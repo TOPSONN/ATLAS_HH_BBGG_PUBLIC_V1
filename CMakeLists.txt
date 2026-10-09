@@ -1,0 +1,66 @@
+cmake_minimum_required(VERSION 3.20)
+project(ATLAS_HH_BBGG_PUBLIC_V1 VERSION 0.1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
+  message(FATAL_ERROR "Use an out-of-source build directory; source-tree builds are unsupported.")
+endif()
+
+find_package(ROOT 6.40.04 EXACT CONFIG REQUIRED COMPONENTS
+  Core RIO Tree Hist ROOTDataFrame RooFit RooStats)
+if(NOT DEFINED ROOT_CXX_STANDARD OR NOT ROOT_CXX_STANDARD STREQUAL "20")
+  message(FATAL_ERROR "Step 1 requires ROOT built with C++20; ROOT_CXX_STANDARD='${ROOT_CXX_STANDARD}'.")
+endif()
+
+message(STATUS "ROOT version: ${ROOT_VERSION}")
+message(STATUS "ROOT C++ standard: ${ROOT_CXX_STANDARD}")
+message(STATUS "ROOT CMake package: ${ROOT_DIR}")
+message(STATUS "Compiler: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "Compiler path: ${CMAKE_CXX_COMPILER}")
+
+function(add_step1_executable target source)
+  add_executable(${target} ${source})
+  target_compile_features(${target} PRIVATE cxx_std_20)
+  set_target_properties(${target} PROPERTIES
+    CXX_STANDARD 20 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
+  # This generated build path is never a hard-coded installation path.
+  target_compile_definitions(${target} PRIVATE
+    ATLAS_STEP1_OUTPUT_DIR="$<TARGET_FILE_DIR:${target}>")
+  if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(${target} PRIVATE -Wall -Wextra -Wpedantic)
+  endif()
+endfunction()
+
+add_step1_executable(root_smoke apps/root_smoke.cxx)
+target_link_libraries(root_smoke PRIVATE ROOT::Core ROOT::RIO ROOT::Hist)
+
+include(CTest)
+if(BUILD_TESTING)
+  add_step1_executable(test_root_io tests/test_root_io.cxx)
+  target_link_libraries(test_root_io PRIVATE ROOT::Core ROOT::RIO ROOT::Tree ROOT::Hist)
+  add_test(NAME root_io COMMAND test_root_io)
+
+  add_step1_executable(test_rdataframe tests/test_rdataframe.cxx)
+  target_link_libraries(test_rdataframe PRIVATE ROOT::Core ROOT::Hist ROOT::ROOTDataFrame)
+  add_test(NAME rdataframe COMMAND test_rdataframe)
+
+  add_step1_executable(test_root_statistics tests/test_root_statistics.cxx)
+  target_link_libraries(test_root_statistics PRIVATE ROOT::Core ROOT::RooFit ROOT::RooStats)
+  add_test(NAME roofit_roostats COMMAND test_root_statistics)
+
+  set_tests_properties(root_io rdataframe roofit_roostats PROPERTIES
+    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}" TIMEOUT 60 LABELS "step1;synthetic")
+endif()
+
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/step1_cmake_environment.txt"
+  "ROOT_VERSION=${ROOT_VERSION}\nROOT_CXX_STANDARD=${ROOT_CXX_STANDARD}\n"
+  "ROOT_DIR=${ROOT_DIR}\nCXX_COMPILER=${CMAKE_CXX_COMPILER}\n"
+  "CXX_COMPILER_ID=${CMAKE_CXX_COMPILER_ID}\n"
+  "CXX_COMPILER_VERSION=${CMAKE_CXX_COMPILER_VERSION}\n"
+  "PROJECT_CXX_STANDARD=${CMAKE_CXX_STANDARD}\n"
+  "CXX_STANDARD_REQUIRED=${CMAKE_CXX_STANDARD_REQUIRED}\n"
+  "CXX_EXTENSIONS=${CMAKE_CXX_EXTENSIONS}\n"
+  "CMAKE_VERSION=${CMAKE_VERSION}\n")

@@ -4,16 +4,28 @@ Independent project infrastructure for a future study of Higgs-boson pair
 production in the bb gamma gamma final state using publicly released materials.
 This is not an official ATLAS Collaboration project, result, or endorsement.
 
-## Step 0 scope
+## Infrastructure scope: Steps 0 and 1
 
-This repository contains Git initialization, environment reporting, and a shared
-development workflow for three independent computers. It contains no physics
-analysis, scientific implementation, datasets, or ROOT installation.
+This repository contains Git initialization, environment reporting, a shared
+development workflow for three independent computers, and compiled synthetic
+ROOT smoke tests. It contains no physics analysis or datasets.
 
-The planned scientific stack is **C++17**, **CERN ROOT 6**, and **CMake**.
-Compiler compatibility, ROOT configuration, and build configuration belong to
-`STEP_1_ROOT_CPP_CMAKE_ENVIRONMENT`, which requires separate authorization.
-Missing ROOT or CMake is acceptable during Step 0.
+Step 1 uses **C++20**, **CERN ROOT 6.40.04**, **CMake >= 3.20**, and **Ninja**
+in the dedicated conda-forge environment `atlas-hh-root`. The selected ROOT
+binary is also built with C++20. Missing ROOT or CMake remains acceptable for
+the original Step 0 checks.
+
+See [the Step 1 setup and validation guide](docs/STEP1_ROOT_CPP_SETUP.md) for
+environment creation, explicit compiler selection, and the `linux-64` package
+lock. After activating `atlas-hh-root`, run:
+
+```bash
+bash scripts/validate_step1.sh
+```
+
+Build products and synthetic ROOT files go to
+`$HOME/build/atlas_hh_bbgg_public_v1`, outside this repository. PC2 and PC3
+remain **PENDING** until this procedure is independently executed there.
 
 ## Public-data-only policy
 
@@ -60,7 +72,7 @@ tree state, and install nothing. They do not fetch, commit, merge, push, or alte
 the working tree. Exit code `1` means a local Step 0 prerequisite needs attention;
 missing compiler, CMake, or ROOT alone does not cause that exit code. Exit code
 `0` describes local readiness only, not successful remote publication or testing
-on another computer. Compiler presence does not establish C++17 compatibility.
+on another computer. Compiler presence does not establish C++20 compatibility.
 
 See [THREE_PC_WORKFLOW.md](docs/THREE_PC_WORKFLOW.md) for authentication,
 publication recovery, daily development, pull requests, and conflict recovery.
