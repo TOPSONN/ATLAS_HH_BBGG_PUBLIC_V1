@@ -1,0 +1,60 @@
+{
+  "unit_status": "PROVISIONAL",
+  "scale_to_gev": 1,
+  "start_entry": 100,
+  "end_exclusive": 63195,
+  "unique_entries": 63095,
+  "invalid_events": 37,
+  "photon_pairs": 63058,
+  "jet_pairs": 17191,
+  "negative_roundoff_objects": 63299,
+  "historical_entries_0_10": 10,
+  "unit_probe_entries_10_100": 90,
+  "total_unique_source_entries": 63195,
+  "new_unique_source_entries": 63185,
+  "new_remote_dataset_bytes": 0,
+  "prior_charged_remote_bytes": 18883874,
+  "source_sha256": "01bfa7cee25c7f32c3701e458d171f65def834d96e6071e119532421a64bd5f7",
+  "verdict": "PASS_PROVISIONAL_RECONSTRUCTION",
+  "integrated_main": "f7a3420155bd557e4146fd1959a60f68742ea930",
+  "phase2_branch": "codex/phase2-kinematic-reconstruction",
+  "ctest": "9/9 PASS",
+  "schema_cases": 22,
+  "transfer_cases": 8,
+  "numerical_assertions": 1033,
+  "seeded_pairs": 500,
+  "native_reader_cases": 12,
+  "driver_cases": 10,
+  "unit_gate_cases": 7,
+  "max_mass_absolute_deviation": 2.08843e-10,
+  "max_mass_relative_deviation": 1.0905e-12,
+  "root_version": "6.40.04",
+  "cxx_standard": 20,
+  "compiler_version": "15.3.0",
+  "cmake_version": "4.4.4",
+  "source_production_match": "UNKNOWN",
+  "figures": [
+    "photon_pt.png",
+    "photon_eta.png",
+    "jet_pt.png",
+    "jet_eta.png",
+    "m_gg.png",
+    "m_jj.png",
+    "deltaR_gg.png"
+  ],
+  "read_ranges": [
+    [
+      10,
+      100
+    ],
+    [
+      100,
+      10000
+    ],
+    [
+      10000,
+      63195
+    ]
+  ],
+  "invalid_reason": "37 leading-photon pairs with negative mass-squared; rejected without correction"
+}

@@ -4,11 +4,16 @@ Independent project infrastructure for a future study of Higgs-boson pair
 production in the bb gamma gamma final state using publicly released materials.
 This is not an official ATLAS Collaboration project, result, or endorsement.
 
-## Infrastructure scope: Steps 0 and 1
+## Infrastructure and bounded exploratory scope
 
 This repository contains Git initialization, environment reporting, a shared
 development workflow for three independent computers, and compiled synthetic
-ROOT smoke tests. It contains no physics analysis or datasets.
+ROOT smoke tests, public-source/schema audits, and bounded exploratory kinematic
+reconstruction. Collision inputs are not committed. Phase 2 uses provisional
+unit evidence and inclusive jets; it does not reproduce the official HH analysis.
+See [Phase 2 validation](reports/phase2_kinematic_validation.md) and
+[the Phase 2 decision](reports/phase2_decision.md). The additional CMake features
+are opt-in, preserving the default Step 1 regression configuration.
 
 Step 1 uses **C++20**, **CERN ROOT 6.40.04**, **CMake >= 3.20**, and **Ninja**
 in the dedicated conda-forge environment `atlas-hh-root`. The selected ROOT
