@@ -1,0 +1,277 @@
+{
+  "record": "https://opendata.cern.ch/api/records/93915",
+  "checked_utc": "2026-10-09T08:47:50.968615+00:00",
+  "budget_bytes": 268435456,
+  "accounting": "HTTP response payload bytes; 64 KiB reserved per request for protocol overhead",
+  "status": "PASS",
+  "remote_root_operations": 0,
+  "payload_bytes": 17573154,
+  "requests": [
+    {
+      "url": "https://opendata.cern.ch/api/records/93915",
+      "method": "GET",
+      "payload_bytes": 15864,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "15864",
+        "etag": "\"1\"",
+        "last-modified": "Thu, 03 Jul 2025 15:25:47 GMT"
+      },
+      "sha256": "449cebdcffa9b6dfb527ec41519e671fee5e4d4292133f3bf88b99a22607ecb9",
+      "adler32": "6192c6a0"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "headers": {}
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+      "method": "GET",
+      "payload_bytes": 1709,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"dac27772a224ce1:0\"",
+        "Content-Length": "1709"
+      },
+      "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+      "adler32": "d2e98587"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+      "method": "GET",
+      "payload_bytes": 3448,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"188339614843d81:0\"",
+        "Content-Length": "3448"
+      },
+      "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+      "adler32": "decf4705"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "17541818",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639072862585487360:037f48e7\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:06:38 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "error": "Redirect refused; record the new public URL before access.",
+      "headers": {}
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)>",
+      "headers": {}
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+      "method": "GET",
+      "payload_bytes": 1709,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"dac27772a224ce1:0\"",
+        "Content-Length": "1709"
+      },
+      "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+      "adler32": "d2e98587"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+      "method": "GET",
+      "payload_bytes": 3448,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"188339614843d81:0\"",
+        "Content-Length": "3448"
+      },
+      "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+      "adler32": "decf4705"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "17541818",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639072862585487360:037f48e7\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:06:38 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP Error 307: Redirect requires explicit inspection",
+      "location": "http://st-096-100gb-ip307-ee292.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "headers": {}
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+      "method": "GET",
+      "payload_bytes": 1709,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"dac27772a224ce1:0\"",
+        "Content-Length": "1709"
+      },
+      "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+      "adler32": "d2e98587"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+      "method": "GET",
+      "payload_bytes": 3448,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"188339614843d81:0\"",
+        "Content-Length": "3448"
+      },
+      "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+      "adler32": "decf4705"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "17541818",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639072862585487360:037f48e7\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:06:38 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-100gb-ip301-3de91.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "headers": {}
+    },
+    {
+      "url": "http://st-096-100gb-ip301-3de91.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 1,
+      "status": 206,
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/17541818",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639072862585487360:037f48e7\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:06:38 GMT"
+      },
+      "sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+      "adler32": "00730073"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-100gb-ip307-ee292.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "headers": {}
+    },
+    {
+      "url": "http://st-096-100gb-ip307-ee292.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 17541818,
+      "status": 200,
+      "headers": {
+        "Content-Length": "17541818",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639072862585487360:037f48e7\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:06:38 GMT"
+      },
+      "sha256": "01bfa7cee25c7f32c3701e458d171f65def834d96e6071e119532421a64bd5f7",
+      "adler32": "037f48e7"
+    }
+  ],
+  "charged_bytes": 18752802,
+  "filename": "ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+  "official_uri": "root://eospublic.cern.ch//eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+  "https_url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+  "https_derivation": "same EOS host/path as the official root:// URI; verified by size/checksum",
+  "expected_size": 17541818,
+  "expected_checksum": "adler32:037f48e7",
+  "tls": {
+    "certificate_validation": true,
+    "hostname_validation": true,
+    "scope": "this process only; system trust unchanged",
+    "additional_ca": [
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+        "bytes": 1709
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+        "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+        "bytes": 3448
+      }
+    ]
+  },
+  "storage_transport": "HTTP",
+  "storage_endpoint": "http://st-096-100gb-ip307-ee292.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+  "range_support": "VERIFIED: HTTP 206, exact Content-Range and one-byte payload",
+  "checksum_status": "PASS",
+  "sha256": "01bfa7cee25c7f32c3701e458d171f65def834d96e6071e119532421a64bd5f7",
+  "diagnostic_head_requests": [
+    {
+      "url": "https://opendata.cern.ch/api/records/93915",
+      "method": "HEAD",
+      "client": "curl",
+      "payload_bytes": 0,
+      "outcome": "HTTP 200"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root",
+      "method": "HEAD",
+      "client": "curl",
+      "payload_bytes": 0,
+      "outcome": "TLS certificate verification failure"
+    }
+  ],
+  "total_charged_bytes_including_diagnostics": 18883874,
+  "accounting_limitation": "HTTP response body bytes measured by the application, not a packet-level TLS/TCP wire count. 64 KiB per attempted request is a conservative protocol reserve."
+}
