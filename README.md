@@ -9,10 +9,13 @@ This is not an official ATLAS Collaboration project, result, or endorsement.
 This repository contains Git initialization, environment reporting, a shared
 development workflow for three independent computers, and compiled synthetic
 ROOT smoke tests, public-source/schema audits, and bounded exploratory kinematic
-reconstruction. Collision inputs are not committed. Phase 2 uses provisional
+reconstruction and configurable exploratory preselection. Collision inputs are not committed. Phase 2 uses provisional
 unit evidence and inclusive jets; it does not reproduce the official HH analysis.
 See [Phase 2 validation](reports/phase2_kinematic_validation.md) and
-[the Phase 2 decision](reports/phase2_decision.md). The additional CMake features
+[the Phase 2 decision](reports/phase2_decision.md), [Phase 3 cutflow](reports/phase3_cutflow.md),
+and [Phase 4 readiness](reports/phase4_readiness_assessment.md). Phase 3 reuses a pinned
+derived cache and keeps all counts conditional on the source skim. B-tagging and
+official diphoton trigger interpretation remain blocked or unknown. The additional CMake features
 are opt-in, preserving the default Step 1 regression configuration.
 
 Step 1 uses **C++20**, **CERN ROOT 6.40.04**, **CMake >= 3.20**, and **Ninja**
