@@ -55,6 +55,29 @@ if(BUILD_TESTING)
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}" TIMEOUT 60 LABELS "step1;synthetic")
 endif()
 
+option(ATLAS_BUILD_PHASE1 "Build the bounded local ROOT schema inspector" OFF)
+if(ATLAS_BUILD_PHASE1)
+  add_library(atlas_root_schema src/RootSchemaInspector.cxx)
+  target_include_directories(atlas_root_schema PUBLIC include)
+  target_link_libraries(atlas_root_schema PUBLIC ROOT::Core ROOT::RIO ROOT::Tree ROOT::TreePlayer ROOT::ROOTVecOps)
+  target_compile_features(atlas_root_schema PUBLIC cxx_std_20)
+  if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(atlas_root_schema PRIVATE -Wall -Wextra -Wpedantic)
+  endif()
+  add_step1_executable(inspect_root_schema apps/inspect_root_schema.cxx)
+  target_link_libraries(inspect_root_schema PRIVATE atlas_root_schema)
+  if(BUILD_TESTING)
+    find_package(Python3 REQUIRED COMPONENTS Interpreter)
+    add_step1_executable(test_root_schema tests/test_root_schema.cxx)
+    target_link_libraries(test_root_schema PRIVATE atlas_root_schema)
+    add_test(NAME root_schema_suite COMMAND test_root_schema)
+    add_test(NAME bounded_transfer COMMAND "${Python3_EXECUTABLE}" -B "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_bounded_transfer.py")
+    set_tests_properties(root_schema_suite PROPERTIES
+      WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}" TIMEOUT 60 LABELS "phase1;synthetic")
+    set_tests_properties(bounded_transfer PROPERTIES TIMEOUT 30 LABELS "phase1;metadata;synthetic")
+  endif()
+endif()
+
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/step1_cmake_environment.txt"
   "ROOT_VERSION=${ROOT_VERSION}\nROOT_CXX_STANDARD=${ROOT_CXX_STANDARD}\n"
   "ROOT_DIR=${ROOT_DIR}\nCXX_COMPILER=${CMAKE_CXX_COMPILER}\n"
