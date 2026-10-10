@@ -1,0 +1,37 @@
+{
+  "input_events": 63095,
+  "selected_events": 1689,
+  "start_entry": 100,
+  "end_exclusive": 63195,
+  "new_ROOT_entry_reads": 0,
+  "unit_status": "PROVISIONAL",
+  "definition_version": "study-preselection-v1",
+  "verdict": "PASS_PROVISIONAL_PRESELECTION",
+  "root_version": "6.40.04",
+  "cxx_standard": 20,
+  "compiler_version": "15.3.0",
+  "compiler_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+  "cmake_version": "4.4.4",
+  "ctest": "11/11 PASS",
+  "selection_boundary_cases": 37,
+  "driver_cases": 9,
+  "independent_cache_cutflow": "MATCH",
+  "phase2_base_commit": "71ee3f2473faeda59fd8e72818392860f4ee692f",
+  "phase2_pr": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/4",
+  "phase3_branch": "codex/phase3-exploratory-preselection",
+  "input_cache": "outputs/phase2_20261010T092242Z/events.csv",
+  "new_remote_dataset_bytes": 0,
+  "definition_config": "metadata/phase3_selection_config.ini",
+  "figures": [
+    "m_gg_preselection.png",
+    "m_jj_preselection.png",
+    "photon_pt_selected.png",
+    "jet_pt_selected.png"
+  ],
+  "optional_raw_flag_counts": [
+    175,
+    48
+  ],
+  "btag_status": "BLOCKED",
+  "official_diphoton_trigger": "UNKNOWN_NOT_APPLIED"
+}

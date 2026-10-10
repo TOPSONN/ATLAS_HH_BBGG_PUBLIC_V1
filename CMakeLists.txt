@@ -107,6 +107,27 @@ if(ATLAS_BUILD_PHASE2)
   endif()
 endif()
 
+option(ATLAS_BUILD_PHASE3 "Build study-defined exploratory preselection" OFF)
+if(ATLAS_BUILD_PHASE3)
+  if(NOT ATLAS_BUILD_PHASE2)
+    message(FATAL_ERROR "Enable ATLAS_BUILD_PHASE2 for the Phase 3 reconstruction dependency.")
+  endif()
+  add_library(atlas_selection src/ExploratorySelection.cxx)
+  target_include_directories(atlas_selection PUBLIC include)
+  target_compile_features(atlas_selection PUBLIC cxx_std_20)
+  target_compile_options(atlas_selection PRIVATE -Wall -Wextra -Wpedantic)
+  add_step1_executable(phase3_cutflow apps/phase3_cutflow.cxx)
+  target_link_libraries(phase3_cutflow PRIVATE atlas_selection ROOT::Hist ROOT::Graf ROOT::Gpad)
+  if(BUILD_TESTING)
+    find_package(Python3 REQUIRED COMPONENTS Interpreter)
+    add_step1_executable(test_exploratory_selection tests/test_exploratory_selection.cxx)
+    target_link_libraries(test_exploratory_selection PRIVATE atlas_selection)
+    add_test(NAME selection_boundaries COMMAND test_exploratory_selection "${CMAKE_CURRENT_SOURCE_DIR}/metadata/phase3_selection_config.ini")
+    add_test(NAME phase3_driver_contract COMMAND "${Python3_EXECUTABLE}" -B "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_phase3_driver.py" "$<TARGET_FILE:phase3_cutflow>" "${CMAKE_CURRENT_SOURCE_DIR}/metadata/phase3_selection_config.ini")
+    set_tests_properties(selection_boundaries phase3_driver_contract PROPERTIES TIMEOUT 60 LABELS "phase3;synthetic")
+  endif()
+endif()
+
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/step1_cmake_environment.txt"
   "ROOT_VERSION=${ROOT_VERSION}\nROOT_CXX_STANDARD=${ROOT_CXX_STANDARD}\n"
   "ROOT_DIR=${ROOT_DIR}\nCXX_COMPILER=${CMAKE_CXX_COMPILER}\n"
