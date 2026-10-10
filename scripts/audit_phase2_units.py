@@ -46,7 +46,7 @@ def main():
     fields=['branch','unit','classification','scale_to_gev','physical_type','dictionary_url','versioned_producer_url','source_sha256','observed_min','observed_max','evidence_scope','limitation']
     a.output_csv.parent.mkdir(parents=True,exist_ok=True)
     with a.output_csv.open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=fields); writer.writeheader()
+        writer=csv.DictWriter(f,fieldnames=fields,lineterminator='\n'); writer.writeheader()
         for kind in ['photon','jet']:
             for suffix,field in [('pt','pt'),('eta','eta'),('phi','phi'),('e','energy')]:
                 writer.writerow({'branch':kind+'_'+suffix,'unit':{'pt':'GeV','energy':'GeV','eta':'dimensionless','phi':'radian'}[field],

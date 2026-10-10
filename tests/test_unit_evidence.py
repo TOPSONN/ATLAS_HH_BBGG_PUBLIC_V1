@@ -24,6 +24,7 @@ class UnitEvidenceTests(unittest.TestCase):
         with (self.path/'evidence.csv').open() as f:
             evidence=list(csv.DictReader(f))
         self.assertEqual(len(evidence),8); self.assertTrue(all(r['classification']=='PROVISIONAL' for r in evidence))
+        self.assertNotIn(b'\r', (self.path/'evidence.csv').read_bytes())
     def test_nonfinite(self):
         self.rows[0]['pt']='nan'; self.assertNotEqual(self.execute().returncode,0)
     def test_energy_contradiction(self):
