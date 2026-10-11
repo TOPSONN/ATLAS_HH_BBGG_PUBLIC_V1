@@ -148,7 +148,7 @@ pinned numerical inputs/configuration. Published copies are byte-identical
 to native exports. Fresh clones require the pinned local inputs for reproduction.
 All 44 tracked export Git blobs match manifest size and SHA-256. The 57-file
 staged scope passed credential and unintended-binary checks, with no deletions;
-the largest staged file is 117,200 bytes. No collision/native ROOT file is staged.
+all tracked files are below 1 MiB. No collision/native ROOT file is staged.
 Prior PNGs/PDFs/reports/manifests are unchanged historical evidence.
 Permanent [AGENTS instructions](../AGENTS.md) and
 [plotting contract](../docs/ATLAS_PLOTTING_STANDARD.md) enforce V2 future gates.
