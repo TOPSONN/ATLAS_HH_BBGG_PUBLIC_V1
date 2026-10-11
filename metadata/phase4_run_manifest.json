@@ -1,0 +1,529 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE4_MC_RECONSTRUCTION_AND_TRUTH_VALIDATION_V1",
+  "status": "PARTIAL_WITH_FAILED_NUMERICAL_GATE",
+  "base_commit": "830af3031da80c1c5f3c01ccec22e3619e95f41f",
+  "record": 93922,
+  "selected_dsids": [
+    343981,
+    346214,
+    423103
+  ],
+  "reconstructed_entries": 29700,
+  "distinct_file_entries_inspected": 30000,
+  "main_ranges": [
+    [
+      100,
+      10000
+    ]
+  ],
+  "prefix_stages": [
+    [
+      0,
+      10
+    ],
+    [
+      10,
+      100
+    ]
+  ],
+  "truth_prefix_same_entry_revisits": "first100 for separate truth/normalization probes; not added to raw cutflow",
+  "extra_numeric_diagnostic_repeat_reads": [
+    {
+      "dsid": 343981,
+      "entry": 5888,
+      "count": 1
+    }
+  ],
+  "duplicate_check_scope": "processed entry ranges across all3 files; first100 separately; not full releases or cross-prefix event-ID scan",
+  "transport_charged_bytes": 58856932,
+  "cumulative_charged_bytes": 77740806,
+  "transport_accounting": "application-consumed HTTP bodies plus64KiB per attempted request; not measured wire bytes",
+  "root_version": "6.40.04",
+  "cpp_standard": 20,
+  "compiler": "GNU15.3.0 conda x86_64-conda-linux-gnu-c++",
+  "cmake_version": "4.4.4",
+  "regression": "17/17 PASS",
+  "regression_log": ".local/phase4_final_regressions_v3.log",
+  "regression_log_sha256": "3c990b7f502de0d7eb393ae8d9d19fccc187d1e2065a7346fdc6330a5020c6d4",
+  "process_exit_evidence": "actual process exits are recorded separately in the reconstruction report; expected_driver_exit_from_closure is an inference, not an execution record",
+  "physical_process_logs": {
+    ".local/phase4_physical_run.log": "1f0050c423c1cb8ff23886ec5f5371b3745829b708f87aa12d577b3517ab430c",
+    ".local/phase4_remaining_run.log": "a3ddeffc71f92e0ae93b696fa1b2ae868e794e1464881d3566db38427c9dfb93"
+  },
+  "physical_execution_source_sha256_lf": {
+    "CMakeLists.txt": "33dda722aea914d502c8ea2b514f5a7bbf39029ce4ba50453d0d59b914bdb059",
+    "apps/phase4_mc_reconstruction.cxx": "752a2c4ce900d07d14b60134ae0f000d79ae529a713d0c4b07ec29c3222aaf04",
+    "include/AtlasExploratorySelection.h": "793a8cdcc9462dfc9ffefaa2bc39dc212a1f6f2b9e2d6b2c012759ba34dd7435",
+    "include/AtlasKinematics.h": "78e58969ab5e940995cd5d70661bf87ffb485c76ad83d60deafdeb8acb1cac3e",
+    "include/AtlasLocalEvents.h": "22297cfc8439644f3ae25e2689866619268623c553cc46de4a69eac2688a53ad",
+    "include/AtlasMCEvents.h": "a65568aab98b5d2cc1c13b14662ee37a23aba5d000fa84773a6098e6fe7fba6f",
+    "include/AtlasMCMatching.h": "7e7638dd23bf9172fde5a69432968fd091311db31a0296190e7192d41cfa1bbf",
+    "include/AtlasRootSchema.h": "ee4c4aff98de69af54b1b82aea0e2a4e9db63d82dcc9d612a0aa55ed100c5393",
+    "include/AtlasSyntheticMatching.h": "042a139b3f1621651fc50b91b2acc917fffc49fd014a5342801032a84b48db9c",
+    "src/ExploratorySelection.cxx": "41a75c0c74e9c67285925edbdbf82c7b87bcd895c37d666e37b52bcc691a2faf",
+    "src/Kinematics.cxx": "4a967bced8232c017057f77e1501a4293a12eb0ad1ef598e97dceeebe8286405",
+    "src/LocalEvents.cxx": "c1e5998d73552012ddd6a734295b5814f2a522e52d37975a956051dcd791378b",
+    "src/MCEvents.cxx": "fa3f6495a7db7b85d30241d0efa62f4273592f85ac9894d378879f4aa146d654",
+    "src/MCMatching.cxx": "a51bc4302aafc8132b04004e3d3cf1b901cd19ea959668352e84838361d425ca",
+    "src/RootSchemaInspector.cxx": "66d3c843a38fe6e3a82a295f05ec35c3f01129ebb9c551e393c426bc80b2ba9a",
+    "src/SyntheticMatching.cxx": "eb32c137b895f1c34189dae32f6b45ee5112e6cd759e134abc23d153ca781f6e"
+  },
+  "physical_execution_note": "original physical outputs preserved; final reader adds an exact-TTree safety guard, satisfying the already measured TTree classes without event rereads",
+  "sample_runs": [
+    {
+      "dsid": 343981,
+      "start_entry": 100,
+      "end_exclusive": 10000,
+      "entries_read": 9900,
+      "invalid_kinematics": 0,
+      "C9_selected": 1125,
+      "scale_to_gev": 1,
+      "unit_status": "PROVISIONAL",
+      "selection_definition": "study-preselection-v1",
+      "negative_roundoff_objects": 9894,
+      "mass_closure_status": "FAIL",
+      "mass_closure_pairs": 12004,
+      "mass_closure_failures": 1,
+      "mass_max_absolute_deviation": 1.9124535637071727e-07,
+      "mass_max_relative_deviation": 1.5429356670611176e-09,
+      "mass_closure_max_tolerance": 2.60783881976183e-07,
+      "mass_closure_tolerance": "1e-7+1e-10*abs(long_double_reference_mass)",
+      "mass_closure_reference": "independent long-double Cartesian sum from same raw leading-pair indices; negative mass2 is never clamped",
+      "weighting": "RAW_UNWEIGHTED",
+      "normalization_applied": false,
+      "scale_factors_applied": false,
+      "truth_matching": "PROVISIONAL_SAME_EVENT_GEOMETRIC_ONLY",
+      "truth_matching_population": "all valid reconstructed events; C9 is a separately reported subset",
+      "truth_scale_to_gev": 1,
+      "matching_eligibility": "all objects with photon pt>25 and abs(eta)<2.37; jet pt>25 and abs(eta)<2.5; no photon crack/ID/isolation/origin/flavour cut",
+      "photon_matching_thresholds": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "jet_matching_thresholds": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "max_eligible_objects_per_collection": 128,
+      "max_candidate_pairs": 4096,
+      "matching_denominator_scope": "eligible objects in truth-available valid reconstructed events; empty denominators have undefined CSV fractions",
+      "truth_mass_quality": "UNKNOWN_SIGNED_NATIVE_MASS_PRESERVED_UNUSED_GEOMETRY",
+      "truth_energy_inferred": false,
+      "negative_truth_jet_mass_values": 1397,
+      "nonfinite_truth_jet_mass_values": 0,
+      "minimum_truth_jet_mass": -0.1931658387184143,
+      "negative_btag_scale_factors": 18,
+      "minimum_btag_scale_factor": -1.2101823091506958,
+      "raw_diagnostic_population": "all processed entries, including invalid reconstructed events",
+      "btag_classification": "NOT_APPLIED",
+      "duplicate_identity_scope": "processed entry range within this file",
+      "cached_cutflow_audit": "PASS",
+      "failing_event_rows": [
+        {
+          "dsid": "343981",
+          "entry": "5888",
+          "run": "284500",
+          "event": "4385033",
+          "m_gg": "123.94901495790135",
+          "m_jj": "",
+          "C9_selected": "0"
+        }
+      ],
+      "expected_driver_exit_from_closure": 1,
+      "actual_driver_exit_recorded": 1
+    },
+    {
+      "dsid": 346214,
+      "start_entry": 100,
+      "end_exclusive": 10000,
+      "entries_read": 9900,
+      "invalid_kinematics": 0,
+      "C9_selected": 1419,
+      "scale_to_gev": 1,
+      "unit_status": "PROVISIONAL",
+      "selection_definition": "study-preselection-v1",
+      "negative_roundoff_objects": 9975,
+      "mass_closure_status": "PASS",
+      "mass_closure_pairs": 12197,
+      "mass_closure_failures": 0,
+      "mass_max_absolute_deviation": 6.34403390237237e-09,
+      "mass_max_relative_deviation": 5.0578704904519715e-11,
+      "mass_closure_max_tolerance": 2.911998893621793e-07,
+      "mass_closure_tolerance": "1e-7+1e-10*abs(long_double_reference_mass)",
+      "mass_closure_reference": "independent long-double Cartesian sum from same raw leading-pair indices; negative mass2 is never clamped",
+      "weighting": "RAW_UNWEIGHTED",
+      "normalization_applied": false,
+      "scale_factors_applied": false,
+      "truth_matching": "PROVISIONAL_SAME_EVENT_GEOMETRIC_ONLY",
+      "truth_matching_population": "all valid reconstructed events; C9 is a separately reported subset",
+      "truth_scale_to_gev": 1,
+      "matching_eligibility": "all objects with photon pt>25 and abs(eta)<2.37; jet pt>25 and abs(eta)<2.5; no photon crack/ID/isolation/origin/flavour cut",
+      "photon_matching_thresholds": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "jet_matching_thresholds": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "max_eligible_objects_per_collection": 128,
+      "max_candidate_pairs": 4096,
+      "matching_denominator_scope": "eligible objects in truth-available valid reconstructed events; empty denominators have undefined CSV fractions",
+      "truth_mass_quality": "UNKNOWN_SIGNED_NATIVE_MASS_PRESERVED_UNUSED_GEOMETRY",
+      "truth_energy_inferred": false,
+      "negative_truth_jet_mass_values": 2511,
+      "nonfinite_truth_jet_mass_values": 0,
+      "minimum_truth_jet_mass": -0.19456349313259125,
+      "negative_btag_scale_factors": 75,
+      "minimum_btag_scale_factor": -1.2288618087768555,
+      "raw_diagnostic_population": "all processed entries, including invalid reconstructed events",
+      "btag_classification": "NOT_APPLIED",
+      "duplicate_identity_scope": "processed entry range within this file",
+      "cached_cutflow_audit": "PASS",
+      "failing_event_rows": [],
+      "expected_driver_exit_from_closure": 0,
+      "actual_driver_exit_recorded": 0
+    },
+    {
+      "dsid": 423103,
+      "start_entry": 100,
+      "end_exclusive": 10000,
+      "entries_read": 9900,
+      "invalid_kinematics": 0,
+      "C9_selected": 588,
+      "scale_to_gev": 1,
+      "unit_status": "PROVISIONAL",
+      "selection_definition": "study-preselection-v1",
+      "negative_roundoff_objects": 9833,
+      "mass_closure_status": "PASS",
+      "mass_closure_pairs": 13220,
+      "mass_closure_failures": 0,
+      "mass_max_absolute_deviation": 3.382111962713097e-08,
+      "mass_max_relative_deviation": 5.587375631553617e-09,
+      "mass_closure_max_tolerance": 3.647342569172227e-07,
+      "mass_closure_tolerance": "1e-7+1e-10*abs(long_double_reference_mass)",
+      "mass_closure_reference": "independent long-double Cartesian sum from same raw leading-pair indices; negative mass2 is never clamped",
+      "weighting": "RAW_UNWEIGHTED",
+      "normalization_applied": false,
+      "scale_factors_applied": false,
+      "truth_matching": "PROVISIONAL_SAME_EVENT_GEOMETRIC_ONLY",
+      "truth_matching_population": "all valid reconstructed events; C9 is a separately reported subset",
+      "truth_scale_to_gev": 1,
+      "matching_eligibility": "all objects with photon pt>25 and abs(eta)<2.37; jet pt>25 and abs(eta)<2.5; no photon crack/ID/isolation/origin/flavour cut",
+      "photon_matching_thresholds": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "jet_matching_thresholds": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "max_eligible_objects_per_collection": 128,
+      "max_candidate_pairs": 4096,
+      "matching_denominator_scope": "eligible objects in truth-available valid reconstructed events; empty denominators have undefined CSV fractions",
+      "truth_mass_quality": "UNKNOWN_SIGNED_NATIVE_MASS_PRESERVED_UNUSED_GEOMETRY",
+      "truth_energy_inferred": false,
+      "negative_truth_jet_mass_values": 731,
+      "nonfinite_truth_jet_mass_values": 0,
+      "minimum_truth_jet_mass": -0.4330529272556305,
+      "negative_btag_scale_factors": 103,
+      "minimum_btag_scale_factor": -1.2561054229736328,
+      "raw_diagnostic_population": "all processed entries, including invalid reconstructed events",
+      "btag_classification": "NOT_APPLIED",
+      "duplicate_identity_scope": "processed entry range within this file",
+      "cached_cutflow_audit": "PASS",
+      "failing_event_rows": [],
+      "expected_driver_exit_from_closure": 0,
+      "actual_driver_exit_recorded": 0
+    }
+  ],
+  "data_mc_compatibility": {
+    "343981": {
+      "native_required_types": {
+        "runNumber": {
+          "data": "UInt_t",
+          "mc": "UInt_t",
+          "matches": true
+        },
+        "eventNumber": {
+          "data": "ULong64_t",
+          "mc": "ULong64_t",
+          "matches": true
+        },
+        "photon_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_btag_quantile": {
+          "data": "ROOT::VecOps::RVec<int>",
+          "mc": "ROOT::VecOps::RVec<int>",
+          "matches": true
+        },
+        "photon_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        }
+      },
+      "schema_type_assessment": "PASS",
+      "physical_unit_and_calibration_equivalence": "UNKNOWN_PROVISIONAL",
+      "data_period_luminosity": "UNKNOWN",
+      "rate_comparison": "BLOCKED",
+      "distribution_comparison": "NOT_EXECUTED"
+    },
+    "346214": {
+      "native_required_types": {
+        "runNumber": {
+          "data": "UInt_t",
+          "mc": "UInt_t",
+          "matches": true
+        },
+        "eventNumber": {
+          "data": "ULong64_t",
+          "mc": "ULong64_t",
+          "matches": true
+        },
+        "photon_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_btag_quantile": {
+          "data": "ROOT::VecOps::RVec<int>",
+          "mc": "ROOT::VecOps::RVec<int>",
+          "matches": true
+        },
+        "photon_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        }
+      },
+      "schema_type_assessment": "PASS",
+      "physical_unit_and_calibration_equivalence": "UNKNOWN_PROVISIONAL",
+      "data_period_luminosity": "UNKNOWN",
+      "rate_comparison": "BLOCKED",
+      "distribution_comparison": "NOT_EXECUTED"
+    },
+    "423103": {
+      "native_required_types": {
+        "runNumber": {
+          "data": "UInt_t",
+          "mc": "UInt_t",
+          "matches": true
+        },
+        "eventNumber": {
+          "data": "ULong64_t",
+          "mc": "ULong64_t",
+          "matches": true
+        },
+        "photon_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_n": {
+          "data": "Int_t",
+          "mc": "Int_t",
+          "matches": true
+        },
+        "jet_btag_quantile": {
+          "data": "ROOT::VecOps::RVec<int>",
+          "mc": "ROOT::VecOps::RVec<int>",
+          "matches": true
+        },
+        "photon_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "photon_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_pt": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_eta": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_phi": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        },
+        "jet_e": {
+          "data": "ROOT::VecOps::RVec<float>",
+          "mc": "ROOT::VecOps::RVec<float>",
+          "matches": true
+        }
+      },
+      "schema_type_assessment": "PASS",
+      "physical_unit_and_calibration_equivalence": "UNKNOWN_PROVISIONAL",
+      "data_period_luminosity": "UNKNOWN",
+      "rate_comparison": "BLOCKED",
+      "distribution_comparison": "NOT_EXECUTED"
+    }
+  },
+  "historical_preserved_paths": [
+    "metadata/dataset_manifest.csv",
+    "metadata/phase2_artifact_manifest.csv",
+    "metadata/phase2_run_manifest.json",
+    "metadata/phase2_unit_evidence.csv",
+    "metadata/phase3_artifact_manifest.csv",
+    "metadata/phase3_cutflow.csv",
+    "metadata/phase3_histogram_inventory.csv",
+    "metadata/phase3_optional_photon_flags.csv",
+    "metadata/phase3_run_manifest.json",
+    "metadata/phase3_selection_config.ini",
+    "metadata/public_input_inventory.md",
+    "metadata/root_access_audit.md",
+    "metadata/root_access_ledger.json",
+    "metadata/root_schema_manifest.csv",
+    "metadata/root_schema_summary.txt",
+    "metadata/sources.md",
+    "note/phase0_decision.md",
+    "note/phase0_feasibility.md",
+    "reports/figures/phase2/deltaR_gg.png",
+    "reports/figures/phase2/jet_eta.png",
+    "reports/figures/phase2/jet_pt.png",
+    "reports/figures/phase2/m_gg.png",
+    "reports/figures/phase2/m_jj.png",
+    "reports/figures/phase2/photon_eta.png",
+    "reports/figures/phase2/photon_pt.png",
+    "reports/figures/phase3/jet_pt_selected.png",
+    "reports/figures/phase3/m_gg_preselection.png",
+    "reports/figures/phase3/m_jj_preselection.png",
+    "reports/figures/phase3/photon_pt_selected.png",
+    "reports/phase1_decision.md",
+    "reports/phase1_schema_validation.md",
+    "reports/phase2_decision.md",
+    "reports/phase2_kinematic_validation.md",
+    "reports/phase3_cutflow.md",
+    "reports/phase3_decision.md",
+    "reports/phase3_validation.md",
+    "reports/phase4_readiness_assessment.md"
+  ],
+  "phase4_pdf_png_generated": 0,
+  "source_sha256_lf": {
+    "CMakeLists.txt": "33dda722aea914d502c8ea2b514f5a7bbf39029ce4ba50453d0d59b914bdb059",
+    "apps/phase4_mc_reconstruction.cxx": "752a2c4ce900d07d14b60134ae0f000d79ae529a713d0c4b07ec29c3222aaf04",
+    "include/AtlasExploratorySelection.h": "793a8cdcc9462dfc9ffefaa2bc39dc212a1f6f2b9e2d6b2c012759ba34dd7435",
+    "include/AtlasKinematics.h": "78e58969ab5e940995cd5d70661bf87ffb485c76ad83d60deafdeb8acb1cac3e",
+    "include/AtlasLocalEvents.h": "22297cfc8439644f3ae25e2689866619268623c553cc46de4a69eac2688a53ad",
+    "include/AtlasMCEvents.h": "a65568aab98b5d2cc1c13b14662ee37a23aba5d000fa84773a6098e6fe7fba6f",
+    "include/AtlasMCMatching.h": "7e7638dd23bf9172fde5a69432968fd091311db31a0296190e7192d41cfa1bbf",
+    "include/AtlasRootSchema.h": "ee4c4aff98de69af54b1b82aea0e2a4e9db63d82dcc9d612a0aa55ed100c5393",
+    "include/AtlasSyntheticMatching.h": "042a139b3f1621651fc50b91b2acc917fffc49fd014a5342801032a84b48db9c",
+    "src/ExploratorySelection.cxx": "41a75c0c74e9c67285925edbdbf82c7b87bcd895c37d666e37b52bcc691a2faf",
+    "src/Kinematics.cxx": "4a967bced8232c017057f77e1501a4293a12eb0ad1ef598e97dceeebe8286405",
+    "src/LocalEvents.cxx": "c1e5998d73552012ddd6a734295b5814f2a522e52d37975a956051dcd791378b",
+    "src/MCEvents.cxx": "66b01d286398280d92ba0ebea327ee004c1ba743f8018165096289bea116df4f",
+    "src/MCMatching.cxx": "a51bc4302aafc8132b04004e3d3cf1b901cd19ea959668352e84838361d425ca",
+    "src/RootSchemaInspector.cxx": "66d3c843a38fe6e3a82a295f05ec35c3f01129ebb9c551e393c426bc80b2ba9a",
+    "src/SyntheticMatching.cxx": "eb32c137b895f1c34189dae32f6b45ee5112e6cd759e134abc23d153ca781f6e"
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "record": "https://opendata.cern.ch/api/records/93922",
+  "checked_utc": "2026-10-11T09:27:35.149828+00:00",
+  "budget_bytes": 134217728,
+  "accounting": "HTTP response payload bytes; 64 KiB reserved per request for protocol overhead",
+  "status": "PASS",
+  "remote_root_operations": 0,
+  "new_limit_bytes": 134217728,
+  "cumulative_limit_bytes": 268435456,
+  "historical_charged_bytes": 18883874,
+  "historical_ledger_sha256": "c0a8a6d73bae78b3a4fcad6828b7a9f5b73fdd28937719c5c399071ea9503d52",
+  "selected_dsids": [
+    343981,
+    346214,
+    423103
+  ],
+  "files": [
+    {
+      "dsid": 343981,
+      "filename": "ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "size": 32086416,
+      "published_checksum": "adler32:3e3f0a3b",
+      "sha256": "002e890c517e03ba59c49bc0852d0fdcd200e0d48add7ca189228a6f82965c56",
+      "checksum_status": "PASS",
+      "official_uri": "root://eospublic.cern.ch//eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root"
+    },
+    {
+      "dsid": 346214,
+      "filename": "ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "size": 14414350,
+      "published_checksum": "adler32:52f61c51",
+      "sha256": "8f32169da2dfa378e4b4d34573bf12a0475934b10cc4ad00e51da89c34bdb908",
+      "checksum_status": "PASS",
+      "official_uri": "root://eospublic.cern.ch//eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root"
+    },
+    {
+      "dsid": 423103,
+      "filename": "ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "size": 10489108,
+      "published_checksum": "adler32:5bf96f22",
+      "sha256": "c65f7103c8e75c6a0d2faf5488752c2efc08376780c0f04fbe52052ac978da1e",
+      "checksum_status": "PASS",
+      "official_uri": "root://eospublic.cern.ch//eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root"
+    }
+  ],
+  "payload_bytes": 57349604,
+  "requests": [
+    {
+      "url": "https://opendata.cern.ch/api/records/93922",
+      "method": "GET",
+      "payload_bytes": 337923,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json",
+        "content-length": "337923",
+        "etag": "\"1\"",
+        "last-modified": "Thu, 03 Jul 2025 15:26:06 GMT"
+      },
+      "sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+      "adler32": "68a6bad7"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+      "method": "GET",
+      "payload_bytes": 1709,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"dac27772a224ce1:0\"",
+        "Content-Length": "1709"
+      },
+      "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+      "adler32": "d2e98587"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+      "method": "GET",
+      "payload_bytes": 3448,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"188339614843d81:0\"",
+        "Content-Length": "3448"
+      },
+      "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+      "adler32": "decf4705"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "32086416",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639080302005714944:3e3f0a3b\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:17:15 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-100gb-ip301-3de91.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "headers": {}
+    },
+    {
+      "url": "http://st-096-100gb-ip301-3de91.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 1,
+      "status": 206,
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/32086416",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639080302005714944:3e3f0a3b\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:17:15 GMT"
+      },
+      "sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+      "adler32": "00730073"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-ee856945.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "headers": {}
+    },
+    {
+      "url": "http://st-096-ee856945.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 32086416,
+      "status": 200,
+      "headers": {
+        "Content-Length": "32086416",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639080302005714944:3e3f0a3b\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:17:15 GMT"
+      },
+      "sha256": "002e890c517e03ba59c49bc0852d0fdcd200e0d48add7ca189228a6f82965c56",
+      "adler32": "3e3f0a3b"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "headers": {}
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+      "method": "GET",
+      "payload_bytes": 1709,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"dac27772a224ce1:0\"",
+        "Content-Length": "1709"
+      },
+      "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+      "adler32": "d2e98587"
+    },
+    {
+      "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+      "method": "GET",
+      "payload_bytes": 3448,
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/x-x509-ca-cert",
+        "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"188339614843d81:0\"",
+        "Content-Length": "3448"
+      },
+      "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+      "adler32": "decf4705"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "14414350",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639079594409852928:52f61c51\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:16:14 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-120-100gb-a4uyjl.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root"
+    },
+    {
+      "url": "http://st-120-100gb-a4uyjl.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 1,
+      "status": 206,
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/14414350",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639079594409852928:52f61c51\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:16:14 GMT"
+      },
+      "sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+      "adler32": "00730073"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-100gb-ip310-c61e4.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root"
+    },
+    {
+      "url": "http://st-096-100gb-ip310-c61e4.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 14414350,
+      "status": 200,
+      "headers": {
+        "Content-Length": "14414350",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"639079594409852928:52f61c51\"",
+        "Last-Modified": "Fri, 21 Feb 2025 19:16:14 GMT"
+      },
+      "sha256": "8f32169da2dfa378e4b4d34573bf12a0475934b10cc4ad00e51da89c34bdb908",
+      "adler32": "52f61c51"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "method": "HEAD",
+      "payload_bytes": 0,
+      "status": 200,
+      "headers": {
+        "Content-Length": "10489108",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"645905136303996928:5bf96f22\"",
+        "Last-Modified": "Fri, 28 Feb 2025 17:52:00 GMT"
+      }
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-100gb-ip315-a32e4.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root"
+    },
+    {
+      "url": "http://st-096-100gb-ip315-a32e4.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 1,
+      "status": 206,
+      "headers": {
+        "Content-Length": "1",
+        "Content-Range": "bytes 0-0/10489108",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"645905136303996928:5bf96f22\"",
+        "Last-Modified": "Fri, 28 Feb 2025 17:52:00 GMT"
+      },
+      "sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+      "adler32": "00730073"
+    },
+    {
+      "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 0,
+      "status": 307,
+      "error": "HTTP 307",
+      "location": "http://st-096-ff761a4f.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root"
+    },
+    {
+      "url": "http://st-096-ff761a4f.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "method": "GET",
+      "payload_bytes": 10489108,
+      "status": 200,
+      "headers": {
+        "Content-Length": "10489108",
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"645905136303996928:5bf96f22\"",
+        "Last-Modified": "Fri, 28 Feb 2025 17:52:00 GMT"
+      },
+      "sha256": "c65f7103c8e75c6a0d2faf5488752c2efc08376780c0f04fbe52052ac978da1e",
+      "adler32": "5bf96f22"
+    },
+    {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FTruthInfo.cxx/raw",
+      "method": "GET",
+      "payload_bytes": 5745,
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Length": "5745"
+      },
+      "sha256": "792543c179d42efa2c10588b5175bd7150c1b9e30cfa2fd7e6e7358d7dd89317",
+      "adler32": "e903858e"
+    },
+    {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FTruthInfo.cxx/raw",
+      "method": "GET",
+      "client": "publication_gates_source_audit",
+      "payload_bytes": 5745,
+      "status": 200,
+      "sha256": "792543c179d42efa2c10588b5175bd7150c1b9e30cfa2fd7e6e7358d7dd89317",
+      "accounting": "measured agent body; 64KiB protocol reserve"
+    }
+  ],
+  "charged_bytes": 58856932,
+  "last_updated_utc": "2026-10-11T09:32:56.775517+00:00",
+  "record_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+  "tls": {
+    "certificate_validation": true,
+    "hostname_validation": true,
+    "scope": "this process only; system trust unchanged",
+    "additional_ca": [
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+        "bytes": 1709
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+        "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+        "bytes": 3448
+      }
+    ]
+  },
+  "https_url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+  "filename": "ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+  "expected_size": 10489108,
+  "expected_checksum": "adler32:5bf96f22",
+  "storage_transport": "HTTP",
+  "storage_endpoint": "http://st-096-ff761a4f.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+  "cumulative_charged_bytes": 77740806,
+  "truth_source": {
+    "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FTruthInfo.cxx/raw?ref=v1.0.0",
+    "bytes": 5745,
+    "sha256": "792543c179d42efa2c10588b5175bd7150c1b9e30cfa2fd7e6e7358d7dd89317",
+    "evidence": "LATER_SOURCE_NOT_EXACT_FEB2025_PRODUCER"
+  }
+}

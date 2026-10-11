@@ -1,0 +1,40 @@
+{
+  "status": "PASS_SOFTWARE_REGRESSION_ONLY",
+  "root_version": "6.40.04",
+  "cpp_standard": 20,
+  "compiler_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+  "compiler_version": "GNU 15.3.0",
+  "cmake_version": "4.4.4",
+  "final_build": "/home/btu/build/atlas_phase4_final_review_v1",
+  "final_ctest": "17/17 PASS",
+  "final_log": ".local/phase4_final_regressions_v3.log",
+  "final_log_sha256": "3c990b7f502de0d7eb393ae8d9d19fccc187d1e2065a7346fdc6330a5020c6d4",
+  "step1_baseline": {
+    "ctest": "3/3 PASS",
+    "log": ".local/phase4_step1_baseline.log",
+    "sha256": "28b1e787903eb0499daca00803df39ae35d2df0359db96276792901e622c9b5e"
+  },
+  "prior_phase1_2_3": {
+    "ctest": "11/11 PASS",
+    "log": ".local/phase4_prior_regressions.log",
+    "sha256": "fc73fa01c33f7678be68fcdfc90b121ffe3981727af2425d03320511107ac78d"
+  },
+  "cases": {
+    "phase1_schema": 22,
+    "phase1_bounded_transfer": 8,
+    "kinematics_assertions": 1033,
+    "kinematics_seeded_pairs": 500,
+    "native_mc_reader": 41,
+    "synthetic_matching_assertions": 4264,
+    "synthetic_matching_exhaustive_cases": 600,
+    "mc_adapter_assertions": 44,
+    "phase4_driver": 10,
+    "phase4_transfer": 8,
+    "phase4_unit_evidence": 6
+  },
+  "compiler_and_root_libstdcpp_libgcc_conda_linkage": "PASS",
+  "github_ci": "NOT_ASSESSED_BY_LOCAL_TESTS",
+  "physical_gate_C": "FAIL",
+  "known_initial_test_failure": "driver fixture marker directory; corrected CMake argument; preserved failed logs",
+  "physical_runs_not_relabelled_as_execution_of_guarded_build": true
+}

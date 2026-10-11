@@ -1,0 +1,68 @@
+{
+  "classification": "PROVISIONAL_SAME_EVENT_GEOMETRY_NOT_OFFICIAL_EFFICIENCY_OR_PURITY",
+  "audit_script": "scripts/audit_phase4_matching.py",
+  "audit_script_sha256_lf": "9fed6a1018b939adccd7c80a62025a38bb2d7bea7f2f23e99000746ca91e51ee",
+  "root_event_rereads": 0,
+  "per_dsid": {
+    "343981": {
+      "dsid": 343981,
+      "range": [
+        100,
+        10000
+      ],
+      "assignment_rows": 83681,
+      "threshold_summary_rows": 12,
+      "csv_identity_uniqueness_threshold_denominator_scope_checks": "PASS",
+      "raw_truth_object_rows": 49430,
+      "reconstruction_mass_closure_status": "FAIL",
+      "classification": "PROVISIONAL_GEOMETRIC_DIAGNOSTIC_ONLY",
+      "input_sha256": {
+        "events.csv": "4d961edc9d3dcf8677fc9017719a4629d94517df2b92c22309358676e090f003",
+        "truth_objects.csv": "f88b6ba750b8e6f765354a40c3cd8108785d37fe6af94a5609543bafd10a6127",
+        "matching_assignments.csv": "f0d5f0eef5bb42aebd56e6fc9727b08d3f6e692541c10f1d832f3931f1f0021c",
+        "matching_threshold_summary.csv": "f2da6044aeecf37ce3a166c785761a73edc1dbd7665eb5216dbe6c8b0a920f0d",
+        "summary.json": "c1abe8f5d89184f778de307d5c0dffb664d741cf6c1995c4dce81a8543ad1263"
+      }
+    },
+    "346214": {
+      "dsid": 346214,
+      "range": [
+        100,
+        10000
+      ],
+      "assignment_rows": 92871,
+      "threshold_summary_rows": 12,
+      "csv_identity_uniqueness_threshold_denominator_scope_checks": "PASS",
+      "raw_truth_object_rows": 61303,
+      "reconstruction_mass_closure_status": "PASS",
+      "classification": "PROVISIONAL_GEOMETRIC_DIAGNOSTIC_ONLY",
+      "input_sha256": {
+        "events.csv": "d3dcc2337dabc8cac18b4ee5f3c11702d5827520dc0a8d4d886ebca1100c0c0c",
+        "truth_objects.csv": "3711b82d46f7a5f087fbfa87162e5391c09108ca2c6e079dc296943edd6137b2",
+        "matching_assignments.csv": "9a645015a139f6d53b650f472c2f2a8fd0f78b78a42bf9046b35590a59beeb23",
+        "matching_threshold_summary.csv": "5905b0f7e6ceae3fd48ff31a12cb2b69022d5a3206a822f2200d33ee46157f0e",
+        "summary.json": "ee0032d3e2cc2c491b71664bba0c89aad9862186e44f7ac12891ad66bbd7c81e"
+      }
+    },
+    "423103": {
+      "dsid": 423103,
+      "range": [
+        100,
+        10000
+      ],
+      "assignment_rows": 76363,
+      "threshold_summary_rows": 12,
+      "csv_identity_uniqueness_threshold_denominator_scope_checks": "PASS",
+      "raw_truth_object_rows": 55244,
+      "reconstruction_mass_closure_status": "PASS",
+      "classification": "PROVISIONAL_GEOMETRIC_DIAGNOSTIC_ONLY",
+      "input_sha256": {
+        "events.csv": "e996bbe6acfb049c78f0b7b2a532673bb4d8efc7928b023d753f327210bbb05f",
+        "truth_objects.csv": "046320b3e2b0fbd1aeddd16147f27f4f25348b881823507ab453af1f8eb2d04e",
+        "matching_assignments.csv": "d4680b41add9ba8d7a7c8f77348b577de4d39d54f7ef3958a56b920bb52aacfe",
+        "matching_threshold_summary.csv": "49033752d39c6c57d096482c31bcfc4fa3bd67d628be5612dbebbcddcf493864",
+        "summary.json": "2a09df338294262ff41cab31bfd110516e68cc00726e6f7946f0f086d97ad5b7"
+      }
+    }
+  }
+}
