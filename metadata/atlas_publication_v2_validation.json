@@ -1,0 +1,2781 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "ATLAS_PUBLICATION_FIGURE_ALIGNMENT_V2",
+  "standard": "atlas-root-plot-v2",
+  "verified_date": "2026-10-11 Asia/Taipei",
+  "starting_commit": "5962329a97f68dadddc32c18a8e1b5bdf220a607",
+  "status": "PASS_PUBLICATION_STYLE",
+  "toolchain": {
+    "root_version": "6.40.04",
+    "root_cxxstandard": 20,
+    "cpp_standard": 20,
+    "compiler_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "compiler_version": "15.3.0",
+    "cmake_version": "cmake version 4.4.4",
+    "ninja_version": "1.13.2",
+    "translation_units": 20,
+    "all_commands_explicit_cxx20": true,
+    "root_linkage": "PASS",
+    "verified_libraries": {
+      "libCore.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40",
+      "libGraf.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40",
+      "libGpad.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40",
+      "libstdc++.so.6": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6",
+      "libgcc_s.so.1": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1"
+    },
+    "libstdcxx_and_libgcc_from_conda_environment": true
+  },
+  "ctest_combined": "15/15 PASS",
+  "step1_tests": "3/3 PASS",
+  "phase1_tests": "22 schema cases; 8 transfer cases PASS",
+  "style_cases": 29,
+  "pdf_gate_cases": 32,
+  "publication_reference": [
+    {
+      "url": "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGP-2025-10/fig_02.pdf",
+      "sha256": "5318bca0e6217ed237d5fccf4ef7c2ab650304215cf98708bc206fd445b2bd27",
+      "reviewed": "native PDF render"
+    },
+    {
+      "url": "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGP-2025-10/fig_03a.pdf",
+      "sha256": "bc55ec8217f2aeffb4422a2244f1494e65d7d1c78631be13ec1ff9685943be07",
+      "reviewed": "native PDF render"
+    },
+    {
+      "url": "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGP-2025-10/fig_04a.png",
+      "sha256": "8b1547687f0a1433f74b6c10bc8308566c2cc3ed5bcacda334f8e232af1234b3",
+      "reviewed": "official PNG reference"
+    }
+  ],
+  "reference_access": "CDS access challenge; official ATLAS same-publication figure page used",
+  "visual_review_limits": "Checks apply to these eleven outputs; future representations need separate visual and scientific validation",
+  "numeric_comparison": {
+    "root_version": "6.40.04",
+    "old_directory": "/mnt/c/HH/outputs/atlas_plotting_v1_20261010",
+    "new_directory": "/mnt/c/HH/outputs/atlas_publication_v2_20261011",
+    "comparison": "IEEE-754 exact values; no tolerances; source errors and display errors",
+    "expected_plots": 11,
+    "audited_plots": 11,
+    "status": "PASS",
+    "results": [
+      {
+        "plot": "phase2/deltaR_gg",
+        "old_native_sha256": "57bf0a1449115f758ce07789712b35755a4c34094157bc7de4adfd80278faa48",
+        "old_sidecar_sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; leading photon pair",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "deltaR_gg",
+              "bins": 60,
+              "range": [
+                0.0,
+                6.0
+              ],
+              "entries": 63058.0,
+              "underflow": 0.0,
+              "overflow": 0.0,
+              "in_range_sum": 63058.0,
+              "numeric_sha256": "0ee00c2741552d8b2613dcf4009ab8e4e2df61f8762af2a3e8e8d760c8ba2c09"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "deltaR_gg_display",
+              "points": 60,
+              "numeric_sha256": "a8e0e8d6f9c64e5cdf1a43f830fb58475fce90a8e6f68285b041a4986dc81772"
+            }
+          ]
+        },
+        "new_native_sha256": "88fac9631b908e192a667e270591d0985ff84a81e1ab8ea2ae19063efa22f16c",
+        "new_sidecar_sha256": "dbb1608f06a671d5dc6fee39c07a878b167f68a242e517894541b00cb546db1b",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/jet_eta",
+        "old_native_sha256": "9a06311c7e69a71369fa791d8c1bef0317df4157f834fcfe3c5aa3275cb6b32b",
+        "old_sidecar_sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; all inclusive jet objects",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "jet_eta",
+              "bins": 60,
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "entries": 64556.0,
+              "underflow": 0.0,
+              "overflow": 0.0,
+              "in_range_sum": 64556.0,
+              "numeric_sha256": "eab84022947d59e3ecc38eb700b7845524072f86466349415cf4c4b0da1e7159"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "jet_eta_display",
+              "points": 30,
+              "numeric_sha256": "2abdc0c85a89cfeaab7559e03efe55b63e45e4a31cfec9f0c92c7c50342a5ffb"
+            }
+          ]
+        },
+        "new_native_sha256": "ec22672a63459d9f03a166a40d90c87788cff103efcfd21db2f07b1421546f3a",
+        "new_sidecar_sha256": "6491396a6153515c4986e7470e5140a6212d1e113783ceca99300664975d19f5",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/jet_pt",
+        "old_native_sha256": "851f9dfa66f878f763aa2849d4e4b7345a56cec2da9bbc1ccb598025cab1dc03",
+        "old_sidecar_sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; all inclusive jet objects",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "jet_pt",
+              "bins": 60,
+              "range": [
+                0.0,
+                300.0
+              ],
+              "entries": 64556.0,
+              "underflow": 0.0,
+              "overflow": 377.0,
+              "in_range_sum": 64179.0,
+              "numeric_sha256": "ba0387361132a3578fb14d09dd8a117f913256234341ef32d8085f1c36d7c4a3"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "jet_pt_display",
+              "points": 56,
+              "numeric_sha256": "5ca3a757e621526e95a71f6100bdb2e3c7b11be1587fbfae7df67d618f9c4db7"
+            }
+          ]
+        },
+        "new_native_sha256": "e45d33f0db7bd976f5a3ee43507df06998c7f990e0625cce4859766f930d937a",
+        "new_sidecar_sha256": "35486795a8310da709c32ac9b3b251b9855c82507ccc85a8b090cc6be20539b6",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/m_gg",
+        "old_native_sha256": "3a27edd4d4fac55d7cd900bd8c28f6f42c5d4a975ed837f4ad4762534fe3af3b",
+        "old_sidecar_sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; leading photon pair",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "m_gg",
+              "bins": 80,
+              "range": [
+                0.0,
+                400.0
+              ],
+              "entries": 63058.0,
+              "underflow": 0.0,
+              "overflow": 647.0,
+              "in_range_sum": 62411.0,
+              "numeric_sha256": "bc73565c08a1897f9ba1928245563d3097b9bff527e8768191bec3684e308786"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "m_gg_display",
+              "points": 80,
+              "numeric_sha256": "031c48c50626f6ab5fd420e1f8bbfd7846ac00d675629baf68f70f8b4d597037"
+            }
+          ]
+        },
+        "new_native_sha256": "34aa0932dd8cc77d3f0caf509d34cb815bf00b21f3c02d49e3365d691f4f9666",
+        "new_sidecar_sha256": "a4de0e4c011d5231b8971aaa002752f3d76f86e3635de2aa56559e9d45dc1a89",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/m_jj",
+        "old_native_sha256": "19cf03b6bc8ecd0d5427a1af29edb1e576100739534505efa7d51dd26188725a",
+        "old_sidecar_sha256": "d1bfebb0cd73d997365ece290670738246eb60606c8d74fb5ec776fd6c36f8f1",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; leading inclusive jet pair",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 17191,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "m_jj",
+              "bins": 80,
+              "range": [
+                0.0,
+                800.0
+              ],
+              "entries": 17191.0,
+              "underflow": 0.0,
+              "overflow": 86.0,
+              "in_range_sum": 17105.0,
+              "numeric_sha256": "e14d0862c97e2552bc1746ac397f2ca45cf2f13dbca32464c7ef8804171e3d13"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "m_jj_display",
+              "points": 80,
+              "numeric_sha256": "cfbc6b3af1fe3c4c92d04c4ab69f79737a6b8e86d1c9321b2411736a36477339"
+            }
+          ]
+        },
+        "new_native_sha256": "07ba99304053ff24d8d22145e991afd30fb3cd91327c92edd4f5e810f4eb1d09",
+        "new_sidecar_sha256": "ee5868a3668f9f24a7f0b5a109fb9d779b2c4ff69dea28aaa63510dd84364f52",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/photon_eta",
+        "old_native_sha256": "53c5c4fbfc579603d612043f7c25c18e1d04497a665a932ebb931a5efa894e8e",
+        "old_sidecar_sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; all photon objects",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "photon_eta",
+              "bins": 50,
+              "range": [
+                -2.5,
+                2.5
+              ],
+              "entries": 126586.0,
+              "underflow": 0.0,
+              "overflow": 0.0,
+              "in_range_sum": 126586.0,
+              "numeric_sha256": "87b64bb32c51cfbdd455d6ae540079f7c5e8e1683d3c649a630ffc3c685a777b"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "photon_eta_display",
+              "points": 48,
+              "numeric_sha256": "6375bb4973fc0d2923e720df8fdd5ac2464bf69c01d505785bbdcd68e81c3a16"
+            }
+          ]
+        },
+        "new_native_sha256": "c29657b9378a91fceb2f8cb53c4c3b77133525cf39d2dfd531b2f2591059f6e9",
+        "new_sidecar_sha256": "d190d9f5cc5e05ea07c60f81544a75327aa48e9fa9592ecddf830ca794d38297",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase2/photon_pt",
+        "old_native_sha256": "c50a83646ba7c4465b406917136c376610a73ddce0d900a032c95387af38a339",
+        "old_sidecar_sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "Valid kinematics; all photon objects",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 63058,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "photon_pt",
+              "bins": 60,
+              "range": [
+                0.0,
+                300.0
+              ],
+              "entries": 126586.0,
+              "underflow": 0.0,
+              "overflow": 188.0,
+              "in_range_sum": 126398.0,
+              "numeric_sha256": "7c2318d9fbcbbce0fdd3dbe285fbf95271ca32ee6a01c053b06f32bb3cb0a979"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "photon_pt_display",
+              "points": 55,
+              "numeric_sha256": "90ffe6190eaedf754d0eb23a7977f137dc8671593eb4ab1fc7313bd947d52be1"
+            }
+          ]
+        },
+        "new_native_sha256": "c7f3d44eb68f228509ff9e153e9791762e84acea09c9a8392dc322aecff7b734",
+        "new_sidecar_sha256": "2c1fd5ef650e9625ffd5ade20f0c7e9a381bbabd9f5bcc4f1f80e9510b6db155",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase3/jet_pt_selected",
+        "old_native_sha256": "b7ec7656738ce7b3f21ff02e23ae8a40814fa36d93b57e336682828f6f3d746f",
+        "old_sidecar_sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "study-preselection-v1; C9; leading photons and inclusive jets",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 1689,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "jet_pt_selected",
+              "bins": 60,
+              "range": [
+                0.0,
+                300.0
+              ],
+              "entries": 3378.0,
+              "underflow": 0.0,
+              "overflow": 18.0,
+              "in_range_sum": 3360.0,
+              "numeric_sha256": "eee3ac74ddbf086d0cddc568299b2b4b709e51fd8324b349cd9d6b52f7826276"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "jet_pt_selected_display",
+              "points": 53,
+              "numeric_sha256": "4c08714c63858ee91c1ad87639cbd3b37af154f5d562c34119a38c233364ae7d"
+            }
+          ]
+        },
+        "new_native_sha256": "caec1c862529059fcd8046dcf2cccb9a7aebbf2cd5669a5fb9a7ddb9d4e922d8",
+        "new_sidecar_sha256": "8b30d0f99706b2f81c97322da66b9d3ec5153e6d8cce8d2b9b1bf67e07590f8e",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase3/m_gg_preselection",
+        "old_native_sha256": "c507e2811b40ae5a0e4cac51e3091baf82786c9771c77a97ddfe43fb564cb7d1",
+        "old_sidecar_sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "study-preselection-v1; C9; leading photons and inclusive jets",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 1689,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "m_gg_preselection",
+              "bins": 70,
+              "range": [
+                100.0,
+                170.0
+              ],
+              "entries": 1689.0,
+              "underflow": 0.0,
+              "overflow": 0.0,
+              "in_range_sum": 1689.0,
+              "numeric_sha256": "65ce17b86abe83266f11036ad90cb56894a08f220d72665e80a24fd3fee22190"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "m_gg_preselection_display",
+              "points": 70,
+              "numeric_sha256": "3a3e406a5c269ec84be001c06f431fe7df9a4853e30cec98dc4dde534e0ac195"
+            }
+          ]
+        },
+        "new_native_sha256": "c1ffffbfe3a06cfc5dba619d65e0dd8190be3be37a707a3f752235eecf07e25b",
+        "new_sidecar_sha256": "d9d44ba67a41b1c5347686a34f07906e707618a532787069b0879fee4c1e61a3",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase3/m_jj_preselection",
+        "old_native_sha256": "dc75af6cbbe9e705e11c4e9bdb80148132d5c5ffe22d9958f1f97c43572fcf78",
+        "old_sidecar_sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "study-preselection-v1; C9; leading photons and inclusive jets",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 1689,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "m_jj_preselection",
+              "bins": 80,
+              "range": [
+                0.0,
+                800.0
+              ],
+              "entries": 1689.0,
+              "underflow": 0.0,
+              "overflow": 9.0,
+              "in_range_sum": 1680.0,
+              "numeric_sha256": "9a9bb157df853519e49a8fd644d19bc00c13be4de93cc39b97f173f1b703e776"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "m_jj_preselection_display",
+              "points": 80,
+              "numeric_sha256": "e02064410cb917335d7f9ef0f447c9ba5dffb297ed7c9d01ec91fd4c7a5d3910"
+            }
+          ]
+        },
+        "new_native_sha256": "22021746dab960eb893429b97986ceee14adeaf397b711d1f9395a506d944593",
+        "new_sidecar_sha256": "5140ac5674220bb4a3cbd1a61822fa13c6420383b6c1585539d660064c17037f",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      },
+      {
+        "plot": "phase3/photon_pt_selected",
+        "old_native_sha256": "104d3e952cb33cf49fda45b29564a4871bb8dc57a417d89320a55287981d9a13",
+        "old_sidecar_sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "old_standard": "atlas-root-plot-v1",
+        "science_metadata": {
+          "root_version": "6.40.04",
+          "sample_kind": "DATA",
+          "record": "93915",
+          "period": "2015 periodD",
+          "selection": "study-preselection-v1; C9; leading photons and inclusive jets",
+          "unit_status": "PROVISIONAL",
+          "weighting": "Raw unweighted counts",
+          "inspected": 63095,
+          "accepted": 1689,
+          "start": 100,
+          "end": 63195,
+          "energy_tev": 13.0,
+          "luminosity_pb": null,
+          "luminosity_validated": false,
+          "luminosity_evidence": ""
+        },
+        "inventory": {
+          "histograms": [
+            {
+              "name": "photon_pt_selected",
+              "bins": 60,
+              "range": [
+                0.0,
+                300.0
+              ],
+              "entries": 3378.0,
+              "underflow": 0.0,
+              "overflow": 0.0,
+              "in_range_sum": 3378.0,
+              "numeric_sha256": "a1d309dfe9614598e21fef0d5f6499de2cdd06e296c0496c87a6e79cedbbbe5b"
+            }
+          ],
+          "display_graphs": [
+            {
+              "name": "photon_pt_selected_display",
+              "points": 43,
+              "numeric_sha256": "b63852d83ce3c18c530f274258ce1d10589aa1736efc1c0f54f419fbb4db053d"
+            }
+          ]
+        },
+        "new_native_sha256": "fd75a2c10a74d4b5cf64edd148f6a04de47b2fb4c4e5263949b3486d94868d29",
+        "new_sidecar_sha256": "04810c845fe61eb815acf0ca7dbe7265c1c421771374c7150fa85fe13170eed7",
+        "new_standard": "atlas-root-plot-v2",
+        "status": "PASS_EXACT_NUMERIC_AND_SCIENCE_METADATA_IDENTITY"
+      }
+    ],
+    "failures": []
+  },
+  "historical_preservation": {
+    "baseline_commit": "5962329a97f68dadddc32c18a8e1b5bdf220a607",
+    "repository": "/mnt/c/HH",
+    "status": "PASS",
+    "tracked_historical_files_passed": 73,
+    "manifest_rows_passed": 75,
+    "phase3_csv_comparisons_passed": 9,
+    "scope": "All baseline tracked note/reports/metadata bytes; original Phase2/Phase3/V1 artifact rows; new Phase3 CSV bytes",
+    "tracked_historical_files": [
+      {
+        "path": "metadata/atlas_plotting_artifact_manifest.csv",
+        "base_blob": "4d6f41267c03035791f52dbf57a072962844a303",
+        "size_bytes": 7375,
+        "sha256": "95b9f746d0f67f0692a5a7533fc743fe2e28349cbc7e1752acd9725f4aa17380",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/atlas_plotting_validation.json",
+        "base_blob": "6a962bc4d94e85a3f23c016cfd9f7c9909161434",
+        "size_bytes": 32639,
+        "sha256": "8e7892b2d49f443fad2a192fd099abbdbbca5f20e0e73b5ca89f648b0de83e39",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/dataset_manifest.csv",
+        "base_blob": "b18bfffdd381011fc235eee885c40c80f7d63cc6",
+        "size_bytes": 35316,
+        "sha256": "ba8c9bfaed0c9ed18a121ea799ae72b10db1408335e9c7840dc04ab60d0f0400",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase2_artifact_manifest.csv",
+        "base_blob": "facb42577b3a6db94861dedd3cba623b6c6cd0d9",
+        "size_bytes": 1890,
+        "sha256": "eb8ef601f05e338fcc965197e3827e80485965dd54d811860e9cac6baadc4678",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase2_run_manifest.json",
+        "base_blob": "32460f7be6c30956c9f3ecec26cbb037585148e6",
+        "size_bytes": 1546,
+        "sha256": "f9905fed00fa6c88a39bca04bc17a2579974055a8c644316bc030498d54f6cac",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase2_unit_evidence.csv",
+        "base_blob": "dc44cf23c86ac4ab5504f7e0986b2deae40a806a",
+        "size_bytes": 4674,
+        "sha256": "936e0c48eb645d2f9b71af7a69e69bbf6750a7961d03d9d6007327ad623dedcf",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_artifact_manifest.csv",
+        "base_blob": "a0e3fc1bb4fdc1ae3b8e5a9fe2a6771e231c1b7f",
+        "size_bytes": 2193,
+        "sha256": "85c6db72fd15921e76444a388cfc717628fa573d3144d9cdc8183099eb8fd43a",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_cutflow.csv",
+        "base_blob": "80461c69d24ae6476529f59b3467d3640fb68825",
+        "size_bytes": 1267,
+        "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_histogram_inventory.csv",
+        "base_blob": "f0b13930ee8cd398898d1cab4dba24a65b902834",
+        "size_bytes": 175,
+        "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_optional_photon_flags.csv",
+        "base_blob": "18f96b050ce9b2da49dab31f6bf53021b16d3010",
+        "size_bytes": 213,
+        "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_run_manifest.json",
+        "base_blob": "dda4af25f1c71065a62336ae5a78aeb19444c32f",
+        "size_bytes": 1215,
+        "sha256": "bc8dfe13b6a1a955a7775e7f9e174fdc083db1fc695ef30fb27f5282a6018069",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/phase3_selection_config.ini",
+        "base_blob": "3eeecfb59a293af22467c03884ce00038d3fddab",
+        "size_bytes": 333,
+        "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/public_input_inventory.md",
+        "base_blob": "f42a6a519f35b982ba0beb26a0fd612a6d0eb6f8",
+        "size_bytes": 15114,
+        "sha256": "6e249d27fd44438d303f2c2cfc0c927b8b35848c14aa10a79b9de4c1366e0762",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/root_access_audit.md",
+        "base_blob": "6c67c3ee74cde2ceddf59bf91d73c9c073c81ae3",
+        "size_bytes": 6926,
+        "sha256": "1223401b56842faaa1a10f26e49badfa893b732303ea4bc579532f3f3e053f55",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/root_access_ledger.json",
+        "base_blob": "e00aa76392938d4bc919e1101265184bef45274a",
+        "size_bytes": 11065,
+        "sha256": "c0a8a6d73bae78b3a4fcad6828b7a9f5b73fdd28937719c5c399071ea9503d52",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/root_schema_manifest.csv",
+        "base_blob": "b385bfd195c9f2693acdd1e7d228529b99c27c93",
+        "size_bytes": 45833,
+        "sha256": "a4692e9abffaada1418647d552994938f040616fafe407d95fbf6e9dad947ffc",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/root_schema_summary.txt",
+        "base_blob": "0f03cfda07ba6fff495053cb3b122b31fc5ad610",
+        "size_bytes": 98,
+        "sha256": "3de5e14374f9bc31c156ed1b2273814645dce77317155813bf4913c0ea5eb01d",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "metadata/sources.md",
+        "base_blob": "f7d55e49ef375e86119c355497214e17d8ed7b98",
+        "size_bytes": 27423,
+        "sha256": "b7125af60e3fc7c0cfae89f0274fa9e2109823e395a9a212892bbd8244db096b",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "note/phase0_decision.md",
+        "base_blob": "209346f8afe6c8ba4e0cbe87289c3bbc8e5fddbc",
+        "size_bytes": 8267,
+        "sha256": "2feef66ba425c9287092447d6bf2af4ecc20978498bcc3e224b54d2759c4674a",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "note/phase0_feasibility.md",
+        "base_blob": "9ab00fc11c73d417d15fe99d09785db0dd66b409",
+        "size_bytes": 17989,
+        "sha256": "2a4bcbb257238f12221cc5178c13c5febaf24db42a453ebea00d781c29a4ed87",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/atlas_plotting_standard_validation.md",
+        "base_blob": "1e2c5814fdfc81ead8228295191774bdcb4bdafc",
+        "size_bytes": 10659,
+        "sha256": "6428e05363a2196b74e9b8d7a610cc45b6e5659c5cc6cb6339362dd42afafc7a",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.pdf",
+        "base_blob": "9a0836a2130b351729619ee5e59f22325a6e0de7",
+        "size_bytes": 17089,
+        "sha256": "41691287ccf307412323630fc619bb05314b362ba3c3919ef9df3dd620c18930",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.plot.json",
+        "base_blob": "c6f088754605da94f4f82a92796e8d9f19b782a8",
+        "size_bytes": 450,
+        "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.png",
+        "base_blob": "89e10aa41550801b2ca14f1aff4c56941e2747eb",
+        "size_bytes": 32436,
+        "sha256": "67d0f150c6a94010947792ff4c8c5e7d4423fc4527810b1e2fe9f0ed7b2d2ba0",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.pdf",
+        "base_blob": "a1e15f22b6108d358202a7b5b88b6bd37e067eee",
+        "size_bytes": 15972,
+        "sha256": "099ebcab4c39b05f38f78b78c3280920330fcc99d233abc2b171c65c81aaf4af",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.plot.json",
+        "base_blob": "2e22ef619e407cb3ac139203691c7c42e4400325",
+        "size_bytes": 456,
+        "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.png",
+        "base_blob": "423bedc8b8b9da0504a65f0aaffe39bf18956939",
+        "size_bytes": 30565,
+        "sha256": "1cc59c1f35ea3882a0af4bb99032181e865738d06f627caafc8fa5c720757996",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.pdf",
+        "base_blob": "943cbd3fb3e81eae9671f42f39682dc2478c3c5e",
+        "size_bytes": 16636,
+        "sha256": "73dc01f3c33c9731c1cd6b9ad20d332fcbc040b5d336c2b347f0fdbe20c77fcc",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.plot.json",
+        "base_blob": "2e22ef619e407cb3ac139203691c7c42e4400325",
+        "size_bytes": 456,
+        "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.png",
+        "base_blob": "16e47b669e725fff24dd953f557280cb875b3f3a",
+        "size_bytes": 32981,
+        "sha256": "27ea455ca53a80e13fe97d927ad51ed5b40d70545e6bae23591767fdbdd080b6",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.pdf",
+        "base_blob": "95bed307742462079613657402bcaa77c548090a",
+        "size_bytes": 18015,
+        "sha256": "d32afc03a38b23f17a7ed3c7d76fced869d0979e36b2551151ff60477818cdfd",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.plot.json",
+        "base_blob": "c6f088754605da94f4f82a92796e8d9f19b782a8",
+        "size_bytes": 450,
+        "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.png",
+        "base_blob": "a991524776a6bf8532bee76490f95d404760ccca",
+        "size_bytes": 32986,
+        "sha256": "9b03b78b5045c9d09a1189d409fee52e2b1394d6ca3b08b924ac222893eccd65",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.pdf",
+        "base_blob": "bb8f7d11cfc9dd2b2444fdb40eb249b040ff06a3",
+        "size_bytes": 18220,
+        "sha256": "fdcbd82faf72f133cae98577032537b15448cf7a324d5d1c2aa4b47ff446e668",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.plot.json",
+        "base_blob": "568c1e854a320b8d9ca9ec959caf4a35bb51b149",
+        "size_bytes": 457,
+        "sha256": "d1bfebb0cd73d997365ece290670738246eb60606c8d74fb5ec776fd6c36f8f1",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.png",
+        "base_blob": "bcd6429218f4312197958e83604fe795fa05c7e3",
+        "size_bytes": 34443,
+        "sha256": "3f4398c9ed91e78cfcb18c1d1b1a78c43a00b0e1e33fa3811b7141f0aa437b5e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.pdf",
+        "base_blob": "110f28d2e59a3ce19041a26d715876886ab0b980",
+        "size_bytes": 16772,
+        "sha256": "1c9873b1654ed9da92fd70cb47788fad700005a33e90c8c724a789c05aa466ab",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.plot.json",
+        "base_blob": "75d64634c8bcd69c67d1d4dee0365aa87e7f8940",
+        "size_bytes": 449,
+        "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.png",
+        "base_blob": "dd54c7edbf5266ce6863abbed6358b6ad4e4315d",
+        "size_bytes": 31630,
+        "sha256": "a3cf4947419f3fd274fa937174ad345db9591793f0c5cde6522ebd22304906bc",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.pdf",
+        "base_blob": "9bc071128b14a9da0d6453844786168406f288fa",
+        "size_bytes": 16384,
+        "sha256": "46f8817b8b5c6fdf6dfcafb399ceccaea6422fa8cc16ad35f0fca09a71af07df",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.plot.json",
+        "base_blob": "75d64634c8bcd69c67d1d4dee0365aa87e7f8940",
+        "size_bytes": 449,
+        "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.png",
+        "base_blob": "9df9cfb2089613729b6648f0d5656ac3cc38c612",
+        "size_bytes": 32124,
+        "sha256": "430371d39616092f7bb5957e0a898fb0b20f95242e6933a9a7eede9f8bd38c6e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.pdf",
+        "base_blob": "b4a0eff1d5dcba44253ea0f3b17caf4e511588e3",
+        "size_bytes": 16301,
+        "sha256": "33e3aeddda1aedd35b3ccdece295d9fb0200e1abb497972c8d9744dc3b7cd9b2",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.plot.json",
+        "base_blob": "3652630630e465ecbb64b559294b7af21ffd7d69",
+        "size_bytes": 473,
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.png",
+        "base_blob": "e6fdf8643e7b657b298a1ae4063a76bf795d90a1",
+        "size_bytes": 33775,
+        "sha256": "064111c0826b978a6c6b0c33e082e6e7fe503947651887c6b67ddc849568c829",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.pdf",
+        "base_blob": "7fd3e05965872d29e434367db5752a68433485ed",
+        "size_bytes": 18068,
+        "sha256": "3f063dba8421934b56f33310e84b03e938e49e495d7195e72e60f980d684a43a",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.plot.json",
+        "base_blob": "3652630630e465ecbb64b559294b7af21ffd7d69",
+        "size_bytes": 473,
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.png",
+        "base_blob": "267ad29f0b771713d14f921ddf60eb5e48c6070b",
+        "size_bytes": 34805,
+        "sha256": "0f09841b0dbf174b9969ded5a4726427ca7b2c20dff9bc653f92673e17344fa7",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.pdf",
+        "base_blob": "903289b55e6eb2e3471e1106957b226325d5bb09",
+        "size_bytes": 18635,
+        "sha256": "eb084f3d4a2bf5811aa1b9528c9ae1be86afab58490a9ae8d9d9d8d0727a66ca",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.plot.json",
+        "base_blob": "3652630630e465ecbb64b559294b7af21ffd7d69",
+        "size_bytes": 473,
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.png",
+        "base_blob": "8c630c2b1e9856fd6816bc1ff9d18a9b87d047ec",
+        "size_bytes": 35099,
+        "sha256": "bae336bba87574f01d09d406001596f2f9af3dbc8e0b8aa0a7bed120d813a7fe",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.pdf",
+        "base_blob": "b2fcadf11542be0a410275bf638995b6fb30806a",
+        "size_bytes": 16186,
+        "sha256": "c7a29927ae70dc96eedf4a5aa0542b95390ad23d9db2dcb98cfc32f6f6218952",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.plot.json",
+        "base_blob": "3652630630e465ecbb64b559294b7af21ffd7d69",
+        "size_bytes": 473,
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.png",
+        "base_blob": "fba530d7ae13118e74b0198005e70126f55b11b0",
+        "size_bytes": 34958,
+        "sha256": "4fd825a49ca1d4d9e8de79394bfd8b45b2568f2f84e8c7f26f49de392af8fb6c",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/deltaR_gg.png",
+        "base_blob": "8457aab0c156bd2083d5c36127dcda7cce1cd6e2",
+        "size_bytes": 26626,
+        "sha256": "d1cc9c9048e8e74f8d65e4ff45008d25f5d85d9e7c9709e3c04a40595f237ea9",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/jet_eta.png",
+        "base_blob": "d8cf4dae64f110e31fe652086d6619c9b42c8f00",
+        "size_bytes": 26352,
+        "sha256": "05df3b40a02199d6e2eaf0a8b2cd8dd54a4ddfe8d2be26d51266546f070edd97",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/jet_pt.png",
+        "base_blob": "0b89d150bc10a0daa4c6c73e48243145f470ec7a",
+        "size_bytes": 28043,
+        "sha256": "341b783479512d21e08de5ca9d83d6d582b3c6a555eefcb00627f5d775198dd7",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/m_gg.png",
+        "base_blob": "d174aa3aea3d803559984830fb411ce670462a41",
+        "size_bytes": 28651,
+        "sha256": "34e61cd431bfc46c7606bafe8bd3e7cbb37675d627625a9e65f49bf4d6abb9dc",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/m_jj.png",
+        "base_blob": "16a1e12cc2ffcc54d2a6cfe85d3c2a5f687a6027",
+        "size_bytes": 28785,
+        "sha256": "aeb010a34d2ab40f7fb56bf7869e1762102c7d18244fe6044013d324de22bcc1",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/photon_eta.png",
+        "base_blob": "079382423b2971d2c8699a362c86229995dabce4",
+        "size_bytes": 27389,
+        "sha256": "2c3fe05e27f2eedcc08cc31b80f18ffcc7940a6a1848c871f3d9290b16de694f",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase2/photon_pt.png",
+        "base_blob": "9def43334e161c736eeee60637918e614babe65d",
+        "size_bytes": 27257,
+        "sha256": "18dfa28f822ab9ce1e671cd8f202ac7f469d42507c2d418b6f144f65d73f2497",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase3/jet_pt_selected.png",
+        "base_blob": "d09f072d7b17f0e9703fce753776ff151f8d12d8",
+        "size_bytes": 28413,
+        "sha256": "a4336a6ba0aec758ce042ed02b0bdc82fda270432e7e80eba99edd0488d775ef",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase3/m_gg_preselection.png",
+        "base_blob": "01f81133cf8e6f27d28f7e2403a3d2ddf0799844",
+        "size_bytes": 25818,
+        "sha256": "fea83807fe5f6075f2c34306a8bb975eed52d7b3c14ff2f0c02d3a86275d9915",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase3/m_jj_preselection.png",
+        "base_blob": "b2f215008189275e2254c24dcd6ce00af5e2da28",
+        "size_bytes": 27780,
+        "sha256": "20e79fa03192bc19cc1f15e672b6a2aa80f8c840a7d5f43772de14d72e80f6fa",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/figures/phase3/photon_pt_selected.png",
+        "base_blob": "1128d0b65ec677ed045076e09c88caa16b9785b8",
+        "size_bytes": 28957,
+        "sha256": "901391ce61fdd164b25ace51b0ed13a21ef4a9edf207bedc55881f8c2e023b59",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase1_decision.md",
+        "base_blob": "33314f6d8dc06e707f02a5b8a2460577909bd87b",
+        "size_bytes": 4370,
+        "sha256": "b57cc46d05cbc6fe800cbb2989f45bfb3e392b6c34e978390aec02155ab6e57d",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase1_schema_validation.md",
+        "base_blob": "85f838502252b2743cd86761de1f8dff89f7cadd",
+        "size_bytes": 10236,
+        "sha256": "8d1700f6d75bdb92b1c65c6662a9e2fda0c5472a95b961686a6f9019a24cdab9",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase2_decision.md",
+        "base_blob": "4ff18b3a0981e57f71eaa1e212335f26155982a1",
+        "size_bytes": 1263,
+        "sha256": "8f93245aab69666cfcd512ba28d7a6480c19e3b9770a8e1672bd55f722bc094b",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase2_kinematic_validation.md",
+        "base_blob": "490155520e4e9d5eaad8bb51265742f78298a3c3",
+        "size_bytes": 8463,
+        "sha256": "c540faf6eedf06feb4ac73a7daa85e2b61b6c0c3e7b4c382bcc599491dcc7f7e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase3_cutflow.md",
+        "base_blob": "2451b7fbea34d1c2c72e017f1a98738673eb68ca",
+        "size_bytes": 5840,
+        "sha256": "1ceb835e42075a4ea5df2a3c64940e1f7bec92f68f65d3e4c5f0a3075fffa215",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase3_decision.md",
+        "base_blob": "4cba5cc0d88d80816040a15fb6c32c6a6aa46e58",
+        "size_bytes": 1623,
+        "sha256": "34ac743db0ae5e0456f66df4a22c653796880075ecfa7e47cd0f8b69f1d326b4",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase3_validation.md",
+        "base_blob": "7aeb71b052788a6ebbf90f5e9c2d3bb969257016",
+        "size_bytes": 5147,
+        "sha256": "2e76ec55d26a2e6078427c7cee65985091385030a9f7c150c93ca064e9dc9380",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "reports/phase4_readiness_assessment.md",
+        "base_blob": "617b5b3d33b0aa47e4997f828320c5512f570eb9",
+        "size_bytes": 9871,
+        "sha256": "45282005d9c27db291614c09f6f39fcc2a95730d0c195d94eda8fc9bae59ee70",
+        "status": "PASS_BYTE_IDENTITY"
+      }
+    ],
+    "manifest_checks": [
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "rows_passed": 13,
+        "rows": [
+          {
+            "path": "metadata/phase2_unit_evidence.csv",
+            "size_bytes": 4674,
+            "sha256": "936e0c48eb645d2f9b71af7a69e69bbf6750a7961d03d9d6007327ad623dedcf",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": ".local/multiphase_20261010T092242Z/phase2_unit_probe.csv",
+            "size_bytes": 24720,
+            "sha256": "91e162e91e2d9a276f16a6907d6dacc20dbf7316773519ece39563e7daffbe12",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/phase2_diagnostics.root",
+            "size_bytes": 7685,
+            "sha256": "78729eb927974165a2251c3ca26f93f63af70bf6ca8fbee2dfe69d6306bbdcd7",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/events.csv",
+            "size_bytes": 16052596,
+            "sha256": "a50c50eda011ffae6aa224dcab02a34b1e5a3a430dd427ee6397274f9afef764",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/stages.csv",
+            "size_bytes": 121,
+            "sha256": "5d88c190b2c5679ae75c8941fc684cc41a81a122eb551999e1a995a6679c62c0",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/histogram_inventory.csv",
+            "size_bytes": 226,
+            "sha256": "ec272e8d1ab53a45b00e8e05c58463adb9eed45ddd6179cdbaa922b5602a2ffa",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/photon_pt.png",
+            "size_bytes": 27257,
+            "sha256": "18dfa28f822ab9ce1e671cd8f202ac7f469d42507c2d418b6f144f65d73f2497",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/photon_eta.png",
+            "size_bytes": 27389,
+            "sha256": "2c3fe05e27f2eedcc08cc31b80f18ffcc7940a6a1848c871f3d9290b16de694f",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/jet_pt.png",
+            "size_bytes": 28043,
+            "sha256": "341b783479512d21e08de5ca9d83d6d582b3c6a555eefcb00627f5d775198dd7",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/jet_eta.png",
+            "size_bytes": 26352,
+            "sha256": "05df3b40a02199d6e2eaf0a8b2cd8dd54a4ddfe8d2be26d51266546f070edd97",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/m_gg.png",
+            "size_bytes": 28651,
+            "sha256": "34e61cd431bfc46c7606bafe8bd3e7cbb37675d627625a9e65f49bf4d6abb9dc",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/m_jj.png",
+            "size_bytes": 28785,
+            "sha256": "aeb010a34d2ab40f7fb56bf7869e1762102c7d18244fe6044013d324de22bcc1",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase2/deltaR_gg.png",
+            "size_bytes": 26626,
+            "sha256": "d1cc9c9048e8e74f8d65e4ff45008d25f5d85d9e7c9709e3c04a40595f237ea9",
+            "status": "PASS_MANIFEST_ROW"
+          }
+        ]
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "rows_passed": 15,
+        "rows": [
+          {
+            "path": "metadata/phase3_selection_config.ini",
+            "size_bytes": 333,
+            "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "metadata/phase3_run_manifest.json",
+            "size_bytes": 1215,
+            "sha256": "bc8dfe13b6a1a955a7775e7f9e174fdc083db1fc695ef30fb27f5282a6018069",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "metadata/phase3_cutflow.csv",
+            "size_bytes": 1267,
+            "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "metadata/phase3_optional_photon_flags.csv",
+            "size_bytes": 213,
+            "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "metadata/phase3_histogram_inventory.csv",
+            "size_bytes": 175,
+            "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/events.csv",
+            "size_bytes": 16052596,
+            "sha256": "a50c50eda011ffae6aa224dcab02a34b1e5a3a430dd427ee6397274f9afef764",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase3_20261010T092242Z/summary.json",
+            "size_bytes": 184,
+            "sha256": "b88bf718ae27c2c7eeb2827cdf4486912c1e38424d09672dbb4bf22a4dcec53e",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase3/m_gg_preselection.png",
+            "size_bytes": 25818,
+            "sha256": "fea83807fe5f6075f2c34306a8bb975eed52d7b3c14ff2f0c02d3a86275d9915",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase3/m_jj_preselection.png",
+            "size_bytes": 27780,
+            "sha256": "20e79fa03192bc19cc1f15e672b6a2aa80f8c840a7d5f43772de14d72e80f6fa",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase3/photon_pt_selected.png",
+            "size_bytes": 28957,
+            "sha256": "901391ce61fdd164b25ace51b0ed13a21ef4a9edf207bedc55881f8c2e023b59",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/phase3/jet_pt_selected.png",
+            "size_bytes": 28413,
+            "sha256": "a4336a6ba0aec758ce042ed02b0bdc82fda270432e7e80eba99edd0488d775ef",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/phase3_cutflow.md",
+            "size_bytes": 5840,
+            "sha256": "1ceb835e42075a4ea5df2a3c64940e1f7bec92f68f65d3e4c5f0a3075fffa215",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/phase3_validation.md",
+            "size_bytes": 5147,
+            "sha256": "2e76ec55d26a2e6078427c7cee65985091385030a9f7c150c93ca064e9dc9380",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/phase3_decision.md",
+            "size_bytes": 1623,
+            "sha256": "34ac743db0ae5e0456f66df4a22c653796880075ecfa7e47cd0f8b69f1d326b4",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/phase4_readiness_assessment.md",
+            "size_bytes": 9871,
+            "sha256": "45282005d9c27db291614c09f6f39fcc2a95730d0c195d94eda8fc9bae59ee70",
+            "status": "PASS_MANIFEST_ROW"
+          }
+        ]
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "rows_passed": 47,
+        "rows": [
+          {
+            "path": "reports/figures/atlas_v1/phase2/deltaR_gg.pdf",
+            "size_bytes": 17089,
+            "sha256": "41691287ccf307412323630fc619bb05314b362ba3c3919ef9df3dd620c18930",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/deltaR_gg.png",
+            "size_bytes": 32436,
+            "sha256": "67d0f150c6a94010947792ff4c8c5e7d4423fc4527810b1e2fe9f0ed7b2d2ba0",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/deltaR_gg.plot.json",
+            "size_bytes": 450,
+            "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/deltaR_gg.root",
+            "size_bytes": 7805,
+            "sha256": "57bf0a1449115f758ce07789712b35755a4c34094157bc7de4adfd80278faa48",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_eta.pdf",
+            "size_bytes": 15972,
+            "sha256": "099ebcab4c39b05f38f78b78c3280920330fcc99d233abc2b171c65c81aaf4af",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_eta.png",
+            "size_bytes": 30565,
+            "sha256": "1cc59c1f35ea3882a0af4bb99032181e865738d06f627caafc8fa5c720757996",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_eta.plot.json",
+            "size_bytes": 456,
+            "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/jet_eta.root",
+            "size_bytes": 6689,
+            "sha256": "9a06311c7e69a71369fa791d8c1bef0317df4157f834fcfe3c5aa3275cb6b32b",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_pt.pdf",
+            "size_bytes": 16636,
+            "sha256": "73dc01f3c33c9731c1cd6b9ad20d332fcbc040b5d336c2b347f0fdbe20c77fcc",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_pt.png",
+            "size_bytes": 32981,
+            "sha256": "27ea455ca53a80e13fe97d927ad51ed5b40d70545e6bae23591767fdbdd080b6",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/jet_pt.plot.json",
+            "size_bytes": 456,
+            "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/jet_pt.root",
+            "size_bytes": 6905,
+            "sha256": "851f9dfa66f878f763aa2849d4e4b7345a56cec2da9bbc1ccb598025cab1dc03",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_gg.pdf",
+            "size_bytes": 18015,
+            "sha256": "d32afc03a38b23f17a7ed3c7d76fced869d0979e36b2551151ff60477818cdfd",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_gg.png",
+            "size_bytes": 32986,
+            "sha256": "9b03b78b5045c9d09a1189d409fee52e2b1394d6ca3b08b924ac222893eccd65",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_gg.plot.json",
+            "size_bytes": 450,
+            "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/m_gg.root",
+            "size_bytes": 8241,
+            "sha256": "3a27edd4d4fac55d7cd900bd8c28f6f42c5d4a975ed837f4ad4762534fe3af3b",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_jj.pdf",
+            "size_bytes": 18220,
+            "sha256": "fdcbd82faf72f133cae98577032537b15448cf7a324d5d1c2aa4b47ff446e668",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_jj.png",
+            "size_bytes": 34443,
+            "sha256": "3f4398c9ed91e78cfcb18c1d1b1a78c43a00b0e1e33fa3811b7141f0aa437b5e",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/m_jj.plot.json",
+            "size_bytes": 457,
+            "sha256": "d1bfebb0cd73d997365ece290670738246eb60606c8d74fb5ec776fd6c36f8f1",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/m_jj.root",
+            "size_bytes": 7998,
+            "sha256": "19cf03b6bc8ecd0d5427a1af29edb1e576100739534505efa7d51dd26188725a",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_eta.pdf",
+            "size_bytes": 16772,
+            "sha256": "1c9873b1654ed9da92fd70cb47788fad700005a33e90c8c724a789c05aa466ab",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_eta.png",
+            "size_bytes": 31630,
+            "sha256": "a3cf4947419f3fd274fa937174ad345db9591793f0c5cde6522ebd22304906bc",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_eta.plot.json",
+            "size_bytes": 449,
+            "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/photon_eta.root",
+            "size_bytes": 6894,
+            "sha256": "53c5c4fbfc579603d612043f7c25c18e1d04497a665a932ebb931a5efa894e8e",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_pt.pdf",
+            "size_bytes": 16384,
+            "sha256": "46f8817b8b5c6fdf6dfcafb399ceccaea6422fa8cc16ad35f0fca09a71af07df",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_pt.png",
+            "size_bytes": 32124,
+            "sha256": "430371d39616092f7bb5957e0a898fb0b20f95242e6933a9a7eede9f8bd38c6e",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase2/photon_pt.plot.json",
+            "size_bytes": 449,
+            "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase2/photon_pt.root",
+            "size_bytes": 6915,
+            "sha256": "c50a83646ba7c4465b406917136c376610a73ddce0d900a032c95387af38a339",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.pdf",
+            "size_bytes": 16301,
+            "sha256": "33e3aeddda1aedd35b3ccdece295d9fb0200e1abb497972c8d9744dc3b7cd9b2",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.png",
+            "size_bytes": 33775,
+            "sha256": "064111c0826b978a6c6b0c33e082e6e7fe503947651887c6b67ddc849568c829",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.plot.json",
+            "size_bytes": 473,
+            "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase3/jet_pt_selected.root",
+            "size_bytes": 6882,
+            "sha256": "b7ec7656738ce7b3f21ff02e23ae8a40814fa36d93b57e336682828f6f3d746f",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.pdf",
+            "size_bytes": 18068,
+            "sha256": "3f063dba8421934b56f33310e84b03e938e49e495d7195e72e60f980d684a43a",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.png",
+            "size_bytes": 34805,
+            "sha256": "0f09841b0dbf174b9969ded5a4726427ca7b2c20dff9bc653f92673e17344fa7",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.plot.json",
+            "size_bytes": 473,
+            "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase3/m_gg_preselection.root",
+            "size_bytes": 7447,
+            "sha256": "c507e2811b40ae5a0e4cac51e3091baf82786c9771c77a97ddfe43fb564cb7d1",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.pdf",
+            "size_bytes": 18635,
+            "sha256": "eb084f3d4a2bf5811aa1b9528c9ae1be86afab58490a9ae8d9d9d8d0727a66ca",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.png",
+            "size_bytes": 35099,
+            "sha256": "bae336bba87574f01d09d406001596f2f9af3dbc8e0b8aa0a7bed120d813a7fe",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.plot.json",
+            "size_bytes": 473,
+            "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase3/m_jj_preselection.root",
+            "size_bytes": 7717,
+            "sha256": "dc75af6cbbe9e705e11c4e9bdb80148132d5c5ffe22d9958f1f97c43572fcf78",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.pdf",
+            "size_bytes": 16186,
+            "sha256": "c7a29927ae70dc96eedf4a5aa0542b95390ad23d9db2dcb98cfc32f6f6218952",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.png",
+            "size_bytes": 34958,
+            "sha256": "4fd825a49ca1d4d9e8de79394bfd8b45b2568f2f84e8c7f26f49de392af8fb6c",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.plot.json",
+            "size_bytes": 473,
+            "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/atlas_plotting_v1_20261010/phase3/photon_pt_selected.root",
+            "size_bytes": 6863,
+            "sha256": "104d3e952cb33cf49fda45b29564a4871bb8dc57a417d89320a55287981d9a13",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/phase2_diagnostics.root",
+            "size_bytes": 7685,
+            "sha256": "78729eb927974165a2251c3ca26f93f63af70bf6ca8fbee2dfe69d6306bbdcd7",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "outputs/phase2_20261010T092242Z/events.csv",
+            "size_bytes": 16052596,
+            "sha256": "a50c50eda011ffae6aa224dcab02a34b1e5a3a430dd427ee6397274f9afef764",
+            "status": "PASS_MANIFEST_ROW"
+          },
+          {
+            "path": "metadata/phase3_selection_config.ini",
+            "size_bytes": 333,
+            "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+            "status": "PASS_MANIFEST_ROW"
+          }
+        ]
+      }
+    ],
+    "phase3_csv_identity": [
+      {
+        "path": "outputs/phase3_20261010T092242Z/cutflow.csv",
+        "baseline_metadata": "metadata/phase3_cutflow.csv",
+        "size_bytes": 1267,
+        "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/cutflow.csv",
+        "baseline_metadata": "metadata/phase3_cutflow.csv",
+        "size_bytes": 1267,
+        "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_publication_v2_20261011/phase3/cutflow.csv",
+        "baseline_metadata": "metadata/phase3_cutflow.csv",
+        "size_bytes": 1267,
+        "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/phase3_20261010T092242Z/optional_photon_flags.csv",
+        "baseline_metadata": "metadata/phase3_optional_photon_flags.csv",
+        "size_bytes": 213,
+        "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/optional_photon_flags.csv",
+        "baseline_metadata": "metadata/phase3_optional_photon_flags.csv",
+        "size_bytes": 213,
+        "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_publication_v2_20261011/phase3/optional_photon_flags.csv",
+        "baseline_metadata": "metadata/phase3_optional_photon_flags.csv",
+        "size_bytes": 213,
+        "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/phase3_20261010T092242Z/histogram_inventory.csv",
+        "baseline_metadata": "metadata/phase3_histogram_inventory.csv",
+        "size_bytes": 175,
+        "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/histogram_inventory.csv",
+        "baseline_metadata": "metadata/phase3_histogram_inventory.csv",
+        "size_bytes": 175,
+        "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266",
+        "status": "PASS_BYTE_IDENTITY"
+      },
+      {
+        "path": "outputs/atlas_publication_v2_20261011/phase3/histogram_inventory.csv",
+        "baseline_metadata": "metadata/phase3_histogram_inventory.csv",
+        "size_bytes": 175,
+        "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266",
+        "status": "PASS_BYTE_IDENTITY"
+      }
+    ],
+    "failures": []
+  },
+  "caption_preservation": "11/11 caption file=JSON=ROOT; all captions reproduced in report",
+  "raw_collision_entries_read": 0,
+  "remote_dataset_bytes_downloaded": 0,
+  "optional_focused_mgg_view": "not produced",
+  "pdf_quality": [
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/deltaR_gg",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            110.551,
+            38.106553,
+            257.279053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            144.623284,
+            63.018949,
+            199.221565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            203.555752,
+            63.018949,
+            272.902741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            110.551,
+            86.403949,
+            272.568515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_left",
+        "label_x": 0.19499999642372132,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 10901,
+      "plot_interior_pixels": 3830,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/deltaR_gg_c97b5217.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-left labels clear of the angular peak and counting intervals; exponent and DeltaR readable.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/jet_eta",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 10224,
+      "plot_interior_pixels": 3431,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/jet_eta_6a5e0f32.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels above the broad object distribution; exponent and jet superscript readable.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/jet_pt",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 11689,
+      "plot_interior_pixels": 3375,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/jet_pt_d1296469.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of the low-pT object peak; full 0-300 range retained.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/m_gg",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            110.551,
+            38.106553,
+            257.279053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            144.623284,
+            63.018949,
+            199.221565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            203.555752,
+            63.018949,
+            272.902741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            110.551,
+            86.403949,
+            272.568515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_left",
+        "label_x": 0.19499999642372132,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 11826,
+      "plot_interior_pixels": 4305,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/m_gg_90e16970.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-left labels clear of first-bin and diphoton peak errors; full 0-400 GeV range retained.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/m_jj",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 12759,
+      "plot_interior_pixels": 4118,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/m_jj_2702e849.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of the dijet peak/errors; full 0-800 GeV range retained.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/photon_eta",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            110.551,
+            38.106553,
+            257.279053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            144.623284,
+            63.018949,
+            199.221565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            203.555752,
+            63.018949,
+            272.902741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            110.551,
+            86.403949,
+            272.568515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_left",
+        "label_x": 0.19499999642372132,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 10348,
+      "plot_interior_pixels": 3816,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/photon_eta_6fbfbcb7.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-left labels above the broad object distribution with modest headroom; photon superscript readable.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase2/photon_pt",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 10914,
+      "plot_interior_pixels": 3156,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/photon_pt_941c11a3.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of object peak; photon pT and exponent readable.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase3/jet_pt_selected",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 11707,
+      "plot_interior_pixels": 3454,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/jet_pt_selected_90721218.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of selected object peak; visible object counts have no invented errors.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase3/m_gg_preselection",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 14607,
+      "plot_interior_pixels": 7028,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/m_gg_preselection_d98c71fb.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels above local counting intervals; selected 100-170 GeV range and zero-bin upper bars retained.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase3/m_jj_preselection",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 13622,
+      "plot_interior_pixels": 5107,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/m_jj_preselection_47a9ad5c.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of dijet peak/counting intervals; no header/footer or clipped axes.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    },
+    {
+      "plot": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/phase3/photon_pt_selected",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            390.529284,
+            63.018949,
+            445.127565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 data",
+          "box_points": [
+            449.461752,
+            63.018949,
+            518.808741,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 12046,
+      "plot_interior_pixels": 3400,
+      "rendered_png": "/mnt/c/HH/outputs/atlas_publication_v2_20261011/pdf_renders/photon_pt_selected_ecbeb6de.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_checks": {
+        "axis_and_math_glyphs": "PASS",
+        "clipping": "PASS",
+        "annotation_data_overlap": "NONE_OBSERVED",
+        "outer_margins": "PASS",
+        "diagnostic_header_footer": "ABSENT",
+        "single_series_legend": "ABSENT"
+      },
+      "visual_note": "Upper-right labels clear of selected photon peak; no invented object-count error bars.",
+      "visual_review_method": "Individual Poppler PDF render inspection; independent second-agent inspection and annotation pixel confirmation"
+    }
+  ],
+  "artifact_manifest_rows": 58,
+  "staged_publication_audit": {
+    "status": "PASS",
+    "staged_files": 57,
+    "tracked_export_blobs_hashed": 44,
+    "manifest_rows": 58,
+    "no_deletions": true,
+    "credential_scan": "PASS",
+    "unintended_large_or_native_root_files": "NONE",
+    "historical_evidence_staged_identity": "PASS",
+    "markdown_links": "PASS"
+  },
+  "branch": "codex/atlas-root-plotting-standard",
+  "pull_request": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/6",
+  "github_ci": "NO_CHECKS; no CI PASS claimed",
+  "scientific_status": {
+    "phase0": "PARTIAL",
+    "units": "PROVISIONAL",
+    "b_tagging": "BLOCKED",
+    "trigger": "UNKNOWN_NOT_APPLIED",
+    "source_production_match": "UNKNOWN",
+    "luminosity": "UNVALIDATED_NOT_DISPLAYED",
+    "MC_normalisation_and_systematics": "NOT_VALIDATED"
+  },
+  "pr_integration": "PR4, PR5 and PR6 remain OPEN; no PR merge performed"
+}

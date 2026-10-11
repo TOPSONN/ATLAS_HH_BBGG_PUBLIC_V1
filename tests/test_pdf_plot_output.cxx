@@ -9,6 +9,8 @@
 #include <cmath>
 #include <TROOT.h>
 #include <TStyle.h>
+#include <TNamed.h>
+#include <fstream>
 #include <iostream>
 #include <stdexcept>
 int main() {
@@ -26,15 +28,20 @@ int main() {
     if(h.Integral()!=counts||h.GetEntries()!=entries)throw std::runtime_error("Plotting changed histogram values");
     atlas::plotting::ApplyAtlasPlotStyle();
     const double x[]{1,2,3},y[]{2,4,3},dx[]{0,0,0},dy[]{.1,.2,.1};TGraphErrors graph(3,x,y,dx,dy);graph.SetName("synthetic_graph");
-    TCanvas gc("graph_canvas","",1100,900);graph.SetMarkerStyle(20);graph.SetMarkerColor(kBlue+2);graph.SetLineColor(kBlue+2);
+    TCanvas gc("graph_canvas","",800,600);gc.SetCanvasSize(800,600);graph.SetMarkerStyle(20);graph.SetMarkerSize(.9);graph.SetMarkerColor(kBlue+2);graph.SetLineColor(kBlue+2);
     graph.Draw("AP");atlas::plotting::ConfigurePhysicsAxes(*graph.GetHistogram(),"p_{T}^{jet} [GeV]","Synthetic response");
     atlas::plotting::DrawOpenDataLabel(m);atlas::plotting::ExportPhysicsCanvas(gc,graph,out/"synthetic_graph",m);
     TH2D h2("synthetic_density","",4,0,4,4,-2,2);h2.SetDirectory(nullptr);h2.Fill(1,-1);h2.Fill(2,1);h2.Fill(3,1);h2.Fill(3,1);
-    TCanvas dc("density_canvas","",1100,900);dc.SetRightMargin(.16);
+    TCanvas dc("density_canvas","",800,600);dc.SetCanvasSize(800,600);dc.SetRightMargin(.16);
     atlas::plotting::ConfigurePhysicsAxes(h2,"p_{T}^{#gamma} [GeV]","#eta^{#gamma}","Raw counts / bin");h2.Draw("COLZ");
-    atlas::plotting::DrawOpenDataLabel(m);atlas::plotting::ExportPhysicsCanvas(dc,h2,out/"synthetic_density",m);
+    auto density_metadata=m;density_metadata.label_placement=atlas::plotting::LabelPlacement::UpperLeft;
+    atlas::plotting::DrawOpenDataLabel(density_metadata);atlas::plotting::ExportPhysicsCanvas(dc,h2,out/"synthetic_density",density_metadata);
     TFile root((out/"synthetic_mass.root").c_str(),"READ");auto* saved=root.Get<TH1D>("synthetic_mass");
     if(!saved||saved->GetEntries()!=4||saved->GetBinContent(2)!=2||!root.Get("atlas_plot_metadata"))throw std::runtime_error("ROOT object preservation failure");
+    auto* caption=root.Get<TNamed>("atlas_plot_caption");
+    std::ifstream caption_file(out/"synthetic_mass.caption.md");
+    const std::string caption_text((std::istreambuf_iterator<char>(caption_file)),std::istreambuf_iterator<char>());
+    if(!caption||caption_text!=std::string(caption->GetTitle()))throw std::runtime_error("Figure caption/native ROOT preservation failure");
     auto* errors=root.Get<TGraphAsymmErrors>("synthetic_mass_display");
     TH1D poisson=h;poisson.SetDirectory(nullptr);poisson.SetBinErrorOption(TH1::kPoisson);
     if(!errors||errors->GetN()!=4)throw std::runtime_error("Counting interval object missing");

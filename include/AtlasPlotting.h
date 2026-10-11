@@ -10,6 +10,7 @@ class TObject;
 
 namespace atlas::plotting {
 enum class SampleKind { Data, Simulation, Synthetic };
+enum class LabelPlacement { UpperLeft, UpperRight };
 struct Metadata {
   SampleKind kind=SampleKind::Synthetic;
   std::string record,period,selection,unit_status,weighting="Raw unweighted counts";
@@ -17,6 +18,8 @@ struct Metadata {
   std::optional<double> energy_tev,luminosity_pb;
   bool luminosity_validated=false;
   std::string luminosity_evidence;
+  LabelPlacement label_placement=LabelPlacement::UpperRight;
+  double label_y=.88;
 };
 void ApplyAtlasPlotStyle();
 void ValidatePlotMetadata(const Metadata&);

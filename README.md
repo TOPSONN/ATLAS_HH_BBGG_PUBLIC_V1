@@ -21,9 +21,10 @@ are opt-in, preserving the default Step 1 regression configuration.
 All current and future physics figures must follow the permanent
 [ROOT/ATLAS plotting standard](docs/ATLAS_PLOTTING_STANDARD.md) and shared
 `AtlasPlotting` module. Native vector PDF is the primary output; PNG is preview
-only. Each figure must preserve its ROOT objects, pass metadata/PDF quality gates,
+only. Each figure must preserve its ROOT objects and full caption, pass metadata/PDF quality gates,
 and receive visual review. The current Phase 2/3 figure set is under
-`reports/figures/atlas_v1/`; earlier figures remain historical evidence.
+`reports/figures/atlas_v2/`; earlier figures remain historical evidence. See
+[V2 publication alignment validation](reports/atlas_publication_v2_validation.md).
 
 Step 1 uses **C++20**, **CERN ROOT 6.40.04**, **CMake >= 3.20**, and **Ninja**
 in the dedicated conda-forge environment `atlas-hh-root`. The selected ROOT
