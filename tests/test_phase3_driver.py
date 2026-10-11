@@ -25,6 +25,9 @@ class SelectionDriverTests(unittest.TestCase):
         self.assertEqual([int(r['events_after']) for r in rows],[12,9,9,8,7,6,6,5,4,3])
         for r in rows: self.assertEqual(int(r['events_before'])-int(r['events_after']),int(r['rejected_events']))
         self.assertEqual(len(list(self.output.glob('*.png'))),4)
+        self.assertEqual(len(list(self.output.glob('*.pdf'))),4)
+        self.assertEqual(len(list(self.output.glob('*.plot.json'))),4)
+        self.assertEqual(len(list(self.output.glob('*.root'))),4)
         self.assertEqual(json.loads((self.output/'summary.json').read_text())['new_ROOT_entry_reads'],0)
         with (self.output/'histogram_inventory.csv').open() as f: hist={r['name']:r for r in csv.DictReader(f)}
         self.assertEqual(float(hist['m_gg_preselection']['filled_values']),3)

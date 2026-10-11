@@ -1,0 +1,1726 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "ADD_ALTERNATIVE_HATCHED_HISTOGRAM_STYLE_V1",
+  "status": "PASS",
+  "verified_date": "2026-10-11 Asia/Taipei",
+  "starting_commit": "28e9f031ec52e6c9752912c5138b934689703307",
+  "branch": "codex/atlas-root-plotting-standard",
+  "pull_request_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/6",
+  "original_style_preserved": true,
+  "default_plot_mode": "ORIGINAL_DATA_POINTS",
+  "available_modes": [
+    "ORIGINAL_DATA_POINTS",
+    "HATCHED_STEP",
+    "BOTH"
+  ],
+  "toolchain": {
+    "root_version": "6.40.04",
+    "root_cxxstandard": 20,
+    "cpp_standard": 20,
+    "compiler_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "compiler_version": "x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.3.0-7) 15.3.0",
+    "cmake_version": "cmake version 4.4.4",
+    "ninja_version": "1.13.2",
+    "translation_units": 22,
+    "all_commands_explicit_cxx20": true,
+    "root_and_cxx_linkage": "PASS",
+    "verified_libraries": {
+      "render_histogram_modes": {
+        "libGpad.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40",
+        "libGraf.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40",
+        "libHist.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40",
+        "libCore.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40",
+        "libstdc++.so.6": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6",
+        "libgcc_s.so.1": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1"
+      },
+      "test_hatched_plot": {
+        "libGpad.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40",
+        "libGraf.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40",
+        "libHist.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40",
+        "libCore.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40",
+        "libstdc++.so.6": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6",
+        "libgcc_s.so.1": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1"
+      },
+      "phase3_cutflow": {
+        "libGpad.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40",
+        "libGraf.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40",
+        "libHist.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40",
+        "libCore.so.6.40": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40",
+        "libstdc++.so.6": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6",
+        "libgcc_s.so.1": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1"
+      }
+    },
+    "configuration": "ROOT_VERSION=6.40.04\nROOT_CXX_STANDARD=20\nROOT_DIR=/home/btu/miniforge3/envs/atlas-hh-root/cmake\nCXX_COMPILER=/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++\nCXX_COMPILER_ID=GNU\nCXX_COMPILER_VERSION=15.3.0\nPROJECT_CXX_STANDARD=20\nCXX_STANDARD_REQUIRED=ON\nCXX_EXTENSIONS=OFF\nCMAKE_VERSION=4.4.4\n"
+  },
+  "ctest_combined": "18/18 PASS",
+  "existing_regression_tests": "15/15 PASS within combined run",
+  "step1_regression": "3/3 PASS",
+  "phase1_regression": "22 schema cases; 8 bounded transfer cases PASS",
+  "plotting_tests": {
+    "style_cases": 29,
+    "original_pdf_gate_cases": 32,
+    "new_cpp_contract_cases": 51,
+    "new_python_gate_cases": 47,
+    "ctest_plotting": "7/7 PASS",
+    "new_fixture_exports": 5
+  },
+  "numerical_identity": {
+    "status": "PASS",
+    "root_version": "6.40.04",
+    "pairs": [
+      {
+        "plot": "phase2/m_gg",
+        "status": "PASS",
+        "histogram_identity": "IEEE-754 exact",
+        "source_interval_identity": "IEEE-754 exact",
+        "band_interval_identity": "IEEE-754 exact",
+        "bins": 80,
+        "eligible_bins": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        "structural_zero_exclusions": [],
+        "entries": 63058.0,
+        "underflow": 0.0,
+        "overflow": 647.0,
+        "confidence_level": 0.682689492137,
+        "original_png_sha256": "668afa1e9b42310948dc851ace2a8bc0f82cd9d765c7c2f581175db1e3bf5252",
+        "default_png_and_json_unchanged": true
+      },
+      {
+        "plot": "phase3/m_gg_preselection",
+        "status": "PASS",
+        "histogram_identity": "IEEE-754 exact",
+        "source_interval_identity": "IEEE-754 exact",
+        "band_interval_identity": "IEEE-754 exact",
+        "bins": 70,
+        "eligible_bins": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "structural_zero_exclusions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70
+        ],
+        "entries": 1689.0,
+        "underflow": 0.0,
+        "overflow": 0.0,
+        "confidence_level": 0.682689492137,
+        "original_png_sha256": "3b0d0c06922cea25df7400c6dac7db4d4a6b80fdd23fa79e5a11ded29967cebd",
+        "default_png_and_json_unchanged": true
+      }
+    ],
+    "existing_original_png_regression": [
+      {
+        "plot": "phase2/deltaR_gg",
+        "png_sha256": "9651676a2bac207fec59b0ec217cb791a60c61c4c328df7290c8227297634169",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/jet_eta",
+        "png_sha256": "0f4539cee38d39cd153ca8cc4fe2caa706313294abb4344d6413ed428ab1df36",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/jet_pt",
+        "png_sha256": "8ff8d39533c5382f664b2539ab765984b00b828dd014e19d637bcd9840489ee4",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/m_gg",
+        "png_sha256": "668afa1e9b42310948dc851ace2a8bc0f82cd9d765c7c2f581175db1e3bf5252",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/m_jj",
+        "png_sha256": "0449fe5ff156a1e5eb83b7fc8bb174287b0f8151615d81d667057a1f8eabbfad",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/photon_eta",
+        "png_sha256": "77fbdecaf1d241efce457d0dbd12bfe5cea06b56f1c7caf1b326b9dc8d4d11bd",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase2/photon_pt",
+        "png_sha256": "864367c8e4299c2ce0ef98b6f11260d857b00f3cc3c9c9a4eea81554973e6ebe",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase3/jet_pt_selected",
+        "png_sha256": "c4470ad85b2d3be14f047a62913591a06d27c5b50a1b5cfaffe9bcc47b773eb9",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase3/m_gg_preselection",
+        "png_sha256": "3b0d0c06922cea25df7400c6dac7db4d4a6b80fdd23fa79e5a11ded29967cebd",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase3/m_jj_preselection",
+        "png_sha256": "65f1e10995fe38152959a12eb2414f1701116371c8b54469e9b3b88c37ddfce6",
+        "exact_original_png": true
+      },
+      {
+        "plot": "phase3/photon_pt_selected",
+        "png_sha256": "27559dd943174067154ceb86dea3df634085ba176c6fc8d1f306d41277390163",
+        "exact_original_png": true
+      }
+    ],
+    "new_collision_event_reads": 0
+  },
+  "original_preservation": {
+    "baseline_commit": "28e9f031ec52e6c9752912c5138b934689703307",
+    "status": "PASS",
+    "historical_tracked_files": 120,
+    "historical_manifest_rows": 133,
+    "all_original_figure_bytes_unchanged": true,
+    "tracked_files": [
+      {
+        "path": "metadata/atlas_plotting_artifact_manifest.csv",
+        "sha256": "95b9f746d0f67f0692a5a7533fc743fe2e28349cbc7e1752acd9725f4aa17380"
+      },
+      {
+        "path": "metadata/atlas_plotting_validation.json",
+        "sha256": "8e7892b2d49f443fad2a192fd099abbdbbca5f20e0e73b5ca89f648b0de83e39"
+      },
+      {
+        "path": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "sha256": "3a9916e12be3b2a963bc0d2bbc28d83ed5d05b8707249bc785c2e1aa03a48a03"
+      },
+      {
+        "path": "metadata/atlas_publication_v2_validation.json",
+        "sha256": "ea47f70fa960439c64ff563ff8aa54f70e6aa121d18ed8b06a2caac6b890009b"
+      },
+      {
+        "path": "metadata/dataset_manifest.csv",
+        "sha256": "ba8c9bfaed0c9ed18a121ea799ae72b10db1408335e9c7840dc04ab60d0f0400"
+      },
+      {
+        "path": "metadata/phase2_artifact_manifest.csv",
+        "sha256": "eb8ef601f05e338fcc965197e3827e80485965dd54d811860e9cac6baadc4678"
+      },
+      {
+        "path": "metadata/phase2_run_manifest.json",
+        "sha256": "f9905fed00fa6c88a39bca04bc17a2579974055a8c644316bc030498d54f6cac"
+      },
+      {
+        "path": "metadata/phase2_unit_evidence.csv",
+        "sha256": "936e0c48eb645d2f9b71af7a69e69bbf6750a7961d03d9d6007327ad623dedcf"
+      },
+      {
+        "path": "metadata/phase3_artifact_manifest.csv",
+        "sha256": "85c6db72fd15921e76444a388cfc717628fa573d3144d9cdc8183099eb8fd43a"
+      },
+      {
+        "path": "metadata/phase3_cutflow.csv",
+        "sha256": "fde6e1b93a862093682a5253b59c79901a448d0367ed31d63bc105256f446a2e"
+      },
+      {
+        "path": "metadata/phase3_histogram_inventory.csv",
+        "sha256": "67721899a395e19da6055fce6cf1dbe03cc6ac2666270d2a65ce725af4961266"
+      },
+      {
+        "path": "metadata/phase3_optional_photon_flags.csv",
+        "sha256": "21fec305f55ba0f53345ecfd27b6e653012c411a9650b93265cbbb2205e04c60"
+      },
+      {
+        "path": "metadata/phase3_run_manifest.json",
+        "sha256": "bc8dfe13b6a1a955a7775e7f9e174fdc083db1fc695ef30fb27f5282a6018069"
+      },
+      {
+        "path": "metadata/phase3_selection_config.ini",
+        "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751"
+      },
+      {
+        "path": "metadata/public_input_inventory.md",
+        "sha256": "6e249d27fd44438d303f2c2cfc0c927b8b35848c14aa10a79b9de4c1366e0762"
+      },
+      {
+        "path": "metadata/root_access_audit.md",
+        "sha256": "1223401b56842faaa1a10f26e49badfa893b732303ea4bc579532f3f3e053f55"
+      },
+      {
+        "path": "metadata/root_access_ledger.json",
+        "sha256": "c0a8a6d73bae78b3a4fcad6828b7a9f5b73fdd28937719c5c399071ea9503d52"
+      },
+      {
+        "path": "metadata/root_schema_manifest.csv",
+        "sha256": "a4692e9abffaada1418647d552994938f040616fafe407d95fbf6e9dad947ffc"
+      },
+      {
+        "path": "metadata/root_schema_summary.txt",
+        "sha256": "3de5e14374f9bc31c156ed1b2273814645dce77317155813bf4913c0ea5eb01d"
+      },
+      {
+        "path": "metadata/sources.md",
+        "sha256": "b7125af60e3fc7c0cfae89f0274fa9e2109823e395a9a212892bbd8244db096b"
+      },
+      {
+        "path": "note/phase0_decision.md",
+        "sha256": "2feef66ba425c9287092447d6bf2af4ecc20978498bcc3e224b54d2759c4674a"
+      },
+      {
+        "path": "note/phase0_feasibility.md",
+        "sha256": "2a4bcbb257238f12221cc5178c13c5febaf24db42a453ebea00d781c29a4ed87"
+      },
+      {
+        "path": "reports/atlas_plotting_standard_validation.md",
+        "sha256": "6428e05363a2196b74e9b8d7a610cc45b6e5659c5cc6cb6339362dd42afafc7a"
+      },
+      {
+        "path": "reports/atlas_publication_v2_validation.md",
+        "sha256": "483eae2c67dbbd7113eceabfec8cc98c92222fe8672fa181bfcd91aa3e79d0cc"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.pdf",
+        "sha256": "41691287ccf307412323630fc619bb05314b362ba3c3919ef9df3dd620c18930"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.plot.json",
+        "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.png",
+        "sha256": "67d0f150c6a94010947792ff4c8c5e7d4423fc4527810b1e2fe9f0ed7b2d2ba0"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.pdf",
+        "sha256": "099ebcab4c39b05f38f78b78c3280920330fcc99d233abc2b171c65c81aaf4af"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.plot.json",
+        "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.png",
+        "sha256": "1cc59c1f35ea3882a0af4bb99032181e865738d06f627caafc8fa5c720757996"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.pdf",
+        "sha256": "73dc01f3c33c9731c1cd6b9ad20d332fcbc040b5d336c2b347f0fdbe20c77fcc"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.plot.json",
+        "sha256": "85e824415eff1351f975375b34fd27f24912ec14944f1a9fdcda5323dc97fe90"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.png",
+        "sha256": "27ea455ca53a80e13fe97d927ad51ed5b40d70545e6bae23591767fdbdd080b6"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.pdf",
+        "sha256": "d32afc03a38b23f17a7ed3c7d76fced869d0979e36b2551151ff60477818cdfd"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.plot.json",
+        "sha256": "c504da60cfd0991e27823bc8a87a0483129d3623177121915d190a738aa07d91"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_gg.png",
+        "sha256": "9b03b78b5045c9d09a1189d409fee52e2b1394d6ca3b08b924ac222893eccd65"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.pdf",
+        "sha256": "fdcbd82faf72f133cae98577032537b15448cf7a324d5d1c2aa4b47ff446e668"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.plot.json",
+        "sha256": "d1bfebb0cd73d997365ece290670738246eb60606c8d74fb5ec776fd6c36f8f1"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/m_jj.png",
+        "sha256": "3f4398c9ed91e78cfcb18c1d1b1a78c43a00b0e1e33fa3811b7141f0aa437b5e"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.pdf",
+        "sha256": "1c9873b1654ed9da92fd70cb47788fad700005a33e90c8c724a789c05aa466ab"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.plot.json",
+        "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.png",
+        "sha256": "a3cf4947419f3fd274fa937174ad345db9591793f0c5cde6522ebd22304906bc"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.pdf",
+        "sha256": "46f8817b8b5c6fdf6dfcafb399ceccaea6422fa8cc16ad35f0fca09a71af07df"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.plot.json",
+        "sha256": "abbc554b6f8d681233a05582f17e11f16cd5d43ccc3cb09db29874f9b4836362"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.png",
+        "sha256": "430371d39616092f7bb5957e0a898fb0b20f95242e6933a9a7eede9f8bd38c6e"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.pdf",
+        "sha256": "33e3aeddda1aedd35b3ccdece295d9fb0200e1abb497972c8d9744dc3b7cd9b2"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.plot.json",
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.png",
+        "sha256": "064111c0826b978a6c6b0c33e082e6e7fe503947651887c6b67ddc849568c829"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.pdf",
+        "sha256": "3f063dba8421934b56f33310e84b03e938e49e495d7195e72e60f980d684a43a"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.plot.json",
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.png",
+        "sha256": "0f09841b0dbf174b9969ded5a4726427ca7b2c20dff9bc653f92673e17344fa7"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.pdf",
+        "sha256": "eb084f3d4a2bf5811aa1b9528c9ae1be86afab58490a9ae8d9d9d8d0727a66ca"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.plot.json",
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.png",
+        "sha256": "bae336bba87574f01d09d406001596f2f9af3dbc8e0b8aa0a7bed120d813a7fe"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.pdf",
+        "sha256": "c7a29927ae70dc96eedf4a5aa0542b95390ad23d9db2dcb98cfc32f6f6218952"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.plot.json",
+        "sha256": "104b5aa4fa1cb6f1eab504b7f5ca7012fdfc2dab720d842d0fd232f51d825aa3"
+      },
+      {
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.png",
+        "sha256": "4fd825a49ca1d4d9e8de79394bfd8b45b2568f2f84e8c7f26f49de392af8fb6c"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.caption.md",
+        "sha256": "00cc451c1d35cebad3411048fed2c60bd42d656d5caad6cd7de6be3ce677e59f"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.pdf",
+        "sha256": "dc82ad9e9e876ac6329db379e115cd8aefb8d594607d5d28b551fc4936510551"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.plot.json",
+        "sha256": "dbb1608f06a671d5dc6fee39c07a878b167f68a242e517894541b00cb546db1b"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.png",
+        "sha256": "9651676a2bac207fec59b0ec217cb791a60c61c4c328df7290c8227297634169"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.caption.md",
+        "sha256": "571bb14c3a57ecda485c7c3276312e147120d9d30dfbb5b0cd414d64d4892a38"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.pdf",
+        "sha256": "246b529a0ddc65580b24ca8bd34c65cef125b973a11f4a0d5edb39e481144853"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.plot.json",
+        "sha256": "6491396a6153515c4986e7470e5140a6212d1e113783ceca99300664975d19f5"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.png",
+        "sha256": "0f4539cee38d39cd153ca8cc4fe2caa706313294abb4344d6413ed428ab1df36"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.caption.md",
+        "sha256": "70c7babd1ab044192549a99f684e362b6712489815a7f136b8cef0faedc36e5a"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.pdf",
+        "sha256": "f9c8a03d2b466a474bd23564702d70c580610b54b100df7ebf317c131b2179bf"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.plot.json",
+        "sha256": "35486795a8310da709c32ac9b3b251b9855c82507ccc85a8b090cc6be20539b6"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.png",
+        "sha256": "8ff8d39533c5382f664b2539ab765984b00b828dd014e19d637bcd9840489ee4"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_gg.caption.md",
+        "sha256": "30d60eac5f22e1d7dbeac40ac73bcf7e96c0f335bcc6394a0fc6e87b7d0f4da4"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_gg.pdf",
+        "sha256": "828f2bd0ef7414401451cce10db8efdd87d4972439109d5bcc76ed31d299d396"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_gg.plot.json",
+        "sha256": "a4de0e4c011d5231b8971aaa002752f3d76f86e3635de2aa56559e9d45dc1a89"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_gg.png",
+        "sha256": "668afa1e9b42310948dc851ace2a8bc0f82cd9d765c7c2f581175db1e3bf5252"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_jj.caption.md",
+        "sha256": "134fea2aa235c8e468b71922ed1879bb6d80cbcd5d5cc35b4787e55e98931705"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_jj.pdf",
+        "sha256": "b2827fc8db631288564da0f9133a4740d45b8a83d27b4e7d001086aa1d9400c7"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_jj.plot.json",
+        "sha256": "ee5868a3668f9f24a7f0b5a109fb9d779b2c4ff69dea28aaa63510dd84364f52"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/m_jj.png",
+        "sha256": "0449fe5ff156a1e5eb83b7fc8bb174287b0f8151615d81d667057a1f8eabbfad"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.caption.md",
+        "sha256": "1f12c11dae5ef2609792cbd7cd4444521c87dd6be1dfefef0e752b3946133367"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.pdf",
+        "sha256": "5adc009c870fb5d89a9c04f62199db4ac28b450de9750464e414cad167455796"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.plot.json",
+        "sha256": "d190d9f5cc5e05ea07c60f81544a75327aa48e9fa9592ecddf830ca794d38297"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.png",
+        "sha256": "77fbdecaf1d241efce457d0dbd12bfe5cea06b56f1c7caf1b326b9dc8d4d11bd"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.caption.md",
+        "sha256": "8e84ea4c315c3830cbc1175f325952accd71e303dbc4df960f0a927576e7e7df"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.pdf",
+        "sha256": "2878e28fbf51970c5738dfd0552c6f427bc5eb60baa5d4ab09ea9eacf1bce90e"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.plot.json",
+        "sha256": "2c1fd5ef650e9625ffd5ade20f0c7e9a381bbabd9f5bcc4f1f80e9510b6db155"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.png",
+        "sha256": "864367c8e4299c2ce0ef98b6f11260d857b00f3cc3c9c9a4eea81554973e6ebe"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.caption.md",
+        "sha256": "9c6ab696d713e870ba269c62c20986f4e9e1f92df410e3e5b13da3aba8d300a4"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.pdf",
+        "sha256": "741044696a4216d6e8710002a7424e08ad6984d5b5fd9db701ca29901c7c4488"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.plot.json",
+        "sha256": "8b30d0f99706b2f81c97322da66b9d3ec5153e6d8cce8d2b9b1bf67e07590f8e"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.png",
+        "sha256": "c4470ad85b2d3be14f047a62913591a06d27c5b50a1b5cfaffe9bcc47b773eb9"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.caption.md",
+        "sha256": "c1fbac29c08fdc5654d4aa5c3d5876af6a1a29ed213778820b7d488c31d49e46"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.pdf",
+        "sha256": "22a3687857ce669c42761cbd949cba9be4adbfda5a6eaf5ee9bf3735a5c04dec"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.plot.json",
+        "sha256": "d9d44ba67a41b1c5347686a34f07906e707618a532787069b0879fee4c1e61a3"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.png",
+        "sha256": "3b0d0c06922cea25df7400c6dac7db4d4a6b80fdd23fa79e5a11ded29967cebd"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.caption.md",
+        "sha256": "134fb256eb7a4264a9b1738264086991c8174122c32d04a6ed7db868360fab0a"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.pdf",
+        "sha256": "6603499d12d22e3dff26da6002c4ca398be6bc430485ff3b6209cb176f522e47"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.plot.json",
+        "sha256": "5140ac5674220bb4a3cbd1a61822fa13c6420383b6c1585539d660064c17037f"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.png",
+        "sha256": "65f1e10995fe38152959a12eb2414f1701116371c8b54469e9b3b88c37ddfce6"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.caption.md",
+        "sha256": "fae31897ba9ce2ffb9d0108a3cdd9565b4ec615b82cfbae284d0f1dae84621c8"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.pdf",
+        "sha256": "65ca4a3a5ec6d36ccc9620af5304072ce6a33ac4063184e48aa63aafe503c869"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.plot.json",
+        "sha256": "04810c845fe61eb815acf0ca7dbe7265c1c421771374c7150fa85fe13170eed7"
+      },
+      {
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.png",
+        "sha256": "27559dd943174067154ceb86dea3df634085ba176c6fc8d1f306d41277390163"
+      },
+      {
+        "path": "reports/figures/phase2/deltaR_gg.png",
+        "sha256": "d1cc9c9048e8e74f8d65e4ff45008d25f5d85d9e7c9709e3c04a40595f237ea9"
+      },
+      {
+        "path": "reports/figures/phase2/jet_eta.png",
+        "sha256": "05df3b40a02199d6e2eaf0a8b2cd8dd54a4ddfe8d2be26d51266546f070edd97"
+      },
+      {
+        "path": "reports/figures/phase2/jet_pt.png",
+        "sha256": "341b783479512d21e08de5ca9d83d6d582b3c6a555eefcb00627f5d775198dd7"
+      },
+      {
+        "path": "reports/figures/phase2/m_gg.png",
+        "sha256": "34e61cd431bfc46c7606bafe8bd3e7cbb37675d627625a9e65f49bf4d6abb9dc"
+      },
+      {
+        "path": "reports/figures/phase2/m_jj.png",
+        "sha256": "aeb010a34d2ab40f7fb56bf7869e1762102c7d18244fe6044013d324de22bcc1"
+      },
+      {
+        "path": "reports/figures/phase2/photon_eta.png",
+        "sha256": "2c3fe05e27f2eedcc08cc31b80f18ffcc7940a6a1848c871f3d9290b16de694f"
+      },
+      {
+        "path": "reports/figures/phase2/photon_pt.png",
+        "sha256": "18dfa28f822ab9ce1e671cd8f202ac7f469d42507c2d418b6f144f65d73f2497"
+      },
+      {
+        "path": "reports/figures/phase3/jet_pt_selected.png",
+        "sha256": "a4336a6ba0aec758ce042ed02b0bdc82fda270432e7e80eba99edd0488d775ef"
+      },
+      {
+        "path": "reports/figures/phase3/m_gg_preselection.png",
+        "sha256": "fea83807fe5f6075f2c34306a8bb975eed52d7b3c14ff2f0c02d3a86275d9915"
+      },
+      {
+        "path": "reports/figures/phase3/m_jj_preselection.png",
+        "sha256": "20e79fa03192bc19cc1f15e672b6a2aa80f8c840a7d5f43772de14d72e80f6fa"
+      },
+      {
+        "path": "reports/figures/phase3/photon_pt_selected.png",
+        "sha256": "901391ce61fdd164b25ace51b0ed13a21ef4a9edf207bedc55881f8c2e023b59"
+      },
+      {
+        "path": "reports/phase1_decision.md",
+        "sha256": "b57cc46d05cbc6fe800cbb2989f45bfb3e392b6c34e978390aec02155ab6e57d"
+      },
+      {
+        "path": "reports/phase1_schema_validation.md",
+        "sha256": "8d1700f6d75bdb92b1c65c6662a9e2fda0c5472a95b961686a6f9019a24cdab9"
+      },
+      {
+        "path": "reports/phase2_decision.md",
+        "sha256": "8f93245aab69666cfcd512ba28d7a6480c19e3b9770a8e1672bd55f722bc094b"
+      },
+      {
+        "path": "reports/phase2_kinematic_validation.md",
+        "sha256": "c540faf6eedf06feb4ac73a7daa85e2b61b6c0c3e7b4c382bcc599491dcc7f7e"
+      },
+      {
+        "path": "reports/phase3_cutflow.md",
+        "sha256": "1ceb835e42075a4ea5df2a3c64940e1f7bec92f68f65d3e4c5f0a3075fffa215"
+      },
+      {
+        "path": "reports/phase3_decision.md",
+        "sha256": "34ac743db0ae5e0456f66df4a22c653796880075ecfa7e47cd0f8b69f1d326b4"
+      },
+      {
+        "path": "reports/phase3_validation.md",
+        "sha256": "2e76ec55d26a2e6078427c7cee65985091385030a9f7c150c93ca064e9dc9380"
+      },
+      {
+        "path": "reports/phase4_readiness_assessment.md",
+        "sha256": "45282005d9c27db291614c09f6f39fcc2a95730d0c195d94eda8fc9bae59ee70"
+      }
+    ],
+    "manifest_rows": [
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "metadata/phase2_unit_evidence.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": ".local/multiphase_20261010T092242Z/phase2_unit_probe.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/phase2_diagnostics.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/events.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/stages.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/histogram_inventory.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/photon_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/photon_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/jet_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/jet_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/m_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/m_jj.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase2_artifact_manifest.csv",
+        "path": "reports/figures/phase2/deltaR_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "metadata/phase3_selection_config.ini",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "metadata/phase3_run_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "metadata/phase3_cutflow.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "metadata/phase3_optional_photon_flags.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "metadata/phase3_histogram_inventory.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/events.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "outputs/phase3_20261010T092242Z/summary.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/figures/phase3/m_gg_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/figures/phase3/m_jj_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/figures/phase3/photon_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/figures/phase3/jet_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/phase3_cutflow.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/phase3_validation.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/phase3_decision.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/phase3_artifact_manifest.csv",
+        "path": "reports/phase4_readiness_assessment.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/deltaR_gg.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/deltaR_gg.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_eta.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/jet_eta.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/jet_pt.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/jet_pt.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_gg.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_gg.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/m_gg.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_jj.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_jj.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/m_jj.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/m_jj.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_eta.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/photon_eta.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase2/photon_pt.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase2/photon_pt.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/jet_pt_selected.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/jet_pt_selected.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_gg_preselection.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/m_gg_preselection.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/m_jj_preselection.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/m_jj_preselection.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v1/phase3/photon_pt_selected.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/atlas_plotting_v1_20261010/phase3/photon_pt_selected.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/phase2_diagnostics.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/events.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_plotting_artifact_manifest.csv",
+        "path": "metadata/phase3_selection_config.ini",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/deltaR_gg.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/deltaR_gg.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_eta.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/jet_eta.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/jet_pt.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/jet_pt.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_gg.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_gg.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_gg.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_gg.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/m_gg.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_jj.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_jj.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_jj.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/m_jj.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/m_jj.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_eta.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/photon_eta.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase2/photon_pt.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase2/photon_pt.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/jet_pt_selected.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase3/jet_pt_selected.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_gg_preselection.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase3/m_gg_preselection.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/m_jj_preselection.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase3/m_jj_preselection.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.pdf",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.png",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.plot.json",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "reports/figures/atlas_v2/phase3/photon_pt_selected.caption.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/atlas_publication_v2_20261011/phase3/photon_pt_selected.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/phase2_diagnostics.root",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "outputs/phase2_20261010T092242Z/events.csv",
+        "status": "PASS"
+      },
+      {
+        "manifest": "metadata/atlas_publication_v2_artifact_manifest.csv",
+        "path": "metadata/phase3_selection_config.ini",
+        "status": "PASS"
+      }
+    ]
+  },
+  "final_pdf_quality": [
+    {
+      "plot": "outputs/hatched_v1_20261011/delivery/phase2/m_gg_hatched",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            360.765284,
+            63.018949,
+            415.363565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 Period D",
+          "box_points": [
+            419.697752,
+            63.018949,
+            519.352867,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 13553,
+      "plot_interior_pixels": 5983,
+      "rendered_png": ".local/hatched_v1/delivery_renders/m_gg_hatched_2c34f503.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "plot_mode": "HATCHED_STEP",
+      "hatched_numerics": {
+        "bins": 80,
+        "eligible_bins": 80,
+        "excluded_zero_bins": 0,
+        "native_poisson_oracle": "PASS",
+        "full_bin_rectangles": "PASS"
+      },
+      "legend_boxes": [
+        {
+          "label": "Data (step histogram)",
+          "box_points": [
+            283.124,
+            127.425264,
+            405.759223,
+            139.224471
+          ]
+        },
+        {
+          "label": "68.27% Poisson statistical interval",
+          "box_points": [
+            283.124,
+            151.873264,
+            475.95494,
+            163.672471
+          ]
+        }
+      ],
+      "colored_diagonal_vector_paths": 92,
+      "visual_review": "Rendered complete page inspected by author and independent reviewers: diagonal band and central step visible; glyphs, ticks, annotations and legend readable; no overlap or clipping."
+    },
+    {
+      "plot": "outputs/hatched_v1_20261011/delivery/phase3/m_gg_hatched",
+      "pages": 1,
+      "page_points": [
+        425.0,
+        567.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        567.0,
+        425.0
+      ],
+      "png_pixels": [
+        800,
+        600
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "standard": "atlas-root-plot-v2",
+      "compact_annotation_boxes": [
+        {
+          "label": "ATLAS Open Data",
+          "box_points": [
+            372.047,
+            38.106553,
+            518.775053,
+            54.494315
+          ]
+        },
+        {
+          "label": "13 TeV",
+          "box_points": [
+            360.765284,
+            63.018949,
+            415.363565,
+            77.440254
+          ]
+        },
+        {
+          "label": "2015 Period D",
+          "box_points": [
+            419.697752,
+            63.018949,
+            519.352867,
+            77.440254
+          ]
+        },
+        {
+          "label": "Exploratory, provisional",
+          "box_points": [
+            357.165,
+            86.403949,
+            519.182515,
+            100.825254
+          ]
+        }
+      ],
+      "caption_preservation": "PASS",
+      "layout": {
+        "nominal_width": 800,
+        "nominal_height": 600,
+        "left_margin": 0.1599999964237213,
+        "right_margin": 0.05000000074505806,
+        "top_margin": 0.05000000074505806,
+        "bottom_margin": 0.1599999964237213,
+        "axis_title_size": 0.05,
+        "axis_label_size": 0.045,
+        "text_size": 0.04,
+        "experiment_text_size": 0.045,
+        "marker_style": 20,
+        "marker_size": 0.9,
+        "label_position": "upper_right",
+        "label_x": 0.9149999992549419,
+        "label_y": 0.88,
+        "single_series_legend": false
+      },
+      "png_decode": "PASS",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        591,
+        443
+      ],
+      "nonwhite_pixels": 20033,
+      "plot_interior_pixels": 12189,
+      "rendered_png": ".local/hatched_v1/delivery_renders/m_gg_hatched_bf674d96.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "plot_mode": "HATCHED_STEP",
+      "hatched_numerics": {
+        "bins": 70,
+        "eligible_bins": 55,
+        "excluded_zero_bins": 15,
+        "native_poisson_oracle": "PASS",
+        "full_bin_rectangles": "PASS"
+      },
+      "legend_boxes": [
+        {
+          "label": "Data (step histogram)",
+          "box_points": [
+            283.124,
+            127.425264,
+            405.759223,
+            139.224471
+          ]
+        },
+        {
+          "label": "68.27% Poisson statistical interval",
+          "box_points": [
+            283.124,
+            151.873264,
+            475.95494,
+            163.672471
+          ]
+        }
+      ],
+      "colored_diagonal_vector_paths": 410,
+      "visual_review": "Rendered complete page inspected by author and independent reviewers: diagonal band and central step visible; glyphs, ticks, annotations and legend readable; no overlap or clipping."
+    }
+  ],
+  "artifact_manifest": "metadata/hatched_histogram_artifact_manifest.csv",
+  "artifact_manifest_rows": 19,
+  "statistical_confidence_level": 0.682689492137,
+  "line_color": "kAzure+2 (862)",
+  "band_color": "kAzure+1 (861)",
+  "hatch_fill_style": 3354,
+  "new_collision_event_reads": 0,
+  "new_downloads": 0,
+  "initial_validation": "15/18 PASS; retained log .local/hatched_v1/ctest_initial.log",
+  "initial_failure_resolution": "Saved native style was correct; ROOT ForceStyle replaced it during test reads. Scoped native reads preserve saved attributes and restore the caller flag. Caption scope validator recognizes explicit equivalent no-systematics wording. Assertions and historical tests retained.",
+  "limitations": [
+    "Units remain PROVISIONAL; luminosity is not validated or displayed.",
+    "Raw unweighted event-count Poisson bands only; MC, weighted and correlated object counts are rejected.",
+    "Phase3 display support is complete bins [105,160); existing inclusive selection is unchanged. A nonzero event in the excluded [160,161) boundary bin causes refusal.",
+    "Native ROOT outputs and source caches are ignored local artifacts; fresh clones require the pinned local sources.",
+    "Vector parser is bounded to these native ROOT PDF outputs and complements page-by-page visual review.",
+    "PR4/PR5/PR6 remain open; remote CI NO_CHECKS is not CI PASS. PC2/PC3 remain PENDING."
+  ]
+}

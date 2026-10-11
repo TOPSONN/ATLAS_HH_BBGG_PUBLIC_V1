@@ -1,0 +1,15 @@
+Figure: jet_pt_selected. Sample: DATA.
+ATLAS Open Data. Independent exploratory analysis.
+Record: 93915. Period: 2015 periodD.
+Collision energy: sqrt(s) = 13 TeV.
+Inspected: 63095. Accepted: 1689. Entries [100,63195).
+Selection: study-preselection-v1; C9; leading photons and inclusive jets.
+Units: PROVISIONAL. Weighting: Raw unweighted counts.
+Integrated luminosity is not shown; usable luminosity is not validated for this sample.
+X axis: p_{T}^{jet} [GeV]. Y axis: Objects / 5 GeV.
+Native binning: 60 x bins over [0,300). Entries: 3378.
+Underflow: 0. Overflow: 18. Original bin errors preserved.
+Object-count markers without error bars; within-event correlations are not modeled.
+ATLAS Open Data exploratory diagnostic;
+raw unweighted GamGam skim;
+not the official ATLAS HH analysis.

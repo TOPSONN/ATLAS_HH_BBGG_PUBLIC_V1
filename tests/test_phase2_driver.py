@@ -1,6 +1,7 @@
 """Offline executable contract tests against native-RVec synthetic fixtures."""
 import csv
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -54,6 +55,8 @@ class DriverTests(unittest.TestCase):
         self.assertEqual([int(r['entry']) for r in rows], [0,1,2])
         self.assertEqual(int(rows[0]['event']), 9007199254740993)
         self.assertEqual(len(list(self.output.glob('*.png'))), 7)
+        self.assertEqual(len(list(self.output.glob('*.pdf'))), 7)
+        self.assertEqual(len(list(self.output.glob('*.plot.json'))), 7)
         self.assertGreater((self.output/'phase2_diagnostics.root').stat().st_size, 100)
         with (self.output/'histogram_inventory.csv').open() as f:
             inventory = {r['name']: r for r in csv.DictReader(f)}
@@ -76,5 +79,13 @@ class DriverTests(unittest.TestCase):
         with (self.output/'events.csv').open() as f:
             rows=list(csv.DictReader(f))
         self.assertEqual([int(r['entry']) for r in rows],[1,2])
+
+    def test_unknown_provenance_rejected(self):
+        unknown=Path(self.temp.name)/'unknown.root'
+        shutil.copyfile(fixtures/'0.root',unknown)
+        result=self.run_driver(source=unknown)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('Unrecognized input provenance',result.stderr)
+        self.assertFalse(self.output.exists())
 
 if __name__ == '__main__': unittest.main()
