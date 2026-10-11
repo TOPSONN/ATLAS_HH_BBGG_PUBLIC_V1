@@ -30,6 +30,18 @@ output, including edges, errors and flows. Never crop or post-process preview
 images to manufacture publication alignment. Compare representative published
 ATLAS figure layouts without copying data, luminosity, models or official labels.
 
+The optional HATCHED_STEP mode is additive: ORIGINAL_DATA_POINTS remains the
+default, and BOTH generates separate original and `_hatched` outputs. Preserve
+every existing figure and its appearance. Hatched raw event-count data uses the
+same central 68.27% Garwood intervals, blue step lines and native full-bin-width
+rectangles with diagonal fill 3354. Its two-entry legend explains data and
+statistical interval; it must not cover measurements or annotations. Never use
+this Poisson mode for weighted MC or correlated object counts. Explicit band
+support can suppress only structural zero bins outside a selection; preserve
+the full source histogram/intervals, record the exclusions and reject excluded
+nonzero bins. Do not change selection boundaries or reinterpret structural zeros
+as measurements. Render and inspect the diagonal pattern in the native vector PDF.
+
 Keep collision inputs and generated ROOT objects ignored. Preserve historical
 artifacts; identify the current standard-compliant output set explicitly. New
 physics/MC/fit/uncertainty plots must extend the same tested module and documented

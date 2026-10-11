@@ -68,6 +68,77 @@ label, logo, `ATLAS Preliminary`, `ATLAS Internal`, `ATLAS Official` or
 `ATLAS Simulation Preliminary` label is authorized. Styling does not authorize
 new physics analysis or upgrade prior PARTIAL conclusions.
 
+## Additive alternative: HATCHED_STEP
+
+`ORIGINAL_DATA_POINTS` remains the default. The original six-argument
+`RenderHistogram` and existing commands retain their black markers, vertical
+Poisson errors, labels, binning and output paths. Never overwrite or rename
+existing figures. The optional overload accepts `RenderOptions` with mode
+`ORIGINAL_DATA_POINTS`, `HATCHED_STEP` or `BOTH`; the latter renders separate
+original and `<base>_hatched` outputs in one run. All output paths must be new.
+
+The alternative uses the same native histogram: a solid `kAzure+2` step line
+of width 2, with `kAzure+1` uncertainty rectangles filled using opaque ROOT
+hatch **3354**. Draw axes, the TGraphAsymmErrors rectangles with option `2`,
+then `HIST SAME`, then compact annotations and the two-entry legend. Do not use
+graph options `3`/`4` or any interpolation/smoothing. Every eligible rectangle
+covers exactly the source bin edges; its asymmetric y errors are the existing
+central **0.682689492137** Garwood interval. Keep the physical display floor at
+zero and retain stored errors. The legend identifies Data (step histogram) and
+68.27% Poisson statistical interval, with no systematic or fitted-model claim.
+
+This raw-event-count mode accepts unweighted collision DATA and clearly labeled
+synthetic test fixtures. MC, weighted/normalized data and multiple-object counts
+are rejected until their appropriate uncertainty semantics are separately
+implemented and validated. A visualization mode is not a new measurement.
+
+For the new Period D figures, the compact energy line says
+`#sqrt{s} = 13 TeV, 2015 Period D`. Original figures keep their existing
+`2015 data` line unchanged. Both modes use the same publication axes and fonts.
+The alternative can use modest extra y headroom for its compact legend;
+annotation/legend placement still requires visual inspection.
+
+`RenderOptions::band_support` optionally records aligned display support.
+Only fully contained bins get a band; excluded bins must be zero or rendering
+fails. Save the full histogram and full source interval graph, plus the eligible
+band graph and explicit bin-index/exclusion metadata. Eligible zero-count bins
+retain their positive upper Poisson interval. Out-of-selection structural zeros
+do not become independent measurements in the alternative band.
+
+The existing Phase 3 selection is inclusive **105 <= mgg <= 160 GeV**. Its
+70-bin, 100-170 GeV histogram has structural zero bins outside fully contained
+display bins 6-60. The bin beginning at 160 GeV is currently zero; an event
+exactly at 160 would enter that bin. If a future source has nonzero excluded
+content, fail rather than silently hide it. This display mask changes neither
+the inclusive selection nor the original plot. Phase 2 remains 80 bins over
+0-400 GeV with Events / 5 GeV. Phase 3 remains Events / 1 GeV; do not rebin to
+make these labels interchangeable.
+
+Reproduce the new views from the checksum-pinned V2 native objects:
+
+```bash
+# New build/output directories; existing ROOT/C++20 environment required.
+bash scripts/validate_plotting.sh "$HOME/build/atlas_hatched_validate"
+bash scripts/render_alternative_mass_plots.sh \
+  "$HOME/build/atlas_hatched_validate" outputs/atlas_hatched_reproduce BOTH
+```
+
+The new wrapper defaults to ORIGINAL_DATA_POINTS when its mode is omitted.
+It opens only two per-figure ROOT histograms; no event tree or remote input is
+read. Hatched sidecars add source object names, confidence/model, styles,
+eligible bin indices, support/exclusions and annotation/legend placement. The
+existing original sidecar contract is unchanged. Save all native objects and
+identical captions. Dedicated tests cover interval identity, rectangle coverage,
+zero bins, unsafe dataset semantics, mode dispatch and overwrite prevention.
+
+The current alternatives are under `reports/figures/hatched_v1/phase3/` (the
+primary 1 GeV plot) and `reports/figures/hatched_v1/phase2/` (the unchanged
+full-range 5 GeV plot). Each uses the additional filename `m_gg_hatched`.
+Phase 3 preserves its native source name `m_gg_preselection`; its delivery
+filename is a byte-identical copy of the new ROOT export. See the
+[validation report](../reports/hatched_histogram_style_validation.md) and
+[manifest](../metadata/hatched_histogram_artifact_manifest.csv).
+
 ## Required outputs and complete scientific caption
 
 Each finalized plot produces `<name>.pdf`, `<name>.png`, `<name>.root`,

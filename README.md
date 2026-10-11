@@ -45,6 +45,12 @@ remain **PENDING** until this procedure is independently executed there.
 
 ## Public-data-only policy
 
+Optional `HATCHED_STEP` and `BOTH` modes add a native blue step histogram and
+diagonal Garwood statistical rectangles. `ORIGINAL_DATA_POINTS` remains the
+default. See the [plotting standard](docs/ATLAS_PLOTTING_STANDARD.md) and
+[hatched-style validation](reports/hatched_histogram_style_validation.md).
+The original publication figures and their scientific contents are preserved.
+
 - Use only data and documentation explicitly released for public use. Record
   source URLs, release versions, and applicable usage terms when analysis begins.
 - Never commit internal ATLAS data, collaboration-restricted documents, private

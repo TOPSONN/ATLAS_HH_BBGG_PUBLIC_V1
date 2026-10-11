@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <optional>
 #include <string>
+#include <utility>
 class TH1;
 class TCanvas;
 class TLegend;
@@ -11,6 +12,14 @@ class TObject;
 namespace atlas::plotting {
 enum class SampleKind { Data, Simulation, Synthetic };
 enum class LabelPlacement { UpperLeft, UpperRight };
+enum class PlotMode { ORIGINAL_DATA_POINTS, HATCHED_STEP, BOTH };
+struct RenderOptions {
+  PlotMode mode=PlotMode::ORIGINAL_DATA_POINTS;
+  // Display-only band support. Bounds must coincide with source bin edges;
+  // excluded bins must be structural zeros. The full source histogram and
+  // all-bin 68.2689492137% Garwood intervals are always retained.
+  std::optional<std::pair<double,double>> band_support;
+};
 struct Metadata {
   SampleKind kind=SampleKind::Synthetic;
   std::string record,period,selection,unit_status,weighting="Raw unweighted counts";
@@ -31,4 +40,9 @@ void ExportPhysicsCanvas(TCanvas&,TObject&,const std::filesystem::path& base,con
 // markers only; their within-event correlations are not approximated as Poisson.
 void RenderHistogram(TH1&,const std::filesystem::path& base,const Metadata&,
                      const std::string& x,const std::string& y,bool event_counts);
+// Additive alternative; the original overload and its metadata remain intact.
+// HATCHED_STEP writes base_hatched. BOTH preflights both stems before export.
+void RenderHistogram(TH1&,const std::filesystem::path& base,const Metadata&,
+                     const std::string& x,const std::string& y,bool event_counts,
+                     const RenderOptions&);
 }
