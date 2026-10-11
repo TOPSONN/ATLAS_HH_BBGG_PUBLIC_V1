@@ -1,4 +1,5 @@
 #include "AtlasLocalEvents.h"
+#include "AtlasPlotting.h"
 #include <TCanvas.h>
 #include <TH1D.h>
 #include <TFile.h>
@@ -14,6 +15,7 @@
 #include <numbers>
 #include <stdexcept>
 #include <cmath>
+#include <array>
 
 using namespace atlas;
 int main(int argc, char** argv) {
@@ -26,6 +28,11 @@ int main(int argc, char** argv) {
       throw std::invalid_argument("Invalid scale or bounded entry range");
     const std::filesystem::path output(argv[2]);
     if (std::filesystem::exists(output)) throw std::runtime_error("Output exists; refusing overwrite or accidental duplicate processing");
+    const std::filesystem::path input(argv[1]);
+    const bool audited=input.filename()=="ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root";
+    const bool synthetic=input.parent_path().filename()=="local_events_fixtures" && input.extension()==".root" &&
+      (input.stem()=="0" || input.stem()=="1" || input.stem()=="2" || input.stem()=="3" || input.stem()=="4");
+    if(!audited && !synthetic)throw std::invalid_argument("Unrecognized input provenance; approved GamGam input or generated schema fixture required");
     events::Reader reader(argv[1]);
     const auto end = std::min<std::int64_t>(requested_end, reader.entries());
     if (start >= end) throw std::out_of_range("No available entries in requested range");
@@ -94,31 +101,25 @@ int main(int argc, char** argv) {
       stages << (stage_start<10000 ? "B" : "C") << ',' << stage_start << ',' << stage_end << ',' << processed << ',' << stage_invalid << ',' << (stage_pass?"PASS":"FAIL_NUMERICAL_GATE") << '\n'; stages.flush();
       if(!stage_pass) throw std::runtime_error("More than 1% invalid events in stage; dependent processing stopped, rows preserved");
     }
-    gROOT->SetBatch(true); gStyle->SetOptStat(0); gStyle->SetCanvasColor(0); gStyle->SetPadColor(0);
-    gStyle->SetPadTickX(1); gStyle->SetPadTickY(1); TGaxis::SetMaxDigits(3);
-    const bool audited = std::filesystem::path(argv[1]).filename()=="ODEO_FEB2025_v0_GamGam_data15_periodD.GamGam.root";
+    plotting::Metadata metadata;
+    metadata.kind=audited?plotting::SampleKind::Data:plotting::SampleKind::Synthetic;
+    metadata.record=audited?"93915":"synthetic-fixture";metadata.period=audited?"2015 periodD":"Synthetic fixture";
+    if(audited)metadata.energy_tev=13.;
+    metadata.inspected=seen;metadata.accepted=seen-invalid;metadata.start=start;metadata.end=end;metadata.unit_status=status;
+    const std::array<const char*,7> axes{"p_{T}^{#gamma} [GeV]","#eta^{#gamma}","p_{T}^{jet} [GeV]","#eta^{jet}","m_{#gamma#gamma} [GeV]","m_{jj} [GeV]","#Delta R_{#gamma#gamma} (dimensionless)"};
+    const std::array<const char*,7> yaxes{"Objects / 5 GeV","Objects / bin","Objects / 5 GeV","Objects / bin","Events / 5 GeV","Events / 10 GeV","Events / bin"};
+    const std::array<const char*,7> selections{"Valid kinematics; all photon objects","Valid kinematics; all photon objects","Valid kinematics; all inclusive jet objects","Valid kinematics; all inclusive jet objects","Valid kinematics; leading photon pair","Valid kinematics; leading inclusive jet pair","Valid kinematics; leading photon pair"};
     std::ofstream inventory(output/"histogram_inventory.csv");
     inventory << "name,filled_values,in_range,underflow,overflow\n" << std::setprecision(17);
     TFile root((output/"phase2_diagnostics.root").c_str(),"CREATE");
     if(root.IsZombie()) throw std::runtime_error("Cannot create histogram ROOT output");
-    for(auto& h : hist) {
+    for(std::size_t i=0;i<hist.size();++i) {
+      auto& h=hist[i];
       inventory << h->GetName() << ',' << h->GetEntries() << ',' << h->Integral() << ',' << h->GetBinContent(0) << ',' << h->GetBinContent(h->GetNbinsX()+1) << '\n';
       h->Write();
-      TCanvas canvas("diagnostic_canvas","exploratory diagnostic",1100,850);
-      canvas.SetLeftMargin(.14); canvas.SetBottomMargin(.13); canvas.SetTopMargin(.29);
-      h->SetLineColor(kBlue+2); h->SetLineWidth(2); h->SetMinimum(0); h->Draw("HIST");
-      TLatex text; text.SetNDC(); text.SetTextFont(42); text.SetTextSize(.028);
-      text.DrawLatex(.14,.955,"ATLAS Open Data exploratory diagnostic;");
-      text.DrawLatex(.14,.918,"raw unweighted GamGam skim;");
-      text.DrawLatex(.14,.881,"not the official ATLAS HH analysis.");
-      text.SetTextSize(.023);
-      const std::string label=(audited?"Record 93915 / data15 periodD":"Synthetic/local test input")+std::string(" | unit status: ")+status;
-      text.DrawLatex(.14,.837,label.c_str());
-      const std::string counts="Unique source entries ["+std::to_string(start)+","+std::to_string(end)+"): "+std::to_string(seen)+"; invalid events excluded: "+std::to_string(invalid);
-      text.DrawLatex(.14,.802,counts.c_str());
-      TLegend legend(.59,.655,.94,.713); legend.SetBorderSize(0); legend.SetFillStyle(0); legend.SetTextSize(.022);
-      legend.AddEntry(h.get(),"Raw counts; no event weights","l"); legend.Draw();
-      canvas.SaveAs((output/(std::string(h->GetName())+".png")).c_str());
+      metadata.selection=selections[i];
+      metadata.accepted=i==5?jet_pairs:seen-invalid;
+      plotting::RenderHistogram(*h,output/h->GetName(),metadata,axes[i],yaxes[i],i>=4);
     }
     root.Close();
     std::ofstream summary(output/"summary.json");

@@ -1,0 +1,484 @@
+{
+  "standard": "atlas-root-plot-v1",
+  "verified_date": "2026-10-11 Asia/Taipei",
+  "base_commit": "830af3031da80c1c5f3c01ccec22e3619e95f41f",
+  "toolchain": {
+    "root_version": "6.40.04",
+    "cpp_standard": 20,
+    "compiler_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "compiler_version": "15.3.0",
+    "cmake_version": "cmake version 4.4.4",
+    "translation_units": 20,
+    "all_commands_explicit_cxx20": true,
+    "root_library_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib",
+    "root_linkage": "PASS",
+    "root_cxxstandard": 20,
+    "libstdcxx_and_libgcc_from_conda_environment": true
+  },
+  "ctest_combined": "15/15 PASS",
+  "plotting_final": "4/4 PASS",
+  "style_cases": 21,
+  "pdf_gate_cases": 13,
+  "phase2_numeric_closure": [
+    {
+      "name": "deltaR_gg",
+      "entries": 63058.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 0.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "26232d2f7ce2916fa69e1415647a950cd0b415cf32e79016b7b203284387677c"
+    },
+    {
+      "name": "jet_eta",
+      "entries": 64556.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 0.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "71ec9a930553a819743c3505e541a6957895c4d58c19b57b3f985e0b94ef578b"
+    },
+    {
+      "name": "jet_pt",
+      "entries": 64556.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 377.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "760daf3fba4292af06e98df09d0b7ab4f327d627d670169aca24d0a37b814f2c"
+    },
+    {
+      "name": "m_gg",
+      "entries": 63058.0,
+      "regular_bins": 80,
+      "underflow": 0.0,
+      "overflow": 647.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "5c0a9ca8e0ad69a6263f7a792ba535edcfb8573d1dcfde49890524a2f0057978"
+    },
+    {
+      "name": "m_jj",
+      "entries": 17191.0,
+      "regular_bins": 80,
+      "underflow": 0.0,
+      "overflow": 86.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "41c5c4ead2c42030db58ac36be4d0ae8f535e8df5f17f806cd5e7fcd20bab456"
+    },
+    {
+      "name": "photon_eta",
+      "entries": 126586.0,
+      "regular_bins": 50,
+      "underflow": 0.0,
+      "overflow": 0.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "d1f3210e296ce064ca8d275aa577f80f794ada53236be3d48702737975a5d573"
+    },
+    {
+      "name": "photon_pt",
+      "entries": 126586.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 188.0,
+      "bin_edges_contents_source_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "58f8934dc07ef48c7e64d7139370c33e4300ae809e2c22cb3a763d2e74bf745e"
+    }
+  ],
+  "phase3_numeric_closure": [
+    {
+      "name": "m_gg_preselection",
+      "entries": 1689.0,
+      "regular_bins": 70,
+      "underflow": 0.0,
+      "overflow": 0.0,
+      "independent_cache_bin_edges_contents_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "3ffd1aa26e29179075fc2e3b4cab4f919d2c8a4dc74f057b0294a94b1f8a2e3f"
+    },
+    {
+      "name": "m_jj_preselection",
+      "entries": 1689.0,
+      "regular_bins": 80,
+      "underflow": 0.0,
+      "overflow": 9.0,
+      "independent_cache_bin_edges_contents_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "a1975c0fb6c490d4c2b2b898dd31c89bb79a9f9eb28b1327f9188394bc4b9d0a"
+    },
+    {
+      "name": "photon_pt_selected",
+      "entries": 3378.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 0.0,
+      "independent_cache_bin_edges_contents_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "4e7e16a8266b96baf2a729ee39362101207285f8f3be7414c92d496769581399"
+    },
+    {
+      "name": "jet_pt_selected",
+      "entries": 3378.0,
+      "regular_bins": 60,
+      "underflow": 0.0,
+      "overflow": 18.0,
+      "independent_cache_bin_edges_contents_errors_entries_moments": "EXACT_MATCH",
+      "histogram_numeric_sha256": "e1e69765170f1bbbf6ed8eff836245a738eed4888b9ebb34212bcfb62cc8fa8e"
+    }
+  ],
+  "independent_cutflow": [
+    63095,
+    63058,
+    63058,
+    53978,
+    53978,
+    51136,
+    12564,
+    2842,
+    1689,
+    1689
+  ],
+  "optional_raw_flag_counts": [
+    175,
+    48
+  ],
+  "historical_files_preserved": 37,
+  "historical_manifest_rows_checked": 28,
+  "phase3_csv_byte_closure": "EXACT_MATCH",
+  "new_ROOT_entry_reads": 0,
+  "new_remote_dataset_bytes": 0,
+  "scientific_status": "UNCHANGED_PROVISIONAL",
+  "plots": [
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/deltaR_gg",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 15951,
+      "plot_interior_pixels": 221,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/deltaR_gg_b1ffb14a.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/jet_eta",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 15465,
+      "plot_interior_pixels": 316,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/jet_eta_a72a0b70.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/jet_pt",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 16862,
+      "plot_interior_pixels": 82,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/jet_pt_29110562.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/m_gg",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 16710,
+      "plot_interior_pixels": 336,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/m_gg_dc81d63b.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/m_jj",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 17873,
+      "plot_interior_pixels": 348,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/m_jj_e7ae6a33.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/photon_eta",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 16236,
+      "plot_interior_pixels": 480,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/photon_eta_45b6852c.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase2/photon_pt",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 16094,
+      "plot_interior_pixels": 106,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/photon_pt_fbfc9d61.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase3/jet_pt_selected",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 17205,
+      "plot_interior_pixels": 127,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/jet_pt_selected_81ced37c.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase3/m_gg_preselection",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 19713,
+      "plot_interior_pixels": 3130,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/m_gg_preselection_ec6730fe.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase3/m_jj_preselection",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 18939,
+      "plot_interior_pixels": 985,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/m_jj_preselection_51b4c0d0.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    },
+    {
+      "plot": "outputs/atlas_plotting_v1_20261010/phase3/photon_pt_selected",
+      "pages": 1,
+      "page_points": [
+        567.0,
+        713.0
+      ],
+      "page_rotation": 90,
+      "effective_crop_points": [
+        713.0,
+        567.0
+      ],
+      "png_pixels": [
+        1096,
+        872
+      ],
+      "font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nTimes-Italic                         Type 1            WinAnsi          no  no  no       7  0\nTimes-Bold                           Type 1            WinAnsi          no  no  no       8  0\nTimes-BoldItalic                     Type 1            WinAnsi          no  no  no       9  0\nHelvetica                            Type 1            WinAnsi          no  no  no      10  0\nHelvetica-Oblique                    Type 1            WinAnsi          no  no  no      11  0\nHelvetica-Bold                       Type 1            WinAnsi          no  no  no      12  0\nHelvetica-BoldOblique                Type 1            WinAnsi          no  no  no      13  0\nCourier                              Type 1            WinAnsi          no  no  no      14  0\nCourier-Oblique                      Type 1            WinAnsi          no  no  no      15  0\nCourier-Bold                         Type 1            WinAnsi          no  no  no      16  0\nCourier-BoldOblique                  Type 1            WinAnsi          no  no  no      17  0\nSymbol                               Type 1            Symbol           no  no  no      18  0\nTimes-Roman                          Type 1            WinAnsi          no  no  no      19  0\nZapfDingbats                         Type 1            ZapfDingbats     no  no  no      20  0\nSymbol                               Type 1            Symbol           no  no  no      21  0\n",
+      "vector_no_raster_images": true,
+      "render_pixels": [
+        743,
+        591
+      ],
+      "nonwhite_pixels": 17595,
+      "plot_interior_pixels": 179,
+      "rendered_png": "outputs/atlas_plotting_v1_20261010/pdf_crop_renders/photon_pt_selected_be4c5bcc.png",
+      "automated_status": "PASS",
+      "visual_status": "PASS",
+      "visual_inspection": "Each CropBox PDF render inspected individually for readable axes, Greek glyphs, labels, legend, clipping, overlap and nonblank content.",
+      "inspection_date": "2026-10-11 Asia/Taipei"
+    }
+  ],
+  "phase2_driver_cases": 11,
+  "unknown_input_provenance_rejected": true,
+  "ctest_final_after_all_code_changes": "15/15 PASS",
+  "local_test_log": ".local/atlas_plotting_v1_20261010/ctest_delivery_final.log",
+  "local_test_log_sha256": "16c795155b40ae0e6256270de07efa0e594c71f1117d9e7e0b20e4fdd9d2d1d8"
+}

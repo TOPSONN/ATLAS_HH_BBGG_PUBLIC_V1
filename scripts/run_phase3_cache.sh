@@ -17,4 +17,4 @@ with (repo/'metadata/phase2_unit_evidence.csv').open() as f:
 assert len(evidence)==8 and all(r['classification'] in ['VERIFIED','PROVISIONAL'] for r in evidence)
 assert json.loads((repo/'metadata/phase2_run_manifest.json').read_text())['verdict']=='PASS_PROVISIONAL_RECONSTRUCTION'
 PY
-"$build_dir/phase3_cutflow" "$input_csv" "$repo_dir/metadata/phase3_selection_config.ini" "$output_dir" PROVISIONAL
+"$build_dir/phase3_cutflow" "$input_csv" "$repo_dir/metadata/phase3_selection_config.ini" "$output_dir" PROVISIONAL 93915 '2015 periodD' 13

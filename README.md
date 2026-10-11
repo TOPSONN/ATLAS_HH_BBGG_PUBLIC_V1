@@ -18,6 +18,13 @@ derived cache and keeps all counts conditional on the source skim. B-tagging and
 official diphoton trigger interpretation remain blocked or unknown. The additional CMake features
 are opt-in, preserving the default Step 1 regression configuration.
 
+All current and future physics figures must follow the permanent
+[ROOT/ATLAS plotting standard](docs/ATLAS_PLOTTING_STANDARD.md) and shared
+`AtlasPlotting` module. Native vector PDF is the primary output; PNG is preview
+only. Each figure must preserve its ROOT objects, pass metadata/PDF quality gates,
+and receive visual review. The current Phase 2/3 figure set is under
+`reports/figures/atlas_v1/`; earlier figures remain historical evidence.
+
 Step 1 uses **C++20**, **CERN ROOT 6.40.04**, **CMake >= 3.20**, and **Ninja**
 in the dedicated conda-forge environment `atlas-hh-root`. The selected ROOT
 binary is also built with C++20. Missing ROOT or CMake remains acceptable for

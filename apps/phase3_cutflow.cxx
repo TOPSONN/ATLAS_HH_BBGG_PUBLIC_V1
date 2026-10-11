@@ -1,4 +1,5 @@
 #include "AtlasExploratorySelection.h"
+#include "AtlasPlotting.h"
 #include <TCanvas.h>
 #include <TH1D.h>
 #include <TROOT.h>
@@ -36,7 +37,7 @@ long long integer(const std::string& text) {
 }
 int main(int argc,char** argv) {
   try {
-    if(argc!=5) throw std::invalid_argument("Usage: phase3_cutflow phase2_events.csv selection.ini new_output_dir VERIFIED|PROVISIONAL");
+    if(argc!=5 && argc!=8) throw std::invalid_argument("Usage: phase3_cutflow cache.csv selection.ini new_output_dir VERIFIED|PROVISIONAL [record period energy_TeV]");
     const std::string status=argv[4]; if(status!="VERIFIED" && status!="PROVISIONAL") throw std::invalid_argument("Unit/reconstruction gate blocks real selection");
     if(!std::filesystem::is_regular_file(argv[1]) || std::string(argv[1]).find("://")!=std::string::npos) throw std::invalid_argument("Local derived cache required");
     const auto config=atlas::selection::read_config(argv[2]); const std::filesystem::path output(argv[3]);
@@ -90,23 +91,24 @@ int main(int argc,char** argv) {
     optional << "diagnostic,base_C9_events,flag_true_events,missing_flag_events,validation_status\n";
     optional << "raw_tightID_both," << counts[9] << ',' << selected_tight << ',' << missing_flags << ',' << (missing_flags?"UNKNOWN_MISSING_FLAGS":"PROVISIONAL_RAW_FLAG_DIAGNOSTIC") << '\n';
     optional << "raw_tightID_and_tightIso_both," << counts[9] << ',' << selected_tight_iso << ',' << missing_flags << ',' << (missing_flags?"UNKNOWN_MISSING_FLAGS":"PROVISIONAL_RAW_FLAG_DIAGNOSTIC") << '\n';
-    gROOT->SetBatch(true);gStyle->SetOptStat(0);gStyle->SetCanvasColor(0);gStyle->SetPadColor(0);gStyle->SetPadTickX(1);gStyle->SetPadTickY(1);TGaxis::SetMaxDigits(3);
     std::ofstream inventory(output/"histogram_inventory.csv");
     inventory.exceptions(std::ios::badbit|std::ios::failbit);
     inventory << "name,filled_values,in_range,underflow,overflow\n";
     const bool synthetic=std::filesystem::path(argv[1]).filename().string().find("synthetic")!=std::string::npos;
+    if(!synthetic && argc!=8)throw std::invalid_argument("Explicit collision provenance required; use the checksum-pinned cache wrapper");
+    atlas::plotting::Metadata metadata;
+    metadata.kind=synthetic?atlas::plotting::SampleKind::Synthetic:atlas::plotting::SampleKind::Data;
+    metadata.record=synthetic?"synthetic-fixture":argv[5];metadata.period=synthetic?"Synthetic fixture":argv[6];
+    if(!synthetic)metadata.energy_tev=number(argv[7]);
+    metadata.inspected=counts[0];metadata.accepted=counts[9];metadata.start=first;metadata.end=previous+1;
+    metadata.unit_status=status;metadata.selection=config.version+"; C9; leading photons and inclusive jets";
+    const std::array<const char*,4> axes{"m_{#gamma#gamma} [GeV]","m_{jj} [GeV]","p_{T}^{#gamma} [GeV]","p_{T}^{jet} [GeV]"};
+    const std::array<const char*,4> yaxes{"Events / 1 GeV","Events / 10 GeV","Objects / 5 GeV","Objects / 5 GeV"};
+    std::size_t plot_index=0;
     for(auto* h:{&mgg,&mjj,&ppt,&jpt}) {
       inventory << h->GetName() << ',' << h->GetEntries() << ',' << h->Integral() << ',' << h->GetBinContent(0) << ',' << h->GetBinContent(h->GetNbinsX()+1) << '\n';
-      TCanvas canvas("selection_canvas","exploratory preselection",1100,850);canvas.SetLeftMargin(.14);canvas.SetBottomMargin(.13);canvas.SetTopMargin(.29);
-      h->SetLineWidth(2);h->SetLineColor(kBlue+2);h->SetMinimum(0);h->Draw("HIST");
-      TLatex text;text.SetNDC();text.SetTextFont(42);text.SetTextSize(.028);
-      text.DrawLatex(.14,.955,"ATLAS Open Data exploratory diagnostic;");text.DrawLatex(.14,.918,"raw unweighted GamGam skim;");text.DrawLatex(.14,.881,"not the official ATLAS HH analysis.");
-      text.SetTextSize(.023);const std::string provenance=(synthetic?"Synthetic cache":"Record 93915 / data15 periodD")+std::string(" | unit status: ")+status;
-      text.DrawLatex(.14,.837,provenance.c_str());
-      const std::string caption="Source entries ["+std::to_string(first)+","+std::to_string(previous+1)+"); C0="+std::to_string(counts[0])+"; C9="+std::to_string(counts[9])+" | "+config.version;
-      text.DrawLatex(.14,.802,caption.c_str());
-      TLegend legend(.56,.655,.94,.713);legend.SetFillStyle(0);legend.SetBorderSize(0);legend.SetTextSize(.021);legend.AddEntry(h,"Study-defined C9; inclusive jets","l");legend.Draw();
-      canvas.SaveAs((output/(std::string(h->GetName())+".png")).c_str());
+      atlas::plotting::RenderHistogram(*h,output/h->GetName(),metadata,axes[plot_index],yaxes[plot_index],plot_index<2);
+      ++plot_index;
     }
     std::ofstream summary(output/"summary.json");
     summary.exceptions(std::ios::badbit|std::ios::failbit);
