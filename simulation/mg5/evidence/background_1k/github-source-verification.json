@@ -1,0 +1,639 @@
+{
+  "baseline_pr9": {
+    "headRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+    "isDraft": false,
+    "state": "OPEN",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9"
+  },
+  "checked_head": "d38020948bd7e766119e085cdcc7a3f441e46f6b",
+  "ci_executed_test_counts": [
+    59
+  ],
+  "ci_jobs": [
+    {
+      "completedAt": "2026-10-12T11:08:58Z",
+      "conclusion": "success",
+      "databaseId": 114782488902,
+      "name": "validate",
+      "startedAt": "2026-10-12T11:08:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-12T11:08:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-12T11:08:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:45Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-12T11:08:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:45Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-10-12T11:08:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:46Z",
+          "conclusion": "success",
+          "name": "Validate actual compressed references and provenance",
+          "number": 4,
+          "startedAt": "2026-10-12T11:08:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:46Z",
+          "conclusion": "success",
+          "name": "Validate 3000-event bbgg, ccgg and light-jjgg background library",
+          "number": 5,
+          "startedAt": "2026-10-12T11:08:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:54Z",
+          "conclusion": "success",
+          "name": "Adversarial tests on copies of real MG5 outputs",
+          "number": 6,
+          "startedAt": "2026-10-12T11:08:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:54Z",
+          "conclusion": "success",
+          "name": "Check exact archive allowlist and reject generated process outputs",
+          "number": 7,
+          "startedAt": "2026-10-12T11:08:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 13,
+          "startedAt": "2026-10-12T11:08:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 14,
+          "startedAt": "2026-10-12T11:08:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-12T11:08:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-12T11:08:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152/job/114782488902"
+    }
+  ],
+  "full_git_blob_tree_equal": true,
+  "git_blob_count": 147,
+  "github_ci": {
+    "conclusion": "success",
+    "databaseId": 38240760152,
+    "event": "pull_request",
+    "headSha": "d38020948bd7e766119e085cdcc7a3f441e46f6b",
+    "name": "MG5 reference samples",
+    "status": "completed",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152"
+  },
+  "pr": {
+    "baseRefName": "codex/phase6a-mg5-lo-bbgg",
+    "headRefName": "codex/phase6a-backgrounds-1k",
+    "headRefOid": "d38020948bd7e766119e085cdcc7a3f441e46f6b",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11"
+  },
+  "remote_fetched_files": {
+    "reference_samples/mg5/pp_bbgg_sm_lo_13tev/README.md": {
+      "bytes": 2230,
+      "git_blob": "c0a9fd243b4d4ad839549fa272521f99c14a673e",
+      "sha256": "84f7d373a1c2aea3ec0b2caa84c310ec6f4a34333433434b03387bf9537f0ca5"
+    },
+    "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz": {
+      "bytes": 166818,
+      "git_blob": "47047fdce7717347608782eb0c2a0034dad7003e",
+      "sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343"
+    },
+    "reference_samples/mg5/pp_bbgg_sm_lo_13tev/sample_manifest.json": {
+      "bytes": 13920,
+      "git_blob": "ceadfc7634da8a7da684692a9e13a332afe5c9af",
+      "sha256": "7dbc0440965a21983aa63fd25661ee52e0f679f6bebcea10c33f483e669cabce"
+    },
+    "reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz": {
+      "bytes": 22486,
+      "git_blob": "bc43aed70aabd12a928df948d51e08699f82a763",
+      "sha256": "1427fd1446f6bce5627be769a5fde905206f01b684d72d2b8ee35b46a198c568"
+    },
+    "reference_samples/mg5/pp_ccgg_sm_lo_13tev/README.md": {
+      "bytes": 2333,
+      "git_blob": "52561d9584fa1739c4c5f54140bbabf958bb595f",
+      "sha256": "de97831b021d9342135fdb889a8fe1fe5612f5157802c8eb270e5a1c9974a3e6"
+    },
+    "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz": {
+      "bytes": 165830,
+      "git_blob": "2502ee1b223f40ad9f4ad476e2ab578db779f364",
+      "sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef"
+    },
+    "reference_samples/mg5/pp_ccgg_sm_lo_13tev/sample_manifest.json": {
+      "bytes": 6672,
+      "git_blob": "6f643e44de21f311206ed3413c48c1e20333cd0a",
+      "sha256": "d29b3662828a3292838264ffc94c217686309bec6fbd7e05cd4db9ef6540f575"
+    },
+    "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/README.md": {
+      "bytes": 2379,
+      "git_blob": "6b103fb0dd7ce38c77721508cb8c1f87c7e474c9",
+      "sha256": "3421bf247503f4d3f1a05949eb87e63b81cdda9599aa0711320629bbae82e70b"
+    },
+    "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz": {
+      "bytes": 168744,
+      "git_blob": "49e1ec16e95ba261c462608877686066650d1939",
+      "sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030"
+    },
+    "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/sample_manifest.json": {
+      "bytes": 6745,
+      "git_blob": "c00c0177d16618cc0d90a16a3072f4c9f66d5bbe",
+      "sha256": "efc6d895c40af86b7c303a93a4cd224406670d322a80962f9f1db2f9a8c3abb8"
+    },
+    "simulation/mg5/cards/ccgg_reference_1000/me5_configuration.txt": {
+      "bytes": 9065,
+      "git_blob": "58a2115251adecfd29817455563218cf78afbf26",
+      "sha256": "5ba043b0886e9f5c25f51767db28ebc3be1fe9d1b60d5ab3f2de48fab1d49354"
+    },
+    "simulation/mg5/cards/ccgg_reference_1000/param_card.dat": {
+      "bytes": 1986,
+      "git_blob": "f5acf7dbc4c641e5bb53f871443d96459a659580",
+      "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+    },
+    "simulation/mg5/cards/ccgg_reference_1000/proc_card_mg5.dat": {
+      "bytes": 2275,
+      "git_blob": "f5a422e726a7836fe04b8ae0dfbe4b7184977076",
+      "sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2"
+    },
+    "simulation/mg5/cards/ccgg_reference_1000/run_card.dat": {
+      "bytes": 12608,
+      "git_blob": "403ecde0ff1574a1cf3d2af1c81c7fb3de86d765",
+      "sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce"
+    },
+    "simulation/mg5/cards/jjgg_reference_1000/me5_configuration.txt": {
+      "bytes": 9065,
+      "git_blob": "58a2115251adecfd29817455563218cf78afbf26",
+      "sha256": "5ba043b0886e9f5c25f51767db28ebc3be1fe9d1b60d5ab3f2de48fab1d49354"
+    },
+    "simulation/mg5/cards/jjgg_reference_1000/param_card.dat": {
+      "bytes": 1986,
+      "git_blob": "f5acf7dbc4c641e5bb53f871443d96459a659580",
+      "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+    },
+    "simulation/mg5/cards/jjgg_reference_1000/proc_card_mg5.dat": {
+      "bytes": 2305,
+      "git_blob": "f71075104a390acf5673dfe64a53d3399849bcf4",
+      "sha256": "6724ed8d59c4f04cd1651986fbec5e5ba3f6ab6d90d3a83599e18187383ae73f"
+    },
+    "simulation/mg5/cards/jjgg_reference_1000/run_card.dat": {
+      "bytes": 12608,
+      "git_blob": "06a5ffab979c46a14c2b632045f2ebd6651aecf4",
+      "sha256": "5c388bb0fe5c11130ee79d327858b6b1a2982b76cf9e257bac572b529fd3b00f"
+    },
+    "simulation/mg5/cards/reference_1000/me5_configuration.txt": {
+      "bytes": 8979,
+      "git_blob": "c59969534a405bc78492f36478904e757d56dab8",
+      "sha256": "92d3b8ceb2d36486b56afa2f15885b04b1d312be958dec4cb2d12d085697b778"
+    },
+    "simulation/mg5/cards/reference_1000/param_card.dat": {
+      "bytes": 1986,
+      "git_blob": "f5acf7dbc4c641e5bb53f871443d96459a659580",
+      "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+    },
+    "simulation/mg5/cards/reference_1000/proc_card_mg5.dat": {
+      "bytes": 2319,
+      "git_blob": "6f0f02813be3848910a646c7b4602d33d1b4aadb",
+      "sha256": "8d57622a06aa06b2cfcfed7cfec128b733552344c2be1d920e31f335f8a0fb81"
+    },
+    "simulation/mg5/cards/reference_1000/run_card.dat": {
+      "bytes": 12608,
+      "git_blob": "38fe83c0a436302ce241d3eb19588ec3c814c9bb",
+      "sha256": "00b17883baedf6e2b621099c4bc33f9058501548bdf4b1c41c9d682015ab1b7d"
+    },
+    "simulation/mg5/cards/smoke_100/me5_configuration.txt": {
+      "bytes": 8979,
+      "git_blob": "c59969534a405bc78492f36478904e757d56dab8",
+      "sha256": "92d3b8ceb2d36486b56afa2f15885b04b1d312be958dec4cb2d12d085697b778"
+    },
+    "simulation/mg5/cards/smoke_100/param_card.dat": {
+      "bytes": 1986,
+      "git_blob": "f5acf7dbc4c641e5bb53f871443d96459a659580",
+      "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+    },
+    "simulation/mg5/cards/smoke_100/proc_card_mg5.dat": {
+      "bytes": 2314,
+      "git_blob": "09a5530fb819c6426dc4148213d145d725ec7b26",
+      "sha256": "7784346556e5e38675fe1090529c71c0c9eeb9f11698702d10b5965b1ac78c81"
+    },
+    "simulation/mg5/cards/smoke_100/run_card.dat": {
+      "bytes": 12607,
+      "git_blob": "1de3165b1231be060bb3331f21b64159b4ddc75d",
+      "sha256": "0179260005d087aea66ec6d01ed3b81e98dfff83dc37962f6f5352ec17430176"
+    },
+    "simulation/mg5/evidence/ccgg_reference_1000/event_generation.txt": {
+      "bytes": 11815,
+      "git_blob": "1609c6d7b1c5012f90ab3815137cc419a847e58c",
+      "sha256": "dcfc757c991ea8910ca20c6661f97bfdede7d47cec61df8f77b18a7e1df12b76"
+    },
+    "simulation/mg5/evidence/ccgg_reference_1000/generate.mg5": {
+      "bytes": 290,
+      "git_blob": "d44b0addd109e2b3d787df2807bd9f9ba6892565",
+      "sha256": "53bc5b2377b83929090a81bab98ac415fa6cb053f035430ed9dd3e7506d1fc57"
+    },
+    "simulation/mg5/evidence/ccgg_reference_1000/generator_banner.txt": {
+      "bytes": 21352,
+      "git_blob": "fbcf95c262add66995d7e8f2e2de2588f1ea53d3",
+      "sha256": "6c166a3c52c99075a21cbd77dcfc5d64f62c892a69f9a649f01efd8b6cd401aa"
+    },
+    "simulation/mg5/evidence/ccgg_reference_1000/launch.mg5": {
+      "bytes": 177,
+      "git_blob": "1bde40d60ef845e42a3026730b290ef87797364e",
+      "sha256": "3c410dd76135bfb57cfaeaea7583e6dd0ee81d7315da9f729d7791217fae342f"
+    },
+    "simulation/mg5/evidence/ccgg_reference_1000/process_generation.txt": {
+      "bytes": 8294,
+      "git_blob": "d182cda9374d6a4004fbab53c8ab8ec9470bc4b2",
+      "sha256": "f08d3e964c4570283a58a343bc99446550fdd162b39e20a87ffe0fdb4ecdda24"
+    },
+    "simulation/mg5/evidence/environment.json": {
+      "bytes": 4667,
+      "git_blob": "e1821f7c380b28e889b89fb32774b775847ebbea",
+      "sha256": "4d27074ab32574a770eec6c558ac24eb53c7ec0dac3ab86878594d857412d435"
+    },
+    "simulation/mg5/evidence/jjgg_reference_1000/event_generation.txt": {
+      "bytes": 12052,
+      "git_blob": "e134e105b59fb496846c629ba1f5a65fb9fbd101",
+      "sha256": "4f6b5274f12659f9030965c21405a43115f6de017329598d0c14ee659d68b07d"
+    },
+    "simulation/mg5/evidence/jjgg_reference_1000/generate.mg5": {
+      "bytes": 320,
+      "git_blob": "7355ffdb366b4e39f2faa188b14e66f8b8223b09",
+      "sha256": "8f1f3205385c1f2cc6a395659469bba190b8e075a861d05c253e1c789dec106a"
+    },
+    "simulation/mg5/evidence/jjgg_reference_1000/generator_banner.txt": {
+      "bytes": 21382,
+      "git_blob": "74f3477abee255d1be420c1ffad1d9a467574e1d",
+      "sha256": "8e4a9a343e57dc0c12ab1adc1d598a1c8f716c1a566b792c6da5fee64c5ca9cd"
+    },
+    "simulation/mg5/evidence/jjgg_reference_1000/launch.mg5": {
+      "bytes": 177,
+      "git_blob": "b05fa07125094162f030a08976a8495ae331a8c1",
+      "sha256": "e77f7ca94d471847f6e155ef217d37f7f6527b0fb767f1a62e61ad347ec12577"
+    },
+    "simulation/mg5/evidence/jjgg_reference_1000/process_generation.txt": {
+      "bytes": 24037,
+      "git_blob": "5e293b6af2649dede21bbab63387b3c5d88caeed",
+      "sha256": "2a80df1d2efe933849c68e1a367a63ce945684d2e894ec848edd4d65ea1de612"
+    },
+    "simulation/mg5/evidence/reference_1000/event_generation.txt": {
+      "bytes": 11855,
+      "git_blob": "4ab7e5273c3d4a11efae1021a778c3a2f7263fb2",
+      "sha256": "80da48090cf1332ea395dbddb13c753b2d43be3bde1e8005dba10dc7e5e962b7"
+    },
+    "simulation/mg5/evidence/reference_1000/generate.mg5": {
+      "bytes": 334,
+      "git_blob": "51a4399061921699cc15c7fa8052a0fc3040bd65",
+      "sha256": "86e97efb9c50e2e3d928434b08346bf43553dacf7e441871ef590858c24d292c"
+    },
+    "simulation/mg5/evidence/reference_1000/generator_banner.txt": {
+      "bytes": 21389,
+      "git_blob": "b501399ab21d785d74dcb0eef537e22b1085c8e0",
+      "sha256": "6526b61fffa8dc6d98d2e6e263b7b2eff9703098badf3fa895cea2560e5263fb"
+    },
+    "simulation/mg5/evidence/reference_1000/launch.mg5": {
+      "bytes": 221,
+      "git_blob": "bffea9162d1defbbfaa7628e7f2f04cf3aee74d9",
+      "sha256": "7ac7620087485f33ddc33f215d5d3a7f9f8841d225dab669f864f06089398970"
+    },
+    "simulation/mg5/evidence/reference_1000/process_generation.txt": {
+      "bytes": 8169,
+      "git_blob": "8a0821e79ba2da5059555046013931ab47f438e7",
+      "sha256": "d5079c377520d1934d9b82e1186b4de8e11a4f81a06b780beadc10863a2be74b"
+    },
+    "simulation/mg5/evidence/smoke_100/event_generation.txt": {
+      "bytes": 11800,
+      "git_blob": "1d9052b8242366d1ad0cdae545548760d64934a1",
+      "sha256": "264efeda089b71f3b99153865edc97eac58855f48b70e9ee297dd8220db16c6d"
+    },
+    "simulation/mg5/evidence/smoke_100/generate.mg5": {
+      "bytes": 329,
+      "git_blob": "e0ec68d5394d53d555713d383da77a8cae6ea701",
+      "sha256": "ad6f5ba613be67e1bc1c23e8fdc9726f7d55156520bf1835a8d51cd4705c3060"
+    },
+    "simulation/mg5/evidence/smoke_100/generator_banner.txt": {
+      "bytes": 21382,
+      "git_blob": "dbd77a4d47b4f6d0cabd1740524ce9d9bd426cef",
+      "sha256": "70f8173c04b956f6b7d70123ff1abf4043e4d42a9732499b576b93dd26d8c78b"
+    },
+    "simulation/mg5/evidence/smoke_100/launch.mg5": {
+      "bytes": 215,
+      "git_blob": "c1a26269f13395ad5eef4dc6016bd2dbc4008374",
+      "sha256": "8605fb0d3dded36ac91edbaaadb630e9841fd77e7e3f365740c9bc095bef5c67"
+    },
+    "simulation/mg5/evidence/smoke_100/process_generation.txt": {
+      "bytes": 8164,
+      "git_blob": "edc2da1bcf6df12a9e724e454f5843f36802707c",
+      "sha256": "db7857d843bbe34c079f33b3b84c3b3113ffd46d84182d03c723663f3f0b8600"
+    },
+    "simulation/mg5/evidence/source_identity.json": {
+      "bytes": 752,
+      "git_blob": "9c6252cfea04265e16bd92ef0aba21c85251ad4e",
+      "sha256": "d681cbaf0789c20f885ef8c0fd0d99a3b300afbfec4a4d58ec6fc1c1bfb35de2"
+    },
+    "simulation/mg5/evidence/toolchain-linux-64.explicit.txt": {
+      "bytes": 3784,
+      "git_blob": "d7a4c0e6d9d366133f0aaaa02c629f39e6843426",
+      "sha256": "42db7af3c17e305cb76306ac3f5ddfe0e2e3bd6ec159eec32b9484c700fff86a"
+    }
+  },
+  "remote_library_validation": {
+    "actual_reference_events": 3000,
+    "library_profiles": [
+      "bbgg",
+      "ccgg",
+      "jjgg"
+    ],
+    "samples": [
+      {
+        "actual_events": 1000,
+        "compressed_bytes": 166818,
+        "compressed_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "cross_section_pb": 0.06624666,
+        "cross_section_uncertainty_pb": 0.0005940933,
+        "cut_extrema": {
+          "b_abs_eta": 4.967793053242706,
+          "b_pt": 20.008290926846136,
+          "draa": 0.426204675082374,
+          "drab": 0.40090420093323775,
+          "drbb": 0.40918558369041463,
+          "photon_abs_eta": 2.4941811827113964,
+          "photon_pt": 25.02090683315893
+        },
+        "decompressed_bytes": 969612,
+        "decompressed_file_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "1bee38da3a30b39286d6d3a40732f858a2b35b0e48f9b64c647b6c9f14871427",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 12,
+          "-2,2": 228,
+          "-3,3": 3,
+          "-4,4": 15,
+          "-5,5": 10,
+          "1,-1": 19,
+          "2,-2": 201,
+          "21,21": 475,
+          "3,-3": 4,
+          "4,-4": 18,
+          "5,-5": 15
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 9.699988368083723e-08,
+        "max_mass_shell_residual_gev2": 0.00027202069759368896,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.066246662,
+        "outgoing_pdg_counts": {
+          "-5": 1000,
+          "22": 2000,
+          "5": 1000
+        },
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "physics_profile": "bbgg",
+        "positive_weight_count": 1000,
+        "sample_id": "reference_1000",
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      },
+      {
+        "actual_events": 1000,
+        "compressed_bytes": 165830,
+        "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "cross_section_pb": 0.6274417,
+        "cross_section_uncertainty_pb": 0.005190692,
+        "cut_extrema": {
+          "draa": 0.4002916303433148,
+          "draj": 0.4000742172385804,
+          "drjj": 0.5303604758883032,
+          "jet_abs_eta": 4.9885521701678925,
+          "jet_pt": 20.015314648779874,
+          "photon_abs_eta": 2.499979190628354,
+          "photon_pt": 25.00339803506781
+        },
+        "decompressed_bytes": 969561,
+        "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 5,
+          "-2,2": 49,
+          "-4,4": 35,
+          "1,-1": 5,
+          "2,-2": 34,
+          "21,21": 837,
+          "3,-3": 1,
+          "4,-4": 32,
+          "5,-5": 2
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 9.099994713324122e-08,
+        "max_mass_shell_residual_gev2": 0.00041316263377666473,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.6274417,
+        "outgoing_pdg_counts": {
+          "-4": 1000,
+          "22": 2000,
+          "4": 1000
+        },
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "physics_profile": "ccgg",
+        "positive_weight_count": 1000,
+        "sample_id": "reference_1000",
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      },
+      {
+        "actual_events": 1000,
+        "compressed_bytes": 168744,
+        "compressed_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "cross_section_pb": 9.436556,
+        "cross_section_uncertainty_pb": 0.0547472,
+        "cut_extrema": {
+          "draa": 0.4043645384515487,
+          "draj": 0.40011554455123033,
+          "drjj": 0.4018972009948762,
+          "jet_abs_eta": 4.743176517527776,
+          "jet_pt": 20.019694986459307,
+          "photon_abs_eta": 2.496683018842777,
+          "photon_pt": 25.002140903969245
+        },
+        "decompressed_bytes": 969652,
+        "decompressed_file_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "ccec02ff630643898cdfbf86c9313362c92131b900a8f7c111f6e669ab438726",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,-1": 1,
+          "-1,-2": 1,
+          "-1,1": 2,
+          "-1,2": 8,
+          "-1,21": 3,
+          "-2,-1": 1,
+          "-2,-2": 2,
+          "-2,-3": 2,
+          "-2,1": 3,
+          "-2,2": 58,
+          "-2,21": 64,
+          "-2,3": 2,
+          "-3,-1": 1,
+          "-3,1": 1,
+          "-3,2": 4,
+          "-3,21": 2,
+          "-3,3": 1,
+          "-4,4": 2,
+          "1,-1": 8,
+          "1,-2": 5,
+          "1,2": 17,
+          "1,21": 8,
+          "1,3": 1,
+          "2,-1": 5,
+          "2,-2": 56,
+          "2,-3": 1,
+          "2,1": 19,
+          "2,2": 54,
+          "2,21": 273,
+          "2,3": 8,
+          "21,-1": 4,
+          "21,-2": 67,
+          "21,-3": 2,
+          "21,1": 10,
+          "21,2": 232,
+          "21,21": 55,
+          "21,3": 1,
+          "3,-2": 1,
+          "3,1": 1,
+          "3,2": 6,
+          "3,21": 4,
+          "4,-4": 4
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 8.999995770864189e-08,
+        "max_mass_shell_residual_gev2": 0.0003193467855453491,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 9.4365561,
+        "outgoing_pdg_counts": {
+          "-1": 30,
+          "-2": 264,
+          "-3": 18,
+          "1": 70,
+          "2": 795,
+          "21": 794,
+          "22": 2000,
+          "3": 29
+        },
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "physics_profile": "jjgg",
+        "positive_weight_count": 1000,
+        "sample_id": "reference_1000",
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      }
+    ],
+    "smoke_events_excluded": 100,
+    "statistical_interpretation": "Three separate process samples; process cross sections are not summed",
+    "status": "PASS"
+  },
+  "scope": "Actual GitHub API file bytes downloaded and SHA256/physics verified independently; full Git tree compared; actual completed Actions job/steps verified",
+  "status": "PASS"
+}

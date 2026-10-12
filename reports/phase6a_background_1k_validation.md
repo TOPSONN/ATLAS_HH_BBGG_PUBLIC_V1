@@ -33,3 +33,5 @@ Mass-shell 大數相減採相對/絕對 tolerance；以上是 LHE decimal serial
 舊 bbgg reference SHA `bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343`；smoke SHA `1427fd1446f6bce5627be769a5fde905206f01b684d72d2b8ee35b46a198c568`，原目錄、cards、historical provenance 的 Git blobs 對基線完全未變。兩個新 archive 均 <=5 MiB。ROOT source/build 無影響，所以依任务條件不重跑 ROOT CTest；既有 ROOT environment identity 未變，不將舊 CTest 報成此次新執行。
 
 GitHub CI 狀態在 publication/decision reports 記錄；local PASS 不代替 remote CI PASS。
+
+GitHub Actions 同樣實際執行59tests且成功：https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152。遠端 reference bytes 重新下載後重驗為3000，original smoke100 regression 亦 PASS。

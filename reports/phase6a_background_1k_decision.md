@@ -1,6 +1,6 @@
 # Phase 6A background reference decision
 
-Local verdict：LOCAL_VERIFIED_AWAITING_REMOTE。A–H PASS；I/J UNKNOWN，不能把尚未檢查的遠端出版或 CI 報成 PASS。
+Final source verdict：PASS_PUBLISHED_VERIFIED_DRAFT。A–J 全部 PASS；遠端 bytes/physics/provenance 與 actual Actions 59 tests 均已獨立查驗。
 
 ccgg 與 light-jjgg 真正生成各 1000 events，seed 20261021/20261022。bbgg 1000 events 原樣沿用；reference total3000，smoke100 不計。完整 59 項 portable tests 與實際 LHE validation PASS。
 
@@ -8,4 +8,6 @@ ccgg 與 light-jjgg 真正生成各 1000 events，seed 20261021/20261022。bbgg 
 
 These are three separate LO parton-level reference categories. No shower/hadronization, detector response, charm/light-to-b mistags, shower flavour migration, photon fake background, or fragmentation contribution is modeled. Their cross sections are not summed and their event counts are not equal expected yields.
 
-下一步：完成選定 refs 的 GitHub remote verification 與真正 CI，保持 stacked Draft PR 供審查。之後可先審查這些 hard-process categories/cuts/normalization；大型 production、mistag/detector/shower study 需另訂計畫，本次不啟動。
+下一步：審查已出版的選定 refs 與 stacked Draft PR；保留 Draft 狀態，不自動 merge。之後可先審查這些 hard-process categories/cuts/normalization；大型 production、mistag/detector/shower study 需另訂計畫，本次不啟動。
+
+驗證 source commit `d38020948bd7e766119e085cdcc7a3f441e46f6b`；Draft PR https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11；CI https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152。後續 report-only seal HEAD 另在本機 final report 精確記錄並重新驗證。

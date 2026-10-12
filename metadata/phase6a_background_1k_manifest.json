@@ -133,11 +133,25 @@
   },
   "project": "ATLAS_HH_BBGG_PUBLIC_V1",
   "publication": {
-    "ci": "UNKNOWN",
+    "ci": "PASS",
+    "ci_executed_tests": 59,
     "draft": true,
+    "full_git_tree_equal": true,
     "merge_authorized": false,
-    "pr_url": null,
-    "status": "UNKNOWN"
+    "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11",
+    "receipt_scope": "Verified source/sample implementation commit; later seal commits only record this receipt. Exact final seal HEAD verification is recorded locally to avoid a self-referential commit hash.",
+    "remote_verification_evidence": "simulation/mg5/evidence/background_1k/github-source-verification.json",
+    "source_ci_run": {
+      "conclusion": "success",
+      "databaseId": 38240760152,
+      "event": "pull_request",
+      "headSha": "d38020948bd7e766119e085cdcc7a3f441e46f6b",
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152"
+    },
+    "source_commit_verified": "d38020948bd7e766119e085cdcc7a3f441e46f6b",
+    "status": "PUBLISHED_AND_REMOTE_BYTES_VERIFIED"
   },
   "resources": {
     "jobs": 2,
@@ -404,7 +418,7 @@
   },
   "scientific_limits": "These are three separate LO parton-level reference categories. No shower/hadronization, detector response, charm/light-to-b mistags, shower flavour migration, photon fake background, or fragmentation contribution is modeled. Their cross sections are not summed and their event counts are not equal expected yields.",
   "smoke_events_excluded": 100,
-  "status": "LOCAL_VERIFIED_AWAITING_REMOTE",
+  "status": "PASS_PUBLISHED_VERIFIED_DRAFT",
   "task": "PHASE6A_BACKGROUND_REFERENCE_EXPANSION_1000_V1",
   "total_reference_events": 3000
 }
