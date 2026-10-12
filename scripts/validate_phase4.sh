@@ -20,7 +20,7 @@ for c in commands:
     args=c.get('arguments') or shlex.split(c['command'])
     assert Path(args[0]).resolve()==compiler.resolve()
     assert [a for a in args if a.startswith('-std=')]==['-std=c++20']
-for app in ('phase4_mc_reconstruction','test_mc_events','test_mc_matching','test_synthetic_matching'):
+for app in ('phase4_mc_reconstruction','phase4_numerical_regression','test_mc_events','test_mc_matching','test_synthetic_matching','test_cartesian_stability'):
     linkage=subprocess.check_output(['ldd',str(build/app)],text=True)
     assert 'not found' not in linkage
     for line in linkage.splitlines():

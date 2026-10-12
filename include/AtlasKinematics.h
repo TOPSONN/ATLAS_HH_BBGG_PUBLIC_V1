@@ -8,6 +8,9 @@
 namespace atlas::kinematics {
 using RVec = ROOT::VecOps::RVec<float>;
 using FourVector = ROOT::Math::PtEtaPhiEVector;
+// Objects retain the native pT/eta/phi/E interpretation. Pair invariants use
+// Cartesian coordinates to avoid converting a small transverse sum to eta.
+using CartesianFourVector = ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<long double>>;
 // Float input rounding may produce small negative single-object m^2. We retain
 // the supplied energy and explicitly count these; no four-vector is corrected.
 inline constexpr double object_mass2_relative_tolerance = 1e-5;
