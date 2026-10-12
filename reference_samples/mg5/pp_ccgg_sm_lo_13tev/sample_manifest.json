@@ -1,0 +1,156 @@
+{
+  "samples": [
+    {
+      "actual_events": 1000,
+      "alpha_em_settings": {
+        "GF_gev_minus2": 1.16639e-05,
+        "MZ_gev": 91.188,
+        "aEWM1": 132.507,
+        "alpha_em": 0.0075467711139788835,
+        "event_aqed_values": [
+          0.007546771
+        ],
+        "input_scheme": "aEWM1, GF, MZ; MW derived"
+      },
+      "alpha_s_settings": {
+        "event_aqcd": 0.1238062,
+        "event_aqcd_values": [
+          0.1238062
+        ],
+        "note": "actual banner SMINPUTS(3) recorded; hadronic event running uses the built-in PDF",
+        "param_card_as": 0.129783,
+        "pdf_alpha_s_mz": 0.13,
+        "running": "CTEQ6L1 LO one-loop"
+      },
+      "b_mass_treatment": "MB=0 GeV; zero b Yukawa in sm-no_b_mass restriction",
+      "beam_energies_gev": [
+        6500.0,
+        6500.0
+      ],
+      "charm_mass_treatment": "MC=0 GeV; charm treated as an ordinary jet for generation cuts",
+      "compressed_bytes": 165830,
+      "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "cross_section_uncertainty_pb": 0.005190692,
+      "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+      "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 11.308834934000004,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 2.002877510000019,
+          "exit_code": 0
+        }
+      },
+      "factorization_scale": {
+        "beam1_gev": 125.0,
+        "beam2_gev": 125.0,
+        "type": "fixed"
+      },
+      "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "final_state_definition": {
+        "allowed_pdg_ids": [
+          -4,
+          4,
+          22,
+          22
+        ],
+        "light_jet_definition": "exact c and cbar plus two photons"
+      },
+      "flavour_scheme": "5F massless hard process; u,d,s,c,b and antiquarks in proton; no top PDF",
+      "generation_cuts": {
+        "delta_r_aa_min": 0.4,
+        "delta_r_aj_min": 0.4,
+        "delta_r_jj_min": 0.4,
+        "jet_abs_eta_max": 5.0,
+        "jet_pt_min_gev": 20.0,
+        "maxjetflavor_for_cut_classification": 4,
+        "photon_abs_eta_max": 2.5,
+        "photon_isolation": "fixed parton-photon separation only; ptgmin=0 disables smooth-cone isolation",
+        "photon_pt_min_gev": 25.0
+      },
+      "generator_cross_section_pb": 0.6274417,
+      "generator_weight_convention": {
+        "description": "positive constant XWGTUP in pb equals integrated cross section; histogram normalization is XWGTUP/N",
+        "event_norm": "average",
+        "idwtup": -4
+      },
+      "lhe_publication_transformation": "NONE; decompressed bytes unchanged; deterministic gzip mtime=0, no filename",
+      "mg5_source_identity": {
+        "commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "tag": "v3.5.16",
+        "url": "https://github.com/mg5amcnlo/mg5amcnlo.git"
+      },
+      "mg5_version": "3.5.16",
+      "negative_weight_count": 0,
+      "original_compressed_file_sha256": "bfba7b6eb4e33689b02e576007aed1d136f64fd6a7e8bcde42f408e27af964c7",
+      "original_decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+      "param_card_path": "simulation/mg5/cards/ccgg_reference_1000/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "pdf_name_and_id": {
+        "data_source": "Template/LO/lib/Pdfdata/cteq6l1.tbl",
+        "interface": "MG5 built-in Ctq6Pdf.f",
+        "lhapdf_id": 10042,
+        "name": "CTEQ6L1"
+      },
+      "perturbative_order": "LO",
+      "physics_model": "sm-no_b_mass (bundled SM UFO, diagonal CKM, massless b and zero b Yukawa)",
+      "physics_process": "p p > c c~ a a QCD=2 QED=2",
+      "physics_profile": "ccgg",
+      "process_card_path": "simulation/mg5/cards/ccgg_reference_1000/proc_card_mg5.dat",
+      "process_card_sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2",
+      "provenance_files": [
+        {
+          "original_sha256": "6c166a3c52c99075a21cbd77dcfc5d64f62c892a69f9a649f01efd8b6cd401aa",
+          "path": "simulation/mg5/evidence/ccgg_reference_1000/generator_banner.txt",
+          "sha256": "6c166a3c52c99075a21cbd77dcfc5d64f62c892a69f9a649f01efd8b6cd401aa",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "c21a3938a57e2b36fc5b74c77f5a4a7304d1b14cc4e4f22e01daf22b7bf331bd",
+          "path": "simulation/mg5/evidence/ccgg_reference_1000/process_generation.txt",
+          "sha256": "f08d3e964c4570283a58a343bc99446550fdd162b39e20a87ffe0fdb4ecdda24",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "36cd783aa4e474b318fc63f3b77ae148ec2017916c70a75763383e75c9bcdd4c",
+          "path": "simulation/mg5/evidence/ccgg_reference_1000/event_generation.txt",
+          "sha256": "dcfc757c991ea8910ca20c6661f97bfdede7d47cec61df8f77b18a7e1df12b76",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291",
+          "path": "simulation/mg5/cards/ccgg_reference_1000/me5_configuration.txt",
+          "sha256": "5ba043b0886e9f5c25f51767db28ebc3be1fe9d1b60d5ab3f2de48fab1d49354",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "53bc5b2377b83929090a81bab98ac415fa6cb053f035430ed9dd3e7506d1fc57",
+          "path": "simulation/mg5/evidence/ccgg_reference_1000/generate.mg5",
+          "sha256": "53bc5b2377b83929090a81bab98ac415fa6cb053f035430ed9dd3e7506d1fc57",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "3c410dd76135bfb57cfaeaea7583e6dd0ee81d7315da9f729d7791217fae342f",
+          "path": "simulation/mg5/evidence/ccgg_reference_1000/launch.mg5",
+          "sha256": "3c410dd76135bfb57cfaeaea7583e6dd0ee81d7315da9f729d7791217fae342f",
+          "transformation": "NONE"
+        }
+      ],
+      "random_seed": 20261021,
+      "renormalization_scale": {
+        "gev": 125.0,
+        "type": "fixed"
+      },
+      "requested_events": 1000,
+      "run_card_path": "simulation/mg5/cards/ccgg_reference_1000/run_card.dat",
+      "run_card_sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce",
+      "sample_id": "reference_1000",
+      "sqrt_s_gev": 13000.0,
+      "validation_status": "PASS",
+      "zero_weight_count": 0
+    }
+  ],
+  "schema_version": 1
+}

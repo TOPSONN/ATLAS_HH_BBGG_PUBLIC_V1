@@ -1,0 +1,76 @@
+{
+  "blocked": [],
+  "ci_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38240760152",
+  "fail": [],
+  "gates": {
+    "A": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Existing MG5 installation verified",
+      "state": "PASS"
+    },
+    "B": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "ccgg model and process validated",
+      "state": "PASS"
+    },
+    "C": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "jjgg model and process validated",
+      "state": "PASS"
+    },
+    "D": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "ccgg 1000 genuine events generated",
+      "state": "PASS"
+    },
+    "E": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "jjgg 1000 genuine events generated",
+      "state": "PASS"
+    },
+    "F": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Physics and LHE integrity tests passed",
+      "state": "PASS"
+    },
+    "G": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Process-specific cross sections recorded",
+      "state": "PASS"
+    },
+    "H": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Existing bbgg regression unchanged",
+      "state": "PASS"
+    },
+    "I": {
+      "evidence": "simulation/mg5/evidence/background_1k/github-source-verification.json",
+      "name": "GitHub reference files published and verified",
+      "state": "PASS"
+    },
+    "J": {
+      "evidence": "simulation/mg5/evidence/background_1k/github-source-verification.json",
+      "name": "CI, provenance and Git integrity validated",
+      "state": "PASS"
+    }
+  },
+  "pass": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J"
+  ],
+  "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11",
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "schema_version": 1,
+  "task": "PHASE6A_BACKGROUND_REFERENCE_EXPANSION_1000_V1",
+  "unknown": [],
+  "verdict": "PASS_PUBLISHED_VERIFIED_DRAFT",
+  "verified_source_commit": "d38020948bd7e766119e085cdcc7a3f441e46f6b"
+}

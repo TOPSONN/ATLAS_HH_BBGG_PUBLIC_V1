@@ -1,0 +1,369 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.16                2026-06-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../../../.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+import [LOCAL_RUN_DIRECTORY]/generate.mg5
+The import format was not given, so we guess it as command
+set automatic_html_opening False
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+set auto_update 0
+save options auto_update
+save configuration file to [LOCAL_USER_HOME]/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt
+set nb_core 2
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+set fortran_compiler x86_64-conda-linux-gnu-gfortran
+set fortran compiler to x86_64-conda-linux-gnu-gfortran
+save options fortran_compiler
+save configuration file to [LOCAL_USER_HOME]/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt
+set cpp_compiler x86_64-conda-linux-gnu-g++
+save options cpp_compiler
+save configuration file to [LOCAL_USER_HOME]/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt
+import model sm-no_b_mass
+INFO: Restrict model sm-no_b_mass with file ../../../.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_no_b_mass.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+[1;34mPass the definition of 'j' and 'p' to 5 flavour scheme.[0m
+Defined multiparticle all = g u c d s b u~ c~ d~ s~ b~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t t~ z w+ h w- ta- ta+
+define p = g u c d s b u~ c~ d~ s~ b~
+Defined multiparticle p = g u c d s b u~ c~ d~ s~ b~
+define jl = g u u~ d d~ s s~
+Defined multiparticle jl = g u d s u~ d~ s~
+generate p p > a a jl jl QCD=2 QED=2
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+INFO: Trying process: g g > a a g g QCD<=2 QED<=2 @1  
+INFO: Trying process: g g > a a u u~ QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: g g > a a d d~ QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: g g > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: g g > a a s d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: g g > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Crossed process found for g u > a a g u, reuse diagrams. 
+INFO: Trying process: g c > a a g u QCD<=2 QED<=2 @1  
+INFO: Crossed process found for g d > a a g d, reuse diagrams. 
+INFO: Crossed process found for g s > a a g s, reuse diagrams. 
+INFO: Trying process: g b > a a g d QCD<=2 QED<=2 @1  
+INFO: Trying process: g b > a a g s QCD<=2 QED<=2 @1  
+INFO: Crossed process found for g u~ > a a g u~, reuse diagrams. 
+INFO: Trying process: g c~ > a a g u~ QCD<=2 QED<=2 @1  
+INFO: Crossed process found for g d~ > a a g d~, reuse diagrams. 
+INFO: Crossed process found for g s~ > a a g s~, reuse diagrams. 
+INFO: Trying process: g b~ > a a g d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: g b~ > a a g s~ QCD<=2 QED<=2 @1  
+INFO: Process u g > a a g u added to mirror process g u > a a g u 
+INFO: Trying process: u u > a a u u QCD<=2 QED<=2 @1  
+INFO: Process has 40 diagrams 
+INFO: Trying process: u c > a a u u QCD<=2 QED<=2 @1  
+INFO: Trying process: u d > a a u d QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: u d > a a u s QCD<=2 QED<=2 @1  
+INFO: Trying process: u s > a a u d QCD<=2 QED<=2 @1  
+INFO: Trying process: u s > a a u s QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: u b > a a u d QCD<=2 QED<=2 @1  
+INFO: Trying process: u b > a a u s QCD<=2 QED<=2 @1  
+INFO: Crossed process found for u u~ > a a g g, reuse diagrams. 
+INFO: Crossed process found for u u~ > a a u u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > a a d d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > a a s s~, reuse diagrams. 
+INFO: Trying process: u c~ > a a u u~ QCD<=2 QED<=2 @1  
+INFO: Trying process: u c~ > a a d d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: u c~ > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: u c~ > a a s d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: u c~ > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Crossed process found for u d~ > a a u d~, reuse diagrams. 
+INFO: Crossed process found for u s~ > a a u s~, reuse diagrams. 
+INFO: Trying process: u b~ > a a u d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: u b~ > a a u s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c c > a a u u QCD<=2 QED<=2 @1  
+INFO: Trying process: c d > a a u d QCD<=2 QED<=2 @1  
+INFO: Trying process: c d > a a u s QCD<=2 QED<=2 @1  
+INFO: Trying process: c s > a a u d QCD<=2 QED<=2 @1  
+INFO: Trying process: c s > a a u s QCD<=2 QED<=2 @1  
+INFO: Trying process: c b > a a u d QCD<=2 QED<=2 @1  
+INFO: Trying process: c b > a a u s QCD<=2 QED<=2 @1  
+INFO: Trying process: c c~ > a a g g QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: c c~ > a a u u~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: c c~ > a a d d~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: c c~ > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c c~ > a a s d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c c~ > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: c b~ > a a u d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c b~ > a a u s~ QCD<=2 QED<=2 @1  
+INFO: Process d g > a a g d added to mirror process g d > a a g d 
+INFO: Process d u > a a u d added to mirror process u d > a a u d 
+INFO: Trying process: d d > a a d d QCD<=2 QED<=2 @1  
+INFO: Process has 40 diagrams 
+INFO: Trying process: d d > a a d s QCD<=2 QED<=2 @1  
+INFO: Trying process: d d > a a s s QCD<=2 QED<=2 @1  
+INFO: Trying process: d s > a a d d QCD<=2 QED<=2 @1  
+INFO: Trying process: d s > a a d s QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: d s > a a s s QCD<=2 QED<=2 @1  
+INFO: Trying process: d b > a a d d QCD<=2 QED<=2 @1  
+INFO: Trying process: d b > a a d s QCD<=2 QED<=2 @1  
+INFO: Trying process: d b > a a s s QCD<=2 QED<=2 @1  
+INFO: Crossed process found for d u~ > a a d u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > a a g g, reuse diagrams. 
+INFO: Crossed process found for d d~ > a a u u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > a a d d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > a a s s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > a a d s~, reuse diagrams. 
+INFO: Trying process: d b~ > a a d d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: d b~ > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: d b~ > a a s d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: d b~ > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Process s g > a a g s added to mirror process g s > a a g s 
+INFO: Process s u > a a u s added to mirror process u s > a a u s 
+INFO: Process s d > a a d s added to mirror process d s > a a d s 
+INFO: Trying process: s s > a a d d QCD<=2 QED<=2 @1  
+INFO: Trying process: s s > a a d s QCD<=2 QED<=2 @1  
+INFO: Trying process: s s > a a s s QCD<=2 QED<=2 @1  
+INFO: Process has 40 diagrams 
+INFO: Trying process: s b > a a d d QCD<=2 QED<=2 @1  
+INFO: Trying process: s b > a a d s QCD<=2 QED<=2 @1  
+INFO: Trying process: s b > a a s s QCD<=2 QED<=2 @1  
+INFO: Crossed process found for s u~ > a a s u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > a a s d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > a a g g, reuse diagrams. 
+INFO: Crossed process found for s s~ > a a u u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > a a d d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > a a s s~, reuse diagrams. 
+INFO: Trying process: s b~ > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: s b~ > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b b > a a d d QCD<=2 QED<=2 @1  
+INFO: Trying process: b b > a a d s QCD<=2 QED<=2 @1  
+INFO: Trying process: b b > a a s s QCD<=2 QED<=2 @1  
+INFO: Trying process: b c~ > a a d u~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b c~ > a a s u~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b b~ > a a g g QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: b b~ > a a u u~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: b b~ > a a d d~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: b b~ > a a d s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b b~ > a a s d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b b~ > a a s s~ QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Process u~ g > a a g u~ added to mirror process g u~ > a a g u~ 
+INFO: Process u~ u > a a g g added to mirror process u u~ > a a g g 
+INFO: Process u~ u > a a u u~ added to mirror process u u~ > a a u u~ 
+INFO: Process u~ u > a a d d~ added to mirror process u u~ > a a d d~ 
+INFO: Process u~ u > a a s s~ added to mirror process u u~ > a a s s~ 
+INFO: Process u~ d > a a d u~ added to mirror process d u~ > a a d u~ 
+INFO: Process u~ s > a a s u~ added to mirror process s u~ > a a s u~ 
+INFO: Crossed process found for u~ u~ > a a u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > a a u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > a a u~ s~, reuse diagrams. 
+INFO: Process c~ c > a a g g added to mirror process c c~ > a a g g 
+INFO: Process c~ c > a a u u~ added to mirror process c c~ > a a u u~ 
+INFO: Process c~ c > a a d d~ added to mirror process c c~ > a a d d~ 
+INFO: Process c~ c > a a s s~ added to mirror process c c~ > a a s s~ 
+INFO: Trying process: c~ c~ > a a u~ u~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c~ b~ > a a u~ d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: c~ b~ > a a u~ s~ QCD<=2 QED<=2 @1  
+INFO: Process d~ g > a a g d~ added to mirror process g d~ > a a g d~ 
+INFO: Process d~ u > a a u d~ added to mirror process u d~ > a a u d~ 
+INFO: Process d~ d > a a g g added to mirror process d d~ > a a g g 
+INFO: Process d~ d > a a u u~ added to mirror process d d~ > a a u u~ 
+INFO: Process d~ d > a a d d~ added to mirror process d d~ > a a d d~ 
+INFO: Process d~ d > a a s s~ added to mirror process d d~ > a a s s~ 
+INFO: Process d~ s > a a s d~ added to mirror process s d~ > a a s d~ 
+INFO: Process d~ u~ > a a u~ d~ added to mirror process u~ d~ > a a u~ d~ 
+INFO: Crossed process found for d~ d~ > a a d~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > a a d~ s~, reuse diagrams. 
+INFO: Process s~ g > a a g s~ added to mirror process g s~ > a a g s~ 
+INFO: Process s~ u > a a u s~ added to mirror process u s~ > a a u s~ 
+INFO: Process s~ d > a a d s~ added to mirror process d s~ > a a d s~ 
+INFO: Process s~ s > a a g g added to mirror process s s~ > a a g g 
+INFO: Process s~ s > a a u u~ added to mirror process s s~ > a a u u~ 
+INFO: Process s~ s > a a d d~ added to mirror process s s~ > a a d d~ 
+INFO: Process s~ s > a a s s~ added to mirror process s s~ > a a s s~ 
+INFO: Process s~ u~ > a a u~ s~ added to mirror process u~ s~ > a a u~ s~ 
+INFO: Process s~ d~ > a a d~ s~ added to mirror process d~ s~ > a a d~ s~ 
+INFO: Crossed process found for s~ s~ > a a s~ s~, reuse diagrams. 
+INFO: Process b~ b > a a g g added to mirror process b b~ > a a g g 
+INFO: Process b~ b > a a u u~ added to mirror process b b~ > a a u u~ 
+INFO: Process b~ b > a a d d~ added to mirror process b b~ > a a d d~ 
+INFO: Process b~ b > a a s s~ added to mirror process b b~ > a a s s~ 
+INFO: Trying process: b~ b~ > a a d~ d~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b~ b~ > a a d~ s~ QCD<=2 QED<=2 @1  
+INFO: Trying process: b~ b~ > a a s~ s~ QCD<=2 QED<=2 @1  
+47 processes with 1260 diagrams generated in 0.516 s
+Total: 47 processes with 1260 diagrams
+output process -nojpeg
+INFO: initialize a new directory: process 
+INFO: remove old information in process 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: u u > a a u u QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u u > a a u u QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u u~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u u~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d > a a d d QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d d > a a d d QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d d~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Combined process s s > a a s s QCD<=2 QED<=2 @1 with process d d > a a d d QCD<=2 QED<=2 @1 
+INFO: Combined process s s~ > a a s s~ QCD<=2 QED<=2 @1 with process d d~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u~ u~ > a a u~ u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u~ u~ > a a u~ u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d~ d~ > a a d~ d~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d~ d~ > a a d~ d~ QCD<=2 QED<=2 @1 
+INFO: Combined process s~ s~ > a a s~ s~ QCD<=2 QED<=2 @1 with process d~ d~ > a a d~ d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u d > a a u d QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u d > a a u d QCD<=2 QED<=2 @1 
+INFO: Combined process u s > a a u s QCD<=2 QED<=2 @1 with process u d > a a u d QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Combined process u u~ > a a s s~ QCD<=2 QED<=2 @1 with process u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u d~ > a a u d~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u d~ > a a u d~ QCD<=2 QED<=2 @1 
+INFO: Combined process u s~ > a a u s~ QCD<=2 QED<=2 @1 with process u d~ > a a u d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: c c~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: c c~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Combined process c c~ > a a d d~ QCD<=2 QED<=2 @1 with process u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Combined process c c~ > a a s s~ QCD<=2 QED<=2 @1 with process u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d s > a a d s QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d s > a a d s QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d u~ > a a d u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: d u~ > a a d u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: d d~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d s~ > a a d s~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d s~ > a a d s~ QCD<=2 QED<=2 @1 
+INFO: Combined process s u~ > a a s u~ QCD<=2 QED<=2 @1 with process d u~ > a a d u~ QCD<=2 QED<=2 @1 
+INFO: Combined process s d~ > a a s d~ QCD<=2 QED<=2 @1 with process d s~ > a a d s~ QCD<=2 QED<=2 @1 
+INFO: Combined process s s~ > a a u u~ QCD<=2 QED<=2 @1 with process d d~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Combined process s s~ > a a d d~ QCD<=2 QED<=2 @1 with process d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Combined process b b~ > a a u u~ QCD<=2 QED<=2 @1 with process d d~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Combined process b b~ > a a d d~ QCD<=2 QED<=2 @1 with process d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Combined process b b~ > a a s s~ QCD<=2 QED<=2 @1 with process d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u~ d~ > a a u~ d~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u~ d~ > a a u~ d~ QCD<=2 QED<=2 @1 
+INFO: Combined process u~ s~ > a a u~ s~ QCD<=2 QED<=2 @1 with process u~ d~ > a a u~ d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d~ s~ > a a d~ s~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d~ s~ > a a d~ s~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g g > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: g g > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g g > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: g g > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Combined process g g > a a s s~ QCD<=2 QED<=2 @1 with process g g > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g u > a a g u QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: g u > a a g u QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g d > a a g d QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: g d > a a g d QCD<=2 QED<=2 @1 
+INFO: Combined process g s > a a g s QCD<=2 QED<=2 @1 with process g d > a a g d QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g u~ > a a g u~ QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: g u~ > a a g u~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g d~ > a a g d~ QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: g d~ > a a g d~ QCD<=2 QED<=2 @1 
+INFO: Combined process g s~ > a a g s~ QCD<=2 QED<=2 @1 with process g d~ > a a g d~ QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u u~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u u~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Combined process c c~ > a a g g QCD<=2 QED<=2 @1 with process u u~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d d~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Combined process s s~ > a a g g QCD<=2 QED<=2 @1 with process d d~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Combined process b b~ > a a g g QCD<=2 QED<=2 @1 with process d d~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Creating files in directory P1_qq_aaqq 
+INFO: Generating Feynman diagrams for Process: u u > a a u u QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d > a a d d QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u~ u~ > a a u~ u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d~ d~ > a a d~ d~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u d > a a u d QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u d~ > a a u d~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: c c~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d s > a a d s QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d u~ > a a d u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > a a s s~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d s~ > a a d s~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u~ d~ > a a u~ d~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d~ s~ > a a d~ s~ QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group qq_aaqq 
+INFO: Creating files in directory P1_gg_aaqq 
+INFO: Generating Feynman diagrams for Process: g g > a a u u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: g g > a a d d~ QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_aaqq 
+INFO: Creating files in directory P1_gq_aagq 
+INFO: Generating Feynman diagrams for Process: g u > a a g u QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: g d > a a g d QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: g u~ > a a g u~ QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: g d~ > a a g d~ QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gq_aagq 
+INFO: Creating files in directory P1_qq_aagg 
+INFO: Generating Feynman diagrams for Process: u u~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > a a g g QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group qq_aagg 
+Generated helas calls for 25 subprocesses (700 diagrams) in 0.463 s
+Wrote files for 1411 helas calls in 0.555 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 2 routines in  0.130 s
+save configuration file to [LOCAL_RUN_DIRECTORY]/process/Cards/me5_configuration.txt
+INFO: Use Fortran compiler x86_64-conda-linux-gnu-gfortran 
+INFO: Use c++ compiler x86_64-conda-linux-gnu-g++ 
+INFO: Generate web pages 
+Output to directory [LOCAL_RUN_DIRECTORY]/process done.
+Type "launch" to generate events from this process, or see
+[LOCAL_RUN_DIRECTORY]/process/README
+Run "open index.html" to see more information about this process.
+quit
+quit

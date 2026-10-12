@@ -232,3 +232,77 @@ git check-ignore -v reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe
 `--outgoing origin/main`。PDF/PNG 需要使用者對最終 paths、SHA-256、caption/provenance
 另行明確核准；測試成功不等於圖像核准。push 後驗證 GitHub tree、遠端檔案 hashes
 及實際 Actions 結果，建立獨立 PR；不 force-push，不自動 merge，不改 PR #8。
+
+## 11. 新增 ccgg 與 light-jjgg 小型背景 reference library
+
+上述章節保留原 Phase 6A bbgg 操作與歷史驗收紀錄。本次 stacked branch
+`codex/phase6a-backgrounds-1k` 增加 ccgg1000 與 light-jjgg1000；原 bbgg1000
+與 smoke100 的 bytes、cards、manifest 和歷史結果均保留。新的 3000-event library
+只計 bbgg1000 + ccgg1000 + light-jjgg1000，不包含 smoke100。
+
+本次 branch 在主要 `C:\HH` checkout；從 PowerShell 進入：
+
+```powershell
+wsl -d Ubuntu --cd 'C:\HH'
+```
+
+以下命令供使用者自行產生**新的本機副本**；若 output 已存在請更換名稱，不能覆寫
+既有 reference。先前的本機 MG5 installation 註冊可重用，不重新安裝。
+
+```bash
+bash simulation/mg5/scripts/generate_sample.sh \
+  --process simulation/mg5/cards/ccgg.mg5 \
+  --events 1000 --seed 20261021 --energy 13000 \
+  --output "$HOME/simulations/mg5_runs/my_ccgg_1000"
+
+bash simulation/mg5/scripts/generate_sample.sh \
+  --process simulation/mg5/cards/jjgg_light.mg5 \
+  --events 1000 --seed 20261022 --energy 13000 \
+  --output "$HOME/simulations/mg5_runs/my_jjgg_light_1000"
+
+python3 -B simulation/mg5/scripts/validate_lhe.py \
+  --file "$HOME/simulations/mg5_runs/my_ccgg_1000/sample.lhe.gz" \
+  --events 1000 --profile ccgg
+python3 -B simulation/mg5/scripts/validate_lhe.py \
+  --file "$HOME/simulations/mg5_runs/my_jjgg_light_1000/sample.lhe.gz" \
+  --events 1000 --profile jjgg
+```
+
+ccgg process 是 `p p > c c~ a a QCD=2 QED=2`。light-jjgg 是
+`p p > a a jl jl QCD=2 QED=2`，其中 `jl = g u d s u~ d~ s~`，**終態不含 c/b**；
+初態 proton 仍包含五味道 c/b PDFs。massless charm 採普通 jet cuts，不沿用 bbgg 的
+b-specific cuts。兩個新 profile 的 photon pT≥25 GeV、|eta|≤2.5，jet pT≥20 GeV、
+|eta|≤5；`draa`、`draj`、`drjj` 各≥0.4，`maxjetflavor=4`。PDF CTEQ6L1 ID10042，
+muR/muF1/muF2=125 GeV；各份 actual cards、seed、截面與積分誤差以自己的 manifest 為準。
+
+驗證所有三個背景組件與新 manifests：
+
+```bash
+python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+python3 -B -m unittest discover -s simulation/mg5/tests -v
+```
+
+`--repository .` 仍保留原 bbgg 驗證範圍；`--background-library .` 額外驗證兩個新
+1000-event 樣本、exact cards、gzip/XML、終態 flavour、cuts、weights、cross sections
+及 hashes，最後回報 library count3000。CI 需要真正的 GitHub Actions 成功結果。
+
+ccgg 與 light-jjgg 是 parton-level 物理組件；charm/light partons 變成 b-tag background
+需要明確的 hadronization、jet reconstruction 與 tagging/mistag 模型，本次沒有執行。
+不能把三種 process 的相同 event counts 當成相同 yield，不能直接接合三份 LHE 或
+把 raw XWGTUP 相加當總截面；各組件依自己的截面與 XWGTUP/N normalization 分析。
+這些小 reference 不提供 NLO、detector response、HH sensitivity 或 ATLAS normalization。
+
+只公開選定的 `pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz` 與
+`pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz`，以及 exact cards、path-sanitized
+evidence 和 manifests。個人產樣仍保存在本機，不會自動推送。出版 helper 僅準備本機
+檔案，不執行 Git；`--dry-run` 先驗證兩份 input 並列出結果，不寫入 publication files。
+
+```bash
+python3 -B simulation/mg5/scripts/publish_background_references.py \
+  --ccgg-run "$HOME/simulations/mg5_runs/my_ccgg_1000" \
+  --jjgg-run "$HOME/simulations/mg5_runs/my_jjgg_light_1000" --dry-run
+```
+
+既有公開路徑若存在，helper 會拒絕覆寫，要求保留歷史與重新審查。正式更新仍需明確
+stage paths、逐個 outgoing commit audit、remote SHA/count 查驗與獨立 Draft PR；
+不得 force-push、自動 merge，或包含未經使用者核准的 PDF/PNG。
