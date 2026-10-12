@@ -1,0 +1,84 @@
+{
+  "main_commit": "f7a3420155bd557e4146fd1959a60f68742ea930",
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/phase6a-mg5-lo-bbgg",
+    "headRefOid": "93a63c0f9642eeb65057721d2729f2d9b40e6892",
+    "isDraft": true,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-12T09:59:52Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464887/job/114758291663",
+        "name": "validate",
+        "startedAt": "2026-10-12T09:59:44Z",
+        "status": "COMPLETED",
+        "workflowName": "MG5 reference samples"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-12T09:59:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464112/job/114758289577",
+        "name": "validate",
+        "startedAt": "2026-10-12T09:59:43Z",
+        "status": "COMPLETED",
+        "workflowName": "MG5 reference samples"
+      }
+    ],
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9"
+  },
+  "pr8_unchanged": {
+    "baseRefName": "codex/phase4-mc-truth-validation",
+    "headRefName": "codex/phase5-background-normalization",
+    "headRefOid": "3eb5124f9782960afd8992559aeb4210ac308f77",
+    "isDraft": true,
+    "state": "OPEN"
+  },
+  "samples": [
+    {
+      "actual_events": 100,
+      "bytes": 22486,
+      "compressed_sha256": "1427fd1446f6bce5627be769a5fde905206f01b684d72d2b8ee35b46a198c568",
+      "decompressed_sha256": "bb793b6f0a8f73d0368c6d3f1d21c3dfb21ac2dbb3e9e974a9b1d3b8f39cc5a1",
+      "downloaded_remote_validation": "PASS",
+      "event_sha256": "a6cd0f1e40df4ee3f859f2aac55f99baff7b555de97268d5371c5e03b42e21e9",
+      "git_blob_sha": "bc43aed70aabd12a928df948d51e08699f82a763",
+      "path": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz"
+    },
+    {
+      "actual_events": 1000,
+      "bytes": 166818,
+      "compressed_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "decompressed_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+      "downloaded_remote_validation": "PASS",
+      "event_sha256": "1bee38da3a30b39286d6d3a40732f858a2b35b0e48f9b64c647b6c9f14871427",
+      "git_blob_sha": "47047fdce7717347608782eb0c2a0034dad7003e",
+      "path": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz"
+    }
+  ],
+  "status": "PASS_REMOTE_SAMPLES",
+  "verified_commit": "93a63c0f9642eeb65057721d2729f2d9b40e6892",
+  "workflow_runs": [
+    {
+      "conclusion": "success",
+      "event": "pull_request",
+      "head_sha": "93a63c0f9642eeb65057721d2729f2d9b40e6892",
+      "id": 38233464887,
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464887"
+    },
+    {
+      "conclusion": "success",
+      "event": "push",
+      "head_sha": "93a63c0f9642eeb65057721d2729f2d9b40e6892",
+      "id": 38233464112,
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464112"
+    }
+  ]
+}

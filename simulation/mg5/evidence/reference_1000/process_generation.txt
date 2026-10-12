@@ -1,0 +1,140 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.16                2026-06-03         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../../../../..[LOCAL_MG5_INSTALLATION]/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+import [LOCAL_RUN_DIRECTORY]/generate.mg5
+The import format was not given, so we guess it as command
+set automatic_html_opening False
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+set auto_update 0
+save options auto_update
+save configuration file to [LOCAL_MG5_INSTALLATION]/input/mg5_configuration.txt
+set nb_core 2
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+set fortran_compiler x86_64-conda-linux-gnu-gfortran
+set fortran compiler to x86_64-conda-linux-gnu-gfortran
+save options fortran_compiler
+save configuration file to [LOCAL_MG5_INSTALLATION]/input/mg5_configuration.txt
+set cpp_compiler x86_64-conda-linux-gnu-g++
+save options cpp_compiler
+save configuration file to [LOCAL_MG5_INSTALLATION]/input/mg5_configuration.txt
+import model sm-no_b_mass
+INFO: Restrict model sm-no_b_mass with file ../../../../..[LOCAL_MG5_INSTALLATION]/models/sm/restrict_no_b_mass.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+[1;34mPass the definition of 'j' and 'p' to 5 flavour scheme.[0m
+Defined multiparticle all = g u c d s b u~ c~ d~ s~ b~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t t~ z w+ h w- ta- ta+
+define p = g u c d s b u~ c~ d~ s~ b~
+Defined multiparticle p = g u c d s b u~ c~ d~ s~ b~
+generate p p > b b~ a a QCD=2 QED=2
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+INFO: Trying process: g g > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 30 diagrams 
+INFO: Trying process: u u~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: u c~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: c u~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: c c~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: d d~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: d s~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: d b~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: s d~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: s s~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 20 diagrams 
+INFO: Trying process: s b~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: b d~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: b s~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Trying process: b b~ > b b~ a a QCD<=2 QED<=2 @1  
+INFO: Process has 40 diagrams 
+INFO: Process u~ u > b b~ a a added to mirror process u u~ > b b~ a a 
+INFO: Process c~ c > b b~ a a added to mirror process c c~ > b b~ a a 
+INFO: Process d~ d > b b~ a a added to mirror process d d~ > b b~ a a 
+INFO: Process s~ s > b b~ a a added to mirror process s s~ > b b~ a a 
+INFO: Process b~ b > b b~ a a added to mirror process b b~ > b b~ a a 
+6 processes with 150 diagrams generated in 0.116 s
+Total: 6 processes with 150 diagrams
+output .local/user-samples/reference_1000_verified/process -nojpeg
+INFO: initialize a new directory: process 
+INFO: remove old information in process 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: b b~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: b b~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: u u~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: u u~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Combined process c c~ > b b~ a a QCD<=2 QED<=2 @1 with process u u~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: d d~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Reusing existing color information for process: d d~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Combined process s s~ > b b~ a a QCD<=2 QED<=2 @1 with process d d~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Generating Helas calls for process: g g > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Processing color information for process: g g > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Creating files in directory P1_qq_qqaa 
+INFO: Generating Feynman diagrams for Process: b b~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group qq_qqaa 
+INFO: Creating files in directory P1_gg_qqaa 
+INFO: Generating Feynman diagrams for Process: g g > b b~ a a QCD<=2 QED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_qqaa 
+Generated helas calls for 4 subprocesses (110 diagrams) in 0.072 s
+Wrote files for 223 helas calls in 2.250 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 2 routines in  0.374 s
+save configuration file to [LOCAL_RUN_DIRECTORY]/process/Cards/me5_configuration.txt
+INFO: Use Fortran compiler x86_64-conda-linux-gnu-gfortran 
+INFO: Use c++ compiler x86_64-conda-linux-gnu-g++ 
+INFO: Generate web pages 
+Output to directory [LOCAL_RUN_DIRECTORY]/process done.
+Type "launch" to generate events from this process, or see
+[LOCAL_RUN_DIRECTORY]/process/README
+Run "open index.html" to see more information about this process.
+quit
+quit

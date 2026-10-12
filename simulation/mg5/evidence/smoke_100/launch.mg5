@@ -1,0 +1,13 @@
+launch .local/user-samples/smoke_100_verified/process -m --name=sample
+shower=OFF
+detector=OFF
+analysis=OFF
+madspin=OFF
+reweight=OFF
+done
+set nevents 100
+set iseed 20261012
+set ebeam1 6500
+set ebeam2 6500
+done
+quit
