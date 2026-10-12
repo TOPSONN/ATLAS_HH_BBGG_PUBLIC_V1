@@ -1,7 +1,7 @@
 name: MG5 reference samples
 on:
   push:
-    branches: [main, codex/phase6a-mg5-lo-bbgg]
+    branches: [main, codex/phase6a-mg5-lo-bbgg, codex/phase6a-backgrounds-1k]
     paths:
       - 'simulation/mg5/**'
       - 'reference_samples/mg5/**'
@@ -29,6 +29,8 @@ jobs:
           python-version: '3.12'
       - name: Validate actual compressed references and provenance
         run: python -B simulation/mg5/scripts/validate_lhe.py --repository . --report "$RUNNER_TEMP/mg5-validation.json"
+      - name: Validate 3000-event bbgg, ccgg and light-jjgg background library
+        run: python -B simulation/mg5/scripts/validate_lhe.py --background-library . --report "$RUNNER_TEMP/mg5-background-library.json"
       - name: Adversarial tests on copies of real MG5 outputs
         run: python -B -m unittest discover -s simulation/mg5/tests -v
       - name: Check exact archive allowlist and reject generated process outputs

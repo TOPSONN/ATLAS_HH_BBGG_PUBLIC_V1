@@ -1,0 +1,65 @@
+test_actual_alpha_s_is_derived_from_banner_card (test_background_publisher.BackgroundPublisherTests.test_actual_alpha_s_is_derived_from_banner_card) ... ok
+test_existing_publication_file_is_never_overwritten (test_background_publisher.BackgroundPublisherTests.test_existing_publication_file_is_never_overwritten) ... ok
+test_failure_of_second_run_writes_neither_sample (test_background_publisher.BackgroundPublisherTests.test_failure_of_second_run_writes_neither_sample) ... FAIL: local run is not a completed selected profile
+ok
+test_plan_preserves_actual_generator_bytes_and_is_read_only (test_background_publisher.BackgroundPublisherTests.test_plan_preserves_actual_generator_bytes_and_is_read_only) ... ok
+test_wrong_seed_rejected_before_any_publication (test_background_publisher.BackgroundPublisherTests.test_wrong_seed_rejected_before_any_publication) ... ok
+test_color_flow_conservation (test_background_validator.GenericProfileChecks.test_color_flow_conservation) ... ok
+test_duplicate_generator_card_and_changed_pdf_rejected (test_background_validator.GenericProfileChecks.test_duplicate_generator_card_and_changed_pdf_rejected) ... ok
+test_massless_charm_parameter_is_required (test_background_validator.GenericProfileChecks.test_massless_charm_parameter_is_required) ... ok
+test_old_sample_cannot_be_relabelled_charm_or_light_jets (test_background_validator.GenericProfileChecks.test_old_sample_cannot_be_relabelled_charm_or_light_jets) ... ok
+test_quark_and_gluon_color_assignments (test_background_validator.GenericProfileChecks.test_quark_and_gluon_color_assignments) ... ok
+test_actual_1000_each_and_total_3000_excludes_smoke (test_background_validator.RealBackgroundLibraryChecks.test_actual_1000_each_and_total_3000_excludes_smoke) ... ok
+test_actual_final_pdg_contents (test_background_validator.RealBackgroundLibraryChecks.test_actual_final_pdg_contents) ... ok
+test_actual_jet_cut_and_light_definition_are_checked (test_background_validator.RealBackgroundLibraryChecks.test_actual_jet_cut_and_light_definition_are_checked) ... ok
+test_charged_final_flavour_mutation_rejected (test_background_validator.RealBackgroundLibraryChecks.test_charged_final_flavour_mutation_rejected) ... ok
+test_charm_cannot_be_relabelled_as_bottom (test_background_validator.RealBackgroundLibraryChecks.test_charm_cannot_be_relabelled_as_bottom) ... ok
+test_heavy_flavour_contamination_of_light_jets_rejected (test_background_validator.RealBackgroundLibraryChecks.test_heavy_flavour_contamination_of_light_jets_rejected) ... ok
+test_manifest_card_hash_count_and_cut_corruption (test_background_validator.RealBackgroundLibraryChecks.test_manifest_card_hash_count_and_cut_corruption) ... ok
+test_missing_events_rejected_with_validation_error (test_background_validator.RealBackgroundLibraryChecks.test_missing_events_rejected_with_validation_error) ... ok
+test_new_profiles_reject_truncation_nan_and_wrong_count (test_background_validator.RealBackgroundLibraryChecks.test_new_profiles_reject_truncation_nan_and_wrong_count) ... ok
+test_nonzero_charge_light_jet_channels_are_validated (test_background_validator.RealBackgroundLibraryChecks.test_nonzero_charge_light_jet_channels_are_validated) ... ok
+test_same_charge_d_to_s_flavour_mutation_rejected (test_background_validator.RealBackgroundLibraryChecks.test_same_charge_d_to_s_flavour_mutation_rejected) ... ok
+test_b_specific_cuts_do_not_substitute_for_charm_or_light_jets (test_generator_backgrounds.BackgroundGeneratorTests.test_b_specific_cuts_do_not_substitute_for_charm_or_light_jets) ... ok
+test_charm_cut_classification_cannot_be_changed_silently (test_generator_backgrounds.BackgroundGeneratorTests.test_charm_cut_classification_cannot_be_changed_silently) ... ok
+test_charm_or_bottom_in_light_jet_definition_rejected (test_generator_backgrounds.BackgroundGeneratorTests.test_charm_or_bottom_in_light_jet_definition_rejected) ... ok
+test_dry_run_never_starts_generator_or_creates_output (test_generator_backgrounds.BackgroundGeneratorTests.test_dry_run_never_starts_generator_or_creates_output) ... ok
+test_hidden_launch_or_shell_command_rejected (test_generator_backgrounds.BackgroundGeneratorTests.test_hidden_launch_or_shell_command_rejected) ... ok
+test_old_profile_settings_remain_independent (test_generator_backgrounds.BackgroundGeneratorTests.test_old_profile_settings_remain_independent) ... ok
+test_ordinary_jet_soft_collinear_regulators_required (test_generator_backgrounds.BackgroundGeneratorTests.test_ordinary_jet_soft_collinear_regulators_required) ... ok
+test_relabelled_old_process_rejected (test_generator_backgrounds.BackgroundGeneratorTests.test_relabelled_old_process_rejected) ... ok
+test_reviewed_process_cards_are_accepted (test_generator_backgrounds.BackgroundGeneratorTests.test_reviewed_process_cards_are_accepted) ... ok
+test_cpu_bound_and_low_disk_preflight (test_generator_backgrounds.ExecutionLimitTests.test_cpu_bound_and_low_disk_preflight) ... ok
+test_generator_failure_status_and_log_are_retained (test_generator_backgrounds.ExecutionLimitTests.test_generator_failure_status_and_log_are_retained) ... ok
+test_output_budget_preserves_failure (test_generator_backgrounds.ExecutionLimitTests.test_output_budget_preserves_failure) ... ok
+test_production_estimates_are_unknown (test_generator_backgrounds.ExecutionLimitTests.test_production_estimates_are_unknown) ... ok
+test_real_control_process_terminated_on_timeout (test_generator_backgrounds.ExecutionLimitTests.test_real_control_process_terminated_on_timeout) ... ok
+test_signal_requests_safe_stop (test_generator_backgrounds.ExecutionLimitTests.test_signal_requests_safe_stop) ... ok
+test_stop_marker_preserves_partial_file_and_status (test_generator_backgrounds.ExecutionLimitTests.test_stop_marker_preserves_partial_file_and_status) ... ok
+test_bad_mass_shell (test_validator.ValidatorTests.test_bad_mass_shell) ... ok
+test_bad_mothers (test_validator.ValidatorTests.test_bad_mothers) ... ok
+test_both_registered_process_cards (test_validator.ValidatorTests.test_both_registered_process_cards) ... ok
+test_card_provenance_corruption (test_validator.ValidatorTests.test_card_provenance_corruption) ... ok
+test_deterministic_gzip (test_validator.ValidatorTests.test_deterministic_gzip) ... ok
+test_dtd_rejected (test_validator.ValidatorTests.test_dtd_rejected) ... ok
+test_gzip_truncation_and_crc (test_validator.ValidatorTests.test_gzip_truncation_and_crc) ... ok
+test_manifest_cut_corruption (test_validator.ValidatorTests.test_manifest_cut_corruption) ... ok
+test_manifest_hash_corruption (test_validator.ValidatorTests.test_manifest_hash_corruption) ... ok
+test_missing_card (test_validator.ValidatorTests.test_missing_card) ... ok
+test_momentum_closure_preserving_shell (test_validator.ValidatorTests.test_momentum_closure_preserving_shell) ... ok
+test_nan (test_validator.ValidatorTests.test_nan) ... ok
+test_negative_weight (test_validator.ValidatorTests.test_negative_weight) ... ok
+test_nonfinite_weight (test_validator.ValidatorTests.test_nonfinite_weight) ... ok
+test_original_files_unchanged (test_validator.ValidatorTests.test_original_files_unchanged) ... ok
+test_real_references (test_validator.ValidatorTests.test_real_references) ... ok
+test_truncated_xml (test_validator.ValidatorTests.test_truncated_xml) ... ok
+test_unknown_process_rejected (test_validator.ValidatorTests.test_unknown_process_rejected) ... ok
+test_wrong_event_count (test_validator.ValidatorTests.test_wrong_event_count) ... ok
+test_wrong_final_pdg (test_validator.ValidatorTests.test_wrong_final_pdg) ... ok
+test_wrong_generator (test_validator.ValidatorTests.test_wrong_generator) ... ok
+test_zero_weight (test_validator.ValidatorTests.test_zero_weight) ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 9.691s
+
+OK

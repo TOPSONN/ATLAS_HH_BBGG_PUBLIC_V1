@@ -1,0 +1,410 @@
+{
+  "baseline": {
+    "branch": "codex/phase6a-mg5-lo-bbgg",
+    "merged": false,
+    "pr": 9,
+    "state": "OPEN",
+    "verified_head": "640bec6b64b2533bd33ac23d0a1e2e328e93e842"
+  },
+  "branch": "codex/phase6a-backgrounds-1k",
+  "code_sha256": {
+    "simulation/mg5/scripts/audit_payload.py": "322dbc401fa1f402444e9acb6baf899d48e4b7447db7ab085456bd9885a95196",
+    "simulation/mg5/scripts/generate_sample.py": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752",
+    "simulation/mg5/scripts/publish_background_references.py": "1519f90ab3e6f755d4194ab241e5dd5744a233a02106396aec365fb6d05db91c",
+    "simulation/mg5/scripts/resource_limits.py": "3afb3ad000fae1c62fc187bf52e0bd0e514f7144ba9ed28761f018b37b0690ca",
+    "simulation/mg5/scripts/validate_lhe.py": "042c5d235898db08b3decdef7b2930170a33b7e426b9724bab11ec90430360f1"
+  },
+  "evidence_files": [
+    {
+      "original_sha256": "215fd36ebb88a7d98ac1db3fa659913710630ecd647b537aac04981b25300ae9",
+      "path": "simulation/mg5/evidence/background_1k/environment.json",
+      "sha256": "b9db524cde928e13c9eb20e0a4b224cae436347346df18acbcaef340c1c0af49",
+      "transformation": "path placeholders only"
+    },
+    {
+      "original_sha256": "224105397c2025bf1791d1c2c3c04c9a20bfabd6c5c78d52a8af612f0d981712",
+      "path": "simulation/mg5/evidence/background_1k/cut-source-identities.json",
+      "sha256": "224105397c2025bf1791d1c2c3c04c9a20bfabd6c5c78d52a8af612f0d981712",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "c4da6a77b60f45f226c1437a3d191d9c484061a4b3589127b0085969db730a7e",
+      "path": "simulation/mg5/evidence/background_1k/cross-section-audit.json",
+      "sha256": "baacac7400699e6fc36ca47f816fda6eb94f2cc22a8c1fdf52773d8b47841c98",
+      "transformation": "added portable sample/log identities; numerical audit unchanged"
+    },
+    {
+      "original_sha256": "70d7ef94aa3613b264b1998fe37959f6c58b3524a7b4c1fc93477b80b02ed659",
+      "path": "simulation/mg5/evidence/background_1k/bbgg-results.dat",
+      "sha256": "70d7ef94aa3613b264b1998fe37959f6c58b3524a7b4c1fc93477b80b02ed659",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "9696c1743c3b3fd7510ac102c372712e7ca45cab28c9e5af2cf4397ad7ccff02",
+      "path": "simulation/mg5/evidence/background_1k/ccgg-results.dat",
+      "sha256": "9696c1743c3b3fd7510ac102c372712e7ca45cab28c9e5af2cf4397ad7ccff02",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "f853dadd4da1a25e087ec4694d070f60badfadf8412e609fb91ef1b8c36c092c",
+      "path": "simulation/mg5/evidence/background_1k/jjgg-results.dat",
+      "sha256": "f853dadd4da1a25e087ec4694d070f60badfadf8412e609fb91ef1b8c36c092c",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "40e25e734e717026aaecbcd7071a6e11ce5bad04f7b1abeef3d1f273f4b6e2e8",
+      "path": "simulation/mg5/evidence/background_1k/ccgg-run.json",
+      "sha256": "7a0f13443917ff21683cafe7c7ad53dba7b736e23ab6924362d388a4c4cb77e4",
+      "transformation": "path placeholders only"
+    },
+    {
+      "original_sha256": "aad9cb6ed9e33043b6f5e48429ca870738f9b7dc5b91e62cf41b2a016be916b7",
+      "path": "simulation/mg5/evidence/background_1k/jjgg-run.json",
+      "sha256": "13a3ef132c69185d668b44553de474cf72314504e18b2ddcf0a1c970d3bf4327",
+      "transformation": "path placeholders only"
+    },
+    {
+      "original_sha256": "9e52258265b89330c4ffade60c1bd4237ef93ba700f22e8bdc8548d634298750",
+      "path": "simulation/mg5/evidence/background_1k/process-help.txt",
+      "sha256": "20bb36acbd28d2485b66373bcc5d5cb886433a4ade4b01cb4f179661954d5aae",
+      "transformation": "path placeholders only"
+    },
+    {
+      "original_sha256": "7c47d3838c8e92827fd09a327406b39086b63a403c9f739807d30c3607368c2a",
+      "path": "simulation/mg5/evidence/background_1k/tests-final.txt",
+      "sha256": "7c47d3838c8e92827fd09a327406b39086b63a403c9f739807d30c3607368c2a",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "path": "simulation/mg5/evidence/background_1k/library-validation.json",
+      "sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "transformation": "NONE"
+    },
+    {
+      "original_sha256": "33ca32dda88a6ae30ac79f31395db37bcd2dd6544ea41efc2dafd55214f7999e",
+      "path": "simulation/mg5/evidence/background_1k/legacy-validation.json",
+      "sha256": "33ca32dda88a6ae30ac79f31395db37bcd2dd6544ea41efc2dafd55214f7999e",
+      "transformation": "NONE"
+    }
+  ],
+  "existing_reference_events": 1000,
+  "figures": {
+    "committed": 0,
+    "generated": 0,
+    "staged": 0
+  },
+  "generator": {
+    "gcc_gxx_gfortran": "14.4.0",
+    "make": "4.4.1",
+    "model": "sm-no_b_mass",
+    "python": "3.12.15",
+    "reinstalled": false,
+    "retained_source_files_verified": 4658,
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "version": "3.5.16"
+  },
+  "historical_samples_cards_provenance": "UNCHANGED from verified PR9 baseline",
+  "local_library_validation": "PASS",
+  "local_test_count": 59,
+  "local_tests_status": "PASS",
+  "new_generation_events": 2000,
+  "personal_outputs": "LOCAL_ONLY",
+  "physics": {
+    "beam_energies_gev": [
+      6500,
+      6500
+    ],
+    "bottom_mass_gev": 0,
+    "charm_mass_gev": 0,
+    "flavour_scheme": "5F massless hard process, initial u,d,s,c,b/antiquarks and gluon",
+    "muR_muF1_muF2_gev": [
+      125,
+      125,
+      125
+    ],
+    "pdf": "CTEQ6L1",
+    "pdf_id": 10042,
+    "qcd_order": 2,
+    "qed_order": 2,
+    "sqrt_s_gev": 13000,
+    "tree_only": true
+  },
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "publication": {
+    "ci": "UNKNOWN",
+    "draft": true,
+    "merge_authorized": false,
+    "pr_url": null,
+    "status": "UNKNOWN"
+  },
+  "resources": {
+    "jobs": 2,
+    "max_disk_gb": 5,
+    "max_hours": 1
+  },
+  "root_conda_history_sha256": "b34431d29b37459623cf34ffd1dc8bb3fe54f9f7377bd108c40503459dbf81a7",
+  "root_environment": "UNCHANGED; no source/build changes; ROOT CTest not rerun for this task",
+  "samples": {
+    "bbgg": {
+      "actual_events": 1000,
+      "compressed_bytes": 166818,
+      "compressed_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "cross_section_uncertainty_pb": 0.0005940933,
+      "decompressed_file_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+      "event_content_sha256": "1bee38da3a30b39286d6d3a40732f858a2b35b0e48f9b64c647b6c9f14871427",
+      "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "generator_cross_section_pb": 0.06624666,
+      "param_card_path": "simulation/mg5/cards/reference_1000/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "process_card_path": "simulation/mg5/cards/reference_1000/proc_card_mg5.dat",
+      "process_card_sha256": "8d57622a06aa06b2cfcfed7cfec128b733552344c2be1d920e31f335f8a0fb81",
+      "random_seed": 20261013,
+      "run_card_path": "simulation/mg5/cards/reference_1000/run_card.dat",
+      "run_card_sha256": "00b17883baedf6e2b621099c4bc33f9058501548bdf4b1c41c9d682015ab1b7d"
+    },
+    "ccgg": {
+      "actual_events": 1000,
+      "compressed_bytes": 165830,
+      "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "cross_section_uncertainty_pb": 0.005190692,
+      "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+      "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+      "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "generator_cross_section_pb": 0.6274417,
+      "param_card_path": "simulation/mg5/cards/ccgg_reference_1000/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "process_card_path": "simulation/mg5/cards/ccgg_reference_1000/proc_card_mg5.dat",
+      "process_card_sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2",
+      "random_seed": 20261021,
+      "run_card_path": "simulation/mg5/cards/ccgg_reference_1000/run_card.dat",
+      "run_card_sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce"
+    },
+    "jjgg": {
+      "actual_events": 1000,
+      "compressed_bytes": 168744,
+      "compressed_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "cross_section_uncertainty_pb": 0.0547472,
+      "decompressed_file_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+      "event_content_sha256": "ccec02ff630643898cdfbf86c9313362c92131b900a8f7c111f6e669ab438726",
+      "file": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+      "generator_cross_section_pb": 9.436556,
+      "param_card_path": "simulation/mg5/cards/jjgg_reference_1000/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "process_card_path": "simulation/mg5/cards/jjgg_reference_1000/proc_card_mg5.dat",
+      "process_card_sha256": "6724ed8d59c4f04cd1651986fbec5e5ba3f6ab6d90d3a83599e18187383ae73f",
+      "random_seed": 20261022,
+      "run_card_path": "simulation/mg5/cards/jjgg_reference_1000/run_card.dat",
+      "run_card_sha256": "5c388bb0fe5c11130ee79d327858b6b1a2982b76cf9e257bac572b529fd3b00f"
+    }
+  },
+  "schema_version": 1,
+  "scientific_audit": {
+    "bbgg": {
+      "actual_events": 1000,
+      "cross_section_pb": 0.06624666,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 21.181084575,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 11.065209269999997,
+          "exit_code": 0
+        }
+      },
+      "grouped_diagrams": 110,
+      "grouped_representative_subprocesses": 4,
+      "independent_extraction_agreement": "PASS (actual printed precision)",
+      "independent_log_cross_section_tokens": [
+        "0.06625",
+        "0.0005941"
+      ],
+      "independent_results_cross_section_pb": 0.066247,
+      "independent_results_uncertainty_pb": 0.00059409,
+      "log_sha256": "b80c3b2c0566f15ccd779a11d7e329a29b0d515213a17617b0d8fe1820bf145c",
+      "max_closure_gev": 9.699988368083723e-08,
+      "max_shell_gev2": 0.00027202069759368896,
+      "published_event_log": {
+        "original_sha256": "b80c3b2c0566f15ccd779a11d7e329a29b0d515213a17617b0d8fe1820bf145c",
+        "path": "simulation/mg5/evidence/reference_1000/event_generation.txt",
+        "sha256": "80da48090cf1332ea395dbddb13c753b2d43be3bde1e8005dba10dc7e5e962b7",
+        "transformation": "path placeholders only"
+      },
+      "results_dat_path": "simulation/mg5/evidence/background_1k/bbgg-results.dat",
+      "results_dat_sha256": "70d7ef94aa3613b264b1998fe37959f6c58b3524a7b4c1fc93477b80b02ed659",
+      "runtime_scope": "sum of historically recorded process/event generator phase elapsed times",
+      "runtime_seconds": 32.246293845,
+      "sample_identity": {
+        "compressed_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "decompressed_file_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+        "event_content_sha256": "1bee38da3a30b39286d6d3a40732f858a2b35b0e48f9b64c647b6c9f14871427",
+        "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+        "random_seed": 20261013
+      },
+      "seed": 20261013,
+      "subprocess_directories": [
+        "P1_qq_qqaa",
+        "P1_gg_qqaa"
+      ],
+      "uncertainty_pb": 0.0005940933,
+      "ungrouped_parser_diagrams": 150,
+      "ungrouped_parser_processes": 6,
+      "unweighting": {
+        "after_primary_unweighting_nw": 72409,
+        "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+        "overall_count_ratio_nunwgt_over_nevents": 0.04607218569124461,
+        "primary_count_ratio_nw_over_nevents": 0.3905913702982474,
+        "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+        "recorded_nonzero_sampling_points_nevents": 185383,
+        "secondary_count_ratio_nunwgt_over_nw": 0.11795495035147564,
+        "unweighted_pool_nunwgt": 8541
+      },
+      "weights": {
+        "idwtup": -4,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "ccgg": {
+      "actual_events": 1000,
+      "cross_section_pb": 0.6274417,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 11.308834934000004,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 2.002877510000019,
+          "exit_code": 0
+        }
+      },
+      "grouped_diagrams": 110,
+      "grouped_representative_subprocesses": 4,
+      "independent_extraction_agreement": "PASS (actual printed precision)",
+      "independent_log_cross_section_tokens": [
+        "0.6274",
+        "0.005191"
+      ],
+      "independent_results_cross_section_pb": 0.62744,
+      "independent_results_uncertainty_pb": 0.0051907,
+      "log_sha256": "36cd783aa4e474b318fc63f3b77ae148ec2017916c70a75763383e75c9bcdd4c",
+      "max_closure_gev": 9.099994713324122e-08,
+      "max_shell_gev2": 0.00041316263377666473,
+      "published_event_log": {
+        "original_sha256": "36cd783aa4e474b318fc63f3b77ae148ec2017916c70a75763383e75c9bcdd4c",
+        "path": "simulation/mg5/evidence/ccgg_reference_1000/event_generation.txt",
+        "sha256": "dcfc757c991ea8910ca20c6661f97bfdede7d47cec61df8f77b18a7e1df12b76",
+        "transformation": "path placeholders only"
+      },
+      "results_dat_path": "simulation/mg5/evidence/background_1k/ccgg-results.dat",
+      "results_dat_sha256": "9696c1743c3b3fd7510ac102c372712e7ca45cab28c9e5af2cf4397ad7ccff02",
+      "runtime_scope": "full CLI recorded elapsed",
+      "runtime_seconds": 13.64930074299997,
+      "sample_identity": {
+        "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+        "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+        "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+        "random_seed": 20261021
+      },
+      "seed": 20261021,
+      "subprocess_directories": [
+        "P1_qq_qqaa",
+        "P1_gg_qqaa"
+      ],
+      "uncertainty_pb": 0.005190692,
+      "ungrouped_parser_diagrams": 150,
+      "ungrouped_parser_processes": 6,
+      "unweighting": {
+        "after_primary_unweighting_nw": 74532,
+        "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+        "overall_count_ratio_nunwgt_over_nevents": 0.041586407368679114,
+        "primary_count_ratio_nw_over_nevents": 0.37289678946130794,
+        "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+        "recorded_nonzero_sampling_points_nevents": 199873,
+        "secondary_count_ratio_nunwgt_over_nw": 0.11152256748779048,
+        "unweighted_pool_nunwgt": 8312
+      },
+      "weights": {
+        "idwtup": -4,
+        "negative": 0,
+        "zero": 0
+      }
+    },
+    "jjgg": {
+      "actual_events": 1000,
+      "cross_section_pb": 9.436556,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 25.146753500999978,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 3.255315300999996,
+          "exit_code": 0
+        }
+      },
+      "grouped_diagrams": 700,
+      "grouped_representative_subprocesses": 25,
+      "independent_extraction_agreement": "PASS (actual printed precision)",
+      "independent_log_cross_section_tokens": [
+        "9.437",
+        "0.05475"
+      ],
+      "independent_results_cross_section_pb": 9.4366,
+      "independent_results_uncertainty_pb": 0.054747,
+      "log_sha256": "c45cfcf78fbed5e4174806079b0f88ba46284a9c20c48a5e0a9627c98bb6039c",
+      "max_closure_gev": 8.999995770864189e-08,
+      "max_shell_gev2": 0.0003193467855453491,
+      "published_event_log": {
+        "original_sha256": "c45cfcf78fbed5e4174806079b0f88ba46284a9c20c48a5e0a9627c98bb6039c",
+        "path": "simulation/mg5/evidence/jjgg_reference_1000/event_generation.txt",
+        "sha256": "4f6b5274f12659f9030965c21405a43115f6de017329598d0c14ee659d68b07d",
+        "transformation": "path placeholders only"
+      },
+      "results_dat_path": "simulation/mg5/evidence/background_1k/jjgg-results.dat",
+      "results_dat_sha256": "f853dadd4da1a25e087ec4694d070f60badfadf8412e609fb91ef1b8c36c092c",
+      "runtime_scope": "full CLI recorded elapsed",
+      "runtime_seconds": 28.84485612200001,
+      "sample_identity": {
+        "compressed_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "decompressed_file_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+        "event_content_sha256": "ccec02ff630643898cdfbf86c9313362c92131b900a8f7c111f6e669ab438726",
+        "file": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+        "random_seed": 20261022
+      },
+      "seed": 20261022,
+      "subprocess_directories": [
+        "P1_qq_aaqq",
+        "P1_gg_aaqq",
+        "P1_gq_aagq",
+        "P1_qq_aagg"
+      ],
+      "uncertainty_pb": 0.0547472,
+      "ungrouped_parser_diagrams": 1260,
+      "ungrouped_parser_processes": 47,
+      "unweighting": {
+        "after_primary_unweighting_nw": 178281,
+        "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+        "overall_count_ratio_nunwgt_over_nevents": 0.023794060104557556,
+        "primary_count_ratio_nw_over_nevents": 0.35737395362263064,
+        "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+        "recorded_nonzero_sampling_points_nevents": 498864,
+        "secondary_count_ratio_nunwgt_over_nw": 0.06658028617743898,
+        "unweighted_pool_nunwgt": 11870
+      },
+      "weights": {
+        "idwtup": -4,
+        "negative": 0,
+        "zero": 0
+      }
+    }
+  },
+  "scientific_limits": "These are three separate LO parton-level reference categories. No shower/hadronization, detector response, charm/light-to-b mistags, shower flavour migration, photon fake background, or fragmentation contribution is modeled. Their cross sections are not summed and their event counts are not equal expected yields.",
+  "smoke_events_excluded": 100,
+  "status": "LOCAL_VERIFIED_AWAITING_REMOTE",
+  "task": "PHASE6A_BACKGROUND_REFERENCE_EXPANSION_1000_V1",
+  "total_reference_events": 3000
+}

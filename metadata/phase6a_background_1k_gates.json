@@ -1,0 +1,74 @@
+{
+  "blocked": [],
+  "fail": [],
+  "gates": {
+    "A": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Existing MG5 installation verified",
+      "state": "PASS"
+    },
+    "B": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "ccgg model and process validated",
+      "state": "PASS"
+    },
+    "C": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "jjgg model and process validated",
+      "state": "PASS"
+    },
+    "D": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "ccgg 1000 genuine events generated",
+      "state": "PASS"
+    },
+    "E": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "jjgg 1000 genuine events generated",
+      "state": "PASS"
+    },
+    "F": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Physics and LHE integrity tests passed",
+      "state": "PASS"
+    },
+    "G": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Process-specific cross sections recorded",
+      "state": "PASS"
+    },
+    "H": {
+      "evidence": "simulation/mg5/evidence/background_1k/",
+      "name": "Existing bbgg regression unchanged",
+      "state": "PASS"
+    },
+    "I": {
+      "evidence": "Remote push/check pending",
+      "name": "GitHub reference files published and verified",
+      "state": "UNKNOWN"
+    },
+    "J": {
+      "evidence": "Remote push/check pending",
+      "name": "CI, provenance and Git integrity validated",
+      "state": "UNKNOWN"
+    }
+  },
+  "pass": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "schema_version": 1,
+  "task": "PHASE6A_BACKGROUND_REFERENCE_EXPANSION_1000_V1",
+  "unknown": [
+    "I",
+    "J"
+  ],
+  "verdict": "LOCAL_VERIFIED_AWAITING_REMOTE"
+}

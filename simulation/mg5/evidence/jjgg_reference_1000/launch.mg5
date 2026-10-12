@@ -1,0 +1,13 @@
+launch process -m --name=sample
+shower=OFF
+detector=OFF
+analysis=OFF
+madspin=OFF
+reweight=OFF
+done
+set nevents 1000
+set iseed 20261022
+set ebeam1 6500
+set ebeam2 6500
+done
+quit

@@ -1,0 +1,11 @@
+set automatic_html_opening False
+set auto_update 0
+set nb_core 2
+set fortran_compiler x86_64-conda-linux-gnu-gfortran
+set cpp_compiler x86_64-conda-linux-gnu-g++
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+define jl = g u u~ d d~ s s~
+generate p p > a a jl jl QCD=2 QED=2
+output process -nojpeg
+quit

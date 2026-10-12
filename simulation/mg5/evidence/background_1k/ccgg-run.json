@@ -1,0 +1,122 @@
+{
+  "actual_cards_authority": "Exact LHE banner text; post-run card separately retained (MG5 resets iseed=0)",
+  "card_hashes": {
+    "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+    "process_card_sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2",
+    "run_card_sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce"
+  },
+  "elapsed_seconds": 13.64930074299997,
+  "events_requested": 1000,
+  "execution": {
+    "event_generation": {
+      "elapsed_seconds": 11.308834934000004,
+      "exit_code": 0
+    },
+    "process_generation": {
+      "elapsed_seconds": 2.002877510000019,
+      "exit_code": 0
+    }
+  },
+  "generator_script_sha256": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752",
+  "lhe": "sample.lhe",
+  "lhe_gz": "sample.lhe.gz",
+  "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "process": "generate p p > c c~ a a QCD=2 QED=2",
+  "profile": "ccgg",
+  "publication": "LOCAL_ONLY",
+  "random_seed": 20261021,
+  "resource_limits": {
+    "jobs": 2,
+    "max_disk_gb": 5.0,
+    "max_hours": 1.0
+  },
+  "resources_preflight": {
+    "available_logical_cpus": 8,
+    "disk_free_bytes": 1009569722368,
+    "jobs": 2,
+    "output_size_estimate_bytes": "UNKNOWN",
+    "ram_available_bytes": 7504429056,
+    "ram_total_bytes": 8051187712,
+    "runtime_estimate_seconds": "UNKNOWN"
+  },
+  "schema_version": 1,
+  "source_identity": {
+    "conda_sh": "[LOCAL_CONDA_SH]",
+    "mg5_path": "[LOCAL_MG5_INSTALLATION]",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+    "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+  },
+  "sqrt_s_gev": 13000.0,
+  "status": "PASS",
+  "validation": {
+    "actual_events": 1000,
+    "compressed_bytes": 165830,
+    "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+    "cross_section_pb": 0.6274417,
+    "cross_section_uncertainty_pb": 0.005190692,
+    "cut_extrema": {
+      "draa": 0.4002916303433148,
+      "draj": 0.4000742172385804,
+      "drjj": 0.5303604758883032,
+      "jet_abs_eta": 4.9885521701678925,
+      "jet_pt": 20.015314648779874,
+      "photon_abs_eta": 2.499979190628354,
+      "photon_pt": 25.00339803506781
+    },
+    "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+    "event_alpha_em_values": [
+      0.007546771
+    ],
+    "event_alpha_s_values": [
+      0.1238062
+    ],
+    "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+    "event_scale_values_gev": [
+      125.0
+    ],
+    "idwtup": -4,
+    "incoming_pdg_pair_counts": {
+      "-1,1": 5,
+      "-2,2": 49,
+      "-4,4": 35,
+      "1,-1": 5,
+      "2,-2": 34,
+      "21,21": 837,
+      "3,-3": 1,
+      "4,-4": 32,
+      "5,-5": 2
+    },
+    "lhe_version": "3.0",
+    "max_four_momentum_residual_gev": 9.099994713324122e-08,
+    "max_mass_shell_residual_gev2": 0.00041316263377666473,
+    "mg5_version": "3.5.16",
+    "negative_weight_count": 0,
+    "nominal_event_weight": 0.6274417,
+    "original_compressed_sha256": "bfba7b6eb4e33689b02e576007aed1d136f64fd6a7e8bcde42f408e27af964c7",
+    "outgoing_pdg_counts": {
+      "-4": 1000,
+      "4": 1000,
+      "22": 2000
+    },
+    "pdf_groups": [
+      0,
+      0
+    ],
+    "pdf_ids": [
+      10042,
+      10042
+    ],
+    "physics_profile": "ccgg",
+    "positive_weight_count": 1000,
+    "tolerances": {
+      "closure_atol_gev": 1e-06,
+      "closure_rtol": 5e-09,
+      "shell_atol_gev2": 1e-06,
+      "shell_rtol": 5e-09
+    },
+    "validation_status": "PASS",
+    "zero_weight_count": 0
+  }
+}

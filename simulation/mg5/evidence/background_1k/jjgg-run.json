@@ -1,0 +1,160 @@
+{
+  "actual_cards_authority": "Exact LHE banner text; post-run card separately retained (MG5 resets iseed=0)",
+  "card_hashes": {
+    "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+    "process_card_sha256": "6724ed8d59c4f04cd1651986fbec5e5ba3f6ab6d90d3a83599e18187383ae73f",
+    "run_card_sha256": "5c388bb0fe5c11130ee79d327858b6b1a2982b76cf9e257bac572b529fd3b00f"
+  },
+  "elapsed_seconds": 28.84485612200001,
+  "events_requested": 1000,
+  "execution": {
+    "event_generation": {
+      "elapsed_seconds": 25.146753500999978,
+      "exit_code": 0
+    },
+    "process_generation": {
+      "elapsed_seconds": 3.255315300999996,
+      "exit_code": 0
+    }
+  },
+  "generator_script_sha256": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752",
+  "lhe": "sample.lhe",
+  "lhe_gz": "sample.lhe.gz",
+  "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "process": "generate p p > a a jl jl QCD=2 QED=2",
+  "profile": "jjgg",
+  "publication": "LOCAL_ONLY",
+  "random_seed": 20261022,
+  "resource_limits": {
+    "jobs": 2,
+    "max_disk_gb": 5.0,
+    "max_hours": 1.0
+  },
+  "resources_preflight": {
+    "available_logical_cpus": 8,
+    "disk_free_bytes": 1009529278464,
+    "jobs": 2,
+    "output_size_estimate_bytes": "UNKNOWN",
+    "ram_available_bytes": 7505346560,
+    "ram_total_bytes": 8051187712,
+    "runtime_estimate_seconds": "UNKNOWN"
+  },
+  "schema_version": 1,
+  "source_identity": {
+    "conda_sh": "[LOCAL_CONDA_SH]",
+    "mg5_path": "[LOCAL_MG5_INSTALLATION]",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+    "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+  },
+  "sqrt_s_gev": 13000.0,
+  "status": "PASS",
+  "validation": {
+    "actual_events": 1000,
+    "compressed_bytes": 168744,
+    "compressed_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+    "cross_section_pb": 9.436556,
+    "cross_section_uncertainty_pb": 0.0547472,
+    "cut_extrema": {
+      "draa": 0.4043645384515487,
+      "draj": 0.40011554455123033,
+      "drjj": 0.4018972009948762,
+      "jet_abs_eta": 4.743176517527776,
+      "jet_pt": 20.019694986459307,
+      "photon_abs_eta": 2.496683018842777,
+      "photon_pt": 25.002140903969245
+    },
+    "decompressed_file_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+    "event_alpha_em_values": [
+      0.007546771
+    ],
+    "event_alpha_s_values": [
+      0.1238062
+    ],
+    "event_content_sha256": "ccec02ff630643898cdfbf86c9313362c92131b900a8f7c111f6e669ab438726",
+    "event_scale_values_gev": [
+      125.0
+    ],
+    "idwtup": -4,
+    "incoming_pdg_pair_counts": {
+      "-1,-1": 1,
+      "-1,-2": 1,
+      "-1,1": 2,
+      "-1,2": 8,
+      "-1,21": 3,
+      "-2,-1": 1,
+      "-2,-2": 2,
+      "-2,-3": 2,
+      "-2,1": 3,
+      "-2,2": 58,
+      "-2,21": 64,
+      "-2,3": 2,
+      "-3,-1": 1,
+      "-3,1": 1,
+      "-3,2": 4,
+      "-3,21": 2,
+      "-3,3": 1,
+      "-4,4": 2,
+      "1,-1": 8,
+      "1,-2": 5,
+      "1,2": 17,
+      "1,21": 8,
+      "1,3": 1,
+      "2,-1": 5,
+      "2,-2": 56,
+      "2,-3": 1,
+      "2,1": 19,
+      "2,2": 54,
+      "2,21": 273,
+      "2,3": 8,
+      "21,-1": 4,
+      "21,-2": 67,
+      "21,-3": 2,
+      "21,1": 10,
+      "21,2": 232,
+      "21,21": 55,
+      "21,3": 1,
+      "3,-2": 1,
+      "3,1": 1,
+      "3,2": 6,
+      "3,21": 4,
+      "4,-4": 4
+    },
+    "lhe_version": "3.0",
+    "max_four_momentum_residual_gev": 8.999995770864189e-08,
+    "max_mass_shell_residual_gev2": 0.0003193467855453491,
+    "mg5_version": "3.5.16",
+    "negative_weight_count": 0,
+    "nominal_event_weight": 9.4365561,
+    "original_compressed_sha256": "03bb4be6690dbfe630edec72a9c38371c365ec4147776a72311cf2f60a700931",
+    "outgoing_pdg_counts": {
+      "-3": 18,
+      "-2": 264,
+      "-1": 30,
+      "1": 70,
+      "2": 795,
+      "3": 29,
+      "21": 794,
+      "22": 2000
+    },
+    "pdf_groups": [
+      0,
+      0
+    ],
+    "pdf_ids": [
+      10042,
+      10042
+    ],
+    "physics_profile": "jjgg",
+    "positive_weight_count": 1000,
+    "tolerances": {
+      "closure_atol_gev": 1e-06,
+      "closure_rtol": 5e-09,
+      "shell_atol_gev2": 1e-06,
+      "shell_rtol": 5e-09
+    },
+    "validation_status": "PASS",
+    "zero_weight_count": 0
+  }
+}

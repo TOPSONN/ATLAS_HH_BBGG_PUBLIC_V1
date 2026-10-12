@@ -1,0 +1,202 @@
+{
+  "bbgg": {
+    "actual_events": 1000,
+    "cross_section_pb": 0.06624666,
+    "execution": {
+      "event_generation": {
+        "elapsed_seconds": 21.181084575,
+        "exit_code": 0
+      },
+      "process_generation": {
+        "elapsed_seconds": 11.065209269999997,
+        "exit_code": 0
+      }
+    },
+    "grouped_diagrams": 110,
+    "grouped_representative_subprocesses": 4,
+    "independent_extraction_agreement": "PASS (actual printed precision)",
+    "independent_log_cross_section_tokens": [
+      "0.06625",
+      "0.0005941"
+    ],
+    "independent_results_cross_section_pb": 0.066247,
+    "independent_results_uncertainty_pb": 0.00059409,
+    "log_sha256": "b80c3b2c0566f15ccd779a11d7e329a29b0d515213a17617b0d8fe1820bf145c",
+    "max_closure_gev": 9.699988368083723e-08,
+    "max_shell_gev2": 0.00027202069759368896,
+    "published_event_log": {
+      "original_sha256": "b80c3b2c0566f15ccd779a11d7e329a29b0d515213a17617b0d8fe1820bf145c",
+      "path": "simulation/mg5/evidence/reference_1000/event_generation.txt",
+      "sha256": "80da48090cf1332ea395dbddb13c753b2d43be3bde1e8005dba10dc7e5e962b7",
+      "transformation": "path placeholders only"
+    },
+    "results_dat_path": "simulation/mg5/evidence/background_1k/bbgg-results.dat",
+    "results_dat_sha256": "70d7ef94aa3613b264b1998fe37959f6c58b3524a7b4c1fc93477b80b02ed659",
+    "runtime_scope": "sum of historically recorded process/event generator phase elapsed times",
+    "runtime_seconds": 32.246293845,
+    "sample_identity": {
+      "compressed_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "decompressed_file_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+      "event_content_sha256": "1bee38da3a30b39286d6d3a40732f858a2b35b0e48f9b64c647b6c9f14871427",
+      "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "random_seed": 20261013
+    },
+    "seed": 20261013,
+    "subprocess_directories": [
+      "P1_qq_qqaa",
+      "P1_gg_qqaa"
+    ],
+    "uncertainty_pb": 0.0005940933,
+    "ungrouped_parser_diagrams": 150,
+    "ungrouped_parser_processes": 6,
+    "unweighting": {
+      "after_primary_unweighting_nw": 72409,
+      "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+      "overall_count_ratio_nunwgt_over_nevents": 0.04607218569124461,
+      "primary_count_ratio_nw_over_nevents": 0.3905913702982474,
+      "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+      "recorded_nonzero_sampling_points_nevents": 185383,
+      "secondary_count_ratio_nunwgt_over_nw": 0.11795495035147564,
+      "unweighted_pool_nunwgt": 8541
+    },
+    "weights": {
+      "idwtup": -4,
+      "negative": 0,
+      "zero": 0
+    }
+  },
+  "ccgg": {
+    "actual_events": 1000,
+    "cross_section_pb": 0.6274417,
+    "execution": {
+      "event_generation": {
+        "elapsed_seconds": 11.308834934000004,
+        "exit_code": 0
+      },
+      "process_generation": {
+        "elapsed_seconds": 2.002877510000019,
+        "exit_code": 0
+      }
+    },
+    "grouped_diagrams": 110,
+    "grouped_representative_subprocesses": 4,
+    "independent_extraction_agreement": "PASS (actual printed precision)",
+    "independent_log_cross_section_tokens": [
+      "0.6274",
+      "0.005191"
+    ],
+    "independent_results_cross_section_pb": 0.62744,
+    "independent_results_uncertainty_pb": 0.0051907,
+    "log_sha256": "36cd783aa4e474b318fc63f3b77ae148ec2017916c70a75763383e75c9bcdd4c",
+    "max_closure_gev": 9.099994713324122e-08,
+    "max_shell_gev2": 0.00041316263377666473,
+    "published_event_log": {
+      "original_sha256": "36cd783aa4e474b318fc63f3b77ae148ec2017916c70a75763383e75c9bcdd4c",
+      "path": "simulation/mg5/evidence/ccgg_reference_1000/event_generation.txt",
+      "sha256": "dcfc757c991ea8910ca20c6661f97bfdede7d47cec61df8f77b18a7e1df12b76",
+      "transformation": "path placeholders only"
+    },
+    "results_dat_path": "simulation/mg5/evidence/background_1k/ccgg-results.dat",
+    "results_dat_sha256": "9696c1743c3b3fd7510ac102c372712e7ca45cab28c9e5af2cf4397ad7ccff02",
+    "runtime_scope": "full CLI recorded elapsed",
+    "runtime_seconds": 13.64930074299997,
+    "sample_identity": {
+      "compressed_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "decompressed_file_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+      "event_content_sha256": "de13a0a2e8cfa82bfcee83db86e0fc915afdf4a480a9ba84dd5ea41c9b33e15e",
+      "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "random_seed": 20261021
+    },
+    "seed": 20261021,
+    "subprocess_directories": [
+      "P1_qq_qqaa",
+      "P1_gg_qqaa"
+    ],
+    "uncertainty_pb": 0.005190692,
+    "ungrouped_parser_diagrams": 150,
+    "ungrouped_parser_processes": 6,
+    "unweighting": {
+      "after_primary_unweighting_nw": 74532,
+      "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+      "overall_count_ratio_nunwgt_over_nevents": 0.041586407368679114,
+      "primary_count_ratio_nw_over_nevents": 0.37289678946130794,
+      "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+      "recorded_nonzero_sampling_points_nevents": 199873,
+      "secondary_count_ratio_nunwgt_over_nw": 0.11152256748779048,
+      "unweighted_pool_nunwgt": 8312
+    },
+    "weights": {
+      "idwtup": -4,
+      "negative": 0,
+      "zero": 0
+    }
+  },
+  "jjgg": {
+    "actual_events": 1000,
+    "cross_section_pb": 9.436556,
+    "execution": {
+      "event_generation": {
+        "elapsed_seconds": 25.146753500999978,
+        "exit_code": 0
+      },
+      "process_generation": {
+        "elapsed_seconds": 3.255315300999996,
+        "exit_code": 0
+      }
+    },
+    "grouped_diagrams": 700,
+    "grouped_representative_subprocesses": 25,
+    "independent_extraction_agreement": "PASS (actual printed precision)",
+    "independent_log_cross_section_tokens": [
+      "9.437",
+      "0.05475"
+    ],
+    "independent_results_cross_section_pb": 9.4366,
+    "independent_results_uncertainty_pb": 0.054747,
+    "log_sha256": "c45cfcf78fbed5e4174806079b0f88ba46284a9c20c48a5e0a9627c98bb6039c",
+    "max_closure_gev": 8.999995770864189e-08,
+    "max_shell_gev2": 0.0003193467855453491,
+    "published_event_log": {
+      "original_sha256": "c45cfcf78fbed5e4174806079b0f88ba46284a9c20c48a5e0a9627c98bb6039c",
+      "path": "simulation/mg5/evidence/jjgg_reference_1000/event_generation.txt",
+      "sha256": "4f6b5274f12659f9030965c21405a43115f6de017329598d0c14ee659d68b07d",
+      "transformation": "path placeholders only"
+    },
+    "results_dat_path": "simulation/mg5/evidence/background_1k/jjgg-results.dat",
+    "results_dat_sha256": "f853dadd4da1a25e087ec4694d070f60badfadf8412e609fb91ef1b8c36c092c",
+    "runtime_scope": "full CLI recorded elapsed",
+    "runtime_seconds": 28.84485612200001,
+    "sample_identity": {
+      "compressed_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "decompressed_file_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+      "event_content_sha256": "ccec02ff630643898cdfbf86c9313362c92131b900a8f7c111f6e669ab438726",
+      "file": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+      "random_seed": 20261022
+    },
+    "seed": 20261022,
+    "subprocess_directories": [
+      "P1_qq_aaqq",
+      "P1_gg_aaqq",
+      "P1_gq_aagq",
+      "P1_qq_aagg"
+    ],
+    "uncertainty_pb": 0.0547472,
+    "ungrouped_parser_diagrams": 1260,
+    "ungrouped_parser_processes": 47,
+    "unweighting": {
+      "after_primary_unweighting_nw": 178281,
+      "meaning": "Conditional count ratios on the recorded nonzero-weight pool using MG5 OneResult and dsample.f definitions; final published1000 is a selected pool, not all-point generator efficiency or detector acceptance",
+      "overall_count_ratio_nunwgt_over_nevents": 0.023794060104557556,
+      "primary_count_ratio_nw_over_nevents": 0.35737395362263064,
+      "record_scope": "MG5 final SubProcesses/results.dat summed recorded nonzero-weight sampling points, including oversampled pools; zero-weight integration points excluded",
+      "recorded_nonzero_sampling_points_nevents": 498864,
+      "secondary_count_ratio_nunwgt_over_nw": 0.06658028617743898,
+      "unweighted_pool_nunwgt": 11870
+    },
+    "weights": {
+      "idwtup": -4,
+      "negative": 0,
+      "zero": 0
+    }
+  }
+}

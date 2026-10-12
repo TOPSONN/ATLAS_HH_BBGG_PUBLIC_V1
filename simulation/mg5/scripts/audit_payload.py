@@ -9,6 +9,8 @@ REPO = Path(__file__).resolve().parents[3]
 ALLOWED = {
     "reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz",
     "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+    "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+    "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
 }
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--tracked", action="store_true")
@@ -46,7 +48,7 @@ if args.tracked:
             inspect(path, (REPO / path).read_bytes(), True)
             checks += 1
     if not all(path in git("ls-files").decode().splitlines() for path in ALLOWED):
-        raise SystemExit("both actual samples must be tracked")
+        raise SystemExit("all four selected actual sample archives must be tracked")
 if args.staged:
     for path in git("diff", "--cached", "--name-only", "--diff-filter=ACMRT", "-z").decode().split("\0"):
         if path:

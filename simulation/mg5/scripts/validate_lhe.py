@@ -28,6 +28,15 @@ SAMPLE_DIR = "reference_samples/mg5/pp_bbgg_sm_lo_13tev"
 EXPECTED_SAMPLES = {"smoke_100": (100, 20261012), "reference_1000": (1000, 20261013)}
 ALLOWED_INITIAL = {21, *range(1, 6), *range(-5, 0)}
 EXPECTED_FINAL = Counter([5, -5, 22, 22])
+LIGHT_JETS = {21, 1, -1, 2, -2, 3, -3}
+PROFILE_PROCESSES = {
+    "bbgg": "p p > b b~ a a QCD=2 QED=2",
+    "ccgg": "p p > c c~ a a QCD=2 QED=2",
+    "jjgg": "p p > a a jl jl QCD=2 QED=2",
+    "diphoton": "p p > a a QCD=0 QED=2",
+}
+BACKGROUND_DIRS = {"ccgg": "reference_samples/mg5/pp_ccgg_sm_lo_13tev",
+                   "jjgg": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev"}
 CARD_TAGS = {"process_card": "MG5ProcCard", "run_card": "MGRunCard", "param_card": "slha"}
 REQUIRED_FIELDS = {
     "sample_id", "physics_process", "physics_model", "perturbative_order",
@@ -112,10 +121,60 @@ def read_gzip(path: Path, *, require_deterministic=True):
     return compressed, data
 
 
+def validate_profile_cards(cards, rv, profile):
+    commands = [line.split("#", 1)[0].strip() for line in cards["process_card"].splitlines()
+                if line.split("#", 1)[0].strip()]
+    require([line for line in commands if line.startswith("import model ")] == ["import model sm-no_b_mass"],
+            "process/model profile mismatch")
+    require([line for line in commands if line.startswith(("generate ", "add process "))] ==
+            ["generate " + PROFILE_PROCESSES[profile]], "declared process/orders profile mismatch")
+    proton = [line for line in commands if line.startswith("define p =")]
+    require(proton and proton[-1] == "define p = g u c d s b u~ c~ d~ s~ b~",
+            "five-flavour proton definition mismatch")
+    if profile == "jjgg":
+        light = [line for line in commands if line.startswith("define jl =")]
+        require(light and light[-1] == "define jl = g u u~ d d~ s s~", "light-jet definition mismatch")
+    require(rv.get("pdlabel") == "cteq6l1" and number(rv.get("lhaid", "0")) == 10042,
+            "profile PDF mismatch")
+    require(rv.get("event_norm") == "average" and number(rv.get("ickkw", "-1")) == 0,
+            "profile weight/matching convention mismatch")
+    require(number(rv.get("ptgmin", "-1")) == 0, "profile smooth-cone isolation mismatch")
+    require(1 <= integer(rv.get("iseed", "0")) <= 30081 ** 2, "actual seed outside valid MG5 range")
+    keys = ["pta", "etaa", "draa"]
+    if profile == "bbgg":
+        keys += ["ptb", "etab", "drab", "drbb"]
+    elif profile in {"ccgg", "jjgg"}:
+        keys += ["ptj", "etaj", "draj", "drjj"]
+    require(all(number(rv.get(key, "0")) > 0 for key in keys), "invalid profile generation cuts")
+    if profile != "diphoton":
+        require(number(rv.get("maxjetflavor", "-1")) == 4, "profile requires maxjetflavor=4")
+    block, masses, seen = None, {}, set()
+    for row in records(cards["param_card"]):
+        if row[0].lower() == "block":
+            require(len(row) >= 2, "invalid parameter block")
+            block = row[1].lower()
+        elif row[0].lower() == "decay":
+            require(len(row) >= 3 and number(row[2]) >= 0, "invalid decay width")
+            block = "decay"
+        elif block in {"mass", "yukawa", "sminputs"}:
+            require(len(row) == 2, "invalid parameter value")
+            key, value = integer(row[0]), number(row[1])
+            require((block, key) not in seen, "duplicate parameter entry")
+            seen.add((block, key))
+            require(value >= 0 and (block != "sminputs" or value > 0), "invalid Standard Model parameter")
+            if block == "mass":
+                masses[key] = value
+            elif block == "yukawa" and key in {1, 2, 3, 4, 5}:
+                require(value == 0, "massless light-flavour Yukawa mismatch")
+    require(all(masses.get(pdg) == 0 for pdg in (1, 2, 3, 4, 5, 21, 22)),
+            "parameter card violates massless five-flavour model")
+
+
 def validate_data(data: bytes, expected_events: int | None = None, *, profile="bbgg", beam_energy=None):
-    require(profile in {"bbgg", "diphoton"}, "unknown physical validation profile")
-    expected_final = EXPECTED_FINAL if profile == "bbgg" else Counter([22, 22])
-    expected_nup = sum(expected_final.values()) + 2
+    require(profile in PROFILE_PROCESSES, "unknown physical validation profile")
+    expected_final = {"bbgg": EXPECTED_FINAL, "ccgg": Counter([4, -4, 22, 22]),
+                      "diphoton": Counter([22, 22])}.get(profile)
+    expected_nup = 4 if profile == "diphoton" else 6
     require(b"<!DOCTYPE" not in data.upper() and b"<!ENTITY" not in data.upper(),
             "DTD/entities are not supported")
     try:
@@ -135,8 +194,11 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
             generator.get("version") == version, "init generator identity mismatch")
     cards = {key: header.findtext(tag, "") for key, tag in CARD_TAGS.items()}
     require(all(text.strip() for text in cards.values()), "generator cards missing from header")
-    require("MadGraph" in data[:data.index(b"<event>")].decode("utf-8"), "generator identity missing")
+    require(all(len(header.findall(tag)) == 1 for tag in ("MGVersion", *CARD_TAGS.values())) and
+            len(init.findall("generator")) == 1, "duplicate generator identity/card")
+    require("MadGraph" in cards["process_card"], "generator identity missing")
     rv = run_values(cards["run_card"])
+    validate_profile_cards(cards, rv, profile)
     init_rows = records(init.text or "")
     require(init_rows and len(init_rows[0]) == 10, "invalid init beam record")
     beam = init_rows[0]
@@ -147,6 +209,7 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
     require(number(rv["ebeam1"]) == number(rv["ebeam2"]) == beam_energy, "card/init energy mismatch")
     pdf_groups = [integer(x) for x in beam[4:6]]
     pdf_ids = [integer(x) for x in beam[6:8]]
+    require(pdf_ids == [10042, 10042], "init PDF differs from declared CTEQ6L1")
     idwtup, nprup = [integer(x) for x in beam[8:10]]
     require(idwtup == -4 and nprup > 0, "expected MG5 IDWTUP=-4 with event_norm=average")
     require(len(init_rows) == nprup + 1, "init process count mismatch")
@@ -169,9 +232,13 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
     weight_values = set()
     event_scales, aqed_values, aqcd_values = set(), set(), set()
     initial_counts = Counter()
-    minima = {"photon_pt": math.inf, "b_pt": math.inf, "draa": math.inf,
-              "drab": math.inf, "drbb": math.inf}
-    maxima = {"photon_abs_eta": 0.0, "b_abs_eta": 0.0}
+    final_counts = Counter()
+    jet_profile = profile in {"ccgg", "jjgg"}
+    object_name = "jet" if jet_profile else "b"
+    cross_dr, pair_dr = ("draj", "drjj") if jet_profile else ("drab", "drbb")
+    minima = {"photon_pt": math.inf, object_name + "_pt": math.inf, "draa": math.inf,
+              cross_dr: math.inf, pair_dr: math.inf}
+    maxima = {"photon_abs_eta": 0.0, object_name + "_abs_eta": 0.0}
     for event_index, event in enumerate(events, 1):
         rows = records(event.text or "")
         require(rows and len(rows[0]) == 6, f"event {event_index}: invalid event header")
@@ -184,12 +251,12 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
         event_scales.add(scale)
         aqed_values.add(aqed)
         aqcd_values.add(aqcd)
-        incoming, outgoing = [], []
+        incoming, outgoing, color_balance = [], [], Counter()
         for particle_index, row in enumerate(rows[1:], 1):
             require(len(row) == 13, f"event {event_index}: malformed particle record")
             pdg, status, mother1, mother2, color1, color2 = [integer(x) for x in row[:6]]
             px, py, pz, energy, mass, lifetime, spin = [number(x) for x in row[6:]]
-            require(status in {-1, 1}, "unexpected particle status for direct LO bbgg")
+            require(status in {-1, 1}, "unexpected particle status for direct LO process")
             require(energy > 0 and mass >= 0 and lifetime >= 0, "invalid particle energy/mass/lifetime")
             require(0 <= mother1 <= nup and 0 <= mother2 <= nup and
                     particle_index not in {mother1, mother2}, "invalid mother indices")
@@ -198,6 +265,16 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
                     "unexpected direct-process mother assignment")
             if pdg == 22:
                 require(color1 == color2 == 0, "photon carries color")
+            elif 1 <= abs(pdg) <= 5:
+                require((color1 > 0 and color2 == 0) if pdg > 0 else (color1 == 0 and color2 > 0),
+                        "quark/antiquark color assignment mismatch")
+            elif pdg == 21:
+                require(color1 > 0 and color2 > 0 and color1 != color2, "invalid gluon color assignment")
+            direction = -1 if status == -1 else 1
+            if color1:
+                color_balance[color1] += direction
+            if color2:
+                color_balance[color2] -= direction
             require(mass == 0.0, "expected massless five-flavour hard particles")
             p2 = px * px + py * py + pz * pz
             shell = abs(energy * energy - p2 - mass * mass)
@@ -208,7 +285,14 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
             (incoming if status == -1 else outgoing).append(particle)
         require(len(incoming) == 2 and len(outgoing) == expected_nup - 2, "wrong incoming/outgoing multiplicity")
         require(all(p[0] in ALLOWED_INITIAL for p in incoming), "unexpected incoming PDG ID")
-        require(Counter(p[0] for p in outgoing) == expected_final, "final state differs from declared process")
+        final_pdg = Counter(p[0] for p in outgoing)
+        if profile == "jjgg":
+            require(final_pdg[22] == 2 and sum(final_pdg[pdg] for pdg in LIGHT_JETS) == 2 and
+                    set(final_pdg) <= LIGHT_JETS | {22}, "final state differs from declared light-jet process")
+        else:
+            require(final_pdg == expected_final, "final state differs from declared process")
+        require(all(value == 0 for value in color_balance.values()), "color-flow conservation failure")
+        final_counts.update(final_pdg)
         initial_counts[",".join(str(p[0]) for p in incoming)] += 1
         require(all(p[1] == p[2] == 0 for p in incoming) and incoming[0][3] > 0 > incoming[1][3],
                 "invalid collinear beam kinematics")
@@ -220,24 +304,33 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
             require(residual <= CLOSURE_ATOL_GEV + CLOSURE_RTOL * total_energy,
                     f"event {event_index}: four-momentum closure failure")
             max_closure = max(max_closure, residual)
-        charge = {21: 0, 1: -1, 2: 2, 3: -1, 4: 2, 5: -1}
-        require(sum(charge[abs(p[0])] * (1 if p[0] > 0 else -1) for p in incoming) == 0,
-                "incoming charge does not match neutral final state")
+        charge = {21: 0, 22: 0, 1: -1, 2: 2, 3: -1, 4: 2, 5: -1}
+        electric_charge = lambda particles: sum(charge[abs(p[0])] * (1 if p[0] > 0 else -1) for p in particles)
+        require(electric_charge(incoming) == electric_charge(outgoing), "electric-charge conservation failure")
+        if profile in {"ccgg", "jjgg"}:
+            # At QCD=2 QED=2 the continuum amplitudes contain two photon
+            # vertices and conserve every quark flavour's net number.
+            net_flavours = lambda particles: {
+                flavour: sum((p[0] == flavour) - (p[0] == -flavour) for p in particles)
+                for flavour in range(1, 6)
+            }
+            require(net_flavours(incoming) == net_flavours(outgoing),
+                    "quark-flavour net-number conservation failure")
         objects = []
         for pdg, px, py, pz, energy in outgoing:
             pt = math.hypot(px, py)
             eta = math.asinh(pz / pt) if pt > 0 else math.inf
             photon = pdg == 22
-            key = "photon" if photon else "b"
-            cut_pt = number(rv["pta" if photon else "ptb"])
-            cut_eta = number(rv["etaa" if photon else "etab"])
+            key = "photon" if photon else object_name
+            cut_pt = number(rv["pta" if photon else "ptj" if jet_profile else "ptb"])
+            cut_eta = number(rv["etaa" if photon else "etaj" if jet_profile else "etab"])
             require(pt >= cut_pt - 1e-6 and abs(eta) <= cut_eta + 1e-8, "generation pT/eta cut failure")
             minima[key + "_pt"] = min(minima[key + "_pt"], pt)
             maxima[key + "_abs_eta"] = max(maxima[key + "_abs_eta"], abs(eta))
             objects.append((photon, eta, math.atan2(py, px)))
         for index, (photon1, eta1, phi1) in enumerate(objects):
             for photon2, eta2, phi2 in objects[index + 1:]:
-                key = "draa" if photon1 and photon2 else "drbb" if not photon1 and not photon2 else "drab"
+                key = "draa" if photon1 and photon2 else pair_dr if not photon1 and not photon2 else cross_dr
                 delta_phi = math.remainder(phi1 - phi2, 2 * math.pi)
                 delta_r = math.hypot(eta1 - eta2, delta_phi)
                 require(delta_r >= number(rv[key]) - 1e-8, "generation DeltaR cut failure")
@@ -263,6 +356,7 @@ def validate_data(data: bytes, expected_events: int | None = None, *, profile="b
         "max_four_momentum_residual_gev": max_closure,
         "max_mass_shell_residual_gev2": max_shell,
         "cut_extrema": extrema, "incoming_pdg_pair_counts": dict(initial_counts),
+        "outgoing_pdg_counts": dict(sorted(final_counts.items())), "physics_profile": profile,
         "event_content_sha256": sha256(event_bytes(data)),
         "decompressed_file_sha256": sha256(data), "run_values": rv,
         "cards": cards,
@@ -280,8 +374,9 @@ def validate_file(path: Path, expected_events=None, *, profile="bbgg", beam_ener
 
 
 def safe_file(repo: Path, relative: str):
-    path = (repo / relative).resolve()
-    require(path.is_relative_to(repo.resolve()), "manifest path escapes repository")
+    require(isinstance(relative, str) and not Path(relative).is_absolute(), "manifest paths must be relative")
+    path = repo / relative
+    require(path.resolve().is_relative_to(repo.resolve()), "manifest path escapes repository")
     require(path.is_file() and not path.is_symlink(), f"required file missing: {relative}")
     return path
 
@@ -365,18 +460,132 @@ def validate_repository(repo: Path):
     return {"status": "PASS", "samples": reports}
 
 
+def parameter_value(card, block_name, code):
+    block = None
+    for row in records(card):
+        if row[0].lower() == "block":
+            block = row[1].lower()
+        elif row[0].lower() == "decay":
+            block = "decay"
+        elif block == block_name and integer(row[0]) == code:
+            return number(row[1])
+    raise ValidationError(f"parameter missing: {block_name}[{code}]")
+
+
+def validate_background_manifest(repo: Path, profile: str):
+    require(profile in BACKGROUND_DIRS, "unknown background-library profile")
+    relative_dir = BACKGROUND_DIRS[profile]
+    directory = repo / relative_dir
+    manifest = json.loads((directory / "sample_manifest.json").read_text(encoding="utf-8"))
+    require(manifest.get("schema_version") == 1 and len(manifest.get("samples", [])) == 1,
+            "new background manifest requires exactly one sample")
+    require({path.name for path in directory.iterdir()} ==
+            {"reference_1000.lhe.gz", "sample_manifest.json", "README.md"},
+            "unexpected background-directory output")
+    sample = manifest["samples"][0]
+    require(REQUIRED_FIELDS | {"physics_profile"} <= sample.keys(), "missing mandatory background provenance")
+    require(sample["sample_id"] == "reference_1000" and sample["physics_profile"] == profile,
+            "background sample/profile identity mismatch")
+    require(sample["file"] == relative_dir + "/reference_1000.lhe.gz", "background sample path mismatch")
+    result = validate_file(safe_file(repo, sample["file"]), 1000, profile=profile, beam_energy=6500)
+    rv, cards = result["run_values"], result["cards"]
+    require(sample["requested_events"] == sample["actual_events"] == result["actual_events"] == 1000,
+            "background count mismatch")
+    require(sample["random_seed"] == integer(rv["iseed"]), "background actual seed mismatch")
+    require(sample["validation_status"] == "PASS", "background not independently validated")
+    for key in ("compressed_file_sha256", "decompressed_file_sha256", "event_content_sha256",
+                "negative_weight_count", "zero_weight_count", "compressed_bytes"):
+        require(sample[key] == result[key], "background manifest mismatch: " + key)
+    for key, actual in (("generator_cross_section_pb", "cross_section_pb"),
+                        ("cross_section_uncertainty_pb", "cross_section_uncertainty_pb")):
+        require(math.isclose(number(str(sample[key])), result[actual], rel_tol=1e-8, abs_tol=1e-12),
+                "background cross-section mismatch: " + key)
+    for key in CARD_TAGS:
+        path = safe_file(repo, sample[key + "_path"])
+        require(sha256(path.read_bytes()) == sample[key + "_sha256"], "background card hash mismatch: " + key)
+        require(canonical_card(path.read_text(encoding="utf-8")) == canonical_card(cards[key]),
+                "background card differs from actual LHE banner: " + key)
+    require(sample.get("provenance_files"), "background generation provenance missing")
+    for item in sample["provenance_files"]:
+        require(sha256(safe_file(repo, item["path"]).read_bytes()) == item["sha256"], "background provenance hash mismatch")
+    source = sample["mg5_source_identity"]
+    require(source == {"url": "https://github.com/mg5amcnlo/mg5amcnlo.git", "tag": "v3.5.16",
+                       "commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7"},
+            "background official generator source identity mismatch")
+    require(sample["mg5_version"] == result["mg5_version"] == "3.5.16", "background generator version mismatch")
+    require(sample["physics_process"] == PROFILE_PROCESSES[profile], "background declared process mismatch")
+    require("sm-no_b_mass" in sample["physics_model"], "background declared model mismatch")
+    require(sample["perturbative_order"] == "LO" and sample["sqrt_s_gev"] == 13000 and
+            sample["beam_energies_gev"] == [6500, 6500], "background declared order/energy mismatch")
+    require(sample["pdf_name_and_id"]["name"] == "CTEQ6L1" and
+            sample["pdf_name_and_id"]["lhapdf_id"] == 10042, "background declared PDF mismatch")
+    require(sample["renormalization_scale"] == {"type": "fixed", "gev": 125} and
+            sample["factorization_scale"] == {"type": "fixed", "beam1_gev": 125, "beam2_gev": 125},
+            "background scale metadata mismatch")
+    require(sample["generator_weight_convention"]["idwtup"] == -4 and
+            sample["generator_weight_convention"]["event_norm"] == "average", "background weight convention mismatch")
+    require(sample["original_decompressed_file_sha256"] == sample["decompressed_file_sha256"],
+            "background generator decompressed content changed")
+    cuts = {"photon_pt_min_gev": 25, "photon_abs_eta_max": 2.5, "jet_pt_min_gev": 20,
+            "jet_abs_eta_max": 5, "delta_r_aa_min": 0.4, "delta_r_aj_min": 0.4,
+            "delta_r_jj_min": 0.4, "maxjetflavor_for_cut_classification": 4}
+    require(all(sample["generation_cuts"].get(key) == value for key, value in cuts.items()),
+            "background declared generation cuts mismatch")
+    settings = {"pta": 25, "ptj": 20, "etaa": 2.5, "etaj": 5, "draa": 0.4, "draj": 0.4,
+                "drjj": 0.4, "ebeam1": 6500, "ebeam2": 6500, "ickkw": 0, "ptgmin": 0,
+                "maxjetflavor": 4, "scale": 125, "dsqrt_q2fact1": 125, "dsqrt_q2fact2": 125}
+    require(all(number(rv[key]) == value for key, value in settings.items()), "background actual run setting mismatch")
+    require(rv["fixed_ren_scale"].lower() in {"true", ".true."} and
+            rv["fixed_fac_scale"].lower() in {"true", ".true."} and
+            rv["systematics_program"] == "none", "background scale/systematics convention mismatch")
+    require(result["event_scale_values_gev"] == [125] and result["event_alpha_s_values"] == [0.1238062] and
+            result["event_alpha_em_values"] == [0.007546771], "background actual scale/coupling mismatch")
+    aewm1 = parameter_value(cards["param_card"], "sminputs", 1)
+    alpha_s = parameter_value(cards["param_card"], "sminputs", 3)
+    require(math.isclose(sample["alpha_s_settings"]["param_card_as"], alpha_s, rel_tol=1e-8) and
+            sample["alpha_s_settings"]["event_aqcd"] == result["event_alpha_s_values"][0],
+            "background alpha_s metadata differs from actual card/event")
+    require(math.isclose(sample["alpha_em_settings"]["aEWM1"], aewm1, rel_tol=1e-8) and
+            math.isclose(sample["alpha_em_settings"]["alpha_em"], 1 / aewm1, rel_tol=1e-8),
+            "background alpha_em metadata differs from actual parameter card")
+    result.pop("cards")
+    result.pop("run_values")
+    return {"sample_id": sample["sample_id"], "file": sample["file"], **result}
+
+
+def validate_background_library(repo: Path):
+    legacy = validate_repository(repo)
+    bbgg = next(sample for sample in legacy["samples"] if sample["sample_id"] == "reference_1000")
+    reports = [{**bbgg, "file": SAMPLE_DIR + "/reference_1000.lhe.gz"}]
+    reports.extend(validate_background_manifest(repo, profile) for profile in BACKGROUND_DIRS)
+    require(sum(sample["actual_events"] for sample in reports) == 3000, "background library total must equal 3000")
+    require(sum(safe_file(repo, sample["file"]).stat().st_size for sample in reports) <= MAX_TOTAL,
+            "background library total compressed size cap")
+    require(len({sample["event_content_sha256"] for sample in reports}) == 3, "background library duplicate event content")
+    return {"status": "PASS", "actual_reference_events": 3000, "smoke_events_excluded": 100,
+            "library_profiles": ["bbgg", "ccgg", "jjgg"], "samples": reports,
+            "statistical_interpretation": "Three separate process samples; process cross sections are not summed"}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repository", type=Path)
+    parser.add_argument("--background-library", type=Path, help="verify bbgg/ccgg/light-jjgg reference library; excludes smoke_100")
     parser.add_argument("--file", type=Path)
     parser.add_argument("--events", type=int)
-    parser.add_argument("--profile", choices=["bbgg", "diphoton"], default="bbgg")
+    parser.add_argument("--profile", choices=sorted(PROFILE_PROCESSES), default="bbgg")
     parser.add_argument("--generator-original", action="store_true", help="permit original gzip timestamp/filename; all physical checks remain")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
     try:
-        require(bool(args.repository) != bool(args.file), "choose --repository or --file")
-        result = validate_repository(args.repository) if args.repository else validate_file(args.file, args.events, profile=args.profile, require_deterministic=not args.generator_original)
+        require(sum(bool(value) for value in (args.repository, args.file, args.background_library)) == 1,
+                "choose --repository, --background-library, or --file")
+        if args.background_library:
+            result = validate_background_library(args.background_library)
+        elif args.repository:
+            result = validate_repository(args.repository)
+        else:
+            result = validate_file(args.file, args.events, profile=args.profile, require_deterministic=not args.generator_original)
         result.pop("cards", None)
         result.pop("run_values", None)
         output = json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n"
