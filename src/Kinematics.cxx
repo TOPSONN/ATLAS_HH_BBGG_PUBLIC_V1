@@ -49,8 +49,20 @@ Pair leading_pair(const Collection& collection) {
   result.available = true;
   const auto& a = collection.ordered[0].p4;
   const auto& b = collection.ordered[1].p4;
-  const auto sum = a + b;
-  const double mass2 = sum.M2();
+  // Keep the sum Cartesian: PtEtaPhiE addition otherwise converts the summed
+  // components back to eta before M2(), losing precision for small total pT
+  // and large negative pz. Neither input energies nor object coordinates change.
+  // Double Cartesian M2 can still lose a small invariant for highly boosted
+  // near-collinear pairs. Convert the unchanged stored coordinates with
+  // extended precision and retain it through the ROOT Cartesian sum and M2.
+  const auto cartesian = [](const FourVector& object) {
+    const long double pt=object.Pt(), eta=object.Eta(), phi=object.Phi();
+    return CartesianFourVector(pt*std::cos(phi),pt*std::sin(phi),pt*std::sinh(eta),object.E());
+  };
+  const auto first = cartesian(a);
+  const auto second = cartesian(b);
+  const auto sum = first + second;
+  const auto mass2 = sum.M2();
   // Negative pair m^2 is rejected and reported, including tiny negatives.
   // We never hide it by clamping an invariant mass or modifying energy.
   if (!std::isfinite(mass2) || mass2 < 0) { result.issue = "negative_or_nonfinite_pair_mass2"; return result; }

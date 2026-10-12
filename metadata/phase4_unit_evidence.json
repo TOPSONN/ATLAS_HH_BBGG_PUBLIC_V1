@@ -1,0 +1,899 @@
+{
+  "343981": {
+    "reco": {
+      "dsid": 343981,
+      "record": 93922,
+      "native_container": "ROOT::VecOps::RVec<float>",
+      "numerical_consistency": "PASS",
+      "unit_status": "PROVISIONAL",
+      "scale_to_gev": 1,
+      "eta": "dimensionless",
+      "phi": "radians PROVISIONAL",
+      "range": [
+        10,
+        100
+      ],
+      "unique_probe_entries": 90,
+      "probe_sha256": "89c4fc07897431be9fb16ffe7a9beb5a3076bf1fc8f493b4b869bb7f704a4cd1",
+      "statistics": {
+        "photon": {
+          "pt": {
+            "min": 26.221843719482422,
+            "max": 160.3488311767578
+          },
+          "eta": {
+            "min": -2.3089635372161865,
+            "max": 2.1623942852020264
+          },
+          "phi": {
+            "min": -3.138908624649048,
+            "max": 3.1403350830078125
+          },
+          "energy": {
+            "min": 27.765918731689453,
+            "max": 352.673095703125
+          },
+          "minimum_relative_mass2": -1.5655989220747016e-07,
+          "negative_small_mass2_objects": 104
+        },
+        "jet": {
+          "pt": {
+            "min": 20.130783081054688,
+            "max": 137.44326782226562
+          },
+          "eta": {
+            "min": -2.26202654838562,
+            "max": 2.482865333557129
+          },
+          "phi": {
+            "min": -3.0055556297302246,
+            "max": 3.0613632202148438
+          },
+          "energy": {
+            "min": 20.652650833129883,
+            "max": 706.778564453125
+          },
+          "minimum_relative_mass2": 0.0001416605135174023,
+          "negative_small_mass2_objects": 0
+        }
+      },
+      "exact_producer_association": "UNKNOWN",
+      "calibration_validation": "UNKNOWN",
+      "evidence": "actual native reco values + published >=25GeV skim; later producer is supporting context only",
+      "reference": "https://opendata.cern.ch/record/93922"
+    },
+    "physical_first100": {
+      "dsid": 343981,
+      "entries": 94082,
+      "branch_count": 118,
+      "keys": [
+        "analysis:TTree"
+      ],
+      "truth_direction_numeric_check": "PASS",
+      "truth_mass_quality": "UNKNOWN_NEGATIVE_VALUES",
+      "negative_truth_jet_mass": [
+        {
+          "entry": 10,
+          "index": 0,
+          "native_mass": -0.024534542113542557
+        },
+        {
+          "entry": 11,
+          "index": 1,
+          "native_mass": -0.014093990437686443
+        },
+        {
+          "entry": 12,
+          "index": 0,
+          "native_mass": -0.06633756309747696
+        },
+        {
+          "entry": 21,
+          "index": 0,
+          "native_mass": -0.047736190259456635
+        },
+        {
+          "entry": 25,
+          "index": 0,
+          "native_mass": -0.027242163196206093
+        },
+        {
+          "entry": 25,
+          "index": 1,
+          "native_mass": -0.015609294176101685
+        },
+        {
+          "entry": 51,
+          "index": 0,
+          "native_mass": -0.01674794591963291
+        },
+        {
+          "entry": 61,
+          "index": 1,
+          "native_mass": -0.01021550502628088
+        },
+        {
+          "entry": 63,
+          "index": 0,
+          "native_mass": -0.060790278017520905
+        },
+        {
+          "entry": 83,
+          "index": 1,
+          "native_mass": -0.010924188420176506
+        },
+        {
+          "entry": 84,
+          "index": 2,
+          "native_mass": -0.00651354156434536
+        },
+        {
+          "entry": 88,
+          "index": 1,
+          "native_mass": -0.00785436574369669
+        },
+        {
+          "entry": 92,
+          "index": 0,
+          "native_mass": -0.02198951318860054
+        },
+        {
+          "entry": 97,
+          "index": 0,
+          "native_mass": -0.0035181138664484024
+        },
+        {
+          "entry": 97,
+          "index": 1,
+          "native_mass": -0.02155669778585434
+        }
+      ],
+      "truth_units": "PROVISIONAL GeV/radians; eta dimensionless",
+      "stages": [
+        [
+          0,
+          10
+        ],
+        [
+          10,
+          100
+        ]
+      ],
+      "unique_entries": 100,
+      "same_entry_dsid_check": "PASS",
+      "duplicate_keys_first100": 0,
+      "truth_objects": {
+        "photon": 203,
+        "jet": 280
+      },
+      "truth_ranges": {
+        "photon_pt": {
+          "min": 20.162336349487305,
+          "max": 157.8908233642578
+        },
+        "photon_eta": {
+          "min": -2.3208673000335693,
+          "max": 2.1861603260040283
+        },
+        "photon_phi": {
+          "min": -3.1414599418640137,
+          "max": 3.093592405319214
+        },
+        "jet_pt": {
+          "min": 20.17287826538086,
+          "max": 159.40122985839844
+        },
+        "jet_eta": {
+          "min": -4.562320232391357,
+          "max": 4.429234027862549
+        },
+        "jet_phi": {
+          "min": -3.139688491821289,
+          "max": 3.124835729598999
+        },
+        "jet_m": {
+          "min": -0.06633756309747696,
+          "max": 27.184249877929688
+        }
+      },
+      "scalar_first100": {
+        "channelNumber": {
+          "min": 343981.0,
+          "max": 343981.0
+        },
+        "runNumber": {
+          "min": 284500.0,
+          "max": 284500.0
+        },
+        "eventNumber": {
+          "min": 4172015.0,
+          "max": 4556973.0
+        },
+        "mcWeight": {
+          "min": 28.48573112487793,
+          "max": 28.48573112487793
+        },
+        "xsec": {
+          "min": 28.3,
+          "max": 28.3
+        },
+        "filteff": {
+          "min": 0.00227,
+          "max": 0.00227
+        },
+        "kfac": {
+          "min": 1.717,
+          "max": 1.717
+        },
+        "num_events": {
+          "min": 200000.0,
+          "max": 200000.0
+        },
+        "sum_of_weights": {
+          "min": 5660115.0,
+          "max": 5660115.0
+        },
+        "sum_of_weights_squared": {
+          "min": 162287376.0,
+          "max": 162287376.0
+        },
+        "ScaleFactor_MLTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PILEUP": {
+          "min": 0.0,
+          "max": 1.2023627758026123
+        },
+        "ScaleFactor_FTAG": {
+          "min": 0.955812394618988,
+          "max": 1.2378002405166626
+        },
+        "ScaleFactor_BTAG": {
+          "min": 0.955812394618988,
+          "max": 1.2378002405166626
+        },
+        "ScaleFactor_JVT": {
+          "min": 0.9673668742179871,
+          "max": 1.2933601140975952
+        },
+        "ScaleFactor_ELE": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MUON": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_LepTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MuTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_ElTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PHOTON": {
+          "min": 0.9833826422691345,
+          "max": 1.0452375411987305
+        },
+        "ScaleFactor_TAU": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_TauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_DiTauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "truth_probe_sha256": "8ce1041e808cc1b791ad6abc95b5247eeab4949bc172622b1ed70da620f277f2",
+      "production_equivalence": "UNKNOWN"
+    }
+  },
+  "346214": {
+    "reco": {
+      "dsid": 346214,
+      "record": 93922,
+      "native_container": "ROOT::VecOps::RVec<float>",
+      "numerical_consistency": "PASS",
+      "unit_status": "PROVISIONAL",
+      "scale_to_gev": 1,
+      "eta": "dimensionless",
+      "phi": "radians PROVISIONAL",
+      "range": [
+        10,
+        100
+      ],
+      "unique_probe_entries": 90,
+      "probe_sha256": "fa5c0786e337e1e46373acd89eff32fa9d39e3cdf45259a3c4c3be4fb8fc7584",
+      "statistics": {
+        "photon": {
+          "pt": {
+            "min": 29.280384063720703,
+            "max": 237.2938690185547
+          },
+          "eta": {
+            "min": -2.2240352630615234,
+            "max": 2.2695865631103516
+          },
+          "phi": {
+            "min": -3.0906481742858887,
+            "max": 3.0666728019714355
+          },
+          "energy": {
+            "min": 35.29391098022461,
+            "max": 663.9585571289062
+          },
+          "minimum_relative_mass2": -1.9782779194796079e-07,
+          "negative_small_mass2_objects": 108
+        },
+        "jet": {
+          "pt": {
+            "min": 20.066097259521484,
+            "max": 228.10592651367188
+          },
+          "eta": {
+            "min": -2.4270575046539307,
+            "max": 2.491478204727173
+          },
+          "phi": {
+            "min": -2.9375483989715576,
+            "max": 3.0086965560913086
+          },
+          "energy": {
+            "min": 25.111961364746094,
+            "max": 950.0853881835938
+          },
+          "minimum_relative_mass2": 0.00012516246057515913,
+          "negative_small_mass2_objects": 0
+        }
+      },
+      "exact_producer_association": "UNKNOWN",
+      "calibration_validation": "UNKNOWN",
+      "evidence": "actual native reco values + published >=25GeV skim; later producer is supporting context only",
+      "reference": "https://opendata.cern.ch/record/93922"
+    },
+    "physical_first100": {
+      "dsid": 346214,
+      "entries": 38403,
+      "branch_count": 118,
+      "keys": [
+        "analysis:TTree"
+      ],
+      "truth_direction_numeric_check": "PASS",
+      "truth_mass_quality": "UNKNOWN_NEGATIVE_VALUES",
+      "negative_truth_jet_mass": [
+        {
+          "entry": 9,
+          "index": 0,
+          "native_mass": -0.006065420340746641
+        },
+        {
+          "entry": 11,
+          "index": 1,
+          "native_mass": -0.03545733168721199
+        },
+        {
+          "entry": 15,
+          "index": 0,
+          "native_mass": -0.006426141131669283
+        },
+        {
+          "entry": 19,
+          "index": 0,
+          "native_mass": -0.024278970435261726
+        },
+        {
+          "entry": 20,
+          "index": 2,
+          "native_mass": -0.013398667797446251
+        },
+        {
+          "entry": 33,
+          "index": 0,
+          "native_mass": -0.015483076684176922
+        },
+        {
+          "entry": 37,
+          "index": 1,
+          "native_mass": -0.11407157778739929
+        },
+        {
+          "entry": 37,
+          "index": 3,
+          "native_mass": -0.01163051649928093
+        },
+        {
+          "entry": 39,
+          "index": 2,
+          "native_mass": -0.010966399684548378
+        },
+        {
+          "entry": 43,
+          "index": 0,
+          "native_mass": -0.03506183251738548
+        },
+        {
+          "entry": 44,
+          "index": 0,
+          "native_mass": -0.02853221818804741
+        },
+        {
+          "entry": 49,
+          "index": 0,
+          "native_mass": -0.025764448568224907
+        },
+        {
+          "entry": 61,
+          "index": 0,
+          "native_mass": -0.031464312225580215
+        },
+        {
+          "entry": 63,
+          "index": 3,
+          "native_mass": -0.004616490099579096
+        },
+        {
+          "entry": 76,
+          "index": 1,
+          "native_mass": -0.007303510792553425
+        },
+        {
+          "entry": 81,
+          "index": 1,
+          "native_mass": -0.048076238483190536
+        },
+        {
+          "entry": 82,
+          "index": 0,
+          "native_mass": -0.0287806186825037
+        },
+        {
+          "entry": 82,
+          "index": 3,
+          "native_mass": -0.007238664198666811
+        },
+        {
+          "entry": 84,
+          "index": 2,
+          "native_mass": -0.015684794634580612
+        },
+        {
+          "entry": 85,
+          "index": 3,
+          "native_mass": -0.007032467983663082
+        },
+        {
+          "entry": 91,
+          "index": 2,
+          "native_mass": -0.01020511519163847
+        },
+        {
+          "entry": 93,
+          "index": 2,
+          "native_mass": -0.01880895532667637
+        }
+      ],
+      "truth_units": "PROVISIONAL GeV/radians; eta dimensionless",
+      "stages": [
+        [
+          0,
+          10
+        ],
+        [
+          10,
+          100
+        ]
+      ],
+      "unique_entries": 100,
+      "same_entry_dsid_check": "PASS",
+      "duplicate_keys_first100": 0,
+      "truth_objects": {
+        "photon": 230,
+        "jet": 401
+      },
+      "truth_ranges": {
+        "photon_pt": {
+          "min": 10.357192993164062,
+          "max": 239.13601684570312
+        },
+        "photon_eta": {
+          "min": -3.687347650527954,
+          "max": 3.673337459564209
+        },
+        "photon_phi": {
+          "min": -3.0924391746520996,
+          "max": 3.0663251876831055
+        },
+        "jet_pt": {
+          "min": 20.11270523071289,
+          "max": 243.14944458007812
+        },
+        "jet_eta": {
+          "min": -4.835395812988281,
+          "max": 4.607018947601318
+        },
+        "jet_phi": {
+          "min": -3.0745997428894043,
+          "max": 3.1305997371673584
+        },
+        "jet_m": {
+          "min": -0.11407157778739929,
+          "max": 35.0960807800293
+        }
+      },
+      "scalar_first100": {
+        "channelNumber": {
+          "min": 346214.0,
+          "max": 346214.0
+        },
+        "runNumber": {
+          "min": 284500.0,
+          "max": 284500.0
+        },
+        "eventNumber": {
+          "min": 1527007.0,
+          "max": 1544997.0
+        },
+        "mcWeight": {
+          "min": 3.7499001026153564,
+          "max": 3.7499001026153564
+        },
+        "xsec": {
+          "min": 3.782,
+          "max": 3.782
+        },
+        "filteff": {
+          "min": 0.00227,
+          "max": 0.00227
+        },
+        "kfac": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "num_events": {
+          "min": 80000.0,
+          "max": 80000.0
+        },
+        "sum_of_weights": {
+          "min": 299915.6875,
+          "max": 299915.6875
+        },
+        "sum_of_weights_squared": {
+          "min": 1142827.25,
+          "max": 1142827.25
+        },
+        "ScaleFactor_MLTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PILEUP": {
+          "min": 0.0,
+          "max": 1.2023627758026123
+        },
+        "ScaleFactor_FTAG": {
+          "min": 0.9415922164916992,
+          "max": 1.226662516593933
+        },
+        "ScaleFactor_BTAG": {
+          "min": 0.9415922164916992,
+          "max": 1.226662516593933
+        },
+        "ScaleFactor_JVT": {
+          "min": 0.9731946587562561,
+          "max": 1.1672488451004028
+        },
+        "ScaleFactor_ELE": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MUON": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_LepTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MuTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_ElTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PHOTON": {
+          "min": 0.9839372634887695,
+          "max": 1.0383801460266113
+        },
+        "ScaleFactor_TAU": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_TauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_DiTauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "truth_probe_sha256": "a3faa81e08236cd8494f9bfcb405541043f52e265c758dbbda76991622875598",
+      "production_equivalence": "UNKNOWN"
+    }
+  },
+  "423103": {
+    "reco": {
+      "dsid": 423103,
+      "record": 93922,
+      "native_container": "ROOT::VecOps::RVec<float>",
+      "numerical_consistency": "PASS",
+      "unit_status": "PROVISIONAL",
+      "scale_to_gev": 1,
+      "eta": "dimensionless",
+      "phi": "radians PROVISIONAL",
+      "range": [
+        10,
+        100
+      ],
+      "unique_probe_entries": 90,
+      "probe_sha256": "ee4d441e800abb30c0888d96c2488ecc855b9f55ef044ea3c1e75891ba237e8e",
+      "statistics": {
+        "photon": {
+          "pt": {
+            "min": 25.193147659301758,
+            "max": 207.76446533203125
+          },
+          "eta": {
+            "min": -2.3327372074127197,
+            "max": 2.3452701568603516
+          },
+          "phi": {
+            "min": -3.1357946395874023,
+            "max": 3.131869316101074
+          },
+          "energy": {
+            "min": 25.24399185180664,
+            "max": 558.6488037109375
+          },
+          "minimum_relative_mass2": -1.5718841074384437e-07,
+          "negative_small_mass2_objects": 87
+        },
+        "jet": {
+          "pt": {
+            "min": 20.133331298828125,
+            "max": 511.13580322265625
+          },
+          "eta": {
+            "min": -2.179525375366211,
+            "max": 2.4306161403656006
+          },
+          "phi": {
+            "min": -3.1124796867370605,
+            "max": 3.0752604007720947
+          },
+          "energy": {
+            "min": 21.059099197387695,
+            "max": 839.903564453125
+          },
+          "minimum_relative_mass2": 0.0004948987913124864,
+          "negative_small_mass2_objects": 0
+        }
+      },
+      "exact_producer_association": "UNKNOWN",
+      "calibration_validation": "UNKNOWN",
+      "evidence": "actual native reco values + published >=25GeV skim; later producer is supporting context only",
+      "reference": "https://opendata.cern.ch/record/93922"
+    },
+    "physical_first100": {
+      "dsid": 423103,
+      "entries": 26366,
+      "branch_count": 118,
+      "keys": [
+        "analysis:TTree"
+      ],
+      "truth_direction_numeric_check": "PASS",
+      "truth_mass_quality": "UNKNOWN_NEGATIVE_VALUES",
+      "negative_truth_jet_mass": [
+        {
+          "entry": 14,
+          "index": 3,
+          "native_mass": -0.0051125939935445786
+        },
+        {
+          "entry": 27,
+          "index": 2,
+          "native_mass": -0.013743245042860508
+        },
+        {
+          "entry": 37,
+          "index": 0,
+          "native_mass": -0.041084494441747665
+        },
+        {
+          "entry": 48,
+          "index": 0,
+          "native_mass": -0.050643060356378555
+        },
+        {
+          "entry": 54,
+          "index": 1,
+          "native_mass": -0.02151997946202755
+        },
+        {
+          "entry": 75,
+          "index": 2,
+          "native_mass": -0.014463329687714577
+        },
+        {
+          "entry": 77,
+          "index": 0,
+          "native_mass": -0.011974524706602097
+        },
+        {
+          "entry": 79,
+          "index": 0,
+          "native_mass": -0.03861317038536072
+        }
+      ],
+      "truth_units": "PROVISIONAL GeV/radians; eta dimensionless",
+      "stages": [
+        [
+          0,
+          10
+        ],
+        [
+          10,
+          100
+        ]
+      ],
+      "unique_entries": 100,
+      "same_entry_dsid_check": "PASS",
+      "duplicate_keys_first100": 0,
+      "truth_objects": {
+        "photon": 220,
+        "jet": 341
+      },
+      "truth_ranges": {
+        "photon_pt": {
+          "min": 15.261850357055664,
+          "max": 194.24578857421875
+        },
+        "photon_eta": {
+          "min": -2.3470845222473145,
+          "max": 2.843327760696411
+        },
+        "photon_phi": {
+          "min": -3.1368119716644287,
+          "max": 3.123222589492798
+        },
+        "jet_pt": {
+          "min": 20.04054832458496,
+          "max": 501.9611511230469
+        },
+        "jet_eta": {
+          "min": -3.7473080158233643,
+          "max": 4.167403697967529
+        },
+        "jet_phi": {
+          "min": -3.134474992752075,
+          "max": 3.1255335807800293
+        },
+        "jet_m": {
+          "min": -0.050643060356378555,
+          "max": 60.18124008178711
+        }
+      },
+      "scalar_first100": {
+        "channelNumber": {
+          "min": 423103.0,
+          "max": 423103.0
+        },
+        "runNumber": {
+          "min": 284500.0,
+          "max": 284500.0
+        },
+        "eventNumber": {
+          "min": 13715022.0,
+          "max": 14268860.0
+        },
+        "mcWeight": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "xsec": {
+          "min": 106210000.0,
+          "max": 106210000.0
+        },
+        "filteff": {
+          "min": 3.9e-05,
+          "max": 3.9e-05
+        },
+        "kfac": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "num_events": {
+          "min": 1989000.0,
+          "max": 1989000.0
+        },
+        "sum_of_weights": {
+          "min": 1989000.0,
+          "max": 1989000.0
+        },
+        "sum_of_weights_squared": {
+          "min": 1989000.0,
+          "max": 1989000.0
+        },
+        "ScaleFactor_MLTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PILEUP": {
+          "min": 0.24522435665130615,
+          "max": 1.2023627758026123
+        },
+        "ScaleFactor_FTAG": {
+          "min": 0.8872156143188477,
+          "max": 1.0492935180664062
+        },
+        "ScaleFactor_BTAG": {
+          "min": -1.0,
+          "max": 1.0492935180664062
+        },
+        "ScaleFactor_JVT": {
+          "min": 0.9611064791679382,
+          "max": 1.2164093255996704
+        },
+        "ScaleFactor_ELE": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MUON": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_LepTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_MuTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_ElTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_PHOTON": {
+          "min": 0.988311231136322,
+          "max": 1.036633849143982
+        },
+        "ScaleFactor_TAU": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_TauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ScaleFactor_DiTauTRIGGER": {
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "truth_probe_sha256": "98ac241ee0e51fe52628025b0649e5d285297b455b9c2527076add26c7877789",
+      "production_equivalence": "UNKNOWN"
+    }
+  }
+}

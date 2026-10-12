@@ -1,0 +1,54 @@
+{
+  "A": {
+    "status": "PASS",
+    "scope": "published sample identity/checksums and processed-entry DSIDs"
+  },
+  "B": {
+    "status": "UNKNOWN",
+    "schema": "PASS",
+    "numerical_unit_consistency": "PASS",
+    "units": "PROVISIONAL",
+    "exact_producer_calibration": "UNKNOWN"
+  },
+  "C": {
+    "status": "FAIL",
+    "scope": "fixed-tolerance physical pair-mass closure",
+    "by_dsid": {
+      "343981": "FAIL",
+      "346214": "PASS",
+      "423103": "PASS"
+    }
+  },
+  "D": {
+    "status": "PASS",
+    "scope": "independent cached raw cutflow reproduction; does not waive C"
+  },
+  "E": {
+    "status": "BLOCKED",
+    "scope": "exact generator convention/generated sums/filter/SFs/BR/completeness unresolved"
+  },
+  "F": {
+    "status": "UNKNOWN",
+    "geometric_algorithm_and_same_event_association": "PASS_PROVISIONAL",
+    "official_truth_origin_and_flavour": "BLOCKED"
+  },
+  "G": {
+    "status": "BLOCKED",
+    "scope": "exact quantile tagger/WP/calibration/flavour unavailable"
+  },
+  "H": {
+    "status": "UNKNOWN",
+    "native_common_types": "PASS",
+    "unit_calibration_equivalence": "UNKNOWN",
+    "coverage_and_normalized_comparison": "BLOCKED"
+  },
+  "I": {
+    "status": "PASS",
+    "scope": "no HH fit/significance/rate/limit/coupling or unsupported official efficiency claims"
+  },
+  "J": {
+    "status": "PASS",
+    "ctest": "17/17",
+    "historical_artifact_files_preserved": 37
+  }
+}
