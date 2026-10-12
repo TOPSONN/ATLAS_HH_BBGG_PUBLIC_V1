@@ -1,0 +1,780 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5_MC_BACKGROUND_AND_NORMALIZATION_V1",
+  "checked_utc": "2026-10-12T04:52:00.902533+00:00",
+  "base_commit": "704045c6c18c313114e3ab41019e46c70beb086b",
+  "status": "PARTIAL",
+  "verdict": "ENGINEERING_PASS_PHYSICAL_MODEL_BLOCKED",
+  "gates": {
+    "A": {
+      "state": "PASS",
+      "scope": "Preserved Phase4 source/selection/results/input identity and executed numerical baseline regression"
+    },
+    "B": {
+      "state": "PASS",
+      "scope": "Current official MC release UUID/DSID/filename and documented process identity only; exact producer/tag application remains UNKNOWN"
+    },
+    "C": {
+      "state": "UNKNOWN",
+      "scope": "Exact FEB2025 nominal generator-weight convention"
+    },
+    "D": {
+      "state": "UNKNOWN",
+      "scope": "Complete signed pre-skim normalization denominator and sumabs applicability"
+    },
+    "E": {
+      "state": "UNKNOWN",
+      "scope": "Exact e4045/FEB2025 generation filter/configuration; later documented100-160/pT20 is not exact-production proof"
+    },
+    "F": {
+      "state": "UNKNOWN",
+      "scope": "Applicable DATA run/LB/GRL/trigger/skim/bounded exposure"
+    },
+    "G": {
+      "state": "PASS",
+      "scope": "Compatibility assessed using unchanged selection and preserved caches; unresolved physical differences explicitly identified"
+    },
+    "H": {
+      "state": "BLOCKED",
+      "scope": "Scientifically interpretable physical weighted DATA/MC shape comparison; synthetic code only"
+    },
+    "I": {
+      "state": "BLOCKED",
+      "scope": "Physical CR/VR model, contamination, coverage and closure; descriptive partition and synthetic TF only"
+    },
+    "J": {
+      "state": "PASS",
+      "scope": "Fresh23/23 CTest plus3/3 Step1, compiler/ROOT linkage, metadata joins and historical/source hashes"
+    }
+  },
+  "environment": {
+    "ROOT_VERSION": "6.40.04",
+    "ROOT_CXX_STANDARD": "20",
+    "ROOT_DIR": "/home/btu/miniforge3/envs/atlas-hh-root/cmake",
+    "CXX_COMPILER": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "CXX_COMPILER_ID": "GNU",
+    "CXX_COMPILER_VERSION": "15.3.0",
+    "PROJECT_CXX_STANDARD": "20",
+    "CXX_STANDARD_REQUIRED": "ON",
+    "CXX_EXTENSIONS": "OFF",
+    "CMAKE_VERSION": "4.4.4"
+  },
+  "compiler_ROOT_linkage": {
+    "compiler": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "prefix": "/home/btu/miniforge3/envs/atlas-hh-root",
+    "linked": {
+      "root_smoke": "\tlinux-vdso.so.1 (0x00007ffcb0524000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x00007d198f000000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x00007d198f4a4000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x00007d198ec00000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x00007d198e600000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x00007d198ef99000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x00007d198e000000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007d198f49d000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x00007d198dc00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007d198eea9000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x00007d198ee7b000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007d198d800000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007d198f666000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x00007d198ebea000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007d198ee74000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x00007d198eb89000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x00007d198e542000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x00007d198eb6e000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x00007d198eb3d000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x00007d198e513000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x00007d198dee7000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x00007d198eb2d000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x00007d198db1c000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x00007d198da19000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x00007d198d000000)\n",
+      "phase4_mc_reconstruction": "\tlinux-vdso.so.1 (0x00007ffcea3ed000)\n\tlibTreePlayer.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTreePlayer.so.6.40 (0x00007b39c24c2000)\n\tlibTree.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTree.so.6.40 (0x00007b39c22e3000)\n\tlibGraf3d.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf3d.so.6.40 (0x00007b39c2234000)\n\tlibGpad.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40 (0x00007b39c213d000)\n\tlibGraf.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40 (0x00007b39c1fce000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x00007b39c1a00000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x00007b39c184a000)\n\tlibROOTVecOps.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libROOTVecOps.so.6.40 (0x00007b39c1f1e000)\n\tlibvdt.so => /home/btu/miniforge3/envs/atlas-hh-root/lib/libvdt.so (0x00007b39c1f15000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x00007b39c1400000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x00007b39c1efd000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x00007b39c1eed000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x00007b39c1766000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x00007b39c0e00000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x00007b39c16ff000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007b39c1edf000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x00007b39c0800000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x00007b39c0400000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007b39c0d17000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x00007b39c1eb1000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007b39c0000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007b39c26ee000)\n\tlibfreetype.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libfreetype.so.6 (0x00007b39c133d000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x00007b39c169e000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007b39c1eaa000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x00007b39c06fd000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x00007b39bf800000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x00007b39c0342000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x00007b39c1683000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x00007b39c06cc000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x00007b39c0313000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x00007b39bfee7000)\n\tlibpng16.so.16 => /home/btu/miniforge3/envs/atlas-hh-root/lib/./libpng16.so.16 (0x00007b39c02d3000)\n",
+      "phase4_numerical_regression": "\tlinux-vdso.so.1 (0x00007ffeabdfc000)\n\tlibTreePlayer.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTreePlayer.so.6.40 (0x000076189a725000)\n\tlibTree.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTree.so.6.40 (0x000076189a546000)\n\tlibGraf3d.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf3d.so.6.40 (0x000076189a497000)\n\tlibGpad.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40 (0x000076189a3a0000)\n\tlibGraf.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40 (0x000076189a231000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x0000761899c00000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x0000761899a4a000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x0000761899600000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x000076189a219000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x000076189a209000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x000076189a123000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x0000761899000000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x000076189a0bc000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000076189a0b0000)\n\tlibROOTVecOps.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libROOTVecOps.so.6.40 (0x000076189999c000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x0000761898a00000)\n\tlibvdt.so => /home/btu/miniforge3/envs/atlas-hh-root/lib/libvdt.so (0x000076189a0a5000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x0000761898600000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007618998b3000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x0000761899885000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000761898200000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000076189a958000)\n\tlibfreetype.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libfreetype.so.6 (0x000076189953d000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x0000761898f9f000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000076189a09e000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x00007618988fd000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x0000761897a00000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x0000761898542000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x0000761899522000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x0000761898f6e000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x0000761898f3f000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x0000761898429000)\n\tlibpng16.so.16 => /home/btu/miniforge3/envs/atlas-hh-root/lib/./libpng16.so.16 (0x0000761898eff000)\n",
+      "test_cartesian_stability": "\tlinux-vdso.so.1 (0x00007ffdc6f97000)\n\tlibTreePlayer.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTreePlayer.so.6.40 (0x000072fb39b7b000)\n\tlibGraf3d.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf3d.so.6.40 (0x000072fb39acc000)\n\tlibGpad.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGpad.so.6.40 (0x000072fb399d5000)\n\tlibGraf.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libGraf.so.6.40 (0x000072fb39866000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x000072fb39200000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x000072fb396ae000)\n\tlibTree.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libTree.so.6.40 (0x000072fb39021000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x000072fb38c00000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x000072fb3900b000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x000072fb3969e000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x000072fb38f27000)\n\tlibROOTVecOps.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libROOTVecOps.so.6.40 (0x000072fb38e79000)\n\tlibvdt.so => /home/btu/miniforge3/envs/atlas-hh-root/lib/libvdt.so (0x000072fb38e70000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x000072fb38600000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x000072fb38b99000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x000072fb38000000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000072fb38b8d000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x000072fb37c00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000072fb38517000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x000072fb38b5f000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000072fb37800000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000072fb39d6a000)\n\tlibfreetype.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libfreetype.so.6 (0x000072fb37f3d000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x000072fb37edc000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000072fb38b5a000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x000072fb37afd000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x000072fb37000000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x000072fb37a3f000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x000072fb38b3d000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x000072fb377cf000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x000072fb377a0000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x000072fb37687000)\n\tlibpng16.so.16 => /home/btu/miniforge3/envs/atlas-hh-root/lib/./libpng16.so.16 (0x000072fb37647000)\n",
+      "test_normalization": "\tlinux-vdso.so.1 (0x00007ffcfdd52000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x0000762c3b400000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x0000762c3b24a000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x0000762c3ae00000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x0000762c3a800000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x0000762c3b8c6000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x0000762c3a200000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x0000762c3b8b8000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x0000762c39e00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000762c3b161000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x0000762c3b133000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000762c39a00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000762c3b966000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x0000762c3b8a0000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x0000762c3b12e000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x0000762c3b0cd000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x0000762c3ad42000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x0000762c3b0b2000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x0000762c3b081000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x0000762c3a7d1000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x0000762c3a0e7000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x0000762c3b071000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x0000762c39d1c000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x0000762c39c19000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x0000762c39200000)\n",
+      "test_shape_comparison": "\tlinux-vdso.so.1 (0x00007ffdd47e9000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x00007fb8b0400000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x00007fb8b024a000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x00007fb8afe00000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x00007fb8af800000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x00007fb8b08bc000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x00007fb8af200000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fb8b08ae000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x00007fb8aee00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fb8b0161000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x00007fb8b0133000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fb8aea00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fb8b0959000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x00007fb8b011d000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fb8b08a7000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x00007fb8b00bc000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x00007fb8afd42000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x00007fb8b00a1000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x00007fb8b0070000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x00007fb8af7d1000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x00007fb8af0e7000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x00007fb8afd32000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x00007fb8aed1c000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x00007fb8aec19000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x00007fb8ae200000)\n",
+      "test_control_regions": "\tlinux-vdso.so.1 (0x00007ffea27f3000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x00007b3a22400000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x00007b3a228a7000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x00007b3a22000000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x00007b3a21a00000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x00007b3a22399000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x00007b3a21400000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007b3a22394000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x00007b3a21000000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007b3a222ab000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x00007b3a2227d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007b3a20c00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007b3a22aa9000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x00007b3a21fea000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007b3a22278000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x00007b3a21f89000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x00007b3a21942000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x00007b3a21f6e000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x00007b3a21f3d000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x00007b3a21913000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x00007b3a212e7000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x00007b3a21f2d000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x00007b3a20f1c000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x00007b3a20e19000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x00007b3a20400000)\n",
+      "phase5_region_inventory": "\tlinux-vdso.so.1 (0x00007fff30d46000)\n\tlibHist.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libHist.so.6.40 (0x000076d5f1a00000)\n\tlibMatrix.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMatrix.so.6.40 (0x000076d5f184a000)\n\tlibMathCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMathCore.so.6.40 (0x000076d5f1400000)\n\tlibRIO.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libRIO.so.6.40 (0x000076d5f0e00000)\n\tlibThread.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libThread.so.6.40 (0x000076d5f17e3000)\n\tlibCore.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libCore.so.6.40 (0x000076d5f0800000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000076d5f1ecf000)\n\tlibstdc++.so.6 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libstdc++.so.6 (0x000076d5f0400000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000076d5f16fa000)\n\tlibgcc_s.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libgcc_s.so.1 (0x000076d5f1ea1000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000076d5f0000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000076d5f1f21000)\n\tlibImt.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libImt.so.6.40 (0x000076d5f16e4000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000076d5f16df000)\n\tlibtbb.so.12 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libtbb.so.12 (0x000076d5f167e000)\n\tlibpcre2-8.so.0 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libpcre2-8.so.0 (0x000076d5f1342000)\n\tlibz.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libz.so.1 (0x000076d5f1327000)\n\tliblzma.so.5 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblzma.so.5 (0x000076d5f0dcf000)\n\tliblz4.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/liblz4.so.1 (0x000076d5f0da0000)\n\tlibzstd.so.1 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libzstd.so.1 (0x000076d5f06e7000)\n\tlibMultiProc.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libMultiProc.so.6.40 (0x000076d5f166e000)\n\tlibNet.so.6.40 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libNet.so.6.40 (0x000076d5f031c000)\n\tlibssl.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libssl.so.3 (0x000076d5f0219000)\n\tlibcrypto.so.3 => /home/btu/miniforge3/envs/atlas-hh-root/lib/libcrypto.so.3 (0x000076d5ef800000)\n"
+    }
+  },
+  "step1_regression": {
+    "tests": 3,
+    "passed": 3,
+    "log_sha256": "fce9c24d4a6a568749d8991191626c97f26322c3bb8fee8c294e9ed81516a6b8"
+  },
+  "integrated_ctest": {
+    "tests": 23,
+    "passed": 23,
+    "xml_sha256": "21dbb8fd767414179e1c1f8eee371e3bb9b5f8c0dfcd4be378a23d8f4fc81749",
+    "cases": [
+      {
+        "name": "root_io",
+        "status": "PASS",
+        "seconds": "1.68937"
+      },
+      {
+        "name": "rdataframe",
+        "status": "PASS",
+        "seconds": "0.184648"
+      },
+      {
+        "name": "roofit_roostats",
+        "status": "PASS",
+        "seconds": "0.366179"
+      },
+      {
+        "name": "root_schema_suite",
+        "status": "PASS",
+        "seconds": "0.493304"
+      },
+      {
+        "name": "bounded_transfer",
+        "status": "PASS",
+        "seconds": "0.243161"
+      },
+      {
+        "name": "kinematic_numerics",
+        "status": "PASS",
+        "seconds": "0.0157304"
+      },
+      {
+        "name": "native_local_events",
+        "status": "PASS",
+        "seconds": "0.371889"
+      },
+      {
+        "name": "phase2_driver_contract",
+        "status": "PASS",
+        "seconds": "2.77328"
+      },
+      {
+        "name": "unit_evidence_gate",
+        "status": "PASS",
+        "seconds": "1.09883"
+      },
+      {
+        "name": "selection_boundaries",
+        "status": "PASS",
+        "seconds": "0.00851899"
+      },
+      {
+        "name": "phase3_driver_contract",
+        "status": "PASS",
+        "seconds": "1.91735"
+      },
+      {
+        "name": "native_mc_events",
+        "status": "PASS",
+        "seconds": "0.551931"
+      },
+      {
+        "name": "synthetic_matching_contract",
+        "status": "PASS",
+        "seconds": "0.0532369"
+      },
+      {
+        "name": "mc_matching_adapter",
+        "status": "PASS",
+        "seconds": "0.0151444"
+      },
+      {
+        "name": "cartesian_stability_contract",
+        "status": "PASS",
+        "seconds": "0.254494"
+      },
+      {
+        "name": "phase4_driver_contract",
+        "status": "PASS",
+        "seconds": "5.01234"
+      },
+      {
+        "name": "phase4_transfer_budget",
+        "status": "PASS",
+        "seconds": "0.268448"
+      },
+      {
+        "name": "phase4_unit_evidence",
+        "status": "PASS",
+        "seconds": "0.189822"
+      },
+      {
+        "name": "signed_normalization_contract",
+        "status": "PASS",
+        "seconds": "0.015588"
+      },
+      {
+        "name": "signed_shape_covariance",
+        "status": "PASS",
+        "seconds": "0.237204"
+      },
+      {
+        "name": "control_region_contract",
+        "status": "PASS",
+        "seconds": "0.0630394"
+      },
+      {
+        "name": "phase5_transfer_contract",
+        "status": "PASS",
+        "seconds": "0.800769"
+      },
+      {
+        "name": "phase5_region_driver",
+        "status": "PASS",
+        "seconds": "1.16694"
+      }
+    ]
+  },
+  "tested_source_sha256_lf": {
+    "CMakeLists.txt": "beff3353e2468fe1627d22f9ebc11846d0653903ed1f0fa9cebd282951fe672e",
+    "apps/inspect_root_schema.cxx": "9b8e9171a6dfce94667de072b96addf8f3b46f22d3ad4b2f6783096ce8c4768e",
+    "apps/phase2_diagnostics.cxx": "6b48417011be36c5e882f3793786cb90987bccad2ab5213b95cc0653d79c3472",
+    "apps/phase3_cutflow.cxx": "2756795938400c851fe79478d5052454660cfd36c94224c18caecf39bc0d2f6b",
+    "apps/phase4_mc_reconstruction.cxx": "752a2c4ce900d07d14b60134ae0f000d79ae529a713d0c4b07ec29c3222aaf04",
+    "apps/phase4_numerical_regression.cxx": "a070e4679792d74d0b980bae18f1ef93de2f9a8f038b5a1c2994026897609ab7",
+    "apps/phase5_region_inventory.cxx": "ca5e6f3638acface1394a805965f31e4f4896e9cb4ba00b532c4855a2390acb4",
+    "apps/probe_kinematic_units.cxx": "20684228a4dbe59132665f4af1b1e643593cb1db2563385f0681fe6fe509ce17",
+    "apps/root_smoke.cxx": "8f1dbb91fd2a9e7a817b3c3405229c3aacc7fc660bf51af6f4db8cc4371e5f70",
+    "include/AtlasControlRegions.h": "ef95aa76a571f4da6da5001f8e5cdadf7157e76d360e15df0cc0267f4fd58138",
+    "include/AtlasExploratorySelection.h": "793a8cdcc9462dfc9ffefaa2bc39dc212a1f6f2b9e2d6b2c012759ba34dd7435",
+    "include/AtlasKinematics.h": "1b9ba61359a0e23d7e1576c3e91bb25fbdc986987c40c58336ccf9313619bf64",
+    "include/AtlasLocalEvents.h": "22297cfc8439644f3ae25e2689866619268623c553cc46de4a69eac2688a53ad",
+    "include/AtlasMCEvents.h": "a65568aab98b5d2cc1c13b14662ee37a23aba5d000fa84773a6098e6fe7fba6f",
+    "include/AtlasMCMatching.h": "7e7638dd23bf9172fde5a69432968fd091311db31a0296190e7192d41cfa1bbf",
+    "include/AtlasNormalization.h": "d08999881dd8bb29226a378b318b1f22a6944b2b9a9aa7e575bc2335f91f4485",
+    "include/AtlasRootSchema.h": "ee4c4aff98de69af54b1b82aea0e2a4e9db63d82dcc9d612a0aa55ed100c5393",
+    "include/AtlasSyntheticMatching.h": "042a139b3f1621651fc50b91b2acc917fffc49fd014a5342801032a84b48db9c",
+    "metadata/phase3_selection_config.ini": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+    "scripts/audit_phase2_units.py": "0cd969f7cc6feab62ea1499f3e185ccfa52224d2b90cbd195c610bfafe8d7472",
+    "scripts/audit_phase4_matching.py": "9fed6a1018b939adccd7c80a62025a38bb2d7bea7f2f23e99000746ca91e51ee",
+    "scripts/audit_phase4_mc_histograms.py": "60285ae4c5fc02a805e52e24a3a8e8494d3dd68b124d224aa765fba89cbb1f44",
+    "scripts/audit_phase4_negative_data.py": "468897fbf23cb499d4e97d01bf415a1a05c7c038340ce8be8323c5f8f4809805",
+    "scripts/audit_phase4_recovery_data.py": "86fa4cb94f600ce9a27d2d6bb81f7ec9ade4356a1c1d686a9224badcce520be8",
+    "scripts/audit_phase4_recovery_matching.py": "6101037a84b30f263afb8d9c95ef670981a0c133171fcba90ad259b597f234a9",
+    "scripts/audit_phase4_run.py": "6ffe2a0d5053b1a70611a4e91d1717c49791646b4c1674db4d102ac29079919d",
+    "scripts/audit_phase4_sources.py": "d757691973d6cf9a7e0ec0d5fa3da0996e978aa1d8a55ad3ae725b168bed63d9",
+    "scripts/audit_phase4_units.py": "1937bae1ad3a02df4ce0d3642754f21c707b1127d655eb88615c8d88b9b48989",
+    "scripts/audit_phase5_evidence.py": "2722448a6f0de264f6edc15dc7b11d1c99e1748ac0eafd061b49a18a86020301",
+    "scripts/audit_phase5_weights.py": "0d13cf501c4b04359b39319813153b538fa6db9951b4da77c0804d34bfa9d699",
+    "scripts/check_environment.sh": "cb3f7d529680afda159cd1eb2f4752799077970358971ad1577e94579047dbd2",
+    "scripts/fetch_phase1_sample.py": "d6825bf70a485628005c966ae660cf4e54327b3c202b28a70929383b54bd13d0",
+    "scripts/fetch_phase4_samples.py": "1b06827aa5c0a2aa2032a8570803a02e0c7d27b383fd70957a6ec30dc962c89b",
+    "scripts/fetch_phase5_continuum.py": "a0b8666167d2de916a510cc4f0622a4e037bf47f57de3f87f892554b40826360",
+    "scripts/freeze_phase4_history.py": "b6978245e38d667ac666a68f829b76cb645f4b9844fdbb7b8436822470570db5",
+    "scripts/freeze_phase5_baseline.py": "c051fd16b754d3862cfac44226b36ce8d91500a40fb8a8719bb8ef11af7d76e0",
+    "scripts/run_phase2_local.sh": "d2a6e4ff0924ed2f57873d94b7b0d75fc4217cd6186d87c487fc3f27eacc963f",
+    "scripts/run_phase3_cache.sh": "4f1d84a790b7edebbbb459f598295e6a8af454262ef873dacc55bd27fa238ea9",
+    "scripts/run_phase4_numerical_recovery.py": "63ef25e3e1d9044cb0e1cdb86c0c5334b52e2fe19b5c60f1cfc2048689620223",
+    "scripts/summarize_phase4_numerical_recovery.py": "026bc8d52c07b80e9251e5eb70c2421ecc839ae1c3b05ecf6d21f8904169b0e2",
+    "scripts/validate_phase1.sh": "dd30183e29637db269cb72fdc0e03f2b6b93eaaa5a24a1147d638e166dd6e4c8",
+    "scripts/validate_phase2.sh": "e4fbb7813413f88881bb015f9f0d6301458956f29d78f8a70a2dc465c7d12c6e",
+    "scripts/validate_phase3.sh": "dbe559df99ba86b06b2453a33c8adc56f33d7100b3ca909a6d8c9199af94bf0c",
+    "scripts/validate_phase4.sh": "fa2a34357304629bb3273af7240b02cebccaa811ff548c702f2f487585357b2d",
+    "scripts/validate_phase5.sh": "fe616f68a6b0d2cf0e5b91ab5eced5141c742561046ade0cef962e1c5c8b6fb6",
+    "scripts/validate_step1.sh": "7a54e9969f4e6772e5a64ca02c2c5fbb697b54eb248fd7811d452bc3afd45f35",
+    "src/ControlRegions.cxx": "430d2a9258f3192b0391d88899b3d73755f2ae4fe56320708821bff8acd14f0c",
+    "src/ExploratorySelection.cxx": "41a75c0c74e9c67285925edbdbf82c7b87bcd895c37d666e37b52bcc691a2faf",
+    "src/Kinematics.cxx": "360d8474168a6ca0643916dca03ffc2da47cac5b46947f55565133d379a9089d",
+    "src/LocalEvents.cxx": "c1e5998d73552012ddd6a734295b5814f2a522e52d37975a956051dcd791378b",
+    "src/MCEvents.cxx": "66b01d286398280d92ba0ebea327ee004c1ba743f8018165096289bea116df4f",
+    "src/MCMatching.cxx": "a51bc4302aafc8132b04004e3d3cf1b901cd19ea959668352e84838361d425ca",
+    "src/Normalization.cxx": "19a7a516d2d402fc83b6e422b511f4e69f5ebc13586f1950737c761dd0446e02",
+    "src/RootSchemaInspector.cxx": "66d3c843a38fe6e3a82a295f05ec35c3f01129ebb9c551e393c426bc80b2ba9a",
+    "src/SyntheticMatching.cxx": "eb32c137b895f1c34189dae32f6b45ee5112e6cd759e134abc23d153ca781f6e",
+    "tests/test_bounded_transfer.py": "545b5af15cac85843cbb3789129d98e564919d79138018ce319d18ddeb772e4f",
+    "tests/test_cartesian_stability.cxx": "e119eaf40ef44c3da0c12445180cdd68e8c60706820f136e4044ff0129184de6",
+    "tests/test_control_regions.cxx": "d90ee2f06f4894da513c490fad2462b37d75b4d08652662eca11167d46a23259",
+    "tests/test_exploratory_selection.cxx": "d275b1b4dd94773b352ecf341d31881835c0375b138199425589155ad2474dba",
+    "tests/test_kinematics.cxx": "5edc2452467c80df4de6e9dba238d45d2f8df0e3000a58b8f2faea3105d61b21",
+    "tests/test_local_events.cxx": "5b1486975fcf30d4f67351a58788be08f5867971dca7c2d4cd3db1d8887c9b1f",
+    "tests/test_mc_events.cxx": "b225a01e458fa4b9008917628b4625d8398456a6e0cbd6ddc39d5e33468a770b",
+    "tests/test_mc_matching.cxx": "8e987ce40090d643c4b66c304bc2c8a33520b1568b7d43f813db0533c99835da",
+    "tests/test_normalization.cxx": "efda50bdea4cec93057b3434a3bcc1cbbd1fbae8cbad3a15999c35b021540200",
+    "tests/test_phase2_driver.py": "356ff31864bd1cc5bb52e52bbc3463a6164d9dd4533871751274f5d96c61dbb8",
+    "tests/test_phase3_driver.py": "6b9ff2f7ecfe01f01cfe188d599c4ae58beca8b8ff694fa0390ac73fe0511ea9",
+    "tests/test_phase4_driver.py": "d9c647616147b841e644a7976079329de5c21193d27ce0d76877c2ed1f8de8cd",
+    "tests/test_phase4_transfer.py": "c8b1f85146329e31b2b06271b91c6176b132bb8afe7de76eb603c376e7f7b2b0",
+    "tests/test_phase4_units.py": "86d18487bfa788080784146cd38c9e694538124e3033166fd95a83bae65ec97e",
+    "tests/test_phase5_region_driver.py": "55736ebb61b13d9f27d00404cbe332ba7077f4a9727f7c61088161e0c0e6c2ba",
+    "tests/test_phase5_transfer.py": "f13affe4c930676438e983774c656d98a8d92a6c84f8c333700249efb66ab251",
+    "tests/test_rdataframe.cxx": "00035f818420659b178350a9c24d65ea46ae64885401d7df7bdfd60503192bac",
+    "tests/test_root_io.cxx": "e76a781d135d76b3f9cfd5ae936c5a6ec77c672db393f0c251dae15c0796eab0",
+    "tests/test_root_schema.cxx": "742e5a4114f422cef7cb0eaa55c42e43bf3530b1af30d27224265081a7d6222d",
+    "tests/test_root_statistics.cxx": "c75bbad25f1a12cf93a3ce9f41ecfbfd598b66b613ed95809b367247942ce6ae",
+    "tests/test_shape_comparison.cxx": "1d04982198b79fd08883b3d22a36dc9b2423eb80bfe048f5332504140bfb69fb",
+    "tests/test_synthetic_matching.cxx": "7867f0bd31d17c7ed9adb872092127cea2b9cb16a353d9716e2a1c2a45cdde28",
+    "tests/test_unit_evidence.py": "4566089d028a00441ec584999a74ae8ac0d733941519dfa15a3962d61f4e8bab"
+  },
+  "source_and_report_sha256_lf": {
+    "reports/phase5_background_readiness.md": "ff4a6ce0d4b86f0b73cb9ec612804b6d1a3064c290759de6dc15ea9578e94ea4",
+    "reports/phase5_control_region_feasibility.md": "f422e63e7b27d6a1b3a155bdab4b98a55601cc8e2973dab3deb6968771846a26",
+    "reports/phase5_decision.md": "bf17e9045fb5681dcf70ea3978c52fdf5e985af5771bd555b1fc86279be77d5a",
+    "reports/phase5_luminosity_audit.md": "15d3b53b3f5842ae928288863f36b22eb7502da530f3d84b70a9719208295b6c",
+    "reports/phase5_mc_source_audit.md": "7e5d8f20ff4148e445549055ff1a3be0cc253b3edd017f767b78ec60980047b3",
+    "reports/phase5_normalization_contract.md": "966c4f1e9f320dc875b52bc5df40625f4030ac24f174cccfd73bb0ef66d67f51",
+    "reports/phase5_shape_comparison.md": "28feecb84ff9cf066c2996df8a063de0eb0fcbc07439b71895bbaca2dd7779f8",
+    "metadata/phase5_baseline_preservation.json": "3a558169fe279be4c390fc118ddd2727e678fe748f79f63aa721ce903d4119e9",
+    "metadata/phase5_dsid_manifest.csv": "2b18b25a4e33a17d94db862645395379262db21c73051ebdedd890c378318596",
+    "metadata/phase5_luminosity_evidence.csv": "1ea393878bd4ddc34487146bf37ea201a47f756c20ca1fcc2a6db2e78be89b5f",
+    "metadata/phase5_region_config.json": "2604a7cf743e0b7faafdf3029e97ee877931a47d8b4e93857aee1e56d4a93800",
+    "metadata/phase5_transfer_ledger.json": "9e8a88178bc2d2f5717d71b1e7f9d59f07eb46be0e96c185c6e2ba58997d5ece",
+    "metadata/phase5_weight_evidence.csv": "82ae4ab66e8da467e82fdb5103741d3f3e6181c14d5ee413a629ad9e6a3e3014",
+    "metadata/phase5_weight_observations.json": "d3d181a63dac6103dc397f557f812943cbf5a8cfaa635435eb329b6280236818",
+    "metadata/phase5_region_occupancy.csv": "e76bc236855857d8f9acf12e34f9f2d2371c24e343c72238683cc433555b8a55"
+  },
+  "build_artifact_sha256": {
+    "phase5_test_source_hashes.json": "9f0742d1bc977e4dc7ca8257a9dc9ed2138f971123b5c8efa9199c5125cd338b",
+    "phase5_linkage.json": "8aadd2231c8c41752994378293cb35a8eceb32c7c58a4a4c01afd9106f52aace",
+    "step1_cmake_environment.txt": "b51d00d8c73ae663630ecacc987545ef7f7f14100ca73eea9ce7ccfbbdb23175",
+    "test_normalization": "15dc93ce57138b1a4ea537905c024089b51f271d587821960cccc215abf67f76",
+    "test_shape_comparison": "889d0be72a9c33dad9b032d4f9021ff384596f6df8f934a0303cfba3c54dd7da",
+    "test_control_regions": "bc389434963edd41bf08f0010900625d80bb302ac5701ff5bcc3f04378d1a830",
+    "phase5_region_inventory": "fbd1c9daca3f24d467ad99e384b48f9488c914792e9a096f2df55cd41b1d2398"
+  },
+  "transfer": {
+    "record": "https://opendata.cern.ch/api/records/93922",
+    "checked_utc": "2026-10-12T04:05:12.914953+00:00",
+    "budget_bytes": 133470725,
+    "accounting": "HTTP response payload bytes; 64 KiB reserved per request for protocol overhead",
+    "status": "BLOCKED_ACCESS",
+    "remote_root_operations": 0,
+    "record_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+    "phase4_ledger_sha256": "47367f1c27ef3223965b7e61dc9764e16dc68facf4bdaa4dde78472502685679",
+    "phase4_documentation_sha256": "6b316f79f8376bd5055a6cfce34df11d6c3885daca719498cb7b7b694ac38069",
+    "phase5_documentation_sha256": "a08ed08d8a5aa378c9edfb8e2a9cd729d3904ea69797a80f06ddde0c74c73196",
+    "phase5_limit_bytes": 134217728,
+    "cumulative_limit_bytes": 268435456,
+    "historical_charged_bytes": 78134022,
+    "phase5_documentation_charged_bytes": 747003,
+    "selected_dsids": [
+      302521
+    ],
+    "authorization": "Human approved single pinned DSID 302521 file and Phase 5 128 MiB cap; no physical normalization approval",
+    "https_url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+    "filename": "ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+    "expected_size": 110755804,
+    "expected_checksum": "adler32:b43248ea",
+    "payload_bytes": 15471,
+    "requests": [
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "method": "GET",
+        "payload_bytes": 0,
+        "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+        "headers": {}
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "method": "GET",
+        "payload_bytes": 1709,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"dac27772a224ce1:0\"",
+          "Content-Length": "1709"
+        },
+        "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+        "adler32": "d2e98587"
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+        "method": "GET",
+        "payload_bytes": 3448,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"188339614843d81:0\"",
+          "Content-Length": "3448"
+        },
+        "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+        "adler32": "decf4705"
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "HEAD",
+        "payload_bytes": 0,
+        "status": 200,
+        "headers": {
+          "Content-Length": "110755804",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/octet-stream",
+          "ETag": "\"645902614621323264:b43248ea\"",
+          "Last-Modified": "Fri, 28 Feb 2025 17:47:43 GMT"
+        }
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "status": 307,
+        "error": "HTTP 307",
+        "location": "http://st-096-dd904134.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "headers": {}
+      },
+      {
+        "url": "http://st-096-dd904134.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "error": "[WinError 10054] \u9060\u7aef\u4e3b\u6a5f\u5df2\u5f37\u5236\u95dc\u9589\u4e00\u500b\u73fe\u5b58\u7684\u9023\u7dda\u3002",
+        "headers": {}
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "method": "GET",
+        "payload_bytes": 1709,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"dac27772a224ce1:0\"",
+          "Content-Length": "1709"
+        },
+        "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+        "adler32": "d2e98587"
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+        "method": "GET",
+        "payload_bytes": 3448,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"188339614843d81:0\"",
+          "Content-Length": "3448"
+        },
+        "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+        "adler32": "decf4705"
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "HEAD",
+        "payload_bytes": 0,
+        "status": 200,
+        "headers": {
+          "Content-Length": "110755804",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/octet-stream",
+          "ETag": "\"645902614621323264:b43248ea\"",
+          "Last-Modified": "Fri, 28 Feb 2025 17:47:43 GMT"
+        }
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "status": 307,
+        "error": "HTTP 307",
+        "location": "http://st-120-100gb-bknoxg.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "headers": {}
+      },
+      {
+        "url": "http://st-120-100gb-bknoxg.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "runtime": "Ubuntu WSL public HTTP storage; no TLS claim",
+        "error": "WSL public storage request failed: TimeoutError",
+        "headers": {}
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+        "method": "GET",
+        "payload_bytes": 1709,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 19 Mar 2013 13:05:36 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"dac27772a224ce1:0\"",
+          "Content-Length": "1709"
+        },
+        "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+        "adler32": "d2e98587"
+      },
+      {
+        "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+        "method": "GET",
+        "payload_bytes": 3448,
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/x-x509-ca-cert",
+          "Last-Modified": "Tue, 29 Mar 2022 08:38:35 GMT",
+          "Accept-Ranges": "bytes",
+          "ETag": "\"188339614843d81:0\"",
+          "Content-Length": "3448"
+        },
+        "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+        "adler32": "decf4705"
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "HEAD",
+        "payload_bytes": 0,
+        "status": 200,
+        "headers": {
+          "Content-Length": "110755804",
+          "Accept-Ranges": "bytes",
+          "Content-Type": "application/octet-stream",
+          "ETag": "\"645902614621323264:b43248ea\"",
+          "Last-Modified": "Fri, 28 Feb 2025 17:47:43 GMT"
+        }
+      },
+      {
+        "url": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "status": 307,
+        "error": "HTTP 307",
+        "location": "http://st-120-100gb-bknoxg.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root"
+      },
+      {
+        "url": "https://st-120-100gb-bknoxg.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+        "method": "GET",
+        "payload_bytes": 0,
+        "error": "<urlopen error [WinError 10054] \u9060\u7aef\u4e3b\u6a5f\u5df2\u5f37\u5236\u95dc\u9589\u4e00\u500b\u73fe\u5b58\u7684\u9023\u7dda\u3002>"
+      }
+    ],
+    "charged_bytes": 1064047,
+    "last_updated_utc": "2026-10-12T04:10:20.567087+00:00",
+    "error": "<urlopen error [WinError 10054] \u9060\u7aef\u4e3b\u6a5f\u5df2\u5f37\u5236\u95dc\u9589\u4e00\u500b\u73fe\u5b58\u7684\u9023\u7dda\u3002>",
+    "phase5_charged_bytes": 1811050,
+    "cumulative_charged_bytes": 79945072,
+    "tls": {
+      "certificate_validation": true,
+      "hostname_validation": true,
+      "scope": "this process only; system trust unchanged",
+      "additional_ca": [
+        {
+          "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+          "sha256": "187f4f7b1315ebd2b72547c1accf2ec4077d51c14a0ce574904a9fdaea8a320c",
+          "bytes": 1709
+        },
+        {
+          "url": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+          "sha256": "7b28ce158439ad742b4be0d7dbf05cbdf715038f5e41ea1424caad3bb4e69d8a",
+          "bytes": 3448
+        }
+      ]
+    },
+    "storage_transport": "HTTPS",
+    "storage_endpoint": "https://st-120-100gb-bknoxg.cern.ch:8443/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+    "https_storage_upgrade_requested": true
+  },
+  "access_receipts": {
+    ".local/phase5_sources_20261012/access.json": {
+      "path": ".local/phase5_sources_20261012/access.json",
+      "sha256": "a08ed08d8a5aa378c9edfb8e2a9cd729d3904ea69797a80f06ddde0c74c73196"
+    },
+    ".local/phase5_access_20261012/access.json": {
+      "path": ".local/phase5_access_20261012/access.json",
+      "sha256": "be764a03f335e9cf238b9e8f1f67a8fd82bfa07aeb2ae145f490e8d6547ab134"
+    },
+    ".local/phase5_baseline_ctest.log": {
+      "path": ".local/phase5_baseline_ctest.log",
+      "sha256": "e9ea67a740d9b0593b1439fcf79ae658b72a1637ef0c5011f2bab648ce586dca"
+    },
+    ".local/phase5_step1.log": {
+      "path": ".local/phase5_step1.log",
+      "sha256": "469ebefff6692b76b92f4224ee5d57eea680fe2248bdd003dc9f05d16afd2f35"
+    },
+    ".local/phase5_validation.log": {
+      "path": ".local/phase5_validation.log",
+      "sha256": "3e5ad1da1714e30b6c5dd10821a148cd7b85865961f74d07374522246f90b728"
+    }
+  },
+  "descriptive_regions": {
+    "DATA": {
+      "summary": {
+        "status": "PASS_BOUNDED_DERIVED_CACHE_INVENTORY",
+        "scope": "DESCRIPTIVE_ONLY_NO_PHYSICAL_BACKGROUND_PREDICTION",
+        "sample_id": "DATA",
+        "input_cache": "/mnt/c/HH/outputs/phase4_numerical_v2_20261012/DATA93915/phase2/events.csv",
+        "selection_file": "/mnt/c/HH/metadata/phase3_selection_config.ini",
+        "cache_schema": "DATA_PHASE2_28",
+        "region_definition": "study-regions-v1",
+        "selection_definition": "study-preselection-v1",
+        "start": 100,
+        "end_exclusive": 63195,
+        "entries": 63095,
+        "C5": 51136,
+        "C5_plus_jets": 9037,
+        "C9": 1689,
+        "outside_study_domain": 7348,
+        "unit_status": "PROVISIONAL",
+        "generator_weight_semantics": "NOT_APPLICABLE",
+        "weight_scope": "RAW_UNWEIGHTED_DATA_DIAGNOSTIC",
+        "normalization_applied": false,
+        "scale_factors_applied": false,
+        "physical_transfer_factor_applied": false,
+        "physical_closure_status": "BLOCKED",
+        "native_ROOT_read_by_this_app": false,
+        "source_ROOT_identity_verified_by_this_app": false,
+        "limits": {
+          "max_entries": 64000,
+          "max_input_bytes": 67108864,
+          "max_line_bytes": 65536
+        }
+      },
+      "summary_sha256": "40f2e46a6d7c74f5c0781abc80fc767cb0860d552317550db018915f0f56f52f",
+      "event_ledger_sha256": "848f3c9411de13ca049ec4b743f431462def4236763187921f189a467c892274",
+      "region_counts_sha256": "56ba6cbd4738012867ea7716453d37ae2c84e0554f00f5e55d69e11b30da04a3",
+      "cache_sha256": "c242e256d76d6832031b2e4b2dfeeb342b5b05885c2a6bdf53d2d5eab71201c7"
+    },
+    "343981": {
+      "summary": {
+        "status": "PASS_BOUNDED_DERIVED_CACHE_INVENTORY",
+        "scope": "DESCRIPTIVE_ONLY_NO_PHYSICAL_BACKGROUND_PREDICTION",
+        "sample_id": "343981",
+        "input_cache": "/mnt/c/HH/outputs/phase4_numerical_v2_20261012/343981/reconstruction/events.csv",
+        "selection_file": "/mnt/c/HH/metadata/phase3_selection_config.ini",
+        "cache_schema": "MC_PHASE4_24",
+        "region_definition": "study-regions-v1",
+        "selection_definition": "study-preselection-v1",
+        "start": 100,
+        "end_exclusive": 10000,
+        "entries": 9900,
+        "C5": 9734,
+        "C5_plus_jets": 1127,
+        "C9": 1125,
+        "outside_study_domain": 2,
+        "unit_status": "PROVISIONAL",
+        "generator_weight_semantics": "UNKNOWN",
+        "weight_scope": "RAW_MC_WEIGHT_DIAGNOSTIC_SEMANTICS_UNKNOWN",
+        "normalization_applied": false,
+        "scale_factors_applied": false,
+        "physical_transfer_factor_applied": false,
+        "physical_closure_status": "BLOCKED",
+        "native_ROOT_read_by_this_app": false,
+        "source_ROOT_identity_verified_by_this_app": false,
+        "limits": {
+          "max_entries": 64000,
+          "max_input_bytes": 67108864,
+          "max_line_bytes": 65536
+        }
+      },
+      "summary_sha256": "e04266320cd2c7d9e2759573300e26e00fc56ce1f256733a42cf5541de629059",
+      "event_ledger_sha256": "f70e94326317f64b191b701e0a98d3d642212b7e4fb667cadaac660de3f35ace",
+      "region_counts_sha256": "dbfbd05eeeba54491d610114506ae7b16ffc0b8746485297f555d6f1078c88ff",
+      "cache_sha256": "32b08339e35a74cce3dff550935ae6dbb0bd42044f60fa9590258af7ec0c591b"
+    },
+    "346214": {
+      "summary": {
+        "status": "PASS_BOUNDED_DERIVED_CACHE_INVENTORY",
+        "scope": "DESCRIPTIVE_ONLY_NO_PHYSICAL_BACKGROUND_PREDICTION",
+        "sample_id": "346214",
+        "input_cache": "/mnt/c/HH/outputs/phase4_numerical_v2_20261012/346214/reconstruction/events.csv",
+        "selection_file": "/mnt/c/HH/metadata/phase3_selection_config.ini",
+        "cache_schema": "MC_PHASE4_24",
+        "region_definition": "study-regions-v1",
+        "selection_definition": "study-preselection-v1",
+        "start": 100,
+        "end_exclusive": 10000,
+        "entries": 9900,
+        "C5": 9816,
+        "C5_plus_jets": 1440,
+        "C9": 1419,
+        "outside_study_domain": 21,
+        "unit_status": "PROVISIONAL",
+        "generator_weight_semantics": "UNKNOWN",
+        "weight_scope": "RAW_MC_WEIGHT_DIAGNOSTIC_SEMANTICS_UNKNOWN",
+        "normalization_applied": false,
+        "scale_factors_applied": false,
+        "physical_transfer_factor_applied": false,
+        "physical_closure_status": "BLOCKED",
+        "native_ROOT_read_by_this_app": false,
+        "source_ROOT_identity_verified_by_this_app": false,
+        "limits": {
+          "max_entries": 64000,
+          "max_input_bytes": 67108864,
+          "max_line_bytes": 65536
+        }
+      },
+      "summary_sha256": "90244e0ef07b7c00f6e87dc9d9ef8d4956b5a74b74c08a929c82c8c528d034c5",
+      "event_ledger_sha256": "554bcf13997a79e443d2ae50d2291a84a38214b362523059c3a4484f17b89e13",
+      "region_counts_sha256": "09873abb49a615726ec01e9c43fc28ef5d6a2f88acc1199ab492027fc3aa3365",
+      "cache_sha256": "30c034513a7928330ef16da99854927ce53bd0240ce6e7d9eedb7e640cb8db52"
+    },
+    "423103": {
+      "summary": {
+        "status": "PASS_BOUNDED_DERIVED_CACHE_INVENTORY",
+        "scope": "DESCRIPTIVE_ONLY_NO_PHYSICAL_BACKGROUND_PREDICTION",
+        "sample_id": "423103",
+        "input_cache": "/mnt/c/HH/outputs/phase4_numerical_v2_20261012/423103/reconstruction/events.csv",
+        "selection_file": "/mnt/c/HH/metadata/phase3_selection_config.ini",
+        "cache_schema": "MC_PHASE4_24",
+        "region_definition": "study-regions-v1",
+        "selection_definition": "study-preselection-v1",
+        "start": 100,
+        "end_exclusive": 10000,
+        "entries": 9900,
+        "C5": 9805,
+        "C5_plus_jets": 2215,
+        "C9": 588,
+        "outside_study_domain": 1627,
+        "unit_status": "PROVISIONAL",
+        "generator_weight_semantics": "UNKNOWN",
+        "weight_scope": "RAW_MC_WEIGHT_DIAGNOSTIC_SEMANTICS_UNKNOWN",
+        "normalization_applied": false,
+        "scale_factors_applied": false,
+        "physical_transfer_factor_applied": false,
+        "physical_closure_status": "BLOCKED",
+        "native_ROOT_read_by_this_app": false,
+        "source_ROOT_identity_verified_by_this_app": false,
+        "limits": {
+          "max_entries": 64000,
+          "max_input_bytes": 67108864,
+          "max_line_bytes": 65536
+        }
+      },
+      "summary_sha256": "63023d80a9e22f6c27d6a0b70ac6e2149b8026f252e5425fc04b3186bb99a2c1",
+      "event_ledger_sha256": "2c59ec5b14d13308c1547363b898d4db7f97506202c8a14889b891cd8e2032e5",
+      "region_counts_sha256": "784523b49d81b5b987490e444d381ded21f8272e4806c5d33a6c452f01c48e47",
+      "cache_sha256": "e14069e6364a8880530b9d3fbbab82f86857cff8c3ed238c6adb4ae3571c522d"
+    }
+  },
+  "verified_preserved_official_sources": {
+    "converter": {
+      "path": ".local/phase0_sources/framework_Root_PhysLiteToOpenData.cxx.txt",
+      "sha256": "d17dd6e26f8217bfd967dd4007cbbe1df6e8f742a8a8ee0b3fec6dfd863d0093",
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FPhysLiteToOpenData.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "d17dd6e26f8217bfd967dd4007cbbe1df6e8f742a8a8ee0b3fec6dfd863d0093",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "skim": {
+      "path": ".local/phase0_sources/framework_scripts_skimOpenDataNtuples.py.txt",
+      "sha256": "798cc579aaa303be420ca8621d7cb3e1b3ef2cee1f0ecb9d25469a1aba32f6b8",
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/scripts%2FskimOpenDataNtuples.py/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "798cc579aaa303be420ca8621d7cb3e1b3ef2cee1f0ecb9d25469a1aba32f6b8",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "jet": {
+      "path": ".local/phase0_sources/framework_Root_JetInfo.cxx.txt",
+      "sha256": "01325c175a93676dea65f7946dba486bcc1e84c6f7168e694bc3362c05f3a5b5",
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FJetInfo.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "01325c175a93676dea65f7946dba486bcc1e84c6f7168e694bc3362c05f3a5b5",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "photon": {
+      "path": ".local/phase0_sources/framework_Root_PhotonInfo.cxx.txt",
+      "sha256": "9a59853da9c04a428d1990320b680940480bdf723f8d299689ac3bc26e7a8569",
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FPhotonInfo.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "9a59853da9c04a428d1990320b680940480bdf723f8d299689ac3bc26e7a8569",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "algorithm": {
+      "path": ".local/phase0_sources/framework_algorithms.txt",
+      "sha256": "5a56eb88d9beb3c472f21defca8f250a7dd3ca63ef60fe08f56cc8183eaf56c3",
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/python%2FPhysLiteToOpenDataAlgorithms.py/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "5a56eb88d9beb3c472f21defca8f250a7dd3ca63ef60fe08f56cc8183eaf56c3",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    }
+  },
+  "physical_normalization_applied": false,
+  "physical_shape_comparison_executed": false,
+  "physical_closure_executed": false,
+  "real_HH_fit_executed": false,
+  "physical_release_ROOT_events_read_in_Phase5": 0,
+  "physical_study_figures_generated": 0,
+  "synthetic_fixture_outputs": "Existing ROOT/driver regressions read synthetic ROOT fixtures and can generate temporary synthetic figures; these are not physical study outputs or approved publication artifacts",
+  "figure_policy": "Unapproved PDF/PNG excluded from staging and all outgoing commits; previous local drafts retain LOCAL_DRAFT status",
+  "limitations": [
+    "302521 storage access failed; schema NOT_EVALUATED",
+    "All applicable DATA luminosity scopes UNKNOWN",
+    "Exact nominal-weight, signed pre-skim aggregation/completeness, BR/SF/overlap conventions UNKNOWN",
+    "Continuum filter applicability/edge migration and complete background mixture unresolved",
+    "Region counts are descriptive; synthetic closure is not physical closure; existing DATA is not blinded"
+  ],
+  "reproduction": [
+    "source /home/btu/miniforge3/etc/profile.d/conda.sh; conda activate atlas-hh-root",
+    "bash scripts/validate_step1.sh NEW_EXTERNAL_STEP1_BUILD",
+    "bash scripts/validate_phase5.sh NEW_EXTERNAL_PHASE5_BUILD",
+    "python -B scripts/audit_phase5_weights.py --csv outputs/NEW_weights.csv --json outputs/NEW_weights.json",
+    "See reports/phase5_decision.md for cache inventory commands and failed transfer attempt history"
+  ]
+}

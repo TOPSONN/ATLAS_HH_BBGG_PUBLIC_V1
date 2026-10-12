@@ -1,0 +1,318 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5D_RESEARCH_PHYSLITE_AND_PROVENANCE_DECISION",
+  "baseline_commit": "ba2ba7d8fbfdf8d54c5f6156a673ee4ac1fb30af",
+  "sealed_utc": "2026-10-12T08:24:23.046292+00:00",
+  "status": "PARTIAL_INPUT_PROVENANCE_AND_TOOLCHAIN_BLOCKED",
+  "gate_semantics": "PASS is limited to each stated documentary/preservation assessment. No gate PASS supplies calibrated HH readiness or a physical closure result.",
+  "gates": {
+    "A": {
+      "status": "PASS",
+      "scope": "212 baseline tracked files unchanged; 477 historical local evidence items sealed and retained."
+    },
+    "B": {
+      "status": "PASS",
+      "scope": "Exact target, sanitized diagnosis and transport/production/toolchain questions finalized; email UNSENT, dispatch separately authorized."
+    },
+    "C": {
+      "status": "UNKNOWN",
+      "scope": "Exact FEB2025 producer, nominal index, signed pre-skim denominator/input completeness and conventions unresolved; normalization disabled."
+    },
+    "D": {
+      "status": "PASS",
+      "scope": "Documentary candidate identification:10 exact physical metadata candidates, DATA2016/HH unresolved; native suitability NOT_EVALUATED."
+    },
+    "E": {
+      "status": "PASS",
+      "scope": "Documentary truth/flavour assessment complete; exact candidate physical/native truth/flavour capability remains UNKNOWN."
+    },
+    "F": {
+      "status": "PASS",
+      "scope": "Documentary calibration/trigger/GRL/luminosity feasibility complete; candidate calibrated readiness remains UNKNOWN."
+    },
+    "G": {
+      "status": "UNKNOWN",
+      "scope": "Functional requirements/isolation established; example AnalysisBase25.2.2 not verified for exact candidate/platform/payloads."
+    },
+    "H": {
+      "status": "UNKNOWN",
+      "scope": "Exact input-only sizes known; runtime/cache/calibration/RAM/CPU and total resources unmeasured."
+    },
+    "I": {
+      "status": "PASS",
+      "scope": "Ranked GO/CONDITIONAL/STOP decision and frozen prospective closure sequence supported by scoped evidence."
+    },
+    "J": {
+      "status": "PASS",
+      "scope": "No source/build changes; retained actual CTest28/28 and linkage/compile evidence preserved; Phase5C local evidence audit freshly916PASS."
+    }
+  },
+  "gate_counts": {
+    "PASS": 7,
+    "UNKNOWN": 3,
+    "BLOCKED": 0,
+    "FAIL": 0,
+    "NOT_EVALUATED": 0
+  },
+  "physical_blockers": [
+    "Exact production/nominal/signed normalization contract",
+    "Candidate native truth/calibration/trigger/exposure applicability",
+    "Pinned public calibrated runtime/payloads and measured total resources",
+    "Matching exact HH signal and complete background inputs",
+    "Future independent prospective closure"
+  ],
+  "support": {
+    "draft": "reports/phase5d_cern_support_email.md",
+    "status": "PREPARED_UNSENT",
+    "sent": false,
+    "send_authorization_required": true
+  },
+  "provenance": {
+    "FEB2025_production": "UNKNOWN",
+    "nominal_generator_weight": "UNKNOWN",
+    "signed_pre_skim_sumW": "UNKNOWN",
+    "normalization": "DISABLED",
+    "upstream_candidate_AST_issue": "Pinned February skim unclosed bracket line413; upstream comparison limitation, not project regression."
+  },
+  "candidates": {
+    "manifest_rows": 12,
+    "physical_metadata_candidates": 10,
+    "DATA_physical": 1,
+    "MC_physical": 9,
+    "unresolved_roles": [
+      "DATA2016",
+      "HH"
+    ],
+    "research_ROOT_acquired": false,
+    "native_research_reads": 0,
+    "HH_global_availability": "UNKNOWN"
+  },
+  "capabilities": {
+    "matrix_rows": 26,
+    "paired_capabilities": 13,
+    "native_research_validation": "NOT_EVALUATED",
+    "documented_research_AnalysisBase_example": "25.2.2",
+    "exact_candidate_supported_runtime": "UNKNOWN",
+    "container_or_calibration_installations": 0
+  },
+  "resources": {
+    "DATA_plus_gammajet_364542_input_bytes": 94595392,
+    "DATA_plus_prompt_diphoton_364352_input_bytes": 1815242009,
+    "total_installation_bytes": "UNKNOWN",
+    "RAM": "UNKNOWN",
+    "CPU": "UNKNOWN",
+    "new_input_authorization_required": true
+  },
+  "network": {
+    "requests": 16,
+    "received_metadata_body_bytes": 1678884,
+    "reserve_bytes": 1048576,
+    "phase5d_incremental_charged_bytes": 2727460,
+    "phase5_charged_bytes": 8422935,
+    "cumulative_charged_bytes": 86556957,
+    "phase5_limit_bytes": 134217728,
+    "cumulative_limit_bytes": 268435456,
+    "ROOT_requests": 0,
+    "ROOT_payload_bytes": 0,
+    "ROOT_acquired": false,
+    "wire_control_and_provider_search_traffic": "UNMEASURED",
+    "scope": "HTTP metadata/source bodies plus per-application-operation reserve; not a measured wire-byte cap. No redirects, automatic retries, storage-route retry or ROOT GET. Git and provider-mediated discovery traffic outside this payload receipt."
+  },
+  "sidebands": {
+    "historical_rows": 63095,
+    "C9": 1689,
+    "sideband_events": 1374,
+    "central_excluded": 315,
+    "fold_counts": [
+      724,
+      650
+    ],
+    "fold_classification": "RETROSPECTIVE",
+    "physical_closure": "NOT_PASSED",
+    "TF_fit_or_background_prediction": false,
+    "protocol_sha256": "e9916da8772902c5464ea141397340a5230cb1733bb05e7c86800d9681295f66",
+    "summary_sha256": "5ea4338ec5224b494cf3ebd5751752bd929ad7b6572d9198f23f670da3d1acef"
+  },
+  "regression": {
+    "source_or_build_changes": false,
+    "CTest_freshly_rerun": false,
+    "retained_actual_CTest": {
+      "total": 28,
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0,
+      "xml": {
+        "path": ".local/phase5c_validation_final_20261012/ctest.xml",
+        "bytes": 16642,
+        "sha256": "46285a6e637822776f5d76092485f3771350ee6d4c7864087b0dced53e9b3978",
+        "hash_convention": "RAW"
+      }
+    },
+    "retained_environment": {
+      "ROOT_VERSION": "6.40.04",
+      "ROOT_CXX_STANDARD": "20",
+      "ROOT_DIR": "/home/btu/miniforge3/envs/atlas-hh-root/cmake",
+      "CXX_COMPILER": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+      "CXX_COMPILER_ID": "GNU",
+      "CXX_COMPILER_VERSION": "15.3.0",
+      "PROJECT_CXX_STANDARD": "20",
+      "CXX_STANDARD_REQUIRED": "ON",
+      "CXX_EXTENSIONS": "OFF",
+      "CMAKE_VERSION": "4.4.4"
+    },
+    "retained_compiled_translation_units": 38,
+    "retained_linkage": "PASS_CONDA_ROOT_AND_LIBSTDCXX",
+    "fresh_Phase5C_evidence_audit": {
+      "status": "PASS_OFFLINE_EVIDENCE_AUDIT",
+      "checks": 916,
+      "local": true,
+      "physical_input_status": "BLOCKED",
+      "physical_normalization": "DISABLED"
+    },
+    "reason_no_CTest_rerun": "Task requests existing regression execution when source/build infrastructure changes; only additive reports/metadata changed.",
+    "GitHub_CI": "NO_CHECKS"
+  },
+  "routes": {
+    "educational": "GO_EXISTING_BOUNDED_METHODS",
+    "small_research_tool_pilot": "CONDITIONAL_EXACT_INPUT_AND_RUNTIME_AUTHORIZATION",
+    "prompt_diphoton_pilot": "CONDITIONAL_BUDGET_AND_PHYSICAL_GATES",
+    "calibrated_bbgg_methods": "CONDITIONAL",
+    "HH_extraction_or_absolute_prediction": "STOP"
+  },
+  "git": {
+    "branch": "codex/phase5-background-normalization",
+    "PR": 8,
+    "PR_state_preflight": "OPEN",
+    "PR_isDraft_preflight": true,
+    "base": "codex/phase4-mc-truth-validation",
+    "strategy": "ONE_ADDITIVE_REPORT_METADATA_COMMIT",
+    "main_unchanged_required": true,
+    "no_force_push_or_merge": true,
+    "publication_scope": "12 explicit text paths; staged and every outgoing commit reviewed before push; postpush verification retained locally."
+  },
+  "figures": {
+    "new_PDF_PNG_generated": 0,
+    "PDF_PNG_ROOT_allowed_in_payload": 0,
+    "historical_local_drafts": "AWAITING_USER_APPROVAL",
+    "approval_from_tests": false
+  },
+  "sealed_artifacts": [
+    {
+      "path": "reports/phase5d_provenance_review.md",
+      "bytes": 21414,
+      "sha256": "100f6c63531ff755e3fd15767a44eca927e6aeab03d4a3c80b04214716e3211f",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "reports/phase5d_research_dataset_candidates.md",
+      "bytes": 19306,
+      "sha256": "79a4b48995da8adfee55a3a0db4daa067e87c979b10b748ac32135cfea7b4dae",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "reports/phase5d_toolchain_requirements.md",
+      "bytes": 21301,
+      "sha256": "c707631d6ea67ea2be4f5e15ae7d3ee6df47482e48b9c214da4a68198c1000c3",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "reports/phase5d_analysis_route_comparison.md",
+      "bytes": 18786,
+      "sha256": "777d9edd01daba81011f8c04d3ea8c4f004902511a75ed14db6fed25f07589a8",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "reports/phase5d_final_decision.md",
+      "bytes": 14341,
+      "sha256": "cbb5556bbc6a9fad072ae562ebc923d30ad2368e88e1ffd89e7fcb9d3006538e",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "reports/phase5d_cern_support_email.md",
+      "bytes": 4388,
+      "sha256": "d0ec1ee223c02f0edbb063cc20f13bafda54931fc4468b8a81c94be08337548c",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "metadata/phase5d_dataset_manifest.csv",
+      "bytes": 19736,
+      "sha256": "48dac83b5b31f4419378f6c4ba8db0ba5e3e149aa315beb6742dc75c72cfd9e2",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "metadata/phase5d_capability_matrix.csv",
+      "bytes": 10072,
+      "sha256": "ccfd7e3f5ad9c09f62213ed320737f30ee36945474c2c183cf81656db52eec9f",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "metadata/phase5d_baseline_preservation.json",
+      "bytes": 163603,
+      "sha256": "79b40c87e4c7a9cf4c9ddac3e0d450be4e6e7535a9b160e46a3695ec19d48f9d",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "metadata/phase5d_source_access.json",
+      "bytes": 11121,
+      "sha256": "f41c422010e3507526feaa1cd6ccd6461329980d7f000b40a9d3d51fc55e7136",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": "metadata/phase5d_candidate_evidence.json",
+      "bytes": 13078,
+      "sha256": "79ebb7b5c4aac4e7333bf34cca1bbe1e5b0c54c3d4f9749e1dd87221d0d7eb5a",
+      "hash_convention": "RAW_UTF8_LF"
+    }
+  ],
+  "local_review_evidence": [
+    {
+      "path": ".local/phase5d_pr8_initial.json",
+      "bytes": 214,
+      "sha256": "fca7f203a559f9d570c34d4117bdcbd07f84e4c0aadd80a1ec9c010a6f9f5789",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": ".local/phase5d_preserved_refs_initial.txt",
+      "bytes": 123,
+      "sha256": "87cc1ad490a9a24cb2cd0ff4f6225c2e19aec14f295493c9f32058ab7972f199",
+      "hash_convention": "RAW"
+    },
+    {
+      "path": ".local/phase5d_root_identity.txt",
+      "bytes": 35,
+      "sha256": "ba3eb5c8e82f798421a38569f3ebd6f87c1848b9e76d66dc21977ca7c3a0962a",
+      "hash_convention": "RAW"
+    },
+    {
+      "path": ".local/phase5d_precommit_phase5c_audit.txt",
+      "bytes": 146,
+      "sha256": "56f2187522ea0e511dc93b36de9d8d1a9dfcaf14b26f619a56e348257a1221df",
+      "hash_convention": "RAW"
+    },
+    {
+      "path": ".local/phase5d_root_static_evidence.json",
+      "bytes": 540,
+      "sha256": "abcfa1984ceebb1881441038f5191564b5f3f84664b599c6d7dd2553a3d6504a",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": ".local/phase5d_toolchain_review_v3.json",
+      "bytes": 1629,
+      "sha256": "4f5b027c59ef09da87cf99b4e0e697a24ab3ec150b399bd233b51f6185a5a914",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": ".local/phase5d_independent_candidate_review.json",
+      "bytes": 9421,
+      "sha256": "a02713c92e496a17f280b9ccf7bd72a2e3a114c69c189e17b3f5e23270282b87",
+      "hash_convention": "RAW_UTF8_LF"
+    },
+    {
+      "path": ".local/phase5d_independent_provenance_email_review.json",
+      "bytes": 1156,
+      "sha256": "f2b8bd9801ee149bc34e5906c30929e3f748bef87ef25628d473889d051f3140",
+      "hash_convention": "RAW_UTF8_LF"
+    }
+  ],
+  "reproduction": "Public report/metadata digests and exact source URLs identify evidence. Full raw source/API and retained CTest/local audit dependencies remain ignored locally; no new framework or physical processing was added."
+}

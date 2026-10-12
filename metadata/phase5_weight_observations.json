@@ -1,0 +1,1205 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5_WEIGHT_EVIDENCE_AUDIT",
+  "status": "PASS",
+  "status_scope": "Preserved CSV/JSON consistency and observed diagnostic accounting only",
+  "normalization": "BLOCKED",
+  "generator_weight_physical_semantics": "UNKNOWN",
+  "signed_preskim_denominator_applicability": "UNKNOWN",
+  "scale_factor_application": "BLOCKED",
+  "new_ROOT_entry_reads": 0,
+  "new_network_requests": 0,
+  "signed_values_modified": false,
+  "bounded_event_rows": 29700,
+  "source_inputs_sha256": {
+    "metadata/phase4_weight_normalization_evidence.json": "2d181816939595efea8bb6ec268b8bb0185c2cfbe34e70117bfe7db9c13954c4",
+    "metadata/phase5_dsid_manifest.csv": "2b18b25a4e33a17d94db862645395379262db21c73051ebdedd890c378318596",
+    "outputs/phase4_numerical_v2_20261012/343981/reconstruction/events.csv": "32b08339e35a74cce3dff550935ae6dbb0bd42044f60fa9590258af7ec0c591b",
+    "outputs/phase4_numerical_v2_20261012/343981/reconstruction/normalization_sf_diagnostics.csv": "4ceb2bac899b8f4fee90310c0dfb62d18b7f91c6fb6855d155071a27c48fb94c",
+    "outputs/phase4_numerical_v2_20261012/346214/reconstruction/events.csv": "30c034513a7928330ef16da99854927ce53bd0240ce6e7d9eedb7e640cb8db52",
+    "outputs/phase4_numerical_v2_20261012/346214/reconstruction/normalization_sf_diagnostics.csv": "330882d654fb0cc3adee01c804ac4b6855a0a71e61a87202b2daa3a1af861c46",
+    "outputs/phase4_numerical_v2_20261012/423103/reconstruction/events.csv": "e14069e6364a8880530b9d3fbbab82f86857cff8c3ed238c6adb4ae3571c522d",
+    "outputs/phase4_numerical_v2_20261012/423103/reconstruction/normalization_sf_diagnostics.csv": "02db8bb3569967a835f37c4d8a3e3d92630303534afaca239e2768f2e740c0c3"
+  },
+  "script_sha256": "0d13cf501c4b04359b39319813153b538fa6db9951b4da77c0804d34bfa9d699",
+  "reproduction_command": "python scripts/audit_phase5_weights.py --csv outputs/phase5_weight_audit_reproduced.csv --json outputs/phase5_weight_audit_reproduced.json",
+  "output_policy": "Outputs must be new paths; historical evidence is never overwritten",
+  "official_sources": {
+    "converter": {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FPhysLiteToOpenData.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "d17dd6e26f8217bfd967dd4007cbbe1df6e8f742a8a8ee0b3fec6dfd863d0093",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "skim": {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/scripts%2FskimOpenDataNtuples.py/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "798cc579aaa303be420ca8621d7cb3e1b3ef2cee1f0ecb9d25469a1aba32f6b8",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "jet": {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FJetInfo.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "01325c175a93676dea65f7946dba486bcc1e84c6f7168e694bc3362c05f3a5b5",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "photon": {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FPhotonInfo.cxx/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "9a59853da9c04a428d1990320b680940480bdf723f8d299689ac3bc26e7a8569",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    },
+    "algorithm": {
+      "url": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/python%2FPhysLiteToOpenDataAlgorithms.py/raw?ref=v1.0.0",
+      "version": "v1.0.0_preserved_2026-10-09",
+      "local_snapshot_sha256": "5a56eb88d9beb3c472f21defca8f250a7dd3ca63ef60fe08f56cc8183eaf56c3",
+      "hash_provenance": "Preserved source audit; not a fresh download or official strong digest"
+    }
+  },
+  "serialization_note": "CSV versus JSON textual formatting can differ; parsed moments and scalar extrema/types/counts are compared exactly, with all actual deltas recorded",
+  "negative_SF_policy": "Negative BTAG scalars are separate from generator signs; no absolute/unity/zero replacement or correction application",
+  "samples": {
+    "343981": {
+      "input_filename": "ODEO_FEB2025_v0_GamGam_mc_343981.PowhegPythia8EvtGen_NNLOPS_nnlo_30_ggH125_gamgam.GamGam.root",
+      "input_ROOT_sha256": "002e890c517e03ba59c49bc0852d0fdcd200e0d48add7ca189228a6f82965c56",
+      "published_checksum": "adler32:3e3f0a3b",
+      "record_url": "https://opendata.cern.ch/record/93922",
+      "record_response_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+      "release_filename_tag": "ODEO_FEB2025_v0",
+      "table_generation_tag": "e5607",
+      "exact_release_applicability": "UNKNOWN",
+      "absolute_normalization": "BLOCKED",
+      "physical_input_status": "PRESERVED_PHASE4_LOCAL_FILE",
+      "generator_observation": {
+        "entries": 9900,
+        "positive": 9886,
+        "negative": 14,
+        "zero": 0,
+        "sumW": 281211.1376647949,
+        "sumW2": 8033225.089416509,
+        "sumAbsW": 282008.7381362915,
+        "effective_statistics_signed": 9844.079191919192,
+        "absolute_signed_sum_over_sumAbsW": 0.9971717171717172,
+        "cancellation_fraction": 0.0028282828282828465,
+        "minimum": -28.48573112487793,
+        "maximum": 28.48573112487793,
+        "usage": "DIAGNOSTIC_ONLY_BOUNDED_POSTSKIM_NOT_NORMALIZATION_DENOMINATOR",
+        "sumAbsW_usage": "CANCELLATION_METRIC_ONLY_NO_ABSOLUTE_WEIGHT_REPLACEMENT",
+        "definitions": {
+          "sumW": "math.fsum of signed preserved mc_weight values",
+          "sumW2": "math.fsum of squared signed preserved values; no SF applied",
+          "sumAbsW": "math.fsum(abs(weight)) only to quantify signed cancellation",
+          "effective_statistics_signed": "sumW^2/sumW2; diagnostic, not generated N",
+          "cancellation_fraction": "1-abs(sumW)/sumAbsW; undefined if sumAbsW=0"
+        }
+      },
+      "original_generator_comparison": {
+        "counts_exact": true,
+        "sumW": {
+          "preserved_Phase4_value": 281211.1376647949,
+          "recomputed_fsum_value": 281211.1376647949,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "sumW2": {
+          "preserved_Phase4_value": 8033225.089416509,
+          "recomputed_fsum_value": 8033225.089416509,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "status": "PASS",
+        "scope": "Preserved CSV/JSON evidence consistency; no physical convention validation"
+      },
+      "scalar_observations": {
+        "ScaleFactor_BTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9882,
+          "negative": 18,
+          "zero": 0,
+          "minimum": -1.2101823091506958,
+          "maximum": 1.535015344619751,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_FTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.8255999684333801,
+          "maximum": 1.535015344619751,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_JVT": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9342018961906433,
+          "maximum": 1.489740014076233,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PHOTON": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9690592288970947,
+          "maximum": 1.0580416917800903,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PILEUP": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9811,
+          "negative": 0,
+          "zero": 89,
+          "minimum": 0.0,
+          "maximum": 1.2023627758026123,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "filteff": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.00227,
+          "maximum": 0.00227,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "kfac": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1.717,
+          "maximum": 1.717,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "num_events": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 200000.0,
+          "maximum": 200000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 5660115.0,
+          "maximum": 5660115.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights_squared": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 162287376.0,
+          "maximum": 162287376.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "xsec": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 28.3,
+          "maximum": 28.3,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        }
+      },
+      "original_scalar_comparisons": {
+        "ScaleFactor_BTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_FTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_JVT": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PHOTON": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PILEUP": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "filteff": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "kfac": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "num_events": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights_squared": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "xsec": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        }
+      },
+      "event_rows": 9900,
+      "diagnostic_rows": 198000,
+      "entry_range": [
+        100,
+        10000
+      ],
+      "csv_identity_join": "PASS_EXACT_DSID_ENTRY_RUN_EVENT",
+      "table_native_comparison": {
+        "sigma_pb": {
+          "later_table_candidate": "28.3",
+          "native_constant": 28.3,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generator_filter_efficiency": {
+          "later_table_candidate": "0.00227",
+          "native_constant": 0.00227,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "k_factor": {
+          "later_table_candidate": "1.717",
+          "native_constant": 1.717,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generated_event_count": {
+          "later_table_candidate": "200000.0",
+          "native_constant": 200000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "signed_pre_skim_sumW": {
+          "later_table_candidate": "5660114.774513245",
+          "native_constant": 5660115.0,
+          "difference_native_minus_table": 0.22548675537109375,
+          "relative_difference": 3.983784151982767e-08,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "pre_skim_sumW2": {
+          "later_table_candidate": "162287375.54376578",
+          "native_constant": 162287376.0,
+          "difference_native_minus_table": 0.4562342166900635,
+          "relative_difference": 2.811273613621448e-09,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        }
+      }
+    },
+    "346214": {
+      "input_filename": "ODEO_FEB2025_v0_GamGam_mc_346214.PowhegPy8EG_NNPDF30_AZNLOCTEQ6L1_VBFH125_gamgam.GamGam.root",
+      "input_ROOT_sha256": "8f32169da2dfa378e4b4d34573bf12a0475934b10cc4ad00e51da89c34bdb908",
+      "published_checksum": "adler32:52f61c51",
+      "record_url": "https://opendata.cern.ch/record/93922",
+      "record_response_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+      "release_filename_tag": "ODEO_FEB2025_v0",
+      "table_generation_tag": "e6970",
+      "exact_release_applicability": "UNKNOWN",
+      "absolute_normalization": "BLOCKED",
+      "physical_input_status": "PRESERVED_PHASE4_LOCAL_FILE",
+      "generator_observation": {
+        "entries": 9900,
+        "positive": 9885,
+        "negative": 15,
+        "zero": 0,
+        "sumW": 37087.79810833931,
+        "sumW2": 140118.1906686802,
+        "sumAbsW": 37200.29511141777,
+        "effective_statistics_signed": 9816.746576305852,
+        "absolute_signed_sum_over_sumAbsW": 0.9969759110044283,
+        "cancellation_fraction": 0.0030240889955717165,
+        "minimum": -3.7499001026153564,
+        "maximum": 12.345000267028809,
+        "usage": "DIAGNOSTIC_ONLY_BOUNDED_POSTSKIM_NOT_NORMALIZATION_DENOMINATOR",
+        "sumAbsW_usage": "CANCELLATION_METRIC_ONLY_NO_ABSOLUTE_WEIGHT_REPLACEMENT",
+        "definitions": {
+          "sumW": "math.fsum of signed preserved mc_weight values",
+          "sumW2": "math.fsum of squared signed preserved values; no SF applied",
+          "sumAbsW": "math.fsum(abs(weight)) only to quantify signed cancellation",
+          "effective_statistics_signed": "sumW^2/sumW2; diagnostic, not generated N",
+          "cancellation_fraction": "1-abs(sumW)/sumAbsW; undefined if sumAbsW=0"
+        }
+      },
+      "original_generator_comparison": {
+        "counts_exact": true,
+        "sumW": {
+          "preserved_Phase4_value": 37087.79810833931,
+          "recomputed_fsum_value": 37087.79810833931,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "sumW2": {
+          "preserved_Phase4_value": 140118.1906686802,
+          "recomputed_fsum_value": 140118.1906686802,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "status": "PASS",
+        "scope": "Preserved CSV/JSON evidence consistency; no physical convention validation"
+      },
+      "scalar_observations": {
+        "ScaleFactor_BTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9825,
+          "negative": 75,
+          "zero": 0,
+          "minimum": -1.2288618087768555,
+          "maximum": 1.6769144535064697,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_FTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.816951334476471,
+          "maximum": 1.6769144535064697,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_JVT": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9364210367202759,
+          "maximum": 1.581647515296936,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PHOTON": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9520360827445984,
+          "maximum": 1.0580416917800903,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PILEUP": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9807,
+          "negative": 0,
+          "zero": 93,
+          "minimum": 0.0,
+          "maximum": 1.2023627758026123,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "filteff": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.00227,
+          "maximum": 0.00227,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "kfac": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "num_events": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 80000.0,
+          "maximum": 80000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 299915.6875,
+          "maximum": 299915.6875,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights_squared": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1142827.25,
+          "maximum": 1142827.25,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "xsec": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 3.782,
+          "maximum": 3.782,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        }
+      },
+      "original_scalar_comparisons": {
+        "ScaleFactor_BTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_FTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_JVT": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PHOTON": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PILEUP": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "filteff": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "kfac": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "num_events": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights_squared": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "xsec": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        }
+      },
+      "event_rows": 9900,
+      "diagnostic_rows": 198000,
+      "entry_range": [
+        100,
+        10000
+      ],
+      "csv_identity_join": "PASS_EXACT_DSID_ENTRY_RUN_EVENT",
+      "table_native_comparison": {
+        "sigma_pb": {
+          "later_table_candidate": "3.782",
+          "native_constant": 3.782,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generator_filter_efficiency": {
+          "later_table_candidate": "0.00227",
+          "native_constant": 0.00227,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "k_factor": {
+          "later_table_candidate": "1.0",
+          "native_constant": 1.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generated_event_count": {
+          "later_table_candidate": "80000.0",
+          "native_constant": 80000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "signed_pre_skim_sumW": {
+          "later_table_candidate": "299915.6851153374",
+          "native_constant": 299915.6875,
+          "difference_native_minus_table": 0.002384662628173828,
+          "relative_difference": 7.951110083678244e-09,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "pre_skim_sumW2": {
+          "later_table_candidate": "1142827.2423424923",
+          "native_constant": 1142827.25,
+          "difference_native_minus_table": 0.0076575076673179865,
+          "relative_difference": 6.7004945136083115e-09,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        }
+      }
+    },
+    "423103": {
+      "input_filename": "ODEO_FEB2025_v0_GamGam_mc_423103.Pythia8EvtGen_A14NNPDF23LO_gammajet_DP70_140.GamGam.root",
+      "input_ROOT_sha256": "c65f7103c8e75c6a0d2faf5488752c2efc08376780c0f04fbe52052ac978da1e",
+      "published_checksum": "adler32:5bf96f22",
+      "record_url": "https://opendata.cern.ch/record/93922",
+      "record_response_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+      "release_filename_tag": "ODEO_FEB2025_v0",
+      "table_generation_tag": "e3791",
+      "exact_release_applicability": "UNKNOWN",
+      "absolute_normalization": "BLOCKED",
+      "physical_input_status": "PRESERVED_PHASE4_LOCAL_FILE",
+      "generator_observation": {
+        "entries": 9900,
+        "positive": 9900,
+        "negative": 0,
+        "zero": 0,
+        "sumW": 9900.0,
+        "sumW2": 9900.0,
+        "sumAbsW": 9900.0,
+        "effective_statistics_signed": 9900.0,
+        "absolute_signed_sum_over_sumAbsW": 1.0,
+        "cancellation_fraction": 0.0,
+        "minimum": 1.0,
+        "maximum": 1.0,
+        "usage": "DIAGNOSTIC_ONLY_BOUNDED_POSTSKIM_NOT_NORMALIZATION_DENOMINATOR",
+        "sumAbsW_usage": "CANCELLATION_METRIC_ONLY_NO_ABSOLUTE_WEIGHT_REPLACEMENT",
+        "definitions": {
+          "sumW": "math.fsum of signed preserved mc_weight values",
+          "sumW2": "math.fsum of squared signed preserved values; no SF applied",
+          "sumAbsW": "math.fsum(abs(weight)) only to quantify signed cancellation",
+          "effective_statistics_signed": "sumW^2/sumW2; diagnostic, not generated N",
+          "cancellation_fraction": "1-abs(sumW)/sumAbsW; undefined if sumAbsW=0"
+        }
+      },
+      "original_generator_comparison": {
+        "counts_exact": true,
+        "sumW": {
+          "preserved_Phase4_value": 9900.0,
+          "recomputed_fsum_value": 9900.0,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "sumW2": {
+          "preserved_Phase4_value": 9900.0,
+          "recomputed_fsum_value": 9900.0,
+          "delta_recomputed_minus_preserved": 0.0,
+          "relative_delta": 0.0,
+          "exact_equal": true,
+          "interpretation": "EXACT_MATCH"
+        },
+        "status": "PASS",
+        "scope": "Preserved CSV/JSON evidence consistency; no physical convention validation"
+      },
+      "scalar_observations": {
+        "ScaleFactor_BTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9797,
+          "negative": 103,
+          "zero": 0,
+          "minimum": -1.2561054229736328,
+          "maximum": 1.5460608005523682,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_FTAG": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.7954883575439453,
+          "maximum": 1.5460608005523682,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_JVT": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9340276718139648,
+          "maximum": 1.5745700597763062,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PHOTON": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 0.9703816771507263,
+          "maximum": 1.044508934020996,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "ScaleFactor_PILEUP": {
+          "native_type": "float",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9802,
+          "negative": 0,
+          "zero": 98,
+          "minimum": 0.0,
+          "maximum": 1.2023627758026123,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "filteff": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 3.9e-05,
+          "maximum": 3.9e-05,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "kfac": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "num_events": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1989000.0,
+          "maximum": 1989000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1989000.0,
+          "maximum": 1989000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "sum_of_weights_squared": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 1989000.0,
+          "maximum": 1989000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        },
+        "xsec": {
+          "native_type": "double",
+          "count": 9900,
+          "finite": 9900,
+          "nonfinite": 0,
+          "positive": 9900,
+          "negative": 0,
+          "zero": 0,
+          "minimum": 106210000.0,
+          "maximum": 106210000.0,
+          "usage": "DIAGNOSTIC_ONLY_NOT_APPLIED"
+        }
+      },
+      "original_scalar_comparisons": {
+        "ScaleFactor_BTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_FTAG": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_JVT": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PHOTON": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "ScaleFactor_PILEUP": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "filteff": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "kfac": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "num_events": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "sum_of_weights_squared": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        },
+        "xsec": {
+          "status": "PASS",
+          "checks": {
+            "native_type_exact": true,
+            "count_exact": true,
+            "finite_count_exact": true,
+            "negative_count_exact": true,
+            "minimum_exact": true,
+            "maximum_exact": true
+          },
+          "zero_comparison": "NOT_AVAILABLE_IN_ORIGINAL_PHASE4_JSON_ZERO_COUNT_COMPUTED_FROM_FULL_V2_CSV"
+        }
+      },
+      "event_rows": 9900,
+      "diagnostic_rows": 198000,
+      "entry_range": [
+        100,
+        10000
+      ],
+      "csv_identity_join": "PASS_EXACT_DSID_ENTRY_RUN_EVENT",
+      "table_native_comparison": {
+        "sigma_pb": {
+          "later_table_candidate": "106210000.0",
+          "native_constant": 106210000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generator_filter_efficiency": {
+          "later_table_candidate": "3.93e-05",
+          "native_constant": 3.9e-05,
+          "difference_native_minus_table": -3.000000000000005e-07,
+          "relative_difference": -0.0076335877862595556,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "k_factor": {
+          "later_table_candidate": "1.0",
+          "native_constant": 1.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "generated_event_count": {
+          "later_table_candidate": "1989000.0",
+          "native_constant": 1989000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "signed_pre_skim_sumW": {
+          "later_table_candidate": "1989000.0",
+          "native_constant": 1989000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        },
+        "pre_skim_sumW2": {
+          "later_table_candidate": "1989000.0",
+          "native_constant": 1989000.0,
+          "difference_native_minus_table": 0.0,
+          "relative_difference": 0.0,
+          "exact_applicability": "UNKNOWN_NO_VALUE_REPLACEMENT"
+        }
+      }
+    },
+    "302521": {
+      "input_filename": "ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+      "input_ROOT_sha256": null,
+      "published_checksum": "adler32:b43248ea",
+      "record_url": "https://opendata.cern.ch/record/93922",
+      "record_response_sha256": "750cefd4163a6b62bfa11c5898bd568342180d756fb2f377328065ff8fa69a2c",
+      "release_filename_tag": "ODEO_FEB2025_v0",
+      "table_generation_tag": "e4045",
+      "exact_release_applicability": "UNKNOWN",
+      "absolute_normalization": "BLOCKED",
+      "physical_input_status": "AUTHORIZED_BUT_BLOCKED_ACCESS",
+      "generator_observation": null,
+      "scalar_observations": null,
+      "entry_range": null,
+      "csv_identity_join": "NOT_EVALUATED",
+      "native_observation_status": "NOT_EVALUATED_MISSING_PHYSICAL_INPUT"
+    }
+  }
+}

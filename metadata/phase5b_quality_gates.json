@@ -1,0 +1,742 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5B_CONTINUUM_ACCESS_AND_PHYSICAL_VALIDATION_V1",
+  "baseline_commit": "e131de92897b75185981ec2c5ce1c722e9ada6c3",
+  "final_verdict": "BLOCKED_STORAGE_ACCESS",
+  "physical_model_ready": false,
+  "gates": {
+    "A": {
+      "state": "PASS",
+      "name": "Historical evidence preservation",
+      "evidence": "164 baseline tracked +269 immutable local; binary/unclassified raw, text LF only; CMake prefix retained"
+    },
+    "B": {
+      "state": "PASS",
+      "name": "CERN source identity",
+      "evidence": "Exact record/path/expectedsize/publishedchecksum and official job response; no actual ROOT identity claim"
+    },
+    "C": {
+      "state": "BLOCKED",
+      "name": "Bounded transport integrity",
+      "evidence": "Metadata accounting verified within caps, XRootD stat timeout, bulkmeter NOT_EVALUATED; no usable file transport"
+    },
+    "D": {
+      "state": "BLOCKED",
+      "name": "Physical ROOT schema",
+      "evidence": "No302521 acquisition; physical schema NOT_EVALUATED"
+    },
+    "E": {
+      "state": "BLOCKED",
+      "name": "Shared reconstruction numerical closure",
+      "evidence": "Synthetic regression PASS; actual302521 reconstruction/closure NOT_EVALUATED"
+    },
+    "F": {
+      "state": "UNKNOWN",
+      "name": "Generator-filter applicability",
+      "evidence": "Current witnessed job partonicmHat and photonfilter properties; exacte4045/filterpair/reco coverage UNKNOWN"
+    },
+    "G": {
+      "state": "UNKNOWN",
+      "name": "Nominal generator-weight semantics",
+      "evidence": "Exact nominal index/signed pre-skim applicability/completeness UNKNOWN; normalization remains BLOCKED"
+    },
+    "H": {
+      "state": "UNKNOWN",
+      "name": "Dataset and selection compatibility",
+      "evidence": "Exact producer/skim/trigger/ID/calibration/exposure and overlap unverified; selections unchanged"
+    },
+    "I": {
+      "state": "PASS",
+      "name": "DATA-only diagnostics",
+      "evidence": "Actual preserved63095cache,C9=1689,SB1374; four integrated outputs byte-identical; no physicalTF/closure"
+    },
+    "J": {
+      "state": "PASS",
+      "name": "Regression and scientific integrity",
+      "evidence": "Fresh26/26 syntheticCTest, compiler/ROOT/C++20 identity/linkage, guards and old scientific evidence preserved"
+    }
+  },
+  "gate_counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "BLOCKED": 3,
+    "UNKNOWN": 3,
+    "NOT_EVALUATED": 0
+  },
+  "actual_environment": {
+    "ROOT_VERSION": "6.40.04",
+    "ROOT_CXX_STANDARD": "20",
+    "ROOT_DIR": "/home/btu/miniforge3/envs/atlas-hh-root/cmake",
+    "CXX_COMPILER": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+    "CXX_COMPILER_ID": "GNU",
+    "CXX_COMPILER_VERSION": "15.3.0",
+    "PROJECT_CXX_STANDARD": "20",
+    "CXX_STANDARD_REQUIRED": "ON",
+    "CXX_EXTENSIONS": "OFF",
+    "CMAKE_VERSION": "4.4.4"
+  },
+  "compiled_translation_units": 36,
+  "ctest": {
+    "scope": "Fresh synthetic integratedStep1+Phase1-5B",
+    "total": 26,
+    "passed": 26,
+    "failed": 0,
+    "step1": "3/3 PASS",
+    "prior_Phase1": "5/5 PASS including Step1",
+    "new_preflight_checks": 34,
+    "new_preflight_rejections": 19,
+    "new_network_mock_tests": 40,
+    "new_sideband_tests": 14
+  },
+  "regression_source_inventory_lf": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256_lf": "00e69a918294aa053070674da86c1aa3d1aed7515a9ddc993ea8724c84308e16",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/inspect_root_schema.cxx",
+      "sha256_lf": "9b8e9171a6dfce94667de072b96addf8f3b46f22d3ad4b2f6783096ce8c4768e",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase2_diagnostics.cxx",
+      "sha256_lf": "6b48417011be36c5e882f3793786cb90987bccad2ab5213b95cc0653d79c3472",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase3_cutflow.cxx",
+      "sha256_lf": "2756795938400c851fe79478d5052454660cfd36c94224c18caecf39bc0d2f6b",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase4_mc_reconstruction.cxx",
+      "sha256_lf": "752a2c4ce900d07d14b60134ae0f000d79ae529a713d0c4b07ec29c3222aaf04",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase4_numerical_regression.cxx",
+      "sha256_lf": "a070e4679792d74d0b980bae18f1ef93de2f9a8f038b5a1c2994026897609ab7",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase5_region_inventory.cxx",
+      "sha256_lf": "ca5e6f3638acface1394a805965f31e4f4896e9cb4ba00b532c4855a2390acb4",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase5b_data_sidebands.cxx",
+      "sha256_lf": "736d62799ba70b0c66a3aea572a75d6149bb4dd541e4f646e395ce976645fa3d",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase5b_input_preflight.cxx",
+      "sha256_lf": "dbacebe805cc3780e6be2618a565996a3f40348b45649f364c3aed41d94ad263",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/phase5b_xrootd_metadata.cxx",
+      "sha256_lf": "2d40307d95b1fb2cb740a17f3eae122969578bcafea369fc753d74b5efabb841",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/probe_kinematic_units.cxx",
+      "sha256_lf": "20684228a4dbe59132665f4af1b1e643593cb1db2563385f0681fe6fe509ce17",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "apps/root_smoke.cxx",
+      "sha256_lf": "8f1dbb91fd2a9e7a817b3c3405229c3aacc7fc660bf51af6f4db8cc4371e5f70",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasControlRegions.h",
+      "sha256_lf": "ef95aa76a571f4da6da5001f8e5cdadf7157e76d360e15df0cc0267f4fd58138",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasExploratorySelection.h",
+      "sha256_lf": "793a8cdcc9462dfc9ffefaa2bc39dc212a1f6f2b9e2d6b2c012759ba34dd7435",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasInputPreflight.h",
+      "sha256_lf": "9030b5bf7c62da8b4df2d254306d3ed698a6c3943ca5948996e631b90e702b5f",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasKinematics.h",
+      "sha256_lf": "1b9ba61359a0e23d7e1576c3e91bb25fbdc986987c40c58336ccf9313619bf64",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasLocalEvents.h",
+      "sha256_lf": "22297cfc8439644f3ae25e2689866619268623c553cc46de4a69eac2688a53ad",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasMCEvents.h",
+      "sha256_lf": "a65568aab98b5d2cc1c13b14662ee37a23aba5d000fa84773a6098e6fe7fba6f",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasMCMatching.h",
+      "sha256_lf": "7e7638dd23bf9172fde5a69432968fd091311db31a0296190e7192d41cfa1bbf",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasNormalization.h",
+      "sha256_lf": "d08999881dd8bb29226a378b318b1f22a6944b2b9a9aa7e575bc2335f91f4485",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasRootSchema.h",
+      "sha256_lf": "ee4c4aff98de69af54b1b82aea0e2a4e9db63d82dcc9d612a0aa55ed100c5393",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "include/AtlasSyntheticMatching.h",
+      "sha256_lf": "042a139b3f1621651fc50b91b2acc917fffc49fd014a5342801032a84b48db9c",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "metadata/phase3_selection_config.ini",
+      "sha256_lf": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase2_units.py",
+      "sha256_lf": "0cd969f7cc6feab62ea1499f3e185ccfa52224d2b90cbd195c610bfafe8d7472",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_matching.py",
+      "sha256_lf": "9fed6a1018b939adccd7c80a62025a38bb2d7bea7f2f23e99000746ca91e51ee",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_mc_histograms.py",
+      "sha256_lf": "60285ae4c5fc02a805e52e24a3a8e8494d3dd68b124d224aa765fba89cbb1f44",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_negative_data.py",
+      "sha256_lf": "468897fbf23cb499d4e97d01bf415a1a05c7c038340ce8be8323c5f8f4809805",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_recovery_data.py",
+      "sha256_lf": "86fa4cb94f600ce9a27d2d6bb81f7ec9ade4356a1c1d686a9224badcce520be8",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_recovery_matching.py",
+      "sha256_lf": "6101037a84b30f263afb8d9c95ef670981a0c133171fcba90ad259b597f234a9",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_run.py",
+      "sha256_lf": "6ffe2a0d5053b1a70611a4e91d1717c49791646b4c1674db4d102ac29079919d",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_sources.py",
+      "sha256_lf": "d757691973d6cf9a7e0ec0d5fa3da0996e978aa1d8a55ad3ae725b168bed63d9",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase4_units.py",
+      "sha256_lf": "1937bae1ad3a02df4ce0d3642754f21c707b1127d655eb88615c8d88b9b48989",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase5_evidence.py",
+      "sha256_lf": "2722448a6f0de264f6edc15dc7b11d1c99e1748ac0eafd061b49a18a86020301",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/audit_phase5_weights.py",
+      "sha256_lf": "0d13cf501c4b04359b39319813153b538fa6db9951b4da77c0804d34bfa9d699",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/diagnose_phase5b_storage.py",
+      "sha256_lf": "5f84b0c4210692b497caa49f429d3dbe41385d14680ccf432a17f943b55ea60e",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/fetch_phase1_sample.py",
+      "sha256_lf": "d6825bf70a485628005c966ae660cf4e54327b3c202b28a70929383b54bd13d0",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/fetch_phase4_samples.py",
+      "sha256_lf": "1b06827aa5c0a2aa2032a8570803a02e0c7d27b383fd70957a6ec30dc962c89b",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/fetch_phase5_continuum.py",
+      "sha256_lf": "a0b8666167d2de916a510cc4f0622a4e037bf47f57de3f87f892554b40826360",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/freeze_phase4_history.py",
+      "sha256_lf": "b6978245e38d667ac666a68f829b76cb645f4b9844fdbb7b8436822470570db5",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/freeze_phase5_baseline.py",
+      "sha256_lf": "c051fd16b754d3862cfac44226b36ce8d91500a40fb8a8719bb8ef11af7d76e0",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/run_phase4_numerical_recovery.py",
+      "sha256_lf": "63ef25e3e1d9044cb0e1cdb86c0c5334b52e2fe19b5c60f1cfc2048689620223",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "scripts/summarize_phase4_numerical_recovery.py",
+      "sha256_lf": "026bc8d52c07b80e9251e5eb70c2421ecc839ae1c3b05ecf6d21f8904169b0e2",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/ControlRegions.cxx",
+      "sha256_lf": "430d2a9258f3192b0391d88899b3d73755f2ae4fe56320708821bff8acd14f0c",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/ExploratorySelection.cxx",
+      "sha256_lf": "41a75c0c74e9c67285925edbdbf82c7b87bcd895c37d666e37b52bcc691a2faf",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/InputPreflight.cxx",
+      "sha256_lf": "99d07286b255067a6c44f96bc1a51a56778a234ec397d33770f9306d9c6d58b1",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/Kinematics.cxx",
+      "sha256_lf": "360d8474168a6ca0643916dca03ffc2da47cac5b46947f55565133d379a9089d",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/LocalEvents.cxx",
+      "sha256_lf": "c1e5998d73552012ddd6a734295b5814f2a522e52d37975a956051dcd791378b",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/MCEvents.cxx",
+      "sha256_lf": "66b01d286398280d92ba0ebea327ee004c1ba743f8018165096289bea116df4f",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/MCMatching.cxx",
+      "sha256_lf": "a51bc4302aafc8132b04004e3d3cf1b901cd19ea959668352e84838361d425ca",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/Normalization.cxx",
+      "sha256_lf": "19a7a516d2d402fc83b6e422b511f4e69f5ebc13586f1950737c761dd0446e02",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/RootSchemaInspector.cxx",
+      "sha256_lf": "66d3c843a38fe6e3a82a295f05ec35c3f01129ebb9c551e393c426bc80b2ba9a",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "src/SyntheticMatching.cxx",
+      "sha256_lf": "eb32c137b895f1c34189dae32f6b45ee5112e6cd759e134abc23d153ca781f6e",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_bounded_transfer.py",
+      "sha256_lf": "545b5af15cac85843cbb3789129d98e564919d79138018ce319d18ddeb772e4f",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_cartesian_stability.cxx",
+      "sha256_lf": "e119eaf40ef44c3da0c12445180cdd68e8c60706820f136e4044ff0129184de6",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_control_regions.cxx",
+      "sha256_lf": "d90ee2f06f4894da513c490fad2462b37d75b4d08652662eca11167d46a23259",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_exploratory_selection.cxx",
+      "sha256_lf": "d275b1b4dd94773b352ecf341d31881835c0375b138199425589155ad2474dba",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_input_preflight.cxx",
+      "sha256_lf": "a49d0b0c89926213516d380ed56d6945a1f541e37e542fa786ed44586ea2ee3a",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_kinematics.cxx",
+      "sha256_lf": "5edc2452467c80df4de6e9dba238d45d2f8df0e3000a58b8f2faea3105d61b21",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_local_events.cxx",
+      "sha256_lf": "5b1486975fcf30d4f67351a58788be08f5867971dca7c2d4cd3db1d8887c9b1f",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_mc_events.cxx",
+      "sha256_lf": "b225a01e458fa4b9008917628b4625d8398456a6e0cbd6ddc39d5e33468a770b",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_mc_matching.cxx",
+      "sha256_lf": "8e987ce40090d643c4b66c304bc2c8a33520b1568b7d43f813db0533c99835da",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_normalization.cxx",
+      "sha256_lf": "efda50bdea4cec93057b3434a3bcc1cbbd1fbae8cbad3a15999c35b021540200",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase2_driver.py",
+      "sha256_lf": "356ff31864bd1cc5bb52e52bbc3463a6164d9dd4533871751274f5d96c61dbb8",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase3_driver.py",
+      "sha256_lf": "6b9ff2f7ecfe01f01cfe188d599c4ae58beca8b8ff694fa0390ac73fe0511ea9",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase4_driver.py",
+      "sha256_lf": "d9c647616147b841e644a7976079329de5c21193d27ce0d76877c2ed1f8de8cd",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase4_transfer.py",
+      "sha256_lf": "c8b1f85146329e31b2b06271b91c6176b132bb8afe7de76eb603c376e7f7b2b0",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase4_units.py",
+      "sha256_lf": "86d18487bfa788080784146cd38c9e694538124e3033166fd95a83bae65ec97e",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase5_region_driver.py",
+      "sha256_lf": "55736ebb61b13d9f27d00404cbe332ba7077f4a9727f7c61088161e0c0e6c2ba",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase5_transfer.py",
+      "sha256_lf": "f13affe4c930676438e983774c656d98a8d92a6c84f8c333700249efb66ab251",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase5b_network.py",
+      "sha256_lf": "0cfb3016f44650d7269a50946d0d8d6c7dc38a119fec6f39f5eef55bb009a5b2",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_phase5b_sidebands.py",
+      "sha256_lf": "78cae07c99ded7e273d60a96447164d5928405c52b3f32db98643a59c8ae68e9",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_rdataframe.cxx",
+      "sha256_lf": "00035f818420659b178350a9c24d65ea46ae64885401d7df7bdfd60503192bac",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_root_io.cxx",
+      "sha256_lf": "e76a781d135d76b3f9cfd5ae936c5a6ec77c672db393f0c251dae15c0796eab0",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_root_schema.cxx",
+      "sha256_lf": "742e5a4114f422cef7cb0eaa55c42e43bf3530b1af30d27224265081a7d6222d",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_root_statistics.cxx",
+      "sha256_lf": "c75bbad25f1a12cf93a3ce9f41ecfbfd598b66b613ed95809b367247942ce6ae",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_shape_comparison.cxx",
+      "sha256_lf": "1d04982198b79fd08883b3d22a36dc9b2423eb80bfe048f5332504140bfb69fb",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_synthetic_matching.cxx",
+      "sha256_lf": "7867f0bd31d17c7ed9adb872092127cea2b9cb16a353d9716e2a1c2a45cdde28",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    },
+    {
+      "path": "tests/test_unit_evidence.py",
+      "sha256_lf": "4566089d028a00441ec584999a74ae8ac0d733941519dfa15a3962d61f4e8bab",
+      "scope": "Compiled/header or regression support inventory; only executed tests establish behavior"
+    }
+  ],
+  "ancillary_tool_change": [
+    {
+      "path": "scripts/freeze_phase5b_baseline.py",
+      "old_inventory_sha256_lf": "cca03974120c421ee147ef4c743be0af3233015cfd6fd1c9bc1deebdb18f8572",
+      "current_sha256_lf": "1cf3c371141d5c18a7e03d76a7af142dec423a571008ed430eb1e2f328abce91",
+      "reason": "Binary-aware preservation tooling strengthened after regression; separately executed creation and verification, no regression/import dependency"
+    }
+  ],
+  "executed_binary_hashes": [
+    {
+      "path": "/home/btu/build/atlas_phase5b_20261012/phase5b_data_sidebands",
+      "bytes": 2188672,
+      "sha256": "c53dd1bba61b4519cecaf76cf2f6fa07fa069204d73b1bccf23ac9d985fcbd90"
+    },
+    {
+      "path": "/home/btu/build/atlas_phase5b_20261012/phase5b_input_preflight",
+      "bytes": 1895184,
+      "sha256": "c2024b70368c16108341d1b1df344d7c710dd56eb241dd5fb9b000e01b48a2dd"
+    },
+    {
+      "path": "/home/btu/build/atlas_phase5b_20261012/phase5b_xrootd_metadata",
+      "bytes": 118824,
+      "sha256": "b843f0fde30576ab2c93618db7513efaf1e3154ae7226e36726b1669a8f708ce"
+    }
+  ],
+  "new_tool_sources": [
+    {
+      "path": "scripts/freeze_phase5b_baseline.py",
+      "bytes": 3400,
+      "sha256": "1cf3c371141d5c18a7e03d76a7af142dec423a571008ed430eb1e2f328abce91"
+    },
+    {
+      "path": "scripts/validate_phase5b.sh",
+      "bytes": 1833,
+      "sha256": "9b6523df4ff600fca798447f69ba5f6d3bcad5975f404794bb33ac15526cc4d8"
+    },
+    {
+      "path": "scripts/audit_phase5b_evidence.py",
+      "bytes": 5447,
+      "sha256": "b66e30700060953a69e0a9d05192fb27e2b1e48c6e3d2022919c4f365339b997"
+    }
+  ],
+  "tool_validation": "Freezer creation and --verify executed; validation shell wrapper bash-n PASS, equivalent actual wrapper executed; no remote service in CTest",
+  "run_evidence": [
+    {
+      "path": ".local/phase5b_validation_20261012/build.log",
+      "bytes": 5198,
+      "sha256": "88ef88ee22cdda6a2d7af19325f4829a83efacb1c35ca674888a8592b618182c"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/cmake_version.txt",
+      "bytes": 90,
+      "sha256": "4d92ce18ddf9889d463ac875608423312823ad89e7fd5178b02a21ea26a2bd3d"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/compile_commands.json",
+      "bytes": 20793,
+      "sha256": "5f7d9b71ac0ebf62fea63fb01990b5d07738bd3beb6b209e2d31bb547ef05a0b"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/compiled_identity.json",
+      "bytes": 21437,
+      "sha256": "e889b1d28f0f33961f2797410367656cebcd43ba4afc2ae877905aedfd25c762"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/compiler_version.txt",
+      "bytes": 263,
+      "sha256": "473bc310b15e00e42d0e92ecb14905dc669fa5a4375292ca9163cd737cc211c7"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/configure.log",
+      "bytes": 891,
+      "sha256": "a4b1db4453ddd9eabdd692d1336af9a2310c8ad0ec6f16562026564495a6d510"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/ctest.log",
+      "bytes": 3357,
+      "sha256": "f1ee8cf289be25397fd698171f0726d8067fdb153bf45dbc87f20c2396fa9ce7"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/ctest.xml",
+      "bytes": 13905,
+      "sha256": "eee5f936127cf954a882ae39abe1fba1fdc3dcb9e55ba3d1b7a7ab0ad556f0d8"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/data_actual.log",
+      "bytes": 95,
+      "sha256": "58360af2f32b702e6a39b7e41e0451dee119dd02112d3cd21e2f4dc5989f50ca"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/data_actual_identity.json",
+      "bytes": 926,
+      "sha256": "bd6b23112d0cf3f63cdbf2e105b164489223bf897d818e982ece9162126937ee"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/LastTest.log",
+      "bytes": 29041,
+      "sha256": "5e02a6cc3f2d7175f011eb82ac7b279b6d7d04aec9cab57475bfbb9997914941"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/linkage.txt",
+      "bytes": 3182,
+      "sha256": "56b4e73b0f0a1216c0c782278ed580ef4878686a8e0a8b9c13db6fe8386530f2"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/root_config.txt",
+      "bytes": 395,
+      "sha256": "306da5651b80b8d53448e0e1bda4d5e1bac5aded034329586306ec0426d317d3"
+    },
+    {
+      "path": ".local/phase5b_validation_20261012/step1_cmake_environment.txt",
+      "bytes": 317,
+      "sha256": "b51d00d8c73ae663630ecacc987545ef7f7f14100ca73eea9ce7ccfbbdb23175"
+    }
+  ],
+  "focused_evidence": [
+    {
+      "path": ".local/phase5b_network_tests_v1_failed.log",
+      "bytes": 32736,
+      "sha256": "bb6fafcd5c09db7bf2b5881b79fb584199f1eb73adcdad3e106d576179efca6d"
+    },
+    {
+      "path": ".local/phase5b_network_tests_final.log",
+      "bytes": 5179,
+      "sha256": "3cb048d285d3c6a19e4c1563b0a4f2a2f408b3bef480cee4c7d4ef0540d2e24d"
+    },
+    {
+      "path": ".local/phase5b_review_20261012/focused_preflight.json",
+      "bytes": 1256,
+      "sha256": "5f1bb9866edf32dc687c861fc004c47d018cbea25ab6d216d1205f52f3c74a92"
+    },
+    {
+      "path": ".local/phase5b_review_20261012/historical_png_raw_audit.json",
+      "bytes": 5060,
+      "sha256": "f0a0a7b20675e7e80bbdec09c0f666aebba68a072525f9d8ca6f5327a06760fe"
+    },
+    {
+      "path": ".local/build_phase5b_sidebands_agent/actual_final_independent_audit.json",
+      "bytes": 982,
+      "sha256": "83c39f33a534a676292267d6ca9f7c78811b10b7f5c80622d56325b0c430e5bf"
+    }
+  ],
+  "DATA_actual_outputs": [
+    {
+      "path": "outputs/phase5b_v1/data_sidebands_integrated/mass_histograms.csv",
+      "bytes": 1780,
+      "sha256": "30eb5954516f738e16f535d398e62a03bb832b41ae8b0a2d1e0c0880450cb485"
+    },
+    {
+      "path": "outputs/phase5b_v1/data_sidebands_integrated/region_diagnostics.csv",
+      "bytes": 14991,
+      "sha256": "b9f9f9ad6a50f4a773fe42dcea984bf323e73e0e18b8ffcc97a4425234ec4eb7"
+    },
+    {
+      "path": "outputs/phase5b_v1/data_sidebands_integrated/sideband_events.csv",
+      "bytes": 154347,
+      "sha256": "1a37cdc169d74710fe10c6d03c4269ae9058230ca7eaf2444628eae2d45b6b4f"
+    },
+    {
+      "path": "outputs/phase5b_v1/data_sidebands_integrated/summary.json",
+      "bytes": 1685,
+      "sha256": "4b12e7f040fa1621b81c639663329f1e0944cc09bd504b7003d16aa53b03555a"
+    }
+  ],
+  "DATA_cache": {
+    "path": "outputs/phase4_numerical_v2_20261012/DATA93915/phase2/events.csv",
+    "bytes": 16052682,
+    "sha256": "c242e256d76d6832031b2e4b2dfeeb342b5b05885c2a6bdf53d2d5eab71201c7"
+  },
+  "selection_config": {
+    "path": "metadata/phase3_selection_config.ini",
+    "bytes": 333,
+    "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751"
+  },
+  "reports": [
+    {
+      "path": "reports/phase5b_continuum_schema.md",
+      "bytes": 11403,
+      "sha256": "3186cd57bd22146bcf942e0c768a22948bef304fb4ccb0473bc96ccf2752c7ac",
+      "sha256_lf": "3186cd57bd22146bcf942e0c768a22948bef304fb4ccb0473bc96ccf2752c7ac"
+    },
+    {
+      "path": "reports/phase5b_data_sideband_diagnostics.md",
+      "bytes": 13720,
+      "sha256": "ee1bfea441ac40f658f25ed015c7c0b97eb3761656405637d66d4846d84014fe",
+      "sha256_lf": "ee1bfea441ac40f658f25ed015c7c0b97eb3761656405637d66d4846d84014fe"
+    },
+    {
+      "path": "reports/phase5b_decision.md",
+      "bytes": 7578,
+      "sha256": "fc2a1ab4d4a7b3e163354565ff2a64166c6b76a233165c62b76d8183368e5c5b",
+      "sha256_lf": "fc2a1ab4d4a7b3e163354565ff2a64166c6b76a233165c62b76d8183368e5c5b"
+    },
+    {
+      "path": "reports/phase5b_generator_filter_review.md",
+      "bytes": 14714,
+      "sha256": "5db49bf578e0985b87122a9b5cf5f566683557884988e5fa0870bbedf3a6f9e9",
+      "sha256_lf": "5db49bf578e0985b87122a9b5cf5f566683557884988e5fa0870bbedf3a6f9e9"
+    },
+    {
+      "path": "reports/phase5b_storage_access_review.md",
+      "bytes": 8650,
+      "sha256": "ebd71ee99b5b01b86271a5865104f960ab0ba7864944f6bb3b1139fcb18a2014",
+      "sha256_lf": "ebd71ee99b5b01b86271a5865104f960ab0ba7864944f6bb3b1139fcb18a2014"
+    },
+    {
+      "path": "reports/phase5b_weight_provenance.md",
+      "bytes": 16381,
+      "sha256": "0abe2420831ca29db87a0fcb2a8cd25e73a2c844c5e5738a484dd4dff3815b2f",
+      "sha256_lf": "0abe2420831ca29db87a0fcb2a8cd25e73a2c844c5e5738a484dd4dff3815b2f"
+    }
+  ],
+  "metadata_evidence": [
+    {
+      "path": "metadata/phase5b_baseline_manifest.json",
+      "bytes": 89832,
+      "sha256": "a5e5f95e3fbcd2df0949f4e50eaba9a642982d4873650e714a0ef19a523eae02"
+    },
+    {
+      "path": "metadata/phase5b_transfer_audit.json",
+      "bytes": 29493,
+      "sha256": "5bc1022d5af20dcc96a559954551693f869be3bb2142973f7dc9e188623ce3e1"
+    },
+    {
+      "path": "metadata/phase5b_schema_manifest.csv",
+      "bytes": 2170,
+      "sha256": "46bcd977f5f81805e6467b6e19848e8b0baf4eb0b0e798cb167a59bcc42d7183"
+    },
+    {
+      "path": "metadata/phase5b_region_diagnostics.csv",
+      "bytes": 14991,
+      "sha256": "b9f9f9ad6a50f4a773fe42dcea984bf323e73e0e18b8ffcc97a4425234ec4eb7"
+    }
+  ],
+  "DSID302521": {
+    "acquired": false,
+    "entries_processed": 0,
+    "schema": "NOT_EVALUATED",
+    "native_weight": "NOT_EVALUATED",
+    "cutflow": "NOT_EVALUATED",
+    "reconstruction": "NOT_EVALUATED",
+    "physical_closure": "NOT_EVALUATED"
+  },
+  "normalization": "BLOCKED",
+  "physical_transfer_factor": "BLOCKED",
+  "HH_fit": "NOT_PERFORMED",
+  "singleH_contamination": "UNKNOWN",
+  "new_figures": {
+    "physical_study_or_publication_count": 0,
+    "DATA_study_count": 0,
+    "synthetic_regression_outputs": "Historical Phase2/3 drivers produced temporary PNG fixtures in unchanged tests; exact generation count not inventoried. Temporary cleanup follows existing suites.",
+    "synthetic_figure_status": "LOCAL_DRAFT; no user approval; all excluded from staging/outgoing commit payloads",
+    "historical_figures": "Raw tracked identity and local evidence preserved; prior publication does not approve new versions"
+  },
+  "github_ci": "NO_CHECKS; local executed evidence only",
+  "PR8_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/8",
+  "git_policy": "Additive source/tests/evidence on existingPhase5branch; no merge/forcepush. Prepush staged and outgoing payload review required.",
+  "binary_hash_convention": "RAW_ONLY. Original local source/binary capture is preserved; its redundant LF column for ELF binaries is unused.",
+  "offline_evidence_verifier": "Executed default published checks and --local identity checks;33 local artifacts verified; no network/event processing"
+}

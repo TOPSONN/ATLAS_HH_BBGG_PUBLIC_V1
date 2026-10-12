@@ -1,0 +1,35 @@
+######################################################################
+# SM QCD diphoton with Pythia 8 (binned in m_gg)
+######################################################################
+
+evgenConfig.description = "Pythia8 diphoton sample. gammagamma events with at least two photons with pT > 20 GeV, with mass cut 100<Mgg<160 GeV"
+evgenConfig.process = "QCD direct diphoton production"
+evgenConfig.keywords = ["diphoton","SM","egamma"]
+evgenConfig.contact = ["leonardo.carminati@cern.ch","jan.stark@cern.ch"]
+evgenConfig.minevents = 500
+
+include( "MC15JobOptions/Pythia8_A14_NNPDF23LO_EvtGen_Common.py" )
+
+## Configure Pythia
+genSeq.Pythia8.Commands += ["PromptPhoton:ffbar2gammagamma = on",
+                            "PromptPhoton:gg2gammagamma = on",
+                            "PhaseSpace:pTHatMin = 18",
+                            "PhaseSpace:mHatMin = 100.",
+                            "PhaseSpace:mHatMax = 160."]
+                            
+#-------------------------------------------------------------
+# Filter
+#-------------------------------------------------------------
+
+## Filter
+if not hasattr( filtSeq, "DirectPhotonFilter" ):
+    from GeneratorFilters.GeneratorFiltersConf import DirectPhotonFilter
+    filtSeq += DirectPhotonFilter()
+    pass
+
+DirectPhotonFilter = filtSeq.DirectPhotonFilter
+DirectPhotonFilter.Ptcut = 20000.
+DirectPhotonFilter.Etacut = 2.7
+DirectPhotonFilter.NPhotons = 2
+
+

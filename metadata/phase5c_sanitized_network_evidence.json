@@ -1,0 +1,605 @@
+{
+  "task": "PHASE5C_STORAGE_ESCALATION_AND_SIDEBAND_VALIDATION",
+  "baseline_commit": "1c7da77fe4c852c929be39b10544220033de9fec",
+  "evidence_status": "OBSERVED_TRANSPORT_FAILURES_NO_STORAGE_AVAILABILITY_VERDICT",
+  "support_delivery": "UNSENT_DRAFT",
+  "support_recipient": "atlas-outreach-opendata-support@cern.ch",
+  "object": {
+    "record": 93922,
+    "dsid": 302521,
+    "filename": "ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+    "expected_bytes": 110755804,
+    "published_checksum": "adler32:b43248ea",
+    "ROOT_payload_bytes": 0,
+    "local_checksum": "NOT_VERIFIED",
+    "native_schema": "NOT_EVALUATED"
+  },
+  "original_access_receipt": {
+    "receipt": ".local/phase5_access_20261012/access.json",
+    "raw_sha256": "be764a03f335e9cf238b9e8f1f67a8fd82bfa07aeb2ae145f490e8d6547ab134",
+    "checked_utc": "2026-10-12T04:05:12.914953+00:00",
+    "phase5_charged_bytes": 1811050,
+    "cumulative_charged_bytes": 79945072,
+    "historical_charged_bytes": 78134022,
+    "documentation_charge_bytes": 747003,
+    "request_count": 16,
+    "response_body_bytes": 15471,
+    "summary": [
+      "Windows EOS HEAD returned200 and expected size/checksum headers.",
+      "Subsequent GET redirected to public storage; Windows connection reset and WSL timeout.",
+      "Original redirect capability queries and raw error strings are not published."
+    ]
+  },
+  "new_and_prior_metadata_receipts": [
+    {
+      "receipt": ".local/phase5b_windows_network_20261012/audit.json",
+      "raw_sha256": "4f0f4ca172bcc707e1d7148ddd0f7e4f5863e1bcfc89e2d049bf74566974fc0f",
+      "checked_utc": "2026-10-12T05:51:55.909759+00:00",
+      "task": "PHASE5B_METADATA_DIAGNOSTICS",
+      "runtime": "Windows",
+      "status": "COMPLETED_METADATA_DIAGNOSTICS",
+      "incremental_charged_bytes": 1114112,
+      "operations": [
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "PASS_TLS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "PASS_TLS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:443",
+          "family": "IPv4",
+          "error": "SSLCertVerificationError (errno 1)"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:1094",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "PASS_TLS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-096-dd904134.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-096-dd904134.cern.ch:8443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-120-100gb-bknoxg.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-120-100gb-bknoxg.cern.ch:8443",
+          "family": "IPv4"
+        }
+      ]
+    },
+    {
+      "receipt": ".local/phase5b_wsl_network_20261012/audit.json",
+      "raw_sha256": "4fc9ec9740f5af5651943a5fbb6aaa26ea312c2dce744cc2276257872c53ae71",
+      "checked_utc": "2026-10-12T05:52:26.025464+00:00",
+      "task": "PHASE5B_METADATA_DIAGNOSTICS",
+      "runtime": "Linux",
+      "status": "COMPLETED_METADATA_DIAGNOSTICS",
+      "incremental_charged_bytes": 1572864,
+      "operations": [
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch:443",
+          "family": "IPv4",
+          "error": "TimeoutError"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "opendata.cern.ch:443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch:443",
+          "family": "IPv4",
+          "error": "TimeoutError"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "ca.cern.ch:443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:443",
+          "family": "IPv4",
+          "error": "TimeoutError"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:1094",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "eospublic.cern.ch:1094",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch:443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TLS_DEFAULT_TRUST",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch:443",
+          "family": "IPv4",
+          "error": "TimeoutError"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "gitlab.cern.ch:443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-096-dd904134.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-096-dd904134.cern.ch:8443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-096-dd904134.cern.ch:8443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        },
+        {
+          "kind": "DNS",
+          "status": "PASS_DNS",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-120-100gb-bknoxg.cern.ch"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "PASS_TCP",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-120-100gb-bknoxg.cern.ch:8443",
+          "family": "IPv4"
+        },
+        {
+          "kind": "DIRECT_TCP",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "st-120-100gb-bknoxg.cern.ch:8443",
+          "family": "IPv6",
+          "error": "OSError (errno 101)"
+        }
+      ]
+    },
+    {
+      "receipt": ".local/phase5b_windows_sources_20261012/audit.json",
+      "raw_sha256": "60cdfd11a68f21301ff87f9eee420687656ab13513a80cc89d30578046b42d4d",
+      "checked_utc": "2026-10-12T05:53:23.136623+00:00",
+      "task": "PHASE5B_METADATA_DIAGNOSTICS",
+      "runtime": "Windows",
+      "status": "COMPLETED_METADATA_DIAGNOSTICS",
+      "incremental_charged_bytes": 738697,
+      "operations": [
+        {
+          "kind": "HTTP_GET",
+          "status": "PASS_HTTP_METADATA",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 1048576,
+          "received_body_bytes": 337923,
+          "target": "https://opendata.cern.ch/api/records/93922",
+          "http_status": 200,
+          "tls_verification": true
+        },
+        {
+          "kind": "HTTP_HEAD",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "https://opendata.cern.ch/api/files/95bcca35-f11d-474a-b954-230ea0dbcaca/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+          "error": "TimeoutError"
+        },
+        {
+          "kind": "HTTP_GET",
+          "status": "PASS_HTTP_METADATA",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 8192,
+          "received_body_bytes": 1709,
+          "target": "https://ca.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt",
+          "http_status": 200,
+          "tls_verification": true
+        },
+        {
+          "kind": "HTTP_GET",
+          "status": "PASS_HTTP_METADATA",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 8192,
+          "received_body_bytes": 3448,
+          "target": "https://ca.cern.ch/cafiles/certificates/CERN%20Grid%20Certification%20Authority%281%29.crt",
+          "http_status": 200,
+          "tls_verification": true
+        },
+        {
+          "kind": "HTTP_HEAD",
+          "status": "PASS_HTTP_METADATA",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "https://eospublic.cern.ch/eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+          "http_status": 200,
+          "tls_verification": true
+        },
+        {
+          "kind": "HTTP_GET",
+          "status": "PASS_HTTP_METADATA",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 65536,
+          "received_body_bytes": 2401,
+          "target": "https://gitlab.cern.ch/api/v4/projects/atlas-physics%2Fpmg%2Finfrastructure%2Fmc15joboptions/repository/files/share%2FDSID302xxx%2FMC15.302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.py",
+          "http_status": 200,
+          "tls_verification": true
+        }
+      ]
+    },
+    {
+      "receipt": ".local/phase5b_xrootd_metadata_20261012/audit.json",
+      "raw_sha256": "e652fd0aa3a9fde0a2f7b5737d691cd120d707eb826d2394b21d4dc43cb714e6",
+      "checked_utc": "2026-10-12T06:04:45.921542+00:00",
+      "task": "PHASE5B_METADATA_DIAGNOSTICS",
+      "runtime": "Linux",
+      "status": "BLOCKED_XROOTD_METADATA",
+      "incremental_charged_bytes": 65536,
+      "operations": [
+        {
+          "kind": "XROOTD_OPEN_STAT_METADATA",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 0,
+          "received_body_bytes": 0,
+          "target": "root://eospublic.cern.ch//eos/opendata/atlas/rucio/opendata/ODEO_FEB2025_v0_GamGam_mc_302521.Pythia8EvtGen_A14NNPDF23LO_2DP20_Mass_100_160.GamGam.root",
+          "error": "TimeoutExpired"
+        }
+      ]
+    },
+    {
+      "receipt": ".local/phase5c_sources_20261012/audit.json",
+      "raw_sha256": "06ca8e5342a242fffc30141a1b218dc5a3a937b4dd26fda2a26833a6c43d64ba",
+      "checked_utc": "2026-10-12T07:05:38.377981+00:00",
+      "task": "PHASE5C_DOCUMENTATION_ACCESS",
+      "runtime": "Windows",
+      "status": "PARTIAL_DOCUMENTATION_ACCESS",
+      "incremental_charged_bytes": 393216,
+      "operations": [
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 65536,
+          "received_body_bytes": 0,
+          "target": "https://opendata.atlas.cern/docs/data/for_research/limitations_pp",
+          "error": "URLError"
+        },
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 65536,
+          "received_body_bytes": 0,
+          "target": "https://opendata.atlas.cern/docs/documentation/data_format/physlite/",
+          "error": "URLError"
+        },
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 65536,
+          "received_body_bytes": 0,
+          "target": "https://opendata.atlas.cern/docs/data/for_research/pp_data",
+          "error": "URLError"
+        },
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 65536,
+          "received_body_bytes": 0,
+          "target": "https://opendata.atlas.cern/docs/data/for_research/evgen_collections",
+          "error": "URLError"
+        },
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 262144,
+          "received_body_bytes": 0,
+          "target": "https://atlas-physlite-content-opendata.web.cern.ch/opendata_pp_physlite_variables.html",
+          "error": "URLError"
+        },
+        {
+          "kind": "PHASE5C_DOCUMENT_GET",
+          "status": "BLOCKED",
+          "reserve_bytes": 65536,
+          "body_cap_bytes": 524288,
+          "received_body_bytes": 0,
+          "target": "https://opendata.atlas.cern/docs/data/for_research/metadata",
+          "error": "URLError"
+        }
+      ]
+    }
+  ],
+  "accounting": {
+    "model": "Consumed HTTP response bodies plus65536 per application operation; wire/control traffic and XRootD internal retries UNMEASURED.",
+    "reserve_bytes_per_operation": 65536,
+    "phase5_limit_bytes": 134217728,
+    "cumulative_limit_bytes": 268435456,
+    "phase5_charged_bytes": 5695475,
+    "cumulative_charged_bytes": 83829497,
+    "phase5c_incremental_charged_bytes": 393216,
+    "phase5c_received_body_bytes": 0,
+    "phase5_remaining_bytes": 128522253,
+    "cumulative_remaining_bytes": 184605959,
+    "model_allowance_for_exact_file_plus_one_reserve": 116516815,
+    "not_a_wire_cap": true
+  },
+  "phase5c_executed_documentation_source": {
+    "path": "metadata/phase5c_source_evidence/collector_executed_v1.py.txt",
+    "sha256": "77d73864febb1d9c929d35dcbb28318b41b4776e22477950bcf9207b605befae",
+    "results": "Six once-only requests,URLError,no HTTP body/status. Cause UNKNOWN; documentation availability not inferred."
+  },
+  "sanitization": "Explicit projection: no resolved IP addresses, proxy endpoints, user paths, credentials, raw exception strings or query/fragment values. Public CERN hostnames and public object identity retained.",
+  "decision": "STOP_REPEATED_FAILED_PATHS_AWAIT_OFFICIAL_NEW_EVIDENCE",
+  "new_ROOT_attempts_this_phase": 0,
+  "new_research_dataset_requests": 0,
+  "xrootd_counter_scope": "One prior public root:// open/stat application operation; no TLS claim,GetSize never completed. Legacy remote_ROOT_operations0 counts event/TFile operations, not this metadata operation."
+}
