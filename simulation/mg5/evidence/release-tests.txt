@@ -1,0 +1,16 @@
+test_asset_at_size_limit_rejected (test_release.ReleaseTests.test_asset_at_size_limit_rejected) ... ok
+test_card_tampering_rejected (test_release.ReleaseTests.test_card_tampering_rejected) ... ok
+test_download_hash_mismatch_is_failure (test_release.ReleaseTests.test_download_hash_mismatch_is_failure) ... ok
+test_draft_upload_verified_using_mock_transport_only (test_release.ReleaseTests.test_draft_upload_verified_using_mock_transport_only) ... ok
+test_duplicate_content_cannot_double_count (test_release.ReleaseTests.test_duplicate_content_cannot_double_count) ... ok
+test_existing_release_refused_before_staging_or_upload (test_release.ReleaseTests.test_existing_release_refused_before_staging_or_upload) ... ok
+test_partial_run_rejected (test_release.ReleaseTests.test_partial_run_rejected) ... ok
+test_preflight_validates_real_events_and_leaves_input_unchanged (test_release.ReleaseTests.test_preflight_validates_real_events_and_leaves_input_unchanged) ... ok
+test_private_banner_rejected_without_editing_event_content (test_release.ReleaseTests.test_private_banner_rejected_without_editing_event_content) ... ok
+test_upload_failure_retains_explicit_partial_receipt (test_release.ReleaseTests.test_upload_failure_retains_explicit_partial_receipt) ... ok
+test_wrong_expected_total_rejected (test_release.ReleaseTests.test_wrong_expected_total_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.414s
+
+OK

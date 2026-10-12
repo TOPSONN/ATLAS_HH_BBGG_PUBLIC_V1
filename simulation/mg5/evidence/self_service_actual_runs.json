@@ -1,0 +1,485 @@
+{
+  "actual_runs": {
+    "cli_100": {
+      "actual_cards_authority": "Exact LHE banner text; mutable post-run seed-reset card separately retained",
+      "actual_events": 100,
+      "attempt_directory": "attempts/attempt_001",
+      "attempt_number": 1,
+      "available_disk_bytes": 1009610326016,
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "9b97d64f8d81c4a83458af52119e4e034524aed33cfb249f7301041486b20913",
+        "run_card_sha256": "b698c8c51ef25a92ea5ce7d2b4c5eae51ae24312e1d02794bd04735197c6d72f"
+      },
+      "completed_utc": "2026-10-12T10:21:08.613804+00:00",
+      "current_log": "attempts/attempt_001/validation_manifest.log",
+      "elapsed_seconds": 16.25161020799999,
+      "events_requested": 100,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 12.086657854999999,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 2.753628950999996,
+          "exit_code": 0
+        },
+        "validation_export": {
+          "elapsed_seconds": 0.5011130629999911,
+          "exit_code": 0
+        },
+        "validation_manifest": {
+          "elapsed_seconds": 0.5010823690000166,
+          "exit_code": 0
+        },
+        "validation_original": {
+          "elapsed_seconds": 0.2509303400000249,
+          "exit_code": 0
+        }
+      },
+      "generator_script_sha256": "4ffa8cad22db2a26f59264af6a61dbf74c6527ef7d6d024519380c20720e96f6",
+      "jobs": 1,
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "max_disk_gb": 2.0,
+      "max_hours": 2.0,
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "mg5_version": "3.5.16",
+      "output_bytes": 37313848,
+      "phase": "complete",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_budget_scope": "entire sample output directory; GiB (1024^3 bytes)",
+        "disk_free_bytes": 1009649610752,
+        "disk_total_bytes": 1081101176832,
+        "estimate_basis": "No extrapolated production benchmark; limits are enforced during the run",
+        "free_disk_stop_bytes": 268435456,
+        "jobs": 1,
+        "max_disk_gb": 2.0,
+        "max_hours": 2.0,
+        "output_size_estimate_bytes": "UNKNOWN",
+        "ram_available_bytes": 7531134976,
+        "ram_total_bytes": 8051187712,
+        "runtime_estimate_seconds": "UNKNOWN"
+      },
+      "process": "generate p p > b b~ a a QCD=2 QED=2",
+      "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+      "profile": "bbgg",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 12347,
+      "request": {
+        "events_requested": 100,
+        "jobs": 1,
+        "max_disk_gb": 2.0,
+        "max_hours": 2.0,
+        "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "process": "generate p p > b b~ a a QCD=2 QED=2",
+        "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+        "profile": "bbgg",
+        "random_seed": 12347,
+        "sqrt_s_gev": 14000.0,
+        "supplied_param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "supplied_run_card_sha256": "530e6707d03171106f0b7886e51af33e64d1c155f9da4a0f8efebfb7ad6d05e9"
+      },
+      "request_sha256": "d1f1ecf6317ca36c58969ca6ef0662f28df40cb159d2c90f2de9451e090ee740",
+      "resume_semantics": "New complete attempt; interrupted integration and partial events are retained, never merged",
+      "schema_version": 2,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[PREFERRED_MG5_ENTRY]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "source_verified_file_count": 4658,
+      "sqrt_s_gev": 14000.0,
+      "started_utc": "2026-10-12T10:20:52.361980+00:00",
+      "status": "PASS",
+      "supplied_param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "supplied_run_card_sha256": "530e6707d03171106f0b7886e51af33e64d1c155f9da4a0f8efebfb7ad6d05e9",
+      "updated_utc": "2026-10-12T10:21:08.613039+00:00",
+      "validation": {
+        "actual_events": 100,
+        "compressed_bytes": 22463,
+        "compressed_file_sha256": "00d6849de694928d0e8b76a18e9b3dd3b11475407174a9b52273fc9fdc0cab66",
+        "cross_section_pb": 0.0732962,
+        "cross_section_uncertainty_pb": 0.0005512499,
+        "cut_extrema": {
+          "b_abs_eta": 4.632521780856236,
+          "b_pt": 20.00781636128307,
+          "draa": 0.5470700488510322,
+          "drab": 0.43336829574990404,
+          "drbb": 0.4317910046413427,
+          "photon_abs_eta": 2.4780320140726904,
+          "photon_pt": 25.046499003379072
+        },
+        "decompressed_bytes": 116340,
+        "decompressed_file_sha256": "b489d393b21d477fe18b16489b7cff289f6d311e66e3ba2e25aa9c220aeb9472",
+        "distinct_value_lists_truncated": [],
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "002bf8ebe48f83b0aa7a7b0edacebcd8f787385cfa34958b7aeba44479ab902c",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file_format": "gzip",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 4,
+          "-2,2": 18,
+          "-4,4": 1,
+          "-5,5": 2,
+          "1,-1": 1,
+          "2,-2": 14,
+          "21,21": 57,
+          "4,-4": 2,
+          "5,-5": 1
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 5.699985194951296e-08,
+        "max_mass_shell_residual_gev2": 0.0001324857585132122,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.073296205,
+        "original_compressed_sha256": "2f8c6a4119a8bb0532e5ed9b2535f44f2abf8a0ff26b9430d49f7731da191e1f",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 100,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "validator": "streaming_all_events",
+        "zero_weight_count": 0
+      }
+    },
+    "reference_1000": {
+      "actual_cards_authority": "Exact LHE banner text; mutable post-run seed-reset card separately retained",
+      "actual_events": 1000,
+      "attempt_directory": "attempts/attempt_001",
+      "attempt_number": 1,
+      "available_disk_bytes": 1009646067712,
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "e9f687ef7a5f0355a7a828b175e95ca63db29a494d3ec09216d41753abfb2ce1",
+        "run_card_sha256": "4da64199245dd09b61cce77dea90b447073c7a91c9861fe7e884d25d2fcc5952"
+      },
+      "completed_utc": "2026-10-12T10:18:36.968241+00:00",
+      "current_log": "attempts/attempt_001/event_generation.log",
+      "elapsed_seconds": 27.360765905999983,
+      "events_requested": 1000,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 21.343005276999975,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 5.514558580000028,
+          "exit_code": 0
+        }
+      },
+      "jobs": 2,
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "max_disk_gb": 20,
+      "max_hours": 24,
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "mg5_version": "3.5.16",
+      "output_bytes": 38282235,
+      "phase": "complete",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_budget_scope": "entire sample output directory; GiB (1024^3 bytes)",
+        "disk_free_bytes": 1009686323200,
+        "disk_total_bytes": 1081101176832,
+        "estimate_basis": "No extrapolated production benchmark; limits are enforced during the run",
+        "free_disk_stop_bytes": 268435456,
+        "jobs": 2,
+        "max_disk_gb": 20,
+        "max_hours": 24,
+        "output_size_estimate_bytes": "UNKNOWN",
+        "ram_available_bytes": 7513030656,
+        "ram_total_bytes": 8051187712,
+        "runtime_estimate_seconds": "UNKNOWN"
+      },
+      "process": "generate p p > b b~ a a QCD=2 QED=2",
+      "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+      "profile": "bbgg",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 12346,
+      "request": {
+        "events_requested": 1000,
+        "jobs": 2,
+        "max_disk_gb": 20,
+        "max_hours": 24,
+        "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "process": "generate p p > b b~ a a QCD=2 QED=2",
+        "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+        "profile": "bbgg",
+        "random_seed": 12346,
+        "sqrt_s_gev": 13000.0,
+        "supplied_param_card_sha256": null,
+        "supplied_run_card_sha256": null
+      },
+      "request_sha256": "e994edf03df64f45c5c401d8d23008a317ab389bc3a5ee41edf7027986ed4c47",
+      "resume_semantics": "New complete attempt; interrupted integration and partial events are retained, never merged",
+      "schema_version": 2,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[PREFERRED_MG5_ENTRY]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "source_verified_file_count": 4658,
+      "sqrt_s_gev": 13000.0,
+      "started_utc": "2026-10-12T10:18:09.607210+00:00",
+      "status": "PASS",
+      "supplied_param_card_sha256": null,
+      "supplied_run_card_sha256": null,
+      "updated_utc": "2026-10-12T10:18:36.967831+00:00",
+      "validation": {
+        "actual_events": 1000,
+        "compressed_bytes": 166712,
+        "compressed_file_sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1",
+        "cross_section_pb": 0.06569109,
+        "cross_section_uncertainty_pb": 0.0004706016,
+        "cut_extrema": {
+          "b_abs_eta": 4.359269783198682,
+          "b_pt": 20.004453547466287,
+          "draa": 0.4102473308375722,
+          "drab": 0.40177047065836835,
+          "drbb": 0.43153473178173757,
+          "photon_abs_eta": 2.496462810963068,
+          "photon_pt": 25.00692592371943
+        },
+        "decompressed_bytes": 969559,
+        "decompressed_file_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+        "distinct_value_lists_truncated": [],
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "cf0c79f6edf5c301ac38a30eef4ce333033ac3185c5448c4d21fa053722b5ffc",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file_format": "gzip",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 17,
+          "-2,2": 191,
+          "-3,3": 3,
+          "-4,4": 18,
+          "-5,5": 11,
+          "1,-1": 26,
+          "2,-2": 202,
+          "21,21": 495,
+          "3,-3": 3,
+          "4,-4": 25,
+          "5,-5": 9
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 9.699988368083723e-08,
+        "max_mass_shell_residual_gev2": 0.00032616592943668365,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.06569109,
+        "original_compressed_sha256": "9a195fc9fe0e6efd92d046dcb198c660d03df9f594c7c03802bd3903e0bf30d7",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 1000,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "validator": "streaming_all_events",
+        "zero_weight_count": 0
+      }
+    },
+    "smoke_100": {
+      "actual_cards_authority": "Exact LHE banner text; mutable post-run seed-reset card separately retained",
+      "actual_events": 100,
+      "attempt_directory": "attempts/attempt_001",
+      "attempt_number": 1,
+      "available_disk_bytes": 1009686474752,
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "e9f687ef7a5f0355a7a828b175e95ca63db29a494d3ec09216d41753abfb2ce1",
+        "run_card_sha256": "530e6707d03171106f0b7886e51af33e64d1c155f9da4a0f8efebfb7ad6d05e9"
+      },
+      "completed_utc": "2026-10-12T10:17:45.926658+00:00",
+      "current_log": "attempts/attempt_001/event_generation.log",
+      "elapsed_seconds": 12.17122372,
+      "events_requested": 100,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 10.035044036999977,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 2.002539726000009,
+          "exit_code": 0
+        }
+      },
+      "jobs": 2,
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "max_disk_gb": 20,
+      "max_hours": 24,
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "mg5_version": "3.5.16",
+      "output_bytes": 37230629,
+      "phase": "complete",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_budget_scope": "entire sample output directory; GiB (1024^3 bytes)",
+        "disk_free_bytes": 1009725681664,
+        "disk_total_bytes": 1081101176832,
+        "estimate_basis": "No extrapolated production benchmark; limits are enforced during the run",
+        "free_disk_stop_bytes": 268435456,
+        "jobs": 2,
+        "max_disk_gb": 20,
+        "max_hours": 24,
+        "output_size_estimate_bytes": "UNKNOWN",
+        "ram_available_bytes": 7503581184,
+        "ram_total_bytes": 8051187712,
+        "runtime_estimate_seconds": "UNKNOWN"
+      },
+      "process": "generate p p > b b~ a a QCD=2 QED=2",
+      "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+      "profile": "bbgg",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 12345,
+      "request": {
+        "events_requested": 100,
+        "jobs": 2,
+        "max_disk_gb": 20,
+        "max_hours": 24,
+        "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "process": "generate p p > b b~ a a QCD=2 QED=2",
+        "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+        "profile": "bbgg",
+        "random_seed": 12345,
+        "sqrt_s_gev": 13000.0,
+        "supplied_param_card_sha256": null,
+        "supplied_run_card_sha256": null
+      },
+      "request_sha256": "a9d6f6523ea39a4e70d9f51ef088c9d4d12a92eda4890f2885af905775468d09",
+      "resume_semantics": "New complete attempt; interrupted integration and partial events are retained, never merged",
+      "schema_version": 2,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[PREFERRED_MG5_ENTRY]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "source_verified_file_count": 4658,
+      "sqrt_s_gev": 13000.0,
+      "started_utc": "2026-10-12T10:17:33.755226+00:00",
+      "status": "PASS",
+      "supplied_param_card_sha256": null,
+      "supplied_run_card_sha256": null,
+      "updated_utc": "2026-10-12T10:17:45.926295+00:00",
+      "validation": {
+        "actual_events": 100,
+        "compressed_bytes": 22449,
+        "compressed_file_sha256": "22ad7f548221f872c1e5d80a98e0af4d2435caf3eb838f8aabecd095f6e355b6",
+        "cross_section_pb": 0.06685344,
+        "cross_section_uncertainty_pb": 0.0005076687,
+        "cut_extrema": {
+          "b_abs_eta": 3.5649931842714953,
+          "b_pt": 20.047091114830515,
+          "draa": 0.5118189078388564,
+          "drab": 0.4000072693868144,
+          "drbb": 0.446174720516122,
+          "photon_abs_eta": 2.4835321008156575,
+          "photon_pt": 25.040510721058734
+        },
+        "decompressed_bytes": 116352,
+        "decompressed_file_sha256": "957cb2f41e962c95575de1c5a9bbb1d5ba5daa467107236b0145a3f65fe98dff",
+        "distinct_value_lists_truncated": [],
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "3d94f63295eae67d36523e2dbc6aa5ea85c5d99555e999012850118d6b4f7543",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "file_format": "gzip",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 1,
+          "-2,2": 21,
+          "-3,3": 1,
+          "-4,4": 1,
+          "2,-2": 25,
+          "21,21": 48,
+          "4,-4": 1,
+          "5,-5": 2
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 5.299989425111562e-08,
+        "max_mass_shell_residual_gev2": 4.487484693527222e-05,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.066853438,
+        "original_compressed_sha256": "7e84bb380b2a0dd7ac471210da4461290f8b2888c349879d5bd2899ed34f212b",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 100,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "validator": "streaming_all_events",
+        "zero_weight_count": 0
+      }
+    }
+  },
+  "final_cli_test": "100 real events at 14 TeV, seed 12347, supplied run/param cards, jobs=1, max-hours=2, max-disk-gb=2",
+  "large_sample_publication": "NOT_EVALUATED",
+  "production_1m_status": "NOT_EXECUTED_BY_DESIGN",
+  "publication": "Only selected smoke100/reference1000 LHE; CLI100 LHE remains LOCAL_ONLY",
+  "task": "PHASE6A_MG5_SELF_SERVICE_SETUP_AND_GITHUB_V2"
+}

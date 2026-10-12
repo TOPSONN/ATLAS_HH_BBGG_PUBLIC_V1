@@ -1,0 +1,39 @@
+name: MG5 reference samples
+on:
+  push:
+    branches: [main, codex/phase6a-mg5-self-service]
+    paths:
+      - 'simulation/mg5/**'
+      - 'reference_samples/mg5/**'
+      - '.github/workflows/mg5_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  pull_request:
+    paths:
+      - 'simulation/mg5/**'
+      - 'reference_samples/mg5/**'
+      - '.github/workflows/mg5_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate actual compressed references and provenance
+        run: python -B simulation/mg5/scripts/validate_lhe.py --repository . --report "$RUNNER_TEMP/mg5-validation.json"
+      - name: Validate every reference event with the production streaming validator
+        run: |
+          python -B simulation/mg5/scripts/validate_sample.py --file reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz --events 100 --seed 12345 --beam-energy 6500
+          python -B simulation/mg5/scripts/validate_sample.py --file reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz --events 1000 --seed 12346 --beam-energy 6500
+      - name: Adversarial tests on copies of real MG5 outputs
+        run: python -B -m unittest discover -s simulation/mg5/tests -v
+      - name: Check exact archive allowlist and reject generated process outputs
+        run: python -B simulation/mg5/scripts/audit_payload.py --tracked

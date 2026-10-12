@@ -1,0 +1,95 @@
+{
+  "full_remote_tree_matches_local_git": true,
+  "historical_prs_unchanged": [
+    {
+      "headRefOid": "3eb5124f9782960afd8992559aeb4210ac308f77",
+      "isDraft": true,
+      "pr": 8,
+      "state": "OPEN"
+    },
+    {
+      "headRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+      "isDraft": false,
+      "pr": 9,
+      "state": "OPEN"
+    }
+  ],
+  "large_sample_publication": "NOT_EVALUATED",
+  "main_commit": "f7a3420155bd557e4146fd1959a60f68742ea930",
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/phase6a-mg5-self-service",
+    "headRefOid": "b17bec4012d56f0bb2f5354bca15ba6ebf3c26f9",
+    "isDraft": false,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-12T10:33:45Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38237083358/job/114770294462",
+        "name": "validate",
+        "startedAt": "2026-10-12T10:33:35Z",
+        "status": "COMPLETED",
+        "workflowName": "MG5 reference samples"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-12T10:33:14Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38237024683/job/114770098133",
+        "name": "validate",
+        "startedAt": "2026-10-12T10:33:02Z",
+        "status": "COMPLETED",
+        "workflowName": "MG5 reference samples"
+      }
+    ],
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/10"
+  },
+  "production_1m_status": "NOT_EXECUTED_BY_DESIGN",
+  "samples": [
+    {
+      "actual_events": 100,
+      "bytes": 22449,
+      "compressed_sha256": "22ad7f548221f872c1e5d80a98e0af4d2435caf3eb838f8aabecd095f6e355b6",
+      "decompressed_sha256": "957cb2f41e962c95575de1c5a9bbb1d5ba5daa467107236b0145a3f65fe98dff",
+      "downloaded_remote_validation": "PASS",
+      "event_sha256": "3d94f63295eae67d36523e2dbc6aa5ea85c5d99555e999012850118d6b4f7543",
+      "git_blob_sha": "3ecd8a87b71bc12225a2ce85ec88285d923c0770",
+      "path": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz"
+    },
+    {
+      "actual_events": 1000,
+      "bytes": 166712,
+      "compressed_sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1",
+      "decompressed_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+      "downloaded_remote_validation": "PASS",
+      "event_sha256": "cf0c79f6edf5c301ac38a30eef4ce333033ac3185c5448c4d21fa053722b5ffc",
+      "git_blob_sha": "5a611f508ceb8dac9016b1b8fdd78cefb385d170",
+      "path": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz"
+    }
+  ],
+  "status": "PASS_REMOTE_SAMPLES_AND_CI",
+  "verified_commit": "b17bec4012d56f0bb2f5354bca15ba6ebf3c26f9",
+  "workflow_runs": [
+    {
+      "conclusion": "success",
+      "event": "pull_request",
+      "head_sha": "b17bec4012d56f0bb2f5354bca15ba6ebf3c26f9",
+      "id": 38237083358,
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38237083358"
+    },
+    {
+      "conclusion": "success",
+      "event": "push",
+      "head_sha": "b17bec4012d56f0bb2f5354bca15ba6ebf3c26f9",
+      "id": 38237024683,
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38237024683"
+    }
+  ],
+  "evidence_scope": "Verified source/reference payload commit; final documentation seal is independently checked after push"
+}

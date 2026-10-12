@@ -1,0 +1,126 @@
+{
+  "source": {
+    "mg5_path": "[RESOLVED_MG5_INSTALLATION]",
+    "toolchain_prefix": "[LOCAL_TOOLCHAIN]",
+    "conda_sh": "[LOCAL_CONDA_SH]",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+    "source_tag": "v3.5.16"
+  },
+  "source_archive_sha256": "04d480ac64bdb5529351a9641aa0f328d11b2238c40d4777de3d2ad9afa906ca",
+  "packaging": {
+    "packaging": "upstream bin/create_release.py directory transformations only",
+    "physics_source_changes": [],
+    "removed_developer_utilities": [
+      "README.developer",
+      "bin/create_aloha_release.py",
+      "bin/create_release.py"
+    ],
+    "renamed": {
+      "README.release": "README",
+      "bin/compile.py": "bin/.compile.py"
+    },
+    "schema_version": 1,
+    "source_archive_sha256": "04d480ac64bdb5529351a9641aa0f328d11b2238c40d4777de3d2ad9afa906ca",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+    "upstream_packaging_recipe_sha256": "dee933c6bcbe7fd0df718e2c63eb79555e892bb4f1df2ca9c2124a8cd7f46600"
+  },
+  "retained_source_files_verified": 4658,
+  "source_files": {
+    "VERSION": {
+      "bytes": 35,
+      "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+    },
+    "LICENSE": {
+      "bytes": 1883,
+      "sha256": "7e8d6c8410bb2f19a4841a670b2d6d5e3c3b2d7409bce1260b7f5de15a16f378"
+    },
+    "INSTALL": {
+      "bytes": 1848,
+      "sha256": "a4606578b073b003b279d564521c30f91e54e4d2d9b54fa3378886af2b7c8975"
+    },
+    "models/sm/restrict_no_b_mass.dat": {
+      "bytes": 1438,
+      "sha256": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f"
+    },
+    "models/sm/parameters.py": {
+      "bytes": 15693,
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc"
+    },
+    "madgraph/various/banner.py": {
+      "bytes": 279713,
+      "sha256": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a"
+    },
+    "Template/LO/SubProcesses/cuts.f": {
+      "bytes": 55278,
+      "sha256": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c"
+    },
+    "Template/Common/Source/PDF/Ctq6Pdf.f": {
+      "bytes": 15036,
+      "sha256": "faaae1776c4228066687642b39d350ba745f3076c21007516d82dee88601d646"
+    },
+    "Template/LO/lib/Pdfdata/cteq6l1.tbl": {
+      "bytes": 219850,
+      "sha256": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058"
+    }
+  },
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.15",
+  "six": "1.17.0",
+  "memory": {
+    "MemTotal": "7862488 kB",
+    "MemAvailable": "7327628 kB"
+  },
+  "cpus": {
+    "argv": [
+      "nproc"
+    ],
+    "exit_code": 0,
+    "stdout": "8\n",
+    "stderr": ""
+  },
+  "disk": {
+    "total": 1081101176832,
+    "used": 16382676992,
+    "free": 1009726144512
+  },
+  "gcc": {
+    "argv": [
+      "x86_64-conda-linux-gnu-gcc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 14.4.0-7) 14.4.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  "gxx": {
+    "argv": [
+      "x86_64-conda-linux-gnu-g++",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "x86_64-conda-linux-gnu-g++ (conda-forge gcc 14.4.0-7) 14.4.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  "gfortran": {
+    "argv": [
+      "x86_64-conda-linux-gnu-gfortran",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "GNU Fortran (conda-forge gcc 14.4.0-7) 14.4.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  "make": {
+    "argv": [
+      "make",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "GNU Make 4.4.1\nBuilt for x86_64-conda-linux-gnu\nCopyright (C) 1988-2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n",
+    "stderr": ""
+  },
+  "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7"
+}
