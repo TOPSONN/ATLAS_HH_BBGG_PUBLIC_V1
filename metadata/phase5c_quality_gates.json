@@ -1,0 +1,615 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5C_STORAGE_ESCALATION_AND_SIDEBAND_VALIDATION",
+  "baseline_commit": "1c7da77fe4c852c929be39b10544220033de9fec",
+  "status": "PARTIAL_STORAGE_BLOCKED",
+  "gates": {
+    "A": {
+      "state": "PASS",
+      "name": "Historical baseline preserved",
+      "evidence": [
+        "metadata/phase5c_baseline_manifest.json",
+        ".local/phase5c_review/baseline_independent.json"
+      ],
+      "scope": "190 tracked+407 prior local hashes; CMake unchanged prefix. No deletion/rebase/history rewrite."
+    },
+    "B": {
+      "state": "PASS",
+      "name": "CERN support package prepared",
+      "evidence": [
+        "reports/phase5c_cern_support_request.md",
+        "metadata/phase5c_sanitized_network_evidence.json"
+      ],
+      "scope": "Exact object; reviewed public projection; UNSENT."
+    },
+    "C": {
+      "state": "BLOCKED",
+      "name": "New input access independently verified",
+      "reason": "No acquired302521 ROOT payload or completed official object read."
+    },
+    "D": {
+      "state": "BLOCKED",
+      "name": "Local ROOT checksum and schema validation",
+      "reason": "Exact member absent; no native checksum/schema/DSID read or10/100/10000 stages."
+    },
+    "E": {
+      "state": "UNKNOWN",
+      "name": "MC generator provenance assessed",
+      "evidence": [
+        "reports/phase5c_mc_provenance_update.md"
+      ],
+      "scope": "Documentation review completed; exact e4045/FEB2025 nominal/pre-skim/completeness/filter/sigma/BR/SF/overlap applicability remains unresolved."
+    },
+    "F": {
+      "state": "PASS",
+      "name": "DATA sideband dependence assessed",
+      "evidence": [
+        "reports/phase5c_sideband_dependence.md",
+        "metadata/phase5c_sideband_audit.csv"
+      ],
+      "scope": "Executed retrospective descriptive binned/unbinned/counting diagnostics. No independence/physical-transfer approval."
+    },
+    "G": {
+      "state": "PASS",
+      "name": "Held-out methodology correctly separated",
+      "evidence": [
+        "metadata/phase5c_sideband_protocol.json",
+        "outputs/phase5c_v1/independent_audit_final.json"
+      ],
+      "scope": "Fixed SHA identities724/650; zero overlap; central excluded. Previously viewed DATA; no untouched/blinded claim."
+    },
+    "H": {
+      "state": "PASS",
+      "name": "Research-data route feasibility evaluated",
+      "evidence": [
+        "reports/phase5c_analysis_route_assessment.md"
+      ],
+      "scope": "Historical official primary-source documentary assessment. Future physical pilot CONDITIONAL; no research acquisition or calibration PASS."
+    },
+    "I": {
+      "state": "PASS",
+      "name": "No unsupported physical prediction",
+      "evidence": [
+        "reports/phase5c_decision.md"
+      ],
+      "scope": "No physical TF/background/normalization/HH fit/sensitivity. Sideband counts are unclassifiedDATA."
+    },
+    "J": {
+      "state": "PASS",
+      "name": "Regression and reproducibility preserved",
+      "evidence": [
+        ".local/phase5c_validation_final_20261012/ctest.xml",
+        ".local/phase5c_validation_final_20261012/compiled_identity.json",
+        ".local/phase5c_validation_final_20261012/data_actual_identity.json"
+      ],
+      "scope": "Final28/28 plus source/compile/linkage identity and four actual-cache output identities. GitHubNO_CHECKS is not CI PASS."
+    }
+  },
+  "gate_counts": {
+    "PASS": 7,
+    "FAIL": 0,
+    "BLOCKED": 2,
+    "UNKNOWN": 1,
+    "NOT_EVALUATED": 0
+  },
+  "root_input": {
+    "DSID": 302521,
+    "acquired": false,
+    "ROOT_payload_bytes": 0,
+    "checksum": "NOT_VERIFIED",
+    "native_schema": "NOT_EVALUATED",
+    "DSID_values": "NOT_EVALUATED",
+    "physical_10_entries": "NOT_EVALUATED",
+    "physical_100_entries": "NOT_EVALUATED",
+    "physical_10000_entries": "NOT_EVALUATED"
+  },
+  "support": {
+    "prepared": true,
+    "sent": false,
+    "recipient": "atlas-outreach-opendata-support@cern.ch"
+  },
+  "storage": {
+    "status": "BLOCKED",
+    "retry_decision": "STOP_WITHOUT_NEW_OFFICIAL_EVIDENCE",
+    "phase5_charged_bytes": 5695475,
+    "cumulative_charged_bytes": 83829497,
+    "phase5_limit_bytes": 134217728,
+    "cumulative_limit_bytes": 268435456,
+    "wire_and_control_bytes": "UNMEASURED",
+    "phase5c_ROOT_attempts": 0,
+    "phase5c_research_ROOT_requests": 0
+  },
+  "sidebands": {
+    "entries": 63095,
+    "C9": 1689,
+    "sideband_entries": 1374,
+    "A": 443,
+    "B": 931,
+    "central_excluded": 315,
+    "fold0": 724,
+    "fold1": 650,
+    "fold_identity_intersection": 0,
+    "historical_DATA_already_viewed": true,
+    "blinded_analysis": false,
+    "untouched_validation": false,
+    "unit_status": "PROVISIONAL",
+    "selection_unchanged": true,
+    "pvalues": false,
+    "best_boundary_selected": false,
+    "pearson_mass_absDeltaEta": 0.19574450675572902,
+    "spearman_mass_absDeltaEta": 0.18900906988894597,
+    "pooled_AB_empirical_KS_D": 0.08213212812747768,
+    "pooled_AB_cramers_V": 0.08459747338416704,
+    "calibration_AB_empirical_KS_D": 0.060261707988980714,
+    "validation_AB_empirical_KS_D": 0.13891184800696488,
+    "physical_transfer_stability": "NOT_VALIDATED",
+    "scope": "RETROSPECTIVE_DATA_ONLY_DESCRIPTIVE"
+  },
+  "mc_provenance": {
+    "assessment": "COMPLETED_DOCUMENTATION_ONLY",
+    "exact_FEB2025_generator": "UNKNOWN",
+    "nominal_weight": "UNKNOWN",
+    "signed_pre_skim_sumW": "UNKNOWN",
+    "completeness": "UNKNOWN",
+    "exact_filter_efficiency": "UNKNOWN",
+    "cross_section_convention": "UNKNOWN",
+    "BR_treatment": "UNKNOWN",
+    "invalid_SF_sentinels": "UNKNOWN",
+    "overlap": "UNKNOWN"
+  },
+  "physics": {
+    "physical_closure_executed": false,
+    "physical_transfer_factor_applied": false,
+    "background_prediction_performed": false,
+    "normalization_applied": false,
+    "scale_factors_applied": false,
+    "HH_fit": false,
+    "HH_sensitivity_claim": false,
+    "native_MC_event_reads": 0
+  },
+  "routes": {
+    "educational_raw_methods": "GO",
+    "educational_physical_model": "STOP",
+    "research_metadata_assessment": "GO",
+    "research_native_pilot": "CONDITIONAL",
+    "official_HH_result": "STOP",
+    "research_download_authorized": false,
+    "research_file_acquired": false
+  },
+  "regression": {
+    "ctest_total": 28,
+    "ctest_passed": 28,
+    "ctest_failed": 0,
+    "ctest_skipped": 0,
+    "ctest_xml": ".local/phase5c_validation_final_20261012/ctest.xml",
+    "environment": {
+      "ROOT_VERSION": "6.40.04",
+      "ROOT_CXX_STANDARD": "20",
+      "ROOT_DIR": "/home/btu/miniforge3/envs/atlas-hh-root/cmake",
+      "CXX_COMPILER": "/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++",
+      "CXX_COMPILER_ID": "GNU",
+      "CXX_COMPILER_VERSION": "15.3.0",
+      "PROJECT_CXX_STANDARD": "20",
+      "CXX_STANDARD_REQUIRED": "ON",
+      "CXX_EXTENSIONS": "OFF",
+      "CMAKE_VERSION": "4.4.4"
+    },
+    "compiled_translation_units": 38,
+    "phase5c_synthetic_methods": 20,
+    "phase5c_app_invocations": 67,
+    "phase5c_accepted": 29,
+    "phase5c_rejected": 38,
+    "documentation_mock_methods": 23,
+    "native_runtime_linkage": "PASS_CONDA_ROOT_AND_LIBSTDCXX",
+    "actual_DATA_reproducibility": "FOUR_FILES_BYTE_IDENTICAL",
+    "GitHub_CI": "NO_CHECKS",
+    "initial_validation_retained": "Initial28/28 before trim-label clarity change; finalsource was rebuilt and fresh28/28 executed separately."
+  },
+  "figures": {
+    "new_physical_study_PDF_PNG": 0,
+    "existing_drafts": "AWAITING_USER_APPROVAL",
+    "new_figure_approval": false,
+    "generated_figures_staged": false,
+    "scope": "Old regression-only dummyPNG fixtures are disposable; no Phase5C physical-study figures."
+  },
+  "git": {
+    "branch": "codex/phase5-background-normalization",
+    "PR": 8,
+    "PR_state": "OPEN",
+    "PR_draft": true,
+    "PR_base": "codex/phase4-mc-truth-validation",
+    "merge_authorized": false,
+    "force_push": false
+  },
+  "sealed_artifacts": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 17663,
+      "sha256": "437c18109f0c2d8551e1bfd6cbc18f41c1fb91abce1121a0639e4a4b42a5ea03",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "apps/phase5c_data_sidebands.cxx",
+      "bytes": 20419,
+      "sha256": "e8089225533276a395f4db51c44475325b692cf3554adce4e731a6cea012d15e",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "include/AtlasSidebandDiagnostics.h",
+      "bytes": 1852,
+      "sha256": "07a237e7cf3137085ad290b8fde5337058b5a937ebe38918b499274972eb5c20",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "src/SidebandDiagnostics.cxx",
+      "bytes": 7643,
+      "sha256": "2d2f9771b749b161cc9e623fdcaf6ead5ad8d78da96c6e2040adfa91e3d077a3",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "tests/test_phase5c_sidebands.py",
+      "bytes": 21446,
+      "sha256": "94a35ac584131877488caf181ac02c37aec053b81f2c44a10d8ead2a91cd6076",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "tests/audit_phase5c_sidebands.py",
+      "bytes": 9571,
+      "sha256": "7c7fa6223c8be75cbd1812a42f078e824080000e3f89d8f13d6297e726685ff0",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "tests/test_phase5c_sources.py",
+      "bytes": 18375,
+      "sha256": "615e79fdee049e903948c3666311b554d0bf9051b4db1f7608aa06dda5b6b7b8",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "scripts/collect_phase5c_sources.py",
+      "bytes": 5879,
+      "sha256": "3d37c15468ed6ec4268dfda7f2408b34d843df68dcae98791105e5a2d5504e69",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "scripts/freeze_phase5c_baseline.py",
+      "bytes": 4034,
+      "sha256": "365b15248859223984375c412f1277c62f5534b62d03274e4636835dd9d2cef5",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "scripts/validate_phase5c.sh",
+      "bytes": 1900,
+      "sha256": "0287507c1c0e5c88839df49ff4765fbaf34e6179a66575ff8631f91dca4e54e0",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "scripts/audit_phase5c_evidence.py",
+      "bytes": 8372,
+      "sha256": "064e8b0af637900dc2641fc41ba9c028c25f6fc7f0951d8307d6b654b24e0f76",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "metadata/phase5c_baseline_manifest.json",
+      "bytes": 120904,
+      "sha256": "c1c0035515d383f3f6faf25a3da8cdccd2aa7ae40582c2208b04d213efe0c288",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "metadata/phase5c_sanitized_network_evidence.json",
+      "bytes": 20560,
+      "sha256": "0ac4afc45c708068d4befd0d9c104c83c27fa5af6a49d28e2789c962d80d048d",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "metadata/phase5c_sideband_protocol.json",
+      "bytes": 3056,
+      "sha256": "e9916da8772902c5464ea141397340a5230cb1733bb05e7c86800d9681295f66",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "metadata/phase5c_sideband_audit.csv",
+      "bytes": 316174,
+      "sha256": "5df09c40c8fbaaec7b6074105bc8743f24be5cbb4bfcf2c1dfbfdfe4e4c5d587",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "metadata/phase5c_source_evidence/collector_executed_v1.py.txt",
+      "bytes": 5021,
+      "sha256": "77d73864febb1d9c929d35dcbb28318b41b4776e22477950bcf9207b605befae",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_cern_support_request.md",
+      "bytes": 4030,
+      "sha256": "995ca91f3bb87bb7b430d8f175d561fadaefc873921c0afb0f289afc3ab47fd2",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_storage_decision.md",
+      "bytes": 5445,
+      "sha256": "aeae5fb48591935b4a7374020080197f5409782c9bb7823bd48920dfa571892a",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_sideband_dependence.md",
+      "bytes": 13924,
+      "sha256": "970adf9305f86bd834cab096a5e2bc956286b9bd1c840dd7e36f0a59b189a178",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_mc_provenance_update.md",
+      "bytes": 17741,
+      "sha256": "3d847e492f3d0f2b61cc5cf94a38dae9d87068200d6b775d053737fbf75863cd",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_analysis_route_assessment.md",
+      "bytes": 23235,
+      "sha256": "7cb065d0c3d51d91773274ef33d82d82fd05d7ed859e05880b7b0d75dc8a7e11",
+      "hash_convention": "LF_TEXT_ONLY"
+    },
+    {
+      "path": "reports/phase5c_decision.md",
+      "bytes": 8511,
+      "sha256": "926aa9ede7fe32ea7b075f0d72be805f187cf35acecccaf84d39bcfa602c0969",
+      "hash_convention": "LF_TEXT_ONLY"
+    }
+  ],
+  "local_artifacts": [
+    {
+      "path": ".local/phase5c_review/baseline_independent.json",
+      "bytes": 230987,
+      "sha256": "3604dfc8ae38aa0c4db93b93dda0906901b6c3ede3675e5bc2b979575d041dc2"
+    },
+    {
+      "path": ".local/phase5c_review/derived_sideband_independent.json",
+      "bytes": 1479,
+      "sha256": "2f97486ed0caa90117c419c73349b6acf7e5a31907da6224547c4abac04bc7b2"
+    },
+    {
+      "path": ".local/phase5c_review/final_sideband_label_review.json",
+      "bytes": 625,
+      "sha256": "0a4b78dd01c7adbd52570e033f8e4d396a3b5ba4fef299abe4859f9b32b328b4"
+    },
+    {
+      "path": ".local/phase5c_review/network_projection_independent.json",
+      "bytes": 445,
+      "sha256": "20de3edbe2f528a9dc8914d801c58edae45dacd47104974948c420007b2436cf"
+    },
+    {
+      "path": ".local/phase5c_review/provenance_sources.json",
+      "bytes": 4633,
+      "sha256": "4bb0e590c21ce665ee1539106eed2ce8efd3be0d7ad347ee47bd3854dcc5b614"
+    },
+    {
+      "path": ".local/phase5c_review/provenance_supplement.json",
+      "bytes": 1758,
+      "sha256": "5998a579aa8426ef83d72b206fb082a816638f20d3dbbbd96b8c1522ffce73d3"
+    },
+    {
+      "path": ".local/phase5c_review/route_sources_independent.json",
+      "bytes": 3472,
+      "sha256": "8fd03c90197b6981773088278038c409f4cefe257265815213a6f7bb2225e7e3"
+    },
+    {
+      "path": ".local/phase5c_source_tests_final.log",
+      "bytes": 3038,
+      "sha256": "743b3b5c5c16a1b407373208c295468bf4655e696c1d355d430a2ea5257f60c2"
+    },
+    {
+      "path": ".local/phase5c_sources_20261012/audit.json",
+      "bytes": 3412,
+      "sha256": "06ca8e5342a242fffc30141a1b218dc5a3a937b4dd26fda2a26833a6c43d64ba"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/cmake_version.txt",
+      "bytes": 90,
+      "sha256": "4d92ce18ddf9889d463ac875608423312823ad89e7fd5178b02a21ea26a2bd3d"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/compile_commands.json",
+      "bytes": 21916,
+      "sha256": "3a09f53011df0922a1080c1bd92eadc69c63df6ac9b04a54fb25952251b527b4"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/compiled_identity.json",
+      "bytes": 13930,
+      "sha256": "cb708c6fea0c9b23410652325514f083048558a35595ea9e3533b09c000087ec"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/compiler_version.txt",
+      "bytes": 263,
+      "sha256": "473bc310b15e00e42d0e92ecb14905dc669fa5a4375292ca9163cd737cc211c7"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/ctest.xml",
+      "bytes": 16640,
+      "sha256": "7f6bf52b7cf762fdb96c0f7bb73214a6763c32edb3c9b0f8b00cc796839a4a0d"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/LastTest.log",
+      "bytes": 36402,
+      "sha256": "d82976c29ecf92165a0729b0cedddb14ccf6880e0c0a8e01c2b96238b0950503"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/linkage.txt",
+      "bytes": 2255,
+      "sha256": "6cb88db020189c37a11fc1eea6910930907cbd758b5564cc0c4b4299498c9ddf"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/regression.log",
+      "bytes": 10041,
+      "sha256": "c2ab7cd92b7f481b4ecabf9a2d6b5e8c87ee46010ab3a3e13041b5a54f4581e2"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/root_config.txt",
+      "bytes": 395,
+      "sha256": "306da5651b80b8d53448e0e1bda4d5e1bac5aded034329586306ec0426d317d3"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/sources_before.json",
+      "bytes": 11866,
+      "sha256": "ded8dde3de25bd8d8a05e0a1b390052f4f3b4453f069d718caabfe690c651e72"
+    },
+    {
+      "path": ".local/phase5c_validation_20261012/step1_cmake_environment.txt",
+      "bytes": 317,
+      "sha256": "b51d00d8c73ae663630ecacc987545ef7f7f14100ca73eea9ce7ccfbbdb23175"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/build.log",
+      "bytes": 150,
+      "sha256": "66466ec8330a4dab89266d1a18e6d8f48cd47c87b37bc5ccffc0c98090739deb"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/cmake_version.txt",
+      "bytes": 90,
+      "sha256": "4d92ce18ddf9889d463ac875608423312823ad89e7fd5178b02a21ea26a2bd3d"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/compile_commands.json",
+      "bytes": 21916,
+      "sha256": "3a09f53011df0922a1080c1bd92eadc69c63df6ac9b04a54fb25952251b527b4"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/compiled_identity.json",
+      "bytes": 13930,
+      "sha256": "1e1496c796de359ca002656ade223bd8056e25241214807bd79bbea0a897c418"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/compiler_version.txt",
+      "bytes": 263,
+      "sha256": "473bc310b15e00e42d0e92ecb14905dc669fa5a4375292ca9163cd737cc211c7"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/ctest.log",
+      "bytes": 3631,
+      "sha256": "e3b1af4c6837409b0e7399dcb1efbf7077d2096c1d0e18645b7bee4ad7a2e287"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/ctest.xml",
+      "bytes": 16642,
+      "sha256": "46285a6e637822776f5d76092485f3771350ee6d4c7864087b0dced53e9b3978"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/data_actual.log",
+      "bytes": 120,
+      "sha256": "aa68c27aedb6596d68024fe8393e8cb8005cef99b117a3852d437e8143709965"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/data_actual_identity.json",
+      "bytes": 937,
+      "sha256": "3674ae1db027eb7a46c6e9369e526d428d50d24a20e4f854978b887496b1ea9f"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/data_actual_independent.json",
+      "bytes": 1731,
+      "sha256": "3da1e0a5b97fe041b976f11f601414b319edf978d22d55d97f07f3361c78206b"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/data_actual_independent.log",
+      "bytes": 488,
+      "sha256": "19870f31a4af75d1026518aa1a1f0b9c46f5a49bb19e268b96d591bce49d5a20"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/LastTest.log",
+      "bytes": 36562,
+      "sha256": "99929fe98a3a8cfbf9003df7bfa77d0ec0b0cb5742a412aaf712a681645b46c4"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/linkage.txt",
+      "bytes": 2255,
+      "sha256": "c814a3384860190172e92f185d9705f1d1bcf127b2e3dae7fccc304642d43fbb"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/root_config.txt",
+      "bytes": 395,
+      "sha256": "306da5651b80b8d53448e0e1bda4d5e1bac5aded034329586306ec0426d317d3"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/sources_before.json",
+      "bytes": 11866,
+      "sha256": "cf009820610633e007044e4e86a0b867b61ab037ed71a95c0675c764195156af"
+    },
+    {
+      "path": ".local/phase5c_validation_final_20261012/step1_cmake_environment.txt",
+      "bytes": 317,
+      "sha256": "b51d00d8c73ae663630ecacc987545ef7f7f14100ca73eea9ce7ccfbbdb23175"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands/root_mass_counts.csv",
+      "bytes": 2325,
+      "sha256": "5e695321bb8b714a033b3f3a977ba8fd6688a7fd54cd30bb84eaeab6b34d4408"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands/sideband_audit.csv",
+      "bytes": 312142,
+      "sha256": "6e94de9288f4ad081f2cefe894c56c2c0483c23580541e0a18413c454c20847f"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands/sideband_events.csv",
+      "bytes": 281506,
+      "sha256": "441822328bdfbfb5b25108a93ea78745ee8475af69e93a028f48aea7aea9ebfa"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands/summary.json",
+      "bytes": 2277,
+      "sha256": "71f3dcbdc5a7b3367bf53af90f6e02d21ceeb7dae45ae9075f9b2137622121b0"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_final/root_mass_counts.csv",
+      "bytes": 2325,
+      "sha256": "5e695321bb8b714a033b3f3a977ba8fd6688a7fd54cd30bb84eaeab6b34d4408"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_final/sideband_audit.csv",
+      "bytes": 316174,
+      "sha256": "5df09c40c8fbaaec7b6074105bc8743f24be5cbb4bfcf2c1dfbfdfe4e4c5d587"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_final/sideband_events.csv",
+      "bytes": 281506,
+      "sha256": "441822328bdfbfb5b25108a93ea78745ee8475af69e93a028f48aea7aea9ebfa"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_final/summary.json",
+      "bytes": 2277,
+      "sha256": "5ea4338ec5224b494cf3ebd5751752bd929ad7b6572d9198f23f670da3d1acef"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_integrated/root_mass_counts.csv",
+      "bytes": 2325,
+      "sha256": "5e695321bb8b714a033b3f3a977ba8fd6688a7fd54cd30bb84eaeab6b34d4408"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_integrated/sideband_audit.csv",
+      "bytes": 316174,
+      "sha256": "5df09c40c8fbaaec7b6074105bc8743f24be5cbb4bfcf2c1dfbfdfe4e4c5d587"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_integrated/sideband_events.csv",
+      "bytes": 281506,
+      "sha256": "441822328bdfbfb5b25108a93ea78745ee8475af69e93a028f48aea7aea9ebfa"
+    },
+    {
+      "path": "outputs/phase5c_v1/data_sidebands_integrated/summary.json",
+      "bytes": 2277,
+      "sha256": "5ea4338ec5224b494cf3ebd5751752bd929ad7b6572d9198f23f670da3d1acef"
+    },
+    {
+      "path": "outputs/phase5c_v1/independent_audit.json",
+      "bytes": 1686,
+      "sha256": "f44283636922b7c902b8c7e10c1c67129a5fac5c4c6aed7da0135399df8a4fbf"
+    },
+    {
+      "path": "outputs/phase5c_v1/independent_audit_final.json",
+      "bytes": 1711,
+      "sha256": "d5b21183967a44f96e9e1f46cf98d6e2a022d29d88c62ede3695185f7823c0e4"
+    }
+  ],
+  "reproduction": {
+    "offline": "python -B scripts/audit_phase5c_evidence.py",
+    "with_retained_evidence": "python -B scripts/audit_phase5c_evidence.py --local",
+    "regression": "bash scripts/validate_phase5c.sh /home/btu/build/NEW_PHASE5C_BUILD"
+  }
+}

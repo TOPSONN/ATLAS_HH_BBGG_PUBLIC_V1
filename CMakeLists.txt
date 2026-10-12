@@ -250,3 +250,26 @@ if(ATLAS_BUILD_PHASE5B)
       PROPERTIES TIMEOUT 60 LABELS "phase5b;synthetic")
   endif()
 endif()
+
+# Phase 5C is additive: retrospective DATA-only diagnostics, no physical model.
+option(ATLAS_BUILD_PHASE5C "Build frozen-protocol DATA-only sideband diagnostics" OFF)
+if(ATLAS_BUILD_PHASE5C)
+  if(NOT ATLAS_BUILD_PHASE5B)
+    message(FATAL_ERROR "Enable Phase 5B for the preserved Phase 5C dependencies.")
+  endif()
+  add_library(atlas_sideband_diagnostics src/SidebandDiagnostics.cxx)
+  target_include_directories(atlas_sideband_diagnostics PUBLIC include)
+  target_compile_features(atlas_sideband_diagnostics PUBLIC cxx_std_20)
+  target_compile_options(atlas_sideband_diagnostics PRIVATE -Wall -Wextra -Wpedantic)
+  add_step1_executable(phase5c_data_sidebands apps/phase5c_data_sidebands.cxx)
+  target_link_libraries(phase5c_data_sidebands PRIVATE atlas_sideband_diagnostics atlas_selection ROOT::Hist)
+  if(BUILD_TESTING)
+    find_package(Python3 REQUIRED COMPONENTS Interpreter)
+    add_test(NAME phase5c_sideband_contract COMMAND "${Python3_EXECUTABLE}" -B "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_phase5c_sidebands.py"
+      "$<TARGET_FILE:phase5c_data_sidebands>" "${CMAKE_CURRENT_SOURCE_DIR}/metadata/phase3_selection_config.ini"
+      "${CMAKE_CURRENT_SOURCE_DIR}/metadata/phase5c_sideband_protocol.json")
+    add_test(NAME phase5c_documentation_contract COMMAND "${Python3_EXECUTABLE}" -B "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_phase5c_sources.py")
+    set_tests_properties(phase5c_sideband_contract phase5c_documentation_contract
+      PROPERTIES TIMEOUT 90 LABELS "phase5c;synthetic")
+  endif()
+endif()
