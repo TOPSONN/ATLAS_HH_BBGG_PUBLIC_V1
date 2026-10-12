@@ -159,8 +159,11 @@
   "portable_validator_tests": "22/22 PASS",
   "pr8_preserved_head": "3eb5124f9782960afd8992559aeb4210ac308f77",
   "publication": {
-    "reason": "Awaiting actual push/remote tree/CI verification",
-    "status": "NOT_EVALUATED"
+    "actual_ci": "SUCCESS: push and pull_request",
+    "evidence": "metadata/phase6a_mg5_github_publication.json",
+    "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9",
+    "status": "PASS",
+    "verified_source_commit": "93a63c0f9642eeb65057721d2729f2d9b40e6892"
   },
   "root_preservation": {
     "cxx_standard": 20,

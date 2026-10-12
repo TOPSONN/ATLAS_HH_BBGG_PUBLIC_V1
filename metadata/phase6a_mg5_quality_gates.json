@@ -34,15 +34,20 @@
       "state": "PASS"
     },
     "I": {
-      "evidence": "GitHub publication requires both actual remote reference blobs and hash checks",
-      "state": "NOT_EVALUATED"
+      "evidence": "Both actual reference blobs verified in PR head remote Git tree; downloaded bytes/gzip/events/hash checks PASS",
+      "state": "PASS",
+      "verified_source_commit": "93a63c0f9642eeb65057721d2729f2d9b40e6892"
     },
     "J": {
-      "evidence": "Final staged/outgoing audits and actual GitHub CI required",
-      "state": "NOT_EVALUATED"
+      "ci_runs": [
+        "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464887",
+        "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38233464112"
+      ],
+      "evidence": "Explicit staged and every-outgoing-commit audits PASS; actual push and pull_request Actions SUCCESS; historical main and PR #8 preserved",
+      "state": "PASS"
     }
   },
   "no_automatic_merge": true,
   "task": "PHASE6A_MADGRAPH5_LO_GENERATION_AND_GITHUB_SAMPLES_V1",
-  "verdict": "PARTIAL_MG5_GENERATION"
+  "verdict": "PASS_MG5_GENERATION_AND_GITHUB_PUBLICATION"
 }
