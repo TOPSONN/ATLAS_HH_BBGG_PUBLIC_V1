@@ -1,0 +1,249 @@
+{
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE5D_RESEARCH_PHYSLITE_AND_PROVENANCE_DECISION",
+  "previous_sanitized_receipt": {
+    "path": "metadata/phase5c_sanitized_network_evidence.json",
+    "sha256": "0ac4afc45c708068d4befd0d9c104c83c27fa5af6a49d28e2789c962d80d048d",
+    "phase5_charged_bytes": 5695475,
+    "cumulative_charged_bytes": 83829497
+  },
+  "receipts": [
+    {
+      "path": ".local/phase5d_sources_20261012/audit.json",
+      "sha256": "f62b4dc275725fa050b333c28bf9df059663a9293a45c6925d12f8951fed962d",
+      "incremental_charged_bytes": 1576034
+    },
+    {
+      "path": ".local/phase5d_sources_additional_20261012/audit.json",
+      "sha256": "b921dc506bfe6cd5c701a7dbf924889567baa027dac6d70c4778dcc1dda5faf1",
+      "incremental_charged_bytes": 746618
+    },
+    {
+      "path": ".local/phase5d_candidate_sources_20261012/audit.json",
+      "sha256": "b56df0865ba7e346243809397313735628fcf895f9e6ebd5758dc683792fd90c",
+      "incremental_charged_bytes": 404808
+    }
+  ],
+  "operations": [
+    {
+      "source_id": "converter_tag",
+      "exact_public_reference": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/tags/v1.0.0",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 65536,
+      "received_body_bytes": 994,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "converter_tag.json",
+      "sha256": "7a0515700e007a11fcd41a6cd77ffa394e21f420e655e16ec5aec9e74f0e76f3",
+      "retained_path": ".local/phase5d_sources_20261012/converter_tag.json"
+    },
+    {
+      "source_id": "converter_history",
+      "exact_public_reference": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/commits?until=2025-03-01T00%3A00%3A00Z&per_page=5",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 4143,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "converter_history.json",
+      "sha256": "26473d4837ffc102539b08c2ba7466b9f65887591d11d245343178033e46eb92",
+      "retained_path": ".local/phase5d_sources_20261012/converter_history.json"
+    },
+    {
+      "source_id": "physlite_tutorial",
+      "exact_public_reference": "https://opendata.atlas.cern/docs/tutresearch/physlitetut",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 35357,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "physlite_tutorial.html",
+      "sha256": "74fe10fe7f3574a202ef66688e0e8aa0f3aa5d316c47e3cd14486516ac6640b2",
+      "retained_path": ".local/phase5d_sources_20261012/physlite_tutorial.html"
+    },
+    {
+      "source_id": "analysisbase_setup",
+      "exact_public_reference": "https://atlas-software.docs.cern.ch/analysis/analysis_tutorial/AnalysisSWTutorial/setup_software/",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 0,
+      "status": "ACCESS_UNVERIFIED",
+      "tls_verification": true,
+      "http_status": 404,
+      "access_limit": "HTTP404; content not established"
+    },
+    {
+      "source_id": "cpalg_tutorial",
+      "exact_public_reference": "https://atlas-software.docs.cern.ch/analysis/analysis_tutorial/AnalysisSWTutorial/cpalg_ntuple/",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 0,
+      "status": "ACCESS_UNVERIFIED",
+      "tls_verification": true,
+      "http_status": 200,
+      "access_limit": "HTTP200 announced 242489 bytes, exceeding 131072 body cap; body not ingested"
+    },
+    {
+      "source_id": "record80014",
+      "exact_public_reference": "https://opendata.cern.ch/api/records/80014",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 4194304,
+      "received_body_bytes": 1057821,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "record80014.json",
+      "sha256": "6a44431db897b5dff2cb872c5ae6c1e65e5ad76c654d436cfe4e634af521b1e0",
+      "retained_path": ".local/phase5d_sources_20261012/record80014.json"
+    },
+    {
+      "source_id": "record80000_page",
+      "exact_public_reference": "https://opendata.cern.ch/record/80000",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 1048576,
+      "received_body_bytes": 18967,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "record80000_page.html",
+      "sha256": "9f77e4f6a04f7a197d907741c34f0aeaff107bf5b2a4595958db9893d3cacc97",
+      "retained_path": ".local/phase5d_sources_20261012/record80000_page.html"
+    },
+    {
+      "source_id": "feb_converter",
+      "exact_public_reference": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/Root%2FPhysLiteToOpenData.cxx/raw?ref=0cfc9416d6146ebdb31234f1e486f77abe28aa83",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 65536,
+      "received_body_bytes": 16441,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "feb_converter.txt",
+      "sha256": "29d56a2ffe708b3b2578b88ba265763791bf3ab418c46c2c4a3e81c4449797d9",
+      "retained_path": ".local/phase5d_sources_additional_20261012/feb_converter.txt"
+    },
+    {
+      "source_id": "feb_algorithms",
+      "exact_public_reference": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/python%2FPhysLiteToOpenDataAlgorithms.py/raw?ref=0cfc9416d6146ebdb31234f1e486f77abe28aa83",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 65536,
+      "received_body_bytes": 19673,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "feb_algorithms.txt",
+      "sha256": "ecbc8c3a1ee3fc560c2f92dc9fb08ca201d85aff414c546525199f9dcab79274",
+      "retained_path": ".local/phase5d_sources_additional_20261012/feb_algorithms.txt"
+    },
+    {
+      "source_id": "feb_skim",
+      "exact_public_reference": "https://gitlab.cern.ch/api/v4/projects/atlas-outreach-data-tools%2Fphyslitetoopendata/repository/files/scripts%2FskimOpenDataNtuples.py/raw?ref=0cfc9416d6146ebdb31234f1e486f77abe28aa83",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 65536,
+      "received_body_bytes": 28066,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "feb_skim.txt",
+      "sha256": "5cc1084166f3019594697a119b7814679c060ba4727d0c4416e6146a677e50e5",
+      "retained_path": ".local/phase5d_sources_additional_20261012/feb_skim.txt"
+    },
+    {
+      "source_id": "records_file_box",
+      "exact_public_reference": "https://opendata.cern.ch/static/dist/js/cernopendata_records_file_box.b259516a5367dc4dd788.js",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 262144,
+      "received_body_bytes": 18364,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "records_file_box.txt",
+      "sha256": "513bafe3a1ca9e28b8f91a0d191df4aba237e1fd109c4480d7b99275b617a99a",
+      "retained_path": ".local/phase5d_sources_additional_20261012/records_file_box.txt"
+    },
+    {
+      "source_id": "research_containers",
+      "exact_public_reference": "https://opendata.atlas.cern/docs/tutresearch/containers",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 27441,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "research_containers.html",
+      "sha256": "8f66488d093fb5da1717ca4679e8ebfd284e5c765b21b9fa8799d815d5e5906a",
+      "retained_path": ".local/phase5d_sources_additional_20261012/research_containers.html"
+    },
+    {
+      "source_id": "cpalg_intro",
+      "exact_public_reference": "https://atlas-software.docs.cern.ch/analysis/analysis_tutorial/AnalysisSWTutorial/cpalg_intro/",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 524288,
+      "received_body_bytes": 243417,
+      "status": "PASS_OFFICIAL_DOCUMENT",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "cpalg_intro.html",
+      "sha256": "1196bfedf00f176763b2005001a25b8f13d890f4d12525c5574e6a798672e1f7",
+      "retained_path": ".local/phase5d_sources_additional_20261012/cpalg_intro.html"
+    },
+    {
+      "source_id": "data2015_index_page",
+      "exact_public_reference": "https://opendata.cern.ch/record/80000/filepage/1?group=1",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 2097152,
+      "received_body_bytes": 150761,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "data2015_index_page.json",
+      "sha256": "078a36a5212d88b2b16ad705e7dd0a0ee48a8b2a5e13c6fb325188ea403dfb2b",
+      "retained_path": ".local/phase5d_candidate_sources_20261012/data2015_index_page.json"
+    },
+    {
+      "source_id": "record80011",
+      "exact_public_reference": "https://opendata.cern.ch/api/records/80011",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 4194304,
+      "received_body_bytes": 15252,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "record80011.json",
+      "sha256": "3a5de86868f45da38d7bca4cfd226768205d340b6659bd01581ab0b4cc1a014a",
+      "retained_path": ".local/phase5d_candidate_sources_20261012/record80011.json"
+    },
+    {
+      "source_id": "research_systematics",
+      "exact_public_reference": "https://opendata.atlas.cern/docs/documentation/systematics",
+      "reserve_bytes": 65536,
+      "body_cap_bytes": 131072,
+      "received_body_bytes": 42187,
+      "status": "PASS_OFFICIAL_METADATA",
+      "tls_verification": true,
+      "http_status": 200,
+      "saved_name": "research_systematics.html",
+      "sha256": "15ae14edcfa5ce2efe44b547cc551b01ca776cea25b4e80e8ca095e34d440b7c",
+      "retained_path": ".local/phase5d_candidate_sources_20261012/research_systematics.html"
+    }
+  ],
+  "accounting": {
+    "requests": 16,
+    "received_metadata_body_bytes": 1678884,
+    "reserve_bytes": 1048576,
+    "phase5d_incremental_charged_bytes": 2727460,
+    "phase5_charged_bytes": 8422935,
+    "cumulative_charged_bytes": 86556957,
+    "phase5_limit_bytes": 134217728,
+    "cumulative_limit_bytes": 268435456,
+    "ROOT_requests": 0,
+    "ROOT_payload_bytes": 0,
+    "ROOT_acquired": false,
+    "wire_control_and_provider_search_traffic": "UNMEASURED",
+    "scope": "HTTP metadata/source bodies plus per-application-operation reserve; not a measured wire-byte cap. No redirects, automatic retries, storage-route retry or ROOT GET. Git and provider-mediated discovery traffic outside this payload receipt."
+  },
+  "privacy": "Explicit public-source projection; no raw exceptions, proxy endpoints, resolved addresses, redirect capabilities or public author personal metadata exported."
+}
