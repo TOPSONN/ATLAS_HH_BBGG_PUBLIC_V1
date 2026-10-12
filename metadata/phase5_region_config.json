@@ -1,0 +1,114 @@
+{
+  "schema": "atlas-study-regions-v1",
+  "definition_version": "study-regions-v1",
+  "purpose": "Prospective diphoton-plus-inclusive-jets methods study; no official ATLAS region equivalence",
+  "physical_transfer_factor_application": "BLOCKED",
+  "physical_closure_status": "BLOCKED",
+  "synthetic_framework_status": "PASS_FOCUSED_TEST_ONLY",
+  "kinematic_unit_provenance": "PROVISIONAL",
+  "mass_threshold_unit": "GeV under the preserved Phase3 provisional unit contract",
+  "selection": {
+    "source": "metadata/phase3_selection_config.ini",
+    "sha256": "77d57cd6fa204aad5a24031ac925c4e20e121b8aee35148cc29b522b39cf5751",
+    "definition_version": "study-preselection-v1",
+    "population": "C5 before C6, followed by separate unchanged C7-C9 jet predicates",
+    "source_valid_required": true,
+    "photon_multiplicity_minimum": 2,
+    "leading_photon_pt_strictly_greater_than": 35,
+    "subleading_photon_pt_strictly_greater_than": 25,
+    "photon_abs_eta_strictly_less_than": 2.37,
+    "photon_crack_excludes_open_interval": [1.37, 1.52],
+    "jet_multiplicity_minimum": 2,
+    "each_leading_jet_pt_strictly_greater_than": 25,
+    "each_leading_jet_abs_eta_strictly_less_than": 2.5,
+    "btag_requirement": false,
+    "tight_id_and_isolation_required": false,
+    "outside_mass_window_from_c9": false
+  },
+  "study_domain": {
+    "variable": "m_gg",
+    "low": 105,
+    "high": 160,
+    "low_inclusive": true,
+    "high_inclusive": true
+  },
+  "mass_window": {
+    "variable": "m_gg",
+    "low": 120,
+    "high": 130,
+    "low_inclusive": true,
+    "high_inclusive": false
+  },
+  "partition": {
+    "variable": "abs(leading_photon_eta-subleading_photon_eta)",
+    "split": 1,
+    "A": "value < split",
+    "B": "value >= split",
+    "physical_independence_from_m_gg": "UNKNOWN"
+  },
+  "regions": {
+    "CR": {"partition": "A", "mass": "study_domain AND NOT mass_window"},
+    "VR": {"partition": "B", "mass": "study_domain AND NOT mass_window"},
+    "PROSPECTIVE_SR": {"partition": "A", "mass": "mass_window"},
+    "RESERVED_WINDOW_PARTITION": {"partition": "B", "mass": "mass_window"},
+    "OUTSIDE_STUDY_DOMAIN": {"mass": "m_gg < 105 OR m_gg > 160", "included_in_transfer_factor": false}
+  },
+  "scope_limits": {
+    "background_dominated": "UNKNOWN",
+    "signal_contamination": "UNKNOWN",
+    "existing_data_mass_histograms_already_inspected": true,
+    "blinded_analysis_claim": false,
+    "generator_phase_space_coverage": "NOT_ESTABLISHED_BY_REGION_DEFINITION",
+    "trigger_compatibility": "UNKNOWN",
+    "absolute_normalization": "BLOCKED",
+    "bjet_or_HH_signal_region_claim": false,
+    "region_disjointness_implies_statistical_independence": false
+  },
+  "transfer_factor": {
+    "mode": "SYNTHETIC_ONLY",
+    "formula": "T = MC_SR / MC_CR",
+    "prediction": "B_SR = T * (Data_CR - sum(other_backgrounds_CR))",
+    "statistical_model": "Explicit signed yield moments and full supplied covariance; first-order Jacobian propagation",
+    "signed_weights": "PRESERVED",
+    "negative_numeric_prediction": "PRESERVED_AS_SYNTHETIC_DIAGNOSTIC; NOT_A_PHYSICAL_RATE",
+    "denominator_condition": "abs(sumw)/sumabs > minimum_relative_signed_sum",
+    "default_minimum_relative_signed_sum": 1e-12,
+    "event_identity": ["canonical_sample_namespace", "run", "event"],
+    "calibration_validation_event_overlap": "REJECT",
+    "mixed_sample_overlap_unknown_or_present": "REJECT",
+    "prediction_sample_contract": "Union of MC calibration, DATA_CR and contamination namespaces, including all pairwise overlap dispositions",
+    "nuisance_parameters": "Only explicit synthetic covariance is propagated; no fit or physical constraints provided",
+    "ratio_interval_or_physical_closure_claim": false
+  },
+  "synthetic_boundary_sensitivity": {
+    "sr_low": [119, 120, 121],
+    "sr_high": [129, 130, 131],
+    "abs_delta_eta_split": [0.75, 1, 1.25],
+    "independent_partition_cases": 1782,
+    "physics_optimization_claim": false
+  },
+  "focused_test": {
+    "source": "tests/test_control_regions.cxx",
+    "assertions": 1887,
+    "rejection_cases": 51,
+    "status": "PASS",
+    "physical_events_used": 0,
+    "compiler": "Existing conda GNU C++20 toolchain",
+    "root": "6.40.04",
+    "integrated_ctest": "NOT_RECORDED_BY_FOCUSED_TEST"
+  },
+  "derived_cache_inventory": {
+    "source": "apps/phase5_region_inventory.cxx",
+    "accepted_schemas": ["DATA_PHASE2_28", "MC_PHASE4_24"],
+    "maximum_contiguous_entries": 64000,
+    "maximum_input_bytes": 67108864,
+    "maximum_line_bytes": 65536,
+    "native_ROOT_read": false,
+    "scope": "Descriptive raw occupancy and signed raw-weight diagnostic only",
+    "generator_weight_semantics": "UNKNOWN",
+    "normalization_or_scale_factors_applied": false,
+    "physical_transfer_factor_applied": false,
+    "synthetic_driver_tests": 10,
+    "synthetic_driver_status": "PASS"
+  }
+}
