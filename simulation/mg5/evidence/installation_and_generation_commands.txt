@@ -1,0 +1,11 @@
+# Actual source and isolated dependency installation, with HOME replacing the private user prefix.
+git clone --depth 1 --branch v3.5.16 https://github.com/mg5amcnlo/mg5amcnlo.git "$HOME/.local/share/atlas-hh-phase6a/mg5-v3.5.16"
+"$HOME/miniforge3/bin/conda" create --prefix "$HOME/.local/share/atlas-hh-phase6a/toolchain" --override-channels -c conda-forge python=3.12 gfortran_linux-64=14 gcc_linux-64=14 gxx_linux-64=14 make six --dry-run --json
+"$HOME/miniforge3/bin/conda" create --yes --prefix "$HOME/.local/share/atlas-hh-phase6a/toolchain" --override-channels -c conda-forge python=3.12 gfortran_linux-64=14 gcc_linux-64=14 gxx_linux-64=14 make six
+"$HOME/miniforge3/bin/conda" list --prefix "$HOME/.local/share/atlas-hh-phase6a/toolchain" --explicit
+python3 simulation/mg5/scripts/prepare_release.py --checkout "$HOME/.local/share/atlas-hh-phase6a/mg5-v3.5.16" --destination "$HOME/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16"
+python3 simulation/mg5/scripts/configure_local.py --mg5 "$HOME/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16" --toolchain "$HOME/.local/share/atlas-hh-phase6a/toolchain" --conda-sh "$HOME/miniforge3/etc/profile.d/conda.sh" --output .local/mg5_release_installation.json
+# Successful references (actual shipped self-service interface)
+bash simulation/mg5/scripts/generate_sample.sh --events 100 --seed 20261012 --energy 13000 --output .local/user-samples/smoke_100_verified
+bash simulation/mg5/scripts/generate_sample.sh --events 1000 --seed 20261013 --energy 13000 --output .local/user-samples/reference_1000_verified
+# The complete frozen conda explicit file is preferred for exact package replay.

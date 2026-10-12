@@ -1,0 +1,48 @@
+{
+  "figures": "NONE_GENERATED",
+  "gates": {
+    "A": {
+      "evidence": "Official source tag/commit, license, release recipe and unchanged retained source verified",
+      "state": "PASS"
+    },
+    "B": {
+      "evidence": "Massless five-flavour tree bbgg model and QCD<=2/QED<=2 content verified; 110 diagrams",
+      "state": "PASS"
+    },
+    "C": {
+      "evidence": "Actual complete banner cards and per-event finite phase-space cuts verified",
+      "state": "PASS"
+    },
+    "D": {
+      "evidence": "100 actual MG5 bbgg events generated and independently validated",
+      "state": "PASS"
+    },
+    "E": {
+      "evidence": "1000 actual MG5 bbgg events generated and independently validated",
+      "state": "PASS"
+    },
+    "F": {
+      "evidence": "Gzip, XML, particles, weights, mass shell and four-momentum checked for every event",
+      "state": "PASS"
+    },
+    "G": {
+      "evidence": "Actual integration logs, banners and initialization cross sections preserved",
+      "state": "PASS"
+    },
+    "H": {
+      "evidence": "Source/PDF/card/banner/log hashes and original/published event identities preserved",
+      "state": "PASS"
+    },
+    "I": {
+      "evidence": "GitHub publication requires both actual remote reference blobs and hash checks",
+      "state": "NOT_EVALUATED"
+    },
+    "J": {
+      "evidence": "Final staged/outgoing audits and actual GitHub CI required",
+      "state": "NOT_EVALUATED"
+    }
+  },
+  "no_automatic_merge": true,
+  "task": "PHASE6A_MADGRAPH5_LO_GENERATION_AND_GITHUB_SAMPLES_V1",
+  "verdict": "PARTIAL_MG5_GENERATION"
+}

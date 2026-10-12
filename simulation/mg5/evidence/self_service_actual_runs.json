@@ -1,0 +1,279 @@
+{
+  "interactive_cli": "Actual PTY: MG5_aMC prompt, help generate, quit; exit 0",
+  "isolated_output_check": "Final shipped command: 3 actual bbgg events; no py.py at repository root; generator parser/build caches inside local run output",
+  "publication": "Both additional personal samples LOCAL_ONLY; no LHE uploaded",
+  "runs": [
+    {
+      "actual_cards_authority": "Exact LHE banner text; post-run card separately retained (MG5 resets iseed=0)",
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "b860150332963042d804e9d03b47e5fb5079f146038ee0214e557ae7d2b379ab",
+        "run_card_sha256": "aab12895b35c4aea5da309df238d39fd6cb3b3d666eb61ea16fbc55a6ee44c5b"
+      },
+      "events_requested": 23,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 9.483541520000017,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 9.444279287,
+          "exit_code": 0
+        }
+      },
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "process": "generate p p > a a QCD=0 QED=2",
+      "profile": "diphoton",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 20261014,
+      "schema_version": 1,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[LOCAL_MG5_INSTALLATION]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "sqrt_s_gev": 14000.0,
+      "status": "PASS",
+      "validation": {
+        "actual_events": 23,
+        "compressed_bytes": 7210,
+        "compressed_file_sha256": "5f8afdec875fb28bec47fbb207374019160bae3f2431228aa6d4855e2839c13f",
+        "cross_section_pb": 14.181,
+        "cross_section_uncertainty_pb": 0.17,
+        "cut_extrema": {
+          "b_abs_eta": 0.0,
+          "draa": 3.1417049147585963,
+          "photon_abs_eta": 2.3293186646517356,
+          "photon_pt": 30.22978215107984
+        },
+        "decompressed_file_sha256": "63e3c5a7c2558bec4ff6a97af971382a9caea50d949ddb92e47cb4ddead5921b",
+        "event_content_sha256": "77d54a1a9a74cddfd4e2ac5966514e45ed4d7c29026cfcc13cacb6990f698cac",
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "-1,1": 4,
+          "-2,2": 5,
+          "-4,4": 2,
+          "-5,5": 1,
+          "2,-2": 7,
+          "4,-4": 4
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 1.019998308038339e-08,
+        "max_mass_shell_residual_gev2": 3.7786885513924062e-06,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 14.181,
+        "original_compressed_sha256": "ef0d77619eae544bd40f8cfa9da0698a5a494b007360a84c1c0e2e72a7610dae",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 23,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      }
+    },
+    {
+      "actual_cards_authority": "Exact LHE banner text; post-run card separately retained (MG5 resets iseed=0)",
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "2f579e6fca1d738618f102f5983f047a74373b78fd0fd741eb426fd7565e2b17",
+        "run_card_sha256": "f7ea1fd1124bca0613c9f172b40d21aed44efefff6d609e0e020c447c1f00fe3"
+      },
+      "events_requested": 7,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 18.951025950000002,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 8.761216791999985,
+          "exit_code": 0
+        }
+      },
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "process": "generate p p > b b~ a a QCD=2 QED=2",
+      "profile": "bbgg",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 20261018,
+      "schema_version": 1,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[LOCAL_MG5_INSTALLATION]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "sqrt_s_gev": 13000.0,
+      "status": "PASS",
+      "validation": {
+        "actual_events": 7,
+        "compressed_bytes": 6732,
+        "compressed_file_sha256": "56c769c17fffde7b8788e1720dd92d17789c6200e2c73f9b155554a9f9dce575",
+        "cross_section_pb": 0.06527959,
+        "cross_section_uncertainty_pb": 0.0005053569,
+        "cut_extrema": {
+          "b_abs_eta": 3.3469463645739363,
+          "b_pt": 23.485141316515897,
+          "draa": 0.46495527495716504,
+          "drab": 0.4972012251749597,
+          "drbb": 1.4225146975469851,
+          "photon_abs_eta": 2.3213961738380378,
+          "photon_pt": 26.523777770139798
+        },
+        "decompressed_file_sha256": "b76f86e96f475c2716c61b77d6d2088cb4d31b7170c131ae8494a853beb9bc59",
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "647f6a1411618c2c838499c24d9b78a4779be40fa862ff6967461518fd8f821d",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "2,-2": 2,
+          "21,21": 4,
+          "4,-4": 1
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 5.020001481170766e-08,
+        "max_mass_shell_residual_gev2": 0.00016102567315101624,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.065279588,
+        "original_compressed_sha256": "5bbdeb77c2651696738033f5da6c8aa4cc4acd990523cf3383f9eea10b36716a",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 7,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      }
+    },
+    {
+      "actual_cards_authority": "Exact LHE banner text; post-run card separately retained (MG5 resets iseed=0)",
+      "card_hashes": {
+        "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+        "process_card_sha256": "e9f687ef7a5f0355a7a828b175e95ca63db29a494d3ec09216d41753abfb2ce1",
+        "run_card_sha256": "272027b0dfd2d360993f668a27e35c92c237dd1edb261dcfe473cdc614533d46"
+      },
+      "events_requested": 3,
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 23.34456748599999,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 12.733620561999999,
+          "exit_code": 0
+        }
+      },
+      "lhe": "sample.lhe",
+      "lhe_gz": "sample.lhe.gz",
+      "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+      "process": "generate p p > b b~ a a QCD=2 QED=2",
+      "profile": "bbgg",
+      "publication": "LOCAL_ONLY",
+      "random_seed": 20261019,
+      "schema_version": 1,
+      "source_identity": {
+        "conda_sh": "[LOCAL_CONDA_SH]",
+        "mg5_path": "[LOCAL_MG5_INSTALLATION]",
+        "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "source_tag": "v3.5.16",
+        "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+        "toolchain_prefix": "[LOCAL_TOOLCHAIN]"
+      },
+      "sqrt_s_gev": 13000,
+      "status": "PASS",
+      "validation": {
+        "actual_events": 3,
+        "compressed_bytes": 5936,
+        "compressed_file_sha256": "55a617ed4314050c507ede7fcb9b3fa9c03e597799300ed81f39dcf9c5367a6a",
+        "cross_section_pb": 0.06664839,
+        "cross_section_uncertainty_pb": 0.0006869408,
+        "cut_extrema": {
+          "b_abs_eta": 2.217822816846095,
+          "b_pt": 41.45325354126,
+          "draa": 1.4722964482330572,
+          "drab": 0.8511044658919968,
+          "drbb": 2.383819068689267,
+          "photon_abs_eta": 2.0794512035117805,
+          "photon_pt": 25.392023578446633
+        },
+        "decompressed_file_sha256": "2a6caa0ec05a49036e650a580e3c5db150c05c28c1be3b1ee72dcec8f845ab77",
+        "event_alpha_em_values": [
+          0.007546771
+        ],
+        "event_alpha_s_values": [
+          0.1238062
+        ],
+        "event_content_sha256": "4cb806842c3adcc3d1dd8d2c1dd34bcbab0cafddb09701cc436b531323008d37",
+        "event_scale_values_gev": [
+          125.0
+        ],
+        "idwtup": -4,
+        "incoming_pdg_pair_counts": {
+          "2,-2": 1,
+          "21,21": 2
+        },
+        "lhe_version": "3.0",
+        "max_four_momentum_residual_gev": 5.299989425111562e-08,
+        "max_mass_shell_residual_gev2": 1.0501244105398655e-05,
+        "mg5_version": "3.5.16",
+        "negative_weight_count": 0,
+        "nominal_event_weight": 0.066648393,
+        "original_compressed_sha256": "c1aac786110fe8d3b1d3983f640cbff1fa1f84df0b698a08a64e1540478206e7",
+        "pdf_groups": [
+          0,
+          0
+        ],
+        "pdf_ids": [
+          10042,
+          10042
+        ],
+        "positive_weight_count": 3,
+        "tolerances": {
+          "closure_atol_gev": 1e-06,
+          "closure_rtol": 5e-09,
+          "shell_atol_gev2": 1e-06,
+          "shell_rtol": 5e-09
+        },
+        "validation_status": "PASS",
+        "zero_weight_count": 0
+      }
+    }
+  ]
+}

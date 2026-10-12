@@ -1,0 +1,35 @@
+name: MG5 reference samples
+on:
+  push:
+    branches: [main, codex/phase6a-mg5-lo-bbgg]
+    paths:
+      - 'simulation/mg5/**'
+      - 'reference_samples/mg5/**'
+      - '.github/workflows/mg5_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  pull_request:
+    paths:
+      - 'simulation/mg5/**'
+      - 'reference_samples/mg5/**'
+      - '.github/workflows/mg5_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate actual compressed references and provenance
+        run: python -B simulation/mg5/scripts/validate_lhe.py --repository . --report "$RUNNER_TEMP/mg5-validation.json"
+      - name: Adversarial tests on copies of real MG5 outputs
+        run: python -B -m unittest discover -s simulation/mg5/tests -v
+      - name: Check exact archive allowlist and reject generated process outputs
+        run: python -B simulation/mg5/scripts/audit_payload.py --tracked

@@ -1,0 +1,21 @@
+Test project [REPOSITORY]/.local/root-regression-build
+    Start 1: root_io
+1/5 Test #1: root_io ..........................   Passed    1.23 sec
+    Start 2: rdataframe
+2/5 Test #2: rdataframe .......................   Passed    0.26 sec
+    Start 3: roofit_roostats
+3/5 Test #3: roofit_roostats ..................   Passed    0.36 sec
+    Start 4: root_schema_suite
+4/5 Test #4: root_schema_suite ................   Passed    0.75 sec
+    Start 5: bounded_transfer
+5/5 Test #5: bounded_transfer .................   Passed    0.20 sec
+
+100% tests passed out of 5
+
+Label Time Summary:
+metadata     =   0.20 sec*proc (1 test)
+phase1       =   0.95 sec*proc (2 tests)
+step1        =   1.85 sec*proc (3 tests)
+synthetic    =   2.80 sec*proc (5 tests)
+
+Total Test time (real) =   2.84 sec
