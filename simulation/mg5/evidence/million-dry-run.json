@@ -1,0 +1,35 @@
+{
+  "status": "DRY_RUN",
+  "events_generated": 0,
+  "output": "[LOCAL_RUN_ROOT]/pp_bbgg_1m",
+  "request": {
+    "profile": "bbgg",
+    "process": "generate p p > b b~ a a QCD=2 QED=2",
+    "events_requested": 1000000,
+    "random_seed": 12345,
+    "sqrt_s_gev": 13000.0,
+    "jobs": 2,
+    "max_hours": 24.0,
+    "max_disk_gb": 20.0,
+    "process_card_sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+    "supplied_run_card_sha256": null,
+    "supplied_param_card_sha256": null,
+    "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7"
+  },
+  "resources": {
+    "available_logical_cpus": 8,
+    "jobs": 2,
+    "ram_total_bytes": 8051187712,
+    "ram_available_bytes": 7510315008,
+    "disk_free_bytes": 1009610661888,
+    "disk_total_bytes": 1081101176832,
+    "output_size_estimate_bytes": "UNKNOWN",
+    "runtime_estimate_seconds": "UNKNOWN",
+    "estimate_basis": "No extrapolated production benchmark; limits are enforced during the run",
+    "max_hours": 24.0,
+    "max_disk_gb": 20.0,
+    "disk_budget_scope": "entire sample output directory; GiB (1024^3 bytes)",
+    "free_disk_stop_bytes": 268435456
+  },
+  "source_files_verified": 4658
+}

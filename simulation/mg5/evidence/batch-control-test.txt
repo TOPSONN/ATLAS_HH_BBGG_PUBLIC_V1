@@ -1,0 +1,59 @@
+PASS: existing complete sample independently revalidated: [LOCAL_RUN_ROOT]/phase6a_v2_batch_reuse_test/batch_01/sample.lhe.gz
+{
+  "status": "MANIFEST_SNAPSHOT",
+  "target_events": 100,
+  "complete_events": 0,
+  "counts_independently_validated": false,
+  "reference_samples_included": false,
+  "batches": [
+    {
+      "directory": "batch_01",
+      "seed": 12345,
+      "status": "NOT_STARTED",
+      "actual_events": 0
+    }
+  ],
+  "cross_section_combination": "NOT_COMPUTED; repeated-process cross sections must never be summed",
+  "event_concatenation": "NOT_PERFORMED; each batch is an independent complete LHE file"
+}
+Stop requested; controller will stop its active batch and preserve all attempts
+{
+  "status": "INCOMPLETE",
+  "target_events": 100,
+  "complete_events": 0,
+  "counts_independently_validated": true,
+  "reference_samples_included": false,
+  "batches": [
+    {
+      "directory": "batch_01",
+      "seed": 12345,
+      "status": "NOT_STARTED",
+      "actual_events": 0
+    }
+  ],
+  "cross_section_combination": "NOT_COMPUTED; repeated-process cross sections must never be summed",
+  "event_concatenation": "NOT_PERFORMED; each batch is an independent complete LHE file"
+}
+{
+  "status": "PASS",
+  "target_events": 100,
+  "complete_events": 100,
+  "counts_independently_validated": true,
+  "reference_samples_included": false,
+  "batches": [
+    {
+      "directory": "batch_01",
+      "seed": 12345,
+      "status": "PASS",
+      "actual_events": 100,
+      "compressed_file_sha256": "22ad7f548221f872c1e5d80a98e0af4d2435caf3eb838f8aabecd095f6e355b6",
+      "cross_section_pb": 0.06685344,
+      "cross_section_uncertainty_pb": 0.0005076687,
+      "event_content_sha256": "3d94f63295eae67d36523e2dbc6aa5ea85c5d99555e999012850118d6b4f7543"
+    }
+  ],
+  "cross_section_combination": "NOT_COMPUTED; repeated-process cross sections must never be summed",
+  "event_concatenation": "NOT_PERFORMED; each batch is an independent complete LHE file"
+}
+TEST_ONLY: copied and revalidated existing smoke100; zero new MG5 events
+CONTROL_TEST: stopped unstarted plan, verified INCOMPLETE with zero actual events

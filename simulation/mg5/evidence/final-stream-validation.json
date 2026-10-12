@@ -1,0 +1,70 @@
+{
+  "actual_events": 1000,
+  "compressed_bytes": 166712,
+  "compressed_file_sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1",
+  "cross_section_pb": 0.06569109,
+  "cross_section_uncertainty_pb": 0.0004706016,
+  "cut_extrema": {
+    "b_abs_eta": 4.359269783198682,
+    "b_pt": 20.004453547466287,
+    "draa": 0.4102473308375722,
+    "drab": 0.40177047065836835,
+    "drbb": 0.43153473178173757,
+    "photon_abs_eta": 2.496462810963068,
+    "photon_pt": 25.00692592371943
+  },
+  "decompressed_bytes": 969559,
+  "decompressed_file_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+  "distinct_value_lists_truncated": [],
+  "event_alpha_em_values": [
+    0.007546771
+  ],
+  "event_alpha_s_values": [
+    0.1238062
+  ],
+  "event_content_sha256": "cf0c79f6edf5c301ac38a30eef4ce333033ac3185c5448c4d21fa053722b5ffc",
+  "event_scale_values_gev": [
+    125.0
+  ],
+  "file_format": "gzip",
+  "idwtup": -4,
+  "incoming_pdg_pair_counts": {
+    "-1,1": 17,
+    "-2,2": 191,
+    "-3,3": 3,
+    "-4,4": 18,
+    "-5,5": 11,
+    "1,-1": 26,
+    "2,-2": 202,
+    "21,21": 495,
+    "3,-3": 3,
+    "4,-4": 25,
+    "5,-5": 9
+  },
+  "lhe_version": "3.0",
+  "max_four_momentum_residual_gev": 9.699988368083723e-08,
+  "max_mass_shell_residual_gev2": 0.00032616592943668365,
+  "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "mg5_version": "3.5.16",
+  "negative_weight_count": 0,
+  "nominal_event_weight": 0.06569109,
+  "pdf_groups": [
+    0,
+    0
+  ],
+  "pdf_ids": [
+    10042,
+    10042
+  ],
+  "positive_weight_count": 1000,
+  "run_manifest_validation": "PASS",
+  "tolerances": {
+    "closure_atol_gev": 1e-06,
+    "closure_rtol": 5e-09,
+    "shell_atol_gev2": 1e-06,
+    "shell_rtol": 5e-09
+  },
+  "validation_status": "PASS",
+  "validator": "streaming_all_events",
+  "zero_weight_count": 0
+}

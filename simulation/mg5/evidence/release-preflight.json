@@ -1,0 +1,37 @@
+{
+  "status": "PREFLIGHT_PASS_NO_UPLOAD",
+  "actual_events_total": 1000,
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "tag": "phase6a-v2-local-publication-check",
+  "draft": true,
+  "assets": [
+    {
+      "name": "phase6a_v2_reference_1000.lhe.gz",
+      "size_bytes": 166712,
+      "sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1"
+    },
+    {
+      "name": "phase6a_v2_reference_1000.metadata.json",
+      "size_bytes": 1308,
+      "sha256": "2836a57649b332cefdab285c867328b132652ff65f082a1748dfb5861ea6ab66"
+    },
+    {
+      "name": "phase6a_v2_reference_1000.cards.json",
+      "size_bytes": 17359,
+      "sha256": "c053f0db22ab00fe52816b73580f771aff926a289ce2a8705f0d14126c8cc9e6"
+    },
+    {
+      "name": "release_manifest.json",
+      "size_bytes": 2293,
+      "sha256": "22d640b54e5a2f90cb85f8442f0ab6a21577f62b1cdc9d425101c2b561e010f0"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size_bytes": 396,
+      "sha256": "fc7abcf4a59e362b95a9f4c377d194ac96f2f656de722cdc790beab58fc00ee7"
+    }
+  ],
+  "asset_limit_bytes_exclusive": 2147483648,
+  "limit_documentation": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
+  "production_publication": "NOT_EVALUATED"
+}

@@ -1,0 +1,277 @@
+{
+  "samples": [
+    {
+      "actual_events": 100,
+      "alpha_em_settings": {
+        "aEWM1": 132.507,
+        "alpha_em": 0.0075467711139788835,
+        "input_scheme": "aEWM1, GF=1.16639e-5 GeV^-2, MZ=91.188 GeV; MW derived"
+      },
+      "alpha_s_settings": {
+        "event_aqcd": 0.1238062,
+        "note": "Hadronic alpha_s follows the built-in PDF; the exact banner records MG5's PDF-adjusted parameter",
+        "param_card_as": 0.129783,
+        "pdf_alpha_s_mz": 0.13,
+        "running": "CTEQ6L1 LO one-loop",
+        "model_default_as_before_pdf_update": 0.118
+      },
+      "b_mass_treatment": "MB=0 GeV and ymb=0 in sm-no_b_mass",
+      "beam_energies_gev": [
+        6500,
+        6500
+      ],
+      "compressed_bytes": 22449,
+      "compressed_file_sha256": "22ad7f548221f872c1e5d80a98e0af4d2435caf3eb838f8aabecd095f6e355b6",
+      "cross_section_uncertainty_pb": 0.0005076687,
+      "decompressed_file_sha256": "957cb2f41e962c95575de1c5a9bbb1d5ba5daa467107236b0145a3f65fe98dff",
+      "event_content_sha256": "3d94f63295eae67d36523e2dbc6aa5ea85c5d99555e999012850118d6b4f7543",
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 10.035044036999977,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 2.002539726000009,
+          "exit_code": 0
+        }
+      },
+      "factorization_scale": {
+        "beam1_gev": 125,
+        "beam2_gev": 125,
+        "type": "fixed"
+      },
+      "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/smoke_100.lhe.gz",
+      "flavour_scheme": "5F massless hard process; u,d,s,c,b and antiquarks in proton; no top PDF",
+      "generation_cuts": {
+        "b_abs_eta_max": 5,
+        "b_pt_min_gev": 20,
+        "delta_r_aa_min": 0.4,
+        "delta_r_ab_min": 0.4,
+        "delta_r_bb_min": 0.4,
+        "maxjetflavor_for_cut_classification": 4,
+        "photon_abs_eta_max": 2.5,
+        "photon_isolation": "fixed parton-photon separation only; ptgmin=0 disables smooth-cone isolation",
+        "photon_pt_min_gev": 25
+      },
+      "generator_cross_section_pb": 0.06685344,
+      "generator_weight_convention": {
+        "description": "positive constant XWGTUP in pb equals integrated cross section; histogram normalization is XWGTUP/N",
+        "event_norm": "average",
+        "idwtup": -4
+      },
+      "lhe_publication_transformation": "NONE; decompressed bytes unchanged; deterministic gzip mtime=0, no filename",
+      "mg5_source_identity": {
+        "commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "tag": "v3.5.16",
+        "url": "https://github.com/mg5amcnlo/mg5amcnlo.git"
+      },
+      "mg5_version": "3.5.16",
+      "negative_weight_count": 0,
+      "original_compressed_file_sha256": "7e84bb380b2a0dd7ac471210da4461290f8b2888c349879d5bd2899ed34f212b",
+      "original_decompressed_file_sha256": "957cb2f41e962c95575de1c5a9bbb1d5ba5daa467107236b0145a3f65fe98dff",
+      "param_card_path": "simulation/mg5/cards/smoke_100/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "pdf_name_and_id": {
+        "data_source": "Template/LO/lib/Pdfdata/cteq6l1.tbl",
+        "interface": "MG5 built-in Ctq6Pdf.f",
+        "lhapdf_id": 10042,
+        "name": "CTEQ6L1"
+      },
+      "perturbative_order": "LO",
+      "physics_model": "sm-no_b_mass (bundled SM UFO, diagonal CKM, massless b and zero b Yukawa)",
+      "physics_process": "p p > b b~ a a QCD=2 QED=2",
+      "process_card_path": "simulation/mg5/cards/smoke_100/proc_card_mg5.dat",
+      "process_card_sha256": "e9f687ef7a5f0355a7a828b175e95ca63db29a494d3ec09216d41753abfb2ce1",
+      "provenance_files": [
+        {
+          "original_sha256": "457a0c8cb98d88af92b87fb34a10fa40d8e83825305866001681a5ab147866ae",
+          "path": "simulation/mg5/evidence/smoke_100/generator_banner.txt",
+          "sha256": "457a0c8cb98d88af92b87fb34a10fa40d8e83825305866001681a5ab147866ae",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "3d287ffab6ba825b50fb938717b770aa38acae3164e5f5ce35796bf61bdeaae7",
+          "path": "simulation/mg5/evidence/smoke_100/process_generation.txt",
+          "sha256": "c9d36db2c1cbd6ee257bfb0446e2408162591929a54d71c8978013964d1769e4",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "ab5d70604b6ee6e1c2d4a4b065f6cbdcdedbb1fed1d0b6fc69823bc9f4489def",
+          "path": "simulation/mg5/evidence/smoke_100/event_generation.txt",
+          "sha256": "3af10db2983330dbdee1e19a9892673282d85cbb90d9cc0a2c7b494cfac985c2",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291",
+          "path": "simulation/mg5/cards/smoke_100/me5_configuration.txt",
+          "sha256": "5ba043b0886e9f5c25f51767db28ebc3be1fe9d1b60d5ab3f2de48fab1d49354",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "e053b192168e3a6bea32d762917d01c37016185248368cfabaf1d8462f3c6c1b",
+          "path": "simulation/mg5/evidence/smoke_100/generate.mg5",
+          "sha256": "e053b192168e3a6bea32d762917d01c37016185248368cfabaf1d8462f3c6c1b",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "fccddf7acf21615ed5eb159e5d712baa0a21b8727b0dba7b63769dce00ff271c",
+          "path": "simulation/mg5/evidence/smoke_100/launch.mg5",
+          "sha256": "fccddf7acf21615ed5eb159e5d712baa0a21b8727b0dba7b63769dce00ff271c",
+          "transformation": "NONE"
+        }
+      ],
+      "random_seed": 12345,
+      "renormalization_scale": {
+        "gev": 125,
+        "type": "fixed"
+      },
+      "requested_events": 100,
+      "run_card_path": "simulation/mg5/cards/smoke_100/run_card.dat",
+      "run_card_sha256": "530e6707d03171106f0b7886e51af33e64d1c155f9da4a0f8efebfb7ad6d05e9",
+      "sample_id": "smoke_100",
+      "sqrt_s_gev": 13000,
+      "validation_status": "PASS",
+      "zero_weight_count": 0,
+      "total_elapsed_seconds": 12.17122372,
+      "measured_events_per_second": 8.21610072253277,
+      "performance_scope": "Measured small reference including process setup, integration, export and validation; not a production benchmark"
+    },
+    {
+      "actual_events": 1000,
+      "alpha_em_settings": {
+        "aEWM1": 132.507,
+        "alpha_em": 0.0075467711139788835,
+        "input_scheme": "aEWM1, GF=1.16639e-5 GeV^-2, MZ=91.188 GeV; MW derived"
+      },
+      "alpha_s_settings": {
+        "event_aqcd": 0.1238062,
+        "note": "Hadronic alpha_s follows the built-in PDF; the exact banner records MG5's PDF-adjusted parameter",
+        "param_card_as": 0.129783,
+        "pdf_alpha_s_mz": 0.13,
+        "running": "CTEQ6L1 LO one-loop",
+        "model_default_as_before_pdf_update": 0.118
+      },
+      "b_mass_treatment": "MB=0 GeV and ymb=0 in sm-no_b_mass",
+      "beam_energies_gev": [
+        6500,
+        6500
+      ],
+      "compressed_bytes": 166712,
+      "compressed_file_sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1",
+      "cross_section_uncertainty_pb": 0.0004706016,
+      "decompressed_file_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+      "event_content_sha256": "cf0c79f6edf5c301ac38a30eef4ce333033ac3185c5448c4d21fa053722b5ffc",
+      "execution": {
+        "event_generation": {
+          "elapsed_seconds": 21.343005276999975,
+          "exit_code": 0
+        },
+        "process_generation": {
+          "elapsed_seconds": 5.514558580000028,
+          "exit_code": 0
+        }
+      },
+      "factorization_scale": {
+        "beam1_gev": 125,
+        "beam2_gev": 125,
+        "type": "fixed"
+      },
+      "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "flavour_scheme": "5F massless hard process; u,d,s,c,b and antiquarks in proton; no top PDF",
+      "generation_cuts": {
+        "b_abs_eta_max": 5,
+        "b_pt_min_gev": 20,
+        "delta_r_aa_min": 0.4,
+        "delta_r_ab_min": 0.4,
+        "delta_r_bb_min": 0.4,
+        "maxjetflavor_for_cut_classification": 4,
+        "photon_abs_eta_max": 2.5,
+        "photon_isolation": "fixed parton-photon separation only; ptgmin=0 disables smooth-cone isolation",
+        "photon_pt_min_gev": 25
+      },
+      "generator_cross_section_pb": 0.06569109,
+      "generator_weight_convention": {
+        "description": "positive constant XWGTUP in pb equals integrated cross section; histogram normalization is XWGTUP/N",
+        "event_norm": "average",
+        "idwtup": -4
+      },
+      "lhe_publication_transformation": "NONE; decompressed bytes unchanged; deterministic gzip mtime=0, no filename",
+      "mg5_source_identity": {
+        "commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+        "tag": "v3.5.16",
+        "url": "https://github.com/mg5amcnlo/mg5amcnlo.git"
+      },
+      "mg5_version": "3.5.16",
+      "negative_weight_count": 0,
+      "original_compressed_file_sha256": "9a195fc9fe0e6efd92d046dcb198c660d03df9f594c7c03802bd3903e0bf30d7",
+      "original_decompressed_file_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+      "param_card_path": "simulation/mg5/cards/reference_1000/param_card.dat",
+      "param_card_sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125",
+      "pdf_name_and_id": {
+        "data_source": "Template/LO/lib/Pdfdata/cteq6l1.tbl",
+        "interface": "MG5 built-in Ctq6Pdf.f",
+        "lhapdf_id": 10042,
+        "name": "CTEQ6L1"
+      },
+      "perturbative_order": "LO",
+      "physics_model": "sm-no_b_mass (bundled SM UFO, diagonal CKM, massless b and zero b Yukawa)",
+      "physics_process": "p p > b b~ a a QCD=2 QED=2",
+      "process_card_path": "simulation/mg5/cards/reference_1000/proc_card_mg5.dat",
+      "process_card_sha256": "e9f687ef7a5f0355a7a828b175e95ca63db29a494d3ec09216d41753abfb2ce1",
+      "provenance_files": [
+        {
+          "original_sha256": "00c221c66958554c1f73ae002291e559e12c7c52e1057a2e5a0a184e617c3982",
+          "path": "simulation/mg5/evidence/reference_1000/generator_banner.txt",
+          "sha256": "00c221c66958554c1f73ae002291e559e12c7c52e1057a2e5a0a184e617c3982",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "68434046895ffc98f0226a3bcd237ca3ac80ed48fe9388e16b131452c3df8182",
+          "path": "simulation/mg5/evidence/reference_1000/process_generation.txt",
+          "sha256": "17e99774402c8bdc4d8ca40efe33ab2205cdf849c2b3ac3f8d1f8d99b0d7268f",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "256828fa61008b8e7052632554ed8236bb852e8e4f0e33c57ab5bc01008c3c9b",
+          "path": "simulation/mg5/evidence/reference_1000/event_generation.txt",
+          "sha256": "da959c94f9304fb1ca243e1aad7eb11f6e71c7cf429ddcfd48f29a24b5042f75",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291",
+          "path": "simulation/mg5/cards/reference_1000/me5_configuration.txt",
+          "sha256": "5ba043b0886e9f5c25f51767db28ebc3be1fe9d1b60d5ab3f2de48fab1d49354",
+          "transformation": "path placeholders only"
+        },
+        {
+          "original_sha256": "e053b192168e3a6bea32d762917d01c37016185248368cfabaf1d8462f3c6c1b",
+          "path": "simulation/mg5/evidence/reference_1000/generate.mg5",
+          "sha256": "e053b192168e3a6bea32d762917d01c37016185248368cfabaf1d8462f3c6c1b",
+          "transformation": "NONE"
+        },
+        {
+          "original_sha256": "3a9c0754418099035c445e18a6639cd172b0317036b182fb3e6d807f18284299",
+          "path": "simulation/mg5/evidence/reference_1000/launch.mg5",
+          "sha256": "3a9c0754418099035c445e18a6639cd172b0317036b182fb3e6d807f18284299",
+          "transformation": "NONE"
+        }
+      ],
+      "random_seed": 12346,
+      "renormalization_scale": {
+        "gev": 125,
+        "type": "fixed"
+      },
+      "requested_events": 1000,
+      "run_card_path": "simulation/mg5/cards/reference_1000/run_card.dat",
+      "run_card_sha256": "4da64199245dd09b61cce77dea90b447073c7a91c9861fe7e884d25d2fcc5952",
+      "sample_id": "reference_1000",
+      "sqrt_s_gev": 13000,
+      "validation_status": "PASS",
+      "zero_weight_count": 0,
+      "total_elapsed_seconds": 27.360765905999983,
+      "measured_events_per_second": 36.548684471610805,
+      "performance_scope": "Measured small reference including process setup, integration, export and validation; not a production benchmark"
+    }
+  ],
+  "schema_version": 1
+}

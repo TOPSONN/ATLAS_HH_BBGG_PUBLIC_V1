@@ -1,0 +1,134 @@
+{
+  "samples": [
+    {
+      "actual_events": 100,
+      "compressed_bytes": 22449,
+      "compressed_file_sha256": "22ad7f548221f872c1e5d80a98e0af4d2435caf3eb838f8aabecd095f6e355b6",
+      "cross_section_pb": 0.06685344,
+      "cross_section_uncertainty_pb": 0.0005076687,
+      "cut_extrema": {
+        "b_abs_eta": 3.5649931842714953,
+        "b_pt": 20.047091114830515,
+        "draa": 0.5118189078388564,
+        "drab": 0.4000072693868144,
+        "drbb": 0.446174720516122,
+        "photon_abs_eta": 2.4835321008156575,
+        "photon_pt": 25.040510721058734
+      },
+      "decompressed_bytes": 116352,
+      "decompressed_file_sha256": "957cb2f41e962c95575de1c5a9bbb1d5ba5daa467107236b0145a3f65fe98dff",
+      "event_alpha_em_values": [
+        0.007546771
+      ],
+      "event_alpha_s_values": [
+        0.1238062
+      ],
+      "event_content_sha256": "3d94f63295eae67d36523e2dbc6aa5ea85c5d99555e999012850118d6b4f7543",
+      "event_scale_values_gev": [
+        125.0
+      ],
+      "idwtup": -4,
+      "incoming_pdg_pair_counts": {
+        "-1,1": 1,
+        "-2,2": 21,
+        "-3,3": 1,
+        "-4,4": 1,
+        "2,-2": 25,
+        "21,21": 48,
+        "4,-4": 1,
+        "5,-5": 2
+      },
+      "lhe_version": "3.0",
+      "max_four_momentum_residual_gev": 5.299989425111562e-08,
+      "max_mass_shell_residual_gev2": 4.487484693527222e-05,
+      "mg5_version": "3.5.16",
+      "negative_weight_count": 0,
+      "nominal_event_weight": 0.066853438,
+      "pdf_groups": [
+        0,
+        0
+      ],
+      "pdf_ids": [
+        10042,
+        10042
+      ],
+      "positive_weight_count": 100,
+      "sample_id": "smoke_100",
+      "tolerances": {
+        "closure_atol_gev": 1e-06,
+        "closure_rtol": 5e-09,
+        "shell_atol_gev2": 1e-06,
+        "shell_rtol": 5e-09
+      },
+      "validation_status": "PASS",
+      "zero_weight_count": 0
+    },
+    {
+      "actual_events": 1000,
+      "compressed_bytes": 166712,
+      "compressed_file_sha256": "7d46d4daea74c1d77074af608594941d0a3212b59c24a7ed0ad6ca5f66b596d1",
+      "cross_section_pb": 0.06569109,
+      "cross_section_uncertainty_pb": 0.0004706016,
+      "cut_extrema": {
+        "b_abs_eta": 4.359269783198682,
+        "b_pt": 20.004453547466287,
+        "draa": 0.4102473308375722,
+        "drab": 0.40177047065836835,
+        "drbb": 0.43153473178173757,
+        "photon_abs_eta": 2.496462810963068,
+        "photon_pt": 25.00692592371943
+      },
+      "decompressed_bytes": 969559,
+      "decompressed_file_sha256": "0df2351431235610cb4013c2fa0aa5862b7d5913891fc958a93d295e8bddf6e2",
+      "event_alpha_em_values": [
+        0.007546771
+      ],
+      "event_alpha_s_values": [
+        0.1238062
+      ],
+      "event_content_sha256": "cf0c79f6edf5c301ac38a30eef4ce333033ac3185c5448c4d21fa053722b5ffc",
+      "event_scale_values_gev": [
+        125.0
+      ],
+      "idwtup": -4,
+      "incoming_pdg_pair_counts": {
+        "-1,1": 17,
+        "-2,2": 191,
+        "-3,3": 3,
+        "-4,4": 18,
+        "-5,5": 11,
+        "1,-1": 26,
+        "2,-2": 202,
+        "21,21": 495,
+        "3,-3": 3,
+        "4,-4": 25,
+        "5,-5": 9
+      },
+      "lhe_version": "3.0",
+      "max_four_momentum_residual_gev": 9.699988368083723e-08,
+      "max_mass_shell_residual_gev2": 0.00032616592943668365,
+      "mg5_version": "3.5.16",
+      "negative_weight_count": 0,
+      "nominal_event_weight": 0.06569109,
+      "pdf_groups": [
+        0,
+        0
+      ],
+      "pdf_ids": [
+        10042,
+        10042
+      ],
+      "positive_weight_count": 1000,
+      "sample_id": "reference_1000",
+      "tolerances": {
+        "closure_atol_gev": 1e-06,
+        "closure_rtol": 5e-09,
+        "shell_atol_gev2": 1e-06,
+        "shell_rtol": 5e-09
+      },
+      "validation_status": "PASS",
+      "zero_weight_count": 0
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+# Selected V2 publication
+
+Only the verified smoke_100.lhe.gz (seed12345) and reference_1000.lhe.gz (seed12346) are selected. Their actual counts, sizes, compressed/decompressed/event SHA256, cross sections/errors, full physics settings and exact card hashes are in sample_manifest.json. Original decompressed generator bytes and every event block are unchanged; only deterministic gzip container metadata is normalized.
+
+Logs/configuration evidence replaces local paths with documented placeholders and preserves original/published hashes. No third-party generator source, process build, integration grids, extra CLI-test LHE, private environment configuration, generated figures or large personal output is included. The .gitignore has only two exact gzip exceptions. Source cards/logs deliberately retain upstream whitespace.
+
+Generation never invokes GitHub. The manual Release command is dry-run by default and requires explicit --publish for a draft; it validates samples/counts/card provenance/checksums/private-path policy and GitHub limits before uploading. Each asset must be strictly below 2 GiB and releases may contain at most 1000 assets (official GitHub documentation linked in the guide). Upload verification requires remote names/sizes and downloaded hashes to match before reporting DRAFT_UPLOADED_VERIFIED. A failed upload remains an explicitly unverified partial draft requiring user inspection; no automatic overwrite/delete/publish or LFS setup is performed.
+
+The release preflight was physically executed using the real 1000-event run. No Release was created. Future million-event generation and large-sample GitHub publication are NOT_EVALUATED. Repository reference publication/CI evidence will be recorded after remote verification; local preparation alone does not meet gate I.
