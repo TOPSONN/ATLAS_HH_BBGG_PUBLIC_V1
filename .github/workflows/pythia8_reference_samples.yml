@@ -1,0 +1,43 @@
+name: Pythia8 shower reference integrity
+on:
+  push:
+    branches: [main, codex/phase6b-pythia8-shower-1k]
+    paths:
+      - 'simulation/pythia8/**'
+      - 'reference_samples/pythia8/**'
+      - 'metadata/phase6b*'
+      - 'reports/phase6b*'
+      - '.github/workflows/pythia8_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  pull_request:
+    paths:
+      - 'simulation/pythia8/**'
+      - 'reference_samples/pythia8/**'
+      - 'metadata/phase6b*'
+      - 'reports/phase6b*'
+      - '.github/workflows/pythia8_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact shower references, ledgers and hard-input provenance
+        run: python -B simulation/pythia8/scripts/validate_hepmc3.py --repository . --report "$RUNNER_TEMP/pythia8-integrity.json"
+      - name: Test shower publication and integrity failure paths
+        run: python -B -m unittest discover -s simulation/pythia8/tests -v
+      - name: Preserve MG5 input regression
+        run: |
+          python -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python -B -m unittest discover -s simulation/mg5/tests -v
+      - name: Audit bounded publication payload
+        run: python -B simulation/pythia8/scripts/audit_shower.py --tracked

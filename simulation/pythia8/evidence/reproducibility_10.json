@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "events_each": 10,
+  "independent_hard_statistics_added": 0,
+  "same_source_settings_seed_limit_versions": true,
+  "files": {
+    "shower.hepmc3": {
+      "first_sha256": "12381b3d2315c80f3c158088dbedfdd35ac4d809120158dabdcf98094b9bfa69",
+      "repeat_sha256": "12381b3d2315c80f3c158088dbedfdd35ac4d809120158dabdcf98094b9bfa69"
+    },
+    "shower.hepmc3.gz": {
+      "first_sha256": "874ccb3e2a4681a5e48a4f31ce02f143ca84a8b7ae1c7126c15b3615a6e6e731",
+      "repeat_sha256": "874ccb3e2a4681a5e48a4f31ce02f143ca84a8b7ae1c7126c15b3615a6e6e731"
+    },
+    "event_ledger.jsonl": {
+      "first_sha256": "6793e0f7e7aa21fd6624526653791e72be910e0db1f949587b8d7a127d683685",
+      "repeat_sha256": "6793e0f7e7aa21fd6624526653791e72be910e0db1f949587b8d7a127d683685"
+    },
+    "particle_diagnostics.jsonl": {
+      "first_sha256": "608c92e847db144e86ce9a9504241b44043933916cf6343834db035b037d7e1c",
+      "repeat_sha256": "608c92e847db144e86ce9a9504241b44043933916cf6343834db035b037d7e1c"
+    },
+    "source_events.jsonl": {
+      "first_sha256": "7555b827fa8427c758e39f1963177a38616e5b7ed66bfdd6175352dd0d786793",
+      "repeat_sha256": "7555b827fa8427c758e39f1963177a38616e5b7ed66bfdd6175352dd0d786793"
+    },
+    "settings.cmnd": {
+      "first_sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+      "repeat_sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+    },
+    "effective_settings.cmnd": {
+      "first_sha256": "2f94292d6db98f4220fae7eded28d33974ae5e9fb7933429ab5c8da861d9f2cc",
+      "repeat_sha256": "8540e1764c0eac69474d8014b2238e7273500131c5c68fd1e75721fb624b0945"
+    },
+    "effective_particle_data.xml": {
+      "first_sha256": "9b3f3b3782cc5a03424f08047c5533005ae4815fc1855f7d8364ee3ef6711ce0",
+      "repeat_sha256": "9b3f3b3782cc5a03424f08047c5533005ae4815fc1855f7d8364ee3ef6711ce0"
+    },
+    "physical_validation.json": {
+      "first_sha256": "7e82d856c044ad0070dc1c3b05ccf4a593bc6fa91a345873f13d1f4e1e542d09",
+      "repeat_sha256": "7e82d856c044ad0070dc1c3b05ccf4a593bc6fa91a345873f13d1f4e1e542d09"
+    },
+    "portable_validation.json": {
+      "first_sha256": "eca94673714cd869993b7c9178b0bbfa5a4ba10200d4e432859682ef2b2daf08",
+      "repeat_sha256": "eca94673714cd869993b7c9178b0bbfa5a4ba10200d4e432859682ef2b2daf08"
+    }
+  },
+  "scope": "same installed versions/compiler, single-stream deterministic command; no platform or multithread reproducibility claim",
+  "nonidentical_files": [
+    "effective_settings.cmnd"
+  ],
+  "metadata_scope": "All physics/output/ledger/source/particle-data/ReaderAscii hashes match; effective settings and portable report may carry distinct output paths. Differences are recorded, not concealed."
+}

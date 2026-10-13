@@ -1,0 +1,45 @@
+{
+  "assets_uploaded": false,
+  "draft": true,
+  "event_scope": "actual validated1000-run outputs; prefixes share the same hard events",
+  "git_lfs_enabled": false,
+  "github_asset_limit_bytes_exclusive": 2147483648,
+  "github_size_policy_source": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
+  "next_action": "User review and explicit authorization required before creating or uploading any large release",
+  "proposed_assets": [
+    {
+      "actual_events": 1000,
+      "compressed_bytes": 25204359,
+      "compressed_file_sha256": "a35e15942ac5442b3141960f0c0602f5a4cb63ea853f1090fa9e46f304209536",
+      "decompressed_file_sha256": "97ebc8dcbdd7ff249581a584f23e42e4d722961f65e8a370f6ca052d85c98db0",
+      "github_asset_size_preflight": "PASS",
+      "name": "bbgg_shower_1000.hepmc3.gz",
+      "source_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343"
+    },
+    {
+      "actual_events": 1000,
+      "compressed_bytes": 27381014,
+      "compressed_file_sha256": "ad173686a9d9cb342796016bdb2ea6b70f08a5b921233da0d33d9dd8945cf9bb",
+      "decompressed_file_sha256": "8259af7279df4828249da9e0f68dc9b3bf8ffc54ae8e8a112e2c9c16adba83bc",
+      "github_asset_size_preflight": "PASS",
+      "name": "ccgg_shower_1000.hepmc3.gz",
+      "source_file_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef"
+    },
+    {
+      "actual_events": 1000,
+      "compressed_bytes": 27259142,
+      "compressed_file_sha256": "2643f0c14440b25267a153b72a7d676c337fd182a39e62fdcbe2191361a91365",
+      "decompressed_file_sha256": "c62ba365bba6ddc4d4d1e613288af3215b89dce02d837f548f137b258d84ec5f",
+      "github_asset_size_preflight": "PASS",
+      "name": "jjgg_shower_1000.hepmc3.gz",
+      "source_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030"
+    }
+  ],
+  "proposed_tag": "phase6b-pythia8-full-1k-v1",
+  "release_created": false,
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "schema_version": 1,
+  "source_commit": "ee58a1b5a13f6fde939c81e68ea79bdac1a91023",
+  "source_commit_scope": "Verified scientific source/reference commit; provenance seal changes no assets or physics bytes",
+  "status": "DRAFT_RELEASE_PROPOSAL_LOCAL_ONLY"
+}

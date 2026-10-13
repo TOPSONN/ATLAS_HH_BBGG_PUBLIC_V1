@@ -1,0 +1,107 @@
+{
+  "PR_merged": false,
+  "assessment": "SOURCE_AND_REAL_REFERENCE_ACCEPTANCE_PASS; PROVENANCE_SEAL_FINAL_HEAD_CHECKED_SEPARATELY",
+  "delphes_installed_or_run": false,
+  "figures_created": 0,
+  "final_actual_inputs": 3000,
+  "final_valid_outputs": 3000,
+  "final_verdict": "PASS_PYTHIA8_SHOWER_AND_GITHUB_PUBLICATION",
+  "gates": {
+    "A": {
+      "evidence": "reports/phase6b_environment.md",
+      "state": "PASS"
+    },
+    "B": {
+      "evidence": "reports/phase6b_hepmc3_validation.md",
+      "state": "PASS"
+    },
+    "C": {
+      "evidence": "metadata/phase6b_input_manifest.json",
+      "state": "PASS"
+    },
+    "D": {
+      "evidence": "reports/phase6b_lhe_interface.md",
+      "state": "PASS"
+    },
+    "E": {
+      "evidence": "reports/phase6b_hadronization_validation.md",
+      "state": "PASS"
+    },
+    "F": {
+      "evidence": "metadata/phase6b_event_summary.csv",
+      "state": "PASS"
+    },
+    "G": {
+      "evidence": "reports/phase6b_event_identity.md",
+      "state": "PASS"
+    },
+    "H": {
+      "evidence": "reports/phase6b_weight_validation.md",
+      "state": "PASS"
+    },
+    "I": {
+      "evidence": "simulation/pythia8/evidence/*/physical_validation.json",
+      "state": "PASS"
+    },
+    "J": {
+      "evidence": "reports/phase6b_github_publication.md",
+      "state": "PASS"
+    },
+    "K": {
+      "evidence": "simulation/pythia8/USER_GUIDE_ZH_TW.md",
+      "state": "PASS"
+    },
+    "L": {
+      "evidence": "simulation/pythia8/evidence/github_source_head_verification.json; actual56new/59MG5 plus5C++/31upstream and10event reproducibility",
+      "state": "PASS"
+    }
+  },
+  "github_verification": {
+    "actual_fetched_files": 148,
+    "checked_source_reference_commit": "ee58a1b5a13f6fde939c81e68ea79bdac1a91023",
+    "full_git_blob_tree_equal": true,
+    "scope": "Verified source/reference commit; provenance final seal receives independent final-head CI and complete remote recheck. Its actual receipt is local and PR body links final checks, avoiding self-referential commit hashes.",
+    "workflow_runs": {
+      "MG5 reference samples": {
+        "conclusion": "success",
+        "databaseId": 38361258136,
+        "event": "pull_request",
+        "headSha": "ee58a1b5a13f6fde939c81e68ea79bdac1a91023",
+        "name": "MG5 reference samples",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38361258136",
+        "workflowName": "MG5 reference samples"
+      },
+      "Pythia8 shower reference integrity": {
+        "conclusion": "success",
+        "databaseId": 38361258047,
+        "event": "pull_request",
+        "headSha": "ee58a1b5a13f6fde939c81e68ea79bdac1a91023",
+        "name": "Pythia8 shower reference integrity",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38361258047",
+        "workflowName": "Pythia8 shower reference integrity"
+      }
+    }
+  },
+  "million_events_processed": false,
+  "old_failed_diagnostic_run": {
+    "events": 100,
+    "failed_particles": 3,
+    "failed_validation_events": 1,
+    "reference_accepted": false,
+    "valid_events": 99
+  },
+  "published_reference_events": 300,
+  "published_reference_plan_events": 300,
+  "pull_request_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12",
+  "schema_version": 1,
+  "source_reference_commit": "ee58a1b5a13f6fde939c81e68ea79bdac1a91023",
+  "states_allowed": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "UNKNOWN",
+    "NOT_EVALUATED"
+  ]
+}

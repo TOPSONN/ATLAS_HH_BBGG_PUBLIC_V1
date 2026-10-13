@@ -1,0 +1,101 @@
+{
+  "hard_sample_total_events": 3000,
+  "mg5_regenerated": false,
+  "physics": "sm-no_b_mass, external LO pp13TeV, CTEQ6L1, fixed125GeV source scales",
+  "samples": [
+    {
+      "compressed_bytes": 166818,
+      "compressed_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "cross_section_pb": 0.06624666,
+      "cross_section_uncertainty_pb": 0.0005940933,
+      "decompressed_bytes": 969612,
+      "decompressed_sha256": "0e69e904ad69e5a535750d7b13d546ee94ee036663a8db85cccee35dab144aa1",
+      "event_norm": "average",
+      "events": 1000,
+      "file": "reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "idwtup": -4,
+      "nominal_event_weight_pb": 0.066246662,
+      "original_manifest_sha256": "7dbc0440965a21983aa63fd25661ee52e0f679f6bebcea10c33f483e669cabce",
+      "profile": "bbgg",
+      "source_cards": {
+        "param_card": {
+          "path": "simulation/mg5/cards/reference_1000/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        },
+        "process_card": {
+          "path": "simulation/mg5/cards/reference_1000/proc_card_mg5.dat",
+          "sha256": "8d57622a06aa06b2cfcfed7cfec128b733552344c2be1d920e31f335f8a0fb81"
+        },
+        "run_card": {
+          "path": "simulation/mg5/cards/reference_1000/run_card.dat",
+          "sha256": "00b17883baedf6e2b621099c4bc33f9058501548bdf4b1c41c9d682015ab1b7d"
+        }
+      },
+      "validation_status": "PASS"
+    },
+    {
+      "compressed_bytes": 165830,
+      "compressed_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "cross_section_pb": 0.6274417,
+      "cross_section_uncertainty_pb": 0.005190692,
+      "decompressed_bytes": 969561,
+      "decompressed_sha256": "ca9836048c5de45e11f345e7524208c3356974bc2b8f97969dbf7678d7656430",
+      "event_norm": "average",
+      "events": 1000,
+      "file": "reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "idwtup": -4,
+      "nominal_event_weight_pb": 0.6274417,
+      "original_manifest_sha256": "d29b3662828a3292838264ffc94c217686309bec6fbd7e05cd4db9ef6540f575",
+      "profile": "ccgg",
+      "source_cards": {
+        "param_card": {
+          "path": "simulation/mg5/cards/ccgg_reference_1000/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        },
+        "process_card": {
+          "path": "simulation/mg5/cards/ccgg_reference_1000/proc_card_mg5.dat",
+          "sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2"
+        },
+        "run_card": {
+          "path": "simulation/mg5/cards/ccgg_reference_1000/run_card.dat",
+          "sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce"
+        }
+      },
+      "validation_status": "PASS"
+    },
+    {
+      "compressed_bytes": 168744,
+      "compressed_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "cross_section_pb": 9.436556,
+      "cross_section_uncertainty_pb": 0.0547472,
+      "decompressed_bytes": 969652,
+      "decompressed_sha256": "be361ac675a5379df5a30eaa5ac07b8ba95f8f7aeb3ea43add40761432467c69",
+      "event_norm": "average",
+      "events": 1000,
+      "file": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+      "idwtup": -4,
+      "nominal_event_weight_pb": 9.4365561,
+      "original_manifest_sha256": "efc6d895c40af86b7c303a93a4cd224406670d322a80962f9f1db2f9a8c3abb8",
+      "profile": "jjgg",
+      "source_cards": {
+        "param_card": {
+          "path": "simulation/mg5/cards/jjgg_reference_1000/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        },
+        "process_card": {
+          "path": "simulation/mg5/cards/jjgg_reference_1000/proc_card_mg5.dat",
+          "sha256": "6724ed8d59c4f04cd1651986fbec5e5ba3f6ab6d90d3a83599e18187383ae73f"
+        },
+        "run_card": {
+          "path": "simulation/mg5/cards/jjgg_reference_1000/run_card.dat",
+          "sha256": "5c388bb0fe5c11130ee79d327858b6b1a2982b76cf9e257bac572b529fd3b00f"
+        }
+      },
+      "validation_status": "PASS"
+    }
+  ],
+  "schema_version": 1,
+  "source_head": "2b028228280872f13c20ac2d45b88fba408272ed",
+  "source_pr": 11,
+  "validation_status": "PASS"
+}
