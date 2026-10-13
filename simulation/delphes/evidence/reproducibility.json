@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "actual repeated final self-service10 inputs; scientific content and exactcards/inputs match, ROOT UUID/timing bytes differ",
+  "scientific_sha256": "ab8026584d1b94edb1ca93e5f3162e35b0a03d62cebc913fbb47a1a2470fc340",
+  "first_root_sha256": "32cc87e062ff1d831b5413e5c870231d5be476ba0b3adceddd89022b4c9c26ca",
+  "repeat_root_sha256": "69df3fdf1d9c577d8161df6aa728620f8629d572b9e9c665dae4110a32834311",
+  "B100_C1000_prefix_comparisons": [
+    {
+      "process": "bbgg",
+      "B100_scientific_sha256": "ee68f3c80ee82dd61fbcbb75035c2d7d17efe72d273df132bc19f0cf95022270",
+      "C1000_first100_scientific_sha256": "ee68f3c80ee82dd61fbcbb75035c2d7d17efe72d273df132bc19f0cf95022270",
+      "status": "PASS",
+      "independent_additional_hard_statistics": false
+    },
+    {
+      "process": "ccgg",
+      "B100_scientific_sha256": "48319364173c5f0ae6f5080976e240516e2b8cb374ef61ef4a5343f5f8a0a06a",
+      "C1000_first100_scientific_sha256": "48319364173c5f0ae6f5080976e240516e2b8cb374ef61ef4a5343f5f8a0a06a",
+      "status": "PASS",
+      "independent_additional_hard_statistics": false
+    },
+    {
+      "process": "jjgg",
+      "B100_scientific_sha256": "4659284f6c870ba7b221b4d55cd3101a9fd0184550dc50ec220bb4671ed0acb1",
+      "C1000_first100_scientific_sha256": "4659284f6c870ba7b221b4d55cd3101a9fd0184550dc50ec220bb4671ed0acb1",
+      "status": "PASS",
+      "independent_additional_hard_statistics": false
+    }
+  ]
+}

@@ -1,0 +1,678 @@
+{
+  "status": "PASS",
+  "ROOT_version": "6.40.04",
+  "runs": [
+    {
+      "run": "stage_a_v2_bbgg_10",
+      "process": "bbgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "32cc87e062ff1d831b5413e5c870231d5be476ba0b3adceddd89022b4c9c26ca",
+      "scientific_sha256": "ab8026584d1b94edb1ca93e5f3162e35b0a03d62cebc913fbb47a1a2470fc340",
+      "events": 10,
+      "raw_cutflow": {
+        "00_input": 10,
+        "01_photons": 1,
+        "02_jets": 1,
+        "03_two_btags": 0,
+        "04_mgg_105_160": 0
+      },
+      "eligible_jets": {
+        "b": {
+          "n": 15,
+          "tagged": 9,
+          "expected": 10.205181596095045
+        },
+        "light": {
+          "n": 10,
+          "tagged": 0,
+          "expected": 0.024104582838439942
+        },
+        "c": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "Jet": 1,
+        "GenJet": 1
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 9,
+          "min": 56.97586174126268,
+          "max": 400.253607648284,
+          "mean": 186.13780421524473,
+          "population_rms_about_mean": 104.64891430807339
+        },
+        "pT_j1": {
+          "n": 10,
+          "min": 46.04452896118164,
+          "max": 184.71905517578125,
+          "mean": 88.10097808837891,
+          "population_rms_about_mean": 46.70325189326801
+        },
+        "pT_j2": {
+          "n": 9,
+          "min": 29.446203231811523,
+          "max": 107.07413482666016,
+          "mean": 55.52019945780436,
+          "population_rms_about_mean": 26.05112862115722
+        },
+        "pT_gamma1": {
+          "n": 8,
+          "min": 29.028701782226562,
+          "max": 181.7001495361328,
+          "mean": 72.43991899490356,
+          "population_rms_about_mean": 52.90220419502218
+        },
+        "m_bb": {
+          "n": 2,
+          "min": 26.54093786276044,
+          "max": 177.51388298845032,
+          "mean": 102.02741042560538,
+          "population_rms_about_mean": 75.48647256284494
+        },
+        "m_gamma_gamma": {
+          "n": 1,
+          "min": 39.24640241457634,
+          "max": 39.24640241457634,
+          "mean": 39.24640241457634,
+          "population_rms_about_mean": 0.0
+        },
+        "pT_gamma2": {
+          "n": 1,
+          "min": 39.92363357543945,
+          "max": 39.92363357543945,
+          "mean": 39.92363357543945,
+          "population_rms_about_mean": 0.0
+        }
+      }
+    },
+    {
+      "run": "stage_b_bbgg_100",
+      "process": "bbgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "fc73c51169d1402d496fe445769adbc2634ba6e0b99ee25726919e100b1c8c67",
+      "scientific_sha256": "ee68f3c80ee82dd61fbcbb75035c2d7d17efe72d273df132bc19f0cf95022270",
+      "events": 100,
+      "raw_cutflow": {
+        "00_input": 100,
+        "01_photons": 41,
+        "02_jets": 26,
+        "03_two_btags": 7,
+        "04_mgg_105_160": 2
+      },
+      "eligible_jets": {
+        "b": {
+          "n": 138,
+          "tagged": 87,
+          "expected": 92.31089041118862
+        },
+        "light": {
+          "n": 64,
+          "tagged": 0,
+          "expected": 0.14934763219623565
+        },
+        "c": {
+          "n": 4,
+          "tagged": 0,
+          "expected": 0.4835168205416816
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "Jet": 4,
+        "GenJet": 34
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 66,
+          "min": 23.418714189998642,
+          "max": 849.7354888769827,
+          "mean": 158.43157326355714,
+          "population_rms_about_mean": 137.6538029275033
+        },
+        "pT_j1": {
+          "n": 94,
+          "min": 27.72891616821289,
+          "max": 232.9249725341797,
+          "mean": 74.4784560305007,
+          "population_rms_about_mean": 44.434281450583526
+        },
+        "pT_j2": {
+          "n": 66,
+          "min": 25.46033477783203,
+          "max": 216.96617126464844,
+          "mean": 52.81681312214244,
+          "population_rms_about_mean": 35.00740694559043
+        },
+        "pT_gamma1": {
+          "n": 91,
+          "min": 26.030492782592773,
+          "max": 408.6617126464844,
+          "mean": 72.1611595573006,
+          "population_rms_about_mean": 56.31725158564423
+        },
+        "m_bb": {
+          "n": 20,
+          "min": 26.54093786276044,
+          "max": 214.18822313744457,
+          "mean": 105.31732259795592,
+          "population_rms_about_mean": 63.63363111981958
+        },
+        "m_gamma_gamma": {
+          "n": 46,
+          "min": 29.220174679177727,
+          "max": 481.79788019112664,
+          "mean": 128.4080621009988,
+          "population_rms_about_mean": 97.54022386958168
+        },
+        "pT_gamma2": {
+          "n": 46,
+          "min": 25.160297393798828,
+          "max": 220.741943359375,
+          "mean": 46.647507004115894,
+          "population_rms_about_mean": 36.83278176927903
+        },
+        "m_bb_gamma_gamma": {
+          "n": 7,
+          "min": 192.0336715819516,
+          "max": 619.8560764152988,
+          "mean": 334.06378525531244,
+          "population_rms_about_mean": 131.73419129876544
+        }
+      }
+    },
+    {
+      "run": "stage_b_ccgg_100",
+      "process": "ccgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "479d628cdafce05ea885176753b51fca90db9db7f552e1dca03947b5fa46e562",
+      "scientific_sha256": "48319364173c5f0ae6f5080976e240516e2b8cb374ef61ef4a5343f5f8a0a06a",
+      "events": 100,
+      "raw_cutflow": {
+        "00_input": 100,
+        "01_photons": 44,
+        "02_jets": 30,
+        "03_two_btags": 1,
+        "04_mgg_105_160": 0
+      },
+      "eligible_jets": {
+        "light": {
+          "n": 71,
+          "tagged": 0,
+          "expected": 0.16958295243701935
+        },
+        "c": {
+          "n": 154,
+          "tagged": 21,
+          "expected": 19.107163399113816
+        },
+        "b": {
+          "n": 3,
+          "tagged": 3,
+          "expected": 1.8961719406785276
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "Jet": 6,
+        "GenJet": 17
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 80,
+          "min": 19.62219134269856,
+          "max": 890.1240638208898,
+          "mean": 207.4992590241077,
+          "population_rms_about_mean": 140.55851178244075
+        },
+        "pT_gamma1": {
+          "n": 96,
+          "min": 25.50041961669922,
+          "max": 442.9283447265625,
+          "mean": 72.29118027289708,
+          "population_rms_about_mean": 55.11156773847808
+        },
+        "pT_j1": {
+          "n": 97,
+          "min": 25.40360450744629,
+          "max": 467.7022705078125,
+          "mean": 87.68271764774913,
+          "population_rms_about_mean": 60.511336118737006
+        },
+        "pT_j2": {
+          "n": 80,
+          "min": 25.202592849731445,
+          "max": 377.19854736328125,
+          "mean": 61.01107301712036,
+          "population_rms_about_mean": 49.080242574506265
+        },
+        "m_gamma_gamma": {
+          "n": 47,
+          "min": 37.50554805114624,
+          "max": 466.7063533535212,
+          "mean": 110.92839434272136,
+          "population_rms_about_mean": 76.11195678431086
+        },
+        "pT_gamma2": {
+          "n": 47,
+          "min": 25.107036590576172,
+          "max": 144.75143432617188,
+          "mean": 42.89541001015521,
+          "population_rms_about_mean": 23.927154841317286
+        },
+        "m_bb": {
+          "n": 1,
+          "min": 145.8607153648639,
+          "max": 145.8607153648639,
+          "mean": 145.8607153648639,
+          "population_rms_about_mean": 0.0
+        },
+        "m_bb_gamma_gamma": {
+          "n": 1,
+          "min": 342.6677910506812,
+          "max": 342.6677910506812,
+          "mean": 342.6677910506812,
+          "population_rms_about_mean": 0.0
+        }
+      }
+    },
+    {
+      "run": "stage_b_jjgg_100",
+      "process": "jjgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "2a6ed16ddd26e440d15f661c359b8760af1397a947a9be6f0bd5e5ca432a160a",
+      "scientific_sha256": "4659284f6c870ba7b221b4d55cd3101a9fd0184550dc50ec220bb4671ed0acb1",
+      "events": 100,
+      "raw_cutflow": {
+        "00_input": 100,
+        "01_photons": 55,
+        "02_jets": 28,
+        "03_two_btags": 0,
+        "04_mgg_105_160": 0
+      },
+      "eligible_jets": {
+        "light": {
+          "n": 207,
+          "tagged": 2,
+          "expected": 0.5262488241004945
+        },
+        "b": {
+          "n": 1,
+          "tagged": 1,
+          "expected": 0.6903053102418581
+        },
+        "c": {
+          "n": 4,
+          "tagged": 1,
+          "expected": 0.4499135534861095
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "GenJet": 22,
+        "Jet": 5
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 64,
+          "min": 30.686622567744017,
+          "max": 854.37713818659,
+          "mean": 200.78703894955362,
+          "population_rms_about_mean": 150.1193115192504
+        },
+        "pT_gamma1": {
+          "n": 91,
+          "min": 25.84290313720703,
+          "max": 246.23411560058594,
+          "mean": 81.33179748451317,
+          "population_rms_about_mean": 53.60689600178662
+        },
+        "pT_j1": {
+          "n": 95,
+          "min": 27.772409439086914,
+          "max": 315.0667419433594,
+          "mean": 97.6965728558992,
+          "population_rms_about_mean": 62.13966129862313
+        },
+        "pT_j2": {
+          "n": 64,
+          "min": 25.416667938232422,
+          "max": 209.26275634765625,
+          "mean": 65.9515897333622,
+          "population_rms_about_mean": 42.10541330533943
+        },
+        "m_gamma_gamma": {
+          "n": 56,
+          "min": 23.090881621497353,
+          "max": 541.4700428551,
+          "mean": 139.11214424975705,
+          "population_rms_about_mean": 99.52827061871434
+        },
+        "pT_gamma2": {
+          "n": 56,
+          "min": 25.662012100219727,
+          "max": 206.60842895507812,
+          "mean": 53.69925774846758,
+          "population_rms_about_mean": 36.83817062950571
+        }
+      }
+    },
+    {
+      "run": "stage_c_bbgg_1000",
+      "process": "bbgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "scientific_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+      "events": 1000,
+      "raw_cutflow": {
+        "00_input": 1000,
+        "01_photons": 446,
+        "02_jets": 266,
+        "03_two_btags": 91,
+        "04_mgg_105_160": 28
+      },
+      "eligible_jets": {
+        "b": {
+          "n": 1373,
+          "tagged": 894,
+          "expected": 920.379799501253
+        },
+        "light": {
+          "n": 686,
+          "tagged": 1,
+          "expected": 1.6392903071954728
+        },
+        "c": {
+          "n": 38,
+          "tagged": 4,
+          "expected": 4.568100735957283
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "Jet": 64,
+        "GenJet": 250
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 684,
+          "min": 14.125557518407668,
+          "max": 1450.4469857619554,
+          "mean": 182.63004575544528,
+          "population_rms_about_mean": 146.27879310633767
+        },
+        "pT_j1": {
+          "n": 928,
+          "min": 25.063379287719727,
+          "max": 605.6296997070312,
+          "mean": 85.30109644552758,
+          "population_rms_about_mean": 63.05231071505604
+        },
+        "pT_j2": {
+          "n": 684,
+          "min": 25.001323699951172,
+          "max": 297.4100036621094,
+          "mean": 58.27351680275989,
+          "population_rms_about_mean": 37.71022072500083
+        },
+        "pT_gamma1": {
+          "n": 901,
+          "min": 25.045930862426758,
+          "max": 888.7639770507812,
+          "mean": 76.44319743242168,
+          "population_rms_about_mean": 62.23397957108921
+        },
+        "m_bb": {
+          "n": 215,
+          "min": 17.98754133741996,
+          "max": 756.735994073567,
+          "mean": 156.88575846087488,
+          "population_rms_about_mean": 106.54716375822879
+        },
+        "m_gamma_gamma": {
+          "n": 484,
+          "min": 17.838090215544526,
+          "max": 880.8467719835376,
+          "mean": 127.96271699530155,
+          "population_rms_about_mean": 106.81215582145605
+        },
+        "pT_gamma2": {
+          "n": 484,
+          "min": 25.012348175048828,
+          "max": 333.84381103515625,
+          "mean": 46.23156543211503,
+          "population_rms_about_mean": 32.15527847746151
+        },
+        "m_bb_gamma_gamma": {
+          "n": 98,
+          "min": 140.08630309368206,
+          "max": 1164.699496638142,
+          "mean": 389.1833843492059,
+          "population_rms_about_mean": 199.50456940149581
+        }
+      }
+    },
+    {
+      "run": "stage_c_ccgg_1000",
+      "process": "ccgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "scientific_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+      "events": 1000,
+      "raw_cutflow": {
+        "00_input": 1000,
+        "01_photons": 378,
+        "02_jets": 241,
+        "03_two_btags": 7,
+        "04_mgg_105_160": 1
+      },
+      "eligible_jets": {
+        "light": {
+          "n": 793,
+          "tagged": 0,
+          "expected": 1.8894348520629882
+        },
+        "c": {
+          "n": 1514,
+          "tagged": 189,
+          "expected": 188.45172242820178
+        },
+        "b": {
+          "n": 15,
+          "tagged": 11,
+          "expected": 9.55643738406119
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "Jet": 83,
+        "GenJet": 196
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 756,
+          "min": 15.321547715106963,
+          "max": 1172.3309617247276,
+          "mean": 181.7534217972806,
+          "population_rms_about_mean": 143.08286217079745
+        },
+        "pT_gamma1": {
+          "n": 879,
+          "min": 25.021007537841797,
+          "max": 442.9283447265625,
+          "mean": 64.69820015422313,
+          "population_rms_about_mean": 41.54780637248092
+        },
+        "pT_j1": {
+          "n": 959,
+          "min": 25.289892196655273,
+          "max": 575.8619995117188,
+          "mean": 81.77499928837399,
+          "population_rms_about_mean": 54.42731959702388
+        },
+        "pT_j2": {
+          "n": 756,
+          "min": 25.08089828491211,
+          "max": 409.4130859375,
+          "mean": 56.495702185958784,
+          "population_rms_about_mean": 38.124135633676424
+        },
+        "m_gamma_gamma": {
+          "n": 417,
+          "min": 19.613418008440895,
+          "max": 466.7063533535212,
+          "mean": 111.73199665659901,
+          "population_rms_about_mean": 62.83367279199364
+        },
+        "pT_gamma2": {
+          "n": 417,
+          "min": 25.036853790283203,
+          "max": 250.06553649902344,
+          "mean": 41.31365078987835,
+          "population_rms_about_mean": 20.803116953293628
+        },
+        "m_bb": {
+          "n": 13,
+          "min": 34.881753035330554,
+          "max": 613.7028260023093,
+          "mean": 169.21612262971024,
+          "population_rms_about_mean": 146.30278829960173
+        },
+        "m_bb_gamma_gamma": {
+          "n": 7,
+          "min": 342.6677910506812,
+          "max": 770.8298845039463,
+          "mean": 448.60332799048393,
+          "population_rms_about_mean": 135.36888778981023
+        }
+      }
+    },
+    {
+      "run": "stage_c_jjgg_1000",
+      "process": "jjgg",
+      "status": "PASS",
+      "scope": "independent actual PyROOT source-index/reco-object/persisted-cut/tag-formula/Cartesian-mass/weight readback; not calibrated detector performance",
+      "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "scientific_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+      "events": 1000,
+      "raw_cutflow": {
+        "00_input": 1000,
+        "01_photons": 445,
+        "02_jets": 277,
+        "03_two_btags": 0,
+        "04_mgg_105_160": 0
+      },
+      "eligible_jets": {
+        "light": {
+          "n": 2130,
+          "tagged": 10,
+          "expected": 5.3685610778980255
+        },
+        "b": {
+          "n": 21,
+          "tagged": 16,
+          "expected": 14.024876004907867
+        },
+        "c": {
+          "n": 67,
+          "tagged": 7,
+          "expected": 8.444786470042214
+        },
+        "UNKNOWN": {
+          "n": 0,
+          "tagged": 0,
+          "expected": 0.0
+        }
+      },
+      "signed_native_negative_mass_counts": {
+        "GenJet": 240,
+        "Jet": 80
+      },
+      "observables_gev": {
+        "m_jj": {
+          "n": 716,
+          "min": 17.469655565387306,
+          "max": 1606.9045742993385,
+          "mean": 204.51095291588075,
+          "population_rms_about_mean": 183.75976403891306
+        },
+        "pT_gamma1": {
+          "n": 880,
+          "min": 25.025867462158203,
+          "max": 1289.382568359375,
+          "mean": 83.08061702901666,
+          "population_rms_about_mean": 69.54558550775079
+        },
+        "pT_j1": {
+          "n": 947,
+          "min": 25.46883201599121,
+          "max": 1167.979736328125,
+          "mean": 95.17731791841695,
+          "population_rms_about_mean": 74.89863800292893
+        },
+        "pT_j2": {
+          "n": 716,
+          "min": 25.08409881591797,
+          "max": 472.5218505859375,
+          "mean": 64.14487959153159,
+          "population_rms_about_mean": 46.589449928772645
+        },
+        "m_gamma_gamma": {
+          "n": 473,
+          "min": 19.905085424644845,
+          "max": 873.3444573829487,
+          "mean": 136.46433115992537,
+          "population_rms_about_mean": 107.98979730977221
+        },
+        "pT_gamma2": {
+          "n": 473,
+          "min": 25.03680992126465,
+          "max": 232.7835235595703,
+          "mean": 49.04307188796191,
+          "population_rms_about_mean": 32.195950488466515
+        },
+        "m_bb": {
+          "n": 4,
+          "min": 54.17692197135045,
+          "max": 561.3313127768506,
+          "mean": 206.72344154744178,
+          "population_rms_about_mean": 207.04228762303774
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "version": "3.5.1",
+  "source_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+  "source_archive_sha256": "b60d26d2ee2c84b58fbf2cf397fabd0ef3e89d3a0546d843c4ada82cc802d787",
+  "ROOT": "6.40.04",
+  "cpp_standard": 20,
+  "canonical_card": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+  "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "upstream_card_sha256": "b6a97bcd6e2b4f19e218eaa07b3afe1937d66452f0519de0b8c367eff46fe69d",
+  "physics_label": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+  "btag_working_point": "UPSTREAM_ATLAS_CARD_BIT0_STUDY",
+  "jet_algorithm": "anti-kT R0.4",
+  "full1000_local_runs": [
+    {
+      "process": "bbgg",
+      "run_id": "stage_c_bbgg_1000",
+      "full1000_ROOT_publication": "LOCAL_ONLY",
+      "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "root_bytes": 28747494,
+      "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "runtime_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "seed": 610301,
+      "native_report_path": "simulation/delphes/evidence/bbgg/native_validation.json",
+      "native_report_sha256": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+      "input_index_sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "truth_index_sha256": "fe0bd96df52528c4bd6dfd36f47bcc19f6d69596658cca1a6fb916358ab9e87b",
+      "scientific_content_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+      "counts": {
+        "N_input": 1000,
+        "N_read": 1000,
+        "N_processed": 1000,
+        "N_output": 1000,
+        "N_invalid": 0,
+        "N_skipped": 0
+      }
+    },
+    {
+      "process": "ccgg",
+      "run_id": "stage_c_ccgg_1000",
+      "full1000_ROOT_publication": "LOCAL_ONLY",
+      "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "root_bytes": 30570772,
+      "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "runtime_card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "seed": 610302,
+      "native_report_path": "simulation/delphes/evidence/ccgg/native_validation.json",
+      "native_report_sha256": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+      "input_index_sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "truth_index_sha256": "b84a4056adf90dfbd2baa35010f3123fbc9f272a236f38364f1d7b3408886e24",
+      "scientific_content_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+      "counts": {
+        "N_input": 1000,
+        "N_read": 1000,
+        "N_processed": 1000,
+        "N_output": 1000,
+        "N_invalid": 0,
+        "N_skipped": 0
+      }
+    },
+    {
+      "process": "jjgg",
+      "run_id": "stage_c_jjgg_1000",
+      "full1000_ROOT_publication": "LOCAL_ONLY",
+      "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "root_bytes": 30235463,
+      "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "seed": 610303,
+      "native_report_path": "simulation/delphes/evidence/jjgg/native_validation.json",
+      "native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+      "input_index_sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "truth_index_sha256": "8aafa9966f87ad77246533d69d6319af72b2b311a74d2ffa6b1bb560cf515a57",
+      "scientific_content_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+      "counts": {
+        "N_input": 1000,
+        "N_read": 1000,
+        "N_processed": 1000,
+        "N_output": 1000,
+        "N_invalid": 0,
+        "N_skipped": 0
+      }
+    }
+  ],
+  "small100_references": "reference_samples/delphes; selected actual StageB100 bytes only"
+}

@@ -1,0 +1,45 @@
+name: Delphes reference integrity
+on:
+  push:
+    branches: [main, codex/phase6c-delphes-fast-sim]
+    paths:
+      - 'simulation/delphes/**'
+      - 'reference_samples/delphes/**'
+      - 'reports/phase6c*'
+      - 'metadata/phase6c*'
+      - '.github/workflows/delphes_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  pull_request:
+    paths:
+      - 'simulation/delphes/**'
+      - 'reference_samples/delphes/**'
+      - 'reports/phase6c*'
+      - 'metadata/phase6c*'
+      - '.github/workflows/delphes_reference_samples.yml'
+      - '.gitignore'
+      - '.gitattributes'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify selected ROOT signatures, hashes, source/card/index relationships
+        run: python3 -B simulation/delphes/scripts/validate_references.py --repo . --report "$RUNNER_TEMP/delphes-reference-integrity.json"
+      - name: Test portable control and publication failure paths
+        run: python3 -B -m unittest discover -s simulation/delphes/tests -v
+      - name: Preserve previous physics input integrity and regression
+        run: |
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B -m unittest discover -s simulation/pythia8/tests -v
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B -m unittest discover -s simulation/mg5/tests -v
+      - name: Audit bounded selected payload
+        run: python3 -B simulation/delphes/scripts/audit_payload.py --tracked

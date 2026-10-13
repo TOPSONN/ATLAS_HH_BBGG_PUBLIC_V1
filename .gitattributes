@@ -28,3 +28,11 @@ CMakeLists.txt text eol=lf
 simulation/pythia8/evidence/*/effective_settings.cmnd -whitespace
 simulation/pythia8/evidence/*/effective_particle_data.xml -whitespace
 simulation/pythia8/licenses/*_COPYING -whitespace
+
+# Preserve the exact upstream license bytes accompanying the pinned cards.
+simulation/delphes/cards/UPSTREAM_LICENSE_GPL3.txt -whitespace
+simulation/delphes/cards/upstream_delphes_card_ATLAS_3.5.1.tcl -whitespace
+simulation/delphes/cards/atlas_like_bbgg_baseline.tcl -whitespace
+reference_samples/delphes/pp_bbgg_atlas_like/detector_card.tcl -whitespace
+reference_samples/delphes/pp_ccgg_atlas_like/detector_card.tcl -whitespace
+reference_samples/delphes/pp_jjgg_light_atlas_like/detector_card.tcl -whitespace

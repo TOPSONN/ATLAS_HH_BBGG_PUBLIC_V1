@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "commit": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+  "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13",
+  "PR": {
+    "baseRefName": "codex/phase6b-pythia8-shower-1k",
+    "headRefName": "codex/phase6c-delphes-fast-sim",
+    "headRefOid": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+    "isDraft": true,
+    "number": 13,
+    "state": "OPEN",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13"
+  },
+  "whole_remote_Git_blob_tree": "PASS",
+  "Git_blob_files_compared": 334,
+  "actual_ROOT_blobs": [
+    {
+      "path": "reference_samples/delphes/pp_bbgg_atlas_like/detector_100.root",
+      "bytes": 2959022,
+      "SHA256": "fc73c51169d1402d496fe445769adbc2634ba6e0b99ee25726919e100b1c8c67",
+      "Git_blob": "a35c35f7f69926f364041389d7fcaa5bb3c9f1b8",
+      "status": "PASS_ACTUAL_GITHUB_BLOB_BYTES",
+      "native_readback_binding": "exact byte identity to tested StageBROOT; portabledownload doesnotexecuteROOT"
+    },
+    {
+      "path": "reference_samples/delphes/pp_ccgg_atlas_like/detector_100.root",
+      "bytes": 3098810,
+      "SHA256": "479d628cdafce05ea885176753b51fca90db9db7f552e1dca03947b5fa46e562",
+      "Git_blob": "92e3c2c73594bb0215790aa0de49993732764fdb",
+      "status": "PASS_ACTUAL_GITHUB_BLOB_BYTES",
+      "native_readback_binding": "exact byte identity to tested StageBROOT; portabledownload doesnotexecuteROOT"
+    },
+    {
+      "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/detector_100.root",
+      "bytes": 3028524,
+      "SHA256": "2a6ed16ddd26e440d15f661c359b8760af1397a947a9be6f0bd5e5ca432a160a",
+      "Git_blob": "691581a64115477e38b074fe7aa2bd71ed00b4ad",
+      "status": "PASS_ACTUAL_GITHUB_BLOB_BYTES",
+      "native_readback_binding": "exact byte identity to tested StageBROOT; portabledownload doesnotexecuteROOT"
+    }
+  ],
+  "github_CI": [
+    {
+      "conclusion": "success",
+      "databaseId": 38387807223,
+      "event": "pull_request",
+      "headSha": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+      "name": "MG5 reference samples",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807223"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38387807291,
+      "event": "pull_request",
+      "headSha": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+      "name": "Pythia8 shower reference integrity",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807291"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38387807387,
+      "event": "pull_request",
+      "headSha": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+      "name": "Delphes reference integrity",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807387"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38387702439,
+      "event": "push",
+      "headSha": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+      "name": "Delphes reference integrity",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387702439"
+    }
+  ],
+  "required_CI_workflows": [
+    "Delphes reference integrity",
+    "MG5 reference samples",
+    "Pythia8 shower reference integrity"
+  ],
+  "github_CI_status": "PASS",
+  "legacy_PRs_unchanged": [
+    {
+      "headRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+      "isDraft": false,
+      "number": 9,
+      "state": "OPEN",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9"
+    },
+    {
+      "headRefOid": "2b028228280872f13c20ac2d45b88fba408272ed",
+      "isDraft": true,
+      "number": 11,
+      "state": "OPEN",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11"
+    },
+    {
+      "headRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+      "isDraft": true,
+      "number": 12,
+      "state": "OPEN",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12"
+    }
+  ],
+  "scope": "actual remote blob bytes and current head GitHubjobs; CIportable integrity distinct actuallocalnativeROOTreadback",
+  "figure_status": "NO_NEW_PDF_PNG_PUSHED",
+  "full1000_ROOT_publication": "LOCAL_ONLY",
+  "reference_ROOT_cap_bytes": 10485760,
+  "reference_input_index_cap_bytes": 10485760,
+  "no_merge_no_forcepush": true
+}
