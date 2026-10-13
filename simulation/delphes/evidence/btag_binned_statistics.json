@@ -1,0 +1,1405 @@
+{
+  "schema_version": 1,
+  "validation_status": "PASS_NUMERICAL_READBACK_OF_NATIVE_STAGE_C",
+  "working_point": "UPSTREAM_ATLAS_CARD_BIT0_STUDY",
+  "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "input_events_per_process": 1000,
+  "stage_b_added_to_statistics": false,
+  "denominator": "raw eligible reconstructed jets pT>25GeV |eta|<2.5 before event-level cuts; actual Flavor category",
+  "pt_bin_edges_gev": [
+    25.0,
+    50.0,
+    100.0,
+    200.0,
+    null
+  ],
+  "abs_eta_bin_edges": [
+    0.0,
+    0.8,
+    1.6,
+    2.5
+  ],
+  "bin_convention": "lower inclusive, upper exclusive after strict eligible-jet selection; null final pT upper edge means infinity",
+  "interval_scope": "descriptive per-jet Wilson95; event correlations/systematics unmodeled; not ATLAS calibration",
+  "low_count_policy": "INSUFFICIENT_STATISTICS if n<30 or expected_tags<5 or n-expected_tags<5 or UNKNOWN category",
+  "physics_acceptance": "no independent ROOT execution by this numerical summary; hashes bind actual preceding native readback",
+  "samples": [
+    {
+      "process": "bbgg",
+      "events": 1000,
+      "source_mg5_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "source_pythia_run_id": "274dbf55-ef40-574b-a420-65eb745adea4",
+      "detector_runtime_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "source_native_hashes": {
+        "native_validation.json": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+        "reco_events.jsonl": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+        "efficiencies.csv": "f242956e97acc51c7f62198ddaab5e5483784e9c33335509115f7d97ce1037ee",
+        "detector.root": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111"
+      },
+      "aggregate": {
+        "b": {
+          "eligible_reco_jets": 1373,
+          "tagged_bit0": 894,
+          "expected_tags": 920.379799501253,
+          "mean_card_probability": 0.6703421700664626,
+          "observed_fraction": 0.651128914785142,
+          "wilson95": [
+            0.6255285743247685,
+            0.6758859402813358
+          ],
+          "conditional_card_tag_variance": 300.0351140207794,
+          "model_standardized_residual": -1.522949308806774,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "c": {
+          "eligible_reco_jets": 38,
+          "tagged_bit0": 4,
+          "expected_tags": 4.568100735957283,
+          "mean_card_probability": 0.12021317726203376,
+          "observed_fraction": 0.10526315789473684,
+          "wilson95": [
+            0.04170257347553526,
+            0.24130521722887316
+          ],
+          "conditional_card_tag_variance": 4.0023779021149215,
+          "model_standardized_residual": -0.2839659751075554,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "light": {
+          "eligible_reco_jets": 686,
+          "tagged_bit0": 1,
+          "expected_tags": 1.6392903071954728,
+          "mean_card_probability": 0.002389636016319931,
+          "observed_fraction": 0.0014577259475218659,
+          "wilson95": [
+            0.00025737078701253396,
+            0.008210457213177952
+          ],
+          "conditional_card_tag_variance": 1.635336817005753,
+          "model_standardized_residual": -0.4999130945216536,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "UNKNOWN": {
+          "eligible_reco_jets": 0,
+          "tagged_bit0": 0,
+          "expected_tags": 0.0,
+          "mean_card_probability": null,
+          "observed_fraction": null,
+          "wilson95": null,
+          "conditional_card_tag_variance": 0.0,
+          "model_standardized_residual": null,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        }
+      },
+      "bins": {
+        "pt_gev": {
+          "b": [
+            {
+              "eligible_reco_jets": 631,
+              "tagged_bit0": 395,
+              "expected_tags": 395.5338567974527,
+              "mean_card_probability": 0.6268365400910503,
+              "observed_fraction": 0.6259904912836767,
+              "wilson95": [
+                0.587581173930645,
+                0.6628750585519728
+              ],
+              "conditional_card_tag_variance": 147.0243277773829,
+              "model_standardized_residual": -0.044028123462867386,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 480,
+              "tagged_bit0": 334,
+              "expected_tags": 338.0580355115912,
+              "mean_card_probability": 0.7042875739824817,
+              "observed_fraction": 0.6958333333333333,
+              "wilson95": [
+                0.6532564849601393,
+                0.7353005445640101
+              ],
+              "conditional_card_tag_variance": 99.85054886403091,
+              "model_standardized_residual": -0.4061071304871,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 206,
+              "tagged_bit0": 135,
+              "expected_tags": 150.01847214070443,
+              "mean_card_probability": 0.7282450103917691,
+              "observed_fraction": 0.6553398058252428,
+              "wilson95": [
+                0.5881302242317948,
+                0.7168619368010108
+              ],
+              "conditional_card_tag_variance": 40.76276871824068,
+              "model_standardized_residual": -2.3523065391432834,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 56,
+              "tagged_bit0": 30,
+              "expected_tags": 36.76943505150473,
+              "mean_card_probability": 0.6565970544911559,
+              "observed_fraction": 0.5357142857142857,
+              "wilson95": [
+                0.40704181935661177,
+                0.6598014708777623
+              ],
+              "conditional_card_tag_variance": 12.39746866112494,
+              "model_standardized_residual": -1.922586622990066,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 22,
+              "tagged_bit0": 3,
+              "expected_tags": 2.3142668225865166,
+              "mean_card_probability": 0.1051939464812053,
+              "observed_fraction": 0.13636363636363635,
+              "wilson95": [
+                0.04749003714055253,
+                0.33334987166571717
+              ],
+              "conditional_card_tag_variance": 2.0664274868504195,
+              "model_standardized_residual": 0.4770293243376965,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 15,
+              "tagged_bit0": 1,
+              "expected_tags": 2.110317218058946,
+              "mean_card_probability": 0.14068781453726306,
+              "observed_fraction": 0.06666666666666667,
+              "wilson95": [
+                0.011866895493268553,
+                0.2981652987378003
+              ],
+              "conditional_card_tag_variance": 1.8130307617859076,
+              "model_standardized_residual": -0.8246021981859798,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 1,
+              "tagged_bit0": 0,
+              "expected_tags": 0.14351669531182001,
+              "mean_card_probability": 0.14351669531182001,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.7934506856227626
+              ],
+              "conditional_card_tag_variance": 0.12291965347859424,
+              "model_standardized_residual": -0.4093471413750397,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 417,
+              "tagged_bit0": 1,
+              "expected_tags": 0.9440896982378006,
+              "mean_card_probability": 0.0022640040725127116,
+              "observed_fraction": 0.002398081534772182,
+              "wilson95": [
+                0.00042344577726697273,
+                0.013456980445623217
+              ],
+              "conditional_card_tag_variance": 0.9419511873192288,
+              "model_standardized_residual": 0.057607315465643905,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 223,
+              "tagged_bit0": 0,
+              "expected_tags": 0.5557035795631409,
+              "mean_card_probability": 0.002491944302973726,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.016934553501221267
+              ],
+              "conditional_card_tag_variance": 0.5543167036304705,
+              "model_standardized_residual": -0.7463872489520419,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 40,
+              "tagged_bit0": 0,
+              "expected_tags": 0.11702703769989015,
+              "mean_card_probability": 0.002925675942497254,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.08762160119728664
+              ],
+              "conditional_card_tag_variance": 0.11668343416543553,
+              "model_standardized_residual": -0.3425954656162693,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 6,
+              "tagged_bit0": 0,
+              "expected_tags": 0.022469991694641114,
+              "mean_card_probability": 0.003744998615773519,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.3903342879021653
+              ],
+              "conditional_card_tag_variance": 0.022385491890618205,
+              "model_standardized_residual": -0.15018259041891419,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        },
+        "abs_eta": {
+          "b": [
+            {
+              "eligible_reco_jets": 539,
+              "tagged_bit0": 350,
+              "expected_tags": 360.9025588184364,
+              "mean_card_probability": 0.6695780312030359,
+              "observed_fraction": 0.6493506493506493,
+              "wilson95": [
+                0.6081388876816665,
+                0.6884486285883094
+              ],
+              "conditional_card_tag_variance": 117.8824993840069,
+              "model_standardized_residual": -1.0041619725071367,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 458,
+              "tagged_bit0": 316,
+              "expected_tags": 307.1018689815817,
+              "mean_card_probability": 0.6705280982130605,
+              "observed_fraction": 0.6899563318777293,
+              "wilson95": [
+                0.6461650718015151,
+                0.7305875922930136
+              ],
+              "conditional_card_tag_variance": 100.07203146733218,
+              "model_standardized_residual": 0.889492802151989,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 376,
+              "tagged_bit0": 228,
+              "expected_tags": 252.37537170123497,
+              "mean_card_probability": 0.671211094950093,
+              "observed_fraction": 0.6063829787234043,
+              "wilson95": [
+                0.5561641179316216,
+                0.6544500689672456
+              ],
+              "conditional_card_tag_variance": 82.08058316944032,
+              "model_standardized_residual": -2.6904878200202833,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 9,
+              "tagged_bit0": 0,
+              "expected_tags": 1.109562130336176,
+              "mean_card_probability": 0.123284681148464,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.2991450484195441
+              ],
+              "conditional_card_tag_variance": 0.9696058877718127,
+              "model_standardized_residual": -1.1268185911812245,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 12,
+              "tagged_bit0": 2,
+              "expected_tags": 1.4770119401752035,
+              "mean_card_probability": 0.12308432834793363,
+              "observed_fraction": 0.16666666666666666,
+              "wilson95": [
+                0.04696514218385378,
+                0.4480308622529734
+              ],
+              "conditional_card_tag_variance": 1.2902232179643598,
+              "model_standardized_residual": 0.46042547762981223,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 17,
+              "tagged_bit0": 2,
+              "expected_tags": 1.981526665445903,
+              "mean_card_probability": 0.11656039208505312,
+              "observed_fraction": 0.11764705882352941,
+              "wilson95": [
+                0.03287977376379267,
+                0.3433635059488588
+              ],
+              "conditional_card_tag_variance": 1.742548796378749,
+              "model_standardized_residual": 0.013994352892056066,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 247,
+              "tagged_bit0": 0,
+              "expected_tags": 0.5858225019374848,
+              "mean_card_probability": 0.0023717510199898167,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.015314289905481962
+              ],
+              "conditional_card_tag_variance": 0.5844208640143607,
+              "model_standardized_residual": -0.7663077067732519,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 207,
+              "tagged_bit0": 1,
+              "expected_tags": 0.49178202897319795,
+              "mean_card_probability": 0.00237575859407342,
+              "observed_fraction": 0.004830917874396135,
+              "wilson95": [
+                0.0008532852477254535,
+                0.02685217103856346
+              ],
+              "conditional_card_tag_variance": 0.49060658431124915,
+              "model_standardized_residual": 0.7255767062416913,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 232,
+              "tagged_bit0": 0,
+              "expected_tags": 0.5616857762847901,
+              "mean_card_probability": 0.0024210593805378882,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.016288310121142503
+              ],
+              "conditional_card_tag_variance": 0.5603093686801432,
+              "model_standardized_residual": -0.7503769486421387,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "process": "ccgg",
+      "events": 1000,
+      "source_mg5_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "source_pythia_run_id": "c75ec15f-ff81-5eac-a47c-adc0f5d10423",
+      "detector_runtime_card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "source_native_hashes": {
+        "native_validation.json": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+        "reco_events.jsonl": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+        "efficiencies.csv": "e724107336fec2d13c7c8e2de149bcfd7ced945f5df2df8d9b0e6bb5f2fad1d5",
+        "detector.root": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2"
+      },
+      "aggregate": {
+        "b": {
+          "eligible_reco_jets": 15,
+          "tagged_bit0": 11,
+          "expected_tags": 9.556437384061192,
+          "mean_card_probability": 0.6370958256040795,
+          "observed_fraction": 0.7333333333333333,
+          "wilson95": [
+            0.4804956594401943,
+            0.8910254667430761
+          ],
+          "conditional_card_tag_variance": 3.4386255608466563,
+          "model_standardized_residual": 0.7784723342416807,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "c": {
+          "eligible_reco_jets": 1514,
+          "tagged_bit0": 189,
+          "expected_tags": 188.45172242820178,
+          "mean_card_probability": 0.12447273608203552,
+          "observed_fraction": 0.12483487450462351,
+          "wilson95": [
+            0.10912898199943954,
+            0.14243975503938833
+          ],
+          "conditional_card_tag_variance": 164.4950714466526,
+          "model_standardized_residual": 0.042748810571983216,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "light": {
+          "eligible_reco_jets": 793,
+          "tagged_bit0": 0,
+          "expected_tags": 1.8894348520629882,
+          "mean_card_probability": 0.002382641679776782,
+          "observed_fraction": 0.0,
+          "wilson95": [
+            0.0,
+            0.004820857120536111
+          ],
+          "conditional_card_tag_variance": 1.88489660402617,
+          "model_standardized_residual": -1.3762209222350277,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "UNKNOWN": {
+          "eligible_reco_jets": 0,
+          "tagged_bit0": 0,
+          "expected_tags": 0.0,
+          "mean_card_probability": null,
+          "observed_fraction": null,
+          "wilson95": null,
+          "conditional_card_tag_variance": 0.0,
+          "model_standardized_residual": null,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        }
+      },
+      "bins": {
+        "pt_gev": {
+          "b": [
+            {
+              "eligible_reco_jets": 12,
+              "tagged_bit0": 9,
+              "expected_tags": 7.409706661366169,
+              "mean_card_probability": 0.6174755551138474,
+              "observed_fraction": 0.75,
+              "wilson95": [
+                0.46769466506643426,
+                0.9110583316059453
+              ],
+              "conditional_card_tag_variance": 2.82838105084416,
+              "model_standardized_residual": 0.9456017783836891,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 2,
+              "tagged_bit0": 1,
+              "expected_tags": 1.4171375025254656,
+              "mean_card_probability": 0.7085687512627328,
+              "observed_fraction": 0.5,
+              "wilson95": [
+                0.09453120573423074,
+                0.9054687942657693
+              ],
+              "conditional_card_tag_variance": 0.41295755675032336,
+              "model_standardized_residual": -0.6491222978794569,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 1,
+              "tagged_bit0": 1,
+              "expected_tags": 0.7295932201695575,
+              "mean_card_probability": 0.7295932201695575,
+              "observed_fraction": 1.0,
+              "wilson95": [
+                0.20654931437723745,
+                1.0
+              ],
+              "conditional_card_tag_variance": 0.19728695325217308,
+              "model_standardized_residual": 0.6087912381754156,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 695,
+              "tagged_bit0": 72,
+              "expected_tags": 75.71576770197555,
+              "mean_card_probability": 0.10894355065032453,
+              "observed_fraction": 0.10359712230215827,
+              "wilson95": [
+                0.0830777399719446,
+                0.12847447541919557
+              ],
+              "conditional_card_tag_variance": 67.35604908560086,
+              "model_standardized_residual": -0.4527518703341355,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 564,
+              "tagged_bit0": 82,
+              "expected_tags": 79.2347157791436,
+              "mean_card_probability": 0.14048708471479363,
+              "observed_fraction": 0.1453900709219858,
+              "wilson95": [
+                0.11869742042103586,
+                0.17688060794144228
+              ],
+              "conditional_card_tag_variance": 68.09184511772273,
+              "model_standardized_residual": 0.33511373187853616,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 215,
+              "tagged_bit0": 29,
+              "expected_tags": 29.349687066975715,
+              "mean_card_probability": 0.13651017240453822,
+              "observed_fraction": 0.13488372093023257,
+              "wilson95": [
+                0.09558276830353848,
+                0.1870028950984012
+              ],
+              "conditional_card_tag_variance": 25.332782572583028,
+              "model_standardized_residual": -0.06947653049177928,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 40,
+              "tagged_bit0": 6,
+              "expected_tags": 4.151551880106915,
+              "mean_card_probability": 0.10378879700267288,
+              "observed_fraction": 0.15,
+              "wilson95": [
+                0.07061187717320358,
+                0.2907232436648971
+              ],
+              "conditional_card_tag_variance": 3.71439467074597,
+              "model_standardized_residual": 0.9590985668254787,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 485,
+              "tagged_bit0": 0,
+              "expected_tags": 1.097612026730728,
+              "mean_card_probability": 0.002263117580888099,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.00785829178638296
+              ],
+              "conditional_card_tag_variance": 1.095126766195016,
+              "model_standardized_residual": -1.048857915673509,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 260,
+              "tagged_bit0": 0,
+              "expected_tags": 0.6495662411640167,
+              "mean_card_probability": 0.0024983316967846798,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.014559724001923326
+              ],
+              "conditional_card_tag_variance": 0.6479410224750977,
+              "model_standardized_residual": -0.8069668743879338,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 46,
+              "tagged_bit0": 0,
+              "expected_tags": 0.13367832672348023,
+              "mean_card_probability": 0.0029060505809452223,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.07707356308558039
+              ],
+              "conditional_card_tag_variance": 0.1332883300050829,
+              "model_standardized_residual": -0.36615497341676984,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 2,
+              "tagged_bit0": 0,
+              "expected_tags": 0.008578257444763183,
+              "mean_card_probability": 0.004289128722381592,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.6576197724933469
+              ],
+              "conditional_card_tag_variance": 0.008540485350973511,
+              "model_standardized_residual": -0.09282347005788293,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        },
+        "abs_eta": {
+          "b": [
+            {
+              "eligible_reco_jets": 4,
+              "tagged_bit0": 3,
+              "expected_tags": 2.6484023627825746,
+              "mean_card_probability": 0.6621005906956436,
+              "observed_fraction": 0.75,
+              "wilson95": [
+                0.30064184258240184,
+                0.9544127391902995
+              ],
+              "conditional_card_tag_variance": 0.88355140867335,
+              "model_standardized_residual": 0.37405032470583877,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 6,
+              "tagged_bit0": 5,
+              "expected_tags": 3.8313653720112937,
+              "mean_card_probability": 0.6385608953352157,
+              "observed_fraction": 0.8333333333333334,
+              "wilson95": [
+                0.43649717781352987,
+                0.9699466302516935
+              ],
+              "conditional_card_tag_variance": 1.374452236222553,
+              "model_standardized_residual": 0.9968135312846479,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 5,
+              "tagged_bit0": 3,
+              "expected_tags": 3.0766696492673233,
+              "mean_card_probability": 0.6153339298534647,
+              "observed_fraction": 0.6,
+              "wilson95": [
+                0.2307242812760128,
+                0.882379225767352
+              ],
+              "conditional_card_tag_variance": 1.1806219159507532,
+              "model_standardized_residual": -0.07056154088918978,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 586,
+              "tagged_bit0": 71,
+              "expected_tags": 73.41526731837554,
+              "mean_card_probability": 0.1252820261405726,
+              "observed_fraction": 0.12116040955631399,
+              "wilson95": [
+                0.09717842218654733,
+                0.15007693201029706
+              ],
+              "conditional_card_tag_variance": 64.03845119446453,
+              "model_standardized_residual": -0.30181776236812796,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 566,
+              "tagged_bit0": 69,
+              "expected_tags": 70.30874223345309,
+              "mean_card_probability": 0.12422039263860969,
+              "observed_fraction": 0.12190812720848057,
+              "wilson95": [
+                0.09747312453400572,
+                0.15144077357765456
+              ],
+              "conditional_card_tag_variance": 61.38449307890977,
+              "model_standardized_residual": -0.16704165360059536,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            },
+            {
+              "eligible_reco_jets": 362,
+              "tagged_bit0": 49,
+              "expected_tags": 44.72771287637316,
+              "mean_card_probability": 0.12355721789053359,
+              "observed_fraction": 0.13535911602209943,
+              "wilson95": [
+                0.10392341976099528,
+                0.17445251704229786
+              ],
+              "conditional_card_tag_variance": 39.0721271732783,
+              "model_standardized_residual": 0.6834817210079255,
+              "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 266,
+              "tagged_bit0": 0,
+              "expected_tags": 0.6306390023477555,
+              "mean_card_probability": 0.002370823317096825,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.014235984483195078
+              ],
+              "conditional_card_tag_variance": 0.6291296798116953,
+              "model_standardized_residual": -0.7950798361457697,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 278,
+              "tagged_bit0": 0,
+              "expected_tags": 0.6669119857721328,
+              "mean_card_probability": 0.0023989639775976,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.013629857142976395
+              ],
+              "conditional_card_tag_variance": 0.6652992885994257,
+              "model_standardized_residual": -0.8176359777744255,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 249,
+              "tagged_bit0": 0,
+              "expected_tags": 0.5918838639431,
+              "mean_card_probability": 0.0023770436302935744,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.015193152415001476
+              ],
+              "conditional_card_tag_variance": 0.590467635615049,
+              "model_standardized_residual": -0.7702619613319212,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "process": "jjgg",
+      "events": 1000,
+      "source_mg5_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "source_pythia_run_id": "220224a8-5332-5952-866a-58821d9c7748",
+      "detector_runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "source_native_hashes": {
+        "native_validation.json": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+        "reco_events.jsonl": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+        "efficiencies.csv": "35ef7b9c9f4ffffaaea2c1c950633deae9590f56354a9931f1795d4b09969940",
+        "detector.root": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e"
+      },
+      "aggregate": {
+        "b": {
+          "eligible_reco_jets": 21,
+          "tagged_bit0": 16,
+          "expected_tags": 14.024876004907867,
+          "mean_card_probability": 0.667851238328946,
+          "observed_fraction": 0.7619047619047619,
+          "wilson95": [
+            0.5490882631704924,
+            0.8937198697736354
+          ],
+          "conditional_card_tag_variance": 4.602192883274265,
+          "model_standardized_residual": 0.9206868852435882,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "c": {
+          "eligible_reco_jets": 67,
+          "tagged_bit0": 7,
+          "expected_tags": 8.444786470042214,
+          "mean_card_probability": 0.12604158910510765,
+          "observed_fraction": 0.1044776119402985,
+          "wilson95": [
+            0.05153769768782859,
+            0.20031283048738022
+          ],
+          "conditional_card_tag_variance": 7.357739636139541,
+          "model_standardized_residual": -0.5326371550416421,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "light": {
+          "eligible_reco_jets": 2130,
+          "tagged_bit0": 10,
+          "expected_tags": 5.3685610778980255,
+          "mean_card_probability": 0.0025204512102807632,
+          "observed_fraction": 0.004694835680751174,
+          "wilson95": [
+            0.002552156888166846,
+            0.008620865700807752
+          ],
+          "conditional_card_tag_variance": 5.354628475549611,
+          "model_standardized_residual": 2.0014800680033797,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "UNKNOWN": {
+          "eligible_reco_jets": 0,
+          "tagged_bit0": 0,
+          "expected_tags": 0.0,
+          "mean_card_probability": null,
+          "observed_fraction": null,
+          "wilson95": null,
+          "conditional_card_tag_variance": 0.0,
+          "model_standardized_residual": null,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        }
+      },
+      "bins": {
+        "pt_gev": {
+          "b": [
+            {
+              "eligible_reco_jets": 9,
+              "tagged_bit0": 5,
+              "expected_tags": 5.680743978816379,
+              "mean_card_probability": 0.6311937754240421,
+              "observed_fraction": 0.5555555555555556,
+              "wilson95": [
+                0.26665129349549305,
+                0.8112214789023355
+              ],
+              "conditional_card_tag_variance": 2.0839604808211827,
+              "model_standardized_residual": -0.47156229125789617,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 6,
+              "tagged_bit0": 5,
+              "expected_tags": 4.225437037590343,
+              "mean_card_probability": 0.7042395062650572,
+              "observed_fraction": 0.8333333333333334,
+              "wilson95": [
+                0.43649717781352987,
+                0.9699466302516935
+              ],
+              "conditional_card_tag_variance": 1.2489644613031006,
+              "model_standardized_residual": 0.6930773175553769,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 4,
+              "tagged_bit0": 4,
+              "expected_tags": 2.9081248474580095,
+              "mean_card_probability": 0.7270312118645024,
+              "observed_fraction": 1.0,
+              "wilson95": [
+                0.5101091635454027,
+                1.0
+              ],
+              "conditional_card_tag_variance": 0.7936446215038228,
+              "model_standardized_residual": 1.225631584802677,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 2,
+              "tagged_bit0": 2,
+              "expected_tags": 1.2105701410431364,
+              "mean_card_probability": 0.6052850705215682,
+              "observed_fraction": 1.0,
+              "wilson95": [
+                0.34238022750665303,
+                1.0
+              ],
+              "conditional_card_tag_variance": 0.4756233196461589,
+              "model_standardized_residual": 1.1446744232464043,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 22,
+              "tagged_bit0": 3,
+              "expected_tags": 2.375002614338595,
+              "mean_card_probability": 0.10795466428811795,
+              "observed_fraction": 0.13636363636363635,
+              "wilson95": [
+                0.04749003714055253,
+                0.33334987166571717
+              ],
+              "conditional_card_tag_variance": 2.114865927524069,
+              "model_standardized_residual": 0.42977067701587035,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 25,
+              "tagged_bit0": 1,
+              "expected_tags": 3.531496360236764,
+              "mean_card_probability": 0.14125985440947056,
+              "observed_fraction": 0.04,
+              "wilson95": [
+                0.007096233501987265,
+                0.19544063736193734
+              ],
+              "conditional_card_tag_variance": 3.0322463825082635,
+              "model_standardized_residual": -1.4537678626074315,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 13,
+              "tagged_bit0": 3,
+              "expected_tags": 1.796800735151323,
+              "mean_card_probability": 0.1382154411654864,
+              "observed_fraction": 0.23076923076923078,
+              "wilson95": [
+                0.08179528718498569,
+                0.5025637594672749
+              ],
+              "conditional_card_tag_variance": 1.5482560253642212,
+              "model_standardized_residual": 0.966977053815066,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 7,
+              "tagged_bit0": 0,
+              "expected_tags": 0.7414867603155305,
+              "mean_card_probability": 0.10592668004507579,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.35433043506668743
+              ],
+              "conditional_card_tag_variance": 0.662371300742987,
+              "model_standardized_residual": -0.9110718902086201,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 987,
+              "tagged_bit0": 4,
+              "expected_tags": 2.2363400818992614,
+              "mean_card_probability": 0.0022657954223903355,
+              "observed_fraction": 0.004052684903748734,
+              "wilson95": [
+                0.001577104564923962,
+                0.010373807173052672
+              ],
+              "conditional_card_tag_variance": 2.2312704631724545,
+              "model_standardized_residual": 1.1806977531751255,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 753,
+              "tagged_bit0": 4,
+              "expected_tags": 1.8872988411663056,
+              "mean_card_probability": 0.0025063729630362625,
+              "observed_fraction": 0.005312084993359893,
+              "wilson95": [
+                0.0020676475296236034,
+                0.013578243274436495
+              ],
+              "conditional_card_tag_variance": 1.882561108362302,
+              "model_standardized_residual": 1.5397972133452258,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 311,
+              "tagged_bit0": 1,
+              "expected_tags": 0.9240161406829834,
+              "mean_card_probability": 0.002971112992549786,
+              "observed_fraction": 0.003215434083601286,
+              "wilson95": [
+                0.0005678287489161854,
+                0.01798582311947039
+              ],
+              "conditional_card_tag_variance": 0.9212604746741976,
+              "model_standardized_residual": 0.07916443722657393,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 79,
+              "tagged_bit0": 1,
+              "expected_tags": 0.3209060141494751,
+              "mean_card_probability": 0.004062101444930064,
+              "observed_fraction": 0.012658227848101266,
+              "wilson95": [
+                0.0022379938550498787,
+                0.06827571876965954
+              ],
+              "conditional_card_tag_variance": 0.3195364293406565,
+              "model_standardized_residual": 1.201350394635599,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        },
+        "abs_eta": {
+          "b": [
+            {
+              "eligible_reco_jets": 6,
+              "tagged_bit0": 5,
+              "expected_tags": 4.1117184439918795,
+              "mean_card_probability": 0.6852864073319799,
+              "observed_fraction": 0.8333333333333334,
+              "wilson95": [
+                0.43649717781352987,
+                0.9699466302516935
+              ],
+              "conditional_card_tag_variance": 1.2801372253077694,
+              "model_standardized_residual": 0.7850953069852752,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 9,
+              "tagged_bit0": 6,
+              "expected_tags": 6.0229760149751,
+              "mean_card_probability": 0.6692195572194556,
+              "observed_fraction": 0.6666666666666666,
+              "wilson95": [
+                0.3542021355803963,
+                0.879416181613089
+              ],
+              "conditional_card_tag_variance": 1.9759572686517117,
+              "model_standardized_residual": -0.016345037879631295,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 6,
+              "tagged_bit0": 5,
+              "expected_tags": 3.8901815459408877,
+              "mean_card_probability": 0.648363590990148,
+              "observed_fraction": 0.8333333333333334,
+              "wilson95": [
+                0.43649717781352987,
+                0.9699466302516935
+              ],
+              "conditional_card_tag_variance": 1.3460983893147838,
+              "model_standardized_residual": 0.956562914988688,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "c": [
+            {
+              "eligible_reco_jets": 35,
+              "tagged_bit0": 6,
+              "expected_tags": 4.434714842979993,
+              "mean_card_probability": 0.12670613837085695,
+              "observed_fraction": 0.17142857142857143,
+              "wilson95": [
+                0.08102640053701589,
+                0.3268228229904496
+              ],
+              "conditional_card_tag_variance": 3.8611661256315766,
+              "model_standardized_residual": 0.7965888501619108,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 18,
+              "tagged_bit0": 1,
+              "expected_tags": 2.1458537614232043,
+              "mean_card_probability": 0.11921409785684468,
+              "observed_fraction": 0.05555555555555555,
+              "wilson95": [
+                0.009875190978303097,
+                0.25757300781872594
+              ],
+              "conditional_card_tag_variance": 1.8837321088686643,
+              "model_standardized_residual": -0.8348714781738009,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 14,
+              "tagged_bit0": 0,
+              "expected_tags": 1.8642178656390158,
+              "mean_card_probability": 0.1331584189742154,
+              "observed_fraction": 0.0,
+              "wilson95": [
+                0.0,
+                0.2153108027376358
+              ],
+              "conditional_card_tag_variance": 1.6128414016393005,
+              "model_standardized_residual": -1.467914748869217,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "light": [
+            {
+              "eligible_reco_jets": 822,
+              "tagged_bit0": 3,
+              "expected_tags": 2.0822858621927263,
+              "mean_card_probability": 0.002533194479553195,
+              "observed_fraction": 0.0036496350364963502,
+              "wilson95": [
+                0.0012419648988059029,
+                0.010674921466705196
+              ],
+              "conditional_card_tag_variance": 2.0768691881571497,
+              "model_standardized_residual": 0.6367997006980368,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 689,
+              "tagged_bit0": 3,
+              "expected_tags": 1.7442152089956284,
+              "mean_card_probability": 0.00253151699418814,
+              "observed_fraction": 0.0043541364296081275,
+              "wilson95": [
+                0.0014818807955714079,
+                0.012722608118018668
+              ],
+              "conditional_card_tag_variance": 1.7396148532431754,
+              "model_standardized_residual": 0.9521133735822287,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 619,
+              "tagged_bit0": 4,
+              "expected_tags": 1.542060006709671,
+              "mean_card_probability": 0.002491211642503507,
+              "observed_fraction": 0.006462035541195477,
+              "wilson95": [
+                0.0025157447773124317,
+                0.01649625041503569
+              ],
+              "conditional_card_tag_variance": 1.5381444341492858,
+              "model_standardized_residual": 1.981858834296021,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ],
+          "UNKNOWN": [
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            },
+            {
+              "eligible_reco_jets": 0,
+              "tagged_bit0": 0,
+              "expected_tags": 0.0,
+              "mean_card_probability": null,
+              "observed_fraction": null,
+              "wilson95": null,
+              "conditional_card_tag_variance": 0.0,
+              "model_standardized_residual": null,
+              "statistics_status": "INSUFFICIENT_STATISTICS"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

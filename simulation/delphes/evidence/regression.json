@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "historical_baseline_commit": "c3d901a4894c255b2e471208473e85db1fcd138c",
+  "historical_MG5_Pythia_source_and_reference_tree_sha256": "3756a09ff3d684dbda8a7ee69193e6c6095c573c5b42f23b84b520fbc5ba1e07",
+  "historical_source_references_unchanged": true,
+  "toolchain_and_library_preservation": [
+    {
+      "name": "ROOT_conda_history",
+      "before_sha256": "b34431d29b37459623cf34ffd1dc8bb3fe54f9f7377bd108c40503459dbf81a7",
+      "after_sha256": "b34431d29b37459623cf34ffd1dc8bb3fe54f9f7377bd108c40503459dbf81a7",
+      "status": "PASS"
+    },
+    {
+      "name": "MG5_conda_history",
+      "before_sha256": "734fe80dec6447fd3d3ffb162752e898b9b7272282cb05472cab00c5e41bc3ce",
+      "after_sha256": "734fe80dec6447fd3d3ffb162752e898b9b7272282cb05472cab00c5e41bc3ce",
+      "status": "PASS"
+    },
+    {
+      "name": "ROOT_Core_library",
+      "before_sha256": "fcb0392d82ac33b7f41e310099cfde0e3165e0c83ca4ef89911df72e479e4472",
+      "after_sha256": "fcb0392d82ac33b7f41e310099cfde0e3165e0c83ca4ef89911df72e479e4472",
+      "status": "PASS"
+    },
+    {
+      "name": "ROOT_CPP_runtime",
+      "before_sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9",
+      "after_sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9",
+      "status": "PASS"
+    },
+    {
+      "name": "libpythia8.so",
+      "before_sha256": "80291086e976c1caa2d47c6dec3bd0fe2e41bfe67637458101a43bba6e54620f",
+      "after_sha256": "80291086e976c1caa2d47c6dec3bd0fe2e41bfe67637458101a43bba6e54620f",
+      "status": "PASS"
+    },
+    {
+      "name": "libHepMC3.so.4",
+      "before_sha256": "f669ba0b71e6d011709535b1c61075105dc5b093251335aaac618df417af2bfc",
+      "after_sha256": "f669ba0b71e6d011709535b1c61075105dc5b093251335aaac618df417af2bfc",
+      "status": "PASS"
+    }
+  ],
+  "local_tests": {
+    "MG5_Python": 59,
+    "Pythia_Python": 56,
+    "Pythia_CPP_CTest": 5,
+    "HepMC3_CTest": 31,
+    "Delphes_local_Python_PASS": 27,
+    "Delphes_local_Python_native_SKIPS": 8,
+    "Delphes_native_adversarial_PASS": 8,
+    "Delphes_analytic_CTest": 1,
+    "portable_CI_expected_PASS": 25,
+    "portable_CI_explicit_SKIPS": 10
+  },
+  "local_log_sha256": {
+    "mg5-regression.txt": "afb982c1d0e6b42d1627b86aaa8a411d40714abc731ed8abe7a18fd9bd626ce3",
+    "pythia-regression.txt": "1348f7fd8abd25a9b174cee5e47ae4af53d405eb03cfa42174c43c763394d846",
+    "pythia-cpp-regression-correct-runtime.txt": "4c38093269d48a86170a9a9a0f33b48b93f2b2e948d1a858c4160c5af670c404",
+    "hepmc-regression.txt": "70245add8a7cc1da1b61e3413d0172d1d1ea736b38ef2a1574fffc6cdd835448",
+    "delphes-portable-tests-final.txt": "6ba4f15cc7b3424c0dadc5f89029b7a6b544dd7d72b0afd5bb3d661306b5c413",
+    "analyzer-ctest.log": "37131a5671e28071aacd0cea1f4ff3999593cd8d066fdd04919b158cd491e430",
+    "native-adversarial-tests-r2.log": "3e649771fb5247a3145b04847e32a9135cd58f92a645e1faa713df0ef43fa243",
+    "guide-recheck.log": "893d1c8b3ef0c64a86c34eae4455b03d04c4248b321f1e6ceb8ae7927da6de93",
+    "formal-dry-run-final-activated-root.json": "a2420a837a1feb0af7b96dbc69c1f0bde5e513bbb422b7305793a44e53b5151b"
+  },
+  "own_native_source_sha256": {
+    "simulation/delphes/src/analyze_delphes.cxx": "ece7c1bbedacdc0573394fdb9f330a7a5115cd62cc7f80b43f2e76a4baf668ae",
+    "simulation/delphes/include/DelphesAdapter.hxx": "ca79bbb3baad15bcc8afded0a0261a859e23fcbe63969d523e5a32e33aa115e6",
+    "simulation/delphes/include/Physics.hxx": "24512067aed35295b1e4584a8db8e4aec27c38c330d76099eccc3e83e04e0e6d",
+    "simulation/delphes/CMakeLists.txt": "0bf6eb5acd9b1e21fab217e42a48ce503867438da2e0b4ebc100e5441e71e63c"
+  },
+  "initial_runtime_context_failure": "twoPythia tests inherited ROOTenv8.312 XML; preservedfailure log; pinned8.317env retryPASS withoutsource/data/librarychange",
+  "scope": "actual local regression and physical native tests; GitHub CI evidence separate"
+}

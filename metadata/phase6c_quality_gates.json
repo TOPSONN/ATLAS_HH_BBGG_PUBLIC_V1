@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "task": "PHASE6C_DELPHES_FAST_SIM_AND_ROOT_ANALYSIS_V1",
+  "status": "LOCAL_PASS_REMOTE_NOT_EVALUATED",
+  "gates": {
+    "A": {
+      "state": "PASS",
+      "evidence": "simulation/delphes/evidence/installation.json",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "B": {
+      "state": "PASS",
+      "evidence": "simulation/delphes/evidence/card_source_review.json",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "C": {
+      "state": "PASS",
+      "evidence": "metadata/phase6c_input_manifest.json",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "D": {
+      "state": "PASS",
+      "evidence": "simulation/delphes/evidence/native_runs.json",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "E": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_root_schema.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "F": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_photon_jet_validation.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "G": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_photon_jet_validation.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "H": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_btag_validation.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "I": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_truth_matching.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "J": {
+      "state": "PASS",
+      "evidence": "reports/phase6c_background_cutflow.md",
+      "scope": "independent methods/implementation validation; no official ATLAS calibration"
+    },
+    "K": {
+      "state": "NOT_EVALUATED",
+      "evidence": "simulation/delphes/evidence/github_publication.json",
+      "scope": "actual remote ROOT blob bytes/hash + reviewed payload"
+    },
+    "L": {
+      "state": "NOT_EVALUATED",
+      "evidence": "simulation/delphes/evidence/reproducibility.json and github_publication.json",
+      "local_status": "PASS",
+      "scope": "frozen command scientific content repeated; historical input/source/toolchain hashes preserved; portable GitHubCI distinct native readback"
+    }
+  },
+  "statistics": {
+    "stageC_unique_hard_events": 3000,
+    "per_process": 1000,
+    "A_B_repro_not_additive": true
+  },
+  "physical_processing": {
+    "A10": "PASS",
+    "B100_per_process": "PASS",
+    "C1000_per_process": "PASS",
+    "invalid": 0,
+    "skipped": 0
+  },
+  "initial_preserved_failure": "signed native tiny negativeMass; old analyzer strictgate; actual10ROOTentries retained; freshfinalcommandPASS; evidence/stage_a_initial_failure.json",
+  "tests": {
+    "MG5_portable": 59,
+    "Pythia_portable": 56,
+    "Pythia_CPP": 5,
+    "HepMC3_upstream": 31,
+    "Delphes_local_Python_controls": 27,
+    "Delphes_native_adversarial": 8,
+    "Delphes_analytic_CTest": 1,
+    "independent_PyROOT_full_readback_runs": 7,
+    "local_Python_discovery_native_skips": 8,
+    "portable_CI_controls": 25,
+    "portable_CI_expected_skips": 10,
+    "guide_native_recheck": "physically PASS100",
+    "activated_ROOT_shell_dry_run": "physically PASS; detector_events_processed0"
+  },
+  "forbidden_claims": [
+    "OFFICIAL_ATLAS_DETECTOR_SIMULATION",
+    "CALIBRATED_ATLAS_BTAGGING",
+    "FULL_BACKGROUND_PREDICTION",
+    "HH_SIGNAL_SENSITIVITY",
+    "NLO_MATCHED_GENERATION"
+  ],
+  "figure_status": "NO_NEW_PDF_PNG; unapproved figures excluded",
+  "publication": "selected actual100 ROOT each only; full1000 ROOT/personalruns local",
+  "remote_evidence_commit": null,
+  "PR_URL": null,
+  "git_history": "stackedPhase6B c3d901a; no merge or forcepush"
+}

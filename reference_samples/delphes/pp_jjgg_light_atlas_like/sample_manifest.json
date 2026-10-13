@@ -1,0 +1,77 @@
+{
+  "delphes_source_archive_sha256": "b60d26d2ee2c84b58fbf2cf397fabd0ef3e89d3a0546d843c4ada82cc802d787",
+  "delphes_source_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+  "delphes_source_url": "https://codeload.github.com/delphes/delphes/tar.gz/refs/tags/3.5.1",
+  "delphes_version": "3.5.1",
+  "detector_card": {
+    "canonical_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/detector_card.tcl",
+    "runtime_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+    "seed": 610303
+  },
+  "events": 100,
+  "input_generator_cross_section_pb": 9.436556,
+  "input_hepmc": {
+    "compressed_sha256": "02581f704f398b3935bb76ded39311439525ba09ab66b5e883e39e116a4d60a4",
+    "decompressed_sha256": "3a93e667501efb9a83209e71b36a8a79cafec4209dd554295973b0a9f82325d9",
+    "events": 100,
+    "path": "reference_samples/pythia8/pp_jjgg_light_sm_lo_ps_13tev/shower_100.hepmc3.gz"
+  },
+  "input_index": {
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/input_event_index.dat",
+    "sha256": "dc90b492d81ffd819ace2cdb73fd7e9ec07644cede597de33529a75cab0b9854"
+  },
+  "native_validation": {
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/native_validation.json",
+    "sha256": "b48c108f00e0419f0cb02f6c224a440ae7fdd82d5298c5637a20c9cac4559d21"
+  },
+  "normalization_denominator": 1000,
+  "physics_label": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+  "process": "jjgg",
+  "provenance_files": [
+    {
+      "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/input_event_index.jsonl",
+      "sha256": "9c27d7c27c741d3527aae0f6d3f257d4ca9c26be45d6a2b80a7757140df38e55"
+    },
+    {
+      "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/reco_events.jsonl",
+      "sha256": "4659284f6c870ba7b221b4d55cd3101a9fd0184550dc50ec220bb4671ed0acb1"
+    },
+    {
+      "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/cutflow.csv",
+      "sha256": "1d657014247e1c7c8f2370aaa9860b21ac5bc7981c3e913386784c2d73001872"
+    },
+    {
+      "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/efficiencies.csv",
+      "sha256": "47777b1c12554a7f6056ecdcb4f006ebdd0e2bc9a2d6a79338402860ea73dae2"
+    }
+  ],
+  "publication": "LOCAL_PREPARED_NO_GIT_ACTION",
+  "root_file": {
+    "bytes": 3028524,
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/detector_100.root",
+    "sha256": "2a6ed16ddd26e440d15f661c359b8760af1397a947a9be6f0bd5e5ca432a160a"
+  },
+  "root_version": "6.40.04",
+  "schema_version": 1,
+  "source_ledger": {
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/source_event_ledger.jsonl",
+    "sha256": "3f91243c6529f8ee451a7de06673e5dc8208ccf4c45ed5eabc42ddfef589e47f"
+  },
+  "source_mg5": {
+    "path": "reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+    "sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030"
+  },
+  "source_pythia": {
+    "run_id": "220224a8-5332-5952-866a-58821d9c7748",
+    "seed": 610203,
+    "settings_sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+  },
+  "statistics": "same original1000 hard-event source; these100 detector inputs are not independent extra hard statistics",
+  "transformation": "NONE; original ROOT/card/index/ledger/analysis bytes copied unchanged",
+  "truth_index": {
+    "path": "reference_samples/delphes/pp_jjgg_light_atlas_like/truth_analysis_index.dat",
+    "sha256": "e7821966b7d76a3bfdf85810d83a368ade02f13546cc959aecbb54a397df87f8"
+  },
+  "validation_status": "PASS"
+}

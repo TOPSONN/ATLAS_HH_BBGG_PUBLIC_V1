@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "study_label": "FAST_SIM_ATLAS_LIKE",
+  "official_ATLAS": false,
+  "upstream_url": "https://github.com/delphes/delphes",
+  "upstream_tag": "3.5.1",
+  "upstream_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+  "source_archive_url": "https://codeload.github.com/delphes/delphes/tar.gz/refs/tags/3.5.1",
+  "source_archive_sha256": "b60d26d2ee2c84b58fbf2cf397fabd0ef3e89d3a0546d843c4ada82cc802d787",
+  "source_archive_bytes": 5012371,
+  "archive_vs_independent_tag_clone": {"exact_source_bytes": "PASS", "source_files_compared": 900},
+  "upstream_card_path": "simulation/delphes/cards/upstream_delphes_card_ATLAS_3.5.1.tcl",
+  "upstream_card_sha256": "b6a97bcd6e2b4f19e218eaa07b3afe1937d66452f0519de0b8c367eff46fe69d",
+  "study_card_path": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+  "study_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "changes": [
+    {
+      "setting": "GenJetFinder.ParameterR",
+      "before": 0.6,
+      "after": 0.4
+    },
+    {
+      "setting": "FastJetFinder.ParameterR",
+      "before": 0.6,
+      "after": 0.4
+    },
+    {
+      "setting": "JetFlavorAssociation.DeltaR",
+      "before": 0.5,
+      "after": 0.4
+    },
+    {
+      "setting": "RandomSeed",
+      "before": "stock0(auto seed)",
+      "after": 610301
+    }
+  ],
+  "source_sha256": {
+    "cards/delphes_card_ATLAS.tcl": "b6a97bcd6e2b4f19e218eaa07b3afe1937d66452f0519de0b8c367eff46fe69d",
+    "modules/Delphes.cc": "9e43ea517f19fdac8505d33007a37e424f958aeb8a695aba3d1dd45d6ef6d087",
+    "modules/FastJetFinder.cc": "335e99f67900863804915f78fff6a6bd73159f972438933bfb47a8471f104a0f",
+    "modules/JetFlavorAssociation.cc": "ef790024dc1a1c1f33a8ce2160af49ce8e1205cbd066d9fd5a7281e1727d55b3",
+    "modules/BTagging.cc": "367c02a87193498ed9e1dbb4702c94ad181b0e4f7ba171fc7df3cd3712c16f81",
+    "modules/Isolation.cc": "e8f12d4a008446742f632aad918f752155ecad408ef0a45272a27e49ed0a7724",
+    "modules/UniqueObjectFinder.cc": "17bca136f0a78545719286d49a6d8798654e20c958af359a461aaabd223fb172",
+    "modules/Merger.cc": "e6d64d0ce9951ff3ee3ddbf6a9e162bf7b0a6f0909ee920d5501586b5236c130",
+    "modules/SimpleCalorimeter.cc": "8481d5f267168eb7413ad9b2a0f65521bf92bc7e221408e0d6324db315393976",
+    "modules/TreeWriter.cc": "493b200746370317e16be7060aa531947c592af1c4e15bcd0aa29ceb3dcbdd92",
+    "classes/DelphesClasses.cc": "4af575be5300f59c58c81e86a9c04a817fd9ce40d01ee91760b86706f72b03ef",
+    "classes/DelphesHepMC3Reader.cc": "ae41b83dc7b044a234bf2ddf80cc078075afd955aea34987aefd7ba6ccbb7bb0"
+  },
+  "detector_seeds": {
+    "bbgg": 610301,
+    "ccgg": 610302,
+    "jjgg": 610303
+  },
+  "working_point": "UPSTREAM_ATLAS_CARD_BIT0_STUDY",
+  "btag_bit": 0,
+  "btag_formulas": {
+    "light": "0.002+7.3e-06*pt",
+    "c": "0.20*tanh(0.02*pt)*(1/(1+0.0034*pt))",
+    "b": "0.80*tanh(0.003*pt)*(30/(1+0.086*pt))"
+  },
+  "flavour_definition": "Highest absolute matched quark PDG1..5 within DeltaR<=0.4; gluon lowest priority mappedback21; unmatched0; all nonstable reader partons eligible after pt>1GeV and|eta|<=2.5, not only original hard partons",
+  "photon_isolation": {
+    "DeltaRMax": 0.5,
+    "PTMin_GeV": 0.5,
+    "PTRatioMax": 0.12,
+    "UsePTSum_default": false,
+    "UseRhoCorrection_default": true,
+    "rho_input": "NONE;rho0",
+    "self_exclusion": "different candidate UniqueID"
+  },
+  "overlap": "UniqueObjectFinder priority photons,electrons,muons,jets; recursive shared candidate UID/constituents; not a geometric DeltaR overlap removal",
+  "missing_et": "Negative transverse direction of sum of Calorimeter towers including smeared muons; pre-UniqueObjectFinder and pre-jet-JES",
+  "limits": "Radius adaptation not recalibrated; no ATLAS efficiency/tagging/UE/full-background claim; executed validation is limited to this explicit study implementation",
+  "source_review_status": "PASS",
+  "physical_validation_status": "PASS",
+  "upstream_license": "GPL-3.0-or-later",
+  "upstream_license_path": "simulation/delphes/cards/UPSTREAM_LICENSE_GPL3.txt",
+  "upstream_license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+  "random_seed_source": "modules/Delphes.cc:124; global ::RandomSeed read and gRandom.SetSeed before detector modules initialize",
+  "energy_smearing": "SimpleCalorimeter absolute sigma(E,eta) in GeV; positive log-normal with configured mean/variance; significance thresholds and random tower center subsequently applied",
+  "btag_efficiency_denominator": "All eligible reconstructed Jet with pT>25GeV,|eta|<2.5 before photon/event cuts; categorize actual Flavor5/4/(0,1,2,3,21); other flavours UNKNOWN",
+  "ROOT_BRANCH_TARGETS": {
+    "Photon": "UniqueObjectFinder/photons",
+    "Jet": "UniqueObjectFinder/jets",
+    "GenJet": "GenJetFinder/jets",
+    "MissingET": "MissingET/momentum",
+    "Particle": "Delphes/allParticles",
+    "Track": "TrackMerger/tracks",
+    "Tower": "Calorimeter/towers",
+    "ScalarHT": "ScalarHT/energy"
+  },
+  "event_stage_status": "Actual complete-controller A10 bbgg, B3x100 and C3x1000 native PASS; zero invalid/skipped; source review remains distinct from execution and from statistical/calibration claims"
+}

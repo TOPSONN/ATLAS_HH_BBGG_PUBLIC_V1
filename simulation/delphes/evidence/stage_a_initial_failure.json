@@ -1,0 +1,1127 @@
+{
+  "schema_version": 1,
+  "status": "FAIL_PRESERVED_LOCAL_DIAGNOSTIC",
+  "scope": "initial strict polar-object analyzer rejected signed double-cancellation mass; Delphes produced all10entries; no physical event loss or replacement",
+  "initial_native_report": {
+    "schema_version": 1,
+    "validation_status": "FAIL",
+    "validator": "actual_ROOT_TClonesArray_Delphes_dictionary_and_source_adapter",
+    "root_version": "6.40.04",
+    "cpp_standard": 20,
+    "process": "bbgg",
+    "N_input": 10,
+    "N_read": 3,
+    "N_processed": 2,
+    "N_output": 10,
+    "N_invalid": 1,
+    "N_skipped": 0,
+    "N_unassessed_output_entries": 7,
+    "error": "entry 2 source ordinal 3: invalid polar object",
+    "root_file_sha256": "cbc3da6f9280e8c40c16574852f9e80617604eb2d0c661aba6714700a71bad93",
+    "input_index_sha256": "6c156663a0b83eda1f416688f740f4ce8513ae03211b86056ac029b1946be1d3",
+    "truth_index_sha256": "c5d8642b1db7b1352eb81970bb7fec41a52aebc4631228a43da3f7fa846041df",
+    "detector_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "scientific_content_sha256": "ac454ff8fe8b997503af903a78ddb41ac3f3543072256896151af480eb23f18b",
+    "scientific_content_definition": "exact reco_events JSONL; physics/source/card-derived values; excludes ROOT UUID, dates, process timing and TRef IDs",
+    "native_particle_identity": "multiplicity-preserving Float_t PID/status/p4/mass/XYZmm/Tseconds tuples; T=source_ct_mm*1e-3/2.99792458e8; no barcode/order equivalence; mother/daughter bounds only",
+    "duplicate_particle_tuple_count": 0,
+    "finite_native_scalar_fields_checked": 25384,
+    "native_flavor_float_boundary_jets": 0,
+    "truth_jet_definition": "independent FastJet anti-kT R0.4, all known-PDG status1 particles except neutrinos, inclusive pT20, includes photons/muons; reco overlap removal can cause migrations",
+    "independent_truth_jets": 10,
+    "max_genjet_float_comparison_difference": 2.555607639107005e-06,
+    "max_stored_photon_energy_minus_massless_pt_eta_energy_gev": 1.7918463067617685e-06,
+    "weight_sum_pb": 0.000132493324,
+    "weight_abs_sum_pb": 0.000132493324,
+    "weight_sum_squared_pb2": 8.777240452284489e-09,
+    "positive_weights": 2,
+    "negative_weights": 0,
+    "zero_weights": 0,
+    "optional_mbb_window": "NOT_EVALUATED; no small-sample optimization",
+    "tag_working_point": "UPSTREAM_ATLAS_CARD_BIT0_STUDY",
+    "efficiency_denominator": "all eligible reconstructed Jet pT>25GeV |eta|<2.5, before event photon/mass cuts, actual Flavor5/4/light0,1,2,3,21; otherUNKNOWN",
+    "matching_definition": "global maximum cardinality then minimum total DeltaR; strict photon0.2/jet0.3; exact-cost ties retain ordered residual traversal; one-to-one; geometric diagnostics, not calibrated efficiency",
+    "terminal_heavy_hadron_association": {
+      "assigned_once_to_nearest_eligible_jet_R04": 9,
+      "unassociated": 2,
+      "note": "distinct terminal Py IDs counted once; many hadrons per jet permitted; inclusive B_c flags do not duplicate object"
+    },
+    "schema": [
+      {
+        "branch": "EFlowNeutralHadron",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "EFlowPhoton",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "EFlowTrack",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Track",
+        "class_version": 4,
+        "dictionary_checksum": 968497457
+      },
+      {
+        "branch": "Electron",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Electron",
+        "class_version": 4,
+        "dictionary_checksum": 3973934735
+      },
+      {
+        "branch": "Event",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "HepMCEvent",
+        "class_version": 3,
+        "dictionary_checksum": 2026647734
+      },
+      {
+        "branch": "GenJet",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Jet",
+        "class_version": 5,
+        "dictionary_checksum": 527275606
+      },
+      {
+        "branch": "GenMissingET",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "MissingET",
+        "class_version": 1,
+        "dictionary_checksum": 1034148504
+      },
+      {
+        "branch": "Jet",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Jet",
+        "class_version": 5,
+        "dictionary_checksum": 527275606
+      },
+      {
+        "branch": "MissingET",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "MissingET",
+        "class_version": 1,
+        "dictionary_checksum": 1034148504
+      },
+      {
+        "branch": "Muon",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Muon",
+        "class_version": 4,
+        "dictionary_checksum": 264472101
+      },
+      {
+        "branch": "Particle",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "GenParticle",
+        "class_version": 2,
+        "dictionary_checksum": 3403479520
+      },
+      {
+        "branch": "Photon",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Photon",
+        "class_version": 4,
+        "dictionary_checksum": 4175710330
+      },
+      {
+        "branch": "ScalarHT",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "ScalarHT",
+        "class_version": 1,
+        "dictionary_checksum": 4118442578
+      },
+      {
+        "branch": "Tower",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "Track",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Track",
+        "class_version": 4,
+        "dictionary_checksum": 968497457
+      },
+      {
+        "branch": "Weight",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Weight",
+        "class_version": 1,
+        "dictionary_checksum": 1453428690
+      }
+    ],
+    "all_branch_inventory": [
+      {
+        "branch": "Event",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Event_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Weight",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Weight_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Particle",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Particle_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Track",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Track_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Tower",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Tower_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowTrack",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowTrack_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowPhoton",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowPhoton_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowNeutralHadron",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowNeutralHadron_size",
+        "container_class": ""
+      },
+      {
+        "branch": "GenJet",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "GenJet_size",
+        "container_class": ""
+      },
+      {
+        "branch": "GenMissingET",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "GenMissingET_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Jet",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Jet_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Electron",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Electron_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Photon",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Photon_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Muon",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Muon_size",
+        "container_class": ""
+      },
+      {
+        "branch": "MissingET",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "MissingET_size",
+        "container_class": ""
+      },
+      {
+        "branch": "ScalarHT",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "ScalarHT_size",
+        "container_class": ""
+      }
+    ],
+    "matching": {
+      "final_hard_origin_photons": {
+        "truth_objects": 4,
+        "fiducial_truth_objects": 3,
+        "uniquely_matched": 2,
+        "fiducial_truth_matched": 1,
+        "candidate_edges": 2,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.5,
+        "conditional_fraction_fiducial_truth": 0.3333333333333333,
+        "acceptance_fraction": {
+          "numerator": 3,
+          "denominator": 4,
+          "estimate": 0.75,
+          "wilson95_low": 0.30064184258240184,
+          "wilson95_high": 0.9544127391902995,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 2,
+          "denominator": 4,
+          "estimate": 0.5,
+          "wilson95_low": 0.15003898915214947,
+          "wilson95_high": 0.8499610108478506,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "wilson95_low": 0.06149194472039621,
+          "wilson95_high": 0.7923403991979522,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 2,
+          "mean": 0.9903431318362103,
+          "population_rms_about_mean": 0.005090713705052211
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 2,
+          "mean": -0.006134433484003413,
+          "population_rms_about_mean": 0.01098816252749024
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {
+          "50": {
+            "n": 2,
+            "mean": -0.006134433484003413,
+            "population_rms_about_mean": 0.01098816252749024
+          }
+        }
+      },
+      "original_LHE_photons_diagnostic_only": {
+        "truth_objects": 4,
+        "fiducial_truth_objects": 2,
+        "uniquely_matched": 1,
+        "fiducial_truth_matched": 0,
+        "candidate_edges": 1,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.25,
+        "conditional_fraction_fiducial_truth": 0,
+        "acceptance_fraction": {
+          "numerator": 2,
+          "denominator": 4,
+          "estimate": 0.5,
+          "wilson95_low": 0.15003898915214947,
+          "wilson95_high": 0.8499610108478506,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 1,
+          "denominator": 4,
+          "estimate": 0.25,
+          "wilson95_low": 0.04558726080970055,
+          "wilson95_high": 0.6993581574175981,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "wilson95_low": 0,
+          "wilson95_high": 0.6576197724933469,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 1,
+          "mean": 1.087936784179937,
+          "population_rms_about_mean": 0
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 1,
+          "mean": 0.1312291970453326,
+          "population_rms_about_mean": 0
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {
+          "50": {
+            "n": 1,
+            "mean": 0.1312291970453326,
+            "population_rms_about_mean": 0
+          }
+        }
+      },
+      "post_interface_hard_parton_association_only": {
+        "truth_objects": 4,
+        "fiducial_truth_objects": 4,
+        "uniquely_matched": 1,
+        "fiducial_truth_matched": 1,
+        "candidate_edges": 1,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.25,
+        "conditional_fraction_fiducial_truth": 0.25,
+        "acceptance_fraction": {
+          "numerator": 4,
+          "denominator": 4,
+          "estimate": 1,
+          "wilson95_low": 0.5101091635454027,
+          "wilson95_high": 1,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 1,
+          "denominator": 4,
+          "estimate": 0.25,
+          "wilson95_low": 0.04558726080970055,
+          "wilson95_high": 0.6993581574175981,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 1,
+          "denominator": 4,
+          "estimate": 0.25,
+          "wilson95_low": 0.04558726080970055,
+          "wilson95_high": 0.6993581574175981,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 1,
+          "mean": 0.9745501523300075,
+          "population_rms_about_mean": 0
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 0,
+          "mean": null,
+          "population_rms_about_mean": null
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {}
+      },
+      "stable_visible_antikt_R04_jets": {
+        "truth_objects": 10,
+        "fiducial_truth_objects": 8,
+        "uniquely_matched": 7,
+        "fiducial_truth_matched": 5,
+        "candidate_edges": 8,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 1,
+        "matching_fraction_all_truth": 0.7,
+        "conditional_fraction_fiducial_truth": 0.625,
+        "acceptance_fraction": {
+          "numerator": 8,
+          "denominator": 10,
+          "estimate": 0.8,
+          "wilson95_low": 0.49016247153664183,
+          "wilson95_high": 0.9433178485456247,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 7,
+          "denominator": 10,
+          "estimate": 0.7,
+          "wilson95_low": 0.39677814746114537,
+          "wilson95_high": 0.8922087325936989,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 5,
+          "denominator": 8,
+          "estimate": 0.625,
+          "wilson95_low": 0.30574239460262737,
+          "wilson95_high": 0.8631557141764026,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 7,
+          "mean": 1.1158952571299203,
+          "population_rms_about_mean": 0.2487498690828951
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 0,
+          "mean": null,
+          "population_rms_about_mean": null
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {}
+      }
+    },
+    "multiplicity_migrations": {
+      "hard_origin_truth_photons_to_all_reco": {
+        "2->1": 2
+      },
+      "stable_visible_truth_jets_to_reco": {
+        "5->3": 1,
+        "5->4": 1
+      }
+    }
+  },
+  "post_fix_readback_same_immutable_ROOT": {
+    "schema_version": 1,
+    "validation_status": "PASS",
+    "validator": "actual_ROOT_TClonesArray_Delphes_dictionary_and_source_adapter",
+    "root_version": "6.40.04",
+    "cpp_standard": 20,
+    "process": "bbgg",
+    "N_input": 10,
+    "N_read": 10,
+    "N_processed": 10,
+    "N_output": 10,
+    "N_invalid": 0,
+    "N_skipped": 0,
+    "N_unassessed_output_entries": 0,
+    "error": null,
+    "root_file_sha256": "cbc3da6f9280e8c40c16574852f9e80617604eb2d0c661aba6714700a71bad93",
+    "input_index_sha256": "6c156663a0b83eda1f416688f740f4ce8513ae03211b86056ac029b1946be1d3",
+    "truth_index_sha256": "c5d8642b1db7b1352eb81970bb7fec41a52aebc4631228a43da3f7fa846041df",
+    "detector_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "scientific_content_sha256": "ab8026584d1b94edb1ca93e5f3162e35b0a03d62cebc913fbb47a1a2470fc340",
+    "scientific_content_definition": "exact reco_events JSONL; physics/source/card-derived values; excludes ROOT UUID, dates, process timing and TRef IDs",
+    "native_particle_identity": "multiplicity-preserving Float_t PID/status/p4/mass/XYZmm/Tseconds tuples; T=source_ct_mm*1e-3/2.99792458e8; no barcode/order equivalence; mother/daughter bounds only",
+    "duplicate_particle_tuple_count": 0,
+    "finite_native_scalar_fields_checked": 119580,
+    "native_flavor_float_boundary_jets": 0,
+    "truth_jet_definition": "independent FastJet anti-kT R0.4, all known-PDG status1 particles except neutrinos, inclusive pT20, includes photons/muons; reco overlap removal can cause migrations",
+    "independent_truth_jets": 44,
+    "negative_reco_jet_mass_count": 1,
+    "negative_genjet_mass_count": 1,
+    "max_negative_mass_square_over_p_square": 1.5873194002245834e-16,
+    "signed_native_mass_policy": "raw signed Mass retained; ROOT E2=p2+M*abs(M); negative only within 16*double_epsilon*p2; Cartesian pair physical gate unchanged",
+    "max_genjet_float_comparison_difference": 3.814697265625e-06,
+    "max_stored_photon_energy_minus_massless_pt_eta_energy_gev": 1.250599730889812e-05,
+    "weight_sum_pb": 0.00066246662,
+    "weight_abs_sum_pb": 0.00066246662,
+    "weight_sum_squared_pb2": 4.388620226142244e-08,
+    "positive_weights": 10,
+    "negative_weights": 0,
+    "zero_weights": 0,
+    "optional_mbb_window": "NOT_EVALUATED; no small-sample optimization",
+    "tag_working_point": "UPSTREAM_ATLAS_CARD_BIT0_STUDY",
+    "efficiency_denominator": "all eligible reconstructed Jet pT>25GeV |eta|<2.5, before event photon/mass cuts, actual Flavor5/4/light0,1,2,3,21; otherUNKNOWN",
+    "matching_definition": "global maximum cardinality then minimum total DeltaR; strict photon0.2/jet0.3; exact-cost ties retain ordered residual traversal; one-to-one; geometric diagnostics, not calibrated efficiency",
+    "terminal_heavy_hadron_association": {
+      "assigned_once_to_nearest_eligible_jet_R04": 36,
+      "unassociated": 18,
+      "note": "distinct terminal Py IDs counted once; many hadrons per jet permitted; inclusive B_c flags do not duplicate object"
+    },
+    "schema": [
+      {
+        "branch": "EFlowNeutralHadron",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "EFlowPhoton",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "EFlowTrack",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Track",
+        "class_version": 4,
+        "dictionary_checksum": 968497457
+      },
+      {
+        "branch": "Electron",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Electron",
+        "class_version": 4,
+        "dictionary_checksum": 3973934735
+      },
+      {
+        "branch": "Event",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "HepMCEvent",
+        "class_version": 3,
+        "dictionary_checksum": 2026647734
+      },
+      {
+        "branch": "GenJet",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Jet",
+        "class_version": 5,
+        "dictionary_checksum": 527275606
+      },
+      {
+        "branch": "GenMissingET",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "MissingET",
+        "class_version": 1,
+        "dictionary_checksum": 1034148504
+      },
+      {
+        "branch": "Jet",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Jet",
+        "class_version": 5,
+        "dictionary_checksum": 527275606
+      },
+      {
+        "branch": "MissingET",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "MissingET",
+        "class_version": 1,
+        "dictionary_checksum": 1034148504
+      },
+      {
+        "branch": "Muon",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Muon",
+        "class_version": 4,
+        "dictionary_checksum": 264472101
+      },
+      {
+        "branch": "Particle",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "GenParticle",
+        "class_version": 2,
+        "dictionary_checksum": 3403479520
+      },
+      {
+        "branch": "Photon",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Photon",
+        "class_version": 4,
+        "dictionary_checksum": 4175710330
+      },
+      {
+        "branch": "ScalarHT",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "ScalarHT",
+        "class_version": 1,
+        "dictionary_checksum": 4118442578
+      },
+      {
+        "branch": "Tower",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Tower",
+        "class_version": 5,
+        "dictionary_checksum": 2195636175
+      },
+      {
+        "branch": "Track",
+        "present": true,
+        "required": false,
+        "container": "TClonesArray",
+        "clone_class": "Track",
+        "class_version": 4,
+        "dictionary_checksum": 968497457
+      },
+      {
+        "branch": "Weight",
+        "present": true,
+        "required": true,
+        "container": "TClonesArray",
+        "clone_class": "Weight",
+        "class_version": 1,
+        "dictionary_checksum": 1453428690
+      }
+    ],
+    "all_branch_inventory": [
+      {
+        "branch": "Event",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Event_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Weight",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Weight_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Particle",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Particle_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Track",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Track_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Tower",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Tower_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowTrack",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowTrack_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowPhoton",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowPhoton_size",
+        "container_class": ""
+      },
+      {
+        "branch": "EFlowNeutralHadron",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "EFlowNeutralHadron_size",
+        "container_class": ""
+      },
+      {
+        "branch": "GenJet",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "GenJet_size",
+        "container_class": ""
+      },
+      {
+        "branch": "GenMissingET",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "GenMissingET_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Jet",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Jet_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Electron",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Electron_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Photon",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Photon_size",
+        "container_class": ""
+      },
+      {
+        "branch": "Muon",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "Muon_size",
+        "container_class": ""
+      },
+      {
+        "branch": "MissingET",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "MissingET_size",
+        "container_class": ""
+      },
+      {
+        "branch": "ScalarHT",
+        "container_class": "TClonesArray"
+      },
+      {
+        "branch": "ScalarHT_size",
+        "container_class": ""
+      }
+    ],
+    "matching": {
+      "final_hard_origin_photons": {
+        "truth_objects": 20,
+        "fiducial_truth_objects": 13,
+        "uniquely_matched": 14,
+        "fiducial_truth_matched": 9,
+        "candidate_edges": 14,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.7,
+        "conditional_fraction_fiducial_truth": 0.6923076923076923,
+        "acceptance_fraction": {
+          "numerator": 13,
+          "denominator": 20,
+          "estimate": 0.65,
+          "wilson95_low": 0.43285427668523624,
+          "wilson95_high": 0.818808175898918,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "wilson95_low": 0.4810271816464765,
+          "wilson95_high": 0.8545227551323956,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 9,
+          "denominator": 13,
+          "estimate": 0.6923076923076923,
+          "wilson95_low": 0.42369343180549035,
+          "wilson95_high": 0.8731929634428948,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 14,
+          "mean": 0.9977881450666148,
+          "population_rms_about_mean": 0.009291856110266079
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 14,
+          "mean": -0.0005920225027496801,
+          "population_rms_about_mean": 0.008987812177478665
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {
+          "0": {
+            "n": 4,
+            "mean": 0.0015764051312263012,
+            "population_rms_about_mean": 0.011816051821741086
+          },
+          "25": {
+            "n": 2,
+            "mean": -0.001562883239165163,
+            "population_rms_about_mean": 0.005079542962557759
+          },
+          "35": {
+            "n": 3,
+            "mean": 0.0029285647545209707,
+            "population_rms_about_mean": 0.0041439348115828185
+          },
+          "50": {
+            "n": 2,
+            "mean": -0.006134433484003413,
+            "population_rms_about_mean": 0.01098816252749024
+          },
+          "75": {
+            "n": 1,
+            "mean": -0.01039633868709074,
+            "population_rms_about_mean": 0
+          },
+          "100": {
+            "n": 1,
+            "mean": 0.002930950149217323,
+            "population_rms_about_mean": 0
+          },
+          "150": {
+            "n": 1,
+            "mean": -0.0005196078427530691,
+            "population_rms_about_mean": 0
+          }
+        }
+      },
+      "original_LHE_photons_diagnostic_only": {
+        "truth_objects": 20,
+        "fiducial_truth_objects": 17,
+        "uniquely_matched": 7,
+        "fiducial_truth_matched": 6,
+        "candidate_edges": 7,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.35,
+        "conditional_fraction_fiducial_truth": 0.35294117647058826,
+        "acceptance_fraction": {
+          "numerator": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "wilson95_low": 0.6395811352592431,
+          "wilson95_high": 0.9476312541037835,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 7,
+          "denominator": 20,
+          "estimate": 0.35,
+          "wilson95_low": 0.18119182410108206,
+          "wilson95_high": 0.5671457233147638,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 6,
+          "denominator": 17,
+          "estimate": 0.35294117647058826,
+          "wilson95_low": 0.17309720397243744,
+          "wilson95_high": 0.5869963651478132,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 7,
+          "mean": 1.1086687973637146,
+          "population_rms_about_mean": 0.20182368369977052
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 7,
+          "mean": 0.13604284185808244,
+          "population_rms_about_mean": 0.25546180748045866
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {
+          "25": {
+            "n": 3,
+            "mean": 0.02413507617492484,
+            "population_rms_about_mean": 0.05780136417264741
+          },
+          "35": {
+            "n": 1,
+            "mean": 0.0080618981020646,
+            "population_rms_about_mean": 0
+          },
+          "50": {
+            "n": 1,
+            "mean": 0.1312291970453326,
+            "population_rms_about_mean": 0
+          },
+          "75": {
+            "n": 2,
+            "mean": 0.3703017846672027,
+            "population_rms_about_mean": 0.3762149058011101
+          }
+        }
+      },
+      "post_interface_hard_parton_association_only": {
+        "truth_objects": 20,
+        "fiducial_truth_objects": 16,
+        "uniquely_matched": 9,
+        "fiducial_truth_matched": 6,
+        "candidate_edges": 9,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 0,
+        "matching_fraction_all_truth": 0.45,
+        "conditional_fraction_fiducial_truth": 0.375,
+        "acceptance_fraction": {
+          "numerator": 16,
+          "denominator": 20,
+          "estimate": 0.8,
+          "wilson95_low": 0.5839825677481064,
+          "wilson95_high": 0.919342337420202,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 9,
+          "denominator": 20,
+          "estimate": 0.45,
+          "wilson95_low": 0.2581978582556243,
+          "wilson95_high": 0.6579146575496577,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 6,
+          "denominator": 16,
+          "estimate": 0.375,
+          "wilson95_low": 0.18481232558863633,
+          "wilson95_high": 0.6135895945449727,
+          "statistics_status": "INSUFFICIENT_STATISTICS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 9,
+          "mean": 0.9899861269230938,
+          "population_rms_about_mean": 0.23548753880590673
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 0,
+          "mean": null,
+          "population_rms_about_mean": null
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {}
+      },
+      "stable_visible_antikt_R04_jets": {
+        "truth_objects": 44,
+        "fiducial_truth_objects": 35,
+        "uniquely_matched": 30,
+        "fiducial_truth_matched": 24,
+        "candidate_edges": 31,
+        "truth_with_multiple_candidates": 0,
+        "reco_with_multiple_candidates": 1,
+        "matching_fraction_all_truth": 0.6818181818181818,
+        "conditional_fraction_fiducial_truth": 0.6857142857142857,
+        "acceptance_fraction": {
+          "numerator": 35,
+          "denominator": 44,
+          "estimate": 0.7954545454545454,
+          "wilson95_low": 0.6549942193889834,
+          "wilson95_high": 0.8884674692991871,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "all_truth_matching_fraction_uncertainty": {
+          "numerator": 30,
+          "denominator": 44,
+          "estimate": 0.6818181818181818,
+          "wilson95_low": 0.5344310393781777,
+          "wilson95_high": 0.8000069228914657,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "fiducial_matching_fraction_uncertainty": {
+          "numerator": 24,
+          "denominator": 35,
+          "estimate": 0.6857142857142857,
+          "wilson95_low": 0.5202023638793081,
+          "wilson95_high": 0.8144915532573418,
+          "statistics_status": "DESCRIPTIVE_SUFFICIENT_COUNTS"
+        },
+        "uncertainty_scope": "object-count Wilson diagnostic; same-event correlations are not modeled; not calibrated efficiency",
+        "pt_response_reco_over_truth": {
+          "n": 30,
+          "mean": 1.0442523430393698,
+          "population_rms_about_mean": 0.1603376782193347
+        },
+        "photon_energy_fractional_residual_matched_only": {
+          "n": 0,
+          "mean": null,
+          "population_rms_about_mean": null
+        },
+        "photon_energy_residual_by_truth_pt_lower_edge_gev": {}
+      }
+    },
+    "multiplicity_migrations": {
+      "hard_origin_truth_photons_to_all_reco": {
+        "2->1": 6,
+        "2->2": 4
+      },
+      "stable_visible_truth_jets_to_reco": {
+        "3->2": 1,
+        "3->3": 1,
+        "4->2": 1,
+        "4->3": 2,
+        "5->3": 2,
+        "5->4": 1,
+        "5->5": 1,
+        "6->4": 1
+      }
+    }
+  },
+  "initial_file_publication": "LOCAL_ONLY; contains machine absolute filename",
+  "remediation": "native ROOT signed mass convention, explicit16 double-epsilon relative bound, originalMass retained; fresh finalcommand uses relative output filename"
+}
