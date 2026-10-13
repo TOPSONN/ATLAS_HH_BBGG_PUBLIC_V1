@@ -63,8 +63,8 @@ ctest --test-dir "$HOME/.local/share/atlas-hh-phase6b/build/runner-user" --outpu
 ```bash
 python3 - <<'PY'
 from pathlib import Path
-import json
-source = Path('.local/pythia8_installation.json')
+import json, os
+source = Path(os.environ.get('PYTHIA8_LOCAL_CONFIG', '.local/pythia8_installation.json'))
 record = json.loads(source.read_text())
 assert record['pythia_source_commit'] == '83a5c9986f30746cfb390435a9b10ac55a758fca'
 assert record['hepmc3_source_commit'] == 'beb66aa1a2ac263066becdee26d18ead83edec95'

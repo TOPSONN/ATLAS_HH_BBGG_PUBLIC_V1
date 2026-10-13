@@ -1,8 +1,7 @@
 # Phase6B GitHub shower publication
 
-**LOCAL_PHYSICAL_AND_REFERENCE_PREPARATION_PASS; remote publication and final
-PR-head CI remain NOT_EVALUATED until actual GitHub verification.**
-The intended stacked Draft PR is from `codex/phase6b-pythia8-shower-1k` into
+**PASS: real references published and byte-verified on source/reference head `ee58a1b5a13f6fde939c81e68ea79bdac1a91023`.**
+The actual stacked [Draft PR12](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12) is from `codex/phase6b-pythia8-shower-1k` into
 `codex/phase6a-backgrounds-1k`; PR9/11 remain unchanged and no merge is requested.
 
 Each process has a real100-event reference selected from its actual validated
@@ -68,20 +67,23 @@ respectively, so all three stay local and the concrete Draft Release proposal
 was prepared. Its actual assets retain the full-run hashes listed in the
 configuration report; no release was created or uploaded.
 
-Final acceptance still needs pre-push payload audit, remote blob verification,
-a Draft PR URL and successful checks on the final submitted PR head. At this snapshot:
+Actual pre-push index/outgoing-commit audits passed with zero figures or unselected archives. GitHub returned148 downloaded source/reference/provenance artifacts with exact bytes, and the entire245-blob tree matched. Both source-head workflows completed successfully with actual56/59 tests and required step conclusions. This provenance acceptance seal receives a separate final-head recheck before delivery. The committed receipt binds the independently verified source/reference head and is not a claim about an unobserved future SHA:
 
 | Item | State |
 |---|---|
 | Actual v2 full1000 samples | PASS;1000each,3000total, zero shower/validation failures |
-| Selected real references | PASS_LOCAL;100each, exact original StageC blocks/ledgers |
+| Selected real references | PASS; published100each, exact original StageC blocks/ledgers |
 | Local publisher physical-data preflight | PASS; actually executed,28artifacts prepared locally |
-| Remote sample SHA256 verification | NOT_EVALUATED |
-| Final PR head/URL | UNKNOWN |
-| Final-head GitHub CI | UNKNOWN; NO_CHECKS is not PASS |
+| Remote sample SHA256 verification | PASS; actual GitHub bytes/CRC/decompressed/source/ledger hashes |
+| Draft PR/source-reference head | PR12 / `ee58a1b5a13f6fde939c81e68ea79bdac1a91023`; OPEN/DRAFT |
+| Source-head GitHub CI | PASS; actual Pythia56+MG559, and MG5 workflow59; final provenance seal separately rechecked |
 | Large release creation/upload | NOT_EVALUATED; not authorized by the bounded reference push |
 
 The failed OFF configuration is preserved only as diagnostic source/evidence
 with **NOT_APPROVED_FOR_REFERENCE** status. Its failed physics files are local
 and excluded from publication. Final acceptance cannot be inferred from source
 checks, API tests or a successful Pythia call alone.
+
+Actual Actions evidence: [MG5 reference samples](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38361258136), [Pythia8 shower reference integrity](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38361258047).
+
+The final submitted provenance HEAD is verified through its live PR checks and a second immutable local GitHub-byte/CI receipt before delivery. Historical MG5 Git blob identities remain unchanged. No merge/force push, large release/LFS upload or unapproved figure publication occurred.

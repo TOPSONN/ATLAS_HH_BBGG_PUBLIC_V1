@@ -513,6 +513,8 @@ def validate_repository(repo):
             cpp_path = safe_file(repo, sample["cpp_report_path"])
             require(file_sha256(cpp_path) == sample["cpp_report_sha256"], "physical library report hash mismatch")
             cpp = json.loads(cpp_path.read_text(encoding="utf-8"))
+            require(sample["hepmc3_reported_version"] == cpp["hepmc3_version"],
+                    "reported HepMC3 API version must retain the actual ReaderAscii version string")
             require(cpp["validation_status"] == "PASS" and
                     cpp["N_requested_validation"] == cpp["N_readback"] == cpp["N_passed_validation"] ==
                     cpp["N_events_with_complete_physics_assessment"] == 1000 and

@@ -25,7 +25,7 @@
   "sampling_and_covariance": "Independent Gaussian px,py before momentum compensation; recoil sharing introduces correlations, so raw width is not the final pT RMS",
   "kinematic_construction": "Normal subsystem invariant mass and rapidity preserved by source rotations/boosts; hard-particle and remnant lab-frame momenta change",
   "interpretation": "Standard documented nonperturbative beam/remnant model; not a numerical epsilon, output repair, matching or calibrated ATLAS underlying-event tune",
-  "failure_source_correlated": "Local diagnosis identifies exact-collinear beam-remnant mini-string; official StringRegion::setUp constructs w2 from binary64 Minkowski products and returns empty below m2Join",
+  "failure_source_correlated": "Observed exact-collinear beam-remnant mini-string reaches the later StringRegion::setUp pPos.e()<TINY || pNeg.e()<TINY branch (584-585); binary64 pNeg.e=-5.12478e-5GeV versus high-precision positive4.5844e-5GeV; returns empty before transverse basis. The earlier w2<m2Join branch is not this observed failure.",
   "limits": "Source-reviewed physical model change only. Exact new baseline must pass fresh A/B/C stages with unchanged strict QA; universal numerical success is not claimed.",
   "public_documentation": [
     "https://pythia.org/latest-manual/BeamRemnants.html",

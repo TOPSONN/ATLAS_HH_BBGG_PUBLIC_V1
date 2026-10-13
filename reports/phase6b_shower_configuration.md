@@ -79,11 +79,14 @@ HepMC serialization. No four-vector, particle mass, event block or QA tolerance
 was changed to make this diagnostic pass. The failed physics files stay local.
 
 The investigated topology contains exactly collinear beam-remnant mini-string
-endpoints. In verified8.317 source, StringRegion::setUp constructs w² from
-binary64 Minkowski products and returns an empty region below its minimum
-joining threshold. The source/diagnostic review supports this numerical
-degeneracy mechanism for the observed event; it does not establish a universal
-failure rate. Compact identities and residuals are preserved in
+endpoints. In verified8.317 source, StringRegion::setUp uses binary64 Minkowski
+products to construct light-cone directions. This observed event reaches the
+later `pPos.e()<TINY || pNeg.e()<TINY` branch: pNeg.e≈−5.12478e−5GeV,
+where high-precision evaluation of the preserved endpoints gives a positive
+≈4.5844e−5GeV. It returns an empty region before constructing the transverse
+basis. The upstream API test reproduces this branch. The preceding w²<m2Join
+branch exists but is not the observed event54 failure. This source/diagnostic
+correlation does not establish a universal failure rate. Identities are in
 [baseline_v2_source_review.json](../simulation/pythia8/evidence/baseline_v2_source_review.json).
 
 Version2 restores the documented stock nonperturbative beam/remnant model.

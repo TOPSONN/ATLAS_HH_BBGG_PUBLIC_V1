@@ -172,7 +172,7 @@ def prepare_run(profile, run, stage, publish_full):
             report["pythia_run_id"] == validated["pythia_run_id"] == local["pythia_run_id"],
             "ReaderAscii identity proof does not match the selected real run")
     require(str(local["pythia_version"]) == report["pythia_version"] == "8.317", "Pythia source version differs")
-    reported_hepmc_version = local["hepmc3_version"]
+    reported_hepmc_version = report["hepmc3_version"]
     require(tuple(int(component) for component in reported_hepmc_version.split(".")) == (3, 3, 1) and
             tuple(int(component) for component in report["hepmc3_version"].split(".")) == (3, 3, 1),
             "HepMC3 source version differs")

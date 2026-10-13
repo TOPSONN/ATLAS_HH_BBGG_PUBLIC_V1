@@ -47,3 +47,5 @@ Actual generator warnings are retained in [source/configuration assessment](phas
 All photon/heavy multiplicity and stable-visible-pT distributions are in per-process diagnostic JSON. No figure was generated. ROOT/MG5 historical definitions and results are untouched. The complete local gzip outputs are25,204,359/27,381,014/27,259,142bytes (bbgg/ccgg/jjgg); each exceeds10MiB. Only losslessly selected100-event prefixes from these full verified runs are candidates for GitHub.
 
 Resource evidence separately records physics-runner time, entire CLI elapsed time, exact ASCII/gzip/whole-run bytes and runner getrusage RSS. Future-million-event storage projections scale measured1k whole-run bytes by1000 and remain extrapolations, not a physical million-event or performance acceptance test. No Delphes installation/execution or detector simulation was performed.
+
+Remote source/reference acceptance is recorded in [GitHub publication](phase6b_github_publication.md). It uses exact downloaded bytes and actual successful jobs, separately from the physical tests above.
