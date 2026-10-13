@@ -1,0 +1,505 @@
+{
+  "version": "8.317",
+  "settings_card_sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+  "source_xml_sha256": {
+    "share/Pythia8/xmldoc/Tunes.xml": "74c66a2dc9bba8a6dfdb01437947fff389c99720c1f7da8eac0d42ebf2005af1",
+    "share/Pythia8/xmldoc/PartonShowers.xml": "9f4e2ddfd036b3dac66634ba99d84700ec2b835db97192aeac36ed90b7ac2872",
+    "share/Pythia8/xmldoc/BeamParameters.xml": "b9b8e05ae8728c773de76a4c42b5506c0cca257053de6ef202f89d116235654a",
+    "share/Pythia8/xmldoc/MasterSwitches.xml": "574be85710e96e0a871dc2bbf0c9194b8f17bf529f33467216bbd0662cf716a8",
+    "share/Pythia8/xmldoc/QCDHardProcesses.xml": "d3480570abfec690e85c2f0f189640c7eccb292322ecca391fc6940edfc41cda",
+    "share/Pythia8/xmldoc/QCDSoftProcesses.xml": "a9394caef8166e18a1ddd2d9b969ca9224dfbce227185558087e0f92552b1e7b",
+    "share/Pythia8/xmldoc/SecondHardProcess.xml": "35f606e2ba2ff43da66d3a12330819b5a64f3f0610fa3ea7cd3551c52969eba2",
+    "share/Pythia8/xmldoc/JetMatching.xml": "0bd35d22262c28b0d237b70dcac9d86940ef81b70de967c8ecc33fef9200aa1b",
+    "share/Pythia8/xmldoc/CKKWLMerging.xml": "30db6858445707fc7d5171ee8fff4afda664234f9aa9fb50c10651774c014ae8",
+    "share/Pythia8/xmldoc/SpacelikeShowers.xml": "0d4d3c6b54e7dc8f1dfb89088a96c9354a07ec447cb1b5a96b81baba00d09d2e",
+    "share/Pythia8/xmldoc/TimelikeShowers.xml": "5cb214f66e3d06b1fa6e53f313ad4ba97ed95dd7346e43b4a3e30ac130cf37ad",
+    "share/Pythia8/xmldoc/PDFSelection.xml": "341c145785f000d4f0bf4bc2d37579d7d32fe931e51edc5485b3e55734eb64e1",
+    "share/Pythia8/xmldoc/BeamRemnants.xml": "f166764054381d69b2c49dd664375d7c79df40efee8788dc1f7542ce5f8772f5",
+    "share/Pythia8/xmldoc/ColourReconnection.xml": "b96853ec944a11ec85df6654f633de1b2f24b2060055f640ef6d52c8b0e0085a",
+    "share/Pythia8/xmldoc/ParticleDecays.xml": "0a654d527185196847bf4f85ebd3d72c175bb3100e916e019cbae7fb23d6ccd0",
+    "share/Pythia8/xmldoc/Variations.xml": "3eca13d362e3e55326961008869e4454fcc50f7c99f9cbf73616979b0170317a",
+    "share/Pythia8/xmldoc/RandomNumberSeed.xml": "b1a06cfe8d5511c4050205cb147d4e20417f40348e843fd13533a3f73752248c",
+    "share/Pythia8/xmldoc/ErrorChecks.xml": "9d37c4c9a1d79c1c3c2a9d09cfeb9cce67df6b881d34c064f107a2c6b686f88d",
+    "share/Pythia8/xmldoc/MainProgramSettings.xml": "29884d8e1c753338a346eed2dba8bb2811135838b8fd3a306761faded0cf9235"
+  },
+  "entries": [
+    {
+      "name": "Tune:ee",
+      "chosen": "7",
+      "xml": "share/Pythia8/xmldoc/Tunes.xml",
+      "definition": "<modepick name=\"Tune:ee\" default=\"7\" min=\"-1\" max=\"7\">"
+    },
+    {
+      "name": "Tune:pp",
+      "chosen": "14",
+      "xml": "share/Pythia8/xmldoc/Tunes.xml",
+      "definition": "<modepick name=\"Tune:pp\" default=\"14\" min=\"-1\" max=\"33\">"
+    },
+    {
+      "name": "PartonShowers:model",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/PartonShowers.xml",
+      "definition": "<modepick name=\"PartonShowers:model\" default=\"1\" min=\"1\" max=\"2\">"
+    },
+    {
+      "name": "Beams:frameType",
+      "chosen": "4",
+      "xml": "share/Pythia8/xmldoc/BeamParameters.xml",
+      "definition": "<modepick name=\"Beams:frameType\" default=\"1\" min=\"1\" max=\"5\">"
+    },
+    {
+      "name": "Beams:readLHEFheaders",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/BeamParameters.xml",
+      "definition": "<flag name=\"Beams:readLHEFheaders\" default=\"on\">"
+    },
+    {
+      "name": "Beams:strictLHEFscale",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/BeamParameters.xml",
+      "definition": "<flag name=\"Beams:strictLHEFscale\" default=\"off\">"
+    },
+    {
+      "name": "ProcessLevel:all",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"ProcessLevel:all\" default=\"on\">"
+    },
+    {
+      "name": "ProcessLevel:resonanceDecays",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"ProcessLevel:resonanceDecays\" default=\"on\">"
+    },
+    {
+      "name": "HardQCD:all",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/QCDHardProcesses.xml",
+      "definition": "<flag name=\"HardQCD:all\" default=\"off\">"
+    },
+    {
+      "name": "SoftQCD:all",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/QCDSoftProcesses.xml",
+      "definition": "<flag name=\"SoftQCD:all\" default=\"off\">"
+    },
+    {
+      "name": "SecondHard:generate",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/SecondHardProcess.xml",
+      "definition": "<flag name=\"SecondHard:generate\" default=\"off\">"
+    },
+    {
+      "name": "JetMatching:merge",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/JetMatching.xml",
+      "definition": "<flag name=\"JetMatching:merge\" default=\"off\">"
+    },
+    {
+      "name": "Merging:doKTMerging",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/CKKWLMerging.xml",
+      "definition": "<flag name=\"Merging:doKTMerging\" default=\"off\">"
+    },
+    {
+      "name": "Merging:doMGMerging",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/CKKWLMerging.xml",
+      "definition": "<flag name=\"Merging:doMGMerging\" default=\"off\">"
+    },
+    {
+      "name": "Merging:doPTLundMerging",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/CKKWLMerging.xml",
+      "definition": "<flag name=\"Merging:doPTLundMerging\" default=\"off\">"
+    },
+    {
+      "name": "PartonLevel:all",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:all\" default=\"on\">"
+    },
+    {
+      "name": "PartonLevel:ISR",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:ISR\" default=\"on\">"
+    },
+    {
+      "name": "PartonLevel:FSR",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:FSR\" default=\"on\">"
+    },
+    {
+      "name": "PartonLevel:FSRinProcess",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:FSRinProcess\" default=\"on\">"
+    },
+    {
+      "name": "PartonLevel:FSRinResonances",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:FSRinResonances\" default=\"on\">"
+    },
+    {
+      "name": "PartonLevel:Remnants",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:Remnants\" default=\"on\">"
+    },
+    {
+      "name": "SpaceShower:pTmaxMatch",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<modepick name=\"SpaceShower:pTmaxMatch\" default=\"0\" min=\"0\" max=\"2\">"
+    },
+    {
+      "name": "TimeShower:pTmaxMatch",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<modepick name=\"TimeShower:pTmaxMatch\" default=\"1\" min=\"0\" max=\"2\">"
+    },
+    {
+      "name": "SpaceShower:pTmaxFudge",
+      "chosen": "1.0",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<parm name=\"SpaceShower:pTmaxFudge\" default=\"1.0\" min=\"0.25\" max=\"2.0\">"
+    },
+    {
+      "name": "TimeShower:pTmaxFudge",
+      "chosen": "1.0",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<parm name=\"TimeShower:pTmaxFudge\" default=\"1.0\" min=\"0.25\" max=\"2.0\">"
+    },
+    {
+      "name": "SpaceShower:MEcorrections",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:MEcorrections\" default=\"on\">"
+    },
+    {
+      "name": "TimeShower:MEcorrections",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:MEcorrections\" default=\"on\">"
+    },
+    {
+      "name": "SpaceShower:dipoleRecoil",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:dipoleRecoil\" default=\"off\">"
+    },
+    {
+      "name": "TimeShower:globalRecoil",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:globalRecoil\" default=\"off\">"
+    },
+    {
+      "name": "PDF:pSet",
+      "chosen": "8",
+      "xml": "share/Pythia8/xmldoc/PDFSelection.xml",
+      "definition": "<word name=\"PDF:pSet\" default=\"13\">"
+    },
+    {
+      "name": "PDF:useHard",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/PDFSelection.xml",
+      "definition": "<flag name=\"PDF:useHard\" default=\"off\">"
+    },
+    {
+      "name": "SpaceShower:alphaSvalue",
+      "chosen": "0.130",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<parm name=\"SpaceShower:alphaSvalue\" default=\"0.1365\" min=\"0.06\" max=\"0.25\">"
+    },
+    {
+      "name": "TimeShower:alphaSvalue",
+      "chosen": "0.130",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<parm name=\"TimeShower:alphaSvalue\" default=\"0.1365\" \nmin=\"0.06\" max=\"0.25\">"
+    },
+    {
+      "name": "SpaceShower:alphaSorder",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<modepick name=\"SpaceShower:alphaSorder\" default=\"1\" min=\"0\" max=\"3\">"
+    },
+    {
+      "name": "TimeShower:alphaSorder",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<modepick name=\"TimeShower:alphaSorder\" default=\"1\" min=\"0\" max=\"3\">"
+    },
+    {
+      "name": "SpaceShower:alphaSuseCMW",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:alphaSuseCMW\" default=\"off\">"
+    },
+    {
+      "name": "TimeShower:alphaSuseCMW",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:alphaSuseCMW\" default=\"off\">"
+    },
+    {
+      "name": "SpaceShower:nQuarkIn",
+      "chosen": "5",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<modeopen name=\"SpaceShower:nQuarkIn\" default=\"5\" min=\"0\" max=\"5\">"
+    },
+    {
+      "name": "SpaceShower:QCDshower",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:QCDshower\" default=\"on\">"
+    },
+    {
+      "name": "TimeShower:QCDshower",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:QCDshower\" default=\"on\">"
+    },
+    {
+      "name": "SpaceShower:QEDshowerByQ",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:QEDshowerByQ\" default=\"on\">"
+    },
+    {
+      "name": "SpaceShower:QEDshowerByL",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<flag name=\"SpaceShower:QEDshowerByL\" default=\"on\">"
+    },
+    {
+      "name": "TimeShower:QEDshowerByQ",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:QEDshowerByQ\" default=\"on\">"
+    },
+    {
+      "name": "TimeShower:QEDshowerByL",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:QEDshowerByL\" default=\"on\">"
+    },
+    {
+      "name": "TimeShower:QEDshowerByGamma",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<flag name=\"TimeShower:QEDshowerByGamma\" default=\"on\">"
+    },
+    {
+      "name": "SpaceShower:alphaEMorder",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/SpacelikeShowers.xml",
+      "definition": "<modepick name=\"SpaceShower:alphaEMorder\" default=\"1\" min=\"-1\" max=\"1\">"
+    },
+    {
+      "name": "TimeShower:alphaEMorder",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<modepick name=\"TimeShower:alphaEMorder\" default=\"1\" min=\"-1\" max=\"1\">"
+    },
+    {
+      "name": "HadronLevel:QED",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:QED\" default=\"off\">"
+    },
+    {
+      "name": "TimeShower:gammaModeHad",
+      "chosen": "1",
+      "xml": "share/Pythia8/xmldoc/TimelikeShowers.xml",
+      "definition": "<modepick name=\"TimeShower:gammaModeHad\" default=\"1\" min=\"1\" max=\"2\">"
+    },
+    {
+      "name": "PartonLevel:MPI",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"PartonLevel:MPI\" default=\"on\">"
+    },
+    {
+      "name": "BeamRemnants:primordialKT",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<flag name=\"BeamRemnants:primordialKT\" default=\"on\">"
+    },
+    {
+      "name": "BeamRemnants:primordialKTsoft",
+      "chosen": "0.9",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:primordialKTsoft\" default=\"0.9\" min=\"0.\">"
+    },
+    {
+      "name": "BeamRemnants:primordialKThard",
+      "chosen": "1.8",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:primordialKThard\" default=\"1.8\" min=\"0.\">"
+    },
+    {
+      "name": "BeamRemnants:halfScaleForKT",
+      "chosen": "1.5",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:halfScaleForKT\" default=\"1.5\" min=\"0.\">"
+    },
+    {
+      "name": "BeamRemnants:halfMassForKT",
+      "chosen": "1.0",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:halfMassForKT\" default=\"1.\" min=\"0.\">"
+    },
+    {
+      "name": "BeamRemnants:reducedKTatHighY",
+      "chosen": "0.5",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:reducedKTatHighY\" default=\"0.5\" min=\"0.\" max=\"1.\">"
+    },
+    {
+      "name": "BeamRemnants:primordialKTremnant",
+      "chosen": "0.4",
+      "xml": "share/Pythia8/xmldoc/BeamRemnants.xml",
+      "definition": "<parm name=\"BeamRemnants:primordialKTremnant\" default=\"0.4\" min=\"0.\">"
+    },
+    {
+      "name": "ColourReconnection:reconnect",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/ColourReconnection.xml",
+      "definition": "<flag name=\"ColourReconnection:reconnect\" default=\"on\">"
+    },
+    {
+      "name": "HadronLevel:all",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:all\" default=\"on\">"
+    },
+    {
+      "name": "HadronLevel:Hadronize",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:Hadronize\" default=\"on\">"
+    },
+    {
+      "name": "HadronLevel:Decay",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:Decay\" default=\"on\">"
+    },
+    {
+      "name": "HadronLevel:Rescatter",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:Rescatter\" default=\"off\">"
+    },
+    {
+      "name": "HadronLevel:BoseEinstein",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/MasterSwitches.xml",
+      "definition": "<flag name=\"HadronLevel:BoseEinstein\" default=\"off\">"
+    },
+    {
+      "name": "ParticleDecays:limitTau0",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/ParticleDecays.xml",
+      "definition": "<flag name=\"ParticleDecays:limitTau0\" default=\"off\">"
+    },
+    {
+      "name": "ParticleDecays:tau0Max",
+      "chosen": "10.0",
+      "xml": "share/Pythia8/xmldoc/ParticleDecays.xml",
+      "definition": "<parm name=\"ParticleDecays:tau0Max\" default=\"10.\" min=\"0.\">"
+    },
+    {
+      "name": "ParticleDecays:limitTau",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/ParticleDecays.xml",
+      "definition": "<flag name=\"ParticleDecays:limitTau\" default=\"off\">"
+    },
+    {
+      "name": "ParticleDecays:limitRadius",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/ParticleDecays.xml",
+      "definition": "<flag name=\"ParticleDecays:limitRadius\" default=\"off\">"
+    },
+    {
+      "name": "ParticleDecays:limitCylinder",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/ParticleDecays.xml",
+      "definition": "<flag name=\"ParticleDecays:limitCylinder\" default=\"off\">"
+    },
+    {
+      "name": "4:m0",
+      "chosen": "1.5",
+      "xml": "particleData",
+      "definition": "particleData-m0"
+    },
+    {
+      "name": "5:m0",
+      "chosen": "4.8",
+      "xml": "particleData",
+      "definition": "particleData-m0"
+    },
+    {
+      "name": "UncertaintyBands:doVariations",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/Variations.xml",
+      "definition": "<flag name=\"UncertaintyBands:doVariations\" default=\"off\">"
+    },
+    {
+      "name": "Random:setSeed",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/RandomNumberSeed.xml",
+      "definition": "<flag name=\"Random:setSeed\" default=\"off\">"
+    },
+    {
+      "name": "Check:event",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/ErrorChecks.xml",
+      "definition": "<flag name=\"Check:event\" default=\"on\">"
+    },
+    {
+      "name": "Init:showChangedSettings",
+      "chosen": "on",
+      "xml": "share/Pythia8/xmldoc/MainProgramSettings.xml",
+      "definition": "<flag name=\"Init:showChangedSettings\" default=\"on\">"
+    },
+    {
+      "name": "Init:showChangedParticleData",
+      "chosen": "off",
+      "xml": "share/Pythia8/xmldoc/MainProgramSettings.xml",
+      "definition": "<flag name=\"Init:showChangedParticleData\" default=\"on\">"
+    },
+    {
+      "name": "Next:numberShowInfo",
+      "chosen": "0",
+      "xml": "share/Pythia8/xmldoc/MainProgramSettings.xml",
+      "definition": "<modeopen name=\"Next:numberShowInfo\" default=\"1\" min=\"0\">"
+    },
+    {
+      "name": "Next:numberShowProcess",
+      "chosen": "0",
+      "xml": "share/Pythia8/xmldoc/MainProgramSettings.xml",
+      "definition": "<modeopen name=\"Next:numberShowProcess\" default=\"1\" min=\"0\">"
+    },
+    {
+      "name": "Next:numberShowEvent",
+      "chosen": "0",
+      "xml": "share/Pythia8/xmldoc/MainProgramSettings.xml",
+      "definition": "<modeopen name=\"Next:numberShowEvent\" default=\"1\" min=\"0\">"
+    }
+  ],
+  "missing": [],
+  "particle_data_xml_sha256": "330ba4e7f5a081235b5055f7b312fe6f5c9fe9c95411a845cba7a3e82e67ecca",
+  "lifetime_cutoff_source": {
+    "path": "src/ParticleDecays.cc",
+    "sha256": "afbdc32976b20256555a72fea9cf582fe1f270f05154dd08de375ed6dd937415",
+    "condition": "decayer.tau0() > tau0Max",
+    "tau0Max_mm": 10.0
+  },
+  "proof_refresh": "V2 restores stock primordial-kT model ON; six stock parameters now explicit; all remaining chosen settings and verified XML identities unchanged",
+  "canonical_card_status": "APPROVED_FOR_ACTUAL_VALIDATION; no physical PASS inferred from XML/source checks"
+}

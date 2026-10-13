@@ -22,3 +22,9 @@ CMakeLists.txt text eol=lf
 *.root binary
 *.zip binary
 *.lhe.gz binary
+*.hepmc3.gz binary
+
+# Preserve actual generated defaults, including upstream empty-value spacing.
+simulation/pythia8/evidence/*/effective_settings.cmnd -whitespace
+simulation/pythia8/evidence/*/effective_particle_data.xml -whitespace
+simulation/pythia8/licenses/*_COPYING -whitespace

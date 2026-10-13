@@ -1,0 +1,95 @@
+{
+  "independent_original_hard_events": 3000,
+  "prefix_and_repeat_note": "A/B/repeat reuse original source prefixes; never added to3000 independent hard statistics",
+  "stages": {
+    "a": {
+      "bbgg": {
+        "events": 10,
+        "full_cli_seconds": 1.3518363439999987,
+        "hepmc3_gzip_bytes": 269026,
+        "hepmc3_gzip_sha256": "874ccb3e2a4681a5e48a4f31ce02f143ca84a8b7ae1c7126c15b3615a6e6e731",
+        "input_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "physical_report_sha256": "7e82d856c044ad0070dc1c3b05ccf4a593bc6fa91a345873f13d1f4e1e542d09",
+        "seed": 610201,
+        "status": "PASS"
+      }
+    },
+    "b": {
+      "bbgg": {
+        "events": 100,
+        "full_cli_seconds": 2.4116895350000007,
+        "hepmc3_gzip_bytes": 2518179,
+        "hepmc3_gzip_sha256": "737e30b2242fe009284ae7de6939534162dfcf4d7c4e275abfccbe667933237e",
+        "input_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "physical_report_sha256": "e4986cdfa3f255c3b25b85b797cf222337144d8b17642138b9bb5f2ec4abe4df",
+        "seed": 610201,
+        "status": "PASS"
+      },
+      "ccgg": {
+        "events": 100,
+        "full_cli_seconds": 2.405201575999996,
+        "hepmc3_gzip_bytes": 2697836,
+        "hepmc3_gzip_sha256": "99729939fe8fab4b87fa2bab5bb67b09db056b04c6f87d4fd437a90c34536232",
+        "input_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "physical_report_sha256": "cbf03e8ed66cd62892686031cf6b6729b34c34a85832ea4b8ccdaf1f395a576d",
+        "seed": 610202,
+        "status": "PASS"
+      },
+      "jjgg": {
+        "events": 100,
+        "full_cli_seconds": 2.4025368799999995,
+        "hepmc3_gzip_bytes": 2651189,
+        "hepmc3_gzip_sha256": "1c8094b23b545c1122e1ad684810fbb074fe5499ca66caab78e489c3661f0077",
+        "input_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "physical_report_sha256": "46ef2721b56ddd3d7f30faaba4d56bbbb47a4445ee2828e22989d54411a2a0aa",
+        "seed": 610203,
+        "status": "PASS"
+      }
+    },
+    "c": {
+      "bbgg": {
+        "events": 1000,
+        "full_cli_seconds": 14.212730924999995,
+        "hepmc3_gzip_bytes": 25204359,
+        "hepmc3_gzip_sha256": "a35e15942ac5442b3141960f0c0602f5a4cb63ea853f1090fa9e46f304209536",
+        "input_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "physical_report_sha256": "e02681e32fbf34120e7a48e29dd3ef4098f8c4b35afe3ef7529954b8d212586d",
+        "seed": 610201,
+        "status": "PASS"
+      },
+      "ccgg": {
+        "events": 1000,
+        "full_cli_seconds": 16.98892564399999,
+        "hepmc3_gzip_bytes": 27381014,
+        "hepmc3_gzip_sha256": "ad173686a9d9cb342796016bdb2ea6b70f08a5b921233da0d33d9dd8945cf9bb",
+        "input_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "physical_report_sha256": "5481f14bd76fce36017d71193d7f258cf870a5750af8cba07cd11d4d1efb32ac",
+        "seed": 610202,
+        "status": "PASS"
+      },
+      "jjgg": {
+        "events": 1000,
+        "full_cli_seconds": 15.947292306999998,
+        "hepmc3_gzip_bytes": 27259142,
+        "hepmc3_gzip_sha256": "2643f0c14440b25267a153b72a7d676c337fd182a39e62fdcbe2191361a91365",
+        "input_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "physical_report_sha256": "ff0c861dfe1a1044fda57c17e76b9794a1796dcc17742591c11d556d67d4994c",
+        "seed": 610203,
+        "status": "PASS"
+      }
+    },
+    "repro": {
+      "bbgg": {
+        "events": 10,
+        "full_cli_seconds": 1.225563672000007,
+        "hepmc3_gzip_bytes": 269026,
+        "hepmc3_gzip_sha256": "874ccb3e2a4681a5e48a4f31ce02f143ca84a8b7ae1c7126c15b3615a6e6e731",
+        "input_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "physical_report_sha256": "7e82d856c044ad0070dc1c3b05ccf4a593bc6fa91a345873f13d1f4e1e542d09",
+        "seed": 610201,
+        "status": "PASS"
+      }
+    }
+  },
+  "status": "PASS"
+}

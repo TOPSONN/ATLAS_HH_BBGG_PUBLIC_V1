@@ -1,0 +1,75 @@
+{
+  "PR_merged": false,
+  "assessment": "FINAL_LOCAL_PHYSICAL_EVIDENCE; REMOTE_SEAL_PENDING",
+  "delphes_installed_or_run": false,
+  "figures_created": 0,
+  "final_actual_inputs": 3000,
+  "final_valid_outputs": 3000,
+  "gates": {
+    "A": {
+      "evidence": "reports/phase6b_environment.md",
+      "state": "PASS"
+    },
+    "B": {
+      "evidence": "reports/phase6b_hepmc3_validation.md",
+      "state": "PASS"
+    },
+    "C": {
+      "evidence": "metadata/phase6b_input_manifest.json",
+      "state": "PASS"
+    },
+    "D": {
+      "evidence": "reports/phase6b_lhe_interface.md",
+      "state": "PASS"
+    },
+    "E": {
+      "evidence": "reports/phase6b_hadronization_validation.md",
+      "state": "PASS"
+    },
+    "F": {
+      "evidence": "metadata/phase6b_event_summary.csv",
+      "state": "PASS"
+    },
+    "G": {
+      "evidence": "reports/phase6b_event_identity.md",
+      "state": "PASS"
+    },
+    "H": {
+      "evidence": "reports/phase6b_weight_validation.md",
+      "state": "PASS"
+    },
+    "I": {
+      "evidence": "simulation/pythia8/evidence/*/physical_validation.json",
+      "state": "PASS"
+    },
+    "J": {
+      "evidence": "reports/phase6b_github_publication.md",
+      "state": "NOT_EVALUATED"
+    },
+    "K": {
+      "evidence": "simulation/pythia8/USER_GUIDE_ZH_TW.md",
+      "state": "PASS"
+    },
+    "L": {
+      "evidence": "remote CI pending; local56new/59MG5/5C++ tests plus10event reproducibility PASS",
+      "state": "NOT_EVALUATED"
+    }
+  },
+  "million_events_processed": false,
+  "old_failed_diagnostic_run": {
+    "events": 100,
+    "failed_particles": 3,
+    "failed_validation_events": 1,
+    "reference_accepted": false,
+    "valid_events": 99
+  },
+  "published_reference_plan_events": 300,
+  "schema_version": 1,
+  "states_allowed": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "UNKNOWN",
+    "NOT_EVALUATED"
+  ]
+}

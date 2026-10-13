@@ -1,0 +1,101 @@
+! Phase 6B isolated external-LO-LHE shower baseline v2.
+! Runner sets Beams:LHEF and Random:seed explicitly after loading this card.
+! This modifies the tune and is not an ATLAS tune or an ME/PS matching setup.
+
+! Fixed tune starting point; subsequent overrides are intentional.
+Tune:ee = 7
+Tune:pp = 14
+PartonShowers:model = 1
+Beams:frameType = 4
+Beams:readLHEFheaders = on
+Beams:strictLHEFscale = on
+ProcessLevel:all = on
+ProcessLevel:resonanceDecays = on
+
+! No Pythia-generated replacement hard process or second hard interaction.
+HardQCD:all = off
+SoftQCD:all = off
+SecondHard:generate = off
+JetMatching:merge = off
+Merging:doKTMerging = off
+Merging:doMGMerging = off
+Merging:doPTLundMerging = off
+
+! Simple pT-ordered ISR/FSR; honor the external SCALUP upper scale.
+PartonLevel:all = on
+PartonLevel:ISR = on
+PartonLevel:FSR = on
+PartonLevel:FSRinProcess = on
+PartonLevel:FSRinResonances = on
+PartonLevel:Remnants = on
+SpaceShower:pTmaxMatch = 1
+TimeShower:pTmaxMatch = 1
+SpaceShower:pTmaxFudge = 1.0
+TimeShower:pTmaxFudge = 1.0
+SpaceShower:MEcorrections = off
+TimeShower:MEcorrections = off
+SpaceShower:dipoleRecoil = off
+TimeShower:globalRecoil = off
+
+! Same named LO PDF as the MG5 input; no LHAPDF download required.
+PDF:pSet = 8
+PDF:useHard = off
+SpaceShower:alphaSvalue = 0.130
+TimeShower:alphaSvalue = 0.130
+SpaceShower:alphaSorder = 1
+TimeShower:alphaSorder = 1
+SpaceShower:alphaSuseCMW = off
+TimeShower:alphaSuseCMW = off
+SpaceShower:nQuarkIn = 5
+SpaceShower:QCDshower = on
+TimeShower:QCDshower = on
+
+! QED photons from showers/decays are retained; gamma conversion is excluded
+! in this first direct-photon baseline and recorded as a physical limitation.
+SpaceShower:QEDshowerByQ = on
+SpaceShower:QEDshowerByL = on
+TimeShower:QEDshowerByQ = on
+TimeShower:QEDshowerByL = on
+TimeShower:QEDshowerByGamma = off
+SpaceShower:alphaEMorder = 1
+TimeShower:alphaEMorder = 1
+HadronLevel:QED = on
+TimeShower:gammaModeHad = 1
+
+! MPI/pileup and CR remain off; stock primordial-kT beam-remnant model is on.
+PartonLevel:MPI = off
+! Versioned physical model choice: Gaussian primordial pT with stock parameters.
+! This changes beam/subsystem recoil; it is not a particle repair or ATLAS UE tune.
+BeamRemnants:primordialKT = on
+BeamRemnants:primordialKTsoft = 0.9
+BeamRemnants:primordialKThard = 1.8
+BeamRemnants:halfScaleForKT = 1.5
+BeamRemnants:halfMassForKT = 1.0
+BeamRemnants:reducedKTatHighY = 0.5
+BeamRemnants:primordialKTremnant = 0.4
+ColourReconnection:reconnect = off
+
+! Lund string fragmentation and built-in decays of applicable short-lived
+! particles. c*tau >10 mm particles remain stable in this truth convention.
+HadronLevel:all = on
+HadronLevel:Hadronize = on
+HadronLevel:Decay = on
+HadronLevel:Rescatter = off
+HadronLevel:BoseEinstein = off
+ParticleDecays:limitTau0 = on
+ParticleDecays:tau0Max = 10.0
+ParticleDecays:limitTau = off
+ParticleDecays:limitRadius = off
+ParticleDecays:limitCylinder = off
+4:m0 = 1.5
+5:m0 = 4.8
+
+! Shower variations are not enabled. Signed nominal LHE weights are preserved.
+UncertaintyBands:doVariations = off
+Random:setSeed = on
+Check:event = on
+Init:showChangedSettings = on
+Init:showChangedParticleData = off
+Next:numberShowInfo = 0
+Next:numberShowProcess = 0
+Next:numberShowEvent = 0

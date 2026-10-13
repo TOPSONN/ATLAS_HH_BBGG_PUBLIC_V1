@@ -1,0 +1,86 @@
+{
+  "DelphesHepMC3_source_only": {
+    "documented_reader_buffer_bytes": 16384,
+    "max_observed_ascii_line_bytes": {
+      "bbgg": 159,
+      "ccgg": 166,
+      "jjgg": 215
+    },
+    "runtime_compatibility": "NOT_EVALUATED; not installed or executed"
+  },
+  "runs": {
+    "bbgg": {
+      "actual_ascii_bytes": 71497127,
+      "actual_complete_run_bytes": 250644633,
+      "actual_full_cli_seconds": 14.212730924999995,
+      "actual_gzip_bytes": 25204359,
+      "actual_physics_runner_seconds": 3.039935746,
+      "million_event_projection_status": "EXTRAPOLATION_ONLY_NOT_EXECUTED; record content and source size can differ",
+      "million_event_storage_projection_bytes": 250644633000,
+      "peak_runner_rss_bytes": 21757952,
+      "peak_scope": "getrusage of real C++ generator process, not whole system or all Python processes",
+      "prediction_scope": "measured100-event gzip bytes x10; not guaranteed; actual values replace estimate",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_free_bytes": 1008799956992,
+        "jobs": 1,
+        "lhe_decompressed_bytes": 969612,
+        "predicted_hepmc_bytes": "UNKNOWN",
+        "predicted_runtime_seconds": "UNKNOWN",
+        "prediction_basis": "No production throughput extrapolation; actual run metrics are recorded",
+        "ram_available_bytes": 7542996992,
+        "ram_total_bytes": 8051191808
+      },
+      "stage_B_gzip_prediction_for_1000_bytes": 25181790
+    },
+    "ccgg": {
+      "actual_ascii_bytes": 78033465,
+      "actual_complete_run_bytes": 273911296,
+      "actual_full_cli_seconds": 16.98892564399999,
+      "actual_gzip_bytes": 27381014,
+      "actual_physics_runner_seconds": 3.978280755,
+      "million_event_projection_status": "EXTRAPOLATION_ONLY_NOT_EXECUTED; record content and source size can differ",
+      "million_event_storage_projection_bytes": 273911296000,
+      "peak_runner_rss_bytes": 21889024,
+      "peak_scope": "getrusage of real C++ generator process, not whole system or all Python processes",
+      "prediction_scope": "measured100-event gzip bytes x10; not guaranteed; actual values replace estimate",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_free_bytes": 1008549253120,
+        "jobs": 1,
+        "lhe_decompressed_bytes": 969561,
+        "predicted_hepmc_bytes": "UNKNOWN",
+        "predicted_runtime_seconds": "UNKNOWN",
+        "prediction_basis": "No production throughput extrapolation; actual run metrics are recorded",
+        "ram_available_bytes": 7542419456,
+        "ram_total_bytes": 8051191808
+      },
+      "stage_B_gzip_prediction_for_1000_bytes": 26978360
+    },
+    "jjgg": {
+      "actual_ascii_bytes": 78057236,
+      "actual_complete_run_bytes": 275587484,
+      "actual_full_cli_seconds": 15.947292306999998,
+      "actual_gzip_bytes": 27259142,
+      "actual_physics_runner_seconds": 3.295683889,
+      "million_event_projection_status": "EXTRAPOLATION_ONLY_NOT_EXECUTED; record content and source size can differ",
+      "million_event_storage_projection_bytes": 275587484000,
+      "peak_runner_rss_bytes": 21688320,
+      "peak_scope": "getrusage of real C++ generator process, not whole system or all Python processes",
+      "prediction_scope": "measured100-event gzip bytes x10; not guaranteed; actual values replace estimate",
+      "preflight": {
+        "available_logical_cpus": 8,
+        "disk_free_bytes": 1008269090816,
+        "jobs": 1,
+        "lhe_decompressed_bytes": 969652,
+        "predicted_hepmc_bytes": "UNKNOWN",
+        "predicted_runtime_seconds": "UNKNOWN",
+        "prediction_basis": "No production throughput extrapolation; actual run metrics are recorded",
+        "ram_available_bytes": 7537156096,
+        "ram_total_bytes": 8051191808
+      },
+      "stage_B_gzip_prediction_for_1000_bytes": 26511890
+    }
+  },
+  "status": "MEASURED_1000_RUNS; FUTURE_SCALE_EXTRAPOLATION_ONLY"
+}

@@ -1,0 +1,17 @@
+{
+  "MG5_toolchain_history_sha256": "734fe80dec6447fd3d3ffb162752e898b9b7272282cb05472cab00c5e41bc3ce",
+  "ROOT_history_sha256": "b34431d29b37459623cf34ffd1dc8bb3fe54f9f7377bd108c40503459dbf81a7",
+  "actual_linked_cpp_api_tests": 5,
+  "commands": [
+    "python3 -B -m unittest discover -s simulation/mg5/tests -v",
+    "python3 -B -m unittest discover -s simulation/pythia8/tests -v",
+    "ctest --test-dir [ISOLATED_RUNNER_BUILD] --output-on-failure"
+  ],
+  "existing_mg5_git_tree_unchanged": true,
+  "fixture_scope": "synthetic/corruption/API controls test only failure paths; physical references are genuine Pythia runs on existing MG5 inputs",
+  "hepmc3_upstream_tests": 31,
+  "mg5_portable_tests": 59,
+  "new_pythia_portable_tests": 56,
+  "physical_full_events": 3000,
+  "status": "PASS"
+}

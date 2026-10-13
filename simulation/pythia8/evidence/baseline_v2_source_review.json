@@ -1,0 +1,106 @@
+{
+  "status": "SOURCE_REVIEW_PASS; V2_PHYSICAL_VALIDATION_NOT_EVALUATED_BY_THIS_EVIDENCE",
+  "pythia_version": "8.317",
+  "source_commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+  "source_sha256": {
+    "share/Pythia8/xmldoc/BeamRemnants.xml": "f166764054381d69b2c49dd664375d7c79df40efee8788dc1f7542ce5f8772f5",
+    "share/Pythia8/tunes/Monash2013.cmnd": "0cf04d68789d2a08fe27586496ff78f47941aff8e45463c7c8a1cd8f97005534",
+    "src/BeamRemnants.cc": "7a466ba004f96bb717027087ded4438e1bfc95ce64cc9135d43f71ea5b6edfb5",
+    "src/FragmentationSystems.cc": "49b86b42b3720fec8556a4465561648ab50cd6b95e87942b55d929f0465d375f",
+    "share/Pythia8/tunes/Monash2013-ee.cmnd": "4f61cc9746b8f7f1667c14885a1edddb5b2a414d78f335af9b4afafabcbea9bf",
+    "src/HadronWidths.cc": "1684005fdace4b8ac521bd130586004705d3b05c2f17effe31f415e8223428e7"
+  },
+  "candidate_sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+  "original_baseline_sha256": "a1e62fdaf6a6b487a1d9c696b87fa4ce9edec31c0b3b00dca5e985cba4ab7dd5",
+  "physics_change": "primordial-kT beam/remnant Gaussian model ON instead of disabled; MPI, pileup and CR remain OFF",
+  "parameters": {
+    "primordialKTsoft_GeV": 0.9,
+    "primordialKThard_GeV": 1.8,
+    "halfScaleForKT_GeV": 1.5,
+    "halfMassForKT_GeV": 1.0,
+    "reducedKTatHighY": 0.5,
+    "primordialKTremnant_GeV": 0.4
+  },
+  "LHE_initiator_sigma_before_compensation": "1.8 GeV * m/(m + 1.0 GeV * (E/m)^0.5); soft width and halfScale bypassed for first LHE subsystem",
+  "sampling_and_covariance": "Independent Gaussian px,py before momentum compensation; recoil sharing introduces correlations, so raw width is not the final pT RMS",
+  "kinematic_construction": "Normal subsystem invariant mass and rapidity preserved by source rotations/boosts; hard-particle and remnant lab-frame momenta change",
+  "interpretation": "Standard documented nonperturbative beam/remnant model; not a numerical epsilon, output repair, matching or calibrated ATLAS underlying-event tune",
+  "failure_source_correlated": "Local diagnosis identifies exact-collinear beam-remnant mini-string; official StringRegion::setUp constructs w2 from binary64 Minkowski products and returns empty below m2Join",
+  "limits": "Source-reviewed physical model change only. Exact new baseline must pass fresh A/B/C stages with unchanged strict QA; universal numerical success is not claimed.",
+  "public_documentation": [
+    "https://pythia.org/latest-manual/BeamRemnants.html",
+    "https://pythia.org/latest-manual/UpdateHistory.html"
+  ],
+  "canonical_settings": {
+    "path": "simulation/pythia8/config/baseline_shower.cmnd",
+    "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+    "version": "v2"
+  },
+  "diagnostic_settings": {
+    "path": "simulation/pythia8/config/diagnostic_collinear_disabled.cmnd",
+    "sha256": "a1e62fdaf6a6b487a1d9c696b87fa4ce9edec31c0b3b00dca5e985cba4ab7dd5",
+    "status": "NOT_APPROVED_FOR_REFERENCE",
+    "normal_cli_supported": false,
+    "byte_identity": "Exact original failed-run settings card; no annotations added"
+  },
+  "preserved_failed_OFF_run": {
+    "local_label": "stage_b_bbgg_100",
+    "status": "PARTIAL",
+    "publication": "LOCAL_ONLY_NOT_APPROVED",
+    "source_sample_id": "bbgg",
+    "source_file_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+    "pythia_run_id": "e72f7e19-481c-5d7a-a95a-fba1c15c4442",
+    "pythia_seed": 610201,
+    "events_requested": 100,
+    "counters": {
+      "N_input": 100,
+      "N_attempted": 100,
+      "N_shower_success": 100,
+      "N_shower_failed": 0,
+      "N_written": 100
+    },
+    "raw_ASCII_sha256": "307c3473b436afbbf7e4856c371226d897545754ad0a036d608e687b6996e471",
+    "raw_particle_diagnostics_sha256": "5f35a7ddb5e745b1d419a7823cec94a47de93fc619f328b6598d666f00978710",
+    "run_summary_sha256": "7bdf47336dcd2c85dd9cd0f8bb264266d9b8b392380d99eb778ce660bcf3a5dc",
+    "physical_readback_log_sha256": "e2a43bfcbd23f5f5701594a5a6fda357d84cd08b100d546914cbc73c8e49867d",
+    "physical_readback_exit_code": 1,
+    "physical_readback_message": "FAIL: stable-particle mass-shell failure",
+    "physical_validation_report": "NOT_PRESENT; ReaderAscii validator exited nonzero; no full-readback PASS inferred",
+    "diagnosis_source_sha256": "68a1e95c98987049151ac828df6367d32d0e7e1d266c3814579bb77a64e3dcea",
+    "stable_particle_failures": 3,
+    "failure_pdg_counts": {
+      "310": 1,
+      "22": 2
+    },
+    "event54_failures": [
+      {
+        "event": 54,
+        "pythia_index": 436,
+        "pdg_id": 310,
+        "recorded_mass_gev": 0.49761,
+        "p4_mass_squared_gev2": 0.2909909840673208,
+        "residual_gev2": 0.04337527196732083,
+        "strict_tolerance_gev2": 0.00983071310329683
+      },
+      {
+        "event": 54,
+        "pythia_index": 491,
+        "pdg_id": 22,
+        "recorded_mass_gev": 0,
+        "p4_mass_squared_gev2": 0.0015429833983944263,
+        "residual_gev2": 0.0015429833983944263,
+        "strict_tolerance_gev2": 1.6542891609421146e-05
+      },
+      {
+        "event": 54,
+        "pythia_index": 492,
+        "pdg_id": 22,
+        "recorded_mass_gev": 0,
+        "p4_mass_squared_gev2": 0.028556431585457176,
+        "residual_gev2": 0.028556431585457176,
+        "strict_tolerance_gev2": 0.00030465918177574917
+      }
+    ],
+    "diagnostic_scope": "Residuals independently recomputed from unmodified raw Pythia particle diagnostics; ReaderAscii separately failed. No physics event bytes are published or repaired here."
+  }
+}
