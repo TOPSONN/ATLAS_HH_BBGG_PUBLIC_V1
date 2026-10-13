@@ -10,7 +10,7 @@
 |---|---|
 | PROJECT | ATLAS_HH_BBGG_PUBLIC_V1 |
 | TASK | PHASE6C_DELPHES_FAST_SIM_AND_ROOT_ANALYSIS_V1 |
-| STATUS | LOCAL_PASS_REMOTE_NOT_EVALUATED |
+| STATUS | PASS |
 | DELPHES_INSTALLED | YES; isolated user-owned WSL prefix |
 | DELPHES_VERSION | 3.5.1 |
 | DELPHES_SOURCE | official tag3.5.1 /28658365abeb71ee36dfc739f9670c1514c0cb10; archiveb60d26d2ee2c84b58fbf2cf397fabd0ef3e89d3a0546d843c4ada82cc802d787 |
@@ -41,15 +41,15 @@
 | M_BBGAMMAGAMMA | PASS summed selected taggedjet+photonpairs; null when unavailable |
 | WEIGHT_ACCOUNTING | PASS raw signed source contributions/full original1000denominator, named highprecision sidecar; separateσ .06624666/.6274417/9.436556pb, raw sums retain generator digits; no luminosity |
 | LOCAL_TESTS | 59MG5+56PythiaPython+5PythiaCPP+31HepMC+27DelphesPython+8nativefailure+1analyticCTest PASS;7 independentPyROOT readbacks; guide recheck and activatedshell dryrun PASS; CI25Python/10explicitSKIP distinct local35discovered/8SKIP |
-| GITHUB_CI | NOT_EVALUATED pending actual GitHub runs |
-| GITHUB_SAMPLES | 3 localprepared100-entry ROOTreferences; remote NOT_EVALUATED |
-| GATES_PASS | A,B,C,D,E,F,G,H,I,J |
+| GITHUB_CI | PASS at evidencecommit; portable signatures/hashes/provenance only |
+| GITHUB_SAMPLES | 3 actual100-entry ROOT blobs verified SHA256 |
+| GATES_PASS | A,B,C,D,E,F,G,H,I,J,K,L |
 | GATES_FAIL | NONE |
 | GATES_BLOCKED | NONE |
-| GATES_UNKNOWN | NONE; remote NOT_EVALUATED if notsealed |
-| COMMIT_HASH | PENDING; remote evidence commit is a bounded snapshot; subsequent finalhead verified separately |
-| PR_URL | PENDING stackedDraftPR base codex/phase6b-pythia8-shower-1k |
-| FINAL_VERDICT | LOCAL_METHODS_PASS_REMOTE_PENDING |
+| GATES_UNKNOWN | NONE |
+| COMMIT_HASH | 1c20514c44db624dd926ed058deca39c1c41fbfb (verified source/data snapshot; later report-seal HEAD recorded in PR body) |
+| PR_URL | https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13 |
+| FINAL_VERDICT | PASS_INDEPENDENT_ATLAS_LIKE_METHODS_SELF_SERVICE_AND_SELECTED_REFERENCES |
 | NEXT_RECOMMENDED_STEP | Review the DraftPR/card/uncertainties, then design an independently justified larger-statistics/systematics study; no automatic merge or generation expansion |
 
 ## Evidence and scientific limits

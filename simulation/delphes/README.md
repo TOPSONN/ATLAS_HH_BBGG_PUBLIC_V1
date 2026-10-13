@@ -47,16 +47,25 @@ or skipped inputs. Independent PyROOT readback passed all seven runs. Bundled
 Tcl/FastJet are used, with ROOT libraries loaded from the verified environment.
 The three Stage B ROOT files pass the strict privacy/signature/size guard.
 Actual selected-copy preparation and portable integrity passed all three
-references. Final remote publication is recorded separately and remains pending.
+references. [Draft PR #13](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13)
+is OPEN/DRAFT against the Phase6B branch. At verified source/data snapshot
+`1c20514c44db624dd926ed058deca39c1c41fbfb`, actual GitHub ROOT downloads match
+all three hashes/sizes and the whole 334-file blob tree; all four relevant
+push/PR CI runs succeeded. The exact bounded receipt is
+[github_publication.json](evidence/github_publication.json), with workflow links
+in the [publication report](../../reports/phase6c_github_publication.md).
+The later report-only seal receives a separate final-HEAD check recorded in
+the PR body/final handoff; this document does not claim its own future hash.
+Historical PR #9 remains OPEN/ready for review; #11 and #12 remain OPEN/DRAFT.
 The [native receipts](evidence/native_runs.json),
 [independent readback](evidence/independent_readback.json) and
 [reproducibility evidence](evidence/reproducibility.json) distinguish physical
 processing, independent auditing and equal scientific content from ROOT binary
-identity. The repeated10-event run adds no hard statistics.
+identity. The repeated 10-event run adds no hard statistics.
 The [Traditional Chinese guide](USER_GUIDE_ZH_TW.md) supplies complete commands;
 [binned tagging evidence](evidence/btag_binned_statistics.json) uses Stage C only.
 
-The [official3.5.1 repository](https://github.com/delphes/delphes/tree/3.5.1)
+The [official 3.5.1 repository](https://github.com/delphes/delphes/tree/3.5.1)
 and the distributed GPLv3-or-later license apply to the upstream and derivative
 cards. The unmodified license is retained in
 [UPSTREAM_LICENSE_GPL3.txt](cards/UPSTREAM_LICENSE_GPL3.txt).

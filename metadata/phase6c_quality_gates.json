@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "ATLAS_HH_BBGG_PUBLIC_V1",
   "task": "PHASE6C_DELPHES_FAST_SIM_AND_ROOT_ANALYSIS_V1",
-  "status": "LOCAL_PASS_REMOTE_NOT_EVALUATED",
+  "status": "PASS",
   "gates": {
     "A": {
       "state": "PASS",
@@ -55,12 +55,12 @@
       "scope": "independent methods/implementation validation; no official ATLAS calibration"
     },
     "K": {
-      "state": "NOT_EVALUATED",
+      "state": "PASS",
       "evidence": "simulation/delphes/evidence/github_publication.json",
       "scope": "actual remote ROOT blob bytes/hash + reviewed payload"
     },
     "L": {
-      "state": "NOT_EVALUATED",
+      "state": "PASS",
       "evidence": "simulation/delphes/evidence/reproducibility.json and github_publication.json",
       "local_status": "PASS",
       "scope": "frozen command scientific content repeated; historical input/source/toolchain hashes preserved; portable GitHubCI distinct native readback"
@@ -103,7 +103,8 @@
   ],
   "figure_status": "NO_NEW_PDF_PNG; unapproved figures excluded",
   "publication": "selected actual100 ROOT each only; full1000 ROOT/personalruns local",
-  "remote_evidence_commit": null,
-  "PR_URL": null,
-  "git_history": "stackedPhase6B c3d901a; no merge or forcepush"
+  "remote_evidence_commit": "1c20514c44db624dd926ed058deca39c1c41fbfb",
+  "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13",
+  "git_history": "stackedPhase6B c3d901a; no merge or forcepush",
+  "report_seal_scope": "remote evidence is exact source/data snapshot; later report-only HEAD verified separately in PRbody/finalhandoff; no self-referential own-commit claim"
 }

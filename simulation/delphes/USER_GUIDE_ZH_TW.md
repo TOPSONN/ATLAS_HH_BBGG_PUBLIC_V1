@@ -13,7 +13,10 @@ Pythia 8.317 / HepMC3 3.3.1；一般操作不重新安裝。原始 MG5、Pythia 
 不同；它也不增加硬事件統計。完整執行證據在
 `simulation/delphes/evidence/native_runs.json`、`independent_readback.json` 與
 `reproducibility.json`。三個選定 100 事件參考檔的本機精確複製與 portable
-檢查已實際完成；遠端 blob／最終 HEAD CI 仍待發布驗證。
+檢查已實際完成；遠端驗證對應的精確 source/data snapshot 為
+`1c20514c44db624dd926ed058deca39c1c41fbfb`：三個 GitHub ROOT blob 的實際下載
+雜湊／大小、334 個 Git blob 檔案與四個 CI 工作均通過。公開收據為
+`simulation/delphes/evidence/github_publication.json`。
 
 ## 1. 進入專案並檢查安裝契約
 
@@ -252,5 +255,24 @@ portable 檢查驗證 ROOT magic／SHA、卡片／來源／索引與原生報告
 不在 GitHub runner 重新安裝或執行 Delphes/ROOT，不能替代第7節原生讀回。
 發布須由使用者選定精確檔案，檢查 staged 及每個 outgoing commit；PDF／
 PNG 未獲精確最終版本與 caption/provenance 核准不可加入。普通來源 PR
-流程不構成圖檔核准。完整 1000 ROOT 預設留本機。遠端 ROOT blob、雜湊
-及最終 PR HEAD 的實際 CI 尚未核對時，發布狀態保持 `NOT_EVALUATED`。
+流程不構成圖檔核准。完整 1000 ROOT 預設留本機。
+
+目前已驗證的
+[PR #13](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13) 為
+OPEN/DRAFT，base 是 `codex/phase6b-pythia8-shower-1k`。上述 snapshot 的
+[Delphes push CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387702439)、
+[Delphes PR CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807387)、
+[MG5 CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807223) 與
+[Pythia CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38387807291)
+都已實際成功。這是有明確 HEAD 的驗證，不能自動套用到後續尚未檢查的
+commit。最後的報告封存 commit 會先在 push 前檢查 staged/outgoing
+payload，push 後再獨立檢查最終 HEAD CI；精確最終 HEAD／結果記錄在
+PR body 及交接回覆。報告本身不假稱知道自己的 commit ID。原始碼、卡片與 reference
+資料在報告封存階段保持凍結。
+
+歷史 [PR #9](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9)
+仍為 OPEN／ready for review（非 Draft）；
+[PR #11](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11) 與
+[PR #12](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12) 仍為
+OPEN/DRAFT，沒有修改其 head／狀態，也沒有自動合併。對使用者日後新增
+的樣本，仍須獨立核對其遠端 blob 與最終 HEAD，不能沿用這次收據當作驗收。
