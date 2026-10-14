@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "PASS_TEXT_PREPARATION_AND_METHOD_TESTS_ONLY",
+  "scope": "Actual fresh local text preparation and repeated pre-execution frozen-card checks; simulated callbacks only; no MG5 entrypoint/import/integration/export/launch or physical records executed.",
+  "created_utc": "2026-10-14T09:18:58.617942+00:00",
+  "physical_authorization": "NOT_AUTHORIZED",
+  "MG5_entrypoint_executed": false,
+  "MG5_imported": false,
+  "process_export_executed": false,
+  "integration_executed": false,
+  "new_physics_events_generated": 0,
+  "actual_physics_validation": "NOT_EVALUATED",
+  "live_versions": {
+    "MG5_version_file": "3.5.16",
+    "reviewed_toolchain_python_version_command": "Python 3.12.15"
+  },
+  "installed_identity": {
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git",
+    "source_hashes": {
+      "madgraph/__init__.py": "6371c71acf6135d279bc3935b7fae4f758ba3e583f15978b9cea8adc52dccf26",
+      "models/import_ufo.py": "d030835ea14a700ab40c29e4e2fb73df4d7f4fd846cf4ba22db3589a14549a38",
+      "madgraph/iolibs/export_v4.py": "c67c75c507f08f9984c4ec99cc088b2df19d0abfa557ae91108576983aac8c0b",
+      "madgraph/interface/madgraph_interface.py": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3",
+      "bin/mg5_aMC": "d899f9f367376cded43e5caed2eab6adf9a541a59982cfe10e39b33c8608ea64"
+    }
+  },
+  "request": {
+    "process": "zh",
+    "profile": "ZH_ZBB_STABLE_H",
+    "events": 100,
+    "seed": 20261104,
+    "energy_gev": 13000,
+    "workers": 1
+  },
+  "prepared_text_files": [
+    {
+      "path": "generate.mg5",
+      "sha256": "3c94d6e97d60fd3ad5c9c17433fcb26e924e927f610e6cf7984b2b39ad9644b9",
+      "bytes": 418
+    },
+    {
+      "path": "inputs/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+      "bytes": 3054
+    },
+    {
+      "path": "inputs/process.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad",
+      "bytes": 330
+    },
+    {
+      "path": "inputs/run_card.dat",
+      "sha256": "6d89d82c8b2c0e04277fb6c78c7ae1efd4453ac35982f8e2deee19c85d7bdaf5",
+      "bytes": 16360
+    },
+    {
+      "path": "launch.mg5",
+      "sha256": "e68181a12ca0502377996c7b4a8346385f5cf78fc10cd3e520233763722c2568",
+      "bytes": 173
+    },
+    {
+      "path": "prepared_stage.json",
+      "sha256": "c2317ab294a83d63b301abb75def5c428b577f92be92250ff36c92a0bcfddcd7",
+      "bytes": 2955
+    }
+  ],
+  "frozen_generator_contract_sha256": "a385af80aebb8462b73c6eb83de54a7f996d4f1e4d5e6aff840b5c83f44d2cf4",
+  "prepared_card_sha256": {
+    "process_card": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad",
+    "run_card": "6d89d82c8b2c0e04277fb6c78c7ae1efd4453ac35982f8e2deee19c85d7bdaf5",
+    "param_card": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+  },
+  "readonly_runtime_adapter_sha256": "9a3d1c4c168f768ec43bb0c61dfa3b12b7f0eb0d994e757545072368ac558194",
+  "installed_write_policy": "madgraph.ReadWrite=False before UFO/interface/export imports; -O -B; Python audit rejects installed-root/toolchain mutations",
+  "adapter_not_physically_executed": true,
+  "source_inspection": {
+    "UFO_pickle_write": "models/import_ufo.py:448 guarded by imported ReadWrite; adapter sets False before interface/UFO imports",
+    "automatic_update": "madgraph/interface/madgraph_interface.py:3045,3124 guarded by madgraph.ReadWrite",
+    "installed_compiler_template_write": "madgraph/iolibs/export_v4.py:2098,2135 guarded by imported ReadWrite",
+    "new_process_model_output": "madgraph/iolibs/export_v4.py:943 Source/MODEL inside new process",
+    "new_process_ALOHA_output": "madgraph/iolibs/export_v4.py:971 compute_all(save=False); 974-975 write new process Source/DHELAS",
+    "ancient_template_repair_policy": "adapter fails before import if installed make_opts mtime is older than1480375724",
+    "actual_make_opts_mtime": 1791797474.8182676,
+    "defense_in_depth": "Python audit hook rejects open-for-write and mutating operations under resolved existing MG5/toolchain roots; unexpected write fails closed",
+    "native_compiler_scope": "outer controller confines cwd/output and supervises subprocess group; future real-native compatibility remains NOT_EVALUATED"
+  },
+  "tests": {
+    "Windows": {
+      "status": "PASS_METHOD_ONLY",
+      "tests_run": 15,
+      "skipped": 0,
+      "log_sha256": "aa5783d60ce363741a94b5768678ab25328156e171183fd7ccae7f7ae911d103"
+    },
+    "WSL": {
+      "status": "PASS_METHOD_ONLY",
+      "tests_run": 15,
+      "skipped": 0,
+      "log_sha256": "37fae9d7129102ab3aeec1e5c3526d70d37212317e9ffda78b54ce7a3c2b2c0c"
+    }
+  },
+  "source_sha256": {
+    "simulation/zh_pilot/phase6g/mg5_stage.py": "c4a8e857612010b9dd66be716b250d4e0b1c3dfcfb8c2b576b0034a4494d283b",
+    "simulation/zh_pilot/phase6g/tests/test_mg5_stage.py": "e531f7157e564ad9e703452bd54159197f2dbe15c08abc6960326397328e8cea"
+  },
+  "publication": "bounded text METHOD_ONLY evidence; no new physics reference sample"
+}

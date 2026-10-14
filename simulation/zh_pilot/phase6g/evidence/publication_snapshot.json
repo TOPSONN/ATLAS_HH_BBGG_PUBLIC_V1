@@ -1,0 +1,735 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "verified_source_data_head": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+  "stack_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "snapshot_utc": "2026-10-14T10:46:38.472059+00:00",
+  "new_physics_events": 0,
+  "new_figures": 0,
+  "external_writes": 0,
+  "git_mutations": 0,
+  "physical_gates_C": "NOT_AUTHORIZED",
+  "physical_gates_D_through_L": "NOT_EVALUATED",
+  "acceptance_scope": "Actual GitHub source/evidence bytes and portable CI; not physical generation, decay/BR closure or ATLAS calibration",
+  "root_tree_sha1": "a99f3c8f1e4af95a9a1b991311bc0c3639c76484",
+  "whole_git_blob_tree": {
+    "status": "PASS",
+    "recursive": true,
+    "truncated": false,
+    "local_blob_entries": 492,
+    "remote_blob_entries": 492,
+    "comparison": "EVERY_PATH_MODE_TYPE_GIT_SHA_MATCH"
+  },
+  "outgoing_commit_payloads": [
+    {
+      "head": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+      "parent": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+      "changed_paths": [
+        ".github/workflows/zh_physical_pilot_bridge.yml",
+        "metadata/phase6g_quality_gates.json",
+        "reports/phase6g_br_weight_closure.md",
+        "reports/phase6g_decision.md",
+        "reports/phase6g_execution_bridge.md",
+        "simulation/zh_pilot/phase6g/README.md",
+        "simulation/zh_pilot/phase6g/USER_GUIDE_ZH_TW.md",
+        "simulation/zh_pilot/phase6g/__init__.py",
+        "simulation/zh_pilot/phase6g/audit_payload.py",
+        "simulation/zh_pilot/phase6g/authorize_pilot.py",
+        "simulation/zh_pilot/phase6g/common.py",
+        "simulation/zh_pilot/phase6g/controller.py",
+        "simulation/zh_pilot/phase6g/delphes_stage.py",
+        "simulation/zh_pilot/phase6g/evidence/lhe_methods.json",
+        "simulation/zh_pilot/phase6g/evidence/mg5_preparation.json",
+        "simulation/zh_pilot/phase6g/evidence/native_bridge.json",
+        "simulation/zh_pilot/phase6g/evidence/preserved_methods.json",
+        "simulation/zh_pilot/phase6g/evidence/regressions_and_preservation.json",
+        "simulation/zh_pilot/phase6g/evidence/root_bridge.json",
+        "simulation/zh_pilot/phase6g/evidence/source_checks.json",
+        "simulation/zh_pilot/phase6g/include/Authorization.hxx",
+        "simulation/zh_pilot/phase6g/include/SourceAttempt.hxx",
+        "simulation/zh_pilot/phase6g/include/StrictJson.hxx",
+        "simulation/zh_pilot/phase6g/include/ZHAncestry.hxx",
+        "simulation/zh_pilot/phase6g/mg5_stage.py",
+        "simulation/zh_pilot/phase6g/prepare_references.py",
+        "simulation/zh_pilot/phase6g/scripts/build_stage.py",
+        "simulation/zh_pilot/phase6g/scripts/shower_stage.py",
+        "simulation/zh_pilot/phase6g/src/analyze_zh_root.cxx",
+        "simulation/zh_pilot/phase6g/src/test_zh_methods.cxx",
+        "simulation/zh_pilot/phase6g/src/validate_zh_hepmc3.cxx",
+        "simulation/zh_pilot/phase6g/src/zh_shower.cxx",
+        "simulation/zh_pilot/phase6g/tests/test_controller.py",
+        "simulation/zh_pilot/phase6g/tests/test_lhe.py",
+        "simulation/zh_pilot/phase6g/tests/test_mg5_stage.py",
+        "simulation/zh_pilot/phase6g/tests/test_preserved_run.py",
+        "simulation/zh_pilot/phase6g/tests/test_shower_stage.py",
+        "simulation/zh_pilot/phase6g/validate_lhe.py",
+        "simulation/zh_pilot/phase6g/validate_run.py",
+        "simulation/zh_pilot/scripts/generate_pilot.sh"
+      ]
+    }
+  ],
+  "new_or_modified_text_blob_downloads": {
+    "status": "PASS",
+    "count": 40,
+    "bytes": 473645,
+    "files": [
+      {
+        "path": ".github/workflows/zh_physical_pilot_bridge.yml",
+        "git_blob_sha1": "f76c346e908480bd4eacc94bb5c9adc04f870ef6",
+        "bytes": 1477,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "989bfae9a3939c5d520bbe3219cf2fd9414db1c1472ff12f91dd94f09cf5c413",
+        "local_commit_sha256": "989bfae9a3939c5d520bbe3219cf2fd9414db1c1472ff12f91dd94f09cf5c413"
+      },
+      {
+        "path": "metadata/phase6g_quality_gates.json",
+        "git_blob_sha1": "922781fa112874745c21de9c3f1b675d6414c2f7",
+        "bytes": 2977,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "d0971f95dbbce9c6e1f51318496b5db50225ad75ae570718c72abd3bc8dbf5b7",
+        "local_commit_sha256": "d0971f95dbbce9c6e1f51318496b5db50225ad75ae570718c72abd3bc8dbf5b7"
+      },
+      {
+        "path": "reports/phase6g_br_weight_closure.md",
+        "git_blob_sha1": "773bbe966ae318b02d1d4213bb300f52e55d9fae",
+        "bytes": 2155,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "5a10ad937ef69337b4315e9d1073a6c38bfdf557d9e89fd3d94d892f63524480",
+        "local_commit_sha256": "5a10ad937ef69337b4315e9d1073a6c38bfdf557d9e89fd3d94d892f63524480"
+      },
+      {
+        "path": "reports/phase6g_decision.md",
+        "git_blob_sha1": "167897a01386b49ebbed2533d697c5ae39c26b38",
+        "bytes": 3746,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "628f3c292e736aff9347f0dd4174bf8409f2b78eec50f5de4b4d8f2324d16626",
+        "local_commit_sha256": "628f3c292e736aff9347f0dd4174bf8409f2b78eec50f5de4b4d8f2324d16626"
+      },
+      {
+        "path": "reports/phase6g_execution_bridge.md",
+        "git_blob_sha1": "541f768d9cf8afcdbf1762834de0cf57ef0f1725",
+        "bytes": 3158,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "060df3007e159b91cb5acf3aeb700a35e60d6349d75438f336cfa428f95a873e",
+        "local_commit_sha256": "060df3007e159b91cb5acf3aeb700a35e60d6349d75438f336cfa428f95a873e"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/README.md",
+        "git_blob_sha1": "6287ad698342ed3d75c31a6c2475b7e37068be55",
+        "bytes": 3804,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "87a7d3a3b5ffdb29eb4d2c0bf65c0188682b48ae0ee9ab9d96cfb7731303385b",
+        "local_commit_sha256": "87a7d3a3b5ffdb29eb4d2c0bf65c0188682b48ae0ee9ab9d96cfb7731303385b"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/USER_GUIDE_ZH_TW.md",
+        "git_blob_sha1": "317b8d8630e4f92c19cefd6fa4d0742531e63787",
+        "bytes": 7141,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "65b04c5a8e3fe1b709a794ed4c70003c40fbc0523188e6c959e04a4915f526a8",
+        "local_commit_sha256": "65b04c5a8e3fe1b709a794ed4c70003c40fbc0523188e6c959e04a4915f526a8"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/__init__.py",
+        "git_blob_sha1": "dfe3df69190cccdc12e433486608e11470117c27",
+        "bytes": 79,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "ab4d4ba06df87fa52c60f7f07e50bbe3329dcd0f38382df826e5bf3fe76c720d",
+        "local_commit_sha256": "ab4d4ba06df87fa52c60f7f07e50bbe3329dcd0f38382df826e5bf3fe76c720d"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/audit_payload.py",
+        "git_blob_sha1": "a6085a3a13e31bf815451cb4acac6756b26029a7",
+        "bytes": 4567,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "c83deb5ded974ff201d58d6a351484188d48b12f6d3d3f6fcbd50bb865b8e3f2",
+        "local_commit_sha256": "c83deb5ded974ff201d58d6a351484188d48b12f6d3d3f6fcbd50bb865b8e3f2"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/authorize_pilot.py",
+        "git_blob_sha1": "f224dad5d50182d0cd8b1fe9447aa95ca96f4d71",
+        "bytes": 2268,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "b10602b37555083a75192e966a72afca832d0138b9f599e277a5564028e65221",
+        "local_commit_sha256": "b10602b37555083a75192e966a72afca832d0138b9f599e277a5564028e65221"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/common.py",
+        "git_blob_sha1": "928a6450e806183dc40c4ac99a63228a59859ba9",
+        "bytes": 24012,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "83191650274c593d5b65d4a6840714548d95630f25617dec01fa95b667407346",
+        "local_commit_sha256": "83191650274c593d5b65d4a6840714548d95630f25617dec01fa95b667407346"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/controller.py",
+        "git_blob_sha1": "f1dac49c4c22dc11607afda14fb652928effb5aa",
+        "bytes": 23822,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "cc90c72ab0b01093e0adfdbbcfc99e9bb1a37773133e3cccef4432dc50714fc4",
+        "local_commit_sha256": "cc90c72ab0b01093e0adfdbbcfc99e9bb1a37773133e3cccef4432dc50714fc4"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/delphes_stage.py",
+        "git_blob_sha1": "3f836546af519b77bb776f741eccd67b7d093289",
+        "bytes": 8285,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "85484bcc2edcd4903cea18d30c42ff8239a11eef7a00030e18fac43eeb35d729",
+        "local_commit_sha256": "85484bcc2edcd4903cea18d30c42ff8239a11eef7a00030e18fac43eeb35d729"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/lhe_methods.json",
+        "git_blob_sha1": "0107fd72b93bcec51d2b9a5d5d73ac655a8ee9bf",
+        "bytes": 3048,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "57d95f543b06e6665944a0e3a05527b52d083c9d22e31ba5563d545901e75b66",
+        "local_commit_sha256": "57d95f543b06e6665944a0e3a05527b52d083c9d22e31ba5563d545901e75b66"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/mg5_preparation.json",
+        "git_blob_sha1": "d5d7772416834bc8ed35c080e222ffc8f74f1b69",
+        "bytes": 5109,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "44dbe012a701187d601b89d0928d339fe54749c81d83b315e1d0c253aef77312",
+        "local_commit_sha256": "44dbe012a701187d601b89d0928d339fe54749c81d83b315e1d0c253aef77312"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/native_bridge.json",
+        "git_blob_sha1": "16e0e91a214aadc47924799dcb6c29d1f779a224",
+        "bytes": 39124,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "4252c9137e3b7f70a9143db6f47a0779a7af5a4f39f70e828a658c43add283f3",
+        "local_commit_sha256": "4252c9137e3b7f70a9143db6f47a0779a7af5a4f39f70e828a658c43add283f3"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/preserved_methods.json",
+        "git_blob_sha1": "007f79244142b63abc1831ffcede2588130109dd",
+        "bytes": 4557,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "1e3ada11cf6e65c90bdd08bf909118a08974765a67882ea875fba3c8362fd830",
+        "local_commit_sha256": "1e3ada11cf6e65c90bdd08bf909118a08974765a67882ea875fba3c8362fd830"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/regressions_and_preservation.json",
+        "git_blob_sha1": "0519c6a01eb19cfcb974858ed08fc141044b41ec",
+        "bytes": 20012,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "00bfa5fcd4f80bf3bd690170e9fb935460c1357d280422ab2f97ac682b8d427a",
+        "local_commit_sha256": "00bfa5fcd4f80bf3bd690170e9fb935460c1357d280422ab2f97ac682b8d427a"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/root_bridge.json",
+        "git_blob_sha1": "d2f12d7f9eccae2dbe19c3fd96ef51a07d4d432f",
+        "bytes": 1708,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "82e52585ce304567f7e57cd684c2ea92cdd799ede614619174a596379fb7a237",
+        "local_commit_sha256": "82e52585ce304567f7e57cd684c2ea92cdd799ede614619174a596379fb7a237"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/evidence/source_checks.json",
+        "git_blob_sha1": "8862bb4133edee82fc72fbe7e70b8af27129a319",
+        "bytes": 26493,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "8c9cc6b76caef497a74e674c4efd1fbdb594cf96b3317fc10219c3a544894433",
+        "local_commit_sha256": "8c9cc6b76caef497a74e674c4efd1fbdb594cf96b3317fc10219c3a544894433"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/include/Authorization.hxx",
+        "git_blob_sha1": "eeb6dc72ba441e201b6f39cd5e37b076b40fb4e6",
+        "bytes": 5562,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "edfd66fce589063a41537ac8be0128d40f43d9e5b1a05d1552764665c5c717b4",
+        "local_commit_sha256": "edfd66fce589063a41537ac8be0128d40f43d9e5b1a05d1552764665c5c717b4"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/include/SourceAttempt.hxx",
+        "git_blob_sha1": "4f58a03674a60944c1f875141ed653ba0ce59940",
+        "bytes": 392,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "23ffc83abdf249a2ada05743cad2c00e9c29e85ca794fbf6d7dc52654bc2bb6f",
+        "local_commit_sha256": "23ffc83abdf249a2ada05743cad2c00e9c29e85ca794fbf6d7dc52654bc2bb6f"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/include/StrictJson.hxx",
+        "git_blob_sha1": "78ba6974d5c93ed6fc6155365d306298535bf415",
+        "bytes": 4965,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "a474b9d18ee471df1e604ca96ff1ae55c0aceca69cdea4a367de76d961e4782a",
+        "local_commit_sha256": "a474b9d18ee471df1e604ca96ff1ae55c0aceca69cdea4a367de76d961e4782a"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/include/ZHAncestry.hxx",
+        "git_blob_sha1": "5632a2bd94c8ddc639c8c5d02f34e829f23b5ec2",
+        "bytes": 7494,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "e0d7b0c3966804c7ab8cff3beb9af245c583a938aaf2aaed589e783c47534ba5",
+        "local_commit_sha256": "e0d7b0c3966804c7ab8cff3beb9af245c583a938aaf2aaed589e783c47534ba5"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/mg5_stage.py",
+        "git_blob_sha1": "1ea87f4df65a8a599539bc1081ed76111a379f79",
+        "bytes": 20262,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "c4a8e857612010b9dd66be716b250d4e0b1c3dfcfb8c2b576b0034a4494d283b",
+        "local_commit_sha256": "c4a8e857612010b9dd66be716b250d4e0b1c3dfcfb8c2b576b0034a4494d283b"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/prepare_references.py",
+        "git_blob_sha1": "07c005ff7b510e5574edd204cec9e23f2d0a3443",
+        "bytes": 13160,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48",
+        "local_commit_sha256": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/scripts/build_stage.py",
+        "git_blob_sha1": "626bc6d0d2912c08347fe1d99660b16a791c676b",
+        "bytes": 10745,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "9d44de6bcfb21005903402cfb1b93b1ba153b25bbc9bb2fc8a8ef70bb40adef7",
+        "local_commit_sha256": "9d44de6bcfb21005903402cfb1b93b1ba153b25bbc9bb2fc8a8ef70bb40adef7"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/scripts/shower_stage.py",
+        "git_blob_sha1": "f8d52f4315b0bed01318e3364a609c19d5d54722",
+        "bytes": 10570,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "bda8e94020e19ff6ab8d61fa9de705192a05abd5d66c60d09fb7a628a270146d",
+        "local_commit_sha256": "bda8e94020e19ff6ab8d61fa9de705192a05abd5d66c60d09fb7a628a270146d"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/src/analyze_zh_root.cxx",
+        "git_blob_sha1": "ae4ebb8d0e148488f776c663f12c90aa10ccc4ee",
+        "bytes": 14901,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "e35545ee27beef5587b192bd14122a3675809c38aef34e67d78d649f962e81d5",
+        "local_commit_sha256": "e35545ee27beef5587b192bd14122a3675809c38aef34e67d78d649f962e81d5"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/src/test_zh_methods.cxx",
+        "git_blob_sha1": "5f6d5606cfb55acb240be669d515bee8697af892",
+        "bytes": 6491,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "ad86981e304c854d0af0b06f9cfe9ee7b4bdbf8c3e64eb3658e4148e607be69d",
+        "local_commit_sha256": "ad86981e304c854d0af0b06f9cfe9ee7b4bdbf8c3e64eb3658e4148e607be69d"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/src/validate_zh_hepmc3.cxx",
+        "git_blob_sha1": "f9e17414efece8d2ec0ba117d25c0c8be3d25cd0",
+        "bytes": 14290,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "6d34e4de858aa75935439946f57875446571acdd58d255fcccc8c6a5921cdfac",
+        "local_commit_sha256": "6d34e4de858aa75935439946f57875446571acdd58d255fcccc8c6a5921cdfac"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/src/zh_shower.cxx",
+        "git_blob_sha1": "428ff0f40f0b18514e44dc48739d7b217e46c73e",
+        "bytes": 31935,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "04f74339b01e320bf76739b2db450fdbb92f975b8e0dc1d226bd3851b5b0f94c",
+        "local_commit_sha256": "04f74339b01e320bf76739b2db450fdbb92f975b8e0dc1d226bd3851b5b0f94c"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/tests/test_controller.py",
+        "git_blob_sha1": "10357fc821e39f5dc7c52dd46a4214b7b65cf926",
+        "bytes": 17243,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "1d5debfcd59429c34a8eac48d39ec58ddd9321a933c2a3914df620bf8bd30073",
+        "local_commit_sha256": "1d5debfcd59429c34a8eac48d39ec58ddd9321a933c2a3914df620bf8bd30073"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/tests/test_lhe.py",
+        "git_blob_sha1": "130463f38dadb4ee1330be3f285eeba2772f38f4",
+        "bytes": 15020,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "4051794f4cb1ecc09f5f55b421f0f71875e7e42137d4e4b03d0a26923999e9e9",
+        "local_commit_sha256": "4051794f4cb1ecc09f5f55b421f0f71875e7e42137d4e4b03d0a26923999e9e9"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/tests/test_mg5_stage.py",
+        "git_blob_sha1": "ff39dc7704b6776371de6059a8f644d5078e39b3",
+        "bytes": 15743,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "e531f7157e564ad9e703452bd54159197f2dbe15c08abc6960326397328e8cea",
+        "local_commit_sha256": "e531f7157e564ad9e703452bd54159197f2dbe15c08abc6960326397328e8cea"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/tests/test_preserved_run.py",
+        "git_blob_sha1": "f4c575853f7f14a0faebf220433a98ac567c40d6",
+        "bytes": 17138,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "8f2650fe9e6b30cd77cbfbc1602bf1d2452bd2b78679fe32846ed391955e729c",
+        "local_commit_sha256": "8f2650fe9e6b30cd77cbfbc1602bf1d2452bd2b78679fe32846ed391955e729c"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/tests/test_shower_stage.py",
+        "git_blob_sha1": "0246848997e98e2e9bc6855e8693e79ea5e61ba9",
+        "bytes": 11422,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "9f6e89b37e733725511104ab7375892d4de7f1839de4c296b50c9ff264fbf248",
+        "local_commit_sha256": "9f6e89b37e733725511104ab7375892d4de7f1839de4c296b50c9ff264fbf248"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/validate_lhe.py",
+        "git_blob_sha1": "a0d442fd0be9879511bd44745974b3bdacc76435",
+        "bytes": 29899,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "9e06bea703fbcb8125b385f20801939d19a4dc8ad26b19e84c24eac4596ee21a",
+        "local_commit_sha256": "9e06bea703fbcb8125b385f20801939d19a4dc8ad26b19e84c24eac4596ee21a"
+      },
+      {
+        "path": "simulation/zh_pilot/phase6g/validate_run.py",
+        "git_blob_sha1": "5690cbb7bb56968b3bbcc65d0efa165c2525debb",
+        "bytes": 38626,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f",
+        "local_commit_sha256": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f"
+      },
+      {
+        "path": "simulation/zh_pilot/scripts/generate_pilot.sh",
+        "git_blob_sha1": "6655568dd0478f30486e2f994423a719283219e9",
+        "bytes": 245,
+        "comparison": "EXACT_BYTE_PASS",
+        "remote_download_sha256": "bdf43f9e5f172c400ab23cd19207132c2282442773361f77b49652d503206923",
+        "local_commit_sha256": "bdf43f9e5f172c400ab23cd19207132c2282442773361f77b49652d503206923"
+      }
+    ],
+    "method": "Actual GitHub base64 blob payload decoded; exact immutable local Git bytes/GitSHA/SHA256 matched"
+  },
+  "historical_public_source_data": {
+    "baseline_blobs": 453,
+    "unchanged_blobs": 452,
+    "every_452_path_mode_type_git_blob_unchanged": true,
+    "only_modified_path": "simulation/zh_pilot/scripts/generate_pilot.sh",
+    "original_wrapper_git_sha1": "af12029ea50eefe3c506d9184f2c63e8f4309b12",
+    "current_wrapper_git_sha1": "6655568dd0478f30486e2f994423a719283219e9"
+  },
+  "exact_source_head_ci": [
+    {
+      "id": 38551593594,
+      "name": "ZH100 guarded bridge integrity",
+      "path": ".github/workflows/zh_physical_pilot_bridge.yml",
+      "event": "push",
+      "head_sha": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+      "head_branch": "codex/phase6g-zh-physical-pilot",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551593594",
+      "run_attempt": 1,
+      "jobs": [
+        {
+          "id": 115810602939,
+          "name": "guarded_bridge",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551593594/job/115810602939",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Test method-only authorization, source and Linux supervision",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Physically execute missing-authorization rejection without tool installation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Audit source-only preparation payload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 11,
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 12,
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 13,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38551652855,
+      "name": "ZH100 guarded bridge integrity",
+      "path": ".github/workflows/zh_physical_pilot_bridge.yml",
+      "event": "pull_request",
+      "head_sha": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+      "head_branch": "codex/phase6g-zh-physical-pilot",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652855",
+      "run_attempt": 1,
+      "jobs": [
+        {
+          "id": 115810795051,
+          "name": "guarded_bridge",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652855/job/115810795051",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Test method-only authorization, source and Linux supervision",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Physically execute missing-authorization rejection without tool installation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Audit source-only preparation payload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 11,
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 12,
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 13,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38551652865,
+      "name": "ZH pilot readiness integrity",
+      "path": ".github/workflows/zh_pilot_readiness.yml",
+      "event": "pull_request",
+      "head_sha": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+      "head_branch": "codex/phase6g-zh-physical-pilot",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652865",
+      "run_attempt": 1,
+      "jobs": [
+        {
+          "id": 115810794940,
+          "name": "readiness_integrity",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652865/job/115810794940",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Test independent readiness methods and rejection guards",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Reject unauthorized physical execution without installed tools",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Preserve previous forensic and reference methods",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Audit source and bounded text payload",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 13,
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pull_request": {
+    "number": 17,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "0f6826435109e276105d18bcc45b897cb7a2e3bf",
+    "headRefName": "codex/phase6g-zh-physical-pilot",
+    "baseRefOid": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+    "baseRefName": "codex/phase6f-zh-pilot-readiness",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/17"
+  },
+  "protected_pr9": {
+    "number": 9,
+    "state": "OPEN",
+    "isDraft": false,
+    "headRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+    "headRefName": "codex/phase6a-mg5-lo-bbgg",
+    "baseRefOid": "f7a3420155bd557e4146fd1959a60f68742ea930",
+    "baseRefName": "main",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9"
+  },
+  "protected_pr9_unchanged_during_snapshot": true,
+  "protected_pr11": {
+    "number": 11,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "2b028228280872f13c20ac2d45b88fba408272ed",
+    "headRefName": "codex/phase6a-backgrounds-1k",
+    "baseRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+    "baseRefName": "codex/phase6a-mg5-lo-bbgg",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11"
+  },
+  "protected_pr11_unchanged_during_snapshot": true,
+  "protected_pr12": {
+    "number": 12,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+    "headRefName": "codex/phase6b-pythia8-shower-1k",
+    "baseRefOid": "2b028228280872f13c20ac2d45b88fba408272ed",
+    "baseRefName": "codex/phase6a-backgrounds-1k",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12"
+  },
+  "protected_pr12_unchanged_during_snapshot": true,
+  "protected_pr13": {
+    "number": 13,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "headRefName": "codex/phase6c-delphes-fast-sim",
+    "baseRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+    "baseRefName": "codex/phase6b-pythia8-shower-1k",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13"
+  },
+  "protected_pr13_unchanged_during_snapshot": true,
+  "protected_pr14": {
+    "number": 14,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+    "headRefName": "codex/phase6d-rare-backgrounds-statistics",
+    "baseRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "baseRefName": "codex/phase6c-delphes-fast-sim",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/14"
+  },
+  "protected_pr14_unchanged_during_snapshot": true,
+  "protected_pr15": {
+    "number": 15,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "be29be7255c5009c719190cb96f43f04bb144d8f",
+    "headRefName": "codex/phase6e-heavy-flavor-forensics",
+    "baseRefOid": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+    "baseRefName": "codex/phase6d-rare-backgrounds-statistics",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/15"
+  },
+  "protected_pr15_unchanged_during_snapshot": true,
+  "protected_pr16": {
+    "number": 16,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+    "headRefName": "codex/phase6f-zh-pilot-readiness",
+    "baseRefOid": "be29be7255c5009c719190cb96f43f04bb144d8f",
+    "baseRefName": "codex/phase6e-heavy-flavor-forensics",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/16"
+  },
+  "protected_pr16_unchanged_during_snapshot": true,
+  "finished_at_utc": "2026-10-14T10:47:07.918066+00:00"
+}

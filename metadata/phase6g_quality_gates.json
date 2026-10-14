@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6G_ZH_100_EVENT_PHYSICAL_PILOT_V1",
+  "baseline_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "status": "BLOCKED_PHYSICAL_AUTHORIZATION",
+  "physical_execution_authorized": false,
+  "authorization_command_required": "AUTHORIZE_PHASE6G_ZH_100_RUN",
+  "physical_pilot_limit": 100,
+  "new_physics_events_generated": 0,
+  "adopted_physical_BR": null,
+  "exclusive_physical_normalization": "BLOCKED",
+  "gates": {
+    "A": "PASS_EXISTING_HISTORY_AND_INPUT_PRESERVATION",
+    "B": "PASS_FROZEN_GENERATOR_CONFIGURATION_AND_BRIDGE_METHODS",
+    "C": "NOT_AUTHORIZED",
+    "D": "NOT_EVALUATED",
+    "E": "NOT_EVALUATED",
+    "F": "NOT_EVALUATED",
+    "G": "NOT_EVALUATED",
+    "H": "NOT_EVALUATED",
+    "I": "NOT_EVALUATED",
+    "J": "NOT_EVALUATED",
+    "K": "NOT_EVALUATED",
+    "L": "NOT_EVALUATED"
+  },
+  "source_CI_scope": "Source/guard/method publication is checked separately; it does not evaluate physical gate L",
+  "synthetic_success_scope": "METHOD_ONLY; never a real generated reference",
+  "figures_created_or_published": 0,
+  "large_production_authorized": false,
+  "source_evidence": {
+    "simulation/zh_pilot/phase6g/evidence/lhe_methods.json": {
+      "sha256": "57d95f543b06e6665944a0e3a05527b52d083c9d22e31ba5563d545901e75b66",
+      "bytes": 3048
+    },
+    "simulation/zh_pilot/phase6g/evidence/mg5_preparation.json": {
+      "sha256": "44dbe012a701187d601b89d0928d339fe54749c81d83b315e1d0c253aef77312",
+      "bytes": 5109
+    },
+    "simulation/zh_pilot/phase6g/evidence/native_bridge.json": {
+      "sha256": "4252c9137e3b7f70a9143db6f47a0779a7af5a4f39f70e828a658c43add283f3",
+      "bytes": 39124
+    },
+    "simulation/zh_pilot/phase6g/evidence/preserved_methods.json": {
+      "sha256": "1e3ada11cf6e65c90bdd08bf909118a08974765a67882ea875fba3c8362fd830",
+      "bytes": 4557
+    },
+    "simulation/zh_pilot/phase6g/evidence/regressions_and_preservation.json": {
+      "sha256": "00bfa5fcd4f80bf3bd690170e9fb935460c1357d280422ab2f97ac682b8d427a",
+      "bytes": 20012
+    },
+    "simulation/zh_pilot/phase6g/evidence/root_bridge.json": {
+      "sha256": "82e52585ce304567f7e57cd684c2ea92cdd799ede614619174a596379fb7a237",
+      "bytes": 1708
+    },
+    "simulation/zh_pilot/phase6g/evidence/source_checks.json": {
+      "sha256": "8c9cc6b76caef497a74e674c4efd1fbdb594cf96b3317fc10219c3a544894433",
+      "bytes": 26493
+    }
+  },
+  "bridge_sha256": "8d1c5ed1d16508b15abb958c602464f9051c1d1b2bb0e374322296893c72dbe7",
+  "local_tests": {
+    "Windows": {
+      "discovered_tests": 113,
+      "passed_tests": 102,
+      "skipped": 11,
+      "exit_code": 0
+    },
+    "WSL": {
+      "discovered_tests": 113,
+      "passed_tests": 113,
+      "skipped": 0,
+      "exit_code": 0
+    }
+  },
+  "native_method_checks": {
+    "Pythia_and_HepMC3": 21,
+    "ROOT_derived_p4": 3,
+    "new_physics_events": 0
+  },
+  "source_CI": "Evaluated separately after publication; exact-head receipt and final handoff report required"
+}

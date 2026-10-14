@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "PASS_METHOD_TESTS_ONLY",
+  "physical_LHE_validation": "NOT_EXECUTED",
+  "physical_execution_authorization": "NOT_AUTHORIZED",
+  "new_physics_events_generated": 0,
+  "new_shower_or_detector_events_processed": 0,
+  "historical_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "source_binding_sha256": {
+    "simulation/zh_pilot/phase6g/validate_lhe.py": "9e06bea703fbcb8125b385f20801939d19a4dc8ad26b19e84c24eac4596ee21a",
+    "simulation/zh_pilot/phase6g/tests/test_lhe.py": "4051794f4cb1ecc09f5f55b421f0f71875e7e42137d4e4b03d0a26923999e9e9"
+  },
+  "executed_tests": {
+    "windows": {
+      "command": "python -B -m unittest discover -s simulation/zh_pilot/phase6g/tests -p test_lhe.py -v",
+      "tests_run": 22,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 4.773,
+      "wall_elapsed_seconds": 5.016539899999771,
+      "log_basename": "lhe-tests-windows.log",
+      "log_sha256": "a00f65a23f369692a14175e0da71d904960f01a58bcb34ef1e82b72dfd71e630",
+      "log_bytes": 3183,
+      "log_retention": "LOCAL_ONLY completed stdout/stderr; no raw test log published"
+    },
+    "wsl": {
+      "command": "python3 -B -m unittest discover -s simulation/zh_pilot/phase6g/tests -p test_lhe.py -v",
+      "tests_run": 22,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 10.769,
+      "wall_elapsed_seconds": 10.969844953000006,
+      "log_basename": "lhe-tests-wsl.log",
+      "log_sha256": "3b2fa0074fd2202dc53fcacb0628324aca4c83d448c27b2d4f07da525f0829f0",
+      "log_bytes": 3060,
+      "log_retention": "LOCAL_ONLY completed stdout/stderr; no raw test log published"
+    }
+  },
+  "fixture_scope": "All fixtures are bounded analytic METHOD_ONLY XML/gzip/JSON in deleted temporary directories; no physical references or event independence claim",
+  "method_checks": [
+    "All100 synthetic records assessed; invalid event3/99 retained as indexed failures",
+    "Signed and zero nominal weights retain full original100 denominator",
+    "Exact original raw event bytes/hash, actual expandedMG banner/card semantics and printed summary precision",
+    "Gzip CRC/truncation, XML entity/depth/node/decompression bounds, provenance and forged physical acceptance rejection",
+    "10-event downstream prefix source binding; changed Info retained equal converter without assuming an H BR",
+    "Historical Phase6F/MG5/Pythia/Delphes validator bytes unchanged against reviewed05cff base"
+  ],
+  "standalone_CLI": "Physically executed on temporary synthetic parser fixture only; method output METHOD_ONLY, physical invocation without provenance rejected",
+  "local_receipt_sha256": "ce45f6778433f729694f1853eb6820ad00db4576c134f4bcd84b9996e377165c",
+  "acceptance_limit": "Synthetic parser/algebra/failure-rejection execution only. No actual MG5 source production, authorization receipt, independent physical HepMC3/ROOT readback, or adopted physical BR/normalization is supplied."
+}

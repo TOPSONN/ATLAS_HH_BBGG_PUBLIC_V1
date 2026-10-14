@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "status": "PASS_BUILD_AND_METHODS_ONLY",
+  "created_utc": "2026-10-14T10:41:55.950910+00:00",
+  "historical_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "physical_execution_authorization": "NOT_AUTHORIZED",
+  "physical_source_input_processed": false,
+  "external_LHE_initialization_executed": false,
+  "new_physics_events_generated": 0,
+  "pythia_next_calls": 0,
+  "physical_ReaderAscii_validation": "NOT_EXECUTED",
+  "physical_BR_adoption": null,
+  "exclusive_physical_normalization": "BLOCKED_BR_WEIGHT_CLOSURE",
+  "scope": "Actual compilation and complete19-stage frozen resource Monitor callback: ABI/build-info/ldd inspection, settings readString/readFile without physical LHE initialization, two real missing-authorization exit2 rejections, and bounded synthetic METHOD_ONLY ReaderAscii/graph/JSON/control/precision tests. No physical generation or shower/detector processing.",
+  "final_local_build_receipt_sha256": "4db051958af1be42666a856feae642d565d8c156fc2400799a05204db81e2fbf",
+  "final_local_build_receipt_bytes": 23312,
+  "build_receipt_projection": "Bounded sanitized fields; original receipt remains local and is identified by exact SHA256. No private installation/build paths or raw logs included.",
+  "source_sha256": {
+    "simulation/zh_pilot/phase6g/include/Authorization.hxx": "edfd66fce589063a41537ac8be0128d40f43d9e5b1a05d1552764665c5c717b4",
+    "simulation/zh_pilot/phase6g/include/StrictJson.hxx": "a474b9d18ee471df1e604ca96ff1ae55c0aceca69cdea4a367de76d961e4782a",
+    "simulation/zh_pilot/phase6g/include/ZHAncestry.hxx": "e0d7b0c3966804c7ab8cff3beb9af245c583a938aaf2aaed589e783c47534ba5",
+    "simulation/zh_pilot/phase6g/include/SourceAttempt.hxx": "23ffc83abdf249a2ada05743cad2c00e9c29e85ca794fbf6d7dc52654bc2bb6f",
+    "simulation/zh_pilot/phase6g/src/zh_shower.cxx": "04f74339b01e320bf76739b2db450fdbb92f975b8e0dc1d226bd3851b5b0f94c",
+    "simulation/zh_pilot/phase6g/src/validate_zh_hepmc3.cxx": "6d34e4de858aa75935439946f57875446571acdd58d255fcccc8c6a5921cdfac",
+    "simulation/zh_pilot/phase6g/src/test_zh_methods.cxx": "ad86981e304c854d0af0b06f9cfe9ee7b4bdbf8c3e64eb3658e4148e607be69d",
+    "simulation/zh_pilot/phase6g/scripts/build_stage.py": "9d44de6bcfb21005903402cfb1b93b1ba153b25bbc9bb2fc8a8ef70bb40adef7",
+    "simulation/zh_pilot/phase6g/scripts/shower_stage.py": "bda8e94020e19ff6ab8d61fa9de705192a05abd5d66c60d09fb7a628a270146d",
+    "simulation/pythia8/src/validate_hepmc3.cxx": "16b039ddb61846361328104fee624a95e0b6d4ff8e3f1d6eebcba5449c7851eb",
+    "simulation/pythia8/include/TrackedLHA.hxx": "8d9c7a8fdee7ce0588d4222c2b7b05fcc428c3a2c747b13422a4e5a830eea4d5",
+    "simulation/pythia8/include/Sha256.hxx": "c4669dac3347eb5bbea6de97885bb8985e91e435d59a462b6ba683db724f80b2",
+    "simulation/pythia8/include/Json.hxx": "ec2a0bb62b04ed40cf5a27eab9845ad176d05fb0bc8901ab969cb1eab5afdd47",
+    "simulation/pythia8/config/baseline_shower.cmnd": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+    "simulation/zh_pilot/cards/preferred_higgs_decay.cmnd": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+  },
+  "portable_method_test_source_sha256": {
+    "simulation/zh_pilot/phase6g/tests/test_shower_stage.py": "9f6e89b37e733725511104ab7375892d4de7f1839de4c296b50c9ff264fbf248"
+  },
+  "binary_build_info": {
+    "zh_shower": {
+      "pythia_version": "8.317",
+      "pythia_version_integer": 8317,
+      "hepmc3_version": "3.03.01",
+      "cxx_standard": 202002
+    },
+    "validate_zh_hepmc3": {
+      "pythia_version_integer": 8317,
+      "hepmc3_version": "3.03.01",
+      "cxx_standard": 202002
+    }
+  },
+  "native_binaries": {
+    "zh_shower": {
+      "sha256": "26c6a413b416f60de39f4accc9ac00e1f75bbfc93cc0cdc5dfabe8ddc64c1244",
+      "bytes": 544400,
+      "retention": "LOCAL_ONLY"
+    },
+    "validate_zh_hepmc3": {
+      "sha256": "fb7f318a00f88d2b9c6f01dd520fac8fdc839e5e2ae9252232878a46d6e9003f",
+      "bytes": 440616,
+      "retention": "LOCAL_ONLY"
+    },
+    "test_zh_methods": {
+      "sha256": "12a97293e657e0b6d09195c59c31315f9743c0c1145061e962ff22ee43f42747",
+      "bytes": 280408,
+      "retention": "LOCAL_ONLY"
+    }
+  },
+  "native_method_tests": {
+    "status": "METHOD_ONLY",
+    "new_physics_events": 0,
+    "next_calls": 0,
+    "checks": 21,
+    "ReaderAscii_API": "PASS_SYNTHETIC_METHOD_ONLY"
+  },
+  "native_missing_authorization_rejections": {
+    "zh_shower": "PASS_REJECTED_BEFORE_PHYSICAL_INPUT",
+    "validate_zh_hepmc3": "PASS_REJECTED_BEFORE_PHYSICAL_INPUT"
+  },
+  "settings_preflight": {
+    "status": "DRY_RUN",
+    "events_processed": 0,
+    "required_settings": {
+      "ProcessLevel:all": true,
+      "PartonLevel:all": true,
+      "PartonLevel:ISR": true,
+      "PartonLevel:FSR": true,
+      "HadronLevel:all": true,
+      "HadronLevel:Hadronize": true,
+      "HadronLevel:Decay": true,
+      "Beams:strictLHEFscale": true,
+      "Random:setSeed": true,
+      "BeamRemnants:primordialKT": true,
+      "PartonLevel:MPI": false,
+      "SecondHard:generate": false,
+      "HardQCD:all": false,
+      "SoftQCD:all": false,
+      "JetMatching:merge": false,
+      "Merging:doKTMerging": false,
+      "Merging:doMGMerging": false,
+      "Merging:doPTLundMerging": false,
+      "UncertaintyBands:doVariations": false,
+      "BeamRemnants:halfMassForKT": 1,
+      "BeamRemnants:halfScaleForKT": 1.5,
+      "BeamRemnants:primordialKThard": 1.8,
+      "BeamRemnants:primordialKTremnant": 0.4,
+      "BeamRemnants:primordialKTsoft": 0.9,
+      "BeamRemnants:reducedKTatHighY": 0.5,
+      "SLHA:readFrom": 0,
+      "H_forcing": "25:onMode=off;25:onIfMatch=22 22",
+      "Z_forcing": "NONE",
+      "Beams:frameType": 4,
+      "PartonShowers:model": 1,
+      "SpaceShower:pTmaxMatch": 1,
+      "TimeShower:pTmaxMatch": 1,
+      "Random:seed": 20261104,
+      "SpaceShower:alphaSvalue": 0.13,
+      "TimeShower:alphaSvalue": 0.13,
+      "PDF:pSet": "8",
+      "4:m0": 1.5,
+      "5:m0": 4.8
+    }
+  },
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cxx_standard_minimum": 202002,
+  "installed_identities_preserved": true,
+  "existing_installation_config_sha256": "4851e8cda078ad4642990588c161ce0a5b7c3accb1c90366731006a038a1404e",
+  "retained_installation_identity": {
+    "pythia_version": "8.317",
+    "pythia_source_commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+    "hepmc3_version": "3.3.1",
+    "hepmc3_reported_version": "3.03.01",
+    "hepmc3_source_commit": "beb66aa1a2ac263066becdee26d18ead83edec95"
+  },
+  "retained_installation_file_sha256": {
+    "hepmc3/include/HepMC3/ReaderAscii.h": "bb7d31d9f037944cec4bdaa921bdf9a4b724c17c99c7c5b0531b7025f23b8824",
+    "hepmc3/include/HepMC3/Version.h": "09e1873043b7639d0f13c8b2c7852167a59e4a9d42bd287471b0f11c86288798",
+    "hepmc3/include/HepMC3/WriterAscii.h": "4ee4dad241412a20f0f822367bed084f5953e518be2035015dbd50c35b12ea23",
+    "hepmc3/lib/libHepMC3.so.4": "f669ba0b71e6d011709535b1c61075105dc5b093251335aaac618df417af2bfc",
+    "pythia8/include/Pythia8/LesHouches.h": "5fdd671d1765e8881376b830f34989d589cbef6bb5aabf31b72a664cf00c4336",
+    "pythia8/include/Pythia8/Pythia.h": "f5603414cf4600366e1af51a4c8085b088e2160b4b18fbcfc8102e6431c93e88",
+    "pythia8/include/Pythia8Plugins/HepMC3.h": "6d99871028d1d97110425bd06207dbcbf5d7fd9c840ee17ab4de0b92016ba165",
+    "pythia8/lib/libpythia8.so": "80291086e976c1caa2d47c6dec3bd0fe2e41bfe67637458101a43bba6e54620f",
+    "pythia8/share/Pythia8/xmldoc/AdvancedUsage.xml": "84487f9ad1ae9c8018d58d57837a8194eca4f61416940efa88f45799728c4175",
+    "pythia8/share/Pythia8/xmldoc/AlpgenEventInterface.xml": "6b76b2cf0321b176b9ed4d33769d8398f3a22cb8ca4e467bf84e40eced4e76fd",
+    "pythia8/share/Pythia8/xmldoc/BeamParameters.xml": "b9b8e05ae8728c773de76a4c42b5506c0cca257053de6ef202f89d116235654a",
+    "pythia8/share/Pythia8/xmldoc/BeamRemnants.xml": "f166764054381d69b2c49dd664375d7c79df40efee8788dc1f7542ce5f8772f5",
+    "pythia8/share/Pythia8/xmldoc/BeamShape.xml": "980c11b1402b1b27aa6faa4a3d38290f7ea09190953fdbc98e49e80eb54061e8",
+    "pythia8/share/Pythia8/xmldoc/Bibliography.xml": "fea95a0f689991558a9c663f0c5702a1a5a19c05baf88f2ae96c3fd8964393c4",
+    "pythia8/share/Pythia8/xmldoc/BoseEinsteinEffects.xml": "6b595f05c2073033c831ee5d90f4e80e66edb5b2dd09fbda65bc52a068b7e167",
+    "pythia8/share/Pythia8/xmldoc/CKKWLMerging.xml": "30db6858445707fc7d5171ee8fff4afda664234f9aa9fb50c10651774c014ae8",
+    "pythia8/share/Pythia8/xmldoc/ClosePacking.xml": "6fbebd462c559d0d118c71063218a8cd61210053402f7c910f0dcd975484177a",
+    "pythia8/share/Pythia8/xmldoc/ColourReconnection.xml": "b96853ec944a11ec85df6654f633de1b2f24b2060055f640ef6d52c8b0e0085a",
+    "pythia8/share/Pythia8/xmldoc/CompositenessProcesses.xml": "a68395a6eaed5147477fad5c878195d7e1be256388672f93c2c01a639fe636a3",
+    "pythia8/share/Pythia8/xmldoc/CouplingsAndScales.xml": "d11088bc26ce783751bab2d762ad55fcbf58236e17ba10573f3026c5ace5f1a7",
+    "pythia8/share/Pythia8/xmldoc/CrossSectionsAndWeights.xml": "2eeb3d45e0b64cb697d4fe04787522bbb2b5ccc9cd21bd2e3c19884debc04ce9",
+    "pythia8/share/Pythia8/xmldoc/DarkMatterProcesses.xml": "e56d49fd7f027040fc5a033eec53a8a7c944b7a56bc4f56d37a7ef14167d3ca1",
+    "pythia8/share/Pythia8/xmldoc/DeuteronProduction.xml": "52083c6e1b6108c055ea5579a7248197b4298d0a966396450bb56306eff80523",
+    "pythia8/share/Pythia8/xmldoc/Diffraction.xml": "40866921b0998051c8c1a4665f38aa075aca780d91fe6dd028686a211c618e96",
+    "pythia8/share/Pythia8/xmldoc/ElectroweakProcesses.xml": "35cd13066e5ff649d904e41e2bc5b62fe5d34f96ffc1ea0e4761b8dd6703832d",
+    "pythia8/share/Pythia8/xmldoc/ErrorChecks.xml": "9d37c4c9a1d79c1c3c2a9d09cfeb9cce67df6b881d34c064f107a2c6b686f88d",
+    "pythia8/share/Pythia8/xmldoc/EventAnalysis.xml": "f9f5c12da5654eac8f429a668c406a3a554ed7a88eeb3a2b38cbe9a00cdb0c29",
+    "pythia8/share/Pythia8/xmldoc/EventInformation.xml": "3d7b76316ada558264ab15a1b89398caf979b4cae5a1891e70cec9f082d286fc",
+    "pythia8/share/Pythia8/xmldoc/EventRecord.xml": "9cbe26f5e1d49fb7246439302d070e9ef0f3d3d46f333f18900a030b059107d7",
+    "pythia8/share/Pythia8/xmldoc/EventStatistics.xml": "67069e7707c8ce84abc89251aa680404c618d924b49b47c31297ea3d327679e8",
+    "pythia8/share/Pythia8/xmldoc/ExampleKeywords.xml": "3e44ff25f6ee8c494d40b759dfda4cb48904303a90cd454201610fe7be67298b",
+    "pythia8/share/Pythia8/xmldoc/ExternalDecays.xml": "200074cb6c491a40920d0ed4da401fd58b421a2fc091bcea5fadc395a566dfc6",
+    "pythia8/share/Pythia8/xmldoc/ExtraDimensionalProcesses.xml": "8fa0a5defe22fb014ce284ad68934ac9ff49dad82021f03c57ec6d08f4c01aa1",
+    "pythia8/share/Pythia8/xmldoc/FlavourSelection.xml": "91fdd493d5f43aa272391e59cd3bf38f241ca3a6460ac67731df38a4b2c7e01f",
+    "pythia8/share/Pythia8/xmldoc/FourVectors.xml": "9e621e9647ee60a83e8e9dca305cdb4c779eaab98c474bda6ad16f10a2c442e7",
+    "pythia8/share/Pythia8/xmldoc/FourthGenerationProcesses.xml": "a8de6db6c816c86a4e2be5e70d4567b646d8471234b35ad9aebdf9c9a6fb13e4",
+    "pythia8/share/Pythia8/xmldoc/Frontpage.xml": "14dfb2ee9450ccf1898b94899a1e236d4aa0a0c7637182d76d5f8b5fc9bfd836",
+    "pythia8/share/Pythia8/xmldoc/GettingStarted.xml": "770d93a87c625a057752402fff1387698af3d16e7e0b199013384266cfaf73e2",
+    "pythia8/share/Pythia8/xmldoc/Glossary.xml": "11d980c5047d8b310b4cbe77ee93b5d12596bfac4be6af0b50d2efa22f912f3a",
+    "pythia8/share/Pythia8/xmldoc/HadronLevelStandalone.xml": "d3e19727c109f605d45e6504f59733c6b28d5571ae74be6fd0d779692cd25702",
+    "pythia8/share/Pythia8/xmldoc/HadronVertexInformation.xml": "b75d94ef1d6bcaa42099de201a1b93f12a7856ee2fa96e2b5f9fb0ca1ea7acdb",
+    "pythia8/share/Pythia8/xmldoc/HadronWidths.xml": "c87645fbb318efd86d00b6f1f889aebbe172ff1435a0cd19710e3715534e0661",
+    "pythia8/share/Pythia8/xmldoc/HadronicRescattering.xml": "788bb346f1e27e9b24bd0ee9944e6cc0f57758722c9c2642dde84093f97f535f",
+    "pythia8/share/Pythia8/xmldoc/HadronizationOverview.xml": "273144730c6b3bacdff1615af105502a1ad6297df5f614c3405413c38489c9f8",
+    "pythia8/share/Pythia8/xmldoc/HadronizationVariations.xml": "107bf7b282ec340dd446a807dbca246de05eb97cf063c97a1a0bbddedbd900c1",
+    "pythia8/share/Pythia8/xmldoc/HeavyIons.xml": "40c5e610bf510f9bf47f6ae798246d31b7af8cd04f2d01bb5167a073b85e6b66",
+    "pythia8/share/Pythia8/xmldoc/HelacOniaProcesses.xml": "076ee25d467df245313da667ed17b20a00ecd59a2757771fef966ccb2254d608",
+    "pythia8/share/Pythia8/xmldoc/HepMCInterface.xml": "04fd4dc53473a95e5016b7db50f35572368c8492068c843e12baceaf2e55df68",
+    "pythia8/share/Pythia8/xmldoc/HiddenValleyProcesses.xml": "21fce7d17f9c87f17a74323c090db14e1405653ab27b058afac0485d99ef1c19",
+    "pythia8/share/Pythia8/xmldoc/HiggsProcesses.xml": "f34ac71bdd10b5643806cb36ba13012278d0a6a80d8031ebdd703189c3974d7b",
+    "pythia8/share/Pythia8/xmldoc/Histograms.xml": "111b6dee482c8467c42568a926cd702b79b5d0a72f0ad152be0e043ae9b318b6",
+    "pythia8/share/Pythia8/xmldoc/ImplementNewFragmentation.xml": "f3633b869122ba0f7d8a4e82e24c9b81e9460de53dcea677b4a21c1a715490db",
+    "pythia8/share/Pythia8/xmldoc/ImplementNewMatching.xml": "4da4b9ca56a2b2e34770da0af39a1ecdfb0978414b5ab12049139cc6d2fc44fb",
+    "pythia8/share/Pythia8/xmldoc/ImplementNewShowers.xml": "1b717937d7b13d48c65448b94a09275caa6b68d644fb617eec046961b3210a0d",
+    "pythia8/share/Pythia8/xmldoc/Index.xml": "403305b7aee68321b9655d7a56a658b1093284170afd849e0cc5b238963d9afa",
+    "pythia8/share/Pythia8/xmldoc/JetFinders.xml": "040633b42d4a9a5e5aba92a1d0d40b293e44d33c245557f218d75809ce843ea2",
+    "pythia8/share/Pythia8/xmldoc/JetMatching.xml": "0bd35d22262c28b0d237b70dcac9d86940ef81b70de967c8ecc33fef9200aa1b",
+    "pythia8/share/Pythia8/xmldoc/LHA.xml": "46f1f6e79bbaa922b31720beb0bca6119d4e597963b5215cdda97b431dc623cc",
+    "pythia8/share/Pythia8/xmldoc/LHAHDF5.xml": "acc9da85db90cd82caeabbc95b76e9149a05a4bf7014fcb9c412fd5cee4ec66a",
+    "pythia8/share/Pythia8/xmldoc/LHEF.xml": "5cb9a8a82f725410fa51ded8ec86f9c658e9718bad5345c7cb84d518863edfa3",
+    "pythia8/share/Pythia8/xmldoc/LeftRightSymmetryProcesses.xml": "efe734c1aa9cf3612b33eafc33028d330209346c91fdb673eab6ae45bb299690",
+    "pythia8/share/Pythia8/xmldoc/LeptoquarkProcesses.xml": "0b009210fd181e64070efd250e65f9d3eb914811831b845f3a11f54d109517e7",
+    "pythia8/share/Pythia8/xmldoc/Logging.xml": "add5e2ed161c1f10d96670019d273e515c4447e4b92c17560d077ee056795020",
+    "pythia8/share/Pythia8/xmldoc/MadGraph5Processes.xml": "8c4f6e0ec4f0e4348f1ca4220d9e5260d8db6337483f0959d930311e5cbb3eda",
+    "pythia8/share/Pythia8/xmldoc/MainProgramSettings.xml": "29884d8e1c753338a346eed2dba8bb2811135838b8fd3a306761faded0cf9235",
+    "pythia8/share/Pythia8/xmldoc/MasterSwitches.xml": "574be85710e96e0a871dc2bbf0c9194b8f17bf529f33467216bbd0662cf716a8",
+    "pythia8/share/Pythia8/xmldoc/MatchingAndMerging.xml": "4936f459e934dd541e2cf28a30a106ee544144c6641870c2e6dcddc3751eb838",
+    "pythia8/share/Pythia8/xmldoc/MergingVariations.xml": "1af5e7c83f936e402e426af6a190c950362ba5f837b0d6ebfcf05319454d13b9",
+    "pythia8/share/Pythia8/xmldoc/MultipartonInteractions.xml": "7081b3edf2b592b9af8a1373e12c36b74e9af78e300ea85240902c5eb4040aef",
+    "pythia8/share/Pythia8/xmldoc/NLOMerging.xml": "7e9bc55e119b41fc92666aa8b468fe657e7ba61fa1da6a2a81880844fe41e22c",
+    "pythia8/share/Pythia8/xmldoc/NewGaugeBosonProcesses.xml": "9ed68b729ee54910d504fb4778836352cd2c8139a607984abb1c5e29bfcbf0c7",
+    "pythia8/share/Pythia8/xmldoc/OniaProcesses.xml": "108128fb860594205461f0cbf5020549b7c7b0b8c0c471e3b47aa18bf84a9844",
+    "pythia8/share/Pythia8/xmldoc/OniaShowers.xml": "3130396989278b0d95d720e2d570e1461d9822027c4e30e1026ffe5d1d1d3c65",
+    "pythia8/share/Pythia8/xmldoc/PDFSelection.xml": "341c145785f000d4f0bf4bc2d37579d7d32fe931e51edc5485b3e55734eb64e1",
+    "pythia8/share/Pythia8/xmldoc/POWHEGMatching.xml": "7b17ef5f5737af3abb57d010f84c35042b2e845a07aed775f42a38d3eb6e1693",
+    "pythia8/share/Pythia8/xmldoc/PTSelection.xml": "6126a3280c64823fcae71eb05ddd1be9923447a107a8925674491f3482b6de0e",
+    "pythia8/share/Pythia8/xmldoc/Parallelism.xml": "9729cba5e7214abd4b0f2162a5586ae6624f883093339b3fa3f8df0516031de8",
+    "pythia8/share/Pythia8/xmldoc/ParticleData.xml": "330ba4e7f5a081235b5055f7b312fe6f5c9fe9c95411a845cba7a3e82e67ecca",
+    "pythia8/share/Pythia8/xmldoc/ParticleDataScheme.xml": "4c92568be4323523d5745acf4f6027da7a53d31e7014f781dc00e79cb5aa5b21",
+    "pythia8/share/Pythia8/xmldoc/ParticleDecays.xml": "0a654d527185196847bf4f85ebd3d72c175bb3100e916e019cbae7fb23d6ccd0",
+    "pythia8/share/Pythia8/xmldoc/ParticleProperties.xml": "32a325201b1a33aaa34a7bfec9465afddcc94ae552df0132106c022b5d2c4dc0",
+    "pythia8/share/Pythia8/xmldoc/PartonDistributions.xml": "b19f5b3d2159758bd95cd5547cc4b24ae508c4830eeead997c0f3a36dc2da85f",
+    "pythia8/share/Pythia8/xmldoc/PartonShowers.xml": "9f4e2ddfd036b3dac66634ba99d84700ec2b835db97192aeac36ed90b7ac2872",
+    "pythia8/share/Pythia8/xmldoc/PartonVertexInformation.xml": "697869e7ab55fde9346450fa5ea2cc7e971069cd06cc754a7979e7aa3db0d7cd",
+    "pythia8/share/Pythia8/xmldoc/PhaseSpaceCuts.xml": "835bed5ad76f6cf1843cbf4be951dea62fa06d8068bae5b81ee03406b414268c",
+    "pythia8/share/Pythia8/xmldoc/Photoproduction.xml": "fa0f1e6bcb2f4191929510279e162f4b1dd9b4cac9d2d5fbfa788545c884e98a",
+    "pythia8/share/Pythia8/xmldoc/Plugins.xml": "efd19a71f67dc05f5f435cd8001f4ecb50343a3f990262e72f12b8939eefeb33",
+    "pythia8/share/Pythia8/xmldoc/ProcessSelection.xml": "b63a8196c90f280b0927dc67536e91fc4e141532fd0fad90d954b1573eda2bc2",
+    "pythia8/share/Pythia8/xmldoc/ProgramFlow.xml": "9cacd64b53e6e5b2c01a0da1355869b872dba5cca18cff79c3c110407e6edc66",
+    "pythia8/share/Pythia8/xmldoc/PythonInterface.xml": "535bf0c3413519755adf79150142bf9dce3ad51481d32318a356a1c3b1fa771d",
+    "pythia8/share/Pythia8/xmldoc/QCDHardProcesses.xml": "d3480570abfec690e85c2f0f189640c7eccb292322ecca391fc6940edfc41cda",
+    "pythia8/share/Pythia8/xmldoc/QCDLowEnergyProcesses.xml": "fc8e92daf604efd2e2f0c9e71318ba8b4c6da45906c5365e2c91ada5bdd77a6c",
+    "pythia8/share/Pythia8/xmldoc/QCDSoftProcesses.xml": "a9394caef8166e18a1ddd2d9b969ca9224dfbce227185558087e0f92552b1e7b",
+    "pythia8/share/Pythia8/xmldoc/RHadrons.xml": "476d0c680cd07dfb4843d252f68a323b491cec8b9308148e745c8b623b52dd13",
+    "pythia8/share/Pythia8/xmldoc/RIVETusage.xml": "71768fd2d7cfeb6d48c8680881ab3493056a12f54579ce61acb2428d87cadd13",
+    "pythia8/share/Pythia8/xmldoc/ROOTusage.xml": "1986338c076bd40454e7383dac4a5699519fb765169de52cd1a05ef007020a4a",
+    "pythia8/share/Pythia8/xmldoc/RandomNumberSeed.xml": "b1a06cfe8d5511c4050205cb147d4e20417f40348e843fd13533a3f73752248c",
+    "pythia8/share/Pythia8/xmldoc/RandomNumbers.xml": "dd62cc4890ce601955546cb18a2be5b7d119981f8dc7bd69fe214d7a304d4a35",
+    "pythia8/share/Pythia8/xmldoc/ResonanceDecays.xml": "3d9215143c4da2692a58f437b503b233a2ed1e57fb8e0b6df1396215caa33731",
+    "pythia8/share/Pythia8/xmldoc/RopeHadronization.xml": "125a57f05bdd4c53dcb118e744217ee5ebc0d9862ee653c119030588d993ae44",
+    "pythia8/share/Pythia8/xmldoc/SUSYLesHouchesAccord.xml": "b2825bceccd7195ec7a9893d8a8c47e734b525d55d58c6f4011e191e87d510f4",
+    "pythia8/share/Pythia8/xmldoc/SUSYProcesses.xml": "2457a1c25268d285bef8ec9de761a82d8ec9a84d5f79e4e21a01775b070fdba4",
+    "pythia8/share/Pythia8/xmldoc/SampleMainPrograms.xml": "b558e4ed3e479f0e9cb4dcec7d8d94aa62464429f3b9322e2c96b204acc67e86",
+    "pythia8/share/Pythia8/xmldoc/SaveSettings.xml": "c027814e44e4cd873504461d55b8500e142bf428defb23ad6cf57d367c2f377a",
+    "pythia8/share/Pythia8/xmldoc/SecondHardProcess.xml": "35f606e2ba2ff43da66d3a12330819b5a64f3f0610fa3ea7cd3551c52969eba2",
+    "pythia8/share/Pythia8/xmldoc/SemiInternalProcesses.xml": "9ceb95fd255fdfd7ed279b2c0cb668d1de179156ca81cc821d179d6c679c1642",
+    "pythia8/share/Pythia8/xmldoc/SemiInternalResonances.xml": "154af70e3e0c5152e0225e7c23fb20959d0b38b8bf73c56ca4222ea0fdb0965f",
+    "pythia8/share/Pythia8/xmldoc/SettingsScheme.xml": "08329bc1544df195919127782bd11e3d52d918af7a6540d9900c8b0cbf43d0e7",
+    "pythia8/share/Pythia8/xmldoc/SimpleShowers.xml": "65dd2678fcb3313fffe3587f1a1ba9c5ff17bd4b9be676d63719d5170a6f54bd",
+    "pythia8/share/Pythia8/xmldoc/SpacelikeShowers.xml": "0d4d3c6b54e7dc8f1dfb89088a96c9354a07ec447cb1b5a96b81baba00d09d2e",
+    "pythia8/share/Pythia8/xmldoc/StandardModelParameters.xml": "be1577e47e5d0ea45243b87719402a2c161b33271121c9088870a05f31ec9a23",
+    "pythia8/share/Pythia8/xmldoc/StringFragmentation.xml": "80a5a10a6f62f5d723989b7d54367beef8016cd5f20680e41daf3a315b8eb4f4",
+    "pythia8/share/Pythia8/xmldoc/ThermalFragmentation.xml": "ea46922a891a45f24a6edd3dd6ffbfdd084aad30f3640703e68f5f7dbb574eae",
+    "pythia8/share/Pythia8/xmldoc/TimelikeShowers.xml": "5cb214f66e3d06b1fa6e53f313ad4ba97ed95dd7346e43b4a3e30ac130cf37ad",
+    "pythia8/share/Pythia8/xmldoc/TopProcesses.xml": "0b7b458bb0a33551ca5487c0cd066bb4e5a259922fc4ea2e0f338aad055f60c8",
+    "pythia8/share/Pythia8/xmldoc/TotalCrossSections.xml": "3cd2e9c2e817f41112d3e92d1c7c0edb2f2e39b9b3f853df5d60ac394e0dcf82",
+    "pythia8/share/Pythia8/xmldoc/Tunes.xml": "74c66a2dc9bba8a6dfdb01437947fff389c99720c1f7da8eac0d42ebf2005af1",
+    "pythia8/share/Pythia8/xmldoc/UMEPSMerging.xml": "8ef2dd8f05397ff59a9657c2eec4ffae525922c6a58b152b7f712084793e83c8",
+    "pythia8/share/Pythia8/xmldoc/UpdateHistory.xml": "2628bb93ef348b3507727751a087e8bfce51d737da27587246d52455891b1ae3",
+    "pythia8/share/Pythia8/xmldoc/UserHooks.xml": "818945a4ab3f2dbf5c4a1388c43956f7c526983034043ffb48a83dff9fe83091",
+    "pythia8/share/Pythia8/xmldoc/Variations.xml": "3eca13d362e3e55326961008869e4454fcc50f7c99f9cbf73616979b0170317a",
+    "pythia8/share/Pythia8/xmldoc/Version.xml": "0ba06616a064d6bebe412a6306fd0237c874db7592fede8e14f7de30d562153e",
+    "pythia8/share/Pythia8/xmldoc/Vincia.xml": "1c3ee20332912e398aab2348ab361ef8f36e2cab52ba96520e72988a9f4c6f5c",
+    "pythia8/share/Pythia8/xmldoc/VinciaEW.xml": "a0c7f55366b16f0e300c65a2a177d820ccf1f6227f7ec531c17b4ed6fda386d8",
+    "pythia8/share/Pythia8/xmldoc/VinciaMECs.xml": "f355a4559ec912051c2da629625a5cdcfb5ec7318c0c6971ce98f41cd9a97acc",
+    "pythia8/share/Pythia8/xmldoc/VinciaMerging.xml": "82906798414e77aff4224ce56ac89a41be2ea7d9335fd82396d25069ef1e926b",
+    "pythia8/share/Pythia8/xmldoc/VinciaQCD.xml": "24b09840471c6ad7d796898a35881c0afa0ec972451f405efa58e751848176a0",
+    "pythia8/share/Pythia8/xmldoc/WeakShowers.xml": "4779c606465aeed06334424beaf727b56ce47676089fc0cc6586f407fb5e6e05",
+    "pythia8/share/Pythia8/xmldoc/Welcome.xml": "f9a4f5ac10b253d0e264c47ce84e750c5af77dd4687678af02bd0eaaf73e7bce",
+    "pythia8/share/Pythia8/xmldoc/ZSelection.xml": "fc52f45d079db67e3fb9acdea3098d4a1d4582d7375b4708fcbcd34bce609841",
+    "pythia8/share/Pythia8/xmldoc/aMCatNLOMatching.xml": "e7a55b5f416f9f3db318b32b0e558f7d770af64affe4b521ee2886fb77a9d5e4"
+  },
+  "local_execution_log_sha256": {
+    "existing_prebuild_runner_build_info.log": {
+      "sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+      "bytes": 106,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "existing_prebuild_runner_path_ldd.log": {
+      "sha256": "6ea2486ce8b24dfbf62191a41a06b2f7fd75f0040ff0f2a09b47e63e37986bb1",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "existing_prebuild_validator_path_ldd.log": {
+      "sha256": "c552bc32072aabd3a90f28a0e543827d84fe49a248c6cb9c573024665619d625",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_shower_build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_shower_ldd.log": {
+      "sha256": "4aed239c6f511d0eaff1cddd606514dd65f54aa65a32f7f466a7bab5f8fd817e",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "validate_zh_hepmc3_build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "validate_zh_hepmc3_ldd.log": {
+      "sha256": "601c68ee67e31379367e561e7860baafd2ab15ad5d5246752be660e4c4f06952",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "test_zh_methods_build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "test_zh_methods_ldd.log": {
+      "sha256": "675c7c251fc13b3da709c7bf883a891b83ef02eb2e855e74fe5087aedad7c363",
+      "bytes": 454,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_shower_build_info.log": {
+      "sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+      "bytes": 106,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_shower_missing_authorization.log": {
+      "sha256": "85e01d0181d779e1f18d057942454fcc76982b96e5a3b0eedaa8030132fe0522",
+      "bytes": 60,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "validate_zh_hepmc3_build_info.log": {
+      "sha256": "aa8a2edd70fad02ab29f05ec70937295548c6ec3857f582325631849bf59ec3a",
+      "bytes": 81,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "validate_zh_hepmc3_missing_authorization.log": {
+      "sha256": "3f9fbdf1435c0a0b897961bd62b8f67281062205f5d159d7356a931b324553e6",
+      "bytes": 73,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_method_fixtures.log": {
+      "sha256": "a03ffe3a3f85c1c28f7e363e97589c7fc7a15d7eba1e3c27842355353744af4e",
+      "bytes": 122,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "zh_settings_preflight.log": {
+      "sha256": "d7a5833e2dede63b1b89d82e6affa80db0ffa4b671ef5e705b547541260032ad",
+      "bytes": 1123,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "existing_postbuild_runner_build_info.log": {
+      "sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+      "bytes": 106,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "existing_postbuild_runner_path_ldd.log": {
+      "sha256": "f2359e5c73c2d96251f66998870f94eeeb66ca348e3a0984602309f078f6fc4a",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "existing_postbuild_validator_path_ldd.log": {
+      "sha256": "7a9b1a9645d2b2502832f4c449d15982e3cef75ab538ba5a84fbcd89c94da423",
+      "bytes": 600,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    },
+    "compiler_version.log": {
+      "sha256": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8",
+      "bytes": 246,
+      "retention": "LOCAL_ONLY; private command/log paths and raw content not published"
+    }
+  },
+  "resonance_mass_method_contract": {
+    "source_identity": "Unique source H PDG25/status1 and Z PDG23/status2 from exact full100 DAT, with actual HepMC root graph IDs; no barcode assumption",
+    "generated_mass_comparison": "HepMC generated mass vs exact source mass token",
+    "generated_mass_atol_GeV": 1e-05,
+    "generated_mass_rtol": 1e-09,
+    "invariant_mass_squared_comparison": "Independent source and HepMC E^2-|p|^2 vs source mass token squared",
+    "invariant_mass_squared_atol_GeV2": 1e-06,
+    "invariant_mass_squared_rtol": 5e-09,
+    "kinematic_scale": "max(E^2,|p|^2,m_source^2,1GeV^2); frozen Phase6F printed-LHE precision bound",
+    "source_H_mass_GeV": 125,
+    "source_Z_model_mass_GeV": 91.188,
+    "source_Z_model_width_GeV": 2.441404,
+    "source_Z_width_window": 15,
+    "high_boost_fixture": "Synthetic finite high-boost rounding accepted even when invariant mass cancellation exceeds10microGeV; changed generated mass, invariant mass-squared, and outside-window Z rejected",
+    "source_vs_shower_cartesian_four_momentum_identity_required": false,
+    "lorentz_recoil_allowed": true,
+    "mass_repair": false,
+    "historical_generic_stable_mass_shell_gate": "UNCHANGED"
+  },
+  "future_initialized_higgs_decay_receipt": "NOT_EXECUTED; actual inclusive/effective external-LHE tables and model widths/BR must be bound after separate human authorization; no adopted physical BR or factor-inclusion inference from numeric agreement",
+  "publication": "Bounded sanitized METHOD_ONLY build evidence only; no physics reference sample or binary/log payload",
+  "portable_callback_method_tests": {
+    "status": "PASS_METHOD_ONLY",
+    "Windows_tests_run": 22,
+    "WSL_tests_run": 22,
+    "skips": 0,
+    "scope": "Actually executed portable method suite; four additional simulated callback controls exercise the complete19-stage compile contract without starting subprocesses, unexpected exit handling and fail-closed label/policy checks"
+  },
+  "supervised_callback": {
+    "status": "PASS_SUPERVISED_NO_EVENT_BUILD",
+    "receipt_sha256": "b9886bd84aec157e7277c3db3fc992e145f95e8e1cb9015a3cc439a44ebc111c",
+    "receipt_bytes": 13810,
+    "monitor_source_sha256": {
+      "simulation/zh_pilot/phase6g/common.py": "83191650274c593d5b65d4a6840714548d95630f25617dec01fa95b667407346"
+    },
+    "callbacks_completed": 19,
+    "stage_labels": "Unique lowercase/underscore labels; separate prebuild/postbuild installation verification",
+    "nonzero_exit_policy": "Only one-argument missing-authorization invocations of zh_shower and validate_zh_hepmc3 expect literal exit2; all other stages require0",
+    "expected_missing_authorization_rejections": 2,
+    "observed_rejection_exit_codes": [
+      2,
+      2
+    ],
+    "physical_execution_authorization": "NOT_AUTHORIZED",
+    "authorization_ticket_created": false,
+    "campaign_reserved": false,
+    "physical_LHE_initialization_executed": false,
+    "new_physics_events_generated": 0,
+    "next_calls": 0,
+    "metrics": {
+      "elapsed_seconds": 52.700028817,
+      "peak_sampled_process_tree_rss_bytes": 703873024,
+      "observed_output_bytes": 1294342,
+      "peak_observed_output_bytes": 3814401,
+      "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+      "monitor_interval_seconds": 0.2
+    },
+    "actual_stages": [
+      {
+        "stage": "existing_prebuild_runner_build_info",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2350056760000001,
+        "peak_process_tree_rss_bytes": 6553600,
+        "log_sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+        "failure": null,
+        "executable_basename": "shower_lhef"
+      },
+      {
+        "stage": "existing_prebuild_runner_path_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23874322599999953,
+        "peak_process_tree_rss_bytes": 3600384,
+        "log_sha256": "6ea2486ce8b24dfbf62191a41a06b2f7fd75f0040ff0f2a09b47e63e37986bb1",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "existing_prebuild_validator_path_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.25155125700000003,
+        "peak_process_tree_rss_bytes": 3407872,
+        "log_sha256": "c552bc32072aabd3a90f28a0e543827d84fe49a248c6cb9c573024665619d625",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "zh_shower_build",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 19.593755640999998,
+        "peak_process_tree_rss_bytes": 703873024,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure": null,
+        "executable_basename": "g++"
+      },
+      {
+        "stage": "zh_shower_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.26417227499999996,
+        "peak_process_tree_rss_bytes": 3276800,
+        "log_sha256": "4aed239c6f511d0eaff1cddd606514dd65f54aa65a32f7f466a7bab5f8fd817e",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "validate_zh_hepmc3_build",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 12.658754436999999,
+        "peak_process_tree_rss_bytes": 619884544,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure": null,
+        "executable_basename": "g++"
+      },
+      {
+        "stage": "validate_zh_hepmc3_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24500692800000223,
+        "peak_process_tree_rss_bytes": 3276800,
+        "log_sha256": "601c68ee67e31379367e561e7860baafd2ab15ad5d5246752be660e4c4f06952",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "test_zh_methods_build",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 10.485005798000003,
+        "peak_process_tree_rss_bytes": 514387968,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure": null,
+        "executable_basename": "g++"
+      },
+      {
+        "stage": "test_zh_methods_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24613330900000108,
+        "peak_process_tree_rss_bytes": 3276800,
+        "log_sha256": "675c7c251fc13b3da709c7bf883a891b83ef02eb2e855e74fe5087aedad7c363",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "zh_shower_build_info",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.22940222500000118,
+        "peak_process_tree_rss_bytes": 2621440,
+        "log_sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+        "failure": null,
+        "executable_basename": "zh_shower"
+      },
+      {
+        "stage": "zh_shower_missing_authorization",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "elapsed_seconds": 0.24936584000000295,
+        "peak_process_tree_rss_bytes": 917504,
+        "log_sha256": "85e01d0181d779e1f18d057942454fcc76982b96e5a3b0eedaa8030132fe0522",
+        "failure": null,
+        "executable_basename": "zh_shower"
+      },
+      {
+        "stage": "validate_zh_hepmc3_build_info",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24620150199999813,
+        "peak_process_tree_rss_bytes": 2359296,
+        "log_sha256": "aa8a2edd70fad02ab29f05ec70937295548c6ec3857f582325631849bf59ec3a",
+        "failure": null,
+        "executable_basename": "validate_zh_hepmc3"
+      },
+      {
+        "stage": "validate_zh_hepmc3_missing_authorization",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "elapsed_seconds": 0.2481947489999996,
+        "peak_process_tree_rss_bytes": 3407872,
+        "log_sha256": "3f9fbdf1435c0a0b897961bd62b8f67281062205f5d159d7356a931b324553e6",
+        "failure": null,
+        "executable_basename": "validate_zh_hepmc3"
+      },
+      {
+        "stage": "zh_method_fixtures",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2632677710000024,
+        "peak_process_tree_rss_bytes": 3538944,
+        "log_sha256": "a03ffe3a3f85c1c28f7e363e97589c7fc7a15d7eba1e3c27842355353744af4e",
+        "failure": null,
+        "executable_basename": "test_zh_methods"
+      },
+      {
+        "stage": "zh_settings_preflight",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.270126513000001,
+        "peak_process_tree_rss_bytes": 7340032,
+        "log_sha256": "d7a5833e2dede63b1b89d82e6affa80db0ffa4b671ef5e705b547541260032ad",
+        "failure": null,
+        "executable_basename": "zh_shower"
+      },
+      {
+        "stage": "existing_postbuild_runner_build_info",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.29637054899999526,
+        "peak_process_tree_rss_bytes": 3670016,
+        "log_sha256": "83a9ae1a07c7f3e4143b0916b8b01726c667a2f15bbcfd082818eedb18b9b95a",
+        "failure": null,
+        "executable_basename": "shower_lhef"
+      },
+      {
+        "stage": "existing_postbuild_runner_path_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2784305309999979,
+        "peak_process_tree_rss_bytes": 3407872,
+        "log_sha256": "f2359e5c73c2d96251f66998870f94eeeb66ca348e3a0984602309f078f6fc4a",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "existing_postbuild_validator_path_ldd",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2658477949999991,
+        "peak_process_tree_rss_bytes": 3407872,
+        "log_sha256": "7a9b1a9645d2b2502832f4c449d15982e3cef75ab538ba5a84fbcd89c94da423",
+        "failure": null,
+        "executable_basename": "ldd"
+      },
+      {
+        "stage": "compiler_version",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.011274002999996924,
+        "peak_process_tree_rss_bytes": "UNKNOWN",
+        "log_sha256": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8",
+        "failure": null,
+        "executable_basename": "g++"
+      }
+    ],
+    "acceptance_scope": "Actual frozen resource Monitor callback executed all compile/ABI/ldd/settings/method/rejection stages. No physical execution callback, source LHE, authorization creation, Pythia.next, Delphes, or ROOT event processing was invoked."
+  },
+  "prior_callback_integration_failure": {
+    "status": "PRESERVED_LOCAL_METHOD_ONLY_FAILURE",
+    "receipt_sha256": "bd55fb7e65d2d46398e4930c60357917593ea8f45a58fdaa54bf60da300e9070",
+    "stage": "zh_shower_missing_authorization",
+    "observed_exit_code": 1,
+    "expected_exit_code": 2,
+    "log_sha256": "85e01d0181d779e1f18d057942454fcc76982b96e5a3b0eedaa8030132fe0522",
+    "new_physics_events_generated": 0,
+    "next_calls": 0,
+    "cause": "Direct v9 compilation did not exercise supervised callback labels/exit policy. The first supervised attempt safely stopped when the native runner missing-auth catch returned1 while the reviewed policy required2.",
+    "correction": "Build stage labels normalized to underscores with distinct prebuild/postbuild checks; explicit expected-exit policy only for negative probes; new runner outer errors normalized to2. Fresh supervised compile completed19 callbacks, including both real negative probes.",
+    "original_attempt_and_logs": "LOCAL_ONLY preserved without overwrite; this was a no-event compile retry, not a replacement physics run",
+    "prior_v9_projection_sha256": "2ed1c1e630ed0fe18ad72afcd0676fcee7b5ac1821c1592f49d9831d039a4bb8"
+  }
+}

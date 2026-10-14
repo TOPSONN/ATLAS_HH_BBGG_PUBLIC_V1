@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "PASS_METHODS_ONLY",
+  "task": "PHASE6G_PRESERVED_RUN_AND_REFERENCE_PREPARATION_METHODS",
+  "scope": "Integrity/configuration/path/CRC and event-level arithmetic controls only. Temporary labelled analytic controls are not MC events or physical references.",
+  "source_sha256": {
+    "simulation/zh_pilot/phase6g/validate_run.py": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f",
+    "simulation/zh_pilot/phase6g/prepare_references.py": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48",
+    "simulation/zh_pilot/phase6g/tests/test_preserved_run.py": "8f2650fe9e6b30cd77cbfbc1602bf1d2452bd2b78679fe32846ed391955e729c"
+  },
+  "actual_test_runs": [
+    {
+      "host": "Windows",
+      "exit_code": 0,
+      "tests": 24,
+      "unittest_elapsed_seconds": 1.079,
+      "wrapper_elapsed_seconds": 1.5494605000021693,
+      "log_sha256": "7ccbddfd71a610f540275184db7571e473fa8977e87465b576635c261a9d42a8",
+      "log_bytes": 3983,
+      "source_files": {
+        "simulation/zh_pilot/phase6g/validate_run.py": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f",
+        "simulation/zh_pilot/phase6g/prepare_references.py": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48",
+        "simulation/zh_pilot/phase6g/tests/test_preserved_run.py": "8f2650fe9e6b30cd77cbfbc1602bf1d2452bd2b78679fe32846ed391955e729c"
+      },
+      "scope": "METHOD_ONLY integrity, path, CRC, configuration and arithmetic controls; no authorized run or native processing",
+      "physical_events_generated": 0,
+      "physical_events_processed": 0,
+      "authorization_issued": false,
+      "reference_package_created": false
+    },
+    {
+      "host": "WSL",
+      "exit_code": 0,
+      "tests": 24,
+      "unittest_elapsed_seconds": 3.964,
+      "wrapper_elapsed_seconds": 5.080189648000001,
+      "log_sha256": "8f4123fcd010a51eb71ea338140b9577c95c91bffe27042db66f4c1acd8a68a4",
+      "log_bytes": 3857,
+      "source_files": {
+        "simulation/zh_pilot/phase6g/validate_run.py": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f",
+        "simulation/zh_pilot/phase6g/prepare_references.py": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48",
+        "simulation/zh_pilot/phase6g/tests/test_preserved_run.py": "8f2650fe9e6b30cd77cbfbc1602bf1d2452bd2b78679fe32846ed391955e729c"
+      },
+      "scope": "METHOD_ONLY integrity, path, CRC, configuration and arithmetic controls; no authorized run or native processing",
+      "physical_events_generated": 0,
+      "physical_events_processed": 0,
+      "authorization_issued": false,
+      "reference_package_created": false
+    }
+  ],
+  "methods_checked": [
+    "missing authorization or incomplete/method-only runs rejected before report/reference writes",
+    "source snapshots and duplicate/nonfinite JSON rejection",
+    "gzip CRC, exact plain SHA and bounded expansion",
+    "all100 source denominator and signed event-level cutflow moments",
+    "zero survivors and nullable pair availability",
+    "closed105_to160GeV mgg endpoints",
+    "H-origin match-count consistency",
+    "initialized settings switches, seed, duplicates and representation",
+    "source/build/toolchain/native/historical run output protection",
+    "per-asset and combined30MiB budget and2MiB textfile budget",
+    "native-derived reco rows/H-match pairs and cutflow bound to exact execution receipt SHA; mutation rejected"
+  ],
+  "physical_scope": {
+    "authorization": "NOT_AUTHORIZED",
+    "new_physical_events_generated": 0,
+    "physical_events_processed": 0,
+    "authorization_receipt_created": false,
+    "physical_campaign_created": false,
+    "genuine_selected_reference_package_created": false,
+    "complete_actual_ZH100_preserved_run_validation": "NOT_EXECUTED",
+    "fresh_ReaderAscii": "NOT_EXECUTED",
+    "fresh_ROOT_readback": "NOT_EXECUTED",
+    "exclusive_physical_normalization": "BLOCKED_BR_WEIGHT_CLOSURE"
+  },
+  "helper_contract": {
+    "preserved_run_status": "PASS_PRESERVED_RAW_RUN_ONLY after actual hash-bound source/ledger/receipt verification",
+    "native_QA": "Inherited exact actual receipts; fresh native execution never implied",
+    "reference_status": "PREPARED_LOCAL_REFERENCE_REVIEW_ONLY; no automatic Git operation"
+  },
+  "limits_bytes": {
+    "asset_each": 31457280,
+    "three_assets_combined": 31457280,
+    "text_each": 2097152,
+    "text_combined": 16777216
+  },
+  "supersedes_method_receipt_sha256": "1bb5ee5565920834cf4dc18d746a774a92f7e3c79182d19451dcaec93261eb55"
+}

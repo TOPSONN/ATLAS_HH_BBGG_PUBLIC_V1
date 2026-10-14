@@ -1,0 +1,731 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SOURCE_TESTS_AND_ACTUAL_GUARDED_DRY_RUN_ONLY",
+  "created_utc": "2026-10-14T10:42:32.859360+00:00",
+  "bridge_sha256": "8d1c5ed1d16508b15abb958c602464f9051c1d1b2bb0e374322296893c72dbe7",
+  "bridge_sources": [
+    {
+      "path": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+      "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47"
+    },
+    {
+      "path": "simulation/delphes/include/DelphesAdapter.hxx",
+      "sha256": "ca79bbb3baad15bcc8afded0a0261a859e23fcbe63969d523e5a32e33aa115e6"
+    },
+    {
+      "path": "simulation/delphes/include/Physics.hxx",
+      "sha256": "24512067aed35295b1e4584a8db8e4aec27c38c330d76099eccc3e83e04e0e6d"
+    },
+    {
+      "path": "simulation/delphes/scripts/audit_payload.py",
+      "sha256": "e3f3adf682bec5e63c678da24f755de02b2870cfb333a4abd37ad3a92f2636dd"
+    },
+    {
+      "path": "simulation/delphes/scripts/publish_references.py",
+      "sha256": "f4dfdae1bee8eb8510589e3bd8a971435a5b4802773b4ecfe74fa748c234b071"
+    },
+    {
+      "path": "simulation/delphes/scripts/run_delphes.py",
+      "sha256": "ccfe87604fa669a9cecfbd46e9f997da0e5616654711f25e33ec34dd89d2353e"
+    },
+    {
+      "path": "simulation/delphes/scripts/run_delphes.sh",
+      "sha256": "298313866b97fb74a7af7545e73e04ab5ab5d5c17d38fc2d544d79ac6d95a92e"
+    },
+    {
+      "path": "simulation/delphes/scripts/summarize_btags.py",
+      "sha256": "7cc1cf4cbb361867d5b8b5e49fa1661234b59cfd7c5cbe7ca22f62bda28a2c97"
+    },
+    {
+      "path": "simulation/delphes/scripts/validate_references.py",
+      "sha256": "c6afb6456f86abfb261b228e3b9a9fb637116818a33274a6ad8d5ffba72c1bd7"
+    },
+    {
+      "path": "simulation/mg5/scripts/audit_payload.py",
+      "sha256": "322dbc401fa1f402444e9acb6baf899d48e4b7447db7ab085456bd9885a95196"
+    },
+    {
+      "path": "simulation/mg5/scripts/capture_environment.py",
+      "sha256": "f5fd3f414a1ed57f3c14961141b83c333d3d469f5870212d6f06346f97a77f9b"
+    },
+    {
+      "path": "simulation/mg5/scripts/configure_local.py",
+      "sha256": "7d955f6e0ef84f58b7d116a4018201ace979f8aee86dd17dec96eeeddff90965"
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.py",
+      "sha256": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752"
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.sh",
+      "sha256": "cd4451dfe195f9b68ec8e8b6a467ba835ec2a803d4bfb214165c21f474fc7faa"
+    },
+    {
+      "path": "simulation/mg5/scripts/installation.py",
+      "sha256": "df56d5f20350b460aa01e239dedb6bb9ba16dd91a0c73d73b1a5023b904b0056"
+    },
+    {
+      "path": "simulation/mg5/scripts/mg5_cli.sh",
+      "sha256": "2706e40dd6d8d3247278269402cc00709d0f3656afc2be88f6407958dffb76c1"
+    },
+    {
+      "path": "simulation/mg5/scripts/prepare_release.py",
+      "sha256": "54b04cd5f06253bf356e09de06881a3f1b97d3889c80ce2eafdc86a5d6af3ab7"
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_background_references.py",
+      "sha256": "1519f90ab3e6f755d4194ab241e5dd5744a233a02106396aec365fb6d05db91c"
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_reference_samples.py",
+      "sha256": "477669279e6cd94230d5168d8b14c5881fd41a111008e57fc2b6a491e70335fb"
+    },
+    {
+      "path": "simulation/mg5/scripts/resource_limits.py",
+      "sha256": "3afb3ad000fae1c62fc187bf52e0bd0e514f7144ba9ed28761f018b37b0690ca"
+    },
+    {
+      "path": "simulation/mg5/scripts/validate_lhe.py",
+      "sha256": "042c5d235898db08b3decdef7b2930170a33b7e426b9724bab11ec90430360f1"
+    },
+    {
+      "path": "simulation/pythia8/config/baseline_shower.cmnd",
+      "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+    },
+    {
+      "path": "simulation/pythia8/include/Json.hxx",
+      "sha256": "ec2a0bb62b04ed40cf5a27eab9845ad176d05fb0bc8901ab969cb1eab5afdd47"
+    },
+    {
+      "path": "simulation/pythia8/include/PhotonOrigin.hxx",
+      "sha256": "6d5a8a759bf91982da4fe4ad910f4037ca6e28d5013af4f51565c6ad962ec7cc"
+    },
+    {
+      "path": "simulation/pythia8/include/Sha256.hxx",
+      "sha256": "c4669dac3347eb5bbea6de97885bb8985e91e435d59a462b6ba683db724f80b2"
+    },
+    {
+      "path": "simulation/pythia8/include/TrackedLHA.hxx",
+      "sha256": "8d9c7a8fdee7ce0588d4222c2b7b05fcc428c3a2c747b13422a4e5a830eea4d5"
+    },
+    {
+      "path": "simulation/pythia8/scripts/analyze_shower.py",
+      "sha256": "4fabe3dcd6d0069325a91fb676cf955d52f8ad5769b3df2d0211bb707a862bde"
+    },
+    {
+      "path": "simulation/pythia8/scripts/audit_shower.py",
+      "sha256": "b9f1ecc68c62ce76652e61cfd1c099609223f7c33ea12b02346382d9ff468198"
+    },
+    {
+      "path": "simulation/pythia8/scripts/publish_shower_references.py",
+      "sha256": "fb04228f3a8dd9652c567bb9275ad63013f2fe8c4cb625dd3f3fc70c9e5a23ce"
+    },
+    {
+      "path": "simulation/pythia8/scripts/shower_sample.py",
+      "sha256": "5ee33a7c42b89cef512d0531455d981e1607688e530db15380ac47f35685541f"
+    },
+    {
+      "path": "simulation/pythia8/scripts/shower_sample.sh",
+      "sha256": "ded8f9d10acb17ea44d7b5ab394aa4605f9fcd141362cdc773d38724980df16b"
+    },
+    {
+      "path": "simulation/pythia8/scripts/validate_hepmc3.py",
+      "sha256": "fad41e85b72a522b3a53f7bf61710e97c111aeede30b127cf6877dbbb5ec5215"
+    },
+    {
+      "path": "simulation/pythia8/scripts/validate_lhe_stream.py",
+      "sha256": "5d45cc04a7ef49e48858f398328380a984d58a9788ac1b5f27d0aafedd952d8a"
+    },
+    {
+      "path": "simulation/pythia8/src/shower_lhef.cxx",
+      "sha256": "8290445ee3af6a78c547f1731fc5013954bd9688ee595309279d6979ade3c6a2"
+    },
+    {
+      "path": "simulation/pythia8/src/validate_hepmc3.cxx",
+      "sha256": "16b039ddb61846361328104fee624a95e0b6d4ff8e3f1d6eebcba5449c7851eb"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/preferred_higgs_decay.cmnd",
+      "sha256": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_stable.mg5",
+      "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "path": "simulation/zh_pilot/config/bundle.json",
+      "sha256": "6e879c6fee37a33e9f7017b463bc41ab2d12c6b17be37759f2fd79566c98b5ad"
+    },
+    {
+      "path": "simulation/zh_pilot/config/decay_contract.json",
+      "sha256": "42f595f43bc9ed5037e4f5f9bcf0146e4a88d9a4e2328f3209cf268af4a126ee"
+    },
+    {
+      "path": "simulation/zh_pilot/config/generator_contract.json",
+      "sha256": "a385af80aebb8462b73c6eb83de54a7f996d4f1e4d5e6aff840b5c83f44d2cf4"
+    },
+    {
+      "path": "simulation/zh_pilot/config/input_profiles.json",
+      "sha256": "0d83998f451351eda323d3966f229f674b1830e118a163db08db6d0d2f295217"
+    },
+    {
+      "path": "simulation/zh_pilot/config/preflight_policy.json",
+      "sha256": "59aa121c97e136bab04961bfd42674e0a993dc8e2bf3c290f062d27cfcf5b219"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/__init__.py",
+      "sha256": "ab4d4ba06df87fa52c60f7f07e50bbe3329dcd0f38382df826e5bf3fe76c720d"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/audit_payload.py",
+      "sha256": "c83deb5ded974ff201d58d6a351484188d48b12f6d3d3f6fcbd50bb865b8e3f2"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/authorize_pilot.py",
+      "sha256": "b10602b37555083a75192e966a72afca832d0138b9f599e277a5564028e65221"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/common.py",
+      "sha256": "83191650274c593d5b65d4a6840714548d95630f25617dec01fa95b667407346"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/controller.py",
+      "sha256": "cc90c72ab0b01093e0adfdbbcfc99e9bb1a37773133e3cccef4432dc50714fc4"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/delphes_stage.py",
+      "sha256": "85484bcc2edcd4903cea18d30c42ff8239a11eef7a00030e18fac43eeb35d729"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/include/Authorization.hxx",
+      "sha256": "edfd66fce589063a41537ac8be0128d40f43d9e5b1a05d1552764665c5c717b4"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/include/SourceAttempt.hxx",
+      "sha256": "23ffc83abdf249a2ada05743cad2c00e9c29e85ca794fbf6d7dc52654bc2bb6f"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/include/StrictJson.hxx",
+      "sha256": "a474b9d18ee471df1e604ca96ff1ae55c0aceca69cdea4a367de76d961e4782a"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/include/ZHAncestry.hxx",
+      "sha256": "e0d7b0c3966804c7ab8cff3beb9af245c583a938aaf2aaed589e783c47534ba5"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/mg5_stage.py",
+      "sha256": "c4a8e857612010b9dd66be716b250d4e0b1c3dfcfb8c2b576b0034a4494d283b"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/prepare_references.py",
+      "sha256": "6daf672c2b5a6ed9adc8c3717aafe6c345d88a812be09e6b64185d3deb51bf48"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/scripts/build_stage.py",
+      "sha256": "9d44de6bcfb21005903402cfb1b93b1ba153b25bbc9bb2fc8a8ef70bb40adef7"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/scripts/shower_stage.py",
+      "sha256": "bda8e94020e19ff6ab8d61fa9de705192a05abd5d66c60d09fb7a628a270146d"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/src/analyze_zh_root.cxx",
+      "sha256": "e35545ee27beef5587b192bd14122a3675809c38aef34e67d78d649f962e81d5"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/src/test_zh_methods.cxx",
+      "sha256": "ad86981e304c854d0af0b06f9cfe9ee7b4bdbf8c3e64eb3658e4148e607be69d"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/src/validate_zh_hepmc3.cxx",
+      "sha256": "6d34e4de858aa75935439946f57875446571acdd58d255fcccc8c6a5921cdfac"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/src/zh_shower.cxx",
+      "sha256": "04f74339b01e320bf76739b2db450fdbb92f975b8e0dc1d226bd3851b5b0f94c"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/validate_lhe.py",
+      "sha256": "9e06bea703fbcb8125b385f20801939d19a4dc8ad26b19e84c24eac4596ee21a"
+    },
+    {
+      "path": "simulation/zh_pilot/phase6g/validate_run.py",
+      "sha256": "8a3f1f9b312ba9677a5b3a17d1062d4a4c48eb2e54ced8c6059ca535825b555f"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/audit_payload.py",
+      "sha256": "933a36a251d7584c27efca6e2f8e35500c1869f46877626b799845a86725adec"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_decay_tables.py",
+      "sha256": "19e7f1df9ded5167584ea5cb470c0b53586528fe633a485ef05b1f886ff07a9a"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_environment.py",
+      "sha256": "9524584a30240ef877a820c004bfba177ca06350af077c96fafabe7fe7c625a0"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_generator.py",
+      "sha256": "0774a13204e990e4ffc0c850caed2031f4dcbc35d4398ba37e56b88881eb97b4"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/generate_pilot.sh",
+      "sha256": "bdf43f9e5f172c400ab23cd19207132c2282442773361f77b49652d503206923"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/prepare_pilot.py",
+      "sha256": "b68c216cede730269afdf4858bdf79e2ad88ef679be5169263ca0fa9d01fb850"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/validate_profiles.py",
+      "sha256": "dc673bbead2f47aad05babf19a83f8188c551de8a826767091d5233aaaab1a57"
+    }
+  ],
+  "hosts": [
+    {
+      "host": "Windows",
+      "actual_receipt_sha256": "bd77909403417dc02a3cfd96763b3809af980645668da91514353c8356c460ab",
+      "checks": [
+        {
+          "check": "method-tests",
+          "host": "Windows",
+          "exit_code": 0,
+          "expected_exit_code": 0,
+          "elapsed_seconds": 11.142855199999758,
+          "log_sha256": "6370fccac650b7a52f99238847ac832bce217bf284df1b3bc56777f8a1e5bf19",
+          "command": [
+            "python3",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "simulation/zh_pilot/phase6g/tests",
+            "-v"
+          ],
+          "actual_process_exit_checked": true,
+          "discovered_tests": 113,
+          "skipped": 11,
+          "passed_tests": 102
+        },
+        {
+          "check": "working-payload",
+          "host": "Windows",
+          "exit_code": 0,
+          "expected_exit_code": 0,
+          "elapsed_seconds": 0.2981097999982012,
+          "log_sha256": "25e61662c3f7a3cb356567bfb5a1d79c9679f0df22d9ebb8ebbe801ef8a688ce",
+          "command": [
+            "python3",
+            "-B",
+            "simulation/zh_pilot/phase6g/audit_payload.py",
+            "--working"
+          ],
+          "actual_process_exit_checked": true
+        }
+      ]
+    },
+    {
+      "host": "WSL",
+      "actual_receipt_sha256": "11bf327910081e73ac54a3ec3d751be0869da8d9720e967a667abf1d157efee4",
+      "checks": [
+        {
+          "check": "method-tests",
+          "host": "WSL",
+          "exit_code": 0,
+          "expected_exit_code": 0,
+          "elapsed_seconds": 31.257916693,
+          "log_sha256": "d3ec7bcf8cb7d74c5d35a27f9bbdb0035a7ac073a27810b4af5cbe5f7829a3fc",
+          "command": [
+            "python3",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "simulation/zh_pilot/phase6g/tests",
+            "-v"
+          ],
+          "actual_process_exit_checked": true,
+          "discovered_tests": 113,
+          "skipped": 0,
+          "passed_tests": 113
+        },
+        {
+          "check": "working-payload",
+          "host": "WSL",
+          "exit_code": 0,
+          "expected_exit_code": 0,
+          "elapsed_seconds": 0.29349760399999525,
+          "log_sha256": "a30536409734264d4fa4bf9ab19fc73af46297c72378b40632d35197b1b13bc5",
+          "command": [
+            "python3",
+            "-B",
+            "simulation/zh_pilot/phase6g/audit_payload.py",
+            "--working"
+          ],
+          "actual_process_exit_checked": true
+        },
+        {
+          "check": "self-service-dry-run",
+          "host": "WSL",
+          "exit_code": 0,
+          "expected_exit_code": 0,
+          "elapsed_seconds": 6.298190793999993,
+          "log_sha256": "8f4eb66f08405f9f9253114e24897fb7c5b9a13a208f4e1b7b4d9127cf754bbe",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_acceptance_03",
+            "--dry-run",
+            "--max-hours",
+            "2",
+            "--max-disk-gb",
+            "5"
+          ],
+          "actual_process_exit_checked": true,
+          "plan_sha256": "fc6f53379eea46e93b7f78234f45524a8584e70cf1cc291fd3bf742be24737e5",
+          "plan_status": "PASS_PHASE6G_DRY_RUN_NOT_AUTHORIZED",
+          "source_bridge_sha256": "8d1c5ed1d16508b15abb958c602464f9051c1d1b2bb0e374322296893c72dbe7",
+          "output_files": [
+            {
+              "path": "execution_plan.json",
+              "bytes": 18400,
+              "sha256": "fc6f53379eea46e93b7f78234f45524a8584e70cf1cc291fd3bf742be24737e5"
+            },
+            {
+              "path": "frozen/cards/param_card.dat",
+              "bytes": 3054,
+              "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+            },
+            {
+              "path": "frozen/cards/preferred_higgs_decay.cmnd",
+              "bytes": 463,
+              "sha256": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+            },
+            {
+              "path": "frozen/cards/run_card.dat",
+              "bytes": 16376,
+              "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+            },
+            {
+              "path": "frozen/cards/zh_stable.mg5",
+              "bytes": 246,
+              "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+            },
+            {
+              "path": "frozen/cards/zh_zbb_stable_h.mg5",
+              "bytes": 330,
+              "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+            },
+            {
+              "path": "frozen/config/decay_contract.json",
+              "bytes": 7891,
+              "sha256": "42f595f43bc9ed5037e4f5f9bcf0146e4a88d9a4e2328f3209cf268af4a126ee"
+            },
+            {
+              "path": "frozen/config/generator_contract.json",
+              "bytes": 8068,
+              "sha256": "a385af80aebb8462b73c6eb83de54a7f996d4f1e4d5e6aff840b5c83f44d2cf4"
+            },
+            {
+              "path": "frozen/config/input_profiles.json",
+              "bytes": 4751,
+              "sha256": "0d83998f451351eda323d3966f229f674b1830e118a163db08db6d0d2f295217"
+            },
+            {
+              "path": "frozen/config/preflight_policy.json",
+              "bytes": 907,
+              "sha256": "59aa121c97e136bab04961bfd42674e0a993dc8e2bf3c290f062d27cfcf5b219"
+            },
+            {
+              "path": "mg5/generate.mg5",
+              "bytes": 418,
+              "sha256": "3c94d6e97d60fd3ad5c9c17433fcb26e924e927f610e6cf7984b2b39ad9644b9"
+            },
+            {
+              "path": "mg5/inputs/param_card.dat",
+              "bytes": 3054,
+              "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+            },
+            {
+              "path": "mg5/inputs/process.mg5",
+              "bytes": 330,
+              "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+            },
+            {
+              "path": "mg5/inputs/run_card.dat",
+              "bytes": 16360,
+              "sha256": "6d89d82c8b2c0e04277fb6c78c7ae1efd4453ac35982f8e2deee19c85d7bdaf5"
+            },
+            {
+              "path": "mg5/launch.mg5",
+              "bytes": 173,
+              "sha256": "e68181a12ca0502377996c7b4a8346385f5cf78fc10cd3e520233763722c2568"
+            },
+            {
+              "path": "mg5/prepared_stage.json",
+              "bytes": 2897,
+              "sha256": "51107b5bbf5b8f6312015436c52098fe179ab5a43b953712fa378a344cf43a55"
+            },
+            {
+              "path": "prepared/run_card.dat",
+              "bytes": 16360,
+              "sha256": "6d89d82c8b2c0e04277fb6c78c7ae1efd4453ac35982f8e2deee19c85d7bdaf5"
+            },
+            {
+              "path": "readiness_plan.json",
+              "bytes": 6564,
+              "sha256": "dbb5ff6f608b80a2546d8e0e1e277b2b8bea212c9432ca53c16d0941e6fb78b9"
+            }
+          ],
+          "physical_tools_invoked": 0,
+          "new_physics_events_generated": 0,
+          "frozen_cards": 9,
+          "installed_identity_matches_before": true,
+          "resources": {
+            "logical_cpus_available": 8,
+            "workers": 1,
+            "memory_available_bytes": 7519752192,
+            "memory_total_bytes": 8051191808,
+            "disk_free_bytes": 1007244771328,
+            "projected_runtime_seconds": "UNKNOWN",
+            "projected_peak_memory_bytes": "UNKNOWN",
+            "projected_output_bytes": "UNKNOWN",
+            "scope": "current availability and conservative minimums, not a ZH capacity benchmark"
+          }
+        },
+        {
+          "check": "missing-authorization",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.44024180200000274,
+          "log_sha256": "fe08c24e89f2dee18c08d39b4a6d6baf13d3ca6666ef6bf449de4f9bc8fc6ca2",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_missing-authorization_03"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "larger-source-count",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.3393353400000052,
+          "log_sha256": "46536c1ec19297aee2a91b9852e5de5561a88512376646e7a82da1313c3fa8a1",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "1000",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_larger-source-count_03",
+            "--dry-run"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "changed-frozen-energy",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.39048022499999036,
+          "log_sha256": "e3d2553950ccea48b3c858d24b65b8540b7c4f579a214407dd9479b8d492b022",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "14000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_changed-frozen-energy_03",
+            "--dry-run"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "time-cap-relaxed",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.35939334799999756,
+          "log_sha256": "26691e1172bc6b9943b67df7fc46b5f3bd9eed7117f705c142f42e890c8b638a",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_time-cap-relaxed_03",
+            "--dry-run",
+            "--max-hours",
+            "3"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "disk-cap-relaxed",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.4199925080000071,
+          "log_sha256": "7a2e32ec8bda8bbde05fb09e3a70abe37c5193a96e9663a841cc4930f0da9c9e",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_disk-cap-relaxed_03",
+            "--dry-run",
+            "--max-disk-gb",
+            "6"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "nonfinite-resource",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.3703564580000034,
+          "log_sha256": "26691e1172bc6b9943b67df7fc46b5f3bd9eed7117f705c142f42e890c8b638a",
+          "command": [
+            "bash",
+            "simulation/zh_pilot/scripts/generate_pilot.sh",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_plans/phase6g_rejected_nonfinite-resource_03",
+            "--dry-run",
+            "--max-hours",
+            "nan"
+          ],
+          "actual_process_exit_checked": true,
+          "output_created": false,
+          "physical_tools_invoked": 0
+        },
+        {
+          "check": "wrong-human-token",
+          "host": "WSL",
+          "exit_code": 2,
+          "expected_exit_code": 2,
+          "elapsed_seconds": 0.393091486000003,
+          "log_sha256": "5de735be3a42e7e0bb61bea3f9329333494298289879e8fb5c72153eed97a5a9",
+          "command": [
+            "python3",
+            "-B",
+            "simulation/zh_pilot/phase6g/authorize_pilot.py",
+            "--acknowledgement",
+            "yes",
+            "--receipt",
+            "$HOME/simulations/zh_pilot_authorizations/phase6g_wrong_ack_03.json",
+            "--process",
+            "zh",
+            "--events",
+            "100",
+            "--seed",
+            "20261104",
+            "--energy",
+            "13000",
+            "--output",
+            "$HOME/simulations/zh_pilot_runs/unexecuted"
+          ],
+          "actual_process_exit_checked": true,
+          "authorization_issued": false
+        }
+      ]
+    }
+  ],
+  "physical_authorization": "NOT_AUTHORIZED",
+  "new_physics_events_generated": 0,
+  "valid_human_authorization_receipts_created": 0,
+  "campaign_attempts_reserved": 0,
+  "real_reference_samples_created": 0,
+  "figures_created": 0,
+  "physical_gates": {
+    "C": "NOT_AUTHORIZED",
+    "D": "NOT_EVALUATED",
+    "E": "NOT_EVALUATED",
+    "F": "NOT_EVALUATED",
+    "G": "NOT_EVALUATED",
+    "H": "NOT_EVALUATED",
+    "I": "NOT_EVALUATED",
+    "J": "NOT_EVALUATED",
+    "K": "NOT_EVALUATED",
+    "L": "NOT_EVALUATED"
+  },
+  "scope": "Actual two-host Python methods, Linux benign process cleanup, retained tool identity checks and text-only shell CLI; no MG5 integration/next/Delphes event processing"
+}
