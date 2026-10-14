@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "actual Linux Python numerical/graph offline replay; native ROOT/source and actual MG parse recorded separately",
+  "new_physics_events_generated": 0,
+  "tests": 56,
+  "events_original": 3000,
+  "commands": [
+    {
+      "command": "tests",
+      "status": "PASS",
+      "elapsed_seconds": 1.473,
+      "log_sha256": "8590cd42d54fa3cde15b47bb03624e905c90ff98f15ec2513acfa6f3bcb585a9"
+    },
+    {
+      "command": "offline",
+      "status": "PASS",
+      "elapsed_seconds": 0.191,
+      "log_sha256": "708781e351a1c6a68288b1a5a2385012f64e05c74bc413b58034c01f85c9faa7"
+    },
+    {
+      "command": "influence",
+      "status": "PASS",
+      "elapsed_seconds": 1.392,
+      "log_sha256": "acb5c80a7349977b0827f689789e0b99b9edbf4ef5e4e15316e6d74a4ab25bec"
+    }
+  ],
+  "exact_compared_files": [
+    {
+      "public_file": "simulation/heavy_flavour_forensics/evidence/influence.json",
+      "sha256": "f8cf3f5b6993068c2445a3e3cf27aa73604272d3525648de898b63192bad9006",
+      "bytes": 210198,
+      "comparison": "EXACT_BYTE_PASS"
+    },
+    {
+      "public_file": "metadata/phase6e_flavour_decomposition.csv",
+      "sha256": "ad0e9ee69007faff6693af55d4f4d7f1d0813809872a3a85a3279136310b5b80",
+      "bytes": 11872,
+      "comparison": "EXACT_BYTE_PASS"
+    }
+  ],
+  "protected_sources_unchanged": true,
+  "protected_file_sha256": {
+    "simulation/heavy_flavour_forensics/scripts/source997.py": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a",
+    "simulation/heavy_flavour_forensics/scripts/influence.py": "ca87f57fe1b2529a0a32afc7a84f5b346880fa241a400aaf82282edd622a5c69",
+    "simulation/heavy_flavour_forensics/scripts/parse_process_cards.py": "83520fe4bc017884c7b4b49de565dd3b76d93d75a73c7b01a595c86dc7c53810",
+    "simulation/heavy_flavour_forensics/scripts/higgs_contract.py": "76037e8645e42272aeea843032af56205e8992952b70c4587a5b4ed79336f1e0",
+    "simulation/heavy_flavour_forensics/scripts/audit_payload.py": "e99a97d19c4631aab302662faf78e332ecea98b261b245d480be319f2aef6a13",
+    "simulation/heavy_flavour_forensics/evidence/source997.json": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+    "simulation/heavy_flavour_forensics/evidence/influence.json": "f8cf3f5b6993068c2445a3e3cf27aa73604272d3525648de898b63192bad9006",
+    "simulation/heavy_flavour_forensics/evidence/process_parse.json": "30b2d7e0d9a23ff98c34d3f83bb6ea72ee6e8defbd359e1b1b88990b8f4785bc",
+    "simulation/heavy_flavour_forensics/evidence/higgs_source_review.json": "fd7760ff490b8734b59a7ea8cb52d77c7ccc429191cfd3004142d0d161b7ea41",
+    "metadata/phase6e_source997_manifest.json": "1ffbbdc1607788ed8c844e8e2566713451fed37917fbf528cfa37445d3e4bc92",
+    "metadata/phase6e_flavour_decomposition.csv": "ad0e9ee69007faff6693af55d4f4d7f1d0813809872a3a85a3279136310b5b80",
+    "metadata/phase6e_process_readiness.json": "f893ff07dc294a2e2f10a364d74681d8082251f82ec8a282d99135aa22cb0cfc"
+  }
+}

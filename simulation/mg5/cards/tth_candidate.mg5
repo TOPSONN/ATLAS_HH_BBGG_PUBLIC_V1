@@ -1,0 +1,6 @@
+# phase6e_candidate: tth
+# PARSE_ONLY: LO QCD top-associated production; top/antitop/H stable in MG5.
+# H->gamma gamma and top/W decay normalization are separate unvalidated contracts.
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+generate p p > t t~ h QCD=2 QED=1

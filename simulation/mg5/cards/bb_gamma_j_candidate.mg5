@@ -1,0 +1,7 @@
+# phase6e_candidate: bb_gamma_j
+# PARSE_ONLY: one prompt Born photon; no calibrated jet-to-photon fake model.
+# Five-flavour incoming proton; extra ordinary jet includes charm, excludes bottom.
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+define j4 = g u c d s u~ c~ d~ s~
+generate p p > b b~ a j4 QCD=3 QED=1

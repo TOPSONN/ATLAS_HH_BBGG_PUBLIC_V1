@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "snapshot_utc": "2026-10-14T04:51:05.316684+00:00",
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "scope": "Actual remote source/derived-evidence acceptance before report seal; no future final-head assertion",
+  "verified_source_data_head": "4784ee8bab92e5e73d43bff2d78a531fe7b14adf",
+  "stack_base_head": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+  "root_tree_sha1": "e446a6dba795c0e6c7a40478d18ac99262c79367",
+  "whole_git_blob_tree": {
+    "status": "PASS",
+    "recursive": true,
+    "truncated": false,
+    "local_blob_entries": 410,
+    "remote_blob_entries": 410,
+    "comparison": "EVERY_PATH_MODE_TYPE_GIT_SHA_MATCH"
+  },
+  "new_text_blob_downloads": {
+    "status": "PASS",
+    "count": 35,
+    "bytes": 1527989,
+    "method": "GitHub Git blob API actual base64 payload decoded and matched to git cat-file blob bytes at the verified commit; working-tree EOLs excluded",
+    "files": [
+      {
+        "path": ".github/workflows/heavy_flavour_forensics.yml",
+        "git_blob_sha1": "9b762e623ae7aad338006b0fee3d07a071a0ff99",
+        "bytes": 2503,
+        "remote_download_sha256": "165c3b6927a5f21eca14b39fe1cbd82d5e275471e0a8c09751f22b1bb2c9b9e6",
+        "local_commit_sha256": "165c3b6927a5f21eca14b39fe1cbd82d5e275471e0a8c09751f22b1bb2c9b9e6",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6e_flavour_decomposition.csv",
+        "git_blob_sha1": "6b4636b75bfcb7f18bc1f7e774770d6bbe3a8334",
+        "bytes": 11872,
+        "remote_download_sha256": "ad0e9ee69007faff6693af55d4f4d7f1d0813809872a3a85a3279136310b5b80",
+        "local_commit_sha256": "ad0e9ee69007faff6693af55d4f4d7f1d0813809872a3a85a3279136310b5b80",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6e_process_readiness.json",
+        "git_blob_sha1": "899c39da009ac2dc365fa6e8fa694052fba0e58f",
+        "bytes": 3396,
+        "remote_download_sha256": "f893ff07dc294a2e2f10a364d74681d8082251f82ec8a282d99135aa22cb0cfc",
+        "local_commit_sha256": "f893ff07dc294a2e2f10a364d74681d8082251f82ec8a282d99135aa22cb0cfc",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6e_quality_gates.json",
+        "git_blob_sha1": "07936227155f8e577a504db03912f352690df688",
+        "bytes": 4218,
+        "remote_download_sha256": "895b760b2e807a09d6c9c8bde7c3fac06f046c44f1213dfd1de2db045e2cff58",
+        "local_commit_sha256": "895b760b2e807a09d6c9c8bde7c3fac06f046c44f1213dfd1de2db045e2cff58",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6e_source997_manifest.json",
+        "git_blob_sha1": "29e4f5629b2ee3cebddaf5e57fb6f933488f060b",
+        "bytes": 7724,
+        "remote_download_sha256": "1ffbbdc1607788ed8c844e8e2566713451fed37917fbf528cfa37445d3e4bc92",
+        "local_commit_sha256": "1ffbbdc1607788ed8c844e8e2566713451fed37917fbf528cfa37445d3e4bc92",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_background_overlap.md",
+        "git_blob_sha1": "62fb82b67b24f110e1eca476f28cc56285991676",
+        "bytes": 5886,
+        "remote_download_sha256": "6014e93679379db76baaae5958bff1212aed21c19d61242a359c59a14651a78b",
+        "local_commit_sha256": "6014e93679379db76baaae5958bff1212aed21c19d61242a359c59a14651a78b",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_final_decision.md",
+        "git_blob_sha1": "dc8ce2bbab19769eb3a3edb889f5c9a82196042a",
+        "bytes": 9363,
+        "remote_download_sha256": "aa6a5c41717856143dfac96d59292f24feedf1a29c92cd3ced2259478cab7093",
+        "local_commit_sha256": "aa6a5c41717856143dfac96d59292f24feedf1a29c92cd3ced2259478cab7093",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_heavy_flavour_classification.md",
+        "git_blob_sha1": "04afacf39a1d9d9a8b0ce67d53e7b457e1ef9a46",
+        "bytes": 5942,
+        "remote_download_sha256": "566e8372a80a3d83b5bdb1514544e2abb31ca7c85ce6c6f0c2ca4af4c3d4b124",
+        "local_commit_sha256": "566e8372a80a3d83b5bdb1514544e2abb31ca7c85ce6c6f0c2ca4af4c3d4b124",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_higgs_decay_contract.md",
+        "git_blob_sha1": "1e3a90ad1f0193fcf4e54614da0032daf56b70e0",
+        "bytes": 6046,
+        "remote_download_sha256": "363e3013d886ab26ac17b0ab70e22498015918ec2f1d436823a456597070d868",
+        "local_commit_sha256": "363e3013d886ab26ac17b0ab70e22498015918ec2f1d436823a456597070d868",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_new_process_cards.md",
+        "git_blob_sha1": "435c96766a490735a446e2874f7610ae264dd810",
+        "bytes": 7026,
+        "remote_download_sha256": "00e1331be15bceeba25d14b745bdd50b654af72430b3b3cb6adb575731a3ddfd",
+        "local_commit_sha256": "00e1331be15bceeba25d14b745bdd50b654af72430b3b3cb6adb575731a3ddfd",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6e_source997_forensics.md",
+        "git_blob_sha1": "600ff047f811d5c3733e9dc3bc2865721423857f",
+        "bytes": 8464,
+        "remote_download_sha256": "7d9be7a05984037e95d361de2f6f482f16db619e5d95dd5d5a19ab1ea36dca58",
+        "local_commit_sha256": "7d9be7a05984037e95d361de2f6f482f16db619e5d95dd5d5a19ab1ea36dca58",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/README.md",
+        "git_blob_sha1": "e5bb01496a96f26b9c0336e51034f17010e60bef",
+        "bytes": 5030,
+        "remote_download_sha256": "2257a20f6da096e82437163ba5a58b2eef45401462913d3becf9df4ae4a0878d",
+        "local_commit_sha256": "2257a20f6da096e82437163ba5a58b2eef45401462913d3becf9df4ae4a0878d",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/USER_GUIDE_ZH_TW.md",
+        "git_blob_sha1": "0797ef646722af927ca936cafcc189571c4e8b58",
+        "bytes": 9358,
+        "remote_download_sha256": "c4a44c13c46a5100d7013316c18f0be0fb35b5a6d3aee0156ed4cd2faf0c6be9",
+        "local_commit_sha256": "c4a44c13c46a5100d7013316c18f0be0fb35b5a6d3aee0156ed4cd2faf0c6be9",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/config/higgs_decay_contract_v1.json",
+        "git_blob_sha1": "f63f35b3864c9d12b4320b41e3be2e4b46dacd66",
+        "bytes": 2665,
+        "remote_download_sha256": "455cb7b1b66afb43fff3ee28cf335dd4301e3ede76c4af2458b83ebabf2fb83b",
+        "local_commit_sha256": "455cb7b1b66afb43fff3ee28cf335dd4301e3ede76c4af2458b83ebabf2fb83b",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/config/process_candidates_v1.json",
+        "git_blob_sha1": "6c8f008b85d68e3f4a8c118dadcdb5b4b3b07467",
+        "bytes": 3208,
+        "remote_download_sha256": "cb533bc6c63b188cdf44f381cef551a702025928956226fea59def6787a5094b",
+        "local_commit_sha256": "cb533bc6c63b188cdf44f381cef551a702025928956226fea59def6787a5094b",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/higgs_source_review.json",
+        "git_blob_sha1": "591b9de26dcbb8848874825683c417defa65eb5d",
+        "bytes": 3616,
+        "remote_download_sha256": "fd7760ff490b8734b59a7ea8cb52d77c7ccc429191cfd3004142d0d161b7ea41",
+        "local_commit_sha256": "fd7760ff490b8734b59a7ea8cb52d77c7ccc429191cfd3004142d0d161b7ea41",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/independent_validation.json",
+        "git_blob_sha1": "2db6ee0aaa5c35a4eaf2a2c6d30675ce9d9ed693",
+        "bytes": 8265,
+        "remote_download_sha256": "05e09d68e8990cb71fe69cb341377300fd539c702c1c7d7378a20bbfb18b3d22",
+        "local_commit_sha256": "05e09d68e8990cb71fe69cb341377300fd539c702c1c7d7378a20bbfb18b3d22",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/influence.json",
+        "git_blob_sha1": "17dbf14a550dea75c1a6ecc85697a4001e0f0c2b",
+        "bytes": 210198,
+        "remote_download_sha256": "f8cf3f5b6993068c2445a3e3cf27aa73604272d3525648de898b63192bad9006",
+        "local_commit_sha256": "f8cf3f5b6993068c2445a3e3cf27aa73604272d3525648de898b63192bad9006",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/numerical_execution.json",
+        "git_blob_sha1": "f7c6495f96800c4d3f11e7808298d1666c956304",
+        "bytes": 2964,
+        "remote_download_sha256": "8ee120402f26fe42387d760bacfef8ef5464d6c8850c2eac70858cb4e02af86a",
+        "local_commit_sha256": "8ee120402f26fe42387d760bacfef8ef5464d6c8850c2eac70858cb4e02af86a",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/preservation.json",
+        "git_blob_sha1": "291dfda5cbe51c93703f179c8898749dc7f06353",
+        "bytes": 498,
+        "remote_download_sha256": "4762d10f3e19c89454365c19fad63b26d23834d84fd4cb2301a5a24dd9038c47",
+        "local_commit_sha256": "4762d10f3e19c89454365c19fad63b26d23834d84fd4cb2301a5a24dd9038c47",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/process_parse.json",
+        "git_blob_sha1": "91f23ec601e02f24460d89fffbf511da2063faa8",
+        "bytes": 17721,
+        "remote_download_sha256": "30b2d7e0d9a23ff98c34d3f83bb6ea72ee6e8defbd359e1b1b88990b8f4785bc",
+        "local_commit_sha256": "30b2d7e0d9a23ff98c34d3f83bb6ea72ee6e8defbd359e1b1b88990b8f4785bc",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/regressions.json",
+        "git_blob_sha1": "4fe87654b11991e635ee3e49d81fec9e6e29f309",
+        "bytes": 3897,
+        "remote_download_sha256": "343b3264df0ce87672e9668b76ade49c67513f8d791da3f98b4248e9a2766878",
+        "local_commit_sha256": "343b3264df0ce87672e9668b76ade49c67513f8d791da3f98b4248e9a2766878",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/evidence/source997.json",
+        "git_blob_sha1": "f6d62edd826024aed68ed9e3e6dae9d25637808c",
+        "bytes": 1062918,
+        "remote_download_sha256": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+        "local_commit_sha256": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/scripts/audit_payload.py",
+        "git_blob_sha1": "9b424d745daac93ad73d7d2140061509a6a4d91d",
+        "bytes": 4645,
+        "remote_download_sha256": "e99a97d19c4631aab302662faf78e332ecea98b261b245d480be319f2aef6a13",
+        "local_commit_sha256": "e99a97d19c4631aab302662faf78e332ecea98b261b245d480be319f2aef6a13",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/scripts/higgs_contract.py",
+        "git_blob_sha1": "6f420f412688c442c4c7f366df33cefb6a823c5c",
+        "bytes": 4632,
+        "remote_download_sha256": "76037e8645e42272aeea843032af56205e8992952b70c4587a5b4ed79336f1e0",
+        "local_commit_sha256": "76037e8645e42272aeea843032af56205e8992952b70c4587a5b4ed79336f1e0",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/scripts/influence.py",
+        "git_blob_sha1": "9a3f44f46b60390431aa1d344ec4193804051ded",
+        "bytes": 19774,
+        "remote_download_sha256": "ca87f57fe1b2529a0a32afc7a84f5b346880fa241a400aaf82282edd622a5c69",
+        "local_commit_sha256": "ca87f57fe1b2529a0a32afc7a84f5b346880fa241a400aaf82282edd622a5c69",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/scripts/parse_process_cards.py",
+        "git_blob_sha1": "636a1af445e384b5963b2c2dc1f6282708884c71",
+        "bytes": 10474,
+        "remote_download_sha256": "83520fe4bc017884c7b4b49de565dd3b76d93d75a73c7b01a595c86dc7c53810",
+        "local_commit_sha256": "83520fe4bc017884c7b4b49de565dd3b76d93d75a73c7b01a595c86dc7c53810",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/scripts/source997.py",
+        "git_blob_sha1": "d488d915397394baad779bcad1f9b984de1fa165",
+        "bytes": 39134,
+        "remote_download_sha256": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a",
+        "local_commit_sha256": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/tests/test_higgs_contract.py",
+        "git_blob_sha1": "0cf780ba8f0d4acc054444eaef151b86ebf2851c",
+        "bytes": 9333,
+        "remote_download_sha256": "8e21b3a92461a9e952907c064365f0ea8315c8d9870737b0882fc18aa65d2c94",
+        "local_commit_sha256": "8e21b3a92461a9e952907c064365f0ea8315c8d9870737b0882fc18aa65d2c94",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/tests/test_influence.py",
+        "git_blob_sha1": "485ce54cd60b44e1e6a9c7c127845a162cad1fec",
+        "bytes": 15861,
+        "remote_download_sha256": "cfe582e62b942d7913653071b409c0f9ffe99cbf40dacb14ea332247c90b3396",
+        "local_commit_sha256": "cfe582e62b942d7913653071b409c0f9ffe99cbf40dacb14ea332247c90b3396",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/tests/test_payload.py",
+        "git_blob_sha1": "e211e756b06d671d63abb2e718b7c5117eb153bc",
+        "bytes": 2335,
+        "remote_download_sha256": "221264cac34f294958a8e3a91c2bea34ab63c7aa4464649affad6ff4ae7aac7c",
+        "local_commit_sha256": "221264cac34f294958a8e3a91c2bea34ab63c7aa4464649affad6ff4ae7aac7c",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/heavy_flavour_forensics/tests/test_source997.py",
+        "git_blob_sha1": "faef3e9d6ceacb600f79a8e2da0afba525a4b405",
+        "bytes": 18142,
+        "remote_download_sha256": "00439ce7c397b1353fc558386541761ca4a80da473010e5253391959f035fbf8",
+        "local_commit_sha256": "00439ce7c397b1353fc558386541761ca4a80da473010e5253391959f035fbf8",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/mg5/cards/bb_gamma_j_candidate.mg5",
+        "git_blob_sha1": "e43e2e6784b3e037816e15e94600c7d807392e4f",
+        "bytes": 329,
+        "remote_download_sha256": "419240c178bd64f5dc98f75c922880070ab08e2acfd78f82512b6ea09d18ed53",
+        "local_commit_sha256": "419240c178bd64f5dc98f75c922880070ab08e2acfd78f82512b6ea09d18ed53",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/mg5/cards/tth_candidate.mg5",
+        "git_blob_sha1": "793c370ac4c2f20243e724c5b7b8f0537a4d1472",
+        "bytes": 283,
+        "remote_download_sha256": "be2e50d3757e25c9bb14667d677a05c3d27da1c78121277a772ea98f29cb24b1",
+        "local_commit_sha256": "be2e50d3757e25c9bb14667d677a05c3d27da1c78121277a772ea98f29cb24b1",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/mg5/cards/zh_candidate.mg5",
+        "git_blob_sha1": "5109e3a2d4d39e9a1a3b8c39ba3494ba785a2f3d",
+        "bytes": 269,
+        "remote_download_sha256": "051c3adcf3c6c8c741f71c4709d4cf27b7701b43b98c6e0e84b250d2fb506884",
+        "local_commit_sha256": "051c3adcf3c6c8c741f71c4709d4cf27b7701b43b98c6e0e84b250d2fb506884",
+        "comparison": "EXACT_BYTE_PASS"
+      }
+    ]
+  },
+  "historical_public_source_data": {
+    "status": "PASS",
+    "baseline_paths": 375,
+    "every_path_mode_type_git_blob_unchanged": true
+  },
+  "pull_request": {
+    "number": 15,
+    "state": "OPEN",
+    "isDraft": true,
+    "baseRefName": "codex/phase6d-rare-backgrounds-statistics",
+    "baseRefOid": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+    "headRefName": "codex/phase6e-heavy-flavor-forensics",
+    "headRefOid": "4784ee8bab92e5e73d43bff2d78a531fe7b14adf",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/15"
+  },
+  "protected_pr14": {
+    "number": 14,
+    "state": "OPEN",
+    "isDraft": true,
+    "baseRefName": "codex/phase6c-delphes-fast-sim",
+    "baseRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "headRefName": "codex/phase6d-rare-backgrounds-statistics",
+    "headRefOid": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/14"
+  },
+  "protected_pr13": {
+    "number": 13,
+    "state": "OPEN",
+    "isDraft": true,
+    "baseRefName": "codex/phase6b-pythia8-shower-1k",
+    "baseRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+    "headRefName": "codex/phase6c-delphes-fast-sim",
+    "headRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13"
+  },
+  "protected_pr13_unchanged_during_snapshot": true,
+  "protected_pr14_unchanged_during_snapshot": true,
+  "exact_source_head_ci": [
+    {
+      "id": 38513188423,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4784ee8bab92e5e73d43bff2d78a531fe7b14adf",
+      "head_branch": "codex/phase6e-heavy-flavor-forensics",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513188423",
+      "name": "Heavy flavour forensic integrity",
+      "path": ".github/workflows/heavy_flavour_forensics.yml",
+      "run_attempt": 1,
+      "created_at": "2026-10-14T04:47:11Z",
+      "updated_at": "2026-10-14T04:47:56Z"
+    },
+    {
+      "id": 38513210737,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4784ee8bab92e5e73d43bff2d78a531fe7b14adf",
+      "head_branch": "codex/phase6e-heavy-flavor-forensics",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513210737",
+      "name": "Heavy flavour forensic integrity",
+      "path": ".github/workflows/heavy_flavour_forensics.yml",
+      "run_attempt": 1,
+      "created_at": "2026-10-14T04:47:27Z",
+      "updated_at": "2026-10-14T04:48:18Z"
+    },
+    {
+      "id": 38513210739,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4784ee8bab92e5e73d43bff2d78a531fe7b14adf",
+      "head_branch": "codex/phase6e-heavy-flavor-forensics",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513210739",
+      "name": "MG5 reference samples",
+      "path": ".github/workflows/mg5_reference_samples.yml",
+      "run_attempt": 1,
+      "created_at": "2026-10-14T04:47:27Z",
+      "updated_at": "2026-10-14T04:47:44Z"
+    }
+  ],
+  "new_physics_events": 0,
+  "new_figures": 0,
+  "external_writes": 0,
+  "installed_original_physical_data_scope": "Remote verifier does not execute/open ROOT or write installations/physical event files; prior actual native/source preservation evidence remains separately file-bound",
+  "future_report_seal_head": "NOT_EVALUATED; independently verify after it exists and is pushed",
+  "acceptance_limit": "Actual repository-byte integrity and three portable CI runs; not additional new-physics, branching-ratio, fake-rate or calibration acceptance"
+}

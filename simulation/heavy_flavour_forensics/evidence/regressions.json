@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "baseline_head": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+  "suites": [
+    {
+      "suite": "Phase6D_portable",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "cfb168d15ec60c724bc7fb991d1d69c18d3da0d8758adfdfd8cfed01981eb5be",
+      "log_bytes": 7235,
+      "tests_discovered": 51,
+      "explicit_skips": 0,
+      "elapsed_seconds": 19.086
+    },
+    {
+      "suite": "MG5_portable",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "7c3291300865546fc0b307395c8f1f3fdd5622a6338f7e2066e690800c9c6445",
+      "log_bytes": 7794,
+      "tests_discovered": 59,
+      "explicit_skips": 0,
+      "elapsed_seconds": 24.47
+    },
+    {
+      "suite": "Pythia_portable",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "5b18213993d965dfafc9ace33bd1e8995c17eaa980dfc5b6bd3748e7cdb5e714",
+      "log_bytes": 7662,
+      "tests_discovered": 56,
+      "explicit_skips": 0,
+      "elapsed_seconds": 16.928
+    },
+    {
+      "suite": "Delphes_portable",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "36cf4f47a47673b09b6a7fd7bb7d70a0b4c5eb06b256a3c4188aeb6f2624ee41",
+      "log_bytes": 7184,
+      "tests_discovered": 35,
+      "explicit_skips": 8,
+      "elapsed_seconds": 3.65
+    },
+    {
+      "suite": "Delphes_native_adversarial",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "c63f08e9a359ee7fd68cb640889c800577ebbb677e76529bdc0168cacc84f2c5",
+      "log_bytes": 1113,
+      "tests_discovered": 8,
+      "explicit_skips": 0,
+      "elapsed_seconds": 54.145
+    },
+    {
+      "suite": "Delphes_analytical_CPP",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "55668505ecb8c9e0991eed26e7709ff90b9d643c08ee44289c2d96008c2b3273",
+      "log_bytes": 258,
+      "tests_discovered": 1,
+      "explicit_skips": 0,
+      "elapsed_seconds": 0.102
+    },
+    {
+      "suite": "Pythia_CPP",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "46bfea3ef01f38e97f3a45784a66c355f2bab2db3d43e4cf037f4729c0de8d6a",
+      "log_bytes": 991,
+      "tests_discovered": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 0.917
+    },
+    {
+      "suite": "HepMC3_CPP",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "1f7b169352039254eaf0aab554ec72f9b5fdb3be1ccfbb35b3919a7439830eb5",
+      "log_bytes": 3475,
+      "tests_discovered": 31,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.889
+    },
+    {
+      "suite": "ROOT_CPP20",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "882a1892a50d8db30e4f29ad41d3112fb1fdd8a116d9b2472b835a52997024be",
+      "log_bytes": 805,
+      "tests_discovered": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 5.6
+    },
+    {
+      "suite": "Existing_MG5_references",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "log_bytes": 7358,
+      "tests_discovered": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 2.037
+    },
+    {
+      "suite": "Existing_Pythia_references",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "log_bytes": 12208,
+      "tests_discovered": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 5.275
+    },
+    {
+      "suite": "Existing_Delphes_references",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "log_bytes": 1496,
+      "tests_discovered": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 8.774
+    }
+  ],
+  "scope": "actual existing installation/input regressions; derived corruptions are failure fixtures, never physics samples",
+  "new_physics_events_generated": 0,
+  "software_installed_or_reinstalled": false
+}

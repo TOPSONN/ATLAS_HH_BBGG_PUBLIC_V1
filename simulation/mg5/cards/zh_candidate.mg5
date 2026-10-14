@@ -1,0 +1,6 @@
+# phase6e_candidate: zh
+# PARSE_ONLY: tree qqbar ZH with stable Z/H; omits loop-induced ggZH and NLO/EW.
+# Z->bb and H->gamma gamma are separate unvalidated decay contracts.
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+generate p p > z h QCD=0 QED=2
