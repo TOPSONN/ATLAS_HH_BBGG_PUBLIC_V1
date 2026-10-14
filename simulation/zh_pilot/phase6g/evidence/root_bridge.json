@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "PASS_COMPILE_AND_FAILURE_COUNTER_METHODS_ONLY",
+  "physical_authorization": "NOT_AUTHORIZED",
+  "new_physics_events_generated": 0,
+  "new_ZH_ROOT_entries": 0,
+  "build_info": {
+    "profile": "ZH_RESONANCE_ORIGIN",
+    "root_version": "6.40.04",
+    "cpp_standard": 20,
+    "events_processed": 0
+  },
+  "method_tests": {
+    "status": "METHOD_ONLY",
+    "checks": 3,
+    "events_processed": 0,
+    "scope": "finite derived p4 and overflow rejection; no ROOT input"
+  },
+  "source_sha256": "e35545ee27beef5587b192bd14122a3675809c38aef34e67d78d649f962e81d5",
+  "analyzer_sha256": "ea1d7bf54fb11e07898b771a5171fc4aa280457c2a54798321eb2b4642175da0",
+  "private_build_receipt_sha256": "8ebe02a70ad55df72c0b902c942ec9480b5a3cbd60eca5303a1f66b8b93e77f7",
+  "failure_probe": {
+    "status": "EXPECTED_REJECTION_PASS",
+    "exit_code": 2,
+    "actual_receipt": {
+      "schema_version": 1,
+      "status": "FAILED_NATIVE_ZH_RECORD_READBACK",
+      "expected_events": 100,
+      "ROOT_entries": 1000,
+      "events_assessed": 0,
+      "read": 0,
+      "processed": 0,
+      "invalid": 0,
+      "events_not_assessed": 1000,
+      "diagnostic": "ROOT entries differ from source100",
+      "physical_pilot_acceptance": false
+    },
+    "receipt_sha256": "23e5dee282b71f5e07474d98de69e9c1521f61c0cd98731afd886daca7f100c4",
+    "log_sha256": "d6be8bdd8a27a9d8c4c260a40a7112e9fc2afb8a1ed8ff9b3e17b4602910cf54",
+    "historical_input_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+    "historical_input_unchanged": true,
+    "scope": "actual historical ROOT metadata opened; wrong1000 count rejected before any event read; not ZH physical acceptance"
+  }
+}

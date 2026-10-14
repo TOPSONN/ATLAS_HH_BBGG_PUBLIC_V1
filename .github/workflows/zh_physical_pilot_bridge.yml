@@ -1,0 +1,41 @@
+name: ZH100 guarded bridge integrity
+on:
+  push:
+    branches: [main, codex/phase6g-zh-physical-pilot]
+    paths:
+      - 'simulation/zh_pilot/**'
+      - 'reports/phase6g_*'
+      - 'metadata/phase6g_*'
+      - '.github/workflows/zh_physical_pilot_bridge.yml'
+  pull_request:
+    paths:
+      - 'simulation/zh_pilot/**'
+      - 'reports/phase6g_*'
+      - 'metadata/phase6g_*'
+      - '.github/workflows/zh_physical_pilot_bridge.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  guarded_bridge:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test method-only authorization, source and Linux supervision
+        run: python3 -B -m unittest discover -s simulation/zh_pilot/phase6g/tests -v
+      - name: Physically execute missing-authorization rejection without tool installation
+        run: |
+          set +e
+          env -u PHASE6G_AUTHORIZATION_FILE bash simulation/zh_pilot/scripts/generate_pilot.sh --process zh --events 100 --seed 20261104 --energy 13000 > "$RUNNER_TEMP/phase6g-rejection.log" 2>&1
+          status=$?
+          set -e
+          test "$status" -eq 2
+          grep -q NOT_AUTHORIZED "$RUNNER_TEMP/phase6g-rejection.log"
+      - name: Audit source-only preparation payload
+        run: python3 -B simulation/zh_pilot/phase6g/audit_payload.py --tracked

@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "status": "PASS_EXISTING_REGRESSION_AND_HISTORY_PRESERVATION_ONLY",
+  "created_utc": "2026-10-14T09:59:11.258210+00:00",
+  "baseline_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "scope": "Existing installed tools, historical source samples and readonly full3000 ROOT readback; synthetic corruption/upstream numerical fixtures are METHOD_ONLY. No Phase6G physical run or new simulation source processing.",
+  "physical_authorization": "NOT_AUTHORIZED",
+  "physical_gates_D_through_L": "NOT_EVALUATED",
+  "new_physics_events_generated": 0,
+  "new_MG5_integration_or_generation": false,
+  "new_source_Pythia_shower_or_Delphes_processing": false,
+  "software_installed_or_reinstalled": false,
+  "suites": [
+    {
+      "suite": "Phase6F_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "1d9a009207c3320be48bf36ff0adace90f2977227234207c2a260875c5c2ffac",
+      "log_bytes": 11508,
+      "tests_discovered": 78,
+      "expected_tests": 78,
+      "explicit_skips": 0,
+      "elapsed_seconds": 18.512
+    },
+    {
+      "suite": "Phase6E_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "330ca9d1381f911ddd21a7415ef7fb96daf373640bf66e7cad8bc4997a23666a",
+      "log_bytes": 9341,
+      "tests_discovered": 56,
+      "expected_tests": 56,
+      "explicit_skips": 0,
+      "elapsed_seconds": 2.126
+    },
+    {
+      "suite": "Phase6D_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "12026c4f099c5d0f64de9d4fa52b3d83c59e586ed7dbb58a570826af16941c39",
+      "log_bytes": 7235,
+      "tests_discovered": 51,
+      "expected_tests": 51,
+      "explicit_skips": 0,
+      "elapsed_seconds": 14.69
+    },
+    {
+      "suite": "MG5_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "23833444c800d9016087214977d79adf2cfed5731d7f4729f83a8ef37986418c",
+      "log_bytes": 7794,
+      "tests_discovered": 59,
+      "expected_tests": 59,
+      "explicit_skips": 0,
+      "elapsed_seconds": 11.503,
+      "method_harness_correction": "Restore original temporary-output semantics outside repository in fresh Linux method-fixture directory; otherwise unchanged original suite.",
+      "first_attempt_failure_log_sha256": "cc32f054bdd1f2745946d0ecc380baba30ce6188c62738549e8f1dd074ec380f",
+      "first_attempt_scope": "METHOD_HARNESS_ONLY TMPDIR under repository contradicted the existing dry-run output-path protection test; source not changed",
+      "new_physics_events_generated": 0
+    },
+    {
+      "suite": "Pythia_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "65e058431348c42ede147335652db415c3fb967390455f072566e0d7e6f771d5",
+      "log_bytes": 7662,
+      "tests_discovered": 56,
+      "expected_tests": 56,
+      "explicit_skips": 0,
+      "elapsed_seconds": 21.701
+    },
+    {
+      "suite": "Delphes_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "4a0e89ff300cd98757414fc3726c9d3c83b52620e56e52eec3c6c8c258f01dd0",
+      "log_bytes": 7184,
+      "tests_discovered": 35,
+      "expected_tests": 35,
+      "explicit_skips": 8,
+      "elapsed_seconds": 4.895
+    },
+    {
+      "suite": "Delphes_native_adversarial",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "3f04d54a1b8ab293f5da5de0e4efc008d8dc7a4dce164cea4393bd0fa398327d",
+      "log_bytes": 1113,
+      "tests_discovered": 8,
+      "expected_tests": 8,
+      "explicit_skips": 0,
+      "elapsed_seconds": 46.744
+    },
+    {
+      "suite": "Delphes_analytical_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "0dcf081e5dba6e528eaedd7838b369869e56aad072bf0b530afb58e0dbb776ba",
+      "log_bytes": 271,
+      "tests_discovered": 1,
+      "expected_tests": 1,
+      "explicit_skips": 0,
+      "elapsed_seconds": 0.131
+    },
+    {
+      "suite": "Pythia_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "e8df2ef650edb9fc551a5ad435c4a796063c6ef748115d9fd6ec271badd5c390",
+      "log_bytes": 997,
+      "tests_discovered": 5,
+      "expected_tests": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.036
+    },
+    {
+      "suite": "HepMC3_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "31c817535f8c5edec264a95038a5b6b829c8d1630574103a2c607f6ef97b5306",
+      "log_bytes": 3495,
+      "tests_discovered": 31,
+      "expected_tests": 31,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.398,
+      "upstream_method_input_files": [
+        {
+          "name": "inputConvert1.hepmc",
+          "bytes": 763180,
+          "sha256": "033b587126a6a98283c431e9d034e33e67ed4a1d1ffed468e2df5f7b2143e417"
+        },
+        {
+          "name": "inputConvert2.hepmc",
+          "bytes": 861439,
+          "sha256": "d2b8797c556de1eac95cf0c3aaf1d0bce6d2717b20a38000652fc9807405fd05"
+        },
+        {
+          "name": "inputDelete.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputDelete2.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputIO1.hepmc",
+          "bytes": 205343,
+          "sha256": "526ee618a8e5011a0a1cb2789857c94281091f742a0609fbc5b1ef8dbba17a01"
+        },
+        {
+          "name": "inputIO10.hepmc",
+          "bytes": 205343,
+          "sha256": "526ee618a8e5011a0a1cb2789857c94281091f742a0609fbc5b1ef8dbba17a01"
+        },
+        {
+          "name": "inputIO11.lhe",
+          "bytes": 104367,
+          "sha256": "1bccab215ae88cbff44943ba289a27597ddfbc515bf6cd6eec191875a2f9b52c"
+        },
+        {
+          "name": "inputIO11_1.plhe",
+          "bytes": 80148,
+          "sha256": "ebe14e7ad163c80e88ea7bab34eb0fb105cf2c7b3c8d776de2b5c52da7991235"
+        },
+        {
+          "name": "inputIO11_2.plhe",
+          "bytes": 76959,
+          "sha256": "4b0dc6b283fed85940f77d8abfa2a507814633ffaf0fd09521b5cf3c4ecc64e3"
+        },
+        {
+          "name": "inputIO13.lhe",
+          "bytes": 89860,
+          "sha256": "45d3692b69c1e7968db2f35790b68dd4fc09e5f586d1ea5cff7a979f4cae69b8"
+        },
+        {
+          "name": "inputIO2.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputIO20.proto",
+          "bytes": 520,
+          "sha256": "e3e62fbb532cef0102b7a5ddf5f468be2d364dd5cb6b008e4978d0a8fa982a15"
+        },
+        {
+          "name": "inputIO21.proto",
+          "bytes": 520,
+          "sha256": "e3e62fbb532cef0102b7a5ddf5f468be2d364dd5cb6b008e4978d0a8fa982a15"
+        },
+        {
+          "name": "inputIO26.hepmc",
+          "bytes": 205343,
+          "sha256": "526ee618a8e5011a0a1cb2789857c94281091f742a0609fbc5b1ef8dbba17a01"
+        },
+        {
+          "name": "inputIO3.hepevt",
+          "bytes": 324700,
+          "sha256": "9ca6f95341b5480471dbe3283fdaf8658cf62e45671d1aee53bc9401a883289d"
+        },
+        {
+          "name": "inputIO4.root",
+          "bytes": 2127703,
+          "sha256": "288ff565daa585fc7b572b259803f7d583f873400293f5630d8e092501e68f03"
+        },
+        {
+          "name": "inputIO5.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputIO6.hepmc",
+          "bytes": 782070,
+          "sha256": "216e138ba794083128277bbdc4112e14cd2a1e16d1b3a2a79980d4f7f0a8ef5a"
+        },
+        {
+          "name": "inputIO7.hepmc",
+          "bytes": 782070,
+          "sha256": "216e138ba794083128277bbdc4112e14cd2a1e16d1b3a2a79980d4f7f0a8ef5a"
+        },
+        {
+          "name": "inputIO8.hepmc",
+          "bytes": 126888,
+          "sha256": "f5a2ee212f11a0645b824c887675cdb488fb66a90af45b0832887a8b9105c677"
+        },
+        {
+          "name": "inputIO9.hepmc",
+          "bytes": 205343,
+          "sha256": "526ee618a8e5011a0a1cb2789857c94281091f742a0609fbc5b1ef8dbba17a01"
+        },
+        {
+          "name": "inputMass.hepmc",
+          "bytes": 95016,
+          "sha256": "28f722b7531f7a5fb5d5ced38e76ee11f98712b549093264903ea86b1bc01738"
+        },
+        {
+          "name": "inputMultipleCopies1.hepmc",
+          "bytes": 95016,
+          "sha256": "28f722b7531f7a5fb5d5ced38e76ee11f98712b549093264903ea86b1bc01738"
+        },
+        {
+          "name": "inputMultipleCopies2.hepmc",
+          "bytes": 156157,
+          "sha256": "1cef7f7b6b3b4dcffdb8b680ed121da182c54dc3fe82861525b4c98b1cd2d7e8"
+        },
+        {
+          "name": "inputReaderFactory1.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputReaderFactory2.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputReaderFactory5.hepmc",
+          "bytes": 36226,
+          "sha256": "d6e1b8a6b8333dc9e36572da7f3b2157e6eca7f051a2773a3f9db2324f50e99e"
+        },
+        {
+          "name": "inputRoot300.root",
+          "bytes": 74043,
+          "sha256": "c1892c01264751a5cbde617ada1d254996945c69cad66d608271195b5cc185c0"
+        },
+        {
+          "name": "inputRootTree300.root",
+          "bytes": 38715,
+          "sha256": "5f96adac0645c3174ec53971a091e6f72c8a270c921b0f921997dbe7738a18eb"
+        },
+        {
+          "name": "inputSingleVertexHepMC2.hepmc",
+          "bytes": 17756,
+          "sha256": "69ee91bb1db0f14e63fdffe157e0bb256a85028ceea31aef875ad9da851b1683"
+        },
+        {
+          "name": "inputSkip1.hepmc",
+          "bytes": 205191,
+          "sha256": "5613e22b2c9316c901359e60737bc247be231c8d38a1d8fb3e75c67451de11d3"
+        },
+        {
+          "name": "inputThreads1.hepmc",
+          "bytes": 2052000,
+          "sha256": "20ca041295f1b0473dc5fcd710c3c7c8ae161bfe2784a8234c7e0af4ffc9977a"
+        }
+      ],
+      "source_input_and_ctest_configuration_unchanged": true,
+      "method_harness_correction": "Fresh Linux-filesystem scratch supports FIFO; exact readonly upstream input fixtures copied; original executable commands retained.",
+      "first_attempt_failure_log_sha256": "e4795bb4a2565ab205e486035959a672841742fa7373900261aa7ceddf54e95a",
+      "first_attempt_scope": "METHOD_HARNESS_ONLY missing fixtures and DrvFS FIFO; no source/physics implementation changed",
+      "new_physics_events_generated": 0
+    },
+    {
+      "suite": "ROOT_CPP20",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "06372dcba49b014c93695754f0f4e5db9e71fdb57fda016bbbca6641c12cf8e4",
+      "log_bytes": 798,
+      "tests_discovered": 5,
+      "expected_tests": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 3.445
+    },
+    {
+      "suite": "Existing_MG5_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "log_bytes": 7358,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.945
+    },
+    {
+      "suite": "Existing_Pythia_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "log_bytes": 12208,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 3.177
+    },
+    {
+      "suite": "Existing_Delphes_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "log_bytes": 1496,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 7.54
+    },
+    {
+      "suite": "Existing_FULL1000_native",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "c594a9bc4e083c1268a5e08911148898659fe316e00b90170a2e1949ab0293ba",
+      "log_bytes": 130,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 36.005
+    },
+    {
+      "suite": "Phase6F_portable",
+      "host": "Windows",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests_discovered": 78,
+      "expected_tests": 78,
+      "explicit_skips": 0,
+      "log_sha256": "5ea7bcd78f4c9d1d23fa284d3037f095e649592a49512e39a6fa6fdb0fe1688a",
+      "log_bytes": 11696
+    }
+  ],
+  "existing_python_test_scope": "WSL Phase6F78,Phase6E56,Phase6D51,MG59,Pythia56,Delphes35 discovered with8 native skips covered by separate8 actual native tests; Windows Phase6F78 also passed.",
+  "existing_CXX_test_count": 42,
+  "ctest_policy": "Only test WORKING_DIRECTORY relocated to fresh local scratch; original test commands/executables/source inputs retained; generated test fixtures are METHOD_ONLY.",
+  "original_ctest_configs_and_upstream_inputs_unchanged": true,
+  "historical_tracked_files": {
+    "baseline_blob_count": 453,
+    "unchanged_original_blob_count": 452,
+    "exact_SHA256_and_size_match_for_452": true,
+    "complete_private_baseline_comparison_sha256": "c630e1f623a07b0251f064320b997469af10e84c2f74681ddcd474c25a2a5dbe",
+    "canonical_comparison_content_sha256": "e97f966e5ecb0b4aa2f1d944a37e5c4f5f010a0ac649bd3069d519b81fd0bdec",
+    "only_permitted_original_path_extension": {
+      "path": "simulation/zh_pilot/scripts/generate_pilot.sh",
+      "mode": "100644",
+      "git_sha1": "af12029ea50eefe3c506d9184f2c63e8f4309b12",
+      "baseline_sha256": "a50d0de97e876b07bb37368f2536e4516802ab0dd361a8649ed7473c001ac4c4",
+      "baseline_bytes": 222,
+      "local_sha256": "bdf43f9e5f172c400ab23cd19207132c2282442773361f77b49652d503206923",
+      "local_bytes": 245,
+      "scope": "Only original path extended for requested Phase6G guarded self-service; original Phase6F wrapper remains byte-preserved in Git and local private archive.",
+      "historical_wrapper_archive_sha256": "a50d0de97e876b07bb37368f2536e4516802ab0dd361a8649ed7473c001ac4c4"
+    }
+  },
+  "installed_identity": {
+    "before_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+    "after_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+    "logical_identity_exactly_equal": true,
+    "versions": {
+      "MG5": "3.5.16",
+      "Pythia8": "8.317",
+      "HepMC3": "3.3.1",
+      "Delphes": "3.5.1",
+      "ROOT": "6.40.04",
+      "CXX_standard": 20
+    },
+    "MG5_retained_source_files": 4658,
+    "Delphes_pinned_file_counts": {
+      "source_sha256": 900,
+      "library_sha256": 29,
+      "header_sha256": 102,
+      "dictionary_sha256": 5
+    },
+    "installation_config_sha256": {
+      "mg5": "bdd63c90f87358c6f2818ba1367df4d76f1782336f7590ef50b811b381890f76",
+      "delphes": "ab6357b8894f4b4ee1dcfc9e90e22a9252d8352f0f7081965728f34d363da7de",
+      "pythia": "4851e8cda078ad4642990588c161ce0a5b7c3accb1c90366731006a038a1404e"
+    },
+    "native_binary_sha256": {
+      "delphes": "143e30e49a61d735a39427dd153aaf1655e37940a1f0dfb2c293de0db82c06ad",
+      "analyzer": "b3150e3fca56e20cb821657240c42ed05187cf8eb0332ab1c1e7051360e7389a"
+    },
+    "pythia_runner_sha256": "9e6e5973d6ecbdef14a204f30540797cca93f709e0521106970b0fea1094acda",
+    "hepmc_reader_sha256": "8bc49d3f31e6c71e85e4bed934d81c4a1012cfe0840f7da26f3604c1f3ea836f"
+  },
+  "historical_native_inputs": {
+    "status": "PASS",
+    "actual_existing_ROOT_events": 3000,
+    "normalization_denominator_per_process": 1000,
+    "fresh_full_verification_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+    "historical_Phase6D_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+    "fresh_receipt_exact_bytes_equal_historical": true,
+    "historical_LHE_HepMC_ROOT_cards_weights_ledgers_and_source_manifests_preserved": true,
+    "samples": [
+      {
+        "process": "bbgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "root_bytes": 28747494,
+        "native_scientific_content_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+        "original_native_report_sha256": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+        "fresh_native_report_sha256": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "source_mg5_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "source_pythia_manifest_sha256": "58985f9d6ad78cc835b5895a2e0d5a229a55ef2e06c5ee9a6c67d77de5d938b3"
+      },
+      {
+        "process": "ccgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "root_bytes": 30570772,
+        "native_scientific_content_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+        "original_native_report_sha256": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+        "fresh_native_report_sha256": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+        "source_mg5_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "source_pythia_manifest_sha256": "856066dd98778a3233ebdb9117a5c852120c8fb17dd5b8e3d4319885ad8e9f8c"
+      },
+      {
+        "process": "jjgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "root_bytes": 30235463,
+        "native_scientific_content_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+        "original_native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+        "fresh_native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+        "source_mg5_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "source_pythia_manifest_sha256": "63de55535a5490adfc6c75661779595c9ce4619330093b8ca2b7d2fc592c6986"
+      }
+    ]
+  },
+  "correction_scope": "Two first harness-only failures are retained and documented: copied CTest cwd needed exact upstream inputs/FIFO-compatible Linux storage; old MG dry-run test needed TMPDIR outside repository. No source tests were altered.",
+  "publication": "bounded text source/evidence only; no synthetic reference sample or figures"
+}
