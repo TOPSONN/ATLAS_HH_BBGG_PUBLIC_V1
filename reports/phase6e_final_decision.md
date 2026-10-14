@@ -39,13 +39,13 @@ H→γγ or photon-fake simulation. No physical pilot/large production was launc
 |PYTHIA_REGRESSION|56 existing tests,5 C++/31 HepMC3 CTests and selected-reference validation PASS; original actual source997 graph unchanged|
 |DELPHES_REGRESSION|27 portable tests PASS with8 explicit native skips, then8 actual native adversarial tests PASS; C++ analysis test and all3 full1000 native readbacks PASS|
 |NEW_TESTS|56 PASS on Windows and WSL; source graph/identity/unique matching, all3000 event partitions/covariance,10 source997 pairs/masses, source cross-section preservation, coupling orders, Higgs exactly-once BR and publication guards. Nine additional corrupted-evidence controls rejected, separately counted|
-|GITHUB_CI|Exact final head, Draft/base and remote bytes are checked after publication and recorded in the PR description/final response; portable CI does not execute native ROOT, MG5 parsing or physical production|
+|GITHUB_CI|Verified source head4784ee8bab92e5e73d43bff2d78a531fe7b14adf: forensic push38513188423, forensic PR38513210737 and MG5 PR38513210739 all completed SUCCESS. Exact documentation-seal head is independently checked and reported in PR/final response. Portable CI does not execute native ROOT, MG5 parsing or physical production|
 |GATES_PASS|Identity/actual readback, graph ancestry and mapping, native flavor semantics, unchanged weights/cuts, influence/covariance, overlap risk review, actual process parsing, BR algebra, independent/old regressions and preservation|
 |GATES_FAIL|NONE within the completed existing-input/preparation scope|
 |GATES_BLOCKED|Separate explicit100-event pilot authorization; physical Hγγ decay/weight closure; calibrated photon fake; matching/merging/overlap scheme; statistically stable rare acceptance|
 |GATES_UNKNOWN|Original Pythia production coordinates/omitted HepMC positions; sole hadron-parent attribution through multi-mother string fragmentation; adopted physical new σ/widths/BRs/fake rate; new-process100-event runtime/RAM/disk|
-|COMMIT_HASH|Source/evidence head is recorded at publication; documentation-only seal follows the verified source snapshot. Exact final head is reported in the PR/final response, avoiding a self-hash claim|
-|PR_URL|New stacked OPEN/DRAFT PR on codex/phase6d-rare-backgrounds-statistics; URL recorded after creation in the final response|
+|COMMIT_HASH|Verified source/evidence head4784ee8bab92e5e73d43bff2d78a531fe7b14adf. This publication-snapshot/report seal is a later documentation-only commit; its exact final head is reported in PR/final response, avoiding a self-hash claim|
+|PR_URL|[Stacked OPEN/DRAFT PR15](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/15), basecodex/phase6d-rare-backgrounds-statistics at7b1fccb41133f4f97a5277fa09efc90a1da41239|
 |NEXT_RECOMMENDED_STEP|Choose a heavy-flavour/photon overlap and matching strategy, validate the selected Higgs decay/BR convention, then request a separately authorized100-event physical pilot. Do not automatically execute larger forecasts|
 
 The original generator/shower/Delphes seeds are20261022/610203/610303, with
@@ -84,3 +84,15 @@ or HH_SIGNAL_SENSITIVITY claim is made. Full physical samples stay in their
 original locations; only source/proposals/configuration/tests/small derived
 evidence and reports are selected. No figures, vendored generators, automatic
 merge, force push or new physical production is part of this task.
+
+Executed source publication receipt:
+[publication_snapshot.json](../simulation/heavy_flavour_forensics/evidence/publication_snapshot.json).
+GitHub's nontruncated recursive tree matches all410 local Git blob entries;
+all35 newly added text blobs were downloaded, decoded and compared byte for
+byte and by SHA256 to the source commit. The base PR14 and PR13 remain
+OPEN/DRAFT at their protected heads. Three exact-source-head CI runs succeeded:
+[forensic push](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513188423),
+[forensic PR](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513210737),
+[MG5 PR](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38513210739).
+The later seal's final head and CI are independently checked after its push;
+this source snapshot adds repository-integrity evidence, not physics validation.
