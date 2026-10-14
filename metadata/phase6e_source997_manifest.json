@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "status": "PASS_EXISTING_SOURCE997_FORENSICS_WITH_LIMITS",
+  "base_head": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+  "evidence_path": "simulation/heavy_flavour_forensics/evidence/source997.json",
+  "evidence_sha256": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+  "evidence_bytes": 1062918,
+  "source_script": "simulation/heavy_flavour_forensics/scripts/source997.py",
+  "source_script_sha256": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a",
+  "source_event_index": 997,
+  "source_index_convention": "one-based",
+  "root_entry_zero_based": 996,
+  "source_event_sha256": "322457dfbd206b7cbd2c243f7b437970b82bb03c38fafe7721e40709f77127b8",
+  "hepmc_event_sha256": "157928b854ffa4be208b4460338afea8d857446a595a56016c7e8cb994fec31f",
+  "input_file_sha256": {
+    "mg5/original_source_lhe": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+    "pythia/shower.hepmc3.gz": "2643f0c14440b25267a153b72a7d676c337fd182a39e62fdcbe2191361a91365",
+    "pythia/run_manifest.json": "63de55535a5490adfc6c75661779595c9ce4619330093b8ca2b7d2fc592c6986",
+    "pilot/jjgg_binding.json": "f07f9a7045dbc15d5102986048a62b24079b92734a0b17ef370c63c3718b7a78",
+    "pythia/event_ledger.jsonl": "a182dcb822117e9155c2b808131a9e255b317beedf666e3c811ff7abe81074da",
+    "pythia/particle_diagnostics.jsonl": "a670b8e3b8bf23fa02337416241dd5cdad458133e603169624445a0706e1ab5a",
+    "pythia/source_events.jsonl": "0526970148868972d2333b879c148b3b78b08dfcca4e0b91c8a2353e626a27e7",
+    "pythia/settings.cmnd": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+    "pythia/physical_validation.json": "ff0c861dfe1a1044fda57c17e76b9794a1796dcc17742591c11d556d67d4994c",
+    "delphes/cutflow.csv": "301beb654bbad7d40ee6f3c64ef0becd8794c48ac7be728d2087145917d9dff9",
+    "delphes/delphes.log": "f6f8fee850271fccae8c1abf1584d745cc0427ffed94e30639feffa1b9fd036e",
+    "delphes/delphes_command.json": "48025b35c981163264c70fe1d7d2382cf44d59a74c844cdb28d4c91f6201fe33",
+    "delphes/detector.root": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+    "delphes/detector_card.tcl": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+    "delphes/efficiencies.csv": "35ef7b9c9f4ffffaaea2c1c950633deae9590f56354a9931f1795d4b09969940",
+    "delphes/input.hepmc3": "c62ba365bba6ddc4d4d1e613288af3215b89dce02d837f548f137b258d84ec5f",
+    "delphes/input_event_index.dat": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+    "delphes/input_event_index.jsonl": "20aabe0532160a806c028741b471103b50a178f27bc89d113523f2fb85cec9b0",
+    "delphes/input_native_readback.log": "ff0c861dfe1a1044fda57c17e76b9794a1796dcc17742591c11d556d67d4994c",
+    "delphes/input_native_validation.json": "ff0c861dfe1a1044fda57c17e76b9794a1796dcc17742591c11d556d67d4994c",
+    "delphes/input_portable_readback.log": "c841a198b77aeeec806bbbca50f6529b373baacf331c6e54ac0646fdff5b26f2",
+    "delphes/input_portable_validation.json": "296847663c27bd5a8b025cc2c03d77cc9d7f1b83e39dc2ddcabb8f6184e4c8de",
+    "delphes/native_root_readback.log": "ea7c23b914c2e5b95ecc8561d6293b9b9772e865d210a758b70b5c895f4b2f49",
+    "delphes/native_validation.json": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+    "delphes/reco_events.jsonl": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+    "delphes/source_event_ledger.jsonl": "a182dcb822117e9155c2b808131a9e255b317beedf666e3c811ff7abe81074da",
+    "delphes/truth_analysis_index.dat": "8aafa9966f87ad77246533d69d6319af72b2b311a74d2ffa6b1bb560cf515a57",
+    "delphes/run_manifest.json": "1564160977033e0207e6e3631994f0d45407c4e97fa83c6ec93d1f34d555a7b2",
+    "pilot/jjgg.jsonl": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+    "mg5/sample_manifest.json": "efc6d895c40af86b7c303a93a4cd224406670d322a80962f9f1db2f9a8c3abb8",
+    "code/simulation/heavy_flavour_forensics/scripts/source997.py": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a",
+    "code/simulation/rare_backgrounds/scripts/conditional_tags.py": "34eee3865a004794b8d661febf198e02eaea8de89a5331885eee0ce54ff033cf",
+    "code/simulation/delphes/scripts/run_delphes.py": "ccfe87604fa669a9cecfbd46e9f997da0e5616654711f25e33ec34dd89d2353e",
+    "code/simulation/pythia8/scripts/validate_hepmc3.py": "fad41e85b72a522b3a53f7bf61710e97c111aeede30b127cf6877dbbb5ec5215",
+    "code/simulation/pythia8/scripts/validate_lhe_stream.py": "5d45cc04a7ef49e48858f398328380a984d58a9788ac1b5f27d0aafedd952d8a",
+    "local_installation_config_sha256": "ab6357b8894f4b4ee1dcfc9e90e22a9252d8352f0f7081965728f34d363da7de"
+  },
+  "source_row_sha256": {
+    "ledger": "4b232aed29b6848a973ced37ea6c8e53303b9a099bcb484361e9307d0f99c62d",
+    "pythia_diagnostics": "b9f2e67a99f4d13c9b62eb5b6605ee5e6d0409ea3962e32df8121e3f824b7489",
+    "original_hard_snapshot": "9b624ce3dd6ea8c83ccf8f8540fafc0d3380f82c8810a98157532065ba5fbb67",
+    "pilot": "d04fc30daa2cf00168ae7055ee3015ca746b1f9d1e66f46f5f3e28d823ffd52e"
+  },
+  "software_versions": {
+    "MG5": "3.5.16",
+    "Pythia8": "8.317",
+    "HepMC3": "3.3.1",
+    "Delphes": "3.5.1",
+    "ROOT": "6.40.04",
+    "C++": 20
+  },
+  "seeds": {
+    "generator": 20261022,
+    "shower": 610203,
+    "delphes": 610303
+  },
+  "original_nominal_weight_pb": "9.4365561",
+  "original_contribution_pb": "0.0094365561",
+  "normalization_denominator": 1000,
+  "original_hard_partons": {
+    "incoming": [
+      2,
+      21
+    ],
+    "outgoing": [
+      21,
+      2
+    ]
+  },
+  "origin_verdict": "DIRECT_FSR_G_TO_B_BBAR_CONFIRMED",
+  "direct_perturbative_birth": {
+    "hard_gluon": 7,
+    "recoil_copy": 13,
+    "FSR_gluon": 17,
+    "b": 19,
+    "anti_b": 20
+  },
+  "terminal_b_hadrons": [
+    {
+      "pythia_index": 276,
+      "pdg_id": -511,
+      "status": -83
+    },
+    {
+      "pythia_index": 488,
+      "pdg_id": 521,
+      "status": -91
+    }
+  ],
+  "native_eligible_jet_flavours": [
+    5,
+    2,
+    21,
+    21,
+    5
+  ],
+  "event_probability_ge2": "0.49391027578627762994629311428239633751900699125665",
+  "event_selection": {
+    "N_jets": 5,
+    "N_btags": 1,
+    "m_gamma_gamma": 135.55650162670545,
+    "m_jj": 229.79333891363382,
+    "m_bb": null,
+    "cut_photons": true,
+    "cut_jets": true,
+    "cut_two_btags": false,
+    "cut_mgg": false
+  },
+  "native_flavour_reproduction": "PASS; all five native labels lie in singleton source-derived attainable sets",
+  "Pythia_HepMC_mapping": "571 unique exact PDG/converted-status/binary64-p4/generated-mass tuples; injective;1149 mother edges agree; no barcode/ordinal equivalence",
+  "actual_native_readback": {
+    "status": "PASS",
+    "existing_ROOT_entries_read": 1,
+    "total_tree_entries": 1000,
+    "source_particles": 571,
+    "tuple_fields": "Float_t PID/status/p4/mass/XYZmm/Tseconds; multiplicity-preserving; event_number997"
+  },
+  "production_vertex_scope": "NOT_STORED_IN_ORIGINAL_DIAGNOSTICS; HepMC exact serialized production vertices recorded separately, no inferred Pythia coordinates",
+  "limits": [
+    "multi-mother string ancestry does not establish a sole bottom-quark endpoint for a hadron",
+    "diagnostic labels and one-to-one geometry do not replace native any-cone Jet.Flavor or BTag",
+    "probabilities use retained Float_t PT; upstream draw used hidden full-precision PT",
+    "offline replay does not open ROOT or reconstruct original raw physical files",
+    "one existing event cannot establish inclusive heavy-flavour rates or ME/PS exclusivity"
+  ],
+  "raw_record_modified": false,
+  "new_physics_events_generated": 0,
+  "new_detector_processing": 0,
+  "official_ATLAS_background": "NOT_EVALUATED",
+  "calibrated_btagging": "NOT_EVALUATED"
+}

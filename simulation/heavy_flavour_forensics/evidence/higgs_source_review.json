@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "PASS_READ_ONLY_PRIMARY_SOURCE_REVIEW",
+  "new_physical_events": 0,
+  "mg5": {
+    "version": "3.5.16",
+    "tag": "v3.5.16",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo",
+    "ordinary_sm_tree_HAA_vertices": [],
+    "hgg_plugin_effective_HAA_vertices": [
+      "V_12"
+    ],
+    "effective_plugin_standalone_full_SM": false,
+    "effective_model_import_merge_executed": false,
+    "source_sha256": {
+      "models/sm/vertices.py": "0a4d978fb87f251253b622f6ed01cb6b4ae09dec31a131632f9494eb54541721",
+      "models/sm/restrict_no_b_mass.dat": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+      "models/hgg_plugin/vertices.py": "1e6d51bc78b14a4227d9dc9cb43269c2e942f68faab54e926ffb5b1ee5acdb2e",
+      "models/hgg_plugin/parameters.py": "4dac136c92848202a772e42a4ac7dca736d647de2bb82b49ae00c703efe5273d",
+      "models/hgg_plugin/couplings.py": "307631456e9051c2991d716f455a0e755abba6e39dc61523076b3b85e37aca0f",
+      "models/hgg_plugin/coupling_orders.py": "84779fb78b2c8ad9d9e9c3529b2a95176b1fe7b5c90dc029df5a21f2ac1f8525",
+      "madgraph/interface/madgraph_interface.py": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3",
+      "madgraph/core/base_objects.py": "f6927f3f1a2735cdbda3ae6e5bb27bed25f286f6aff155d5a4df155db2f4f9b2",
+      "models/import_ufo.py": "d030835ea14a700ab40c29e4e2fb73df4d7f4fd846cf4ba22db3589a14549a38"
+    },
+    "restriction_default_decay_width_inputs_gev": {
+      "6": "1.491500E+00",
+      "15": "0.000000e+00",
+      "23": "2.441404e+00",
+      "24": "2.047600e+00",
+      "25": "6.38233934e-03"
+    },
+    "width_input_scope": "Model-file defaults only; not calculated partial widths, adopted physical BR inputs, or a validated diphoton decay model"
+  },
+  "pythia": {
+    "version": "8.317",
+    "tag": "pythia8317",
+    "source_commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+    "archive_url": "https://pythia.org/releases/pythia83/pythia8317.tgz",
+    "source_sha256": {
+      "share/Pythia8/xmldoc/ParticleDataScheme.xml": "4c92568be4323523d5745acf4f6027da7a53d31e7014f781dc00e79cb5aa5b21",
+      "share/Pythia8/xmldoc/ResonanceDecays.xml": "3d9215143c4da2692a58f437b503b233a2ed1e57fb8e0b6df1396215caa33731",
+      "src/ProcessContainer.cc": "a67ad43f55bbc3c0d013799ed2c6423ca836af82dfc0c9010f7a99875e23a832",
+      "src/Info.cc": "127e4ce12443a101d6ddc9b9aaeaeac7f40e841d4c5e60d492616510dc23b975",
+      "include/Pythia8/Info.h": "a9797dac1c9fd56394dbe726a2c0e32b565c9ff29ac18e122fccc553fb72b2d5"
+    },
+    "decay_switches_source_supported": [
+      "25:onMode = off",
+      "25:onIfMatch = 22 22"
+    ],
+    "higgs_forced_external_LHE_weight_closure": "NOT_EXECUTED",
+    "generic_internal_resonance_BR_semantics_not_external_LHE_closure_proof": true,
+    "public_manual_web_access": "403_FORBIDDEN; versioned official local XML/source read"
+  },
+  "physical_adopted_inputs": {
+    "H_partial_width_gamma_gamma_gev": "UNKNOWN",
+    "H_total_width_gev": "UNKNOWN",
+    "H_BR_gamma_gamma": "UNKNOWN",
+    "Z_BR_bb": "UNKNOWN",
+    "t_BR_bW": "UNKNOWN",
+    "W_mode_BRs": "UNKNOWN"
+  },
+  "primary_sources": [
+    "https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/Models/HiggsEffective",
+    "https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/FAQ-General-6",
+    "https://pythia.org/releases/pythia83/pythia8317.tgz",
+    "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/HiggsXSBR"
+  ],
+  "interpretation": "Tree-card parsing and static source inspection do not validate Higgs decay rates or physical production"
+}

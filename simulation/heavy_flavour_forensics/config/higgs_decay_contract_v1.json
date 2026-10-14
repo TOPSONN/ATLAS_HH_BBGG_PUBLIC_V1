@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "contract_id": "PHASE6E_HIGGS_DIPHOTON_NORMALIZATION_V1",
+  "physical_validation_status": "BLOCKED_PENDING_SEPARATE_EXPLICIT_PILOT_AUTHORIZATION",
+  "partial_width_gamma_gamma_gev": "UNKNOWN",
+  "adopted_total_width_gev": "UNKNOWN",
+  "adopted_BR_H_gamma_gamma": "UNKNOWN",
+  "option_A": {
+    "production_model": "sm-no_b_mass",
+    "MG5_Higgs_state": "STABLE_IN_MATRIX_ELEMENT",
+    "proposed_Pythia_settings": ["25:onMode = off", "25:onIfMatch = 22 22"],
+    "forced_settings_status": "SOURCE_REVIEWED_NOT_EXECUTED",
+    "source_cross_section_scope": "UNDECAYED_PRODUCTION_ONLY",
+    "source_included_Higgs_decays": [],
+    "external_forced_decay": true,
+    "external_weight_closure_verified": false,
+    "required_checks": ["pre/post initialization partial/total widths and complete decay tables", "LHE strategy/init cross section/original signed weights", "Pythia Info weight and exported nominal vector", "source denominator including every original input event", "exactly-once physical BR ledger", "H/top/W/Z ancestry and spin/width conventions"]
+  },
+  "option_B": {
+    "model": "UNMERGED_UNREGISTERED_FULL_SM_PLUS_AUDITED_EFFECTIVE_HAA",
+    "installed_extension": "hgg_plugin",
+    "effective_HAA_amplitude_order": "HIW=1",
+    "additional_Hgg_amplitude_order": "HIG; must not contaminate intended production component",
+    "model_import_merge_width_or_physical_run": "NOT_EXECUTED",
+    "source_cross_section_scope": "ACTUAL_EXCLUSIVE_DECAY_CHAIN_SCOPE_MUST_BE_VERIFIED_AFTER_INTEGRATION",
+    "source_included_Higgs_decays": ["H_gamma_gamma_if_in_actual_integrated_chain"],
+    "apply_same_decay_BR_again": false,
+    "model_approximation": "local effective loop amplitude; not a precision BR recommendation"
+  },
+  "algebra": {
+    "numeric_fixture_scope": "SYNTHETIC_TEST_ONLY_NO_PHYSICAL_BR_DEFAULTS",
+    "factor_schema": {"decay_id": "explicit_unique_channel_id", "branching_ratio": "finite exact decimal in[0,1]", "multiplicity": "positive_integer"},
+    "ledger_schema": "explicit unique nonempty source_included_decays/already_applied_decays ID arrays",
+    "forbidden_double_count": "requested decay_id already in source/applied ledger, or source/applied intersection",
+    "ttH_production_only": "BR(H_gamma_gamma) * BR(t_bW)^2 * chosen_W_mode_factor",
+    "ZH_production_only": "BR(Z_bb) * BR(H_gamma_gamma)",
+    "W_modes": "L/hadronic disjoint, BR_L+BR_had<=1; one-charge BR_L*BR_had, both-charge union2*BR_L*BR_had counted only once"
+  },
+  "physical_input_source_and_uncertainty_convention": "NOT_ADOPTED",
+  "old_LHE_shower_detector_profiles": "UNCHANGED_NOT_APPLICABLE_TO_NEW_STABLE_H_OR_DECAY_PROFILES"
+}

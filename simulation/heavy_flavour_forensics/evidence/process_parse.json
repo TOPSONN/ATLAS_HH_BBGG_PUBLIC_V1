@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "status": "PASS_PARSE_ONLY",
+  "mg5_version": "3.5.16",
+  "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "mg5_source_tag": "v3.5.16",
+  "mg5_source_identity_unchanged_after_parsing": true,
+  "configuration_path": "simulation/heavy_flavour_forensics/config/process_candidates_v1.json",
+  "configuration_sha256": "cb533bc6c63b188cdf44f381cef551a702025928956226fea59def6787a5094b",
+  "cards": [
+    {
+      "id": "bb_gamma_j",
+      "path": "simulation/mg5/cards/bb_gamma_j_candidate.mg5",
+      "sha256": "419240c178bd64f5dc98f75c922880070ab08e2acfd78f82512b6ea09d18ed53"
+    },
+    {
+      "id": "tth",
+      "path": "simulation/mg5/cards/tth_candidate.mg5",
+      "sha256": "be2e50d3757e25c9bb14667d677a05c3d27da1c78121277a772ea98f29cb24b1"
+    },
+    {
+      "id": "zh",
+      "path": "simulation/mg5/cards/zh_candidate.mg5",
+      "sha256": "051c3adcf3c6c8c741f71c4709d4cf27b7701b43b98c6e0e84b250d2fb506884"
+    }
+  ],
+  "checks": [
+    {
+      "id": "bb_gamma_j",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "define j4 = g u c d s u~ c~ d~ s~",
+        "generate p p > b b~ a j4 QCD=3 QED=1"
+      ],
+      "amplitude_records": [
+        {
+          "initial_pdgs": [
+            21,
+            21
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 50,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            2
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            2
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            4
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            4
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            1
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            1
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            3
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            3
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            -2
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            -2
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            -4
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            -4
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            -1
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            -1
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            21,
+            -3
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            -3
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 24,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            5,
+            -5,
+            22,
+            21
+          ],
+          "diagram_count": 48,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 3,
+              "QED": 1
+            }
+          ]
+        }
+      ],
+      "record_count": 14,
+      "physical_events": 0,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED"
+    },
+    {
+      "id": "tth",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate p p > t t~ h QCD=2 QED=1"
+      ],
+      "amplitude_records": [
+        {
+          "initial_pdgs": [
+            21,
+            21
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 8,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        }
+      ],
+      "record_count": 6,
+      "physical_events": 0,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED"
+    },
+    {
+      "id": "zh",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate p p > z h QCD=0 QED=2"
+      ],
+      "amplitude_records": [
+        {
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        }
+      ],
+      "record_count": 5,
+      "physical_events": 0,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED"
+    },
+    {
+      "id": "zh_z_to_bb",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate p p > z h QCD=0 QED=2, z > b b~"
+      ],
+      "amplitude_records": [
+        {
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            23
+          ],
+          "final_pdgs": [
+            5,
+            -5
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        }
+      ],
+      "record_count": 6,
+      "physical_events": 0,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED"
+    },
+    {
+      "id": "tth_semileptonic_e_one_charge",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "define j4 = g u c d s u~ c~ d~ s~",
+        "generate p p > t t~ h QCD=2 QED=1, (t > b w+, w+ > e+ ve), (t~ > b~ w-, w- > j4 j4)"
+      ],
+      "amplitude_records": [
+        {
+          "initial_pdgs": [
+            21,
+            21
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 8,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            6,
+            -6,
+            25
+          ],
+          "diagram_count": 2,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 2,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            6
+          ],
+          "final_pdgs": [
+            5,
+            24
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            24
+          ],
+          "final_pdgs": [
+            -11,
+            12
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            -6
+          ],
+          "final_pdgs": [
+            -5,
+            -24
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            -24
+          ],
+          "final_pdgs": [
+            1,
+            -2
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        },
+        {
+          "initial_pdgs": [
+            -24
+          ],
+          "final_pdgs": [
+            3,
+            -4
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        }
+      ],
+      "record_count": 11,
+      "physical_events": 0,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED"
+    },
+    {
+      "id": "ordinary_sm_higgs_diphoton_negative",
+      "status": "PASS_EXPECTED_NO_TREE_DIAGRAMS",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate h > a a"
+      ],
+      "error_class": "NoDiagramException",
+      "reason": "ordinary sm-no_b_mass has no HAA tree vertex",
+      "physical_events": 0
+    }
+  ],
+  "events_generated": 0,
+  "output_or_launch_executed": false,
+  "model_merge_install_or_width_calculation_executed": false,
+  "physical_cross_sections_branching_ratios_and_decay_closure": "NOT_EVALUATED",
+  "parser_source_sha256": "83520fe4bc017884c7b4b49de565dd3b76d93d75a73c7b01a595c86dc7c53810"
+}

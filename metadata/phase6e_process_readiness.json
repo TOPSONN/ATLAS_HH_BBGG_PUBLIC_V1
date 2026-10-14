@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "PASS_PROCESS_PREPARATION_WITH_PHYSICAL_GATES_BLOCKED",
+  "configuration": {
+    "path": "simulation/heavy_flavour_forensics/config/process_candidates_v1.json",
+    "sha256": "cb533bc6c63b188cdf44f381cef551a702025928956226fea59def6787a5094b"
+  },
+  "parse_evidence": {
+    "path": "simulation/heavy_flavour_forensics/evidence/process_parse.json",
+    "sha256": "30b2d7e0d9a23ff98c34d3f83bb6ea72ee6e8defbd359e1b1b88990b8f4785bc"
+  },
+  "higgs_source_review": {
+    "path": "simulation/heavy_flavour_forensics/evidence/higgs_source_review.json",
+    "sha256": "fd7760ff490b8734b59a7ea8cb52d77c7ccc429191cfd3004142d0d161b7ea41"
+  },
+  "higgs_contract_configuration": {
+    "path": "simulation/heavy_flavour_forensics/config/higgs_decay_contract_v1.json",
+    "sha256": "455cb7b1b66afb43fff3ee28cf335dd4301e3ede76c4af2458b83ebabf2fb83b"
+  },
+  "processes": [
+    {
+      "id": "bb_gamma_j",
+      "card": {
+        "id": "bb_gamma_j",
+        "path": "simulation/mg5/cards/bb_gamma_j_candidate.mg5",
+        "sha256": "419240c178bd64f5dc98f75c922880070ab08e2acfd78f82512b6ea09d18ed53"
+      },
+      "parse_status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "mg5_internal_amplitude_records": 14,
+      "actual_amplitude_orders": [
+        {
+          "QCD": 3,
+          "QED": 1
+        }
+      ],
+      "physical_cross_section_pb": "UNKNOWN_NOT_INTEGRATED",
+      "LHE_or_shower_or_detector_validation": "NOT_EXECUTED",
+      "validated_generation_profile_registration": false
+    },
+    {
+      "id": "tth",
+      "card": {
+        "id": "tth",
+        "path": "simulation/mg5/cards/tth_candidate.mg5",
+        "sha256": "be2e50d3757e25c9bb14667d677a05c3d27da1c78121277a772ea98f29cb24b1"
+      },
+      "parse_status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "mg5_internal_amplitude_records": 6,
+      "actual_amplitude_orders": [
+        {
+          "QCD": 2,
+          "QED": 1
+        }
+      ],
+      "physical_cross_section_pb": "UNKNOWN_NOT_INTEGRATED",
+      "LHE_or_shower_or_detector_validation": "NOT_EXECUTED",
+      "validated_generation_profile_registration": false
+    },
+    {
+      "id": "zh",
+      "card": {
+        "id": "zh",
+        "path": "simulation/mg5/cards/zh_candidate.mg5",
+        "sha256": "051c3adcf3c6c8c741f71c4709d4cf27b7701b43b98c6e0e84b250d2fb506884"
+      },
+      "parse_status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "mg5_internal_amplitude_records": 5,
+      "actual_amplitude_orders": [
+        {
+          "QCD": 0,
+          "QED": 2
+        }
+      ],
+      "physical_cross_section_pb": "UNKNOWN_NOT_INTEGRATED",
+      "LHE_or_shower_or_detector_validation": "NOT_EXECUTED",
+      "validated_generation_profile_registration": false
+    }
+  ],
+  "new_events_generated": 0,
+  "cross_section_integration_executed": false,
+  "existing_generator_profiles_modified": false,
+  "existing_installed_source_identity_after_parsing": "PASS_UNCHANGED",
+  "higgs_diphoton_decay_status": "BLOCKED_PENDING_SEPARATE_PHYSICAL_PILOT",
+  "BR_normalization_status": "ALGORITHMIC_EXACT_ONCE_CONTRACT_ONLY_PHYSICAL_INPUTS_AND_EXTERNAL_CLOSURE_UNKNOWN",
+  "future_100_event_pilot": "COMMANDS_PREPARED_NOT_EXECUTED_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "future_process_specific_runtime_ram_disk": "UNKNOWN_NO_PHYSICAL_BENCHMARK",
+  "no_official_ATLAS_background_or_calibrated_photon_fake_claim": true
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6E_HEAVY_FLAVOR_FORENSICS_AND_BACKGROUND_PREPARATION_V1",
+  "base_head": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+  "status": "PASS_FORENSICS_AND_PREPARATION_WITH_PHYSICAL_GATES_BLOCKED",
+  "GATES_PASS": {
+    "baseline_and_ancestry": "actual PR14/PR13 Draft heads and commit ancestry verified before branch creation",
+    "source997_identity": "one-based LHE/ledger/HepMC/pilot997 and zero-based ROOTentry996; exact source/event hashes and original seeds/weights",
+    "native_readback": "actual existing source997 Float_t event/particle/p4/mass/XYZ/T/jet/photon and all3 full1000 ROOT inputs; hashes unchanged",
+    "ancestry": "571-node reciprocal DAGs,1149 motheredges,571 injective exacttuple+convertedstatus matches,zero motheredge differences; FSR17->19/20 confirmed",
+    "flavour_semantics": "original native labels untouched; literal cone/cuts/bit0/card functions reproduced; hard/shower/hadron diagnostics and matching separate",
+    "influence_and_category_covariance": "all3000 originalevents and denominator1000; six leading-pair types/three tag-origin classes; tag and pilot covariance matrices recover totalvariances",
+    "source997_LOO": "diagnostic only; full all-event authoritative expectation and cross section unchanged; no removal or stitching",
+    "overlap_review": "risk matrix and nativeflavour mixtures; no exclusivity assumption or official sample sum",
+    "process_preparation": "actual6 guarded MG5 parse/model checks,3 canonical tree production cards,expected ordinary-SM HAA rejection; zeroevents/integration",
+    "Higgs_BR_algebra": "exactly-once decayledger/forcedclosure/chargeunion guards with explicitly synthetic numericfixtures; no physicalBR adopted",
+    "independent_regression": "56new tests PASS Windows+WSL,9 separate invalid-evidence controls rejected; Phase6D51/MG59/Py56/Delphes27+8native and42C++ testsPASS",
+    "historical_preservation": "375 original tracked files byte-identical; original input hashes and installation sources preserved"
+  },
+  "GATES_FAIL": [],
+  "GATES_BLOCKED": {
+    "new_physical_pilots": "separate explicit100-event pilot authorization required; no bb_gamma_j/ttH/ZH physical production authorized here",
+    "H_gamma_gamma": "actual adopted partial/totalwidths/BR,decay ancestry,externalLHE/Info/exportedweight closure required; parse alone insufficient",
+    "photon_fake": "no calibrated jet-to-photon transfer/closure for bb_gamma_j",
+    "ME_PS_overlap": "validated heavyflavour/matching-merging/photonpartition scheme required before physical samplecombination",
+    "rare_precision": "source997 dominates98.5211%; sourcepilotrelativeSE remains~98.5%; new independent source/shower/reconstruction events are needed, not repeated tags"
+  },
+  "GATES_UNKNOWN": {
+    "production_positions": "original Pythia positions notstored; omitted HepMC positions notinvented",
+    "sole_hadron_parent": "multi-mother stringhadronization doesnot establish unique sole b-line attribution",
+    "physical_rates_and_BR": "new crosssections,adopted HiggsBR/widths,photonfake rate and systematics UNKNOWN",
+    "future_resources": "INCONCLUSIVE_100_EVENT_RESOURCE_ESTIMATE for bb_gamma_j/ttH/ZH: process-specific walltime/RAM/disk UNKNOWN; preserved existing1000-event MG5/Pythia/Delphes benchmarks have explicit different scopes and are not extrapolated; administrative2h ceiling is not a measurement"
+  },
+  "forbidden_claims": [
+    "OFFICIAL_ATLAS_BACKGROUND",
+    "CALIBRATED_BTAGGING",
+    "PHYSICAL_PHOTON_FAKE_RATE",
+    "HH_SIGNAL_SENSITIVITY"
+  ],
+  "analysis_bindings": {
+    "source997_sha256": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+    "influence_sha256": "f8cf3f5b6993068c2445a3e3cf27aa73604272d3525648de898b63192bad9006",
+    "process_parse_sha256": "30b2d7e0d9a23ff98c34d3f83bb6ea72ee6e8defbd359e1b1b88990b8f4785bc",
+    "numerical_execution_sha256": "8ee120402f26fe42387d760bacfef8ef5464d6c8850c2eac70858cb4e02af86a"
+  },
+  "publication": "source/cards/config/tests/small derived evidence only; exact remote/Draft/CI acceptance recorded separately",
+  "figures": "NONE_CREATED_OR_STAGED",
+  "merge_or_force_push": false,
+  "new_physics_events_generated": 0
+}

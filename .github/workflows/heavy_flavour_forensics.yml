@@ -1,0 +1,49 @@
+name: Heavy flavour forensic integrity
+on:
+  push:
+    branches: [main, codex/phase6e-heavy-flavor-forensics]
+    paths:
+      - 'simulation/heavy_flavour_forensics/**'
+      - 'simulation/mg5/cards/*_candidate.mg5'
+      - 'reports/phase6e_*'
+      - 'metadata/phase6e_*'
+      - '.github/workflows/heavy_flavour_forensics.yml'
+  pull_request:
+    paths:
+      - 'simulation/heavy_flavour_forensics/**'
+      - 'simulation/mg5/cards/*_candidate.mg5'
+      - 'reports/phase6e_*'
+      - 'metadata/phase6e_*'
+      - '.github/workflows/heavy_flavour_forensics.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  forensic_integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test actual graph evidence and independent numerical controls
+        run: python3 -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v
+      - name: Replay selected forensic graph with exact manifest binding
+        run: python3 -B simulation/heavy_flavour_forensics/scripts/source997.py --verify-evidence simulation/heavy_flavour_forensics/evidence/source997.json --manifest metadata/phase6e_source997_manifest.json
+      - name: Reproduce all-event influence with original normalization
+        run: |
+          python3 -B simulation/heavy_flavour_forensics/scripts/influence.py --output "$RUNNER_TEMP/phase6e-influence"
+          cmp "$RUNNER_TEMP/phase6e-influence/influence.json" simulation/heavy_flavour_forensics/evidence/influence.json
+          cmp "$RUNNER_TEMP/phase6e-influence/flavour_decomposition.csv" metadata/phase6e_flavour_decomposition.csv
+      - name: Preserve earlier portable controls and reference integrity
+        run: |
+          python3 -B -m unittest discover -s simulation/rare_backgrounds/tests -v
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B -m unittest discover -s simulation/mg5/tests -v
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B -m unittest discover -s simulation/pythia8/tests -v
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+          python3 -B -m unittest discover -s simulation/delphes/tests -v
+      - name: Audit source and selected small forensic payload
+        run: python3 -B simulation/heavy_flavour_forensics/scripts/audit_payload.py --tracked

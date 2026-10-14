@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "PASS_COMPLETED_INDEPENDENT_CHECKS",
+  "receipt_scope": "Completed Phase6E test and offline-replay tool results; no test rerun was performed when writing this receipt",
+  "evidence_capture": {
+    "basis": "Actual completed tool outputs in the independent validator session",
+    "execution_timestamps": null,
+    "timestamp_status": "NOT_RETAINED; no execution timestamps inferred",
+    "test_log_files": null,
+    "test_log_sha256": null,
+    "log_status": "Tool outputs were observed, but no test-log files were retained; no log paths or digests invented"
+  },
+  "unit_tests": {
+    "windows": {
+      "command": "python -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v",
+      "working_directory": "REPOSITORY_ROOT",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests_run": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "unittest_reported_elapsed_seconds": 1.223,
+      "command_tool_wall_time_seconds": 2.3910508999999998,
+      "python_version": "NOT_RECORDED",
+      "observed_launcher_diagnostic": "Windows Python launcher emitted a real-location warning before the tests; completed unittest output was OK and process exit code was0"
+    },
+    "wsl_ubuntu": {
+      "command": "python3 -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v",
+      "execution_surface": "Existing Ubuntu WSL environment",
+      "working_directory": "REPOSITORY_ROOT",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests_run": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "unittest_reported_elapsed_seconds": 1.222,
+      "command_tool_wall_time_seconds": 5.4108727,
+      "python_version": "NOT_RECORDED"
+    },
+    "test_groups": {
+      "test_influence.py": 15,
+      "test_higgs_contract.py": 15,
+      "test_source997.py": 21,
+      "test_payload.py": 5
+    },
+    "interpretation": "56 distinct test cases were run on each platform;112 platform executions do not represent112 distinct tests or independent physics events"
+  },
+  "test_file_sha256": {
+    "simulation/heavy_flavour_forensics/tests/test_influence.py": "cfe582e62b942d7913653071b409c0f9ffe99cbf40dacb14ea332247c90b3396",
+    "simulation/heavy_flavour_forensics/tests/test_higgs_contract.py": "8e21b3a92461a9e952907c064365f0ea8315c8d9870737b0882fc18aa65d2c94",
+    "simulation/heavy_flavour_forensics/tests/test_source997.py": "00439ce7c397b1353fc558386541761ca4a80da473010e5253391959f035fbf8",
+    "simulation/heavy_flavour_forensics/tests/test_payload.py": "221264cac34f294958a8e3a91c2bea34ab63c7aa4464649affad6ff4ae7aac7c"
+  },
+  "validated_artifact": {
+    "path": "simulation/heavy_flavour_forensics/evidence/source997.json",
+    "sha256": "7bd155040ef95dec6a3423d38a1e312e7499d6683c4644853b26c8c312bbad9c",
+    "manifest_path": "metadata/phase6e_source997_manifest.json",
+    "manifest_sha256": "1ffbbdc1607788ed8c844e8e2566713451fed37917fbf528cfa37445d3e4bc92",
+    "source_script_sha256": "2ae413af8edfa1d61a6c1bf911272f09b9cffe7b7d427cce1d83e9b318e6642a"
+  },
+  "actual_source997_regression": {
+    "status": "PASS",
+    "index_convention": "One-based source/HepMC/native Event.Number997; existing ROOT zero-based entry996 is retained as prior evidence",
+    "lhe_source_file_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+    "raw_lhe_event_sha256": "322457dfbd206b7cbd2c243f7b437970b82bb03c38fafe7721e40709f77127b8",
+    "hepmc_event_sha256": "157928b854ffa4be208b4460338afea8d857446a595a56016c7e8cb994fec31f",
+    "original_lhe_events": 1000,
+    "graph_nodes_per_record": 571,
+    "mother_edges_per_record": 1149,
+    "checks": [
+      "Original compressed LHE and exact raw event997 hashes, nominal weight and light-flavour Born PDGs",
+      "Independent ancestry DFS on all571 nodes in both retained Pythia and HepMC graphs, reciprocal links and no cycles",
+      "571 unique exact PDG/converted-status/binary64-p4/generated-mass tuple matches and mapped mother edges; no index/barcode equivalence assumed",
+      "Actual17->19/20 FSR gluon-to-bottom-pair birth, distinguished from recoil and later status copies",
+      "Actual terminal B-hadron geometry, multi-mother sole-attribution limitation and native-flavour cone candidates",
+      "All10 possible leading-tagged-pair probabilities by exhaustive32 configurations and independent Decimal Cartesian masses"
+    ],
+    "possible_leading_tagged_pairs": 10,
+    "event_probability_ge2": "0.49391027578627762994629311428239633751900699125665",
+    "recorded_observed_tag_count": 1,
+    "observed_two_tag_selection": false,
+    "physics_limit": "Ancestry and native associated-flavour diagnostics do not establish a calibrated tagging result or sole hadron/parton attribution"
+  },
+  "all3000_pilot_regression": {
+    "status": "PASS",
+    "profiles": ["bbgg", "ccgg", "jjgg"],
+    "original_source_events_per_profile": 1000,
+    "original_source_events_total": 3000,
+    "all_original_events_retained": true,
+    "stages": ["two_tags", "mgg"],
+    "checks": [
+      "Independent complete tag-configuration enumeration reproduces six leading native-flavour pair categories and three event tag-origin categories",
+      "Partition sums preserve authoritative Phase6D expected counts and original weighted cross sections",
+      "Both partitions' conditional count/weighted covariance and pilot probability/cross-section mean covariance matrices sum to original aggregate variances",
+      "Negative conditional cross-category covariance is retained; diagonal-only variance sums are rejected as an interpretation",
+      "Signed-weight synthetic API variance, original all-event denominator, per-event centered variance and diagnostic-only leave-one-out algebra",
+      "Concentration and inverse relative-precision ratios remain diagnostics, not independent event counts"
+    ],
+    "source_sampling_scope": "One shower/reconstruction realization per hard event; pilot sampling includes source generation, shower and reconstruction and does not isolate pure generator variance"
+  },
+  "separate_semantic_corruption_controls": {
+    "status": "PASS_ALL_REJECTED",
+    "controls_executed": 9,
+    "included_in_unit_test_count56": false,
+    "method": "Temporary corrupted copies of the existing derived JSON, passed to verify_evidence without a manifest to exercise semantic guards; each raised ValueError",
+    "rejected_mutations": [
+      "tree_entries999",
+      "particle_count570",
+      "changed_eligible_native_jet_PT",
+      "changed_HepMC_production_vertex_endpoint",
+      "changed_shower_seed",
+      "changed_source_contribution_weight",
+      "contradictory_origin_verdict",
+      "changed_two_tag_probability_tail",
+      "changed_leading_pair_mass"
+    ],
+    "fixture_scope": "Failure-path derived-evidence copies only; not generated physics samples or passing references",
+    "actual_reference_artifact_changed": false,
+    "log_file": null,
+    "log_sha256": null
+  },
+  "offline_cli": {
+    "command": "python -B simulation/heavy_flavour_forensics/scripts/source997.py --verify-evidence simulation/heavy_flavour_forensics/evidence/source997.json --manifest metadata/phase6e_source997_manifest.json",
+    "platform": "Windows",
+    "status": "PASS_OFFLINE_REPLAY",
+    "exit_code": 0,
+    "manifest_hash_binding": "PASS",
+    "native_ROOT_execution": "NOT_EXECUTED_BY_OFFLINE_REPLAY; prior actual native evidence retained",
+    "scope": "Portable replay of derived graph/flavour/probability/mass evidence and its manifest binding; not a fresh native ROOT or HepMC library readback"
+  },
+  "higgs_and_candidate_validation_scope": {
+    "status": "PASS_ALGEBRA_AND_RECORDED_PARSE_EVIDENCE_CHECKS",
+    "tests": "Exactly-once BR and charge-union algebra, literal closure flags, missing/double-counted factors, candidate command/coupling guards and recorded actual amplitude orders",
+    "numeric_BRs": "SYNTHETIC_API_FIXTURES_ONLY",
+    "new_MG5_parsing_by_this_receipt": "NOT_EXECUTED",
+    "physical_Higgs_BR_width_and_external_forced_decay_closure": "NOT_EVALUATED"
+  },
+  "new_physics_events_generated": 0,
+  "new_detector_processing": 0,
+  "native_ROOT_execution_by_these_checks": "NOT_EXECUTED",
+  "installation_or_historical_source_edits": false
+}
