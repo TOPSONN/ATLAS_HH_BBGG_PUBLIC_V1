@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "snapshot_utc": "2026-10-14T03:27:05.618411+00:00",
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "scope": "Actual remote source/data acceptance snapshot before report-seal commit; no future final-head assertion",
+  "verified_source_data_head": "10fd45321b0255ac2ecedcf9f086abb238322010",
+  "stack_base_head": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+  "root_tree_sha1": "28fa0844b42d41677f1d64645f0565b9f86ab422",
+  "whole_git_blob_tree": {
+    "status": "PASS",
+    "recursive": true,
+    "truncated": false,
+    "local_blob_entries": 373,
+    "remote_blob_entries": 373,
+    "comparison": "EVERY_PATH_MODE_TYPE_GIT_SHA_MATCH"
+  },
+  "new_text_blob_downloads": {
+    "status": "PASS",
+    "count": 38,
+    "bytes": 6517216,
+    "method": "GitHub Git blob API base64 payload decoded and matched to git cat-file blob bytes at verified commit; working-tree EOLs excluded",
+    "files": [
+      {
+        "path": ".github/workflows/rare_backgrounds_statistics.yml",
+        "git_blob_sha1": "c28cbc3c309544a25a7d7609f5c4506c81e88733",
+        "bytes": 2223,
+        "remote_download_sha256": "51f531b4dc599838b813ba3758abb35a3591b945d89c00d272b6a0a4c6adae88",
+        "local_commit_sha256": "51f531b4dc599838b813ba3758abb35a3591b945d89c00d272b6a0a4c6adae88",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6d_expected_counts.csv",
+        "git_blob_sha1": "e0f659e6368a153880b2b1fcf293135fb6f23484",
+        "bytes": 1019,
+        "remote_download_sha256": "3fcbac848407a1c35b07c09c45eb3be0edbc5b236962f43e23b0cec32c6ee29a",
+        "local_commit_sha256": "3fcbac848407a1c35b07c09c45eb3be0edbc5b236962f43e23b0cec32c6ee29a",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6d_future_event_planning.csv",
+        "git_blob_sha1": "067ca55b7c5657bb6129dc89855f40765dc6ea30",
+        "bytes": 6585,
+        "remote_download_sha256": "faf659a0abb518bc393fd9bd35fa405bb6ccd04b4f8516d28e98f2c1f6394d37",
+        "local_commit_sha256": "faf659a0abb518bc393fd9bd35fa405bb6ccd04b4f8516d28e98f2c1f6394d37",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "metadata/phase6d_quality_gates.json",
+        "git_blob_sha1": "34412748676defe59ecbeccb9ef7cee73bd445d3",
+        "bytes": 2691,
+        "remote_download_sha256": "706d0552bedf95a755794e2df03669dec678cc810b5bf56ea6ea43053d182cd8",
+        "local_commit_sha256": "706d0552bedf95a755794e2df03669dec678cc810b5bf56ea6ea43053d182cd8",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6d_new_background_feasibility.md",
+        "git_blob_sha1": "81ccb8d5fb502a87f2b4f074edf5f1835e0acb06",
+        "bytes": 11917,
+        "remote_download_sha256": "c49551364c6ca2b8abb549a785251b930af9eedb1333406c3ef198e6dfa25b65",
+        "local_commit_sha256": "c49551364c6ca2b8abb549a785251b930af9eedb1333406c3ef198e6dfa25b65",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6d_rare_background_assessment.md",
+        "git_blob_sha1": "607bafd3aaebaf436a5fd5cf1a65224c903b0aa0",
+        "bytes": 9203,
+        "remote_download_sha256": "e5a1fe9d3ec43667210ec5cc41f09115e754f96e5a4017ea3f3d60bd4acbbea3",
+        "local_commit_sha256": "e5a1fe9d3ec43667210ec5cc41f09115e754f96e5a4017ea3f3d60bd4acbbea3",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6d_statistical_uncertainty.md",
+        "git_blob_sha1": "b7622dbc8de3dc88b773422928d6dad0a9e4b29f",
+        "bytes": 14023,
+        "remote_download_sha256": "0fb87f1a63edcf50c536173552e5f66728c82edf69265b8b264d4dee8cdd6167",
+        "local_commit_sha256": "0fb87f1a63edcf50c536173552e5f66728c82edf69265b8b264d4dee8cdd6167",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "reports/phase6d_toy_model_sensitivity.md",
+        "git_blob_sha1": "1cb968d5b84347cfe5c1f9e96d4263e1c592ef70",
+        "bytes": 7894,
+        "remote_download_sha256": "62fd8216152bbc9fddb90835f9d086d424ac056e31781eb602577dd7c920c5c2",
+        "local_commit_sha256": "62fd8216152bbc9fddb90835f9d086d424ac056e31781eb602577dd7c920c5c2",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/README.md",
+        "git_blob_sha1": "63d41902fe614539659c16e9147efae55c8a8446",
+        "bytes": 4926,
+        "remote_download_sha256": "0009d5423c6a5de459ba16de06de975cd49d8d2aa357e83d10f1f8ee0b4dbafd",
+        "local_commit_sha256": "0009d5423c6a5de459ba16de06de975cd49d8d2aa357e83d10f1f8ee0b4dbafd",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/USER_GUIDE_ZH_TW.md",
+        "git_blob_sha1": "9214172ab303f927a489eb910ff47ff10aed2c92",
+        "bytes": 9841,
+        "remote_download_sha256": "2000c9b1817a3b14f3fad8cd10dea0b0527019ee06dec067de8b4d269360938c",
+        "local_commit_sha256": "2000c9b1817a3b14f3fad8cd10dea0b0527019ee06dec067de8b4d269360938c",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/independent_regression.json",
+        "git_blob_sha1": "10cf11141bc6f79b2b79391914db76db92508497",
+        "bytes": 14385,
+        "remote_download_sha256": "fd7a4b74bcf585f2318d64b2aa6a14bde31e3bbe913237827b9ac32dbb5df463",
+        "local_commit_sha256": "fd7a4b74bcf585f2318d64b2aa6a14bde31e3bbe913237827b9ac32dbb5df463",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/input_verification.json",
+        "git_blob_sha1": "0e099b5eb79b73b21259e619a7c32f712cfbf5d5",
+        "bytes": 12879,
+        "remote_download_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+        "local_commit_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/new_background_source_review.json",
+        "git_blob_sha1": "30d4e8975f18db73065e8bcfc587ab3ab2d46771",
+        "bytes": 3711,
+        "remote_download_sha256": "184841118b4b8e14e7064feeb76868242218bdee124ef108f86ce81e02df9844",
+        "local_commit_sha256": "184841118b4b8e14e7064feeb76868242218bdee124ef108f86ce81e02df9844",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/numerical_execution.json",
+        "git_blob_sha1": "18a2635e9747f432e8905c67339267168e62fbae",
+        "bytes": 2874,
+        "remote_download_sha256": "201eb54fce81f8207734874fe9b27c2bed127b755da515d7d507dd8139848660",
+        "local_commit_sha256": "201eb54fce81f8207734874fe9b27c2bed127b755da515d7d507dd8139848660",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/bbgg.jsonl",
+        "git_blob_sha1": "466e8363104bff4e679e342fe182f4c232aae226",
+        "bytes": 1439798,
+        "remote_download_sha256": "032761ac914fbed0703fb3212a5a5a95adf79280a69741a284f200bbf4b88220",
+        "local_commit_sha256": "032761ac914fbed0703fb3212a5a5a95adf79280a69741a284f200bbf4b88220",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/bbgg_binding.json",
+        "git_blob_sha1": "264fa6a6cc07a86f80c35928596614cc79b07e4c",
+        "bytes": 1290,
+        "remote_download_sha256": "33e8040a1eede7a30aadeb4666b0ecffeb13dcc97249e47df7f4fd07fd3280a0",
+        "local_commit_sha256": "33e8040a1eede7a30aadeb4666b0ecffeb13dcc97249e47df7f4fd07fd3280a0",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/ccgg.jsonl",
+        "git_blob_sha1": "18131392c86c8d16aaef7c3c2a65a14ffa6d72d4",
+        "bytes": 1454332,
+        "remote_download_sha256": "dc81ff25f523eb82b5906e8576cbe105251f43c5625223d486a54d647ad809e6",
+        "local_commit_sha256": "dc81ff25f523eb82b5906e8576cbe105251f43c5625223d486a54d647ad809e6",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/ccgg_binding.json",
+        "git_blob_sha1": "84620b65ec653e3ae2ef1c794aedd171d4c952a3",
+        "bytes": 1289,
+        "remote_download_sha256": "f23cd62f572db57fdae2c257dee23a0d1ca5a8b6cf5e0da76fb8c321d986bca5",
+        "local_commit_sha256": "f23cd62f572db57fdae2c257dee23a0d1ca5a8b6cf5e0da76fb8c321d986bca5",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/extraction.json",
+        "git_blob_sha1": "ba051d46ea36fd8cd91096c6d8368352fbeecca5",
+        "bytes": 1352,
+        "remote_download_sha256": "bdb1a433d209d61f54b399909883f1b2ad76ace3620dcb0c4cfc5d7a9f5ac249",
+        "local_commit_sha256": "bdb1a433d209d61f54b399909883f1b2ad76ace3620dcb0c4cfc5d7a9f5ac249",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/jjgg.jsonl",
+        "git_blob_sha1": "ce3e4a94e49960ed18093f28d4b0372661c59320",
+        "bytes": 1452558,
+        "remote_download_sha256": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+        "local_commit_sha256": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/pilot/jjgg_binding.json",
+        "git_blob_sha1": "dbcba332cb3a2cad133ddbe5550d795b82680bc9",
+        "bytes": 1288,
+        "remote_download_sha256": "f07f9a7045dbc15d5102986048a62b24079b92734a0b17ef370c63c3718b7a78",
+        "local_commit_sha256": "f07f9a7045dbc15d5102986048a62b24079b92734a0b17ef370c63c3718b7a78",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/regressions.json",
+        "git_blob_sha1": "3b4327a8b4725275e8fb7936a04023e2b92b10df",
+        "bytes": 3934,
+        "remote_download_sha256": "ee5f10154f1799b1e621681e7ae34a7f9cef0c3668677ba31c8a39102b30eb45",
+        "local_commit_sha256": "ee5f10154f1799b1e621681e7ae34a7f9cef0c3668677ba31c8a39102b30eb45",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/results/analysis.json",
+        "git_blob_sha1": "4afa6980a89181fed58806e61581e4c0b79eac1d",
+        "bytes": 1878367,
+        "remote_download_sha256": "23fa2f4a3669c2c8bf97d422e428abda90abd67c15872e0ae8830fd9ddc57b79",
+        "local_commit_sha256": "23fa2f4a3669c2c8bf97d422e428abda90abd67c15872e0ae8830fd9ddc57b79",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/results/bbgg/conditional_summary.json",
+        "git_blob_sha1": "e0cc9332abae23308a55d7fea980dd48d0239c91",
+        "bytes": 17872,
+        "remote_download_sha256": "c338c5be17df6dc5ea66bcd25a0296c89db6fcfdf3d06311d0ccbbbd928966d1",
+        "local_commit_sha256": "c338c5be17df6dc5ea66bcd25a0296c89db6fcfdf3d06311d0ccbbbd928966d1",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/results/ccgg/conditional_summary.json",
+        "git_blob_sha1": "29822de7c4f8fb143830883e000dece663f71264",
+        "bytes": 17887,
+        "remote_download_sha256": "68601d0e07659820100132ae01a7c25192c4828ebfe6cccd19d0eff74488dfaf",
+        "local_commit_sha256": "68601d0e07659820100132ae01a7c25192c4828ebfe6cccd19d0eff74488dfaf",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/results/jjgg/conditional_summary.json",
+        "git_blob_sha1": "1e7dd9bdd19ee00be1aead251b795726fe7aae43",
+        "bytes": 17880,
+        "remote_download_sha256": "f90d16b6a6d9b79178a8e9582eeea0175b03148ad77d310a68a18a14d3436700",
+        "local_commit_sha256": "f90d16b6a6d9b79178a8e9582eeea0175b03148ad77d310a68a18a14d3436700",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/evidence/source_guard_execution.json",
+        "git_blob_sha1": "090251fd1f2f7d102052527f939d3c19a13c0d86",
+        "bytes": 887,
+        "remote_download_sha256": "e94c1a71e4d75bc0d8309c3f860c148906087b73162ae9990cbe51c7cac462bc",
+        "local_commit_sha256": "e94c1a71e4d75bc0d8309c3f860c148906087b73162ae9990cbe51c7cac462bc",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/analyze_pilot.py",
+        "git_blob_sha1": "d36416d92d4421b8933c09724f70133f9e772882",
+        "bytes": 14729,
+        "remote_download_sha256": "af9177e32900d40630ca249a02db682890e52cb7781d87890f1f9a29e6fa4980",
+        "local_commit_sha256": "af9177e32900d40630ca249a02db682890e52cb7781d87890f1f9a29e6fa4980",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/audit_payload.py",
+        "git_blob_sha1": "130aee8b69e59d95d4cc578670e2b361cdcd19ef",
+        "bytes": 4911,
+        "remote_download_sha256": "2755f7586741abf7edd85fccc0d493c10da7da75c5a3b7af89278e0f5af7eef4",
+        "local_commit_sha256": "2755f7586741abf7edd85fccc0d493c10da7da75c5a3b7af89278e0f5af7eef4",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/conditional_tags.py",
+        "git_blob_sha1": "4e2c6c7321b03c35dc7824e335ac4c45381bc498",
+        "bytes": 22187,
+        "remote_download_sha256": "34eee3865a004794b8d661febf198e02eaea8de89a5331885eee0ce54ff033cf",
+        "local_commit_sha256": "34eee3865a004794b8d661febf198e02eaea8de89a5331885eee0ce54ff033cf",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/extract_pilot.py",
+        "git_blob_sha1": "3acd9226eec366ca233e936d58679b81d9b95862",
+        "bytes": 8663,
+        "remote_download_sha256": "be9b15f68314ab700f0d06dbcac271ce99a6827c0ebcb10137ea981234a85866",
+        "local_commit_sha256": "be9b15f68314ab700f0d06dbcac271ce99a6827c0ebcb10137ea981234a85866",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/statistics.py",
+        "git_blob_sha1": "4b9b22127a99272900e9b4320b39de643fe52a4f",
+        "bytes": 17575,
+        "remote_download_sha256": "f81aad367d05980ba9793b7dbc4d9bf8ac841480df507daf4613ffda53afbf8f",
+        "local_commit_sha256": "f81aad367d05980ba9793b7dbc4d9bf8ac841480df507daf4613ffda53afbf8f",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/scripts/verify_existing_inputs.py",
+        "git_blob_sha1": "af89cc36edcbfcb37a6fabf856326260a9ebd148",
+        "bytes": 8617,
+        "remote_download_sha256": "af891de5031be60fb9c2fcd8df41845fc54f5ee5b46829bc45b6ddd10fcb82e2",
+        "local_commit_sha256": "af891de5031be60fb9c2fcd8df41845fc54f5ee5b46829bc45b6ddd10fcb82e2",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/tests/test_conditional_tags.py",
+        "git_blob_sha1": "53b0418acebfbf54b2a27f7712958a65d25300e5",
+        "bytes": 12807,
+        "remote_download_sha256": "db60f8df894a440de478771f21bfb86b3a7a130663cdb8866041d831a3208236",
+        "local_commit_sha256": "db60f8df894a440de478771f21bfb86b3a7a130663cdb8866041d831a3208236",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/tests/test_payload.py",
+        "git_blob_sha1": "e562e9203682d7c804e7726a248e883f167ebe60",
+        "bytes": 2001,
+        "remote_download_sha256": "fce5640b975f44ab9a5016518f2f91255c775ed23261864b34d4b31cdc2e58c2",
+        "local_commit_sha256": "fce5640b975f44ab9a5016518f2f91255c775ed23261864b34d4b31cdc2e58c2",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/tests/test_pilot_controls.py",
+        "git_blob_sha1": "be971653a2857cc372d36a2ff0a514eab0043c2e",
+        "bytes": 5246,
+        "remote_download_sha256": "c965989f08ef9637fdfdc2c51b1da25ab7d4bc724cd11b8cc27be2f0a2d34e2e",
+        "local_commit_sha256": "c965989f08ef9637fdfdc2c51b1da25ab7d4bc724cd11b8cc27be2f0a2d34e2e",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/tests/test_pilot_regression.py",
+        "git_blob_sha1": "96cc35a1e2e053855c5013d90359d5bf4fb17d9a",
+        "bytes": 18575,
+        "remote_download_sha256": "9add3926ddc660a2d60054266e050f14593c9df2f955ac8b5efe30354eedb104",
+        "local_commit_sha256": "9add3926ddc660a2d60054266e050f14593c9df2f955ac8b5efe30354eedb104",
+        "comparison": "EXACT_BYTE_PASS"
+      },
+      {
+        "path": "simulation/rare_backgrounds/tests/test_statistics.py",
+        "git_blob_sha1": "e59065fafac3daed1ae8f8f04600a0b539f9e0d0",
+        "bytes": 9000,
+        "remote_download_sha256": "1560cfe205bddb481819d8d77af31d2ad254a7ef71b087971dcd3574fb2776cc",
+        "local_commit_sha256": "1560cfe205bddb481819d8d77af31d2ad254a7ef71b087971dcd3574fb2776cc",
+        "comparison": "EXACT_BYTE_PASS"
+      }
+    ]
+  },
+  "pull_request": {
+    "number": 14,
+    "state": "OPEN",
+    "isDraft": true,
+    "baseRefName": "codex/phase6c-delphes-fast-sim",
+    "baseRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "headRefName": "codex/phase6d-rare-backgrounds-statistics",
+    "headRefOid": "10fd45321b0255ac2ecedcf9f086abb238322010",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/14"
+  },
+  "protected_pr13": {
+    "number": 13,
+    "state": "OPEN",
+    "isDraft": true,
+    "baseRefName": "codex/phase6b-pythia8-shower-1k",
+    "baseRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+    "headRefName": "codex/phase6c-delphes-fast-sim",
+    "headRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13"
+  },
+  "protected_pr13_unchanged_during_snapshot": true,
+  "exact_source_head_ci": [
+    {
+      "id": 38505845399,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "10fd45321b0255ac2ecedcf9f086abb238322010",
+      "head_branch": "codex/phase6d-rare-backgrounds-statistics",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38505845399",
+      "name": "Rare background conditional statistics",
+      "path": ".github/workflows/rare_backgrounds_statistics.yml",
+      "run_attempt": 1,
+      "created_at": "2026-10-14T03:21:39Z",
+      "updated_at": "2026-10-14T03:22:21Z"
+    },
+    {
+      "id": 38505920003,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "10fd45321b0255ac2ecedcf9f086abb238322010",
+      "head_branch": "codex/phase6d-rare-backgrounds-statistics",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38505920003",
+      "name": "Rare background conditional statistics",
+      "path": ".github/workflows/rare_backgrounds_statistics.yml",
+      "run_attempt": 1,
+      "created_at": "2026-10-14T03:22:31Z",
+      "updated_at": "2026-10-14T03:23:19Z"
+    }
+  ],
+  "new_physics_events": 0,
+  "new_figures": 0,
+  "external_writes": 0,
+  "future_report_seal_head": "NOT_EVALUATED; independently check once created/pushed",
+  "acceptance_limit": "Snapshot verifies repository byte integrity and two portable CI runs; it does not add physics/calibration acceptance"
+}

@@ -64,6 +64,11 @@ No figure is produced here. Any future PDF/PNG must retain the repository's
 exact-version user-approval gate before staging/pushing. Historical reports and
 data remain unchanged. Actual Phase6D execution receipts and final GitHub/CI
 acceptance are recorded separately; source tests alone do not establish them.
+
+The [final scoped report](../../reports/phase6d_final_report.md) gives the
+required acceptance fields, conservative precision targets, physics blockers
+and source-head publication/CI snapshot. The final PR head is checked again
+after its documentation seal, without changing the numerical pilot or model.
 The final full command physically analyzed 3000 original events/all nine
 scenarios on Linux Python 3.12. The separate final 51-test suite passed with no
 skips. The analysis SHA256 is `23fa2f4a3669c2c8bf97d422e428abda90abd67c15872e0ae8830fd9ddc57b79`;
