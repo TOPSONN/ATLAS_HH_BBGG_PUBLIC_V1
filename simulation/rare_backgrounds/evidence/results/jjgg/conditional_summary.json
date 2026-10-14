@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "process": "jjgg",
+  "binding": {
+    "schema_version": 1,
+    "process": "jjgg",
+    "events": 1000,
+    "normalization_denominator": 1000,
+    "verification_status": "PASS",
+    "verification_scope": "actual_ROOT_native_source_card_full_file_hash",
+    "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+    "native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+    "native_scientific_content_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+    "reco_sha256": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+    "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+    "source_mg5_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+    "source_pythia_run_id": "220224a8-5332-5952-866a-58821d9c7748",
+    "input_generator_cross_section_pb": 9.436556,
+    "numerical_input": "simulation/rare_backgrounds/evidence/pilot/jjgg.jsonl",
+    "transformation": "actual ROOT photon/jet fields independently extracted; original exact source identity/decimal nominal weight and validated cut scalars retained; GenJet omitted; no ROOT rewrite",
+    "new_independent_physics_events": 0
+  },
+  "input_binding_sha256": "f07f9a7045dbc15d5102986048a62b24079b92734a0b17ef370c63c3718b7a78",
+  "counts": {
+    "events": 1000,
+    "after_photons": 445,
+    "after_jets": 277,
+    "observed_two_tags": 0,
+    "observed_mgg": 0
+  },
+  "model": "conditional independent per-jet Bernoulli tags on fixed verified persisted reconstruction",
+  "decimal_precision": 50,
+  "probability_algorithm": "direct saturated0/1/>=2 Poisson-binomial DP; no subtraction",
+  "jet_eligibility": "persisted PT>25 GeV and abs(Eta)<2.5; bit0; actual native Flavor",
+  "probability_pt_assumption": "card evaluated at persisted Float_t Jet.PT; upstream tag draw used full-precision Momentum.Pt before tree storage; exact hidden per-draw probability is not recovered",
+  "scenarios": {
+    "baseline": {
+      "b": "1",
+      "c": "1",
+      "light": "1"
+    },
+    "b_down20": {
+      "b": ".8",
+      "c": "1",
+      "light": "1"
+    },
+    "b_up20": {
+      "b": "1.2",
+      "c": "1",
+      "light": "1"
+    },
+    "c_down20": {
+      "b": "1",
+      "c": ".8",
+      "light": "1"
+    },
+    "c_up20": {
+      "b": "1",
+      "c": "1.2",
+      "light": "1"
+    },
+    "light_down20": {
+      "b": "1",
+      "c": "1",
+      "light": ".8"
+    },
+    "light_up20": {
+      "b": "1",
+      "c": "1",
+      "light": "1.2"
+    },
+    "joint_down20": {
+      "b": ".8",
+      "c": ".8",
+      "light": ".8"
+    },
+    "joint_up20": {
+      "b": "1.2",
+      "c": "1.2",
+      "light": "1.2"
+    }
+  },
+  "variation_interpretation": "TOY_MODEL_SENSITIVITY_ONLY",
+  "clipped_eligible_jet_probabilities": {
+    "baseline": 0,
+    "b_down20": 0,
+    "b_up20": 0,
+    "c_down20": 0,
+    "c_up20": 0,
+    "light_down20": 0,
+    "light_up20": 0,
+    "joint_down20": 0,
+    "joint_up20": 0
+  },
+  "optional_mbb_window": "NOT_EVALUATED; no new cut or small-sample optimization",
+  "mass_moment_definition": "exact leading-tagged-pair probability model; binary64 Cartesian masses with pinned signed native mass convention; signed source-weighted moments; no observed-pair substitution",
+  "weight_sum_pb": "9.4365561000",
+  "weight_abs_sum_pb": "9.4365561000",
+  "weight_sum_squared_pb2": "0.08904859102844721000",
+  "negative_source_weights": 0,
+  "zero_source_weights": 0,
+  "normalization": "sum original signed source contributions*q; denominator remains full original1000; no selected/passing-row renormalization",
+  "results": {
+    "baseline": {
+      "two_tags": {
+        "expected_count": "0.57937150728035224868640203830661745167548178939413",
+        "weighted_cross_section_pb": "0.0054672717311926024224903841416347445839747229001461",
+        "mbb_first_weighted": "0.32917015432231123340828531349560217456361653731679",
+        "mbb_second_weighted": "32.200299083030185743607594605158257604905819839019",
+        "mbbgg_first_weighted": "1.7895833988154488959826665221634511890759618268496",
+        "mbbgg_second_weighted": "651.45010341111897588867765343850905062698527332720",
+        "signed_weight_conditional_mean_mbb": "60.207388713512462600195314937653484131794545379405",
+        "signed_weight_conditional_mean_mbbgg": "327.32658751992896002644604304545514002188449083388"
+      },
+      "mgg": {
+        "expected_count": "0.50132451661408503427496978408916428421156739899170",
+        "weighted_cross_section_pb": "0.0047307769253341954761061751933622861700788000295163",
+        "mbb_first_weighted": "0.24275406138489815796631656495818911688014886025547",
+        "mbb_second_weighted": "15.357689184930843823464056968083204749227693525535",
+        "mbbgg_first_weighted": "1.5063333215856768711800480407207617141723712095951",
+        "mbbgg_second_weighted": "482.04000872516726315424013046813528736872355799089",
+        "signed_weight_conditional_mean_mbb": "51.313783172676087187965439515218781001444336073864",
+        "signed_weight_conditional_mean_mbbgg": "318.41140374194778176078810316489669189053616986283"
+      }
+    },
+    "b_down20": {
+      "two_tags": {
+        "expected_count": "0.40255851853721530194360144298365297910675522361257",
+        "weighted_cross_section_pb": "0.0037987660437093221345692340527561927202730235565881",
+        "mbb_first_weighted": "0.24711811024548818598070676947102948422668683739704",
+        "mbb_second_weighted": "27.978360498770056135202844166958916815820984272276",
+        "mbbgg_first_weighted": "1.2578356039033147126591272024083057148379435935962",
+        "mbbgg_second_weighted": "479.55615873716936539380308804246720121261643960481",
+        "signed_weight_conditional_mean_mbb": "65.052205743154584828043692385141168667148014737554",
+        "signed_weight_conditional_mean_mbbgg": "331.11689149329541176831390460010898898744668736134"
+      },
+      "mgg": {
+        "expected_count": "0.32487123182911909998015563456146713164284083321014",
+        "weighted_cross_section_pb": "0.0030656656044315880005442475322703834860537526859583",
+        "mbb_first_weighted": "0.16118432949089149368646276362531449271128751268548",
+        "mbb_second_weighted": "11.204283281559587026377198748930769238085548166261",
+        "mbbgg_first_weighted": "0.97852757914456327284147344428657994664224198780383",
+        "mbbgg_second_weighted": "314.72417231234697717762242560579288089636260549574",
+        "signed_weight_conditional_mean_mbb": "52.577270416542069365668870685548043634898553320285",
+        "signed_weight_conditional_mean_mbbgg": "319.18927417590748172308616581499282955053410527739"
+      }
+    },
+    "b_up20": {
+      "two_tags": {
+        "expected_count": "0.79486062147766525032451542003528873456819419499023",
+        "weighted_cross_section_pb": "0.0075007468462548530317078329664780661234507737967196",
+        "mbb_first_weighted": "0.42874712654260602264038221792376543736330553337980",
+        "mbb_second_weighted": "37.252648201261104764605423488242621576902703643201",
+        "mbbgg_first_weighted": "2.4370430316396775244810551610094020578350757183126",
+        "mbbgg_second_weighted": "860.02308965977266218810791443207153862274896676483",
+        "signed_weight_conditional_mean_mbb": "57.160591515854296384068861144657943966338087022531",
+        "signed_weight_conditional_mean_mbbgg": "324.90671683667086165155335449925038723442661606800"
+      },
+      "mgg": {
+        "expected_count": "0.71645392685322702346509672002256824710427980458780",
+        "weighted_cross_section_pb": "0.0067608576738157732729644015904189585298781989260898",
+        "mbb_first_weighted": "0.34184872142237656405068872669465431351176950396871",
+        "mbb_second_weighted": "20.341505622272890033143993632120663443281887122249",
+        "mbbgg_first_weighted": "2.1498509019388849146934719562457488762235960895960",
+        "mbbgg_second_weighted": "686.03488671269162493541353092799833242247937020128",
+        "signed_weight_conditional_mean_mbb": "50.562922326604742210740155124498273597985291418839",
+        "signed_weight_conditional_mean_mbbgg": "317.98493706872052678804299748730369000166076504815"
+      }
+    },
+    "c_down20": {
+      "two_tags": {
+        "expected_count": "0.55416022877624988898668515326951895763358069030975",
+        "weighted_cross_section_pb": "0.0052293640872359164250416266018649140637228074279847",
+        "mbb_first_weighted": "0.30264638613204098743889670703402549844255118780578",
+        "mbb_second_weighted": "27.855614613630739073711150097866102810244852664236",
+        "mbbgg_first_weighted": "1.7073323791582532332022875254133732785658764437627",
+        "mbbgg_second_weighted": "611.73709377229069382893159005630469084744381049767",
+        "signed_weight_conditional_mean_mbb": "57.874414763117154976286463863945500325435179427508",
+        "signed_weight_conditional_mean_mbbgg": "326.48948336291831069700391512434907119626929185129"
+      },
+      "mgg": {
+        "expected_count": "0.50031855122509953200280311444077918771073615558447",
+        "weighted_cross_section_pb": "0.0047212840765063754618281969466751329325447923044712",
+        "mbb_first_weighted": "0.24105144879178217562434902166865352657201428421288",
+        "mbb_second_weighted": "14.935560876008155078458952420024345722657480852672",
+        "mbbgg_first_weighted": "1.5021494603530397066665275829792365025496394657971",
+        "mbbgg_second_weighted": "480.01617383797851219403644685340466608610344193348",
+        "signed_weight_conditional_mean_mbb": "51.056332320963374660971638242920997349435063493014",
+        "signed_weight_conditional_mean_mbbgg": "318.16544736799449712201229570874768961587427364499"
+      }
+    },
+    "c_up20": {
+      "two_tags": {
+        "expected_count": "0.60896358774875667421095790096181048459323994402195",
+        "weighted_cross_section_pb": "0.0057465190586484150614411274671643685954322944125240",
+        "mbb_first_weighted": "0.35997057308928165610449622369424673130090437172520",
+        "mbb_second_weighted": "37.033672684177085187685820373472776914732774692560",
+        "mbbgg_first_weighted": "1.8854136383938131298488689413521903689785274677609",
+        "mbbgg_second_weighted": "697.11590239204595138919152381742127712997582544528",
+        "signed_weight_conditional_mean_mbb": "62.641499908980892497067917606077872015781653980628",
+        "signed_weight_conditional_mean_mbbgg": "328.09664757942412830157339743096036834240383892516"
+      },
+      "mgg": {
+        "expected_count": "0.50233048200307053654713645373754938071239864239894",
+        "weighted_cross_section_pb": "0.0047402697741620154903841534400494394076128077545614",
+        "mbb_first_weighted": "0.24445667397801414030828410824772470718828343629806",
+        "mbb_second_weighted": "15.779817493853532568469161516142063775797906198399",
+        "mbbgg_first_weighted": "1.5105171828183140356935684984622869257951029533931",
+        "mbbgg_second_weighted": "484.06384361235601411444381408286590865134367404830",
+        "signed_weight_conditional_mean_mbb": "51.570202883912692813511737773602406470783062904717",
+        "signed_weight_conditional_mean_mbbgg": "318.65637501303248966348710190699717541482667897360"
+      }
+    },
+    "light_down20": {
+      "two_tags": {
+        "expected_count": "0.57359296306345726533644228198612320327370688625770",
+        "weighted_cross_section_pb": "0.0054127421745135423442999229683740710292040386871272",
+        "mbb_first_weighted": "0.31882117141883068826314585685927135366100132563788",
+        "mbb_second_weighted": "28.801185373064916830736462829778928694621683823024",
+        "mbbgg_first_weighted": "1.7586599492349164495032511065770151202143505434854",
+        "mbbgg_second_weighted": "626.14778813153181100158955978777684290885978700233",
+        "signed_weight_conditional_mean_mbb": "58.901968935456269351607658196348450685049327077532",
+        "signed_weight_conditional_mean_mbbgg": "324.91108804623082489702770210127271806071928886189"
+      },
+      "mgg": {
+        "expected_count": "0.49909452502398623799886072975328761444620586510452",
+        "weighted_cross_section_pb": "0.0047097334845916999805042010124038377331567920782078",
+        "mbb_first_weighted": "0.23880600877921077635749784038043753708378372399357",
+        "mbb_second_weighted": "14.335435719228882771176299864094928521574763274709",
+        "mbbgg_first_weighted": "1.4978484841250068000256880992410128820092967921782",
+        "mbbgg_second_weighted": "478.18851197897222012509269750497631787775368878166",
+        "signed_weight_conditional_mean_mbb": "50.704781822683866742032834432493150704118642751609",
+        "signed_weight_conditional_mean_mbbgg": "318.03253602891703556482523953206914203785288623167"
+      }
+    },
+    "light_up20": {
+      "two_tags": {
+        "expected_count": "0.58541798107397276174973532241964441482278120467368",
+        "weighted_cross_section_pb": "0.0055243296203532822161233115301645622625268463959289",
+        "mbb_first_weighted": "0.34003763883552430505355608934569887745197506814153",
+        "mbb_second_weighted": "35.817468985884338080007498839084067239339061158696",
+        "mbbgg_first_weighted": "1.8219638477621355653745840284648925373070823265466",
+        "mbbgg_second_weighted": "678.39719836511106344141139724028329538878837243626",
+        "signed_weight_conditional_mean_mbb": "61.552742541416059775241468864724575960683857243134",
+        "signed_weight_conditional_mean_mbbgg": "329.80722964999697762247994855702402746025360986447"
+      },
+      "mgg": {
+        "expected_count": "0.50361368171336377058341722622909529904898329871786",
+        "weighted_cross_section_pb": "0.0047523787602157013408179463850172492417220075463141",
+        "mbb_first_weighted": "0.24682679662932474376836158425621410157622387365754",
+        "mbb_second_weighted": "16.441244457324405404401351769965221929203996193123",
+        "mbbgg_first_weighted": "1.5150841071217454869484742108539262708107853140479",
+        "mbbgg_second_weighted": "486.05581576458924195721461455316741114175538738063",
+        "signed_weight_conditional_mean_mbb": "51.937526254351357659154823705977083437143524474840",
+        "signed_weight_conditional_mean_mbbgg": "318.80542009933962636703181870068324176810074968081"
+      }
+    },
+    "joint_down20": {
+      "two_tags": {
+        "expected_count": "0.37224046768510104561067934171752641772797105403762",
+        "weighted_cross_section_pb": "0.0035126680560006931510738343672285083941220333906022",
+        "mbb_first_weighted": "0.21167032475531222638227952183028414159376658973689",
+        "mbb_second_weighted": "20.700498295456320421818550708907886872815696671174",
+        "mbbgg_first_weighted": "1.1488461493610209695860373333510769713754750721181",
+        "mbbgg_second_weighted": "417.90329510383130313023921523070986202710519353206",
+        "signed_weight_conditional_mean_mbb": "60.259131059570422927795502098117459714583440322559",
+        "signed_weight_conditional_mean_mbbgg": "327.05798869848983788804804355213272283288249461689"
+      },
+      "mgg": {
+        "expected_count": "0.32179105194399494303392655289355829761662996815475",
+        "weighted_cross_section_pb": "0.0030365993141475223380559521196596802040798249874335",
+        "mbb_first_weighted": "0.15603925547934984096962364462059088157654652963586",
+        "mbb_second_weighted": "9.8926110889571358171422715914531617481132841655536",
+        "mbbgg_first_weighted": "0.96665997889482598267099160467701064857096099986213",
+        "mbbgg_second_weighted": "309.27615494627996746631648096233623844578190560907",
+        "signed_weight_conditional_mean_mbb": "51.386185445133519762423555321328879869234655561593",
+        "signed_weight_conditional_mean_mbbgg": "318.33636212428659537074195799553336967733210446330"
+      }
+    },
+    "joint_up20": {
+      "two_tags": {
+        "expected_count": "0.83105205058434854469572055158742974003533083625263",
+        "weighted_cross_section_pb": "0.0078422692973592428239745244149777247966518154183581",
+        "mbb_first_weighted": "0.47175431797034321346118308605901271795302826719169",
+        "mbb_second_weighted": "46.160991936936048481071398700131988921781330012471",
+        "mbbgg_first_weighted": "2.5691048401451843302222117192245867600377152580520",
+        "mbbgg_second_weighted": "935.89632548609768962421947534857389512279048904469",
+        "signed_weight_conditional_mean_mbb": "60.155332606239222072788113309337517088413843435829",
+        "signed_weight_conditional_mean_mbbgg": "327.59712051845615363866774833708880589260915473732"
+      },
+      "mgg": {
+        "expected_count": "0.71978789795981114380280583617072968570753656074160",
+        "weighted_cross_section_pb": "0.0067923188791988334039003446104324998571145369482392",
+        "mbb_first_weighted": "0.34804587109848526334361183228805824965280124545648",
+        "mbb_second_weighted": "21.972020941544562279241873924391887339849254735291",
+        "mbbgg_first_weighted": "2.1632634781904761087420071218619602159641126998109",
+        "mbbgg_second_weighted": "692.40630164142645856181388395465155885540174546992",
+        "signed_weight_conditional_mean_mbb": "51.241097081640242230930349186486532628257044233270",
+        "signed_weight_conditional_mean_mbbgg": "318.48673724894921952289629436782300736041115680217"
+      }
+    }
+  },
+  "uncertainty": "NOT_COMPUTED_BY_THIS_MODULE; independent statistics module required",
+  "conditional_events_sha256": "d733292945e884ccf1b5434bce5e47d871082cb4995a419b7d229435aeef1c76",
+  "estimator_source_sha256": "34eee3865a004794b8d661febf198e02eaea8de89a5331885eee0ce54ff033cf"
+}

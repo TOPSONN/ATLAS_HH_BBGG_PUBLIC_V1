@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "FEASIBILITY_ONLY",
+  "source_review_status": "PASS_READ_ONLY_STATIC_INSPECTION",
+  "new_generated_events": 0,
+  "mg5_model_import_merge_or_process_execution": "NOT_EXECUTED",
+  "new_physical_cross_sections_and_adopted_branching_ratios": "UNKNOWN",
+  "calibrated_photon_fake_probability_or_transfer": "NOT_IMPLEMENTED",
+  "mg5": {
+    "version": "3.5.16",
+    "tag": "v3.5.16",
+    "commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "url": "https://github.com/mg5amcnlo/mg5amcnlo",
+    "sm_tree_HAA_vertex": false,
+    "installed_hgg_plugin_effective_HAA_vertex": true,
+    "effective_extension_is_a_standalone_full_SM": false,
+    "source_sha256": {
+      "models/sm/vertices.py": "0a4d978fb87f251253b622f6ed01cb6b4ae09dec31a131632f9494eb54541721",
+      "models/sm/restrict_no_b_mass.dat": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+      "models/hgg_plugin/vertices.py": "1e6d51bc78b14a4227d9dc9cb43269c2e942f68faab54e926ffb5b1ee5acdb2e",
+      "models/hgg_plugin/couplings.py": "307631456e9051c2991d716f455a0e755abba6e39dc61523076b3b85e37aca0f",
+      "models/hgg_plugin/coupling_orders.py": "84779fb78b2c8ad9d9e9c3529b2a95176b1fe7b5c90dc029df5a21f2ac1f8525",
+      "madgraph/interface/madgraph_interface.py": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3"
+    }
+  },
+  "pythia": {
+    "version": "8.317",
+    "tag": "pythia8317",
+    "commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+    "archive_url": "https://pythia.org/releases/pythia83/pythia8317.tgz",
+    "source_sha256": {
+      "share/Pythia8/xmldoc/ParticleDataScheme.xml": "4c92568be4323523d5745acf4f6027da7a53d31e7014f781dc00e79cb5aa5b21",
+      "share/Pythia8/xmldoc/ResonanceDecays.xml": "3d9215143c4da2692a58f437b503b233a2ed1e57fb8e0b6df1396215caa33731"
+    },
+    "forced_H_decay_external_LHE_BR_accounting": "NOT_EXECUTED_REQUIRES_SEPARATE_VALIDATION",
+    "public_manual_web_access": "403_FORBIDDEN; versioned local official XML inspected"
+  },
+  "delphes": {
+    "version": "3.5.1",
+    "commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+    "source_sha256": {
+      "modules/SimpleCalorimeter.cc": "8481d5f267168eb7413ad9b2a0f65521bf92bc7e221408e0d6324db315393976",
+      "modules/Efficiency.cc": "cd900285e24e08816e2f872d65ee657049d5a46285bd49d68ef02627d54e0dc9",
+      "modules/Isolation.cc": "e8f12d4a008446742f632aad918f752155ecad408ef0a45272a27e49ed0a7724"
+    },
+    "photon_candidate_source": "significant neutral ECAL tower excess assigned PID22; not calibrated ATLAS jet-to-photon transfer"
+  },
+  "primary_sources": [
+    {
+      "title": "ATLAS HH bb gamma gamma primary analysis",
+      "url": "https://arxiv.org/pdf/2112.11876",
+      "scope": "data-driven photon misidentification and separate single-Higgs backgrounds; no local calibration transfer"
+    },
+    {
+      "title": "MG5 decay chain syntax",
+      "url": "https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/FAQ-General-6",
+      "scope": "resonant-diagram narrow-width approximation"
+    },
+    {
+      "title": "MG5 effective Higgs couplings",
+      "url": "https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/Models/HiggsEffective",
+      "scope": "loop-induced HAA and effective-model approximation"
+    },
+    {
+      "title": "LHC Higgs Working Group XS and BR recommendations",
+      "url": "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/HiggsXSBR",
+      "scope": "future versioned recommendation source; no BR/cross-section value adopted"
+    }
+  ],
+  "limits": "No new LHE/HepMC/ROOT, model merge, width calculation, fake calibration, NLO/matching or efficiency closure. Proposed cards remain unexecuted and unsupported by existing validated profiles."
+}

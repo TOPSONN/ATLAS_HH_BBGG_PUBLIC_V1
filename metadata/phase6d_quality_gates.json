@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6D_RARE_BACKGROUND_STATISTICS_AND_SYSTEMATICS_V1",
+  "base_head": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+  "scientific_task_status": "PASS_EXISTING_INPUT_PILOT_ASSESSMENT",
+  "passes": {
+    "full1000_native_ROOT_source_cards_weights": "PASS: actual3000 native entries, hashes/indexes/source identities and fresh scientific content unchanged",
+    "independent_event_estimator": "PASS: literal bit0 formulas, eligible native reconstructed jets, conditional Bernoulli model and bounded PT-storage approximation",
+    "observed_expected_selection_preservation": "PASS: unchanged91/7/0 two tags and28/1/0 finalmgg, all1000 denominator",
+    "tagged_pair_combination_accounting": "PASS: all potential leading-pair probabilities and weighted mass moments; no new mass cut",
+    "separate_statistical_terms_and_correlations": "PASS: conditional tag variance, combined source/shower/reco pilot variance, source normalization error and nested covariance distinct",
+    "toy_sensitivity_labeling": "PASS:9 predeclared scenarios; TOY_MODEL_SENSITIVITY_ONLY; no officialATLAS claim",
+    "intervals_and_qualified_future_counts": "PASS: exact observed CP intervals, predictive Poisson-binomial, conservative zero-rate lower bound yields UNBOUNDED_INCONCLUSIVE",
+    "new_process_feasibility": "PASS_PLAN_ONLY: source/decay/BR/fake/normalization/overlap prerequisites explicit; no process execution",
+    "historical_and_installation_regression": "PASS: native,portable,C++ and original source/reference tests; all historical tracked bytes preserved"
+  },
+  "failures": [],
+  "physical_interpretation_blockers_outside_completed_assessment": {
+    "jjgg_precision": "INSUFFICIENT: observed0 and98.5211% expected final yield from source997; no finite conservative future count",
+    "official_ATLAS_systematics": "NOT_EVALUATED: toy multipliers are not calibrated efficiency errors",
+    "generator_shower_reconstruction_component_separation": "NOT_IDENTIFIABLE: one realization per source event; independent replicas required",
+    "bb_gamma_j": "BLOCKED_FOR_PHYSICAL_YIELD: validated photon-fake transfer and overlap/closure model required",
+    "ttH_and_ZH": "BLOCKED_FOR_PHYSICAL_YIELD: validated HAA decay treatment, widths and BR accounting; selected production/decay components required"
+  },
+  "generation_authorization": "NONE: automatic large production forbidden; estimates are planning evidence only",
+  "figures": "NONE_CREATED_OR_STAGED",
+  "publication": "source and bounded numerical evidence only; final remote/Draft/CI acceptance recorded separately",
+  "analysis_sha256": "23fa2f4a3669c2c8bf97d422e428abda90abd67c15872e0ae8830fd9ddc57b79"
+}

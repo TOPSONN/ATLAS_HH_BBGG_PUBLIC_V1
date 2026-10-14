@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "verification_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+  "actual_ROOT_entries_read": 3000,
+  "samples": [
+    {
+      "process": "bbgg",
+      "input": "simulation/rare_backgrounds/evidence/pilot/bbgg.jsonl",
+      "events": 1000,
+      "bytes": 1439798,
+      "sha256": "032761ac914fbed0703fb3212a5a5a95adf79280a69741a284f200bbf4b88220",
+      "ROOT_physical_readback": "PASS",
+      "binding_sha256": "33e8040a1eede7a30aadeb4666b0ecffeb13dcc97249e47df7f4fd07fd3280a0"
+    },
+    {
+      "process": "ccgg",
+      "input": "simulation/rare_backgrounds/evidence/pilot/ccgg.jsonl",
+      "events": 1000,
+      "bytes": 1454332,
+      "sha256": "dc81ff25f523eb82b5906e8576cbe105251f43c5625223d486a54d647ad809e6",
+      "ROOT_physical_readback": "PASS",
+      "binding_sha256": "f23cd62f572db57fdae2c257dee23a0d1ca5a8b6cf5e0da76fb8c321d986bca5"
+    },
+    {
+      "process": "jjgg",
+      "input": "simulation/rare_backgrounds/evidence/pilot/jjgg.jsonl",
+      "events": 1000,
+      "bytes": 1452558,
+      "sha256": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+      "ROOT_physical_readback": "PASS",
+      "binding_sha256": "f07f9a7045dbc15d5102986048a62b24079b92734a0b17ef370c63c3718b7a78"
+    }
+  ],
+  "new_physics_events_generated": 0
+}
