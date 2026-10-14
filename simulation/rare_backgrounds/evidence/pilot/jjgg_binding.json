@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "process": "jjgg",
+  "events": 1000,
+  "normalization_denominator": 1000,
+  "verification_status": "PASS",
+  "verification_scope": "actual_ROOT_native_source_card_full_file_hash",
+  "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+  "native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+  "native_scientific_content_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+  "reco_sha256": "f603c5166882853bcd21ca196c230a292d9dabfc66d3332f5067bee93644c92b",
+  "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+  "source_mg5_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+  "source_pythia_run_id": "220224a8-5332-5952-866a-58821d9c7748",
+  "input_generator_cross_section_pb": 9.436556,
+  "numerical_input": "simulation/rare_backgrounds/evidence/pilot/jjgg.jsonl",
+  "transformation": "actual ROOT photon/jet fields independently extracted; original exact source identity/decimal nominal weight and validated cut scalars retained; GenJet omitted; no ROOT rewrite",
+  "new_independent_physics_events": 0
+}

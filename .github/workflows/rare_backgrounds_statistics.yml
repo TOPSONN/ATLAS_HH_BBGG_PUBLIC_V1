@@ -1,0 +1,46 @@
+name: Rare background conditional statistics
+on:
+  push:
+    branches: [main, codex/phase6d-rare-backgrounds-statistics]
+    paths:
+      - 'simulation/rare_backgrounds/**'
+      - 'reports/phase6d_*'
+      - 'metadata/phase6d_*'
+      - '.github/workflows/rare_backgrounds_statistics.yml'
+  pull_request:
+    paths:
+      - 'simulation/rare_backgrounds/**'
+      - 'reports/phase6d_*'
+      - 'metadata/phase6d_*'
+      - '.github/workflows/rare_backgrounds_statistics.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  numerical_integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test numerical models and bounded failure controls
+        run: python3 -B -m unittest discover -s simulation/rare_backgrounds/tests -v
+      - name: Reproduce full pilot numerical evidence without ROOT or generator execution
+        run: |
+          python3 -B simulation/rare_backgrounds/scripts/analyze_pilot.py --pilot-dir simulation/rare_backgrounds/evidence/pilot --output "$RUNNER_TEMP/rare-backgrounds-reproduction"
+          cmp "$RUNNER_TEMP/rare-backgrounds-reproduction/analysis.json" simulation/rare_backgrounds/evidence/results/analysis.json
+          for profile in bbgg ccgg jjgg; do
+            cmp "$RUNNER_TEMP/rare-backgrounds-reproduction/$profile/conditional_summary.json" "simulation/rare_backgrounds/evidence/results/$profile/conditional_summary.json"
+          done
+      - name: Preserve prior input integrity and portable regression
+        run: |
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B -m unittest discover -s simulation/pythia8/tests -v
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B -m unittest discover -s simulation/mg5/tests -v
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+          python3 -B -m unittest discover -s simulation/delphes/tests -v
+      - name: Audit exact bounded numerical payload
+        run: python3 -B simulation/rare_backgrounds/scripts/audit_payload.py --tracked

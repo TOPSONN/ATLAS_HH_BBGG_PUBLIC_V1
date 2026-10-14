@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "final hardening executed on actual existing full1000 inputs, read-only; no new events",
+  "actual_native_entries_read": 3000,
+  "actual_independent_ROOT_extraction_entries_read": 3000,
+  "verification_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+  "all_reextracted_public_pilot_bytes_identical": true,
+  "source_sha256": {
+    "verify_existing_inputs.py": "af891de5031be60fb9c2fcd8df41845fc54f5ee5b46829bc45b6ddd10fcb82e2",
+    "extract_pilot.py": "be9b15f68314ab700f0d06dbcac271ce99a6827c0ebcb10137ea981234a85866"
+  },
+  "tested_controls": [
+    "exact source identity/weight JSONL checksum before/after extraction",
+    "three distinct complete processes, actual extraction count",
+    "original detector/source manifest, LHE, HepMC and sidecar hashes before/after native readback"
+  ]
+}

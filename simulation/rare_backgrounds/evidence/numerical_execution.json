@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Actual final-source-guards portable tests, complete numeric reproduction, byte comparison and bounded file scan; no native ROOT or event generation by this agent",
+  "supersedes_test_count": 48,
+  "unit_tests_executed": 51,
+  "unit_test_failures": 0,
+  "unit_test_skips": 0,
+  "unit_test_time_seconds_reported": 6.531,
+  "os": "Ubuntu24.04.4",
+  "python": "3.12.3",
+  "original_events_analyzed": 3000,
+  "fixed_scenarios": 9,
+  "new_physics_events": 0,
+  "exact_compared_files": [
+    {
+      "file": "analysis.json",
+      "sha256": "23fa2f4a3669c2c8bf97d422e428abda90abd67c15872e0ae8830fd9ddc57b79",
+      "bytes": 1878367,
+      "comparison": "EXACT_BYTE_PASS"
+    },
+    {
+      "file": "bbgg/conditional_summary.json",
+      "sha256": "c338c5be17df6dc5ea66bcd25a0296c89db6fcfdf3d06311d0ccbbbd928966d1",
+      "bytes": 17872,
+      "comparison": "EXACT_BYTE_PASS"
+    },
+    {
+      "file": "ccgg/conditional_summary.json",
+      "sha256": "68601d0e07659820100132ae01a7c25192c4828ebfe6cccd19d0eff74488dfaf",
+      "bytes": 17887,
+      "comparison": "EXACT_BYTE_PASS"
+    },
+    {
+      "file": "jjgg/conditional_summary.json",
+      "sha256": "f90d16b6a6d9b79178a8e9582eeea0175b03148ad77d310a68a18a14d3436700",
+      "bytes": 17880,
+      "comparison": "EXACT_BYTE_PASS"
+    }
+  ],
+  "source_sha256_before_and_after_unchanged": {
+    "simulation/rare_backgrounds/scripts/analyze_pilot.py": "af9177e32900d40630ca249a02db682890e52cb7781d87890f1f9a29e6fa4980",
+    "simulation/rare_backgrounds/scripts/conditional_tags.py": "34eee3865a004794b8d661febf198e02eaea8de89a5331885eee0ce54ff033cf",
+    "simulation/rare_backgrounds/scripts/statistics.py": "f81aad367d05980ba9793b7dbc4d9bf8ac841480df507daf4613ffda53afbf8f",
+    "simulation/rare_backgrounds/scripts/verify_existing_inputs.py": "af891de5031be60fb9c2fcd8df41845fc54f5ee5b46829bc45b6ddd10fcb82e2",
+    "simulation/rare_backgrounds/scripts/extract_pilot.py": "be9b15f68314ab700f0d06dbcac271ce99a6827c0ebcb10137ea981234a85866",
+    "simulation/rare_backgrounds/scripts/audit_payload.py": "2755f7586741abf7edd85fccc0d493c10da7da75c5a3b7af89278e0f5af7eef4",
+    ".github/workflows/rare_backgrounds_statistics.yml": "51f531b4dc599838b813ba3758abb35a3591b945d89c00d272b6a0a4c6adae88"
+  },
+  "payload_files_inspected_without_Git": 38,
+  "local_cache_files_excluded_from_proposed_payload_scan": 2,
+  "local_cache_publication_status": "NOT_SELECTED; tracked/staged/outgoing audit still rejects any cache payload",
+  "git_operations_by_this_agent": 0,
+  "native_source_readback_evidence": "Separate root-agent execution receipt; portable reproduction does not execute ROOT",
+  "historical_portable_regression_receipt": ".local/phase6d/workflow-publication-agent-preservation-receipt.json",
+  "tracked_staged_outgoing_Git_audit": "ROOT_AGENT_PENDING_EXPLICIT_STAGING"
+}
