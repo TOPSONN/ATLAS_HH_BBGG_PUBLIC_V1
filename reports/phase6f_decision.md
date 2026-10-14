@@ -32,13 +32,13 @@ history, source997 and scientific results remain preserved.
 |PILOT_RESOURCE_ESTIMATE|One-worker policy; projected runtime/RAM/storage UNKNOWN; measured availability and administrative budgets separated|
 |NEW_TESTS|78 PASS on Windows and WSL, zero skips;2 actual final dry-run commands with distinct seeds and4 actual rejection commands; synthetic profiles remain METHOD_ONLY|
 |EXISTING_REGRESSION|Phase6E56/Phase6D51/MG59/Pythia56/Delphes27portable+8native and42C++ checks PASS; original3×1000 ROOT inputs actual readback PASS|
-|GITHUB_CI|Exact published head CI and remote byte/tree acceptance recorded after publication; portable CI does not execute native tools or a physical pilot|
+|GITHUB_CI|Verified source/CI head4870451bafcbc0ed82e0860af11b04dcef576a39: push 38532003488 SUCCESS, pull_request 38532010736 SUCCESS. Final report-seal head CI is independently checked in PR/final response. Portable CI does not execute native tools or a physical pilot|
 |GATES_PASS|A historical/input preservation; B process; C generator assessment; D/E decay source/table assessment; F BR algebra; G retained interface/ABI assessment; H prepared profile methods; I overlap review; J tested dry-run/rejection methods; K executed regression methods|
 |GATES_FAIL|NONE in the completed readiness-method scope|
 |GATES_BLOCKED|Gate L NOT_AUTHORIZED; actual ZH integration/decay/weight closure and new detector execution; physical BR adoption and reviewed execution bridge|
 |GATES_UNKNOWN|New physical σ, adopted physicalBR/width convention/finite-width acceptance, actual external weighting, ZH runtime/RAM/storage|
-|COMMIT_HASH|Verified scientific source head recorded in publication snapshot; documentation seal final head independently reported in PR/final response|
-|PR_URL|New stacked OPEN/DRAFT PR on codex/phase6e-heavy-flavor-forensics, basebe29be7255c5009c719190cb96f43f04bb144d8f; URL recorded after creation|
+|COMMIT_HASH|Verified source/CI head4870451bafcbc0ed82e0860af11b04dcef576a39; scientific implementation commitbe32aa69b253e71805a542dad90aa6f96eed74d9. Later publication-snapshot/report seal final head independently reported in PR/final response; no self-hash claim|
+|PR_URL|[OPEN/DRAFT PR16](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/16), stacked on codex/phase6e-heavy-flavor-forensics atbe29be7255c5009c719190cb96f43f04bb144d8f|
 |NEXT_RECOMMENDED_STEP|Review/adopt the decay/BR/width/weight and execution-bridge contract, then obtain separate explicit100-event pilot authorization; no automatic larger production|
 
 For readiness gates D/E/F/G/H, PASS means the stated source/probe/algebra/profile
@@ -61,3 +61,14 @@ Evidence/operating entries:
 No physical HH result or official ATLAS detector/efficiency claim is made.
 Source997's FSR ancestry/concentration and original continuum predictions remain
 unchanged. No fake/synthetic physics reference or unapproved PDF/PNG is published.
+
+Executed source publication receipt:
+[publication_snapshot.json](../simulation/zh_pilot/evidence/publication_snapshot.json).
+All452 nontruncated remote Git blob entries match local commit objects;
+all41 new text blobs were actually downloaded and compared by exact bytes,
+GitSHA and SHA256. All411 baseline blobs and protected earlier PRs remain
+unchanged. Successful exact-source-head portable CI runs are [push](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38532003488), [pull_request](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38532010736).
+The workflow fetches complete history so the pinned baseline byte-comparison
+test can execute. The later documentation seal and its CI are checked
+independently; this snapshot adds repository-integrity evidence, not physical
+ZH/BR/shower/detector validation. Gate L remains NOT_AUTHORIZED.
