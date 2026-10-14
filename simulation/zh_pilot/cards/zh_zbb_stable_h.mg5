@@ -1,0 +1,6 @@
+# Phase6F preferred future route B: production-correlated Z->bb, stable H.
+# H->gamma gamma will require a separate validated Pythia/BR contract.
+# No output, integration, launch, width calculation, or events are authorized.
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+generate p p > z h QCD=0 QED=2, z > b b~

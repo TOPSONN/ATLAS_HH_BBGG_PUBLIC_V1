@@ -1,0 +1,5 @@
+# Phase6F reviewed alternative A: tree-level qqbar ZH, stable Z and H.
+# Parse/diagram construction only; physical event production is not authorized.
+import model sm-no_b_mass
+define p = g u c d s b u~ c~ d~ s~ b~
+generate p p > z h QCD=0 QED=2

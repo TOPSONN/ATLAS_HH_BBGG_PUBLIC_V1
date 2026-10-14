@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6F_ZH_RESONANT_BACKGROUND_PILOT_READINESS_V1",
+  "status": "PASS_READINESS_METHODS_WITH_PHYSICAL_EXECUTION_NOT_AUTHORIZED",
+  "baseline_head": "be29be7255c5009c719190cb96f43f04bb144d8f",
+  "gates_A_through_L": {
+    "A": "PASS_EXISTING_HISTORY_INPUT_PRESERVATION",
+    "B": "PASS_PARSE_AND_DIAGRAM_ONLY",
+    "C": "PASS_ASSESSED_FROZEN_LO_GENERATOR_CONTRACT",
+    "D": "PASS_NO_EVENT_H_TABLE_SOURCE_ASSESSMENT",
+    "E": "PASS_Z_DECAY_CHAIN_SPIN_SOURCE_ASSESSMENT",
+    "F": "PASS_METHOD_ONLY_EXACT_ONCE_BR_LEDGER",
+    "G": "PASS_PINNED_ABI_AND_SOURCE_INTERFACE_ASSESSMENT",
+    "H": "PASS_METHOD_INPUT_PROFILE_PREPARED",
+    "I": "PASS_OVERLAP_RISK_REVIEW",
+    "J": "PASS_ACTUAL_DRY_RUN_AND_REJECTION_COMMANDS",
+    "K": "PASS_NEW_AND_EXISTING_LOCAL_REGRESSION; EXACT_HEAD_CI_ACCEPTANCE_RECORDED_SEPARATELY",
+    "L": "NOT_AUTHORIZED"
+  },
+  "GATES_PASS": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K"
+  ],
+  "GATES_FAIL": [],
+  "GATES_BLOCKED": {
+    "L": "No subsequent explicit physical-pilot authorization",
+    "physical_acceptance": "No actual ZH integration/decay/Info-HepMC/BR/native receipts",
+    "execution_bridge": "Existing continuum controllers remain unchanged; ZH-specific physical bridge still requires separate review"
+  },
+  "GATES_UNKNOWN": [
+    "new production/exclusive cross sections",
+    "adopted physical BR/width convention and uncertainty",
+    "actual external forced-decay nominal weight transfer",
+    "finite-width/cut acceptance",
+    "ZH runtime/RAM/storage costs"
+  ],
+  "method_gate_scope": "D/E/F/G/H passes are assessments/probes/algebra/profile methods, not physical sample validation",
+  "new_tests": {
+    "Windows": 78,
+    "WSL": 78,
+    "explicit_skips": 0
+  },
+  "actual_dry_run_commands": 2,
+  "actual_rejection_commands": 4,
+  "evidence_sha256": {
+    "simulation/zh_pilot/evidence/decay_tables.json": "b5185671b8f552477d1a46e350492d0eff3cf625733de3215ae29700eee3749b",
+    "simulation/zh_pilot/evidence/environment.json": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+    "simulation/zh_pilot/evidence/generator_checks.json": "49ffa98cd3d34c62896b29aa83b5aee0527f071f2dc23f97f361fa1462d78704",
+    "simulation/zh_pilot/evidence/preservation.json": "d2e16f022b998ba2c8c8f6335c91f28560d4487876402eca6cf140fe56589e1e",
+    "simulation/zh_pilot/evidence/profile_tests.json": "28138de80f724f1db0c87d07adeee1f5010654f19ee4d5db9245a893788420cc",
+    "simulation/zh_pilot/evidence/readiness_execution.json": "889d977dfbca75fc9207e2fa9ec8f018494769671d7a6fa7049f4e86dd7815fa",
+    "simulation/zh_pilot/evidence/regressions.json": "9e5274017674c45d812d1ac4d26b4eaa9fb911e44d051c31d1530bc291ffee07"
+  },
+  "new_physics_events_generated": 0,
+  "figures_created_or_published": 0,
+  "physical_generation_authorized": false,
+  "large_generation_authorized": false,
+  "GitHub_CI": "Source snapshot and final PR/head checks record actual exact-head CI independently after publication"
+}

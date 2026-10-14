@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "METHOD_PROFILE_DEFINITIONS_PREPARED_NOT_PHYSICALLY_VALIDATED",
+  "physical_execution_authorized": false,
+  "physical_success_enabled_in_this_phase": false,
+  "target_independent_source_events": 100,
+  "maximum_method_fixture_events": 100,
+  "required_physical_decay_ids": ["Z_to_b_bbar", "H_to_gamma_gamma"],
+  "profiles": {
+    "ZH_STABLE": {
+      "source_lhe_profile": "ZH_STABLE",
+      "stable_lhe_pdgs": [23, 25],
+      "retained_lhe_resonances": [],
+      "source_included_decay_ids": [],
+      "future_missing_decay_ids": ["Z_to_b_bbar", "H_to_gamma_gamma"],
+      "scope": "Alternative inclusive stable ZH production; external forced Z has the documented production-spin limitation"
+    },
+    "ZH_ZBB_STABLE_H": {
+      "source_lhe_profile": "ZH_ZBB_STABLE_H",
+      "stable_lhe_pdgs": [5, -5, 25],
+      "retained_lhe_resonances": [23],
+      "source_included_decay_ids": ["Z_to_b_bbar"],
+      "future_missing_decay_ids": ["H_to_gamma_gamma"],
+      "scope": "Preferred MG5 Zbb resonant chain and stable H; the source Z decay must never receive another BR factor"
+    },
+    "ZH_BBGG_FORCED_DECAYS": {
+      "source_lhe_profile": "EXPLICIT_ZH_STABLE_OR_ZH_ZBB_STABLE_H_REQUIRED",
+      "required_higgs_photon_birth_pdgs": [22, 22],
+      "required_z_bottom_birth_pdgs": [5, -5],
+      "source_included_decay_ids": "DERIVED_FROM_EXPLICIT_SOURCE_LHE_PROFILE",
+      "scope": "Future post-shower decay record; source LHE validation alone cannot validate this profile"
+    }
+  },
+  "nominal_weight_names": ["input_contribution_pb", "LHE_XWGTUP_pb", "Pythia_Info_weight_pb", "converter_weight_0_pb"],
+  "additional_separate_weight_names": ["physical_BR_factor", "exclusive_contribution_pb"],
+  "weight_policy": "Preserve raw LHE and actual Info/converter columns. An observed, complete BR-inclusion ledger determines only missing external factors; no unobserved policy is adopted.",
+  "source_normalization_denominator": "ALL_ORIGINAL_INPUT_EVENTS_INCLUDING_FAILED_OR_FILTERED",
+  "units": {"lhe_momentum": "GEV", "hepmc_momentum": "GEV", "hepmc_length": "MM", "cross_section": "PB", "pythia_sigmaGen": "MB", "pb_per_mb": "1000000000"},
+  "ancestry": {
+    "higgs": "Two photon BIRTH records must have a direct H copy as unique non-photon mother and one uniquely identified original H lineage",
+    "z": "b/bbar BIRTH records must have a direct Z copy as unique non-bottom mother and one uniquely identified original Z lineage",
+    "final_photons": "Explicit selected stable direct-H-photon descendants, if present; conversion/loss can yield fewer than two and must not delete original events",
+    "ambiguity": "REJECT_DANGLING_CYCLIC_NONRECIPROCAL_DUPLICATE_OR_MULTIPLE_RESONANCE_LINEAGES",
+    "barcode_equivalence": "NEVER_ASSUMED"
+  },
+  "lhe_numeric_tolerances": {"closure_atol_gev": 0.000001, "closure_rtol": 0.000000005, "mass_shell_atol_gev2": 0.000001, "mass_shell_rtol": 0.000000005},
+  "future_native_detector": {
+    "status": "INPUT_METHOD_PREPARED_NATIVE_ZH_NOT_EXECUTED",
+    "card_path": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+    "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "working_point": "FAST_SIM_ATLAS_LIKE_BIT0_STUDY_NOT_OFFICIAL_ATLAS",
+    "jets": "Persisted native Delphes jets; PT>25GeV and abs(Eta)<2.5; native associated flavour, no hard-parton substitution",
+    "photons": "Persisted PT>25GeV, abs(Eta)<2.37, exclude1.37<abs(Eta)<1.52; leading PT>35GeV; separate H-decay truth association",
+    "tags": "Native BTag&1 retained; no redraw or forced second tag",
+    "pairing": "Two leading eligible photons and two leading tagged native jets; null tagged masses when fewer than two tags",
+    "masses": "Cartesian pair/four-object invariant masses; photon massless polar P4 and bounded signed native jet-mass convention from unchanged Phase6C",
+    "mgg_window_gev": [105, 160],
+    "mbb_cut": "NONE_ADOPTED",
+    "input_truth_profile": "H_DECAY_PHOTONS_Z_DECAY_BOTTOMS; no continuum Born-photon requirement",
+    "global_detector_energy_closure": "NOT_IMPOSED_ON_RECONSTRUCTED_OBJECTS"
+  },
+  "physical_receipts_required_later": ["explicit user authorization", "actual MG5 generation and source-card/LHE/init hashes", "actual full original source event ledger", "actual pre/post initialization inclusive and forced decay tables/widths", "adopted numeric BR source and uncertainty convention", "actual LHE/Info/converter/BR once normalization closure", "actual independent HepMC3 physics readback", "actual native ROOT schema/readback for detector-stage acceptance"],
+  "synthetic_success_label": "METHOD_ONLY",
+  "synthetic_success_is_physical_acceptance": false,
+  "new_physics_events_generated": 0
+}

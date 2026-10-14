@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "policy_id": "PHASE6F_NO_PHYSICAL_EXECUTION_V1",
+  "process": "zh",
+  "events": 100,
+  "energy_gev": 13000,
+  "workers": 1,
+  "physical_production_authorized": false,
+  "large_production_authorized": false,
+  "required_decay_ids": ["Z_to_b_bbar", "H_to_gamma_gamma"],
+  "physical_execution_gate": "NOT_AUTHORIZED",
+  "runtime_seconds_estimate": "UNKNOWN",
+  "peak_ram_bytes_estimate": "UNKNOWN",
+  "storage_bytes_estimate": "UNKNOWN",
+  "limit_scope": "user administrative budgets, not measured throughput or guaranteed upper bounds",
+  "expected_outputs": {
+    "production_lhe": "mg5/Events/pilot100/unweighted_events.lhe.gz",
+    "shower_hepmc3": "pythia/shower.hepmc3.gz",
+    "detector_root": "delphes/detector.root",
+    "source_ledger": "pythia/source_events.jsonl",
+    "decay_ledger": "validation/decay_and_br_ledger.json",
+    "validation_receipts": "validation/"
+  }
+}

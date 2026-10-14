@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INSTALLED_IDENTITY_ONLY",
+  "scope": "real hash/version/ABI/build-info checks; no integration, next, shower or detector execution",
+  "versions": {
+    "MG5": "3.5.16",
+    "Pythia8": "8.317",
+    "HepMC3": "3.3.1",
+    "Delphes": "3.5.1",
+    "ROOT": "6.40.04",
+    "CXX_standard": 20
+  },
+  "mg5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "mg5_retained_source_files_verified": 4658,
+  "mg5_entrypoint_sha256": "d899f9f367376cded43e5caed2eab6adf9a541a59982cfe10e39b33c8608ea64",
+  "mg5_actual_version_file_sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c",
+  "delphes_source_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+  "delphes_identity_file_counts": {
+    "source_sha256": 900,
+    "library_sha256": 29,
+    "header_sha256": 102,
+    "dictionary_sha256": 5
+  },
+  "native_binary_sha256": {
+    "delphes": "143e30e49a61d735a39427dd153aaf1655e37940a1f0dfb2c293de0db82c06ad",
+    "analyzer": "b3150e3fca56e20cb821657240c42ed05187cf8eb0332ab1c1e7051360e7389a"
+  },
+  "pythia_runner_sha256": "9e6e5973d6ecbdef14a204f30540797cca93f709e0521106970b0fea1094acda",
+  "hepmc_reader_sha256": "8bc49d3f31e6c71e85e4bed934d81c4a1012cfe0840f7da26f3604c1f3ea836f",
+  "local_installation_config_sha256": {
+    "mg5": "bdd63c90f87358c6f2818ba1367df4d76f1782336f7590ef50b811b381890f76",
+    "delphes": "ab6357b8894f4b4ee1dcfc9e90e22a9252d8352f0f7081965728f34d363da7de",
+    "pythia": "4851e8cda078ad4642990588c161ce0a5b7c3accb1c90366731006a038a1404e"
+  },
+  "loaded_library_paths_match_pinned_installations": true,
+  "software_installed_or_reinstalled": false,
+  "new_physics_events_generated": 0
+}
