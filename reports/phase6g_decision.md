@@ -53,9 +53,9 @@ were preserved. The two corrected method-harness setup failures and original
 failure logs are explicitly recorded in
 [regressions_and_preservation.json](../simulation/zh_pilot/phase6g/evidence/regressions_and_preservation.json).
 
-GITHUB_CI: source-only workflow and inherited readiness checks must be verified
-on the exact published head; their final receipt is separate from physical
-gateL. Hosted CI never installs or invokes physical production.
+GITHUB_CI: all3 exact-source-head runs PASS at 0f6826435109e276105d18bcc45b897cb7a2e3bf; [ZH100 guarded bridge integrity/push](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551593594), [ZH100 guarded bridge integrity/pull_request](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652855), [ZH pilot readiness integrity/pull_request](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38551652865).
+This receipt is source-only, separate from physical gateL. The report-seal head
+is checked again in the final handoff; hosted CI never invokes production.
 
 GATES_PASS: A(history/input preservation), B(frozen configuration/source methods).
 
@@ -64,12 +64,18 @@ GATES_FAIL: NONE currently evaluated.
 GATES_BLOCKED: C=NOT_AUTHORIZED; D-L=NOT_EVALUATED. Physical BR adoption remains
 separately blocked. Source GitHub publication does not promote physical gateL.
 
-COMMIT_HASH: exact final Draft PR head and handoff report are authoritative.
+COMMIT_HASH: verified implementation head 0f6826435109e276105d18bcc45b897cb7a2e3bf.
+The later report-only seal head is identified by the final Draft PR/handoff.
 
-PR_URL: the separate stacked Phase6G Draft PR is attached at publication.
+PR_URL: [Stacked Draft PR17](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/17).
 
 FINAL_VERDICT: BLOCKED_PHYSICAL_AUTHORIZATION.
 
 NEXT_RECOMMENDED_STEP: review the concrete source bridge, then the human may send
 AUTHORIZE_PHASE6G_ZH_100_RUN to authorize exactly one source100 run within the
 reviewed caps. No larger production or external physical BR adoption is implied.
+
+The exact GitHub snapshot confirms 40 downloaded changed text blobs (473645bytes), the full Git tree, all452 unchanged historical blobs and protected PR9/11-16.
+[publication_snapshot.json](../simulation/zh_pilot/phase6g/evidence/publication_snapshot.json)
+SHA256: 38a3eda2c3ba96585ace3cfd6b592be96eb7a602946d5b23b532e4be155eea80.
+This source publication does not create or validate a physical reference sample.
