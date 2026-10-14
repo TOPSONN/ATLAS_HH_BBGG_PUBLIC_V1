@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "PREPARED_NOT_EXECUTED_BY_DESIGN",
+  "process": "SINGLE_HIGGS_ZH_BBGG",
+  "base_head": "be29be7255c5009c719190cb96f43f04bb144d8f",
+  "target_independent_source_events": 100,
+  "energy_gev": 13000,
+  "preferred_source_profile": "ZH_ZBB_STABLE_H",
+  "physical_production_authorized": false,
+  "large_production_authorized": false,
+  "actual_generated_events": 0,
+  "source_included_decay_ids": [
+    "Z_to_b_bbar"
+  ],
+  "external_missing_decay_ids": "UNKNOWN_UNTIL_ACTUAL_WEIGHT_CLOSURE",
+  "physical_BR_adoption": "UNKNOWN_NOT_APPLIED",
+  "normalization_denominator": "full original production source count100, including later failures/filters",
+  "cards": [
+    {
+      "id": "process_stable",
+      "path": "simulation/zh_pilot/cards/zh_stable.mg5",
+      "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+    },
+    {
+      "id": "process_zbb",
+      "path": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "id": "run",
+      "path": "simulation/zh_pilot/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "id": "param",
+      "path": "simulation/zh_pilot/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    }
+  ],
+  "bundle_path": "simulation/zh_pilot/config/bundle.json",
+  "bundle_sha256": "6e879c6fee37a33e9f7017b463bc41ab2d12c6b17be37759f2fd79566c98b5ad",
+  "pilot_command": "bash simulation/zh_pilot/scripts/generate_pilot.sh --process zh --events 100 --seed 20261104 --energy 13000 --output NEW_LOCAL_DIRECTORY --dry-run --max-hours 2 --max-disk-gb 5",
+  "future_physical_command": "NOT_ENABLED; reject before generator call until separate authorization and reviewed physical bridge",
+  "expected_outputs": {
+    "production_lhe": "mg5/Events/pilot100/unweighted_events.lhe.gz",
+    "shower_hepmc3": "pythia/shower.hepmc3.gz",
+    "detector_root": "delphes/detector.root",
+    "source_ledger": "pythia/source_events.jsonl",
+    "decay_ledger": "validation/decay_and_br_ledger.json",
+    "validation_receipts": "validation/"
+  },
+  "projected_resources": {
+    "workers": 1,
+    "runtime_seconds": "UNKNOWN",
+    "peak_ram_bytes": "UNKNOWN",
+    "storage_bytes": "UNKNOWN",
+    "administrative_example_max_hours": 2,
+    "administrative_example_max_disk_GiB": 5
+  },
+  "validation_profiles": [
+    "ZH_STABLE",
+    "ZH_ZBB_STABLE_H",
+    "ZH_BBGG_FORCED_DECAYS"
+  ],
+  "native_detector_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "physical_LHE_HepMC_ROOT_file_hashes": "NOT_GENERATED",
+  "publication": "own source/cards/config/tests/bounded text evidence only"
+}

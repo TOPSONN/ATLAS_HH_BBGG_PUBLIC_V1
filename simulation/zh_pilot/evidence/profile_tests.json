@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "PASS_METHOD_TESTS_ONLY",
+  "physical_validation": "NOT_EXECUTED",
+  "physical_acceptance": false,
+  "physical_execution_gate": "NOT_AUTHORIZED",
+  "executed_tests": {
+    "windows": {
+      "command": "python -B -m unittest discover -s simulation/zh_pilot/tests -p test_profiles.py -v",
+      "tests_run": 24,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 2.827,
+      "log_basename": "profile-tests-windows.log",
+      "log_sha256": "18b5feaa33e5e7aa1510270ceb7e5c60e948c93e0c763e9981afce20a97cf307",
+      "log_bytes": 4036,
+      "log_retention": "LOCAL_ONLY actual completed stdout/stderr; no raw test log published",
+      "wall_elapsed_seconds": 3.339575199999672
+    },
+    "wsl_ubuntu": {
+      "command": "python3 -B -m unittest discover -s simulation/zh_pilot/tests -p test_profiles.py -v",
+      "tests_run": 24,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 7.368,
+      "log_basename": "profile-tests-wsl.log",
+      "log_sha256": "eade1defd225b09f0eb50989eed1771c31bff097cde67c160aa4436c5a9a3d6f",
+      "log_retention": "LOCAL_ONLY actual completed stdout/stderr; no raw test log published",
+      "wall_elapsed_seconds": 7.9983640039999955,
+      "log_bytes": 3910
+    }
+  },
+  "source_binding_sha256": {
+    "simulation/zh_pilot/scripts/validate_profiles.py": "dc673bbead2f47aad05babf19a83f8188c551de8a826767091d5233aaaab1a57",
+    "simulation/zh_pilot/config/input_profiles.json": "0d83998f451351eda323d3966f229f674b1830e118a163db08db6d0d2f295217",
+    "simulation/zh_pilot/tests/test_profiles.py": "a2f1b686f3d2d330ae25ece49e37067d012af0f8718417aefed0a5eaa5fca91d"
+  },
+  "covered_profile_ids": [
+    "ZH_STABLE",
+    "ZH_ZBB_STABLE_H",
+    "ZH_BBGG_FORCED_DECAYS"
+  ],
+  "method_checks": [
+    "Temporary explicitly METHOD_ONLY source LHE topologies, complete cards/init, resonance mass/width/window, finite metadata, status2 Z and direct b/bbar ancestry",
+    "Stable-final four-momentum closure without double-counting intermediate Z, quark colour/sign, qqbar source component, signed nominal weights and original denominator",
+    "Malformed XML/entity/truncation/missing events, wrong source/cards/scales/widths/mothers and fabricated physical receipts fail closed",
+    "Exact reciprocal DAG, missing/duplicate/cyclic/multiple resonance lineages, independent H-photon and Z-bottom BIRTH identities",
+    "Every selected final H photon follows only photon copies to exactly one declared H-decay birth; wrong H-copy branches and multiple finals claiming one birth rejected. Hadron-decay photons cannot substitute; photon loss/conversion retains original source count.",
+    "Exact existing ordered weight names including converter_weight_0_pb, vector-to-column binding, PB/MB conversion and explicit observed nominal transfer",
+    "Preferred source-included Z_to_b_bbar never reapplied; missing external H factor or explicitly embedded H factor counted once, unknown/repeated BRs rejected",
+    "Two-factor first-order BR covariance algebra with explicit Cauchy/PSD constraint; no implicit zero correlation",
+    "Prepared native Cartesian mass method, original stored bit0 and null tagged masses; no native ZH detector execution",
+    "Historical MG5/Pythia/HepMC/Delphes validator bytes compared to the unchanged Phase6E base"
+  ],
+  "standalone_cli": {
+    "executed": true,
+    "input": "Temporary bounded synthetic METHOD_ONLY XML fixture created by test_cli_physically_executed_on_temporary_method_fixture",
+    "result": "METHOD_ONLY",
+    "physical_mode_result": "REJECTED_NOT_AUTHORIZED",
+    "fixture_retention": "Temporary files deleted; no synthetic LHE/HepMC/ROOT reference sample published"
+  },
+  "validation_limit": "This receipt verifies code methods, serialization and failure rejection. It provides no actual ZH generation, forced-decay table/weight closure, adopted physical BR, independent native HepMC3 readback or new ROOT sample acceptance.",
+  "future_physical_receipts": "REQUIRED_BUT_MISSING; current physical entry point remains blocked even if a caller supplies a fabricated PASS flag",
+  "new_physics_events_generated": 0,
+  "new_detector_processing": 0,
+  "historical_validator_edits": false,
+  "software_installs": 0
+}

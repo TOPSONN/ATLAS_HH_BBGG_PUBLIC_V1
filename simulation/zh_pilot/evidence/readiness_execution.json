@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "status": "PASS_METHODS_AND_ACTUAL_DRY_RUN_ONLY",
+  "host_runs": [
+    {
+      "schema_version": 1,
+      "host": "Windows",
+      "status": "PASS",
+      "tests": 78,
+      "actual_tests_utc": "2026-10-14T07:44:37.331186+00:00",
+      "tests_log_sha256": "f08dc5d044b959a936b66c7743a0ad65e624a6cae34d2e3a73a575f04cea37e0",
+      "tests_elapsed_seconds": 4.149,
+      "new_physics_events_generated": 0,
+      "scope": "actual bounded method/algebra/config/CLI rejection tests, never physical acceptance"
+    },
+    {
+      "schema_version": 1,
+      "host": "WSL",
+      "status": "PASS",
+      "tests": 78,
+      "actual_tests_utc": "2026-10-14T07:44:51.271465+00:00",
+      "tests_log_sha256": "39e56dd1ba693c2415ea4af823f8f78bd20979bb025c7673a46ad04a0163b327",
+      "tests_elapsed_seconds": 11.041,
+      "new_physics_events_generated": 0,
+      "scope": "actual bounded method/algebra/config/CLI rejection tests, never physical acceptance",
+      "actual_dry_run_commands": [
+        {
+          "seed": 20261104,
+          "status": "PASS_DRY_RUN_WITH_PHYSICAL_GATES_BLOCKED",
+          "local_plan_sha256": "b0b053bf54c6ce9d94f7df900d86d3881cac238a85ff80ff2aa4be13492a1acb",
+          "prepared_run_card_sha256": "6d89d82c8b2c0e04277fb6c78c7ae1efd4453ac35982f8e2deee19c85d7bdaf5",
+          "template_run_card_sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73",
+          "frozen_card_config_files": 9,
+          "request_overrides": {
+            "nevents": "100",
+            "iseed": "20261104",
+            "ebeam1": "6500",
+            "ebeam2": "6500"
+          },
+          "actual_available_resources": {
+            "available_logical_cpus": 8,
+            "requested_workers": 1,
+            "cpu_requirement": "one worker requested; integration cost UNKNOWN",
+            "ram_available_bytes": 7506751488,
+            "ram_total_bytes": 8051191808,
+            "disk_free_bytes": 1007285342208,
+            "administrative_disk_budget_bytes": 5368709120,
+            "disk_budget_units": "GiB (1024^3 bytes)",
+            "projected_wall_seconds": "UNKNOWN",
+            "projected_peak_ram_bytes": "UNKNOWN",
+            "projected_storage_bytes": "UNKNOWN",
+            "scope": "measured current availability; no ZH throughput/RAM/storage benchmark or capacity guarantee"
+          },
+          "semantic_contract_checks": {
+            "generator": {
+              "status": "CARD_CONTRACT_CHECKED_READINESS_ONLY",
+              "physical_validation": "NOT_EXECUTED",
+              "cards_checked": 4,
+              "profile_ids": [
+                "ZH_STABLE",
+                "ZH_ZBB_STABLE_H"
+              ],
+              "new_events_generated": 0
+            },
+            "input_profiles": {
+              "status": "METHOD_PROFILE_DEFINITIONS_PREPARED",
+              "physical_validation": "NOT_EXECUTED",
+              "profiles": [
+                "ZH_STABLE",
+                "ZH_ZBB_STABLE_H",
+                "ZH_BBGG_FORCED_DECAYS"
+              ]
+            },
+            "decay": {
+              "status": "METHOD_ONLY",
+              "physical_decay_validation": "NOT_EXECUTED",
+              "external_lhe_weight_closure": "UNKNOWN",
+              "events_generated": 0,
+              "preferred_lhe_profile": "ZH_ZBB_STABLE_H",
+              "source_included_decay_ids": [
+                "Z_to_b_bbar"
+              ],
+              "planning_missing_external_decay_ids": [
+                "H_to_gamma_gamma"
+              ]
+            },
+            "cross_contracts": {
+              "status": "METHOD_CONTRACTS_MUTUALLY_CONSISTENT",
+              "physical_validation": "NOT_EXECUTED"
+            }
+          },
+          "command_log_sha256": "d4b5b9bbd5a002e2c66e11027406491ae74beee2a8394ac38458a77b8cf7143a",
+          "physical_files_created": 0
+        },
+        {
+          "seed": 42,
+          "status": "PASS_DRY_RUN_WITH_PHYSICAL_GATES_BLOCKED",
+          "local_plan_sha256": "d5f34182dd947e2f4f2096cb8f9f15595e3f697444b2fb9403fe142d10f612ce",
+          "prepared_run_card_sha256": "25952a57a9f1080370f287cb8df28ba1ac61154cd34b979af366fe623223fa84",
+          "template_run_card_sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73",
+          "frozen_card_config_files": 9,
+          "request_overrides": {
+            "nevents": "100",
+            "iseed": "42",
+            "ebeam1": "6500",
+            "ebeam2": "6500"
+          },
+          "actual_available_resources": {
+            "available_logical_cpus": 8,
+            "requested_workers": 1,
+            "cpu_requirement": "one worker requested; integration cost UNKNOWN",
+            "ram_available_bytes": 7507988480,
+            "ram_total_bytes": 8051191808,
+            "disk_free_bytes": 1007285235712,
+            "administrative_disk_budget_bytes": 5368709120,
+            "disk_budget_units": "GiB (1024^3 bytes)",
+            "projected_wall_seconds": "UNKNOWN",
+            "projected_peak_ram_bytes": "UNKNOWN",
+            "projected_storage_bytes": "UNKNOWN",
+            "scope": "measured current availability; no ZH throughput/RAM/storage benchmark or capacity guarantee"
+          },
+          "semantic_contract_checks": {
+            "generator": {
+              "status": "CARD_CONTRACT_CHECKED_READINESS_ONLY",
+              "physical_validation": "NOT_EXECUTED",
+              "cards_checked": 4,
+              "profile_ids": [
+                "ZH_STABLE",
+                "ZH_ZBB_STABLE_H"
+              ],
+              "new_events_generated": 0
+            },
+            "input_profiles": {
+              "status": "METHOD_PROFILE_DEFINITIONS_PREPARED",
+              "physical_validation": "NOT_EXECUTED",
+              "profiles": [
+                "ZH_STABLE",
+                "ZH_ZBB_STABLE_H",
+                "ZH_BBGG_FORCED_DECAYS"
+              ]
+            },
+            "decay": {
+              "status": "METHOD_ONLY",
+              "physical_decay_validation": "NOT_EXECUTED",
+              "external_lhe_weight_closure": "UNKNOWN",
+              "events_generated": 0,
+              "preferred_lhe_profile": "ZH_ZBB_STABLE_H",
+              "source_included_decay_ids": [
+                "Z_to_b_bbar"
+              ],
+              "planning_missing_external_decay_ids": [
+                "H_to_gamma_gamma"
+              ]
+            },
+            "cross_contracts": {
+              "status": "METHOD_CONTRACTS_MUTUALLY_CONSISTENT",
+              "physical_validation": "NOT_EXECUTED"
+            }
+          },
+          "command_log_sha256": "41d92a6d0f3b9d540a039e2b434979aa56cd9b9fa87f3f6456d3a234995d50a5",
+          "physical_files_created": 0
+        }
+      ],
+      "actual_negative_commands": [
+        {
+          "case": "unauthorized_physical",
+          "exit_code": 2,
+          "output_created": false,
+          "actual_log_sha256": "ac36575515bc2e7b11c0fbfd46687d2c2dee2479b0f5dfcee2e3338c7ef5fc38"
+        },
+        {
+          "case": "large_request",
+          "exit_code": 2,
+          "output_created": false,
+          "actual_log_sha256": "14b7b02dc13abbfc90f9c18708332a04897773171a14c60f6d3cab3f16497135"
+        },
+        {
+          "case": "unsupported_energy",
+          "exit_code": 2,
+          "output_created": false,
+          "actual_log_sha256": "14b7b02dc13abbfc90f9c18708332a04897773171a14c60f6d3cab3f16497135"
+        },
+        {
+          "case": "nonfinite_budget",
+          "exit_code": 2,
+          "output_created": false,
+          "actual_log_sha256": "a130e2140f4a05a4c9272fd1298aefe14bea969d45fc4a06a7bd119385734b25"
+        }
+      ],
+      "dry_run_command": "bash simulation/zh_pilot/scripts/generate_pilot.sh --process zh --events 100 --seed 20261104 --energy 13000 --output NEW_LOCAL_DIRECTORY --dry-run --max-hours 2 --max-disk-gb 5",
+      "output_policy": "$HOME/simulations/zh_pilot_plans; user-local text only",
+      "final_controller_sha256": "b68c216cede730269afdf4858bdf79e2ad88ef679be5169263ca0fa9d01fb850",
+      "final_environment_checker_sha256": "9524584a30240ef877a820c004bfba177ca06350af077c96fafabe7fe7c625a0"
+    }
+  ],
+  "physical_pilot": "NOT_AUTHORIZED",
+  "new_physics_events_generated": 0
+}

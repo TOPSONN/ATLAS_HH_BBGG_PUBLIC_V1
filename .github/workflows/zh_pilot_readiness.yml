@@ -1,0 +1,50 @@
+name: ZH pilot readiness integrity
+on:
+  push:
+    branches: [main, codex/phase6f-zh-pilot-readiness]
+    paths:
+      - 'simulation/zh_pilot/**'
+      - 'reports/phase6f_*'
+      - 'metadata/phase6f_*'
+      - '.github/workflows/zh_pilot_readiness.yml'
+  pull_request:
+    paths:
+      - 'simulation/zh_pilot/**'
+      - 'reports/phase6f_*'
+      - 'metadata/phase6f_*'
+      - '.github/workflows/zh_pilot_readiness.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  readiness_integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test independent readiness methods and rejection guards
+        run: python3 -B -m unittest discover -s simulation/zh_pilot/tests -v
+      - name: Reject unauthorized physical execution without installed tools
+        run: |
+          set +e
+          python3 -B simulation/zh_pilot/scripts/prepare_pilot.py --process zh --events 100 --seed 20261104 --energy 13000 > "$RUNNER_TEMP/zh-rejection.log" 2>&1
+          status=$?
+          set -e
+          test "$status" -eq 2
+          grep -q NOT_AUTHORIZED "$RUNNER_TEMP/zh-rejection.log"
+      - name: Preserve previous forensic and reference methods
+        run: |
+          python3 -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v
+          python3 -B simulation/heavy_flavour_forensics/scripts/source997.py --verify-evidence simulation/heavy_flavour_forensics/evidence/source997.json --manifest metadata/phase6e_source997_manifest.json
+          python3 -B -m unittest discover -s simulation/rare_backgrounds/tests -v
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B -m unittest discover -s simulation/mg5/tests -v
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B -m unittest discover -s simulation/pythia8/tests -v
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+          python3 -B -m unittest discover -s simulation/delphes/tests -v
+      - name: Audit source and bounded text payload
+        run: python3 -B simulation/zh_pilot/scripts/audit_payload.py --tracked

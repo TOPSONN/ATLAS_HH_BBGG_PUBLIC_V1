@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "status": "PASS_PARSE_AND_CARD_READBACK_ONLY",
+  "source_identity": {
+    "mg5_version": "3.5.16",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git"
+  },
+  "installation_retained_source_identity_verified_before_after": true,
+  "installed_model_cache_unchanged": true,
+  "automatic_model_conversion_disabled": true,
+  "model_cache_write_disabled": true,
+  "python_bytecode_write_disabled": true,
+  "generator_contract_sha256": "a385af80aebb8462b73c6eb83de54a7f996d4f1e4d5e6aff840b5c83f44d2cf4",
+  "checker_source_sha256": "0774a13204e990e4ffc0c850caed2031f4dcbc35d4398ba37e56b88881eb97b4",
+  "cards": [
+    {
+      "id": "process_stable",
+      "path": "simulation/zh_pilot/cards/zh_stable.mg5",
+      "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+    },
+    {
+      "id": "process_zbb",
+      "path": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "id": "run",
+      "path": "simulation/zh_pilot/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "id": "param",
+      "path": "simulation/zh_pilot/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    }
+  ],
+  "source_files_sha256": {
+    "models/sm/restrict_no_b_mass.dat": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+    "models/sm/parameters.py": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+    "models/model_reader.py": "74745c262cfc638e43d7772b684c4e09d8ead3b312dd77c9e8e6ae296033f7d4",
+    "models/write_param_card.py": "7ffdafd3b7f279724b83d646b7a95e716576a3640749a3ec61d301799f4464db",
+    "madgraph/various/banner.py": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a",
+    "madgraph/interface/common_run_interface.py": "5745d31d6172182723bf761d7203dbb8bf6fbbee43bbdbab7b4d2c33df459752",
+    "Template/LO/Cards/run_card.dat": "24611f33c2e2cef72c447f0c5380c92e030b31c4b14c5b34d0fde0f60aa4de36",
+    "Template/LO/lib/Pdfdata/cteq6l1.tbl": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058",
+    "Template/LO/Source/PDF/pdfwrap.f": "32164b7098c60d94a3985781aba0ed0b348e3acbf1fe860c153227253c834638",
+    "Template/LO/SubProcesses/setcuts.f": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18",
+    "Template/LO/SubProcesses/myamp.f": "cf39421ee7781cb7899fa235a841e478c005df3c408357661b5733bab53ed7b8"
+  },
+  "checks": [
+    {
+      "profile": "ZH_STABLE",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate p p > z h QCD=0 QED=2"
+      ],
+      "amplitude_records": [
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        }
+      ],
+      "production_record_count": 5,
+      "decay_record_count": 0,
+      "actual_parameters": {
+        "mdl_MZ": 91.188,
+        "mdl_MH": 125.0,
+        "mdl_WZ": 2.441404,
+        "mdl_WH": 0.00638233934,
+        "aEWM1": 132.507,
+        "mdl_Gf": 1.16639e-05,
+        "aS": 0.129783,
+        "mdl_MW": 80.41900244575616,
+        "mdl_sw2": 0.22224648578577766
+      },
+      "actual_restricted_mass_symbols": {
+        "4": "ZERO",
+        "5": "ZERO"
+      },
+      "restricted_c_b_yukawa_parameters_removed": true,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED",
+      "events_generated": 0
+    },
+    {
+      "profile": "ZH_ZBB_STABLE_H",
+      "status": "PASS_PARSE_AND_TREE_DIAGRAM_CONSTRUCTION",
+      "commands": [
+        "import model sm-no_b_mass",
+        "define p = g u c d s b u~ c~ d~ s~ b~",
+        "generate p p > z h QCD=0 QED=2, z > b b~"
+      ],
+      "amplitude_records": [
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            2,
+            -2
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            4,
+            -4
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            1,
+            -1
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            3,
+            -3
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "production",
+          "initial_pdgs": [
+            5,
+            -5
+          ],
+          "final_pdgs": [
+            23,
+            25
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 2
+            }
+          ]
+        },
+        {
+          "scope": "Z_decay",
+          "initial_pdgs": [
+            23
+          ],
+          "final_pdgs": [
+            5,
+            -5
+          ],
+          "diagram_count": 1,
+          "actual_amplitude_orders": [
+            {
+              "QCD": 0,
+              "QED": 1
+            }
+          ]
+        }
+      ],
+      "production_record_count": 5,
+      "decay_record_count": 1,
+      "actual_parameters": {
+        "mdl_MZ": 91.188,
+        "mdl_MH": 125.0,
+        "mdl_WZ": 2.441404,
+        "mdl_WH": 0.00638233934,
+        "aEWM1": 132.507,
+        "mdl_Gf": 1.16639e-05,
+        "aS": 0.129783,
+        "mdl_MW": 80.41900244575616,
+        "mdl_sw2": 0.22224648578577766
+      },
+      "actual_restricted_mass_symbols": {
+        "4": "ZERO",
+        "5": "ZERO"
+      },
+      "restricted_c_b_yukawa_parameters_removed": true,
+      "cross_section_pb": "UNKNOWN_NOT_INTEGRATED",
+      "events_generated": 0
+    }
+  ],
+  "official_pdf_id": 10042,
+  "official_run_card_readback": {
+    "run_tag": "phase6f_zh_pilot",
+    "gridpack": false,
+    "time_of_flight": -1.0,
+    "nevents": 100,
+    "iseed": 620101,
+    "bypass_check": [],
+    "python_seed": -2,
+    "lpp1": 1,
+    "lpp2": 1,
+    "ebeam1": 6500.0,
+    "ebeam2": 6500.0,
+    "polbeam1": 0.0,
+    "polbeam2": 0.0,
+    "nb_proton1": 1,
+    "nb_proton2": 1,
+    "nb_neutron1": 0,
+    "nb_neutron2": 0,
+    "mass_ion1": -1.0,
+    "mass_ion2": -1.0,
+    "pdlabel": "cteq6l1",
+    "pdlabel1": "cteq6l1",
+    "pdlabel2": "cteq6l1",
+    "lhaid": 10042,
+    "fixed_ren_scale": true,
+    "fixed_fac_scale": true,
+    "fixed_fac_scale1": true,
+    "fixed_fac_scale2": true,
+    "fixed_extra_scale": false,
+    "scale": 216.188,
+    "dsqrt_q2fact1": 216.188,
+    "dsqrt_q2fact2": 216.188,
+    "mue_ref_fixed": 91.188,
+    "dynamical_scale_choice": -1,
+    "mue_over_ref": 1.0,
+    "ievo_eva": 0,
+    "bias_module": "None",
+    "bias_parameters": {},
+    "scalefact": 1.0,
+    "ickkw": 0,
+    "highestmult": 1,
+    "ktscheme": 1,
+    "alpsfact": 1.0,
+    "chcluster": false,
+    "pdfwgt": true,
+    "asrwgtflavor": 5,
+    "clusinfo": true,
+    "custom_fcts": [],
+    "lhe_version": 3.0,
+    "boost_event": "False",
+    "me_frame": [
+      1,
+      2
+    ],
+    "frame_id": 6,
+    "event_norm": "average",
+    "keep_log": "normal",
+    "auto_ptj_mjj": true,
+    "bwcutoff": 15.0,
+    "cut_decays": false,
+    "dsqrt_shat": 0.0,
+    "nhel": 0,
+    "ptj": 0.0,
+    "ptb": 0.0,
+    "pta": 0.0,
+    "ptl": 0.0,
+    "misset": 0.0,
+    "ptheavy": 0.0,
+    "ptonium": 1.0,
+    "ptjmax": -1.0,
+    "ptbmax": -1.0,
+    "ptamax": -1.0,
+    "ptlmax": -1.0,
+    "missetmax": -1.0,
+    "ej": 0.0,
+    "eb": 0.0,
+    "ea": 0.0,
+    "el": 0.0,
+    "ejmax": -1.0,
+    "ebmax": -1.0,
+    "eamax": -1.0,
+    "elmax": -1.0,
+    "etaj": -1.0,
+    "etab": -1.0,
+    "etaa": -1.0,
+    "etal": -1.0,
+    "etaonium": 0.6,
+    "etajmin": 0.0,
+    "etabmin": 0.0,
+    "etaamin": 0.0,
+    "etalmin": 0.0,
+    "drjj": 0.0,
+    "drbb": 0.0,
+    "drll": 0.0,
+    "draa": 0.0,
+    "drbj": 0.0,
+    "draj": 0.0,
+    "drjl": 0.0,
+    "drab": 0.0,
+    "drbl": 0.0,
+    "dral": 0.0,
+    "drjjmax": -1.0,
+    "drbbmax": -1.0,
+    "drllmax": -1.0,
+    "draamax": -1.0,
+    "drbjmax": -1.0,
+    "drajmax": -1.0,
+    "drjlmax": -1.0,
+    "drabmax": -1.0,
+    "drblmax": -1.0,
+    "dralmax": -1.0,
+    "mmjj": 0.0,
+    "mmbb": 0.0,
+    "mmaa": 0.0,
+    "mmll": 0.0,
+    "mmjjmax": -1.0,
+    "mmbbmax": -1.0,
+    "mmaamax": -1.0,
+    "mmllmax": -1.0,
+    "mmnl": 0.0,
+    "mmnlmax": -1.0,
+    "ptllmin": 0.0,
+    "ptllmax": -1.0,
+    "xptj": 0.0,
+    "xptb": 0.0,
+    "xpta": 0.0,
+    "xptl": 0.0,
+    "ptj1min": 0.0,
+    "ptj1max": -1.0,
+    "ptj2min": 0.0,
+    "ptj2max": -1.0,
+    "ptj3min": 0.0,
+    "ptj3max": -1.0,
+    "ptj4min": 0.0,
+    "ptj4max": -1.0,
+    "cutuse": 0,
+    "ptl1min": 0.0,
+    "ptl1max": -1.0,
+    "ptl2min": 0.0,
+    "ptl2max": -1.0,
+    "ptl3min": 0.0,
+    "ptl3max": -1.0,
+    "ptl4min": 0.0,
+    "ptl4max": -1.0,
+    "htjmin": 0.0,
+    "htjmax": -1.0,
+    "ihtmin": 0.0,
+    "ihtmax": -1.0,
+    "ht2min": 0.0,
+    "ht3min": 0.0,
+    "ht4min": 0.0,
+    "ht2max": -1.0,
+    "ht3max": -1.0,
+    "ht4max": -1.0,
+    "ptgmin": 0.0,
+    "r0gamma": 0.4,
+    "xn": 1.0,
+    "epsgamma": 1.0,
+    "isoem": true,
+    "xetamin": 0.0,
+    "deltaeta": 0.0,
+    "ktdurham": -1.0,
+    "dparameter": 0.4,
+    "ptlund": -1.0,
+    "pdgs_for_merging_cut": [
+      21,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "maxjetflavor": 5,
+    "xqcut": 0.0,
+    "use_syst": false,
+    "systematics_program": "systematics",
+    "systematics_arguments": [
+      "--mur=0.5,1,2",
+      "--muf=0.5,1,2",
+      "--pdf=errorset"
+    ],
+    "sys_scalefact": "0.5 1 2",
+    "sys_alpsfact": "None",
+    "sys_matchscale": "auto",
+    "sys_pdf": "errorset",
+    "sys_scalecorrelation": -1,
+    "gridrun": false,
+    "fixed_couplings": true,
+    "mc_grouped_subproc": true,
+    "xmtcentral": 0.0,
+    "d": 1.0,
+    "gseed": 0,
+    "issgridfile": "",
+    "job_strategy": 0,
+    "hard_survey": 0,
+    "tmin_for_channel": -1.0,
+    "second_refine_treshold": 0.9,
+    "survey_splitting": -1,
+    "survey_nchannel_per_job": 2,
+    "refine_evt_by_job": -1,
+    "small_width_treatment": 1e-06,
+    "hel_recycling": true,
+    "hel_filtering": true,
+    "hel_splitamp": true,
+    "hel_zeroamp": true,
+    "SDE_strategy": 1,
+    "global_flag": "-O",
+    "aloha_flag": "",
+    "matrix_flag": "",
+    "pt_min_pdg": {},
+    "pt_max_pdg": {},
+    "E_min_pdg": {},
+    "E_max_pdg": {},
+    "eta_min_pdg": {},
+    "eta_max_pdg": {},
+    "mxx_min_pdg": {},
+    "mxx_only_part_antipart": {
+      "default": false
+    },
+    "pdg_cut": [
+      0
+    ],
+    "ptmin4pdg": [
+      0.0
+    ],
+    "ptmax4pdg": [
+      -1.0
+    ],
+    "Emin4pdg": [
+      0.0
+    ],
+    "Emax4pdg": [
+      -1.0
+    ],
+    "etamin4pdg": [
+      0.0
+    ],
+    "etamax4pdg": [
+      -1.0
+    ],
+    "mxxmin4pdg": [
+      -1.0
+    ],
+    "mxxpart_antipart": [
+      false
+    ]
+  },
+  "events_generated": 0,
+  "process_export_integration_launch_width_calculation_executed": false,
+  "physical_pilot": "NOT_AUTHORIZED",
+  "physical_cross_section_BR_decay_shower_closure": "NOT_EVALUATED"
+}

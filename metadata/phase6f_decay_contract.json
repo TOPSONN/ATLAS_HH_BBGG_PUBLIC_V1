@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "contract_id": "PHASE6F_ZH_DECAY_CONTRACT_V1",
+  "status": "PREPARED_MODEL_TABLE_PROBED_PHYSICAL_GATES_BLOCKED",
+  "physical_decay_validation": "NOT_EXECUTED",
+  "external_lhe_weight_closure": "UNKNOWN",
+  "physical_production_authorized": false,
+  "apply_physical_BR_to_nominal_weights": false,
+  "preferred_route": "B_MG5_ZBB_STABLE_H",
+  "preferred_lhe_profile": "ZH_ZBB_STABLE_H",
+  "preferred_process_card": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+  "preferred_pythia_overlay": "simulation/zh_pilot/cards/preferred_higgs_decay.cmnd",
+  "alternative_route": "A_STABLE_ZH_EXTERNAL_FORCED_Z_SPIN_LIMITATION",
+  "required_physical_decay_ids": [
+    "Z_to_b_bbar",
+    "H_to_gamma_gamma"
+  ],
+  "source_included_decay_ids": [
+    "Z_to_b_bbar"
+  ],
+  "planning_missing_external_decay_ids": [
+    "H_to_gamma_gamma"
+  ],
+  "already_applied_decay_ids": [],
+  "nominal_decay_ids_in_pythia_weight": "UNKNOWN",
+  "nominal_ledger_scope": "Additional factors relative to source nominal weight; source-included Z is never applied again",
+  "missing_external_decay_ids": "UNKNOWN_UNTIL_MEASURED_CLOSURE",
+  "pythia_forcing_switches": [
+    "25:onMode = off",
+    "25:onIfMatch = 22 22"
+  ],
+  "slha_policy": {
+    "readFrom": 0,
+    "scope": "SM-only proposal; prevent external SLHA masses/decays replacing separately probed model tables",
+    "does_not_override_source_Z_propagator_width": true
+  },
+  "mass_inputs_gev": {
+    "Z": "91.188",
+    "H": "125"
+  },
+  "source_MG_widths_gev": {
+    "Z": "2.441404",
+    "H": "0.00638233934"
+  },
+  "source_width_scope": "Restricted MG model fixed input; Zbb source propagator uses MG width, stable H width unused in its external production kinematics",
+  "pythia_width_scope": "Initialized Pythia SM model; Z table diagnostic only for predecayed preferred source; H model recomputed with Pythia inputs, not imported MG SLHA",
+  "electroweak_scheme_scope": "MG and Pythia have distinct documented model EW inputs; matching MH/MZ and named PDF does not establish precision BR/scheme consistency",
+  "decays": {
+    "Z_to_b_bbar": {
+      "pdg_id": 23,
+      "daughter_pdgs": [
+        5,
+        -5
+      ],
+      "model_value_status": "PROBED_MODEL_VALUE_NOT_PHYSICAL_ADOPTION",
+      "model_total_width_gev": "2.5042006900866638",
+      "model_partial_width_gev": "0.38145723530671699",
+      "model_inclusive_BR": "0.1523269428112472",
+      "physical_adopted_BR": "UNKNOWN",
+      "physical_adopted_total_width_gev": "UNKNOWN",
+      "physical_adopted_partial_width_gev": "UNKNOWN",
+      "forced_sampling_probability": "1",
+      "forced_probability_scope": "Conditional draw among the one enabled channel; not physical branching ratio",
+      "model_source_evidence": "simulation/zh_pilot/evidence/decay_tables.json#tables/inclusive_after_init/Z",
+      "physical_reference_comparison": {
+        "status": "REFERENCE_ONLY_NOT_ADOPTED",
+        "source_url": "https://pdg.lbl.gov/2025/listings/rpp2025-list-z-boson.pdf",
+        "source_version": "PDG 2025 Z listing; total-width page2 and direct bb branching-ratio page4",
+        "total_width_gev": "2.4955",
+        "total_width_uncertainty_gev": "0.0023",
+        "inclusive_BR": "0.1512",
+        "inclusive_BR_uncertainty": "0.0005",
+        "derived_partial_width_gev": "0.3773196",
+        "partial_width_scope": "Product of rounded reference central values; no covariance or independent partial-width precision adopted",
+        "BR_denominator": "All Z decays, not R_b relative to hadronic Z decays"
+      }
+    },
+    "H_to_gamma_gamma": {
+      "pdg_id": 25,
+      "daughter_pdgs": [
+        22,
+        22
+      ],
+      "model_value_status": "PROBED_MODEL_VALUE_NOT_PHYSICAL_ADOPTION",
+      "model_total_width_gev": "0.0040834219879883659",
+      "model_partial_width_gev": "9.3777064667590622e-06",
+      "model_inclusive_BR": "0.0022965313147512443",
+      "physical_adopted_BR": "UNKNOWN",
+      "physical_adopted_total_width_gev": "UNKNOWN",
+      "physical_adopted_partial_width_gev": "UNKNOWN",
+      "forced_sampling_probability": "1",
+      "forced_probability_scope": "Conditional draw among the one enabled channel; not physical branching ratio",
+      "model_source_evidence": "simulation/zh_pilot/evidence/decay_tables.json#tables/inclusive_after_init/H",
+      "physical_reference_comparison": {
+        "status": "REFERENCE_ONLY_NOT_ADOPTED",
+        "source_url": "https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR",
+        "source_version": "CERN Yellow Report4 SM Higgs two-gauge-boson table, MH125.00GeV row",
+        "higgs_mass_gev": "125.00",
+        "total_width_gev": "0.004088",
+        "inclusive_BR": "0.002270",
+        "derived_partial_width_gev": "0.00000927976",
+        "partial_width_scope": "Product of rounded tabulated central values; not a separate partial-width calculation",
+        "uncertainty_adoption": "NONE; table theory/parametric components not combined or applied"
+      }
+    }
+  },
+  "probe_evidence": {
+    "path": "simulation/zh_pilot/evidence/decay_tables.json",
+    "sha256": "b5185671b8f552477d1a46e350492d0eff3cf625733de3215ae29700eee3749b"
+  },
+  "file_bindings": [
+    {
+      "path": "simulation/zh_pilot/cards/preferred_higgs_decay.cmnd",
+      "sha256": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+    },
+    {
+      "path": "simulation/pythia8/config/baseline_shower.cmnd",
+      "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+    },
+    {
+      "path": "simulation/zh_pilot/src/inspect_decay_tables.cxx",
+      "sha256": "62863a5b50289fbbbdc94d8b0d2f4499b1e5b27e96d56017486bd0fa32820820"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_decay_tables.py",
+      "sha256": "19e7f1df9ded5167584ea5cb470c0b53586528fe633a485ef05b1f886ff07a9a"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_stable.mg5",
+      "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    }
+  ],
+  "units": {
+    "cross_section": "PB",
+    "LHE_XWGTUP": "PB_FOR_ABS_IDWTUP4",
+    "Pythia_Info_weight": "PB_FOR_ABS_IDWTUP4",
+    "Pythia_sigmaGen": "MB",
+    "pb_per_mb": "1000000000"
+  },
+  "nominal_weight_columns": [
+    "input_contribution_pb",
+    "LHE_XWGTUP_pb",
+    "Pythia_Info_weight_pb",
+    "converter_weight_0_pb"
+  ],
+  "additional_separate_weight_columns": [
+    "physical_BR_factor",
+    "exclusive_contribution_pb"
+  ],
+  "normalization_denominator": "FULL_ORIGINAL_SOURCE_EVENT_COUNT_INCLUDING_FAILED_OR_FILTERED",
+  "prospective_exclusive_formula": "Pythia_Info_weight_pb / full_original_source_count * measured_missing_external_BR_factor",
+  "double_normalization_forbidden": [
+    "second source Z BR",
+    "already embedded/applied H BR",
+    "multiplying LHE weight by sigma/N again",
+    "second event-weight mb-to-pb conversion"
+  ],
+  "future_physical_gates": [
+    "explicit separate pilot authorization",
+    "actual hash-bound MG source/LHE/init and complete count",
+    "actual external-LHE initialized original/forced tables",
+    "reviewed physical BR and width scheme adoption",
+    "actual measured signed LHE/Info/converter/BR ledger closure",
+    "independent HepMC ancestry/units/physics validation",
+    "actual native detector-stage validation"
+  ],
+  "new_physics_events_generated": 0,
+  "synthetic_algebra_scope": "SYNTHETIC_METHOD_ONLY; never a physical decay or normalization receipt"
+}
