@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
           # Preserve the Phase7A immutable bundle's exact source bindings while
           # the separate campaign job checks the current authorized campaign.
-          ref: ${{ (github.head_ref == 'codex/phase7b7c7d-ggf-hh-signal' || github.head_ref == 'codex/phase7e-hh-integration-convergence' || github.head_ref == 'codex/phase7f-hh-effective-config-lock') && 'd9fe33f97773367a41b8877568401af594eeb2a6' || github.sha }}
+          ref: ${{ (github.head_ref == 'codex/phase7b7c7d-ggf-hh-signal' || github.head_ref == 'codex/phase7e-hh-integration-convergence' || github.head_ref == 'codex/phase7f-hh-effective-config-lock' || github.head_ref == 'codex/phase7g-hh-matched-integration') && 'd9fe33f97773367a41b8877568401af594eeb2a6' || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

@@ -1,0 +1,32 @@
+name: HH matched integration preparation and semantics
+on:
+  push:
+    branches: [codex/phase7g-hh-matched-integration]
+  pull_request:
+    paths: ['simulation/hh_signal/matched_integration/**', 'simulation/hh_signal/campaign/**', 'metadata/phase7g_*', 'reports/phase7g_*', '.github/workflows/hh_signal_matched_integration.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preparation_only_no_integrals:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scientific and negative safety methods; no generator execution
+        run: python3 -B -m unittest simulation.hh_signal.matched_integration.test_matched simulation.hh_signal.config_lock.test_guards simulation.hh_signal.integration_audit.test_audit simulation.hh_signal.campaign.test_campaign -v
+      - name: Actual bounded non-integrating evidence and immutable reference regression
+        run: |
+          python3 -B -m simulation.hh_signal.matched_integration.validate
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: Every outgoing commit, index, historical blobs and evidence hashes
+        run: python3 -B -m simulation.hh_signal.matched_integration.audit_payload
