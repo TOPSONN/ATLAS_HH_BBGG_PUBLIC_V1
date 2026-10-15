@@ -2,8 +2,8 @@
   "schema_version": 1,
   "project": "ATLAS_HH_BBGG_PUBLIC_V1",
   "task": "PHASE6G_THREE_NEW_BACKGROUNDS_FULL_CHAIN_1K_V1",
-  "created_at_utc": "2026-10-15T02:14:55.510752+00:00",
-  "status": "PHYSICAL_FULL_CHAINS_PASS_GITHUB_PUBLICATION_PENDING",
+  "created_at_utc": "2026-10-15T02:34:07.869415+00:00",
+  "status": "PASS_TASK_ACCEPTANCE_WITH_INTERPRETATION_LIMITS",
   "physical_chain_verdict": "PASS_THREE_FULL_CHAINS_WITH_SCOPE_LIMITS",
   "reviewed_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
   "versions": {
@@ -4354,11 +4354,704 @@
     }
   },
   "publication": {
-    "status": "PENDING_ACTUAL_GITHUB_PUBLICATION_AND_FINAL_HEAD_CI",
-    "commit_hash": "PENDING",
-    "pr_url": "PENDING",
-    "CI": "NOT_EXECUTED_YET",
-    "remote_reference_hashes": "NOT_VERIFIED_YET"
+    "schema_version": 1,
+    "status": "PASS_REMOTE_REFERENCE_HASHES_AND_FINAL_HEAD_CI",
+    "commit_hash": "1c4e4add9de4e13c5c4e6d255723665379a39847",
+    "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/18",
+    "CI": "PASS_2_OF_2_RUNS_AT_VERIFIED_SOURCE_EVIDENCE_HEAD",
+    "remote_reference_hashes": "PASS_90_ACTUAL_GITHUB_BLOBS_47102739_BYTES",
+    "CI_details": [
+      {
+        "check_job_id": 116214282486,
+        "head_sha": "1c4e4add9de4e13c5c4e6d255723665379a39847",
+        "name": "source_and_evidence",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38671135556/job/116214282486",
+        "reported_suites": [
+          "Ran 134 tests in 1.478s",
+          "Ran 78 tests in 0.970s",
+          "Ran 56 tests in 1.438s",
+          "Ran 51 tests in 5.905s"
+        ],
+        "new_suite_skipped": 1,
+        "selected_reference_validation_PASS": true,
+        "outgoing_payload_audit_PASS": true,
+        "tool_log_excerpt_truncated": true
+      },
+      {
+        "check_job_id": 116214169835,
+        "head_sha": "1c4e4add9de4e13c5c4e6d255723665379a39847",
+        "name": "source_and_evidence",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38671099755/job/116214169835",
+        "reported_suites": [
+          "Ran 134 tests in 1.435s",
+          "Ran 78 tests in 0.910s",
+          "Ran 56 tests in 1.387s",
+          "Ran 51 tests in 5.712s"
+        ],
+        "new_suite_skipped": 1,
+        "selected_reference_validation_PASS": true,
+        "outgoing_payload_audit_PASS": true,
+        "tool_log_excerpt_truncated": true
+      }
+    ],
+    "draft": true,
+    "base": "codex/phase6f-zh-pilot-readiness",
+    "old_PRs_unchanged": 17,
+    "remote_reference_readback": {
+      "schema_version": 1,
+      "status": "PASS_ACTUAL_REMOTE_REFERENCE_BYTE_HASHES",
+      "source_evidence_head": "1c4e4add9de4e13c5c4e6d255723665379a39847",
+      "pr_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/18",
+      "draft": true,
+      "base": "codex/phase6f-zh-pilot-readiness",
+      "remote_files_verified": 90,
+      "remote_reference_bytes_verified": 47102739,
+      "verified_at_utc": "2026-10-15T02:30:11.504254+00:00",
+      "old_PRs_unchanged": 17,
+      "new_MC_events": 0,
+      "release_published": false,
+      "figures_published": false,
+      "files": [
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/delphes/cutflow_100.csv",
+          "bytes": 365,
+          "sha256": "f756d9dc64b8af3db542c0e19421cebe24e516f35f51f044b28e30824f9e0be7",
+          "remote_git_blob_oid": "d1e798695abd30d706676a548f371f6e0100b247",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/delphes/detector_100.root",
+          "bytes": 2470679,
+          "sha256": "490e39374e8a6dc9ffe626d2f97f0c07eba59786d03e98482b148c4326de0b3e",
+          "remote_git_blob_oid": "ec688dee5b17115c5fccf1fee2ec22c790e08b02",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/delphes/detector_card.tcl",
+          "bytes": 22243,
+          "sha256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+          "remote_git_blob_oid": "55730bda6dd6af44c1e76cc84cbad258ea857d43",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/delphes/reco_events_100.jsonl",
+          "bytes": 145076,
+          "sha256": "3eac7a8c37c119e617796ff788310bd928d3a34af4bcb2caaa0e8e1af76f5c96",
+          "remote_git_blob_oid": "6685afe587b6aa226d132959b27212c6d27a8d11",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/manifest.json",
+          "bytes": 19214,
+          "sha256": "10f1484e0b1d09d5ef1c5578efba891755c5c9af96fb94c41a433cae4cbf22a9",
+          "remote_git_blob_oid": "853c7f528801e9b6a745051f04240572939ab1b3",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/mg5/banner.txt",
+          "bytes": 26519,
+          "sha256": "062f1358f8e9cb80f707971459eafbe7260ba37b3cb4a4c23808726b08c3d56d",
+          "remote_git_blob_oid": "dd6a30ab8ad713a41ba8f5c2b9f3e3bde33db795",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/mg5/param_card.dat",
+          "bytes": 3054,
+          "sha256": "b55253cc5197609e95723c4d33a298f4d3f693e292d81db29e13b553ef165e93",
+          "remote_git_blob_oid": "b810ac0ae1116a3ea3e3dad70f09889287b8c8c7",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/mg5/process_card.mg5",
+          "bytes": 2355,
+          "sha256": "894453737703212e6bf95dc3fb116c7b05ac11504547af0d737059cf993574cc",
+          "remote_git_blob_oid": "03c5896996599b2a41401795cdc8fd6f6ef1f7d5",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/mg5/reference_1000.lhe.gz",
+          "bytes": 164495,
+          "sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+          "remote_git_blob_oid": "d558c02542bcbd824be4667217ff3fadf4e2f5e1",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/mg5/run_card.dat",
+          "bytes": 16631,
+          "sha256": "44c0c0673062e7d97896167f23a33b925a6362a35a68b42436d06d12472ebffe",
+          "remote_git_blob_oid": "a82520f170d7ee0b4e51f163f514b5531dbe4d20",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/background_truth_index.dat",
+          "bytes": 33557,
+          "sha256": "cfa8de1c8755703c0ede38185fcc5af967fed236fea7c5609ba25a63a16aa7e0",
+          "remote_git_blob_oid": "494f7ec6a7ecfae3d66fd977776dbe122e11ab49",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/decay_tables_inclusive_initialized.json",
+          "bytes": 12008,
+          "sha256": "b1215349f648a60d2483b3b660c218334360f90fed35ae62f7e35016e344d15c",
+          "remote_git_blob_oid": "e8cd3748ddae40f3943a86937914690f1c1cb70d",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/decay_tables_initialized.json",
+          "bytes": 12008,
+          "sha256": "e5118782a44f85650edde6637ac72b5cc9d204ed058418bfe649a922c79c0937",
+          "remote_git_blob_oid": "aa390a92f2b9b443ab54799a6d130aed39e74118",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/decay_tables_original_preinit.json",
+          "bytes": 11315,
+          "sha256": "cbcf657ebfa03b134bc39505874cdcc902a0e7a35c83290f979f098e661602f3",
+          "remote_git_blob_oid": "ac24784a4b79ba69c2e45d6a67e4d9f82de53d32",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/effective_settings.cmnd",
+          "bytes": 61007,
+          "sha256": "706f8f3ff51f8aaa4c264e09b324ea8813e1df7334adaa69958872a73ab4e4a6",
+          "remote_git_blob_oid": "840c640104e5605884d39618cc869c12088eeb54",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/event_ledger_100.jsonl",
+          "bytes": 118476,
+          "sha256": "8eedad8a6e7a8cf19b028fffa13dc30f6970d736b44abf07319f6bc30a0854cd",
+          "remote_git_blob_oid": "fbe5264fc81cc2385e457c48171251efa061dfcd",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/hepmc_ancestry_100.jsonl",
+          "bytes": 140920,
+          "sha256": "d1f51b3c2bce579fb3e7c59d119593b672e32a771f195bd4b52a9dc17ab72174",
+          "remote_git_blob_oid": "621a76af12f04cf68974c85308adf458d8dbcf60",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/inclusive_initialized_settings.cmnd",
+          "bytes": 61007,
+          "sha256": "706f8f3ff51f8aaa4c264e09b324ea8813e1df7334adaa69958872a73ab4e4a6",
+          "remote_git_blob_oid": "840c640104e5605884d39618cc869c12088eeb54",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/input_event_index.dat",
+          "bytes": 4670562,
+          "sha256": "4f19e8ebdf3583d373f52ea103346d81757ca1b641e8d728c17023f87d9a0a63",
+          "remote_git_blob_oid": "27fa4f6e973c9a86d3c0849808155afd34632bf9",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/pythia8/reference_100.hepmc3.gz",
+          "bytes": 2599636,
+          "sha256": "3d9e610560ff1537143165d92bfe417a7046f01441794248b0da77ebedb5d7bd",
+          "remote_git_blob_oid": "34472d9c2aab2c85ea29877fe1fb0749c2d72c5e",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/cutflow_statistics.json",
+          "bytes": 6301,
+          "sha256": "7a2a9982876c0cb722a9b7a8b9673285a3554c5ba6f53931cd730c7c1d5b90d1",
+          "remote_git_blob_oid": "d53d7c03534e3f99dad4dfb49203f8e000b0326d",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/full_chain.json",
+          "bytes": 15820,
+          "sha256": "886040ef11989460b7467cee618a0902d483ff9cebc43e74bbf1378f95b162aa",
+          "remote_git_blob_oid": "7909913f680fbd136ee0766c055fa4637bf5e711",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/generator_contract.json",
+          "bytes": 15775,
+          "sha256": "df243057b51b3fe181f260449119ea9b31c237dcfedfec1082db1ae8554afe9c",
+          "remote_git_blob_oid": "8a5b4917a95f8cb145f556317e0196dcb79cbbc8",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/hepmc_full1000.json",
+          "bytes": 2578,
+          "sha256": "87827e04f3fac8e5af7b5124b103fd86b1e2d4400c59b6bb5bc4a258c16182c5",
+          "remote_git_blob_oid": "bbc363f2b27341e750a9f5dd083e1ab97db2e449",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/lhe_full1000.json",
+          "bytes": 318793,
+          "sha256": "5f4222b9aace69fd9f1ac058f1f39d4112baa6a341a214e327ec68127827d8ec",
+          "remote_git_blob_oid": "bb0b72346ecc298657a23f0feafac525017e5853",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/pythia_full1000_summary.json",
+          "bytes": 4655,
+          "sha256": "12f6bbb1a9a47b81b826a6d56e0e6953aca964fb3d38c252cf648bf4b082f648",
+          "remote_git_blob_oid": "b5075a8d54be2bee3e723537e427e81c2d7efec9",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/root_full1000.json",
+          "bytes": 5173,
+          "sha256": "733d4a101595a749e818d7cb313b2f72a40e4b9dc1e60529a7f87fbf59b31a10",
+          "remote_git_blob_oid": "ff54abf68c3c9859365f9e715d18db8361604ba6",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/root_prefix100.json",
+          "bytes": 5610,
+          "sha256": "9a90b0217bebb2268a4c2e3f26c7d1c0cb1cbbe8359c35140dfb832f4ee1ceab",
+          "remote_git_blob_oid": "8781fc77c8ea7532fc0905f2bd07fc08b2d6ed66",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/source_provenance.json",
+          "bytes": 15749,
+          "sha256": "f9ffead8abbec06d63db800d3091318f2edead40fca9c432f98594739413ed0d",
+          "remote_git_blob_oid": "70a7c10c9dceb19c2253ad34465c63ff89a3ba56",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B04_ZH/validation/weight_and_BR_ledger.json",
+          "bytes": 4166,
+          "sha256": "203fe3c457feb8ed7ea6f373c784675916f30f2ed31d7f39fed3fb18228a3db0",
+          "remote_git_blob_oid": "9fa0f7a5edfdd0c671815bd3fc511c80cd567132",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/delphes/cutflow_100.csv",
+          "bytes": 344,
+          "sha256": "996668666b7dbd83f2245ee71bd3660dd7fe3cf81f87100705e77479e5210e30",
+          "remote_git_blob_oid": "ada7407a9efe497ef404e0d4232058288b3e5952",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/delphes/detector_100.root",
+          "bytes": 4643941,
+          "sha256": "742c76dd54ebbb032ea493ccc6b939dd3f305df9c54625496389c71644c1c417",
+          "remote_git_blob_oid": "a9c5bac48930d014ea1020233bc79c8a6c5a8e85",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/delphes/detector_card.tcl",
+          "bytes": 22243,
+          "sha256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+          "remote_git_blob_oid": "934cbfc55bc9278b13b3e3444bc820d5c2fa43ab",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/delphes/reco_events_100.jsonl",
+          "bytes": 143450,
+          "sha256": "8b7be8eb148952655cf03283b357e297db4f43e805a05427192b0bc07d2c6352",
+          "remote_git_blob_oid": "9b858304be03f51c3fa691e91840df40e433eca8",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/manifest.json",
+          "bytes": 19211,
+          "sha256": "cf2fd098a5a20e20543d871377753308d8b6f2ffa93816d8413ccf6d67abfbe2",
+          "remote_git_blob_oid": "a9cd3f3a38f2b68de235d574b0b46aec45775954",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/mg5/banner.txt",
+          "bytes": 26507,
+          "sha256": "16b6e049e06710795baee5b19c753320ac966f884c3c2a36f569c935a9b02c2b",
+          "remote_git_blob_oid": "efbc527dd62e318f506a671136ad8e8daab956a5",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/mg5/param_card.dat",
+          "bytes": 3054,
+          "sha256": "b55253cc5197609e95723c4d33a298f4d3f693e292d81db29e13b553ef165e93",
+          "remote_git_blob_oid": "b810ac0ae1116a3ea3e3dad70f09889287b8c8c7",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/mg5/process_card.mg5",
+          "bytes": 2348,
+          "sha256": "857100b2f17ae32675a340fd545747d5e3a2098b80a8707e8d4ec44e4b8bb02b",
+          "remote_git_blob_oid": "de2c050a139a1712ce2e6a2a09fbabcd918d7c6d",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/mg5/reference_1000.lhe.gz",
+          "bytes": 134068,
+          "sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+          "remote_git_blob_oid": "30fa8f5a3f6746d4713052e97ac4e80c045a571a",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/mg5/run_card.dat",
+          "bytes": 16623,
+          "sha256": "7f933e53d0c570653177d1d4ef5bc3d9a3b72b0aa4b04b2184a5a07925d9c2a8",
+          "remote_git_blob_oid": "088ce66ebb64a14a2d45c30b5cff12f6450bb561",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/background_truth_index.dat",
+          "bytes": 53134,
+          "sha256": "f865a62f79f16a6704494c33185e8e9d40038a3df24160422ff371bcc2a7a04a",
+          "remote_git_blob_oid": "0b064cefd97dab99e3be76e61d7060359b127159",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/decay_tables_inclusive_initialized.json",
+          "bytes": 12007,
+          "sha256": "07bc5d0ff2bf28a2153ad8e7818c22eb9c766d8f0a61c60891c69be9387e7358",
+          "remote_git_blob_oid": "892eeb4360b02b18122e947185f750a92601ff7d",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/decay_tables_initialized.json",
+          "bytes": 12007,
+          "sha256": "6271392cf650b801b1078a382a9e89314feb8460a12b3d09d32b62d246a7ecde",
+          "remote_git_blob_oid": "d043df4d1ebd79d32f1eab280c4f01b20627ef67",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/decay_tables_original_preinit.json",
+          "bytes": 11316,
+          "sha256": "020621e4269c902cad3a05dd06f58a79b1d65dc2569e07053230223256660003",
+          "remote_git_blob_oid": "3a96c9be35eb95062a9af7029f6f705792d8ca02",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/effective_settings.cmnd",
+          "bytes": 60986,
+          "sha256": "7c062e0bc084cbf9199f1f014862e7444d985536f20be14f0672e2e1a4db20c6",
+          "remote_git_blob_oid": "aab3e708062ff2d2ab18497e7ca439ee212511db",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/event_ledger_100.jsonl",
+          "bytes": 117176,
+          "sha256": "f59b57db07602bf441ea8d9754f651f6ae00eccc9ad9f9cac517463dc37b584e",
+          "remote_git_blob_oid": "b52c1183238897596a963eea8b8cc60f055e5182",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/hepmc_ancestry_100.jsonl",
+          "bytes": 163415,
+          "sha256": "1e19a010cb1675d640e84cd85691fd98b219dba9122743f35931284393fc5c11",
+          "remote_git_blob_oid": "42134689fd228cb709fe75676eb0e51857125f84",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/inclusive_initialized_settings.cmnd",
+          "bytes": 60986,
+          "sha256": "7c062e0bc084cbf9199f1f014862e7444d985536f20be14f0672e2e1a4db20c6",
+          "remote_git_blob_oid": "aab3e708062ff2d2ab18497e7ca439ee212511db",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/input_event_index.dat",
+          "bytes": 9300380,
+          "sha256": "5c91910b7911a5ec8e60f762132520bcec254fc1ac831b70805594a70722c815",
+          "remote_git_blob_oid": "839e41153a9e038d88e7713207b3444f14ed2f71",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/pythia8/reference_100.hepmc3.gz",
+          "bytes": 4718078,
+          "sha256": "2b9685580deddeafe372159afdb7e868874732ba9a8a2609f4998846a7747ccf",
+          "remote_git_blob_oid": "0d4ad2f9a8b4d3f0b437298276f3b75bad1caaf0",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/cutflow_statistics.json",
+          "bytes": 6285,
+          "sha256": "74142242f863ea5fcff551d80ca37967e7f0c73beb8c73798191cee6aadfc493",
+          "remote_git_blob_oid": "d40c8e9047db5efef65014c73a50a78bdd766fa2",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/full_chain.json",
+          "bytes": 1300,
+          "sha256": "60559acde3dd746f79c20689bc59d0b35887bbb1e0279028c79b6190a6baa4ad",
+          "remote_git_blob_oid": "578b35e05af776a2548d71f57315278f309c4850",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/generator_contract.json",
+          "bytes": 15775,
+          "sha256": "df243057b51b3fe181f260449119ea9b31c237dcfedfec1082db1ae8554afe9c",
+          "remote_git_blob_oid": "8a5b4917a95f8cb145f556317e0196dcb79cbbc8",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/hepmc_full1000.json",
+          "bytes": 2909,
+          "sha256": "e53fb2c78b806148a9c2b825ddaf204f14a3c6d05d966ea6fd7f03b0f2455692",
+          "remote_git_blob_oid": "8d2299a682fe0ab91f0ea9cfffa0d9b6098644b5",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/lhe_full1000.json",
+          "bytes": 301771,
+          "sha256": "7a1879457c5f68fd76be796644e175a7dbaba5a55c183c76939bab40d24d4eab",
+          "remote_git_blob_oid": "7049b840ad04c70b8e9aad1d94b64bbf99af3016",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/pythia_full1000_summary.json",
+          "bytes": 4682,
+          "sha256": "2f84f9397d3800ab33fb81aefd59ff637934d9925169f81e6da33cbdb2215692",
+          "remote_git_blob_oid": "024e2a491311bbd0b9f47fd47b8bde8f89ad9f42",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/root_full1000.json",
+          "bytes": 5111,
+          "sha256": "0fd9d6f2b095a03f0ed90c3b7b738acd5e616edc964eb5ea12be8f318829767c",
+          "remote_git_blob_oid": "6c842620a662c82758ce3b2c77afa8648f79f97b",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/root_prefix100.json",
+          "bytes": 5100,
+          "sha256": "16918cd0efca84785ad6ca8402327432272c358f1bec54d06857f938c00250ec",
+          "remote_git_blob_oid": "c1bfd5511a109a46f5f6b0c2ac712fc542793393",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/source_provenance.json",
+          "bytes": 1303,
+          "sha256": "7c017686d359766c93db6d2dc7fb318e37c5eee111ddd82b94b877f686b89d07",
+          "remote_git_blob_oid": "bbde03ba0432a850334a1f59267681d7adc4351e",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B05_TTH/validation/weight_and_BR_ledger.json",
+          "bytes": 4178,
+          "sha256": "9c0644657637aef2e19aa80dbdf27ceb90a072de07d1301cc8a9f5e10f4ec33f",
+          "remote_git_blob_oid": "8b9a8730685c5bed203c4c928a1a95c6b72b3327",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/delphes/cutflow_100.csv",
+          "bytes": 549,
+          "sha256": "7aa196bf0e9a036a9e46cd59e9ba8317a10db0909f0ff76b80271d046952348a",
+          "remote_git_blob_oid": "fd8207ac43db90ba8675fd2317161f0c9d485e06",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/delphes/detector_100.root",
+          "bytes": 3788021,
+          "sha256": "d52a96acc25d0eb55989e53a76b288a2ac4302f251b5037d34a0b951dd1244b2",
+          "remote_git_blob_oid": "23a7a3fd810d81c22c4d563afa6b95fcb6bb7f3d",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/delphes/detector_card.tcl",
+          "bytes": 22243,
+          "sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+          "remote_git_blob_oid": "355a74e29cb8984600a4648a5dfac20ccc92b9a5",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/delphes/reco_events_100.jsonl",
+          "bytes": 124444,
+          "sha256": "8ca19cdcb8f23ae29b80c3ac506478393c63e08d95bf71ca38cbb68d963a9fe2",
+          "remote_git_blob_oid": "6db106ad58798cb290746279e9e5790b522ef18c",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/manifest.json",
+          "bytes": 19204,
+          "sha256": "831eefec4ff4126e6367f7e2bc73036993c400b3f02a102fb80e87b480f6caee",
+          "remote_git_blob_oid": "826dd22ba3bb901b090eec99d5f12780748e6067",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/mg5/banner.txt",
+          "bytes": 26539,
+          "sha256": "c43262c143f76547ba807a993147dc7f2bf62dbe6a2ab2207f27cdf1dd92bc14",
+          "remote_git_blob_oid": "a2897230fa0fee85da9456138a2d036758860e39",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/mg5/param_card.dat",
+          "bytes": 3054,
+          "sha256": "b55253cc5197609e95723c4d33a298f4d3f693e292d81db29e13b553ef165e93",
+          "remote_git_blob_oid": "b810ac0ae1116a3ea3e3dad70f09889287b8c8c7",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/mg5/process_card.mg5",
+          "bytes": 2385,
+          "sha256": "a33cb4452d47c29ea2702281ebf29bdbdbfd587dc00255640c02a71354fcc74b",
+          "remote_git_blob_oid": "806c6252ee0129b6aa956bac177f91be9ee9cdab",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/mg5/reference_1000.lhe.gz",
+          "bytes": 171154,
+          "sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+          "remote_git_blob_oid": "615ba91108c549029bbec8f6a86ce7201c43f443",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/mg5/run_card.dat",
+          "bytes": 16624,
+          "sha256": "d8869a107814e2ebf92187c20c25b9a3e29b453f15c9877b5c5cd26c2f081b11",
+          "remote_git_blob_oid": "487b7bed0459cf6e76f9835e4d5306a7e2871428",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/background_truth_index.dat",
+          "bytes": 42788,
+          "sha256": "8b4d50d99c32995b9d3d9ca5b2a97e0e1f29a4713154e123c2ca006d16e6062c",
+          "remote_git_blob_oid": "8a882c5f30c0650941bb0ec0e7efddc8853a2882",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/decay_tables_inclusive_initialized.json",
+          "bytes": 12009,
+          "sha256": "35dabdda720c46ce27fc7222bd493ea558591203bed748479aa8ab70d0f68cd3",
+          "remote_git_blob_oid": "b92938e640de3dd553fd6b2fe0257ab8f4616f98",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/decay_tables_initialized.json",
+          "bytes": 12009,
+          "sha256": "35dabdda720c46ce27fc7222bd493ea558591203bed748479aa8ab70d0f68cd3",
+          "remote_git_blob_oid": "b92938e640de3dd553fd6b2fe0257ab8f4616f98",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/decay_tables_original_preinit.json",
+          "bytes": 11316,
+          "sha256": "020621e4269c902cad3a05dd06f58a79b1d65dc2569e07053230223256660003",
+          "remote_git_blob_oid": "3a96c9be35eb95062a9af7029f6f705792d8ca02",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/effective_settings.cmnd",
+          "bytes": 60986,
+          "sha256": "82d2e5f713be91581140cb3f971ba34e44f7ea5109e23fe5c759224aa42f21fe",
+          "remote_git_blob_oid": "502455fabef63aabd62cf3fe6b789a2eed36c765",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/event_ledger_100.jsonl",
+          "bytes": 115976,
+          "sha256": "1f6e37ce37101066e298660fb37bb5220511a7b900bdccc3bd9cbd56a6556c03",
+          "remote_git_blob_oid": "3cefd61c1910bcc9d0fd7162c65731eaac9d575c",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/hepmc_ancestry_100.jsonl",
+          "bytes": 147765,
+          "sha256": "b4f299812e0260a4c148b35d463b1d185124cb82fc8054f6b0d7d3220ae22218",
+          "remote_git_blob_oid": "6acdcf7061617c079d42e97596252f942eec08f4",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/inclusive_initialized_settings.cmnd",
+          "bytes": 60986,
+          "sha256": "82d2e5f713be91581140cb3f971ba34e44f7ea5109e23fe5c759224aa42f21fe",
+          "remote_git_blob_oid": "502455fabef63aabd62cf3fe6b789a2eed36c765",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/input_event_index.dat",
+          "bytes": 7233230,
+          "sha256": "f8243b399a1cd1dced2b76cd0136e41792097ef44d4c445d14a8bbb1bc64053d",
+          "remote_git_blob_oid": "d096b0133072f96961d8a42b8587d9be0f479374",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/pythia8/reference_100.hepmc3.gz",
+          "bytes": 4004565,
+          "sha256": "91b0f52aba50d59684e3868697742c50b9a41660f5f38e640b5f15df79f896ec",
+          "remote_git_blob_oid": "37288f8e317c99165c7889205d8e1ef0a9a6e1e4",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/cutflow_statistics.json",
+          "bytes": 8005,
+          "sha256": "908a8179c27cbd46042aba1da98f672f2ce756615af1de760fbcf35ba10c3070",
+          "remote_git_blob_oid": "54fac570c65e558eaf9e904c5378b75d2042aeda",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/full_chain.json",
+          "bytes": 1298,
+          "sha256": "dd9b3440fd183e50d2be187574458604327b57e4ff70ce486c9ba6cd57efb7b6",
+          "remote_git_blob_oid": "9252d0b059b4f5a948b83d0e7c91f64356f85c3e",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/generator_contract.json",
+          "bytes": 15775,
+          "sha256": "df243057b51b3fe181f260449119ea9b31c237dcfedfec1082db1ae8554afe9c",
+          "remote_git_blob_oid": "8a5b4917a95f8cb145f556317e0196dcb79cbbc8",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/hepmc_full1000.json",
+          "bytes": 2574,
+          "sha256": "5d159a1d424c89d048ee60451ffe1f5f2ada0e31461f048013aeef155918d004",
+          "remote_git_blob_oid": "b45d2f3857047ac001c2921a7f18114c0b4d1ab4",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/lhe_full1000.json",
+          "bytes": 323737,
+          "sha256": "5050f685eacb86a9f5a85a81bf29b7f883af8c86adef0fd4b58cb854a2302884",
+          "remote_git_blob_oid": "b6b81bc77c28a436c5e2c7134ce687155f5373ea",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/pythia_full1000_summary.json",
+          "bytes": 4568,
+          "sha256": "11e19daec2616dfe2689bf684999aa1f910a1ca6bc13c6d5cebddde95086b9db",
+          "remote_git_blob_oid": "0a626cff43fe32017d8c0636973cbf974fc4f0d5",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/root_full1000.json",
+          "bytes": 5108,
+          "sha256": "afa5c46a4ffeefe639930a904489c8ec62a100e04294755f6bb5fb9913ab9cb1",
+          "remote_git_blob_oid": "8710f2c5f2cd93cd241291160e3d44c3bc5fa699",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/root_prefix100.json",
+          "bytes": 5098,
+          "sha256": "014fd57e7541068a3c575c4bf5111a43fe2ece7f0190ce76dc308951454709a3",
+          "remote_git_blob_oid": "65047c0beba797c56d605e4eac67a53e41fdccd9",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/source_provenance.json",
+          "bytes": 1303,
+          "sha256": "d34e4971bb9ef3f4f50b72368d954834ca82c2f3a9bb325dbac9024d8f39b2cf",
+          "remote_git_blob_oid": "46bd28e92a1dac0122ea55fa640d1477ad4b0306",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        },
+        {
+          "path": "reference_samples/new_backgrounds/B06_BBGJ/validation/weight_and_BR_ledger.json",
+          "bytes": 3991,
+          "sha256": "f9e95e58a6e278fb5152a0f1e48827753ff10d0f677d138f92fd3a9729097dfc",
+          "remote_git_blob_oid": "e98d0b614b6889e75fd63c257bb4e61aac99a2eb",
+          "scope": "ACTUAL_GITHUB_GIT_BLOB_BYTES_READ_BACK_AND_SHA256_MATCHED"
+        }
+      ]
+    },
+    "new_MC_events": 0,
+    "figures_published": false,
+    "release_published": false,
+    "receipt_snapshot_scope": "Actual verified source/reference head before adding this receipt to documentation; final PR tip CI is checked again after the documentation commit."
   },
   "regression_evidence": {
     "status": "PASS_EXISTING_REGRESSIONS_AND_ALL_HISTORY_PRESERVATION",

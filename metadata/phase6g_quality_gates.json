@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "task": "PHASE6G_THREE_NEW_BACKGROUNDS_FULL_CHAIN_1K_V1",
-  "status": "PHYSICAL_FULL_CHAINS_PASS_GITHUB_PUBLICATION_PENDING",
+  "status": "PASS_TASK_ACCEPTANCE_WITH_INTERPRETATION_LIMITS",
   "physical_chain_verdict": "PASS_THREE_FULL_CHAINS_WITH_SCOPE_LIMITS",
   "gates": {
     "A": {
@@ -57,11 +57,11 @@
       "scope": "Documented CLI physically executed on original source streams, bounded B04 recovery preserves producers"
     },
     "N": {
-      "status": "UNKNOWN",
+      "status": "PASS",
       "scope": "Actual selected reference SHA verification plus final-head GitHub CI",
       "local_selected_reference_preparation": "PASS",
-      "remote_hash_verification": "NOT_VERIFIED_YET",
-      "final_head_CI": "NOT_EXECUTED_YET"
+      "remote_hash_verification": "PASS_90_ACTUAL_GITHUB_BLOBS_47102739_BYTES",
+      "final_head_CI": "PASS_2_OF_2_RUNS_AT_VERIFIED_SOURCE_EVIDENCE_HEAD"
     },
     "O": {
       "status": "BLOCKED",
