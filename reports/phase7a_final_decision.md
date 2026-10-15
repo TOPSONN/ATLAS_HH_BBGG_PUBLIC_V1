@@ -60,17 +60,25 @@ NEW_TESTS:42/42 PASS, no skips; actual native C++ interface methods PASS.
 EXISTING_REGRESSION:469 discovered,461 PASS/8 explicit portable skips; reference
 validators PASS; all six existing streams6000 source events and6000 actual ROOT
 records rehashed/reread, exact reco/cutflow preservation. No new Delphes run.
-GITHUB_CI:PENDING_PUBLICATION, NO_CHECKS is not PASS.
+GITHUB_CI:2/2 actual source-head checks SUCCESS at101b844eaa7d42e2a69fc7d36520c02c6c4112bd;
+final evidence-only HEAD is independently checked at task handoff. CI reruns
+portable methods/evidence, not native loop generation or full local ROOT data.
+Both actual checks and the bounded log/annotation inspection are retained in
+`simulation/hh_signal/evidence/github_publication.json`. NO_CHECKS is not PASS.
 
-GATES_PASS:A–I,K–M within the explicit method/source/numerical scope.
+GATES_PASS:A–I,K–N within the explicit method/source/numerical/publication scope.
 GATES_FAIL:none for current final checks; prior attempt failures retained.
 GATES_BLOCKED:J native mixed-decay bridge and physical-pilot prerequisites;
-N pending publication; O NOT_AUTHORIZED.
+O NOT_AUTHORIZED. N source publication/CI PASS; final HEAD rechecked at handoff.
 GATES_UNKNOWN:P,Q real signal closure; Ward identity/independent amplitude
 provider and future production performance NOT_EVALUATED.
 
-COMMIT_HASH: resolve current stacked PR head; publication evidence is snapshotted
-separately after remote readback. PULL_REQUEST_URL:PENDING_DRAFT_CREATION.
+COMMIT_HASH: source/evidence101b844eaa7d42e2a69fc7d36520c02c6c4112bd, followed
+by this publication-receipt commit. Exact final HEAD and its CI are reported at
+task handoff (a file cannot contain its own final Git commit hash).
+PULL_REQUEST_URL:https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/19.
+Actual remote readback:53 new blobs/238386bytes, byte/SHA256 equal to source
+commit;625 historical blob OIDs and all18 prior PR states/heads unchanged.
 NEXT_RECOMMENDED_STEP: implement/validate native per-lineage decays, initialize
 and adopt signal BRs, review production PDF/alpha_s and dynamic scale, then
 request separate10-event authorization. Do not start a physical pilot now.
