@@ -1,0 +1,41 @@
+{
+  "status": "B_REQUEST_SEED_NOT_HONORED_HISTORICAL_FAILURE_PRESERVED",
+  "requested": 20261121,
+  "actual": 21,
+  "native_survey_seed_offset": 21,
+  "final_randinit": "r=27",
+  "working_card_iseed": 0,
+  "C_requested_actual": 20261122,
+  "native_seed_reset_source": "madevent_interface.py6033-6038 resets working iseed to0 before compilation",
+  "source_sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+  "original_receipts": [
+    {
+      "role": "preintegration_continuation.json",
+      "sha256": "3aa11ee85841d1e5f3c9acb877de1160e8c4f6794941d5a57c66a8ee2626e9e7",
+      "bytes": 699
+    },
+    {
+      "role": "recovery_seed_observation.json",
+      "sha256": "1635685e5004720ead91f1bb72ee772f9dda0901eee020386bc53713ddd8c16d",
+      "bytes": 995
+    },
+    {
+      "role": "continuation_started.json",
+      "sha256": "a4c7eba14e349ccc8264671c3b62146955b2f022e343824c7b1f2796db72b0d7",
+      "bytes": 385
+    },
+    {
+      "role": "launch.mg5",
+      "sha256": "f584e1f32faa2de8e93660b568e279931e6dc06b2d7c281489f8a33676200521",
+      "bytes": 228
+    },
+    {
+      "role": "continuation_launch.mg5",
+      "sha256": "a71e10f4641f7c76c7a3e1532213f1f93c0d9795f553d351d96621701d23fc0f",
+      "bytes": 225
+    }
+  ],
+  "source_unchanged": true,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

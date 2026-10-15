@@ -1,0 +1,722 @@
+{
+  "-1": {
+    "source_events": 1000,
+    "input_ESS": 235.4948461850581,
+    "final_ESS": 43.77333141731474,
+    "max_contribution_fraction": 0.04649976095126733,
+    "top5_fraction": 0.09448725346271933,
+    "top10_fraction": 0.1325968625177886,
+    "dominant_events": [
+      {
+        "source_index": 213,
+        "source_event_sha256": "95a65504cea7007eaac423839d6b87986eedd8742dd3cfaf2d9899c55fc423cc",
+        "ratio": 188.9326465824656,
+        "normalized_contribution_fraction": 0.04649976095126733,
+        "selected": false,
+        "mHH_GeV": 253.86314153485503,
+        "ALPS": 0.1232081,
+        "scale_GeV": 126.9316
+      },
+      {
+        "source_index": 502,
+        "source_event_sha256": "3316ce5486cf4f59315babd9290bc015d06100b0f6fd249c6fe3bee1a2757527",
+        "ratio": 58.49105375386247,
+        "normalized_contribution_fraction": 0.014395712263286278,
+        "selected": true,
+        "mHH_GeV": 266.55041307088027,
+        "ALPS": 0.1222675,
+        "scale_GeV": 133.2752
+      },
+      {
+        "source_index": 914,
+        "source_event_sha256": "9eccca1efde90db6c4e5f368bad0439fb8805d8156de7644fdc757202ff4ebfa",
+        "ratio": 53.16519065174178,
+        "normalized_contribution_fraction": 0.01308492047802596,
+        "selected": false,
+        "mHH_GeV": 267.9801205520105,
+        "ALPS": 0.1221652,
+        "scale_GeV": 133.9901
+      },
+      {
+        "source_index": 697,
+        "source_event_sha256": "f2fa5e9291d26788ff6b76393f13edfd037f3f87b062bb6160199dd89bbd705d",
+        "ratio": 42.09734085269736,
+        "normalized_contribution_fraction": 0.010360921321662785,
+        "selected": true,
+        "mHH_GeV": 271.85580569034244,
+        "ALPS": 0.1218916,
+        "scale_GeV": 135.9279
+      },
+      {
+        "source_index": 39,
+        "source_event_sha256": "782f31ee6c5423d468ad885be929b79fd40e27e481e01012e08b27c943e25693",
+        "ratio": 41.223846400898644,
+        "normalized_contribution_fraction": 0.010145938448476971,
+        "selected": false,
+        "mHH_GeV": 272.2556300433096,
+        "ALPS": 0.1218636,
+        "scale_GeV": 136.1278
+      },
+      {
+        "source_index": 181,
+        "source_event_sha256": "e3e98fdf4859f55f12dd5dcb8ecbf25572b8893f404d46a7a39357e29a321fcd",
+        "ratio": 33.55054362043931,
+        "normalized_contribution_fraction": 0.00825739905916442,
+        "selected": false,
+        "mHH_GeV": 276.21830608889206,
+        "ALPS": 0.1215896,
+        "scale_GeV": 138.1092
+      },
+      {
+        "source_index": 942,
+        "source_event_sha256": "bcad18a16213789f612d9282ad603d2151cb7f4c47e355c627e9c8aa40c4d550",
+        "ratio": 33.140980079897304,
+        "normalized_contribution_fraction": 0.008156598022000916,
+        "selected": false,
+        "mHH_GeV": 276.3861455464805,
+        "ALPS": 0.1215781,
+        "scale_GeV": 138.1931
+      },
+      {
+        "source_index": 761,
+        "source_event_sha256": "b3f8dbbc882da99cef297f06d5a0b69df1281158d1ad8c15ef49a1d0cc36a5a0",
+        "ratio": 30.743580770848528,
+        "normalized_contribution_fraction": 0.0075665544440804465,
+        "selected": false,
+        "mHH_GeV": 278.1274509832075,
+        "ALPS": 0.1214594,
+        "scale_GeV": 139.0637
+      },
+      {
+        "source_index": 271,
+        "source_event_sha256": "281d2abec930fa5145a8ae436948cecae14b9f393a5d0afd8117ce32f0a92212",
+        "ratio": 29.335473626119356,
+        "normalized_contribution_fraction": 0.00721999366272232,
+        "selected": true,
+        "mHH_GeV": 278.9848133659529,
+        "ALPS": 0.1214014,
+        "scale_GeV": 139.4924
+      },
+      {
+        "source_index": 698,
+        "source_event_sha256": "df2a56886da4c3ede61d8a48ef310bd5fe7bdc0f2e1c34cbde81f1cb53e136da",
+        "ratio": 28.072138331780668,
+        "normalized_contribution_fraction": 0.006909063867101176,
+        "selected": false,
+        "mHH_GeV": 280.1496236487355,
+        "ALPS": 0.1213228,
+        "scale_GeV": 140.0748
+      }
+    ],
+    "status": "BOUNDED_PILOT_DIAGNOSTIC",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 425,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 547,
+      "0.1": 2185,
+      "0.05": 8738
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  },
+  "0": {
+    "source_events": 1000,
+    "input_ESS": 503.65533426420956,
+    "final_ESS": 78.30971579803723,
+    "max_contribution_fraction": 0.024736154345259713,
+    "top5_fraction": 0.053768207971697686,
+    "top10_fraction": 0.07833654666435601,
+    "dominant_events": [
+      {
+        "source_index": 213,
+        "source_event_sha256": "95a65504cea7007eaac423839d6b87986eedd8742dd3cfaf2d9899c55fc423cc",
+        "ratio": 54.19853025337856,
+        "normalized_contribution_fraction": 0.024736154345259713,
+        "selected": false,
+        "mHH_GeV": 253.86314153485503,
+        "ALPS": 0.1232081,
+        "scale_GeV": 126.9316
+      },
+      {
+        "source_index": 502,
+        "source_event_sha256": "3316ce5486cf4f59315babd9290bc015d06100b0f6fd249c6fe3bee1a2757527",
+        "ratio": 18.676974373040384,
+        "normalized_contribution_fraction": 0.008524152198115885,
+        "selected": true,
+        "mHH_GeV": 266.55041307088027,
+        "ALPS": 0.1222675,
+        "scale_GeV": 133.2752
+      },
+      {
+        "source_index": 914,
+        "source_event_sha256": "9eccca1efde90db6c4e5f368bad0439fb8805d8156de7644fdc757202ff4ebfa",
+        "ratio": 17.17074909093629,
+        "normalized_contribution_fraction": 0.007836712504037896,
+        "selected": false,
+        "mHH_GeV": 267.9801205520105,
+        "ALPS": 0.1221652,
+        "scale_GeV": 133.9901
+      },
+      {
+        "source_index": 697,
+        "source_event_sha256": "f2fa5e9291d26788ff6b76393f13edfd037f3f87b062bb6160199dd89bbd705d",
+        "ratio": 14.0079609149187,
+        "normalized_contribution_fraction": 0.006393219182031132,
+        "selected": true,
+        "mHH_GeV": 271.85580569034244,
+        "ALPS": 0.1218916,
+        "scale_GeV": 135.9279
+      },
+      {
+        "source_index": 39,
+        "source_event_sha256": "782f31ee6c5423d468ad885be929b79fd40e27e481e01012e08b27c943e25693",
+        "ratio": 13.75544186279313,
+        "normalized_contribution_fraction": 0.006277969742253059,
+        "selected": false,
+        "mHH_GeV": 272.2556300433096,
+        "ALPS": 0.1218636,
+        "scale_GeV": 136.1278
+      },
+      {
+        "source_index": 181,
+        "source_event_sha256": "e3e98fdf4859f55f12dd5dcb8ecbf25572b8893f404d46a7a39357e29a321fcd",
+        "ratio": 11.5264710626915,
+        "normalized_contribution_fraction": 0.005260669725359078,
+        "selected": false,
+        "mHH_GeV": 276.21830608889206,
+        "ALPS": 0.1215896,
+        "scale_GeV": 138.1092
+      },
+      {
+        "source_index": 942,
+        "source_event_sha256": "bcad18a16213789f612d9282ad603d2151cb7f4c47e355c627e9c8aa40c4d550",
+        "ratio": 11.407442935849593,
+        "normalized_contribution_fraction": 0.0052063454087544776,
+        "selected": false,
+        "mHH_GeV": 276.3861455464805,
+        "ALPS": 0.1215781,
+        "scale_GeV": 138.1931
+      },
+      {
+        "source_index": 761,
+        "source_event_sha256": "b3f8dbbc882da99cef297f06d5a0b69df1281158d1ad8c15ef49a1d0cc36a5a0",
+        "ratio": 10.69960539332814,
+        "normalized_contribution_fraction": 0.004883289070855195,
+        "selected": false,
+        "mHH_GeV": 278.1274509832075,
+        "ALPS": 0.1214594,
+        "scale_GeV": 139.0637
+      },
+      {
+        "source_index": 271,
+        "source_event_sha256": "281d2abec930fa5145a8ae436948cecae14b9f393a5d0afd8117ce32f0a92212",
+        "ratio": 10.287089162872757,
+        "normalized_contribution_fraction": 0.004695017080844303,
+        "selected": true,
+        "mHH_GeV": 278.9848133659529,
+        "ALPS": 0.1214014,
+        "scale_GeV": 139.4924
+      },
+      {
+        "source_index": 698,
+        "source_event_sha256": "df2a56886da4c3ede61d8a48ef310bd5fe7bdc0f2e1c34cbde81f1cb53e136da",
+        "ratio": 9.910226639915757,
+        "normalized_contribution_fraction": 0.004523017406845261,
+        "selected": false,
+        "mHH_GeV": 280.1496236487355,
+        "ALPS": 0.1213228,
+        "scale_GeV": 140.0748
+      }
+    ],
+    "status": "BOUNDED_PILOT_DIAGNOSTIC",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 199,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 295,
+      "0.1": 1177,
+      "0.05": 4708
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  },
+  "1": {
+    "source_events": 1000,
+    "input_ESS": 1000.0,
+    "final_ESS": 143.0,
+    "max_contribution_fraction": 0.001,
+    "top5_fraction": 0.005,
+    "top10_fraction": 0.01,
+    "dominant_events": [
+      {
+        "source_index": 1,
+        "source_event_sha256": "70b1f4c73cf6f20fc0cec94972eac6a56626985b1d40671d3eba6f858831cd3d",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 368.16330172646906,
+        "ALPS": 0.116391,
+        "scale_GeV": 184.0817
+      },
+      {
+        "source_index": 2,
+        "source_event_sha256": "af0bdaa0ef29fe225de5dc5dfbfecf6df57401d054d0f91614823b24f239286c",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": true,
+        "mHH_GeV": 515.155209550595,
+        "ALPS": 0.1108607,
+        "scale_GeV": 257.5776
+      },
+      {
+        "source_index": 3,
+        "source_event_sha256": "035fdf9b8de20d5bd073621678a2afcad7fdd38e79accfd54c61bde28d993696",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 520.3197364701123,
+        "ALPS": 0.1107047,
+        "scale_GeV": 260.1599
+      },
+      {
+        "source_index": 4,
+        "source_event_sha256": "109c6f2207d65dca86070f1e11c4be8240281c556be66d16db013f4a73ee483d",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 348.25965670973295,
+        "ALPS": 0.1173608,
+        "scale_GeV": 174.1298
+      },
+      {
+        "source_index": 5,
+        "source_event_sha256": "a7f6028d885be313d59d66f1eab641be891f5b11008fa8b9c2d971c04e44f642",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 342.0116024140144,
+        "ALPS": 0.1176803,
+        "scale_GeV": 171.0058
+      },
+      {
+        "source_index": 6,
+        "source_event_sha256": "c3c90fbc87f6dffc2ce7993424040130f8a1abbf0048ebd163d6179e8a27ad51",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": true,
+        "mHH_GeV": 1063.4312900013638,
+        "ALPS": 0.1005817,
+        "scale_GeV": 531.7156
+      },
+      {
+        "source_index": 7,
+        "source_event_sha256": "25bb21a3b6c887b609005eaabc5cd67ef15faea21938ebd0795132ff3e5713aa",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 632.7872548303044,
+        "ALPS": 0.1077321,
+        "scale_GeV": 316.3936
+      },
+      {
+        "source_index": 8,
+        "source_event_sha256": "9cb3c7505da46287335694544ccb2ec008fa1736d7de90c50f0ee30467ee4765",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 587.2444347349657,
+        "ALPS": 0.1088473,
+        "scale_GeV": 293.6222
+      },
+      {
+        "source_index": 9,
+        "source_event_sha256": "b9323fef583ae5cd744bb9ce8a6578245addcb8730386bdc6fa83bca93e975ec",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 371.3403999342132,
+        "ALPS": 0.1162426,
+        "scale_GeV": 185.6702
+      },
+      {
+        "source_index": 10,
+        "source_event_sha256": "4844794a09aeb18f7b25a06a7895f827d3e320683dd42d40e9726edef5e46e69",
+        "ratio": 1.0,
+        "normalized_contribution_fraction": 0.001,
+        "selected": false,
+        "mHH_GeV": 298.84262493615273,
+        "ALPS": 0.1201186,
+        "scale_GeV": 149.4213
+      }
+    ],
+    "status": "BOUNDED_PILOT_DIAGNOSTIC",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 100,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 150,
+      "0.1": 600,
+      "0.05": 2398
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  },
+  "2": {
+    "source_events": 1000,
+    "input_ESS": 204.58940463642608,
+    "final_ESS": 71.9809431524761,
+    "max_contribution_fraction": 0.059884673420633465,
+    "top5_fraction": 0.09283894610560438,
+    "top10_fraction": 0.10988393018967052,
+    "dominant_events": [
+      {
+        "source_index": 213,
+        "source_event_sha256": "95a65504cea7007eaac423839d6b87986eedd8742dd3cfaf2d9899c55fc423cc",
+        "ratio": 29.337055822329905,
+        "normalized_contribution_fraction": 0.059884673420633465,
+        "selected": false,
+        "mHH_GeV": 253.86314153485503,
+        "ALPS": 0.1232081,
+        "scale_GeV": 126.9316
+      },
+      {
+        "source_index": 502,
+        "source_event_sha256": "3316ce5486cf4f59315babd9290bc015d06100b0f6fd249c6fe3bee1a2757527",
+        "ratio": 5.460130634741312,
+        "normalized_contribution_fraction": 0.011145567635543035,
+        "selected": true,
+        "mHH_GeV": 266.55041307088027,
+        "ALPS": 0.1222675,
+        "scale_GeV": 133.2752
+      },
+      {
+        "source_index": 914,
+        "source_event_sha256": "9eccca1efde90db6c4e5f368bad0439fb8805d8156de7644fdc757202ff4ebfa",
+        "ratio": 4.652943379787055,
+        "normalized_contribution_fraction": 0.009497885419407335,
+        "selected": false,
+        "mHH_GeV": 267.9801205520105,
+        "ALPS": 0.1221652,
+        "scale_GeV": 133.9901
+      },
+      {
+        "source_index": 697,
+        "source_event_sha256": "f2fa5e9291d26788ff6b76393f13edfd037f3f87b062bb6160199dd89bbd705d",
+        "ratio": 3.0734581020306475,
+        "normalized_contribution_fraction": 0.0062737391177479125,
+        "selected": true,
+        "mHH_GeV": 271.85580569034244,
+        "ALPS": 0.1218916,
+        "scale_GeV": 135.9279
+      },
+      {
+        "source_index": 39,
+        "source_event_sha256": "782f31ee6c5423d468ad885be929b79fd40e27e481e01012e08b27c943e25693",
+        "ratio": 2.9575208125192542,
+        "normalized_contribution_fraction": 0.0060370805122726265,
+        "selected": false,
+        "mHH_GeV": 272.2556300433096,
+        "ALPS": 0.1218636,
+        "scale_GeV": 136.1278
+      },
+      {
+        "source_index": 181,
+        "source_event_sha256": "e3e98fdf4859f55f12dd5dcb8ecbf25572b8893f404d46a7a39357e29a321fcd",
+        "ratio": 1.9711304323648158,
+        "normalized_contribution_fraction": 0.004023597423221742,
+        "selected": false,
+        "mHH_GeV": 276.21830608889206,
+        "ALPS": 0.1215896,
+        "scale_GeV": 138.1092
+      },
+      {
+        "source_index": 942,
+        "source_event_sha256": "bcad18a16213789f612d9282ad603d2151cb7f4c47e355c627e9c8aa40c4d550",
+        "ratio": 1.918651272348535,
+        "normalized_contribution_fraction": 0.00391647360759427,
+        "selected": false,
+        "mHH_GeV": 276.3861455464805,
+        "ALPS": 0.1215781,
+        "scale_GeV": 138.1931
+      },
+      {
+        "source_index": 761,
+        "source_event_sha256": "b3f8dbbc882da99cef297f06d5a0b69df1281158d1ad8c15ef49a1d0cc36a5a0",
+        "ratio": 1.6447645903155137,
+        "normalized_contribution_fraction": 0.0033573986067782623,
+        "selected": false,
+        "mHH_GeV": 278.1274509832075,
+        "ALPS": 0.1214594,
+        "scale_GeV": 139.0637
+      },
+      {
+        "source_index": 271,
+        "source_event_sha256": "281d2abec930fa5145a8ae436948cecae14b9f393a5d0afd8117ce32f0a92212",
+        "ratio": 1.4742061399201603,
+        "normalized_contribution_fraction": 0.003009243796598544,
+        "selected": true,
+        "mHH_GeV": 278.9848133659529,
+        "ALPS": 0.1214014,
+        "scale_GeV": 139.4924
+      },
+      {
+        "source_index": 698,
+        "source_event_sha256": "df2a56886da4c3ede61d8a48ef310bd5fe7bdc0f2e1c34cbde81f1cb53e136da",
+        "ratio": 1.3414584120334028,
+        "normalized_contribution_fraction": 0.002738270649873344,
+        "selected": false,
+        "mHH_GeV": 280.1496236487355,
+        "ALPS": 0.1213228,
+        "scale_GeV": 140.0748
+      }
+    ],
+    "status": "BOUNDED_PILOT_DIAGNOSTIC",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 489,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 323,
+      "0.1": 1290,
+      "0.05": 5158
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  },
+  "2.5": {
+    "source_events": 1000,
+    "input_ESS": 36.6942995242142,
+    "final_ESS": 16.07357051564675,
+    "max_contribution_fraction": 0.15112550778924444,
+    "top5_fraction": 0.2513386197238729,
+    "top10_fraction": 0.31170852291180123,
+    "dominant_events": [
+      {
+        "source_index": 213,
+        "source_event_sha256": "95a65504cea7007eaac423839d6b87986eedd8742dd3cfaf2d9899c55fc423cc",
+        "ratio": 74.08142851188556,
+        "normalized_contribution_fraction": 0.15112550778924444,
+        "selected": false,
+        "mHH_GeV": 253.86314153485503,
+        "ALPS": 0.1232081,
+        "scale_GeV": 126.9316
+      },
+      {
+        "source_index": 502,
+        "source_event_sha256": "3316ce5486cf4f59315babd9290bc015d06100b0f6fd249c6fe3bee1a2757527",
+        "ratio": 15.991610330052744,
+        "normalized_contribution_fraction": 0.03262275417798144,
+        "selected": true,
+        "mHH_GeV": 266.55041307088027,
+        "ALPS": 0.1222675,
+        "scale_GeV": 133.2752
+      },
+      {
+        "source_index": 914,
+        "source_event_sha256": "9eccca1efde90db6c4e5f368bad0439fb8805d8156de7644fdc757202ff4ebfa",
+        "ratio": 13.913299745840309,
+        "normalized_contribution_fraction": 0.028383017597679486,
+        "selected": false,
+        "mHH_GeV": 267.9801205520105,
+        "ALPS": 0.1221652,
+        "scale_GeV": 133.9901
+      },
+      {
+        "source_index": 697,
+        "source_event_sha256": "f2fa5e9291d26788ff6b76393f13edfd037f3f87b062bb6160199dd89bbd705d",
+        "ratio": 9.765719284983229,
+        "normalized_contribution_fraction": 0.019921987406513412,
+        "selected": true,
+        "mHH_GeV": 271.85580569034244,
+        "ALPS": 0.1218916,
+        "scale_GeV": 135.9279
+      },
+      {
+        "source_index": 39,
+        "source_event_sha256": "782f31ee6c5423d468ad885be929b79fd40e27e481e01012e08b27c943e25693",
+        "ratio": 9.453642221998894,
+        "normalized_contribution_fraction": 0.019285352752454105,
+        "selected": false,
+        "mHH_GeV": 272.2556300433096,
+        "ALPS": 0.1218636,
+        "scale_GeV": 136.1278
+      },
+      {
+        "source_index": 181,
+        "source_event_sha256": "e3e98fdf4859f55f12dd5dcb8ecbf25572b8893f404d46a7a39357e29a321fcd",
+        "ratio": 6.768296209193102,
+        "normalized_contribution_fraction": 0.013807268866558354,
+        "selected": false,
+        "mHH_GeV": 276.21830608889206,
+        "ALPS": 0.1215896,
+        "scale_GeV": 138.1092
+      },
+      {
+        "source_index": 942,
+        "source_event_sha256": "bcad18a16213789f612d9282ad603d2151cb7f4c47e355c627e9c8aa40c4d550",
+        "ratio": 6.625262236597087,
+        "normalized_contribution_fraction": 0.013515480733231285,
+        "selected": false,
+        "mHH_GeV": 276.3861455464805,
+        "ALPS": 0.1215781,
+        "scale_GeV": 138.1931
+      },
+      {
+        "source_index": 761,
+        "source_event_sha256": "b3f8dbbc882da99cef297f06d5a0b69df1281158d1ad8c15ef49a1d0cc36a5a0",
+        "ratio": 5.846285630375824,
+        "normalized_contribution_fraction": 0.011926374832658066,
+        "selected": false,
+        "mHH_GeV": 278.1274509832075,
+        "ALPS": 0.1214594,
+        "scale_GeV": 139.0637
+      },
+      {
+        "source_index": 271,
+        "source_event_sha256": "281d2abec930fa5145a8ae436948cecae14b9f393a5d0afd8117ce32f0a92212",
+        "ratio": 5.37179494842758,
+        "normalized_contribution_fraction": 0.010958417725308433,
+        "selected": true,
+        "mHH_GeV": 278.9848133659529,
+        "ALPS": 0.1214014,
+        "scale_GeV": 139.4924
+      },
+      {
+        "source_index": 698,
+        "source_event_sha256": "df2a56886da4c3ede61d8a48ef310bd5fe7bdc0f2e1c34cbde81f1cb53e136da",
+        "ratio": 4.981569512531055,
+        "normalized_contribution_fraction": 0.010162361030172215,
+        "selected": false,
+        "mHH_GeV": 280.1496236487355,
+        "ALPS": 0.1213228,
+        "scale_GeV": 140.0748
+      }
+    ],
+    "status": "INCONCLUSIVE_REWEIGHTING",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 2726,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 1531,
+      "0.1": 6122,
+      "0.05": 24486
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  },
+  "5": {
+    "source_events": 1000,
+    "input_ESS": 19.544222688333267,
+    "final_ESS": 7.650124068754687,
+    "max_contribution_fraction": 0.1981933658096245,
+    "top5_fraction": 0.35683274420724087,
+    "top10_fraction": 0.4656841568120698,
+    "dominant_events": [
+      {
+        "source_index": 213,
+        "source_event_sha256": "95a65504cea7007eaac423839d6b87986eedd8742dd3cfaf2d9899c55fc423cc",
+        "ratio": 603.5617397435703,
+        "normalized_contribution_fraction": 0.1981933658096245,
+        "selected": false,
+        "mHH_GeV": 253.86314153485503,
+        "ALPS": 0.1232081,
+        "scale_GeV": 126.9316
+      },
+      {
+        "source_index": 502,
+        "source_event_sha256": "3316ce5486cf4f59315babd9290bc015d06100b0f6fd249c6fe3bee1a2757527",
+        "ratio": 151.66315258579897,
+        "normalized_contribution_fraction": 0.049802081048160675,
+        "selected": true,
+        "mHH_GeV": 266.55041307088027,
+        "ALPS": 0.1222675,
+        "scale_GeV": 133.2752
+      },
+      {
+        "source_index": 914,
+        "source_event_sha256": "9eccca1efde90db6c4e5f368bad0439fb8805d8156de7644fdc757202ff4ebfa",
+        "ratio": 134.55392833918785,
+        "normalized_contribution_fraction": 0.04418387413320916,
+        "selected": false,
+        "mHH_GeV": 267.9801205520105,
+        "ALPS": 0.1221652,
+        "scale_GeV": 133.9901
+      },
+      {
+        "source_index": 697,
+        "source_event_sha256": "f2fa5e9291d26788ff6b76393f13edfd037f3f87b062bb6160199dd89bbd705d",
+        "ratio": 99.78234657045884,
+        "normalized_contribution_fraction": 0.032765826282467485,
+        "selected": true,
+        "mHH_GeV": 271.85580569034244,
+        "ALPS": 0.1218916,
+        "scale_GeV": 135.9279
+      },
+      {
+        "source_index": 39,
+        "source_event_sha256": "782f31ee6c5423d468ad885be929b79fd40e27e481e01012e08b27c943e25693",
+        "ratio": 97.10785930181144,
+        "normalized_contribution_fraction": 0.031887596933779114,
+        "selected": false,
+        "mHH_GeV": 272.2556300433096,
+        "ALPS": 0.1218636,
+        "scale_GeV": 136.1278
+      },
+      {
+        "source_index": 181,
+        "source_event_sha256": "e3e98fdf4859f55f12dd5dcb8ecbf25572b8893f404d46a7a39357e29a321fcd",
+        "ratio": 73.8701306997974,
+        "normalized_contribution_fraction": 0.02425695479373812,
+        "selected": false,
+        "mHH_GeV": 276.21830608889206,
+        "ALPS": 0.1215896,
+        "scale_GeV": 138.1092
+      },
+      {
+        "source_index": 942,
+        "source_event_sha256": "bcad18a16213789f612d9282ad603d2151cb7f4c47e355c627e9c8aa40c4d550",
+        "ratio": 72.63117033858296,
+        "normalized_contribution_fraction": 0.023850113690459897,
+        "selected": false,
+        "mHH_GeV": 276.3861455464805,
+        "ALPS": 0.1215781,
+        "scale_GeV": 138.1931
+      },
+      {
+        "source_index": 761,
+        "source_event_sha256": "b3f8dbbc882da99cef297f06d5a0b69df1281158d1ad8c15ef49a1d0cc36a5a0",
+        "ratio": 65.64527826865734,
+        "normalized_contribution_fraction": 0.02155613550836113,
+        "selected": false,
+        "mHH_GeV": 278.1274509832075,
+        "ALPS": 0.1214594,
+        "scale_GeV": 139.0637
+      },
+      {
+        "source_index": 271,
+        "source_event_sha256": "281d2abec930fa5145a8ae436948cecae14b9f393a5d0afd8117ce32f0a92212",
+        "ratio": 61.46459637982646,
+        "normalized_contribution_fraction": 0.020183312546987266,
+        "selected": true,
+        "mHH_GeV": 278.9848133659529,
+        "ALPS": 0.1214014,
+        "scale_GeV": 139.4924
+      },
+      {
+        "source_index": 698,
+        "source_event_sha256": "df2a56886da4c3ede61d8a48ef310bd5fe7bdc0f2e1c34cbde81f1cb53e136da",
+        "ratio": 57.875943959828554,
+        "normalized_contribution_fraction": 0.019004896065282478,
+        "selected": false,
+        "mHH_GeV": 280.1496236487355,
+        "ALPS": 0.1213228,
+        "scale_GeV": 140.0748
+      }
+    ],
+    "status": "INCONCLUSIVE_REWEIGHTING",
+    "actual_proposal": "effective C NNPDF23_lo_as_0130_qed_mem0, two-loop native alpha_s; NOT intended CTEQ6L1",
+    "same_proposal_total_N_for_input_ESS100": 5117,
+    "same_proposal_total_N_for_final_relative_MC_precision": {
+      "0.2": 3243,
+      "0.1": 12972,
+      "0.05": 51887
+    },
+    "planning_scope": "pilot-based scaling only; not a tail-support guarantee or authorization",
+    "new_physical_events": 0
+  }
+}

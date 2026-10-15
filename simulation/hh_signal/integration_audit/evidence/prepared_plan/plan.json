@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "base_head": "a0e1539e56c122deb6b36a708a121d2098ad3220",
+  "status": "PREPARED_NOT_EXECUTED",
+  "execution_enabled": false,
+  "independent_integration_status": "NOT_AUTHORIZED",
+  "retained_LHE_target": 0,
+  "seeds": [
+    910001,
+    910019,
+    910037,
+    910061
+  ],
+  "survey_options": {
+    "points": 250,
+    "iterations": 5,
+    "accuracy": 0.005
+  },
+  "native_command_design": [
+    "survey phase7e_seed_910001 --points=250 --iterations=5 --accuracy=0.005",
+    "survey phase7e_seed_910019 --points=250 --iterations=5 --accuracy=0.005",
+    "survey phase7e_seed_910037 --points=250 --iterations=5 --accuracy=0.005",
+    "survey phase7e_seed_910061 --points=250 --iterations=5 --accuracy=0.005"
+  ],
+  "forbidden_commands": [
+    "launch",
+    "generate_events",
+    "refine EVENT_TARGET",
+    "combine_events",
+    "store_events",
+    "shower",
+    "detector"
+  ],
+  "max_aggregate_hours_requested": 4.0,
+  "max_concurrent_jobs": 1,
+  "max_workers": 1,
+  "additional_disk_cap_GiB": 5,
+  "PDF": "cteq6l1",
+  "runtime_expected_alpha_s_MZ": 0.13,
+  "runtime_expected_alpha_s_running_loops": 1,
+  "MH_GeV": 125,
+  "MT_GeV": 173,
+  "MB_GeV": 4.7,
+  "muR_muF": "mHH/2",
+  "kappa_lambda": 1,
+  "kappa_top": 1,
+  "param_card_sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0",
+  "runtime_zero_retained_LHE_validation": "BLOCKED_UNTIL_SEPARATELY_AUTHORIZED_NATIVE_EXECUTION",
+  "zero_retained_design": "native survey can create internal weighted candidate scratch; nevents=0 alone is NOT proof. A separately reviewed writer-suppression/retention guard and runtime counters are required before execution.",
+  "fresh_process_grid_policy": "independent seeds, fresh workspace and adaptation per replica; never import B/C grids",
+  "stopping_policy": "require matched compiled/runtime PDF+alpha_s; >=4 independent replicas; assess between-replica CI, budget doubling and last-iteration drift. Target0.5% per-run and1% between-budget agreement is an assessment goal, never grounds for auto-expansion. Stop at aggregate4h regardless.",
+  "budget_extension": "separate authorization required; points/iterations are limits, not guaranteed runtime or convergence",
+  "pilot_cost_model": {
+    "native_seconds_per_ME_evaluation": 0.0625797962206441,
+    "assumed_exact_helicities": 4,
+    "assumed_iteration_point_growth": 2,
+    "estimated_matrix_calls": 124000,
+    "estimated_seconds": 7759.894731359867,
+    "planning_margin": 1.5,
+    "scope": "measured pilot extrapolation, not a runtime guarantee or new integration result"
+  },
+  "measurement_policy": "warmup/adaptation versus fixed-grid measurement must be distinguished; no same-grid stages counted independent",
+  "paired_actual_NNPDF_arm": "NOT_AUTHORIZED; independently specify PDF/running consistently if a future factorial diagnosis is approved",
+  "actual_new_integrals": 0,
+  "actual_new_physical_events": 0
+}

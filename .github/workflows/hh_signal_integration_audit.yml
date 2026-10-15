@@ -1,0 +1,28 @@
+name: HH integration configuration and support audit
+on:
+  push:
+    branches: [codex/phase7e-hh-integration-convergence]
+  pull_request:
+    paths: ['simulation/hh_signal/integration_audit/**', 'metadata/phase7e_*', 'reports/phase7e_*', '.github/workflows/hh_signal_integration_audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  existing_evidence_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scientific mismatch detection and guarded preparation regression
+        run: python3 -B -m unittest simulation.hh_signal.integration_audit.test_audit -v
+      - name: Original campaign methods and physical reference bytes
+        run: |
+          python3 -B -m unittest simulation.hh_signal.campaign.test_campaign -v
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+      - name: Freeze PR20 and inspect every outgoing snapshot
+        run: python3 -B -m simulation.hh_signal.integration_audit.audit_payload

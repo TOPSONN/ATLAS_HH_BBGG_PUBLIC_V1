@@ -1,0 +1,74 @@
+{
+  "effective_PDF": {
+    "generated_pdf_source_sha256": "955eb4b5cd06d1e5416c2644e2d31ba677e6fe529c96b9b00619f44e147407f6",
+    "dispatch_lines": [
+      44,
+      279
+    ],
+    "finding": "density dispatch uses global PDLABEL, not the stored PDSUBLABEL proton labels"
+  },
+  "running_order": {
+    "generated_pdfwrap_source_sha256": "32164b7098c60d94a3985781aba0ed0b348e3acbf1fe860c153227253c834638",
+    "default_order_line": 13,
+    "CTEQ6L1_order1_line": 235,
+    "NNPDF_branch_lines": [
+      252,
+      255
+    ],
+    "finding": "pdfwrap defaults to2 loops; CTEQ6L1 overrides to1, nn23lo1 does not; native retained-ALPS audit confirms the actual difference"
+  },
+  "candidate_buffer": {
+    "genps_include_sha256": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880",
+    "maxevents": 200000,
+    "largest_visible_found_buffer": 2703,
+    "visible_buffer_cap_hit": false
+  },
+  "primary_unweight": {
+    "source": "Template/LO/SubProcesses/unwgt.f",
+    "lines": [
+      419,
+      440
+    ],
+    "finding": "overweight excess is retained using max(abs(weight),target); printed second field is100*xover/xtot. Raw first field is internal weight, not a percent or a pb loss"
+  },
+  "native_error": {
+    "source": "Template/LO/Source/dsample.f",
+    "lines": [
+      169,
+      207
+    ],
+    "finding": "relative-variance weighted last<=3 iterations; error inflated by sqrt(chi2) only if chi2>1. One-iteration chi2=0 is not empirical convergence or zero MC error"
+  },
+  "secondary_unweight": {
+    "source": "madgraph/interface/madevent_interface.py",
+    "lines": [
+      3871,
+      3874
+    ],
+    "trunc_error": 0.01,
+    "event_targets": [
+      100,
+      1000
+    ],
+    "finding": "upstream integral recorded before final event-target thinning; realized final truncation and inclusion-history cannot be reconstructed because candidate files were cleaned"
+  },
+  "metadata_PDF_ID": {
+    "native_setrun_source_sha256": "1f243b1e7f25966643b997e488a23b43746f8f3236cb19888d4b1bd5e504cf68",
+    "LHE_PDFSUP_B_C": [
+      10042,
+      10042
+    ],
+    "native_global_C_expected_PDFSUP": 247000,
+    "finding": "header/card metadata contradict the actual C density execution; header alone is insufficient source identity evidence"
+  },
+  "writer_default_reset": {
+    "source": "madgraph/various/banner.py",
+    "lines": [
+      3058,
+      3098,
+      3363,
+      3441
+    ],
+    "finding": "reusing the preserved working-card writer can fall back to adjacent run_card_default.dat and yield global nn23lo1 while beam sublabels staycteq6l1; full historical in-memory sequence is not retained"
+  }
+}
