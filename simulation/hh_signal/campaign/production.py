@@ -29,6 +29,8 @@ def launch_text(name,process='process'):
        'madspin=OFF','reweight=OFF','done','done','quit',''])
 
 def generate_source(output,phase,seed,build,monitor,reservation):
+    from simulation.hh_signal.config_lock.contract import deny_execution
+    deny_execution('new HH hard-event source')
     events=LIMITS[phase][0];out=Path(output)
     require(reservation['phase']==phase and reservation['events']==events and reservation['seed']==seed,
             'PHYSICAL_SOURCE_RESERVATION_MISMATCH')

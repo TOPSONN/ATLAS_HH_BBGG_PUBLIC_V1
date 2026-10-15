@@ -1,0 +1,70 @@
+{
+  "status": "PASS_ACTUAL_NATIVE_GATE_SYNTHETIC_CONTEXT_TESTS",
+  "cases": [
+    {
+      "case": "valid",
+      "exit": 0,
+      "stdout": " Got moffset           0\n HH_PRE_SAMPLING_CONFIG_PASS               910001           0           0\n",
+      "stderr": ""
+    },
+    {
+      "case": "pdf",
+      "exit": 71,
+      "stdout": "",
+      "stderr": "STOP 71\n"
+    },
+    {
+      "case": "labels",
+      "exit": 72,
+      "stdout": "",
+      "stderr": "STOP 72\n"
+    },
+    {
+      "case": "alpha",
+      "exit": 73,
+      "stdout": "",
+      "stderr": "STOP 73\n"
+    },
+    {
+      "case": "seed",
+      "exit": 74,
+      "stdout": "",
+      "stderr": "STOP 74\n"
+    },
+    {
+      "case": "mass",
+      "exit": 76,
+      "stdout": "",
+      "stderr": "STOP 76\n"
+    },
+    {
+      "case": "header",
+      "exit": 77,
+      "stdout": "",
+      "stderr": "STOP 77\n"
+    }
+  ],
+  "source_sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd",
+  "executable_sha256": "e356a6137e69e0c86dcb0e488a54038642df39774b195ca91c0cd9514ed7f882",
+  "postcondition": {
+    "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+    "retained_event_records": 0,
+    "files": [
+      {
+        "path": "iproc.dat",
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "path": "moffset.dat",
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    ],
+    "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+  },
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED",
+  "scope": "native guard in synthetic common-block contexts; full driver not executed",
+  "new_integrals": 0,
+  "new_ME_calls": 0
+}

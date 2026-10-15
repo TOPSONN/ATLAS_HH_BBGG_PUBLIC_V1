@@ -1,0 +1,22 @@
+{
+  "status": "PASS_NATIVE_SYNTHETIC_WRITER_BOUNDARIES_ONLY",
+  "suppressed_candidate_store_clear": [
+    1,
+    1,
+    1
+  ],
+  "permanent_writer_exit": 86,
+  "stdout": " HH_GUARD_SUPPRESSED_CALLS                    1                    1                    1\n",
+  "patched_unwgt_sha256": "5b96a1b107e86a8b1e512d1877c631a2a3a005f53853a09737ac226fc7203db0",
+  "patched_permanent_writer_sha256": "ff326e0e23cb2b4437a65632a026bd134f6ec76e0fe848dad946a5efbb852b0b",
+  "executable_sha256": "5630c71ca71f019a154920dcbc1485f8d4d5589b0f42e94682ab907ffe71d8e3",
+  "postcondition": {
+    "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+    "retained_event_records": 0,
+    "files": [],
+    "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+  },
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED",
+  "new_integrals": 0,
+  "new_ME_calls": 0
+}

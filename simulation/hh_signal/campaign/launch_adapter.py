@@ -3,6 +3,9 @@ import sys,os,runpy
 from pathlib import Path
 
 def main():
+    sys.path.insert(0,str(Path(__file__).resolve().parents[3]))
+    from simulation.hh_signal.config_lock.contract import deny_execution
+    deny_execution('legacy MG5 hard-event launch')
     root=Path(sys.argv[1]).resolve();driver=Path(sys.argv[2]).resolve()
     protected=[Path(p).resolve() for p in sys.argv[3:]]
     def forbidden(value):
