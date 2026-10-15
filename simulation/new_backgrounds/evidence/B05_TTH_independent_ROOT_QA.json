@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_ACTUAL_ROOT_AND_NUMERICAL_READBACK",
+  "process": "tth",
+  "actual_source_events": 1000,
+  "actual_ROOT_entries": 1000,
+  "independent_native_read_records": 1000,
+  "new_physical_events_generated": 0,
+  "actual_native_analyzer_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+  "native_source_sha256": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+  "source_run_manifest_sha256": "601490546cf98e4ab2551c48c4c75fa308b4dd9bf24666c71aa639d5ebe5387c",
+  "original_ROOT_SHA256_unchanged": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+  "fresh_native_report_sha256": "682e4f15215ca9139436946786784a183ad043caa583208fec68232ee233093b",
+  "reco_events_byte_identical_to_pipeline": true,
+  "cutflow_CSV_byte_identical_to_pipeline": true,
+  "independent_statistics_exactly_equal_pipeline": true,
+  "cutflow": [
+    {
+      "stage": "00_input",
+      "raw_events": 1000,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 1.0,
+        "binomial_plugin_standard_error": 0.0,
+        "wilson95_low": 0.996173241514445,
+        "wilson95_high": 1.0,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": 0.9970087504549047,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.399182,
+      "source_weight_sum_squared_pb2": 0.000159346269124,
+      "source_sampling_variance_pb2": 0.0,
+      "source_sampling_standard_error_pb": 0.0,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.0009171393204540268,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 8.411445331228742e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 0.0
+    },
+    {
+      "stage": "01_photons",
+      "raw_events": 327,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.327,
+        "binomial_plugin_standard_error": 0.014834790190629594,
+        "wilson95_low": 0.2986345103891364,
+        "wilson95_high": 0.35668954804686565,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.130532514,
+      "source_weight_sum_squared_pb2": 5.2106230003548e-05,
+      "source_sampling_variance_pb2": 3.510259538777558e-05,
+      "source_sampling_standard_error_pb": 0.005924744331004974,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00029990455778846676,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 2.7505426233117984e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 1.3612377285553332e-05
+    },
+    {
+      "stage": "02_jets",
+      "raw_events": 322,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.322,
+        "binomial_plugin_standard_error": 0.014775520295407536,
+        "wilson95_low": 0.29376911381672366,
+        "wilson95_high": 0.351593212204134,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.128536604,
+      "source_weight_sum_squared_pb2": 5.1309498657928e-05,
+      "source_sampling_variance_pb2": 3.4822662752828014e-05,
+      "source_sampling_standard_error_pb": 0.005901073017073082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00029531886118619666,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 2.7084853966556546e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 1.3557991334348744e-05
+    },
+    {
+      "stage": "03_two_btags",
+      "raw_events": 131,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.131,
+        "binomial_plugin_standard_error": 0.010669536072388528,
+        "wilson95_low": 0.11149250620200898,
+        "wilson95_high": 0.15333164156033072,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.052292842,
+      "source_weight_sum_squared_pb2": 2.0874361255244e-05,
+      "source_sampling_variance_pb2": 1.815797790871575e-05,
+      "source_sampling_standard_error_pb": 0.004261217890312082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00012014525097947751,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 1.1018993383909651e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 9.790347461126416e-06
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "raw_events": 131,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.131,
+        "binomial_plugin_standard_error": 0.010669536072388528,
+        "wilson95_low": 0.11149250620200898,
+        "wilson95_high": 0.15333164156033072,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.052292842,
+      "source_weight_sum_squared_pb2": 2.0874361255244e-05,
+      "source_sampling_variance_pb2": 1.815797790871575e-05,
+      "source_sampling_standard_error_pb": 0.004261217890312082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00012014525097947751,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 1.1018993383909651e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 9.790347461126416e-06
+    }
+  ],
+  "elapsed_seconds": 8.888541113999963,
+  "scope": "read-only replay using separately compiled retained-environment native analyzer; actual ROOT/indices/cards/manifests unchanged; repeated reads are not additional source statistics"
+}

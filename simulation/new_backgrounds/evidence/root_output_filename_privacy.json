@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ZERO_EVENT_FILENAME_SERIALIZATION_CHECK_AND_NARROW_DRIVER_FIX",
+  "created_at_utc": "2026-10-14T12:23:12.350358+00:00",
+  "root_version": "6.40.04",
+  "new_physical_events_generated": 0,
+  "Delphes_invocations_in_this_check": 0,
+  "probe_records": [
+    {
+      "constructor_mode": "absolute",
+      "runtime_name_is_absolute": true,
+      "file_bytes": 1092,
+      "method_file_sha256": "e4033a9ff7d8c565b8f0fb0c80a3052250f641050ca5285098ada0614ccad069",
+      "raw_home_prefix_occurrences": 4
+    },
+    {
+      "constructor_mode": "relative",
+      "runtime_name_is_absolute": false,
+      "file_bytes": 816,
+      "method_file_sha256": "cf83dd7d09c6aec13ee7a4ec42fa21fbd5a62cec5c648eebb24d8a292fe28736",
+      "raw_home_prefix_occurrences": 0
+    }
+  ],
+  "retained_existing_ROOT_raw_prefix_scan": [
+    {
+      "label": "B01",
+      "file_sha256_unchanged": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "raw_private_prefix_occurrences": 0
+    },
+    {
+      "label": "B02",
+      "file_sha256_unchanged": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "raw_private_prefix_occurrences": 0
+    },
+    {
+      "label": "B03",
+      "file_sha256_unchanged": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "raw_private_prefix_occurrences": 0
+    }
+  ],
+  "driver_change": {
+    "path": "simulation/new_backgrounds/delphes_stage.py",
+    "before_sha256": "a773f3f3302732075e1fc7e1a26ec830f419fca4ffb2044745dbf1e30ab2c991",
+    "after_sha256": "5d9f91aebe24442debd732028de678b2fc2b9e63ba414344e39739894ac95d60",
+    "exact_only_change": "Delphes output filename argument changed to relative detector.root; existing subprocess cwd is output directory",
+    "cards_native_physics_and_input_arguments_unchanged": true,
+    "existing_MG5_source_not_modified_or_regenerated": true,
+    "physical_Delphes_attempts_before_change": 0
+  },
+  "focused_controls_after_change": {
+    "Windows_discovered": 25,
+    "Windows_passed": 24,
+    "Windows_skipped": 1,
+    "WSL_discovered": 25,
+    "WSL_passed": 25,
+    "WSL_skipped": 0,
+    "exit_codes": {
+      "Windows": 0,
+      "WSL": 0
+    }
+  },
+  "scope": "Native zero-event ROOT serialization and literal raw-byte checks only. Method files remain private and are not samples. Actual generated ROOT reference bytes must still be scanned after production; no rewriting of physical bytes is performed.",
+  "retained_PyROOT_diagnostic": "Cling reported unavailable build-time standard-library include paths; precompiled native TFile/TObjString operations completed, probe exited0. This check does not establish arbitrary Cling C++ interpretation."
+}

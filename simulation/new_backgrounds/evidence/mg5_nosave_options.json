@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ACTUAL_SUPPORTED_NO_SAVE_OPTIONS",
+  "scope": "METHOD_ONLY_ACTUAL_CONFIG_API",
+  "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+  "options": {
+    "automatic_html_opening": false,
+    "auto_update": 0,
+    "nb_core": "1",
+    "run_mode": "0",
+    "fortran_compiler": "x86_64-conda-linux-gnu-gfortran",
+    "cpp_compiler": "x86_64-conda-linux-gnu-g++"
+  },
+  "executed_set_commands": [
+    "set automatic_html_opening False --no_save",
+    "set auto_update 0 --no_save",
+    "set nb_core 1 --no_save",
+    "set run_mode 0 --no_save",
+    "set fortran_compiler x86_64-conda-linux-gnu-gfortran --no_save",
+    "set cpp_compiler x86_64-conda-linux-gnu-g++ --no_save"
+  ],
+  "installed_config_sha256_before": "583b625c12a8e6931230e54cb7622fa7352cf297c2af5a3f4b9654190dfc1402",
+  "installed_config_sha256_after": "583b625c12a8e6931230e54cb7622fa7352cf297c2af5a3f4b9654190dfc1402",
+  "installed_configuration_unchanged": true,
+  "process_export_invocations": 0,
+  "integration_invocations": 0,
+  "event_generation_invocations": 0,
+  "new_physics_events_generated": 0,
+  "preserved_first_failed_run": {
+    "status": "PARTIAL_PHYSICAL_CHAIN",
+    "MG5_events_generated": 0,
+    "MG5_generation_stage_attempted": false,
+    "LHE_files_present": 0,
+    "process_export_output_present": false,
+    "failed_export_log_sha256": "b94971ef6a898444048b36936e3622444bb3afe0663bc49d78615f626c9fc8da",
+    "run_manifest_sha256": "b372b375740c843387c4ea1e59ee98e02889ba52e797096591023044277992b7"
+  },
+  "installed_source_bindings": {
+    "madgraph/interface/madgraph_interface.py": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3",
+    "madgraph/interface/common_run_interface.py": "5745d31d6172182723bf761d7203dbb8bf6fbbee43bbdbab7b4d2c33df459752"
+  },
+  "inspected_branch_lines": {
+    "madgraph/interface/madgraph_interface.py": [
+      8117,
+      8120
+    ],
+    "madgraph/interface/common_run_interface.py": [
+      3495,
+      3496,
+      3615,
+      3616
+    ]
+  },
+  "local_driver_source_sha256": "1cef5cd29840838a9d6bdc1aa9ff00ace2b1b0956faa1ada2d30943c0ac4c208",
+  "supported_flag": "--no_save",
+  "repair": "All driver set commands use the installed supported session-only option. Installation mutation audit remains active; source physics cards are unchanged."
+}

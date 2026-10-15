@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ACTUAL_READONLY_STATUS_CONTEXT_REPAIR",
+  "scope": "EXISTING_GENUINE_PREFIX10_ONLY_NOT_FULL1000_PHYSICS_ACCEPTANCE",
+  "process_alias": "zh",
+  "source_profile": "B04_ZH_BBGG",
+  "new_MG5_events": 0,
+  "new_Pythia_next_calls": 0,
+  "new_Delphes_runs": 0,
+  "native_reader_invocations": 1,
+  "actual_existing_events_read": 10,
+  "actual_existing_particles_read": 3604,
+  "original_assets_and_failed_receipts_unchanged": true,
+  "old_reader_source_sha256": "fbcac365c20f6c4d44dfb57945ab6b6a47354acc500c0dd28a163ae7c2ff0db9",
+  "new_reader_source_sha256": "e0b03c81098fe63b99491e58a3c9979135f389f6a93e8ed7b799cdd97876977f",
+  "old_shower_stage_source_sha256": "507ec22e27fe130a08a849e70fa828fa58dcf1fdd32acd47614c0c0c32c2b636",
+  "new_shower_stage_source_sha256": "34a3a62762f677939b22050da251adfe709a5b4154c493f9f77523668424c9e6",
+  "new_reader_binary_sha256": "35d4b7703c429d00e85079bf4a9096b9270b2baa93f8447a5b250d1e123cb333",
+  "original_full1000_LHE_gzip_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+  "original_prefix10_hepmc_plain_sha256": "ad51a02e982ae83368768e84569f20093de304714c54e7496aadc12a438f9e00",
+  "original_closed_manifest_sha256": "18ecb5657ab7bdb20d9861c357fe3904f935e4d63f0dcca8e1b5260790ea45ce",
+  "original_failed_reader_receipt_sha256": "2495433a82e6392102562ac487bdad801d51ebd660ad4e2260c536afb1995f17",
+  "fresh_readonly_authority_sha256": "30f57f6b333938d8eff7a38b51cbef2a6b62973da76116d5adcbbd43e4c27774",
+  "original_preserved_asset_sha256": {
+    "shower.hepmc3": "ad51a02e982ae83368768e84569f20093de304714c54e7496aadc12a438f9e00",
+    "run_summary.json": "5142334e1053e02485a0b49b7064b44dbaff7afff7e3cae06ce485e6f9b00628",
+    "event_ledger.jsonl": "e0b945ef60c674af93226081c78e8751cf35a663bb6c0fc56101fbd02a1e6f5c",
+    "particle_diagnostics.jsonl": "4fc630cc43eb70e5ae65da3083dae8ecd10cdf6d68b0c2a36f8d411ac33b618d",
+    "decay_tables_original_preinit.json": "cbcf657ebfa03b134bc39505874cdcc902a0e7a35c83290f979f098e661602f3",
+    "decay_tables_before_init.json": "910e66ae2ad972225c0e6e670e4df644d041446c22677ad4fac5281dac53f9ef",
+    "decay_tables_inclusive_initialized.json": "b1215349f648a60d2483b3b660c218334360f90fed35ae62f7e35016e344d15c",
+    "decay_tables_initialized.json": "e5118782a44f85650edde6637ac72b5cc9d204ed058418bfe649a922c79c0937",
+    "original_particle_data.xml": "fce59e34b6dd99a8392acb6669c70525e20bcc8fa6b40d96383218a31251b268",
+    "inclusive_initialized_particle_data.xml": "fd0ca5ca66c7ef16da6df2206471306132a5c003015cd47680ddcde22d1a03b2",
+    "effective_particle_data.xml": "60170a68b411009b304a91bd07ccedbc4141a86198eefda1c618e748eb42bd88",
+    "inclusive_initialized_settings.cmnd": "11d64a986fa9bccf1c89c841d6a1d26bff6ab9eb4dda8c6f99b7beffe014ccad",
+    "effective_settings.cmnd": "11d64a986fa9bccf1c89c841d6a1d26bff6ab9eb4dda8c6f99b7beffe014ccad"
+  },
+  "actual_generic_reader": {
+    "validation_status": "PASS",
+    "N_readback": 10,
+    "N_passed_validation": 10,
+    "N_failed_validation": 0,
+    "total_particles": 3604,
+    "max_beam_to_stable_residual_gev": 1.8212161105590763e-07,
+    "stable_colored_particle_count": 0,
+    "mass_shell_failed_particle_count": 0
+  },
+  "actual_contextual_ancestry_reader": {
+    "schema_version": 1,
+    "validation_status": "PASS_BACKGROUND_HEPMC_RECORDS",
+    "N_readback": 10,
+    "N_passed_validation": 10,
+    "N_failed_validation": 0,
+    "source_total_events": 1000,
+    "source_file_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+    "process_alias": "zh",
+    "source_profile": "B04_ZH_BBGG",
+    "higgs_two_photon_birth_events": 10,
+    "source_Z_bottom_birth_events": 10,
+    "top_W_model_decay_events": 0,
+    "one_Born_photon_identity_events": 0,
+    "stable_photon_origin_counts": {
+      "born_prompt": 0,
+      "shower_radiation": 0,
+      "hadron_decay": 637,
+      "other": 20
+    },
+    "decompressed_file_sha256": "ad51a02e982ae83368768e84569f20093de304714c54e7496aadc12a438f9e00",
+    "input_index_sha256": "71d52d6fb7d8b7d84774e7d4b928f76266b16a1bd5b9b7b8640355baa839ac92",
+    "truth_index_sha256": "a45b4b721982836ddfbef6101d5ddbcd2b0cd92cd1014251fb88631d567bd957",
+    "generic_physics_report_sha256": "03f7e36e642580855cae96f0f5e531d353434db9bad874be82af63782bc28232",
+    "actual_initialized_decay_table_sha256": "e5118782a44f85650edde6637ac72b5cc9d204ed058418bfe649a922c79c0937",
+    "raw_LHE_weight_sum_pb": 0.8953800000000001,
+    "Info_weight_sum_pb": 0.8953800000000002,
+    "converter_nominal_weight_sum_pb": 0.8953800000000002,
+    "Higgs_BR_adoption": "UNKNOWN_NOT_APPLIED",
+    "exclusive_physical_normalization": "BLOCKED",
+    "source_Z_BR_reapplied": false,
+    "top_W_decay_scope": "inclusive supported Pythia model; production-decay spin correlations unvalidated",
+    "photon_fake_rate": "BLOCKED_UNCALIBRATED",
+    "resonance_mass_check": "Independent source and HMC root invariant mass-squared vs exact source mass token; HMC generated mass token compared separately; Lorentz recoil allowed; no p4 identity/repair",
+    "resonance_generated_mass_atol_GeV": 1e-05,
+    "resonance_generated_mass_rtol": 1e-09,
+    "resonance_invariant_mass_squared_atol_GeV2": 1e-06,
+    "resonance_invariant_mass_squared_rtol": 5e-09,
+    "resonance_invariant_mass_squared_scale": "max(E^2,|p|^2,m_source^2,1GeV^2): frozen PhaseF printed-LHE precision and binary64 cancellation bound",
+    "pythia_version": "8.317",
+    "hepmc3_version": "3.3.1",
+    "hepmc3_reported_version": "3.03.01",
+    "top_decay_quark_pdg_counts": {},
+    "W_birth_product_pdg_counts": {},
+    "H_final_photon_multiplicity_histogram": {
+      "2": 10
+    }
+  },
+  "source_inspection": {
+    "scope": "SOURCE_INSPECTION_ONLY_WITH_SEPARATE_ACTUAL_READER_QA",
+    "official_pythia_version": "8.317",
+    "official_source_commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+    "relative_path": "src/Event.cc",
+    "sha256": "7a05b2c5638b370a5fca27e424fc6527c733294b11f356299e45c3ce701f0b04",
+    "lines": [
+      383,
+      403
+    ],
+    "finding": "The null Event pointer branch returns zero for negative nonbeam statuses. Official contextual conversion also needs installed hadron classification and the first original native daughter status.",
+    "new_library_builds": 0
+  },
+  "actual_existing_record_diagnosis": {
+    "particles": 3604,
+    "official_contextual_status_mismatches": 0,
+    "dummy_null_event_status_mismatches": 2167,
+    "first_mismatch": {
+      "event": 1,
+      "original_native_index": 3,
+      "pdg_id": -1,
+      "original_status": -21,
+      "dummy_HepMC_status": 0,
+      "actual_HepMC_status": 21
+    },
+    "scope": "Saved actual native particle diagnostics compared with immutable actual HepMC status columns; separate actual C++ reader proof above."
+  },
+  "failure_controls": {
+    "status": "PASS_FAILURE_CONTROLS_ONLY",
+    "scope": "ACTUAL_SAVED_PREFIX_METADATA_MUTATIONS_MUST_REJECT_NO_NATIVE_INVOCATION",
+    "controls": [
+      {
+        "case": "wrong_status",
+        "rejected": true
+      },
+      {
+        "case": "changed_manifest",
+        "rejected": true
+      },
+      {
+        "case": "changed_failed_receipt",
+        "rejected": true
+      },
+      {
+        "case": "changed_old_authority",
+        "rejected": true
+      },
+      {
+        "case": "wrong_process",
+        "rejected": true
+      },
+      {
+        "case": "wrong_stage",
+        "rejected": true
+      },
+      {
+        "case": "changed_source_sha",
+        "rejected": true
+      },
+      {
+        "case": "changed_seed",
+        "rejected": true
+      },
+      {
+        "case": "missing_original_ledger",
+        "rejected": true
+      },
+      {
+        "case": "different_raw_HepMC",
+        "rejected": true
+      },
+      {
+        "case": "invented_pythia_run_id",
+        "rejected": true
+      },
+      {
+        "case": "original_output_overlap",
+        "rejected": true
+      }
+    ],
+    "new_events_generated": 0,
+    "producer_invocations": 0,
+    "reader_invocations": 0
+  },
+  "existing_stage_guard_regression": {
+    "Windows": {
+      "tests": 21,
+      "exit_code": 0
+    },
+    "WSL": {
+      "tests": 21,
+      "exit_code": 0
+    },
+    "scope": "Failure-path method tests; physical acceptance supplied only by the actual saved ten-event native readback."
+  },
+  "reuse_contract": {
+    "stage": "prefix10",
+    "process": "zh",
+    "immutable_asset_count": 13,
+    "generating_callback_permitted": false,
+    "source_denominator": 1000,
+    "description": "Strictly source-bound saved genuine ten-event HMC is copied into a fresh output, with original run identity retained; only the native reader is invoked."
+  },
+  "interpretation_limits": [
+    "The original failed reader receipt remains historical evidence.",
+    "This repair does not regenerate or alter a physics record, card, selection or weight.",
+    "Full1000 readback and model-only normalization closure remain separate future gates.",
+    "Higgs branching ratio is not adopted by this ten-event read-only receipt.",
+    "No official ATLAS systematic, calibrated photon fake rate or production-decay spin validation is claimed."
+  ]
+}

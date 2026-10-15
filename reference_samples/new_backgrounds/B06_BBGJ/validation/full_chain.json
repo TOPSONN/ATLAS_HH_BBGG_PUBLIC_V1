@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6G_THREE_NEW_BACKGROUNDS_FULL_CHAIN_1K_V1",
+  "status": "PASS_FULL_CHAIN_MODEL_SCOPE",
+  "physical_generation_completed": true,
+  "campaign_id": "d7e05a4b-6931-49c3-8593-0ec4e96e53fd",
+  "request": {
+    "process": "bbgj",
+    "events": 1000,
+    "seed": 20261106,
+    "energy_gev": 13000,
+    "output": "run:ACTUAL_PRESERVED_RUN",
+    "max_hours": 4.0,
+    "max_disk_gb": 10.0
+  },
+  "bridge_sha256": "0b8675b0df8c01f95078e86062904d156e8c9db92e834c6a6d5dc278f6e9e109",
+  "MG5_events_generated": 1000,
+  "MG5_events_generated_in_this_attempt": 1000,
+  "MG5_events_reused": 0,
+  "Pythia_events_attempted": 1000,
+  "Pythia_events_attempted_in_this_attempt": 1000,
+  "Pythia_events_reused": 0,
+  "Pythia_events_written": 1000,
+  "HepMC_validated_events": 1000,
+  "Delphes_ROOT_entries": 1000,
+  "source_cross_section_pb": "65.88309",
+  "source_integration_uncertainty_pb": "0.3918004",
+  "interpretation_gates": {
+    "O": "BLOCKED_PHOTON_FAKE",
+    "P": "UNKNOWN_OVERLAP",
+    "Q": "BLOCKED_OFFICIAL_CALIBRATION"
+  },
+  "original_receipt_sha256": "8933bca3b2a821d4f679382d81a27db5fa55b5aebcd5f197db290042175c35ff",
+  "public_projection_scope": "Numbers/hashes unchanged; known private artifact locations replaced by logical roles; native QA not reexecuted"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_INSPECTION_ONLY_REQUIRES_ACTUAL_EVENT_CLOSURE",
+  "pythia_version": "8.317",
+  "source_commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+  "new_physics_events_from_inspection": 0,
+  "source_sha256": {
+    "src/PhaseSpace.cc": "d6d297c49480e0b14b4686f6348aac7f7552c002975516cc77b2063902ca0c92",
+    "src/ProcessContainer.cc": "a67ad43f55bbc3c0d013799ed2c6423ca836af82dfc0c9010f7a99875e23a832",
+    "src/ProcessLevel.cc": "0f7a4b101693603db84d09fd1864e58eb5dab4e1342d2e27b2a073d6d16de7c0",
+    "src/ResonanceDecays.cc": "59876d78a0e8b3caf972eb706453e54ddb754641f110c5e326130ea7907b6559",
+    "src/ParticleData.cc": "e37c8813c5f742d061179b1d189732118eaff89fc207ae28815c7c5d627cd85e",
+    "src/Info.cc": "127e4ce12443a101d6ddc9b9aaeaeac7f40e841d4c5e60d492616510dc23b975",
+    "src/Weights.cc": "61d331b7d1876843734ca598068cba3201c722d2243d6469c36a62ee9ef99bc7",
+    "include/Pythia8/Info.h": "a9797dac1c9fd56394dbe726a2c0e32b565c9ff29ac18e122fccc553fb72b2d5"
+  },
+  "observed_source_paths": [
+    {
+      "path": "src/PhaseSpace.cc",
+      "lines": [4170, 4204],
+      "finding": "External LHE strategy magnitude 4 obtains XWGTUP from the official reader and converts pb to internal mb once."
+    },
+    {
+      "path": "src/ProcessContainer.cc",
+      "lines": [372, 396],
+      "finding": "Magnitude 4 uses the external sigma as the nominal process weight, followed by the separate bias-selection factor."
+    },
+    {
+      "path": "include/Pythia8/Info.h",
+      "lines": [732, 738],
+      "finding": "The nominal Info weight is stored in pb for external strategies plus/minus 4."
+    },
+    {
+      "path": "src/ProcessContainer.cc",
+      "lines": [1333, 1370],
+      "finding": "Resonance decays run after nominal process weight assignment; this inspected conditional decay path does not multiply the nominal external weight by the Higgs branching fraction."
+    },
+    {
+      "path": "src/ParticleData.cc",
+      "lines": [538, 580],
+      "finding": "Enabled-channel widths are summed and decay-channel selection samples relative to that enabled-channel sum. Forcing one supported channel changes its conditional sampling probability."
+    },
+    {
+      "path": "src/ProcessContainer.cc",
+      "lines": [904, 1029],
+      "finding": "The supported LesHouches quark-mass policy may change initially massless heavy-quark momenta and masses after exact external-reader input validation. This is recorded model behavior, not source or detector momentum repair."
+    }
+  ],
+  "required_runtime_closure_before_model_br": [
+    "Actual full source validated with IDWTUP=-4 and denominator 1000.",
+    "Every actual Info weight divided by original nonzero XWGTUP agrees with the measured nominal-inclusion convention; zero weights handled explicitly.",
+    "Every actual HepMC converter nominal weight agrees with the corresponding Info weight.",
+    "Actual initialized inclusive and forced Higgs tables share the same positive total/partial widths and inclusive H-to-gamma-gamma model BR.",
+    "Actual forced Higgs conditional probability is one; actual H-origin two-photon birth verified in every shower/HepMC record.",
+    "Only the missing factor is applied once to the raw signed source contribution in a separate MODEL_BR_ONLY quantity."
+  ],
+  "scope_limits": [
+    "Source inspection alone does not establish event-weight closure.",
+    "MODEL_BR_ONLY is not an official calibrated background normalization.",
+    "B04 source-included Z-to-bb factor must never be multiplied again.",
+    "B05 inclusive supported top/W model channels remain inclusive; no exclusive top/W factor or HH factor of two is applied.",
+    "Pythia fallback production-decay spin correlations are not validated.",
+    "B06 photon-fake-rate calibration remains blocked."
+  ]
+}

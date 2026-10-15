@@ -1,0 +1,239 @@
+{
+  "status": "PASS_INDEPENDENT_ACTUAL_FULL1000_RAW_AND_MODEL_BR_CLOSURE",
+  "scope": "MODEL_BR_ONLY_NO_CALIBRATED_PHYSICAL_NORMALIZATION",
+  "source_events": 1000,
+  "actual_HMC_events": 1000,
+  "actual_Hgg_birth_events": 1000,
+  "actual_Zbb_birth_events": 0,
+  "actual_top_W_decay_events": 1000,
+  "source_indices": "EXACT_1_THROUGH_1000",
+  "raw_Info_to_LHE_ratio_min_exact_native_serialized_tokens": "1.0000000000000001503073785892149520923978831317520",
+  "raw_Info_to_LHE_ratio_max_exact_native_serialized_tokens": "1.0000000000000001503073785892149520923978831317520",
+  "converter_Info_max_abs_difference_pb": "0",
+  "contribution_raw_source_over1000_max_abs_difference_pb": "1E-20",
+  "source_decimal_to_binary64_serialization_max_difference_pb": "2E-17",
+  "inclusive_total_width_GeV": "0.0040759737157163968",
+  "inclusive_gamma_partial_width_GeV": "0.0000093647403034721282",
+  "inclusive_model_BR_gamma_gamma": "0.002297546784308979",
+  "inclusive_enabled_BR_sum": "1.0000000000000000350524009",
+  "forced_conditional_gamma_probability": "1",
+  "Z_on_modes_unchanged": true,
+  "Z_inclusive_vs_forced_H_tables_equal": true,
+  "Z_preinit_vs_initialized_width_note": "Ordinary initialization recalculates inclusive widths; no Z forcing and no source Z decay factor for B05.",
+  "H_BR_applications": 1,
+  "Z_BR_applications": 0,
+  "HH_factor_two_applied": false,
+  "raw_source_sum_pb_native_serialized_tokens": "0.39918199999999999000",
+  "model_Hgg_sum_pb": "0.00091713932045402683220253215691021000",
+  "model_Hgg_squared_sum_pb2": "8.4114453312287412050210925369339289211555838409214E-10",
+  "controller_model_sum_representation_difference_pb": "2.297546784308979000E-20",
+  "controller_model_squared_sum_representation_difference_pb2": "4.214340992940660710788444161590786E-26",
+  "original_input_hashes_unchanged": true,
+  "new_events_generated": 0,
+  "full1000_native_reader_report_sha256": "0ab7c2776d3bf04180c09a7d549e6bb8da02cf58087db244419d37b2caf5d70a",
+  "full1000_HMC_sha256": "524a47c8a87516c30ff01cf03e9097e68d0eff9aa74b39a3a1d502a9ec6f90e4",
+  "actual_root_full1000_QA": "SEPARATE_ACTUAL_INDEPENDENT_FULL1000_ROOT_AND_NUMERICAL_READBACK_PASS",
+  "process": "tth",
+  "top_W_model_scope": "INCLUSIVE_SUPPORTED_PYTHIA_MODEL_NO_EXCLUSIVE_TOP_W_FACTOR",
+  "production_decay_spin_correlation": "NOT_VALIDATED",
+  "independently_checked_top_births": 2000,
+  "independently_checked_W_births": 2000,
+  "actual_top_decay_quark_pdg_counts": {
+    "-5": 1000,
+    "5": 1000
+  },
+  "actual_W_birth_product_pdg_counts": {
+    "-16": 108,
+    "-15": 114,
+    "-14": 97,
+    "-13": 106,
+    "-12": 116,
+    "-11": 122,
+    "-4": 326,
+    "-3": 328,
+    "-2": 353,
+    "-1": 330,
+    "1": 347,
+    "2": 326,
+    "3": 329,
+    "4": 332,
+    "5": 3,
+    "11": 116,
+    "12": 122,
+    "13": 97,
+    "14": 106,
+    "15": 108,
+    "16": 114
+  },
+  "actual_W_channel_counts": {
+    "-24:-12,11": 116,
+    "-24:-14,13": 97,
+    "-24:-16,15": 108,
+    "-24:-2,1": 331,
+    "-24:-2,3": 22,
+    "-24:-4,1": 16,
+    "-24:-4,3": 307,
+    "-24:-4,5": 3,
+    "24:-1,2": 312,
+    "24:-1,4": 18,
+    "24:-11,12": 122,
+    "24:-13,14": 106,
+    "24:-15,16": 114,
+    "24:-3,2": 14,
+    "24:-3,4": 314
+  },
+  "actual_inclusive_top_and_W_tables": {
+    "6": {
+      "mass_gev": "173",
+      "total_width_gev": "1.3553448418805865",
+      "channels": [
+        {
+          "index": 0,
+          "on_mode": 1,
+          "stored_inclusive_BR": "6.6440891427417377e-05",
+          "partial_width_gev": "9.0050319486098215e-05",
+          "products": [
+            24,
+            1
+          ]
+        },
+        {
+          "index": 1,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.0017361001207372234",
+          "partial_width_gev": "0.0023530143436294591",
+          "products": [
+            24,
+            3
+          ]
+        },
+        {
+          "index": 2,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.99819745898783541",
+          "partial_width_gev": "1.352901777217471",
+          "products": [
+            24,
+            5
+          ]
+        },
+        {
+          "index": 3,
+          "on_mode": 0,
+          "stored_inclusive_BR": "0",
+          "partial_width_gev": "0",
+          "products": [
+            37,
+            5
+          ]
+        }
+      ]
+    },
+    "24": {
+      "mass_gev": "80.418999999999997",
+      "total_width_gev": "2.0931855123021208",
+      "channels": [
+        {
+          "index": 0,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.32052205748717494",
+          "partial_width_gev": "0.67091212710542203",
+          "products": [
+            -1,
+            2
+          ]
+        },
+        {
+          "index": 1,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.017422487211344019",
+          "partial_width_gev": "0.036468497819054278",
+          "products": [
+            -1,
+            4
+          ]
+        },
+        {
+          "index": 2,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.01744592749724869",
+          "partial_width_gev": "0.036517562685914155",
+          "products": [
+            -3,
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.31978024955737688",
+          "partial_width_gev": "0.66935938549385798",
+          "products": [
+            -3,
+            4
+          ]
+        },
+        {
+          "index": 4,
+          "on_mode": 1,
+          "stored_inclusive_BR": "5.2718843732088659e-06",
+          "partial_width_gev": "1.1035031992532745e-05",
+          "products": [
+            -5,
+            2
+          ]
+        },
+        {
+          "index": 5,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.00059867250755108522",
+          "partial_width_gev": "0.0012531326194195136",
+          "products": [
+            -5,
+            4
+          ]
+        },
+        {
+          "index": 6,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.10810159046594314",
+          "partial_width_gev": "0.22627668302012927",
+          "products": [
+            -11,
+            12
+          ]
+        },
+        {
+          "index": 7,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.10810131055681563",
+          "partial_width_gev": "0.22627609711839877",
+          "products": [
+            -13,
+            14
+          ]
+        },
+        {
+          "index": 8,
+          "on_mode": 1,
+          "stored_inclusive_BR": "0.1080224328321724",
+          "partial_width_gev": "0.22611099140793223",
+          "products": [
+            -15,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  "top_W_channel_on_modes_unchanged": true,
+  "top_W_inclusive_vs_forced_H_tables_equal": true,
+  "rare_top_d_or_s_observed": 0,
+  "rare_top_zero_does_not_imply_zero_model_probability": true,
+  "top_W_BR_applications": 0,
+  "native_birth_diagnostics_sha256": {
+    "particle_diagnostics.jsonl": "1eec842bf391be7f95a477df702e8dcea030b960692ad380e50da6c47bc90e00",
+    "hepmc_ancestry.jsonl": "f75faaff500e1ed383ecda1eb9a41ddb51789b1476814e64252d4b85832cff9c"
+  },
+  "native_birth_diagnostics_unchanged": true
+}

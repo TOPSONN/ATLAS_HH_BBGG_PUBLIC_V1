@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_FULL1000_NUMERICAL_READBACK",
+  "process": "bbgj",
+  "source_events": 1000,
+  "native_root_sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+  "reco_events_sha256": "b894f1a5ff2c6e2e6424f8db232e936fdf8b72b598df69bc5adfe1b94f0ab410",
+  "cutflow_sha256": "d06b38c51fd0e92b461652b20e870ba3a59a9f9d2732ce29ae144a5854b5d11c",
+  "cutflow": [
+    {
+      "stage": "00_input",
+      "raw_events": 1000,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 1.0,
+        "binomial_plugin_standard_error": 0.0,
+        "wilson95_low": 0.996173241514445,
+        "wilson95_high": 1.0,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": 0.9970087504549047,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 65.883086,
+      "source_weight_sum_squared_pb2": 4.3405810208833975,
+      "source_sampling_variance_pb2": 0.0,
+      "source_sampling_standard_error_pb": 0.0,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "01_photons",
+      "raw_events": 2,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.002,
+        "binomial_plugin_standard_error": 0.0014127986409959489,
+        "wilson95_low": 0.000548643588120728,
+        "wilson95_high": 0.007262807863492177,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.13176617200000001,
+      "source_weight_sum_squared_pb2": 0.008681162041766794,
+      "source_sampling_variance_pb2": 0.008672472189873133,
+      "source_sampling_standard_error_pb": 0.09312610906654016,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "02_jets",
+      "raw_events": 2,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.002,
+        "binomial_plugin_standard_error": 0.0014127986409959489,
+        "wilson95_low": 0.000548643588120728,
+        "wilson95_high": 0.007262807863492177,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.13176617200000001,
+      "source_weight_sum_squared_pb2": 0.008681162041766794,
+      "source_sampling_variance_pb2": 0.008672472189873133,
+      "source_sampling_standard_error_pb": 0.09312610906654016,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "03_two_btags",
+      "raw_events": 2,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.002,
+        "binomial_plugin_standard_error": 0.0014127986409959489,
+        "wilson95_low": 0.000548643588120728,
+        "wilson95_high": 0.007262807863492177,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.13176617200000001,
+      "source_weight_sum_squared_pb2": 0.008681162041766794,
+      "source_sampling_variance_pb2": 0.008672472189873133,
+      "source_sampling_standard_error_pb": 0.09312610906654016,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "raw_events": 0,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.0,
+        "binomial_plugin_standard_error": 0.0,
+        "wilson95_low": 0.0,
+        "wilson95_high": 0.0038267584855551234,
+        "zero_survivor_one_sided95_upper": 0.002991249545095296,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": "OBSERVED_ZERO_IS_NOT_PROOF_OF_ZERO_BACKGROUND"
+      },
+      "source_weight_sum_pb": 0.0,
+      "source_weight_sum_squared_pb2": 0.0,
+      "source_sampling_variance_pb2": 0.0,
+      "source_sampling_standard_error_pb": 0.0,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "control_00_input",
+      "raw_events": 1000,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 1.0,
+        "binomial_plugin_standard_error": 0.0,
+        "wilson95_low": 0.996173241514445,
+        "wilson95_high": 1.0,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": 0.9970087504549047,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 65.883086,
+      "source_weight_sum_squared_pb2": 4.3405810208833975,
+      "source_sampling_variance_pb2": 0.0,
+      "source_sampling_standard_error_pb": 0.0,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "control_01_one_photon",
+      "raw_events": 450,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.45,
+        "binomial_plugin_standard_error": 0.015732132722552274,
+        "wilson95_low": 0.4194153840742968,
+        "wilson95_high": 0.4809672917742588,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 29.647388700000004,
+      "source_weight_sum_squared_pb2": 1.9532614593975288,
+      "source_sampling_variance_pb2": 1.0753691718404814,
+      "source_sampling_standard_error_pb": 1.0370000828546164,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "control_02_jets",
+      "raw_events": 410,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.41,
+        "binomial_plugin_standard_error": 0.01555313473226539,
+        "wilson95_low": 0.3799172576460708,
+        "wilson95_high": 0.4407715588813291,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 27.012065260000004,
+      "source_weight_sum_squared_pb2": 1.7796382185621928,
+      "source_sampling_variance_pb2": 1.051037586538232,
+      "source_sampling_standard_error_pb": 1.0252012419706835,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    },
+    {
+      "stage": "control_03_two_btags",
+      "raw_events": 147,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.147,
+        "binomial_plugin_standard_error": 0.011197812286335219,
+        "wilson95_low": 0.12640395855176664,
+        "wilson95_high": 0.1702977329390353,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 9.684813642000002,
+      "source_weight_sum_squared_pb2": 0.6380654100698594,
+      "source_sampling_variance_pb2": 0.5448146093989891,
+      "source_sampling_standard_error_pb": 0.7381155799730751,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i"
+    }
+  ],
+  "generator_integration_uncertainty_pb": 0.3918004,
+  "uncertainty_scope": "source sampling includes this one realized tag/detector stream; integration error separate",
+  "tag_sampling_variance": "NOT_SEPARATELY_MEASURED; no additional detector or tag redraws",
+  "event_correlations": "cuts nested within each source event; stage uncertainties must not be combined independently",
+  "model_br_contract": null,
+  "official_detector_or_br_calibration": "BLOCKED",
+  "B06_photon_fake_rate": "BLOCKED_UNCALIBRATED",
+  "background_overlap": "BLOCKED_NO_VALIDATED_OVERLAP_OR_MATCHING_SCHEME",
+  "luminosity_applied": false,
+  "selection_optimized": false,
+  "original_receipt_sha256": "bf60d1a0e78cd1806502908a54abf802dcf5c70208055eee3e7567c5c2363679",
+  "public_projection_scope": "Numbers/hashes unchanged; known private artifact locations replaced by logical roles; native QA not reexecuted"
+}

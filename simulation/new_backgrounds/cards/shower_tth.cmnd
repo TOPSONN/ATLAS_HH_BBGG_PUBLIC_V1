@@ -1,0 +1,11 @@
+! Tree-level stable t tbar H external source; Higgs-only forced decay.
+! Top/W channels remain inclusive across every supported initialized channel.
+! Production-decay spin correlations are not validated by this Pythia fallback.
+! Keep audited Pythia widths and loop model rather than importing SLHA widths.
+SLHA:readFrom = 0
+23:m0 = 91.188
+25:m0 = 125.0
+6:m0 = 173.0
+24:m0 = 80.41900
+25:onMode = off
+25:onIfMatch = 22 22

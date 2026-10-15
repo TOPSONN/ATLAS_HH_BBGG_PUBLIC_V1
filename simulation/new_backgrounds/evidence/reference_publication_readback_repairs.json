@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ACTUAL_PUBLICATION_REPRESENTATION_REPAIRS",
+  "scope": "READ_ONLY_REFERENCE_EXPORT_ONLY_NO_PHYSICS_OR_GENERATOR_CHANGE",
+  "new_MG5_events": 0,
+  "new_Pythia_next_calls": 0,
+  "new_Delphes_runs": 0,
+  "original_physical_asset_bytes_rewritten": false,
+  "old_portable_validator_sha256": "48569102f5c2e2926d533be11d84331fe9866413274526d26c7f237ecca3ce4f",
+  "new_portable_validator_sha256": "4c1f4c9f4299c2aa65fef2df8f2b440e09b8342ebb02d85891cc7a1787603dd1",
+  "new_publisher_sha256": "0f0272592e62f2297bcef6bf531d3ddd24fe6959181109e72d462e06bb0de15e",
+  "card_hash_diagnosis": [
+    {
+      "role": "process_card",
+      "exact_actual_header_sha256": "894453737703212e6bf95dc3fb116c7b05ac11504547af0d737059cf993574cc",
+      "actual_receipt_sha256": "894453737703212e6bf95dc3fb116c7b05ac11504547af0d737059cf993574cc",
+      "untrimmed_section_text_equals_actual_card": true,
+      "trimmed_text_wrong_sha256": "016e6d9dc43c08c18a3563729f81b052a0ae0b4a1ea5055e207d9b08d0b59dcc"
+    },
+    {
+      "role": "run_card",
+      "exact_actual_header_sha256": "44c0c0673062e7d97896167f23a33b925a6362a35a68b42436d06d12472ebffe",
+      "actual_receipt_sha256": "44c0c0673062e7d97896167f23a33b925a6362a35a68b42436d06d12472ebffe",
+      "untrimmed_section_text_equals_actual_card": true,
+      "trimmed_text_wrong_sha256": "e1b43e757e856d360ac4f7fc67c3928a7e0d6b52342a78a971cd9c4f74c84d4f"
+    },
+    {
+      "role": "param_card",
+      "exact_actual_header_sha256": "b55253cc5197609e95723c4d33a298f4d3f693e292d81db29e13b553ef165e93",
+      "actual_receipt_sha256": "b55253cc5197609e95723c4d33a298f4d3f693e292d81db29e13b553ef165e93",
+      "untrimmed_section_text_equals_actual_card": true,
+      "trimmed_text_wrong_sha256": "05ae00609e2331b0f2a576b7ab6ce84067110c7e3024b95a9a4b3d5a50fc140f"
+    }
+  ],
+  "exact_original_card_policy": "Hash exact decoded XML section.text with its original leading/trailing whitespace; no strip, normalization or card rewrite.",
+  "settings_privacy_projection": {
+    "unknown_absolute_paths_still_rejected": true,
+    "only_xml_directory_bound_by_actual_installed_ParticleData_sha256_projected": true,
+    "bound_installed_ParticleData_sha256": "330ba4e7f5a081235b5055f7b312fe6f5c9fe9c95411a845cba7a3e82e67ecca",
+    "logical_role": "installed:Pythia8.317_XML/",
+    "original_settings_sha256": "bc0840a5808314a5c78b46e1dc461235d4affbda034aac84c779adfaaac5e541",
+    "settings_original_bytes_preserved": true,
+    "scope": "Public settings projection records its original SHA; generated LHE/HepMC/ROOT bytes unchanged."
+  },
+  "failure_history": {
+    "pre_XML_projection_attempt": "BLOCKED_PRIVATE_XML_PATH_NO_REFERENCE_FILES",
+    "post_XML_pre_untrimmed_attempt": "BLOCKED_HEADER_CARD_IDENTITY_NO_REFERENCE_FILES",
+    "failed_preflight_private_evidence_sha256": "a4951b49247fe1d2f7d65c492f0f2e8c74543b22acab35f1eaa4beb51736d5fd"
+  },
+  "actual_all_process_preflight": "PASS_PORTABLE_SELECTED_REFERENCE_BUNDLES",
+  "fresh_native_QA_during_publication": false,
+  "failure_only_regression_tests": {
+    "Windows": 28,
+    "WSL": 28,
+    "exit_codes": [
+      0,
+      0
+    ]
+  }
+}

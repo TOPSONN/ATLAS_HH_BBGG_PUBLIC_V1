@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_ACTUAL_SOURCE_1000_ONLY",
+  "process": "bbgj",
+  "profile": "B06_BBGJ",
+  "new_MC_events_generated_in_audit": 0,
+  "actual_lhe_recheck": {
+    "schema_version": 1,
+    "status": "PASS_INDEPENDENT_REAL_LHE_RECHECK",
+    "process": "bbgj",
+    "profile": "B06_BBGJ",
+    "actual_events": 1000,
+    "events_assessed": 1000,
+    "events_valid": 1000,
+    "events_invalid": 0,
+    "source_file_sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+    "decompressed_file_sha256": "3221eda89160b031c28d92ee0395b9e7f769fa7266f273995e5c4af43995b8c3",
+    "source_total_events": 1000,
+    "independent_born_photon_multiplicity_counts": {
+      "1": 1000
+    },
+    "independent_ancestry_counts": {
+      "one_born_photon_and_two_b": 1000
+    },
+    "independent_incoming_flavour_counts": {
+      "2 21": 214,
+      "1 21": 60,
+      "21 21": 455,
+      "4 21": 57,
+      "-3 21": 21,
+      "-2 21": 67,
+      "-1 21": 31,
+      "-2 2": 27,
+      "-5 5": 7,
+      "-1 1": 4,
+      "-4 21": 38,
+      "3 21": 19
+    },
+    "independent_born_j4_flavour_counts": {
+      "2": 214,
+      "1": 60,
+      "21": 493,
+      "4": 57,
+      "-3": 21,
+      "-2": 67,
+      "-1": 31,
+      "-4": 38,
+      "3": 19
+    },
+    "independent_max_mass_shell_residual_gev2": "0.00021983996116471900",
+    "independent_max_conservation_residual_gev": "8.5E-8",
+    "cross_section_pb": "65.88309",
+    "integration_uncertainty_pb": "0.3918004",
+    "independent_raw_signed_weight_sum_pb": "65883.086000",
+    "independent_raw_signed_weight_mean_pb": "65.883086",
+    "negative_weights": 0,
+    "zero_weights": 0,
+    "mean_weight_init_print_closure": {
+      "absolute_difference_pb": "0.000004",
+      "combined_exact_decimal_half_unit_tolerance_pb": "0.0000055",
+      "scope": "Different printed precisions preserved; no source weight/header repair or integration-error expansion"
+    },
+    "source_seed_conventions": {
+      "requested_initial_seed": 20261106,
+      "effective_header_initial_seed": 20261106,
+      "post_run_administrative_iseed": 0,
+      "final_internal_randinit": 20261112,
+      "randinit_artifact_sha256": "65b47ffe0e199bbbaac7cae5e8d29c3d2207e7aaae9914e2ca45ec23b66cfb0d"
+    },
+    "independent_fixed_scale_gev": "125",
+    "actual_event_alpha_s_token_counts": {
+      "1.23806200e-01": 1000
+    },
+    "independent_cut_extrema": {
+      "minimum_pt_gev": {
+        "b": 25.015080434118282,
+        "photon": 25.030875791478955,
+        "j4": 25.054968626689057
+      },
+      "maximum_absolute_eta": {
+        "b": 2.498276770800646,
+        "photon": 2.4982570601144856,
+        "j4": 2.496320976693997
+      },
+      "minimum_all_final_pair_dr": 0.4000174621260225
+    },
+    "original_cards_provenance_sha256": "d4d38c21340d7a9809381d509f031677ad82403b001869d05e57d6d5b9a94882",
+    "original_lhe_validation_receipt_sha256": "64347f5a161f95824aae7f87ee2e657fa3049c9ae4ce442f1b56fc99fb8dbae1",
+    "original_lhe_validation_receipt_status": "PASS_LHE_RECORDS",
+    "current_formal_source_validator_status": "PASS_LHE_RECORDS",
+    "execution_bridge_binding": {
+      "status": "PASS_CURRENT_EXECUTED_SOURCE_BINDING",
+      "bridge_sha256": "0b8675b0df8c01f95078e86062904d156e8c9db92e834c6a6d5dc278f6e9e109"
+    },
+    "scope": "Real full1000 source reread. Independent Decimal kinematics, ancestry, colour, charge, cuts, Born topology, seed states and weight closure plus source-bound formal validator. No MG5 invocation or downstream/precision-background acceptance."
+  },
+  "actual_amplitude_card_inspection": {
+    "status": "PASS_ACTUAL_INDEPENDENT_AMPLITUDE_CARD_INSPECTION",
+    "process": "bbgj",
+    "profile": "B06_BBGJ",
+    "amplitude_receipt_sha256": "9bbc04ee75b1d5ec7f205c77aca954bb2ae3900d14eca1710bb6aa4e3f41c9c4",
+    "actual_amplitude_records": [
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          21
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 50,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          2
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          2
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          4
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          4
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          1
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          1
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          3
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          3
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          -2
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          -2
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          -4
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          -4
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          -1
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          -1
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          -3
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          -3
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          2,
+          -2
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          4,
+          -4
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          1,
+          -1
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          3,
+          -3
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 24,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          5,
+          -5
+        ],
+        "final_pdgs": [
+          5,
+          -5,
+          22,
+          21
+        ],
+        "diagram_count": 48,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 3,
+            "QED": 1
+          }
+        ]
+      }
+    ],
+    "actual_model_parameters": {
+      "mdl_MZ": 91.188,
+      "mdl_MH": 125.0,
+      "mdl_MT": 173.0,
+      "mdl_WZ": 2.441404,
+      "mdl_WH": 0.00638233934,
+      "mdl_WT": 1.4915,
+      "mdl_WW": 2.0476,
+      "mdl_ymt": 173.0,
+      "aEWM1": 132.507,
+      "mdl_Gf": 1.16639e-05,
+      "aS": 0.129783
+    },
+    "official_run_readback": {
+      "nevents": 1000,
+      "iseed": 20261106,
+      "lpp1": 1,
+      "lpp2": 1,
+      "ebeam1": 6500.0,
+      "ebeam2": 6500.0,
+      "pdlabel": "cteq6l1",
+      "lhaid": 10042,
+      "fixed_ren_scale": true,
+      "fixed_fac_scale": true,
+      "scale": 125.0,
+      "dsqrt_q2fact1": 125.0,
+      "dsqrt_q2fact2": 125.0,
+      "dynamical_scale_choice": -1,
+      "scalefact": 1.0,
+      "bwcutoff": 15.0,
+      "cut_decays": false,
+      "ptb": 25.0,
+      "ptj": 25.0,
+      "pta": 25.0,
+      "etab": 2.5,
+      "etaj": 2.5,
+      "etaa": 2.5,
+      "drbb": 0.4,
+      "drbj": 0.4,
+      "drab": 0.4,
+      "draj": 0.4,
+      "drjj": 0.4,
+      "maxjetflavor": 4,
+      "ptgmin": 0.0,
+      "ickkw": 0,
+      "use_syst": false,
+      "event_norm": "average",
+      "lhe_version": 3.0
+    },
+    "preserved_card_artifacts": {
+      "banner": {
+        "sha256": "c43262c143f76547ba807a993147dc7f2bf62dbe6a2ab2207f27cdf1dd92bc14",
+        "bytes": 26539
+      },
+      "prepared_process": {
+        "sha256": "ea5efaa0478e54e609c072b421f83a0f0370a1129a63a186106d23976755f92c",
+        "bytes": 135
+      },
+      "prepared_run": {
+        "sha256": "27d57bce001083b746db85528598451eab81e8ca0f5b83b8a9dbbe810ed75c27",
+        "bytes": 16320
+      },
+      "prepared_param": {
+        "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+        "bytes": 3054
+      }
+    },
+    "new_MC_events": 0,
+    "scope": "Read-only actual one-Born-photon bbj source amplitude/card inspection; no photon-fake model or physical diphoton-background interpretation"
+  },
+  "audit_receipt_sha256": {
+    "full_lhe": "569270014264083de7f72930b530892dff2387878cdd40145630c5fde21ea77a",
+    "amplitude_cards": "f6c12f9a0c1b52d987dbbe91b97d72bf7d88bf36dc954f1149c5b396aeffb576"
+  },
+  "audit_method_helper_sha256": "0e3296e4eb397dad69fd780a76880ce118ff0dd495f3c0255faae554f4a40641",
+  "physics_scope": {
+    "Born_photons": 1,
+    "source_Higgs_or_resonance_decay_BR_factor": "NONE_REQUIRED",
+    "proton_PDF_flavour_scheme": "FIVE_FLAVOUR_MASSLESS_B_C",
+    "j4_final_alias": "g,u,c,d,s,u~,c~,d~,s~",
+    "maxjetflavor4_role": "GENERATION_CUT_CLASSIFICATION_NOT_A_FOUR_FLAVOUR_PDF_OR_PROTON"
+  },
+  "limitations": "Actual one-prompt-photon bbj source only. No calibrated photon-fake model, complete diphoton background sum, matching/merging overlap removal or official ATLAS systematic/discovery interpretation. Additional shower/decay photons and reconstructed photon objects do not establish a calibrated jet-to-photon fake contribution. Raw weights are preserved, no Higgs BR factor is applied."
+}

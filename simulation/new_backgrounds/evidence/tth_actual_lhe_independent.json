@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_ACTUAL_SOURCE_1000_ONLY",
+  "process": "tth",
+  "profile": "B05_TTH_HGG",
+  "new_MC_events_generated_in_audit": 0,
+  "actual_lhe_recheck": {
+    "schema_version": 1,
+    "status": "PASS_INDEPENDENT_REAL_LHE_RECHECK",
+    "process": "tth",
+    "profile": "B05_TTH_HGG",
+    "actual_events": 1000,
+    "events_assessed": 1000,
+    "events_valid": 1000,
+    "events_invalid": 0,
+    "source_file_sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+    "decompressed_file_sha256": "30a0e233968a4ac5437269b505c6a1ec54fece13013c472163db9c7840abb16c",
+    "source_total_events": 1000,
+    "independent_born_photon_multiplicity_counts": {
+      "0": 1000
+    },
+    "independent_ancestry_counts": {
+      "stable_t_tbar_H": 1000
+    },
+    "independent_incoming_flavour_counts": {
+      "-2 2": 196,
+      "21 21": 658,
+      "-1 1": 119,
+      "-3 3": 18,
+      "-4 4": 7,
+      "-5 5": 2
+    },
+    "independent_born_j4_flavour_counts": {},
+    "independent_max_mass_shell_residual_gev2": "0.000384357726462747",
+    "independent_max_conservation_residual_gev": "1.0E-7",
+    "cross_section_pb": "0.3991820",
+    "integration_uncertainty_pb": "0.001975393",
+    "independent_raw_signed_weight_sum_pb": "399.18200000",
+    "independent_raw_signed_weight_mean_pb": "0.39918200",
+    "negative_weights": 0,
+    "zero_weights": 0,
+    "source_seed_conventions": {
+      "requested_initial_seed": 20261105,
+      "effective_header_initial_seed": 20261105,
+      "post_run_administrative_iseed": 0,
+      "final_internal_randinit": 20261111,
+      "randinit_artifact_sha256": "954d7df8888d4b3a81c864099a3e72fce470058d7b2c962cb35b65209289f28c"
+    },
+    "independent_fixed_scale_gev": "235.5",
+    "actual_event_alpha_s_token_counts": {
+      "1.12994300e-01": 1000
+    },
+    "independent_cut_extrema": {
+      "minimum_pt_gev": {},
+      "maximum_absolute_eta": {},
+      "minimum_all_final_pair_dr": null
+    },
+    "original_cards_provenance_sha256": "8ab646e2e55c954089f1c9bc048d1c53e2776ed00d87d0895af4f8810bcf7259",
+    "original_lhe_validation_receipt_sha256": "0d745d50d1a5251c03d08cf7d3bee93bc987dce58b11ac74b9688937b922e889",
+    "original_lhe_validation_receipt_status": "PASS_LHE_RECORDS",
+    "current_formal_source_validator_status": "PASS_LHE_RECORDS",
+    "execution_bridge_binding": {
+      "status": "PASS_CURRENT_EXECUTED_SOURCE_BINDING",
+      "bridge_sha256": "0b8675b0df8c01f95078e86062904d156e8c9db92e834c6a6d5dc278f6e9e109"
+    },
+    "scope": "Real full1000 source reread. Independent Decimal kinematics, ancestry, colour, charge, cuts, Born topology, seed states and weight closure plus source-bound formal validator. No MG5 invocation or downstream/precision-background acceptance."
+  },
+  "actual_amplitude_card_inspection": {
+    "status": "PASS_ACTUAL_INDEPENDENT_AMPLITUDE_CARD_INSPECTION",
+    "process": "tth",
+    "profile": "B05_TTH_HGG",
+    "amplitude_receipt_sha256": "32b95a0cabb8228790776d2b3502939d836369380c98412d57f8360125afa3bc",
+    "actual_amplitude_records": [
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          21,
+          21
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 8,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          2,
+          -2
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 2,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          4,
+          -4
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 2,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          1,
+          -1
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 2,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          3,
+          -3
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 2,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      },
+      {
+        "scope": "production",
+        "initial_pdgs": [
+          5,
+          -5
+        ],
+        "final_pdgs": [
+          6,
+          -6,
+          25
+        ],
+        "diagram_count": 2,
+        "actual_amplitude_orders": [
+          {
+            "QCD": 2,
+            "QED": 1
+          }
+        ]
+      }
+    ],
+    "actual_model_parameters": {
+      "mdl_MZ": 91.188,
+      "mdl_MH": 125.0,
+      "mdl_MT": 173.0,
+      "mdl_WZ": 2.441404,
+      "mdl_WH": 0.00638233934,
+      "mdl_WT": 1.4915,
+      "mdl_WW": 2.0476,
+      "mdl_ymt": 173.0,
+      "aEWM1": 132.507,
+      "mdl_Gf": 1.16639e-05,
+      "aS": 0.129783
+    },
+    "official_run_readback": {
+      "nevents": 1000,
+      "iseed": 20261105,
+      "lpp1": 1,
+      "lpp2": 1,
+      "ebeam1": 6500.0,
+      "ebeam2": 6500.0,
+      "pdlabel": "cteq6l1",
+      "lhaid": 10042,
+      "fixed_ren_scale": true,
+      "fixed_fac_scale": true,
+      "scale": 235.5,
+      "dsqrt_q2fact1": 235.5,
+      "dsqrt_q2fact2": 235.5,
+      "dynamical_scale_choice": -1,
+      "scalefact": 1.0,
+      "bwcutoff": 15.0,
+      "cut_decays": false,
+      "ptb": 0.0,
+      "ptj": 0.0,
+      "pta": 0.0,
+      "etab": -1.0,
+      "etaj": -1.0,
+      "etaa": -1.0,
+      "drbb": 0.0,
+      "drbj": 0.0,
+      "drab": 0.0,
+      "draj": 0.0,
+      "drjj": 0.0,
+      "maxjetflavor": 5,
+      "ptgmin": 0.0,
+      "ickkw": 0,
+      "use_syst": false,
+      "event_norm": "average",
+      "lhe_version": 3.0
+    },
+    "preserved_card_artifacts": {
+      "banner": {
+        "sha256": "16b6e049e06710795baee5b19c753320ac966f884c3c2a36f569c935a9b02c2b",
+        "bytes": 26507
+      },
+      "prepared_process": {
+        "sha256": "5dbb8ab17cc7944d62763c35ec9d9676cf75c018a328c767782210a52c304676",
+        "bytes": 98
+      },
+      "prepared_run": {
+        "sha256": "b056d4d0c6cd35571d95cb377c6ec0de276f5cde46930ff9f1af834a2e5130d3",
+        "bytes": 16342
+      },
+      "prepared_param": {
+        "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+        "bytes": 3054
+      }
+    },
+    "new_MC_events": 0,
+    "scope": "Read-only actual source amplitude/card inspection; no downstream or physical background interpretation"
+  },
+  "audit_receipt_sha256": {
+    "full_lhe": "c0feef63355ca2d9e3d1cefb21f23c5e7098375a55c2f89fd827a38a9509961f",
+    "amplitude_cards": "ad536eda783cc3c9aae674ddc197ae91fa12a920f8f75b05d2435252aa3f4030"
+  },
+  "audit_method_helper_sha256": "90a400a525782058a98647bc9930a11184f316c94a145e4a04c87dcb48ece025",
+  "limitations": "Actual hard-process source only: stable top/antitop/H. Inclusive Pythia top/W decays, H model-BR application and full detector/ROOT gates remain separate. Production-decay spin correlations are unvalidated; no official ATLAS normalization, discovery significance or calibrated systematic uncertainty is claimed."
+}

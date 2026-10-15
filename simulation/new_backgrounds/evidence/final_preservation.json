@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FINAL_ENVIRONMENT_AND_HISTORICAL_INPUT_BYTE_PRESERVATION",
+  "unchanged_baseline_blobs": 453,
+  "baseline_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "installed_identity_before_after_exactly_equal": true,
+  "original_environment_receipt_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+  "final_environment_receipt_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+  "samples": [
+    {
+      "process": "bbgg",
+      "events": 1000,
+      "ROOT_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "source_LHE_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "source_HepMC_sha256": "a35e15942ac5442b3141960f0c0602f5a4cb63ea853f1090fa9e46f304209536",
+      "original_source_detector_cards_weights_reports_and_indices": "ALL_BOUND_HASHES_UNCHANGED"
+    },
+    {
+      "process": "ccgg",
+      "events": 1000,
+      "ROOT_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "source_LHE_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "source_HepMC_sha256": "ad173686a9d9cb342796016bdb2ea6b70f08a5b921233da0d33d9dd8945cf9bb",
+      "original_source_detector_cards_weights_reports_and_indices": "ALL_BOUND_HASHES_UNCHANGED"
+    },
+    {
+      "process": "jjgg",
+      "events": 1000,
+      "ROOT_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "source_LHE_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "source_HepMC_sha256": "2643f0c14440b25267a153b72a7d676c337fd182a39e62fdcbe2191361a91365",
+      "original_source_detector_cards_weights_reports_and_indices": "ALL_BOUND_HASHES_UNCHANGED"
+    }
+  ],
+  "new_events_generated": 0,
+  "native_ROOT_rerun": false,
+  "scope": "Final hash readback after all three productions; actual old3000 native readback remains in regression evidence",
+  "software_reinstalled": false,
+  "historical_data_modified": false,
+  "figures_generated": false
+}

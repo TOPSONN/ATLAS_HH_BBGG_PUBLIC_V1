@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "status": "PASS_OFFICIAL_SERIALIZATION_DIAGNOSIS_AND_EXISTING_SOURCE_REVALIDATION",
+  "actual_source_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+  "actual_original_source_events": 1000,
+  "source_cards_or_events_modified": false,
+  "new_source_events_generated_during_revalidation": 0,
+  "implicit_defaults": {
+    "alpsfact": 1.0,
+    "asrwgtflavor": 5,
+    "auto_ptj_mjj": true,
+    "chcluster": false,
+    "xqcut": 0.0
+  },
+  "source_file_sha256_unchanged": true,
+  "runtime_matching": {
+    "ickkw": 0,
+    "xqcut": 0.0,
+    "use_syst": false
+  },
+  "old_failure": "Explicit-text-key equality rejected exactly five official implicit defaults; all explicit input values already agreed.",
+  "fix": "Only five exact pinned defaults can be explicit or implicit; unknown extras, changed defaults and missing/changed explicit values fail.",
+  "seed_conventions": {
+    "requested_initial_seed": 20261104,
+    "effective_banner_initial_seed": 20261104,
+    "post_run_card_iseed": 0,
+    "final_internal_randinit": 20261110,
+    "internal_progression": "MadEvent increments self.random by3 per stage; final internal randinit is recorded separately from the initial requested seed."
+  },
+  "source_inspection": {
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "files": {
+      "madgraph/various/banner.py": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a",
+      "madgraph/interface/madevent_interface.py": "2db7a8bf0be855dd08d4262921a5279f3215c1a12fc6ec8eb8d76289c6ec0540",
+      "Template/LO/SubProcesses/setcuts.f": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18"
+    },
+    "inspected_lines": {
+      "madgraph/various/banner.py": [
+        [
+          4026,
+          4029
+        ],
+        [
+          4043,
+          4043
+        ],
+        [
+          4162,
+          4162
+        ]
+      ],
+      "madgraph/interface/madevent_interface.py": [
+        [
+          6034,
+          6042
+        ],
+        [
+          6399,
+          6401
+        ]
+      ],
+      "Template/LO/SubProcesses/setcuts.f": [
+        [
+          155,
+          178
+        ]
+      ]
+    }
+  },
+  "existing_real_input_revalidation": {
+    "schema_version": 1,
+    "status": "PASS_INDEPENDENT_REAL_LHE_RECHECK",
+    "process": "zh",
+    "profile": "B04_ZH_BBGG",
+    "actual_events": 1000,
+    "events_assessed": 1000,
+    "events_valid": 1000,
+    "events_invalid": 0,
+    "source_file_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+    "decompressed_file_sha256": "b58ef3983969d7bae1fbb765045202def694e668c71366bea21d524b20c5ea6b",
+    "source_total_events": 1000,
+    "independent_born_photon_multiplicity_counts": {
+      "0": 1000
+    },
+    "independent_ancestry_counts": {
+      "stable_H_and_Zbb": 1000
+    },
+    "independent_max_mass_shell_residual_gev2": "0.00039104762625714176",
+    "independent_max_conservation_residual_gev": "1.268E-7",
+    "cross_section_pb": "0.08953800",
+    "integration_uncertainty_pb": "0.0003975100",
+    "independent_raw_signed_weight_sum_pb": "89.538000000",
+    "independent_raw_signed_weight_mean_pb": "0.089538000",
+    "negative_weights": 0,
+    "zero_weights": 0,
+    "original_cards_provenance_sha256": "dba5161cb8928fd0c72e4d7f08258bb8c7a2a51bc5c65c71a76e53d65d595e8e",
+    "original_lhe_validation_receipt_sha256": "e5e851abac532833578b558907ee7b40b4b18ba603b06000de8c794fbd0eb4ed",
+    "original_lhe_validation_receipt_status": "FAILED_PHYSICAL_VALIDATION",
+    "current_formal_source_validator_status": "PASS_LHE_RECORDS",
+    "execution_bridge_binding": {
+      "status": "PASS_PINNED_HISTORICAL_SOURCE_BINDING_ONLY",
+      "original_bridge_sha256": "caa6fbb5560a0069c557bb4253c8bb9dcf46420d5f1c8f69377377dd15a4ed59",
+      "original_execution_plan_sha256": "f1096c00b3f8578fd8810e0e0a0e914f9f15b059d338485e32953b6dbe1b07c5",
+      "original_lhe_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "original_execution_plan": {
+        "path": "[LOCAL_ORIGINAL_ZH_SOURCE]/execution_plan.json",
+        "sha256": "f1096c00b3f8578fd8810e0e0a0e914f9f15b059d338485e32953b6dbe1b07c5",
+        "bytes": 19128
+      },
+      "original_source_only_manifest": {
+        "path": "[LOCAL_ORIGINAL_ZH_SOURCE]/run_manifest.json",
+        "sha256": "17c83600f28fa20d6717ac831930a0080ed64cec4ffb7d393d079cca55eac8d8",
+        "bytes": 104748
+      },
+      "reviewed_source_changes": [
+        {
+          "path": "simulation/new_backgrounds/controller.py",
+          "original_sha256": "cba865fbfee68bb2eda5aae2d567109612a77d8cd1c93103ae33bbba3489aebe",
+          "current_sha256": "42a2909a914f3dbf8f1d7f77c2aa51eae163beaf704f92ca6987e080a121ece3",
+          "role": "READ_ONLY_VALIDATOR_OR_DOWNSTREAM_RESUME_CONTROLLER_ONLY"
+        },
+        {
+          "path": "simulation/new_backgrounds/delphes_stage.py",
+          "original_sha256": "a773f3f3302732075e1fc7e1a26ec830f419fca4ffb2044745dbf1e30ab2c991",
+          "current_sha256": "b8e401857dc8f89a235602f5e9aba1b6268058eb1a4443a5e4203afebeff7e82",
+          "role": "DOWNSTREAM_RELATIVE_OUTPUT_AND_NON_GENERATING_ROOT10_100_REUSE"
+        },
+        {
+          "path": "simulation/new_backgrounds/scripts/shower_stage.py",
+          "original_sha256": "507ec22e27fe130a08a849e70fa828fa58dcf1fdd32acd47614c0c0c32c2b636",
+          "current_sha256": "34a3a62762f677939b22050da251adfe709a5b4154c493f9f77523668424c9e6",
+          "role": "NON_GENERATING_PREFIX10_REUSE"
+        },
+        {
+          "path": "simulation/new_backgrounds/src/analyze_background_root.cxx",
+          "original_sha256": "8b6b62770e75c14b5d4ef4a185efa2ca11cf7e5a451136393eae3e121fbbc655",
+          "current_sha256": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+          "role": "READ_ONLY_NATIVE_SIGNED_JET_NUMERICAL_VALIDATION_FIX_NO_MC"
+        },
+        {
+          "path": "simulation/new_backgrounds/src/validate_background_hepmc3.cxx",
+          "original_sha256": "fbcac365c20f6c4d44dfb57945ab6b6a47354acc500c0dd28a163ae7c2ff0db9",
+          "current_sha256": "e0b03c81098fe63b99491e58a3c9979135f389f6a93e8ed7b799cdd97876977f",
+          "role": "READ_ONLY_STATUS_CONTEXT_FIX"
+        },
+        {
+          "path": "simulation/new_backgrounds/validate_lhe.py",
+          "original_sha256": "a229943fd62afbaa71b5676585417e14d2424fa25d7c1191b1e7a1e9443fa3ea",
+          "current_sha256": "2f01dde6d3fa3cc2bd7467fd7da549007122dc371d54431284ca41cb293884ad",
+          "role": "READ_ONLY_VALIDATOR_OR_DOWNSTREAM_RESUME_CONTROLLER_ONLY"
+        }
+      ],
+      "current_nonexecuted_review_additions": [
+        "simulation/new_backgrounds/scripts/audit_payload.py",
+        "simulation/new_backgrounds/scripts/publish_references.py",
+        "simulation/new_backgrounds/scripts/validate_references.py"
+      ],
+      "scope": "One preserved actual ZH1000 source; generator/cards/shower runner/physics header unchanged. Exact implicit-default parser, downstream controller, relative ROOT output filename, reader Event-context status, non-generating shower10/ROOT10/100 reuse and native signed-jet numerical validation repairs only. Original source-only manifest has zero downstream physical events. No production permission or new events implied."
+    },
+    "scope": "Real full1000 source records reread; independent Decimal shell/momentum/topology/cut checks plus source-bound formal validator. No source/decay regeneration; not downstream or precision normalization acceptance."
+  },
+  "method_tests": {
+    "windows": {
+      "mg5": 11,
+      "lhe": 28,
+      "failed": 0,
+      "skipped": 0
+    },
+    "wsl": {
+      "mg5": 11,
+      "lhe": 28,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "current_validator_sha256": "2f01dde6d3fa3cc2bd7467fd7da549007122dc371d54431284ca41cb293884ad",
+  "limitations": "Actual hard-source1000 and preserved shower10 only. Original failed receipts remain unchanged. Corrected source and same-event reader gates pass separately; full1000 Pythia/HepMC/Delphes and physical model-BR closure remain required. Read-only revalidation produced zero new MG5/Pythia/Delphes events.",
+  "downstream_filename_only_repair": {
+    "original_delphes_stage_sha256": "a773f3f3302732075e1fc7e1a26ec830f419fca4ffb2044745dbf1e30ab2c991",
+    "reviewed_delphes_stage_sha256": "5d9f91aebe24442debd732028de678b2fc2b9e63ba414344e39739894ac95d60",
+    "role": "DOWNSTREAM_OUTPUT_FILENAME_ONLY_NO_PRIOR_DELPHES_EXECUTION",
+    "prior_delphes_entries": 0,
+    "physics_and_native_changed": false,
+    "privacy_probe_evidence": "simulation/new_backgrounds/evidence/root_output_filename_privacy.json"
+  },
+  "read_only_prefix10_context_recheck": {
+    "status": "PASS_ACTUAL_PRESERVED_PREFIX10_NATIVE_READER",
+    "scope": "ACTUAL_EXISTING_INPUTS_ONLY_NO_MG5_NO_PYTHIA_NEXT_NO_DELPHES",
+    "new_events_generated": 0,
+    "native_reader_exit_code": 0,
+    "original_files_unchanged": true,
+    "actual_original_native_particle_count": 3604,
+    "reader_report": {
+      "schema_version": 1,
+      "validation_status": "PASS_BACKGROUND_HEPMC_RECORDS",
+      "N_readback": 10,
+      "N_passed_validation": 10,
+      "N_failed_validation": 0,
+      "source_total_events": 1000,
+      "source_file_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "process_alias": "zh",
+      "source_profile": "B04_ZH_BBGG",
+      "higgs_two_photon_birth_events": 10,
+      "source_Z_bottom_birth_events": 10,
+      "top_W_model_decay_events": 0,
+      "one_Born_photon_identity_events": 0,
+      "stable_photon_origin_counts": {
+        "born_prompt": 0,
+        "shower_radiation": 0,
+        "hadron_decay": 637,
+        "other": 20
+      },
+      "decompressed_file_sha256": "ad51a02e982ae83368768e84569f20093de304714c54e7496aadc12a438f9e00",
+      "input_index_sha256": "71d52d6fb7d8b7d84774e7d4b928f76266b16a1bd5b9b7b8640355baa839ac92",
+      "truth_index_sha256": "a45b4b721982836ddfbef6101d5ddbcd2b0cd92cd1014251fb88631d567bd957",
+      "generic_physics_report_sha256": "03f7e36e642580855cae96f0f5e531d353434db9bad874be82af63782bc28232",
+      "actual_initialized_decay_table_sha256": "e5118782a44f85650edde6637ac72b5cc9d204ed058418bfe649a922c79c0937",
+      "raw_LHE_weight_sum_pb": 0.8953800000000001,
+      "Info_weight_sum_pb": 0.8953800000000002,
+      "converter_nominal_weight_sum_pb": 0.8953800000000002,
+      "Higgs_BR_adoption": "UNKNOWN_NOT_APPLIED",
+      "exclusive_physical_normalization": "BLOCKED",
+      "source_Z_BR_reapplied": false,
+      "top_W_decay_scope": "inclusive supported Pythia model; production-decay spin correlations unvalidated",
+      "photon_fake_rate": "BLOCKED_UNCALIBRATED",
+      "resonance_mass_check": "Independent source and HMC root invariant mass-squared vs exact source mass token; HMC generated mass token compared separately; Lorentz recoil allowed; no p4 identity/repair",
+      "resonance_generated_mass_atol_GeV": 1e-05,
+      "resonance_generated_mass_rtol": 1e-09,
+      "resonance_invariant_mass_squared_atol_GeV2": 1e-06,
+      "resonance_invariant_mass_squared_rtol": 5e-09,
+      "resonance_invariant_mass_squared_scale": "max(E^2,|p|^2,m_source^2,1GeV^2): frozen PhaseF printed-LHE precision and binary64 cancellation bound",
+      "pythia_version": "8.317",
+      "hepmc3_version": "3.3.1",
+      "hepmc3_reported_version": "3.03.01",
+      "top_decay_quark_pdg_counts": {},
+      "W_birth_product_pdg_counts": {},
+      "H_final_photon_multiplicity_histogram": {
+        "2": 10
+      }
+    },
+    "old_reader_source_sha256": "fbcac365c20f6c4d44dfb57945ab6b6a47354acc500c0dd28a163ae7c2ff0db9",
+    "new_reader_source_sha256": "e0b03c81098fe63b99491e58a3c9979135f389f6a93e8ed7b799cdd97876977f",
+    "reader_binary_sha256": "35d4b7703c429d00e85079bf4a9096b9270b2baa93f8447a5b250d1e123cb333",
+    "old_shower_stage_source_sha256": "507ec22e27fe130a08a849e70fa828fa58dcf1fdd32acd47614c0c0c32c2b636",
+    "new_shower_stage_source_sha256": "34a3a62762f677939b22050da251adfe709a5b4154c493f9f77523668424c9e6",
+    "original_hepmc_sha256": "ad51a02e982ae83368768e84569f20093de304714c54e7496aadc12a438f9e00",
+    "pinned_official_status_implementation_sha256": "7a05b2c5638b370a5fca27e424fc6527c733294b11f356299e45c3ce701f0b04",
+    "private_original_receipt_sha256": "c3dfd34076851c8f5f4230ae70c5d829a1bd94c3eb077aa439e4bbf59d85495f",
+    "source_status_implementation": "Pythia8 Event.cc statusHepMC():383-403, pinned official source; complete original native daughter/event context restored in read-only validation."
+  },
+  "root_signed_jet_numerical_repair_source_binding": {
+    "old_analyzer_sha256": "8b6b62770e75c14b5d4ef4a185efa2ca11cf7e5a451136393eae3e121fbbc655",
+    "new_analyzer_sha256": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+    "old_relative_filename_helper_sha256": "5d9f91aebe24442debd732028de678b2fc2b9e63ba414344e39739894ac95d60",
+    "new_root_reuse_helper_sha256": "b8e401857dc8f89a235602f5e9aba1b6268058eb1a4443a5e4203afebeff7e82",
+    "source_audit": "Individual jets keep historical polar signed-mass acceptance and exact Cartesian p4. Strict mass validation is retained for summed derived vectors. Exact helper permits bounded previously produced ROOT10/100 reuse by read-only analyzer only. No cuts, tagging, native ROOT objects, cards or generated source are changed.",
+    "scope": "Exact reviewed source hashes only; actual ROOT read-only receipt is a separate detector evidence gate."
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "status": "PASS_NATIVE_BACKGROUND_RECORD_READBACK",
+  "process": "bbgj",
+  "profile": "ACTUAL_SOURCE_GRAPH_AND_NATIVE_RECO",
+  "ROOT_entries": 100,
+  "source_events": 1000,
+  "subset_events": 100,
+  "events_assessed": 100,
+  "read": 100,
+  "processed": 100,
+  "invalid": 0,
+  "skipped": 0,
+  "events_not_assessed": 0,
+  "root_version": "6.40.04",
+  "root_sha256": "d52a96acc25d0eb55989e53a76b288a2ac4302f251b5037d34a0b951dd1244b2",
+  "input_index_sha256": "f8243b399a1cd1dced2b76cd0136e41792097ef44d4c445d14a8bbb1bc64053d",
+  "truth_index_sha256": "8b4d50d99c32995b9d3d9ca5b2a97e0e1f29a4713154e123c2ca006d16e6062c",
+  "card_sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+  "reco_photons": 73,
+  "reco_jets": 350,
+  "H_photon_reco_matches": 0,
+  "ambiguous_H_match_edges": 0,
+  "normalization_scope": "RAW_SOURCE_CONTRIBUTION_ONLY; BR_MODEL_ADJUSTMENT_SEPARATE",
+  "ancestry_scope": "exact bound upstream ReaderAscii graph and actual truth IDs; native particle tuples verified",
+  "selected_pair_scope": "inclusive Phase6C leading eligible pair for masses/DeltaR; leading all-reco objects for pT; H-origin/origin matches separate diagnostics",
+  "photon_match_scope": "category matches independent geometric diagnostics; not calibrated photon efficiency or jet fake rate",
+  "btag_model": "FAST_SIM_ATLAS_LIKE_BIT0_NOT_OFFICIAL_ATLAS",
+  "schema": [
+    {
+      "branch": "EFlowNeutralHadron",
+      "present": true,
+      "clone_class": "Tower",
+      "dictionary_version": 5,
+      "dictionary_checksum": 2195636175
+    },
+    {
+      "branch": "EFlowPhoton",
+      "present": true,
+      "clone_class": "Tower",
+      "dictionary_version": 5,
+      "dictionary_checksum": 2195636175
+    },
+    {
+      "branch": "EFlowTrack",
+      "present": true,
+      "clone_class": "Track",
+      "dictionary_version": 4,
+      "dictionary_checksum": 968497457
+    },
+    {
+      "branch": "Electron",
+      "present": true,
+      "clone_class": "Electron",
+      "dictionary_version": 4,
+      "dictionary_checksum": 3973934735
+    },
+    {
+      "branch": "Event",
+      "present": true,
+      "clone_class": "HepMCEvent",
+      "dictionary_version": 3,
+      "dictionary_checksum": 2026647734
+    },
+    {
+      "branch": "GenJet",
+      "present": true,
+      "clone_class": "Jet",
+      "dictionary_version": 5,
+      "dictionary_checksum": 527275606
+    },
+    {
+      "branch": "GenMissingET",
+      "present": true,
+      "clone_class": "MissingET",
+      "dictionary_version": 1,
+      "dictionary_checksum": 1034148504
+    },
+    {
+      "branch": "Jet",
+      "present": true,
+      "clone_class": "Jet",
+      "dictionary_version": 5,
+      "dictionary_checksum": 527275606
+    },
+    {
+      "branch": "MissingET",
+      "present": true,
+      "clone_class": "MissingET",
+      "dictionary_version": 1,
+      "dictionary_checksum": 1034148504
+    },
+    {
+      "branch": "Muon",
+      "present": true,
+      "clone_class": "Muon",
+      "dictionary_version": 4,
+      "dictionary_checksum": 264472101
+    },
+    {
+      "branch": "Particle",
+      "present": true,
+      "clone_class": "GenParticle",
+      "dictionary_version": 2,
+      "dictionary_checksum": 3403479520
+    },
+    {
+      "branch": "Photon",
+      "present": true,
+      "clone_class": "Photon",
+      "dictionary_version": 4,
+      "dictionary_checksum": 4175710330
+    },
+    {
+      "branch": "ScalarHT",
+      "present": true,
+      "clone_class": "ScalarHT",
+      "dictionary_version": 1,
+      "dictionary_checksum": 4118442578
+    },
+    {
+      "branch": "Tower",
+      "present": true,
+      "clone_class": "Tower",
+      "dictionary_version": 5,
+      "dictionary_checksum": 2195636175
+    },
+    {
+      "branch": "Track",
+      "present": true,
+      "clone_class": "Track",
+      "dictionary_version": 4,
+      "dictionary_checksum": 968497457
+    },
+    {
+      "branch": "Weight",
+      "present": true,
+      "clone_class": "Weight",
+      "dictionary_version": 1,
+      "dictionary_checksum": 1453428690
+    }
+  ],
+  "root_path": "artifact:DELPHES_PREFIX100",
+  "cutflow_path": "artifact:ACTUAL_NATIVE_PREFIX100_CUTFLOW",
+  "reco_events_path": "artifact:ACTUAL_RECONSTRUCTED_ROWS100",
+  "delphes_seed": 610503,
+  "source_full_shower_sha256": "511eb6ea2bbdd053024b900b716cd433144d9e8f9f2d4677712cba88728d562a",
+  "subset_origin": "FIRST_N_EXACT_RECORDS_OF_VALIDATED_FULL1000_SHOWER",
+  "inputs": {
+    "hepmc_path": "run:delphes/prefix100/input.hepmc3",
+    "input_index_path": "artifact:NATIVE_SOURCE_AND_PARTICLE_INDEX100",
+    "truth_index_path": "artifact:NATIVE_ACTUAL_ANCESTRY_TRUTH100"
+  },
+  "derived_files_sha256": {
+    "reco_events.jsonl": "8ca19cdcb8f23ae29b80c3ac506478393c63e08d95bf71ca38cbb68d963a9fe2",
+    "cutflow.csv": "7aa196bf0e9a036a9e46cd59e9ba8317a10db0909f0ff76b80271d046952348a"
+  },
+  "original_receipt_sha256": "58ba48d1496975f35d6917850b8a15cb135ab1e30532c4da0c5a1953f377289b",
+  "public_projection_scope": "Numbers/hashes unchanged; known private artifact locations replaced by logical roles; native QA not reexecuted"
+}

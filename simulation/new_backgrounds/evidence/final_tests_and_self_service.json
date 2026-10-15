@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "PASS_REAL_SELF_SERVICE_AND_METHOD_FAILURE_CONTROLS",
+  "tests": {
+    "Windows": {
+      "discovered": 134,
+      "passed": 131,
+      "skipped": 3,
+      "elapsed_seconds": 13.021,
+      "log_sha256": "cddf5e2595d5c574bacca73bd55772411800e4297f6b7c3a7a8098d7feac42dd"
+    },
+    "WSL": {
+      "discovered": 134,
+      "passed": 134,
+      "skipped": 0,
+      "elapsed_seconds": 64.396,
+      "log_sha256": "c67b048722a6a7bfd8279e40715dfe24cc2aec4df59045bf90a8d75b9e5fc6c3"
+    }
+  },
+  "full_suite_scope": "134 methods/failure controls before final equivalent literal construction; focused privacy controls and final-head CI verify published revision separately",
+  "actual_full_chain_commands": [
+    {
+      "process": "zh",
+      "run_manifest_sha256": "311843cb430c1e478cb20fa50b676b6225250e3019dd1571754e648f8194fd59",
+      "status": "PASS_FULL_CHAIN_MODEL_SCOPE",
+      "MG5_events": 1000,
+      "HepMC_events": 1000,
+      "ROOT_events": 1000,
+      "MG5_generated_this_attempt": 0,
+      "source_reuse": 1000,
+      "scope": "GENUINE_EXISTING_SOURCE_BOUNDED_CONTINUATION_NO_PRODUCER_REPLAY"
+    },
+    {
+      "process": "tth",
+      "run_manifest_sha256": "601490546cf98e4ab2551c48c4c75fa308b4dd9bf24666c71aa639d5ebe5387c",
+      "status": "PASS_FULL_CHAIN_MODEL_SCOPE",
+      "MG5_events": 1000,
+      "HepMC_events": 1000,
+      "ROOT_events": 1000,
+      "MG5_generated_this_attempt": 1000,
+      "source_reuse": 0,
+      "scope": "FRESH_FULL_CLI"
+    },
+    {
+      "process": "bbgj",
+      "run_manifest_sha256": "8933bca3b2a821d4f679382d81a27db5fa55b5aebcd5f197db290042175c35ff",
+      "status": "PASS_FULL_CHAIN_MODEL_SCOPE",
+      "MG5_events": 1000,
+      "HepMC_events": 1000,
+      "ROOT_events": 1000,
+      "MG5_generated_this_attempt": 1000,
+      "source_reuse": 0,
+      "scope": "FRESH_FULL_CLI"
+    }
+  ],
+  "dry_run": "ACTUALLY_EXECUTED_PASS_TEXT_ONLY_ZERO_EVENTS",
+  "existing_output_protection": "ACTUALLY_EXECUTED_REJECTION_NO_BYTE_CHANGES",
+  "dry_and_rejection_new_MC_events": 0,
+  "dry_run_plan_sha256": "2cdd5edc6c32da0e664d8067940e37eacd770012458ca9da937046bdf0482413",
+  "rejection_stderr_sha256": "8bb3231bc92aff7108661ba7494e0bcbd77ab9e52334554d7072dd47384ad8f1",
+  "figures_generated": false,
+  "personal_outputs_automatically_pushed": false
+}
