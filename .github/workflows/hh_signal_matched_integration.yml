@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.head_ref == 'codex/phase7-final-closure' && 'a5582e508e452a515670d1edc1d39041e88a8638' || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

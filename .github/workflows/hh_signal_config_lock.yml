@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
           # The Phase7G job audits its actual head; retain this historical gate
           # against the exact immutable Phase7F source/evidence snapshot.
-          ref: ${{ github.head_ref == 'codex/phase7g-hh-matched-integration' && '081d29a8499a714faeb9e1296d41ac93d48c82d2' || github.sha }}
+          ref: ${{ (github.head_ref == 'codex/phase7g-hh-matched-integration' || github.head_ref == 'codex/phase7-final-closure') && '081d29a8499a714faeb9e1296d41ac93d48c82d2' || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

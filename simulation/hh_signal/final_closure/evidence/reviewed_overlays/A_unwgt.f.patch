@@ -1,0 +1,51 @@
+--- frozen/SubProcesses/unwgt.f
++++ A/SubProcesses/unwgt.f
+@@ -135,6 +135,7 @@
+ c      write(*,*) 'storing Events'
+       call store_events(-1d0, .True.)
+       rewind(lun)
++      call hh_trace_stream(lun)
+       nw = 0
+       maxwgt = 0d0
+       end
+@@ -369,6 +370,7 @@
+       nstore = 0
+       th_nunwgt = 0
+       rewind(lun)
++      call hh_trace_stream(lun)
+       done = .false. 
+       do i=1,nw
+          if (.not. done) then
+@@ -389,6 +391,7 @@
+          if (dabs(wgt) .gt. th_maxwgt*random) then
+             th_nunwgt = th_nunwgt +1
+          endif
++         write(*,*) 'H_ACCEPT',i,store_event(i)
+       enddo
+       if (scale_to_xsec)then
+          xscale = xsecabs/xsum
+@@ -397,13 +400,14 @@
+       th_maxwgt = th_maxwgt*xscale
+ 
+       rewind(lun)
++      call hh_trace_stream(lun)
+ c     JA 8/17/2011 Don't check for previously stored events
+ c      if (nstore .le. neventswritten) then
+ c         write(*,*) 'No improvement in events',nstore, neventswritten
+ c         return
+ c      endif
+       lunw = 25
+-      open(unit = lunw, file='events.lhe', status='unknown')
++      call hh_open_reference(lunw)
+       done = .false.
+       i=0      
+       xtot = 0
+@@ -438,6 +442,8 @@
+       endif
+       write(*,*) 'Events wgts > 1: ', nover
+       write(*,*) '% Cross section > 1: ',xover, xover/xtot*100.
++      write(*,*) 'H_TAIL',nw,i,nover,th_nunwgt
++      call hh_real4('TAIL',xover,xtot,target_wgt,th_maxwgt)
+       neventswritten = i
+       maxwgt = target_wgt
+       if (force_max_wgt.lt.0)then
