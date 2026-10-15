@@ -21,9 +21,9 @@ bash simulation/hh_signal/scripts/run_campaign.sh \
   --output "$HOME/simulations/hh_signal_runs/campaign_01"
 ```
 
-也可以逐階段執行。7B 的100事件完整物理鏈已實際通過；7C 正以不同 seed 執行。最終狀態與後續階段的執行紀錄，以 `metadata/phase7_quality_gates.json` 和各階段實際收據為準。
+也可以逐階段執行。7B的100與7C的新1000事件完整物理鏈均已實際通過；7D正在只重用C1000進行矩陣元素計算。最終狀態以 `metadata/phase7_quality_gates.json` 和實際收據為準。
 
-本次已保留的7B來源有明確的舊流程偏差：請求seed20261121，實際seed21。第一次零事件編譯失敗後，MG5已清除工作卡seed，而舊續跑未恢復請求卡。來源保持不變、不補生事件，實際卡與差異證明隨樣本發布。現在續跑會先恢復精確請求卡，且新增回歸測試在任何生成器啟動前核對。此舊樣本不能當作「seed請求被正確執行」的證據；7C的新命令已在原生啟動紀錄核對有效seed20261122，完整樣本仍須獨立驗證。
+本次已保留的7B來源有明確的舊流程偏差：請求seed20261121，實際seed21。第一次零事件編譯失敗後，MG5已清除工作卡seed，而舊續跑未恢復請求卡。來源保持不變、不補生事件，實際卡與差異證明隨樣本發布。現在續跑會先恢復精確請求卡，且新增回歸測試在任何生成器啟動前核對。此舊樣本不能當作「seed請求被正確執行」的證據；7C的新命令與完整LHE已核對有效seed20261122，並通過全部1000事件的下游驗證。
 
 ```bash
 bash simulation/hh_signal/scripts/run_campaign.sh \
@@ -64,6 +64,10 @@ bash simulation/hh_signal/scripts/run_campaign.sh \
 逐 Higgs 衰變角色為獨立、對稱的 50/50 分配，再對每顆純量作等向二體衰變，保留來源四動量。缺少的衰變因子是實際初始化模型表的 `2*BR(H→bb)*BR(H→γγ)`，只乘一次。所有產量維持 `MODEL_BR_ONLY`；外部參考 BR 與正式採用 BR 仍分開、可以是未採用。
 
 7D 的 `event_reweights.csv` 使用相同原始四動量、每事件強耦合及尺度，直接呼叫完整有限質量矩陣元素。檢查重複 SM、κλ=0 的 HHH 頂點移除、保留點的二次式閉合、分母、離群比例、ESS 及共同事件協方差。沒有獨立 benchmark 積分時，絕對率明確為 `INCONCLUSIVE_ABSOLUTE_RATE`。
+
+7D數值計算可用同一命令加`--resume`續接完整的逐事件結果；來源SHA、六個benchmark和既有數值都會重驗證，不會重生硬來源。若存在實際fresh-process對照通過且SHA綁定的native批次驗證收據，才使用該評估器；暖機與每個benchmark的穩定回傳仍檢查，既有列不覆寫。先前執行與驗證時間累加到同一4小時上限。
+
+B/C的實際參數卡及23個模型來源檔一致，但所報積分截面有明顯跨run張力。原始權重保留，絕對率精度維持`INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION`。不得自行把兩個來源重縮放一致，或把生成器誤差當作已校準的完整理論不確定度。
 
 重建 cuts 固定為 Phase6C 定義，不能在此次活動改動。各次執行保存精確卡、實際隨機種子和來源 SHA。若未來要修改 cuts、能量或製程，先另立有驗證依據的版本與事件預算，保留歷史參考。
 

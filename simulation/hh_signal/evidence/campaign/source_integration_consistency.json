@@ -1,0 +1,29 @@
+{
+  "status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION",
+  "B_C_param_card_bytes_equal": true,
+  "B_param_card_sha256": "e0cd72ebed38167ce075db098507abbfbd263a76e76c15adffcdadaa24f92bf1",
+  "C_param_card_sha256": "e0cd72ebed38167ce075db098507abbfbd263a76e76c15adffcdadaa24f92bf1",
+  "run_card_differences": {
+    "nevents": {
+      "B": 100,
+      "C": 1000
+    }
+  },
+  "native_model_source_files_compared": 23,
+  "changed_model_source_files": [],
+  "B_sigma_pb": 0.017276,
+  "B_integration_error_pb": 0.00018503,
+  "C_survey_only_sigma_pb": 0.019004,
+  "C_survey_only_error_pb": 0.00014885,
+  "C_final_result": "PENDING; no rescaling or source replacement",
+  "C_final_sigma_pb": 0.019069,
+  "C_final_integration_error_pb": 0.00011745,
+  "absolute_difference_pb": 0.0017929999999999995,
+  "relative_difference_to_B": 0.10378559851817547,
+  "difference_over_quadrature_reported_integration_errors": 8.181280222806983,
+  "interpretation": "diagnostic only; generator-reported integration errors are not established calibrated Gaussian uncertainties; not a physical discovery pull",
+  "source_rescaling": false,
+  "source_replacement": false,
+  "additional_hard_events_authorized": 0,
+  "next_step": "separately approved zero-retained-event independent integration/convergence audit and native weighted-candidate/truncation assessment before precision absolute rates"
+}

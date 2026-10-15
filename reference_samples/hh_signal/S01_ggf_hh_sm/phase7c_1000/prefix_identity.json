@@ -1,0 +1,24 @@
+{
+  "status": "PASS_ACTUAL_PREFIX_IDENTITY_NO_ADDITIONAL_STATISTICS",
+  "original_source_events": 1000,
+  "stages": [
+    {
+      "stage": "prefix10",
+      "events": 10,
+      "HepMC_block_hashes_weights_lineages_exact": true,
+      "ROOT_reco_rows_exact": true
+    },
+    {
+      "stage": "prefix100",
+      "events": 100,
+      "HepMC_block_hashes_weights_lineages_exact": true,
+      "ROOT_reco_rows_exact": true
+    },
+    {
+      "stage": "full1000",
+      "events": 1000,
+      "HepMC_block_hashes_weights_lineages_exact": true,
+      "ROOT_reco_rows_exact": true
+    }
+  ]
+}

@@ -153,5 +153,8 @@ def analyze(out,phase,native,reweights,monitor):
        'B04_B05_Higgs_BR':'MODEL_BR_ONLY','ttH_spin':'UNVALIDATED','B06_photon_fake':'NO_CALIBRATED_FAKE_MODEL',
        'official_ATLAS_systematics':None,'discovery_or_exclusion':None,'PDF_scale_variation':None,'BR_uncertainty':None,
        'full_detector_sampling_variance':None,'total_uncertainty_band':None}
+    result['sampling_interpretation']='event-level sample covariance includes the realized hard-point, decay, shower, detector and tag randomness; it is not an isolated generator-only contribution'
+    result['isolated_generator_only_acceptance_variance']=None
+    result['conditional_tag_variance_interpretation']='conditional on reconstructed jets/photons under the pinned independent Bernoulli model; not additive to the already fluctuating observed-outcome covariance'
     save_json(out/'analysis_validation.json',result)
     return result

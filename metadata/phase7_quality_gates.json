@@ -31,16 +31,19 @@
       "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
     },
     "H": {
-      "status": "RUNNING"
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
     },
     "I": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
     },
     "J": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
     },
     "K": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "RUNNING_REWEIGHT_ONLY_ZERO_NEW_SOURCE_EVENTS"
     },
     "L": {
       "status": "UNKNOWN_NOT_YET_EXECUTED"
@@ -49,7 +52,7 @@
       "status": "UNKNOWN_NOT_YET_EXECUTED"
     },
     "N": {
-      "status": "PARTIAL; real B100 full chain executed, old continuation seed semantics failed and corrected; fresh C command pending"
+      "status": "PASS_SOURCE_COMMANDS_WITH_DISCLOSED_RECOVERED_B_SEED_DEVIATION; ALL_RESUME_REWEIGHT_RUNNING"
     },
     "O": {
       "status": "SOURCE_REGRESSION_PASS_469_TESTS_8_SKIPS; FULL_SIGNAL_NATIVE_REGRESSION_PENDING"
@@ -72,12 +75,13 @@
   },
   "phases": {
     "7b": "PASS",
-    "7c": "RUNNING",
-    "7d": "NOT_STARTED_GATED_BY_7C"
+    "7c": "PASS",
+    "7d": "RUNNING_REWEIGHT_ONLY"
   },
   "source_event_budget_ceiling": 1100,
   "independent_source_events_reserved": 1100,
-  "complete_source_events_validated": 100,
+  "complete_source_events_validated": 1100,
   "BR_scope": "MODEL_BR_ONLY",
-  "new_PDF_PNG": "NONE"
+  "new_PDF_PNG": "NONE",
+  "absolute_rate_status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION"
 }

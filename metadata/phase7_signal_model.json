@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "PASS_FULL_LOOP_AND_GENUINE_B100_MODEL_ONLY; C1000_RUNNING",
+  "status": "PASS_GENUINE_B100_C1000_FULL_CHAINS_MODEL_SCOPE",
   "production_contract": {
     "schema_version": 1,
     "process_id": "S01_GGF_HH_SM",
@@ -830,6 +830,35 @@
   "adopted_physical_BR": null,
   "Ward_evidence_sha256": "abb814703853519c7aae04ef47047e8243ab0e8943973aabb0de1eccf8333e1b",
   "production_parameter_numerical_evidence_sha256": "faac159c8ccb76fd486b6d392369395e6b28f8c27def8ff182bf7ba48a5ba0f8",
-  "physical_source_status": "B100 full-chain PASS; actual seed21 vs requested20261121 documented",
-  "native_PDF_initialized_alpha_s_MZ_observed": 0.129783
+  "physical_source_status": "1100 genuine independent source records validated; absolute rate precision inconclusive due independent-run tension",
+  "native_PDF_initialized_alpha_s_MZ_observed": 0.129783,
+  "source_integration_consistency": {
+    "status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION",
+    "B_C_param_card_bytes_equal": true,
+    "B_param_card_sha256": "e0cd72ebed38167ce075db098507abbfbd263a76e76c15adffcdadaa24f92bf1",
+    "C_param_card_sha256": "e0cd72ebed38167ce075db098507abbfbd263a76e76c15adffcdadaa24f92bf1",
+    "run_card_differences": {
+      "nevents": {
+        "B": 100,
+        "C": 1000
+      }
+    },
+    "native_model_source_files_compared": 23,
+    "changed_model_source_files": [],
+    "B_sigma_pb": 0.017276,
+    "B_integration_error_pb": 0.00018503,
+    "C_survey_only_sigma_pb": 0.019004,
+    "C_survey_only_error_pb": 0.00014885,
+    "C_final_result": "PENDING; no rescaling or source replacement",
+    "C_final_sigma_pb": 0.019069,
+    "C_final_integration_error_pb": 0.00011745,
+    "absolute_difference_pb": 0.0017929999999999995,
+    "relative_difference_to_B": 0.10378559851817547,
+    "difference_over_quadrature_reported_integration_errors": 8.181280222806983,
+    "interpretation": "diagnostic only; generator-reported integration errors are not established calibrated Gaussian uncertainties; not a physical discovery pull",
+    "source_rescaling": false,
+    "source_replacement": false,
+    "additional_hard_events_authorized": 0,
+    "next_step": "separately approved zero-retained-event independent integration/convergence audit and native weighted-candidate/truncation assessment before precision absolute rates"
+  }
 }

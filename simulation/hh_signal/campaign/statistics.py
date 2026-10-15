@@ -41,9 +41,13 @@ def histogram(values,weights,edges,N,active=None):
         sw=math.fsum(b);q=math.fsum(w*w for w in b);p=sw/total if safe else None
         var=N/(N-1)*max(0.,q-sw*sw/N)
         shapevar=N/(N-1)*max(0.,q*(1-2*p)+p*p*qall)/(total*total) if safe else None
+        lo,hi=wilson(len(b),N)
         rows.append({'bin':j,'low':edges[j-1] if j else None,'high':edges[j] if j<len(edges) else None,
             'flow':'underflow' if j==0 else 'overflow' if j==len(edges) else 'regular',
             'entries':len(b),'empty':not bool(b),'sumw':sw,'sumw2':q,'source_sampling_variance':var,
+            'proposal_bin_acceptance_wilson95_low':lo,'proposal_bin_acceptance_wilson95_high':hi,
+            'zero_proposal_count_one_sided95_upper':1-.05**(1/N) if not b else None,
+            'interval_scope':'source_proposal_count_only; not a finite target-reweight-rate bound without a weight bound',
             'ESS':sw*sw/q if q else 0.,'UNIT_AREA_SHAPE_ONLY':p,
             'bin_precision_status':'EMPTY' if not b else 'LOW_ESS_LT10' if q and sw*sw/q<10 else 'BOUNDED_DIAGNOSTIC_GE10_ESS',
             'unit_area_source_sampling_variance':shapevar,
