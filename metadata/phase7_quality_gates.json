@@ -63,8 +63,9 @@
       "scope": "469 existing source tests:461 PASS/8 SKIP;13 campaign tests PASS; native7100 ROOT records and full ReaderAscii chains; independent15-point fresh ME and Decimal regression"
     },
     "P": {
-      "status": "UNKNOWN",
-      "scope": "final data commit/remote byte readback/exact-head CI pending; prior head d92b538 has three successful jobs"
+      "status": "PASS",
+      "verified_data_head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+      "scope": "actual GitHub byte readback of all184 new files and three successful exact-data-head CI checks; final report-only head requires its separate final readback/checks"
     },
     "Q": {
       "status": "BLOCKED",

@@ -1,0 +1,1360 @@
+{
+  "status": "PASS_ACTUAL_VERIFIED_DATA_HEAD",
+  "data_head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+  "remote": {
+    "status": "PASS_ACTUAL_FINAL_HEAD_TREE_AND_ALL_NEW_BLOB_BYTES_READBACK",
+    "head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+    "baseline": "64353adfbbd3a28b13ddbdf761896c0a3fc6e680",
+    "files": [
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "git_blob": "048e3ef577e7b18919993cb3542b46fc6430883d",
+        "sha256": "16dbaab14cc82b5b05aae04742e6f1fc9dd1d6b9b2afd88de9d98fcf1e7a6747",
+        "bytes": 1417
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "git_blob": "09eb661ac5e31ad439d26fc1b045f642561f3273",
+        "sha256": "33dfbbae9eb67491255d0554dd5dcf2df742c3adbef55caec957a1ca2071bc02",
+        "bytes": 2096
+      },
+      {
+        "path": "metadata/phase7_quality_gates.json",
+        "git_blob": "5d63068607337fe54fb80d80b9d96008171bd438",
+        "sha256": "19f144ccf5eceb5ebb093b26a338a3ee784b10e87f6b6d07a00afe7123afcd34",
+        "bytes": 3844
+      },
+      {
+        "path": "metadata/phase7_signal_model.json",
+        "git_blob": "8b9620ef151a66cd859d3de44eb5804a7e7e7a7b",
+        "sha256": "bec518e8d5a09b59e0dc40281fcee0bcf05d64c3d3412ca82b350c9cbaf624fb",
+        "bytes": 23659
+      },
+      {
+        "path": "metadata/phase7a_decay_contract.json",
+        "git_blob": "7224d7510d698fd2033e9d844ee3097d0f0fa2e0",
+        "sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609",
+        "bytes": 1481
+      },
+      {
+        "path": "metadata/phase7a_loop_validation.json",
+        "git_blob": "cf9c99fe9c0fce02e601d9c8a7856863e0b8bf3f",
+        "sha256": "8e8c5a8e0a0eb8c11b47d8d7ff26a02e31a9f6b2c9f16e23d05f32a21c539b3d",
+        "bytes": 36779
+      },
+      {
+        "path": "metadata/phase7a_model_manifest.json",
+        "git_blob": "41d3dcbb0ecdad6e82914606fbd29a7417d31c64",
+        "sha256": "18e239fa878a30c809be461e62ca326e4b423a97f71029111f873aea88819fc3",
+        "bytes": 7974
+      },
+      {
+        "path": "metadata/phase7a_quality_gates.json",
+        "git_blob": "2b1302817db7a12c4a28fa0b4f88756bae7080dc",
+        "sha256": "728005f918cf29a4339776ebbad0c4d8949e9e357135103035be3a02374ff836",
+        "bytes": 2300
+      },
+      {
+        "path": "metadata/phase7b_run_manifest.json",
+        "git_blob": "71dcaa7c871906863f9bbfff6fde533c8bd14a68",
+        "sha256": "d3042767f67ad3a5685cc77c8713c66553292fd209ed9b958d31c85fa0aea2c4",
+        "bytes": 51713
+      },
+      {
+        "path": "metadata/phase7c_run_manifest.json",
+        "git_blob": "86f20dc69feb604bdd8ff7b431c3cd9263397a3a",
+        "sha256": "744ac53d7bf507e4db42065e28240182175f786d621f862f6f1e1f98d327c127",
+        "bytes": 70865
+      },
+      {
+        "path": "metadata/phase7d_kappa_scan.json",
+        "git_blob": "e000c5a66f15b7611134852771f9eb515f3f2cec",
+        "sha256": "32db10b487a247a32e071d616488ad32460ebb5c32346971faf27dcbe32aee2a",
+        "bytes": 54825
+      },
+      {
+        "path": "metadata/phase7d_signal_background_cutflow.csv",
+        "git_blob": "f5deca2b5bf4bc177a8eb6affc28b202f1b81e91",
+        "sha256": "5b532abd1782f6928a9a892e457dbe794777e6ed20bc4596f30d2dda6c066a2d",
+        "bytes": 15131
+      },
+      {
+        "path": "metadata/phase7d_weighted_histograms.csv",
+        "git_blob": "faf2d78f4c3d504b618c3b5bcf8e2a8a8da3bbf6",
+        "sha256": "ab860ef1640bfdc0829a70907cf151e1dd2605e5f77414d4a7f147931d018156",
+        "bytes": 1599196
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/MadLoopParams.dat",
+        "git_blob": "0557db0546b3eb02c11f1e637922b9a395d6cb15",
+        "sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54",
+        "bytes": 13022
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/baseline_shower.cmnd",
+        "git_blob": "47e7567e4f5772e992097348f113d216557ff92d",
+        "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+        "bytes": 3228
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/continuation_launch.mg5",
+        "git_blob": "8f607f02e813c95b2e4b4e855c4d8b97190a561e",
+        "sha256": "a71e10f4641f7c76c7a3e1532213f1f93c0d9795f553d351d96621701d23fc0f",
+        "bytes": 225
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/detector_card.tcl",
+        "git_blob": "f13452fa13bd7782a7f77d4d235e94c084235f71",
+        "sha256": "949b199f9ad16ec8d0543eb545bce0ab37a4d8968fd73f65b96a9302afddf772",
+        "bytes": 22243
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/effective_shower_hostpath_projection.json",
+        "git_blob": "ec54edb0aac9628c1d7f2b03043dc0b35769f9ea",
+        "sha256": "18c01b9cd6279a6ee0e2d191da6cb82095eb03f714beabfe8fc637a00b9c3838",
+        "bytes": 63251
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/launch.mg5",
+        "git_blob": "db590b89903d017ea38b42fe8c56b83e5e1c424e",
+        "sha256": "f584e1f32faa2de8e93660b568e279931e6dc06b2d7c281489f8a33676200521",
+        "bytes": 228
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/param_card.dat",
+        "git_blob": "6573f6a11d3b1effa67d391633082e20c2e6dc3b",
+        "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0",
+        "bytes": 2328
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/process_card.mg5",
+        "git_blob": "26b48d99335969b1eac82052daa5dc326dcdddca",
+        "sha256": "5ff61462a25e4eb60bf204d896b167137126cf0aa7d57a7b807f0902c3526206",
+        "bytes": 2387
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/reviewed_param_card.dat",
+        "git_blob": "d573ac2a410101c88ac47516d88664ffa1a99ec6",
+        "sha256": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c",
+        "bytes": 3340
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/reviewed_run_card.dat",
+        "git_blob": "efce10fb595ee24326c852b772b9aa7afb8d0e91",
+        "sha256": "5ff73ea8d756cc9b741534eb7d008fe7179b0e76d023e89090b0468012fa032f",
+        "bytes": 16372
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/run_card.dat",
+        "git_blob": "667eafa343a6c3c48953c57badffa6738c6b41ba",
+        "sha256": "568b294e820369b90fdf42d57b458f65f83d8fc721c668a0d57063101f1fc08f",
+        "bytes": 16153
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/decay_ledger.jsonl",
+        "git_blob": "6e486ffd9e8f3dde095eda0cd89cfe5629f504f5",
+        "sha256": "0b2f4af1f876cd56e800650751e88055a6316f7c5f67e8699ee36fbbaa4dfe4b",
+        "bytes": 91409
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/detector_100.root",
+        "git_blob": "c7ef6535e626ea7aebb486b849899ae36db3bdcc",
+        "sha256": "39d0a544febdbdcd9711593f613e2f81ba89e396fa5db0e3f76e64c90e107dc8",
+        "bytes": 3602892
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/full_source_and_chain_validation.json",
+        "git_blob": "71dcaa7c871906863f9bbfff6fde533c8bd14a68",
+        "sha256": "d3042767f67ad3a5685cc77c8713c66553292fd209ed9b958d31c85fa0aea2c4",
+        "bytes": 51713
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/hepmc_ancestry_100.jsonl",
+        "git_blob": "5c93489b4081b1d97f761716b250ecc10fbfc0f6",
+        "sha256": "93c9ce714f6599b9bb59cf1f5891c83a2fab7d9636963f928664652ae23bfc86",
+        "bytes": 49888
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/input_event_index_100.dat",
+        "git_blob": "2db24eae316a71d56587b08e30008bba1ebfbddb",
+        "sha256": "1ab21fa10038b0081a2d5cbc79f01a38bdab0cf84b7a493e92d5b5ee5808c6f3",
+        "bytes": 6848916
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/manifest.json",
+        "git_blob": "47e5d7205429605bac080860c73dd9ce05c3d8c1",
+        "sha256": "4683798388832dbbf495b32338550613169fe834fb1dca853cc4d96bb4a7656f",
+        "bytes": 4130
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/physically_decayed_same_source_100.lhe.gz",
+        "git_blob": "19a9455166ce828049158af82654f3d0e26b90d2",
+        "sha256": "e8400eae4467f2f4f45e6369d3ff9043b2e7c57d4f55f7524784d1db22b4c906",
+        "bytes": 35409
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/prefix_identity.json",
+        "git_blob": "c282a08544a8a5935532627fbebdc995132f15c6",
+        "sha256": "06f1b359c2f662770d5b36439b1a027fefccf8cd6a4413adb3bae9e881cca73f",
+        "bytes": 426
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/reco_events_100.jsonl",
+        "git_blob": "500fbe3d40778f46ab76b5fb5a83b2d011484de2",
+        "sha256": "a12bce9a0acf75aa265bd01b8e1a58f3fc35b25c9db1d68c717aa30ac53d33a3",
+        "bytes": 86536
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/reference_100.hepmc3.gz",
+        "git_blob": "076ac8eb124903fde7ef459f33466c5022a084a2",
+        "sha256": "84238e84b59871ccd848fd136f1b67d7e3f999ad4ce819a252a453f84f6db4c6",
+        "bytes": 3696467
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/reference_100.lhe.gz",
+        "git_blob": "203e28fe6594b987c374afd1a7c3a103d56de038",
+        "sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+        "bytes": 15997
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/shower_attempt_ledger_100.jsonl",
+        "git_blob": "2bc7bacb3e4e7d5b2a7ff6c3b77e9fee66a11eb3",
+        "sha256": "589a649d38a70bfeb9bae42a81590d2f20a598a24506e792f19951fb9f12690f",
+        "bytes": 16292
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/signal_truth_100.dat",
+        "git_blob": "508873221ea6089aa7032d57b1ce4eb9a5515b71",
+        "sha256": "b6c6ac5f3e4672664c6e90cff3f02c425aa14a358fb855d44abddf476308f3bb",
+        "bytes": 10208
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/source_attempt_provenance.json",
+        "git_blob": "7e8ee1f17a5f8cab37ab1ab9ff26d39758108257",
+        "sha256": "924d7f4d471d8dd82b0e84c86b00660ffc667baed2bbc9aff172e9bae8f99668",
+        "bytes": 13366
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/validation.json",
+        "git_blob": "0e733e1a7801a04ae37fa066e141c6a548daded7",
+        "sha256": "e25a6e0ec5626ca780b7aeb674c1645691fa478fa4fc71201e962d320dcc46e7",
+        "bytes": 1120
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/MadLoopParams.dat",
+        "git_blob": "0557db0546b3eb02c11f1e637922b9a395d6cb15",
+        "sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54",
+        "bytes": 13022
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/baseline_shower.cmnd",
+        "git_blob": "47e7567e4f5772e992097348f113d216557ff92d",
+        "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+        "bytes": 3228
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/detector_card.tcl",
+        "git_blob": "26e7dd0a2ae831d4d98d4779317eff20a6dc2e0f",
+        "sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+        "bytes": 22243
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/effective_shower_hostpath_projection.json",
+        "git_blob": "6738d6ef8e981885c8b1c217c54b85ffbb9798ab",
+        "sha256": "23eeaf9046f9eff10c1eaf78ba76e0a5f1573081c30f2516ea10921d7ca96a12",
+        "bytes": 63251
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/launch.mg5",
+        "git_blob": "13aa20105d9e1628e9a8427c3c918faf06bbfa59",
+        "sha256": "04e3339e21bbe4a00478937dfdd5fb60e2ccfe11e5983cfa9cb833c207e345a9",
+        "bytes": 225
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/param_card.dat",
+        "git_blob": "6573f6a11d3b1effa67d391633082e20c2e6dc3b",
+        "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0",
+        "bytes": 2328
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/process_card.mg5",
+        "git_blob": "26b48d99335969b1eac82052daa5dc326dcdddca",
+        "sha256": "5ff61462a25e4eb60bf204d896b167137126cf0aa7d57a7b807f0902c3526206",
+        "bytes": 2387
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/reviewed_param_card.dat",
+        "git_blob": "d573ac2a410101c88ac47516d88664ffa1a99ec6",
+        "sha256": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c",
+        "bytes": 3340
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/reviewed_run_card.dat",
+        "git_blob": "91afbd9a7069a54c5149665314c7fe7de880d2a2",
+        "sha256": "a9e4ea61973f035c273fac1dc333401f485fb2721af9e86daa1713a0f536c904",
+        "bytes": 16373
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/run_card.dat",
+        "git_blob": "8f6e3febbcbb1ceeffaffed9cb5c48f7e7f45cd2",
+        "sha256": "ae877745b195e936c16c348f8b30d82b44f32d504f22eeb891ee310c0f165521",
+        "bytes": 16160
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/decay_ledger.jsonl",
+        "git_blob": "f351d1e84165dbd3b323342e2ffa6d6a5b164040",
+        "sha256": "3e48429698397d9806b5a3c530eb60507f6b5ba995b3383b95f9bee6f4e1a63f",
+        "bytes": 916045
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/detector_100.root",
+        "git_blob": "54dedcbcc434951a91c5ae426876b179f16b1724",
+        "sha256": "9ae808933c4ed03cf57cc8a2c3e2542f65c735559ec9ecb70c26e4dc774b5fec",
+        "bytes": 3731578
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/full_source_and_chain_validation.json",
+        "git_blob": "86f20dc69feb604bdd8ff7b431c3cd9263397a3a",
+        "sha256": "744ac53d7bf507e4db42065e28240182175f786d621f862f6f1e1f98d327c127",
+        "bytes": 70865
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/hepmc_ancestry_100.jsonl",
+        "git_blob": "d993ba39df12669e92a77d9499c0f638253de6bf",
+        "sha256": "48cf4ac56b619ac9b889e202026bbd5c26b502e1db900a52ff8ae91cf7828e8b",
+        "bytes": 49892
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/input_event_index_100.dat",
+        "git_blob": "5829836b29e81b7ddc1622479174b343daf878ee",
+        "sha256": "7d382d88ed6b9119aa3a415257a3728613cce779c7dafa7379e46e28fcfefb72",
+        "bytes": 7102305
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/manifest.json",
+        "git_blob": "fc199d58aaa1069d1065c0a027951f62174224a3",
+        "sha256": "8a47d2c6f1cc8685a1d56715db87072910b6b7bd1973f23514c433ea58b742cd",
+        "bytes": 3972
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/physically_decayed_same_source_1000.lhe.gz",
+        "git_blob": "b2a21c9af991b9c910a6b0447f369ef06b6e98e6",
+        "sha256": "15383060eb71a848ab9c4bf72ad4265bca30846fe3be5760658368765a07f2ae",
+        "bytes": 287019
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/prefix_identity.json",
+        "git_blob": "8f7810a88c77087b0fee999e2ba63980076e650b",
+        "sha256": "7bfe165dd9f4d84d1546be1f2bc2e35222676ef623594ddab9d358cbdf43a309",
+        "bytes": 583
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/reco_events_100.jsonl",
+        "git_blob": "0e71094ea9d4d2c5d81b704beff116c63ad7bcf6",
+        "sha256": "0f49b64eaa669e0c0f3e8fa008d2e163551ae1c72f0e229ba951cfc8c476ddd4",
+        "bytes": 86420
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/reference_100.hepmc3.gz",
+        "git_blob": "541f58b5f53bd336ac401dbd4903e841983acd15",
+        "sha256": "ff064e9ac64e99bab39bb75c7651e5a35eecf21f0afa2d3fb86a18f7ce90be86",
+        "bytes": 3828179
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/reference_1000.lhe.gz",
+        "git_blob": "f1be21f7d560f2d8eb84ffc8c80f31a36e13a505",
+        "sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "bytes": 98857
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/shower_attempt_ledger_100.jsonl",
+        "git_blob": "b8f35ba5946c5f6feb24fa4857a214ffbdca56ee",
+        "sha256": "f32494ef4f84bb88f3f01320d0b83dbdb40fdd7fb63694de685ea4f5023993d7",
+        "bytes": 16292
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/signal_truth_100.dat",
+        "git_blob": "aa65d8897660a6ec1334feb4483c4657dbc4e797",
+        "sha256": "393b684a9e6fe80607aefc6b8cb79c96d48f4c296e3ada248ff84b851c157856",
+        "bytes": 10212
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/source_attempt_provenance.json",
+        "git_blob": "e3521d770fbef05db31caf5d561c565b115e1ce3",
+        "sha256": "0ed0d0d5ab9ba5714ce01fda61ca21610f27a26bfa548163f6fac6efe65ccb11",
+        "bytes": 12529
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/validation.json",
+        "git_blob": "0286f3fa5ba3879b31be91a3cc0b984012d83034",
+        "sha256": "dc537f6587fa9123d259ddeadba48a82ed95e06ac4d93afe98e813a8b9f0d1fb",
+        "bytes": 1118
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/event_reweights.csv",
+        "git_blob": "b22011de5b7c6c4c9c13e60460d8b1744fb4b18c",
+        "sha256": "c76dd54b9236ee8110385fe746eb465125c70f1f30e0d580ac95acacc03a9e0f",
+        "bytes": 1482280
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/kappa_scan.json",
+        "git_blob": "edb31803375b50500fa168a0cd000dbedd4a08fa",
+        "sha256": "3e8066b7788567199d77f1a911f6f1b2ca3a484a9a6b4ef0333960e448d354e9",
+        "bytes": 574
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/manifest.json",
+        "git_blob": "27e46cb3bc736b3b0c3be89676c77bc23e701ea4",
+        "sha256": "ff12a6abcf270a444e7ad4f06f67e6e49f60abf4f58e5d8eb5399bd3c0093e3e",
+        "bytes": 717
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/validation.json",
+        "git_blob": "05a48731d7ca0728d2c46222916177503c4c26a6",
+        "sha256": "27995abebf6751ba1a265819c98d2cd968064f37ae22ed80adaacac96106ac06",
+        "bytes": 88157
+      },
+      {
+        "path": "reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/weighted_histograms.root",
+        "git_blob": "dcd56b0b310b80402d919ae9eaeff8c65b4978f4",
+        "sha256": "8cfce2db0d10a4bf30de5c4a8f9e16bbaf5cf1c34199c4b74a856a20983094d7",
+        "bytes": 789644
+      },
+      {
+        "path": "reports/phase7a_branching_ratio_contract.md",
+        "git_blob": "51aad390d7c9c682f365c2c18bf9d085af2cf408",
+        "sha256": "a71b149c668ccf5b621b4d1e9971d602b0be649a4af4085fa08763c7b6e5b79d",
+        "bytes": 1198
+      },
+      {
+        "path": "reports/phase7a_coupling_validation.md",
+        "git_blob": "37398f484f901c04f88bf1db8045a91ffa8c57c2",
+        "sha256": "154cf4500bc1e3a0cfeeba11e4625ded7d6d0e45c94d79caa0197aed6b7e3c8b",
+        "bytes": 1539
+      },
+      {
+        "path": "reports/phase7a_environment.md",
+        "git_blob": "af0ec94ab8a80e8bc3632f0e8d557ae134b02fa7",
+        "sha256": "1082e60b577db927d410f0cd5d3496ccb2f4e28fc5fd8e746d83b7cc4443a516",
+        "bytes": 1104
+      },
+      {
+        "path": "reports/phase7a_final_decision.md",
+        "git_blob": "6101baec4c48fb0422803863043c71cd0915f4d3",
+        "sha256": "7173db4197cbdc9737905f1679250997d98965b1682d6caa7206771b5b27c3b4",
+        "bytes": 5654
+      },
+      {
+        "path": "reports/phase7a_full_loop_model_feasibility.md",
+        "git_blob": "b2c80b6b47605afeb41a5f128ae2cfd3df6e0920",
+        "sha256": "948e13265bc29062b1bc5e80697ae8a4242fcb8700aac5c0b539e6962f45e37a",
+        "bytes": 1217
+      },
+      {
+        "path": "reports/phase7a_higgs_decay_assignment.md",
+        "git_blob": "1d6b193141f52e0ca4aa14ea6995dbb7741ebfe2",
+        "sha256": "63c5a7130b098c25f0bb745f7da9efb0c6aba5433cec4686ace3a4408ae9b045",
+        "bytes": 1119
+      },
+      {
+        "path": "reports/phase7a_physical_pilot_plan.md",
+        "git_blob": "2c98bda3300525acbf81aab6178cd1e7242edcc2",
+        "sha256": "49a786d70d53fe11dc4f5e3f3f5719d84d2cba8c963b0c328664238aa3b0e30e",
+        "bytes": 1624
+      },
+      {
+        "path": "reports/phase7a_pythia_delphes_readiness.md",
+        "git_blob": "4a791bde813e15fedaffe028e9658a9b49dce19c",
+        "sha256": "ef770c735e7f449d1f61b6f67ca4401e19b0d0e3cf24f6918796c6005cb5f5ed",
+        "bytes": 1408
+      },
+      {
+        "path": "reports/phase7a_signal_weight_normalization.md",
+        "git_blob": "86632b6da6f73fcf91be55176f3b834b9939c0ec",
+        "sha256": "c1edbe496997afee99d8132e8ee06f40a1fab6c7dc1f929a1a5815c25d0ed405",
+        "bytes": 1129
+      },
+      {
+        "path": "reports/phase7a_triangle_box_interference.md",
+        "git_blob": "b35c2ca1e64c159238b3b176088739629eade45a",
+        "sha256": "751bb17fe9cc2eec060354e2c46c1e3b67eaf2a86eab7ac283be1267c6289040",
+        "bytes": 1599
+      },
+      {
+        "path": "reports/phase7b7c7d_final_decision.md",
+        "git_blob": "590d4b874b703350951cb578bcf7e16662cd58d6",
+        "sha256": "41943cb8b28e84519101ce1380700849bd53f7a9090adda44522dba836105bec",
+        "bytes": 3568
+      },
+      {
+        "path": "reports/phase7b_double_higgs_decay.md",
+        "git_blob": "b88b6cf5e280e22839e14dd89717f8feb8b17964",
+        "sha256": "0b43a0d66bcb8f198b3501bc9b4328fc42b8f41430ba21e25d9ccc4316cca237",
+        "bytes": 1124
+      },
+      {
+        "path": "reports/phase7b_full_loop_source.md",
+        "git_blob": "b428fefe4a83239b7656992e94b9f32a8574629b",
+        "sha256": "190a46ec0734a92bc06c43a8f4c08705bf2058c150bd055dfee7f238a6ff9bb9",
+        "bytes": 1094
+      },
+      {
+        "path": "reports/phase7b_generation_and_lhe.md",
+        "git_blob": "7b555d5806220e1a07469cd6bacfd93b71a70e0a",
+        "sha256": "cfcf3a3f8131302e67927c78e7023a8c94b9e3b6a971bee8e5f5b500464f8f42",
+        "bytes": 1345
+      },
+      {
+        "path": "reports/phase7b_hepmc_delphes_validation.md",
+        "git_blob": "c3a50e8b4d6ca0b6f39f1a956870ddb1a119ca13",
+        "sha256": "6728a21980558d493969b19e48bff6d243488df63eede79e24093d29a5c7b4b9",
+        "bytes": 1231
+      },
+      {
+        "path": "reports/phase7b_weight_closure.md",
+        "git_blob": "697515d9389a06f4ba3ac90b0d6e109f27eff4d0",
+        "sha256": "6fd3f834a3b17158feb5da62d3841b689dc64307145fc077dead8df1ef5c4f68",
+        "bytes": 957
+      },
+      {
+        "path": "reports/phase7c_full1000_production.md",
+        "git_blob": "0aa1d82744e50320399a9bab32c0e0ab1a433df1",
+        "sha256": "b71f4817d6ba4f52c69ba429bce8420f465a40a82da640625334d2d8e638e134",
+        "bytes": 1042
+      },
+      {
+        "path": "reports/phase7c_reconstruction.md",
+        "git_blob": "79800ee2270fd97fdbb7c0a1c5dff75246cf1880",
+        "sha256": "b8b2c03ee5c4d221508df4ad715c289fa8607da78e119604409b5a64f349659d",
+        "bytes": 1645
+      },
+      {
+        "path": "reports/phase7c_signal_cutflow.md",
+        "git_blob": "6148e77d7cf5d2a6a6f6a87d8064378ee5208cb0",
+        "sha256": "bc631ecaa115ce8af24e5987c32ec703976e4b712d0b84958a2cf13ad1a58f7d",
+        "bytes": 1110
+      },
+      {
+        "path": "reports/phase7c_signal_validation.md",
+        "git_blob": "a177a8fe281c41638833026c0ec2fc1483a4545a",
+        "sha256": "76dcd2d0640957be12fd88edeae3a9b8ea82dfc78c2595704f9983cf8f7b8e8d",
+        "bytes": 1073
+      },
+      {
+        "path": "reports/phase7d_kappa_lambda_scan.md",
+        "git_blob": "e7607255280709dec9d00cb4a95a25d1118b3566",
+        "sha256": "c91de14a8f92d16192185baace2d64320f62f664872385a4cb16fc6dcda54fdb",
+        "bytes": 2208
+      },
+      {
+        "path": "reports/phase7d_larger_sample_requirements.md",
+        "git_blob": "86697f0e57773a0b6ab489ff8d502d5130bc7dc3",
+        "sha256": "b37f5827551aabc4800cac65f03bb83ad169638e853dbd7a6dec51b2a12c508c",
+        "bytes": 1805
+      },
+      {
+        "path": "reports/phase7d_reweighting_validation.md",
+        "git_blob": "d401f225b4cc739c2a8455ee6ccd2f9b87812faf",
+        "sha256": "b042f909fe73670d29da518872fa2bb29031b22ac211d2492866a984f1a42b63",
+        "bytes": 2250
+      },
+      {
+        "path": "reports/phase7d_signal_background_comparison.md",
+        "git_blob": "f2a02a2cc6d754eafafc1e34056b5d254a4af170",
+        "sha256": "42a56b79a1a19be323e66b44c426180f15c26a0aee2046caf753e467d0d25d92",
+        "bytes": 2435
+      },
+      {
+        "path": "reports/phase7d_statistical_precision.md",
+        "git_blob": "fc61bea47175cd13d7172d5eceeed93ef2a878e8",
+        "sha256": "df6c5a01faf93b19fb0b0776bb7b2a38ab6c71e2ded22f81e1d05b907111e0ce",
+        "bytes": 2214
+      },
+      {
+        "path": "simulation/hh_signal/.gitattributes",
+        "git_blob": "471859400fe6e598d9cc90f54299eb5b32dbf609",
+        "sha256": "655897b67f03566f5fd5fd9218106381de2cf082ce72c9195a48674408cc556d",
+        "bytes": 119
+      },
+      {
+        "path": "simulation/hh_signal/README.md",
+        "git_blob": "9aefb5a81bff6629d929fa831c7973bd183065da",
+        "sha256": "d2e035d73ab785cad1420e07f7a85a0f7bdcf89d0c5e8e681aa75a21c2b9051b",
+        "bytes": 1798
+      },
+      {
+        "path": "simulation/hh_signal/README_CAMPAIGN.md",
+        "git_blob": "24ecbd0af9545c11e76701a37dbd5f53d5e776c9",
+        "sha256": "ad4e2e032c387f794e190f65c28c0517a8d4dd667a1b5be6b58ce333bbb82e9b",
+        "bytes": 1363
+      },
+      {
+        "path": "simulation/hh_signal/USER_GUIDE_CAMPAIGN_ZH_TW.md",
+        "git_blob": "68e1ae3384f3c30e1120f6a394cd7e07dca538e7",
+        "sha256": "4038076a9e386f595315656bb6d751f364d3c44747efd2fe9d30ee89500775a7",
+        "bytes": 9240
+      },
+      {
+        "path": "simulation/hh_signal/USER_GUIDE_ZH_TW.md",
+        "git_blob": "e4b4e0e2b4d36f98f844c67c2cbf5d77b44a00ac",
+        "sha256": "a3a08cd2e0f3439e88ef3b6e815ffbae5ddaffb8423e2eb553d548cacb0778e5",
+        "bytes": 5521
+      },
+      {
+        "path": "simulation/hh_signal/__init__.py",
+        "git_blob": "b034d355d4eef7c042d0a17a74750a2e9749c327",
+        "sha256": "e99fbe7ffc6eb425a2445eb633330e5efc462ff7d8a3ec23ebf8df0fcaeaabc6",
+        "bytes": 73
+      },
+      {
+        "path": "simulation/hh_signal/campaign/__init__.py",
+        "git_blob": "59ddbee318df2ff3687518e4a9ad1e5fd7631021",
+        "sha256": "95d6e797b8bccfba9fbca75f570df46dc9d6344aedfbea4e235bba94c447f267",
+        "bytes": 84
+      },
+      {
+        "path": "simulation/hh_signal/campaign/analysis.py",
+        "git_blob": "56f9260612d277acfa3cc40830fc657555413b57",
+        "sha256": "02b9429a42b9bdf7241756f2750967969e1b91ed4a6f0ec1a460fd89c113c843",
+        "bytes": 17111
+      },
+      {
+        "path": "simulation/hh_signal/campaign/audit_payload.py",
+        "git_blob": "406705e5df4e438f840a1def99e455d3edf75bed",
+        "sha256": "34814d82609a054f41c13f2b270700ad870c4f8eb1f8e0f70b5c8cd931db581d",
+        "bytes": 5042
+      },
+      {
+        "path": "simulation/hh_signal/campaign/batch_evaluator.py",
+        "git_blob": "41a93ee83bd33b585a6443b327757fbd99829d52",
+        "sha256": "a4d12916eb836d1950f9b07604746cc288640eb060625297f6defdddee5e573f",
+        "bytes": 2843
+      },
+      {
+        "path": "simulation/hh_signal/campaign/chain.py",
+        "git_blob": "0a0baf72403a41785180689fe9ade7dedcd40990",
+        "sha256": "04804e0f8eb5db49c463637a037877187de9da10086b758a57ef0c2e813d2798",
+        "bytes": 8252
+      },
+      {
+        "path": "simulation/hh_signal/campaign/common.py",
+        "git_blob": "4d6251e4402ff359ae66803303dda9df963d3a1c",
+        "sha256": "23c28f05d9211a925eca37759e806fdd99a8b904972d1df2926f6cfef5f37a97",
+        "bytes": 4159
+      },
+      {
+        "path": "simulation/hh_signal/campaign/config/kappa_scan.json",
+        "git_blob": "edb31803375b50500fa168a0cd000dbedd4a08fa",
+        "sha256": "3e8066b7788567199d77f1a911f6f1b2ca3a484a9a6b4ef0333960e448d354e9",
+        "bytes": 574
+      },
+      {
+        "path": "simulation/hh_signal/campaign/config/production.json",
+        "git_blob": "a41c062de547d95bb1ee7945504c47c8e9f07a05",
+        "sha256": "0cc5d7da0a2e01eaf1f120af4e38b70f84a6bb04c89715dbddb336f86c984822",
+        "bytes": 1803
+      },
+      {
+        "path": "simulation/hh_signal/campaign/controller.py",
+        "git_blob": "9140aad5249bcaa5fcf5b61629b9d0154632850e",
+        "sha256": "6dd5a806260fc991ebc3f572beebece762fc26c61422ba5ef20dbeccbade9479",
+        "bytes": 11721
+      },
+      {
+        "path": "simulation/hh_signal/campaign/decay.py",
+        "git_blob": "09bd62584818719620c490bad06259315e18a6ea",
+        "sha256": "b4899325e4024a2ccfd3d92a88fd2c46d5c512a4818b11b1ee97fa4864d4b7c5",
+        "bytes": 6178
+      },
+      {
+        "path": "simulation/hh_signal/campaign/include/SignalGraph.hxx",
+        "git_blob": "a0e7420802d039567d17fd7474d98133e0dc2bf6",
+        "sha256": "614d333f8aeae3db143445e702ec384eeebf4d8aef5e7b54403bf4bc7cb2748d",
+        "bytes": 3154
+      },
+      {
+        "path": "simulation/hh_signal/campaign/independent_regression.py",
+        "git_blob": "5e09ed7d1eb1ac05da0e08c4bd3e5c7bc5fe4bcb",
+        "sha256": "df5d137d777cbd8a5095548e9f8ca36adc5739e37bb361bf307128f09a928f82",
+        "bytes": 4947
+      },
+      {
+        "path": "simulation/hh_signal/campaign/launch_adapter.py",
+        "git_blob": "29870f424c5cb92abd715ae5fa5d59909f70d032",
+        "sha256": "420976377a2583466aeda65294e4c684fadef3f36e402494329dfb1d414d7b56",
+        "bytes": 1450
+      },
+      {
+        "path": "simulation/hh_signal/campaign/lhe.py",
+        "git_blob": "3b155e846c8f19a481b052ceda9d3ab025842472",
+        "sha256": "8de83e883cbaa5592e5657188952fe60577b4cd3e7802c411b0cc273cbf6cf6e",
+        "bytes": 6605
+      },
+      {
+        "path": "simulation/hh_signal/campaign/mg5_adapter.py",
+        "git_blob": "e40167b0702f153c6f68344e5c31371740d355d3",
+        "sha256": "b646346317e18815cfac90880efbbf9032e48376153d6145b138fe32db522b91",
+        "bytes": 1743
+      },
+      {
+        "path": "simulation/hh_signal/campaign/prerequisites.py",
+        "git_blob": "27555cbfe840f8c930bb2aaca7bd822735f46876",
+        "sha256": "b1e3f9e174443b055645b6e016345aedcb793aad6ae5281f6010492a9e139bac",
+        "bytes": 3187
+      },
+      {
+        "path": "simulation/hh_signal/campaign/production.py",
+        "git_blob": "f256a171ab02fe9868acc8056292e944f6d558f9",
+        "sha256": "7a667229c1789d2e9d0e97d0352a2a3aee168fc5d49a67380285fe6ba8552b91",
+        "bytes": 12470
+      },
+      {
+        "path": "simulation/hh_signal/campaign/publication.py",
+        "git_blob": "e3f2338850af360af83c1e67d4e9d4efeb7cfc3b",
+        "sha256": "5b372517d83d129c9ff6d572c7526c6d69d642ef3e2d17072bc76dc1e1509c46",
+        "bytes": 7595
+      },
+      {
+        "path": "simulation/hh_signal/campaign/reweight.py",
+        "git_blob": "7647dc659e2e29b31edf09a62a2ae5ac7ff2f97f",
+        "sha256": "54ca9bf8e433122173763d686493b67792eb9f79b3dd313fa969c8c73eadee91",
+        "bytes": 14198
+      },
+      {
+        "path": "simulation/hh_signal/campaign/setup.py",
+        "git_blob": "18cd7485faac7b183e11961317216635213160a6",
+        "sha256": "1e0ff531a0175628b5048aed2320c3b2e323dfd4009a978c5fe299909c1e6604",
+        "bytes": 8249
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/analyze_signal_root.cxx",
+        "git_blob": "36fff50db051ae27c21f852264941d1f200bad29",
+        "sha256": "c8b8108b8b6907d95d177b26ef0d29f6b7d87e4adce62f963318368c9cf1c1a1",
+        "bytes": 7844
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/check_reweight.f",
+        "git_blob": "a3d01242753c27981b8da5220eab55302a856433",
+        "sha256": "cd374ba6af4dca3d69ba8ff1830d8ff2951586d746bf7195ea04a38d5a961002",
+        "bytes": 1134
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/check_reweight_batch.f",
+        "git_blob": "f38f676a3d7c75362c83950faaeff33b8da8ea95",
+        "sha256": "35f0866b632466c1ecedaef1270d6d1f11eab118aada2dcea8f026c6da8c0dca",
+        "bytes": 1339
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/check_reweight_batch_fast.f",
+        "git_blob": "e03194e21c5684944e24aab329cd3728b0ccc179",
+        "sha256": "ff216721e9e845c414e46cb1df57282ef5386374d320e282dc7af298bc842525",
+        "bytes": 1513
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/extract_root_features.cxx",
+        "git_blob": "8aba1c927bf244b6040675f315c7e6ca96928143",
+        "sha256": "d224195973ab8ba8cf2a9d031b46e2d5f7381d0ade33ad3cb76d4882ef4b8f98",
+        "bytes": 3374
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/initialize_decay_model.cxx",
+        "git_blob": "ca0203017f66daf3a2148778b8e7a7223886ca2a",
+        "sha256": "e2a129e350225631fb5c0ac3af8ea1cec856139aa2b8bf5861d924fc5438156a",
+        "bytes": 2182
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/shower_signal.cxx",
+        "git_blob": "0fb801393062fe300417a7bb19db1f1809f65b50",
+        "sha256": "3e90d6c51c066fcd331879e303c985e0b2b4ec32692e2ae97cdcdc04575732be",
+        "bytes": 6826
+      },
+      {
+        "path": "simulation/hh_signal/campaign/src/validate_signal_hepmc.cxx",
+        "git_blob": "24e9bb0148a04563970a91cbb8ff5c397c3e3b65",
+        "sha256": "fcb76b53f63e61ec72a270c7b3e19af152e614d4d6301b067c3d94857f5ad4f4",
+        "bytes": 6271
+      },
+      {
+        "path": "simulation/hh_signal/campaign/statistics.py",
+        "git_blob": "9e705970aa443c7c2da8b23b5a2b0cc755587190",
+        "sha256": "041eccbc506c9b50ab36a609f531e6ce023fbe20c00fe3d0e8693d6721c8aed5",
+        "bytes": 3960
+      },
+      {
+        "path": "simulation/hh_signal/campaign/test_campaign.py",
+        "git_blob": "e556a9561b0ba40bb3e85a6c8bd69a398ffa7e27",
+        "sha256": "2d69529e6de4f1e4dc59b6cc9a5492cf0e3a66731a3151e31c576ec918c1b66d",
+        "bytes": 8861
+      },
+      {
+        "path": "simulation/hh_signal/campaign/validate_references.py",
+        "git_blob": "666664b8ec170ae43de19fb38fbeb557b07ac348",
+        "sha256": "dff4ee61fbd6d72ed30bd0cb94fd49f3f8b436d7b2d94ad16e09c6bf59d79af5",
+        "bytes": 6995
+      },
+      {
+        "path": "simulation/hh_signal/campaign/write_root_histograms.py",
+        "git_blob": "640d1c9153d556621e2f945e4c2aba199c4f53bc",
+        "sha256": "21254b948975752b5640937d74b25947f54093d18a904b214490ca8fa4a6036b",
+        "bytes": 3011
+      },
+      {
+        "path": "simulation/hh_signal/cards/ggf_hh_sm_candidate.mg5",
+        "git_blob": "9bd8289d44750a34545fb403f1c4c697c8361bf5",
+        "sha256": "114eb7de5b6376837c3d2f1050745e7e54de24fa107363c41ebf306cf28c7b7e",
+        "bytes": 118
+      },
+      {
+        "path": "simulation/hh_signal/cards/ggf_hh_sm_matrix_element.mg5",
+        "git_blob": "5b42d95b39eaa1c14ab75d7459ec62a12b7d0ea5",
+        "sha256": "4a0aa0f383080de4827794c993a9c57f90bfb2497f2c5ab369a1301b967f375f",
+        "bytes": 130
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_decay_contract.json",
+        "git_blob": "7224d7510d698fd2033e9d844ee3097d0f0fa2e0",
+        "sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609",
+        "bytes": 1481
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_param_card.dat",
+        "git_blob": "908708ddabc3aa890da6a221fd7edb4dbebb47e5",
+        "sha256": "a14a9b1523003a8a8ff80007d75e905f8098deff90a2821f4a225fb6f7a0f409",
+        "bytes": 3464
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_pythia_signal.cmnd",
+        "git_blob": "09851694ce025e36612929cc584af38aada71315",
+        "sha256": "1350e4f828f249be5507c7f1054bf30981cd229ca783b79adb580f618e7754be",
+        "bytes": 308
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_run_card.dat",
+        "git_blob": "dee70d18c6c801f9361231645636fe3db693255f",
+        "sha256": "e1fa2ea88d2439574e7aae1ed509c66844a39f253942bffefc450f83a12c46c9",
+        "bytes": 427
+      },
+      {
+        "path": "simulation/hh_signal/config/coupling_contract.json",
+        "git_blob": "1b57d9368fdc4fccc881db2ca047463fe106222f",
+        "sha256": "76b7ed193648c90027f8cad6eb45cc283dd967c7a88bc49a24b035f893963dec",
+        "bytes": 801
+      },
+      {
+        "path": "simulation/hh_signal/config/future_interfaces.json",
+        "git_blob": "6fdcee8672aad25efa02914b0a84a1d595744119",
+        "sha256": "843fa58e8d737d8e376706aed756dd54b7f2f9fb770ec70baca498147988ac8e",
+        "bytes": 1906
+      },
+      {
+        "path": "simulation/hh_signal/config/resource_policy.json",
+        "git_blob": "ad8d64ff2ae400cdc146c72dba4ff0f483fe125b",
+        "sha256": "f34a1dd7507da5fe3ca0bc347815dea2281a9efd07ce8089cf78afff7f09baea",
+        "bytes": 800
+      },
+      {
+        "path": "simulation/hh_signal/config/signal_model_contract.json",
+        "git_blob": "52e950238b5d4a8d24995700b3bfe1444fb44f00",
+        "sha256": "eff1f53cc72f798ef0f9a0f0a09ad6d0cefbca518a1e88ee86a4d5d5dccb137c",
+        "bytes": 1555
+      },
+      {
+        "path": "simulation/hh_signal/config/weight_contract.json",
+        "git_blob": "3b137ecc558cf06efeca3162dedb99b3dcf4f653",
+        "sha256": "cb0b558350b41f86d8c98d459e375a9cc05e24effb2ffc9bad40c95d1f93d8c2",
+        "bytes": 1296
+      },
+      {
+        "path": "simulation/hh_signal/contracts.py",
+        "git_blob": "dd0507a0f455eceb2b1e33e282cafa9fb1e2f7b4",
+        "sha256": "93a1f790007b62b507d11e7a2b3cd51433c9acd3b75a64319ef080a0a2244a2f",
+        "bytes": 5274
+      },
+      {
+        "path": "simulation/hh_signal/evidence/actual_diagram_inspection.json",
+        "git_blob": "0df7ccf82db5742d72de50de5a09a875cee98538",
+        "sha256": "6ee259c5d6f1db9281fc65bfa4134c4ae5f6be2b262b87e1012761fff742e041",
+        "bytes": 62378
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/batch_native_return_audit.json",
+        "git_blob": "312182a316967f69dcdefe6a3e68ac3fa052055c",
+        "sha256": "f4892c50cc8e1b99a0a25636fd51ec8aaf858f49fe8b60d89fc7bd5c5de7272b",
+        "bytes": 165985
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/batch_verification.json",
+        "git_blob": "194bd2770d132fea339b651a11544203a367bbae",
+        "sha256": "16502f95fcc5ac4da7cd8fcb407e0e8cbf7fdb2cfab3f31b4da24bfbdd160ae6",
+        "bytes": 16088
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/batch_verification_fast.json",
+        "git_blob": "e8db85da25b178439309e22500e5b5464e9529e4",
+        "sha256": "93f622f0ef5bb94efe0dc39d7a53c4abf96dc89209c10df28e53419c7b33a1e6",
+        "bytes": 16378
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/cancellation_point_fresh_verification.json",
+        "git_blob": "176393bd814e3875c63b9ebe521e3d66b5ecd955",
+        "sha256": "08696cad8b1e3746a6c5069cbc45531a28e7c467778152b0dcf5c106ff607e53",
+        "bytes": 7199
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/final_cli_validation.json",
+        "git_blob": "e2035e708056d5b254f7f9fa5b0aabf3324f081f",
+        "sha256": "2bc5f5c5e609367bed2a5aec99feec217be6866b2330028d1dc40791d2494692",
+        "bytes": 9443
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/final_local_regressions.json",
+        "git_blob": "21627a739c02b43d0c93b185304268f373943ac6",
+        "sha256": "8fbaa633799fe4e46adca70055ba206480e9648d583b316a5cc8f60473cb39be",
+        "bytes": 748
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/independent_decimal_regression.json",
+        "git_blob": "66447c98a4a71d0421307e7e628a6e2cb3e82e01",
+        "sha256": "f687514305cea7bc132d15692b783bbf8b4b772416eed065b27c077fa997ac19",
+        "bytes": 5739
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/independent_root_comparison.json",
+        "git_blob": "967ee0705235caf5de0f7dbf4f3a5d15be34c7ca",
+        "sha256": "b5b1b69c5b771bed858f9297d9b3ad78c8a269eca317e03889cccc27e59253d2",
+        "bytes": 59262
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/native_build.json",
+        "git_blob": "a75daabd65ed3a9e0ccdffda2868b547625d86c5",
+        "sha256": "5b9c90ef0e6fdd01388546b8daffdc61f621e1c86d409c3cad106ca85e33615e",
+        "bytes": 12810
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/production_parameter_numerics.json",
+        "git_blob": "d3b3e2c8df03d6e0ddaf8cbffdc833d8c64b68b2",
+        "sha256": "faac159c8ccb76fd486b6d392369395e6b28f8c27def8ff182bf7ba48a5ba0f8",
+        "bytes": 21885
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/reconstruction_C1000.json",
+        "git_blob": "4485044222c55f91bf4daee9f77666f6055abc93",
+        "sha256": "b6ed532907046542a215c0de0932586be2e8b4017216b6653885d66560f6172f",
+        "bytes": 1561
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/resources_final.json",
+        "git_blob": "aede814e19ba7dd9b9665a0629b5f450c072cdca",
+        "sha256": "d912f4f07d507c3b332ee5bf40ecb2176646ac80194ff61c1b828ec939a9d1f6",
+        "bytes": 7697
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/source_integration_consistency.json",
+        "git_blob": "7151d0e31d67e8dc9ed42035ab27e7d72a9922e6",
+        "sha256": "9a021d90d8aa7fd1428af17548b04be33c52a23deafd7551fb923e944307c2ab",
+        "bytes": 1380
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/source_regressions.json",
+        "git_blob": "b154f4e665873719ee4c7d70a7f685c76b498181",
+        "sha256": "9c3846f0d09a46a7e4fbf67db9fbb0e431403361aa78824e57b834eb9455b348",
+        "bytes": 1820
+      },
+      {
+        "path": "simulation/hh_signal/evidence/campaign/ward.json",
+        "git_blob": "4f189ae547c54bc933391b92d0d32f643c3b456a",
+        "sha256": "abb814703853519c7aae04ef47047e8243ab0e8943973aabb0de1eccf8333e1b",
+        "bytes": 4989
+      },
+      {
+        "path": "simulation/hh_signal/evidence/decay_assignment_method.json",
+        "git_blob": "ed1035fdc451ea0fc181d27040374df4a7e7c294",
+        "sha256": "b4e4ea71b06c2d391a801459be2160fd3d04acc4dc96bbd9a8482b6ba8e0a151",
+        "bytes": 451
+      },
+      {
+        "path": "simulation/hh_signal/evidence/environment_preservation.json",
+        "git_blob": "2b5dc81edc1843b706926a770188209e955d5f7c",
+        "sha256": "eb5181a21ab676add9e400b95cd2f5694deb79a636c82b07938e59aef453f190",
+        "bytes": 2058
+      },
+      {
+        "path": "simulation/hh_signal/evidence/existing_regression.json",
+        "git_blob": "1bd215877d4542a50a7fef4d7400265e8785fc0a",
+        "sha256": "60f7172fc5b4042ee11c472d8e6b22424b34a194504336cd689fe5614fc3b8d7",
+        "bytes": 6413
+      },
+      {
+        "path": "simulation/hh_signal/evidence/existing_six_stream_preservation.json",
+        "git_blob": "610117e3412d9d5e553b70dcd98297a0d0d93a5c",
+        "sha256": "d30daa5d9390ed768abd2ba23a3b788c61a48844aba420a3dcc0faab7f2c5a02",
+        "bytes": 11935
+      },
+      {
+        "path": "simulation/hh_signal/evidence/github_publication.json",
+        "git_blob": "5207a8df650e33cf5459384056675fa292a09b7e",
+        "sha256": "2866d227d78eaa3ebc1a3ed1f0ba5d3f848a4a651a819cbe46808a66ee2e3b12",
+        "bytes": 17668
+      },
+      {
+        "path": "simulation/hh_signal/evidence/legacy_source_access.json",
+        "git_blob": "797a4110f0a71c1d7f1bc90ddebed27d594d8ed0",
+        "sha256": "48874352e5f30fa8340d1b311882c1f52bc2d3057ba83828148c6571c3b8bda0",
+        "bytes": 272
+      },
+      {
+        "path": "simulation/hh_signal/evidence/native_interface_methods.json",
+        "git_blob": "e3c948b1fb7c42ad32d45eec6557e6ab23168b8e",
+        "sha256": "e727e006fa5676c8a25d525eda339a8e21340ffd665077f062df309e3d730b2b",
+        "bytes": 744
+      },
+      {
+        "path": "simulation/hh_signal/evidence/numerical_attempt_history.json",
+        "git_blob": "5ef1e20d2981caa60ef8bc94ca150ab551cf9b4b",
+        "sha256": "4e34abcab766f6b58f8cc0e69f30b520e16627db6edd40f8fb0be05b1d6c041c",
+        "bytes": 1802
+      },
+      {
+        "path": "simulation/hh_signal/evidence/self_service_dry_run.json",
+        "git_blob": "641232e992a597a447295c8cfb93d7d2a2a8c82a",
+        "sha256": "2a8193dd4b43a7f60724fadeeebdb89baec814a36a31f0b78a35e3a15a682d5f",
+        "bytes": 11803
+      },
+      {
+        "path": "simulation/hh_signal/evidence/signal_tests.json",
+        "git_blob": "a59c2a4ef68b2930d2fd6115d81cef1e3eafdad2",
+        "sha256": "f4c9cd9ffbe8250d917113445021fcafe2685d95956055c5d6f74fd774a50dcc",
+        "bytes": 273
+      },
+      {
+        "path": "simulation/hh_signal/include/SignalInterface.hxx",
+        "git_blob": "7d7aacf84c8c9de97c9d39791dad25a31ac73e80",
+        "sha256": "8688b6a420732cf5486e3ec4486a9ce0e2048c2422547832f44d109ccd855a29",
+        "bytes": 2042
+      },
+      {
+        "path": "simulation/hh_signal/methods.py",
+        "git_blob": "640770735ee57e4bb09f5741c5071854ca632d65",
+        "sha256": "684ae2f966241bb13b074aa090298ca258b065a96b63daa5f36f857458800a62",
+        "bytes": 3886
+      },
+      {
+        "path": "simulation/hh_signal/models/MODEL_SOURCE_AUDIT.md",
+        "git_blob": "fe8d21409322c9e37e9317e6e887a1da6d3a7b9c",
+        "sha256": "a2335a585bdb6a09f9b0b8a4a5ea890dcf1177e4d8d27c83f3e81530ae65c7c5",
+        "bytes": 3640
+      },
+      {
+        "path": "simulation/hh_signal/scripts/audit_payload.py",
+        "git_blob": "ed1fd1c425229d217be055141997251b47e4a0b0",
+        "sha256": "84e02f8cff5a51ab07ff2a9100fbc14a64927b73d3440cb450e09b1a33cd86ef",
+        "bytes": 3497
+      },
+      {
+        "path": "simulation/hh_signal/scripts/generate_signal.py",
+        "git_blob": "5bbd644faac4f1bee8b71944f178d655a6385ca5",
+        "sha256": "070f6b43b2a6eecb2cb1074d9bbe1bb9f283c3be7783a9478a0d45913794b6ae",
+        "bytes": 4732
+      },
+      {
+        "path": "simulation/hh_signal/scripts/generate_signal.sh",
+        "git_blob": "f153045438437799a07d6aeed1feac53dc9adb81",
+        "sha256": "b4cc727b1ba82a91054b13f4b915d399df513ebc47f7b7148ccb09483a8a06e3",
+        "bytes": 145
+      },
+      {
+        "path": "simulation/hh_signal/scripts/mg5_model_adapter.py",
+        "git_blob": "05e5a7085b368836606709841cfed32f5ceda3bb",
+        "sha256": "60f7aac990437ecb40dbeced8fbbff3081946fd18f0475ef8afdb0f67c043443",
+        "bytes": 3757
+      },
+      {
+        "path": "simulation/hh_signal/scripts/run_campaign.py",
+        "git_blob": "00a900cd6886e1fa931ef9ff4015dd91322f05eb",
+        "sha256": "a24f90d7a502a74f786d7e45d3785c1df47d258ffa6bbb4b00683d969550d8f0",
+        "bytes": 273
+      },
+      {
+        "path": "simulation/hh_signal/scripts/run_campaign.sh",
+        "git_blob": "d757e477f278183cba30748596f0c849dc0e05b8",
+        "sha256": "ca5eb0c4a30c7716436826a3d082ae76f6aac6d1b90d1ad5a2a9c7e558342172",
+        "bytes": 152
+      },
+      {
+        "path": "simulation/hh_signal/scripts/validate_signal_contract.py",
+        "git_blob": "d1673c15d142114dce15435db42cb34172e22240",
+        "sha256": "c0c5a490aa8ef324e169b068e21a12d7e44c45fcb29bae7b1b3826b252497d9c",
+        "bytes": 682
+      },
+      {
+        "path": "simulation/hh_signal/scripts/verify_loop_model.py",
+        "git_blob": "bda3202a2a91c8f706ac9d3f0cd075c74336c56f",
+        "sha256": "a097a0b80959b598b609e82bcad3297d4faa10c532a794689351a6694d2460d4",
+        "bytes": 13248
+      },
+      {
+        "path": "simulation/hh_signal/src/check_fixed_point.f",
+        "git_blob": "ab04c9ea940fb1b96bd1c223b806f30dea4917f4",
+        "sha256": "4ebb3b9c8790bc0b3b6e6b4c7f0c534ba829cca7bfc986a07277966a7cbec673",
+        "bytes": 1050
+      },
+      {
+        "path": "simulation/hh_signal/src/test_interfaces.cxx",
+        "git_blob": "c52840fa6eac2e72bb20d30fbe75ff05f3517b27",
+        "sha256": "80d59c3833c94de59300a974e1cd9ef5196e472da8a57f37969c23cbac2622fc",
+        "bytes": 658
+      },
+      {
+        "path": "simulation/hh_signal/tests/test_signal_methods.py",
+        "git_blob": "ebceec774b2705d45c09428642d29044d1e3f972",
+        "sha256": "72c0ac54a87551627fa087dfd32a818f942e7871782ab8292f58bf910c13eff3",
+        "bytes": 11066
+      }
+    ],
+    "total_bytes": 36009271,
+    "elapsed_seconds": 105.78334177100032,
+    "new_PDF_PNG": 0
+  },
+  "CI": {
+    "headRevision": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+    "checks": [
+      {
+        "id": 116290886553,
+        "name": "methods_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695468287/job/116290886553",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      },
+      {
+        "id": 116290878304,
+        "name": "campaign_source_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695465598/job/116290878304",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      },
+      {
+        "id": 116290857276,
+        "name": "campaign_source_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695459228/job/116290857276",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      }
+    ],
+    "statuses": [],
+    "annotations": [],
+    "hasMore": false,
+    "job": null,
+    "jobs": [],
+    "log": null,
+    "logTruncated": false,
+    "providerGuidance": "GitHub guidance for this response only: use checkRunId for output and annotations, runId from a GitHub Actions /runs/<id> link to list jobs, or jobId from a /jobs/<id> link for logs. page paginates checks, jobs or annotations. Keep the supplied account and returned headRevision on follow-up reads. Third-party CI exposes only the output reported to GitHub."
+  },
+  "PR_preservation": {
+    "status": "PASS_19_PRIOR_PR_IDENTITIES_UNCHANGED_CURRENT_STACKED_DRAFT_OPEN",
+    "verified_head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+    "prior_PRs": [
+      {
+        "baseRefName": "codex/phase6g-backgrounds-b04-b05-b06-1k",
+        "headRefName": "codex/phase7a-ggf-hh-sm-loop-readiness",
+        "headRefOid": "d9fe33f97773367a41b8877568401af594eeb2a6",
+        "isDraft": true,
+        "number": 19,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/19"
+      },
+      {
+        "baseRefName": "codex/phase6f-zh-pilot-readiness",
+        "headRefName": "codex/phase6g-backgrounds-b04-b05-b06-1k",
+        "headRefOid": "64353adfbbd3a28b13ddbdf761896c0a3fc6e680",
+        "isDraft": true,
+        "number": 18,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/18"
+      },
+      {
+        "baseRefName": "codex/phase6f-zh-pilot-readiness",
+        "headRefName": "codex/phase6g-zh-physical-pilot",
+        "headRefOid": "9e05571188c3d96f3ddba8453513a5a90fc7a0eb",
+        "isDraft": true,
+        "number": 17,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/17"
+      },
+      {
+        "baseRefName": "codex/phase6e-heavy-flavor-forensics",
+        "headRefName": "codex/phase6f-zh-pilot-readiness",
+        "headRefOid": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+        "isDraft": true,
+        "number": 16,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/16"
+      },
+      {
+        "baseRefName": "codex/phase6d-rare-backgrounds-statistics",
+        "headRefName": "codex/phase6e-heavy-flavor-forensics",
+        "headRefOid": "be29be7255c5009c719190cb96f43f04bb144d8f",
+        "isDraft": true,
+        "number": 15,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/15"
+      },
+      {
+        "baseRefName": "codex/phase6c-delphes-fast-sim",
+        "headRefName": "codex/phase6d-rare-backgrounds-statistics",
+        "headRefOid": "7b1fccb41133f4f97a5277fa09efc90a1da41239",
+        "isDraft": true,
+        "number": 14,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/14"
+      },
+      {
+        "baseRefName": "codex/phase6b-pythia8-shower-1k",
+        "headRefName": "codex/phase6c-delphes-fast-sim",
+        "headRefOid": "5e7a9522e08e50d99b1a166789500a4039c3e9b1",
+        "isDraft": true,
+        "number": 13,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/13"
+      },
+      {
+        "baseRefName": "codex/phase6a-backgrounds-1k",
+        "headRefName": "codex/phase6b-pythia8-shower-1k",
+        "headRefOid": "c3d901a4894c255b2e471208473e85db1fcd138c",
+        "isDraft": true,
+        "number": 12,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/12"
+      },
+      {
+        "baseRefName": "codex/phase6a-mg5-lo-bbgg",
+        "headRefName": "codex/phase6a-backgrounds-1k",
+        "headRefOid": "2b028228280872f13c20ac2d45b88fba408272ed",
+        "isDraft": true,
+        "number": 11,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/11"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "codex/phase6a-mg5-self-service",
+        "headRefOid": "9d369b3f656c544bcc2ebbeab410f52418309d3e",
+        "isDraft": false,
+        "number": 10,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/10"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "codex/phase6a-mg5-lo-bbgg",
+        "headRefOid": "640bec6b64b2533bd33ac23d0a1e2e328e93e842",
+        "isDraft": false,
+        "number": 9,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/9"
+      },
+      {
+        "baseRefName": "codex/phase4-mc-truth-validation",
+        "headRefName": "codex/phase5-background-normalization",
+        "headRefOid": "3eb5124f9782960afd8992559aeb4210ac308f77",
+        "isDraft": true,
+        "number": 8,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/8"
+      },
+      {
+        "baseRefName": "codex/phase3-exploratory-preselection",
+        "headRefName": "codex/phase4-mc-truth-validation",
+        "headRefOid": "704045c6c18c313114e3ab41019e46c70beb086b",
+        "isDraft": true,
+        "number": 7,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/7"
+      },
+      {
+        "baseRefName": "codex/phase3-exploratory-preselection",
+        "headRefName": "codex/atlas-root-plotting-standard",
+        "headRefOid": "f4e84fa6950c0c44e8b1658787afba09bcacf145",
+        "isDraft": false,
+        "number": 6,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/6"
+      },
+      {
+        "baseRefName": "codex/phase2-kinematic-reconstruction",
+        "headRefName": "codex/phase3-exploratory-preselection",
+        "headRefOid": "830af3031da80c1c5f3c01ccec22e3619e95f41f",
+        "isDraft": false,
+        "number": 5,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/5"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "codex/phase2-kinematic-reconstruction",
+        "headRefOid": "71ee3f2473faeda59fd8e72818392860f4ee692f",
+        "isDraft": false,
+        "number": 4,
+        "state": "OPEN",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/4"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "codex/phase1-bounded-root-schema",
+        "headRefOid": "8a87d7d89d9b8ea97bc1263623b4cbb3d22a2f42",
+        "isDraft": false,
+        "number": 3,
+        "state": "MERGED",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/3"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "feature/phase0-source-feasibility",
+        "headRefOid": "48c4ff80e61f1b060d8e059c9e9107df327e9e96",
+        "isDraft": false,
+        "number": 2,
+        "state": "MERGED",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/2"
+      },
+      {
+        "baseRefName": "main",
+        "headRefName": "feature/step1-root-cpp-cmake",
+        "headRefOid": "be3e3d0c647b4a7c825b20abcc24db5d1aeb4edc",
+        "isDraft": false,
+        "number": 1,
+        "state": "MERGED",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/1"
+      }
+    ],
+    "current_Draft_PR": {
+      "baseRefName": "codex/phase6g-backgrounds-b04-b05-b06-1k",
+      "headRefName": "codex/phase7b7c7d-ggf-hh-signal",
+      "headRefOid": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+      "isDraft": true,
+      "number": 20,
+      "state": "OPEN",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/20"
+    }
+  },
+  "scope": "This snapshot verifies the already-pushed data head. A following report-only commit must be checked at its own final head separately; no claim about future CI is made."
+}

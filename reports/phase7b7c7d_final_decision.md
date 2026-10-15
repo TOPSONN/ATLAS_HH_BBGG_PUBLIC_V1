@@ -32,3 +32,8 @@ NEXT_RECOMMENDED_STEP: 另行核准零保留事件的獨立積分／收斂與候
 
 
 自助命令最後實際測試13個案例（help/dry-run、B/C frozen-resume、D/all complete-resume，以及events/energy/seed/process/hours/disk/kappa的拒絕路徑），全部通過；原始LHE、完整ROOT、重加權表及campaign registry SHA均未改變。新增方法測試13項通過。完整CLI收據在 `simulation/hh_signal/evidence/campaign/final_cli_validation.json`。
+
+
+PUBLICATION_DATA_SNAPSHOT: `41d13febe4f65cb5f2d1343b6a2a853b83945510` 的三個exact-head CI job均實際success；GitHub recursive tree與全部184個新增檔案、36009271 bytes已透過認證blob API實際下載並比對git blob/SHA256。19個先前PR的head/state/base/draft完整不變，PR20保持OPEN/DRAFT。A–P在各自限定範圍PASS，Q/R/S/T BLOCKED；絕對率與κ2.5/5支援仍INCONCLUSIVE。此為已驗證data head的非自我參照快照；後續report-only commit仍須另做最終head CI與讀回，不能預先宣稱通過。
+
+所有指定FINAL REPORT欄位完整保存於 `metadata/phase7_signal_campaign_report.json`；其中COMMIT_HASH明確指此已驗證data head，最終publication head另由實際最終驗收紀錄與回覆提供。
