@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "physical_generation_authorized": false,
+  "numerical_attempt": {
+    "workers": 1,
+    "max_hours": 2,
+    "max_disk_gib": 5,
+    "supervisor": "existing_linux_process_group_Monitor",
+    "stop_on": [
+      "timeout",
+      "disk_threshold",
+      "memory_pressure",
+      "STOP_marker",
+      "orphan_or_escaped_child"
+    ],
+    "retries": "only_explicit_numerical_attempts_preserve_logs_no_event_generation"
+  },
+  "future_production_caps_only": {
+    "max_hours": 4,
+    "max_disk_gib": 10,
+    "events_max": 1000,
+    "authorization_required": true
+  },
+  "dry_run": "no_MG_export_no_integration_no_Pythia_next_no_Delphes",
+  "scratch_role": "local_user_share_atlas_hh_phase7a",
+  "sample_role": "local_simulations_hh_signal_runs",
+  "automatic_publication": false
+}

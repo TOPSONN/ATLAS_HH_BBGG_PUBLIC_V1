@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "suites": [
+    {
+      "name": "new_backgrounds",
+      "exit_code": 0,
+      "elapsed_seconds": 35.472974314,
+      "log_sha256": "f011fadd59755339eadd1049439be36f4def3f50b19956eeb26fedf0abf4cc21",
+      "log_bytes": 235,
+      "test_summary": [
+        "Ran 134 tests in 33.837s",
+        "OK"
+      ]
+    },
+    {
+      "name": "zh_pilot",
+      "exit_code": 0,
+      "elapsed_seconds": 7.654379687999949,
+      "log_sha256": "4eab02579c18ea265f12e359093108f9b55ebec4041ee4b0ed2f4c142783b9f2",
+      "log_bytes": 486,
+      "test_summary": [
+        "Ran 78 tests in 7.220s",
+        "OK"
+      ]
+    },
+    {
+      "name": "heavy_flavour_forensics",
+      "exit_code": 0,
+      "elapsed_seconds": 1.757573023999953,
+      "log_sha256": "b694a5038f1bb5e0b4056e087c015106e4bb590bf7f2cb792565990fdb5a18eb",
+      "log_bytes": 155,
+      "test_summary": [
+        "Ran 56 tests in 1.258s",
+        "OK"
+      ]
+    },
+    {
+      "name": "rare_backgrounds",
+      "exit_code": 0,
+      "elapsed_seconds": 12.386182864000034,
+      "log_sha256": "b631c277898114bd01a8db980c93baf84530f25507348e8fbc3343fc002c93cb",
+      "log_bytes": 151,
+      "test_summary": [
+        "Ran 51 tests in 11.171s",
+        "OK"
+      ]
+    },
+    {
+      "name": "mg5",
+      "exit_code": 0,
+      "elapsed_seconds": 12.536133402000019,
+      "log_sha256": "0f1f44d008ed1335e54db75ebfc9874cc6fd9eeda613947dba41db16ee7a673a",
+      "log_bytes": 211,
+      "test_summary": [
+        "Ran 59 tests in 11.745s",
+        "OK"
+      ]
+    },
+    {
+      "name": "pythia8",
+      "exit_code": 0,
+      "elapsed_seconds": 11.220046406999984,
+      "log_sha256": "be84e0f74ed27154e44e8a1ac4f7022eb3184757f6a11731fc3641ed001b524d",
+      "log_bytes": 156,
+      "test_summary": [
+        "Ran 56 tests in 10.727s",
+        "OK"
+      ]
+    },
+    {
+      "name": "delphes",
+      "exit_code": 0,
+      "elapsed_seconds": 2.761357384000007,
+      "log_sha256": "61e142c0ad9e69625e303c67ff7c146ec68c4b06ed06f8a18e2d8c7f75003d74",
+      "log_bytes": 1581,
+      "test_summary": [
+        "Ran 35 tests in 1.546s",
+        "OK (skipped=8)"
+      ]
+    },
+    {
+      "name": "new_refs",
+      "exit_code": 0,
+      "elapsed_seconds": 4.385893119000002,
+      "log_sha256": "39e014b2b8b0bfae92558b65621f402336e5a8625f3389b4d456199acb34e50c",
+      "log_bytes": 6931,
+      "test_summary": []
+    },
+    {
+      "name": "lhe_refs",
+      "exit_code": 0,
+      "elapsed_seconds": 1.1272088310000186,
+      "log_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "log_bytes": 7358,
+      "test_summary": []
+    },
+    {
+      "name": "hepmc_refs",
+      "exit_code": 0,
+      "elapsed_seconds": 2.5803609329999517,
+      "log_sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "log_bytes": 12208,
+      "test_summary": []
+    },
+    {
+      "name": "delphes_refs",
+      "exit_code": 0,
+      "elapsed_seconds": 5.654825485999993,
+      "log_sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "log_bytes": 1496,
+      "test_summary": []
+    },
+    {
+      "name": "old3000_native",
+      "exit_code": 0,
+      "elapsed_seconds": 40.428596551000055,
+      "log_sha256": "4f38d267f207aad29154b5c47a8e16a2efe7d2d471d80af2276b7caea083ffb1",
+      "log_bytes": 129,
+      "test_summary": []
+    }
+  ],
+  "native_original3000_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+  "native_new3000": {
+    "status": "PASS_READONLY_EXISTING_3000",
+    "samples": [
+      {
+        "process": "zh",
+        "status": "PASS_ACTUAL_EXISTING_ROOT1000_READBACK",
+        "events": 1000,
+        "input_files_sha256": {
+          "detector.root": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+          "detector_card.tcl": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+          "reco_events.jsonl": "13a1e6e91e8eb2781ef6b46c7043a6918823fe185f1ed95c7af0c4d922f6edd8",
+          "cutflow.csv": "985069e9449b4a9bb2b59ac7f77769f0648888f5cf8378119b428238f154fc4e",
+          "native_validation.json": "ce154b9bdadce365d22087e54a1ac589d3f5c8b70c839184d8ffad5ee95bcaf1"
+        },
+        "fresh_native_report_sha256": "ce154b9bdadce365d22087e54a1ac589d3f5c8b70c839184d8ffad5ee95bcaf1",
+        "reco_and_cutflow_byte_identical": true,
+        "analyzer_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+        "new_events": 0
+      },
+      {
+        "process": "tth",
+        "status": "PASS_ACTUAL_EXISTING_ROOT1000_READBACK",
+        "events": 1000,
+        "input_files_sha256": {
+          "detector.root": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+          "detector_card.tcl": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+          "reco_events.jsonl": "f20484e45630450bb020fb118e3a96241f2ff7e80694046f9078e50e37e7b6e0",
+          "cutflow.csv": "062ab7653e30a13b7b44ada128ac8f33ca944916214f029a13fecc982b92bb5a",
+          "native_validation.json": "682e4f15215ca9139436946786784a183ad043caa583208fec68232ee233093b"
+        },
+        "fresh_native_report_sha256": "682e4f15215ca9139436946786784a183ad043caa583208fec68232ee233093b",
+        "reco_and_cutflow_byte_identical": true,
+        "analyzer_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+        "new_events": 0
+      },
+      {
+        "process": "bbgj",
+        "status": "PASS_ACTUAL_EXISTING_ROOT1000_READBACK",
+        "events": 1000,
+        "input_files_sha256": {
+          "detector.root": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+          "detector_card.tcl": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+          "reco_events.jsonl": "b894f1a5ff2c6e2e6424f8db232e936fdf8b72b598df69bc5adfe1b94f0ab410",
+          "cutflow.csv": "d06b38c51fd0e92b461652b20e870ba3a59a9f9d2732ce29ae144a5854b5d11c",
+          "native_validation.json": "7f0ecac021c9fbaa562003ac9b408269fb032db57733e01540fa385602eea1be"
+        },
+        "fresh_native_report_sha256": "7f0ecac021c9fbaa562003ac9b408269fb032db57733e01540fa385602eea1be",
+        "reco_and_cutflow_byte_identical": true,
+        "analyzer_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+        "new_events": 0
+      }
+    ],
+    "new_physical_events": 0
+  }
+}

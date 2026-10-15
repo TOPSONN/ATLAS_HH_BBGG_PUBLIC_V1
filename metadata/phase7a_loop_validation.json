@@ -1,0 +1,1244 @@
+{
+  "schema_version": 1,
+  "scope": "DETERMINISTIC_MATRIX_ELEMENT_ONLY",
+  "physical_signal_events": 0,
+  "integration_invocations": 0,
+  "installed_model": {
+    "status": "PASS_RETAINED_MODEL_AND_TOOLCHAIN_FILES",
+    "model": "loop_sm",
+    "mg5_version": "3.5.16",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "installed_source_files_checked": 4658,
+    "model_files_sha256": {
+      "models/loop_sm/restrict_default.dat": "878a7d1b110faf49824885bd340fb09d6431394d9c7f3d5b86c12d6f4ef54160",
+      "models/loop_sm/parameters.py": "5de44653a32f4c213b6fc0696f3585f36bc34830e64d713c7e268814c847b58f",
+      "models/loop_sm/coupling_orders.py": "c75540ae451aaca4c8f497aed727a252a2960c65c9d6174e94039af8a0615ae0",
+      "models/loop_sm/particles.py": "a437dda2285158b79b44d97830d219f16a3fd1aa864f75131acca6d826893f78",
+      "models/loop_sm/restrict_ckm.dat": "d51f802a2fb5f55a4be5ca0c6daaf666514757f24f42c656a3c00818afd12e44",
+      "models/loop_sm/lorentz.py": "2552626d868a558a321c84fbafd14b43dafd2f4bbd45cf04a7693cb1caac3dc1",
+      "models/loop_sm/__init__.py": "f313e3030c3b3a5d8da2db3ed1b8ad487ce45dfb21810b15a1f717b9a4147d4b",
+      "models/loop_sm/restrict_no_widths.dat": "05ebf8a6e774a80af3f6880346d0e313cef5aaea92f70a9ec35de68635bdfedf",
+      "models/loop_sm/.restrict_parallel_test.dat": "33abf2ee8645e2f55414bb89bb6b9359ad70384667d271d4213a846281622e0e",
+      "models/loop_sm/function_library.py": "4f61390f3cd3ba3baa6b37a908f0f3129c457bca2d4e2b2fa8806c3ac31f9ea3",
+      "models/loop_sm/restrict_parallel_test.dat": "33abf2ee8645e2f55414bb89bb6b9359ad70384667d271d4213a846281622e0e",
+      "models/loop_sm/restrict_c_mass.dat": "11626ca4f6a8220df5ed33d530b6fec92fe69ba5f1c82f54bc17427dd3e83116",
+      "models/loop_sm/restrict_no_masses.dat": "1f72584d6ed563aa911369719a14d8ac3c51bbe055985b3d0a07b6a7b464ad83",
+      "models/loop_sm/CT_vertices.py": "6f125c6cffdd94491fb6167411b23700468663d46c60cee90cdb675ad5659b0f",
+      "models/loop_sm/restrict_no_tau_mass.dat": "4170075aed30aa27eba1ec1533d42fa1496ff605bf666608ed31557e65d28f46",
+      "models/loop_sm/.restrict_parallel_test_c_massive.dat": "e6da223a909271a9fe596a71f3d3ee97bba783a20dda65cb3d3ae71615e1ac3d",
+      "models/loop_sm/write_param_card.py": "04c0b2751d4e52dd957a4609c3f04bc8fee6be40786797324fc9ecbe22e4f1e0",
+      "models/loop_sm/restrict_lepton_masses.dat": "12e95ad3b16a4d92c20c4d60068b27355021bd2966df2af081e06f017ba9bce7",
+      "models/loop_sm/couplings.py": "a91df246f6a68325ead56ec30d49c0586fb9b39451ae62a5c527896acb45014f",
+      "models/loop_sm/CT_parameters.py": "fe89b26fcc375dbffc40003d7e064b2e66316d8d4daa897cd7a9c0ae386cfb3d",
+      "models/loop_sm/CT_couplings.py": "ec0ab5fab1d693e246284c1d82d9ef5219b274dedb909bdd3f6187cbc1ed7b02",
+      "models/loop_sm/vertices.py": "89a4311b8305295e3019e1570c57519c2614b784b1f9ee9637a54ee9d2f07b82",
+      "models/loop_sm/restrict_zeromass_ckm.dat": "ea454a976b28615c60a12d638be9e6896b4e29de10deb8f5ff7337b81a1794ff",
+      "models/loop_sm/restrict_no_b_mass.dat": "9e1839428fd3a3918fa14be2a5ba0b4907dc12134e91ff08d40cd1056208714c",
+      "models/loop_sm/object_library.py": "a4bb6c554809ff739fea28a70e3a889408ea93f48e55cfe20a68d5664a7e16e1",
+      "models/loop_sm/restrict_test.dat": "2ea03c8e94750e40c403d4524bc461f9c1c5802e5f951e15abc18011513f7fe1",
+      "LICENSE": "7e8d6c8410bb2f19a4841a670b2d6d5e3c3b2d7409bce1260b7f5de15a16f378",
+      "VERSION": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+    },
+    "software_installed": false,
+    "physical_events": 0
+  },
+  "attempt_policy": {
+    "max_hours": 2.0,
+    "max_disk_gib": 5.0,
+    "workers": 1
+  },
+  "actual_diagram_summary": {
+    "box": {
+      "5": 6,
+      "6": 6
+    },
+    "triangle": {
+      "5": 2,
+      "6": 2
+    },
+    "born": 0,
+    "UVCT": 0
+  },
+  "generated_couplings_sha256": {
+    "couplings.f": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a",
+    "couplings2.f": "f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b",
+    "couplings1.f": "07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18"
+  },
+  "symmetry_denominator": 512,
+  "executable_sha256": "6424245f08918696160d20b69ba7f1eb78a3953ff9f9729e4cf5ad89c408d364",
+  "evaluations": [
+    {
+      "label": "e250p001_klm1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          125.0005,
+          0.0,
+          0.0,
+          125.0005
+        ],
+        [
+          125.0005,
+          0.0,
+          0.0,
+          -125.0005
+        ],
+        [
+          125.0005,
+          0.3372687763491857,
+          0.0,
+          0.10606612324398218
+        ],
+        [
+          125.0005,
+          -0.3372687763491857,
+          0.0,
+          -0.10606612324398218
+        ]
+      ],
+      "mHH_gev": 250.001,
+      "kappa_lambda": -1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 125.0005,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "47ecbebbba96d5f7c8334c8b9e2bab3b66f672255dc9cd486e93ec3750385373",
+      "finite_squared_me": 7.4254536271213814e-06,
+      "single_pole": -1.6712393041200774e-21,
+      "double_pole": 9.4039548065783e-38,
+      "reported_precision": 2.2112191277196048e-29,
+      "return_code": 329,
+      "log_sha256": "88069e5e8b2d91658e1757dc02e56a641966fbe34be3ce1193851be924cadbc4",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e250p001_kl0",
+      "momenta_E_px_py_pz_gev": [
+        [
+          125.0005,
+          0.0,
+          0.0,
+          125.0005
+        ],
+        [
+          125.0005,
+          0.0,
+          0.0,
+          -125.0005
+        ],
+        [
+          125.0005,
+          0.3372687763491857,
+          0.0,
+          0.10606612324398218
+        ],
+        [
+          125.0005,
+          -0.3372687763491857,
+          0.0,
+          -0.10606612324398218
+        ]
+      ],
+      "mHH_gev": 250.001,
+      "kappa_lambda": 0.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 125.0005,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "47ecbebbba96d5f7c8334c8b9e2bab3b66f672255dc9cd486e93ec3750385373",
+      "finite_squared_me": 2.0545145350153413e-06,
+      "single_pole": -8.790643584388974e-22,
+      "double_pole": 9.4039548065783e-38,
+      "reported_precision": 6.453873190620381e-29,
+      "return_code": 329,
+      "log_sha256": "5cc49619191f496a5db652f4f21cb141025d59132c7ed7c1165df8af25f75e81",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e250p001_kl1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          125.0005,
+          0.0,
+          0.0,
+          125.0005
+        ],
+        [
+          125.0005,
+          0.0,
+          0.0,
+          -125.0005
+        ],
+        [
+          125.0005,
+          0.3372687763491857,
+          0.0,
+          0.10606612324398218
+        ],
+        [
+          125.0005,
+          -0.3372687763491857,
+          0.0,
+          -0.10606612324398218
+        ]
+      ],
+      "mHH_gev": 250.001,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 125.0005,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "47ecbebbba96d5f7c8334c8b9e2bab3b66f672255dc9cd486e93ec3750385373",
+      "finite_squared_me": 2.1972988157217458e-08,
+      "single_pole": -8.688941275771779e-23,
+      "double_pole": 9.4039548065783e-38,
+      "reported_precision": 1.9515795307936656e-26,
+      "return_code": 329,
+      "log_sha256": "2b6789781f23fb77725d281893e9034fdffb3914b90c12c1c365cc781a8b1911",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e250p001_kl2",
+      "momenta_E_px_py_pz_gev": [
+        [
+          125.0005,
+          0.0,
+          0.0,
+          125.0005
+        ],
+        [
+          125.0005,
+          0.0,
+          0.0,
+          -125.0005
+        ],
+        [
+          125.0005,
+          0.3372687763491857,
+          0.0,
+          0.10606612324398218
+        ],
+        [
+          125.0005,
+          -0.3372687763491857,
+          0.0,
+          -0.10606612324398218
+        ]
+      ],
+      "mHH_gev": 250.001,
+      "kappa_lambda": 2.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 125.0005,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "47ecbebbba96d5f7c8334c8b9e2bab3b66f672255dc9cd486e93ec3750385373",
+      "finite_squared_me": 1.3278289865470066e-06,
+      "single_pole": 7.052855329234617e-22,
+      "double_pole": 9.4039548065783e-38,
+      "reported_precision": 5.460378730491881e-28,
+      "return_code": 329,
+      "log_sha256": "cff077efcb207f0f6d3f7ddfcc30d0fab664bab9c3028ebfecae034ca03e5413",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e300_klm1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          150.0,
+          0.0,
+          0.0,
+          150.0
+        ],
+        [
+          150.0,
+          0.0,
+          0.0,
+          -150.0
+        ],
+        [
+          150.0,
+          79.09646009778187,
+          0.0,
+          24.8746859276655
+        ],
+        [
+          150.0,
+          -79.09646009778187,
+          0.0,
+          -24.8746859276655
+        ]
+      ],
+      "mHH_gev": 300.0,
+      "kappa_lambda": -1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 150.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "2449dbba57618ca4e17894ea693baed0c36dd950892d18e8a95efda8c96dc953",
+      "finite_squared_me": 1.2384888136475388e-05,
+      "single_pole": 2.2288178283869125e-19,
+      "double_pole": 1.5702710811529274e-30,
+      "reported_precision": 3.920948273686928e-11,
+      "return_code": 211,
+      "log_sha256": "8e62410f508ebcb5bd442824001f06dbf18a68fcac33a50612e9bbacebfca1ee",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e300_kl0",
+      "momenta_E_px_py_pz_gev": [
+        [
+          150.0,
+          0.0,
+          0.0,
+          150.0
+        ],
+        [
+          150.0,
+          0.0,
+          0.0,
+          -150.0
+        ],
+        [
+          150.0,
+          79.09646009778187,
+          0.0,
+          24.8746859276655
+        ],
+        [
+          150.0,
+          -79.09646009778187,
+          0.0,
+          -24.8746859276655
+        ]
+      ],
+      "mHH_gev": 300.0,
+      "kappa_lambda": 0.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 150.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "2449dbba57618ca4e17894ea693baed0c36dd950892d18e8a95efda8c96dc953",
+      "finite_squared_me": 4.953972425479704e-06,
+      "single_pole": 1.541157276015585e-19,
+      "double_pole": 1.5611955110785056e-30,
+      "reported_precision": 6.194353834179596e-11,
+      "return_code": 211,
+      "log_sha256": "053eb6c3a1a7dd055678b219acd038d0b2940c89c21706959f7aa6b614d4b9ad",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e300_kl1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          150.0,
+          0.0,
+          0.0,
+          150.0
+        ],
+        [
+          150.0,
+          0.0,
+          0.0,
+          -150.0
+        ],
+        [
+          150.0,
+          79.09646009778187,
+          0.0,
+          24.8746859276655
+        ],
+        [
+          150.0,
+          -79.09646009778187,
+          0.0,
+          -24.8746859276655
+        ]
+      ],
+      "mHH_gev": 300.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 150.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "2449dbba57618ca4e17894ea693baed0c36dd950892d18e8a95efda8c96dc953",
+      "finite_squared_me": 8.724531798948697e-07,
+      "single_pole": 6.628621338314615e-20,
+      "double_pole": 1.5547316206976647e-30,
+      "reported_precision": 1.5194676238633016e-10,
+      "return_code": 211,
+      "log_sha256": "b9bb2fff86d3fb4a12b8a323f85ef0a1779357b61dbe6f5e0748f02c295da97b",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e300_kl2",
+      "momenta_E_px_py_pz_gev": [
+        [
+          150.0,
+          0.0,
+          0.0,
+          150.0
+        ],
+        [
+          150.0,
+          0.0,
+          0.0,
+          -150.0
+        ],
+        [
+          150.0,
+          79.09646009778187,
+          0.0,
+          24.8746859276655
+        ],
+        [
+          150.0,
+          -79.09646009778187,
+          0.0,
+          -24.8746859276655
+        ]
+      ],
+      "mHH_gev": 300.0,
+      "kappa_lambda": 2.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 150.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "2449dbba57618ca4e17894ea693baed0c36dd950892d18e8a95efda8c96dc953",
+      "finite_squared_me": 1.4033039972088153e-07,
+      "single_pole": -4.0383777363877236e-20,
+      "double_pole": 1.5508816669595576e-30,
+      "reported_precision": 2.657490115975893e-10,
+      "return_code": 211,
+      "log_sha256": "1e8cd3aa73899ff4eb995f4181bc73646046238ce61c831c5c278073f20495ea",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e400_klm1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": -1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 5.387921089024179e-05,
+      "single_pole": -3.631391258555283e-20,
+      "double_pole": 1.131234499549284e-32,
+      "reported_precision": 1.678513526547583e-12,
+      "return_code": 211,
+      "log_sha256": "7e1fa15fa8da211c5389a26187a794d00bae949e15276d640c04d94c9c9d9f84",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e400_kl0",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 0.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 3.2154771147687635e-05,
+      "single_pole": -2.781872456691212e-20,
+      "double_pole": 1.0937873902183511e-32,
+      "reported_precision": 1.7811928894049546e-12,
+      "return_code": 211,
+      "log_sha256": "1cf39ddfbcf5f4876ff3a7a0c3362b3efc717552e46b2535d352e60d8979ac8f",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e400_kl1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 1.620336617114856e-05,
+      "single_pole": -1.2367510226193387e-20,
+      "double_pole": 1.0641625564464636e-32,
+      "reported_precision": 1.3096942613486669e-12,
+      "return_code": 211,
+      "log_sha256": "8409daaa5e1e45fe946d90670ce695207cdf59ee956071a4354f07549b2e5fe7",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e400_kl2",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 2.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 6.024995960624572e-06,
+      "single_pole": 1.2221775929338333e-20,
+      "double_pole": 1.040366359814627e-32,
+      "reported_precision": 2.934365495770332e-12,
+      "return_code": 211,
+      "log_sha256": "71c2e7046576281b7bf7ef8c7a7baede780a568a627662d539b0aac1af8d77bb",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e800_klm1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          400.0,
+          0.0,
+          0.0,
+          400.0
+        ],
+        [
+          400.0,
+          0.0,
+          0.0,
+          -400.0
+        ],
+        [
+          400.0,
+          362.46551560113966,
+          0.0,
+          113.99013115177998
+        ],
+        [
+          400.0,
+          -362.46551560113966,
+          0.0,
+          -113.99013115177998
+        ]
+      ],
+      "mHH_gev": 800.0,
+      "kappa_lambda": -1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 400.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "6f84bb8d72ecfec6e8412fd8f321adb0ce1d6e6620f4c8bc083a4222a368a83d",
+      "finite_squared_me": 5.4260525951305524e-05,
+      "single_pole": -4.204012523604545e-19,
+      "double_pole": 5.391649514178879e-32,
+      "reported_precision": 3.790235518552643e-12,
+      "return_code": 211,
+      "log_sha256": "89f593873a98b03aa0091347366ef10f785627fab17bddf2f8df15a82cf24ffe",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e800_kl0",
+      "momenta_E_px_py_pz_gev": [
+        [
+          400.0,
+          0.0,
+          0.0,
+          400.0
+        ],
+        [
+          400.0,
+          0.0,
+          0.0,
+          -400.0
+        ],
+        [
+          400.0,
+          362.46551560113966,
+          0.0,
+          113.99013115177998
+        ],
+        [
+          400.0,
+          -362.46551560113966,
+          0.0,
+          -113.99013115177998
+        ]
+      ],
+      "mHH_gev": 800.0,
+      "kappa_lambda": 0.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 400.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "6f84bb8d72ecfec6e8412fd8f321adb0ce1d6e6620f4c8bc083a4222a368a83d",
+      "finite_squared_me": 4.292187308931362e-05,
+      "single_pole": -3.433683993640629e-19,
+      "double_pole": 5.415566651123185e-32,
+      "reported_precision": 5.1096491944802715e-12,
+      "return_code": 211,
+      "log_sha256": "bd488fc8e27ae815646e06596440678c8b3ec55a8289256b1c7f1cbba9ed0483",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e800_kl1",
+      "momenta_E_px_py_pz_gev": [
+        [
+          400.0,
+          0.0,
+          0.0,
+          400.0
+        ],
+        [
+          400.0,
+          0.0,
+          0.0,
+          -400.0
+        ],
+        [
+          400.0,
+          362.46551560113966,
+          0.0,
+          113.99013115177998
+        ],
+        [
+          400.0,
+          -362.46551560113966,
+          0.0,
+          -113.99013115177998
+        ]
+      ],
+      "mHH_gev": 800.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 400.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "6f84bb8d72ecfec6e8412fd8f321adb0ce1d6e6620f4c8bc083a4222a368a83d",
+      "finite_squared_me": 3.350297466476852e-05,
+      "single_pole": -2.6972044719272266e-19,
+      "double_pole": 5.435706422023674e-32,
+      "reported_precision": 6.95050279417775e-12,
+      "return_code": 211,
+      "log_sha256": "0673e3532df955c1deb57e6566461856cc773328957f241334b0e170c4212079",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "e800_kl2",
+      "momenta_E_px_py_pz_gev": [
+        [
+          400.0,
+          0.0,
+          0.0,
+          400.0
+        ],
+        [
+          400.0,
+          0.0,
+          0.0,
+          -400.0
+        ],
+        [
+          400.0,
+          362.46551560113966,
+          0.0,
+          113.99013115177998
+        ],
+        [
+          400.0,
+          -362.46551560113966,
+          0.0,
+          -113.99013115177998
+        ]
+      ],
+      "mHH_gev": 800.0,
+      "kappa_lambda": 2.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 400.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "6f84bb8d72ecfec6e8412fd8f321adb0ce1d6e6620f4c8bc083a4222a368a83d",
+      "finite_squared_me": 2.60038306776702e-05,
+      "single_pole": -1.9851674790664557e-19,
+      "double_pole": 5.463955425755865e-32,
+      "reported_precision": 9.471758862401962e-12,
+      "return_code": 211,
+      "log_sha256": "b179d77a1052a430753b1b467d8d233a4826585e0e41f3d2702f1490714aa000",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "repeat",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 1.620336617114856e-05,
+      "single_pole": -1.2367510226193387e-20,
+      "double_pole": 1.0641625564464636e-32,
+      "reported_precision": 1.3096942613486669e-12,
+      "return_code": 211,
+      "log_sha256": "8409daaa5e1e45fe946d90670ce695207cdf59ee956071a4354f07549b2e5fe7",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "exchange",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "f227a1811444c42bcb68dc6f7815635a7e27c7d582ccc6558a1dbe507ff2f493",
+      "finite_squared_me": 1.6203366171115717e-05,
+      "single_pole": 7.86454270627387e-20,
+      "double_pole": 2.8977048836672237e-33,
+      "reported_precision": 1.0614637728014182e-11,
+      "return_code": 211,
+      "log_sha256": "8dfdf51e16fc17f22db2ba514430dbec08bc77029d1ffcfa40c570a715ef1c05",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "mt180_fixed_yukawa",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 180.0,
+      "YUKAWA6_gev": 173.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "56529a42d7f9f4593bb3e3d899bd0a79a29cdf0239994ba8ee836d8185035030",
+      "finite_squared_me": 1.3392619685615759e-05,
+      "single_pole": -1.9882710255259577e-21,
+      "double_pole": 5.120122198398772e-31,
+      "reported_precision": 1.6115039013056898e-12,
+      "return_code": 211,
+      "log_sha256": "beb28f692f85914d14feb83429ef2296ff9b1dce2cb41a9c4b24604adb5ab3f6",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "yt_zero",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 0.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "9b2f518ea39f60bf6b9a926966a42503dfd802a3629e986341a4dd14cb23b4b0",
+      "finite_squared_me": 2.2583499740505674e-10,
+      "single_pole": -7.728663733252051e-25,
+      "double_pole": 9.194121013911886e-38,
+      "reported_precision": 1.8351040061788506e-12,
+      "return_code": 211,
+      "log_sha256": "f25e8b048335ed1096c17a83fe0d2c017c9922c0b253feab4f22a9e65750206f",
+      "calls_at_same_explicit_point": 6
+    },
+    {
+      "label": "yt_double",
+      "momenta_E_px_py_pz_gev": [
+        [
+          200.0,
+          0.0,
+          0.0,
+          200.0
+        ],
+        [
+          200.0,
+          0.0,
+          0.0,
+          -200.0
+        ],
+        [
+          200.0,
+          148.93371008606482,
+          0.0,
+          46.837484987987985
+        ],
+        [
+          200.0,
+          -148.93371008606482,
+          0.0,
+          -46.837484987987985
+        ]
+      ],
+      "mHH_gev": 400.0,
+      "kappa_lambda": 1.0,
+      "MT_gev": 173.0,
+      "YUKAWA6_gev": 346.0,
+      "mu_R_gev": 200.0,
+      "alpha_s_fixed": 0.118,
+      "param_card_sha256": "50cb511751ef03a07104dcd71d5449922e8c88c380e963531a9fa8d694ba1896",
+      "finite_squared_me": 0.0003755387520806044,
+      "single_pole": -2.9771455993473116e-19,
+      "double_pole": 1.7217414909330408e-31,
+      "reported_precision": 1.6526932111556446e-12,
+      "return_code": 211,
+      "log_sha256": "42f416a94bb782c9440c505c9a6fb945155691fa32aeb4fd8ae625c4eb674865",
+      "calls_at_same_explicit_point": 6
+    }
+  ],
+  "triangle_box_interference": [
+    {
+      "mHH_gev": 250.001,
+      "box_squared": 2.0545145350153413e-06,
+      "triangle_squared": 1.6691987726239582e-06,
+      "interference_kl1": -3.701740319482082e-06,
+      "kl2_prediction": 1.3278289865470098e-06,
+      "kl2_measured": 1.3278289865470066e-06,
+      "relative_closure": 2.3921556046639135e-15
+    },
+    {
+      "mHH_gev": 300.0,
+      "box_squared": 4.953972425479704e-06,
+      "triangle_squared": 1.6746982327054249e-06,
+      "interference_kl1": -5.756217478290259e-06,
+      "kl2_prediction": 1.4033039972088603e-07,
+      "kl2_measured": 1.4033039972088153e-07,
+      "relative_closure": 3.206619906476956e-14
+    },
+    {
+      "mHH_gev": 400.0,
+      "box_squared": 3.2154771147687635e-05,
+      "triangle_squared": 2.8865173829911175e-06,
+      "interference_kl1": -1.8837922359563038e-05,
+      "kl2_prediction": 6.024995960526028e-06,
+      "kl2_measured": 6.024995960624572e-06,
+      "relative_closure": 1.6355830564465626e-11
+    },
+    {
+      "mHH_gev": 800.0,
+      "box_squared": 4.292187308931362e-05,
+      "triangle_squared": 9.598772187234035e-07,
+      "interference_kl1": -1.03787756432685e-05,
+      "kl2_prediction": 2.6003830677670233e-05,
+      "kl2_measured": 2.60038306776702e-05,
+      "relative_closure": 1.3029356447573821e-15
+    }
+  ],
+  "numerical_reproducibility": "PASS",
+  "higgs_exchange": "PASS",
+  "momentum_and_onshell": "PASS",
+  "finite_MT_at_fixed_YUKAWA6": "PASS",
+  "independent_YUKAWA6_sensitivity": "PASS",
+  "threshold": "PHYSICAL_POINTS_ABOVE_250_GEV_BELOW_THRESHOLD_REJECTED_BY_DRIVER",
+  "cross_section_pb": "NOT_EVALUATED_UNTIL_REAL_INTEGRATION",
+  "ward_identity": {
+    "status": "NOT_EVALUATED",
+    "reason": "No reviewed Ward-polarization driver was executed; finiteness and symmetry do not establish gauge invariance."
+  },
+  "forbidden_signal_outputs": 0,
+  "status": "PASS_BOUNDED_FULL_MT_MB_NUMERICAL_WITH_LIMITS",
+  "resource_metrics": {
+    "elapsed_seconds": 139.83612873000015,
+    "peak_sampled_process_tree_rss_bytes": 917192704,
+    "observed_output_bytes": 116130647,
+    "peak_observed_output_bytes": 116130647,
+    "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+    "monitor_interval_seconds": 0.2,
+    "subprocesses": [
+      {
+        "stage": "export",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 112.01042130399992,
+        "peak_process_tree_rss_bytes": 917192704,
+        "log_sha256": "0979ecfc594a18a8f95f24acd5a6b656ee543609dcbd7cd4b9346823f79e4df2",
+        "failure": null
+      },
+      {
+        "stage": "compile_fixed_driver",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 1.6746777319999637,
+        "peak_process_tree_rss_bytes": 82452480,
+        "log_sha256": "0d1474e458e50ee3b84409626155adae65a16370d0ddf191be5c981b9675d3d5",
+        "failure": null
+      },
+      {
+        "stage": "eval_e250p001_klm1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 4.988260096999966,
+        "peak_process_tree_rss_bytes": 11198464,
+        "log_sha256": "88069e5e8b2d91658e1757dc02e56a641966fbe34be3ce1193851be924cadbc4",
+        "failure": null
+      },
+      {
+        "stage": "eval_e250p001_kl0",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 4.995452249999971,
+        "peak_process_tree_rss_bytes": 11071488,
+        "log_sha256": "5cc49619191f496a5db652f4f21cb141025d59132c7ed7c1165df8af25f75e81",
+        "failure": null
+      },
+      {
+        "stage": "eval_e250p001_kl1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 5.171149507999871,
+        "peak_process_tree_rss_bytes": 11198464,
+        "log_sha256": "2b6789781f23fb77725d281893e9034fdffb3914b90c12c1c365cc781a8b1911",
+        "failure": null
+      },
+      {
+        "stage": "eval_e250p001_kl2",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 4.706374644999869,
+        "peak_process_tree_rss_bytes": 11071488,
+        "log_sha256": "cff077efcb207f0f6d3f7ddfcc30d0fab664bab9c3028ebfecae034ca03e5413",
+        "failure": null
+      },
+      {
+        "stage": "eval_e300_klm1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.239798189999874,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "8e62410f508ebcb5bd442824001f06dbf18a68fcac33a50612e9bbacebfca1ee",
+        "failure": null
+      },
+      {
+        "stage": "eval_e300_kl0",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24779419000014968,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "053eb6c3a1a7dd055678b219acd038d0b2940c89c21706959f7aa6b614d4b9ad",
+        "failure": null
+      },
+      {
+        "stage": "eval_e300_kl1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23556944200004182,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "b9bb2fff86d3fb4a12b8a323f85ef0a1779357b61dbe6f5e0748f02c295da97b",
+        "failure": null
+      },
+      {
+        "stage": "eval_e300_kl2",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24246445000017047,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "1e8cd3aa73899ff4eb995f4181bc73646046238ce61c831c5c278073f20495ea",
+        "failure": null
+      },
+      {
+        "stage": "eval_e400_klm1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2565678559999469,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "7e1fa15fa8da211c5389a26187a794d00bae949e15276d640c04d94c9c9d9f84",
+        "failure": null
+      },
+      {
+        "stage": "eval_e400_kl0",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2394622280000931,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "1cf39ddfbcf5f4876ff3a7a0c3362b3efc717552e46b2535d352e60d8979ac8f",
+        "failure": null
+      },
+      {
+        "stage": "eval_e400_kl1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24132900800009338,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "8409daaa5e1e45fe946d90670ce695207cdf59ee956071a4354f07549b2e5fe7",
+        "failure": null
+      },
+      {
+        "stage": "eval_e400_kl2",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2535118460000376,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "71c2e7046576281b7bf7ef8c7a7baede780a568a627662d539b0aac1af8d77bb",
+        "failure": null
+      },
+      {
+        "stage": "eval_e800_klm1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.24450141200009057,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "89f593873a98b03aa0091347366ef10f785627fab17bddf2f8df15a82cf24ffe",
+        "failure": null
+      },
+      {
+        "stage": "eval_e800_kl0",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2550659529999848,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "bd488fc8e27ae815646e06596440678c8b3ec55a8289256b1c7f1cbba9ed0483",
+        "failure": null
+      },
+      {
+        "stage": "eval_e800_kl1",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23929315899999892,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "0673e3532df955c1deb57e6566461856cc773328957f241334b0e170c4212079",
+        "failure": null
+      },
+      {
+        "stage": "eval_e800_kl2",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23640180000006694,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "b179d77a1052a430753b1b467d8d233a4826585e0e41f3d2702f1490714aa000",
+        "failure": null
+      },
+      {
+        "stage": "eval_repeat",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2411550280000938,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "8409daaa5e1e45fe946d90670ce695207cdf59ee956071a4354f07549b2e5fe7",
+        "failure": null
+      },
+      {
+        "stage": "eval_exchange",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23574516899998343,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "8dfdf51e16fc17f22db2ba514430dbec08bc77029d1ffcfa40c570a715ef1c05",
+        "failure": null
+      },
+      {
+        "stage": "eval_mt180_fixed_yukawa",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23715308099986032,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "beb28f692f85914d14feb83429ef2296ff9b1dce2cb41a9c4b24604adb5ab3f6",
+        "failure": null
+      },
+      {
+        "stage": "eval_yt_zero",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.23947003199987194,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "f25e8b048335ed1096c17a83fe0d2c017c9922c0b253feab4f22a9e65750206f",
+        "failure": null
+      },
+      {
+        "stage": "eval_yt_double",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "elapsed_seconds": 0.2627558209999279,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "42f416a94bb782c9440c505c9a6fb945155691fa32aeb4fd8ae625c4eb674865",
+        "failure": null
+      }
+    ]
+  },
+  "raw_private_receipt_sha256": "ff1e796dc4faedd0c11fbe6747dc115d3bcce576a48a66282b6ec1a2f1b49074",
+  "executed_command_role": "verify_loop_model.py --numerical --output FRESH_PRIVATE_SCRATCH --max-hours 2 --max-disk-gb 5"
+}

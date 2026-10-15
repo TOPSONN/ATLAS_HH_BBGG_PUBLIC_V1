@@ -1,0 +1,40 @@
+name: HH full-loop signal readiness
+on:
+  push:
+    branches: [codex/phase7a-ggf-hh-sm-loop-readiness]
+    paths: ['simulation/hh_signal/**', 'metadata/phase7a_*', 'reports/phase7a_*', '.github/workflows/hh_signal_readiness.yml']
+  pull_request:
+    paths: ['simulation/hh_signal/**', 'metadata/phase7a_*', 'reports/phase7a_*', '.github/workflows/hh_signal_readiness.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  methods_and_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Preserve the Phase7A immutable bundle's exact source bindings while
+          # the separate campaign job checks the current authorized campaign.
+          ref: ${{ github.head_ref == 'codex/phase7b7c7d-ggf-hh-signal' && 'd9fe33f97773367a41b8877568401af594eeb2a6' || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Signal method and numerical evidence regression (no generation)
+        run: |
+          python3 -B -m unittest discover -s simulation/hh_signal/tests -v
+          python3 -B simulation/hh_signal/scripts/validate_signal_contract.py
+      - name: Preserve six-background contracts and genuine references
+        run: |
+          python3 -B -m unittest discover -s simulation/new_backgrounds/tests -v
+          python3 -B -m unittest discover -s simulation/zh_pilot/tests -v
+          python3 -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v
+          python3 -B -m unittest discover -s simulation/rare_backgrounds/tests -v
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: Every outgoing snapshot and historical baseline audit
+        run: python3 -B simulation/hh_signal/scripts/audit_payload.py --tracked

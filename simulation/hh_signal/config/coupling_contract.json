@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "SM_kappa_lambda": 1,
+  "SM_kappa_top": 1,
+  "lambda_mapping": {
+    "type": "diagnostic_trilinear_coupling_rescale",
+    "coupling": "GC_30",
+    "formula": "-6*i*lam*v",
+    "lam": "MH**2/(2*v**2)",
+    "changes_Higgs_mass": false,
+    "rescale_both_precisions": true,
+    "production_scan_supported": false
+  },
+  "top_mapping": {
+    "source": "YUKAWA[6]",
+    "formula": "yt=sqrt(2)*ymt/v; GC_37=-i*yt/sqrt(2)",
+    "independent_of_propagator_MT": true,
+    "propagator_mass_source": "MASS[6]"
+  },
+  "amplitude_diagnostic": "A=box_top_bottom+kappa_lambda*triangle_top_bottom",
+  "top_kappa_diagnostic": "A=kt**2*box_top+kt*kl*triangle_top+box_bottom+kl*triangle_bottom",
+  "R2_terms": "included automatically; ggHH R2 is quadratic in Yukawa, ggH R2 linear; not EFT"
+}

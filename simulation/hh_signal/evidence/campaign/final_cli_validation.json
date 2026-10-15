@@ -1,0 +1,312 @@
+{
+  "status": "PASS_ACTUALLY_EXECUTED_ALL_ADVERTISED_FLAGS_AND_COMPLETED_RESUME_GUARDS",
+  "cases": [
+    {
+      "case": "help",
+      "argv": [
+        "--help"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.4468975079998927,
+      "log_sha256": "576f7c70b0569cca411191ac00a947acfac9a3fbbf8cd97c30a5ede0dbc4d3b9",
+      "last_output_lines": [
+        "  --resume              continue the same reserved source, never generate it",
+        "                        again"
+      ]
+    },
+    {
+      "case": "all_dry",
+      "argv": [
+        "--phase",
+        "all",
+        "--process",
+        "ggf_hh_sm",
+        "--energy",
+        "13000",
+        "--max-hours",
+        "4",
+        "--max-disk-gb",
+        "10",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/unused_dry_only",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.4074224900000445,
+      "log_sha256": "958ed034fe12de1087ee7086e4e16ddf32ead8e3fd0b75eb48a56c704ce1f6cb",
+      "last_output_lines": [
+        "  \"resume\": false",
+        "}"
+      ]
+    },
+    {
+      "case": "7b_frozen_resume",
+      "argv": [
+        "--phase",
+        "7b",
+        "--process",
+        "ggf_hh_sm",
+        "--energy",
+        "13000",
+        "--events",
+        "100",
+        "--seed",
+        "20261121",
+        "--max-hours",
+        "6",
+        "--max-disk-gb",
+        "10",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b",
+        "--resume"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 3.86719266099999,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "last_output_lines": []
+    },
+    {
+      "case": "7c_frozen_resume",
+      "argv": [
+        "--phase",
+        "7c",
+        "--process",
+        "ggf_hh_sm",
+        "--energy",
+        "13000",
+        "--events",
+        "1000",
+        "--seed",
+        "20261122",
+        "--max-hours",
+        "12",
+        "--max-disk-gb",
+        "20",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c",
+        "--resume"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.51773478899986,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "last_output_lines": []
+    },
+    {
+      "case": "7d_complete_resume",
+      "argv": [
+        "--phase",
+        "7d",
+        "--process",
+        "ggf_hh_sm",
+        "--energy",
+        "13000",
+        "--events",
+        "1000",
+        "--max-hours",
+        "4",
+        "--max-disk-gb",
+        "10",
+        "--kappa-config",
+        "simulation/hh_signal/campaign/config/kappa_scan.json",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d",
+        "--resume"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 3.2312633679998726,
+      "log_sha256": "56c2f1cf5c3f06b9586316794f6774ae55d94e8d12f1d7e0e773191ac61085b9",
+      "last_output_lines": [
+        "7D PASS existing complete numerical chain reverified; new source events=0"
+      ]
+    },
+    {
+      "case": "all_complete_resume",
+      "argv": [
+        "--phase",
+        "all",
+        "--process",
+        "ggf_hh_sm",
+        "--energy",
+        "13000",
+        "--max-hours",
+        "4",
+        "--max-disk-gb",
+        "10",
+        "--kappa-config",
+        "simulation/hh_signal/campaign/config/kappa_scan.json",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01",
+        "--resume"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.6226727769999343,
+      "log_sha256": "56c2f1cf5c3f06b9586316794f6774ae55d94e8d12f1d7e0e773191ac61085b9",
+      "last_output_lines": [
+        "7D PASS existing complete numerical chain reverified; new source events=0"
+      ]
+    },
+    {
+      "case": "bad_events",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--events",
+        "101"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.2562099409997245,
+      "log_sha256": "d091a7aa420d591d900f2cde4e8611d3ffb6a6c9c69d1b288a52fa659e686eaf",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: EXACT_AUTHORIZED_PHASE_EVENT_COUNT_REQUIRED"
+      ]
+    },
+    {
+      "case": "bad_energy",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--energy",
+        "14000"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.25712493500031997,
+      "log_sha256": "7c382dae86cb4b4c7efb7f423b777438758eaee9d8714e7701bd203b15bd8610",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: ONLY_FROZEN_13000_GEV_VALIDATED; changing energy needs a separately reviewed campaign"
+      ]
+    },
+    {
+      "case": "bad_seed",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--seed",
+        "0"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.28715828500025964,
+      "log_sha256": "7c823498f5121a4d1ecab777c646c68b0fcaa0d67b4a5d96c16eeea0e3b51adb",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: INVALID_MG_SEED"
+      ]
+    },
+    {
+      "case": "bad_process",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--process",
+        "unreviewed_process"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.2864472639998894,
+      "log_sha256": "27cd3ba33aec1c3ed1883cc098feb5f96238b55f41c553edb54e41942e5503fc",
+      "last_output_lines": [
+        "                       [--kappa-config KAPPA_CONFIG] [--dry-run] [--resume]",
+        "run_campaign.py: error: argument --process: invalid choice: 'unreviewed_process' (choose from 'ggf_hh_sm')"
+      ]
+    },
+    {
+      "case": "bad_hours",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--max-hours",
+        "7"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.28164948899984665,
+      "log_sha256": "b38f947e92c73fbdb1a77ea8e4b14623c8b604e51e93ae24654d9911bce3c30c",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: INVALID_RESOURCE_CEILING"
+      ]
+    },
+    {
+      "case": "bad_disk",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--max-disk-gb",
+        "11"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.2579259040003308,
+      "log_sha256": "b38f947e92c73fbdb1a77ea8e4b14623c8b604e51e93ae24654d9911bce3c30c",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: INVALID_RESOURCE_CEILING"
+      ]
+    },
+    {
+      "case": "bad_kappa",
+      "argv": [
+        "--phase",
+        "7b",
+        "--output",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/must_not_exist",
+        "--kappa-config",
+        "not_a_reviewed_scan.json"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "elapsed_seconds": 0.28349670599982346,
+      "log_sha256": "c5d52cecb01b0f3ae878a8c512e6dd4d28f7cfc8022bafe16955d6028841a085",
+      "last_output_lines": [
+        "CAMPAIGN_BLOCKED: ONLY_REVIEWED_KAPPA_CONFIG_ACCEPTED"
+      ]
+    }
+  ],
+  "protected_artifacts": [
+    {
+      "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/source/process/Events/hh_7b/unweighted_events.lhe.gz",
+      "sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b"
+    },
+    {
+      "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/source/process/Events/hh_7c/unweighted_events.lhe.gz",
+      "sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac"
+    },
+    {
+      "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/delphes/detector.root",
+      "sha256": "39d0a544febdbdcd9711593f613e2f81ba89e396fa5db0e3f76e64c90e107dc8"
+    },
+    {
+      "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/delphes/detector.root",
+      "sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02"
+    },
+    {
+      "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/event_reweights.csv",
+      "sha256": "c76dd54b9236ee8110385fe746eb465125c70f1f30e0d580ac95acacc03a9e0f"
+    },
+    {
+      "path": "REPOSITORY/.local/phase7_campaign/campaign_registry.json",
+      "sha256": "e5c12a7b7fd8f457cc1f7d9a0d35f82a20ba01aac55c7d9626518b272a9c111b"
+    }
+  ],
+  "new_independent_source_events": 0,
+  "original_independent_source_events": 1100,
+  "physics_generation_scope": "B100 and C1000 were previously physically generated through this CLI; these final checks reuse completed inputs without another physics job",
+  "historical_B_seed_request_deviation": "requested20261121 actual21 disclosed; fresh C request20261122 verified"
+}

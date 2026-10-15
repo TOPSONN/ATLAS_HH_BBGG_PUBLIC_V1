@@ -1,0 +1,279 @@
+{
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE7B_7C_7D_GGF_HH_SIGNAL_CAMPAIGN_V1",
+  "STATUS": "COMPLETED_WITH_EXPLICIT_PHYSICS_LIMITS",
+  "FULL_MASS_MODEL": "loop_sm LO loop-induced full finite top+bottom mass;16 native loop diagrams plus R2",
+  "MODEL_SOURCE": "MG5_aMC v3.5.16 commit3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7 https://github.com/mg5amcnlo/mg5amcnlo",
+  "MODEL_HASH": "3772b2d0f75e092f82a4c556bf2288a43e239f2c7ee6cafaca22d6a11eb98065",
+  "BOX_AMPLITUDE": "PASS_ACTUAL_FINITE_MT_MB_NATIVE_TESTS",
+  "TRIANGLE_AMPLITUDE": "PASS_ACTUAL_NATIVE_KAPPA_ZERO_VERTEX_REMOVAL",
+  "INTERFERENCE": "PASS_SAME_POINT_NATIVE_QUADRATIC_AND_CAUCHY_TESTS_WITH_ONE_DOCUMENTED_CANCELLATION_SENSITIVITY_FLAG",
+  "KAPPA_LAMBDA": 1,
+  "KAPPA_TOP": 1,
+  "PHASE7B": {
+    "status": "PASS",
+    "SOURCE_EVENTS": 100,
+    "LHE_VALIDATED": 100,
+    "HIGGS_DECAYS_VALIDATED": {
+      "events": 100,
+      "two_Higgs_decays_per_event": true
+    },
+    "HEPMC_EVENTS": 100,
+    "DELPHES_ENTRIES": 100,
+    "SIGNAL_CUTFLOW": [
+      100,
+      45,
+      38,
+      18,
+      18
+    ],
+    "CROSS_SECTION_PB": 0.017276,
+    "CROSS_SECTION_UNCERTAINTY": 0.00018503,
+    "SAMPLE_SHA256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+    "requested_seed": 20261121,
+    "effective_seed": 21,
+    "seed_deviation": "disclosed old zero-record preintegration continuation failed to restore request card; no replacement source"
+  },
+  "PHASE7C": {
+    "status": "PASS",
+    "INDEPENDENT_SOURCE_EVENTS": 1000,
+    "LHE_VALIDATED": 1000,
+    "HEPMC_VALIDATED": 1000,
+    "DELPHES_ENTRIES": 1000,
+    "SIGNAL_CUTFLOW": [
+      1000,
+      484,
+      403,
+      143,
+      143
+    ],
+    "SOURCE_CROSS_SECTION_PB": 0.019069,
+    "SOURCE_CROSS_SECTION_UNCERTAINTY": 0.00011745,
+    "ROOT_SAMPLE_SHA256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+    "ROOT_sample_scope": "full1000 LOCAL_ONLY; selected public detector reference is100 entries with distinct hash",
+    "source_LHE_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+    "requested_and_effective_seed": 20261122
+  },
+  "H_BB_BR": 0.5774528919828654,
+  "H_GAMMAGAMMA_BR": 0.00229754317933142,
+  "HH_COMBINATORIAL_FACTOR": 2,
+  "BR_CONVENTION": "MODEL_BR_ONLY; reference/adopted physical BR null",
+  "BR_WEIGHT_CLOSURE": "PASS_ACTUAL_RAW_INFO_CONVERTER_NATIVE_ROOT_ONCE",
+  "WEIGHT_NORMALIZATION": "original XWGTUP/N times full-mass ME ratio times2BRbbBRgamma-gamma once; prefixes keep original N; no NLO K factor",
+  "PHASE7D": "COMPLETE_NUMERICAL_SCAN; INCONCLUSIVE_REWEIGHTING_AT_KAPPA2.5_5; INCONCLUSIVE_ABSOLUTE_RATE",
+  "KAPPA_BENCHMARKS": [
+    -1,
+    0,
+    1,
+    2,
+    2.5,
+    5
+  ],
+  "REWEIGHT_METHOD": "actual native finite-mass squared ME ratios at original source p4/ALPS/SCALUP",
+  "ME_RATIO_VALIDATION": "1000 repeated-SM/held-out points;15 independent fresh-process source points; independent60-digit Decimal/Lagrange regression",
+  "KAPPA_CROSS_SECTIONS": {
+    "-1": 0.07747903567626502,
+    "0": 0.04178142483169506,
+    "1": 0.019069,
+    "2": 0.009341761180637183,
+    "2.5": 0.009347586525652582,
+    "5": 0.05807116079871952
+  },
+  "KAPPA_WEIGHT_VARIANCES": {
+    "-1": {
+      "per_contribution_sample_variance_pb2": 1.9507514380559852e-08,
+      "input_estimator_sampling_variance_pb2": 1.950751438055986e-05,
+      "sumw2_pb2": 2.5491007835503243e-05
+    },
+    "0": {
+      "per_contribution_sample_variance_pb2": 1.7220704920141171e-09,
+      "input_estimator_sampling_variance_pb2": 1.7220704920141174e-06,
+      "sumw2_pb2": 3.4660358824886875e-06
+    },
+    "1": {
+      "per_contribution_sample_variance_pb2": 0.0,
+      "input_estimator_sampling_variance_pb2": 0.0,
+      "sumw2_pb2": 3.63626761e-07
+    },
+    "2": {
+      "per_contribution_sample_variance_pb2": 3.396254805849206e-10,
+      "input_estimator_sampling_variance_pb2": 3.3962548058492055e-07,
+      "sumw2_pb2": 4.2655435706039545e-07
+    },
+    "2.5": {
+      "per_contribution_sample_variance_pb2": 2.296143509942418e-09,
+      "input_estimator_sampling_variance_pb2": 2.296143509942418e-06,
+      "sumw2_pb2": 2.3812247402870367e-06
+    },
+    "5": {
+      "per_contribution_sample_variance_pb2": 1.6934217521001018e-07,
+      "input_estimator_sampling_variance_pb2": 0.0001693421752100102,
+      "sumw2_pb2": 0.0001725450927513109
+    }
+  },
+  "KAPPA_EFFECTIVE_SAMPLE_SIZES": {
+    "-1": {
+      "input": 235.4948461850581,
+      "final": 43.77333141731474
+    },
+    "0": {
+      "input": 503.65533426420956,
+      "final": 78.30971579803722
+    },
+    "1": {
+      "input": 1000.0,
+      "final": 143.00000000000003
+    },
+    "2": {
+      "input": 204.58940463642608,
+      "final": 71.98094315247609
+    },
+    "2.5": {
+      "input": 36.6942995242142,
+      "final": 16.07357051564675
+    },
+    "5": {
+      "input": 19.544222688333267,
+      "final": 7.65012406875469
+    }
+  },
+  "REWEIGHTING_LIMITATIONS": {
+    "inconclusive_benchmarks": [
+      2.5,
+      5
+    ],
+    "all_absolute_rates": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION",
+    "B_C_difference_over_quadrature_reported_errors": 8.181280222806983,
+    "independent_benchmark_integration": null,
+    "interpolation_result_relative_flags": [
+      {
+        "source_event_index": 212,
+        "kappa_lambda": "2.5",
+        "result_relative_residual": 1.4457879057782e-07,
+        "interpolation_condition_scaled_residual": 2.2075897330043914e-11,
+        "ratio": "0.00038178609306302875"
+      }
+    ],
+    "coverage": "finite pilot and low-ESS/empty bins, not guaranteed target tails"
+  },
+  "SIGNAL_BACKGROUND_COMPARISON": "PASS_SEPARATE_PROCESS_MODEL_ONLY_EXPLORATORY; fixedPhase6C cuts; unit-area and100fb^-1 modes",
+  "B01_STATUS": "28 final events; RAW_SOURCE; ME_PS_OVERLAP_UNKNOWN",
+  "B02_STATUS": "1 final event; RAW_SOURCE; ME_PS_OVERLAP_UNKNOWN",
+  "B03_STATUS": "0 final events; RAW_SOURCE; zero-count interval retained; ME_PS_OVERLAP_UNKNOWN",
+  "B04_STATUS": "75 final events; MODEL_BR_ONLY_ZH",
+  "B05_STATUS": "131 final events; MODEL_BR_ONLY_TTH_SPIN_UNVALIDATED",
+  "B06_STATUS": "0 final events; NO_HIGGS_BR raw identity, not BR1; oneBornPhoton/no calibrated fake; zero-count interval retained",
+  "COMBINED_BACKGROUND_STATUS": "BLOCKED_OVERLAP_AND_CALIBRATION",
+  "NEW_INDEPENDENT_EVENTS": 1100,
+  "TOTAL_RUNTIME": {
+    "measured_controlled_seconds": 8495.926975264001,
+    "wall_since_environment_snapshot_seconds": 11008.489336,
+    "scope": "as measured in resources_final.json; review/publication and final CLI checks are not additional simulation work"
+  },
+  "PEAK_MEMORY": {
+    "sampled_process_tree_RSS_bytes": 1759412224,
+    "instantaneous_peak": "UNKNOWN"
+  },
+  "TOTAL_DISK_USAGE": {
+    "local_campaign_plus_isolated_cache_logical_bytes": 1132101557,
+    "scope": "measured snapshot, pinned install symlinks excluded"
+  },
+  "SELF_SERVICE": "PASS_ACTUAL_GENUINE_B_C_AND_ALL_REWEIGHT_CLI;13 final actually executed success/failure cases",
+  "LOCAL_TESTS": "13 method tests PASS; actual selected-reference and independent numerical regression PASS",
+  "NATIVE_TESTS": "full B/C source-decay-ReaderAscii-Delphes chains;7100 independent ROOT records/all named weights;1249 numerical ROOT keys write/readback",
+  "EXISTING_REGRESSION": "469 tests:461 PASS,8 SKIP; immutable625 baseline blobs and all19 prior PRs preserved",
+  "GITHUB_CI": {
+    "verified_data_head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+    "checks": [
+      {
+        "id": 116290886553,
+        "name": "methods_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695468287/job/116290886553",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      },
+      {
+        "id": 116290878304,
+        "name": "campaign_source_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695465598/job/116290878304",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      },
+      {
+        "id": 116290857276,
+        "name": "campaign_source_and_evidence",
+        "head_sha": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+        "status": "completed",
+        "conclusion": "success",
+        "details_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38695459228/job/116290857276",
+        "output": {
+          "title": null,
+          "summary": null,
+          "text": null,
+          "annotations_count": 1
+        }
+      }
+    ],
+    "final_report_commit_CI": "separate final-head verification required"
+  },
+  "GITHUB_REFERENCE_SAMPLES": {
+    "status": "PASS_ACTUAL_FINAL_HEAD_TREE_AND_ALL_NEW_BLOB_BYTES_READBACK",
+    "verified_new_files": 184,
+    "verified_bytes": 36009271,
+    "selected_public_HepMC_ROOT_entries_per_source": 100,
+    "complete_C1000_shower_ROOT": "LOCAL_ONLY",
+    "new_PDF_PNG": 0
+  },
+  "GATES_PASS": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P"
+  ],
+  "GATES_FAIL": [],
+  "GATES_BLOCKED": [
+    "Q",
+    "R",
+    "S",
+    "T"
+  ],
+  "GATES_UNKNOWN": [
+    "absolute integration convergence",
+    "independent benchmark cross sections",
+    "BR uncertainty",
+    "PDF/scale variations",
+    "full detector variance",
+    "isolated generator-only selected variance"
+  ],
+  "COMMIT_HASH": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+  "COMMIT_HASH_SCOPE": "verified data head before the following report-only snapshot commit; final publication head is checked separately",
+  "PULL_REQUEST_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/20",
+  "FINAL_VERDICT": "PASS_7B_7C_WITH_7D_INCONCLUSIVE",
+  "NEXT_RECOMMENDED_STEP": "separately authorize zero-retained-event independent integration/convergence and weighted-candidate/truncation audit; then plan independent source support for kappa2.5/5; no automatic production"
+}

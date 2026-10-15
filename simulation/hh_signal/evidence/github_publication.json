@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ACTUAL_REMOTE_SOURCE_AND_EVIDENCE_BLOBS",
+  "verified_head": "101b844eaa7d42e2a69fc7d36520c02c6c4112bd",
+  "pull_request": {
+    "baseRefName": "codex/phase6g-backgrounds-b04-b05-b06-1k",
+    "headRefName": "codex/phase7a-ggf-hh-sm-loop-readiness",
+    "headRefOid": "101b844eaa7d42e2a69fc7d36520c02c6c4112bd",
+    "isDraft": true,
+    "number": 19,
+    "state": "OPEN",
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/19"
+  },
+  "prior_PRs_unchanged": 18,
+  "historical_remote_blob_OIDs_unchanged": 625,
+  "actual_remote_blobs": [
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "git_oid": "41a37a6dfe513b6cd934078f11cfe5e46464f086",
+      "bytes": 1803,
+      "actual_remote_sha256": "3d05429203dcd2eb72bcb897bc380019e6808a43afb6d39d8ab95fd96f050176",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "metadata/phase7a_decay_contract.json",
+      "git_oid": "7224d7510d698fd2033e9d844ee3097d0f0fa2e0",
+      "bytes": 1481,
+      "actual_remote_sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "metadata/phase7a_loop_validation.json",
+      "git_oid": "cf9c99fe9c0fce02e601d9c8a7856863e0b8bf3f",
+      "bytes": 36779,
+      "actual_remote_sha256": "8e8c5a8e0a0eb8c11b47d8d7ff26a02e31a9f6b2c9f16e23d05f32a21c539b3d",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "metadata/phase7a_model_manifest.json",
+      "git_oid": "41d3dcbb0ecdad6e82914606fbd29a7417d31c64",
+      "bytes": 7974,
+      "actual_remote_sha256": "18e239fa878a30c809be461e62ca326e4b423a97f71029111f873aea88819fc3",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "metadata/phase7a_quality_gates.json",
+      "git_oid": "bbba2ecb43b2c86ad9031231cf902b7b6d9ab628",
+      "bytes": 1857,
+      "actual_remote_sha256": "ea862eb0010ed88f19ae6ab789b5535dd49b5d5590665705f75fef0a46160ce2",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_branching_ratio_contract.md",
+      "git_oid": "51aad390d7c9c682f365c2c18bf9d085af2cf408",
+      "bytes": 1198,
+      "actual_remote_sha256": "a71b149c668ccf5b621b4d1e9971d602b0be649a4af4085fa08763c7b6e5b79d",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_coupling_validation.md",
+      "git_oid": "37398f484f901c04f88bf1db8045a91ffa8c57c2",
+      "bytes": 1539,
+      "actual_remote_sha256": "154cf4500bc1e3a0cfeeba11e4625ded7d6d0e45c94d79caa0197aed6b7e3c8b",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_environment.md",
+      "git_oid": "af0ec94ab8a80e8bc3632f0e8d557ae134b02fa7",
+      "bytes": 1104,
+      "actual_remote_sha256": "1082e60b577db927d410f0cd5d3496ccb2f4e28fc5fd8e746d83b7cc4443a516",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_final_decision.md",
+      "git_oid": "2f3983c7d04656d47b3536282c53886908685b63",
+      "bytes": 4952,
+      "actual_remote_sha256": "a0d3d6c8e725f276f08f3ae752221ef02f3cbfabc243c4fb8f3f0f45d2f00a2b",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_full_loop_model_feasibility.md",
+      "git_oid": "b2c80b6b47605afeb41a5f128ae2cfd3df6e0920",
+      "bytes": 1217,
+      "actual_remote_sha256": "948e13265bc29062b1bc5e80697ae8a4242fcb8700aac5c0b539e6962f45e37a",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_higgs_decay_assignment.md",
+      "git_oid": "1d6b193141f52e0ca4aa14ea6995dbb7741ebfe2",
+      "bytes": 1119,
+      "actual_remote_sha256": "63c5a7130b098c25f0bb745f7da9efb0c6aba5433cec4686ace3a4408ae9b045",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_physical_pilot_plan.md",
+      "git_oid": "2c98bda3300525acbf81aab6178cd1e7242edcc2",
+      "bytes": 1624,
+      "actual_remote_sha256": "49a786d70d53fe11dc4f5e3f3f5719d84d2cba8c963b0c328664238aa3b0e30e",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_pythia_delphes_readiness.md",
+      "git_oid": "4a791bde813e15fedaffe028e9658a9b49dce19c",
+      "bytes": 1408,
+      "actual_remote_sha256": "ef770c735e7f449d1f61b6f67ca4401e19b0d0e3cf24f6918796c6005cb5f5ed",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_signal_weight_normalization.md",
+      "git_oid": "86632b6da6f73fcf91be55176f3b834b9939c0ec",
+      "bytes": 1129,
+      "actual_remote_sha256": "c1edbe496997afee99d8132e8ee06f40a1fab6c7dc1f929a1a5815c25d0ed405",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "reports/phase7a_triangle_box_interference.md",
+      "git_oid": "b35c2ca1e64c159238b3b176088739629eade45a",
+      "bytes": 1599,
+      "actual_remote_sha256": "751bb17fe9cc2eec060354e2c46c1e3b67eaf2a86eab7ac283be1267c6289040",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/.gitattributes",
+      "git_oid": "471859400fe6e598d9cc90f54299eb5b32dbf609",
+      "bytes": 119,
+      "actual_remote_sha256": "655897b67f03566f5fd5fd9218106381de2cf082ce72c9195a48674408cc556d",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/README.md",
+      "git_oid": "9aefb5a81bff6629d929fa831c7973bd183065da",
+      "bytes": 1798,
+      "actual_remote_sha256": "d2e035d73ab785cad1420e07f7a85a0f7bdcf89d0c5e8e681aa75a21c2b9051b",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/USER_GUIDE_ZH_TW.md",
+      "git_oid": "e4b4e0e2b4d36f98f844c67c2cbf5d77b44a00ac",
+      "bytes": 5521,
+      "actual_remote_sha256": "a3a08cd2e0f3439e88ef3b6e815ffbae5ddaffb8423e2eb553d548cacb0778e5",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/__init__.py",
+      "git_oid": "b034d355d4eef7c042d0a17a74750a2e9749c327",
+      "bytes": 73,
+      "actual_remote_sha256": "e99fbe7ffc6eb425a2445eb633330e5efc462ff7d8a3ec23ebf8df0fcaeaabc6",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/ggf_hh_sm_candidate.mg5",
+      "git_oid": "9bd8289d44750a34545fb403f1c4c697c8361bf5",
+      "bytes": 118,
+      "actual_remote_sha256": "114eb7de5b6376837c3d2f1050745e7e54de24fa107363c41ebf306cf28c7b7e",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/ggf_hh_sm_matrix_element.mg5",
+      "git_oid": "5b42d95b39eaa1c14ab75d7459ec62a12b7d0ea5",
+      "bytes": 130,
+      "actual_remote_sha256": "4a0aa0f383080de4827794c993a9c57f90bfb2497f2c5ab369a1301b967f375f",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_decay_contract.json",
+      "git_oid": "7224d7510d698fd2033e9d844ee3097d0f0fa2e0",
+      "bytes": 1481,
+      "actual_remote_sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_param_card.dat",
+      "git_oid": "908708ddabc3aa890da6a221fd7edb4dbebb47e5",
+      "bytes": 3464,
+      "actual_remote_sha256": "a14a9b1523003a8a8ff80007d75e905f8098deff90a2821f4a225fb6f7a0f409",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_pythia_signal.cmnd",
+      "git_oid": "09851694ce025e36612929cc584af38aada71315",
+      "bytes": 308,
+      "actual_remote_sha256": "1350e4f828f249be5507c7f1054bf30981cd229ca783b79adb580f618e7754be",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_run_card.dat",
+      "git_oid": "dee70d18c6c801f9361231645636fe3db693255f",
+      "bytes": 427,
+      "actual_remote_sha256": "e1fa2ea88d2439574e7aae1ed509c66844a39f253942bffefc450f83a12c46c9",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/config/coupling_contract.json",
+      "git_oid": "1b57d9368fdc4fccc881db2ca047463fe106222f",
+      "bytes": 801,
+      "actual_remote_sha256": "76b7ed193648c90027f8cad6eb45cc283dd967c7a88bc49a24b035f893963dec",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/config/future_interfaces.json",
+      "git_oid": "6fdcee8672aad25efa02914b0a84a1d595744119",
+      "bytes": 1906,
+      "actual_remote_sha256": "843fa58e8d737d8e376706aed756dd54b7f2f9fb770ec70baca498147988ac8e",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/config/resource_policy.json",
+      "git_oid": "ad8d64ff2ae400cdc146c72dba4ff0f483fe125b",
+      "bytes": 800,
+      "actual_remote_sha256": "f34a1dd7507da5fe3ca0bc347815dea2281a9efd07ce8089cf78afff7f09baea",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/config/signal_model_contract.json",
+      "git_oid": "52e950238b5d4a8d24995700b3bfe1444fb44f00",
+      "bytes": 1555,
+      "actual_remote_sha256": "eff1f53cc72f798ef0f9a0f0a09ad6d0cefbca518a1e88ee86a4d5d5dccb137c",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/config/weight_contract.json",
+      "git_oid": "3b137ecc558cf06efeca3162dedb99b3dcf4f653",
+      "bytes": 1296,
+      "actual_remote_sha256": "cb0b558350b41f86d8c98d459e375a9cc05e24effb2ffc9bad40c95d1f93d8c2",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/contracts.py",
+      "git_oid": "dd0507a0f455eceb2b1e33e282cafa9fb1e2f7b4",
+      "bytes": 5274,
+      "actual_remote_sha256": "93a1f790007b62b507d11e7a2b3cd51433c9acd3b75a64319ef080a0a2244a2f",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/actual_diagram_inspection.json",
+      "git_oid": "0df7ccf82db5742d72de50de5a09a875cee98538",
+      "bytes": 62378,
+      "actual_remote_sha256": "6ee259c5d6f1db9281fc65bfa4134c4ae5f6be2b262b87e1012761fff742e041",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/decay_assignment_method.json",
+      "git_oid": "ed1035fdc451ea0fc181d27040374df4a7e7c294",
+      "bytes": 451,
+      "actual_remote_sha256": "b4e4ea71b06c2d391a801459be2160fd3d04acc4dc96bbd9a8482b6ba8e0a151",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/environment_preservation.json",
+      "git_oid": "2b5dc81edc1843b706926a770188209e955d5f7c",
+      "bytes": 2058,
+      "actual_remote_sha256": "eb5181a21ab676add9e400b95cd2f5694deb79a636c82b07938e59aef453f190",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/existing_regression.json",
+      "git_oid": "1bd215877d4542a50a7fef4d7400265e8785fc0a",
+      "bytes": 6413,
+      "actual_remote_sha256": "60f7172fc5b4042ee11c472d8e6b22424b34a194504336cd689fe5614fc3b8d7",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/existing_six_stream_preservation.json",
+      "git_oid": "610117e3412d9d5e553b70dcd98297a0d0d93a5c",
+      "bytes": 11935,
+      "actual_remote_sha256": "d30daa5d9390ed768abd2ba23a3b788c61a48844aba420a3dcc0faab7f2c5a02",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/legacy_source_access.json",
+      "git_oid": "797a4110f0a71c1d7f1bc90ddebed27d594d8ed0",
+      "bytes": 272,
+      "actual_remote_sha256": "48874352e5f30fa8340d1b311882c1f52bc2d3057ba83828148c6571c3b8bda0",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/native_interface_methods.json",
+      "git_oid": "e3c948b1fb7c42ad32d45eec6557e6ab23168b8e",
+      "bytes": 744,
+      "actual_remote_sha256": "e727e006fa5676c8a25d525eda339a8e21340ffd665077f062df309e3d730b2b",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/numerical_attempt_history.json",
+      "git_oid": "5ef1e20d2981caa60ef8bc94ca150ab551cf9b4b",
+      "bytes": 1802,
+      "actual_remote_sha256": "4e34abcab766f6b58f8cc0e69f30b520e16627db6edd40f8fb0be05b1d6c041c",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/self_service_dry_run.json",
+      "git_oid": "641232e992a597a447295c8cfb93d7d2a2a8c82a",
+      "bytes": 11803,
+      "actual_remote_sha256": "2a8193dd4b43a7f60724fadeeebdb89baec814a36a31f0b78a35e3a15a682d5f",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/evidence/signal_tests.json",
+      "git_oid": "a59c2a4ef68b2930d2fd6115d81cef1e3eafdad2",
+      "bytes": 273,
+      "actual_remote_sha256": "f4c9cd9ffbe8250d917113445021fcafe2685d95956055c5d6f74fd774a50dcc",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/include/SignalInterface.hxx",
+      "git_oid": "7d7aacf84c8c9de97c9d39791dad25a31ac73e80",
+      "bytes": 2042,
+      "actual_remote_sha256": "8688b6a420732cf5486e3ec4486a9ce0e2048c2422547832f44d109ccd855a29",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/methods.py",
+      "git_oid": "640770735ee57e4bb09f5741c5071854ca632d65",
+      "bytes": 3886,
+      "actual_remote_sha256": "684ae2f966241bb13b074aa090298ca258b065a96b63daa5f36f857458800a62",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/models/MODEL_SOURCE_AUDIT.md",
+      "git_oid": "fe8d21409322c9e37e9317e6e887a1da6d3a7b9c",
+      "bytes": 3640,
+      "actual_remote_sha256": "a2335a585bdb6a09f9b0b8a4a5ea890dcf1177e4d8d27c83f3e81530ae65c7c5",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/audit_payload.py",
+      "git_oid": "ed1fd1c425229d217be055141997251b47e4a0b0",
+      "bytes": 3497,
+      "actual_remote_sha256": "84e02f8cff5a51ab07ff2a9100fbc14a64927b73d3440cb450e09b1a33cd86ef",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/generate_signal.py",
+      "git_oid": "5bbd644faac4f1bee8b71944f178d655a6385ca5",
+      "bytes": 4732,
+      "actual_remote_sha256": "070f6b43b2a6eecb2cb1074d9bbe1bb9f283c3be7783a9478a0d45913794b6ae",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/generate_signal.sh",
+      "git_oid": "f153045438437799a07d6aeed1feac53dc9adb81",
+      "bytes": 145,
+      "actual_remote_sha256": "b4cc727b1ba82a91054b13f4b915d399df513ebc47f7b7148ccb09483a8a06e3",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/mg5_model_adapter.py",
+      "git_oid": "05e5a7085b368836606709841cfed32f5ceda3bb",
+      "bytes": 3757,
+      "actual_remote_sha256": "60f7aac990437ecb40dbeced8fbbff3081946fd18f0475ef8afdb0f67c043443",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/validate_signal_contract.py",
+      "git_oid": "d1673c15d142114dce15435db42cb34172e22240",
+      "bytes": 682,
+      "actual_remote_sha256": "c0c5a490aa8ef324e169b068e21a12d7e44c45fcb29bae7b1b3826b252497d9c",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/scripts/verify_loop_model.py",
+      "git_oid": "bda3202a2a91c8f706ac9d3f0cd075c74336c56f",
+      "bytes": 13248,
+      "actual_remote_sha256": "a097a0b80959b598b609e82bcad3297d4faa10c532a794689351a6694d2460d4",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/src/check_fixed_point.f",
+      "git_oid": "ab04c9ea940fb1b96bd1c223b806f30dea4917f4",
+      "bytes": 1050,
+      "actual_remote_sha256": "4ebb3b9c8790bc0b3b6e6b4c7f0c534ba829cca7bfc986a07277966a7cbec673",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/src/test_interfaces.cxx",
+      "git_oid": "c52840fa6eac2e72bb20d30fbe75ff05f3517b27",
+      "bytes": 658,
+      "actual_remote_sha256": "80d59c3833c94de59300a974e1cd9ef5196e472da8a57f37969c23cbac2622fc",
+      "byte_equal_local_commit": true
+    },
+    {
+      "path": "simulation/hh_signal/tests/test_signal_methods.py",
+      "git_oid": "ebceec774b2705d45c09428642d29044d1e3f972",
+      "bytes": 11066,
+      "actual_remote_sha256": "72c0ac54a87551627fa087dfd32a818f942e7871782ab8292f58bf910c13eff3",
+      "byte_equal_local_commit": true
+    }
+  ],
+  "check_runs_snapshot": [
+    {
+      "id": 116233025865,
+      "name": "methods_and_evidence",
+      "head_sha": "101b844eaa7d42e2a69fc7d36520c02c6c4112bd",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38677083358/job/116233025865"
+    },
+    {
+      "id": 116233008652,
+      "name": "methods_and_evidence",
+      "head_sha": "101b844eaa7d42e2a69fc7d36520c02c6c4112bd",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/38677077923/job/116233008652"
+    }
+  ],
+  "physical_signal_events": 0,
+  "figures_pushed": 0,
+  "vendor_or_signal_samples_pushed": false,
+  "scope": "Actual initial source-head snapshot; final evidence-only head is separately verified at task handoff to avoid self-referential receipts.",
+  "CI_log_inspection": {
+    "actual_job_id": 116233025865,
+    "test_cases": [
+      42,
+      134,
+      78,
+      56,
+      51
+    ],
+    "new42_passed": true,
+    "earlier_background_suite_explicit_skips": 1,
+    "log_truncated_at_provider": true,
+    "annotation": "Nonblocking Node20 deprecation for checkout_v4 and setup_python_v5; host ran Node24; jobs succeeded.",
+    "CI_scope": "portable methods and bound evidence regression; native loop/ROOT execution evidence is local and hash-bound, not rerun on GitHub"
+  }
+}

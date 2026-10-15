@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "cards/MadLoopParams.dat",
+      "sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54",
+      "bytes": 13022
+    },
+    {
+      "path": "cards/baseline_shower.cmnd",
+      "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389",
+      "bytes": 3228
+    },
+    {
+      "path": "cards/detector_card.tcl",
+      "sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+      "bytes": 22243
+    },
+    {
+      "path": "cards/effective_shower_hostpath_projection.json",
+      "sha256": "23eeaf9046f9eff10c1eaf78ba76e0a5f1573081c30f2516ea10921d7ca96a12",
+      "bytes": 63251
+    },
+    {
+      "path": "cards/launch.mg5",
+      "sha256": "04e3339e21bbe4a00478937dfdd5fb60e2ccfe11e5983cfa9cb833c207e345a9",
+      "bytes": 225
+    },
+    {
+      "path": "cards/param_card.dat",
+      "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0",
+      "bytes": 2328
+    },
+    {
+      "path": "cards/process_card.mg5",
+      "sha256": "5ff61462a25e4eb60bf204d896b167137126cf0aa7d57a7b807f0902c3526206",
+      "bytes": 2387
+    },
+    {
+      "path": "cards/reviewed_param_card.dat",
+      "sha256": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c",
+      "bytes": 3340
+    },
+    {
+      "path": "cards/reviewed_run_card.dat",
+      "sha256": "a9e4ea61973f035c273fac1dc333401f485fb2721af9e86daa1713a0f536c904",
+      "bytes": 16373
+    },
+    {
+      "path": "cards/run_card.dat",
+      "sha256": "ae877745b195e936c16c348f8b30d82b44f32d504f22eeb891ee310c0f165521",
+      "bytes": 16160
+    },
+    {
+      "path": "decay_ledger.jsonl",
+      "sha256": "3e48429698397d9806b5a3c530eb60507f6b5ba995b3383b95f9bee6f4e1a63f",
+      "bytes": 916045
+    },
+    {
+      "path": "detector_100.root",
+      "sha256": "9ae808933c4ed03cf57cc8a2c3e2542f65c735559ec9ecb70c26e4dc774b5fec",
+      "bytes": 3731578
+    },
+    {
+      "path": "full_source_and_chain_validation.json",
+      "sha256": "744ac53d7bf507e4db42065e28240182175f786d621f862f6f1e1f98d327c127",
+      "bytes": 70865
+    },
+    {
+      "path": "hepmc_ancestry_100.jsonl",
+      "sha256": "48cf4ac56b619ac9b889e202026bbd5c26b502e1db900a52ff8ae91cf7828e8b",
+      "bytes": 49892
+    },
+    {
+      "path": "input_event_index_100.dat",
+      "sha256": "7d382d88ed6b9119aa3a415257a3728613cce779c7dafa7379e46e28fcfefb72",
+      "bytes": 7102305
+    },
+    {
+      "path": "physically_decayed_same_source_1000.lhe.gz",
+      "sha256": "15383060eb71a848ab9c4bf72ad4265bca30846fe3be5760658368765a07f2ae",
+      "bytes": 287019
+    },
+    {
+      "path": "prefix_identity.json",
+      "sha256": "7bfe165dd9f4d84d1546be1f2bc2e35222676ef623594ddab9d358cbdf43a309",
+      "bytes": 583
+    },
+    {
+      "path": "reco_events_100.jsonl",
+      "sha256": "0f49b64eaa669e0c0f3e8fa008d2e163551ae1c72f0e229ba951cfc8c476ddd4",
+      "bytes": 86420
+    },
+    {
+      "path": "reference_100.hepmc3.gz",
+      "sha256": "ff064e9ac64e99bab39bb75c7651e5a35eecf21f0afa2d3fb86a18f7ce90be86",
+      "bytes": 3828179
+    },
+    {
+      "path": "reference_1000.lhe.gz",
+      "sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "bytes": 98857
+    },
+    {
+      "path": "shower_attempt_ledger_100.jsonl",
+      "sha256": "f32494ef4f84bb88f3f01320d0b83dbdb40fdd7fb63694de685ea4f5023993d7",
+      "bytes": 16292
+    },
+    {
+      "path": "signal_truth_100.dat",
+      "sha256": "393b684a9e6fe80607aefc6b8cb79c96d48f4c296e3ada248ff84b851c157856",
+      "bytes": 10212
+    },
+    {
+      "path": "source_attempt_provenance.json",
+      "sha256": "0ed0d0d5ab9ba5714ce01fda61ca21610f27a26bfa548163f6fac6efe65ccb11",
+      "bytes": 12529
+    },
+    {
+      "path": "validation.json",
+      "sha256": "dc537f6587fa9123d259ddeadba48a82ed95e06ac4d93afe98e813a8b9f0d1fb",
+      "bytes": 1118
+    }
+  ],
+  "source_events": 1000,
+  "HepMC_events": 100,
+  "ROOT_entries": 100
+}

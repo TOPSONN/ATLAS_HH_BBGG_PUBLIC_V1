@@ -1,0 +1,57 @@
+{
+  "source_events": 1000,
+  "native_reco_sha256": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+  "conditional_observed_pair_mass_statistics": [
+    {
+      "observable": "m_gamma_gamma",
+      "defined_events": 484,
+      "missing_events": 516,
+      "min_GeV": 111.28863407984525,
+      "median_GeV": 124.92803451905753,
+      "mean_GeV": 124.93083357260485,
+      "sample_stddev_GeV": 1.3808374738587423,
+      "max_GeV": 128.7701469695747
+    },
+    {
+      "observable": "m_bb",
+      "defined_events": 305,
+      "missing_events": 695,
+      "min_GeV": 20.526441847743037,
+      "median_GeV": 107.24416366634247,
+      "mean_GeV": 112.09135277230293,
+      "sample_stddev_GeV": 59.005725743656356,
+      "max_GeV": 842.8200211711331
+    },
+    {
+      "observable": "m_bb_gamma_gamma",
+      "defined_events": 143,
+      "missing_events": 857,
+      "min_GeV": 215.04413464327695,
+      "median_GeV": 397.5213867738351,
+      "mean_GeV": 439.2307441893969,
+      "sample_stddev_GeV": 145.1894483511015,
+      "max_GeV": 1074.9238219744802
+    }
+  ],
+  "diagnostics": {
+    "events": 1000,
+    "truth_H_gamma_geometric_matches": {
+      "0": 60,
+      "1": 299,
+      "2": 641
+    },
+    "truth_b_jet_geometric_matches": {
+      "0": 43,
+      "1": 402,
+      "2": 555
+    },
+    "undefined_mass_counts": {
+      "m_gamma_gamma": 516,
+      "m_bb": 695,
+      "m_bb_gamma_gamma": 857,
+      "m_jj": 140
+    },
+    "matching_scope": "geometric diagnostic only, not calibrated detector efficiency"
+  },
+  "new_independent_events": 0
+}

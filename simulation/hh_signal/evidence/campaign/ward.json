@@ -1,0 +1,126 @@
+{
+  "status": "PASS_ACTUAL_FULL_MASS_WARD_AND_REUSED_PHASE7A_NUMERICS",
+  "physical_events": 0,
+  "model_bundle_sha256": "3772b2d0f75e092f82a4c556bf2288a43e239f2c7ee6cafaca22d6a11eb98065",
+  "phase7a_loop_evidence_sha256": "8e8c5a8e0a0eb8c11b47d8d7ff26a02e31a9f6b2c9f16e23d05f32a21c539b3d",
+  "ward_points": [
+    {
+      "mHH_gev": 250.001,
+      "ward_squared_me": 1.0835762460429708e-41,
+      "nominal_squared_me": 2.1972988157217458e-08,
+      "ratio": 4.9314014019847775e-34,
+      "normalized_external_gluon_polarization": "p_mu/E",
+      "precision_mode": "CutTools_quadruple",
+      "log_sha256": "9a8ea884b52b7c95dd87b6bc9b80755b6a679dc91ed5a5d447451b80221ab7d8"
+    },
+    {
+      "mHH_gev": 300.0,
+      "ward_squared_me": 7.349109796151758e-40,
+      "nominal_squared_me": 8.724531798948697e-07,
+      "ratio": 8.423500498946343e-34,
+      "normalized_external_gluon_polarization": "p_mu/E",
+      "precision_mode": "CutTools_quadruple",
+      "log_sha256": "7efa7d3e6b043a7014c40b4d8a3ef0233c98766e1ca59538178ca6633e114c73"
+    },
+    {
+      "mHH_gev": 400.0,
+      "ward_squared_me": 3.397178673876411e-36,
+      "nominal_squared_me": 1.620336617114856e-05,
+      "ratio": 2.096588226170788e-31,
+      "normalized_external_gluon_polarization": "p_mu/E",
+      "precision_mode": "CutTools_quadruple",
+      "log_sha256": "a660165b517de45bcc2249acf6b5d7956b52a0596c03599f8c0359b335dfa8b3"
+    },
+    {
+      "mHH_gev": 800.0,
+      "ward_squared_me": 1.88079096131566e-37,
+      "nominal_squared_me": 3.350297466476852e-05,
+      "ratio": 5.61380289402626e-33,
+      "normalized_external_gluon_polarization": "p_mu/E",
+      "precision_mode": "CutTools_quadruple",
+      "log_sha256": "760b544c70e4755b333eff3ab4229549f25e11f07fb24703d388dcafc9700f0d"
+    }
+  ],
+  "source_scope": "private copied native generated amplitude; external gluon1 epsilon replaced by p/E in DP and MP routines",
+  "resource_metrics": {
+    "elapsed_seconds": 22.750966884000263,
+    "peak_sampled_process_tree_rss_bytes": 21024768,
+    "observed_output_bytes": 56851515,
+    "peak_observed_output_bytes": 56880493,
+    "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+    "monitor_interval_seconds": 0.2,
+    "subprocesses": [
+      {
+        "stage": "ward_compile",
+        "argv": [
+          "make",
+          "-j1",
+          "check"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/logs/ward_compile.log",
+        "elapsed_seconds": 0.6382667329999094,
+        "peak_process_tree_rss_bytes": 21024768,
+        "log_sha256": "28a6ee69c7258ab241f7de336232bfbc3a60d5fcd59137c660fe50084b3535dd",
+        "failure": null
+      },
+      {
+        "stage": "ward_point_0",
+        "argv": [
+          "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/ward/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/logs/ward_point_0.log",
+        "elapsed_seconds": 5.249383079999916,
+        "peak_process_tree_rss_bytes": 11067392,
+        "log_sha256": "9a8ea884b52b7c95dd87b6bc9b80755b6a679dc91ed5a5d447451b80221ab7d8",
+        "failure": null
+      },
+      {
+        "stage": "ward_point_1",
+        "argv": [
+          "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/ward/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/logs/ward_point_1.log",
+        "elapsed_seconds": 5.231700706000083,
+        "peak_process_tree_rss_bytes": 11198464,
+        "log_sha256": "7efa7d3e6b043a7014c40b4d8a3ef0233c98766e1ca59538178ca6633e114c73",
+        "failure": null
+      },
+      {
+        "stage": "ward_point_2",
+        "argv": [
+          "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/ward/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/logs/ward_point_2.log",
+        "elapsed_seconds": 5.487233654999727,
+        "peak_process_tree_rss_bytes": 11329536,
+        "log_sha256": "a660165b517de45bcc2249acf6b5d7956b52a0596c03599f8c0359b335dfa8b3",
+        "failure": null
+      },
+      {
+        "stage": "ward_point_3",
+        "argv": [
+          "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/ward/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/.local/share/atlas-hh-phase7/prerequisite/logs/ward_point_3.log",
+        "elapsed_seconds": 5.47938238200004,
+        "peak_process_tree_rss_bytes": 11198464,
+        "log_sha256": "760b544c70e4755b333eff3ab4229549f25e11f07fb24703d388dcafc9700f0d",
+        "failure": null
+      }
+    ]
+  }
+}

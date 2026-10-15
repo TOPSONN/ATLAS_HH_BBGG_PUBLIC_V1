@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "UNKNOWN_UNTIL_REAL_SOURCE_CLOSURE",
+  "source_process_id": "S01_GGF_HH_SM",
+  "hard_process_accuracy": "LO_LOOP_INDUCED_FULL_MT_MB",
+  "generator_model_identity": "loop_sm_MG5_3.5.16",
+  "source_cross_section_pb": null,
+  "source_cross_section_error_pb": null,
+  "original_generated_event_count": null,
+  "LHE_IDWTUP": null,
+  "LHE_XWGTUP": null,
+  "Pythia_Info_weight": null,
+  "HepMC_converter_weight": null,
+  "source_included_decay_ids": [],
+  "decay_assignment": "UNBIASED_50_50_DISTINCT_ORIGINAL_HIGGS",
+  "BR_H_bb": null,
+  "BR_H_gammagamma": null,
+  "identical_H_factor": 2,
+  "already_applied_decay_factors": [],
+  "missing_decay_factors": [
+    "2*BR_H_bb*BR_H_gammagamma_IF_PRODUCTION_ONLY_AND_NOT_ALREADY_INCLUDED"
+  ],
+  "normalization_status": "NOT_EVALUATED",
+  "event_contribution_pb": null,
+  "signed_weight_support": "retain_sign_and_certify_original_cross_section_weight_pb_then_raw_weight_pb_over_original_N",
+  "denominator": "original_generated_event_count_never_selected_or_successfully_showered_count",
+  "forbidden": [
+    "infer_convention_from_IDWTUP_alone",
+    "sigma_over_N_twice",
+    "pb_mb_conversion_twice",
+    "reapply_BR",
+    "apply_HH_identical_factor_to_ZH_or_ttH",
+    "infer_Hbb_BR_from_massless_b_production"
+  ]
+}

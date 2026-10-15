@@ -1,0 +1,2313 @@
+{
+  "status": "PASS_REAL_HH_SOURCE_DECAY_SHOWER_HEPMC_DELPHES_ROOT_MODEL_SCOPE",
+  "phase": "7c",
+  "source": {
+    "status": "PASS_GENUINE_INDEPENDENT_FULL_MASS_SOURCE",
+    "phase": "7c",
+    "events_observed": 1000,
+    "seed": 20261122,
+    "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/source/process/Events/hh_7c/unweighted_events.lhe.gz",
+    "sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+    "sigma_pb": 0.019069,
+    "error_pb": 0.00011745,
+    "generator_execution": {
+      "stage": "attempt0_mg5_7c_independent_source",
+      "argv": [
+        "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/bin/python3",
+        "-B",
+        "-O",
+        "REPOSITORY/simulation/hh_signal/campaign/launch_adapter.py",
+        "LOCAL_HOME/.local/share/atlas-hh-phase7/build04/generator/mg5",
+        "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/source/launch.mg5",
+        "LOCAL_HOME/opt/mg5amcnlo",
+        "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain",
+        "LOCAL_HOME/miniforge3/envs/atlas-hh-root"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/logs/attempt0_mg5_7c_independent_source.log",
+      "elapsed_seconds": 2706.538700542,
+      "peak_process_tree_rss_bytes": 915124224,
+      "log_sha256": "e9ad78a1655f83faecd621bf0e296681673c2338e32ea1d84fc883a750eabe63",
+      "failure": null
+    },
+    "source_attempt_sha256": "2469cc8fbde96eaaa79898e6b158ce7084ec6322b2ed21dabb2865a1abb6aa85",
+    "validation": {
+      "status": "PASS_ACTUAL_FULL_MASS_HH_LHE",
+      "events": 1000,
+      "sigma_pb": 0.019069,
+      "integration_error_pb": 0.00011745,
+      "LHE_IDWTUP": -4,
+      "source_weight_convention": "XWGTUP_pb_average_original_N",
+      "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "decompressed_sha256": "1de160ecbd8b02603880f71a447568e24ed21226d25ab7cc540e5a3c9415ba63",
+      "max_four_momentum_residual_gev": 1.2500049706432037e-07,
+      "max_mass_shell_tolerance_fraction": 0.03350371662769235,
+      "max_scalup_minus_mHH_over2_gev": 0.0003455757469055243,
+      "scale_validation_scope": "original native E15.7 half-unit before Python E.8 padding, plus hard-p4 serialization allowance; no scale or momentum rewrite",
+      "source_included_decays": [],
+      "identical_H_production_divisor": 2,
+      "physical_normalization": "RAW_PRODUCTION_ONLY",
+      "requested_seed": 20261122,
+      "effective_seed": 20261122,
+      "seed_status": "EXACT_REQUEST_HONORED",
+      "seed_deviation": null,
+      "H_width_native_card_serialization": {
+        "initialized_model_width_gev": 0.004075980111153884,
+        "actual_source_card_width_gev": 0.00407598,
+        "printed_half_unit_tolerance_gev": 5e-10,
+        "relative_rounding_delta": -2.7270467668888295e-08
+      },
+      "actual_model_parameters": {
+        "mass_6": 173.0,
+        "mass_25": 125.0,
+        "mass_5": 4.7,
+        "yukawa_6": 173.0,
+        "yukawa_5": 4.7,
+        "decay_25": 0.00407598
+      },
+      "actual_run_parameters": {
+        "nevents": 1000,
+        "lpp1": 1,
+        "lpp2": 1,
+        "ebeam1": 6500.0,
+        "ebeam2": 6500.0,
+        "pdlabel": "cteq6l1",
+        "fixed_ren_scale": false,
+        "fixed_fac_scale": false,
+        "dynamical_scale_choice": 4,
+        "scalefact": 0.5,
+        "nhel": 0,
+        "event_norm": "average",
+        "ickkw": 0,
+        "cut_decays": false,
+        "iseed": 20261122
+      },
+      "exact_cards_sha256": {
+        "reviewed_run_card.dat": "a9e4ea61973f035c273fac1dc333401f485fb2721af9e86daa1713a0f536c904",
+        "reviewed_param_card.dat": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c",
+        "embedded_run_card.dat": "ae877745b195e936c16c348f8b30d82b44f32d504f22eeb891ee310c0f165521",
+        "embedded_param_card.dat": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0"
+      },
+      "MadLoop_params_sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54",
+      "native_first_event_writer_sha256": "51fac40df2e39e0d20ddbdaed810aabe6e26203ce47f2b11871949085543b67a",
+      "native_first_header_format": "(i2,i5,e16.7e3,3e15.7)"
+    }
+  },
+  "decay": {
+    "status": "PASS_ACTUAL_SYMMETRIC_TWO_HIGGS_SCALAR_DECAYS",
+    "events": 1000,
+    "assignment_seed": 710202,
+    "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+    "decayed_LHE_sha256": "a7457ffd665d0ae78f6280410caece71beceba2075fad7da2cc975d2145b62df",
+    "production_index_sha256": "3579b24bcade8341c99827000c4eb3fb8feebcea037edf73ce472d4f25cb6394",
+    "decayed_index_sha256": "da10cd8ce0e5b87cae909f3a273c9b660d4e3d9c423cd727adc5b41c3a06441a",
+    "ledger_sha256": "3e48429698397d9806b5a3c530eb60507f6b5ba995b3383b95f9bee6f4e1a63f",
+    "model": {
+      "status": "PASS_ACTUAL_INITIALIZED_MODEL_TABLE_ZERO_EVENTS",
+      "scope": "MODEL_BR_ONLY",
+      "events_generated": 0,
+      "H_mass_gev": 125,
+      "W_mass_gev": 80.419,
+      "top_mass_gev": 173,
+      "bottom_kinematic_mass_gev": 4.8,
+      "H_total_width_gev": 0.004075980111153884,
+      "channels": [
+        {
+          "BR": 8.638842748377187e-07,
+          "partial_width_gev": 3.521175122577137e-09,
+          "products": [
+            1,
+            -1
+          ]
+        },
+        {
+          "BR": 2.1597106870942967e-07,
+          "partial_width_gev": 8.802937806442842e-10,
+          "products": [
+            2,
+            -2
+          ]
+        },
+        {
+          "BR": 0.0002165592537876433,
+          "partial_width_gev": 8.826912113247605e-07,
+          "products": [
+            3,
+            -3
+          ]
+        },
+        {
+          "BR": 0.028877605876601396,
+          "partial_width_gev": 0.00011770454721076781,
+          "products": [
+            4,
+            -4
+          ]
+        },
+        {
+          "BR": 0.5774528919828654,
+          "partial_width_gev": 0.0023536865028504516,
+          "products": [
+            5,
+            -5
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            6,
+            -6
+          ]
+        },
+        {
+          "BR": 5.252287198852257e-09,
+          "partial_width_gev": 2.1408218160589945e-11,
+          "products": [
+            11,
+            -11
+          ]
+        },
+        {
+          "BR": 0.000218718225202262,
+          "partial_width_gev": 8.91491135871296e-07,
+          "products": [
+            13,
+            -13
+          ]
+        },
+        {
+          "BR": 0.06291851846596037,
+          "partial_width_gev": 0.00025645462989052286,
+          "products": [
+            15,
+            -15
+          ]
+        },
+        {
+          "BR": 0.0851216263161266,
+          "partial_width_gev": 0.0003469540558936051,
+          "products": [
+            21,
+            21
+          ]
+        },
+        {
+          "BR": 0.00229754317933142,
+          "partial_width_gev": 9.364740303472128e-06,
+          "products": [
+            22,
+            22
+          ]
+        },
+        {
+          "BR": 0.0016156367327026762,
+          "partial_width_gev": 6.585303189345752e-06,
+          "products": [
+            22,
+            23
+          ]
+        },
+        {
+          "BR": 0.026201420272353858,
+          "partial_width_gev": 0.0001067964679140985,
+          "products": [
+            23,
+            23
+          ]
+        },
+        {
+          "BR": 0.21507839458743752,
+          "partial_width_gev": 0.0008766552586773025,
+          "products": [
+            24,
+            -24
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000022,
+            1000022
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000023,
+            1000022
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000023,
+            1000023
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000025,
+            1000022
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000025,
+            1000023
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000025,
+            1000025
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000035,
+            1000022
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000035,
+            1000023
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000035,
+            1000025
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000035,
+            1000035
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000024,
+            -1000024
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000024,
+            -1000037
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000037,
+            -1000024
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000037,
+            -1000037
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000001,
+            -1000001
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000001,
+            -2000001
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000001,
+            -2000001
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000001,
+            2000001
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000002,
+            -1000002
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000002,
+            -2000002
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000002,
+            -2000002
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000002,
+            2000002
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000003,
+            -1000003
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000003,
+            -2000003
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000003,
+            -2000003
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000003,
+            2000003
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000004,
+            -1000004
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000004,
+            -2000004
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000004,
+            -2000004
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000004,
+            2000004
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000005,
+            -1000005
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000005,
+            -2000005
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000005,
+            -2000005
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000005,
+            2000005
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000006,
+            -1000006
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000006,
+            -2000006
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000006,
+            -2000006
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000006,
+            2000006
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000011,
+            -1000011
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000011,
+            -2000011
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000011,
+            -2000011
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000011,
+            2000011
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000012,
+            -1000012
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000012,
+            -2000012
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000012,
+            -2000012
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000012,
+            2000012
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000013,
+            -1000013
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000013,
+            -2000013
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000013,
+            -2000013
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000013,
+            2000013
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000014,
+            -1000014
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000014,
+            -2000014
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000014,
+            -2000014
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000014,
+            2000014
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000015,
+            -1000015
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000015,
+            -2000015
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000015,
+            -2000015
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000015,
+            2000015
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000016,
+            -1000016
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            2000016,
+            -2000016
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            1000016,
+            -2000016
+          ]
+        },
+        {
+          "BR": 0,
+          "partial_width_gev": 0,
+          "products": [
+            -1000016,
+            2000016
+          ]
+        }
+      ],
+      "BR_H_bb": 0.5774528919828654,
+      "BR_H_gammagamma": 0.00229754317933142,
+      "mixed_decay_factor": 0.002653445906720871,
+      "forced_sampling_probability": 1,
+      "assignment_probability": 0.5,
+      "external_reference_BR": null,
+      "adopted_physical_BR": null
+    },
+    "source_decay_factors_in_nominal": [],
+    "missing_mixed_decay_factor": 0.002653445906720871,
+    "normalization_scope": "MODEL_BR_ONLY",
+    "assignment_counts": {
+      "3": 527,
+      "4": 473
+    },
+    "all_original_momenta_preserved": true,
+    "all_decay_vertices_closed": true,
+    "kinematic_mass_uses_original_p4_virtuality": "no_repair_of_printed_source_Higgs_p4"
+  },
+  "stages": {
+    "prefix10": {
+      "status": "PASS_ACTUAL_SIGNAL_PREFIX_CHAIN",
+      "source_events": 1000,
+      "validated_events": 10,
+      "stage": "prefix10",
+      "new_independent_events": 0,
+      "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "shower": {
+        "status": "SHOWER_WRITTEN_REQUIRES_NATIVE_READER",
+        "attempted": 10,
+        "written": 10,
+        "source_count": 1000,
+        "source_identity_failures": 0,
+        "next_calls": 10,
+        "replacement_events": 0,
+        "new_independent_hard_events": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "pythia_seed": 710102
+      },
+      "generic_ReaderAscii": {
+        "validation_status": "PASS",
+        "validator": "actual_HepMC3_ReaderAscii_and_Pythia_ParticleData",
+        "source_identity": "ATTRIBUTES_VERIFIED",
+        "hepmc3_version": "3.03.01",
+        "pythia_version": "8.317",
+        "decompressed_file_sha256": "fe4c1e33c5c5562960bce4da55ce32586e4b81286a52017e91ef7002dcf6eb86",
+        "source_file_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "source_sample_id": "S01_PHASE7C1000",
+        "pythia_run_id": "b13e5010f80b73449559",
+        "pythia_seed": 710102,
+        "N_requested_validation": 10,
+        "N_readback": 10,
+        "N_passed_validation": 10,
+        "N_failed_validation": 0,
+        "N_not_assessed": 0,
+        "N_events_with_complete_physics_assessment": 10,
+        "summary_scope": "All events completing graph/metadata/global checks, including explicitly listed mass-shell failures; events aborting assessment excluded from distributions",
+        "fatal_error": null,
+        "total_particles": 5033,
+        "total_vertices": 2814,
+        "mean_final_multiplicity": 185,
+        "mean_charged_final_multiplicity": 85.4,
+        "min_final_multiplicity": 105,
+        "max_final_multiplicity": 259,
+        "max_beam_to_stable_residual_gev": 5.976276629127142e-07,
+        "stable_colored_particle_count": 0,
+        "stable_free_quark_count": 0,
+        "stable_free_gluon_count": 0,
+        "stable_free_diquark_count": 0,
+        "hadronization_completion_test": "No stable ParticleData.colType!=0 object; no filtering",
+        "max_stable_mass_shell_residual_gev2": 6.873093094661442e-09,
+        "max_stable_mass_shell_residual_to_tolerance": 3.900233137279996e-06,
+        "max_stable_energy_normalized_mass_difference": 1.0385364172211688e-07,
+        "mass_shell_atol_gev2": 1e-07,
+        "mass_shell_rtol_energy_squared": 1e-09,
+        "mass_shell_test": "abs(E^2-|p|^2-m_generated^2) <= 1e-7 GeV^2 + 1e-9*max(E^2,1 GeV^2); generator-native mass fraction is diagnostic only, never an alternate acceptance gate",
+        "mass_shell_failed_particle_count": 0,
+        "closure_atol_gev": 1e-05,
+        "closure_rtol": 1e-09,
+        "beam_remnants_included": true,
+        "intermediate_particles_excluded_from_global_sum": true,
+        "weight_sum": 0.00019069,
+        "weight_abs_sum": 0.00019069,
+        "weight_sum_squared": 3.63626761e-09,
+        "positive_weights": 10,
+        "negative_weights": 0,
+        "zero_weights": 0,
+        "particle_status_counts": {
+          "1": 1850,
+          "2": 918,
+          "4": 20,
+          "21": 20,
+          "22": 20,
+          "23": 20,
+          "41": 57,
+          "42": 57,
+          "43": 57,
+          "44": 363,
+          "51": 588,
+          "52": 278,
+          "53": 16,
+          "61": 20,
+          "62": 304,
+          "63": 38,
+          "71": 383,
+          "73": 24
+        },
+        "particle_pdg_counts": {
+          "-20213": 2,
+          "-10323": 1,
+          "-5224": 1,
+          "-5122": 2,
+          "-4122": 3,
+          "-4112": 1,
+          "-3224": 1,
+          "-3222": 2,
+          "-3212": 3,
+          "-3122": 10,
+          "-3114": 1,
+          "-3112": 2,
+          "-2224": 3,
+          "-2214": 2,
+          "-2212": 20,
+          "-2114": 4,
+          "-2112": 17,
+          "-1114": 4,
+          "-533": 1,
+          "-531": 1,
+          "-523": 2,
+          "-521": 5,
+          "-513": 2,
+          "-511": 3,
+          "-423": 2,
+          "-421": 5,
+          "-413": 2,
+          "-411": 2,
+          "-323": 16,
+          "-321": 51,
+          "-313": 22,
+          "-311": 42,
+          "-213": 47,
+          "-211": 331,
+          "-14": 3,
+          "-13": 1,
+          "-12": 3,
+          "-11": 8,
+          "-5": 42,
+          "-3": 34,
+          "-2": 26,
+          "-1": 30,
+          "1": 48,
+          "2": 94,
+          "3": 14,
+          "5": 45,
+          "11": 10,
+          "12": 1,
+          "13": 3,
+          "14": 1,
+          "21": 1718,
+          "22": 840,
+          "25": 154,
+          "111": 373,
+          "113": 56,
+          "130": 39,
+          "211": 336,
+          "213": 45,
+          "221": 48,
+          "223": 59,
+          "310": 47,
+          "311": 42,
+          "313": 23,
+          "321": 54,
+          "323": 14,
+          "331": 8,
+          "333": 2,
+          "413": 2,
+          "421": 7,
+          "423": 4,
+          "431": 5,
+          "433": 3,
+          "511": 1,
+          "513": 1,
+          "521": 5,
+          "523": 4,
+          "531": 2,
+          "533": 2,
+          "1114": 6,
+          "2101": 16,
+          "2103": 10,
+          "2112": 26,
+          "2114": 4,
+          "2203": 14,
+          "2212": 54,
+          "2214": 7,
+          "2224": 7,
+          "3114": 1,
+          "3122": 7,
+          "3212": 4,
+          "3222": 2,
+          "3322": 2,
+          "4122": 1,
+          "5122": 1,
+          "20413": 1
+        },
+        "final_photon_multiplicity_histogram": {
+          "43": 1,
+          "61": 1,
+          "65": 1,
+          "70": 1,
+          "76": 1,
+          "78": 1,
+          "87": 1,
+          "117": 2,
+          "126": 1
+        },
+        "all_record_b_hadron_multiplicity_histogram": {
+          "2": 1,
+          "3": 5,
+          "4": 4
+        },
+        "all_record_c_hadron_multiplicity_histogram": {
+          "2": 1,
+          "3": 2,
+          "4": 6,
+          "6": 1
+        },
+        "stable_b_hadron_multiplicity_histogram": {
+          "0": 10
+        },
+        "stable_c_hadron_multiplicity_histogram": {
+          "0": 10
+        },
+        "heavy_hadron_count_definition": "inclusive installed ParticleData.nQuarksInCode(pid,5/4)>0; particle/antiparticle symmetric; B_c appears in both categories; all-record and stable are separate; no direct-hard-origin assignment",
+        "failure_detail_count": 0,
+        "failure_details_truncated": false,
+        "failures": []
+      },
+      "signal_ReaderAscii": {
+        "status": "PASS_ACTUAL_NATIVE_SIGNAL_HEPMC_READBACK",
+        "validated_events": 10,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "Hbb_and_Hgammagamma_events": 10,
+        "raw_LHE_weight_sum_pb": 0.19069,
+        "Info_weight_sum_pb": 0.19069,
+        "converter_weight_sum_pb": 0.19069,
+        "max_Info_over_LHE_deviation": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "HepMC_sha256": "fe4c1e33c5c5562960bce4da55ce32586e4b81286a52017e91ef7002dcf6eb86",
+        "input_index_sha256": "585f54732e44a1f6bb0fa518617603fe423c303159a55ee41c3af4cb629f30d0",
+        "truth_index_sha256": "6a72c57b60858144ff4f0a170d9ebcf130e5fe624c4ddd61c5138dfa9acc033f"
+      },
+      "native_ROOT": {
+        "status": "PASS_NATIVE_SIGNAL_ROOT_READBACK",
+        "ROOT_version": "6.40.04",
+        "CXX_standard": 20,
+        "entries": 10,
+        "validated": 10,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "ROOT_sha256": "9130494f538b7495a46061868c52427cfeefec47d245da72dd82763b2072905c",
+        "input_index_sha256": "585f54732e44a1f6bb0fa518617603fe423c303159a55ee41c3af4cb629f30d0",
+        "truth_index_sha256": "6a72c57b60858144ff4f0a170d9ebcf130e5fe624c4ddd61c5138dfa9acc033f",
+        "card_sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+        "reco_sha256": "f3c2a5a9ce2de42155b329683323380c0f0ae045efa9d73edf7f6a87b5676dac",
+        "selection": "UNCHANGED_PHASE6C",
+        "detector_scope": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "missing_pair_values": null
+      },
+      "independent_cutflow": {
+        "status": "PASS_INDEPENDENT_ACTUAL_SIGNAL_CUTFLOW_WEIGHT_ALGEBRA",
+        "cutflow": [
+          {
+            "stage": "00_input",
+            "raw_events": 10,
+            "original_source_events": 1000,
+            "acceptance": 0.01,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.00019069,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 3.63626761e-09,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 5.05985599952603e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 2.5602142735939552e-14,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "01_photons",
+            "raw_events": 4,
+            "original_source_events": 1000,
+            "acceptance": 0.004,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 7.6276e-05,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.454507044e-09,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 2.0239423998104116e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 1.024085709437582e-14,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "02_jets",
+            "raw_events": 3,
+            "original_source_events": 1000,
+            "acceptance": 0.003,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 5.7206999999999996e-05,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.0908802829999999e-09,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 1.5179567998578085e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 7.680642820781865e-15,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "03_two_btags",
+            "raw_events": 2,
+            "original_source_events": 1000,
+            "acceptance": 0.002,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 3.8138e-05,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 7.27253522e-10,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 1.0119711999052058e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 5.12042854718791e-15,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "04_mgg_105_160",
+            "raw_events": 2,
+            "original_source_events": 1000,
+            "acceptance": 0.002,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 3.8138e-05,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 7.27253522e-10,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 1.0119711999052058e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 5.12042854718791e-15,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          }
+        ],
+        "diagnostics": {
+          "events": 10,
+          "truth_H_gamma_geometric_matches": {
+            "0": 1,
+            "1": 5,
+            "2": 4
+          },
+          "truth_b_jet_geometric_matches": {
+            "0": 0,
+            "1": 2,
+            "2": 8
+          },
+          "undefined_mass_counts": {
+            "m_gamma_gamma": 6,
+            "m_bb": 7,
+            "m_bb_gamma_gamma": 8,
+            "m_jj": 2
+          },
+          "matching_scope": "geometric diagnostic only, not calibrated detector efficiency"
+        },
+        "model_BR_factor": 0.002653445906720871,
+        "BR_factor_applications": 1,
+        "BR_scope": "MODEL_BR_ONLY",
+        "source_denominator": 1000
+      },
+      "artifacts": {
+        "HepMC": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/shower/shower.hepmc3",
+          "sha256": "fe4c1e33c5c5562960bce4da55ce32586e4b81286a52017e91ef7002dcf6eb86",
+          "bytes": 1335393
+        },
+        "ROOT": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/delphes/detector.root",
+          "sha256": "9130494f538b7495a46061868c52427cfeefec47d245da72dd82763b2072905c",
+          "bytes": 428940
+        },
+        "reco": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/root_validation/reco_events.jsonl",
+          "sha256": "f3c2a5a9ce2de42155b329683323380c0f0ae045efa9d73edf7f6a87b5676dac",
+          "bytes": 8574
+        },
+        "input_index": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/readback/input_event_index.dat",
+          "sha256": "585f54732e44a1f6bb0fa518617603fe423c303159a55ee41c3af4cb629f30d0",
+          "bytes": 659090
+        },
+        "truth": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/readback/signal_truth.dat",
+          "sha256": "6a72c57b60858144ff4f0a170d9ebcf130e5fe624c4ddd61c5138dfa9acc033f",
+          "bytes": 1031
+        },
+        "ancestry": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix10/readback/hepmc_ancestry.jsonl",
+          "sha256": "310f8505afecc5ff3508a4c43ae8776015d5e042b14c10b79d8af7285293a61e",
+          "bytes": 4981
+        }
+      }
+    },
+    "prefix100": {
+      "status": "PASS_ACTUAL_SIGNAL_PREFIX_CHAIN",
+      "source_events": 1000,
+      "validated_events": 100,
+      "stage": "prefix100",
+      "new_independent_events": 0,
+      "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "shower": {
+        "status": "SHOWER_WRITTEN_REQUIRES_NATIVE_READER",
+        "attempted": 100,
+        "written": 100,
+        "source_count": 1000,
+        "source_identity_failures": 0,
+        "next_calls": 100,
+        "replacement_events": 0,
+        "new_independent_hard_events": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "pythia_seed": 710102
+      },
+      "generic_ReaderAscii": {
+        "validation_status": "PASS",
+        "validator": "actual_HepMC3_ReaderAscii_and_Pythia_ParticleData",
+        "source_identity": "ATTRIBUTES_VERIFIED",
+        "hepmc3_version": "3.03.01",
+        "pythia_version": "8.317",
+        "decompressed_file_sha256": "1fdf5c05f4e2aa9aec3421542d0fe04a3b71d7ec553db81376e0f3481c92ae00",
+        "source_file_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "source_sample_id": "S01_PHASE7C1000",
+        "pythia_run_id": "b13e5010f80b73449559",
+        "pythia_seed": 710102,
+        "N_requested_validation": 100,
+        "N_readback": 100,
+        "N_passed_validation": 100,
+        "N_failed_validation": 0,
+        "N_not_assessed": 0,
+        "N_events_with_complete_physics_assessment": 100,
+        "summary_scope": "All events completing graph/metadata/global checks, including explicitly listed mass-shell failures; events aborting assessment excluded from distributions",
+        "fatal_error": null,
+        "total_particles": 53541,
+        "total_vertices": 29308,
+        "mean_final_multiplicity": 204.92,
+        "mean_charged_final_multiplicity": 91.84,
+        "min_final_multiplicity": 105,
+        "max_final_multiplicity": 300,
+        "max_beam_to_stable_residual_gev": 5.976276629127142e-07,
+        "stable_colored_particle_count": 0,
+        "stable_free_quark_count": 0,
+        "stable_free_gluon_count": 0,
+        "stable_free_diquark_count": 0,
+        "hadronization_completion_test": "No stable ParticleData.colType!=0 object; no filtering",
+        "max_stable_mass_shell_residual_gev2": 2.7316381823183633e-08,
+        "max_stable_mass_shell_residual_to_tolerance": 2.8157656006941526e-05,
+        "max_stable_energy_normalized_mass_difference": 5.966049796094776e-07,
+        "mass_shell_atol_gev2": 1e-07,
+        "mass_shell_rtol_energy_squared": 1e-09,
+        "mass_shell_test": "abs(E^2-|p|^2-m_generated^2) <= 1e-7 GeV^2 + 1e-9*max(E^2,1 GeV^2); generator-native mass fraction is diagnostic only, never an alternate acceptance gate",
+        "mass_shell_failed_particle_count": 0,
+        "closure_atol_gev": 1e-05,
+        "closure_rtol": 1e-09,
+        "beam_remnants_included": true,
+        "intermediate_particles_excluded_from_global_sum": true,
+        "weight_sum": 0.0019069,
+        "weight_abs_sum": 0.0019069,
+        "weight_sum_squared": 3.63626761e-08,
+        "positive_weights": 100,
+        "negative_weights": 0,
+        "zero_weights": 0,
+        "particle_status_counts": {
+          "1": 20492,
+          "2": 10269,
+          "4": 200,
+          "21": 200,
+          "22": 200,
+          "23": 200,
+          "41": 527,
+          "42": 527,
+          "43": 527,
+          "44": 3321,
+          "51": 6186,
+          "52": 2858,
+          "53": 236,
+          "61": 200,
+          "62": 3087,
+          "63": 372,
+          "71": 3829,
+          "72": 93,
+          "73": 217
+        },
+        "particle_pdg_counts": {
+          "-20413": 1,
+          "-20323": 1,
+          "-20313": 3,
+          "-20213": 9,
+          "-14122": 1,
+          "-10431": 1,
+          "-10421": 1,
+          "-10413": 2,
+          "-10323": 2,
+          "-5232": 1,
+          "-5224": 1,
+          "-5214": 1,
+          "-5132": 1,
+          "-5122": 6,
+          "-5114": 1,
+          "-4232": 1,
+          "-4132": 1,
+          "-4122": 10,
+          "-4112": 3,
+          "-3324": 1,
+          "-3322": 6,
+          "-3314": 1,
+          "-3312": 2,
+          "-3224": 11,
+          "-3222": 27,
+          "-3214": 4,
+          "-3212": 24,
+          "-3122": 80,
+          "-3114": 12,
+          "-3112": 35,
+          "-2224": 35,
+          "-2214": 34,
+          "-2212": 200,
+          "-2114": 40,
+          "-2112": 213,
+          "-1114": 30,
+          "-533": 4,
+          "-531": 8,
+          "-523": 31,
+          "-521": 53,
+          "-513": 32,
+          "-511": 42,
+          "-433": 12,
+          "-431": 23,
+          "-423": 26,
+          "-421": 70,
+          "-415": 2,
+          "-413": 32,
+          "-411": 37,
+          "-325": 1,
+          "-323": 175,
+          "-321": 486,
+          "-313": 166,
+          "-311": 478,
+          "-213": 581,
+          "-211": 3634,
+          "-16": 11,
+          "-15": 1,
+          "-14": 25,
+          "-13": 32,
+          "-12": 26,
+          "-11": 83,
+          "-5": 500,
+          "-4": 87,
+          "-3": 298,
+          "-2": 292,
+          "-1": 461,
+          "1": 603,
+          "2": 939,
+          "3": 244,
+          "4": 75,
+          "5": 480,
+          "11": 85,
+          "12": 24,
+          "13": 25,
+          "14": 32,
+          "15": 10,
+          "16": 11,
+          "21": 16739,
+          "22": 9522,
+          "25": 1454,
+          "111": 4297,
+          "113": 584,
+          "130": 484,
+          "211": 3668,
+          "213": 561,
+          "221": 543,
+          "223": 624,
+          "310": 500,
+          "311": 465,
+          "313": 188,
+          "315": 1,
+          "321": 527,
+          "323": 162,
+          "331": 79,
+          "333": 54,
+          "411": 35,
+          "413": 33,
+          "415": 1,
+          "421": 86,
+          "423": 42,
+          "425": 4,
+          "431": 18,
+          "433": 10,
+          "441": 2,
+          "443": 3,
+          "511": 45,
+          "513": 31,
+          "521": 41,
+          "523": 29,
+          "531": 13,
+          "533": 12,
+          "1114": 38,
+          "2101": 223,
+          "2103": 66,
+          "2112": 282,
+          "2114": 49,
+          "2203": 110,
+          "2212": 518,
+          "2214": 55,
+          "2224": 51,
+          "3112": 27,
+          "3114": 10,
+          "3122": 95,
+          "3212": 27,
+          "3214": 9,
+          "3222": 27,
+          "3224": 10,
+          "3312": 7,
+          "3314": 1,
+          "3322": 6,
+          "3324": 2,
+          "3334": 1,
+          "4122": 3,
+          "5122": 4,
+          "5212": 1,
+          "5224": 1,
+          "10323": 1,
+          "10413": 1,
+          "10423": 1,
+          "10441": 1,
+          "20213": 10,
+          "20313": 1,
+          "20413": 1,
+          "20423": 1,
+          "20443": 3,
+          "100443": 1,
+          "9000221": 1
+        },
+        "final_photon_multiplicity_histogram": {
+          "43": 1,
+          "59": 1,
+          "61": 1,
+          "62": 2,
+          "64": 1,
+          "65": 2,
+          "67": 3,
+          "68": 1,
+          "70": 2,
+          "71": 1,
+          "72": 1,
+          "73": 1,
+          "76": 3,
+          "78": 5,
+          "81": 1,
+          "82": 1,
+          "83": 2,
+          "84": 1,
+          "85": 2,
+          "86": 1,
+          "87": 2,
+          "88": 2,
+          "89": 2,
+          "90": 2,
+          "91": 3,
+          "92": 1,
+          "93": 1,
+          "94": 2,
+          "95": 4,
+          "96": 3,
+          "98": 1,
+          "99": 3,
+          "100": 2,
+          "101": 1,
+          "102": 1,
+          "104": 3,
+          "105": 2,
+          "106": 2,
+          "108": 1,
+          "109": 1,
+          "110": 4,
+          "111": 1,
+          "114": 1,
+          "115": 3,
+          "116": 3,
+          "117": 2,
+          "118": 1,
+          "119": 3,
+          "122": 1,
+          "124": 2,
+          "125": 1,
+          "126": 1,
+          "131": 1,
+          "132": 2,
+          "133": 2
+        },
+        "all_record_b_hadron_multiplicity_histogram": {
+          "2": 7,
+          "3": 47,
+          "4": 40,
+          "6": 1,
+          "7": 3,
+          "8": 2
+        },
+        "all_record_c_hadron_multiplicity_histogram": {
+          "2": 8,
+          "3": 23,
+          "4": 32,
+          "5": 8,
+          "6": 12,
+          "7": 6,
+          "8": 5,
+          "9": 2,
+          "10": 3,
+          "14": 1
+        },
+        "stable_b_hadron_multiplicity_histogram": {
+          "0": 100
+        },
+        "stable_c_hadron_multiplicity_histogram": {
+          "0": 100
+        },
+        "heavy_hadron_count_definition": "inclusive installed ParticleData.nQuarksInCode(pid,5/4)>0; particle/antiparticle symmetric; B_c appears in both categories; all-record and stable are separate; no direct-hard-origin assignment",
+        "failure_detail_count": 0,
+        "failure_details_truncated": false,
+        "failures": []
+      },
+      "signal_ReaderAscii": {
+        "status": "PASS_ACTUAL_NATIVE_SIGNAL_HEPMC_READBACK",
+        "validated_events": 100,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "Hbb_and_Hgammagamma_events": 100,
+        "raw_LHE_weight_sum_pb": 1.9068999999999998,
+        "Info_weight_sum_pb": 1.9068999999999998,
+        "converter_weight_sum_pb": 1.9068999999999998,
+        "max_Info_over_LHE_deviation": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "HepMC_sha256": "1fdf5c05f4e2aa9aec3421542d0fe04a3b71d7ec553db81376e0f3481c92ae00",
+        "input_index_sha256": "7d382d88ed6b9119aa3a415257a3728613cce779c7dafa7379e46e28fcfefb72",
+        "truth_index_sha256": "393b684a9e6fe80607aefc6b8cb79c96d48f4c296e3ada248ff84b851c157856"
+      },
+      "native_ROOT": {
+        "status": "PASS_NATIVE_SIGNAL_ROOT_READBACK",
+        "ROOT_version": "6.40.04",
+        "CXX_standard": 20,
+        "entries": 100,
+        "validated": 100,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "ROOT_sha256": "9ae808933c4ed03cf57cc8a2c3e2542f65c735559ec9ecb70c26e4dc774b5fec",
+        "input_index_sha256": "7d382d88ed6b9119aa3a415257a3728613cce779c7dafa7379e46e28fcfefb72",
+        "truth_index_sha256": "393b684a9e6fe80607aefc6b8cb79c96d48f4c296e3ada248ff84b851c157856",
+        "card_sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+        "reco_sha256": "0f49b64eaa669e0c0f3e8fa008d2e163551ae1c72f0e229ba951cfc8c476ddd4",
+        "selection": "UNCHANGED_PHASE6C",
+        "detector_scope": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "missing_pair_values": null
+      },
+      "independent_cutflow": {
+        "status": "PASS_INDEPENDENT_ACTUAL_SIGNAL_CUTFLOW_WEIGHT_ALGEBRA",
+        "cutflow": [
+          {
+            "stage": "00_input",
+            "raw_events": 100,
+            "original_source_events": 1000,
+            "acceptance": 0.1,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.0019069,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 3.63626761e-08,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 5.059855999526029e-06,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 2.560214273593955e-13,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "01_photons",
+            "raw_events": 45,
+            "original_source_events": 1000,
+            "acceptance": 0.045,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.000858105,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.6363204245e-08,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 2.276935199786713e-06,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 1.1520964231172796e-13,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "02_jets",
+            "raw_events": 36,
+            "original_source_events": 1000,
+            "acceptance": 0.036,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.000686484,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.3090563396e-08,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 1.8215481598293706e-06,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 9.216771384938238e-14,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "03_two_btags",
+            "raw_events": 12,
+            "original_source_events": 1000,
+            "acceptance": 0.012,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.00022882799999999998,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 4.3635211319999996e-09,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 6.071827199431234e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 3.072257128312746e-14,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          },
+          {
+            "stage": "04_mgg_105_160",
+            "raw_events": 12,
+            "original_source_events": 1000,
+            "acceptance": 0.012,
+            "acceptance_wilson95": null,
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.00022882799999999998,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 4.3635211319999996e-09,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 6.071827199431234e-07,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 3.072257128312746e-14,
+            "source_MC_sampling_variance_pb2": null,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": null,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "PREFIX_DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FULL_N_ACCEPTANCE"
+          }
+        ],
+        "diagnostics": {
+          "events": 100,
+          "truth_H_gamma_geometric_matches": {
+            "0": 10,
+            "1": 30,
+            "2": 60
+          },
+          "truth_b_jet_geometric_matches": {
+            "0": 2,
+            "1": 45,
+            "2": 53
+          },
+          "undefined_mass_counts": {
+            "m_gamma_gamma": 55,
+            "m_bb": 70,
+            "m_bb_gamma_gamma": 88,
+            "m_jj": 13
+          },
+          "matching_scope": "geometric diagnostic only, not calibrated detector efficiency"
+        },
+        "model_BR_factor": 0.002653445906720871,
+        "BR_factor_applications": 1,
+        "BR_scope": "MODEL_BR_ONLY",
+        "source_denominator": 1000
+      },
+      "artifacts": {
+        "HepMC": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/shower/shower.hepmc3",
+          "sha256": "1fdf5c05f4e2aa9aec3421542d0fe04a3b71d7ec553db81376e0f3481c92ae00",
+          "bytes": 14210966
+        },
+        "ROOT": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/delphes/detector.root",
+          "sha256": "9ae808933c4ed03cf57cc8a2c3e2542f65c735559ec9ecb70c26e4dc774b5fec",
+          "bytes": 3731578
+        },
+        "reco": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/root_validation/reco_events.jsonl",
+          "sha256": "0f49b64eaa669e0c0f3e8fa008d2e163551ae1c72f0e229ba951cfc8c476ddd4",
+          "bytes": 86420
+        },
+        "input_index": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/readback/input_event_index.dat",
+          "sha256": "7d382d88ed6b9119aa3a415257a3728613cce779c7dafa7379e46e28fcfefb72",
+          "bytes": 7102305
+        },
+        "truth": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/readback/signal_truth.dat",
+          "sha256": "393b684a9e6fe80607aefc6b8cb79c96d48f4c296e3ada248ff84b851c157856",
+          "bytes": 10212
+        },
+        "ancestry": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/prefix100/readback/hepmc_ancestry.jsonl",
+          "sha256": "48cf4ac56b619ac9b889e202026bbd5c26b502e1db900a52ff8ae91cf7828e8b",
+          "bytes": 49892
+        }
+      }
+    },
+    "full1000": {
+      "status": "PASS_ACTUAL_FULL_SIGNAL_CHAIN",
+      "source_events": 1000,
+      "validated_events": 1000,
+      "stage": "full1000",
+      "new_independent_events": 0,
+      "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "shower": {
+        "status": "SHOWER_WRITTEN_REQUIRES_NATIVE_READER",
+        "attempted": 1000,
+        "written": 1000,
+        "source_count": 1000,
+        "source_identity_failures": 0,
+        "next_calls": 1000,
+        "replacement_events": 0,
+        "new_independent_hard_events": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "pythia_seed": 710102
+      },
+      "generic_ReaderAscii": {
+        "validation_status": "PASS",
+        "validator": "actual_HepMC3_ReaderAscii_and_Pythia_ParticleData",
+        "source_identity": "ATTRIBUTES_VERIFIED",
+        "hepmc3_version": "3.03.01",
+        "pythia_version": "8.317",
+        "decompressed_file_sha256": "c3637940bb715e907d4066e6143617cc84f2700217bd5fa6b88a33067c7abe3f",
+        "source_file_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "source_sample_id": "S01_PHASE7C1000",
+        "pythia_run_id": "b13e5010f80b73449559",
+        "pythia_seed": 710102,
+        "N_requested_validation": 1000,
+        "N_readback": 1000,
+        "N_passed_validation": 1000,
+        "N_failed_validation": 0,
+        "N_not_assessed": 0,
+        "N_events_with_complete_physics_assessment": 1000,
+        "summary_scope": "All events completing graph/metadata/global checks, including explicitly listed mass-shell failures; events aborting assessment excluded from distributions",
+        "fatal_error": null,
+        "total_particles": 539836,
+        "total_vertices": 295497,
+        "mean_final_multiplicity": 206.87,
+        "mean_charged_final_multiplicity": 92.838,
+        "min_final_multiplicity": 105,
+        "max_final_multiplicity": 383,
+        "max_beam_to_stable_residual_gev": 5.397787596450598e-06,
+        "stable_colored_particle_count": 0,
+        "stable_free_quark_count": 0,
+        "stable_free_gluon_count": 0,
+        "stable_free_diquark_count": 0,
+        "hadronization_completion_test": "No stable ParticleData.colType!=0 object; no filtering",
+        "max_stable_mass_shell_residual_gev2": 2.7316381823183633e-08,
+        "max_stable_mass_shell_residual_to_tolerance": 8.015472384030773e-05,
+        "max_stable_energy_normalized_mass_difference": 9.724220820450662e-07,
+        "mass_shell_atol_gev2": 1e-07,
+        "mass_shell_rtol_energy_squared": 1e-09,
+        "mass_shell_test": "abs(E^2-|p|^2-m_generated^2) <= 1e-7 GeV^2 + 1e-9*max(E^2,1 GeV^2); generator-native mass fraction is diagnostic only, never an alternate acceptance gate",
+        "mass_shell_failed_particle_count": 0,
+        "closure_atol_gev": 1e-05,
+        "closure_rtol": 1e-09,
+        "beam_remnants_included": true,
+        "intermediate_particles_excluded_from_global_sum": true,
+        "weight_sum": 0.019069,
+        "weight_abs_sum": 0.019069,
+        "weight_sum_squared": 3.63626761e-07,
+        "positive_weights": 1000,
+        "negative_weights": 0,
+        "zero_weights": 0,
+        "particle_status_counts": {
+          "1": 206870,
+          "2": 103570,
+          "4": 2000,
+          "21": 2000,
+          "22": 2000,
+          "23": 2000,
+          "41": 5343,
+          "42": 5343,
+          "43": 5343,
+          "44": 35857,
+          "51": 61532,
+          "52": 28193,
+          "53": 2583,
+          "61": 2000,
+          "62": 30329,
+          "63": 3627,
+          "71": 38552,
+          "72": 530,
+          "73": 2160,
+          "91": 4
+        },
+        "particle_pdg_counts": {
+          "-20433": 14,
+          "-20423": 6,
+          "-20413": 10,
+          "-20323": 1,
+          "-20313": 19,
+          "-20213": 108,
+          "-14122": 2,
+          "-10433": 1,
+          "-10431": 3,
+          "-10423": 5,
+          "-10421": 6,
+          "-10413": 5,
+          "-10411": 4,
+          "-10323": 11,
+          "-10321": 5,
+          "-10313": 12,
+          "-10311": 6,
+          "-5324": 1,
+          "-5314": 1,
+          "-5312": 1,
+          "-5232": 3,
+          "-5224": 2,
+          "-5222": 6,
+          "-5214": 3,
+          "-5212": 1,
+          "-5132": 6,
+          "-5122": 48,
+          "-5114": 3,
+          "-5112": 4,
+          "-4324": 1,
+          "-4322": 3,
+          "-4314": 1,
+          "-4312": 1,
+          "-4232": 7,
+          "-4224": 2,
+          "-4222": 3,
+          "-4214": 5,
+          "-4212": 4,
+          "-4132": 4,
+          "-4124": 1,
+          "-4122": 80,
+          "-4114": 4,
+          "-4112": 9,
+          "-3334": 3,
+          "-3324": 11,
+          "-3322": 64,
+          "-3314": 7,
+          "-3312": 66,
+          "-3224": 69,
+          "-3222": 267,
+          "-3214": 70,
+          "-3212": 295,
+          "-3122": 790,
+          "-3114": 73,
+          "-3112": 258,
+          "-2224": 299,
+          "-2214": 342,
+          "-2212": 1997,
+          "-2114": 356,
+          "-2112": 2074,
+          "-1114": 312,
+          "-543": 2,
+          "-541": 2,
+          "-533": 66,
+          "-531": 100,
+          "-523": 314,
+          "-521": 447,
+          "-513": 304,
+          "-511": 455,
+          "-433": 138,
+          "-431": 243,
+          "-425": 11,
+          "-423": 316,
+          "-421": 771,
+          "-415": 11,
+          "-413": 306,
+          "-411": 367,
+          "-325": 4,
+          "-323": 1506,
+          "-321": 4909,
+          "-315": 2,
+          "-313": 1653,
+          "-311": 4666,
+          "-213": 6037,
+          "-211": 36833,
+          "-16": 109,
+          "-15": 51,
+          "-14": 244,
+          "-13": 260,
+          "-12": 243,
+          "-11": 824,
+          "-5": 4810,
+          "-4": 1182,
+          "-3": 2372,
+          "-2": 2969,
+          "-1": 3104,
+          "1": 5582,
+          "2": 9883,
+          "3": 2473,
+          "4": 1161,
+          "5": 4799,
+          "11": 809,
+          "12": 258,
+          "13": 248,
+          "14": 256,
+          "15": 59,
+          "16": 110,
+          "21": 170310,
+          "22": 96349,
+          "25": 14686,
+          "111": 43484,
+          "113": 6326,
+          "115": 1,
+          "130": 4830,
+          "211": 37724,
+          "213": 6143,
+          "221": 5330,
+          "223": 6225,
+          "225": 2,
+          "310": 4938,
+          "311": 4712,
+          "313": 1626,
+          "315": 4,
+          "321": 4957,
+          "323": 1588,
+          "325": 4,
+          "331": 762,
+          "333": 446,
+          "411": 399,
+          "413": 303,
+          "415": 12,
+          "421": 772,
+          "423": 301,
+          "425": 11,
+          "431": 217,
+          "433": 130,
+          "435": 2,
+          "441": 14,
+          "443": 28,
+          "445": 1,
+          "511": 435,
+          "513": 303,
+          "521": 451,
+          "523": 299,
+          "531": 102,
+          "533": 70,
+          "541": 1,
+          "543": 1,
+          "1114": 393,
+          "2101": 2020,
+          "2103": 691,
+          "2112": 2903,
+          "2114": 494,
+          "2203": 1284,
+          "2212": 5038,
+          "2214": 584,
+          "2224": 560,
+          "3112": 273,
+          "3114": 67,
+          "3122": 858,
+          "3212": 274,
+          "3214": 88,
+          "3222": 290,
+          "3224": 94,
+          "3312": 79,
+          "3314": 12,
+          "3322": 73,
+          "3324": 15,
+          "3334": 5,
+          "4112": 5,
+          "4114": 2,
+          "4122": 56,
+          "4132": 9,
+          "4212": 3,
+          "4214": 2,
+          "4222": 4,
+          "4224": 1,
+          "4232": 4,
+          "4314": 3,
+          "4322": 2,
+          "4324": 1,
+          "4332": 3,
+          "4334": 2,
+          "5112": 1,
+          "5122": 38,
+          "5132": 4,
+          "5212": 5,
+          "5214": 2,
+          "5224": 7,
+          "5232": 1,
+          "10221": 1,
+          "10311": 7,
+          "10313": 9,
+          "10321": 1,
+          "10323": 13,
+          "10411": 3,
+          "10413": 4,
+          "10421": 7,
+          "10423": 7,
+          "10431": 4,
+          "10433": 2,
+          "10441": 1,
+          "20213": 113,
+          "20313": 13,
+          "20413": 8,
+          "20423": 9,
+          "20433": 13,
+          "20443": 5,
+          "30443": 3,
+          "100441": 8,
+          "100443": 5,
+          "9000221": 2,
+          "9010221": 5
+        },
+        "final_photon_multiplicity_histogram": {
+          "41": 1,
+          "43": 1,
+          "44": 1,
+          "46": 1,
+          "52": 1,
+          "53": 2,
+          "54": 2,
+          "55": 1,
+          "56": 2,
+          "57": 2,
+          "58": 6,
+          "59": 3,
+          "60": 2,
+          "61": 7,
+          "62": 4,
+          "63": 10,
+          "64": 5,
+          "65": 6,
+          "66": 9,
+          "67": 6,
+          "68": 14,
+          "69": 10,
+          "70": 10,
+          "71": 14,
+          "72": 15,
+          "73": 10,
+          "74": 10,
+          "75": 10,
+          "76": 20,
+          "77": 13,
+          "78": 15,
+          "79": 18,
+          "80": 16,
+          "81": 20,
+          "82": 13,
+          "83": 28,
+          "84": 22,
+          "85": 20,
+          "86": 17,
+          "87": 22,
+          "88": 22,
+          "89": 19,
+          "90": 17,
+          "91": 16,
+          "92": 20,
+          "93": 17,
+          "94": 18,
+          "95": 21,
+          "96": 16,
+          "97": 20,
+          "98": 20,
+          "99": 18,
+          "100": 20,
+          "101": 12,
+          "102": 13,
+          "103": 9,
+          "104": 12,
+          "105": 15,
+          "106": 17,
+          "107": 12,
+          "108": 19,
+          "109": 14,
+          "110": 16,
+          "111": 4,
+          "112": 9,
+          "113": 5,
+          "114": 14,
+          "115": 13,
+          "116": 12,
+          "117": 8,
+          "118": 12,
+          "119": 10,
+          "120": 5,
+          "121": 5,
+          "122": 9,
+          "123": 3,
+          "124": 9,
+          "125": 7,
+          "126": 6,
+          "127": 3,
+          "128": 1,
+          "129": 4,
+          "130": 5,
+          "131": 2,
+          "132": 6,
+          "133": 8,
+          "134": 5,
+          "135": 2,
+          "136": 3,
+          "137": 4,
+          "138": 3,
+          "139": 4,
+          "140": 4,
+          "141": 1,
+          "142": 5,
+          "143": 2,
+          "144": 2,
+          "145": 3,
+          "146": 2,
+          "147": 3,
+          "148": 2,
+          "149": 2,
+          "150": 2,
+          "152": 2,
+          "154": 1,
+          "155": 1,
+          "156": 1,
+          "157": 2,
+          "158": 1,
+          "159": 1,
+          "160": 2,
+          "163": 1,
+          "167": 1,
+          "176": 2,
+          "177": 1,
+          "179": 1,
+          "182": 1,
+          "185": 1
+        },
+        "all_record_b_hadron_multiplicity_histogram": {
+          "2": 95,
+          "3": 444,
+          "4": 416,
+          "5": 7,
+          "6": 10,
+          "7": 17,
+          "8": 10,
+          "9": 1
+        },
+        "all_record_c_hadron_multiplicity_histogram": {
+          "0": 1,
+          "1": 12,
+          "2": 105,
+          "3": 209,
+          "4": 220,
+          "5": 144,
+          "6": 123,
+          "7": 75,
+          "8": 47,
+          "9": 33,
+          "10": 18,
+          "11": 8,
+          "12": 3,
+          "13": 1,
+          "14": 1
+        },
+        "stable_b_hadron_multiplicity_histogram": {
+          "0": 1000
+        },
+        "stable_c_hadron_multiplicity_histogram": {
+          "0": 1000
+        },
+        "heavy_hadron_count_definition": "inclusive installed ParticleData.nQuarksInCode(pid,5/4)>0; particle/antiparticle symmetric; B_c appears in both categories; all-record and stable are separate; no direct-hard-origin assignment",
+        "failure_detail_count": 0,
+        "failure_details_truncated": false,
+        "failures": []
+      },
+      "signal_ReaderAscii": {
+        "status": "PASS_ACTUAL_NATIVE_SIGNAL_HEPMC_READBACK",
+        "validated_events": 1000,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "Hbb_and_Hgammagamma_events": 1000,
+        "raw_LHE_weight_sum_pb": 19.069,
+        "Info_weight_sum_pb": 19.069,
+        "converter_weight_sum_pb": 19.069,
+        "max_Info_over_LHE_deviation": 0,
+        "source_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+        "HepMC_sha256": "c3637940bb715e907d4066e6143617cc84f2700217bd5fa6b88a33067c7abe3f",
+        "input_index_sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+        "truth_index_sha256": "8633893a909fa8d7d30a532e935389b8dd0ba732d471f6d7278ea8b656314d1d"
+      },
+      "native_ROOT": {
+        "status": "PASS_NATIVE_SIGNAL_ROOT_READBACK",
+        "ROOT_version": "6.40.04",
+        "CXX_standard": 20,
+        "entries": 1000,
+        "validated": 1000,
+        "original_source_count": 1000,
+        "invalid": 0,
+        "skipped": 0,
+        "ROOT_sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+        "input_index_sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+        "truth_index_sha256": "8633893a909fa8d7d30a532e935389b8dd0ba732d471f6d7278ea8b656314d1d",
+        "card_sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+        "reco_sha256": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+        "selection": "UNCHANGED_PHASE6C",
+        "detector_scope": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "missing_pair_values": null
+      },
+      "independent_cutflow": {
+        "status": "PASS_INDEPENDENT_ACTUAL_SIGNAL_CUTFLOW_WEIGHT_ALGEBRA",
+        "cutflow": [
+          {
+            "stage": "00_input",
+            "raw_events": 1000,
+            "original_source_events": 1000,
+            "acceptance": 1.0,
+            "acceptance_wilson95": [
+              0.996173241514445,
+              1
+            ],
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.019069,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 3.63626761e-07,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 5.0598559995260286e-05,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 2.560214273593955e-12,
+            "source_MC_sampling_variance_pb2": 0.0,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": 0.0,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "single_real_detector_tag_outcome; detector_tag_variance_not_independently_measured"
+          },
+          {
+            "stage": "01_photons",
+            "raw_events": 484,
+            "original_source_events": 1000,
+            "acceptance": 0.484,
+            "acceptance_wilson95": [
+              0.4531466082917357,
+              0.514975847979802
+            ],
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.009229395999999999,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.75995352324e-07,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 2.448970303770598e-05,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 1.239143708419474e-12,
+            "source_MC_sampling_variance_pb2": 9.09045063054895e-08,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": 8.000238694790206e-07,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "single_real_detector_tag_outcome; detector_tag_variance_not_independently_measured"
+          },
+          {
+            "stage": "02_jets",
+            "raw_events": 403,
+            "original_source_events": 1000,
+            "acceptance": 0.403,
+            "acceptance_wilson95": [
+              0.37302615583096504,
+              0.4337162353152327
+            ],
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.007684807,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 1.46541584683e-07,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 2.0391219678089896e-05,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 1.0317663522583639e-12,
+            "source_MC_sampling_variance_pb2": 8.757289895470572e-08,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": 7.852267783205276e-07,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "single_real_detector_tag_outcome; detector_tag_variance_not_independently_measured"
+          },
+          {
+            "stage": "03_two_btags",
+            "raw_events": 143,
+            "original_source_events": 1000,
+            "acceptance": 0.143,
+            "acceptance_wilson95": [
+              0.12266731749770252,
+              0.16606498806098383
+            ],
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.002726867,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 5.1998626823e-08,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 7.2355940793222215e-06,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 3.6611064112393557e-13,
+            "source_MC_sampling_variance_pb2": 4.460743061792894e-08,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": 5.604202800876735e-07,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "single_real_detector_tag_outcome; detector_tag_variance_not_independently_measured"
+          },
+          {
+            "stage": "04_mgg_105_160",
+            "raw_events": 143,
+            "original_source_events": 1000,
+            "acceptance": 0.143,
+            "acceptance_wilson95": [
+              0.12266731749770252,
+              0.16606498806098383
+            ],
+            "zero_count_one_sided95_upper": null,
+            "RAW_PRODUCTION_WEIGHT_sum_pb": 0.002726867,
+            "RAW_PRODUCTION_WEIGHT_sumw2_pb2": 5.1998626823e-08,
+            "MODEL_BR_ONLY_WEIGHT_sum_pb": 7.2355940793222215e-06,
+            "MODEL_BR_ONLY_WEIGHT_sumw2_pb2": 3.6611064112393557e-13,
+            "source_MC_sampling_variance_pb2": 4.460743061792894e-08,
+            "MODEL_BR_ONLY_source_MC_standard_error_pb": 5.604202800876735e-07,
+            "REFERENCE_BR_WEIGHT": null,
+            "ADOPTED_PHYSICAL_WEIGHT": null,
+            "scope": "single_real_detector_tag_outcome; detector_tag_variance_not_independently_measured"
+          }
+        ],
+        "diagnostics": {
+          "events": 1000,
+          "truth_H_gamma_geometric_matches": {
+            "0": 60,
+            "1": 299,
+            "2": 641
+          },
+          "truth_b_jet_geometric_matches": {
+            "0": 43,
+            "1": 402,
+            "2": 555
+          },
+          "undefined_mass_counts": {
+            "m_gamma_gamma": 516,
+            "m_bb": 695,
+            "m_bb_gamma_gamma": 857,
+            "m_jj": 140
+          },
+          "matching_scope": "geometric diagnostic only, not calibrated detector efficiency"
+        },
+        "model_BR_factor": 0.002653445906720871,
+        "BR_factor_applications": 1,
+        "BR_scope": "MODEL_BR_ONLY",
+        "source_denominator": 1000
+      },
+      "artifacts": {
+        "HepMC": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/shower/shower.hepmc3",
+          "sha256": "c3637940bb715e907d4066e6143617cc84f2700217bd5fa6b88a33067c7abe3f",
+          "bytes": 143259820
+        },
+        "ROOT": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/delphes/detector.root",
+          "sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+          "bytes": 36703913
+        },
+        "reco": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/root_validation/reco_events.jsonl",
+          "sha256": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+          "bytes": 867694
+        },
+        "input_index": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/input_event_index.dat",
+          "sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+          "bytes": 71527185
+        },
+        "truth": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/signal_truth.dat",
+          "sha256": "8633893a909fa8d7d30a532e935389b8dd0ba732d471f6d7278ea8b656314d1d",
+          "bytes": 102878
+        },
+        "ancestry": {
+          "path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/hepmc_ancestry.jsonl",
+          "sha256": "c099eff1b8e7c1ea1b0e420108979d8d46504b3b37d6a5e913636e88bf55797c",
+          "bytes": 499860
+        }
+      }
+    }
+  },
+  "full_count": 1000,
+  "full_stage": "full1000",
+  "model_BR_only": true,
+  "new_independent_source_events": 1000
+}

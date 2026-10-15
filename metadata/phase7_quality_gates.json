@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "PASS_7B_7C_WITH_7D_INCONCLUSIVE",
+  "gates": {
+    "A": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "B": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "C": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "D": {
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
+    },
+    "E": {
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
+    },
+    "F": {
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
+    },
+    "G": {
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
+    },
+    "H": {
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
+    },
+    "I": {
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
+    },
+    "J": {
+      "status": "PASS",
+      "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
+    },
+    "K": {
+      "status": "PASS",
+      "scope": "actual full-mass same-point ME ratios valid; does not certify source support or absolute rates"
+    },
+    "L": {
+      "status": "PASS",
+      "scope": "actual support/uncertainty assessed; kappa2.5 and5 INCONCLUSIVE_REWEIGHTING, input ESS36.6943/19.5442; selected ESS16.0736/7.65012"
+    },
+    "M": {
+      "status": "PASS",
+      "scope": "7100 native ROOT entries independently read; six backgrounds separate; MODEL_BR_ONLY/EXPLORATORY only"
+    },
+    "N": {
+      "status": "PASS",
+      "scope": "13 actual final CLI cases PASS plus genuine B100/C1000/all-resume D commands; original source/ROOT/table/registry hashes unchanged; historical B seed deviation disclosed"
+    },
+    "O": {
+      "status": "PASS",
+      "scope": "469 existing source tests:461 PASS/8 SKIP;13 campaign tests PASS; native7100 ROOT records and full ReaderAscii chains; independent15-point fresh ME and Decimal regression"
+    },
+    "P": {
+      "status": "PASS",
+      "verified_data_head": "41d13febe4f65cb5f2d1343b6a2a853b83945510",
+      "scope": "actual GitHub byte readback of all184 new files and three successful exact-data-head CI checks; final report-only head requires its separate final readback/checks"
+    },
+    "Q": {
+      "status": "BLOCKED",
+      "reason": "ME_PS_OVERLAP_UNKNOWN"
+    },
+    "R": {
+      "status": "BLOCKED",
+      "reason": "NO_CALIBRATED_PHOTON_FAKE_MODEL"
+    },
+    "S": {
+      "status": "BLOCKED",
+      "reason": "NO_OFFICIAL_ATLAS_DETECTOR_CALIBRATION"
+    },
+    "T": {
+      "status": "BLOCKED",
+      "reason": "OVERLAP_AND_CALIBRATION"
+    }
+  },
+  "phases": {
+    "7b": "PASS",
+    "7c": "PASS",
+    "7d": "COMPLETED_NUMERICAL_SCAN_WITH_INCONCLUSIVE_REWEIGHTING_2.5_5_AND_ABSOLUTE_RATE"
+  },
+  "source_event_budget_ceiling": 1100,
+  "independent_source_events_reserved": 1100,
+  "complete_source_events_validated": 1100,
+  "BR_scope": "MODEL_BR_ONLY",
+  "new_PDF_PNG": "NONE",
+  "absolute_rate_status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION",
+  "unknowns": [
+    "absolute integration convergence",
+    "independent benchmark cross sections",
+    "BR uncertainty",
+    "PDF/scale variations",
+    "full detector variance",
+    "isolated generator-only selected variance"
+  ],
+  "inconclusive_reweighting_benchmarks": [
+    2.5,
+    5.0
+  ]
+}
