@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "verdict": "PARTIAL_SIGNAL_MODEL_READINESS",
+  "physical_signal_events": 0,
+  "gates": {
+    "A": "PASS_EXISTING_ENVIRONMENT_AND_GIT_BASE_PRESERVED",
+    "B": "PASS_NATIVE_FULL_MT_MB_MODEL_SOURCE_AND_COMPILE",
+    "C": "PASS_ACTUAL_NOBORN_PARSER_AND_SQRVIRT_STANDALONE_WITH_EXPORT_LIMIT",
+    "D": "PASS_ACTUAL_BOX_TRIANGLE_ATTACHED_HHH_AND_R2_SOURCE",
+    "E": "PASS_NUMERICAL_MT_VARIATION_AT_FIXED_YUKAWA_AND_MOMENTA",
+    "F": "PASS_SM_COUPLING_SOURCE_AND_DIAGNOSTIC_KAPPA_MAPPING",
+    "G": "PASS_ACTUAL_FIXED_POINT_MATRIX_ELEMENTS_WITH_WARD_NOT_EVALUATED",
+    "H": "PASS_METHOD_ONLY_UNBIASED_TWO_ORIGINAL_HIGGS_ASSIGNMENT",
+    "I": "PASS_METHOD_ONLY_EXACTLY_ONCE_BR_ALGEBRA",
+    "J": "PARTIAL_API_COMPILED_NATIVE_PER_LINEAGE_DECAYER_BLOCKED_REAL_CLOSURE_NOT_EVALUATED",
+    "K": "PASS_METHOD_ONLY_UNCHANGED_DELPHES_CARD_AND_COMPILED_ROOT_CARTESIAN_NULL_INTERFACE",
+    "L": "PASS_PHYSICALLY_EXECUTED_DRY_RUN_AND_REJECTED_NON_DRY_MODE",
+    "M": "PASS_REGRESSION_AND_ACTUAL_SIX_STREAM_6000_ROOT_READBACK",
+    "N": "PENDING_GITHUB_PUBLICATION_AND_FINAL_HEAD_CI",
+    "O": "NOT_AUTHORIZED_REAL_SIGNAL_LHE_GENERATION",
+    "P": "NOT_EVALUATED_REAL_DOUBLE_HIGGS_DECAY_AND_WEIGHT_CLOSURE",
+    "Q": "NOT_EVALUATED_REAL_SIGNAL_HEPMC_DELPHES_ROOT"
+  },
+  "current_failed_gates": [],
+  "physical_pilot_blockers": [
+    "native_unbiased_mixed_Higgs_decayer",
+    "signal_inclusive_BR_initialization_and_adoption",
+    "production_PDF_alpha_s_pairing",
+    "actual_dynamic_mHH_over_2_scale_readback_and_integration_path"
+  ],
+  "unknown_not_pass": [
+    "Ward_identity",
+    "independent_amplitude_provider",
+    "future_production_runtime_disk_acceptance"
+  ],
+  "smoke10": "NOT_AUTHORIZED",
+  "pilot100": "NOT_AUTHORIZED",
+  "reference1000": "NOT_AUTHORIZED",
+  "source_cross_section_pb": "NOT_EVALUATED_UNTIL_REAL_INTEGRATION"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "METHOD_ASSIGNMENT_ONLY_REAL_CLOSURE_NOT_EVALUATED",
+  "original_higgs_pdgs": [
+    25,
+    25
+  ],
+  "distinct_original_lineages": 2,
+  "final_modes": [
+    "b bbar",
+    "gamma gamma"
+  ],
+  "assignment": "SHA256_independent_seed_source_index_low_bit_selects_gamma_lineage_uniform_50_50",
+  "kinematic_ranking_used": false,
+  "artificial_daughter_replacement": false,
+  "global_PDG25_force_for_mixed_modes": false,
+  "future_native_bridge": "BLOCKED_IMPLEMENT_AND_VALIDATE_PER_LINEAGE_DECAYER_BEFORE_EVENT_AUTHORIZATION",
+  "momentum_mother_daughter_closure": "NOT_EVALUATED_NO_PHYSICAL_SIGNAL_EVENTS",
+  "GENERATOR_MODEL_BR": {
+    "H_bb": null,
+    "H_gammagamma": null,
+    "status": "NOT_INITIALIZED_FOR_SIGNAL"
+  },
+  "EXTERNAL_REFERENCE_BR": {
+    "H_bb": null,
+    "H_gammagamma": null,
+    "status": "NOT_ADOPTED"
+  },
+  "ADOPTED_STUDY_BR": {
+    "H_bb": null,
+    "H_gammagamma": null,
+    "status": "BLOCKED_PENDING_EXPLICIT_MODEL_OR_REFERENCE_ADOPTION"
+  },
+  "FORCED_SAMPLING_PROBABILITY": {
+    "one_of_two_assignments": 0.5,
+    "mixed_final_state_given_contract": 1.0
+  },
+  "identical_H_factor": 2,
+  "missing_decay_formula": "2*BR_H_bb*BR_H_gammagamma",
+  "source_decay_ids": [],
+  "already_applied_decay_factors": [],
+  "H_bb_decay_model": "proposed_Pythia8_317_nonzero_bottom_Yukawa_initialized_partial_width_required",
+  "H_gammagamma_decay_model": "proposed_Pythia8_317_loop_width_initialized_inclusive_table_required"
+}
