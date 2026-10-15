@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scope": "METHOD_AND_API_READINESS_ONLY_NO_SIGNAL_EVENTS",
+  "Pythia": {
+    "version": "8.317",
+    "profile": "cards/proposed_pythia_signal.cmnd",
+    "original_PDG25_lineages": 2,
+    "H1_H2": "analysis_identifiers_not_new_PDG_codes",
+    "per_lineage_mixed_decay_bridge": "BLOCKED_NOT_IMPLEMENTED_OR_PHYSICALLY_VALIDATED",
+    "required_future_checks": ["original_LHE_source_index_correspondence", "mother_daughter_lineage", "one_bb_one_gammagamma", "parent_p4_conservation", "inclusive_initialized_decay_widths", "signed_Info_weight_transfer", "no_silent_resampling_or_source_loss"]
+  },
+  "HepMC": {
+    "version": "3.3.1",
+    "ReaderAscii": "API_COMPILED_REAL_SIGNAL_READBACK_NOT_EVALUATED",
+    "required_future_checks": ["native_ReaderAscii", "units_GeV_mm", "source_index_and_original_N", "two_original_Higgs_lineages", "vertex_p4_conservation", "raw_and_BR_weight_ledgers"]
+  },
+  "Delphes": {
+    "version": "3.5.1",
+    "card": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+    "card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+    "real_signal_run": "NOT_EVALUATED",
+    "btag_scope": "FAST_SIM_ATLAS_LIKE_BIT0_NOT_OFFICIAL_ATLAS"
+  },
+  "ROOT": {
+    "version": "6.40.04",
+    "CXX_standard": 20,
+    "p4": "Cartesian_PxPyPzE",
+    "missing_pairs": null,
+    "observables": ["m_gamma_gamma", "m_bb", "m_bb_gamma_gamma", "m_jj", "photon_lead_sublead_pT", "jet_lead_sublead_pT", "photon_jet_btag_multiplicities", "DeltaR_gamma_gamma", "DeltaR_bb"]
+  },
+  "unchanged_Phase6C_selection": {
+    "photons_min": 2, "photon_pT_gev": 25, "photon_abs_eta_max": 2.37,
+    "photon_crack_excluded_abs_eta": [1.37, 1.52], "leading_photon_pT_strict_gt_gev": 35,
+    "jet_pT_gev": 25, "jet_abs_eta_max": 2.5, "bit0_btags_min": 2,
+    "m_gamma_gamma_inclusive_gev": [105, 160], "optimization": "NOT_AUTHORIZED_BEFORE_REAL_SIGNAL"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "RETAINED_FAILURES_AND_FINAL_SUCCESS",
+  "attempts": [
+    {
+      "id": "initial_inspector",
+      "result": "FAILED_INVALID_DIAGRAM_PROPERTY",
+      "events": 0
+    },
+    {
+      "id": "optional_tool_prompt",
+      "result": "STOPPED_BEFORE_OPTIONAL_DOWNLOAD",
+      "events": 0
+    },
+    {
+      "id": "offline_setting",
+      "result": "FAILED_UNSUPPORTED_PJFRY_SETTING",
+      "events": 0
+    },
+    {
+      "id": "generic_standalone",
+      "result": "FAILED_NATIVE_WAVEFUNCTION_RANK_EXPORT",
+      "events": 0
+    },
+    {
+      "id": "reviewed02",
+      "result": "FAILED_INSPECTOR_OMITTED_ATTACHED_TREE_STRUCTURES",
+      "receipt_sha256": "83b549a01544a7609d05ed0b9b52d3d927f656a3d50bfe0fa29ac06770abb186",
+      "events": 0
+    },
+    {
+      "id": "reviewed03",
+      "result": "FAILED_NATIVE_LHA_20_CHARACTER_VALUE_TRUNCATION",
+      "receipt_sha256": "1b0c2c56cc7c8619f7f5d1f8f94f9c6d0c97807eae7997271b8005a1fc0f5794",
+      "events": 0
+    },
+    {
+      "id": "reviewed04",
+      "result": "FAILED_THRESHOLD_QUADRATIC_CLOSURE_DEFAULT_LOOP_TOLERANCE",
+      "threshold_kl2_absolute_residual": 1.609519881261153e-10,
+      "events": 0
+    },
+    {
+      "id": "reviewed05",
+      "result": "NUMERICS_PASSED_CLI_FAILED_NO_OUTPUT_GUARD_ON_COPIED_UPSTREAM_MADSPIN_FIXTURE",
+      "events": 0
+    },
+    {
+      "id": "final06",
+      "result": "PASS_EXECUTED_PUBLIC_NUMERICAL_COMMAND",
+      "receipt_sha256": "ff1e796dc4faedd0c11fbe6747dc115d3bcce576a48a66282b6ec1a2f1b49074",
+      "events": 0
+    }
+  ],
+  "retained_private_logs": true,
+  "final_scope": "fixed-point matrix elements only; no integration/unweighting",
+  "final_precision_policy": {
+    "MLStabThres": 1e-09,
+    "CTStabThres": 1e-09,
+    "reduction": "CutTools_OPP_OneLOop",
+    "helicity_filter": 0
+  }
+}

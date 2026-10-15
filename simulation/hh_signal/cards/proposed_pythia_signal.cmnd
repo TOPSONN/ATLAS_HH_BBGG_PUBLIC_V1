@@ -1,0 +1,9 @@
+! READINESS PROFILE ONLY; native per-lineage decay bridge is not implemented.
+Beams:frameType = 4
+PartonLevel:ISR = on
+PartonLevel:FSR = on
+HadronLevel:all = on
+HadronLevel:Hadronize = on
+Random:setSeed = on
+Random:seed = 20261121
+! Deliberately no global 25:onIfMatch: cannot assign different modes by PDG.

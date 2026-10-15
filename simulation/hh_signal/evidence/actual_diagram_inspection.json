@@ -1,0 +1,2844 @@
+{
+  "noborn": {
+    "interface": "MadGraph",
+    "model": "loop_sm",
+    "processes": [
+      "Process: g g > h h WEIGHTED<=8 [ noborn = QCD ]"
+    ],
+    "diagrams": [
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 131,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 4,\n    'state': True,\n    'from_group': False,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 128,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 132,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 4,\n    'state': True,\n    'from_group': False,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 129,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      }
+    ]
+  },
+  "sqrvirt": {
+    "interface": "MadLoop",
+    "model": "loop_sm",
+    "processes": [
+      "Process: g g > h h [ sqrvirt = QCD ]"
+    ],
+    "diagrams": [
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 131,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 4,\n    'state': True,\n    'from_group': False,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 128,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -5,
+              -5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -5,
+              5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 7,
+            "pdgs": [
+              5,
+              5,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 31,
+            "pdgs": [
+              5,
+              5,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              5,
+              5
+            ],
+            "couplings": "{(0, 0): 'GC_33'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              5,
+              -5
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 132,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 4,\n    'state': True,\n    'from_group': False,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[{\n    'id': 129,\n    'legs': [{\n    'id': 21,\n    'number': 1,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 21,\n    'number': 2,\n    'state': False,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}, {\n    'id': 25,\n    'number': 3,\n    'state': True,\n    'from_group': True,\n    'loop_line': False,\n    'onshell': None,\n    'polarization': []\n}]\n}]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [
+          {
+            "interaction_id": 11,
+            "pdgs": [
+              25,
+              25,
+              25
+            ],
+            "couplings": "{(0, 0): 'GC_30'}"
+          }
+        ],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              -6,
+              -6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              -6,
+              6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      },
+      {
+        "kind": "loop_diagrams",
+        "vertices": [
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": 8,
+            "pdgs": [
+              6,
+              6,
+              21
+            ],
+            "leg_pdgs": [
+              21,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_5'}",
+            "orders": {
+              "QCD": 1
+            }
+          },
+          {
+            "interaction_id": 57,
+            "pdgs": [
+              6,
+              6,
+              25
+            ],
+            "leg_pdgs": [
+              25,
+              6,
+              6
+            ],
+            "couplings": "{(0, 0): 'GC_37'}",
+            "orders": {
+              "QED": 1
+            }
+          },
+          {
+            "interaction_id": -1,
+            "pdgs": [],
+            "leg_pdgs": [
+              6,
+              -6
+            ],
+            "couplings": "",
+            "orders": {}
+          }
+        ],
+        "tree_vertices": [],
+        "orders": {
+          "QED": 2,
+          "QCD": 2,
+          "WEIGHTED": 6
+        },
+        "CT_vertices": "[]"
+      }
+    ]
+  }
+}
