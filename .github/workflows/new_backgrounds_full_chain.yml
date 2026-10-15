@@ -1,0 +1,45 @@
+name: New background full-chain integrity
+on:
+  push:
+    branches: [main, codex/phase6g-backgrounds-b04-b05-b06-1k]
+    paths:
+      - 'simulation/new_backgrounds/**'
+      - 'reference_samples/new_backgrounds/**'
+      - 'reports/phase6g_*'
+      - 'metadata/phase6g_*'
+      - '.github/workflows/new_backgrounds_full_chain.yml'
+  pull_request:
+    paths:
+      - 'simulation/new_backgrounds/**'
+      - 'reference_samples/new_backgrounds/**'
+      - 'reports/phase6g_*'
+      - 'metadata/phase6g_*'
+      - '.github/workflows/new_backgrounds_full_chain.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_and_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test process-specific methods and failure guards
+        run: python3 -B -m unittest discover -s simulation/new_backgrounds/tests -v
+      - name: Preserve earlier methods and references
+        run: |
+          python3 -B -m unittest discover -s simulation/zh_pilot/tests -v
+          python3 -B -m unittest discover -s simulation/heavy_flavour_forensics/tests -v
+          python3 -B -m unittest discover -s simulation/rare_backgrounds/tests -v
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: Verify published physical references and provenance
+        run: python3 -B simulation/new_backgrounds/scripts/validate_references.py --repo .
+      - name: Audit all outgoing payload and unchanged historical files
+        run: python3 -B simulation/new_backgrounds/scripts/audit_payload.py --tracked

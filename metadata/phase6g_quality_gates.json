@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "task": "PHASE6G_THREE_NEW_BACKGROUNDS_FULL_CHAIN_1K_V1",
+  "status": "PHYSICAL_FULL_CHAINS_PASS_GITHUB_PUBLICATION_PENDING",
+  "physical_chain_verdict": "PASS_THREE_FULL_CHAINS_WITH_SCOPE_LIMITS",
+  "gates": {
+    "A": {
+      "status": "PASS",
+      "scope": "Actual retained environment and453 original tracked blobs preserved, rechecked after all production"
+    },
+    "B": {
+      "status": "PASS",
+      "scope": "B04_ZH_BBGG genuine MG1000 and independent full LHE"
+    },
+    "C": {
+      "status": "PASS",
+      "scope": "Actual Hgg/Zbb ancestry and MODEL_BR_ONLY closure"
+    },
+    "D": {
+      "status": "PASS",
+      "scope": "Full actual1000 HepMC3 and1000 validated Delphes ROOT"
+    },
+    "E": {
+      "status": "PASS",
+      "scope": "B05_TTH_HGG genuine MG1000 and independent full LHE"
+    },
+    "F": {
+      "status": "PASS",
+      "scope": "Actual Higgs model BR closure; inclusive Pythia top/W supported model, production-decay spin correlations NOT_VALIDATED"
+    },
+    "G": {
+      "status": "PASS",
+      "scope": "Full actual1000 HepMC3 and1000 validated Delphes ROOT"
+    },
+    "H": {
+      "status": "PASS",
+      "scope": "B06_BBGJ genuine MG1000 and independent full LHE"
+    },
+    "I": {
+      "status": "PASS",
+      "scope": "Full actual1000 HepMC3 and1000 validated Delphes ROOT"
+    },
+    "J": {
+      "status": "PASS",
+      "scope": "Three genuine single source streams, 3000 qualified original indices; prefixes contribute no independent events"
+    },
+    "K": {
+      "status": "PASS",
+      "scope": "Native ROOT variables/null contracts and independent numerical readback"
+    },
+    "L": {
+      "status": "PASS",
+      "scope": "16 actual retained regression suites;42 C++ tests; original full3000 read-only ROOT"
+    },
+    "M": {
+      "status": "PASS",
+      "scope": "Documented CLI physically executed on original source streams, bounded B04 recovery preserves producers"
+    },
+    "N": {
+      "status": "UNKNOWN",
+      "scope": "Actual selected reference SHA verification plus final-head GitHub CI",
+      "local_selected_reference_preparation": "PASS",
+      "remote_hash_verification": "NOT_VERIFIED_YET",
+      "final_head_CI": "NOT_EXECUTED_YET"
+    },
+    "O": {
+      "status": "BLOCKED",
+      "scope": "B06 calibrated jet-to-photon fake model absent"
+    },
+    "P": {
+      "status": "UNKNOWN",
+      "scope": "No validated continuum/resonance overlap or matching prescription; combined physical yields BLOCKED"
+    },
+    "Q": {
+      "status": "BLOCKED",
+      "scope": "No official ATLAS detector or adopted precision BR calibration"
+    }
+  }
+}

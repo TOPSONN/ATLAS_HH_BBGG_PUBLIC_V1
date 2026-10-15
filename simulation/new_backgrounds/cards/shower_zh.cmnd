@@ -1,0 +1,10 @@
+! Phase6F proposal: read AFTER the unchanged reviewed Phase6B baseline.
+! Preferred MG5 Z->bb chain already supplies the Z decay and spin correlations.
+! No Z forcing; no BR factor is applied by this settings overlay.
+! SM-only policy: retain audited Pythia resonance model rather than importing
+! MG5 SLHA total-width defaults. Exact source settings and model tables are bound.
+SLHA:readFrom = 0
+23:m0 = 91.188
+25:m0 = 125.0
+25:onMode = off
+25:onIfMatch = 22 22

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "ACTUAL_PROCESS_TABLE_COMPARISON_WITH_SOURCE_INSPECTION",
+  "processes": {
+    "B04_ZH": {
+      "actual_model_masses_GeV": {
+        "6": "173",
+        "24": "80.385000000000005",
+        "23": "91.188000000000002",
+        "25": "125"
+      },
+      "total_H_width_GeV": 0.004083421987988366,
+      "gamma_partial_width_GeV": 9.377706466759062e-06,
+      "inclusive_model_BR_gamma_gamma": 0.0022965313147512443,
+      "actual_inclusive_table_sha256": "b1215349f648a60d2483b3b660c218334360f90fed35ae62f7e35016e344d15c",
+      "actual_effective_table_sha256": "e5118782a44f85650edde6637ac72b5cc9d204ed058418bfe649a922c79c0937"
+    },
+    "B05_TTH": {
+      "actual_model_masses_GeV": {
+        "6": "173",
+        "24": "80.418999999999997",
+        "23": "91.188000000000002",
+        "25": "125"
+      },
+      "total_H_width_GeV": 0.004075973715716397,
+      "gamma_partial_width_GeV": 9.364740303472128e-06,
+      "inclusive_model_BR_gamma_gamma": 0.002297546784308979,
+      "actual_inclusive_table_sha256": "07bc5d0ff2bf28a2153ad8e7818c22eb9c766d8f0a61c60891c69be9387e7358",
+      "actual_effective_table_sha256": "6271392cf650b801b1078a382a9e89314feb8460a12b3d09d32b62d246a7ecde"
+    }
+  },
+  "observed_difference": "Both Mt=173, MZ=91.188 and MH=125. B04 MW=80.385 while B05 explicitly uses MW=80.419 from its frozen source-compatible overlay. Actual total/partial H widths and inclusive BR differ.",
+  "source_inspection": {
+    "scope": "SOURCE_INSPECTION_ONLY_NOT_A_NEW_MODEL_SIMULATION",
+    "version": "8.317",
+    "commit": "83a5c9986f30746cfb390435a9b10ac55a758fca",
+    "relative_path": "src/ResonanceWidths.cc",
+    "sha256": "9ecde574a7af1698633f83571a1d283357b418136807034507ca1946a43ab372",
+    "line_ranges": [
+      [
+        879,
+        893
+      ],
+      [
+        969,
+        979
+      ],
+      [
+        1021,
+        1023
+      ],
+      [
+        1146,
+        1203
+      ]
+    ],
+    "finding": "Initialized mW enters the Higgs width prefactor and the charged-W contribution to the gamma-gamma loop; widths and inclusive BR therefore depend on model masses."
+  },
+  "causal_inference": "The measured difference is consistent with the documented mass-dependent model and different W masses. A controlled reinitialization isolating the sole numerical cause was not performed.",
+  "factor_policy": "Use each actual initialized process BR once; do not coerce it to a PhaseF or external reference value.",
+  "new_Pythia_initializations": 0,
+  "new_Pythia_next_calls": 0,
+  "official_calibrated_BR": "NOT_CLAIMED"
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ACTUAL_READ_ONLY_SIGNED_JET_REVALIDATION",
+  "new_MC_events_generated": 0,
+  "Delphes_invocations": 0,
+  "original_source_denominator": 1000,
+  "actual_ROOT_records_reassessed": 110,
+  "independent_source_statistics_added": 0,
+  "root_version": "6.40.04",
+  "cpp_standard": 20,
+  "source_SHA_before": "8b6b62770e75c14b5d4ef4a185efa2ca11cf7e5a451136393eae3e121fbbc655",
+  "source_SHA_after": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+  "native_binary_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+  "method_checks": {
+    "status": "METHOD_ONLY",
+    "checks": 6,
+    "events_processed": 0,
+    "scope": "finite derived p4, overflow rejection, actual bounded signed native jet, material negative input and spacelike summed-vector rejection; no ROOT input"
+  },
+  "focused_controls": {
+    "Windows": {
+      "discovered": 29,
+      "passed": 28,
+      "skipped": 1,
+      "exit_code": 0
+    },
+    "WSL": {
+      "discovered": 29,
+      "passed": 29,
+      "skipped": 0,
+      "exit_code": 0
+    }
+  },
+  "diagnosis": {
+    "source_event_index": 14,
+    "native_jet_index": 0,
+    "stored_signed_mass_GeV": -1.3486991292666062e-06,
+    "stored_signed_mass_squared_GeV2": -1.8189893412845017e-12,
+    "Cartesian_mass_squared_GeV2": -1.8183635873530175e-12,
+    "historical_double_cancellation_bound_GeV2": 4.264015898928536e-11,
+    "inconsistent_long_double_mass_bound_GeV2": 8.328156052594795e-14,
+    "all100_scan_affected_single_jets": 9,
+    "all100_scan_photon_or_pair_failures": 0,
+    "interpretation": "bounded signed native mass permitted by original polar input check; inappropriate strict summed-vector check on individual jet; detector bytes retained"
+  },
+  "actual_readonly_native_results": [
+    {
+      "subset": 10,
+      "status": "PASS_NATIVE_BACKGROUND_RECORD_READBACK",
+      "read": 10,
+      "processed": 10,
+      "invalid": 0,
+      "input_hashes_before_after": {
+        "detector.root": "52fac8ddb8582be0a918df7363372492b03df9ef17eeb437d19c419a3f5dfa68",
+        "detector_card.tcl": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+        "input.hepmc3": "533dfbfb2dd77d7c46151d6d24a35c99e13d98e073c26f04f0486a8c95841fc8",
+        "input_event_index.dat": "047dd78d41f74fdecf93ac8914796685d29b1a9c0098a4f0297de772fbdaa01d",
+        "background_truth_index.dat": "a45b4b721982836ddfbef6101d5ddbcd2b0cd92cd1014251fb88631d567bd957",
+        "native_validation.json": "2e675320361dcebb6e02da900f37d5e24d2eaa14d1ddb42e9a941f670d01f63a"
+      },
+      "prefix10_derived_bytes_identical": {
+        "reco_events.jsonl": true,
+        "cutflow.csv": true
+      },
+      "cutflow_csv": "stage,raw_events,source_weight_sum_pb,source_weight_sum_squared_pb2\n00_input,10,0.00089538000000000009,8.0170534440000016e-08\n01_photons,5,0.00044769000000000005,4.0085267220000008e-08\n02_jets,2,0.00017907600000000002,1.6034106888000003e-08\n03_two_btags,1,8.9538000000000009e-05,8.0170534440000016e-09\n04_mgg_105_160,1,8.9538000000000009e-05,8.0170534440000016e-09\n",
+      "native_report_sha256": "2e675320361dcebb6e02da900f37d5e24d2eaa14d1ddb42e9a941f670d01f63a"
+    },
+    {
+      "subset": 100,
+      "status": "PASS_NATIVE_BACKGROUND_RECORD_READBACK",
+      "read": 100,
+      "processed": 100,
+      "invalid": 0,
+      "input_hashes_before_after": {
+        "detector.root": "490e39374e8a6dc9ffe626d2f97f0c07eba59786d03e98482b148c4326de0b3e",
+        "detector_card.tcl": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+        "input.hepmc3": "60d8022ac5e295667be19f57f8a510800703e7e8229dce25d3756f0a41bb7312",
+        "input_event_index.dat": "4f19e8ebdf3583d373f52ea103346d81757ca1b641e8d728c17023f87d9a0a63",
+        "background_truth_index.dat": "cfa8de1c8755703c0ede38185fcc5af967fed236fea7c5609ba25a63a16aa7e0",
+        "native_validation.json": "7c214cd151d5e95ae83c2932f6eece3a960d4daedc02906bdb94dc636f39536f"
+      },
+      "prefix10_derived_bytes_identical": null,
+      "cutflow_csv": "stage,raw_events,source_weight_sum_pb,source_weight_sum_squared_pb2\n00_input,100,0.0089538000000000009,8.0170534440000016e-07\n01_photons,41,0.0036710580000000004,3.2869919120400007e-07\n02_jets,23,0.0020593740000000002,1.8439222921200004e-07\n03_two_btags,13,0.0011639940000000001,1.0422169477200002e-07\n04_mgg_105_160,13,0.0011639940000000001,1.0422169477200002e-07\n",
+      "native_report_sha256": "46b0c0e74e5edae0786300beee6b05db9c067abe1283199b54c3214e1ddffb2e"
+    }
+  ],
+  "actual_readonly_reuse_API": {
+    "status": "PASS_ACTUAL_READ_ONLY_DETECTOR_REUSE_API",
+    "new_MC_events": 0,
+    "Delphes_invocations": 0,
+    "actual_records_revalidated": 110,
+    "independent_source_statistics_added": 0,
+    "records": [
+      {
+        "subset": 10,
+        "status": "PASS_NATIVE_BACKGROUND_RECORD_READBACK",
+        "root_sha256": "52fac8ddb8582be0a918df7363372492b03df9ef17eeb437d19c419a3f5dfa68",
+        "reco_event_sha256": "4de47ecee91b0a10aab650d247f5b20e53d7a0aa9ebdd0633bbeb75f4fe57700",
+        "cutflow_sha256": "bdddd74d1ff366e0862346f7afe202bc6951f5b534d705407360c1ff872bf764",
+        "detector_reuse": {
+          "status": "PASS_READ_ONLY_EXISTING_DETECTOR_REVALIDATION",
+          "original_ROOT_sha256": "52fac8ddb8582be0a918df7363372492b03df9ef17eeb437d19c419a3f5dfa68",
+          "original_source_manifest_sha256": "494a1cc13ee5f0c6a271946b61ce8c1ab5e414a098c73aa1f5e4f5c7f7734dd7",
+          "original_native_report_sha256": "2e675320361dcebb6e02da900f37d5e24d2eaa14d1ddb42e9a941f670d01f63a",
+          "Delphes_invocations_in_this_stage": 0,
+          "new_MC_events": 0,
+          "independent_source_statistics_added": 0
+        }
+      },
+      {
+        "subset": 100,
+        "status": "PASS_NATIVE_BACKGROUND_RECORD_READBACK",
+        "root_sha256": "490e39374e8a6dc9ffe626d2f97f0c07eba59786d03e98482b148c4326de0b3e",
+        "reco_event_sha256": "3eac7a8c37c119e617796ff788310bd928d3a34af4bcb2caaa0e8e1af76f5c96",
+        "cutflow_sha256": "f756d9dc64b8af3db542c0e19421cebe24e516f35f51f044b28e30824f9e0be7",
+        "detector_reuse": {
+          "status": "PASS_READ_ONLY_EXISTING_DETECTOR_REVALIDATION",
+          "original_ROOT_sha256": "490e39374e8a6dc9ffe626d2f97f0c07eba59786d03e98482b148c4326de0b3e",
+          "original_source_manifest_sha256": "494a1cc13ee5f0c6a271946b61ce8c1ab5e414a098c73aa1f5e4f5c7f7734dd7",
+          "original_native_report_sha256": "7c214cd151d5e95ae83c2932f6eece3a960d4daedc02906bdb94dc636f39536f",
+          "Delphes_invocations_in_this_stage": 0,
+          "new_MC_events": 0,
+          "independent_source_statistics_added": 0
+        }
+      }
+    ],
+    "commands": [
+      {
+        "stage": "independent_native_root_zh_10",
+        "exit_code": 0
+      },
+      {
+        "stage": "independent_native_root_zh_100",
+        "exit_code": 0
+      }
+    ]
+  },
+  "owned_source_sha256": {
+    "simulation/new_backgrounds/delphes_stage.py": "b8e401857dc8f89a235602f5e9aba1b6268058eb1a4443a5e4203afebeff7e82",
+    "simulation/new_backgrounds/src/analyze_background_root.cxx": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+    "simulation/new_backgrounds/tests/test_detector.py": "505fa6299576794dfd80c77d5b885bb2e855d63d676198563d9ac0ab4c1cc689"
+  },
+  "preservation": "historical Physics.hxx, detector card, selections, native signed p4 and all weights unchanged; original ROOT/input/card/failure evidence hashes retained",
+  "scientific_scope": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS; subset QA does not establish full1000 ROOT completion"
+}

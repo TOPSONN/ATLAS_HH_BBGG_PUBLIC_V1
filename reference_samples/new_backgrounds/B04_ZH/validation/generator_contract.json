@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_SOURCE_CONTRACT_PENDING_ACTUAL_PRODUCTION",
+  "source_identity": {
+    "mg5_version": "3.5.16",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "source_tag": "v3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo.git"
+  },
+  "reviewed_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "authorization_attachment_sha256": "65b25230b2c50c1c4c7bb253887a8934268732dfca8be9b05eb8aed18fd22d91",
+  "generation_policy": {
+    "events_per_process": 1000,
+    "energy_gev": 13000,
+    "workers": 1,
+    "one_independent_source_run_per_process": true,
+    "retry_or_replacement_events": false,
+    "initial_seeds": {
+      "zh": 20261104,
+      "tth": 20261105,
+      "bbgj": 20261106
+    },
+    "allowed_seed_range": [
+      1,
+      900000000
+    ]
+  },
+  "cards": [
+    {
+      "id": "zh.mg5",
+      "path": "simulation/new_backgrounds/cards/zh.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "id": "tth.mg5",
+      "path": "simulation/new_backgrounds/cards/tth.mg5",
+      "sha256": "5dbb8ab17cc7944d62763c35ec9d9676cf75c018a328c767782210a52c304676"
+    },
+    {
+      "id": "bbgj.mg5",
+      "path": "simulation/new_backgrounds/cards/bbgj.mg5",
+      "sha256": "ea5efaa0478e54e609c072b421f83a0f0370a1129a63a186106d23976755f92c"
+    },
+    {
+      "id": "run_card.dat",
+      "path": "simulation/new_backgrounds/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "id": "param_card.dat",
+      "path": "simulation/new_backgrounds/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    }
+  ],
+  "physics": {
+    "model": "sm-no_b_mass",
+    "proton_pdgs": [
+      21,
+      2,
+      4,
+      1,
+      3,
+      5,
+      -2,
+      -4,
+      -1,
+      -3,
+      -5
+    ],
+    "flavour_scheme": "FIVE_FLAVOUR_MASSLESS_B_C",
+    "sqrt_s_gev": 13000,
+    "masses_gev": {
+      "Z": 91.188,
+      "H": 125.0,
+      "b": 0.0,
+      "c": 0.0,
+      "t": 173.0,
+      "W_derived_EW": 80.41900244575616,
+      "W_serialized_dependent_param": 80.419
+    },
+    "widths_gev": {
+      "Z": 2.441404,
+      "H": 0.00638233934,
+      "t": 1.4915,
+      "W": 2.0476
+    },
+    "stable_source_width_roles": "Source H stable in B04/B05; source tops stable in B05, so their widths are retained input conventions rather than hard-process decay factors. B04 Z resonance uses actual fixed GammaZ and Breit-Wigner window.",
+    "electroweak_inputs": {
+      "aEWM1": 132.507,
+      "Gf": 1.16639e-05,
+      "scheme": "alpha_EW_Gf_MZ",
+      "MW_formula": "sqrt(MZ^2/2 + sqrt(MZ^4/4 - (alpha_EW*pi*MZ^2)/(Gf*sqrt(2))))",
+      "derived_MW_gev": 80.41900244575616,
+      "derived_sin2_thetaW": 0.22224648578577766
+    },
+    "yukawa_inputs": {
+      "bottom": 0.0,
+      "charm": 0.0,
+      "restriction": "zero compiled into restricted model; omitted from independent YUKAWA entries",
+      "top_mass_parameter_gev": 173.0,
+      "top_YUKAWA6_input_gev": 173.0
+    },
+    "pdf": {
+      "pdlabel": "cteq6l1",
+      "implementation": "MG5_BUILT_IN_TABLE",
+      "built_in_pdf_id": 10042,
+      "lhaid_card": 10042,
+      "lhaid_is_used": false,
+      "pdf_order": 1,
+      "active_flavours": 5,
+      "param_card_alpha_s_MZ": 0.129783,
+      "pdfwrap_runtime_alpha_s_MZ": 0.13,
+      "alpha_s_running_loops": 1,
+      "alpha_s_source_convention": "MG5 common_run_interface uses0.129783 for dependent param-card update; Fortran built-in CTEQ6L1 PDFwrap uses0.130 at MZ with one-loop running. Actual per-event alpha_s values are preserved and validated as finite positive; QCD2 ttH and QCD3 bbgj depend on runtime alpha_s. No alpha_s uncertainty is adopted.",
+      "table_path": "Template/LO/lib/Pdfdata/cteq6l1.tbl",
+      "limitation": "Legacy LO PDF for reproducible pilot preparation; no precision ZH prediction or PDF uncertainty is claimed."
+    },
+    "source_event_weight_strategy": "MG5 LHE3 IDWTUP=-4 event_norm=average; actual signed XWGTUP_pb contribution divided once by full original1000, conditional on independent actual source strategy validation.",
+    "matching_merging": "ickkw0, no MLM/CKKW matching or merging",
+    "precision_scope": "Selected tree-level LO components. B04 qqbar ZH, B05 QCD ttH, B06 one-prompt-photon bbgj. No loop-induced ggZH, NLO, complete background sum, luminosity or official ATLAS calibration."
+  },
+  "profiles": {
+    "zh": {
+      "profile": "B04_ZH_BBGG",
+      "process_command": "generate p p > z h QCD=0 QED=2, z > b b~",
+      "production_orders": {
+        "QCD": 0,
+        "QED": 2
+      },
+      "run_overrides": {},
+      "source_included_decay_ids": [
+        "Z_to_b_bbar"
+      ],
+      "missing_decay_ids": [
+        "H_to_gamma_gamma"
+      ],
+      "source_topology": "Z_status2_to_b_bbar_and_stable_H",
+      "scale_rationale": "Exact frozen Phase6F muR=muF=MZ+MH=216.188 GeV LO pilot.",
+      "scale_configuration": {
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "muR_gev": 216.188,
+        "muF1_gev": 216.188,
+        "muF2_gev": 216.188,
+        "dynamical_scale_choice": -1,
+        "dynamical_choice_active": false
+      },
+      "generation_cuts": {
+        "cut_decays": false,
+        "bwcutoff": 15.0,
+        "ptb": 0.0,
+        "ptj": 0.0,
+        "pta": 0.0,
+        "etab": -1.0,
+        "etaj": -1.0,
+        "etaa": -1.0,
+        "drbb": 0.0,
+        "drbj": 0.0,
+        "drab": 0.0,
+        "draj": 0.0,
+        "drjj": 0.0,
+        "ptgmin": 0.0,
+        "maxjetflavor": 5,
+        "collective_sorted_cuts": "All minima0/maxima-1 in exact frozen template; no user hook/matching.",
+        "Z_mass_window_gev": [
+          54.56694,
+          127.80906
+        ]
+      }
+    },
+    "tth": {
+      "profile": "B05_TTH_HGG",
+      "process_command": "generate p p > t t~ h QCD=2 QED=1",
+      "production_orders": {
+        "QCD": 2,
+        "QED": 1
+      },
+      "run_overrides": {
+        "run_tag": "phase6g_tth_1k",
+        "scale": 235.5,
+        "dsqrt_q2fact1": 235.5,
+        "dsqrt_q2fact2": 235.5
+      },
+      "source_included_decay_ids": [],
+      "missing_decay_ids": [
+        "H_to_gamma_gamma"
+      ],
+      "source_topology": "stable_t_tbar_H_inclusive_top_W_decay_later",
+      "scale_rationale": "Fixed muR=muF=(2*MT+MH)/2=MT+MH/2=235.5 GeV. A process-specific heavy associated-production threshold-half convention, not optimized and without scale-uncertainty claim.",
+      "top_decay_strategy": {
+        "method": "PYTHIA_INCLUSIVE_SUPPORTED_TOP_W_DECAYS",
+        "source_tops_stable": true,
+        "reason": "Installed MadSpin source exists but a compatible end-to-end ttH inclusive decay runtime has not been verified. This bounded pilot uses the explicitly authorized simplified Pythia route instead of adopting unverified MadSpin behavior.",
+        "production_decay_spin_correlations": "NOT_VALIDATED",
+        "restricted_W_channels": false,
+        "exclusive_top_W_BR_factor": "NONE_INCLUSIVE_MODEL_DECAYS"
+      },
+      "scale_configuration": {
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "muR_gev": 235.5,
+        "muF1_gev": 235.5,
+        "muF2_gev": 235.5,
+        "dynamical_scale_choice": -1,
+        "dynamical_choice_active": false
+      },
+      "generation_cuts": {
+        "cut_decays": false,
+        "bwcutoff": 15.0,
+        "ptb": 0.0,
+        "ptj": 0.0,
+        "pta": 0.0,
+        "etab": -1.0,
+        "etaj": -1.0,
+        "etaa": -1.0,
+        "drbb": 0.0,
+        "drbj": 0.0,
+        "drab": 0.0,
+        "draj": 0.0,
+        "drjj": 0.0,
+        "ptgmin": 0.0,
+        "maxjetflavor": 5,
+        "collective_sorted_cuts": "All minima0/maxima-1 in exact frozen template; no user hook/matching."
+      }
+    },
+    "bbgj": {
+      "profile": "B06_BBGJ",
+      "process_command": "generate p p > b b~ a j4 QCD=3 QED=1",
+      "production_orders": {
+        "QCD": 3,
+        "QED": 1
+      },
+      "run_overrides": {
+        "run_tag": "phase6g_bbgj_1k",
+        "scale": 125.0,
+        "dsqrt_q2fact1": 125.0,
+        "dsqrt_q2fact2": 125.0,
+        "maxjetflavor": 4,
+        "ptb": 25.0,
+        "ptj": 25.0,
+        "pta": 25.0,
+        "etab": 2.5,
+        "etaj": 2.5,
+        "etaa": 2.5,
+        "drbb": 0.4,
+        "drbj": 0.4,
+        "drab": 0.4,
+        "draj": 0.4,
+        "drjj": 0.4
+      },
+      "source_included_decay_ids": [],
+      "missing_decay_ids": [],
+      "source_topology": "b_bbar_one_prompt_photon_one_j4",
+      "scale_rationale": "Fixed muR=muF=125 GeV retained continuum-study pilot convention. Selected finite LO component; no precision physical prediction or scale uncertainty claimed.",
+      "cut_classification": {
+        "source": "Template/LO/SubProcesses/setcuts.f",
+        "sha256": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18",
+        "classification_lines": [
+          216,
+          224
+        ],
+        "b_pt_eta_lines": [
+          290,
+          295
+        ],
+        "pair_deltaR_lines": [
+          347,
+          357
+        ],
+        "policy": "maxjetflavor4 assigns b to is_a_b; u/d/s/c/g to is_a_j. ptgmin0 keeps explicit pta and separation cuts active. All b,bbar,j4,a pT25 GeV and abs(eta)2.5, every distinct b/bbar/j/a pair deltaR0.4.",
+        "cuts_file_sha256": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c",
+        "born_photons": 1,
+        "photon_fake_yield": "BLOCKED_UNCALIBRATED"
+      },
+      "scale_configuration": {
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "muR_gev": 125.0,
+        "muF1_gev": 125.0,
+        "muF2_gev": 125.0,
+        "dynamical_scale_choice": -1,
+        "dynamical_choice_active": false
+      },
+      "generation_cuts": {
+        "cut_decays": false,
+        "bwcutoff": 15.0,
+        "ptb": 25.0,
+        "ptj": 25.0,
+        "pta": 25.0,
+        "etab": 2.5,
+        "etaj": 2.5,
+        "etaa": 2.5,
+        "drbb": 0.4,
+        "drbj": 0.4,
+        "drab": 0.4,
+        "draj": 0.4,
+        "drjj": 0.4,
+        "ptgmin": 0.0,
+        "maxjetflavor": 4,
+        "collective_sorted_cuts": "All minima0/maxima-1 in exact frozen template; no user hook/matching.",
+        "classification_only_note": "maxjetflavor4 makes b-specific cuts effective; this does not change the reviewed five-flavour source proton/PDF into a four-flavour production scheme."
+      }
+    }
+  },
+  "limitations": [
+    "Tree-level LO selected hard-process components; no ggZH, NLO correction, official ATLAS calibration or complete physical background sum.",
+    "Stable source Higgs for B04/B05; missing model H->gamma gamma factor must be determined from actual LHE/Info/HepMC weight closure before applying once.",
+    "Massless b/c model keeps the top Yukawa but zero bottom/charm Yukawa. Built-in CTEQ6L1 LO PDF; no PDF or scale systematics adopted.",
+    "Actual amplitude and official card readback gate runs immediately before each single export; integration starts only if that actual gate passes."
+  ],
+  "frozen_phase6f_reference_physics": {
+    "model": "sm-no_b_mass",
+    "proton_pdgs": [
+      21,
+      2,
+      4,
+      1,
+      3,
+      5,
+      -2,
+      -4,
+      -1,
+      -3,
+      -5
+    ],
+    "flavour_scheme": "FIVE_FLAVOUR_MASSLESS_B_C",
+    "sqrt_s_gev": 13000,
+    "masses_gev": {
+      "Z": 91.188,
+      "H": 125.0,
+      "b": 0.0,
+      "c": 0.0
+    },
+    "widths_gev": {
+      "Z": 2.441404,
+      "H": 0.00638233934
+    },
+    "width_convention": "FIXED_RESTRICTED_SM_INPUTS_NOT_A_CALCULATED_PHYSICAL_BR_TABLE; stable external particles on shell; Zbb uses MG Breit-Wigner resonance window.",
+    "electroweak_inputs": {
+      "aEWM1": 132.507,
+      "Gf": 1.16639e-05,
+      "scheme": "alpha_EW_Gf_MZ",
+      "MW_formula": "sqrt(MZ^2/2 + sqrt(MZ^4/4 - (alpha_EW*pi*MZ^2)/(Gf*sqrt(2))))",
+      "derived_MW_gev": 80.41900244575616,
+      "derived_sin2_thetaW": 0.22224648578577766
+    },
+    "yukawa_inputs": {
+      "bottom": 0.0,
+      "charm": 0.0,
+      "restriction": "zero compiled into restricted model; omitted from independent YUKAWA entries"
+    },
+    "pdf": {
+      "pdlabel": "cteq6l1",
+      "implementation": "MG5_BUILT_IN_TABLE",
+      "built_in_pdf_id": 10042,
+      "lhaid_card": 10042,
+      "lhaid_is_used": false,
+      "pdf_order": 1,
+      "active_flavours": 5,
+      "param_card_alpha_s_MZ": 0.129783,
+      "pdfwrap_runtime_alpha_s_MZ": 0.13,
+      "alpha_s_running_loops": 1,
+      "alpha_s_source_convention": "MG5 common_run_interface uses0.129783 for dependent param-card update; Fortran PDFwrap uses0.130 at runtime. Pure QCD0 Born amplitude is independent of alpha_s.",
+      "table_path": "Template/LO/lib/Pdfdata/cteq6l1.tbl",
+      "limitation": "Legacy LO PDF for reproducible pilot preparation; no precision ZH prediction or PDF uncertainty is claimed."
+    },
+    "scales": {
+      "prescription": "FIXED_MZ_PLUS_MH",
+      "muR_gev": 216.188,
+      "muF1_gev": 216.188,
+      "muF2_gev": 216.188,
+      "fixed_ren_scale": true,
+      "fixed_fac_scale": true,
+      "dynamical_scale_choice": -1,
+      "dynamical_scale_choice_active": false,
+      "rationale": "Fixed associated-production threshold scale set by the two massive produced particles; an explicit LO pilot convention, not optimized or uncertainty-validated."
+    },
+    "generation_cuts": {
+      "policy": "NO_ANALYSIS_ACCEPTANCE_CUTS",
+      "cut_decays": false,
+      "bwcutoff": 15.0,
+      "Z_mass_window_gev": [
+        54.56694,
+        127.80906
+      ],
+      "mass_window_is_analysis_cut": false,
+      "ptheavy": 0.0,
+      "dsqrt_shat": 0.0,
+      "mmbb": 0.0,
+      "mmbbmax": -1.0,
+      "ptb": 0.0,
+      "etab": -1.0,
+      "drbb": 0.0,
+      "custom_fcts": [],
+      "limitation": "cut_decays does not disable all collective/sorted cuts; frozen card sets their minima to zero and maxima to -1."
+    },
+    "run_values": {
+      "run_tag": "phase6f_zh_pilot",
+      "nevents": 100,
+      "iseed": 620101,
+      "lpp1": 1,
+      "lpp2": 1,
+      "ebeam1": 6500.0,
+      "ebeam2": 6500.0,
+      "pdlabel": "cteq6l1",
+      "lhaid": 10042,
+      "fixed_ren_scale": true,
+      "fixed_fac_scale": true,
+      "scale": 216.188,
+      "dsqrt_q2fact1": 216.188,
+      "dsqrt_q2fact2": 216.188,
+      "dynamical_scale_choice": -1,
+      "scalefact": 1.0,
+      "bwcutoff": 15.0,
+      "cut_decays": false,
+      "ptj": 0.0,
+      "pta": 0.0,
+      "ptl": 0.0,
+      "etaj": -1.0,
+      "etaa": -1.0,
+      "etal": -1.0,
+      "drjj": 0.0,
+      "drll": 0.0,
+      "draa": 0.0,
+      "draj": 0.0,
+      "drjl": 0.0,
+      "dral": 0.0,
+      "maxjetflavor": 5,
+      "ickkw": 0,
+      "use_syst": false,
+      "event_norm": "average",
+      "lhe_version": 3.0
+    },
+    "original_RunCardLO_defaults_for_changed_values": {
+      "run_tag": "tag_1",
+      "nevents": 10000,
+      "iseed": 0,
+      "pdlabel": "nn23lo1",
+      "lhaid": 230000,
+      "fixed_ren_scale": false,
+      "fixed_fac_scale": false,
+      "scale": 91.188,
+      "dsqrt_q2fact1": 91.188,
+      "dsqrt_q2fact2": 91.188,
+      "ptj": 20.0,
+      "pta": 10.0,
+      "ptl": 10.0,
+      "etaj": 5.0,
+      "etaa": 2.5,
+      "etal": 2.5,
+      "drjj": 0.4,
+      "drll": 0.4,
+      "draa": 0.4,
+      "draj": 0.4,
+      "drjl": 0.4,
+      "dral": 0.4,
+      "maxjetflavor": 4,
+      "use_syst": true
+    },
+    "original_restricted_model_alpha_s_MZ": 0.118,
+    "param_card_alpha_s_MZ": 0.129783,
+    "original_restricted_model_WH_full_precision": 0.00638233934,
+    "param_card_writer_default_WH_rounding": 0.006382339,
+    "production_scope": "TREE_LEVEL_QQBAR_ZH_ONLY",
+    "loop_induced_gg_ZH_included": false,
+    "H_gamma_gamma_tree_decay_included": false
+  }
+}

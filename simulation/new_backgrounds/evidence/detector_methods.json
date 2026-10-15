@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "PASS_METHODS_AND_RETAINED_INPUT_CHECKS_ONLY",
+  "generated_at_utc": "2026-10-14T13:23:46.481580+00:00",
+  "new_physical_events_generated": 0,
+  "new_delphes_simulation_events": 0,
+  "physical_chain_acceptance": "NOT_IMPLIED",
+  "portable_failure_and_numerical_tests": {
+    "Windows": {
+      "discovered": 29,
+      "passed": 28,
+      "skipped": 1,
+      "skip_reason": "retained actual WSL HepMC input unavailable on Windows",
+      "exit_code": 0
+    },
+    "WSL_Ubuntu": {
+      "discovered": 29,
+      "passed": 29,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "scope": "synthetic input used only to reject failure paths; numerical methods and read-only retained actual samples"
+  },
+  "native_compile": {
+    "status": "PASS_COMPILE_AND_BUILD_INFO_ONLY",
+    "build_info": {
+      "profile": "B04_B05_B06_NATIVE_SOURCE_CORRESPONDENCE",
+      "root_version": "6.40.04",
+      "cpp_standard": 20,
+      "events_processed": 0
+    },
+    "method_tests": {
+      "status": "METHOD_ONLY",
+      "checks": 6,
+      "events_processed": 0,
+      "scope": "finite derived p4, overflow rejection, actual bounded signed native jet, material negative input and spacelike summed-vector rejection; no ROOT input"
+    },
+    "source_sha256": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+    "binary_sha256": "f2501474ec4a566036d522cdfef355888252c604e034bc7bb6971cd72e7a67b3",
+    "private_original_build_receipt_sha256": "967ec562aa726ac1b86ae2df605ab7604f57a813353b706aba834b3fa210a9ef"
+  },
+  "retained_actual_HepMC_prefix_test": {
+    "status": "PASS_READ_ONLY_EXACT_PREFIX_BYTES",
+    "original_events": 1000,
+    "subset_events": [
+      10,
+      100
+    ],
+    "original_plain_HepMC_sha256_unchanged": "97ebc8dcbdd7ff249581a584f23e42e4d722961f65e8a370f6ca052d85c98db0",
+    "independent_new_hard_events": 0,
+    "independent_new_shower_events": 0,
+    "scope": "existing B01 generated input tests byte extraction; does not validate a new B04/B05/B06 chain"
+  },
+  "retained_ROOT_failure_counter_test": {
+    "schema_version": 1,
+    "status": "PASS_READ_ONLY_FAILURE_COUNTER_TEST",
+    "generated_events": 0,
+    "existing_input_entries": 1000,
+    "input_sha256_before_after": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+    "native_analyzer_sha256": "734f26d76d90d8ce26937d0b960b7b17ab7d3cd5e9b7f79c93ee90bf065f40e8",
+    "summary_sha256": "cc4f5fe39734859326231272ef5e9bc0af5b98a8fb8f38850f82bb70610c8cbb",
+    "exit_code": 2,
+    "native_report": {
+      "schema_version": 1,
+      "status": "FAILED_NATIVE_BACKGROUND_RECORD_READBACK",
+      "expected_events": 10,
+      "ROOT_entries": 1000,
+      "events_assessed": 0,
+      "read": 0,
+      "processed": 0,
+      "invalid": 0,
+      "events_not_assessed": 1000,
+      "diagnostic": "ROOT entries differ from exact input subset",
+      "physical_pilot_acceptance": false
+    }
+  },
+  "owned_sources_sha256": {
+    "simulation/new_backgrounds/delphes_stage.py": "b8e401857dc8f89a235602f5e9aba1b6268058eb1a4443a5e4203afebeff7e82",
+    "simulation/new_backgrounds/analyze_results.py": "6f6225b4d77600f268f037fd3080583960ab8076c0aa74003ac83ad4f0f3ec43",
+    "simulation/new_backgrounds/src/analyze_background_root.cxx": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509",
+    "simulation/new_backgrounds/tests/test_detector.py": "505fa6299576794dfd80c77d5b885bb2e855d63d676198563d9ac0ab4c1cc689"
+  },
+  "detector_card_original_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "scientific_scope": "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS; no calibrated fake rate, luminosity, detector/BR systematic or discovery claim",
+  "focused_home_path_refactor_recheck": {
+    "timestamp_utc": "2026-10-14T11:57:37.760503+00:00",
+    "scope": "Path.home resolves the same retained physical file in WSL; no personal username literal in published tests",
+    "Windows_discovered": 25,
+    "Windows_passed": 24,
+    "Windows_skipped": 1,
+    "WSL_discovered": 25,
+    "WSL_passed": 25,
+    "WSL_skipped": 0,
+    "exit_codes": {
+      "Windows": 0,
+      "WSL": 0
+    },
+    "new_physical_events_generated": 0,
+    "previous_method_evidence_sha256": "72cea95ff1870f68af312d63774b1172e94eda0c5bb028446e310474e08ef495"
+  },
+  "root_output_filename_privacy_recheck": {
+    "evidence_sha256": "de1aff40e6a94ada687e6e8953abd899c2595fa1fb870b073719688f383ed0aa",
+    "Windows_discovered": 25,
+    "Windows_passed": 24,
+    "Windows_skipped": 1,
+    "WSL_discovered": 25,
+    "WSL_passed": 25,
+    "WSL_skipped": 0,
+    "new_physical_events_generated": 0,
+    "previous_method_evidence_sha256": "e1297f61f06ae9bf906c3508cb2d3436fda781b8a8dd0e72cb6c5c00f38173a3"
+  },
+  "signed_jet_precision_revalidation": {
+    "evidence_sha256": "869adc268697f19cfcf9c3e87b9bd492cb9e66809c75a6f06c613bc7796f80fe",
+    "scope": "actual existing B04 detector10/100 re-read; zero new MC or Delphes; prefix10 derived data byte-identical; original failed report preserved",
+    "previous_method_evidence_sha256": "11487bd605e5deb9272e5c5bd36d1374d6f684e4718f17469e73f19d398f81a9"
+  }
+}

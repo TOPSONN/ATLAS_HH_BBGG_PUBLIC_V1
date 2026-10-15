@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_FULL1000_NUMERICAL_READBACK",
+  "process": "tth",
+  "source_events": 1000,
+  "native_root_sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+  "reco_events_sha256": "f20484e45630450bb020fb118e3a96241f2ff7e80694046f9078e50e37e7b6e0",
+  "cutflow_sha256": "062ab7653e30a13b7b44ada128ac8f33ca944916214f029a13fecc982b92bb5a",
+  "cutflow": [
+    {
+      "stage": "00_input",
+      "raw_events": 1000,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 1.0,
+        "binomial_plugin_standard_error": 0.0,
+        "wilson95_low": 0.996173241514445,
+        "wilson95_high": 1.0,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": 0.9970087504549047,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.399182,
+      "source_weight_sum_squared_pb2": 0.000159346269124,
+      "source_sampling_variance_pb2": 0.0,
+      "source_sampling_standard_error_pb": 0.0,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.0009171393204540268,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 8.411445331228742e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 0.0
+    },
+    {
+      "stage": "01_photons",
+      "raw_events": 327,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.327,
+        "binomial_plugin_standard_error": 0.014834790190629594,
+        "wilson95_low": 0.2986345103891364,
+        "wilson95_high": 0.35668954804686565,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.130532514,
+      "source_weight_sum_squared_pb2": 5.2106230003548e-05,
+      "source_sampling_variance_pb2": 3.510259538777558e-05,
+      "source_sampling_standard_error_pb": 0.005924744331004974,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00029990455778846676,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 2.7505426233117984e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 1.3612377285553332e-05
+    },
+    {
+      "stage": "02_jets",
+      "raw_events": 322,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.322,
+        "binomial_plugin_standard_error": 0.014775520295407536,
+        "wilson95_low": 0.29376911381672366,
+        "wilson95_high": 0.351593212204134,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.128536604,
+      "source_weight_sum_squared_pb2": 5.1309498657928e-05,
+      "source_sampling_variance_pb2": 3.4822662752828014e-05,
+      "source_sampling_standard_error_pb": 0.005901073017073082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00029531886118619666,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 2.7084853966556546e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 1.3557991334348744e-05
+    },
+    {
+      "stage": "03_two_btags",
+      "raw_events": 131,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.131,
+        "binomial_plugin_standard_error": 0.010669536072388528,
+        "wilson95_low": 0.11149250620200898,
+        "wilson95_high": 0.15333164156033072,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.052292842,
+      "source_weight_sum_squared_pb2": 2.0874361255244e-05,
+      "source_sampling_variance_pb2": 1.815797790871575e-05,
+      "source_sampling_standard_error_pb": 0.004261217890312082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00012014525097947751,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 1.1018993383909651e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 9.790347461126416e-06
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "raw_events": 131,
+      "original_source_events": 1000,
+      "acceptance": {
+        "estimate": 0.131,
+        "binomial_plugin_standard_error": 0.010669536072388528,
+        "wilson95_low": 0.11149250620200898,
+        "wilson95_high": 0.15333164156033072,
+        "zero_survivor_one_sided95_upper": null,
+        "all_survivor_one_sided95_lower": null,
+        "zero_means": null
+      },
+      "source_weight_sum_pb": 0.052292842,
+      "source_weight_sum_squared_pb2": 2.0874361255244e-05,
+      "source_sampling_variance_pb2": 1.815797790871575e-05,
+      "source_sampling_standard_error_pb": 0.004261217890312082,
+      "definition": "N/(N-1)*(sum(c_i^2)-sum(c_i)^2/N); c_i=XWGTUP_i/N*selection_i",
+      "MODEL_BR_ONLY_weight_sum_pb": 0.00012014525097947751,
+      "MODEL_BR_ONLY_weight_sum_squared_pb2": 1.1018993383909651e-10,
+      "MODEL_BR_ONLY_sampling_standard_error_pb": 9.790347461126416e-06
+    }
+  ],
+  "generator_integration_uncertainty_pb": 0.001975393,
+  "uncertainty_scope": "source sampling includes this one realized tag/detector stream; integration error separate",
+  "tag_sampling_variance": "NOT_SEPARATELY_MEASURED; no additional detector or tag redraws",
+  "event_correlations": "cuts nested within each source event; stage uncertainties must not be combined independently",
+  "model_br_contract": {
+    "status": "PASS_MODEL_BR_WEIGHT_CLOSURE",
+    "scope": "MODEL_BR_ONLY",
+    "factor": 0.002297546784308979,
+    "factor_applications": 1,
+    "weight_closure": "PASS",
+    "ledger_sha256": "8ef615bb14bf15d19bd999df930b14f2c30f83bd6fd41c319ce26dae0c30ac87"
+  },
+  "official_detector_or_br_calibration": "BLOCKED",
+  "B06_photon_fake_rate": "NOT_APPLICABLE",
+  "background_overlap": "BLOCKED_NO_VALIDATED_OVERLAP_OR_MATCHING_SCHEME",
+  "luminosity_applied": false,
+  "selection_optimized": false,
+  "original_receipt_sha256": "08733f6776ff812052c14b58a1245b5ec13fd8330d784e557c86e1917990857d",
+  "public_projection_scope": "Numbers/hashes unchanged; known private artifact locations replaced by logical roles; native QA not reexecuted"
+}

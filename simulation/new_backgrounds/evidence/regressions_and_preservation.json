@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "status": "PASS_EXISTING_REGRESSIONS_AND_ALL_HISTORY_PRESERVATION",
+  "created_at_utc": "2026-10-14T11:47:30.444675+00:00",
+  "baseline_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "new_physical_events_generated_by_these_checks": 0,
+  "scope": "Existing B01/B02/B03 and installed software, read-only native full3000 ROOT assessment; METHOD_ONLY upstream/numerical/adversarial fixtures do not establish new B04/B05/B06 physical validity",
+  "suites": [
+    {
+      "suite": "Phase6F_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "6659a6148495e78f850b979c0a1b7f8e484270723b79c3788ef4ead6fb3c819a",
+      "log_bytes": 11508,
+      "tests_discovered": 78,
+      "expected_tests": 78,
+      "explicit_skips": 0,
+      "elapsed_seconds": 15.012
+    },
+    {
+      "suite": "Phase6E_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "3797ebbbcd3a256ccfc105d5ed4db3a11911222f973c5a94583718ec68aee8cf",
+      "log_bytes": 9341,
+      "tests_discovered": 56,
+      "expected_tests": 56,
+      "explicit_skips": 0,
+      "elapsed_seconds": 2.247
+    },
+    {
+      "suite": "Phase6D_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "392a21f5bc15a62136fe448e77d4bf9beb9f2b2f64fb049f17eae0e7023f8a0f",
+      "log_bytes": 7234,
+      "tests_discovered": 51,
+      "expected_tests": 51,
+      "explicit_skips": 0,
+      "elapsed_seconds": 10.559
+    },
+    {
+      "suite": "MG5_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "648b7dceb6f93f3be125b5d1768b1959c7f405945a7051fb195cf3a72612faa6",
+      "log_bytes": 7794,
+      "tests_discovered": 59,
+      "expected_tests": 59,
+      "explicit_skips": 0,
+      "elapsed_seconds": 16.271
+    },
+    {
+      "suite": "Pythia_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "181d4dc8afd7934a82b8f804b6719df059c33c2d5df6cc37b913cfef694d4e51",
+      "log_bytes": 7662,
+      "tests_discovered": 56,
+      "expected_tests": 56,
+      "explicit_skips": 0,
+      "elapsed_seconds": 11.833
+    },
+    {
+      "suite": "Delphes_portable",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "1decdbbac6299302357b508a3b9c85a6afd0f61ac6a6b88238aa94a503340957",
+      "log_bytes": 7184,
+      "tests_discovered": 35,
+      "expected_tests": 35,
+      "explicit_skips": 8,
+      "elapsed_seconds": 2.81
+    },
+    {
+      "suite": "Delphes_native_adversarial",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "3493f01bdc9232dc6f3c1f20247539bfaa1e0d8e1ee45ede59fcfdb9856acc05",
+      "log_bytes": 1113,
+      "tests_discovered": 8,
+      "expected_tests": 8,
+      "explicit_skips": 0,
+      "elapsed_seconds": 54.684
+    },
+    {
+      "suite": "Delphes_analytical_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "3450ad1c4311abaab4bab772e71309a960dc96605336b7244cac090878b8b58f",
+      "log_bytes": 291,
+      "tests_discovered": 1,
+      "expected_tests": 1,
+      "explicit_skips": 0,
+      "elapsed_seconds": 0.074
+    },
+    {
+      "suite": "Pythia_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "55ff6ee126aed4f6ce8ff000166cf0bb27efe63ef741f03f4e17e7ec5b3b1f28",
+      "log_bytes": 1037,
+      "tests_discovered": 5,
+      "expected_tests": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 0.528
+    },
+    {
+      "suite": "HepMC3_CPP",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "b58c653a3af56b0918610653566a4a02184bd23a86be6a9ea9fdf4199c949675",
+      "log_bytes": 3521,
+      "tests_discovered": 31,
+      "expected_tests": 31,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.695
+    },
+    {
+      "suite": "ROOT_CPP20",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "1f24dc783ae04f66daff9d92258d62963639217c8efe62a0f273cba9951e85c9",
+      "log_bytes": 818,
+      "tests_discovered": 5,
+      "expected_tests": 5,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.91
+    },
+    {
+      "suite": "Existing_MG5_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "log_bytes": 7358,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 1.585
+    },
+    {
+      "suite": "Existing_Pythia_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "log_bytes": 12208,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 3.013
+    },
+    {
+      "suite": "Existing_Delphes_references",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "log_bytes": 1496,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 6.603
+    },
+    {
+      "suite": "Existing_FULL1000_native",
+      "host": "WSL",
+      "status": "PASS",
+      "exit_code": 0,
+      "log_sha256": "3cc983669c49ae5c93cf591f15f460e0356daa5bbe69c0c0977df5ec0a1b1139",
+      "log_bytes": 152,
+      "tests_discovered": null,
+      "expected_tests": null,
+      "explicit_skips": 0,
+      "elapsed_seconds": 40.805
+    },
+    {
+      "suite": "Phase6F_portable",
+      "host": "Windows",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests_discovered": 78,
+      "expected_tests": 78,
+      "explicit_skips": 0,
+      "elapsed_seconds": 5.954173099999025,
+      "log_sha256": "f57a8805c4749f0ca098930b80085d52fdef2e7a29ed5c0431f981e3192a059f",
+      "log_bytes": 11695
+    }
+  ],
+  "suite_count": 16,
+  "existing_CXX_test_count": 42,
+  "old_python_portable_tests": "WSL Phase6F78/Phase6E56/Phase6D51/MG59/Pythia56/Delphes35; WindowsPhase6F78",
+  "Delphes_native_test_coverage": "8 portable skips independently covered by 8 actual retained-environment adversarial tests",
+  "ctest_original_configurations_and_inputs_unchanged": true,
+  "ctest_scope": "Original executable commands and library/source inputs retained; only test working directories relocated into fresh Linux scratch with exact upstream fixtures for FIFO support",
+  "historical_tracked_files": {
+    "original_blob_count": 453,
+    "unchanged_original_blob_count": 453,
+    "old_phase6f_wrapper_unchanged": true,
+    "complete_byte_comparison_sha256": "e6cd14fbed14e7fe26904f4467ebb16dadfa6c2e576daa2ddbbe607cfdaca420",
+    "post_regression_exact_SHA256_and_size_recheck": true
+  },
+  "installed_identity": {
+    "before_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+    "after_sha256": "9de5a758849a37f241b5c84764be55bc9268d4c39faad5fcb26fa0c6adcc48ff",
+    "logical_identity_exactly_equal": true,
+    "versions": {
+      "MG5": "3.5.16",
+      "Pythia8": "8.317",
+      "HepMC3": "3.3.1",
+      "Delphes": "3.5.1",
+      "ROOT": "6.40.04",
+      "CXX_standard": 20
+    },
+    "local_installation_config_sha256": {
+      "mg5": "bdd63c90f87358c6f2818ba1367df4d76f1782336f7590ef50b811b381890f76",
+      "delphes": "ab6357b8894f4b4ee1dcfc9e90e22a9252d8352f0f7081965728f34d363da7de",
+      "pythia": "4851e8cda078ad4642990588c161ce0a5b7c3accb1c90366731006a038a1404e"
+    },
+    "MG5_retained_source_files_verified": 4658,
+    "Delphes_pinned_file_counts": {
+      "source_sha256": 900,
+      "library_sha256": 29,
+      "header_sha256": 102,
+      "dictionary_sha256": 5
+    },
+    "native_binary_sha256": {
+      "delphes": "143e30e49a61d735a39427dd153aaf1655e37940a1f0dfb2c293de0db82c06ad",
+      "analyzer": "b3150e3fca56e20cb821657240c42ed05187cf8eb0332ab1c1e7051360e7389a"
+    },
+    "pythia_runner_sha256": "9e6e5973d6ecbdef14a204f30540797cca93f709e0521106970b0fea1094acda",
+    "hepmc_reader_sha256": "8bc49d3f31e6c71e85e4bed934d81c4a1012cfe0840f7da26f3604c1f3ea836f"
+  },
+  "historical_native_inputs": {
+    "status": "PASS",
+    "actual_existing_ROOT_events": 3000,
+    "normalization_denominator_per_process": 1000,
+    "fresh_full_verification_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+    "historical_Phase6D_receipt_sha256": "8811075602eebbd93698627b2e9e3293471aa301bad99471b745563b71527c64",
+    "fresh_receipt_exact_bytes_equal_historical": true,
+    "historical_LHE_HepMC_ROOT_cards_weights_ledgers_and_source_manifests_preserved": true,
+    "samples": [
+      {
+        "process": "bbgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "root_bytes": 28747494,
+        "native_scientific_content_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+        "original_native_report_sha256": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+        "fresh_native_report_sha256": "915ed65ebe58626373f8149a5e4bfbaaf33c355b7f4b23ed76d440aaf273e672",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "source_mg5_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+        "source_pythia_manifest_sha256": "58985f9d6ad78cc835b5895a2e0d5a229a55ef2e06c5ee9a6c67d77de5d938b3"
+      },
+      {
+        "process": "ccgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "root_bytes": 30570772,
+        "native_scientific_content_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+        "original_native_report_sha256": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+        "fresh_native_report_sha256": "00759aa65206818b52eab6d16749b460f389ecd65079ea879d16eac086726756",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+        "source_mg5_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+        "source_pythia_manifest_sha256": "856066dd98778a3233ebdb9117a5c852120c8fb17dd5b8e3d4319885ad8e9f8c"
+      },
+      {
+        "process": "jjgg",
+        "events": 1000,
+        "counts": {
+          "N_input": 1000,
+          "N_read": 1000,
+          "N_processed": 1000,
+          "N_output": 1000,
+          "N_invalid": 0,
+          "N_skipped": 0
+        },
+        "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "root_bytes": 30235463,
+        "native_scientific_content_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+        "original_native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+        "fresh_native_report_sha256": "2de7c95e6097b16298e732d10668bb01706514de3e9bcef836d404e95464fcbd",
+        "canonical_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+        "runtime_card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+        "source_mg5_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+        "source_pythia_manifest_sha256": "63de55535a5490adfc6c75661779595c9ce4619330093b8ca2b7d2fc592c6986"
+      }
+    ]
+  },
+  "preserved_existing_logs": true,
+  "software_installed_or_reinstalled": false,
+  "publication_scope": "bounded sanitized text evidence only; no synthetic sample or figure"
+}

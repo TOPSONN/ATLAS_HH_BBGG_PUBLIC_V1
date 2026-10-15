@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "scope": "METHOD_ONLY",
+  "status": "PASS_CARD_PREPARATION_AND_OFFICIAL_PARSING_ONLY",
+  "MG5_entrypoint_invocations": 0,
+  "process_export_invocations": 0,
+  "integration_invocations": 0,
+  "event_generation_invocations": 0,
+  "new_physics_events_generated": 0,
+  "profiles": [
+    {
+      "process": "zh",
+      "status": "PASS_ACTUAL_OFFICIAL_CARDS_NO_AMPLITUDES_EXPORT_OR_EVENTS",
+      "new_physics_events_generated": 0,
+      "prepared_cards": {
+        "process_card": {
+          "path": "[LOCAL_CARD_CHECK]/zh/mg5/inputs/process.mg5",
+          "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad",
+          "bytes": 330
+        },
+        "run_card": {
+          "path": "[LOCAL_CARD_CHECK]/zh/mg5/inputs/run_card.dat",
+          "sha256": "d4ac3fd4f5dd2f946d022dba9c64b2a2437350a6d93289b0b989d46abf291c4f",
+          "bytes": 16361
+        },
+        "param_card": {
+          "path": "[LOCAL_CARD_CHECK]/zh/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+          "bytes": 3054
+        }
+      },
+      "run_name": "zh1000",
+      "driver_sha256": {
+        "generate": {
+          "path": "[LOCAL_CARD_CHECK]/zh/mg5/generate.mg5",
+          "sha256": "ef69a0d4b6d416c575ac0850164dca092ad5d99adf05157f3133ab97d99785c8",
+          "bytes": 370
+        },
+        "launch": {
+          "path": "[LOCAL_CARD_CHECK]/zh/mg5/launch.mg5",
+          "sha256": "ba873788b4042850040d6da5ee41a21c2d66deb2efc347621f253c7ac4206eb5",
+          "bytes": 204
+        }
+      },
+      "amplitude_contract": {
+        "path": "[LOCAL_CARD_CHECK]/zh/mg5/amplitude_contract.json",
+        "sha256": "fee07552de7376699b3a1e6830cf686d5ae7efce81f82d928ff60e46ed96b148",
+        "bytes": 1142
+      },
+      "official_run_readback": {
+        "nevents": 1000,
+        "iseed": 20261104,
+        "lpp1": 1,
+        "lpp2": 1,
+        "ebeam1": 6500.0,
+        "ebeam2": 6500.0,
+        "pdlabel": "cteq6l1",
+        "lhaid": 10042,
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "scale": 216.188,
+        "dsqrt_q2fact1": 216.188,
+        "dsqrt_q2fact2": 216.188,
+        "dynamical_scale_choice": -1,
+        "scalefact": 1.0,
+        "bwcutoff": 15.0,
+        "cut_decays": false,
+        "ptb": 0.0,
+        "ptj": 0.0,
+        "pta": 0.0,
+        "etab": -1.0,
+        "etaj": -1.0,
+        "etaa": -1.0,
+        "drbb": 0.0,
+        "drbj": 0.0,
+        "drab": 0.0,
+        "draj": 0.0,
+        "drjj": 0.0,
+        "maxjetflavor": 5,
+        "ptgmin": 0.0,
+        "ickkw": 0,
+        "use_syst": false,
+        "event_norm": "average",
+        "lhe_version": 3.0
+      },
+      "actual_model_parameters": {
+        "mdl_MZ": 91.188,
+        "mdl_MH": 125.0,
+        "mdl_MT": 173.0,
+        "mdl_WZ": 2.441404,
+        "mdl_WH": 0.00638233934,
+        "mdl_WT": 1.4915,
+        "mdl_WW": 2.0476,
+        "mdl_ymt": 173.0,
+        "aEWM1": 132.507,
+        "mdl_Gf": 1.16639e-05,
+        "aS": 0.129783
+      }
+    },
+    {
+      "process": "tth",
+      "status": "PASS_ACTUAL_OFFICIAL_CARDS_NO_AMPLITUDES_EXPORT_OR_EVENTS",
+      "new_physics_events_generated": 0,
+      "prepared_cards": {
+        "process_card": {
+          "path": "[LOCAL_CARD_CHECK]/tth/mg5/inputs/process.mg5",
+          "sha256": "5dbb8ab17cc7944d62763c35ec9d9676cf75c018a328c767782210a52c304676",
+          "bytes": 98
+        },
+        "run_card": {
+          "path": "[LOCAL_CARD_CHECK]/tth/mg5/inputs/run_card.dat",
+          "sha256": "b056d4d0c6cd35571d95cb377c6ec0de276f5cde46930ff9f1af834a2e5130d3",
+          "bytes": 16342
+        },
+        "param_card": {
+          "path": "[LOCAL_CARD_CHECK]/tth/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+          "bytes": 3054
+        }
+      },
+      "run_name": "tth1000",
+      "driver_sha256": {
+        "generate": {
+          "path": "[LOCAL_CARD_CHECK]/tth/mg5/generate.mg5",
+          "sha256": "00677f0cef1d5e0981b79c306d9fb5ddbdd7623658bbe12592f8eb3d3bec70ab",
+          "bytes": 363
+        },
+        "launch": {
+          "path": "[LOCAL_CARD_CHECK]/tth/mg5/launch.mg5",
+          "sha256": "01458fb8cce28e0e475d0ecdecbafb02f3de34abf6fc66ce857eede6b29f0e87",
+          "bytes": 205
+        }
+      },
+      "amplitude_contract": {
+        "path": "[LOCAL_CARD_CHECK]/tth/mg5/amplitude_contract.json",
+        "sha256": "11fba5106d14998d4acadbc9d5347dedeabe260b1ca287a22c7b9c330b4efc35",
+        "bytes": 1137
+      },
+      "official_run_readback": {
+        "nevents": 1000,
+        "iseed": 20261105,
+        "lpp1": 1,
+        "lpp2": 1,
+        "ebeam1": 6500.0,
+        "ebeam2": 6500.0,
+        "pdlabel": "cteq6l1",
+        "lhaid": 10042,
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "scale": 235.5,
+        "dsqrt_q2fact1": 235.5,
+        "dsqrt_q2fact2": 235.5,
+        "dynamical_scale_choice": -1,
+        "scalefact": 1.0,
+        "bwcutoff": 15.0,
+        "cut_decays": false,
+        "ptb": 0.0,
+        "ptj": 0.0,
+        "pta": 0.0,
+        "etab": -1.0,
+        "etaj": -1.0,
+        "etaa": -1.0,
+        "drbb": 0.0,
+        "drbj": 0.0,
+        "drab": 0.0,
+        "draj": 0.0,
+        "drjj": 0.0,
+        "maxjetflavor": 5,
+        "ptgmin": 0.0,
+        "ickkw": 0,
+        "use_syst": false,
+        "event_norm": "average",
+        "lhe_version": 3.0
+      },
+      "actual_model_parameters": {
+        "mdl_MZ": 91.188,
+        "mdl_MH": 125.0,
+        "mdl_MT": 173.0,
+        "mdl_WZ": 2.441404,
+        "mdl_WH": 0.00638233934,
+        "mdl_WT": 1.4915,
+        "mdl_WW": 2.0476,
+        "mdl_ymt": 173.0,
+        "aEWM1": 132.507,
+        "mdl_Gf": 1.16639e-05,
+        "aS": 0.129783
+      }
+    },
+    {
+      "process": "bbgj",
+      "status": "PASS_ACTUAL_OFFICIAL_CARDS_NO_AMPLITUDES_EXPORT_OR_EVENTS",
+      "new_physics_events_generated": 0,
+      "prepared_cards": {
+        "process_card": {
+          "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/inputs/process.mg5",
+          "sha256": "ea5efaa0478e54e609c072b421f83a0f0370a1129a63a186106d23976755f92c",
+          "bytes": 135
+        },
+        "run_card": {
+          "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/inputs/run_card.dat",
+          "sha256": "27d57bce001083b746db85528598451eab81e8ca0f5b83b8a9dbbe810ed75c27",
+          "bytes": 16320
+        },
+        "param_card": {
+          "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6",
+          "bytes": 3054
+        }
+      },
+      "run_name": "bbgj1000",
+      "driver_sha256": {
+        "generate": {
+          "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/generate.mg5",
+          "sha256": "ebb2232ce2ccf66db0e7c8bc3d3536bb8869a3728b0b0f59f0538aa4eb992c46",
+          "bytes": 400
+        },
+        "launch": {
+          "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/launch.mg5",
+          "sha256": "ae3dd29b89b6d08fa12717a4239f2151340c6a849759af2f02525ef2e2c6c39e",
+          "bytes": 206
+        }
+      },
+      "amplitude_contract": {
+        "path": "[LOCAL_CARD_CHECK]/bbgj/mg5/amplitude_contract.json",
+        "sha256": "59b8780f59993110da689555065ff5ca9bf2b7c66ca1738582dc31ce12f62d17",
+        "bytes": 1135
+      },
+      "official_run_readback": {
+        "nevents": 1000,
+        "iseed": 20261106,
+        "lpp1": 1,
+        "lpp2": 1,
+        "ebeam1": 6500.0,
+        "ebeam2": 6500.0,
+        "pdlabel": "cteq6l1",
+        "lhaid": 10042,
+        "fixed_ren_scale": true,
+        "fixed_fac_scale": true,
+        "scale": 125.0,
+        "dsqrt_q2fact1": 125.0,
+        "dsqrt_q2fact2": 125.0,
+        "dynamical_scale_choice": -1,
+        "scalefact": 1.0,
+        "bwcutoff": 15.0,
+        "cut_decays": false,
+        "ptb": 25.0,
+        "ptj": 25.0,
+        "pta": 25.0,
+        "etab": 2.5,
+        "etaj": 2.5,
+        "etaa": 2.5,
+        "drbb": 0.4,
+        "drbj": 0.4,
+        "drab": 0.4,
+        "draj": 0.4,
+        "drjj": 0.4,
+        "maxjetflavor": 4,
+        "ptgmin": 0.0,
+        "ickkw": 0,
+        "use_syst": false,
+        "event_norm": "average",
+        "lhe_version": 3.0
+      },
+      "actual_model_parameters": {
+        "mdl_MZ": 91.188,
+        "mdl_MH": 125.0,
+        "mdl_MT": 173.0,
+        "mdl_WZ": 2.441404,
+        "mdl_WH": 0.00638233934,
+        "mdl_WT": 1.4915,
+        "mdl_WW": 2.0476,
+        "mdl_ymt": 173.0,
+        "aEWM1": 132.507,
+        "mdl_Gf": 1.16639e-05,
+        "aS": 0.129783
+      }
+    }
+  ],
+  "source_bindings": {
+    "simulation/new_backgrounds/mg5_stage.py": "1cef5cd29840838a9d6bdc1aa9ff00ace2b1b0956faa1ada2d30943c0ac4c208",
+    "simulation/new_backgrounds/validate_lhe.py": "2f01dde6d3fa3cc2bd7467fd7da549007122dc371d54431284ca41cb293884ad",
+    "simulation/new_backgrounds/config/generator_contract.json": "df243057b51b3fe181f260449119ea9b31c237dcfedfec1082db1ae8554afe9c",
+    "simulation/new_backgrounds/tests/test_mg5_stage.py": "3ab0a46a1e62cac1aaceced300c073afe3efa6ccdd027265449612d6125ce37d",
+    "simulation/new_backgrounds/tests/test_lhe.py": "50b4fe92a69aef309ee25e2e2bcde8443d7190b8bff42501513a544066e44c3c"
+  },
+  "method_tests": {
+    "windows": {
+      "mg5": 11,
+      "lhe": 28,
+      "failed": 0,
+      "skipped": 0
+    },
+    "wsl": {
+      "mg5": 11,
+      "lhe": 28,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "evidence_scope": "Actual text preparation and official MG5 card/model readback only; numerical/guard tests use private METHOD_ONLY algebra and malformed fixtures. Zero export/integration/event-generation invocations in this preparation check. The preserved first production command failed before amplitude export or any source statistics; no replacement hard events were generated.",
+  "latest_repair_note": "The original genuine ZH1000 source, full original source list and exact zero-downstream manifest remain pinned. Six exact reviewed repair paths only: validator, downstream controller, relative ROOT filename and non-generating ROOT10/100 reuse helper, read-only Event-context status reader, non-generating shower10 reuse helper, read-only signed-jet numerical ROOT analyzer. Generator/cards/shower runner/physics header are unchanged. Unknown changes, wrong old/new hashes and any prior original-source downstream physical attempts fail. No generation permission is granted."
+}

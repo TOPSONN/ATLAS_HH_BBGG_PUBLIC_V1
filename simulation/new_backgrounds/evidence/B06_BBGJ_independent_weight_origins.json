@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_ACTUAL_FULL1000_RAW_WEIGHTS_AND_PHOTON_ORIGINS",
+  "process": "bbgj",
+  "source_events": 1000,
+  "actual_HMC_events": 1000,
+  "actual_original_source_Born_photon_events": 1000,
+  "actual_native_hard_Born_photon_events": 1000,
+  "all_native_final_photons_independently_partitioned": 92135,
+  "independent_stable_photon_origin_counts": {
+    "born_prompt": 1000,
+    "hadron_decay": 91080,
+    "shower_radiation": 55
+  },
+  "other_photon_count": 0,
+  "source_indices": "EXACT_1_THROUGH_1000",
+  "native_Info_to_LHE_ratio_min_exact_serialized_tokens": "1.0000000000000002124976355843440412766060547609405",
+  "native_Info_to_LHE_ratio_max_exact_serialized_tokens": "1.0000000000000002124976355843440412766060547609405",
+  "converter_Info_max_absolute_difference_pb": "0",
+  "raw_source_sum_pb": "65.883086000000007000",
+  "H_BR_applications": 0,
+  "Z_BR_applications": 0,
+  "HH_factor_two_applied": false,
+  "original_input_hashes_unchanged": true,
+  "actual_input_sha256": {
+    "event_ledger.jsonl": "3de75c7870c83e6c43f3bd43a33cb300088dc413a728472e938fd04c8eda3987",
+    "particle_diagnostics.jsonl": "339a8c49a4233956b38229a083d97d8f5598783eba423cc19912c01660025ed5",
+    "hepmc_ancestry.jsonl": "bbeb6ac511769d5f4d9421d8062932fb6725ca9fee667cc8095459968a9fcff8",
+    "run_summary.json": "b5f1f69a66638bff357aed3eabdaafa8d8087565c9f9a5b188be1a4505957242",
+    "background_hepmc_validation.json": "e07d804e2e164ca4ffea49cddd719e49e5311a80e8ad7d78badabf0d35898fc0",
+    "generic_physics_validation.json": "0b25f2490e14ccee04013fd376e8205b67a0c272a91f3c186db99df8e056ad56",
+    "shower.hepmc3": "511eb6ea2bbdd053024b900b716cd433144d9e8f9f2d4677712cba88728d562a"
+  },
+  "new_events_generated": 0,
+  "scope": "RAW_LO_ONE_BORN_PHOTON_MODEL_ONLY_NO_CALIBRATED_FAKE_RATE_OR_OVERLAP_MODEL",
+  "no_two_Born_photon_requirement": true,
+  "observed_zero_other_photons_is_not_zero_probability_proof": true,
+  "photon_fake_calibration": "BLOCKED_UNCALIBRATED",
+  "extra_photon_origins_are_not_an_empirical_jet_to_photon_fake_rate": true
+}

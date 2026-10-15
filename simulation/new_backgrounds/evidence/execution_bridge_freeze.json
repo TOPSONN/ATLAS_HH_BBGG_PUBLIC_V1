@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_EXECUTION_SOURCE_BINDINGS_NOT_PHYSICAL_PASS",
+  "bridge_sha256": "0b8675b0df8c01f95078e86062904d156e8c9db92e834c6a6d5dc278f6e9e109",
+  "files": [
+    {
+      "path": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+      "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47"
+    },
+    {
+      "path": "simulation/delphes/include/DelphesAdapter.hxx",
+      "sha256": "ca79bbb3baad15bcc8afded0a0261a859e23fcbe63969d523e5a32e33aa115e6"
+    },
+    {
+      "path": "simulation/delphes/include/Physics.hxx",
+      "sha256": "24512067aed35295b1e4584a8db8e4aec27c38c330d76099eccc3e83e04e0e6d"
+    },
+    {
+      "path": "simulation/delphes/scripts/audit_payload.py",
+      "sha256": "e3f3adf682bec5e63c678da24f755de02b2870cfb333a4abd37ad3a92f2636dd"
+    },
+    {
+      "path": "simulation/delphes/scripts/publish_references.py",
+      "sha256": "f4dfdae1bee8eb8510589e3bd8a971435a5b4802773b4ecfe74fa748c234b071"
+    },
+    {
+      "path": "simulation/delphes/scripts/run_delphes.py",
+      "sha256": "ccfe87604fa669a9cecfbd46e9f997da0e5616654711f25e33ec34dd89d2353e"
+    },
+    {
+      "path": "simulation/delphes/scripts/run_delphes.sh",
+      "sha256": "298313866b97fb74a7af7545e73e04ab5ab5d5c17d38fc2d544d79ac6d95a92e"
+    },
+    {
+      "path": "simulation/delphes/scripts/summarize_btags.py",
+      "sha256": "7cc1cf4cbb361867d5b8b5e49fa1661234b59cfd7c5cbe7ca22f62bda28a2c97"
+    },
+    {
+      "path": "simulation/delphes/scripts/validate_references.py",
+      "sha256": "c6afb6456f86abfb261b228e3b9a9fb637116818a33274a6ad8d5ffba72c1bd7"
+    },
+    {
+      "path": "simulation/mg5/scripts/audit_payload.py",
+      "sha256": "322dbc401fa1f402444e9acb6baf899d48e4b7447db7ab085456bd9885a95196"
+    },
+    {
+      "path": "simulation/mg5/scripts/capture_environment.py",
+      "sha256": "f5fd3f414a1ed57f3c14961141b83c333d3d469f5870212d6f06346f97a77f9b"
+    },
+    {
+      "path": "simulation/mg5/scripts/configure_local.py",
+      "sha256": "7d955f6e0ef84f58b7d116a4018201ace979f8aee86dd17dec96eeeddff90965"
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.py",
+      "sha256": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752"
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.sh",
+      "sha256": "cd4451dfe195f9b68ec8e8b6a467ba835ec2a803d4bfb214165c21f474fc7faa"
+    },
+    {
+      "path": "simulation/mg5/scripts/installation.py",
+      "sha256": "df56d5f20350b460aa01e239dedb6bb9ba16dd91a0c73d73b1a5023b904b0056"
+    },
+    {
+      "path": "simulation/mg5/scripts/mg5_cli.sh",
+      "sha256": "2706e40dd6d8d3247278269402cc00709d0f3656afc2be88f6407958dffb76c1"
+    },
+    {
+      "path": "simulation/mg5/scripts/prepare_release.py",
+      "sha256": "54b04cd5f06253bf356e09de06881a3f1b97d3889c80ce2eafdc86a5d6af3ab7"
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_background_references.py",
+      "sha256": "1519f90ab3e6f755d4194ab241e5dd5744a233a02106396aec365fb6d05db91c"
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_reference_samples.py",
+      "sha256": "477669279e6cd94230d5168d8b14c5881fd41a111008e57fc2b6a491e70335fb"
+    },
+    {
+      "path": "simulation/mg5/scripts/resource_limits.py",
+      "sha256": "3afb3ad000fae1c62fc187bf52e0bd0e514f7144ba9ed28761f018b37b0690ca"
+    },
+    {
+      "path": "simulation/mg5/scripts/validate_lhe.py",
+      "sha256": "042c5d235898db08b3decdef7b2930170a33b7e426b9724bab11ec90430360f1"
+    },
+    {
+      "path": "simulation/new_backgrounds/__init__.py",
+      "sha256": "9730250f8f3fe6afe93310cabc79cc7f7d6d03a1363b50981e043e6d0d566ffd"
+    },
+    {
+      "path": "simulation/new_backgrounds/analyze_results.py",
+      "sha256": "6f6225b4d77600f268f037fd3080583960ab8076c0aa74003ac83ad4f0f3ec43"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/bbgj.mg5",
+      "sha256": "ea5efaa0478e54e609c072b421f83a0f0370a1129a63a186106d23976755f92c"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/shower_bbgj.cmnd",
+      "sha256": "0d53adaceb4eb9ca7de9fea2ba7b2bed6f0b4699da7b7a2752d24ee1c400947e"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/shower_tth.cmnd",
+      "sha256": "26e3c29bfc6c22a557a47bbf35c83c10d0b8c8e46061f1caa3b27ee252d1481c"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/shower_zh.cmnd",
+      "sha256": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/tth.mg5",
+      "sha256": "5dbb8ab17cc7944d62763c35ec9d9676cf75c018a328c767782210a52c304676"
+    },
+    {
+      "path": "simulation/new_backgrounds/cards/zh.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "path": "simulation/new_backgrounds/common.py",
+      "sha256": "00eec48540884b73e9cc8c9ec5e1353a6298d81dcaded8262f7ee8bc2f114fd8"
+    },
+    {
+      "path": "simulation/new_backgrounds/config/generator_contract.json",
+      "sha256": "df243057b51b3fe181f260449119ea9b31c237dcfedfec1082db1ae8554afe9c"
+    },
+    {
+      "path": "simulation/new_backgrounds/controller.py",
+      "sha256": "6b43d62f002da633f43c51a4f318b79473c322b7bf96abf6e0abbc5bd0129402"
+    },
+    {
+      "path": "simulation/new_backgrounds/delphes_stage.py",
+      "sha256": "b8e401857dc8f89a235602f5e9aba1b6268058eb1a4443a5e4203afebeff7e82"
+    },
+    {
+      "path": "simulation/new_backgrounds/include/Authorization.hxx",
+      "sha256": "61b64575f236ff331860d7e3ce4f9e2082515be94d066c7c8f5f7f6910191208"
+    },
+    {
+      "path": "simulation/new_backgrounds/include/BackgroundAncestry.hxx",
+      "sha256": "ac3dbee2f6ba06bc7951cda5f1cc57e2705ede35e0a07cb5a7e13ddaf5bd8d6b"
+    },
+    {
+      "path": "simulation/new_backgrounds/include/SourceAttempt.hxx",
+      "sha256": "23ffc83abdf249a2ada05743cad2c00e9c29e85ca794fbf6d7dc52654bc2bb6f"
+    },
+    {
+      "path": "simulation/new_backgrounds/include/StrictJson.hxx",
+      "sha256": "a474b9d18ee471df1e604ca96ff1ae55c0aceca69cdea4a367de76d961e4782a"
+    },
+    {
+      "path": "simulation/new_backgrounds/mg5_stage.py",
+      "sha256": "1cef5cd29840838a9d6bdc1aa9ff00ace2b1b0956faa1ada2d30943c0ac4c208"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/audit_payload.py",
+      "sha256": "1fcb4d288acaff0c851cd2411598fe9611a90463cb0bf8ef1679bc34b3d7467c"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/build_stage.py",
+      "sha256": "d004c8f4f31dac5231a157d4ae362a1ef15e1b176588aea6ab45b4d9d9fc2894"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/publish_references.py",
+      "sha256": "318211efd348e0de85ad0120a4d9b9d56ac3fcec7b51cf8e7393126f9a167800"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/run_background.sh",
+      "sha256": "708ef0005c9167026d51c36197ce14281345f214878db00a7e1f44e9a584250d"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/shower_stage.py",
+      "sha256": "34a3a62762f677939b22050da251adfe709a5b4154c493f9f77523668424c9e6"
+    },
+    {
+      "path": "simulation/new_backgrounds/scripts/validate_references.py",
+      "sha256": "48569102f5c2e2926d533be11d84331fe9866413274526d26c7f237ecca3ce4f"
+    },
+    {
+      "path": "simulation/new_backgrounds/src/analyze_background_root.cxx",
+      "sha256": "56938c0a3de331d939925ece06ed1ccebee11fdd7472b2c3d096ccd65d62a509"
+    },
+    {
+      "path": "simulation/new_backgrounds/src/shower_background.cxx",
+      "sha256": "d5839efa27e6cb89396b804f08e0e9c1b1fbd61c7b5db921a107eee4e4cbd30b"
+    },
+    {
+      "path": "simulation/new_backgrounds/src/test_background_methods.cxx",
+      "sha256": "a83a33acd655ef2d621a891186c47c00611c786b8762c914cb5f2c7bd36ce2de"
+    },
+    {
+      "path": "simulation/new_backgrounds/src/validate_background_hepmc3.cxx",
+      "sha256": "e0b03c81098fe63b99491e58a3c9979135f389f6a93e8ed7b799cdd97876977f"
+    },
+    {
+      "path": "simulation/new_backgrounds/validate_lhe.py",
+      "sha256": "2f01dde6d3fa3cc2bd7467fd7da549007122dc371d54431284ca41cb293884ad"
+    },
+    {
+      "path": "simulation/pythia8/config/baseline_shower.cmnd",
+      "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+    },
+    {
+      "path": "simulation/pythia8/include/Json.hxx",
+      "sha256": "ec2a0bb62b04ed40cf5a27eab9845ad176d05fb0bc8901ab969cb1eab5afdd47"
+    },
+    {
+      "path": "simulation/pythia8/include/PhotonOrigin.hxx",
+      "sha256": "6d5a8a759bf91982da4fe4ad910f4037ca6e28d5013af4f51565c6ad962ec7cc"
+    },
+    {
+      "path": "simulation/pythia8/include/Sha256.hxx",
+      "sha256": "c4669dac3347eb5bbea6de97885bb8985e91e435d59a462b6ba683db724f80b2"
+    },
+    {
+      "path": "simulation/pythia8/include/TrackedLHA.hxx",
+      "sha256": "8d9c7a8fdee7ce0588d4222c2b7b05fcc428c3a2c747b13422a4e5a830eea4d5"
+    },
+    {
+      "path": "simulation/pythia8/scripts/analyze_shower.py",
+      "sha256": "4fabe3dcd6d0069325a91fb676cf955d52f8ad5769b3df2d0211bb707a862bde"
+    },
+    {
+      "path": "simulation/pythia8/scripts/audit_shower.py",
+      "sha256": "b9f1ecc68c62ce76652e61cfd1c099609223f7c33ea12b02346382d9ff468198"
+    },
+    {
+      "path": "simulation/pythia8/scripts/publish_shower_references.py",
+      "sha256": "fb04228f3a8dd9652c567bb9275ad63013f2fe8c4cb625dd3f3fc70c9e5a23ce"
+    },
+    {
+      "path": "simulation/pythia8/scripts/shower_sample.py",
+      "sha256": "5ee33a7c42b89cef512d0531455d981e1607688e530db15380ac47f35685541f"
+    },
+    {
+      "path": "simulation/pythia8/scripts/shower_sample.sh",
+      "sha256": "ded8f9d10acb17ea44d7b5ab394aa4605f9fcd141362cdc773d38724980df16b"
+    },
+    {
+      "path": "simulation/pythia8/scripts/validate_hepmc3.py",
+      "sha256": "fad41e85b72a522b3a53f7bf61710e97c111aeede30b127cf6877dbbb5ec5215"
+    },
+    {
+      "path": "simulation/pythia8/scripts/validate_lhe_stream.py",
+      "sha256": "5d45cc04a7ef49e48858f398328380a984d58a9788ac1b5f27d0aafedd952d8a"
+    },
+    {
+      "path": "simulation/pythia8/src/shower_lhef.cxx",
+      "sha256": "8290445ee3af6a78c547f1731fc5013954bd9688ee595309279d6979ade3c6a2"
+    },
+    {
+      "path": "simulation/pythia8/src/validate_hepmc3.cxx",
+      "sha256": "16b039ddb61846361328104fee624a95e0b6d4ff8e3f1d6eebcba5449c7851eb"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/param_card.dat",
+      "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/preferred_higgs_decay.cmnd",
+      "sha256": "f2315b863cf39bf6a8b5e87da29397d1e3a773b703ec429a0b78666656d8d2f6"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/run_card.dat",
+      "sha256": "cbb6072adc7a708fd0b9d2a216cd421aa715244b367da27d9aaa8de668218e73"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_stable.mg5",
+      "sha256": "f124bd3050aa44466019ad0110836af5c9a113d5dadd9de39d715ff52b43826a"
+    },
+    {
+      "path": "simulation/zh_pilot/cards/zh_zbb_stable_h.mg5",
+      "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+    },
+    {
+      "path": "simulation/zh_pilot/config/bundle.json",
+      "sha256": "6e879c6fee37a33e9f7017b463bc41ab2d12c6b17be37759f2fd79566c98b5ad"
+    },
+    {
+      "path": "simulation/zh_pilot/config/decay_contract.json",
+      "sha256": "42f595f43bc9ed5037e4f5f9bcf0146e4a88d9a4e2328f3209cf268af4a126ee"
+    },
+    {
+      "path": "simulation/zh_pilot/config/generator_contract.json",
+      "sha256": "a385af80aebb8462b73c6eb83de54a7f996d4f1e4d5e6aff840b5c83f44d2cf4"
+    },
+    {
+      "path": "simulation/zh_pilot/config/input_profiles.json",
+      "sha256": "0d83998f451351eda323d3966f229f674b1830e118a163db08db6d0d2f295217"
+    },
+    {
+      "path": "simulation/zh_pilot/config/preflight_policy.json",
+      "sha256": "59aa121c97e136bab04961bfd42674e0a993dc8e2bf3c290f062d27cfcf5b219"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/audit_payload.py",
+      "sha256": "933a36a251d7584c27efca6e2f8e35500c1869f46877626b799845a86725adec"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_decay_tables.py",
+      "sha256": "19e7f1df9ded5167584ea5cb470c0b53586528fe633a485ef05b1f886ff07a9a"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_environment.py",
+      "sha256": "9524584a30240ef877a820c004bfba177ca06350af077c96fafabe7fe7c625a0"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/check_generator.py",
+      "sha256": "0774a13204e990e4ffc0c850caed2031f4dcbc35d4398ba37e56b88881eb97b4"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/generate_pilot.sh",
+      "sha256": "a50d0de97e876b07bb37368f2536e4516802ab0dd361a8649ed7473c001ac4c4"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/prepare_pilot.py",
+      "sha256": "b68c216cede730269afdf4858bdf79e2ad88ef679be5169263ca0fa9d01fb850"
+    },
+    {
+      "path": "simulation/zh_pilot/scripts/validate_profiles.py",
+      "sha256": "dc673bbead2f47aad05babf19a83f8188c551de8a826767091d5233aaaab1a57"
+    }
+  ],
+  "reviewed_base_head": "05cff9a5d991ba6782b339bc41932ae4da296d8c",
+  "new_events_generated_by_freeze": 0,
+  "authorization_attachment_sha256": "65b25230b2c50c1c4c7bb253887a8934268732dfca8be9b05eb8aed18fd22d91",
+  "per_process_unique_source_events": 1000,
+  "max_total_unique_source_events": 3000,
+  "automatic_extra_source_attempts": false,
+  "original_ZH_source_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+  "previous_execution_bridge_sha256": "fd9bec3eb7ae1022ff31361f946769f528d41c0093a18aa29835824a91545b67",
+  "repair_scope": "Individual native signed-jet validation consistent with historical polar rule; summed-pair checks unchanged. All original records immutable; no MG5/Pythia/Delphes prefix replay."
+}
