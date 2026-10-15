@@ -1,0 +1,32 @@
+name: HH signal campaign source and physical evidence
+on:
+  push:
+    branches: [codex/phase7b7c7d-ggf-hh-signal]
+  pull_request:
+    paths: ['simulation/hh_signal/**', 'metadata/phase7*', 'reports/phase7*', 'reference_samples/hh_signal/**', '.github/workflows/hh_signal_campaign.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  campaign_source_and_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Campaign mathematical and CLI tests (no event generation)
+        run: python3 -B -m unittest simulation.hh_signal.campaign.test_campaign -v
+      - name: All outgoing commit payloads including index
+        run: python3 -B -m simulation.hh_signal.campaign.audit_payload
+      - name: Verify genuine published signal evidence
+        run: python3 -B -m simulation.hh_signal.campaign.validate_references
+      - name: Preserve existing six background reference libraries
+        run: |
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .

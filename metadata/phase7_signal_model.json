@@ -1,0 +1,835 @@
+{
+  "schema_version": 1,
+  "status": "PASS_BOUNDED_FULL_MASS_PREREQUISITES; SOURCE_INTEGRATION_RUNNING",
+  "production_contract": {
+    "schema_version": 1,
+    "process_id": "S01_GGF_HH_SM",
+    "model": "loop_sm",
+    "MG5_version": "3.5.16",
+    "MG5_source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "process": "g g > h h [noborn=QCD]",
+    "accuracy": "LO_LOOP_INDUCED_FINITE_MT_AND_MB",
+    "kappa_lambda": 1,
+    "kappa_top": 1,
+    "sqrt_s_gev": 13000,
+    "MH_gev": 125,
+    "MT_gev": 173,
+    "MB_production_gev": 4.7,
+    "YUKAWA6_gev": 173,
+    "YUKAWA5_gev": 4.7,
+    "Higgs_total_width": "freeze_actual_initialized_Pythia_inclusive_model_width_before_source_run",
+    "PDF": "cteq6l1",
+    "PDF_scope": "LO_continuity_baseline_not_precision_optimality_claim",
+    "input_card_alpha_s_MZ_before_native_PDF_initialization": 0.13,
+    "native_PDF_initialized_param_card_alpha_s_MZ": 0.129783,
+    "alpha_s_policy": "native PDF initialization overrides nominal input; exact embedded card and event ALPS retained; reweights use each original event ALPS",
+    "alpha_s_running_loops": 1,
+    "dynamical_scale_choice": 4,
+    "scalefact": 0.5,
+    "mu_R": "sqrt(shat)/2=mHH/2_for_2_to_2_undecayed_HH",
+    "mu_F": "same_as_mu_R_native_set_fac_scale",
+    "generation_cuts": "inclusive_on_shell_HH_no_reconstructed_or_decay_cuts",
+    "complex_mass_scheme": false,
+    "loop_regularization": "loop_sm_HV_lhv1",
+    "loop_reduction": "bundled_CutTools_OPP_OneLOop_with_QP_rescue",
+    "MLStabThres": 1e-09,
+    "CTStabThres": 1e-09,
+    "event_norm": "average",
+    "expected_IDWTUP": -4,
+    "matching": "NONE_LO_PLUS_PARTON_SHOWER_NOT_NLO_PS",
+    "additional_NLO_K_factor": null,
+    "normalization_scope": "MODEL_BR_ONLY",
+    "decay_model": "physical_external_scalar_two_body_isotropic_with_Pythia_initialized_model_BR",
+    "bottom_decay_kinematic_mass_gev": 4.8,
+    "assignment": "independent_seed_symmetric_50_50_original_source_Higgs_lineages",
+    "identical_H_mixed_decay_factor": 2
+  },
+  "model": {
+    "schema_version": 1,
+    "status": "NATIVE_MODEL_SOURCE_HASHES_NOT_EVENT_MANIFEST",
+    "mg5_version": "3.5.16",
+    "source_url": "https://github.com/mg5amcnlo/mg5amcnlo",
+    "source_tag": "v3.5.16",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "installed_model_files": {
+      "models/loop_sm/restrict_default.dat": "878a7d1b110faf49824885bd340fb09d6431394d9c7f3d5b86c12d6f4ef54160",
+      "models/loop_sm/parameters.py": "5de44653a32f4c213b6fc0696f3585f36bc34830e64d713c7e268814c847b58f",
+      "models/loop_sm/coupling_orders.py": "c75540ae451aaca4c8f497aed727a252a2960c65c9d6174e94039af8a0615ae0",
+      "models/loop_sm/particles.py": "a437dda2285158b79b44d97830d219f16a3fd1aa864f75131acca6d826893f78",
+      "models/loop_sm/restrict_ckm.dat": "d51f802a2fb5f55a4be5ca0c6daaf666514757f24f42c656a3c00818afd12e44",
+      "models/loop_sm/lorentz.py": "2552626d868a558a321c84fbafd14b43dafd2f4bbd45cf04a7693cb1caac3dc1",
+      "models/loop_sm/__init__.py": "f313e3030c3b3a5d8da2db3ed1b8ad487ce45dfb21810b15a1f717b9a4147d4b",
+      "models/loop_sm/restrict_no_widths.dat": "05ebf8a6e774a80af3f6880346d0e313cef5aaea92f70a9ec35de68635bdfedf",
+      "models/loop_sm/.restrict_parallel_test.dat": "33abf2ee8645e2f55414bb89bb6b9359ad70384667d271d4213a846281622e0e",
+      "models/loop_sm/function_library.py": "4f61390f3cd3ba3baa6b37a908f0f3129c457bca2d4e2b2fa8806c3ac31f9ea3",
+      "models/loop_sm/restrict_parallel_test.dat": "33abf2ee8645e2f55414bb89bb6b9359ad70384667d271d4213a846281622e0e",
+      "models/loop_sm/restrict_c_mass.dat": "11626ca4f6a8220df5ed33d530b6fec92fe69ba5f1c82f54bc17427dd3e83116",
+      "models/loop_sm/restrict_no_masses.dat": "1f72584d6ed563aa911369719a14d8ac3c51bbe055985b3d0a07b6a7b464ad83",
+      "models/loop_sm/CT_vertices.py": "6f125c6cffdd94491fb6167411b23700468663d46c60cee90cdb675ad5659b0f",
+      "models/loop_sm/restrict_no_tau_mass.dat": "4170075aed30aa27eba1ec1533d42fa1496ff605bf666608ed31557e65d28f46",
+      "models/loop_sm/.restrict_parallel_test_c_massive.dat": "e6da223a909271a9fe596a71f3d3ee97bba783a20dda65cb3d3ae71615e1ac3d",
+      "models/loop_sm/write_param_card.py": "04c0b2751d4e52dd957a4609c3f04bc8fee6be40786797324fc9ecbe22e4f1e0",
+      "models/loop_sm/restrict_lepton_masses.dat": "12e95ad3b16a4d92c20c4d60068b27355021bd2966df2af081e06f017ba9bce7",
+      "models/loop_sm/couplings.py": "a91df246f6a68325ead56ec30d49c0586fb9b39451ae62a5c527896acb45014f",
+      "models/loop_sm/CT_parameters.py": "fe89b26fcc375dbffc40003d7e064b2e66316d8d4daa897cd7a9c0ae386cfb3d",
+      "models/loop_sm/CT_couplings.py": "ec0ab5fab1d693e246284c1d82d9ef5219b274dedb909bdd3f6187cbc1ed7b02",
+      "models/loop_sm/vertices.py": "89a4311b8305295e3019e1570c57519c2614b784b1f9ee9637a54ee9d2f07b82",
+      "models/loop_sm/restrict_zeromass_ckm.dat": "ea454a976b28615c60a12d638be9e6896b4e29de10deb8f5ff7337b81a1794ff",
+      "models/loop_sm/restrict_no_b_mass.dat": "9e1839428fd3a3918fa14be2a5ba0b4907dc12134e91ff08d40cd1056208714c",
+      "models/loop_sm/object_library.py": "a4bb6c554809ff739fea28a70e3a889408ea93f48e55cfe20a68d5664a7e16e1",
+      "models/loop_sm/restrict_test.dat": "2ea03c8e94750e40c403d4524bc461f9c1c5802e5f951e15abc18011513f7fe1",
+      "LICENSE": "7e8d6c8410bb2f19a4841a670b2d6d5e3c3b2d7409bce1260b7f5de15a16f378",
+      "VERSION": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+    },
+    "installed_model_bundle_sha256": "3772b2d0f75e092f82a4c556bf2288a43e239f2c7ee6cafaca22d6a11eb98065",
+    "project_bindings": [
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "sha256": "3d05429203dcd2eb72bcb897bc380019e6808a43afb6d39d8ab95fd96f050176"
+      },
+      {
+        "path": "metadata/phase7a_decay_contract.json",
+        "sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609"
+      },
+      {
+        "path": "metadata/phase7a_loop_validation.json",
+        "sha256": "8e8c5a8e0a0eb8c11b47d8d7ff26a02e31a9f6b2c9f16e23d05f32a21c539b3d"
+      },
+      {
+        "path": "simulation/delphes/cards/atlas_like_bbgg_baseline.tcl",
+        "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47"
+      },
+      {
+        "path": "simulation/hh_signal/__init__.py",
+        "sha256": "e99fbe7ffc6eb425a2445eb633330e5efc462ff7d8a3ec23ebf8df0fcaeaabc6"
+      },
+      {
+        "path": "simulation/hh_signal/cards/ggf_hh_sm_candidate.mg5",
+        "sha256": "114eb7de5b6376837c3d2f1050745e7e54de24fa107363c41ebf306cf28c7b7e"
+      },
+      {
+        "path": "simulation/hh_signal/cards/ggf_hh_sm_matrix_element.mg5",
+        "sha256": "4a0aa0f383080de4827794c993a9c57f90bfb2497f2c5ab369a1301b967f375f"
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_decay_contract.json",
+        "sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609"
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_param_card.dat",
+        "sha256": "a14a9b1523003a8a8ff80007d75e905f8098deff90a2821f4a225fb6f7a0f409"
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_pythia_signal.cmnd",
+        "sha256": "1350e4f828f249be5507c7f1054bf30981cd229ca783b79adb580f618e7754be"
+      },
+      {
+        "path": "simulation/hh_signal/cards/proposed_run_card.dat",
+        "sha256": "e1fa2ea88d2439574e7aae1ed509c66844a39f253942bffefc450f83a12c46c9"
+      },
+      {
+        "path": "simulation/hh_signal/config/coupling_contract.json",
+        "sha256": "76b7ed193648c90027f8cad6eb45cc283dd967c7a88bc49a24b035f893963dec"
+      },
+      {
+        "path": "simulation/hh_signal/config/future_interfaces.json",
+        "sha256": "843fa58e8d737d8e376706aed756dd54b7f2f9fb770ec70baca498147988ac8e"
+      },
+      {
+        "path": "simulation/hh_signal/config/resource_policy.json",
+        "sha256": "f34a1dd7507da5fe3ca0bc347815dea2281a9efd07ce8089cf78afff7f09baea"
+      },
+      {
+        "path": "simulation/hh_signal/config/signal_model_contract.json",
+        "sha256": "eff1f53cc72f798ef0f9a0f0a09ad6d0cefbca518a1e88ee86a4d5d5dccb137c"
+      },
+      {
+        "path": "simulation/hh_signal/config/weight_contract.json",
+        "sha256": "cb0b558350b41f86d8c98d459e375a9cc05e24effb2ffc9bad40c95d1f93d8c2"
+      },
+      {
+        "path": "simulation/hh_signal/contracts.py",
+        "sha256": "93a1f790007b62b507d11e7a2b3cd51433c9acd3b75a64319ef080a0a2244a2f"
+      },
+      {
+        "path": "simulation/hh_signal/include/SignalInterface.hxx",
+        "sha256": "8688b6a420732cf5486e3ec4486a9ce0e2048c2422547832f44d109ccd855a29"
+      },
+      {
+        "path": "simulation/hh_signal/methods.py",
+        "sha256": "684ae2f966241bb13b074aa090298ca258b065a96b63daa5f36f857458800a62"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/audit_payload.py",
+        "sha256": "84e02f8cff5a51ab07ff2a9100fbc14a64927b73d3440cb450e09b1a33cd86ef"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/generate_signal.py",
+        "sha256": "070f6b43b2a6eecb2cb1074d9bbe1bb9f283c3be7783a9478a0d45913794b6ae"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/generate_signal.sh",
+        "sha256": "b4cc727b1ba82a91054b13f4b915d399df513ebc47f7b7148ccb09483a8a06e3"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/mg5_model_adapter.py",
+        "sha256": "60f7aac990437ecb40dbeced8fbbff3081946fd18f0475ef8afdb0f67c043443"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/validate_signal_contract.py",
+        "sha256": "c0c5a490aa8ef324e169b068e21a12d7e44c45fcb29bae7b1b3826b252497d9c"
+      },
+      {
+        "path": "simulation/hh_signal/scripts/verify_loop_model.py",
+        "sha256": "a097a0b80959b598b609e82bcad3297d4faa10c532a794689351a6694d2460d4"
+      },
+      {
+        "path": "simulation/hh_signal/src/check_fixed_point.f",
+        "sha256": "4ebb3b9c8790bc0b3b6e6b4c7f0c534ba829cca7bfc986a07277966a7cbec673"
+      },
+      {
+        "path": "simulation/hh_signal/src/test_interfaces.cxx",
+        "sha256": "80d59c3833c94de59300a974e1cd9ef5196e472da8a57f37969c23cbac2622fc"
+      },
+      {
+        "path": "simulation/hh_signal/tests/test_signal_methods.py",
+        "sha256": "72c0ac54a87551627fa087dfd32a818f942e7871782ab8292f58bf910c13eff3"
+      }
+    ],
+    "physical_signal_events": 0
+  },
+  "initialized_inclusive_Pythia_BR": {
+    "status": "PASS_ACTUAL_INITIALIZED_MODEL_TABLE_ZERO_EVENTS",
+    "scope": "MODEL_BR_ONLY",
+    "events_generated": 0,
+    "H_mass_gev": 125,
+    "W_mass_gev": 80.419,
+    "top_mass_gev": 173,
+    "bottom_kinematic_mass_gev": 4.8,
+    "H_total_width_gev": 0.004075980111153884,
+    "channels": [
+      {
+        "BR": 8.638842748377187e-07,
+        "partial_width_gev": 3.521175122577137e-09,
+        "products": [
+          1,
+          -1
+        ]
+      },
+      {
+        "BR": 2.1597106870942967e-07,
+        "partial_width_gev": 8.802937806442842e-10,
+        "products": [
+          2,
+          -2
+        ]
+      },
+      {
+        "BR": 0.0002165592537876433,
+        "partial_width_gev": 8.826912113247605e-07,
+        "products": [
+          3,
+          -3
+        ]
+      },
+      {
+        "BR": 0.028877605876601396,
+        "partial_width_gev": 0.00011770454721076781,
+        "products": [
+          4,
+          -4
+        ]
+      },
+      {
+        "BR": 0.5774528919828654,
+        "partial_width_gev": 0.0023536865028504516,
+        "products": [
+          5,
+          -5
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          6,
+          -6
+        ]
+      },
+      {
+        "BR": 5.252287198852257e-09,
+        "partial_width_gev": 2.1408218160589945e-11,
+        "products": [
+          11,
+          -11
+        ]
+      },
+      {
+        "BR": 0.000218718225202262,
+        "partial_width_gev": 8.91491135871296e-07,
+        "products": [
+          13,
+          -13
+        ]
+      },
+      {
+        "BR": 0.06291851846596037,
+        "partial_width_gev": 0.00025645462989052286,
+        "products": [
+          15,
+          -15
+        ]
+      },
+      {
+        "BR": 0.0851216263161266,
+        "partial_width_gev": 0.0003469540558936051,
+        "products": [
+          21,
+          21
+        ]
+      },
+      {
+        "BR": 0.00229754317933142,
+        "partial_width_gev": 9.364740303472128e-06,
+        "products": [
+          22,
+          22
+        ]
+      },
+      {
+        "BR": 0.0016156367327026762,
+        "partial_width_gev": 6.585303189345752e-06,
+        "products": [
+          22,
+          23
+        ]
+      },
+      {
+        "BR": 0.026201420272353858,
+        "partial_width_gev": 0.0001067964679140985,
+        "products": [
+          23,
+          23
+        ]
+      },
+      {
+        "BR": 0.21507839458743752,
+        "partial_width_gev": 0.0008766552586773025,
+        "products": [
+          24,
+          -24
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000022,
+          1000022
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000023,
+          1000022
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000023,
+          1000023
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000025,
+          1000022
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000025,
+          1000023
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000025,
+          1000025
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000035,
+          1000022
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000035,
+          1000023
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000035,
+          1000025
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000035,
+          1000035
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000024,
+          -1000024
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000024,
+          -1000037
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000037,
+          -1000024
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000037,
+          -1000037
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000001,
+          -1000001
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000001,
+          -2000001
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000001,
+          -2000001
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000001,
+          2000001
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000002,
+          -1000002
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000002,
+          -2000002
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000002,
+          -2000002
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000002,
+          2000002
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000003,
+          -1000003
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000003,
+          -2000003
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000003,
+          -2000003
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000003,
+          2000003
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000004,
+          -1000004
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000004,
+          -2000004
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000004,
+          -2000004
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000004,
+          2000004
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000005,
+          -1000005
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000005,
+          -2000005
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000005,
+          -2000005
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000005,
+          2000005
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000006,
+          -1000006
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000006,
+          -2000006
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000006,
+          -2000006
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000006,
+          2000006
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000011,
+          -1000011
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000011,
+          -2000011
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000011,
+          -2000011
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000011,
+          2000011
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000012,
+          -1000012
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000012,
+          -2000012
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000012,
+          -2000012
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000012,
+          2000012
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000013,
+          -1000013
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000013,
+          -2000013
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000013,
+          -2000013
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000013,
+          2000013
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000014,
+          -1000014
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000014,
+          -2000014
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000014,
+          -2000014
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000014,
+          2000014
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000015,
+          -1000015
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000015,
+          -2000015
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000015,
+          -2000015
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000015,
+          2000015
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000016,
+          -1000016
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          2000016,
+          -2000016
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          1000016,
+          -2000016
+        ]
+      },
+      {
+        "BR": 0,
+        "partial_width_gev": 0,
+        "products": [
+          -1000016,
+          2000016
+        ]
+      }
+    ],
+    "BR_H_bb": 0.5774528919828654,
+    "BR_H_gammagamma": 0.00229754317933142,
+    "mixed_decay_factor": 0.002653445906720871,
+    "forced_sampling_probability": 1,
+    "assignment_probability": 0.5,
+    "external_reference_BR": null,
+    "adopted_physical_BR": null
+  },
+  "native_source_card_H_width_gev": 0.00407598,
+  "reference_BR": null,
+  "adopted_physical_BR": null,
+  "Ward_evidence_sha256": "abb814703853519c7aae04ef47047e8243ab0e8943973aabb0de1eccf8333e1b",
+  "production_parameter_numerical_evidence_sha256": "faac159c8ccb76fd486b6d392369395e6b28f8c27def8ff182bf7ba48a5ba0f8",
+  "physical_source_status": "RUNNING; no complete independently validated source LHE yet",
+  "native_PDF_initialized_alpha_s_MZ_observed": 0.129783
+}

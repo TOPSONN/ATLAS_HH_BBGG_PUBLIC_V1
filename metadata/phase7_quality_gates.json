@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "IN_PROGRESS_NOT_A_FINAL_VERDICT",
+  "gates": {
+    "A": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "B": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "C": {
+      "status": "PASS",
+      "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
+    },
+    "D": {
+      "status": "RUNNING",
+      "source_reservation": 100,
+      "complete_independently_validated_source_events": 0,
+      "scope": "survey temporary candidates are integration intermediates, not a validated exported source sample"
+    },
+    "E": {
+      "status": "MATH_TESTS_PASS_PHYSICAL_PENDING"
+    },
+    "F": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "G": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "H": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "I": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "J": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "K": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "L": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "M": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "N": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "O": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "P": {
+      "status": "UNKNOWN_NOT_YET_EXECUTED"
+    },
+    "Q": {
+      "status": "BLOCKED_ME_PS_OVERLAP_UNKNOWN"
+    },
+    "R": {
+      "status": "BLOCKED_NO_CALIBRATED_PHOTON_FAKE"
+    },
+    "S": {
+      "status": "BLOCKED_NO_OFFICIAL_ATLAS_CALIBRATION"
+    },
+    "T": {
+      "status": "BLOCKED_OVERLAP_AND_CALIBRATION"
+    }
+  },
+  "phases": {
+    "7b": "RUNNING",
+    "7c": "NOT_STARTED_GATED_BY_7B",
+    "7d": "NOT_STARTED_GATED_BY_7C"
+  },
+  "source_event_budget_ceiling": 1100,
+  "independent_source_events_reserved": 100,
+  "complete_source_events_validated": 0,
+  "BR_scope": "MODEL_BR_ONLY",
+  "new_PDF_PNG": "NONE"
+}
