@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "IN_PROGRESS_NOT_A_FINAL_VERDICT",
+  "status": "PASS_7B_7C_WITH_7D_INCONCLUSIVE",
   "gates": {
     "A": {
       "status": "PASS",
@@ -43,45 +43,67 @@
       "scope": "actual independent C1000 full chain, exact request seed20261122; absolute normalization tension separate"
     },
     "K": {
-      "status": "RUNNING_REWEIGHT_ONLY_ZERO_NEW_SOURCE_EVENTS"
+      "status": "PASS",
+      "scope": "actual full-mass same-point ME ratios valid; does not certify source support or absolute rates"
     },
     "L": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "actual support/uncertainty assessed; kappa2.5 and5 INCONCLUSIVE_REWEIGHTING, input ESS36.6943/19.5442; selected ESS16.0736/7.65012"
     },
     "M": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "7100 native ROOT entries independently read; six backgrounds separate; MODEL_BR_ONLY/EXPLORATORY only"
     },
     "N": {
-      "status": "PASS_SOURCE_COMMANDS_WITH_DISCLOSED_RECOVERED_B_SEED_DEVIATION; ALL_RESUME_REWEIGHT_RUNNING"
+      "status": "PASS",
+      "scope": "13 actual final CLI cases PASS plus genuine B100/C1000/all-resume D commands; original source/ROOT/table/registry hashes unchanged; historical B seed deviation disclosed"
     },
     "O": {
-      "status": "SOURCE_REGRESSION_PASS_469_TESTS_8_SKIPS; FULL_SIGNAL_NATIVE_REGRESSION_PENDING"
+      "status": "PASS",
+      "scope": "469 existing source tests:461 PASS/8 SKIP;13 campaign tests PASS; native7100 ROOT records and full ReaderAscii chains; independent15-point fresh ME and Decimal regression"
     },
     "P": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "UNKNOWN",
+      "scope": "final data commit/remote byte readback/exact-head CI pending; prior head d92b538 has three successful jobs"
     },
     "Q": {
-      "status": "BLOCKED_ME_PS_OVERLAP_UNKNOWN"
+      "status": "BLOCKED",
+      "reason": "ME_PS_OVERLAP_UNKNOWN"
     },
     "R": {
-      "status": "BLOCKED_NO_CALIBRATED_PHOTON_FAKE"
+      "status": "BLOCKED",
+      "reason": "NO_CALIBRATED_PHOTON_FAKE_MODEL"
     },
     "S": {
-      "status": "BLOCKED_NO_OFFICIAL_ATLAS_CALIBRATION"
+      "status": "BLOCKED",
+      "reason": "NO_OFFICIAL_ATLAS_DETECTOR_CALIBRATION"
     },
     "T": {
-      "status": "BLOCKED_OVERLAP_AND_CALIBRATION"
+      "status": "BLOCKED",
+      "reason": "OVERLAP_AND_CALIBRATION"
     }
   },
   "phases": {
     "7b": "PASS",
     "7c": "PASS",
-    "7d": "RUNNING_REWEIGHT_ONLY"
+    "7d": "COMPLETED_NUMERICAL_SCAN_WITH_INCONCLUSIVE_REWEIGHTING_2.5_5_AND_ABSOLUTE_RATE"
   },
   "source_event_budget_ceiling": 1100,
   "independent_source_events_reserved": 1100,
   "complete_source_events_validated": 1100,
   "BR_scope": "MODEL_BR_ONLY",
   "new_PDF_PNG": "NONE",
-  "absolute_rate_status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION"
+  "absolute_rate_status": "INCONCLUSIVE_ABSOLUTE_NORMALIZATION_CROSS_RUN_TENSION",
+  "unknowns": [
+    "absolute integration convergence",
+    "independent benchmark cross sections",
+    "BR uncertainty",
+    "PDF/scale variations",
+    "full detector variance",
+    "isolated generator-only selected variance"
+  ],
+  "inconclusive_reweighting_benchmarks": [
+    2.5,
+    5.0
+  ]
 }

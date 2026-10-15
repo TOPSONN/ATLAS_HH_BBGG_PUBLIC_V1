@@ -26,6 +26,9 @@ def evaluate_batch(record,source,proof,monitor,env,attempt):
     log=Path(run['log_path']).read_text();model=re.search(r'HH_MODEL_FROZEN\s+([^\n]+)',log)
     results=re.findall(r'HH_BATCH_RESULT\s+([^\n]+)',log);inputs=re.findall(r'HH_ME_INPUT\s+([^\n]+)',log)
     require(model is not None and len(results)==len(inputs)==7,'NATIVE_BATCH_OUTPUT_COUNT')
+    warm=re.search(r'HH_BATCH_WARMUP_RC\s+(\d+)',log)
+    if proof.get('driver_file')=='check_reweight_batch_fast.f':
+        require(warm is not None and int(warm[1])//100 in (2,3),'UNSTABLE_NATIVE_BATCH_CALIBRATION')
     frozen=list(map(float,model[1].split()))
     require(frozen[:3]==[125.,173.,4.7] and abs(frozen[3]-source['validation']['actual_model_parameters']['decay_25'])<1e-14,
         'NATIVE_BATCH_MODEL_DIFFERS_FROM_SOURCE')

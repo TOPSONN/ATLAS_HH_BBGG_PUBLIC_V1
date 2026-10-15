@@ -1,0 +1,175 @@
+{
+  "status": "PASS_ADDITIONAL_ACTUAL_FRESH_PROCESS_CANCELLATION_POINT_CHECK",
+  "source_event_index": 212,
+  "source_event_sha256": "99d4e14152e7319e323f25671fd48b3a8180f0a4915ad7cc18c1f13fde3f6b1c",
+  "source_LHE_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+  "values": [
+    {
+      "kappa_lambda": -1,
+      "fresh_squared_ME": 2.6112713033440783e-05,
+      "retained_batch_squared_ME": 2.6112713033440783e-05,
+      "relative_difference": 0.0,
+      "return_code": 211,
+      "log_sha256": "585da3b1836ef8e08e4b4385e2a1a6c630372cc2524847a7037262b172f1610b"
+    },
+    {
+      "kappa_lambda": 0,
+      "fresh_squared_ME": 1.3346467932550916e-05,
+      "retained_batch_squared_ME": 1.3346467932550916e-05,
+      "relative_difference": 0.0,
+      "return_code": 211,
+      "log_sha256": "19bf7e60354d0e07225943a6e7b08f0d1940dacd015fecca469d0fbc832da49f"
+    },
+    {
+      "kappa_lambda": 1,
+      "fresh_squared_ME": 4.825019847697566e-06,
+      "retained_batch_squared_ME": 4.825019847697566e-06,
+      "relative_difference": 0.0,
+      "return_code": 211,
+      "log_sha256": "5164d3eeb26b9b07f6f465c7951480c8832654b0f0b6b351cb81a0a84687eae0"
+    },
+    {
+      "kappa_lambda": 2,
+      "fresh_squared_ME": 5.483687787336724e-07,
+      "retained_batch_squared_ME": 5.483687787336724e-07,
+      "relative_difference": 0.0,
+      "return_code": 329,
+      "log_sha256": "ae1de9d8c8543a4b2bf5a5aa1f3e082259761c2ddd1886e805fdc00e5e14974f"
+    },
+    {
+      "kappa_lambda": 2.5,
+      "fresh_squared_ME": 1.8421254766040235e-09,
+      "retained_batch_squared_ME": 1.8421254766040235e-09,
+      "relative_difference": 0.0,
+      "return_code": 329,
+      "log_sha256": "3dc9ceef31493e6e14c38293f56026953512c8f64fcc3baa14c20fadbd2711bb"
+    },
+    {
+      "kappa_lambda": 5,
+      "fresh_squared_ME": 1.3187197668645667e-05,
+      "retained_batch_squared_ME": 1.3187197668645667e-05,
+      "relative_difference": 0.0,
+      "return_code": 211,
+      "log_sha256": "c7290e89da4fdebfb21ce45c21d40ad9430f08cf4006e85c8bd1cc1d549c967a"
+    },
+    {
+      "kappa_lambda": 1,
+      "fresh_squared_ME": 4.825019847697566e-06,
+      "retained_batch_squared_ME": 4.825019847697566e-06,
+      "relative_difference": 0.0,
+      "return_code": 211,
+      "log_sha256": "5164d3eeb26b9b07f6f465c7951480c8832654b0f0b6b351cb81a0a84687eae0"
+    }
+  ],
+  "elapsed_seconds": 11.813798448999933,
+  "metrics": {
+    "elapsed_seconds": 11.813834336999662,
+    "peak_sampled_process_tree_rss_bytes": 11329536,
+    "observed_output_bytes": 56863627,
+    "peak_observed_output_bytes": 56863627,
+    "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+    "monitor_interval_seconds": 0.2,
+    "subprocesses": [
+      {
+        "stage": "fresh_212_0",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "-1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_0.log",
+        "elapsed_seconds": 0.220037924999815,
+        "peak_process_tree_rss_bytes": 393216,
+        "log_sha256": "585da3b1836ef8e08e4b4385e2a1a6c630372cc2524847a7037262b172f1610b",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_1",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "0"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_1.log",
+        "elapsed_seconds": 0.21774162900010197,
+        "peak_process_tree_rss_bytes": 5111808,
+        "log_sha256": "19bf7e60354d0e07225943a6e7b08f0d1940dacd015fecca469d0fbc832da49f",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_2",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_2.log",
+        "elapsed_seconds": 0.22296696900002644,
+        "peak_process_tree_rss_bytes": 8519680,
+        "log_sha256": "5164d3eeb26b9b07f6f465c7951480c8832654b0f0b6b351cb81a0a84687eae0",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_3",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "2"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_3.log",
+        "elapsed_seconds": 5.04793622499983,
+        "peak_process_tree_rss_bytes": 11329536,
+        "log_sha256": "ae1de9d8c8543a4b2bf5a5aa1f3e082259761c2ddd1886e805fdc00e5e14974f",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_4",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "2.5"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_4.log",
+        "elapsed_seconds": 5.484144906999973,
+        "peak_process_tree_rss_bytes": 11329536,
+        "log_sha256": "3dc9ceef31493e6e14c38293f56026953512c8f64fcc3baa14c20fadbd2711bb",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_5",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "5"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_5.log",
+        "elapsed_seconds": 0.227598984999986,
+        "peak_process_tree_rss_bytes": 4587520,
+        "log_sha256": "c7290e89da4fdebfb21ce45c21d40ad9430f08cf4006e85c8bd1cc1d549c967a",
+        "failure": null
+      },
+      {
+        "stage": "fresh_212_6",
+        "argv": [
+          "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/standalone/SubProcesses/P0_gg_hh/check",
+          "1"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "log_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7d/cancellation_verification/logs/fresh_212_6.log",
+        "elapsed_seconds": 0.2137802309998733,
+        "peak_process_tree_rss_bytes": 4456448,
+        "log_sha256": "5164d3eeb26b9b07f6f465c7951480c8832654b0f0b6b351cb81a0a84687eae0",
+        "failure": null
+      }
+    ]
+  },
+  "new_independent_events": 0,
+  "scope": "independent native repeated evaluation; does not alter original measured table or relax native thresholds"
+}

@@ -4,7 +4,7 @@ import math
 def wilson(n,N,z=1.959963984540054):
     if N<=0 or not 0<=n<=N:raise ValueError('invalid binomial counts')
     p=n/N;d=1+z*z/N;c=(p+z*z/(2*N))/d;h=z*math.sqrt(p*(1-p)/N+z*z/(4*N*N))/d
-    return max(0.,c-h),min(1.,c+h)
+    return (0. if n==0 else max(0.,c-h)),(1. if n==N else min(1.,c+h))
 
 def precision_plan(n,N):
     lo,hi=wilson(n,N)
@@ -13,12 +13,16 @@ def precision_plan(n,N):
         'planning_status':'NO_FINITE_CONSERVATIVE_GUARANTEE_FROM_ZERO_PILOT' if n==0 else 'PILOT_BASED_NOT_A_GUARANTEE',
         'independent_events_for_relative_source_acceptance_precision':{
            str(t):{'plug_in':math.ceil((1-n/N)/((t*t)*(n/N))) if n else None,
-                   'conservative_using_wilson_lower':math.ceil((1-lo)/(t*t*lo)) if lo>0 else None}
+                   'conservative_using_wilson_lower':math.ceil((1-lo)/(t*t*lo)) if n and lo>0 else None}
            for t in (.2,.1,.05)},'production_authorized_by_this_plan':False}
 
 def covariance(a,b):
     if len(a)!=len(b) or len(a)<=1:raise ValueError('same independent source cohort required')
-    N=len(a);return N/(N-1)*(math.fsum(x*y for x,y in zip(a,b))-math.fsum(a)*math.fsum(b)/N)
+    # Translation before centering avoids subtracting two large equal second
+    # moments and gives an exact zero for an actually constant weight vector.
+    N=len(a);da=[x-a[0] for x in a];db=[y-b[0] for y in b]
+    ma=math.fsum(da)/N;mb=math.fsum(db)/N
+    return N/(N-1)*math.fsum((x-ma)*(y-mb) for x,y in zip(da,db))
 
 def histogram(values,weights,edges,N,active=None):
     """Flows included; no silent drop; undefined observables counted separately."""
@@ -44,7 +48,9 @@ def histogram(values,weights,edges,N,active=None):
         lo,hi=wilson(len(b),N)
         rows.append({'bin':j,'low':edges[j-1] if j else None,'high':edges[j] if j<len(edges) else None,
             'flow':'underflow' if j==0 else 'overflow' if j==len(edges) else 'regular',
-            'entries':len(b),'empty':not bool(b),'sumw':sw,'sumw2':q,'source_sampling_variance':var,
+            'entries':len(b),'empty':not bool(b),'sumw':sw,'sumw2':q,'sum_abs_w':math.fsum(abs(w) for w in b),
+            'N_positive':sum(w>0 for w in b),'N_negative':sum(w<0 for w in b),'N_zero':sum(w==0 for w in b),
+            'source_sampling_variance':var,
             'proposal_bin_acceptance_wilson95_low':lo,'proposal_bin_acceptance_wilson95_high':hi,
             'zero_proposal_count_one_sided95_upper':1-.05**(1/N) if not b else None,
             'interval_scope':'source_proposal_count_only; not a finite target-reweight-rate bound without a weight bound',

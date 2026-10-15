@@ -12,6 +12,7 @@ def main():
     groups={}
     for r in csv.DictReader(source.open()):
         k=(r['process'],r['kappa_lambda'],r['stage'],r['observable']);groups.setdefault(k,[]).append(r)
+    expected={}
     f=ROOT.TFile(str(output),'CREATE');require(not f.IsZombie(),'cannot create native numerical ROOT')
     for key,rows in groups.items():
         process,k,stage,observable=key;edges=BINS[observable];name='_'.join([process,'kl'+k if k else 'baseline',stage,observable]).replace('-','m').replace('.','p')
@@ -19,10 +20,12 @@ def main():
            ('UNIT_AREA_SHAPE_ONLY','UNIT_AREA_SHAPE_ONLY','unit_area_source_sampling_variance'),
            ('COMMON_LUMINOSITY_EXPLORATORY_100FB','expected_weighted_count_at_100fb_inverse','sumw2')]:
             h=ROOT.TH1D(name+'_'+suffix,suffix,len(edges)-1,array('d',edges));h.Sumw2()
+            expected[h.GetName()]=[]
             for row in rows:
                 b=int(row['bin']);content=float(row[column]) if row[column] else 0.;err=math.sqrt(float(row[error])) if row[error] else 0.
                 if suffix=='COMMON_LUMINOSITY_EXPLORATORY_100FB':err*=100000
                 h.SetBinContent(b,content);h.SetBinError(b,err)
+                expected[h.GetName()].append((b,content,err))
             h.SetEntries(sum(int(r['entries']) for r in rows));h.Write()
     ROOT.TNamed('scope','Numerical histograms only; MODEL_BR_ONLY/EXPLORATORY; zero/cancellation shape states in bound CSV; no combined physical background').Write()
     f.Close();check=ROOT.TFile.Open(str(output),'READ');require(check and not check.IsZombie() and not check.TestBit(ROOT.TFile.kRecovered),'native ROOT histogram readback failed')
@@ -31,6 +34,10 @@ def main():
         obj=key.ReadObj()
         if obj.InheritsFrom('TH1'):
             for b in range(obj.GetNbinsX()+2):require(math.isfinite(obj.GetBinContent(b)) and math.isfinite(obj.GetBinError(b)),'nonfinite native numerical histogram')
+            require(obj.GetName() in expected,'unexpected native histogram')
+            for b,content,error in expected[obj.GetName()]:
+                require(obj.GetBinContent(b)==content and abs(obj.GetBinError(b)-error)<=1e-14*max(1e-300,error),
+                    'native ROOT/CSV content or uncertainty transfer mismatch')
     print('PASS_NATIVE_NUMERICAL_ROOT_HISTOGRAM_WRITE_AND_READBACK',check.GetListOfKeys().GetSize());check.Close()
 
 if __name__=='__main__':main()

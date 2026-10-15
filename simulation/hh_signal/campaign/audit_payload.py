@@ -32,13 +32,27 @@ def scan(path,data):
         t=data.decode('utf-8');require(re.search(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-{5}BEGIN [A-Z ]*PRIVATE KEY)',t) is None,'SECRET_PATTERN')
         require(re.search(r'(?:/[h]ome/[A-Za-z0-9_.-]+/|/[m]nt/[a-z]/|[A-Z]:[\\/](?:Users|HH)[\\/])',t) is None,'PRIVATE_ABSOLUTE_PATH:'+path)
 
+def reference_manifests(snapshot):
+    """Latest tree/index must include even deliberately ignored physics files."""
+    checked=0
+    for path,oid in snapshot.items():
+        if not path.startswith('reference_samples/hh_signal/S01_ggf_hh_sm/') or not path.endswith('/manifest.json'):continue
+        manifest=json.loads(git('cat-file','blob',oid));parent=Path(path).parent
+        for row in manifest['files']:
+            relative=Path(row['path']);require(not relative.is_absolute() and '..' not in relative.parts,'UNSAFE_REFERENCE_MANIFEST_PATH')
+            target=(parent/relative).as_posix();require(target in snapshot,'REFERENCE_MANIFEST_ASSET_NOT_STAGED:'+target)
+            data=git('cat-file','blob',snapshot[target])
+            require(len(data)==row['bytes'] and hashlib.sha256(data).hexdigest()==row['sha256'],'REFERENCE_MANIFEST_BLOB_MISMATCH:'+target)
+            checked+=1
+    return checked
+
 def audit():
     base=tree(BASE);a=tree(PHASE7A);revs=git('rev-list','--reverse',BASE+'..HEAD').decode().splitlines()
     index={}
     for row in git('ls-files','--stage','-z').split(b'\0'):
         if row:
             m,p=row.split(b'\t',1);mode,oid,stage=m.split();require(stage==b'0' and mode!=b'120000','UNSAFE_INDEX');index[p.decode()]=oid.decode()
-    new_blobs=set();total=0
+    new_blobs=set();total=0;head=git('rev-parse','HEAD').decode().strip();manifest_assets=0
     for rev,t in [(r,tree(r)) for r in revs]+[('INDEX',index)]:
         for p,oid in base.items():require(t.get(p)==oid,'HISTORICAL_BASE_CHANGED:'+p)
         # Phase7A numerical evidence/cards/reports remain exactly immutable.
@@ -50,9 +64,13 @@ def audit():
         for p,oid in t.items():
             if p in base:continue
             if (p,oid) not in new_blobs:scan(p,git('cat-file','blob',oid));new_blobs.add((p,oid))
+        # Older development commits are still scanned for forbidden payloads;
+        # completeness is enforced on the actual latest HEAD and staged index.
+        if rev in [head,'INDEX']:manifest_assets=reference_manifests(t)
         total+=1
     require(not any(p in base for p in git('diff','--name-only',BASE).decode().splitlines()),'HISTORICAL_WORKTREE_CHANGED')
     return {'status':'PASS_EVERY_OUTGOING_SNAPSHOT_AND_INDEX','baseline':BASE,'phase7a_snapshot':PHASE7A,
-       'snapshots_including_index':total,'distinct_blobs_scanned':len(new_blobs),'historical_blobs_preserved':len(base),'unapproved_PDF_PNG':0}
+       'snapshots_including_index':total,'distinct_blobs_scanned':len(new_blobs),'historical_blobs_preserved':len(base),
+       'latest_reference_manifest_assets_verified':manifest_assets,'unapproved_PDF_PNG':0}
 
 if __name__=='__main__':print(json.dumps(audit(),indent=2))

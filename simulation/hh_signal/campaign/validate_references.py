@@ -54,7 +54,10 @@ def validate_all():
     folder=REF/'phase7d_klambda'
     if folder.exists():
         m=read_json(folder/'manifest.json')
-        for d in m['files']:require(sha(folder/d['path'])==d['sha256'],'REWEIGHT_REFERENCE_HASH')
+        require({p.name for p in folder.iterdir()}=={d['path'] for d in m['files']}|{'manifest.json'},'REWEIGHT_REFERENCE_FILE_SET')
+        for d in m['files']:
+            require(Path(d['path']).name==d['path'] and (folder/d['path']).stat().st_size==d['bytes'] and
+                sha(folder/d['path'])==d['sha256'],'REWEIGHT_REFERENCE_HASH_OR_SIZE')
         rows=list(csv.DictReader((folder/'event_reweights.csv').open()));require(len(rows)==6000,'REWEIGHT_REFERENCE_COUNT')
         grouped={}
         for r in rows:grouped.setdefault(int(r['source_event_index']),{})[float(r['kappa_lambda'])]=r
@@ -65,8 +68,17 @@ def validate_all():
             from .reweight import quadratic
             v={k:float(r['full_mass_squared_ME']) for k,r in group.items()}
             require(quadratic(v)[3]<1e-7,'INDEPENDENT_HELD_OUT_QUADRATIC_REGRESSION')
+        from .independent_regression import validate_scan
+        measured=read_json(folder/'validation.json')
+        for name,key in [('phase7d_weighted_histograms.csv','histogram_sha256'),('phase7d_signal_background_cutflow.csv','cutflow_sha256')]:
+            require(sha(REPO/'metadata'/name)==measured['comparison'][key],'PUBLISHED_NUMERICAL_COMPARISON_BINDING_CHANGED')
+        independent=validate_scan(folder/'event_reweights.csv',REF/'phase7c_1000/reference_1000.lhe.gz',measured['model_BR_factor'])
+        for k,row in independent['summaries'].items():
+            original=measured['summaries'][k]
+            for a,b in [('sum_pb','sum'),('sumw2_pb2','sumw2'),('ESS','ESS')]:
+                require(abs(row[a]-original[b])<=1e-10*max(abs(row[a]),1e-300),'INDEPENDENT_DECIMAL_SUMMARY_REGRESSION')
         results['7d']={'source_events':1000,'benchmarks':6,'new_independent_events':0,'portable_status':'PASS_REAL_NUMERICAL_EVIDENCE_REGRESSION'}
-    else:require(gates['phases']['7d']!='PASS','MISSING_REWEIGHT_REFERENCE')
+    else:require(not gates['phases']['7d'].startswith('PASS') and gates['gates']['K']['status']!='PASS','MISSING_REWEIGHT_REFERENCE')
     return results
 
 if __name__=='__main__':print(json.dumps(validate_all(),indent=2))

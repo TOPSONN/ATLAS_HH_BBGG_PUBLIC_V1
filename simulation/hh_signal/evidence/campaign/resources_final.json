@@ -1,0 +1,183 @@
+{
+  "status": "MEASURED_MONITORS_WITH_EXPLICIT_SCOPE",
+  "measured_controlled_seconds": 8495.926975264001,
+  "source_and_reweight_seconds": 8297.20214329,
+  "peak_sampled_process_tree_rss_bytes": 1759412224,
+  "instantaneous_peak_RSS": "UNKNOWN_BETWEEN_POLLS",
+  "local_campaign_output_bytes": 723917977,
+  "isolated_preparation_cache_bytes": 408183580,
+  "total_measured_local_output_and_cache_bytes": 1132101557,
+  "source_stage_attempts": [
+    {
+      "phase": "7b",
+      "receipt": "execution_0.json",
+      "sha256": "0158f3c9cba40937f76b409dee957b3acce080feae37f88c5a4ee98d7064ac7b",
+      "elapsed_seconds": 149.457036077,
+      "children_user_cpu_seconds": 200.699107,
+      "children_system_cpu_seconds": 9.317164,
+      "metrics": {
+        "elapsed_seconds": 149.45709538800003,
+        "peak_sampled_process_tree_rss_bytes": 1759412224,
+        "observed_output_bytes": 63278018,
+        "peak_observed_output_bytes": 69276415,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7b",
+      "receipt": "execution_1.json",
+      "sha256": "94d499e1c566f9acae27f683643097727f2c2ef61e59d3fdd46dec0516a59545",
+      "elapsed_seconds": 1830.56727026,
+      "children_user_cpu_seconds": 1760.810794,
+      "children_system_cpu_seconds": 1.4833210000000001,
+      "metrics": {
+        "elapsed_seconds": 1830.567310703,
+        "peak_sampled_process_tree_rss_bytes": 115367936,
+        "observed_output_bytes": 79234277,
+        "peak_observed_output_bytes": 79444545,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7b",
+      "receipt": "execution_2.json",
+      "sha256": "67cc6d33876a7ba63bffd616b3350297d0d51524498dd6c9a17ffaa56db3de4f",
+      "elapsed_seconds": 0.041792643000007956,
+      "children_user_cpu_seconds": 0.0,
+      "children_system_cpu_seconds": 0.0,
+      "metrics": {
+        "elapsed_seconds": 0.041847845999654965,
+        "peak_sampled_process_tree_rss_bytes": "UNKNOWN",
+        "observed_output_bytes": 79242002,
+        "peak_observed_output_bytes": 0,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7b",
+      "receipt": "execution_3.json",
+      "sha256": "aef26f59b263ef078d77f0c9fe21be340aed97841c58011f5adf4e94c5561e93",
+      "elapsed_seconds": 0.038006131000202004,
+      "children_user_cpu_seconds": 0.0,
+      "children_system_cpu_seconds": 0.0,
+      "metrics": {
+        "elapsed_seconds": 0.038044455999624915,
+        "peak_sampled_process_tree_rss_bytes": "UNKNOWN",
+        "observed_output_bytes": 79249097,
+        "peak_observed_output_bytes": 0,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7b",
+      "receipt": "execution_4.json",
+      "sha256": "14c9ed6471c5649df606ac0e0ca3acc01f905699360109fedd3f46054ad06835",
+      "elapsed_seconds": 8.869324330999998,
+      "children_user_cpu_seconds": 4.861361,
+      "children_system_cpu_seconds": 0.9964169999999999,
+      "metrics": {
+        "elapsed_seconds": 8.869362925999999,
+        "peak_sampled_process_tree_rss_bytes": 562307072,
+        "observed_output_bytes": 108010734,
+        "peak_observed_output_bytes": 107921850,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7c",
+      "receipt": "execution_0.json",
+      "sha256": "934489b424fcb5011e2b1b739537922d65380f348f952eff4fd124a82e513982",
+      "elapsed_seconds": 2743.906829555,
+      "children_user_cpu_seconds": 2666.809328,
+      "children_system_cpu_seconds": 14.559817,
+      "metrics": {
+        "elapsed_seconds": 2743.906869178,
+        "peak_sampled_process_tree_rss_bytes": 915124224,
+        "observed_output_bytes": 368176877,
+        "peak_observed_output_bytes": 368063572,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7d",
+      "receipt": "execution_attempt_0.json",
+      "sha256": "5beba885b5b5b05adb0206af3b3e3acd68198716df3a4d07722196d6a0ed77c4",
+      "elapsed_seconds": 313.20392090999985,
+      "external_verification_seconds": 0,
+      "children_user_cpu_seconds": 271.36828899999995,
+      "children_system_cpu_seconds": 2.0249669999999997,
+      "metrics": {
+        "elapsed_seconds": 313.19600952599967,
+        "peak_sampled_process_tree_rss_bytes": 32243712,
+        "observed_output_bytes": 58265225,
+        "peak_observed_output_bytes": 58260953,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "phase": "7d",
+      "receipt": "execution_attempt_1.json",
+      "sha256": "77eaa6ad5120aea4fd180b8578b9b8ab8f146803c0db4ef905aa30cdca1c12a5",
+      "elapsed_seconds": 2967.403172086,
+      "external_verification_seconds": 283.7147912969999,
+      "children_user_cpu_seconds": 2769.950664,
+      "children_system_cpu_seconds": 9.631442,
+      "metrics": {
+        "elapsed_seconds": 2967.345896322,
+        "peak_sampled_process_tree_rss_bytes": 641204224,
+        "observed_output_bytes": 189788460,
+        "peak_observed_output_bytes": 189666093,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    }
+  ],
+  "separate_preparation_monitors": [
+    {
+      "receipt": "model_build.json",
+      "metrics": {
+        "elapsed_seconds": 164.160066641,
+        "peak_sampled_process_tree_rss_bytes": 919441408,
+        "observed_output_bytes": 146611194,
+        "peak_observed_output_bytes": 146589321,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    },
+    {
+      "receipt": "loop_prerequisite.json",
+      "metrics": {
+        "elapsed_seconds": 22.750966884000263,
+        "peak_sampled_process_tree_rss_bytes": 21024768,
+        "observed_output_bytes": 56851515,
+        "peak_observed_output_bytes": 56880493,
+        "scope": "actual polled process-tree RSS/output; unsampled instantaneous peaks UNKNOWN",
+        "monitor_interval_seconds": 0.2
+      }
+    }
+  ],
+  "unmonitored_preparation_and_review_cpu_seconds": null,
+  "CPU_scope": "child CPU from B/C/D receipts; preparation CPU not separately captured",
+  "concurrent_physics_jobs": 1,
+  "generator_workers": 1,
+  "no_reinstallation": true,
+  "new_independent_source_events": 1100,
+  "shower_calls_with_prefix_reuse": 1220,
+  "independent_source_events_in_shower_calls": 1100,
+  "overall_22h_ceiling_pass": true,
+  "B_6h_C_12h_D_4h": "PASS_ACTUAL_RECEIPTS",
+  "disk_scope": "logical file sizes, read-only pinned installation symlinks excluded; final snapshot, not peak filesystem allocation",
+  "additional_cancellation_verification_seconds": 11.813798448999933,
+  "additional_cancellation_verification_peak_sampled_RSS_bytes": 11329536,
+  "campaign_environment_snapshot_utc": "2026-10-15T03:46:14.980292+00:00",
+  "measurement_utc": "2026-10-15T06:49:43.469626+00:00",
+  "wall_since_environment_snapshot_seconds": 11008.489336,
+  "wall_scope": "includes source work, numerical work, verification, review and idle gaps; separate from controlled monitor time"
+}

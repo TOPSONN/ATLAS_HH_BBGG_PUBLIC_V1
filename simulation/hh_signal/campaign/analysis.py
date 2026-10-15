@@ -43,6 +43,16 @@ def compile_extractor(out,monitor):
         *flags,'-o',str(exe)],out,'compile_independent_feature_extractor',env=env)
     return exe,env
 
+def background_weight_factor(ledger):
+    if ledger['scope']=='NO_HIGGS_BR':
+        require(ledger['status']=='PASS_RAW_WEIGHT_CLOSURE' and ledger['factor'] is None and
+            ledger['factor_applications']==0,'INVALID_NO_HIGGS_RAW_WEIGHT_CONVENTION')
+        return 1.  # Identity of raw-source weights, not a physical BR=1.
+    require(ledger['scope']=='MODEL_BR_ONLY' and ledger['status']=='PASS_MODEL_BR_WEIGHT_CLOSURE' and
+        ledger['factor'] is not None and ledger['factor_applications']==1,'UNKNOWN_OR_DOUBLE_BACKGROUND_BR_FACTOR')
+    factor=float(ledger['factor']);require(math.isfinite(factor) and 0<factor<=1,'INVALID_MODEL_BR_FACTOR')
+    return factor
+
 def backgrounds():
     result=[]
     for code,alias,reference in [('B01','bbgg','pp_bbgg_sm_lo_13tev'),('B02','ccgg','pp_ccgg_sm_lo_13tev'),('B03','jjgg','pp_jjgg_light_sm_lo_13tev')]:
@@ -54,14 +64,26 @@ def backgrounds():
            'reco':folder/'reco_events.jsonl','source':source,'factor':1.,'scope':'RAW_SOURCE_EXPLORATORY_UNCALIBRATED_OVERLAP_UNKNOWN'})
     for code,alias,run,ref in [('B04','zh','zh_1k_detector_v3','B04_ZH'),('B05','tth','tth_1k','B05_TTH'),('B06','bbgj','bbgj_1k','B06_BBGJ')]:
         folder=Path.home()/'simulations/phase6g_runs'/run;manifest=read_json(folder/'run_manifest.json')
+        bindings={}
+        def verify_declared(item):
+            if isinstance(item,dict):
+                if isinstance(item.get('path'),str) and isinstance(item.get('sha256'),str) and Path(item['path']).is_absolute():
+                    path=Path(item['path']);require(path.is_file() and sha(path)==item['sha256'],'EXISTING_DECLARED_BACKGROUND_ARTIFACT_CHANGED')
+                    bindings[str(path)]=item['sha256']
+                for value in item.values():verify_declared(value)
+            elif isinstance(item,list):
+                for value in item:verify_declared(value)
+        verify_declared(manifest)
         root=folder/'delphes/full1000/detector.root';receipt=read_json(folder/'delphes/full1000/delphes_execution.json')
         require(sha(root)==receipt['root_sha256'],'EXISTING_BACKGROUND_ROOT_CHANGED')
         index=Path(receipt['inputs']['input_index_path']);require(sha(index)==receipt['input_index_sha256'],'EXISTING_BACKGROUND_INDEX_CHANGED')
         reco=Path(receipt['reco_events_path']);require(sha(reco)==receipt['derived_files_sha256']['reco_events.jsonl'],'EXISTING_RECO_CHANGED')
         source=Path(manifest['stages']['MG5']['artifacts']['lhe_gz']['path'])
         require(sha(source)==manifest['stages']['MG5']['artifacts']['lhe_gz']['sha256']==sha(REPO/'reference_samples/new_backgrounds'/ref/'mg5/reference_1000.lhe.gz'),'EXISTING_BACKGROUND_SOURCE_CHANGED')
-        factor=float(manifest['weight_and_BR_ledger']['factor'])
+        ledger=manifest['weight_and_BR_ledger'];factor=background_weight_factor(ledger)
         result.append({'code':code,'root':root,'index':index,'reco':reco,'source':source,'factor':factor,
+            'BR_ledger_scope':ledger['scope'],'BR_factor_applications':ledger['factor_applications'],
+            'declared_artifact_bindings_reverified':len(bindings),
             'scope':'MODEL_BR_ONLY_EXPLORATORY_TTH_SPIN_UNVALIDATED' if alias=='tth' else
                 'MODEL_BR_ONLY_EXPLORATORY' if alias=='zh' else 'ONE_BORN_PHOTON_NO_CALIBRATED_FAKE_MODEL'})
     return result
@@ -104,7 +126,10 @@ def analyze(out,phase,native,reweights,monitor):
         require(sha(stream['root'])==root_before and sha(stream['source'])==source_before,'INPUT_MUTATED_BY_READ_ONLY_ANALYSIS')
         preserved.append({'process':code,'events_reread':1000,'ROOT_sha256':root_before,'source_LHE_sha256':source_before,
            'input_index_sha256':sha(stream['index']),'retained_reco_sha256':sha(stream['reco']),'new_features_sha256':sha(path),
-           'native_all_named_weight_vectors_verified':True,'input_source_unchanged':True,'integration':integ})
+           'native_all_named_weight_vectors_verified':True,'input_source_unchanged':True,'integration':integ,
+           'weight_transfer_multiplier':stream['factor'],'BR_ledger_scope':stream.get('BR_ledger_scope',stream['scope']),
+           'BR_factor_applications':stream.get('BR_factor_applications',1 if code=='S01' else 0),
+           'declared_artifact_bindings_reverified':stream.get('declared_artifact_bindings_reverified')})
         features[code]=rows;plans[code]=precision_plan(sum(r['cut_mgg'] for r in rows),1000)
         variants=[(k,[lookup[(i,k)]['source_contribution_pb']*factor for i in range(1,1001)],'MODEL_BR_ONLY_REWEIGHTED_INCONCLUSIVE_ABSOLUTE_RATE') for k in (-1,0,1,2,2.5,5)] if code=='S01' else [(None,[r['source_contribution_pb']*stream['factor'] for r in rows],stream['scope'])]
         for k,weights,scope in variants:
@@ -113,7 +138,12 @@ def analyze(out,phase,native,reweights,monitor):
             for stage,key in STAGES:
                 accepted=[True if key is None else r[key] for r in rows];a=[w if yes else 0. for w,yes in zip(weights,accepted)];s=math.fsum(a);q=math.fsum(w*w for w in a)
                 cuts.append({'process':code,'kappa_lambda':k,'stage':stage,'observed_events':sum(accepted),'original_N':1000,
-                   'weight_scope':scope,'sum_weight_pb':s,'sumw2_pb2':q,'source_sampling_variance_pb2':covariance(a,a),
+                   'weight_scope':scope,'sum_weight_pb':s,'sumw2_pb2':q,
+                   'sum_abs_w_pb':math.fsum(abs(w) for w,yes in zip(weights,accepted) if yes),
+                   'N_positive':sum(w>0 and yes for w,yes in zip(weights,accepted)),
+                   'N_negative':sum(w<0 and yes for w,yes in zip(weights,accepted)),
+                   'N_zero':sum(w==0 and yes for w,yes in zip(weights,accepted)),
+                   'source_sampling_variance_pb2':covariance(a,a),
                    'correlated_SM_source_normalization_integration_error_pb':abs(s)*integ['relative_error'],
                    'target_benchmark_independent_integration_error_pb':None if code=='S01' and k!=1 else abs(s)*integ['relative_error'],
                    'COMMON_LUMINOSITY_EXPLORATORY_fb_inverse':100,'expected_weighted_count_at_100fb_inverse':s*100*1000,
@@ -129,6 +159,17 @@ def analyze(out,phase,native,reweights,monitor):
                            expected_weighted_count_at_100fb_inverse=row['sumw']*100*1000,
                            observable_scope='NOT_APPLICABLE_BACKGROUND_TRUTH_HH' if code!='S01' and 'truth' in observable else 'DEFINED_OR_MISSING_PAIR')
                         hists.append(row)
+    # Separate B100 readback closes every named ROOT weight value as well;
+    # its events are not pooled into the C1000 comparison/statistics.
+    registry=read_json(REPO/'.local/phase7_campaign/campaign_registry.json')
+    bphase=read_json(Path(registry['phases']['7b']['output'])/'phase_receipt.json');bfull=bphase['stages']['full100']
+    bfeatures=out/'B100_independent_named_weights.jsonl'
+    monitor.run_command([str(exe),bfull['artifacts']['ROOT']['path'],bfull['artifacts']['input_index']['path'],str(bfeatures),'100'],
+        out,'independent_root_b100_all_named_weights',env=env)
+    brow=jsonl(bfeatures);bprevious=jsonl(bfull['artifacts']['reco']['path']);require(len(brow)==len(bprevious)==100,'B100_INDEPENDENT_COUNT')
+    for a,b in zip(brow,bprevious):
+        require(a['source_event_index']==b['source_event_index'] and a['source_event_sha256']==b['source_event_sha256'] and
+            all(a[k]==b[k] for k in ['cut_photons','cut_jets','cut_two_btags','cut_mgg']),'B100_INDEPENDENT_WEIGHT_SELECTION_REGRESSION')
     dump_csv(out/'weighted_histograms.csv',hists);dump_csv(out/'signal_background_cutflow.csv',cuts)
     dc,pc,env=native_environment()
     monitor.run_command([str(Path(dc['root_prefix'])/'bin/python'),'-B',str(CAMPAIGN/'write_root_histograms.py'),
@@ -143,7 +184,8 @@ def analyze(out,phase,native,reweights,monitor):
                 signal_covariance.append({'stage':stage,'kappa_a':k,'kappa_b':l,'common_source_sampling_covariance_pb2':v,
                    'correlation':v/math.sqrt(va*vb) if va>0 and vb>0 else None})
     result={'status':'PASS_SEPARATE_PROCESS_EXPLORATORY_COMPARISON_WITH_LIMITS','inputs':preserved,
-       'original_background_events_preserved':6000,'signal_events_reread':1000,'new_independent_events':0,
+       'original_background_events_preserved':6000,'signal_events_reread':1000,'independent_B100_named_weight_entries':100,
+       'independent_ROOT_records_reread':7100,'B100_independent_readback_sha256':sha(bfeatures),'new_independent_events':0,
        'fixed_common_bins':BINS,'histogram_sha256':sha(out/'weighted_histograms.csv'),'native_numerical_ROOT_sha256':sha(out/'weighted_histograms.root'),
        'cutflow_sha256':sha(out/'signal_background_cutflow.csv'),
        'conditional_tag_statistics':tag,'independent_event_precision_plans':plans,'signal_common_event_selected_covariance':signal_covariance,

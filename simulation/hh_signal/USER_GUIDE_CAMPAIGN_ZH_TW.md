@@ -21,7 +21,7 @@ bash simulation/hh_signal/scripts/run_campaign.sh \
   --output "$HOME/simulations/hh_signal_runs/campaign_01"
 ```
 
-也可以逐階段執行。7B的100與7C的新1000事件完整物理鏈均已實際通過；7D正在只重用C1000進行矩陣元素計算。最終狀態以 `metadata/phase7_quality_gates.json` 和實際收據為準。
+也可以逐階段執行。7B的100與7C的新1000事件完整物理鏈均已實際通過；7D已對C1000完成六個benchmark的實際有限質量矩陣元素計算、獨立數值回歸及native ROOT比較；絕對率仍為INCONCLUSIVE。最終狀態以 `metadata/phase7_quality_gates.json` 和實際收據為準。
 
 本次已保留的7B來源有明確的舊流程偏差：請求seed20261121，實際seed21。第一次零事件編譯失敗後，MG5已清除工作卡seed，而舊續跑未恢復請求卡。來源保持不變、不補生事件，實際卡與差異證明隨樣本發布。現在續跑會先恢復精確請求卡，且新增回歸測試在任何生成器啟動前核對。此舊樣本不能當作「seed請求被正確執行」的證據；7C的新命令與完整LHE已核對有效seed20261122，並通過全部1000事件的下游驗證。
 
@@ -74,3 +74,39 @@ B/C的實際參數卡及23個模型來源檔一致，但所報積分截面有明
 個人樣本預設只留本機。程式不會自行推送 GitHub。僅選定、通過驗證的參考 LHE 與有界 HepMC/ROOT、原始卡和來源收據可列入本活動 Draft PR；完整 1000 shower/ROOT 留本機。任何新 PDF/PNG 均須使用者核准精確版本與 SHA256 後才能提交或推送。
 
 背景比較逐一保留 B01–B06。單位面積是 `UNIT_AREA_SHAPE_ONLY`；100 fb⁻¹ 產量是 `COMMON_LUMINOSITY_EXPLORATORY`，換算為 pb × fb⁻¹ × 1000。來源重疊、光子 fake、ttH spin、BR 和 detector 校正限制仍然存在，不計算合併物理背景、發現或排除顯著性。
+
+
+## 本次活動完成後的唯讀操作
+
+在同一台已安裝工具、保留 `.local` 登記與本機完整輸出的電腦上，核對完整活動：
+
+```bash
+bash simulation/hh_signal/scripts/run_campaign.sh \
+  --phase all --process ggf_hh_sm --energy 13000 \
+  --max-hours 4 --max-disk-gb 10 \
+  --kappa-config simulation/hh_signal/campaign/config/kappa_scan.json \
+  --output "$HOME/simulations/hh_signal_runs/campaign_01" --resume
+```
+
+完整D結果的續跑會核對原始來源、表格、ROOT/CSV與六背景綁定，再直接回傳已有結果。
+不覆寫比較資料、不再計算矩陣元素、不再生硬事件。若資料雜湊不同，會停止；不要刪除登記來規避。
+此次1100來源預算已用完。若要新增獨立來源，需另外核准新的物理契約與預算。
+
+從任一完整clone檢查已公開的參考樣本與數值證據：
+
+```bash
+python3 -B -m simulation.hh_signal.campaign.validate_references
+python3 -B -m unittest simulation.hh_signal.campaign.test_campaign -v
+```
+
+這個portable檢查會驗證公開LHE/HepMC/ROOT的SHA/CRC/計數與原始N、實際衰變表示，
+並以獨立60位Decimal/Lagrange重驗6000列實測重加權。它不會重跑原生ReaderAscii或Delphes；
+本機實際native執行收據與CI來源檢查必須分開解讀。
+
+數值比較位於 `metadata/phase7d_weighted_histograms.csv`、
+`metadata/phase7d_signal_background_cutflow.csv`、`metadata/phase7d_kappa_scan.json`；
+選定數值ROOT位於 `reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/`。
+每個空bin的proposal-count區間、LOW_ESS旗標與未知誤差均保留；不能把0事件當作0物理背景。
+
+
+κλ=2.5與5明確為 `INCONCLUSIVE_REWEIGHTING`：來源ESS分別36.6943、19.5442，最大單點份額超過10%；最終選擇ESS為16.0736、7.65012。它們只有實測權重與診斷分布，不能稱已驗證的精密相對形狀或物理率。其他benchmark也須逐bin檢查低ESS及尾部支援，不能用全局ESS保證每bin精度。

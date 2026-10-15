@@ -30,6 +30,23 @@ class DecayMath(unittest.TestCase):
             with self.assertRaises(ValueError):two_body(parent,m,c,0)
 
 class Guards(unittest.TestCase):
+    def test_completed_resume_rejects_modified_numerical_table(self):
+        from .reweight import completed_reweight
+        from .common import save_json
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp);(path/'event_reweights.csv').write_text('METHOD_ONLY_TAMPERED_TABLE\n')
+            save_json(path/'reweight_validation.json',{'source_sha256':'reviewed_source',
+                'benchmarks':[-1,0,1,2,2.5,5],'source_events':1000,'new_independent_events':0,
+                'event_reweights_sha256':'0'*64,
+                'comparison':{'status':'PASS_SEPARATE_PROCESS_EXPLORATORY_COMPARISON_WITH_LIMITS'}})
+            with self.assertRaisesRegex(ValueError,'COMPLETED_REWEIGHT_TABLE_CHANGED'):
+                completed_reweight(path,'reviewed_source',[-1,0,1,2,2.5,5])
+    def test_manifest_rejects_ignored_unstaged_physics_asset(self):
+        from . import audit_payload
+        manifest={'files':[{'path':'selected.bin','bytes':3,'sha256':'0'*64}]}
+        tree={'reference_samples/hh_signal/S01_ggf_hh_sm/method_only_manifest_test/manifest.json':'method_fixture'}
+        with patch.object(audit_payload,'git',return_value=json.dumps(manifest).encode()):
+            with self.assertRaisesRegex(ValueError,'REFERENCE_MANIFEST_ASSET_NOT_STAGED'):audit_payload.reference_manifests(tree)
     def test_zero_record_continuation_restores_seed_before_any_launch(self):
         from . import production
         from .common import sha,save_json
@@ -84,11 +101,26 @@ class Guards(unittest.TestCase):
             with self.assertRaises(ValueError):safe_output(value)
 
 class Statistics(unittest.TestCase):
+    def test_no_higgs_identity_is_not_an_unknown_BR_replacement(self):
+        from .analysis import background_weight_factor
+        ledger={'scope':'NO_HIGGS_BR','status':'PASS_RAW_WEIGHT_CLOSURE','factor':None,'factor_applications':0}
+        self.assertEqual(background_weight_factor(ledger),1.)
+        for update in [{'scope':'MODEL_BR_ONLY'},{'factor_applications':1},{'status':'UNKNOWN'}]:
+            with self.assertRaises(ValueError):background_weight_factor({**ledger,**update})
+    def test_constant_nominal_sampling_variance_is_exact_zero(self):
+        from .statistics import covariance
+        # A zero source-sampling variance must not acquire a negative or tiny
+        # artificial variance from second-moment cancellation.
+        for scale in [1e-100,1.9069e-5,1e100]:
+            self.assertEqual(covariance([scale]*1000,[scale]*1000),0.)
+            self.assertEqual(covariance([scale]*3,[1.,2.,4.]),0.)
     def test_zero_and_correlated_sampling(self):
         from .statistics import precision_plan,covariance
         p=precision_plan(0,1000)
         self.assertGreater(p['zero_one_sided95_upper'],0)
+        self.assertEqual(p['wilson95'][0],0.)
         self.assertIsNone(p['independent_events_for_relative_source_acceptance_precision']['0.1']['plug_in'])
+        self.assertIsNone(p['independent_events_for_relative_source_acceptance_precision']['0.1']['conservative_using_wilson_lower'])
         self.assertAlmostEqual(covariance([1,2,3],[2,4,6]),6.)
     def test_flows_missing_and_unit_area_correlations(self):
         from .statistics import histogram

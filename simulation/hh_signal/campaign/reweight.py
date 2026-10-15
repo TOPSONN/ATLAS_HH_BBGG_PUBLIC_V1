@@ -16,12 +16,32 @@ def weighted_summary(weights):
        'max_single_fraction':max(map(abs,weights),default=0)/abs(s) if s else None,
        'source_sampling_variance':n/(n-1)*max(0,q-s*s/n) if n>1 else None}
 
+def completed_reweight(out,source_sha,benchmarks):
+    """Read-only idempotent resume of a genuinely completed numerical chain."""
+    out=Path(out);path=out/'reweight_validation.json'
+    if not path.exists():return None
+    result=read_json(path);comparison=result.get('comparison',{})
+    if comparison.get('status')!='PASS_SEPARATE_PROCESS_EXPLORATORY_COMPARISON_WITH_LIMITS':return None
+    require(result['source_sha256']==source_sha and result['benchmarks']==benchmarks and
+        result['source_events']==1000 and result['new_independent_events']==0,'COMPLETED_REWEIGHT_SCOPE_CHANGED')
+    require(sha(out/'event_reweights.csv')==result['event_reweights_sha256'],'COMPLETED_REWEIGHT_TABLE_CHANGED')
+    for name,key in [('weighted_histograms.csv','histogram_sha256'),('weighted_histograms.root','native_numerical_ROOT_sha256'),
+                     ('signal_background_cutflow.csv','cutflow_sha256')]:
+        require(sha(out/'comparison'/name)==comparison[key],'COMPLETED_REWEIGHT_COMPARISON_CHANGED')
+    for row in comparison['inputs']:
+        # Original absolute source bindings are local audit data, not inferred
+        # from the newly derived comparison.
+        require(row['input_source_unchanged'],'COMPLETED_REWEIGHT_INPUT_NOT_PRESERVED')
+    return result
+
 def run_reweight(args,out,registry,build,native):
     c=registry['phases'].get('7c',{});require(c.get('status')=='PASS_FULL_CHAIN','PHASE7D_REQUIRES_GENUINE_7C1000_PASS')
     out=Path(out);existed=out.exists();require(not existed or args.resume,'PRESERVE_EXISTING_REWEIGHT_OUTPUT_USE_EXPLICIT_RESUME')
     hours=min(args.max_hours or 4,4);disk=min(args.max_disk_gb or 10,10)
     avail=resources(out,disk);out.mkdir(parents=True,exist_ok=existed)
-    phase=read_json(Path(c['output'])/'phase_receipt.json');s=phase['source']
+    phase_path=Path(c['output'])/'phase_receipt.json'
+    require(sha(phase_path)==c['phase_receipt_sha256'],'C1000_FROZEN_PHASE_RECEIPT_CHANGED')
+    phase=read_json(phase_path);s=phase['source']
     require(sha(s['path'])==s['sha256'],'C1000_SOURCE_CHANGED')
     source=load_lhe(s['path']);validate_production(source,1000,c['seed'])
     scan=read_json(args.kappa_config);benchmarks=scan['benchmarks']
@@ -34,6 +54,14 @@ def run_reweight(args,out,registry,build,native):
     card='Block loop\n 1 9.118800000000e+01\n'+(Path(c['output'])/'source/embedded_param_card.dat').read_text()
     if not existed:(scratch/'Cards/param_card.dat').write_text(card)
     else:require((scratch/'Cards/param_card.dat').read_text()==card,'RESUME_FROZEN_REWEIGHT_CARD_CHANGED')
+    complete=completed_reweight(out,s['sha256'],benchmarks) if args.resume else None
+    if complete is not None:
+        from .analysis import backgrounds
+        backgrounds()  # Reverify the original six immutable background bindings.
+        for artifact in phase['stages']['full1000']['artifacts'].values():
+            require(sha(artifact['path'])==artifact['sha256'],'COMPLETED_REWEIGHT_SIGNAL_INPUT_CHANGED')
+        print('7D PASS existing complete numerical chain reverified; new source events=0',flush=True)
+        return complete
     cfg=read_json(REPO/'.local/mg5_installation.json');env=mg_environment(cfg)
     from .batch_evaluator import verified_batch,evaluate_batch
     proof=verified_batch(out,s['sha256']);rows=[]
@@ -48,7 +76,7 @@ def run_reweight(args,out,registry,build,native):
                 'RESUME_REWEIGHT_SOURCE_IDENTITY_CHANGED')
             require(abs(row['ratio']-row['full_mass_squared_ME']/row['SM_denominator'])<1e-10*max(1,row['ratio']) and
                 row['source_alpha_s']==original['alpha_qcd'] and row['source_scale_gev']==original['scale'],'RESUME_REWEIGHT_VALUE_CHANGED')
-    completed=len(rows)//6;fresh_complete=completed if proof else 1000
+    completed=len(rows)//6;fresh_complete=proof['preserved_fresh_complete_source_events'] if proof else 1000
     old=out/'execution.json';history=sorted(out.glob('execution_attempt_*.json'))
     if old.exists() and not any(sha(old)==sha(p) for p in history):
         shutil.copyfile(old,out/('execution_attempt_'+str(len(history))+'.json'));history=sorted(out.glob('execution_attempt_*.json'))
@@ -75,7 +103,8 @@ def run_reweight(args,out,registry,build,native):
                 (work/'PS.input').write_text(f"{r['alpha_qcd']:.17e} {r['scale']:.17e}\n"+
                     '\n'.join(' '.join(f'{v:.17e}' for v in q) for q in p)+'\n')
                 values={};details={}
-                # Repeat SM in a separate native process on every same point.
+                # Repeat SM at the identical point; the verified batch repeats
+                # within one process, the original path uses a fresh process.
                 if proof:values,details,repeat=evaluate_batch(r,s,proof,m,env,attempt)
                 for j,k in enumerate([] if proof else [*benchmarks,1]):
                     result=m.run_command([str(work/'check'),str(k)],work,'attempt'+str(attempt)+'_me_'+str(r['index'])+'_'+str(j),env=env)

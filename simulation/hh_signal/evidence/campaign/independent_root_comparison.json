@@ -1,0 +1,1914 @@
+{
+  "status": "PASS_SEPARATE_PROCESS_EXPLORATORY_COMPARISON_WITH_LIMITS",
+  "inputs": [
+    {
+      "process": "S01",
+      "events_reread": 1000,
+      "ROOT_sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+      "source_LHE_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "input_index_sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+      "retained_reco_sha256": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+      "new_features_sha256": "d9f92e7955eb28960793c3d4c89089e886e734a48b0e9d38c78edadd925bf2c1",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 0.019069,
+        "source_integration_error_pb": 0.00011745,
+        "relative_error": 0.006159211285332215
+      },
+      "weight_transfer_multiplier": 0.002653445906720871,
+      "BR_ledger_scope": "MODEL_BR_ONLY_LO_FULL_MASS_UNCALIBRATED",
+      "BR_factor_applications": 1,
+      "declared_artifact_bindings_reverified": null
+    },
+    {
+      "process": "B01",
+      "events_reread": 1000,
+      "ROOT_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "source_LHE_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "input_index_sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "retained_reco_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+      "new_features_sha256": "c3f65fc283af360176ee3f5538e1b02d4e43112752c3a17d0b8e9259c033aded",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 0.06624666,
+        "source_integration_error_pb": 0.0005940933,
+        "relative_error": 0.008967898155167369
+      },
+      "weight_transfer_multiplier": 1.0,
+      "BR_ledger_scope": "RAW_SOURCE_EXPLORATORY_UNCALIBRATED_OVERLAP_UNKNOWN",
+      "BR_factor_applications": 0,
+      "declared_artifact_bindings_reverified": null
+    },
+    {
+      "process": "B02",
+      "events_reread": 1000,
+      "ROOT_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "source_LHE_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "input_index_sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "retained_reco_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+      "new_features_sha256": "6a88811e4b19cde653f5dd9e8574ee39e45ed721261ce1d8b22217cc53706204",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 0.6274417,
+        "source_integration_error_pb": 0.005190692,
+        "relative_error": 0.008272787734701088
+      },
+      "weight_transfer_multiplier": 1.0,
+      "BR_ledger_scope": "RAW_SOURCE_EXPLORATORY_UNCALIBRATED_OVERLAP_UNKNOWN",
+      "BR_factor_applications": 0,
+      "declared_artifact_bindings_reverified": null
+    },
+    {
+      "process": "B03",
+      "events_reread": 1000,
+      "ROOT_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "source_LHE_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "input_index_sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "retained_reco_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+      "new_features_sha256": "be5c0241b505ded22b6d48f5f55f225133dd57d78f5b1e70e63789cc5ee6cbff",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 9.436556,
+        "source_integration_error_pb": 0.0547472,
+        "relative_error": 0.0058016081290674275
+      },
+      "weight_transfer_multiplier": 1.0,
+      "BR_ledger_scope": "RAW_SOURCE_EXPLORATORY_UNCALIBRATED_OVERLAP_UNKNOWN",
+      "BR_factor_applications": 0,
+      "declared_artifact_bindings_reverified": null
+    },
+    {
+      "process": "B04",
+      "events_reread": 1000,
+      "ROOT_sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "source_LHE_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "input_index_sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+      "retained_reco_sha256": "13a1e6e91e8eb2781ef6b46c7043a6918823fe185f1ed95c7af0c4d922f6edd8",
+      "new_features_sha256": "fd7865b35a18ad79525298086c47e48dab68c229b6446e45457fa75512d613c5",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 0.089538,
+        "source_integration_error_pb": 0.00039751,
+        "relative_error": 0.004439567557908374
+      },
+      "weight_transfer_multiplier": 0.0022965313147512443,
+      "BR_ledger_scope": "MODEL_BR_ONLY",
+      "BR_factor_applications": 1,
+      "declared_artifact_bindings_reverified": 19
+    },
+    {
+      "process": "B05",
+      "events_reread": 1000,
+      "ROOT_sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "source_LHE_sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+      "input_index_sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+      "retained_reco_sha256": "f20484e45630450bb020fb118e3a96241f2ff7e80694046f9078e50e37e7b6e0",
+      "new_features_sha256": "1a738a34d7dd030ce5236c1d8d23f345a0c24a86a46863cab67f759e11a5c6d9",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 0.399182,
+        "source_integration_error_pb": 0.001975393,
+        "relative_error": 0.0049486023918914185
+      },
+      "weight_transfer_multiplier": 0.002297546784308979,
+      "BR_ledger_scope": "MODEL_BR_ONLY",
+      "BR_factor_applications": 1,
+      "declared_artifact_bindings_reverified": 17
+    },
+    {
+      "process": "B06",
+      "events_reread": 1000,
+      "ROOT_sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "source_LHE_sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+      "input_index_sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+      "retained_reco_sha256": "b894f1a5ff2c6e2e6424f8db232e936fdf8b72b598df69bc5adfe1b94f0ab410",
+      "new_features_sha256": "2859a1b2bfb87a47afbb3b49056f8d202ab38784e259478c896915e5f5e04e56",
+      "native_all_named_weight_vectors_verified": true,
+      "input_source_unchanged": true,
+      "integration": {
+        "source_integrated_cross_section_pb": 65.88309,
+        "source_integration_error_pb": 0.3918004,
+        "relative_error": 0.005946903826156302
+      },
+      "weight_transfer_multiplier": 1.0,
+      "BR_ledger_scope": "NO_HIGGS_BR",
+      "BR_factor_applications": 0,
+      "declared_artifact_bindings_reverified": 17
+    }
+  ],
+  "original_background_events_preserved": 6000,
+  "signal_events_reread": 1000,
+  "independent_B100_named_weight_entries": 100,
+  "independent_ROOT_records_reread": 7100,
+  "B100_independent_readback_sha256": "9d1c308a48a51570f5ef4621007038ab578a9c541eab94b864a79f06c068aeed",
+  "new_independent_events": 0,
+  "fixed_common_bins": {
+    "mHH_truth": [
+      250,
+      300,
+      350,
+      400,
+      450,
+      500,
+      600,
+      700,
+      800,
+      1000,
+      1500,
+      2500
+    ],
+    "m_bb": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      250,
+      350,
+      500
+    ],
+    "m_gamma_gamma": [
+      0,
+      80,
+      100,
+      105,
+      110,
+      115,
+      120,
+      122.5,
+      125,
+      127.5,
+      130,
+      135,
+      140,
+      150,
+      160,
+      180,
+      250
+    ],
+    "m_bb_gamma_gamma": [
+      0,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500,
+      600,
+      750,
+      1000,
+      1500,
+      2500
+    ],
+    "pT_HH_truth": [
+      0,
+      1e-06,
+      10,
+      25,
+      50,
+      100,
+      200,
+      400,
+      800
+    ],
+    "pT_H_truth_lead": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      300,
+      450,
+      650,
+      1000
+    ],
+    "pT_H_truth_sublead": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      300,
+      450,
+      650,
+      1000
+    ],
+    "pT_gamma_gamma": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      300,
+      450,
+      650,
+      1000
+    ],
+    "pT_bb": [
+      0,
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      300,
+      450,
+      650,
+      1000
+    ],
+    "DeltaR_bb": [
+      0,
+      0.4,
+      0.8,
+      1.2,
+      1.6,
+      2.0,
+      2.4,
+      2.8,
+      3.2,
+      4.0,
+      5.0,
+      7.0
+    ],
+    "DeltaR_gamma_gamma": [
+      0,
+      0.4,
+      0.8,
+      1.2,
+      1.6,
+      2.0,
+      2.4,
+      2.8,
+      3.2,
+      4.0,
+      5.0,
+      7.0
+    ],
+    "N_jets": [
+      -0.5,
+      0.5,
+      1.5,
+      2.5,
+      3.5,
+      4.5,
+      5.5,
+      6.5,
+      8.5,
+      12.5
+    ],
+    "N_btags": [
+      -0.5,
+      0.5,
+      1.5,
+      2.5,
+      3.5,
+      4.5,
+      6.5
+    ]
+  },
+  "histogram_sha256": "ab860ef1640bfdc0829a70907cf151e1dd2605e5f77414d4a7f147931d018156",
+  "native_numerical_ROOT_sha256": "8cfce2db0d10a4bf30de5c4a8f9e16bbaf5cf1c34199c4b74a856a20983094d7",
+  "cutflow_sha256": "5b532abd1782f6928a9a892e457dbe794777e6ed20bc4596f30d2dda6c066a2d",
+  "conditional_tag_statistics": {
+    "S01_kl-1": {
+      "conditional_expected_final_weight_pb": 2.6733003123305813e-05,
+      "conditional_tag_sampling_variance_pb2": 7.1908011350323626e-12,
+      "conditional_mean_source_sampling_variance_pb2": 4.9538358130010495e-12,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "S01_kl0": {
+      "conditional_expected_final_weight_pb": 1.5169643247254015e-05,
+      "conditional_tag_sampling_variance_pb2": 1.275569930005772e-12,
+      "conditional_mean_source_sampling_variance_pb2": 8.544716071462851e-13,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "S01_kl1": {
+      "conditional_expected_final_weight_pb": 7.532917870215387e-06,
+      "conditional_tag_sampling_variance_pb2": 1.9146547150392062e-13,
+      "conditional_mean_source_sampling_variance_pb2": 1.3307755120333403e-13,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "S01_kl2": {
+      "conditional_expected_final_weight_pb": 3.82282699204931e-06,
+      "conditional_tag_sampling_variance_pb2": 7.511420086730923e-14,
+      "conditional_mean_source_sampling_variance_pb2": 5.601574959882222e-14,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "S01_kl2.5": {
+      "conditional_expected_final_weight_pb": 3.440269490018822e-06,
+      "conditional_tag_sampling_variance_pb2": 2.93862176268921e-13,
+      "conditional_mean_source_sampling_variance_pb2": 2.158383422397928e-13,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "S01_kl5": {
+      "conditional_expected_final_weight_pb": 1.6252361352142625e-05,
+      "conditional_tag_sampling_variance_pb2": 2.8411277435064005e-11,
+      "conditional_mean_source_sampling_variance_pb2": 2.084307982237615e-11,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B01": {
+      "conditional_expected_final_weight_pb": 0.002005372788222402,
+      "conditional_tag_sampling_variance_pb2": 6.787465015907082e-08,
+      "conditional_mean_source_sampling_variance_pb2": 6.10140972037571e-08,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B02": {
+      "conditional_expected_final_weight_pb": 0.0008232935477497697,
+      "conditional_tag_sampling_variance_pb2": 4.913010677454387e-07,
+      "conditional_mean_source_sampling_variance_pb2": 2.4614437625567116e-08,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B03": {
+      "conditional_expected_final_weight_pb": 0.0047307769253341955,
+      "conditional_tag_sampling_variance_pb2": 2.2918355915130274e-05,
+      "conditional_mean_source_sampling_variance_pb2": 2.172322891597007e-05,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B04": {
+      "conditional_expected_final_weight_pb": 1.566881791280629e-05,
+      "conditional_tag_sampling_variance_pb2": 1.711271230046367e-12,
+      "conditional_mean_source_sampling_variance_pb2": 1.2664125417583762e-12,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B05": {
+      "conditional_expected_final_weight_pb": 0.00010989564133421365,
+      "conditional_tag_sampling_variance_pb2": 4.7523775667949116e-11,
+      "conditional_mean_source_sampling_variance_pb2": 4.1230016178091015e-11,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    },
+    "B06": {
+      "conditional_expected_final_weight_pb": 0.0,
+      "conditional_tag_sampling_variance_pb2": 0.0,
+      "conditional_mean_source_sampling_variance_pb2": 0.0,
+      "assumptions": "verified pinned independent per-jet bit0 Bernoulli, fixed reconstructed jets/photons; persisted Float_t PT approximation",
+      "full_detector_sampling_variance": null,
+      "official_ATLAS_systematic": null,
+      "combination_warning": "do not add tag variance to a sampling estimate from observed tagged outcomes; those outcomes already fluctuate",
+      "mass_distribution_scope": "actual tagged-pair realization only; conditional counts do not substitute an expected m_bb histogram"
+    }
+  },
+  "independent_event_precision_plans": {
+    "S01": {
+      "observed": 143,
+      "original_independent_events": 1000,
+      "acceptance": 0.143,
+      "wilson95": [
+        0.12266731749770252,
+        0.16606498806098383
+      ],
+      "zero_one_sided95_upper": null,
+      "planning_status": "PILOT_BASED_NOT_A_GUARANTEE",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": 150,
+          "conservative_using_wilson_lower": 179
+        },
+        "0.1": {
+          "plug_in": 600,
+          "conservative_using_wilson_lower": 716
+        },
+        "0.05": {
+          "plug_in": 2398,
+          "conservative_using_wilson_lower": 2861
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B01": {
+      "observed": 28,
+      "original_independent_events": 1000,
+      "acceptance": 0.028,
+      "wilson95": [
+        0.019442276812770925,
+        0.04017018319759311
+      ],
+      "zero_one_sided95_upper": null,
+      "planning_status": "PILOT_BASED_NOT_A_GUARANTEE",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": 868,
+          "conservative_using_wilson_lower": 1261
+        },
+        "0.1": {
+          "plug_in": 3472,
+          "conservative_using_wilson_lower": 5044
+        },
+        "0.05": {
+          "plug_in": 13886,
+          "conservative_using_wilson_lower": 20174
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B02": {
+      "observed": 1,
+      "original_independent_events": 1000,
+      "acceptance": 0.001,
+      "wilson95": [
+        0.00017654637062607809,
+        0.0056425585979579355
+      ],
+      "zero_one_sided95_upper": null,
+      "planning_status": "PILOT_BASED_NOT_A_GUARANTEE",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": 24975,
+          "conservative_using_wilson_lower": 141581
+        },
+        "0.1": {
+          "plug_in": 99900,
+          "conservative_using_wilson_lower": 566324
+        },
+        "0.05": {
+          "plug_in": 399600,
+          "conservative_using_wilson_lower": 2265294
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B03": {
+      "observed": 0,
+      "original_independent_events": 1000,
+      "acceptance": 0.0,
+      "wilson95": [
+        0.0,
+        0.0038267584855551234
+      ],
+      "zero_one_sided95_upper": 0.0029912495450953314,
+      "planning_status": "NO_FINITE_CONSERVATIVE_GUARANTEE_FROM_ZERO_PILOT",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        },
+        "0.1": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        },
+        "0.05": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B04": {
+      "observed": 75,
+      "original_independent_events": 1000,
+      "acceptance": 0.075,
+      "wilson95": [
+        0.06025180497346736,
+        0.0930009397392545
+      ],
+      "zero_one_sided95_upper": null,
+      "planning_status": "PILOT_BASED_NOT_A_GUARANTEE",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": 309,
+          "conservative_using_wilson_lower": 390
+        },
+        "0.1": {
+          "plug_in": 1234,
+          "conservative_using_wilson_lower": 1560
+        },
+        "0.05": {
+          "plug_in": 4934,
+          "conservative_using_wilson_lower": 6239
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B05": {
+      "observed": 131,
+      "original_independent_events": 1000,
+      "acceptance": 0.131,
+      "wilson95": [
+        0.11149250620200898,
+        0.15333164156033072
+      ],
+      "zero_one_sided95_upper": null,
+      "planning_status": "PILOT_BASED_NOT_A_GUARANTEE",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": 166,
+          "conservative_using_wilson_lower": 200
+        },
+        "0.1": {
+          "plug_in": 664,
+          "conservative_using_wilson_lower": 797
+        },
+        "0.05": {
+          "plug_in": 2654,
+          "conservative_using_wilson_lower": 3188
+        }
+      },
+      "production_authorized_by_this_plan": false
+    },
+    "B06": {
+      "observed": 0,
+      "original_independent_events": 1000,
+      "acceptance": 0.0,
+      "wilson95": [
+        0.0,
+        0.0038267584855551234
+      ],
+      "zero_one_sided95_upper": 0.0029912495450953314,
+      "planning_status": "NO_FINITE_CONSERVATIVE_GUARANTEE_FROM_ZERO_PILOT",
+      "independent_events_for_relative_source_acceptance_precision": {
+        "0.2": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        },
+        "0.1": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        },
+        "0.05": {
+          "plug_in": null,
+          "conservative_using_wilson_lower": null
+        }
+      },
+      "production_authorized_by_this_plan": false
+    }
+  },
+  "signal_common_event_selected_covariance": [
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.3734802307206615e-10,
+      "correlation": 1.0
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 4.067986617027705e-11,
+      "correlation": 0.9968564151694277
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.5308424560942798e-11,
+      "correlation": 0.8447124992189816
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 4.395824586564036e-11,
+      "correlation": 0.9328662794356349
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": -1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 3.9716344263619904e-10,
+      "correlation": 0.9814433905452158
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.067986617027705e-11,
+      "correlation": 0.9968564151694277
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.2124711178200404e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 4.305732635586056e-12,
+      "correlation": 0.7996519235494545
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.2620015383554569e-11,
+      "correlation": 0.9013935179351084
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 0,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.158055934266471e-10,
+      "correlation": 0.9631657479275467
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.5308424560942798e-11,
+      "correlation": 0.8447124992189816
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 4.305732635586056e-12,
+      "correlation": 0.7996519235494545
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 2.3912266541617946e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 6.098199714900171e-12,
+      "correlation": 0.9808023985544491
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 4.9746662355490654e-11,
+      "correlation": 0.9316671246862062
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.395824586564036e-11,
+      "correlation": 0.9328662794356349
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.2620015383554569e-11,
+      "correlation": 0.9013935179351084
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 6.098199714900171e-12,
+      "correlation": 0.9808023985544491
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.6166630234276682e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 2.5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.3670208945159136e-10,
+      "correlation": 0.9846289360768236
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 3.9716344263619904e-10,
+      "correlation": 0.9814433905452158
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.158055934266471e-10,
+      "correlation": 0.9631657479275467
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 0.0,
+      "correlation": null
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 4.9746662355490654e-11,
+      "correlation": 0.9316671246862062
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.3670208945159136e-10,
+      "correlation": 0.9846289360768236
+    },
+    {
+      "stage": "00_input",
+      "kappa_a": 5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.1923001841278576e-09,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 3.76518974833766e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.4204956123377563e-11,
+      "correlation": 0.9651627894253961
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 2.4450578477507146e-12,
+      "correlation": 0.49807272509050726
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 2.372202655911748e-12,
+      "correlation": 0.7047900823565627
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 6.718416216519116e-12,
+      "correlation": 0.8788226003897217
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": -1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 7.227589558967484e-11,
+      "correlation": 0.917258132326431
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.4204956123377563e-11,
+      "correlation": 0.9651627894253961
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 5.752965714986788e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.3515922413324114e-12,
+      "correlation": 0.7043635155420688
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.0008357022294997e-12,
+      "correlation": 0.7607086007143758
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 2.3444387831680093e-12,
+      "correlation": 0.7845502216218635
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 0,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 2.4252267694334983e-11,
+      "correlation": 0.7874046644926112
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.4450578477507146e-12,
+      "correlation": 0.49807272509050726
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.3515922413324114e-12,
+      "correlation": 0.7043635155420688
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 6.400381917361849e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.1039569895861067e-13,
+      "correlation": 0.7073171365749873
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 2.887912863773354e-13,
+      "correlation": 0.28974028679725505
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.6129375616153202e-12,
+      "correlation": 0.1570023430683225
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.372202655911748e-12,
+      "correlation": 0.7047900823565627
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.0008357022294997e-12,
+      "correlation": 0.7607086007143758
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 3.1039569895861067e-13,
+      "correlation": 0.7073171365749873
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.008826460593104e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 5.514737260074548e-13,
+      "correlation": 0.8069637042628016
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 4.357905190059909e-12,
+      "correlation": 0.6186866294247862
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 6.718416216519116e-12,
+      "correlation": 0.8788226003897217
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 2.3444387831680093e-12,
+      "correlation": 0.7845502216218635
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 2.887912863773354e-13,
+      "correlation": 0.28974028679725505
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 5.514737260074548e-13,
+      "correlation": 0.8069637042628016
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.5521886720079439e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 2.5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.5249500664994523e-11,
+      "correlation": 0.9531799341409949
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 7.227589558967484e-11,
+      "correlation": 0.917258132326431
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 2.4252267694334983e-11,
+      "correlation": 0.7874046644926112
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.6129375616153202e-12,
+      "correlation": 0.1570023430683225
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 4.357905190059909e-12,
+      "correlation": 0.6186866294247862
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.5249500664994523e-11,
+      "correlation": 0.9531799341409949
+    },
+    {
+      "stage": "01_photons",
+      "kappa_a": 5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.6489859465853862e-10,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 3.142473189181078e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.2009604054952868e-11,
+      "correlation": 0.9623580565115912
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 2.2589068215533653e-12,
+      "correlation": 0.5131772848264883
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 2.1726401910002257e-12,
+      "correlation": 0.7336560335472808
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 5.753668351901109e-12,
+      "correlation": 0.8915944546316246
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": -1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 5.990042392313474e-11,
+      "correlation": 0.9126314672360719
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.2009604054952868e-11,
+      "correlation": 0.9623580565115912
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 4.95578463465953e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.266264791884185e-12,
+      "correlation": 0.7243912860985957
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 9.410445264251435e-13,
+      "correlation": 0.8001924243159165
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 2.0400467352233224e-12,
+      "correlation": 0.7960534493463377
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 0,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 2.0151181196135767e-11,
+      "correlation": 0.7731177232836141
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.2589068215533653e-12,
+      "correlation": 0.5131772848264883
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.266264791884185e-12,
+      "correlation": 0.7243912860985957
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 6.165810933916349e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.0985572606376574e-13,
+      "correlation": 0.746972991738443
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 2.851024165867705e-13,
+      "correlation": 0.3154017661363621
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.447429611179499e-12,
+      "correlation": 0.15743586872252577
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.1726401910002257e-12,
+      "correlation": 0.7336560335472808
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 9.410445264251435e-13,
+      "correlation": 0.8001924243159165
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 3.0985572606376574e-13,
+      "correlation": 0.746972991738443
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 2.7907378987327433e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 4.888353958504729e-13,
+      "correlation": 0.8038248794600549
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 3.789169166806846e-12,
+      "correlation": 0.612612428232602
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 5.753668351901109e-12,
+      "correlation": 0.8915944546316246
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 2.0400467352233224e-12,
+      "correlation": 0.7960534493463377
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 2.851024165867705e-13,
+      "correlation": 0.3154017661363621
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 4.888353958504729e-13,
+      "correlation": 0.8038248794600549
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.3252058722231504e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 2.5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.2852098122624754e-11,
+      "correlation": 0.9535285268055931
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 5.990042392313474e-11,
+      "correlation": 0.9126314672360719
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 2.0151181196135767e-11,
+      "correlation": 0.7731177232836141
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.447429611179499e-12,
+      "correlation": 0.15743586872252577
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.789169166806846e-12,
+      "correlation": 0.612612428232602
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.2852098122624754e-11,
+      "correlation": 0.9535285268055931
+    },
+    {
+      "stage": "02_jets",
+      "kappa_a": 5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.3708733469345866e-10,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.2427935275432795e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 8.310964285394932e-12,
+      "correlation": 0.9697288541713258
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.3901294897329932e-12,
+      "correlation": 0.5237774132812214
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.6654308880422496e-12,
+      "correlation": 0.833320892487961
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 4.50163265995955e-12,
+      "correlation": 0.920214680592155
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": -1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 4.5668152253439695e-11,
+      "correlation": 0.9340772531131438
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 8.310964285394932e-12,
+      "correlation": 0.9697288541713258
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 3.2750120448459206e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 7.236990541555396e-13,
+      "correlation": 0.7135718538744894
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 6.570253131944918e-13,
+      "correlation": 0.8603119460543123
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.5554281613646667e-12,
+      "correlation": 0.832065008005464
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 0,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.5364839590877327e-11,
+      "correlation": 0.8224046982658259
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.3901294897329932e-12,
+      "correlation": 0.5237774132812214
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 7.236990541555396e-13,
+      "correlation": 0.7135718538744894
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 3.140708903335463e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.6124499826092022e-13,
+      "correlation": 0.6817932721902857
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.8113290412603545e-13,
+      "correlation": 0.31289401705208064
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.2435809526749708e-12,
+      "correlation": 0.21494345311491242
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.6654308880422496e-12,
+      "correlation": 0.833320892487961
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 6.570253131944918e-13,
+      "correlation": 0.8603119460543123
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.6124499826092022e-13,
+      "correlation": 0.6817932721902857
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.7808994320641266e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 3.787468881369326e-13,
+      "correlation": 0.868846642229144
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 3.3043763377970095e-12,
+      "correlation": 0.7584619683637726
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.50163265995955e-12,
+      "correlation": 0.920214680592155
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.5554281613646667e-12,
+      "correlation": 0.832065008005464
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.8113290412603545e-13,
+      "correlation": 0.31289401705208064
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.787468881369326e-13,
+      "correlation": 0.868846642229144
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.0670198456233683e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 2.5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.0403044289217885e-11,
+      "correlation": 0.9755245467610267
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.5668152253439695e-11,
+      "correlation": 0.9340772531131438
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.5364839590877327e-11,
+      "correlation": 0.8224046982658259
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.2435809526749708e-12,
+      "correlation": 0.21494345311491242
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.3043763377970095e-12,
+      "correlation": 0.7584619683637726
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.0403044289217885e-11,
+      "correlation": 0.9755245467610267
+    },
+    {
+      "stage": "03_two_btags",
+      "kappa_a": 5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.0657908664901087e-10,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 2.2427935275432795e-11,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 8.310964285394932e-12,
+      "correlation": 0.9697288541713258
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.3901294897329932e-12,
+      "correlation": 0.5237774132812214
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.6654308880422496e-12,
+      "correlation": 0.833320892487961
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 4.50163265995955e-12,
+      "correlation": 0.920214680592155
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": -1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 4.5668152253439695e-11,
+      "correlation": 0.9340772531131438
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 8.310964285394932e-12,
+      "correlation": 0.9697288541713258
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 3.2750120448459206e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 7.236990541555396e-13,
+      "correlation": 0.7135718538744894
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 6.570253131944918e-13,
+      "correlation": 0.8603119460543123
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.5554281613646667e-12,
+      "correlation": 0.832065008005464
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 0,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.5364839590877327e-11,
+      "correlation": 0.8224046982658259
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.3901294897329932e-12,
+      "correlation": 0.5237774132812214
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 7.236990541555396e-13,
+      "correlation": 0.7135718538744894
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 3.140708903335463e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.6124499826092022e-13,
+      "correlation": 0.6817932721902857
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.8113290412603545e-13,
+      "correlation": 0.31289401705208064
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 1,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.2435809526749708e-12,
+      "correlation": 0.21494345311491242
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 1.6654308880422496e-12,
+      "correlation": 0.833320892487961
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 6.570253131944918e-13,
+      "correlation": 0.8603119460543123
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.6124499826092022e-13,
+      "correlation": 0.6817932721902857
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 1.7808994320641266e-13,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 3.787468881369326e-13,
+      "correlation": 0.868846642229144
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 3.3043763377970095e-12,
+      "correlation": 0.7584619683637726
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.50163265995955e-12,
+      "correlation": 0.920214680592155
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.5554281613646667e-12,
+      "correlation": 0.832065008005464
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.8113290412603545e-13,
+      "correlation": 0.31289401705208064
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.787468881369326e-13,
+      "correlation": 0.868846642229144
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.0670198456233683e-12,
+      "correlation": 1.0
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 2.5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.0403044289217885e-11,
+      "correlation": 0.9755245467610267
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": -1,
+      "common_source_sampling_covariance_pb2": 4.5668152253439695e-11,
+      "correlation": 0.9340772531131438
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": 0,
+      "common_source_sampling_covariance_pb2": 1.5364839590877327e-11,
+      "correlation": 0.8224046982658259
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": 1,
+      "common_source_sampling_covariance_pb2": 1.2435809526749708e-12,
+      "correlation": 0.21494345311491242
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": 2,
+      "common_source_sampling_covariance_pb2": 3.3043763377970095e-12,
+      "correlation": 0.7584619683637726
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": 2.5,
+      "common_source_sampling_covariance_pb2": 1.0403044289217885e-11,
+      "correlation": 0.9755245467610267
+    },
+    {
+      "stage": "04_mgg_105_160",
+      "kappa_a": 5,
+      "kappa_b": 5,
+      "common_source_sampling_covariance_pb2": 1.0657908664901087e-10,
+      "correlation": 1.0
+    }
+  ],
+  "shape_scope": "UNIT_AREA_SHAPE_ONLY guarded zero/cancellation; flows included; observed tagged pairs",
+  "luminosity_scope": "COMMON_LUMINOSITY_EXPLORATORY 100 fb^-1; pb * fb^-1 *1000",
+  "combined_physical_background": "BLOCKED_OVERLAP_AND_CALIBRATION",
+  "B01_B02_B03_ME_PS_overlap": "UNKNOWN",
+  "B04_B05_Higgs_BR": "MODEL_BR_ONLY",
+  "ttH_spin": "UNVALIDATED",
+  "B06_photon_fake": "NO_CALIBRATED_FAKE_MODEL",
+  "official_ATLAS_systematics": null,
+  "discovery_or_exclusion": null,
+  "PDF_scale_variation": null,
+  "BR_uncertainty": null,
+  "full_detector_sampling_variance": null,
+  "total_uncertainty_band": null,
+  "sampling_interpretation": "event-level sample covariance includes the realized hard-point, decay, shower, detector and tag randomness; it is not an isolated generator-only contribution",
+  "isolated_generator_only_acceptance_variance": null,
+  "conditional_tag_variance_interpretation": "conditional on reconstructed jets/photons under the pinned independent Bernoulli model; not additive to the already fluctuating observed-outcome covariance"
+}

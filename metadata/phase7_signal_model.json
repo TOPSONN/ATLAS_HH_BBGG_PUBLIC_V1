@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "PASS_GENUINE_B100_C1000_FULL_CHAINS_MODEL_SCOPE",
+  "status": "PASS_7B_7C_WITH_7D_INCONCLUSIVE",
   "production_contract": {
     "schema_version": 1,
     "process_id": "S01_GGF_HH_SM",
@@ -849,7 +849,7 @@
     "B_integration_error_pb": 0.00018503,
     "C_survey_only_sigma_pb": 0.019004,
     "C_survey_only_error_pb": 0.00014885,
-    "C_final_result": "PENDING; no rescaling or source replacement",
+    "C_final_result": "ACTUAL_FINAL_C1000_RETAINED_NO_RESCALING",
     "C_final_sigma_pb": 0.019069,
     "C_final_integration_error_pb": 0.00011745,
     "absolute_difference_pb": 0.0017929999999999995,
@@ -860,5 +860,6 @@
     "source_replacement": false,
     "additional_hard_events_authorized": 0,
     "next_step": "separately approved zero-retained-event independent integration/convergence audit and native weighted-candidate/truncation assessment before precision absolute rates"
-  }
+  },
+  "kappa_scan_status": "BOUNDED_DIAGNOSTIC_ONLY; KAPPA2.5_AND_5_INCONCLUSIVE_REWEIGHTING"
 }

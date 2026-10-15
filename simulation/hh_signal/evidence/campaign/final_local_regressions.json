@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ACTUAL_LOCAL_METHOD_AND_PUBLISHED_EVIDENCE_REGRESSION",
+  "campaign_method_tests": 13,
+  "actual_source_events_in_references": 1100,
+  "actual_reweight_rows": 6000,
+  "rows": [
+    {
+      "suite": "campaign_methods",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4738874390000092,
+      "log_sha256": "3b2ca17f22af8c70e349eb2f96941499b36544d4575d6d1be23fa38dea8df55b"
+    },
+    {
+      "suite": "actual_reference_regression",
+      "exit_code": 0,
+      "elapsed_seconds": 2.70034042899988,
+      "log_sha256": "3a99c7be09c4f0d9e1ff2306fcd59de8bd509b29378161f09e78edbe2bbb01b0"
+    }
+  ],
+  "native_reader_ROOT_rerun_in_portable_test": false,
+  "native_executions": "separate actual-chain and7100 ROOT readback receipts"
+}
