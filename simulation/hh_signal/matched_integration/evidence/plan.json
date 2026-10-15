@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "task": "PHASE7G_HH_MATCHED_INTEGRATION_ONLY_V1",
+  "base_head": "081d29a8499a714faeb9e1296d41ac93d48c82d2",
+  "base_branch": "codex/phase7f-hh-effective-config-lock",
+  "branch_alias_from_request": "codex/phase7f-hh-config-lock",
+  "base_resolution": "verified PR22 exact head; existing branch names preserved",
+  "authorization_status": "NOT_GRANTED",
+  "native_STOP80": "PRESERVED",
+  "permanent_writer_STOP86": "PRESERVED",
+  "semantics_gate": "BLOCKED_INTEGRATION_SEMANTICS",
+  "stage_A_status": "NOT_EXECUTED",
+  "stage_B_status": "NOT_EXECUTED",
+  "configuration_lock_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+  "replicas": [
+    {
+      "seed": 910001,
+      "workspace": "replica_910001",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null
+    },
+    {
+      "seed": 910019,
+      "workspace": "replica_910019",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null
+    },
+    {
+      "seed": 910037,
+      "workspace": "replica_910037",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null
+    },
+    {
+      "seed": 910061,
+      "workspace": "replica_910061",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null
+    }
+  ],
+  "stage_A": {
+    "seed": 910001,
+    "purpose": "first real adaptation survey only, after authorization and semantics review",
+    "blocks_other_replicas_until_pass": true,
+    "reuse_policy": "only exact same adaptation endpoint/config; not a final measurement estimate"
+  },
+  "endpoints": {
+    "adaptation": {
+      "initial_points": 250,
+      "iterations": 4,
+      "minimum_iterations": 4,
+      "accuracy": 0.0,
+      "grid_mode": 2,
+      "moffset": 0
+    },
+    "measurement": {
+      "initial_points": 250,
+      "iterations": 3,
+      "minimum_iterations": 3,
+      "accuracy": 0.0,
+      "grid_mode": 0,
+      "moffset": 1
+    },
+    "native_point_growth": "2x per iteration, not250 constant; initial ME setup calls are separate",
+    "stopping": "fixed predeclared endpoint; no accuracy/luminosity early stop; resource/zero-pass/native failure means PARTIAL, never silently accepted"
+  },
+  "ceilings": {
+    "concurrent_jobs": 1,
+    "workers": 1,
+    "aggregate_wall_seconds": 14400,
+    "aggregate_CPU_seconds": 14400,
+    "additional_disk_bytes": 5368709120,
+    "automatic_expansion": false
+  },
+  "cost_planning_only": {
+    "nominal_phase_space_calls_per_replica": 5500,
+    "assumed_exact_helicities": 4,
+    "nominal_ME_calls_four_replicas": 88000,
+    "pilot_seconds_per_ME": 0.0625797962206441,
+    "nominal_seconds_excluding_setup": 5507.02206741668,
+    "scope": "planning extrapolation from old B timing, not a new measurement, guarantee or spending authorization"
+  },
+  "required_runtime_evidence": [
+    "actual ME counters, distinct from integrand calls",
+    "per-iteration estimates and native errors",
+    "effective config and original seed plus offsets",
+    "all grid snapshots/geometry and provenance",
+    "candidate/write/store/overweight counters",
+    "loop stability diagnostics",
+    "CPU/wall/peak RAM/disk/termination",
+    "transient monitoring method, coverage gaps and final zero-event postcondition",
+    "hash-bound immutable input envelope"
+  ],
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "convergence": "NOT_EVALUATED",
+  "sources": [
+    {
+      "path": "simulation/hh_signal/config_lock/configuration_lock.json",
+      "sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/contract.py",
+      "sha256": "38494fcd0c4775843217d1b2d55e2ad3bd0e2712f4d1ea7cb99d6be2eb404c19"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/controller.py",
+      "sha256": "9c68dab1e38302fc3f1f0c6da1f8f6dc19cdcddb2b64a9de193df81ec499ad02"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/runtime_bridge.py",
+      "sha256": "8f47c0476271b1a6dbddf866a9e1f899b9e69f6655b6a2449ef77038ee02b6ac"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/writers.py",
+      "sha256": "78c2d1e3005e89a080be00e43f06eb37d110a8b3a2c37af9bd4deced7f00f073"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/__init__.py",
+      "sha256": "f411d7af735c3da1acec4b3ea326403eb9baa187213d37d0d6d855965f1aa633"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/audit_payload.py",
+      "sha256": "64a4cee4c8303ff9e64ddd9130c57eb874bad323ff70bbbf943e018cb67ed187"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/contracts.py",
+      "sha256": "5b442d9d830ad3f5f2db713a7456ceb1dadde2026e73871dec0f1bbe03233bde"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/controller.py",
+      "sha256": "cbb984e2d6185dfe89d1d1523c1ab6a69135604fab07bcd3922b505e1a750dc1"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/integration_only.sh",
+      "sha256": "c629101225c96066efaf39e72a41c46aeb528df4469ebae5f1f08f4affae5585"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/runtime_contract.py",
+      "sha256": "4438dd6f1f484dd5f644527a4ec2e7cda0dc8fc2d64bbffeeaaedcfff24f6d4b"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/semantics.py",
+      "sha256": "d533a1f1afa8aec48d246baad3cc8959d6cde105d861738e12bf7407662bd103"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/fixed_weight_kernel_probe.f90",
+      "sha256": "7b0589d7f8b039facfc4d1b67815db49c0405793993988203721deff0582c3be"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/rng_noninterference_probe.f90",
+      "sha256": "516fd2efd2343ef7d02c65e3c00cfd0c99b8b750ada9a3cc103728835db094b6"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/test_matched.py",
+      "sha256": "0a1bbce0d061bb1b0099a32a0768c5cd7bfa27f54290fa6997feacd2c19842cf"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/validate.py",
+      "sha256": "ba2874f9a78476056bff3b8acefc92b5fd745d84ba503ef4d49a42a909ca19f9"
+    }
+  ]
+}

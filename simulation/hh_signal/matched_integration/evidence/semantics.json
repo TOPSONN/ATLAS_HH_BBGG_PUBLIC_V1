@@ -1,0 +1,192 @@
+{
+  "status": "BLOCKED_INTEGRATION_SEMANTICS",
+  "authorization_status": "NOT_GRANTED",
+  "scope": "RNG-only actual native routines and fixed synthetic weights; no ME, phase space or integral",
+  "RANMAR_trace_equal": true,
+  "RANMAR_draws_per_mode": 16,
+  "interleaved_aux_calls_mode_1": {
+    "ran1": 32,
+    "xran1": 16
+  },
+  "auxiliary_next_draws_differ": true,
+  "fixed_weight_sum": 41,
+  "fixed_weight_sum_squares": 289,
+  "fixed_weight_scope": "copied arithmetic shape only; not the native integrator or writer path",
+  "conditional_invariants": [
+    "three separate RNG states; auxiliary draws do not advance RANMAR in tested sequence",
+    "single HH channel bypasses ran1 channel selection; zooming explicitly false in pinned source",
+    "same point/weight stream implies same sum, squared sum and weight-based grid increments"
+  ],
+  "known_changes": [
+    "candidate nw/swgt and auxiliary RNG draws are removed",
+    "th_nunwgt, th_maxwgt, neventswritten become zero; original candidate diagnostics lost",
+    "negative accuracy luminosity stopping depends on neventswritten and is not equivalent"
+  ],
+  "unproven": [
+    "same complete native point/weight/ME trace through all iterations",
+    "same grids, adaptation, reported integral and error under real no-output execution",
+    "native numerical tail/overweight counters with suppressed candidate storage",
+    "complete transient output observation during a genuine survey"
+  ],
+  "required_next": "review narrowly instrumented paired no-output native paths before enabling Stage A; no equivalence claim",
+  "native_survey_executed": false,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "postcondition": {
+    "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+    "retained_event_records": 0,
+    "files": [],
+    "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+  },
+  "source_audit": [
+    {
+      "path": "Source/dsample.f",
+      "sha256": "2177cc91aafea1343d45999ad9ccb41f65bf55a4d9b3f18a2578d62fb219be8a",
+      "excerpts": [
+        {
+          "first_line": 947,
+          "last_line": 971,
+          "text": "     .     tmean, trmean, tsigma, dim, events, itm, kn, cur_it, invar, configs\n      double precision   psect(maxconfigs),alpha(maxconfigs)\n      common/to_mconfig2/psect            ,alpha\n      data idum/0/\n\n      integer           mincfig, maxcfig\n      common/to_configs/mincfig, maxcfig\n\nc-----\nc  Begin Code\nc-----\n      iteration = cur_it\n      if (cur_it .gt. itm) then\n         wgt = -1d0\n      else\n         wgt = 1d0 / (dble(events) * dble(itm))\nc\nc     Choose configuration\nc\n         if (configs .gt. 1) then\n            xrnd = ran1(idum)\n            iconfig=1\n            tot = alpha(iconfig)\n            do while (tot .lt. xrnd .and. iconfig .lt. configs)\n               iconfig=iconfig+1"
+        },
+        {
+          "first_line": 1682,
+          "last_line": 1720,
+          "text": "      if (iteration .eq. cur_it) then\nc        Add the current point to the DiscreteSamplerGrid\n         call add_entry_to_discrete_dimensions(wgt)\n         if (kn.eq.0.and.(iteration.eq.1.or.use_cut.eq.-2)) then\n            ! ensure that all cumulative variable are at zero (usefull for reset)\n            twgt1 = 0d0         !\n            iavg = 0            !Vars for averging to increase err estimate\n            navg = 1            !\n            wmax1= 99d99\n            wmax = -1d0\n            mean = 0d0\n            rmean = 0d0\n            sigma = 0d0\n            chi2 = 0d0\n            non_zero = 0\n            vol = 1d0 / dble(events * itm)\n            knt = events\n            do i=1,maxconfigs\n               psect(i)=0d0\n            enddo\n         endif\n\n         kn = kn + 1\n         if (.true.) then       !Average points to increase error estimate\n            twgt1=twgt1+dabs(wgt)     !This doesn't change anything should remove\n            iavg = iavg+1\n            if (iavg .ge. navg) then\n               sigma=sigma+twgt1**2\n               iavg = 0\n               twgt1=0d0\n            endif\n         else\n            sigma = sigma + wgt**2\n         endif\n         if (wgt .ne. 0.) then\n            if (dabs(wgt)*itm*events .gt. wmax) then\n               wmax=dabs(wgt)*itm*events\n            endif\n            non_zero = non_zero + 1"
+        },
+        {
+          "first_line": 1750,
+          "last_line": 1760,
+          "text": "               endif\nc     write(*,*) 'bin choice',j,i,lastbin(j)\n               if (i .gt. ng) then\n                  print*,'error i>ng',i,j,ng,point(j)\n                  i=ng\n               endif\n               grid(1, i, j) = grid(1, i, j) + abs(wgt)\n               grid2(i, j) = grid2(i, j) + wgt**2\nc\nc     Lines below are for multiconfiguration\nc"
+        },
+        {
+          "first_line": 1945,
+          "last_line": 1963,
+          "text": "\nc------\nc    Here we will double the number of events requested for the next run\nc-----\n 23         events = 2 * events\n            vol = 1d0/dble(events*itm)\n            knt = events\n            if (use_cut.ne.-2) then\n              twgt = mean / (dble(itm)*dble(events))\n            endif\nc            write(*,*) 'New number of events',events,twgt\n\n            mean = 0d0\n            rmean = 0d0\n            sigma = 0d0\n            cur_it = cur_it + 1\n            kn = 0\n            wmax = -1d0\n"
+        },
+        {
+          "first_line": 2128,
+          "last_line": 2150,
+          "text": "            xdum=dsig(0,0,2)\nc\nc     Add test to see if we have achieved desired accuracy \nc     Allow minimum itmin iterations\nc\n            if (tsigma .gt. 0d0 .and. cur_it .gt. itmin .and. accur .gt. 0d0) then\n\n               xxmean = tmean/tsigma\n               if (cur_it.ne.2)then\n                  xchi2 = dabs(chi2/xxmean/xxmean-tsigma)/dble(cur_it-2)               \n               else\n                  xchi2 = 0d0\n               endif\n               write(*,'(a,4f8.3)') ' Accuracy: ',sqrt(xchi2/tsigma),\n     &              accur,1/sqrt(tsigma),xchi2\nc               write(*,*) 'We got it',1d0/sqrt(tsigma), accur\nc               if (1d0/sqrt(tsigma) .lt. accur) then\n               if (sqrt(xchi2/tsigma) .lt. accur) then\n                  write(*,*) 'Finished due to accuracy ',sqrt(xchi2/tsigma), accur\n                  tmean = tmean / tsigma\n                  trmean = trmean / tsigma\n                  if (cur_it .gt. 2) then\n                     chi2 = (chi2/tmean/tmean-tsigma)/dble(cur_it-2)"
+        },
+        {
+          "first_line": 2180,
+          "last_line": 2222,
+          "text": "c\nc New check to see if we need to keep integrating this one or not.\nc\n            if (cur_it .gt. itmin .and. accur .lt. 0d0) then  !Check luminocity\nc\nc             Lets get the actual number instead \nc             tjs 5/22/2007\nc\nc               nun = n_unwgted()\nc               write(*,*) 'Estimated events',nun, accur\n               if (use_cut.eq.-2) then\n                  call store_events(force_max_wgt, .False.)\n               else\n                  call store_events(-1d0, .True.)\n               endif\n\n               nun = neventswritten\nc               tmp1 = tmean / tsigma\nc               chi2tmp = (chi2/tmp1/tmp1-tsigma)/dble(cur_it-2)\nc     Calculate chi2 for last few iterations (ja 03/11)\n               tmeant = 0d0\n               tsigmat = 0d0\nc     Use the last 3 iterations or cur_it-1 if cur_it-1 >= itmin but < 3\n               itsum = min(max(itmin,cur_it-1),3)\n               do i=cur_it-itsum,cur_it-1\n                  tmeant = tmeant+xmean(i)*xmean(i)**2/xsigma(i)**2\n                  tsigmat = tsigmat + xmean(i)**2/ xsigma(i)**2\n               enddo\n               tmeant = tmeant/tsigmat\n               chi2tmp = 0d0\n               do i = cur_it-itsum,cur_it-1\n                  chi2tmp = chi2tmp+(xmean(i)-tmeant)**2/xsigma(i)**2\n               enddo\n               chi2tmp = chi2tmp/2d0  !Since using only last 3, n-1=2\nc     JA 8/17/2011 Redefined -accur as lumi, so nevents is -accur*cross section\n               write(*,*) \"Checking number of events\",-accur*tmeant,nun,' chi2: ',chi2tmp\nc     Check nun and chi2 (ja 03/11)\n               if (nun .gt. -accur*tmeant .and. chi2tmp .lt. 10d0)then   \n                  tmean = tmean / tsigma\n                  if (cur_it .gt. 2) then\n                     chi2 = (chi2/tmean/tmean-tsigma)/dble(cur_it-2)\n                  else\n                     chi2=0d0"
+        },
+        {
+          "first_line": 2546,
+          "last_line": 2576,
+          "text": "      function ran1(idum)\n      dimension r(97)\n      parameter (m1=259200,ia1=7141,ic1=54773,rm1=3.8580247e-6)\n      parameter (m2=134456,ia2=8121,ic2=28411,rm2=7.4373773e-6)\n      parameter (m3=243000,ia3=4561,ic3=51349)\n      data iff /0/\n      save r, ix1, ix2, ix3\n      if (idum.lt.0.or.iff.eq.0) then\n        iff=1\n        ix1=mod(ic1-idum,m1)\n        ix1=mod(ia1*ix1+ic1,m1)\n        ix2=mod(ix1,m2)\n        ix1=mod(ia1*ix1+ic1,m1)\n        ix3=mod(ix1,m3)\n        do 11 j=1,97\n          ix1=mod(ia1*ix1+ic1,m1)\n          ix2=mod(ia2*ix2+ic2,m2)\n          r(j)=(float(ix1)+float(ix2)*rm2)*rm1\n11      continue\n        idum=1\n      endif\n      ix1=mod(ia1*ix1+ic1,m1)\n      ix2=mod(ia2*ix2+ic2,m2)\n      ix3=mod(ia3*ix3+ic3,m3)\n      j=1+(97*ix3)/m3\n      if(j.gt.97.or.j.lt.1) stop\n      ran1=r(j)\n      r(j)=(float(ix1)+float(ix2)*rm2)*rm1\n      return\n      end\n"
+        }
+      ]
+    },
+    {
+      "path": "Source/ran1.f",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af",
+      "excerpts": [
+        {
+          "first_line": 1,
+          "last_line": 33,
+          "text": "      function xran1(idum)\n      dimension r(97)\n      parameter (m1=259200,ia1=7141,ic1=54773,rm1=3.8580247e-6)\n      parameter (m2=134456,ia2=8121,ic2=28411,rm2=7.4373773e-6)\n      parameter (m3=243000,ia3=4561,ic3=51349)\n      data iff /0/\n      save r, ix1,ix2,ix3\n      if (idum.lt.0.or.iff.eq.0) then\n        iff=1\n        ix1=mod(ic1-idum,m1)\n        ix1=mod(ia1*ix1+ic1,m1)\n        ix2=mod(ix1,m2)\n        ix1=mod(ia1*ix1+ic1,m1)\n        ix3=mod(ix1,m3)\n        do 11 j=1,97\n          ix1=mod(ia1*ix1+ic1,m1)\n          ix2=mod(ia2*ix2+ic2,m2)\n          r(j)=(float(ix1)+float(ix2)*rm2)*rm1\n11      continue\n        idum=1\n      endif\n      ix1=mod(ia1*ix1+ic1,m1)\n      ix2=mod(ia2*ix2+ic2,m2)\n      ix3=mod(ia3*ix3+ic3,m3)\n      j=1+(97*ix3)/m3\n      if(j.gt.97.or.j.lt.1)then\n         write(*,*) 'j is bad in ran1.f',j, 97d0*ix3/m3\n         STOP\n      endif\n      xran1=r(j)\n      r(j)=(float(ix1)+float(ix2)*rm2)*rm1\n      return\n      end"
+        }
+      ]
+    },
+    {
+      "path": "Source/ranmar.f",
+      "sha256": "9bb6bbc5f1fda1df1a8df5d8518103b55a3f6c2b13874178b501b7272ecf2888",
+      "excerpts": [
+        {
+          "first_line": 34,
+          "last_line": 70,
+          "text": "      if (init .eq. 1) then\n         init = 0\n         call get_offset(ioffset)\n         if (iseed .eq. 0) call get_base(iseed)\nc\nc     TJS 3/13/2008\nc     Modified to allow for more sequences \nc     iseed can be between 0 and 30081*30081\nc     before pattern repeats\nc\nc\nc     TJS 12/3/2010\nc     multipied iseed to give larger values more likely to make change\nc     get offset for multiple runs of single process\nc\nc\nc     TJS 18/6/2012\nc     Updated to better divide iseed among ij and kl seeds\nc     Note it may still be possible to get identical ij,kl for\nc     different iseed, if have exactly compensating joffset, ioffset, jconfig\nc\n         call get_moffset(joffset)\n         joffset = joffset * 3157\n         iseed = iseed * 31300       \n         ij=1802+jconfig + mod(iseed,30081)\n         kl=9373+(iseed/30081)+ioffset + joffset     !Switched to 30081  20/6/12 to avoid dupes in range 30082-31328\n         write(*,'(a,i6,a3,i6)') 'Using random seed offsets',jconfig,\" : \",ioffset\n         write(*,*) ' with seed', iseed/31300\n         do while (ij .gt. 31328)\n            ij = ij - 31328\n         enddo\n         do while (kl .gt. 30081)\n            kl = kl - 30081\n         enddo\n        call rmarin(ij,kl)         \n      endif\n      call ranmar(x)"
+        }
+      ]
+    },
+    {
+      "path": "SubProcesses/unwgt.f",
+      "sha256": "358140b33f896077d529412c3107411cae8516da507ad1fa42315efc2a4cc2ee",
+      "excerpts": [
+        {
+          "first_line": 233,
+          "last_line": 257,
+          "text": "      if (twgt .ge. 0d0) then\n         do i=1,nexternal\n            do j=0,3\n               p(j,i)=px(j,i)\n            enddo\n         enddo\n         xwgt = abs(wgt)\n         if (zooming) call zoom_event(xwgt,P)\n         if (xwgt .eq. 0d0) return\n         yran = xran1(idum)\n         if (xwgt .gt. twgt*fudge*yran) then\n            uwgt = max(xwgt,twgt*fudge)\nc           Set sign of uwgt to sign of wgt\n            uwgt = dsign(uwgt,wgt)\n            if (twgt .gt. 0) uwgt=uwgt/twgt/fudge\nc            call write_event(p,uwgt)\nc            write(29,'(2e15.5)') matrix,wgt\nc $B$ S-COMMENT_C $B$\n            call write_leshouche(p,uwgt,numproc,.True.)\n         elseif (xwgt .gt. 0d0 .and. nw .lt. 5) then\n            call write_leshouche(p,wgt/twgt*1d-6,numproc,.True.)\nc $E$ S-COMMENT_C $E$\n         endif\n         maxwgt=max(maxwgt,xwgt)\n      endif"
+        },
+        {
+          "first_line": 559,
+          "last_line": 575,
+          "text": "      if ((nw .ge. maxevents).and.do_write_events) return\n      if (init_mode) return\nC     if all the necessary inputs to write the events have already been\nC     computed in the bias module, then directly jump to write_events\n      if (AlreadySetInBiasModule) then\n        goto 1123\n      endif\n\nc\nc     In case of identical particles symmetry, choose assignment\nc\n      xtarget = ran1(iseed)*nsym\n      jsym = 1\n      do while (xtarget .gt. jsym .and. jsym .lt. nsym)\n         jsym = jsym+1\n      enddo\nc"
+        },
+        {
+          "first_line": 810,
+          "last_line": 823,
+          "text": "\n 1123 continue\n      if (.not.do_write_events) then\n        return\n      endif\n\nc     Store weight for event\n      nw = nw+1\n      swgt(nw)=wgt\n\n      call write_event(lun,pb(0,1),wgt,npart,jpart(1,1),ngroup,\n     &   sscale,aaqcd,aaqed,buff,use_syst,s_buff,nclus,buffclus)\n      if(btest(mlevel,1))\n     &   call write_event(6,pb(0,1),wgt,npart,jpart(1,1),ngroup,"
+        }
+      ]
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/configs.inc",
+      "sha256": "3ed151c1c2c37bacff3d3f5d549fdae017a5972d93c6964508b61c78efb764c5",
+      "excerpts": [
+        {
+          "first_line": 1,
+          "last_line": 8,
+          "text": "C     Diagram 1\n      DATA MAPCONFIG(1)/1/\n      DATA TSTRATEGY(1)/2/\n      DATA (IFOREST(I,-1,1),I=1,2)/4,3/\n      DATA (SPROP(I,-1,1),I=1,1)/25/\n      DATA TPRID(-1,1)/0/\nC     Number of configs\n      DATA MAPCONFIG(0)/1/"
+        }
+      ]
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig1.f",
+      "sha256": "9b0ead11f1002cee33a73e7024de5ec9618627ed6cd2b7c65eb24935e163c365",
+      "excerpts": [
+        {
+          "first_line": 140,
+          "last_line": 185,
+          "text": "        RETURN\n      ENDIF\n      IF(FRAME_ID.NE.6)THEN\n        CALL BOOST_TO_FRAME(PP, FRAME_ID, P1)\n      ELSE\n        P1 = PP\n      ENDIF\n      CALL SMATRIX1(P1,DSIGUU)\n      IF (IMODE.EQ.5) THEN\n        IF (DSIGUU.LT.1D199) THEN\n          DSIG1 = DSIGUU*CONV\n        ELSE\n          DSIG1 = 0.0D0\n        ENDIF\n        RETURN\n      ENDIF\nC     Select a flavor combination (need to do here for right sign)\n      CALL RANMAR(R)\n      IPSEL=0\n      DO WHILE (R.GE.0D0 .AND. IPSEL.LT.IPROC)\n        IPSEL=IPSEL+1\n        R=R-DABS(PD(IPSEL))/PD(0)\n      ENDDO\n\n      DSIGUU=DSIGUU*REWGT(PP)\n\nC     Apply the bias weight specified in the run card (default is 1.0)\n      DSIGUU=DSIGUU*CUSTOM_BIAS(PP,DSIGUU,1)\n\n      DSIGUU=DSIGUU*NFACT\n\n      IF (DSIGUU.LT.1D199) THEN\nC       Set sign of dsig based on sign of PDF and matrix element\n        DSIG1=DSIGN(PD(0)*CONV*DSIGUU,DSIGUU*PD(IPSEL))\n      ELSE\n        WRITE(*,*) 'Error in matrix element'\n        DSIGUU=0D0\n        DSIG1=0D0\n      ENDIF\nC     Generate events only if IMODE is 0.\n      IF(IMODE.EQ.0.AND.DABS(DSIG1).GT.0D0)THEN\nC       Call UNWGT to unweight and store events\n        CALL UNWGT(PP,DSIG1*WGT,1)\n      ENDIF\n\n      END"
+        }
+      ]
+    }
+  ],
+  "resources_preparation_only": {
+    "wall_seconds": 0.5298140940003577,
+    "child_CPU_seconds": 0.23024299999999998,
+    "child_peak_RSS_KiB_process_lifetime_high_water": 33536,
+    "disk_bytes_before_receipt": 55340,
+    "limits": "one CPU affinity, each child 60 CPU/wall seconds, 64MiB file size; compiler and RNG probes only"
+  },
+  "compiler_version": "GNU Fortran (conda-forge gcc 14.4.0-7) 14.4.0",
+  "probe_sources": [
+    {
+      "path": "simulation/hh_signal/matched_integration/src/fixed_weight_kernel_probe.f90",
+      "sha256": "7b0589d7f8b039facfc4d1b67815db49c0405793993988203721deff0582c3be"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/rng_noninterference_probe.f90",
+      "sha256": "516fd2efd2343ef7d02c65e3c00cfd0c99b8b750ada9a3cc103728835db094b6"
+    }
+  ],
+  "linked_local_source_hashes": [
+    {
+      "name": "aux_ran1.f",
+      "sha256": "12796c5d521c8342e3d7a1165f1e12f0e36f7f74e3d63e0f06c0309e6142301e"
+    },
+    {
+      "name": "ran1.f",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af"
+    },
+    {
+      "name": "ranmar.f",
+      "sha256": "9bb6bbc5f1fda1df1a8df5d8518103b55a3f6c2b13874178b501b7272ecf2888"
+    }
+  ],
+  "executables": [
+    {
+      "name": "rng_probe",
+      "sha256": "8f28648e8b23c39e7b222559c64009588cc0fc66ac48fca9064856f0d3d87b27"
+    },
+    {
+      "name": "weight_probe",
+      "sha256": "92cc36c71f5318d548b5e5440537df9f996c6d4928731005ec9a6fccecc205e7"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "preparation_exit": 0,
+  "validation_exit": 0,
+  "denied_exits": [
+    2,
+    2,
+    2
+  ],
+  "overwrite_exit": 2,
+  "no_denied_output_created": true,
+  "preparation": {
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"PASS_FROZEN_PREPARATION_ONLY\",\n  \"authorization_status\": \"NOT_GRANTED\",\n  \"semantics_gate\": \"BLOCKED_INTEGRATION_SEMANTICS\",\n  \"new_integrals\": 0,\n  \"new_physical_events\": 0,\n  \"native_survey_executed\": false\n}\n",
+    "stderr": ""
+  },
+  "validation": {
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"PASS_FROZEN_PREPARATION_ONLY\",\n  \"authorization_status\": \"NOT_GRANTED\",\n  \"semantics_gate\": \"BLOCKED_INTEGRATION_SEMANTICS\",\n  \"new_integrals\": 0,\n  \"new_physical_events\": 0,\n  \"native_survey_executed\": false\n}\n",
+    "stderr": ""
+  },
+  "denied_cases": [
+    {
+      "exit": 2,
+      "stdout": "",
+      "stderr": "MATCHED_INTEGRATION_BLOCKED: NOT_AUTHORIZED_PHASE7G; separate explicit human instruction absent\n"
+    },
+    {
+      "exit": 2,
+      "stdout": "",
+      "stderr": "MATCHED_INTEGRATION_BLOCKED: NOT_AUTHORIZED_PHASE7G; separate explicit human instruction absent\n"
+    },
+    {
+      "exit": 2,
+      "stdout": "",
+      "stderr": "MATCHED_INTEGRATION_BLOCKED: NOT_AUTHORIZED_PHASE7G; separate explicit human instruction absent\n"
+    }
+  ],
+  "overwrite": {
+    "exit": 2,
+    "stdout": "",
+    "stderr": "MATCHED_INTEGRATION_BLOCKED: PRESERVE_EXISTING_MATCHED_PLAN\n"
+  },
+  "new_integrals": 0,
+  "new_ME_calls": 0
+}
