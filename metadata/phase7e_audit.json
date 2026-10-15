@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "task": "PHASE7E_HH_INTEGRATION_CONVERGENCE_AUDIT_V1",
+  "base_PR": 20,
+  "base_head": "a0e1539e56c122deb6b36a708a121d2098ad3220",
+  "status": "AUDIT_COMPLETE_EFFECTIVE_CONFIGURATION_MISMATCH_IDENTIFIED",
+  "independent_integration_status": "NOT_AUTHORIZED",
+  "new_physical_events": 0,
+  "new_integrals": 0,
+  "C_effective_PDF": "NNPDF23_lo_as_0130_qed_mem0",
+  "C_effective_alpha_s_MZ": 0.13,
+  "C_effective_running_loops": 2,
+  "B_effective_PDF": "cteq6l1",
+  "B_effective_alpha_s_MZ": 0.13,
+  "B_effective_running_loops": 1,
+  "B_requested_seed": 20261121,
+  "B_effective_seed": 21,
+  "C_requested_effective_seed": 20261122,
+  "source_config_identity": "same 84 generated physics-source files, param cards, process/scales; different runtime PDF and running",
+  "cross_run_reported_error_units": 8.181280222806983,
+  "cross_run_interpretation": "NOT_A_SAME_INTEGRAND_SEED_PULL; PDF/running/convergence contributions not quantitatively isolated",
+  "usage_restrictions": {
+    "C_and_D": "NOT_VALIDATED_AS_DECLARED_CTEQ6L1_ONE_LOOP_TARGET",
+    "D_ME_ratios": "retain actual source ALPS and actual C proposal; ratios/identity tests remain method evidence only",
+    "precision_physical_rates": "BLOCKED_PENDING_MATCHED_CONFIGURATION_INDEPENDENT_VALIDATION",
+    "official_ATLAS_interpretation": false,
+    "B_seed": "preserve actual seed21 identity; never relabel as20261121"
+  },
+  "superseded_claims_additive_erratum": [
+    {
+      "path": "metadata/phase7_signal_model.json",
+      "historical_sha256": "bec518e8d5a09b59e0dc40281fcee0bcf05d64c3d3412ca82b350c9cbaf624fb",
+      "additive_correction_scope": "PDF, running order, actual alpha_s(MZ) and C/D frozen-target PASS scope",
+      "historical_bytes_preserved": true
+    },
+    {
+      "path": "metadata/phase7c_run_manifest.json",
+      "historical_sha256": "744ac53d7bf507e4db42065e28240182175f786d621f862f6f1e1f98d327c127",
+      "additive_correction_scope": "declared card PDF is not evidence of effective runtime PDF",
+      "historical_bytes_preserved": true
+    },
+    {
+      "path": "metadata/phase7_quality_gates.json",
+      "historical_sha256": "46e3ff65b2a2d4f7e2617ee802c832d6f24d208280ae36219b60a54c64276dd1",
+      "additive_correction_scope": "C/D target-consistency acceptance requires this additional FAIL gate",
+      "historical_bytes_preserved": true
+    },
+    {
+      "path": "reports/phase7b7c7d_final_decision.md",
+      "historical_sha256": "b31c15fa99dce6f912ab02774d583eff47e1a4908ddfba574a14d9e0d99610ce",
+      "additive_correction_scope": "prior PASS does not establish effective CTEQ6L1 configuration for C/D",
+      "historical_bytes_preserved": true
+    },
+    {
+      "path": "reports/phase7d_statistical_precision.md",
+      "historical_sha256": "df6c5a01faf93b19fb0b0776bb7b2a38ab6c71e2ded22f81e1d05b907111e0ce",
+      "additive_correction_scope": "B/C tension is not a same-integrand seed test",
+      "historical_bytes_preserved": true
+    }
+  ],
+  "kappa_support": {
+    "2.5": {
+      "input_ESS": 36.6942995242142,
+      "final_ESS": 16.07357051564675,
+      "max_contribution_fraction": 0.15112550778924444,
+      "top5_fraction": 0.2513386197238729,
+      "top10_fraction": 0.31170852291180123,
+      "status": "INCONCLUSIVE_REWEIGHTING"
+    },
+    "5": {
+      "input_ESS": 19.544222688333267,
+      "final_ESS": 7.650124068754687,
+      "max_contribution_fraction": 0.1981933658096245,
+      "top5_fraction": 0.35683274420724087,
+      "top10_fraction": 0.4656841568120698,
+      "status": "INCONCLUSIVE_REWEIGHTING"
+    }
+  },
+  "gates_pass": [
+    "original8420file preservation",
+    "84frozen physics-source identities",
+    "runtime PDF/running mismatch detection",
+    "all1100retained ALPS native and independent RGE checks",
+    "6000row independent ESS/source-event audit",
+    "11new plus13existing method tests",
+    "existing B/C/D reference/Decimal regression",
+    "preparation and execution-denial CLI physically tested"
+  ],
+  "gates_fail": [
+    "C_DECLARED_EFFECTIVE_PDF_AND_RUNNING_CONSISTENCY",
+    "B_REQUESTED_SEED_HONORED",
+    "KAPPA2_5_AND5_PRECISION_SUPPORT"
+  ],
+  "gates_blocked": [
+    "NEW_INDEPENDENT_INTEGRAL_NOT_AUTHORIZED",
+    "ZERO_RETAINED_NATIVE_RUNTIME_GUARD_NOT_EXECUTED",
+    "MATCHED_INTEGRAND_COVERAGE_CALIBRATION",
+    "EXACT_FINAL_CANDIDATE_TRUNCATION_HISTORY_UNAVAILABLE",
+    "FUTURE_INDEPENDENT_GENERATION_NOT_AUTHORIZED"
+  ],
+  "github_CI": "not preclaimed; inspect exact published head checks",
+  "figure_status": "NO_NEW_FIGURES; no PDF/PNG staged or published",
+  "regression_evidence": "simulation/hh_signal/integration_audit/evidence/regression.json"
+}

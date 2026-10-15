@@ -1,0 +1,45 @@
+{
+  "status": "PASS_ACTUAL_EXISTING_INPUT_AND_NUMERICAL_REGRESSION",
+  "cases": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "simulation.hh_signal.integration_audit.test_audit",
+        "simulation.hh_signal.campaign.test_campaign",
+        "-v"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.7073263639999965,
+      "output": "test_actual_all_evidence_and_independent_running (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_actual_all_evidence_and_independent_running) ... ok\ntest_actual_prepared_manifest (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_actual_prepared_manifest) ... ok\ntest_duplicate_cards_and_includes_rejected (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_duplicate_cards_and_includes_rejected) ... ok\ntest_effective_pdf_not_beam_sublabel (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_effective_pdf_not_beam_sublabel) ... ok\ntest_error_inflation_and_tail_units (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_error_inflation_and_tail_units) ... ok\ntest_execution_denied_before_any_file_access (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_execution_denied_before_any_file_access) ... ok\ntest_native_preview_requires_global_and_both_beams (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_native_preview_requires_global_and_both_beams) ... ok\ntest_plan_corruption_rejected (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_plan_corruption_rejected) ... ok\ntest_running_orders_separable_at_retained_scales (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_running_orders_separable_at_retained_scales) ... ok\ntest_seed_and_cost_guards_before_mg_import (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_seed_and_cost_guards_before_mg_import) ... ok\ntest_unsafe_output_rejected (simulation.hh_signal.integration_audit.test_audit.AuditTests.test_unsafe_output_rejected) ... ok\ntest_independent_symmetric_roles_and_angles (simulation.hh_signal.campaign.test_campaign.DecayMath.test_independent_symmetric_roles_and_angles) ... ok\ntest_physical_two_body_all_boosts (simulation.hh_signal.campaign.test_campaign.DecayMath.test_physical_two_body_all_boosts) ... ok\ntest_reject_unphysical_decay (simulation.hh_signal.campaign.test_campaign.DecayMath.test_reject_unphysical_decay) ... ok\ntest_cli_real_values_and_rejections (simulation.hh_signal.campaign.test_campaign.Guards.test_cli_real_values_and_rejections) ... ok\ntest_completed_resume_rejects_modified_numerical_table (simulation.hh_signal.campaign.test_campaign.Guards.test_completed_resume_rejects_modified_numerical_table) ... ok\ntest_manifest_rejects_ignored_unstaged_physics_asset (simulation.hh_signal.campaign.test_campaign.Guards.test_manifest_rejects_ignored_unstaged_physics_asset) ... ok\ntest_native_scalar_printing_intervals (simulation.hh_signal.campaign.test_campaign.Guards.test_native_scalar_printing_intervals) ... ok\ntest_unsafe_outputs (simulation.hh_signal.campaign.test_campaign.Guards.test_unsafe_outputs) ... ok\ntest_zero_record_continuation_restores_seed_before_any_launch (simulation.hh_signal.campaign.test_campaign.Guards.test_zero_record_continuation_restores_seed_before_any_launch) ... ok\ntest_constant_nominal_sampling_variance_is_exact_zero (simulation.hh_signal.campaign.test_campaign.Statistics.test_constant_nominal_sampling_variance_is_exact_zero) ... ok\ntest_flows_missing_and_unit_area_correlations (simulation.hh_signal.campaign.test_campaign.Statistics.test_flows_missing_and_unit_area_correlations) ... ok\ntest_no_higgs_identity_is_not_an_unknown_BR_replacement (simulation.hh_signal.campaign.test_campaign.Statistics.test_no_higgs_identity_is_not_an_unknown_BR_replacement) ... ok\ntest_zero_and_correlated_sampling (simulation.hh_signal.campaign.test_campaign.Statistics.test_zero_and_correlated_sampling) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 1.432s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.campaign.validate_references"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.5675735960000026,
+      "output": "{\n  \"7b\": {\n    \"source_events\": 100,\n    \"HepMC_events\": 100,\n    \"ROOT_entries\": 100,\n    \"portable_status\": \"PASS_HASH_CRC_COUNT_WEIGHTS\",\n    \"native_ReaderAscii_ROOT_execution\": \"NOT_RERUN_BY_PORTABLE_CI; exact bound actual receipts retained\"\n  },\n  \"7c\": {\n    \"source_events\": 1000,\n    \"HepMC_events\": 100,\n    \"ROOT_entries\": 100,\n    \"portable_status\": \"PASS_HASH_CRC_COUNT_WEIGHTS\",\n    \"native_ReaderAscii_ROOT_execution\": \"NOT_RERUN_BY_PORTABLE_CI; exact bound actual receipts retained\"\n  },\n  \"7d\": {\n    \"source_events\": 1000,\n    \"benchmarks\": 6,\n    \"new_independent_events\": 0,\n    \"portable_status\": \"PASS_REAL_NUMERICAL_EVIDENCE_REGRESSION\"\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.integration_audit.validate"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.7167049469999967,
+      "output": "{\n  \"status\": \"PASS_PORTABLE_AUDIT_REGRESSION_WITH_EXPECTED_SCIENTIFIC_FAILURES\",\n  \"C_effective_PDF_gate\": \"FAIL\",\n  \"native_and_independent_alpha_running_match\": {\n    \"7b\": 4.7551778631011017e-07,\n    \"7c\": 4.864578693517129e-07\n  },\n  \"independent_integration_status\": \"NOT_AUTHORIZED\",\n  \"new_integrals\": 0,\n  \"new_physical_events\": 0\n}\n"
+    }
+  ],
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "native_ROOT_execution": "NOT_RERUN; original bound reference receipts preserved",
+  "platform": "existing WSL Ubuntu Python; native coupling/card preparation checks recorded separately"
+}

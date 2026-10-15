@@ -1,0 +1,175 @@
+{
+  "status": "PASS_NATIVE_ALPHA_RUNNING_READ_ONLY_EXISTING_SCALE_AUDIT",
+  "native_source_sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d",
+  "probe_source_sha256": "06a01536ae1783003938a05a9bc8ae16d4b4139652d258c1080ec3a73f09396a",
+  "executable_sha256": "1e021bb25887ddb7d22225198b1dd2f82c4ef75d1550c0828b633a801090b08b",
+  "results": [
+    {
+      "phase": "7b",
+      "retained_source_events": 100,
+      "native_running_order_matching_all_retained_ALPS": 1,
+      "max_relative_residual_by_order": {
+        "1": 4.755177858092905e-07,
+        "2": 0.0086519756526339
+      },
+      "LHE_sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+      "first10": [
+        {
+          "index": 1,
+          "scale": 297.4079,
+          "ALPS": 0.1094716,
+          "native1loop": 0.10947157968979347,
+          "native2loop": 0.10865435789772608
+        },
+        {
+          "index": 2,
+          "scale": 287.3058,
+          "ALPS": 0.1099792,
+          "native1loop": 0.10997924846463096,
+          "native2loop": 0.10917642378675031
+        },
+        {
+          "index": 3,
+          "scale": 320.0514,
+          "ALPS": 0.108409,
+          "native1loop": 0.10840901952680955,
+          "native2loop": 0.10756256319456187
+        },
+        {
+          "index": 4,
+          "scale": 196.4203,
+          "ALPS": 0.1158937,
+          "native1loop": 0.11589367383513906,
+          "native2loop": 0.1152794809343025
+        },
+        {
+          "index": 5,
+          "scale": 238.5476,
+          "ALPS": 0.1127943,
+          "native1loop": 0.1127943033038186,
+          "native2loop": 0.1120764143556003
+        },
+        {
+          "index": 6,
+          "scale": 184.7562,
+          "ALPS": 0.1169057,
+          "native1loop": 0.11690574962366462,
+          "native2loop": 0.11632777343042205
+        },
+        {
+          "index": 7,
+          "scale": 256.3102,
+          "ALPS": 0.1116903,
+          "native1loop": 0.1116902957337737,
+          "native2loop": 0.1109380596906247
+        },
+        {
+          "index": 8,
+          "scale": 227.5073,
+          "ALPS": 0.1135348,
+          "native1loop": 0.11353475675380856,
+          "native2loop": 0.11284066151035538
+        },
+        {
+          "index": 9,
+          "scale": 227.914,
+          "ALPS": 0.1135067,
+          "native1loop": 0.11350667217709053,
+          "native2loop": 0.11281166331607889
+        },
+        {
+          "index": 10,
+          "scale": 162.2364,
+          "ALPS": 0.1191143,
+          "native1loop": 0.11911432256226648,
+          "native2loop": 0.11861947459449017
+        }
+      ]
+    },
+    {
+      "phase": "7c",
+      "retained_source_events": 1000,
+      "native_running_order_matching_all_retained_ALPS": 2,
+      "max_relative_residual_by_order": {
+        "1": 0.012300564467509482,
+        "2": 4.868652628924165e-07
+      },
+      "LHE_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "first10": [
+        {
+          "index": 1,
+          "scale": 184.0817,
+          "ALPS": 0.116391,
+          "native1loop": 0.11696677380872514,
+          "native2loop": 0.11639101882904727
+        },
+        {
+          "index": 2,
+          "scale": 257.5776,
+          "ALPS": 0.1108607,
+          "native1loop": 0.11161526451202389,
+          "native2loop": 0.11086074293953208
+        },
+        {
+          "index": 3,
+          "scale": 260.1599,
+          "ALPS": 0.1107047,
+          "native1loop": 0.11146383345603143,
+          "native2loop": 0.11070471797797668
+        },
+        {
+          "index": 4,
+          "scale": 174.1298,
+          "ALPS": 0.1173608,
+          "native1loop": 0.11790200430771677,
+          "native2loop": 0.11736082694554885
+        },
+        {
+          "index": 5,
+          "scale": 171.0058,
+          "ALPS": 0.1176803,
+          "native1loop": 0.11820987246587178,
+          "native2loop": 0.11768029872429801
+        },
+        {
+          "index": 6,
+          "scale": 531.7156,
+          "ALPS": 0.1005817,
+          "native1loop": 0.10158755711901242,
+          "native2loop": 0.1005816896276027
+        },
+        {
+          "index": 7,
+          "scale": 316.3936,
+          "ALPS": 0.1077321,
+          "native1loop": 0.1085741062878186,
+          "native2loop": 0.10773211253915711
+        },
+        {
+          "index": 8,
+          "scale": 293.6222,
+          "ALPS": 0.1088473,
+          "native1loop": 0.10965922849998058,
+          "native2loop": 0.10884729582126347
+        },
+        {
+          "index": 9,
+          "scale": 185.6702,
+          "ALPS": 0.1162426,
+          "native1loop": 0.11682351248605159,
+          "native2loop": 0.11624254971230376
+        },
+        {
+          "index": 10,
+          "scale": 149.4213,
+          "ALPS": 0.1201186,
+          "native1loop": 0.12055610249520506,
+          "native2loop": 0.12011858912406602
+        }
+      ]
+    }
+  ],
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "scope": "pure native alpha_s function on all1100 existing scales; no PDF evaluation, ME calls, new kinematics or integrals"
+}

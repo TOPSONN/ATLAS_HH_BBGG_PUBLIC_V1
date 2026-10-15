@@ -1,0 +1,580 @@
+{
+  "process_commands_B": [
+    "set group_subprocesses Auto",
+    "set ignore_six_quark_processes False",
+    "set low_mem_multicore_nlo_generation False",
+    "set complex_mass_scheme False",
+    "set include_lepton_initiated_processes False",
+    "set gauge unitary",
+    "set loop_optimized_output True",
+    "set loop_color_flows False",
+    "set max_npoint_for_channel 0",
+    "set default_unset_couplings 99",
+    "set max_t_for_channel 99",
+    "set zerowidth_tchannel True",
+    "set nlo_mixed_expansion True",
+    "set auto_update 0 --no_save",
+    "set automatic_html_opening False --no_save",
+    "set nb_core 1 --no_save",
+    "set run_mode 0 --no_save",
+    "set output_dependencies internal --no_save",
+    "set ninja None --no_save",
+    "set collier None --no_save",
+    "set samurai None --no_save",
+    "set golem None --no_save",
+    "set fortran_compiler x86_64-conda-linux-gnu-gfortran --no_save",
+    "set cpp_compiler x86_64-conda-linux-gnu-g++ --no_save",
+    "import model loop_sm",
+    "define p = g u c d s u~ c~ d~ s~",
+    "define j = g u c d s u~ c~ d~ s~",
+    "define l+ = e+ mu+",
+    "define l- = e- mu-",
+    "define vl = ve vm vt",
+    "define vl~ = ve~ vm~ vt~",
+    "generate g g > h h [noborn=QCD]"
+  ],
+  "process_commands_C": [
+    "set group_subprocesses Auto",
+    "set ignore_six_quark_processes False",
+    "set low_mem_multicore_nlo_generation False",
+    "set complex_mass_scheme False",
+    "set include_lepton_initiated_processes False",
+    "set gauge unitary",
+    "set loop_optimized_output True",
+    "set loop_color_flows False",
+    "set max_npoint_for_channel 0",
+    "set default_unset_couplings 99",
+    "set max_t_for_channel 99",
+    "set zerowidth_tchannel True",
+    "set nlo_mixed_expansion True",
+    "set auto_update 0 --no_save",
+    "set automatic_html_opening False --no_save",
+    "set nb_core 1 --no_save",
+    "set run_mode 0 --no_save",
+    "set output_dependencies internal --no_save",
+    "set ninja None --no_save",
+    "set collier None --no_save",
+    "set samurai None --no_save",
+    "set golem None --no_save",
+    "set fortran_compiler x86_64-conda-linux-gnu-gfortran --no_save",
+    "set cpp_compiler x86_64-conda-linux-gnu-g++ --no_save",
+    "import model loop_sm",
+    "define p = g u c d s u~ c~ d~ s~",
+    "define j = g u c d s u~ c~ d~ s~",
+    "define l+ = e+ mu+",
+    "define l- = e- mu-",
+    "define vl = ve vm vt",
+    "define vl~ = ve~ vm~ vt~",
+    "generate g g > h h [noborn=QCD]"
+  ],
+  "process_commands_equal": true,
+  "frozen_Fortran_files": [
+    {
+      "path": "Source/MODEL/actualize_mp_ext_params.inc",
+      "B": "4108b4fb1f82d348413a9f7f777eb94537061f7ccf339d7d23f30f4f835676ac",
+      "C": "4108b4fb1f82d348413a9f7f777eb94537061f7ccf339d7d23f30f4f835676ac",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "B": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "C": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/coupl_write.inc",
+      "B": "66bbc4f02ef188062992a54bcae96e10670ebe4e918b9a3002fa1f46ac8960ed",
+      "C": "66bbc4f02ef188062992a54bcae96e10670ebe4e918b9a3002fa1f46ac8960ed",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "B": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a",
+      "C": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/couplings1.f",
+      "B": "07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18",
+      "C": "07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/couplings2.f",
+      "B": "f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b",
+      "C": "f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/formats.inc",
+      "B": "1d0c8b3a81b5c4ed3cc50e16edc2d7fa09fa2c2694b9eef3790bff2abc42c3a3",
+      "C": "1d0c8b3a81b5c4ed3cc50e16edc2d7fa09fa2c2694b9eef3790bff2abc42c3a3",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "B": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49",
+      "C": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/intparam_definition.inc",
+      "B": "b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97",
+      "C": "b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/lha_read.f",
+      "B": "fd51c4686981abedbf62153ee537e7dec01a138dd9a560f39303b851f99d6ae0",
+      "C": "fd51c4686981abedbf62153ee537e7dec01a138dd9a560f39303b851f99d6ae0",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/makeinc.inc",
+      "B": "6debc7d36db0890fbf27cbcc98d3e9ac586458abf7cd36496f11eba3f0d514c6",
+      "C": "6debc7d36db0890fbf27cbcc98d3e9ac586458abf7cd36496f11eba3f0d514c6",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/model_functions.f",
+      "B": "a9678291451097495295fb6f894f3fd4c162addca0844f82393db59b69bc981e",
+      "C": "a9678291451097495295fb6f894f3fd4c162addca0844f82393db59b69bc981e",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/model_functions.inc",
+      "B": "be48cc65d552043c1569e2144501aa3d1c16e69834f20090aceca8ea818bb58f",
+      "C": "be48cc65d552043c1569e2144501aa3d1c16e69834f20090aceca8ea818bb58f",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "B": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "C": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "B": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "C": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/mp_couplings2.f",
+      "B": "23096354c99ec3fb224622190da27044e554a305bb95a2f5a51bf92adeacd732",
+      "C": "23096354c99ec3fb224622190da27044e554a305bb95a2f5a51bf92adeacd732",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "B": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382",
+      "C": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/mp_intparam_definition.inc",
+      "B": "7fc271a8e1bff7695802922ab343d5961a0f04f83afb5143aa39afeb25404c39",
+      "C": "7fc271a8e1bff7695802922ab343d5961a0f04f83afb5143aa39afeb25404c39",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/param_read.inc",
+      "B": "a14a19f2379f69375eea63dfa4c34319f2681e9e037fc4088ec39a7978568cbc",
+      "C": "a14a19f2379f69375eea63dfa4c34319f2681e9e037fc4088ec39a7978568cbc",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "B": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc",
+      "C": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/printout.f",
+      "B": "c765cbd47475c2c8ca3e229691373124a01f13c775ccd603625e5bf2aadb82c7",
+      "C": "c765cbd47475c2c8ca3e229691373124a01f13c775ccd603625e5bf2aadb82c7",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/rw_para.f",
+      "B": "8036384b285c6675b96d7c36227e2370d9e703f54e0eaae05064d4056beaf041",
+      "C": "8036384b285c6675b96d7c36227e2370d9e703f54e0eaae05064d4056beaf041",
+      "same": true
+    },
+    {
+      "path": "Source/MODEL/testprog.f",
+      "B": "7570c7961bd45365561047df5a3bd0c529204fb03f4e3562680d3b90e0042c89",
+      "C": "7570c7961bd45365561047df5a3bd0c529204fb03f4e3562680d3b90e0042c89",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/FFS1L1_2.f",
+      "B": "5530a855a51a21827d9cbc77b854e889eac773c7e9d43133698396005a7b250f",
+      "C": "5530a855a51a21827d9cbc77b854e889eac773c7e9d43133698396005a7b250f",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/FFS1L2_1.f",
+      "B": "08ac895aa730fa3c1a7d3f8db153c6cd59bb2679d189d6783ce2abeb03d32ff6",
+      "C": "08ac895aa730fa3c1a7d3f8db153c6cd59bb2679d189d6783ce2abeb03d32ff6",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/FFV1L1_2.f",
+      "B": "016d950386386bec8fc49fe3003808d99912022c9e4b75bbf8a9244ad2fa62d2",
+      "C": "016d950386386bec8fc49fe3003808d99912022c9e4b75bbf8a9244ad2fa62d2",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/FFV1L2_1.f",
+      "B": "904f75d2af93a5b89b2994f0937a3cb934a8a7f06ebcaafe690fe3658a47a7ba",
+      "C": "904f75d2af93a5b89b2994f0937a3cb934a8a7f06ebcaafe690fe3658a47a7ba",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_FFS1L1_2.f",
+      "B": "7bbdd921f7f3746f48fc9c0c7bd14b2aa32eacd958cb440f3aa8d3591e32eeee",
+      "C": "7bbdd921f7f3746f48fc9c0c7bd14b2aa32eacd958cb440f3aa8d3591e32eeee",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_FFS1L2_1.f",
+      "B": "99b2b4e7526595772504e77202d73a1597658f91b542da88ce62b47d1ff0ec7f",
+      "C": "99b2b4e7526595772504e77202d73a1597658f91b542da88ce62b47d1ff0ec7f",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_FFV1L1_2.f",
+      "B": "82411bd16ab27cbecc22d17ca99602f40d5b2283145df997dea9d5f01563c949",
+      "C": "82411bd16ab27cbecc22d17ca99602f40d5b2283145df997dea9d5f01563c949",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_FFV1L2_1.f",
+      "B": "ba83937170e6ab373592d1506aa00cdcf46dcd010a61b19ea07f561da7eec830",
+      "C": "ba83937170e6ab373592d1506aa00cdcf46dcd010a61b19ea07f561da7eec830",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_R2_GGHH_0.f",
+      "B": "cef8719c3efad4f1556c1301d9bacd898154834503ce891439e35d4f45e775cf",
+      "C": "cef8719c3efad4f1556c1301d9bacd898154834503ce891439e35d4f45e775cf",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_SSS1_1.f",
+      "B": "88088ffd8a0aaf703fcd7ebc0a56886615510db50352061f6fe7f804ebff16b5",
+      "C": "88088ffd8a0aaf703fcd7ebc0a56886615510db50352061f6fe7f804ebff16b5",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/MP_VVS1_0.f",
+      "B": "3afbdf9759ff7b7f698bd2417ba1266b708ee44b572cedf301210f8d3f009c99",
+      "C": "3afbdf9759ff7b7f698bd2417ba1266b708ee44b572cedf301210f8d3f009c99",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/R2_GGHH_0.f",
+      "B": "2326295228a6908a62761da80a2c418cf9ecfd385bf9cc2beef2d1b52d9f3133",
+      "C": "2326295228a6908a62761da80a2c418cf9ecfd385bf9cc2beef2d1b52d9f3133",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/SSS1_1.f",
+      "B": "be10ca9a7482051729a2eab03a7effd5f82c09ad694e9cad834d525013ce2018",
+      "C": "be10ca9a7482051729a2eab03a7effd5f82c09ad694e9cad834d525013ce2018",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/VVS1_0.f",
+      "B": "0737e2c8ea6adc18fd7bfcfa0f8ac8887ac830cdca7a935d839d8bb2b3e6b0d1",
+      "C": "0737e2c8ea6adc18fd7bfcfa0f8ac8887ac830cdca7a935d839d8bb2b3e6b0d1",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/aloha_file.inc",
+      "B": "27fe52a5b4d0377441565b2af3c469a996caf622429a831fe473a3a46ea1a525",
+      "C": "27fe52a5b4d0377441565b2af3c469a996caf622429a831fe473a3a46ea1a525",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/aloha_functions.f",
+      "B": "6b238e9a02e69ffc7b1f0d82050747419979818f3a4343a95110b021bcbe0a20",
+      "C": "6b238e9a02e69ffc7b1f0d82050747419979818f3a4343a95110b021bcbe0a20",
+      "same": true
+    },
+    {
+      "path": "Source/DHELAS/coef_specs.inc",
+      "B": "29b2b6762f337b47d7bb8c145b162e0c9862ef3db2446a4382be23ee21f369d2",
+      "C": "29b2b6762f337b47d7bb8c145b162e0c9862ef3db2446a4382be23ee21f369d2",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/addmothers.f",
+      "B": "6eabfc56dbf9fe90efea3ad8b2c0d6e8426fe197cd79ea3a3b8e7522114ffb94",
+      "C": "6eabfc56dbf9fe90efea3ad8b2c0d6e8426fe197cd79ea3a3b8e7522114ffb94",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig.f",
+      "B": "6e9c67b58ea9b94228f2972e048d557cee8c11eb71a425a2cbdce81ba3112c2d",
+      "C": "6e9c67b58ea9b94228f2972e048d557cee8c11eb71a425a2cbdce81ba3112c2d",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig1.f",
+      "B": "9b0ead11f1002cee33a73e7024de5ec9618627ed6cd2b7c65eb24935e163c365",
+      "C": "9b0ead11f1002cee33a73e7024de5ec9618627ed6cd2b7c65eb24935e163c365",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cluster.f",
+      "B": "3e15e8f31ebbcc43d7f10f06d3787e8c1ac54117de14e64d6878e4839bc1390a",
+      "C": "3e15e8f31ebbcc43d7f10f06d3787e8c1ac54117de14e64d6878e4839bc1390a",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cluster.inc",
+      "B": "19710e29a625143930935b641cbbb38fe3e535224bc910f5982a9f77c7076d0a",
+      "C": "19710e29a625143930935b641cbbb38fe3e535224bc910f5982a9f77c7076d0a",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/coloramps.inc",
+      "B": "ec1006156ae22166a26ba3031a5f0a491d1cb00ade9ea92cb56de72253c912d6",
+      "C": "ec1006156ae22166a26ba3031a5f0a491d1cb00ade9ea92cb56de72253c912d6",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/config_nqcd.inc",
+      "B": "9527fd45a966b2c7c8b0fbcd593e7dbb2a19aeda0f21805f77305ced154791b6",
+      "C": "9527fd45a966b2c7c8b0fbcd593e7dbb2a19aeda0f21805f77305ced154791b6",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/config_subproc_map.inc",
+      "B": "fa5ab919db679d122a11a1a095cc7ae06d539214ced3bfd3cb2ff2155559ab50",
+      "C": "fa5ab919db679d122a11a1a095cc7ae06d539214ced3bfd3cb2ff2155559ab50",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/configs.inc",
+      "B": "3ed151c1c2c37bacff3d3f5d549fdae017a5972d93c6964508b61c78efb764c5",
+      "C": "3ed151c1c2c37bacff3d3f5d549fdae017a5972d93c6964508b61c78efb764c5",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/coupl.inc",
+      "B": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "C": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cuts.f",
+      "B": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c",
+      "C": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cuts.inc",
+      "B": "15749e6559df6c6cb99083be6ed2214f4aaf3cb38dd686d359625ca572652b23",
+      "C": "15749e6559df6c6cb99083be6ed2214f4aaf3cb38dd686d359625ca572652b23",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/decayBW.inc",
+      "B": "148f48bf08c4108079a92d88832d57c587222624e1f7162c630fa4eda0811e30",
+      "C": "148f48bf08c4108079a92d88832d57c587222624e1f7162c630fa4eda0811e30",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/driver.f",
+      "B": "17ca148dcdeab4fbd0eccfa0e95e677a59e5a5953c426343a649060010238245",
+      "C": "17ca148dcdeab4fbd0eccfa0e95e677a59e5a5953c426343a649060010238245",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/dummy_fct.f",
+      "B": "b3ac74b7ff05185bbe4a2e9647f501c53dc5fcd5502075b37c4a54179b3b1b33",
+      "C": "b3ac74b7ff05185bbe4a2e9647f501c53dc5fcd5502075b37c4a54179b3b1b33",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/genps.f",
+      "B": "f1ba3efbcc161675f4e84db2ff044fba312866ff4dcc94d0de9580edd9253e23",
+      "C": "f1ba3efbcc161675f4e84db2ff044fba312866ff4dcc94d0de9580edd9253e23",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/genps.inc",
+      "B": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880",
+      "C": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/get_color.f",
+      "B": "667fe7bc4bb80f4d89e9e6b433d82c5459b2645098b56fc96e629823c40f07bf",
+      "C": "667fe7bc4bb80f4d89e9e6b433d82c5459b2645098b56fc96e629823c40f07bf",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/idenparts.f",
+      "B": "0584c11e0f53fba6a2747d1918150e2841ee6cead3972b3bdc50d1b9be9d5a0f",
+      "C": "0584c11e0f53fba6a2747d1918150e2841ee6cead3972b3bdc50d1b9be9d5a0f",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/initcluster.f",
+      "B": "b83e276ade00f20369ad1d2f300ee21940e9650d60084eb7b59fa6e9da575704",
+      "C": "b83e276ade00f20369ad1d2f300ee21940e9650d60084eb7b59fa6e9da575704",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/leshouche.inc",
+      "B": "6a9258ba40c2c2dc9ab14e4f254bb0f8a42e5b293d6c64fedaf885ec2baf98f0",
+      "C": "6a9258ba40c2c2dc9ab14e4f254bb0f8a42e5b293d6c64fedaf885ec2baf98f0",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/lhe_event_infos.inc",
+      "B": "61299a03d23a0cd89d06a12248da67a1696ca1e4c10afe2c9707e4b595b030dd",
+      "C": "61299a03d23a0cd89d06a12248da67a1696ca1e4c10afe2c9707e4b595b030dd",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/matrix1.f",
+      "B": "ff335a733756a6e60c3a65190e1d7a6402ab2fcc68c39bd3767221ace4443993",
+      "C": "ff335a733756a6e60c3a65190e1d7a6402ab2fcc68c39bd3767221ace4443993",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/maxamps.inc",
+      "B": "0bcc55ca74abea2f3bf1f16179c93a90f6c90883b7e0007b853d9e185882d93d",
+      "C": "0bcc55ca74abea2f3bf1f16179c93a90f6c90883b7e0007b853d9e185882d93d",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/maxconfigs.inc",
+      "B": "5f0a5d858bea712fdf860cdd478eba6400d3fbc490c1844643f2b6c93fbdd231",
+      "C": "5f0a5d858bea712fdf860cdd478eba6400d3fbc490c1844643f2b6c93fbdd231",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/maxparticles.inc",
+      "B": "f74c474319f9374319e754e43a6e57113420206e069dd21c73578a28399fa202",
+      "C": "f74c474319f9374319e754e43a6e57113420206e069dd21c73578a28399fa202",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/message.inc",
+      "B": "9d5515b45568d67213152a88a0ad8bdef0a8c4dfc9153c682293f8073942d0c5",
+      "C": "9d5515b45568d67213152a88a0ad8bdef0a8c4dfc9153c682293f8073942d0c5",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/mirrorprocs.inc",
+      "B": "935a25c04c2fb91c02081b241829da3156e4269aeb0e32009dfeb83a04edd2c1",
+      "C": "935a25c04c2fb91c02081b241829da3156e4269aeb0e32009dfeb83a04edd2c1",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/myamp.f",
+      "B": "cf39421ee7781cb7899fa235a841e478c005df3c408357661b5733bab53ed7b8",
+      "C": "cf39421ee7781cb7899fa235a841e478c005df3c408357661b5733bab53ed7b8",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/ncombs.inc",
+      "B": "06bf072f92425bdfbe34d5da8c6c7f2bd1265799bdcd750f0d4ff3aaeff196d8",
+      "C": "06bf072f92425bdfbe34d5da8c6c7f2bd1265799bdcd750f0d4ff3aaeff196d8",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/nexternal.inc",
+      "B": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28",
+      "C": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/ngraphs.inc",
+      "B": "f025f52826df5616a1bbec3d33e320238090bd6bad71ee9bc1551cdfb42dfac9",
+      "C": "f025f52826df5616a1bbec3d33e320238090bd6bad71ee9bc1551cdfb42dfac9",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/pmass.inc",
+      "B": "03fc80bf3ad07d425359321f62edf27a31257671637f1955a8d908f22ce32a23",
+      "C": "03fc80bf3ad07d425359321f62edf27a31257671637f1955a8d908f22ce32a23",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/props.inc",
+      "B": "c8f09d5645099a2196e2ffc6b772a951772c587501a11fd665299f28df9ceb70",
+      "C": "c8f09d5645099a2196e2ffc6b772a951772c587501a11fd665299f28df9ceb70",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/reweight.f",
+      "B": "42674c7015a6cf57b7430a2cdc3e020f207fee56fdb7e6eb46b3c53a9ec40c6a",
+      "C": "42674c7015a6cf57b7430a2cdc3e020f207fee56fdb7e6eb46b3c53a9ec40c6a",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/run.inc",
+      "B": "51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330",
+      "C": "51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/run_config.inc",
+      "B": "5bac273e4594b307125773ac6d7d7045af1c3fbafcabe0bd0ce201aea4138073",
+      "C": "5bac273e4594b307125773ac6d7d7045af1c3fbafcabe0bd0ce201aea4138073",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/setcuts.f",
+      "B": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18",
+      "C": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/setscales.f",
+      "B": "6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28",
+      "C": "6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/sudakov.inc",
+      "B": "e9271a4ce6644118a2feb3d4da31c6c9f4a928a9877999b45a24fe76a960676c",
+      "C": "e9271a4ce6644118a2feb3d4da31c6c9f4a928a9877999b45a24fe76a960676c",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/symmetry.f",
+      "B": "edf9f97d9acbf1050193feeeb524e5052c3d2fefa248c8703f401deaa22ce0fd",
+      "C": "edf9f97d9acbf1050193feeeb524e5052c3d2fefa248c8703f401deaa22ce0fd",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/symperms.inc",
+      "B": "f1f1925d51fcba3df8d683d8c1ea6497c56d6dea4978686d428fccdc549b06fd",
+      "C": "f1f1925d51fcba3df8d683d8c1ea6497c56d6dea4978686d428fccdc549b06fd",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/symswap.inc",
+      "B": "9eee3eaf8365eb19d489c170079bb88598bbb79744432fd88bfbc7c4449414c1",
+      "C": "9eee3eaf8365eb19d489c170079bb88598bbb79744432fd88bfbc7c4449414c1",
+      "same": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/unwgt.f",
+      "B": "358140b33f896077d529412c3107411cae8516da507ad1fa42315efc2a4cc2ee",
+      "C": "358140b33f896077d529412c3107411cae8516da507ad1fa42315efc2a4cc2ee",
+      "same": true
+    }
+  ],
+  "compared": 84,
+  "all_equal": true,
+  "scope": "top-level generated loop subprocess, MODEL and DHELAS source and includes; runtime PDF/ALPS audited separately"
+}

@@ -6,7 +6,8 @@ from .common import REPO,BASE,PHASE7A,require
 ALLOWED=('simulation/hh_signal/','reports/phase7a_','reports/phase7b','reports/phase7c','reports/phase7d',
          'metadata/phase7a_','metadata/phase7_signal_','metadata/phase7b_','metadata/phase7c_','metadata/phase7d_',
          'metadata/phase7_quality_','reference_samples/hh_signal/S01_ggf_hh_sm/',
-         '.github/workflows/hh_signal_readiness.yml','.github/workflows/hh_signal_campaign.yml')
+         '.github/workflows/hh_signal_readiness.yml','.github/workflows/hh_signal_campaign.yml',
+         'reports/phase7e_','metadata/phase7e_','.github/workflows/hh_signal_integration_audit.yml')
 
 def git(*args):
     # Read-only audits must not refresh/write the shared Windows/WSL index.
