@@ -1,0 +1,28 @@
+name: HH effective configuration lock and runtime guard
+on:
+  push:
+    branches: [codex/phase7f-hh-effective-config-lock]
+  pull_request:
+    paths: ['simulation/hh_signal/config_lock/**', 'simulation/hh_signal/campaign/**', 'metadata/phase7f_*', 'reports/phase7f_*', '.github/workflows/hh_signal_config_lock.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  configuration_lock_existing_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fail-closed guard and all preceding relevant method tests
+        run: python3 -B -m unittest simulation.hh_signal.config_lock.test_guards simulation.hh_signal.integration_audit.test_audit simulation.hh_signal.campaign.test_campaign -v
+      - name: Bounded actual native evidence, original references and erratum
+        run: |
+          python3 -B -m simulation.hh_signal.config_lock.validate
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+      - name: Freeze PR21 science and audit every outgoing commit and index
+        run: python3 -B -m simulation.hh_signal.config_lock.audit_payload

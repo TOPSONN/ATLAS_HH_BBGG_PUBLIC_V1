@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "task": "PHASE7F_HH_EFFECTIVE_CONFIG_LOCK_AND_INTEGRATION_ONLY_RUNTIME_GUARD_V1",
+  "base_PR": 21,
+  "base_head": "28862bed06451723ba17c11fbca9f88b6abb8ee7",
+  "configuration_lock_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+  "status": "PROTECTION_READY_FOR_REVIEW_NATIVE_INTEGRAL_RUNTIME_NOT_EVALUATED",
+  "EFFECTIVE_PDF_GUARD": "PASS_NATIVE_INITIALIZATION_AND_COMPILED_SOURCE",
+  "ALPHA_S_RUNNING_GUARD": "PASS_NATIVE_AND_INDEPENDENT_NUMERICAL_ONE_LOOP_PROBES",
+  "SEED_GUARD": "PASS_PRE_SAMPLING_INITIALIZATION; no production continuation permitted",
+  "RUNCARD_WRITER_GUARD": "PASS_ACTUAL_STALE_DEFAULT_REPRODUCTION_AND_FRESH_WRITER",
+  "ZERO_LHE_WRITER_DESIGN": "IMPLEMENTED_NATIVE_SUPPRESSION_FATAL_SERIALIZER_OUTPUT_AND_PUBLICATION_GUARDS",
+  "ZERO_LHE_RUNTIME_VALIDATION": "NOT_EVALUATED_FOR_REAL_SURVEY; initialization and synthetic boundaries pass",
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED",
+  "INTEGRATION_EXECUTED": "NO",
+  "new_ME_calls": 0,
+  "new_physical_events": 0,
+  "HISTORICAL_SIGNAL_PRESERVATION": {
+    "status": "PASS_ALL_ORIGINAL_CAMPAIGN_FILES_BYTE_IDENTICAL",
+    "files": 8420,
+    "logical_bytes": 752305317,
+    "original_inventory_sha256": "e0e666cdf4023a31968364e9a22366d9f4de594cc078d5ca02c4433735a0ddc0"
+  },
+  "historical_interpretation": {
+    "B": "CTEQ6L1/one-loop; actual seed21",
+    "C_D": "NNPDF23LO/two-loop; not CTEQ6L1",
+    "absolute_cross_sections": "INCONCLUSIVE",
+    "kappa_lambda_2_5_and5": "INCONCLUSIVE_REWEIGHTING"
+  },
+  "REGRESSION_TESTS": "PASS_19_NEW_PLUS11_PHASE7E_PLUS13_CAMPAIGN; reference/Decimal regression passes",
+  "GITHUB_CI": "not preclaimed; verify exact published PR head checks",
+  "GATES_PASS": [
+    "831 native build input identities and support cards",
+    "four actual isolated native builds",
+    "four actual driver initialization-only pre-sampling gates",
+    "native PDF/table/one-loop alpha_s and seed probes",
+    "native STOP80 unauthorized integral dispatch",
+    "native STOP86 permanent writer denial",
+    "candidate/store suppression synthetic probes",
+    "missing/mismatched PDF-alpha-seed/card/grid/output/source failure-path detection",
+    "legacy actual HH entry points closed",
+    "original8420file preservation",
+    "source/evidence-only publication guard"
+  ],
+  "GATES_FAIL": [],
+  "historical_failures_preserved": [
+    "C/D are not declared CTEQ6L1 target",
+    "B requested20261121 differs from actual21"
+  ],
+  "GATES_BLOCKED": [
+    "new integral authorization absent",
+    "new hard-event generation forbidden"
+  ],
+  "GATES_UNKNOWN": [
+    "real survey zero-retention/transient event-output behavior",
+    "candidate/RNG suppression effect on native stopping/reporting",
+    "full survey-to-measurement stage transition and ME counters",
+    "integration convergence/empirical coverage",
+    "absolute physical cross sections"
+  ],
+  "figures": "NONE_NEW; no PDF/PNG publication",
+  "authorization_contract": "simulation/hh_signal/config_lock/authorization_contract.json"
+}

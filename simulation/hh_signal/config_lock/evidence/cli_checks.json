@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ACTUALLY_EXECUTED_PREPARATION_VALIDATION_AND_DENIAL",
+  "cases": [
+    {
+      "case": "validate",
+      "exit": 0,
+      "output": "{\n  \"status\": \"PASS_PREPARATION_NATIVE_NO_INTEGRAL_PROBES_AND_MANIFEST\",\n  \"replicas\": 4,\n  \"NATIVE_RUNTIME_GATE\": \"NOT_EVALUATED\",\n  \"INTEGRATION_EXECUTED\": \"NO\",\n  \"new_physical_events\": 0,\n  \"new_integrals\": 0\n}\n"
+    },
+    {
+      "case": "deny_execute",
+      "exit": 2,
+      "output": "CONFIG_LOCK_BLOCKED: NOT_AUTHORIZED_PHASE7F:independent integral; separate explicit authorization and reviewed runtime gate required\n"
+    },
+    {
+      "case": "deny_overwrite",
+      "exit": 2,
+      "output": "CONFIG_LOCK_BLOCKED: EXISTING_OUTPUT_OVERWRITE_FORBIDDEN\n"
+    }
+  ],
+  "integration_executed": false,
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED"
+}

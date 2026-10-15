@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "base_head": "28862bed06451723ba17c11fbca9f88b6abb8ee7",
+  "lock_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+  "status": "PREPARED_PROBES_EXECUTED_NO_INTEGRATION",
+  "replicas": [
+    {
+      "seed": 910001,
+      "workspace": "seed_910001",
+      "native_initialization": "PASS_NO_INTEGRAL_PROBE",
+      "compiled_bridge_executable": "native_build/hh_integral_guarded",
+      "independent_grid": "FRESH_EMPTY_DIRECTORY",
+      "future_measurement_moffset": 1,
+      "compiled_bridge_sha256": "f2894771b0261461fed539a349b4ee7453a70d4d328774ab8838f214be814fd6"
+    },
+    {
+      "seed": 910019,
+      "workspace": "seed_910019",
+      "native_initialization": "PASS_NO_INTEGRAL_PROBE",
+      "compiled_bridge_executable": "native_build/hh_integral_guarded",
+      "independent_grid": "FRESH_EMPTY_DIRECTORY",
+      "future_measurement_moffset": 1,
+      "compiled_bridge_sha256": "15ee3c6a0fb521b041851402da393d101bf3508acc32c6ea45447cf949e49435"
+    },
+    {
+      "seed": 910037,
+      "workspace": "seed_910037",
+      "native_initialization": "PASS_NO_INTEGRAL_PROBE",
+      "compiled_bridge_executable": "native_build/hh_integral_guarded",
+      "independent_grid": "FRESH_EMPTY_DIRECTORY",
+      "future_measurement_moffset": 1,
+      "compiled_bridge_sha256": "94ed035d5e21eb4a109d026475096c04bc27382c0f2912c37fec2fbde860e33c"
+    },
+    {
+      "seed": 910061,
+      "workspace": "seed_910061",
+      "native_initialization": "PASS_NO_INTEGRAL_PROBE",
+      "compiled_bridge_executable": "native_build/hh_integral_guarded",
+      "independent_grid": "FRESH_EMPTY_DIRECTORY",
+      "future_measurement_moffset": 1,
+      "compiled_bridge_sha256": "5111d9c5390a159080071c032a18580eda6c8b030676329bc752c06ae399bd26"
+    }
+  ],
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "INTEGRATION_EXECUTED": "NO",
+  "authorization": "NOT_AUTHORIZED",
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED",
+  "ceilings": {
+    "concurrent_jobs": 1,
+    "workers": 1,
+    "aggregate_wall_seconds": 14400,
+    "aggregate_CPU_seconds": 14400,
+    "additional_disk_bytes": 5368709120
+  },
+  "source_hashes_checked_before_after": true,
+  "bridge_design": "direct isolated native driver; pre-sampling PDF/alpha/seed/scale/mass gate, suppressed candidate/store bodies and fatal permanent writer; no MG survey command dispatcher",
+  "native_pre_sampling_gate_execution": "PASS_INITIALIZATION_ONLY_MODE; exit before first helicity/ME call",
+  "native_integral_execution": "NOT_EXECUTED; both Python and native integral dispatch unconditionally denied",
+  "eventual_physical_LHE_embedded_source_card": "NOT_EVALUATED_NO_PHYSICAL_EVENTS_ALLOWED; prepared Banner is not a generated-source banner",
+  "stages": [
+    {
+      "name": "survey",
+      "grid": "independent fresh adaptation",
+      "moffset": 0
+    },
+    {
+      "name": "measurement",
+      "grid": "own survey grid, hash-bound; fixed grid input=0",
+      "moffset": 1
+    }
+  ],
+  "future_acceptance": "separate reviewed authorization, full patched native build/hash and native zero-retention runtime validation required; preserve all iteration estimates/ME counters/grids; no automatic budget expansion"
+}

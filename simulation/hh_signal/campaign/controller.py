@@ -152,6 +152,8 @@ def main(argv=None):
             print(json.dumps({'status':'DRY_RUN_NO_EVENTS','output':str(out),'phase':args.phase,
                 'events':args.events or (1100 if args.phase=='all' else LIMITS[args.phase][0]),
                 'energy_gev':args.energy,'software_reinstallation':False,'resume':args.resume},indent=2));return
+        from simulation.hh_signal.config_lock.contract import deny_execution
+        deny_execution('legacy HH campaign; effective runtime evidence is required')
         STATE.mkdir(parents=True,exist_ok=True)
         with (STATE/'physics.lock').open('a') as lock:
             try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)

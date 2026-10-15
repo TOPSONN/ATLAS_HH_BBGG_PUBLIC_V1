@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "NOT_GRANTED",
+  "current_integral_execution": "NOT_AUTHORIZED",
+  "this_file_grants_permission": false,
+  "requires": [
+    "Separate explicit human authorization for an exact reviewed source revision and lock SHA256",
+    "Review and separately enable both Python authorization gate and native STOP80 gate",
+    "Approve exact four replica seeds, independent workspaces and grid provenance",
+    "Approve fixed warmup and fixed-grid measurement budgets and endpoints",
+    "Approve native runtime zero-retention evaluation, abort and evidence policy",
+    "Revalidate complete native source, libraries, cards, binaries, PDF table and compiler identities before sampling",
+    "Preserve all iteration estimates, actual ME evaluation counters, grids and native configuration/seed traces"
+  ],
+  "seeds": [910001, 910019, 910037, 910061],
+  "ceilings": {
+    "concurrent_jobs": 1,
+    "workers": 1,
+    "aggregate_wall_hours": 4,
+    "aggregate_CPU_hours": 4,
+    "additional_disk_GiB": 5
+  },
+  "forbidden": [
+    "new hard-event generation",
+    "physical LHE records",
+    "final unweighting or sample publication",
+    "generate_events",
+    "store_events original implementation",
+    "combine_events",
+    "Pythia shower",
+    "Delphes processing",
+    "automatic budget increase",
+    "overwriting historical runs or importing their grids"
+  ],
+  "NATIVE_RUNTIME_GATE": "NOT_EVALUATED",
+  "desired_precision_is_not_guaranteed": true,
+  "failure_policy": "Stop the whole process group, preserve bounded forensic evidence, publish no sample; do not restart automatically"
+}

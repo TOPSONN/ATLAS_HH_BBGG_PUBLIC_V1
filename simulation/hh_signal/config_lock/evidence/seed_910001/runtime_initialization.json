@@ -1,0 +1,52 @@
+{
+  "PDF": "cteq6l1",
+  "PDSUBLABEL": [
+    "cteq6l1",
+    "cteq6l1"
+  ],
+  "alpha_s_MZ": 0.13,
+  "running_loops": 1,
+  "PDFSUP": [
+    10042,
+    10042
+  ],
+  "requested_seed": 910001,
+  "compiled_seed": 910001,
+  "native_base_seed": 910001,
+  "stage_offsets": {
+    "iproc": 0,
+    "moffset": 0
+  },
+  "alpha_values": [
+    {
+      "Q_GeV": 91.188,
+      "alpha_s": 0.13
+    },
+    {
+      "Q_GeV": 125.0,
+      "alpha_s": 0.12380614852685007
+    },
+    {
+      "Q_GeV": 250.0,
+      "alpha_s": 0.11207102338760264
+    },
+    {
+      "Q_GeV": 500.0,
+      "alpha_s": 0.10236794587944135
+    },
+    {
+      "Q_GeV": 1000.0,
+      "alpha_s": 0.09421116947203673
+    }
+  ],
+  "probe_sha256": "9644adc2a4d3cf22d59e70fb6b1e91df680acb866c3249d9a12a7518ff0a6fa4",
+  "executable_sha256": "e4bcf28266860e7298555ee9dc5c1566c416ad7b8be133b8a53e009cb8c0f692",
+  "CTEQ6L1_table_sha256": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058",
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "scope": "actual native PDF initialization and get_base/offset reads; no density, RNG draw, kinematics, ME or integral",
+  "launch_seed": 910001,
+  "banner_seed": 910001,
+  "run_identity_seed": 910001,
+  "source_manifest_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd"
+}
