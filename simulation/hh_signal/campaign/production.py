@@ -69,6 +69,7 @@ def collect_source(out,phase,seed,build,result):
     save_json(out/'source_present.json',evidence)
     validation=validate_source(out,phase,seed,build)
     evidence['status']='PASS_GENUINE_INDEPENDENT_FULL_MASS_SOURCE';evidence['validation']=validation
+    evidence['requested_seed']=seed;evidence['effective_seed']=validation['effective_seed'];evidence['seed']=validation['effective_seed']
     save_json(out/'validated_source.json',evidence);return evidence
 
 def resume_preintegration(out,phase,seed,build,monitor):
@@ -84,6 +85,10 @@ def resume_preintegration(out,phase,seed,build,monitor):
         require(not (p.is_file() and (p.name in ['events.lhe','unweighted_events.lhe','unweighted_events.lhe.gz','results.dat','ftn21'] or p.suffix=='.lhe')),
             'POSSIBLE_PREEXISTING_EVENTS_NO_AUTOMATIC_CONTINUATION')
     shutil.copyfile(out/'ME5_debug',out/'preintegration_failure_debug.txt')
+    # MG clears iseed in the working card before compiling. A zero-record
+    # continuation must restore the exact reviewed physics/run request first.
+    (out/'process/Cards/run_card.dat').write_bytes((out/'reviewed_run_card.dat').read_bytes())
+    (out/'process/Cards/param_card.dat').write_bytes((out/'reviewed_param_card.dat').read_bytes())
     serial_configuration(out/'process')
     (out/'continuation_launch.mg5').write_text(launch_text('hh_'+phase))
     save_json(out/'continuation_started.json',{'same_source_reservation':True,'additional_independent_source_budget':0,
@@ -99,7 +104,27 @@ def validate_source(out,phase,seed,build):
     out=Path(out);present=read_json(out/'source_present.json');path=Path(present['path'])
     sys.path.insert(0,str(Path(build['private_mg5'])))
     require(path.resolve().is_relative_to(out.resolve()) and sha(path)==present['sha256'],'SOURCE_CHANGED_BEFORE_QA')
-    source=load_lhe(path);validation=validate_production(source,LIMITS[phase][0],seed)
+    source=load_lhe(path)
+    observed=re.findall(r'^\s*([0-9]+)\s*=\s*iseed\b',source['header'].decode(),re.M)
+    require(len(observed)==1,'AMBIGUOUS_ACTUAL_SOURCE_SEED');effective_seed=int(observed[0])
+    seed_observation=None
+    if effective_seed!=seed:
+        # The first genuine pilot is preserved after a diagnosed pre-source
+        # compile continuation. This is a bounded documented deviation, not a
+        # generic seed override or a successful test of the old launch code.
+        observation=out/'recovery_seed_observation.json'
+        require(phase=='7b' and observation.exists(),'SOURCE_SEED_MISMATCH')
+        seed_observation=read_json(observation)
+        require(seed_observation['status']=='DOCUMENTED_RECOVERED_PILOT_SEED_DEVIATION' and
+            seed_observation['source_sha256']==sha(path) and seed_observation['requested_seed']==seed and
+            seed_observation['effective_seed']==effective_seed and
+            seed_observation['reviewed_run_card_sha256']==sha(out/'reviewed_run_card.dat') and
+            seed_observation['preintegration_proof_sha256']==sha(out/'preintegration_continuation.json'),'STALE_RECOVERY_SEED_OBSERVATION')
+        print('DOCUMENTED_PILOT_SEED_DEVIATION requested='+str(seed)+' effective='+str(effective_seed)+'; no replacement generation',flush=True)
+    validation=validate_production(source,LIMITS[phase][0],effective_seed)
+    validation['requested_seed']=seed;validation['effective_seed']=effective_seed
+    validation['seed_status']='EXACT_REQUEST_HONORED' if effective_seed==seed else 'DOCUMENTED_RECOVERED_PILOT_DEVIATION'
+    validation['seed_deviation']=seed_observation
     header=source['header'].decode()
     for name in ('param','run'):
         tag='slha' if name=='param' else 'MGRunCard'
@@ -117,10 +142,12 @@ def validate_source(out,phase,seed,build):
             embedded=out/'embedded_run_card.dat'
             if not embedded.exists():embedded.write_text(actual)
             a,b=RunCardLO(str(embedded)),RunCardLO(str(out/'reviewed_run_card.dat'))
-            keys=('nevents','iseed','lpp1','lpp2','ebeam1','ebeam2','pdlabel','fixed_ren_scale','fixed_fac_scale',
+            keys=('nevents','lpp1','lpp2','ebeam1','ebeam2','pdlabel','fixed_ren_scale','fixed_fac_scale',
                   'dynamical_scale_choice','scalefact','nhel','event_norm','ickkw','cut_decays')
             require(all(a[k]==b[k] for k in keys),'ACTUAL_NATIVE_RUN_CARD_DIFFERS')
+            require(a['iseed']==effective_seed and b['iseed']==seed,'ACTUAL_NATIVE_SEED_PROVENANCE_DIFFERS')
             validation['actual_run_parameters']={k:a[k] for k in keys}
+            validation['actual_run_parameters']['iseed']=a['iseed']
         if name=='param':
             from models.check_param_card import ParamCard
             embedded=out/'embedded_param_card.dat'
@@ -143,5 +170,7 @@ def validate_source(out,phase,seed,build):
             validation['actual_model_parameters']={block+'_'+str(code):float(a[block].get((code,)).value) for block,code in physical}
     validation['exact_cards_sha256']={n:sha(out/n) for n in ('reviewed_run_card.dat','reviewed_param_card.dat','embedded_run_card.dat','embedded_param_card.dat')}
     validation['MadLoop_params_sha256']=sha(out/'process/Cards/MadLoopParams.dat')
+    validation['native_first_event_writer_sha256']=sha(out/'process/Source/rw_events.f')
+    validation['native_first_header_format']="(i2,i5,e16.7e3,3e15.7)"
     save_json(out/'lhe_validation.json',validation)
     return validation

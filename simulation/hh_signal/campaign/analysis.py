@@ -1,5 +1,5 @@
 """Read-only independent ROOT regression and per-process numerical comparison."""
-import csv,shlex,subprocess
+import csv,shlex,subprocess,gzip,re
 from .common import *
 from .statistics import histogram,precision_plan,covariance
 from .lhe import load_lhe,mass2
@@ -25,6 +25,13 @@ def jsonl(p):return [json.loads(s) for s in Path(p).read_text().splitlines()]
 def dump_csv(path,rows):
     with Path(path).open('x',newline='') as stream:
         w=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
+
+def integration(path):
+    p=Path(path);data=gzip.decompress(p.read_bytes()) if p.suffix=='.gz' else p.read_bytes()
+    body=re.search(rb'<init>\s*\n(.*?)</init>',data,re.S)[1]
+    lines=[s.split(b'#')[0].strip() for s in body.splitlines() if s.split(b'#')[0].strip()]
+    sigma,error=map(float,lines[1].split()[:2]);require(sigma>0 and error>=0,'INTEGRATION_INIT_ERROR')
+    return {'source_integrated_cross_section_pb':sigma,'source_integration_error_pb':error,'relative_error':error/sigma}
 
 def compile_extractor(out,monitor):
     dc,pc,env=native_environment();root=Path(dc['root_prefix']);source=CAMPAIGN/'src/extract_root_features.cxx'
@@ -83,7 +90,7 @@ def analyze(out,phase,native,reweights,monitor):
         code=stream['code'];path=out/(code+'_features.jsonl');old=jsonl(stream['reco'])
         root_before=sha(stream['root']);source_before=sha(stream['source']);require(len(old)==1000,'EXISTING_RECO_COUNT')
         monitor.run_command([str(exe),str(stream['root']),str(stream['index']),str(path),'1000'],out,'independent_root_'+code.lower(),env=env)
-        rows=jsonl(path);require(len(rows)==1000,'INDEPENDENT_ROOT_FEATURE_COUNT')
+        rows=jsonl(path);require(len(rows)==1000,'INDEPENDENT_ROOT_FEATURE_COUNT');integ=integration(stream['source'])
         for a,b in zip(rows,old):
             require(a['source_event_index']==b['source_event_index'] and a['source_event_sha256']==b.get('source_event_sha256',b.get('source_event_hash')),'RECO_SOURCE_IDENTITY_CHANGED')
             for key in ('cut_photons','cut_jets','cut_two_btags','cut_mgg'):require(a[key]==b[key],'INDEPENDENT_SELECTION_REGRESSION')
@@ -97,7 +104,7 @@ def analyze(out,phase,native,reweights,monitor):
         require(sha(stream['root'])==root_before and sha(stream['source'])==source_before,'INPUT_MUTATED_BY_READ_ONLY_ANALYSIS')
         preserved.append({'process':code,'events_reread':1000,'ROOT_sha256':root_before,'source_LHE_sha256':source_before,
            'input_index_sha256':sha(stream['index']),'retained_reco_sha256':sha(stream['reco']),'new_features_sha256':sha(path),
-           'native_all_named_weight_vectors_verified':True,'input_source_unchanged':True})
+           'native_all_named_weight_vectors_verified':True,'input_source_unchanged':True,'integration':integ})
         features[code]=rows;plans[code]=precision_plan(sum(r['cut_mgg'] for r in rows),1000)
         variants=[(k,[lookup[(i,k)]['source_contribution_pb']*factor for i in range(1,1001)],'MODEL_BR_ONLY_REWEIGHTED_INCONCLUSIVE_ABSOLUTE_RATE') for k in (-1,0,1,2,2.5,5)] if code=='S01' else [(None,[r['source_contribution_pb']*stream['factor'] for r in rows],stream['scope'])]
         for k,weights,scope in variants:
@@ -107,6 +114,8 @@ def analyze(out,phase,native,reweights,monitor):
                 accepted=[True if key is None else r[key] for r in rows];a=[w if yes else 0. for w,yes in zip(weights,accepted)];s=math.fsum(a);q=math.fsum(w*w for w in a)
                 cuts.append({'process':code,'kappa_lambda':k,'stage':stage,'observed_events':sum(accepted),'original_N':1000,
                    'weight_scope':scope,'sum_weight_pb':s,'sumw2_pb2':q,'source_sampling_variance_pb2':covariance(a,a),
+                   'correlated_SM_source_normalization_integration_error_pb':abs(s)*integ['relative_error'],
+                   'target_benchmark_independent_integration_error_pb':None if code=='S01' and k!=1 else abs(s)*integ['relative_error'],
                    'COMMON_LUMINOSITY_EXPLORATORY_fb_inverse':100,'expected_weighted_count_at_100fb_inverse':s*100*1000,
                    'physical_background_combination':'BLOCKED_OVERLAP_AND_CALIBRATION'})
             for stage,key in [('00_input',None),('04_mgg_105_160','cut_mgg')]:

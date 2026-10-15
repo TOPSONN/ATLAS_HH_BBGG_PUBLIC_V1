@@ -20,6 +20,8 @@ C     One fresh native process per event/benchmark avoids coupling caches.
       CALL MP_UPDATE_AS_PARAM()
       GC_30=GC_30*KL
       MP__GC_30=MP__GC_30*REAL(KL,16)
+      WRITE(*,'(A,4ES26.16E3)') 'HH_MODEL_FROZEN ',MDL_MH,
+     $ MDL_MT,MDL_MB,MDL_WH
       WRITE(*,'(A,5ES26.16E3)') 'HH_ME_INPUT ',KL,MU_R,
      $ G**2/(4D0*ACOS(-1D0)),ABS(GC_37),ABS(GC_30)
       DO I=1,6

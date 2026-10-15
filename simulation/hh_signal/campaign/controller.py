@@ -32,6 +32,8 @@ def request(args):
         require(x is None or math.isfinite(x) and 0<x<=ceiling,'INVALID_RESOURCE_CEILING')
     require(Path(args.kappa_config).resolve()==(CAMPAIGN/'config/kappa_scan.json').resolve(),'ONLY_REVIEWED_KAPPA_CONFIG_ACCEPTED')
     scan=read_json(args.kappa_config);require(scan['benchmarks']==[-1,0,1,2,2.5,5],'KAPPA_GRID_DIFFERS')
+    require(scan['kappa_top']==1 and scan['source_phase']=='7c' and scan['source_events']==1000 and
+        scan['new_independent_events']==0 and scan['held_out_quadratic_benchmarks']==[-1,2.5,5], 'UNREVIEWED_COUPLING_OR_SOURCE_SCAN')
     return safe_output(args.output)
 
 def cache():
@@ -54,6 +56,15 @@ def cache():
     require('generate g g > h h [noborn=QCD]' in proc.read_text(),'MISSING_NATIVE_PROCESS_HISTORY')
     return b['build'],n
 
+def frozen_phase(prior):
+    out=Path(prior['output']);path=out/'phase_receipt.json';p=read_json(path)
+    require(p['status']=='PASS_REAL_HH_SOURCE_DECAY_SHOWER_HEPMC_DELPHES_ROOT_MODEL_SCOPE' and
+        p['full_count']==prior['events'] and sha(p['source']['path'])==p['source']['sha256'],'FROZEN_PHASE_SOURCE_CHANGED')
+    if prior.get('phase_receipt_sha256'):require(sha(path)==prior['phase_receipt_sha256'],'FROZEN_PHASE_RECEIPT_CHANGED')
+    for stage in p['stages'].values():
+        for row in stage['artifacts'].values():require(sha(row['path'])==row['sha256'],'FROZEN_NATIVE_ARTIFACT_CHANGED')
+    return p
+
 def run_phase(args,phase,out,registry,build,native):
     count,hours,disk=LIMITS[phase];hours=min(hours,args.max_hours or hours);disk=min(disk,args.max_disk_gb or disk)
     prior=registry['phases'].get(phase)
@@ -61,10 +72,11 @@ def run_phase(args,phase,out,registry,build,native):
     if phase=='7c':
         b=registry['phases'].get('7b',{})
         require(b.get('status')=='PASS_FULL_CHAIN','PHASE7C_REQUIRES_GENUINE_7B_FULL_CHAIN_PASS')
+        frozen_phase(b)
         require(seed!=b['seed'],'INDEPENDENT_PHASES_REQUIRE_DIFFERENT_SEEDS')
     if prior:
         require(args.resume and prior['output']==str(out) and prior['seed']==seed,'SOURCE_ALREADY_RESERVED_NO_REGENERATION')
-        if prior['status']=='PASS_FULL_CHAIN':return read_json(out/'phase_receipt.json')
+        if prior['status']=='PASS_FULL_CHAIN':return frozen_phase(prior)
     else:
         require(not args.resume and not out.exists(),'FRESH_OUTPUT_REQUIRED')
         require(sum(p['events'] for p in registry['phases'].values())+count<=1100,'1100_INDEPENDENT_SOURCE_EVENT_CEILING')
@@ -99,6 +111,7 @@ def run_phase(args,phase,out,registry,build,native):
         if (out/'source/source_present.json').exists():
             source=read_json(out/'source/source_present.json')
             source['validation']=validate_source(out/'source',phase,seed,build)
+            source['requested_seed']=seed;source['effective_seed']=source['validation']['effective_seed'];source['seed']=source['effective_seed']
             source['status']='PASS_GENUINE_INDEPENDENT_FULL_MASS_SOURCE'
             save_json(out/'source/validated_source.json',source)
         else:
@@ -106,9 +119,16 @@ def run_phase(args,phase,out,registry,build,native):
                 require(args.resume,'PARTIAL_SOURCE_REQUIRES_MANUAL_INSPECTION; no automatic replacement')
                 source=resume_preintegration(out/'source',phase,seed,build,m)
             else:source=generate_source(out/'source',phase,seed,build,m,prior['source_request'])
+        prior['effective_seed']=source['validation']['effective_seed']
+        if phase=='7c':require(prior['effective_seed']!=registry['phases']['7b']['effective_seed'],'ACTUAL_SOURCE_SEEDS_NOT_INDEPENDENT')
+        save_json(STATE/'campaign_registry.json',registry)
         result=run_chain(out,source,native,m,phase,710101 if phase=='7b' else 710102,
                          710201 if phase=='7b' else 710202,710301 if phase=='7b' else 710302)
-        save_json(out/'phase_receipt.json',result);prior['status']='PASS_FULL_CHAIN'
+        save_json(out/'phase_receipt.json',result);prior['status']='PASS_FULL_CHAIN';prior['phase_receipt_sha256']=sha(out/'phase_receipt.json')
+        if 'failure' in prior:
+            prior.setdefault('historical_failures',[]).append(prior.pop('failure'))
+            save_json(out/'recovery.json',{'status':'PASS_FULL_CHAIN_AFTER_PRESERVED_EARLIER_FAILURE',
+                'historical_failure_receipt_sha256':sha(out/'failure.json'),'phase_receipt_sha256':prior['phase_receipt_sha256']})
         print(phase.upper()+' PASS genuine independent events='+str(count),flush=True)
         return result
     except BaseException as exc:

@@ -9,6 +9,16 @@ NUMBER=r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eEdD][+-]?\d+)?'
 def real(token):
     v=float(token.replace('D','E').replace('d','e'));require(math.isfinite(v),'NONFINITE_LHE_NUMBER');return v
 
+def printed_half_unit(token):
+    return .5*10.**Decimal(token.replace('D','E').replace('d','e')).as_tuple().exponent
+
+def native_scale_half_unit(value,token_half_unit):
+    # Source/rw_events.f writes scale with E15.7 (7 significant digits).
+    # Native Python combination later pads that rounded value to E.8. Those
+    # extra zeros do not restore information lost in the original write.
+    require(value>0,'NONPOSITIVE_SOURCE_SCALE')
+    return max(token_half_unit,.5*10.**(math.floor(math.log10(value))-6))
+
 def load_lhe(path):
     path=Path(path);data=gzip.decompress(path.read_bytes()) if path.suffix=='.gz' else path.read_bytes()
     require(len(data)<64*1024**2 and data.rstrip().endswith(b'</LesHouchesEvents>'),'LHE_ENVELOPE_OR_SIZE')
@@ -33,7 +43,8 @@ def load_lhe(path):
             particles.append({'id':int(f[0]),'status':int(f[1]),'m1':int(f[2]),'m2':int(f[3]),'c1':int(f[4]),'c2':int(f[5]),
                'p4':[real(x) for x in f[6:10]],'mass':real(f[10]),'tau':real(f[11]),'spin':real(f[12]),'line':line})
         records.append({'index':ordinal,'hash':hashlib.sha256(block).hexdigest(),'block':block,'nup':n,'process':int(tok[1]),
-           'weight':real(tok[2]),'scale':real(tok[3]),'alpha_qed':real(tok[4]),'alpha_qcd':real(tok[5]),'particles':particles,
+           'weight':real(tok[2]),'scale':real(tok[3]),'scale_printed_half_unit_gev':printed_half_unit(tok[3]),
+           'alpha_qed':real(tok[4]),'alpha_qcd':real(tok[5]),'particles':particles,
            'header_line':lines[0]})
     return {'header':header,'records':records,'sigma_pb':sigma,'error_pb':error,'idwtup':-4,
             'sha256':sha(path),'bytes':path.stat().st_size,'decompressed_sha256':hashlib.sha256(data).hexdigest(),
@@ -59,7 +70,7 @@ def validate_production(source,expected,seed=None,model_width=None):
             require(delta<1e-5+5e-10*sum(abs(p['p4'][j]) for p in ps),'SOURCE_FOUR_MOMENTUM_FAILURE')
         hh=[ps[2]['p4'][j]+ps[3]['p4'][j] for j in range(4)];mhh=math.sqrt(mass2(hh))
         delta=abs(r['scale']-mhh/2);max_scale=max(max_scale,delta)
-        require(delta<=1e-5+1e-9*mhh and r['alpha_qcd']>0,'ACTUAL_MHH_SCALE_OR_ALPHA_S_FAILURE')
+        require(delta<=native_scale_half_unit(r['scale'],r['scale_printed_half_unit_gev'])+1e-6+1e-9*mhh and r['alpha_qcd']>0,'ACTUAL_MHH_SCALE_OR_ALPHA_S_FAILURE')
         require(abs(r['weight']-source['sigma_pb'])<=1e-5*source['sigma_pb'], 'UNCERTIFIED_XWGTUP_PB_CONVENTION')
     # Exact card parse is delegated independently to the native MG readers by
     # the export/preparation gate; retained header tokens are checked here too.
@@ -70,7 +81,8 @@ def validate_production(source,expected,seed=None,model_width=None):
        'integration_error_pb':source['error_pb'],'LHE_IDWTUP':-4,'source_weight_convention':'XWGTUP_pb_average_original_N',
        'source_sha256':source['sha256'],'decompressed_sha256':source['decompressed_sha256'],
        'max_four_momentum_residual_gev':max_closure,'max_mass_shell_tolerance_fraction':max_shell,
-       'max_scalup_minus_mHH_over2_gev':max_scale,'source_included_decays':[],
+       'max_scalup_minus_mHH_over2_gev':max_scale,'scale_validation_scope':'original native E15.7 half-unit before Python E.8 padding, plus hard-p4 serialization allowance; no scale or momentum rewrite',
+       'source_included_decays':[],
        'identical_H_production_divisor':2,'physical_normalization':'RAW_PRODUCTION_ONLY'}
 
 def write_index(path,records):

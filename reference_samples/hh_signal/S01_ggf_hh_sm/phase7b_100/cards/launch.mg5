@@ -1,0 +1,13 @@
+set auto_update 0 --no_save
+set automatic_html_opening False --no_save
+set nb_core 1 --no_save
+set run_mode 0 --no_save
+launch process -m --name=hh_7b
+shower=OFF
+detector=OFF
+analysis=OFF
+madspin=OFF
+reweight=OFF
+done
+done
+quit

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "PASS_BOUNDED_FULL_MASS_PREREQUISITES; SOURCE_INTEGRATION_RUNNING",
+  "status": "PASS_FULL_LOOP_AND_GENUINE_B100_MODEL_ONLY; C1000_RUNNING",
   "production_contract": {
     "schema_version": 1,
     "process_id": "S01_GGF_HH_SM",
@@ -830,6 +830,6 @@
   "adopted_physical_BR": null,
   "Ward_evidence_sha256": "abb814703853519c7aae04ef47047e8243ab0e8943973aabb0de1eccf8333e1b",
   "production_parameter_numerical_evidence_sha256": "faac159c8ccb76fd486b6d392369395e6b28f8c27def8ff182bf7ba48a5ba0f8",
-  "physical_source_status": "RUNNING; no complete independently validated source LHE yet",
+  "physical_source_status": "B100 full-chain PASS; actual seed21 vs requested20261121 documented",
   "native_PDF_initialized_alpha_s_MZ_observed": 0.129783
 }

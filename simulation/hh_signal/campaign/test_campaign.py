@@ -1,5 +1,6 @@
 """Mathematical/guard tests; no manufactured physical reference events."""
 import unittest,math,tempfile,json
+from unittest.mock import patch
 from pathlib import Path
 from .decay import two_body,direction,assignment
 from .lhe import mass2
@@ -29,6 +30,45 @@ class DecayMath(unittest.TestCase):
             with self.assertRaises(ValueError):two_body(parent,m,c,0)
 
 class Guards(unittest.TestCase):
+    def test_zero_record_continuation_restores_seed_before_any_launch(self):
+        from . import production
+        from .common import sha,save_json
+        class BeforeAnyGenerator(Exception):pass
+        with tempfile.TemporaryDirectory() as tmp:
+            out=Path(tmp);cards=out/'process/Cards';cards.mkdir(parents=True)
+            reviewed=b'20261121 = iseed\n100 = nevents\n'
+            (out/'reviewed_run_card.dat').write_bytes(reviewed)
+            (out/'reviewed_param_card.dat').write_bytes(b'REVIEWED_PARAMETER_TEXT_ONLY\n')
+            (cards/'run_card.dat').write_bytes(b'0 = iseed\n100 = nevents\n')
+            (cards/'param_card.dat').write_bytes(b'NATIVE_MUTATED_PARAMETER_TEXT_ONLY\n')
+            (cards/'me5_configuration.txt').write_text('run_mode=2\nnb_core=8\n')
+            (out/'ME5_debug').write_text('METHOD_ONLY_PREINTEGRATION_DEBUG_FIXTURE\n')
+            (out/'launch.mg5').write_text('METHOD_ONLY_LAUNCH_FIXTURE\n')
+            save_json(out/'preintegration_continuation.json',{'status':'VERIFIED_ZERO_SOURCE_RECORDS_PREINTEGRATION_COMPILE_FAILURE',
+                'source_records_observed':0,'integration_result_files_observed':0,'debug_sha256':sha(out/'ME5_debug'),
+                'original_launch_sha256':sha(out/'launch.mg5'),'original_run_card_sha256':sha(out/'reviewed_run_card.dat'),
+                'original_param_card_sha256':sha(out/'reviewed_param_card.dat')})
+            read=production.read_json
+            def config(path):
+                if Path(path).name=='mg5_installation.json':return {'toolchain_prefix':'/portable/toolchain','mg5_path':'/portable/mg5'}
+                if Path(path).name=='delphes_installation.json':return {'root_prefix':'/portable/root'}
+                return read(path)
+            case=self
+            class Monitor:
+                def run_command(self,*a,**kw):
+                    case.assertEqual((cards/'run_card.dat').read_bytes(),reviewed)
+                    case.assertEqual((cards/'param_card.dat').read_bytes(),(out/'reviewed_param_card.dat').read_bytes())
+                    case.assertIn('nb_core = 1',(cards/'me5_configuration.txt').read_text())
+                    case.assertNotIn(' -m ',(out/'continuation_launch.mg5').read_text())
+                    raise BeforeAnyGenerator()
+            with patch.object(production,'read_json',side_effect=config):
+                with self.assertRaises(BeforeAnyGenerator):production.resume_preintegration(out,'7b',20261121,{'private_mg5':'/portable/mg5'},Monitor())
+    def test_native_scalar_printing_intervals(self):
+        from .lhe import printed_half_unit
+        self.assertAlmostEqual(printed_half_unit('0.3876131E+03'),5e-5)
+        self.assertAlmostEqual(printed_half_unit('4.075980e-03'),5e-10)
+        from .lhe import native_scale_half_unit
+        self.assertAlmostEqual(native_scale_half_unit(297.4079,5e-7),5e-5)
     def test_cli_real_values_and_rejections(self):
         output=str(Path.home()/'simulations/hh_signal_runs/test_no_creation')
         for phase,n in [('7b',100),('7c',1000),('7d',1000)]:

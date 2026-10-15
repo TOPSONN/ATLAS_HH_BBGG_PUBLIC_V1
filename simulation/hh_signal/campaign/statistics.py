@@ -45,6 +45,7 @@ def histogram(values,weights,edges,N,active=None):
             'flow':'underflow' if j==0 else 'overflow' if j==len(edges) else 'regular',
             'entries':len(b),'empty':not bool(b),'sumw':sw,'sumw2':q,'source_sampling_variance':var,
             'ESS':sw*sw/q if q else 0.,'UNIT_AREA_SHAPE_ONLY':p,
+            'bin_precision_status':'EMPTY' if not b else 'LOW_ESS_LT10' if q and sw*sw/q<10 else 'BOUNDED_DIAGNOSTIC_GE10_ESS',
             'unit_area_source_sampling_variance':shapevar,
             'shape_status':'DEFINED' if safe else 'UNDEFINED_ZERO_OR_SIGNED_CANCELLATION',
             'missing_pair_events':len(missing),'missing_pair_weight':math.fsum(missing),'original_N':N})

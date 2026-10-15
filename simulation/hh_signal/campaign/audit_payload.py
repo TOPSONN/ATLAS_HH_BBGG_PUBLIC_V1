@@ -1,5 +1,5 @@
 """Audit source/evidence/reference allowlist in every outgoing snapshot."""
-import subprocess,hashlib,re,json
+import subprocess,hashlib,re,json,os
 from pathlib import Path
 from .common import REPO,BASE,PHASE7A,require
 
@@ -8,7 +8,9 @@ ALLOWED=('simulation/hh_signal/','reports/phase7a_','reports/phase7b','reports/p
          'metadata/phase7_quality_','reference_samples/hh_signal/S01_ggf_hh_sm/',
          '.github/workflows/hh_signal_readiness.yml','.github/workflows/hh_signal_campaign.yml')
 
-def git(*args):return subprocess.check_output(['git','-C',str(REPO),*args])
+def git(*args):
+    # Read-only audits must not refresh/write the shared Windows/WSL index.
+    return subprocess.check_output(['git','-C',str(REPO),*args],env={**os.environ,'GIT_OPTIONAL_LOCKS':'0'})
 
 def tree(rev):
     out={}
@@ -23,7 +25,8 @@ def scan(path,data):
     require(suffix not in ['.pdf','.png','.jpg','.jpeg','.gif','.svg','.exe','.dll','.so','.a','.o','.mod','.pyc','.pkl'], 'UNAPPROVED_FIGURE_OR_BINARY:'+path)
     require(not {'.local','__pycache__','vendor','Events'}&set(Path(path).parts),'CACHE_OR_GENERATOR_SOURCE_PAYLOAD')
     physical=path.startswith('reference_samples/hh_signal/') and suffix in ['.gz','.root','.hepmc3']
-    require(len(data)<40*1024**2 if physical else len(data)<(8 if suffix=='.csv' else 2)*1024**2,'OVERSIZED_PAYLOAD:'+path)
+    text_cap=12 if path.startswith('reference_samples/hh_signal/') and suffix=='.dat' else 8 if suffix=='.csv' else 2
+    require(len(data)<40*1024**2 if physical else len(data)<text_cap*1024**2,'OVERSIZED_PAYLOAD:'+path)
     require(physical or b'\0' not in data,'UNREVIEWED_BINARY:'+path)
     if not physical:
         t=data.decode('utf-8');require(re.search(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-{5}BEGIN [A-Z ]*PRIVATE KEY)',t) is None,'SECRET_PATTERN')

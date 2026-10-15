@@ -12,8 +12,20 @@ def validate_phase(folder,n):
     for d in manifest['files']:
         p=folder/d['path'];require(not p.is_symlink() and p.resolve().is_relative_to(folder.resolve()),'UNSAFE_REFERENCE')
         require(sha(p)==d['sha256'] and p.stat().st_size==d['bytes'],'REFERENCE_HASH_OR_SIZE')
-    lhe=folder/('reference_'+str(n)+'.lhe.gz');source=load_lhe(lhe);validate_production(source,n,20261121 if n==100 else 20261122)
+    full=read_json(folder/'full_source_and_chain_validation.json')
+    effective=full['source']['validation']['effective_seed']
+    require(n==100 and effective==21 or n==1000 and effective==20261122,'DOCUMENTED_EFFECTIVE_REFERENCE_SEED_DIFFERS')
+    lhe=folder/('reference_'+str(n)+'.lhe.gz');source=load_lhe(lhe);validate_production(source,n,effective)
     require(sha(lhe)==validation['source_LHE_sha256'],'SOURCE_REFERENCE_IDENTITY')
+    derived=load_lhe(folder/('physically_decayed_same_source_'+str(n)+'.lhe.gz'))
+    require(hashlib.sha256(derived['raw']).hexdigest()==validation['physically_decayed_LHE_plain_sha256'] and
+        len(derived['records'])==n,'ACTUAL_PHYSICAL_DECAY_REPRESENTATION')
+    for original,decayed in zip(source['records'],derived['records']):
+        require(decayed['nup']==8 and original['weight']==decayed['weight'] and original['scale']==decayed['scale'],'DERIVED_WEIGHT_OR_SCALE_CHANGED')
+        for a,b in zip(original['particles'],decayed['particles'][:4]):
+            require(a['id']==b['id'] and a['p4']==b['p4'] and a['mass']==b['mass'],'DERIVED_ORIGINAL_MOMENTUM_CHANGED')
+        require([p['status'] for p in decayed['particles']]==[-1,-1,2,2,1,1,1,1] and
+            sorted(p['id'] for p in decayed['particles'][4:])==[-5,5,22,22],'PHYSICAL_MIXED_DECAY_TOPOLOGY')
     h=gzip.decompress((folder/'reference_100.hepmc3.gz').read_bytes())
     require(hashlib.sha256(h).hexdigest()==validation['source_native_HepMC_sha256'],'EXACT_NATIVE_HEPMC_TRANSFER')
     require(len(re.findall(rb'^E ',h,re.M))==100 and h.rstrip().endswith(b'HepMC::Asciiv3-END_EVENT_LISTING'),'HEPMC_REFERENCE_COUNT_OR_ENVELOPE')

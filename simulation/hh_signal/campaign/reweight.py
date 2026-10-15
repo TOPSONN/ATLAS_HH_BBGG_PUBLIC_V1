@@ -51,11 +51,15 @@ def run_reweight(args,out,registry,build,native):
                     result=m.run_command([str(work/'check'),str(k)],work,'me_'+str(r['index'])+'_'+str(j),env=env)
                     log=Path(result['log_path']).read_text();match=re.search(r'HH_ME_RESULT\s+([^\n]+)',log)
                     inputs=re.search(r'HH_ME_INPUT\s+([^\n]+)',log)
-                    require(match is not None and inputs is not None,'MISSING_ACTUAL_NATIVE_REWEIGHT_ME')
+                    model=re.search(r'HH_MODEL_FROZEN\s+([^\n]+)',log)
+                    require(match is not None and inputs is not None and model is not None,'MISSING_ACTUAL_NATIVE_REWEIGHT_ME')
                     f=match[1].split();v=float(f[0]);rc=int(f[4]);prec=float(f[3]);q=list(map(float,inputs[1].split()))
                     require(math.isfinite(v) and v>=0 and rc//100 in (2,3),'UNSTABLE_NATIVE_REWEIGHT_POINT_NO_DROPPING')
                     require(abs(q[1]-r['scale'])<1e-10*max(1,r['scale']) and abs(q[2]-r['alpha_qcd'])<1e-12,
                         'SOURCE_EVENT_SCALE_OR_ALPHA_S_CHANGED')
+                    frozen=list(map(float,model[1].split()))
+                    require(frozen[:3]==[125.,173.,4.7] and abs(frozen[3]-s['validation']['actual_model_parameters']['decay_25'])<1e-14,
+                        'NATIVE_REWEIGHT_MODEL_DIFFERS_FROM_ACTUAL_SOURCE_CARD')
                     require(k!=0 or q[4]==0,'KAPPA_ZERO_DID_NOT_REMOVE_HHH_VERTEX')
                     if j==len(benchmarks):repeat=v
                     else:values[k]=v;details[k]=(rc,prec,result['log_sha256'])
@@ -86,7 +90,8 @@ def run_reweight(args,out,registry,build,native):
                 cov.append({'kappa_a':k,'kappa_b':l,'source_sampling_covariance_pb2':1000/999*(math.fsum(x*y for x,y in zip(byk[k],byk[l]))-math.fsum(byk[k])*math.fsum(byk[l])/1000)})
         result={'status':'PASS_ACTUAL_EVENT_LEVEL_FULL_MASS_REWEIGHT_WITH_ABSOLUTE_RATE_LIMIT',
             'source_sha256':s['sha256'],'source_events':1000,'new_independent_events':0,'benchmarks':benchmarks,
-            'source_event_ME_calls':7000,'summaries':summaries,'cross_benchmark_covariance':cov,
+            'fresh_native_matrix_element_processes':7000,'native_loop_matrix_function_calls':42000,
+            'finite_matrix_element_results':7000,'summaries':summaries,'cross_benchmark_covariance':cov,
             'max_quadratic_relative_residual':max(r['quadratic_residual'] for r in rows),
             'max_SM_repeat_relative_residual':max(r['SM_repeat_relative_residual'] for r in rows),
             'ratios_above10':{str(k):sum(r['ratio']>10 for r in rows if r['kappa_lambda']==k) for k in benchmarks},

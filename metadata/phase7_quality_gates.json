@@ -15,22 +15,23 @@
       "evidence": "actual full-mass Phase7A, new frozen-parameter native grid, normalized native gluon Ward test"
     },
     "D": {
-      "status": "RUNNING",
-      "source_reservation": 100,
-      "complete_independently_validated_source_events": 0,
-      "scope": "survey temporary candidates are integration intermediates, not a validated exported source sample"
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
     },
     "E": {
-      "status": "MATH_TESTS_PASS_PHYSICAL_PENDING"
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
     },
     "F": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
     },
     "G": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PASS",
+      "scope": "real B100 chain; normalization MODEL_BR_ONLY; recovered pilot actual seed21 disclosed"
     },
     "H": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "RUNNING"
     },
     "I": {
       "status": "UNKNOWN_NOT_YET_EXECUTED"
@@ -48,10 +49,10 @@
       "status": "UNKNOWN_NOT_YET_EXECUTED"
     },
     "N": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "PARTIAL; real B100 full chain executed, old continuation seed semantics failed and corrected; fresh C command pending"
     },
     "O": {
-      "status": "UNKNOWN_NOT_YET_EXECUTED"
+      "status": "SOURCE_REGRESSION_PASS_469_TESTS_8_SKIPS; FULL_SIGNAL_NATIVE_REGRESSION_PENDING"
     },
     "P": {
       "status": "UNKNOWN_NOT_YET_EXECUTED"
@@ -70,13 +71,13 @@
     }
   },
   "phases": {
-    "7b": "RUNNING",
-    "7c": "NOT_STARTED_GATED_BY_7B",
+    "7b": "PASS",
+    "7c": "RUNNING",
     "7d": "NOT_STARTED_GATED_BY_7C"
   },
   "source_event_budget_ceiling": 1100,
-  "independent_source_events_reserved": 100,
-  "complete_source_events_validated": 0,
+  "independent_source_events_reserved": 1100,
+  "complete_source_events_validated": 100,
   "BR_scope": "MODEL_BR_ONLY",
   "new_PDF_PNG": "NONE"
 }

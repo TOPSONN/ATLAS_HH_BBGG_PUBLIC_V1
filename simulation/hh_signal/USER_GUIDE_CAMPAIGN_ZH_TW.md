@@ -21,7 +21,9 @@ bash simulation/hh_signal/scripts/run_campaign.sh \
   --output "$HOME/simulations/hh_signal_runs/campaign_01"
 ```
 
-也可以逐階段執行。正式範例的 7B 命令已實際啟動；最終成功與否、實際事件數及後續階段的執行紀錄，以 `metadata/phase7_quality_gates.json` 和各階段實際收據為準。
+也可以逐階段執行。7B 的100事件完整物理鏈已實際通過；7C 正以不同 seed 執行。最終狀態與後續階段的執行紀錄，以 `metadata/phase7_quality_gates.json` 和各階段實際收據為準。
+
+本次已保留的7B來源有明確的舊流程偏差：請求seed20261121，實際seed21。第一次零事件編譯失敗後，MG5已清除工作卡seed，而舊續跑未恢復請求卡。來源保持不變、不補生事件，實際卡與差異證明隨樣本發布。現在續跑會先恢復精確請求卡，且新增回歸測試在任何生成器啟動前核對。此舊樣本不能當作「seed請求被正確執行」的證據；7C的新命令已在原生啟動紀錄核對有效seed20261122，完整樣本仍須獨立驗證。
 
 ```bash
 bash simulation/hh_signal/scripts/run_campaign.sh \
