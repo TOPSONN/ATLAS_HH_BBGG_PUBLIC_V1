@@ -1,0 +1,34 @@
+--- frozen/SubProcesses/P0_gg_hh/matrix1.f
++++ isolated/SubProcesses/P0_gg_hh/matrix1.f
+@@ -228,6 +228,7 @@
+ 
+       IF(FORCE_ML_HELICITY_SUM )THEN
+ 
++        CALL hi_me_enter
+         CALL CPU_TIME(T_BEFORE)
+         CALL ML5_0_0_1_SLOOPMATRIX_THRES(P,ANS_ML,-1.0D0,PREC_FOUND
+      $   ,ML_RET_CODE)
+@@ -244,6 +245,7 @@
+             IF (GOODHEL(I,IMIRROR) .OR. NTRY(IMIRROR)
+      $       .LE.MAXTRIES.OR.ISUM_HEL.NE.0) THEN
+ 
++              CALL hi_me_enter
+               CALL CPU_TIME(T_BEFORE)
+               CALL ML5_0_0_1_SLOOPMATRIXHEL_THRES(P,I,ANS_ML,-1.0D0
+      $         ,PREC_FOUND,ML_RET_CODE)
+@@ -316,6 +318,7 @@
+ C          put in a common block defined in genps.inc.
+           I = HEL_PICKED
+ 
++          CALL hi_me_enter
+           CALL CPU_TIME(T_BEFORE)
+           CALL ML5_0_0_1_SLOOPMATRIXHEL_THRES(P,I,ANS_ML,-1.0D0
+      $     ,PREC_FOUND,ML_RET_CODE)
+@@ -446,6 +449,7 @@
+       T_RETURN_CODES(T) = T_RETURN_CODES(T)+1
+       H = (MOD(RETURN_CODE,1000)-10*T-U)/100
+       H_RETURN_CODES(H) = H_RETURN_CODES(H)+1
++      call hi_loop(RETURN_CODE,FINITE,ONEEPS,TWOEPS,PREC)
+ 
+       MAX_PREC = MAX(PREC, MAX_PREC)
+       MIN_PREC = MIN(PREC, MIN_PREC)

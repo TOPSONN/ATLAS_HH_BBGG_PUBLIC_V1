@@ -1,0 +1,10 @@
+--- frozen/SubProcesses/P0_gg_hh/auto_dsig1.f
++++ isolated/SubProcesses/P0_gg_hh/auto_dsig1.f
+@@ -144,6 +144,7 @@
+       ELSE
+         P1 = PP
+       ENDIF
++      CALL hi_point(PP,G1,G2)
+       CALL SMATRIX1(P1,DSIGUU)
+       IF (IMODE.EQ.5) THEN
+         IF (DSIGUU.LT.1D199) THEN

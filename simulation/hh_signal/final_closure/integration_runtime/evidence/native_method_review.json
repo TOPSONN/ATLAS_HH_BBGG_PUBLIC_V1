@@ -1,0 +1,108 @@
+{
+  "status": "PASS_INDEPENDENT_NATIVE_METHOD_ONLY_REVIEW",
+  "source_identity": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+      "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "sha256": "fe899bd62b1adffb7443acc7cf1399b013dfa6d07f8cdbabf894b7512319b9d8"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+      "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+      "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+      "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+      "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+      "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+      "sha256": "09d009a79082ee8e8a3d0ab412b3d049d428a2d202317e1a2e54bab37aa6eca3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "sha256": "d3bbad90668b90b0c74603858f905b363ce8963624b67277139aa7466ce9c92a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+      "sha256": "aa8e1a82186c0a3567987128909d7584d9c91758041494907ee81532380a8c4c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "sha256": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b"
+    }
+  ],
+  "computational_source_projection": {
+    "Source/dsample.f": "2177cc91aafea1343d45999ad9ccb41f65bf55a4d9b3f18a2578d62fb219be8a",
+    "Source/ranmar.f": "9bb6bbc5f1fda1df1a8df5d8518103b55a3f6c2b13874178b501b7272ecf2888",
+    "SubProcesses/unwgt.f": "358140b33f896077d529412c3107411cae8516da507ad1fa42315efc2a4cc2ee",
+    "Source/rw_events.f": "51fac40df2e39e0d20ddbdaed810aabe6e26203ce47f2b11871949085543b67a",
+    "SubProcesses/P0_gg_hh/matrix1.f": "ff335a733756a6e60c3a65190e1d7a6402ab2fcc68c39bd3767221ace4443993",
+    "SubProcesses/P0_gg_hh/auto_dsig1.f": "9b0ead11f1002cee33a73e7024de5ec9618627ed6cd2b7c65eb24935e163c365"
+  },
+  "synthetic_point_cases": [
+    {
+      "mode": "valid",
+      "exit": 0,
+      "stdout": " HI_SYNTHETIC_POINT_PASS_NO_ME_LIBRARY\n",
+      "stderr": ""
+    },
+    {
+      "mode": "ren_scale",
+      "exit": 92,
+      "stdout": "",
+      "stderr": "STOP 92\n"
+    },
+    {
+      "mode": "fac_scale",
+      "exit": 92,
+      "stdout": "",
+      "stderr": "STOP 92\n"
+    },
+    {
+      "mode": "alpha",
+      "exit": 92,
+      "stdout": "",
+      "stderr": "STOP 92\n"
+    },
+    {
+      "mode": "pdf",
+      "exit": 92,
+      "stdout": "",
+      "stderr": "STOP 92\n"
+    },
+    {
+      "mode": "nan",
+      "exit": 90,
+      "stdout": " HI_FAILURE NONFINITE\n",
+      "stderr": "STOP 90\n"
+    }
+  ],
+  "control_native_positive_and_wrong_seed": "PASS_C_API_ONLY",
+  "method_executable_sha256": "14b1ab63548ae286d6233c8435894b3a98661743b61a1ca5736d8b5dd11cac88",
+  "no_ME_or_sampler_symbols": true,
+  "new_genuine_ME_calls": 0,
+  "new_integrals": 0
+}

@@ -1,0 +1,58 @@
+--- frozen/SubProcesses/P0_gg_hh/driver.f
++++ isolated/SubProcesses/P0_gg_hh/driver.f
+@@ -76,6 +76,7 @@
+ C-----
+ C  BEGIN CODE
+ C----- 
++      character*1 hh_probe_mode
+       call cpu_time(t_before)
+       CUMULATED_TIMING = t_before
+ c
+@@ -110,7 +111,7 @@
+  14   continue
+       lun = 27
+ 
+-      open(unit=lun,status='scratch')
++      call hh_open_sink(lun)
+       nsteps=2
+       param_card_name = 'param_card.dat'
+       call setrun                !Sets up run parameters
+@@ -155,8 +156,21 @@
+ c     Get user input
+ c
+       write(*,*) "getting user params"
++      call hh_before_sampling(910061_8)
++      hh_probe_mode='0'
++      call get_environment_variable('HH_PREFLIGHT_ONLY',
++     $ hh_probe_mode)
++      if(hh_probe_mode.ne.'1') call hi_control_gate(910061_8)
+       call init_good_hel()
+       call get_user_params(ncall,itmax,itmin,mincfig)
++      call hi_inputs(ncall,itmax,itmin)
++      if(hh_probe_mode.eq.'1') then
++      call hi_config
++      call hh_io_report
++      write(*,*) 'HI_PREFLIGHT_ZERO_ME'
++      stop
++      endif
++      call hi_config
+       maxcfig=mincfig
+       minvar(1,1) = 0              !This tells it to map things invarients
+       write(*,*) 'Attempting mappinvarients',nconfigs,nexternal
+@@ -186,6 +200,7 @@
+       endif
+ 
+       write(*,*) "about to integrate ", ndim,ncall,itmax,itmin,ninvar,nconfigs
++      call hi_endpoint(ncall,itmax,itmin)
+       call sample_full(ndim,ncall,itmax,itmin,dsig,ninvar,nconfigs)
+ 
+ c
+@@ -206,6 +221,8 @@
+       rewind(lun)
+ 
+       close(lun)
++      call hi_finish
++      call hh_io_report
+       end
+ 
+ c     $B$ get_user_params $B$ ! tag for MadWeight
