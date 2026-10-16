@@ -1,0 +1,629 @@
+{
+  "revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "physics_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "source_identity": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+      "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "sha256": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+      "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "sha256": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+      "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+      "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+      "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+      "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+      "sha256": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "sha256": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+      "sha256": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+      "sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "sha256": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b"
+    }
+  ],
+  "git_preflight": {
+    "status": "PASS_FULL_TRACKED_PREFLIGHT",
+    "tracked_files": 1257,
+    "index_sha256": "b3d3a86c5cfde643e2867163370392d70f7a782386069535f8e8991f8eb0aec9",
+    "critical_source_sha256": {
+      "metadata/phase7i_git_precheck_recovery.json": "5a1d600d659d2309031ddab27307ed5516e5f4ed40e6298cdfc5a3dc3c830632",
+      "simulation/hh_signal/final_closure/config/physics_contract.json": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "simulation/hh_signal/final_closure/integration_runtime/__init__.py": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+      "simulation/hh_signal/final_closure/integration_runtime/build.py": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+      "simulation/hh_signal/final_closure/integration_runtime/containment.py": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110",
+      "simulation/hh_signal/final_closure/integration_runtime/contract.py": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf",
+      "simulation/hh_signal/final_closure/integration_runtime/control.c": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+      "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6",
+      "simulation/hh_signal/final_closure/integration_runtime/native_checks.f": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "simulation/hh_signal/final_closure/integration_runtime/native_review.py": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+      "simulation/hh_signal/final_closure/integration_runtime/observers.f90": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+      "simulation/hh_signal/final_closure/integration_runtime/overlay.py": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+      "simulation/hh_signal/final_closure/integration_runtime/published.py": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a",
+      "simulation/hh_signal/final_closure/integration_runtime/run.py": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910",
+      "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d",
+      "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+      "simulation/hh_signal/final_closure/integration_runtime/validate.py": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b"
+    },
+    "commands": [
+      {
+        "argv": [
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.04244727200000398,
+        "CPU_seconds": 0.00401,
+        "kernel_ru_maxrss_bytes": 13832192,
+        "stdout_bytes": 41,
+        "stderr_bytes": 0,
+        "stdout_sha256": "68077053183db6acbd8a63a954666b415b0afae63fdb9bc3fc35a7794eec5990",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "rev-parse",
+          "--show-toplevel"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.022037829999987935,
+        "CPU_seconds": 0.003057,
+        "kernel_ru_maxrss_bytes": 13832192,
+        "stdout_bytes": 10,
+        "stderr_bytes": 0,
+        "stdout_sha256": "fa838341e7129e514942d8799679b2c46c78db8723deb60b53202930927530ca",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "rev-parse",
+          "--absolute-git-dir"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.02191621800000121,
+        "CPU_seconds": 0.003129,
+        "kernel_ru_maxrss_bytes": 13836288,
+        "stdout_bytes": 15,
+        "stderr_bytes": 0,
+        "stdout_sha256": "7446c265ddce067711a6e26cd2398427b5c98dd139c6846dd83fad9583d0e043",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "config",
+          "--get",
+          "remote.origin.url"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.022264199000005647,
+        "CPU_seconds": 0.003486,
+        "kernel_ru_maxrss_bytes": 13836288,
+        "stdout_bytes": 55,
+        "stderr_bytes": 0,
+        "stdout_sha256": "71a85711b80bc8d091c27a265e13642270e15f66de791f539bdc80b2daa2cc1f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "config",
+          "--get-regexp",
+          "^core\\.(filemode|fsmonitor|ignorestat)$"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.02193662900003801,
+        "CPU_seconds": 0.003237,
+        "kernel_ru_maxrss_bytes": 13852672,
+        "stdout_bytes": 20,
+        "stderr_bytes": 0,
+        "stdout_sha256": "5796ed318d69a394b30ea960c2fca0ff14d5758b075d0c925c5c6886601af30d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.04249749800004565,
+        "CPU_seconds": 0.0050999999999999995,
+        "kernel_ru_maxrss_bytes": 13914112,
+        "stdout_bytes": 136983,
+        "stderr_bytes": 0,
+        "stdout_sha256": "c744152f008496def89b4c776b4e111a92bedcbc4432771c1316300579357df1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "ls-files",
+          "-v",
+          "-z"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.022208810999984507,
+        "CPU_seconds": 0.0035399999999999997,
+        "kernel_ru_maxrss_bytes": 14483456,
+        "stdout_bytes": 76647,
+        "stderr_bytes": 0,
+        "stdout_sha256": "b4d1b49cf8d4cbedf7fb048f338460550c2bb09ee743b26e4f3f432f314ce38e",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "ls-files",
+          "-f",
+          "-z"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.0221802159999811,
+        "CPU_seconds": 0.00346,
+        "kernel_ru_maxrss_bytes": 14667776,
+        "stdout_bytes": 76647,
+        "stderr_bytes": 0,
+        "stdout_sha256": "b4d1b49cf8d4cbedf7fb048f338460550c2bb09ee743b26e4f3f432f314ce38e",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:metadata/phase7i_git_precheck_recovery.json"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08315974300001017,
+        "CPU_seconds": 0.005685,
+        "kernel_ru_maxrss_bytes": 14786560,
+        "stdout_bytes": 9132,
+        "stderr_bytes": 0,
+        "stdout_sha256": "5a1d600d659d2309031ddab27307ed5516e5f4ed40e6298cdfc5a3dc3c830632",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/config/physics_contract.json"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.10346180899995261,
+        "CPU_seconds": 0.007640999999999999,
+        "kernel_ru_maxrss_bytes": 14790656,
+        "stdout_bytes": 637,
+        "stderr_bytes": 0,
+        "stdout_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/__init__.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08298944899996741,
+        "CPU_seconds": 0.008889,
+        "kernel_ru_maxrss_bytes": 14790656,
+        "stdout_bytes": 87,
+        "stderr_bytes": 0,
+        "stdout_sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/build.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.14472509099999797,
+        "CPU_seconds": 0.008093,
+        "kernel_ru_maxrss_bytes": 14790656,
+        "stdout_bytes": 7734,
+        "stderr_bytes": 0,
+        "stdout_sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/containment.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.0833182319999537,
+        "CPU_seconds": 0.008059,
+        "kernel_ru_maxrss_bytes": 14790656,
+        "stdout_bytes": 9147,
+        "stderr_bytes": 0,
+        "stdout_sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/contract.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06322058000000652,
+        "CPU_seconds": 0.008204,
+        "kernel_ru_maxrss_bytes": 14794752,
+        "stdout_bytes": 4732,
+        "stderr_bytes": 0,
+        "stdout_sha256": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/control.c"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06273700799999915,
+        "CPU_seconds": 0.006605,
+        "kernel_ru_maxrss_bytes": 14794752,
+        "stdout_bytes": 1211,
+        "stderr_bytes": 0,
+        "stdout_sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/git_precheck.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06324968600000602,
+        "CPU_seconds": 0.007476,
+        "kernel_ru_maxrss_bytes": 14798848,
+        "stdout_bytes": 10986,
+        "stderr_bytes": 0,
+        "stdout_sha256": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/native_checks.f"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06273751999998467,
+        "CPU_seconds": 0.006848,
+        "kernel_ru_maxrss_bytes": 14802944,
+        "stdout_bytes": 3012,
+        "stderr_bytes": 0,
+        "stdout_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/native_review.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08293888499997593,
+        "CPU_seconds": 0.0077009999999999995,
+        "kernel_ru_maxrss_bytes": 14807040,
+        "stdout_bytes": 5800,
+        "stderr_bytes": 0,
+        "stdout_sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/observers.f90"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06300179199996592,
+        "CPU_seconds": 0.0056229999999999995,
+        "kernel_ru_maxrss_bytes": 14811136,
+        "stdout_bytes": 3180,
+        "stderr_bytes": 0,
+        "stdout_sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/overlay.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.0833437789999607,
+        "CPU_seconds": 0.007222,
+        "kernel_ru_maxrss_bytes": 14811136,
+        "stdout_bytes": 4584,
+        "stderr_bytes": 0,
+        "stdout_sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/published.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08315296300003183,
+        "CPU_seconds": 0.007526999999999999,
+        "kernel_ru_maxrss_bytes": 14811136,
+        "stdout_bytes": 2073,
+        "stderr_bytes": 0,
+        "stdout_sha256": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/run.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06279222200004142,
+        "CPU_seconds": 0.0063739999999999995,
+        "kernel_ru_maxrss_bytes": 14811136,
+        "stdout_bytes": 9003,
+        "stderr_bytes": 0,
+        "stdout_sha256": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.06257859099997631,
+        "CPU_seconds": 0.006131999999999999,
+        "kernel_ru_maxrss_bytes": 14811136,
+        "stdout_bytes": 14823,
+        "stderr_bytes": 0,
+        "stdout_sha256": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/test_runtime.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08304207199995517,
+        "CPU_seconds": 0.006601999999999999,
+        "kernel_ru_maxrss_bytes": 14815232,
+        "stdout_bytes": 8118,
+        "stderr_bytes": 0,
+        "stdout_sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "cat-file",
+          "blob",
+          "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/validate.py"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.08288476199999195,
+        "CPU_seconds": 0.007476999999999999,
+        "kernel_ru_maxrss_bytes": 14815232,
+        "stdout_bytes": 5454,
+        "stderr_bytes": 0,
+        "stdout_sha256": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "status",
+          "--porcelain",
+          "--untracked-files=no"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 14.473908990999973,
+        "CPU_seconds": 1.694491,
+        "kernel_ru_maxrss_bytes": 34349056,
+        "stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "status",
+          "--porcelain",
+          "--untracked-files=no"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 12.625779851999937,
+        "CPU_seconds": 1.594728,
+        "kernel_ru_maxrss_bytes": 34521088,
+        "stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      },
+      {
+        "argv": [
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit": 0,
+        "reason": null,
+        "timed_out": false,
+        "wall_seconds": 0.04239374700000553,
+        "CPU_seconds": 0.003891,
+        "kernel_ru_maxrss_bytes": 14909440,
+        "stdout_bytes": 41,
+        "stderr_bytes": 0,
+        "stdout_sha256": "68077053183db6acbd8a63a954666b415b0afae63fdb9bc3fc35a7794eec5990",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_excerpt": "",
+        "group_cleanup": true
+      }
+    ],
+    "wall_seconds": 44.70810112700002,
+    "CPU_seconds": 5.055290782,
+    "limits": {
+      "command_seconds": 30,
+      "status_seconds": 120,
+      "overall_wall_seconds": 180,
+      "overall_CPU_seconds": 30
+    },
+    "atomicity": "repeated checks detect observed changes; a later concurrent write remains possible; no execution authorization"
+  }
+}

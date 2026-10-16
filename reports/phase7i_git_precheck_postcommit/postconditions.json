@@ -1,0 +1,45 @@
+{
+  "status": "PASS_READ_ONLY_NEW_SOURCE_PRECHECK_AND_HASH_CLOSURE",
+  "new_source_revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "old_frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "stopped_attempt_files_unchanged": 3603,
+  "stopped_attempt_identity": "5164541051b85a11d8ebe94c43373da88f9a2c43490a055e6afc450887c23d16",
+  "old_failure_receipt_sha256": "a68d27baf2a23f3a850a4cf683682eb56029cdd60e6bb7b0da2e2ea0b2b1d11e",
+  "build_hashcheck_wall_seconds": 1.844117567000012,
+  "build_and_preservation_wall_seconds": 7.821244672000034,
+  "actual_index_bytes": 162545,
+  "historical_campaign": {
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY",
+    "files": 8420,
+    "logical_bytes": 752305317
+  },
+  "actual_precheck_wall_seconds": [
+    44.70810112700002,
+    35.950051955999925,
+    46.072576476999984
+  ],
+  "actual_precheck_CPU_seconds": [
+    5.055290782,
+    4.1936017670000005,
+    4.976272377999999
+  ],
+  "full_tracked_counts": [
+    1257,
+    1257,
+    1257
+  ],
+  "index_unchanged_within_each_precheck": true,
+  "stopped_output_reuse_rejected": true,
+  "restart_authorized": false,
+  "real_native_dispatch": false,
+  "real_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "source_binding": {
+    "status": "UNCHANGED_NATIVE_BUILD_NEW_SOURCE_REAPPROVAL_REQUIRED",
+    "previous_approved_source": "79f779ef6d96340681242f86afe06bc90975728d",
+    "frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+    "new_source_binding_identity": "18943dd37130641e9315fd77bf728d075f2054d017ec7914d2cfb09dca2f8253",
+    "restart_authorized": false
+  }
+}
