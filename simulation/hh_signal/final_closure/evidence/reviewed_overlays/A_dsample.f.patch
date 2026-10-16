@@ -1,0 +1,67 @@
+--- frozen/Source/dsample.f
++++ A/Source/dsample.f
+@@ -1859,6 +1859,7 @@
+             trmean = trmean + rmean * (mean**2 / sigma)
+             tsigma = tsigma + mean**2 / sigma
+             chi2 = chi2 + mean**2 * (mean**2 / sigma)
++            call hh_real4('CHI_ACCUMULATOR',chi2,tsigma,mean,sigma)
+             sigma = sqrt(abs(sigma))
+ 
+             if (cur_it .lt. 100) then
+@@ -2167,7 +2168,9 @@
+ c     $                 access='append',err=122)
+ c                  write(22, 80) real(tmean), real(tsigma), real(chi2)
+ c 122              close(22)
++                  call hh_real4('CHI_BEFORE',chi2,tsigma,tmean,trmean)
+                   tsigma = tsigma*sqrt(chi2)  !This gives the 68% confidence cross section
++                  call hh_real4('NATIVE_ERROR_AFTER',chi2,tsigma,tmean,trmean)
+                   if (use_cut.eq.-2)then
+                     call store_events(force_max_wgt, .False.)
+                   else
+@@ -2238,7 +2241,9 @@
+ c     $                 access='append',err=129)
+ c                  write(22, 80) real(tmean), real(tsigma), real(chi2)
+ c 129              close(22)
++                  call hh_real4('CHI_BEFORE',chi2,tsigma,tmean,trmean)
+                   tsigma = tsigma*sqrt(max(0d0,chi2)) !This gives the 68% confidence cross section
++                  call hh_real4('NATIVE_ERROR_AFTER',chi2,tsigma,tmean,trmean)
+                   cur_it = itm+20
+                   return
+                endif
+@@ -2268,7 +2273,9 @@
+ c     $              access='append',err=123)
+ c               write(22, 80) real(tmean), real(tsigma), real(chi2)
+ c 123           close(22)
++               call hh_real4('CHI_BEFORE',chi2,tsigma,tmean,trmean)
+                tsigma = tsigma*sqrt(chi2) !This gives the 68% confidence cross section
++               call hh_real4('NATIVE_ERROR_AFTER',chi2,tsigma,tmean,trmean)
+             else
+ c
+ c              Starting new iteration, should clean out stored events 
+@@ -2348,7 +2355,7 @@
+ 
+ c     Remove file events.lhe (otherwise event combination gets screwed up)
+       write(*,*) 'Deleting file events.lhe'
+-      open(unit=67,file='events.lhe',status='unknown')
++      call hh_open_reference(67)
+       write(67,*)
+       close(67)
+ 
+@@ -2543,7 +2550,7 @@
+  99   write(*,*) 'Error opening file ',fname
+       end
+ 
+-      function ran1(idum)
++      function hh_original_ran1(idum)
+       dimension r(97)
+       parameter (m1=259200,ia1=7141,ic1=54773,rm1=3.8580247e-6)
+       parameter (m2=134456,ia2=8121,ic2=28411,rm2=7.4373773e-6)
+@@ -2569,7 +2576,7 @@
+       ix3=mod(ia3*ix3+ic3,m3)
+       j=1+(97*ix3)/m3
+       if(j.gt.97.or.j.lt.1) stop
+-      ran1=r(j)
++      hh_original_ran1=r(j)
+       r(j)=(float(ix1)+float(ix2)*rm2)*rm1
+       return
+       end

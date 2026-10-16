@@ -1,0 +1,1743 @@
+FILE SubProcesses/P0_gg_hh/driver.f SHA256 f9d94250035b9a5887bd930333070ebe360d6998ed3dc67f5de0babb29b44f05
+170:      write(*,*) 'HI_PREFLIGHT_ZERO_ME'
+171:      stop
+172:      endif
+173:      call hi_config
+174:      maxcfig=mincfig
+175:      minvar(1,1) = 0              !This tells it to map things invarients
+176:      write(*,*) 'Attempting mappinvarients',nconfigs,nexternal
+177:      if (mincfig.lt.0)then
+178:         maxcfig = -1*mincfig
+179:         mincfig= 1
+180:         nconfigs=maxcfig-mincfig +1
+181:      endif
+182:      call map_invarients(minvar,nconfigs,ninvar,mincfig,maxcfig,nexternal,nincoming,nb_tchannel)
+183:      write(*,*) "Completed mapping",nexternal
+184:      ndim = 3*(nexternal-nincoming)-4
+185:      if (nincoming.gt.1.and.abs(lpp(1)) .ge. 1) ndim=ndim+1
+186:      if (nincoming.gt.1.and.abs(lpp(2)) .ge. 1) ndim=ndim+1
+187:      ninvar = ndim
+188:      do j=mincfig,maxcfig
+189:         if (abs(lpp(1)) .ge. 1 .and. abs(lpp(1)) .ge. 1) then
+190:            if(ndim.gt.1) minvar(ndim-1,j)=ninvar-1
+191:            minvar(ndim,j) = ninvar
+192:         elseif (abs(lpp(1)) .ge. 1 .or. abs(lpp(1)) .ge. 1) then
+193:            minvar(ndim,j) = ninvar
+194:         endif
+195:      enddo
+196:c      ncall =  ncall * max(1., min(3., (nb_tchannel+1.)/2.))
+197:      if (nb_tchannel.gt.1) then
+198:c         itmin = itmin + 1
+199:         itmax = itmax + 2
+200:      endif
+201:
+202:      write(*,*) "about to integrate ", ndim,ncall,itmax,itmin,ninvar,nconfigs
+203:      call hi_endpoint(ncall,itmax,itmin)
+204:      call sample_full(ndim,ncall,itmax,itmin,dsig,ninvar,nconfigs)
+205:
+206:c
+207:c     Now write out events to permanent file
+208:c
+209:      if (twgt .gt. 0d0) maxwgt=maxwgt/twgt
+210:      write(lun,'(a,f20.5)') 'Summary', maxwgt
+211:      
+212:
+213:c      write(*,'(a34,20I7)'),'Color flows originally chosen:   ',
+214:c     &     (ncolflow(i),i=1,ncols)
+215:c      write(*,'(a34,20I7)'),'Color flows according to diagram:',
+216:c     &     (ncolalt(i),i=1,ncols)
+217:c
+218:c      call sample_result(xsec,xerr)
+219:c      write(*,*) 'Final xsec: ',xsec
+220:
+221:      rewind(lun)
+222:
+223:      close(lun)
+224:      call hi_finish
+225:      call hh_io_report
+226:      end
+227:
+228:c     $B$ get_user_params $B$ ! tag for MadWeight
+229:c     change this routine to read the input in a file
+230:c
+231:      subroutine get_user_params(ncall,itmax,itmin,iconfig)
+232:c**********************************************************************
+233:c     Routine to get user specified parameters for run
+234:c**********************************************************************
+235:      use DiscreteSampler
+236:
+237:      implicit none
+238:c
+239:c     Constants
+240:c
+241:      include 'nexternal.inc'
+242:      include 'maxparticles.inc'
+243:      integer NCOMB
+244:      parameter (NCOMB=4)
+245:c
+246:c     Arguments
+247:c
+248:      integer ncall,itmax,itmin,iconfig, diag_number
+249:      common/to_diag_number/diag_number
+250:c
+251:c     Local
+252:c
+253:      integer i, j, jconfig, ncode
+254:      double precision dconfig
+255:c
+256:c     Global
+257:c
+258:      integer           isum_hel
+259:      logical                   multi_channel
+260:      common/to_matrix/isum_hel, multi_channel
+261:      double precision    accur
+262:      common /to_accuracy/accur
+263:      integer           use_cut
+264:      common /to_weight/use_cut
+265:      logical init_mode
+266:      common /to_determine_zero_hel/init_mode
+267:
+268:
+269:      integer        lbw(0:nexternal)  !Use of B.W.
+270:      common /to_BW/ lbw
+271:
+272:c-----
+273:c  Begin Code
+274:c-----
+275:      write(*,'(a)') 'Enter number of events and max and min iterations: '
+276:      read(*,*) ncall,itmax,itmin
+277:      write(*,*) 'Number of events and iterations ',ncall,itmax,itmin
+278:      write(*,'(a)') 'Enter desired fractional accuracy: '
+279:      read(*,*) accur
+280:      write(*,*) 'Desired fractional accuracy: ',accur
+281:
+282:      write(*,'(a)') 'Enter 0 for fixed, 2 for adjustable grid: '
+283:      read(*,*) use_cut
+284:      if (use_cut .lt. 0 .or. use_cut .gt. 2) then
+285:         if (use_cut.ne.-2) then
+286:            write(*,*) 'Bad choice, using 2',use_cut
+287:            use_cut = 2
+288:         else if (use_cut.eq.-2)then
+289:            itmax= 1
+290:            itmin=1
+291:         endif
+292:
+293:      endif
+294:
+295:      write(*,10) 'Suppress amplitude (0 no, 1 yes)? '
+296:      read(*,*) i
+297:      if (i .eq. 1) then
+298:         multi_channel = .true.
+299:         write(*,*) 'Using suppressed amplitude.'
+300:      else
+FILE Source/dsample.f SHA256 0a2e88aa712d1fcf0d1fb0486ab78f8ec87ea8207aa71623da853f5b782c0a4d
+1:      subroutine sample_full(ndim,ncall,itmax,itmin,dsig,ninvar,nconfigs)
+2:c**************************************************************************
+3:c     Driver for sample which does complete integration
+4:c     This is done in double precision, and should be told the
+5:c     number of possible phasespace choices.
+6:c     Arguments:
+7:c     ndim       Number of dimensions for integral(number or random #'s/point)
+8:c     ncall      Number of times to evaluate the function/iteration
+9:c     itmax      Max number of iterations
+10:c     itmin      Min number of iterations
+11:c     ninvar     Number of invarients to keep grids on (s,t,u, s',t' etc)
+12:c     nconfigs   Number of different pole configurations 
+13:c     dsig       Function to be integrated
+14:c**************************************************************************
+15:      implicit none
+16:      include 'genps.inc'
+17:c
+18:c Arguments
+19:c
+20:      integer ndim,ncall,itmax,itmin,ninvar,nconfigs
+21:      external         dsig
+22:      double precision dsig
+23:c
+24:c Local
+25:c
+26:      double precision x(maxinvar),wgt,p(4*maxdim/3+14)
+27:      double precision tdem, chi2, dum
+28:      integer ievent,kevent,nwrite,iter,nun,luntmp,itsum
+29:      integer jmax,i,j,ipole
+30:      integer itmax_adjust
+31:c
+32:c     External
+33:c
+34:      integer  n_unwgted
+35:      external n_unwgted
+36:c
+37:c Global
+38:c
+39:      integer                                      nsteps
+40:      character*40          result_file,where_file
+41:      common /sample_status/result_file,where_file,nsteps
+42:      double precision fx
+43:      common /to_fx/   fx
+44:
+45:      integer           mincfig, maxcfig
+46:      common/to_configs/mincfig, maxcfig
+47:
+48:      double precision     xmean(99),xsigma(99),xwmax(99),xeff(99), xrmean(99)
+49:      common/to_iterations/xmean,    xsigma,    xwmax,    xeff,     xrmean
+50:
+51:      double precision    accur
+52:      common /to_accuracy/accur
+53:
+54:      double precision twgt, maxwgt,swgt(maxevents)
+55:      integer                             lun, nw, itminx
+56:      common/to_unwgt/twgt, maxwgt, swgt, lun, nw, itminx
+57:
+58:      integer nzoom
+59:      double precision  tx(1:3,maxinvar)
+60:      common/to_xpoints/tx, nzoom
+61:
+62:      double precision xzoomfact
+63:      common/to_zoom/  xzoomfact
+64:
+65:      double precision tmean, trmean, tsigma
+66:      integer             dim, events, itm, kn, cur_it, invar, configs
+67:      common /sample_common/
+68:     .     tmean, trmean, tsigma, dim, events, itm, kn, cur_it, invar, configs
+69:
+70:      integer           use_cut
+71:      common /to_weight/use_cut
+72:
+73:      integer              icor
+74:      common/to_correlated/icor
+75:
+76:      integer                   neventswritten
+77:      common /to_eventswritten/ neventswritten
+78:
+79:      integer th_nunwgt
+80:      double precision th_maxwgt
+81:      common/theoretical_unwgt_max/th_maxwgt, th_nunwgt
+82:
+83:c
+84:c     External
+85:c
+86:      logical pass_point
+87:      integer NEXTUNOPEN
+88:c
+89:c     Data
+90:c
+91:      data result_file,where_file,nsteps/'SAMPLE','WHERE.AMI',100/
+92:      data accur/-1d0/
+93:      data mincfig /1/
+94:      data maxcfig /1/
+95:      data twgt/-1d0/              !Dont write out events
+96:      data lun/27/                 !Unit number for events
+97:      data maxwgt/0d0/
+98:      data nw/0/                   !Number of events written
+99:      
+100:
+101:c-----
+102:c Begin Code
+103:c-----
+104:      ievent = 0
+105:      kevent = 0
+106:      nzoom = 0
+107:      xzoomfact = 1d0
+108:      itminx = itmin
+109:      if (nsteps .lt. 1) nsteps=1
+110:      nwrite = itmax*ncall/nsteps
+111:
+112:C     Fix for 2>1 process where ndim is 2 and not 1
+113:      ninvar = max(2,ninvar)
+114:
+115:      call sample_init(ndim,ncall,itmax,ninvar,nconfigs)
+116:      call graph_init
+117:      do i=1,itmax
+118:         xmean(i)=0d0
+119:         xsigma(i)=0d0
+120:      enddo
+121:c      mincfig=1
+122:c      maxcfig=nconfigs
+123:      wgt = 0d0
+124:c
+125:c     Main Integration Loop
+126:c
+127:      iter = 1
+128:      do while(iter .le. itmax)
+129:c
+130:c     Get integration point
+131:c
+132:         call sample_get_config(wgt,iter,ipole)
+133:         if (iter .le. itmax) then
+134:            ievent=ievent+1
+135:            call x_to_f_arg(ndim,ipole,mincfig,maxcfig,ninvar,wgt,x,p)
+136:            if (pass_point(p)) then
+137:               call hi_integrand
+138:               fx = dsig(p,wgt,0) !Evaluate function
+139:               wgt = wgt*fx
+140:               if (wgt .ne. 0d0) call graph_point(p,wgt) !Update graphs
+141:            else
+142:               fx =0d0
+143:               wgt=0d0
+144:            endif
+145:            call sample_put_point(wgt,x(1),iter,ipole) !Store result
+146:         endif
+147:         if (wgt .ne. 0d0) kevent=kevent+1    
+148:c
+149:c     Write out progress/histograms
+150:c
+151:         if (kevent .ge. nwrite) then
+152:            nwrite = nwrite+ncall*itmax/nsteps
+153:            nwrite = min(nwrite,ncall*itmax)
+154:            call graph_store
+155:         endif
+156: 99   enddo
+157:c
+158:c     All done
+159:c
+160:      tmean = 0d0
+161:      trmean = 0d0
+162:      tsigma = 0d0
+163:      tdem = 0d0
+164:      open(unit=66,file='results.dat',status='unknown')
+165:      i=1
+166:      do while(xmean(i) .ne. 0 .and. i .lt. cur_it)
+167:         i=i+1
+168:      enddo
+169:      cur_it = i
+170:c     Use the last 3 iterations or cur_it-1 if cur_it-1 >= itmin but < 3
+171:      itsum = min(max(itmin,cur_it-1),3)
+172:      i = cur_it - itsum
+173:      if (i .gt. 0) then
+174:      tmean = 0d0
+175:      trmean = 0d0
+1650:      data fprb/maxfprb*1d0/
+1651:      data jpnt,jplace /1,1/
+1652:
+1653:c-----
+1654:c  Begin Code
+1655:c-----
+1656:
+1657:      if (first_time) then
+1658:         first_time = .false.
+1659:         twgt1 = 0d0       !
+1660:         iavg = 0         !Vars for averging to increase err estimate
+1661:         navg = 1      !
+1662:         wmax1= 99d99
+1663:         wmax = -1d0
+1664:         mean = 0d0
+1665:         rmean = 0d0
+1666:         sigma = 0d0
+1667:         chi2 = 0d0
+1668:         non_zero = 0
+1669:         vol = 1d0 / dble(events * itm)
+1670:         knt = events
+1671:
+1672:         do i=1,maxconfigs
+1673:            psect(i)=0d0
+1674:         enddo
+1675:         do i=1,invar
+1676:            xmin(i) = xgmax
+1677:            xmax(i) = xgmin
+1678:            do j=1,ng
+1679:               inon_zero(j,i)=0
+1680:               grid(1,j,i)   =0d0
+1681:               grid2(j,i)    =0d0
+1682:            enddo
+1683:         enddo
+1684:      endif
+1685:
+1686:      if (iteration .eq. cur_it) then
+1687:c        Add the current point to the DiscreteSamplerGrid
+1688:         call add_entry_to_discrete_dimensions(wgt)
+1689:         if (kn.eq.0.and.(iteration.eq.1.or.use_cut.eq.-2)) then
+1690:            ! ensure that all cumulative variable are at zero (usefull for reset)
+1691:            twgt1 = 0d0         !
+1692:            iavg = 0            !Vars for averging to increase err estimate
+1693:            navg = 1            !
+1694:            wmax1= 99d99
+1695:            wmax = -1d0
+1696:            mean = 0d0
+1697:            rmean = 0d0
+1698:            sigma = 0d0
+1699:            chi2 = 0d0
+1700:            non_zero = 0
+1701:            vol = 1d0 / dble(events * itm)
+1702:            knt = events
+1703:            do i=1,maxconfigs
+1704:               psect(i)=0d0
+1705:            enddo
+1706:         endif
+1707:
+1708:         kn = kn + 1
+1709:         if (.true.) then       !Average points to increase error estimate
+1710:            twgt1=twgt1+dabs(wgt)     !This doesn't change anything should remove
+1711:            iavg = iavg+1
+1712:            if (iavg .ge. navg) then
+1713:               sigma=sigma+twgt1**2
+1714:               iavg = 0
+1715:               twgt1=0d0
+1716:            endif
+1717:         else
+1718:            sigma = sigma + wgt**2
+1719:         endif
+1720:         if (wgt .ne. 0.) then
+1721:            if (dabs(wgt)*itm*events .gt. wmax) then
+1722:               wmax=dabs(wgt)*itm*events
+1723:            endif
+1724:            non_zero = non_zero + 1
+1725:            mean = mean + dabs(wgt)
+1726:            rmean = rmean + wgt
+1727:            if (.true. ) then
+1728:c               psect(ipole)=psect(ipole)+wgt*wgt/alpha(ipole)  !Ohl 
+1729:c               psect(ipole)=1d0                 !Not doing multi_config
+1730:            else
+1731:               tot = 0d0
+1732:               do i=1,configs
+1733:                  tot=tot+prb(i,jpnt,jplace)*alpha(i)
+1734:               enddo
+1735:               do i=1,configs
+1736:                  if (tot .gt. 0d0) then !Pittau hep-ph/9405257
+1737:                     psect(i)=psect(i)+wgt*wgt*prb(i,jpnt,jplace)/tot
+1738:                  else
+1739:                     psect(i)=psect(i)+wgt*wgt*alpha(i) !prb not set....
+1740:                  endif
+1741:               enddo
+1742:            endif
+1743:c            write(123,'(2i6,1e15.5)') 1,1,wgt
+1744:c            write(123,'(5e15.9)') (fprb(i,jpnt,jplace),i=1,invar) 
+1745:c            write(123,'(5e15.9)') (prb(i,jpnt,jplace),i=1,configs) 
+1746:            do j = 1, invar
+1747:c               i = int(xbin(point(j),j))+1    
+1748:c--------------
+1749:c     tjs 3/5/2011  use stored value for last bin
+1750:c--------------
+FILE SubProcesses/P0_gg_hh/genps.f SHA256 f1ba3efbcc161675f4e84db2ff044fba312866ff4dcc94d0de9580edd9253e23
+1:      integer function f_get_nargs(ndim)
+2:c**************************************************************************
+3:c     Returns number of arguments which come from x_to_f_arg
+4:c**************************************************************************
+5:      implicit none
+6:      include 'nexternal.inc'
+7:      integer ndim
+8:      f_get_nargs=4*nexternal+2      !All 4-momentum and x1,x2
+9:      end
+10:
+11:      subroutine x_to_f_arg(ndim,iconfig,mincfig,maxcfig,invar,wgt,x,p)
+12:c**************************************************************************
+13:c     This is a routine called from sample to transform the integration
+14:c     variables into the arguments of the function. Often these will be
+15:c     4 momentum, but it could also be a trivial 1->1 mapping.
+16:c
+17:c     INPUTS:  ndim     == number of dimensions
+18:c              iconfig  == configuration working on
+19:c              mincfig  == First configuration to include
+20:c              maxcfig  == Last configuration to include
+21:c              invar    == Number of invarients we are mapping (ndim*maxcfig)
+22:c              wgt      == wgt for choosing point thus far. 1/npnts*iter
+23:c     OUTPUTS: wgt      == updated weight after choosing points
+24:c              x        == points choosen from sample grid
+25:c              p        == transformed points call is f(p(x))
+26:c     COMMON:
+27:c           hel_picked  == Modified integer in gen_ps.inc to pass the
+28:c                          chosen helicity configuration to matrix<i>.f
+29:c
+30:c**************************************************************************
+31:      implicit none
+32:c
+33:c     Constants
+34:c
+35:      include 'genps.inc'
+36:c
+37:c     Arguments
+38:c
+39:      integer ndim                             !Number of dimensions(input)
+40:      integer iconfig                          !Configuration (input)
+41:      integer mincfig,maxcfig                  !Range of configurations
+42:      integer invar
+43:      double precision wgt                     !(input and output)
+44:      double precision x(*),p(*)     !x,p (output) [p(0:3,nexternal)]
+45:c
+46:c     Local
+47:c
+48:c
+49:c     External
+50:c     
+51:c
+52:c     Global
+53:c
+54:      INTEGER                    ISUM_HEL
+55:      LOGICAL                    MULTI_CHANNEL
+56:      COMMON/TO_MATRIX/ISUM_HEL, MULTI_CHANNEL
+57:c-----
+58:c  Begin Code
+59:c-----
+60:      call gen_mom(iconfig,mincfig,maxcfig,invar,wgt,x,p)
+61:C     Pick the helicity configuration from the DiscreteSampler if user
+62:C     decided to perform MC over helicity configurations.
+63:      if(ISUM_HEL.ne.0) then
+64:        call sample_get_discrete_x(wgt,hel_picked,iconfig,'Helicity')
+65:      endif
+66:      end
+67:
+68:      subroutine gen_mom(iconfig,mincfig,maxcfig,invar,wgt,x,p1)
+69:c**************************************************************************
+70:c
+71:c     Routine to generate 4 momentum based on tree-level decomposition
+72:c     using generalized s,t,u variables as integration variables. Need to
+73:c     describe different configurations using variable iforest.
+74:c     
+75:c     INPUTS:    iconfig   == Current configuration working on
+76:c                mincfig   == First configuration to include
+77:c                maxcfig   == Last configuration to include
+78:c                wgt       == wgt for choosing x's so far.
+79:c     OUTPUTS:   wgt       == updated wgt including all configs
+80:c                x()       == Integration variabls for all configs
+81:c                p1(0:3,n) == 4 momentum of external particles
+82:c
+83:c     REQUIRES: IFOREST() set in data statement (see configs.inc)
+84:c               NEXTERNAL set in data statement (see genps.inc)
+85:c
+86:c     Note regarding integration variables mapping to invarients
+87:c     the first nbranch variables go for the masses of branches -1,-2,..
+88:c     For each t-channel invarient x(ndim-1), x(ndim-3), .... are used
+89:c     in place of the cos(theta) variable used in s-channel.
+90:c     x(ndim), x(ndim-2),.... are the phi angles.
+91:c**************************************************************************
+92:      use DiscreteSampler
+93:      implicit none
+94:c     
+95:c     Constants
+96:c
+97:      include 'genps.inc'
+98:      include 'maxconfigs.inc'
+99:      include 'nexternal.inc'
+100:      include 'maxamps.inc'
+101:      double precision pi
+102:      parameter       (pi=3.1415926d0)
+103:c
+104:c     Arguments
+105:c
+106:      integer iconfig,mincfig,maxcfig,invar
+107:      double precision p1(0:3,nexternal+1)
+108:      double precision x(*)
+109:      double precision wgt
+110:c
+111:c     Local
+112:c
+113:      integer nbranch,ndim
+114:      integer i,j,jconfig,n,ipole
+115:      double precision P(0:3,-max_branch:max_particles),xx(maxinvar)
+116:      double precision M(-max_branch:max_particles)
+117:      double precision s(-max_branch:0), pole_type
+118:      integer nparticles,nfinal
+119:      double precision jac,sjac,pswgt,pwgt(maxconfigs),flux
+120:      double precision tprb, mtot
+121:      double precision xtau, dum
+122:      double precision pi1(0:3),pi2(0:3),p0,p3
+123:      save m
+124:
+125:      integer sprop(maxsproc,-max_branch:-1,lmaxconfigs)
+126:      integer tprid(-max_branch:-1,lmaxconfigs)
+127:      common/to_sprop/sprop,tprid
+128:      logical firsttime
+129:
+130:      double precision xprop(3,nexternal),tprop(3,nexternal)
+131:      double precision maxwgt
+132:      integer imatch
+133:      save maxwgt
+134:      double precision R        !random value
+135:      integer ninvar, nconfigs
+FILE SubProcesses/P0_gg_hh/auto_dsig.f SHA256 6e9c67b58ea9b94228f2972e048d557cee8c11eb71a425a2cbdce81ba3112c2d
+460:C     
+461:C     LOCAL VARIABLES 
+462:C     
+463:      DOUBLE PRECISION P1(0:3,NEXTERNAL),XDUM
+464:      INTEGER I,J,K,JC(NEXTERNAL)
+465:      INTEGER PERMS(NEXTERNAL,LMAXCONFIGS)
+466:      INCLUDE 'symperms.inc'
+467:      SAVE P1,JC
+468:
+469:      IF (LAST_ICONF.EQ.-1.OR.LAST_ICONF.NE.ICONF) THEN
+470:
+471:        ICONFIG=SYMCONF(ICONF)
+472:        DO I=1,MAXSPROC
+473:          SUBDIAG(I) = CONFSUB(I,SYMCONF(ICONF))
+474:        ENDDO
+475:
+476:C       Set momenta according to this permutation
+477:        CALL SWITCHMOM(PP,P1,PERMS(1,MAPCONFIG(ICONFIG)),JC,NEXTERNAL)
+478:
+479:        IF (LAST_ICONF.NE.-1) THEN
+480:          LAST_ICONF = ICONF
+481:        ENDIF
+482:      ENDIF
+483:
+484:      IB(1)=1
+485:      IB(2)=2
+486:
+487:      IF(IMIRROR.EQ.2)THEN
+488:C       Flip momenta (rotate around x axis)
+489:        DO I=1,NEXTERNAL
+490:          P1(2,I)=-P1(2,I)
+491:          P1(3,I)=-P1(3,I)
+492:        ENDDO
+493:C       Flip beam identity
+494:        IB(1)=2
+495:        IB(2)=1
+496:C       Flip x values (to get boost right)
+497:        XDUM=XBK(1)
+498:        XBK(1)=XBK(2)
+499:        XBK(2)=XDUM
+500:C       Flip CM_RAP (to get rapidity right)
+501:        CM_RAP=-CM_RAP
+502:      ENDIF
+503:
+504:      DSIGPROC=0D0
+505:
+506:      IF (PASSCUTS(P1)) THEN
+507:        IF (IMODE.EQ.0D0.AND.NB_PASS_CUTS.LT.2**12)THEN
+508:          NB_PASS_CUTS = NB_PASS_CUTS + 1
+509:        ENDIF
+510:        IF(IPROC.EQ.1) DSIGPROC=DSIG1(P1,WGT,IMODE)  ! g g > h h
+511:      ENDIF
+512:
+513:      IF (LAST_ICONF.NE.-1.AND.IMIRROR.EQ.2) THEN
+514:C       Flip back local momenta P1 if cached
+515:        DO I=1,NEXTERNAL
+FILE SubProcesses/P0_gg_hh/auto_dsig1.f SHA256 f99900fdb49cdcf87908b528d1ae95ad6eff7b3e3c4739c0e5976bb12c82b61d
+120:      ENDIF
+121:C     Continue only if IMODE is 0, 4 or 5
+122:      IF(IMODE.NE.0.AND.IMODE.NE.4.AND.IMODE.NE.5) RETURN
+123:
+124:
+125:      IF (ABS(LPP(IB(1))).GE.1) THEN
+126:          !LP=SIGN(1,LPP(IB(1)))
+127:        G1=PDG2PDF(LPP(IB(1)),0, IB(1),XBK(IB(1)),DSQRT(Q2FACT(1)))
+128:      ENDIF
+129:      IF (ABS(LPP(IB(2))).GE.1) THEN
+130:          !LP=SIGN(1,LPP(IB(2)))
+131:        G2=PDG2PDF(LPP(IB(2)),0, IB(2),XBK(IB(2)),DSQRT(Q2FACT(2)))
+132:      ENDIF
+133:      PD(0) = 0D0
+134:      IPROC = 0
+135:      IPROC=IPROC+1  ! g g > h h
+136:      PD(IPROC)=G1*G2
+137:      PD(0)=PD(0)+DABS(PD(IPROC))
+138:      IF (IMODE.EQ.4)THEN
+139:        DSIG1 = PD(0)
+140:        RETURN
+141:      ENDIF
+142:      IF(FRAME_ID.NE.6)THEN
+143:        CALL BOOST_TO_FRAME(PP, FRAME_ID, P1)
+144:      ELSE
+145:        P1 = PP
+146:      ENDIF
+147:      CALL hi_point(PP,G1,G2)
+148:      CALL SMATRIX1(P1,DSIGUU)
+149:      IF (IMODE.EQ.5) THEN
+150:        IF (DSIGUU.LT.1D199) THEN
+FILE SubProcesses/P0_gg_hh/cuts.f SHA256 c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c
+1218:C...Set couplings if event passed cuts
+1219:
+1220: 21   if(.not.fixed_ren_scale) then
+1221:         call set_ren_scale(P,scale)
+1222:         if(scale.gt.0) G = SQRT(4d0*PI*ALPHAS(scale))
+1223:      endif
+1224:
+1225:      if(.not.fixed_fac_scale1.or..not.fixed_fac_scale2) then
+1226:         call set_fac_scale(P,q2fact)
+1227:      endif
+1228:
+1229:c
+1230:c     Here we cluster event and reset factorization and renormalization
+1231:c     scales on an event-by-event basis, as well as check xqcut for jets
+1232:c
+1233:c     Note the following condition is the first line of setclscales
+1234:c      if(xqcut.gt.0d0.or.ickkw.gt.0.or.scale.eq.0.or.q2fact(1).eq.0)then
+1235:c     Do not duplicate it since some variable are set for syscalc in the fct
+1236:        if(.not.setclscales(p,.false.))then
+1237:           cutsdone=.false.
+1238:           cutspassed=.false.
+1239:           passcuts = .false.
+1240:           if(debug) write (*,*) 'setclscales -> fails'
+1241:           return
+1242:       endif
+1243:c      endif
+1244:
+1245:c     Set couplings in model files
+1246:      if(.not.fixed_ren_scale.or..not.fixed_couplings) then
+1247:         if (.not.fixed_couplings)then
+1248:            do i=0,3
+1249:               do j=1,nexternal
+1250:                  pp(i,j)=p(i,j)
+1251:               enddo
+1252:            enddo
+1253:         endif
+1254:         call update_as_param()
+1255:      endif
+1256:
+1257:      IF (FIRSTTIME2) THEN
+1258:        FIRSTTIME2=.FALSE.
+1259:        write(6,*) 'alpha_s for scale ',scale,' is ', G**2/(16d0*atan(1d0))
+1260:      ENDIF
+FILE SubProcesses/P0_gg_hh/reweight.f SHA256 42674c7015a6cf57b7430a2cdc3e020f207fee56fdb7e6eb46b3c53a9ec40c6a
+551:      logical function setclscales(p, keepq2bck)
+552:c**************************************************
+553:c     Calculate dynamic scales based on clustering
+554:c     Also perform xqcut and xmtc cuts
+555:c     keepq2bck allow to not reset the parameter q2bck
+556:c**************************************************
+557:      implicit none
+558:
+559:      logical keepq2bck
+560:      include 'message.inc'
+561:      include 'genps.inc'
+562:      include 'maxconfigs.inc'
+563:      include 'nexternal.inc'
+564:      include 'maxamps.inc'
+565:      include 'cluster.inc'
+566:      include 'run.inc'
+567:      include 'coupl.inc'
+568:      include 'run_config.inc'
+569:C   
+570:C   ARGUMENTS 
+571:C   
+572:      DOUBLE PRECISION P(0:3,NEXTERNAL)
+573:C   global variables
+574:C     Present process number
+575:      INTEGER IMIRROR,IPROC
+576:      COMMON/TO_MIRROR/IMIRROR, IPROC
+577:C     ICONFIG has this config number
+578:      INTEGER MAPCONFIG(0:LMAXCONFIGS), ICONFIG
+579:      COMMON/TO_MCONFIGS/MAPCONFIG, ICONFIG
+580:c     Common block for reweighting info
+581:c     q2bck holds the central q2fact scales
+582:      integer jlast(2)
+583:      integer njetstore(lmaxconfigs),iqjetstore(nexternal-2,lmaxconfigs)
+584:      real*8 q2bck(2)
+585:      integer njets,iqjets(nexternal)
+586:      common /to_rw/jlast,njetstore,iqjetstore,njets,iqjets,q2bck
+587:      data njetstore/lmaxconfigs*-1/
+588:      real*8 xptj,xptb,xpta,xptl,xmtc
+589:      real*8 xetamin,xqcut,deltaeta
+590:      common /to_specxpt/xptj,xptb,xpta,xptl,xmtc,xetamin,xqcut,deltaeta
+591:      double precision stot,m1,m2
+592:      common/to_stot/stot,m1,m2
+593:      logical init_mode
+594:      common/to_determine_zero_hel/init_mode
+595:
+596:C   local variables
+597:      integer i, j, idi, idj, k,m
+598:      integer get_color
+599:      real*8 PI
+600:      parameter( PI = 3.14159265358979323846d0 )
+601:      integer iforest(2,-max_branch:-1,lmaxconfigs)
+602:      integer tstrategy
+603:      double precision asref, pt2prev(n_max_cl),pt2min
+604:      integer n, ibeam(2), iqcd(0:2)
+605:      integer idfl, idmap(-nexternal:nexternal)
+606:      integer ipart(2,n_max_cl)
+607:      double precision xnow(2),etot
+608:      integer jfirst(2),jcentral(2),nwarning
+609:      logical qcdline(2),partonline(2)
+610:      logical failed,first
+611:      data first/.true./
+612:      data nwarning/0/
+613:      integer nqcd(lmaxconfigs)
+614:      include 'config_nqcd.inc'
+615:
+616:c     Variables for keeping track of jets
+617:      logical goodjet(n_max_cl)
+618:      integer fsnum(2),ida(2),imo,jcode
+619:      logical chclusold,fail,increasecode
+620:      save chclusold
+621:      integer tmpindex
+622:      integer pdgm, pdgid1, pdgid2
+623:
+624:      logical isqcd,isjet,isparton,cluster,isjetvx,is_octet
+625:      integer ifsno
+626:      double precision alphas
+627:      external isqcd, isjet, isparton, cluster, isjetvx, alphas, ifsno
+628:      external is_octet
+629:      setclscales=.true.
+630:
+631:      if(ickkw.le.0.and.xqcut.le.0d0.and.q2fact(1).gt.0.and.q2fact(2).gt.0.and.scale.gt.0) then
+632:         if(use_syst)then
+633:            s_scale=scale
+634:            n_qcd=nqcd(iconfig)
+635:            n_alpsem=0
+636:            do i=1,2
+637:               n_pdfrw(i)=0
+638:            enddo
+639:            s_rwfact=1d0
+640:         endif
+641:      return
+642:      endif
+643:c   
+644:c   Cluster the configuration
+645:c   
+646:      
+647:c     First time, cluster according to this config and store jets
+648:c     (following times, only accept configurations if the same partons
+649:c      are flagged as jets)
+650:      chclusold=chcluster
+651:      if(njetstore(iconfig).eq.-1)then
+652:         chcluster=.true.
+653:      endif
+654: 100  clustered = cluster(p(0,1))
+655:      if(.not.clustered) then
+656:         if(init_mode) goto 999
+657:         open(unit=26,file='../../../error',status='unknown',err=999)
+658:         write(26,*) 'Error: Clustering failed in cluster.f.'
+659:         write(*,*) 'Error: Clustering failed in cluster.f.'
+660:         stop
+661: 999     write(*,*) 'error for clustering'
+662:         setclscales=.false.
+663:         clustered = .false.
+664:         return
+665:      endif
+666:c     Reset chcluster to run_card value
+667:      chcluster=chclusold
+668:
+669:      if (btest(mlevel,1)) then
+670:        write(*,*)'setclscales: identified tree {'
+671:        do i=1,nexternal-2
+672:          write(*,*)'  ',i,': ',idacl(i,1),'(',ipdgcl(idacl(i,1),igraphs(1),iproc),')',
+673:     $       '&',idacl(i,2),'(',ipdgcl(idacl(i,2),igraphs(1),iproc),')',
+674:     $       ' -> ',imocl(i),'(',ipdgcl(imocl(i),igraphs(1),iproc),')',
+675:     $       ', ptij = ',dsqrt(pt2ijcl(i))
+676:          write(*,*)'   icluster(',i,')=',(icluster(j,i),j=1,4)
+677:        enddo
+678:        write(*,*)'  process: ',iproc
+679:        write(*,*)'  graphs (',igraphs(0),'):',(igraphs(i),i=1,igraphs(0))
+680:        write(*,*)'}'
+FILE Source/kin_functions.f SHA256 258ba73d21343e1e9e64f8f1beec0ae9a9f890d01c3d3a907f1091843de6372d
+1:c************************************************************************
+2:c  THIS FILE CONTAINS THE DEFINITIONS OF USEFUL FUNCTIONS OF MOMENTA:
+3:c  
+4:c  DOT(p1,p2)         : 4-Vector Dot product
+5:c  R2(p1,p2)          : distance in eta,phi between two particles
+6:c  SumDot(P1,P2,dsign): invariant mass of 2 particles
+7:c  rap(p)             : rapidity of particle in the lab frame (p in CM frame)
+8:C  RAP2(P)            : rapidity of particle in the lab frame (p in lab frame)
+9:c  DELTA_PHI(P1, P2)  : separation in phi of two particles 
+10:c  ET(p)              : transverse energy of particle
+11:c  PT(p)              : transverse momentum of particle
+12:c  DJ(p1,p2)          : y*S (Durham) value for two partons
+13:c  DJB(p1,p2)         : mT^2=m^2+pT^2 for one particle
+14:c  PYJB(p1,p2)        : The Pythia ISR pT^2=(1-x)*Q^2
+15:c  DJ2(p1,p2)         : scalar product squared
+16:c  threedot(p1,p2)    : 3-vector Dot product (accept 4 vector in entry)
+17:c  rho                : |p| in lab frame
+18:c  eta                : pseudo-rapidity
+19:c  phi                : phi
+20:c  four_momentum      : (theta,phi,rho,mass)-> 4 vector
+21:c  four_momentum_set2 : (pt,eta,phi,mass--> 4 vector
+22:c
+23:c************************************************************************
+24:
+25:      DOUBLE PRECISION FUNCTION R2(P1,P2)
+26:c************************************************************************
+27:c     Distance in eta,phi between two particles.
+28:c************************************************************************
+29:      IMPLICIT NONE
+30:c
+31:c     Arguments
+32:c
+33:      double precision p1(0:3),p2(0:3)
+34:c
+35:c     External
+36:c
+37:      double precision rap,DELTA_PHI
+38:      external rap,delta_phi
+39:c-----
+40:c  Begin Code
+41:c-----
+42:      R2 = (DELTA_PHI(P1,P2))**2+(rap(p1)-rap(p2))**2
+43:      RETURN
+44:      END
+45:
+46:      DOUBLE PRECISION FUNCTION SumDot(P1,P2,dsign)
+47:c************************************************************************
+48:c     Invarient mass of 2 particles
+49:c************************************************************************
+50:      IMPLICIT NONE
+51:c
+52:c     Arguments
+53:c
+54:      double precision p1(0:3),p2(0:3),dsign
+55:c
+56:c     Local
+57:c      
+58:      integer i
+59:      double precision ptot(0:3)
+60:c
+61:c     External
+62:c
+63:      double precision dot
+64:      external dot
+65:c-----
+66:c  Begin Code
+67:c-----
+68:
+69:      do i=0,3
+70:         ptot(i)=p1(i)+dsign*p2(i)
+71:      enddo
+72:      SumDot = dot(ptot,ptot)
+73:      RETURN
+74:      END
+75:
+76:      DOUBLE PRECISION FUNCTION PtDot(P1,P2)
+77:c************************************************************************
+78:c     Pt of 2 particles
+79:c************************************************************************
+80:      IMPLICIT NONE
+81:c
+82:c     Arguments
+83:c
+84:      double precision p1(0:3),p2(0:3),dsign
+85:
+86:c      write (*,*)'Px of particle 1: ',P1(1)
+87:c      write (*,*)'Px of particle 2: ',P2(1)
+88:c      write (*,*)'Py of particle 1: ',P1(2)
+89:c      write (*,*)'Py of particle 2: ',P2(2)
+90:c
+FILE Source/MODEL/rw_para.f SHA256 8036384b285c6675b96d7c36227e2370d9e703f54e0eaae05064d4056beaf041
+1:c************************************************************************
+2:c**                                                                    **
+3:c**           MadGraph/MadEvent Interface to FeynRules                 **
+4:c**                                                                    **
+5:c**          C. Duhr (Louvain U.) - M. Herquet (NIKHEF)                **
+6:c**                                                                    **
+7:c************************************************************************
+8:
+9:      subroutine setpara(param_name)
+10:      implicit none
+11:
+12:      character*(*) param_name
+13:      logical readlha
+14:
+15:      include 'coupl.inc'
+16:      include 'input.inc'
+17:      include 'model_functions.inc'
+18:      include 'mp_coupl.inc'
+19:      include 'mp_input.inc'
+20:
+21:      integer maxpara
+22:      parameter (maxpara=5000)
+23:      
+24:      integer npara
+25:      character*20 param(maxpara),value(maxpara)
+26:
+27:      logical updateloop
+28:      common /to_updateloop/updateloop
+29:      data updateloop /.true./
+30:
+31:      
+32:      ! also loop parameters should be initialised here
+33:      if (updateloop) then
+34:         include 'param_read.inc'
+35:         call coup()         
+36:      else   
+37:         updateloop=.true.
+38:         include 'param_read.inc'
+39:         call coup()
+40:         updateloop=.false.
+41:      endif
+42:      return
+43:
+44:      end
+45:
+46:      subroutine setParamLog(OnOff)
+47:
+48:      logical OnOff
+49:      logical WriteParamLog
+50:      data WriteParamLog/.TRUE./
+51:      common/IOcontrol/WriteParamLog
+52:
+53:      WriteParamLog = OnOff
+54:
+55:      end
+56:
+57:      subroutine setpara2(param_name)
+58:      implicit none
+59:
+60:      character(512) param_name
+61:
+62:      integer k
+63:      logical found
+64:
+65:      character(512) ParamCardPath
+66:      common/ParamCardPath/ParamCardPath
+67:
+68:      if (param_name(1:1).ne.' ') then
+69:        ! Save the basename of the param_card for the ident_card.
+70:        ! If no absolute path was used then this ParamCardPath
+71:        ! remains empty
+72:        ParamCardPath = '.'
+73:        k = LEN(param_name)
+74:        found = .False.
+75:        do while (k.ge.1.and..not.found)
+76:          if (param_name(k:k).eq.'/') then
+77:              found=.True.
+78:          endif
+79:          k=k-1
+80:        enddo
+81:        if (k.ge.1) then
+82:          ParamCardPath(1:k)=param_name(1:k)
+83:        endif
+84:        call setpara(param_name)
+85:      endif
+86:      if (param_name(1:1).eq.'*') then
+87:         ! Dummy call to printout so that it is available in the
+88:         ! dynamic library for MadLoop BLHA2
+89:         ! In principle the --whole-archive option of ld could be 
+90:         ! used but it is not always supported
+91:         call printout()
+92:         call setParamLog(.True.)
+93:      endif
+94:      return
+95:
+96:      end
+
+FILE Source/setrun.f SHA256 1f243b1e7f25966643b997e488a23b43746f8f3236cb19888d4b1bd5e504cf68
+115:            pol(2) = (-1d0/200d0)*pb2 + 0.5d0
+116:      else
+117:            if(pdsublabel(1).eq.'eva') then
+118:                  pol(1) = (-1d0/200d0)*pb1 + 0.5d0
+119:            endif
+120:            if(pdsublabel(2).eq.'eva') then
+121:                  pol(2) = (-1d0/200d0)*pb2 + 0.5d0
+122:            endif
+123:      endif
+124:
+125:c !!! Default behavior changed (MH, Aug. 07) !!!
+126:c If no pdf, read the param_card and use the value from there and
+127:c order of alfas running = 2
+128:
+129:      if(lpp(1).ne.0.or.lpp(2).ne.0) then
+130:          write(*,*) 'A PDF is used, so alpha_s(MZ) is going to be modified'
+131:          call setpara(param_card_name)
+132:          asmz=G**2/(16d0*atan(1d0))
+133:          write(*,*) 'Old value of alpha_s from param_card: ',asmz
+134:          call pdfwrap
+135:          write(*,*) 'New value of alpha_s from PDF ',pdlabel,':',asmz
+136:      else
+137:          call setpara(param_card_name)
+138:          asmz=G**2/(16d0*atan(1d0))
+139:          nloop=2
+140:          pdlabel='none'
+141:          write(*,*) 'No PDF is used, alpha_s(MZ) from param_card is used'
+142:          write(*,*) 'Value of alpha_s from param_card: ',asmz
+143:          write(*,*) 'The default order of alpha_s running is fixed to ',nloop
+144:      endif
+145:c !!! end of modification !!!
+146:
+147:C     If use_syst, ensure that all variational parameters are 1
+
+FILE Source/MODEL/param_read.inc SHA256 a14a19f2379f69375eea63dfa4c34319f2681e9e037fc4088ec39a7978568cbc
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      INCLUDE '../param_card.inc'
+
+FILE SubProcesses/P0_gg_hh/matrix1.f SHA256 c1c6334e218931430e39853ba9914ee418b454256a5379b67ecbc248b39f926a
+220:
+221:      IF (FORCE_ML_HELICITY_SUM)THEN
+222:C       Of course this option can also not be used for polarized beams.
+223:        DO JJ=1,NINCOMING
+224:          IF (POL(JJ).NE.1D0) FORCE_ML_HELICITY_SUM = .FALSE.
+225:        ENDDO
+226:      ENDIF
+227:
+228:
+229:      IF(FORCE_ML_HELICITY_SUM )THEN
+230:
+231:        CALL hi_me_enter
+232:        CALL CPU_TIME(T_BEFORE)
+233:        CALL ML5_0_0_1_SLOOPMATRIX_THRES(P,ANS_ML,-1.0D0,PREC_FOUND
+234:     $   ,ML_RET_CODE)
+235:        CALL PROCESS_MADLOOP_OUTPUT1(P,T_BEFORE,ANS,ANS_ML(1,0)
+236:     $   ,ANS_ML(2,0),ANS_ML(3,0),PREC_FOUND(0),ML_RET_CODE)
+237:
+238:      ELSE
+239:          !   If the helicity grid status is 0, this means that it is not yet initialized.
+240:          !   If HEL_PICKED==-1, this means that calls to other matrix<i> where in initialization mode as well for the helicity.
+241:        IF ((ISHEL(IMIRROR).EQ.0.AND.ISUM_HEL.EQ.0)
+242:     $   .OR.(DS_GET_DIM_STATUS('Helicity').EQ.0).OR.(HEL_PICKED.EQ.-1)
+243:     $   ) THEN
+244:          DO I=1,NCOMB
+245:            IF (GOODHEL(I,IMIRROR) .OR. NTRY(IMIRROR)
+246:     $       .LE.MAXTRIES.OR.ISUM_HEL.NE.0) THEN
+247:
+248:              CALL hi_me_enter
+249:              CALL CPU_TIME(T_BEFORE)
+250:              CALL ML5_0_0_1_SLOOPMATRIXHEL_THRES(P,I,ANS_ML,-1.0D0
+251:     $         ,PREC_FOUND,ML_RET_CODE)
+252:              CALL PROCESS_MADLOOP_OUTPUT1(P,T_BEFORE,T,ANS_ML(1,0)
+253:     $         ,ANS_ML(2,0),ANS_ML(3,0),PREC_FOUND(0),ML_RET_CODE)
+254:
+255:              DO JJ=1,JAMP2(0)
+310:            ENDIF
+311:            IF(NTRY(IMIRROR).EQ.(MAXTRIES+1)) THEN
+312:              CALL RESET_CUMULATIVE_VARIABLE()  ! avoid biais of the initialization
+313:            ENDIF
+314:
+315:          ENDIF
+316:        ELSE  ! random helicity
+317:C         The helicity configuration was chosen already by genps and
+318:C          put in a common block defined in genps.inc.
+319:          I = HEL_PICKED
+320:
+321:          CALL hi_me_enter
+322:          CALL CPU_TIME(T_BEFORE)
+323:          CALL ML5_0_0_1_SLOOPMATRIXHEL_THRES(P,I,ANS_ML,-1.0D0
+324:     $     ,PREC_FOUND,ML_RET_CODE)
+325:          CALL PROCESS_MADLOOP_OUTPUT1(P,T_BEFORE,T,ANS_ML(1,0)
+326:     $     ,ANS_ML(2,0),ANS_ML(3,0),PREC_FOUND(0),ML_RET_CODE)
+327:
+328:          DO JJ=1,JAMP2(0)
+329:            JAMP2(JJ) = JAMP2(JJ) + ML_JAMP2(JJ)
+
+FILE Source/MODEL/couplings.f SHA256 68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a
+37:      SUBROUTINE UPDATE_AS_PARAM()
+38:
+39:      IMPLICIT NONE
+40:      DOUBLE PRECISION PI, ZERO
+41:      LOGICAL READLHA, FIRST
+42:      DATA FIRST /.TRUE./
+43:      SAVE FIRST
+44:      PARAMETER  (PI=3.141592653589793D0)
+45:      PARAMETER  (ZERO=0D0)
+46:      LOGICAL UPDATELOOP
+47:      COMMON /TO_UPDATELOOP/UPDATELOOP
+48:      INCLUDE 'model_functions.inc'
+49:      DOUBLE PRECISION GOTHER
+50:
+51:      DOUBLE PRECISION MODEL_SCALE
+52:      COMMON /MODEL_SCALE/MODEL_SCALE
+53:
+54:
+55:      INCLUDE '../maxparticles.inc'
+56:      INCLUDE '../cuts.inc'
+57:      INCLUDE '../run.inc'
+58:
+59:      DOUBLE PRECISION ALPHAS
+60:      EXTERNAL ALPHAS
+61:
+62:      INCLUDE 'input.inc'
+63:      INCLUDE 'coupl.inc'
+64:      READLHA = .FALSE.
+65:
+66:      INCLUDE 'intparam_definition.inc'
+67:
+68:
+69:
+70:C     
+71:couplings needed to be evaluated points by points
+72:C     
+73:      CALL COUP2()
+74:
+75:      RETURN
+76:      END
+77:
+78:      SUBROUTINE UPDATE_AS_PARAM2(MU_R2,AS2)
+79:
+80:      IMPLICIT NONE
+81:      DOUBLE PRECISION PI
+82:      PARAMETER  (PI=3.141592653589793D0)
+83:      DOUBLE PRECISION MU_R2, AS2
+84:      INCLUDE 'model_functions.inc'
+85:      INCLUDE 'input.inc'
+86:      INCLUDE 'coupl.inc'
+87:      DOUBLE PRECISION MODEL_SCALE
+88:      COMMON /MODEL_SCALE/MODEL_SCALE
+89:
+90:
+91:      IF (MU_R2.GT.0D0) MU_R = DSQRT(MU_R2)
+92:      MODEL_SCALE = DSQRT(MU_R2)
+93:      G = SQRT(4.0D0*PI*AS2)
+94:      AS = AS2
+95:
+96:      CALL UPDATE_AS_PARAM()
+97:
+98:
+99:      RETURN
+100:      END
+
+FILE Source/MODEL/intparam_definition.inc SHA256 b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97
+143:        MDL_YT__EXP__2 = MDL_YT**2
+144:
+145:      ENDIF
+146:C     
+147:C     Parameters that should be recomputed at an event by even basis.
+148:C     
+149:      AS = G**2/4/PI
+150:
+151:      MDL_SQRT__AS = SQRT(DCMPLX(AS))
+152:
+153:      MDL_G__EXP__4 = G**4
+154:
+155:      MDL_G__EXP__2 = G**2
+156:
+157:      MDL_G__EXP__3 = G**3
+158:
+159:      MDL_MU_R__EXP__2 = MU_R**2
+160:
+161:C     
+162:C     Parameters that should be updated for the loops.
+163:C     
+164:C     
+165:C     Definition of the EW coupling used in the write out of aqed
+166:C     
+167:      GAL(1) = 3.5449077018110318D0 / DSQRT(ABS(AEWM1))
+168:      GAL(2) = 1D0
+169:
+
+FILE Source/MODEL/coupl.inc SHA256 a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      DOUBLE PRECISION G
+6:      COMMON/STRONG/ G
+7:
+8:      DOUBLE COMPLEX GAL(2)
+9:      COMMON/WEAK/ GAL
+10:
+11:      DOUBLE PRECISION MU_R
+12:      COMMON/RSCALE/ MU_R
+13:
+14:      DOUBLE PRECISION NF
+15:      PARAMETER(NF=4D0)
+16:      DOUBLE PRECISION NL
+17:      PARAMETER(NL=2D0)
+18:
+19:      DOUBLE PRECISION MDL_MB,MDL_MH,MDL_MT,MDL_MTA,MDL_MW,MDL_MZ
+20:
+21:      COMMON/MASSES/ MDL_MB,MDL_MH,MDL_MT,MDL_MTA,MDL_MW,MDL_MZ
+22:
+23:
+24:      DOUBLE PRECISION MDL_WH,MDL_WT,MDL_WW,MDL_WZ
+25:
+26:      COMMON/WIDTHS/ MDL_WH,MDL_WT,MDL_WW,MDL_WZ
+27:
+28:
+29:      DOUBLE COMPLEX GC_5, R2_GGHB, R2_GGHT, R2_GGHHB, R2_GGHHT, GC_30
+30:     $ , GC_33, GC_37
+31:
+32:      COMMON/COUPLINGS/ GC_5, R2_GGHB, R2_GGHT, R2_GGHHB, R2_GGHHT,
+33:     $  GC_30, GC_33, GC_37
+34:
+
+FILE SubProcesses/P0_gg_hh/run.inc SHA256 51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330
+1:c**************************************************************
+2:c    run.inc 
+3:c**************************************************************
+4:c
+5:c     Scales
+6:c
+7:      real*8          scale,scalefact,alpsfact,mue_ref_fixed,mue_over_ref
+8:      logical         fixed_ren_scale,fixed_fac_scale1, fixed_fac_scale2,fixed_couplings,hmult
+9:      logical         fixed_extra_scale
+10:      integer         ickkw,nhmult,asrwgtflavor, dynamical_scale_choice,ievo_eva
+11:      
+12:      common/to_scale/scale,scalefact,alpsfact, mue_ref_fixed, mue_over_ref,
+13:     $                fixed_ren_scale,fixed_fac_scale1, fixed_fac_scale2,
+14:     $                fixed_couplings, fixed_extra_scale,ickkw,nhmult,hmult,asrwgtflavor,
+15:     $                dynamical_scale_choice
+16:      common/to_eva/ievo_eva
+17:c
+18:c     Collider
+19:c
+20:      integer                                        lpp(2)
+21:      double precision    ebeam(2), xbk(2),q2fact(2)
+22:      common/to_collider/ ebeam   , xbk   ,q2fact,   lpp
+23:
+24:      integer frame_id
+25:      common/to_frame_me/frame_id
+26:c
+27:c     Number of events
+28:c
+29:      integer nevents, gevents
+30:c
+31:c     BW treatment
+32:c      
+33:      double precision bwcutoff
+34:      common/to_bwcutoff/ bwcutoff
+35:c
+36:c     Sudakov grid file name
+37:c
+38:      character*130 issgridfile
+39:      common/to_sgridfile/issgridfile
+40:c
+41:c     kT/pT scheme for xqcut, clustering according to channel
+42:c
+43:      integer ktscheme
+44:      logical chcluster,pdfwgt
+45:      common/to_cluster/ktscheme,chcluster,pdfwgt
+46:
+47:c
+48:c     Parameters for systematics variations info
+49:c
+50:      logical use_syst
+51:c     Common block for systematics variations
+52:      DOUBLE PRECISION s_scale
+53:      INTEGER n_qcd,n_alpsem
+54:      DOUBLE PRECISION s_qalps(max_particles-2)
+55:      INTEGER n_pdfrw(2),i_pdgpdf(max_particles-2,2)
+56:      DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)
+57:      DOUBLE PRECISION s_rwfact
+58:      COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,
+59:     $               s_scale,s_qalps,s_xpdf,s_qpdf,s_rwfact
+60:c
+61:c     Flag on how to write the LHE events 
+62:c     Include <clustering> tag for Pythia 8 CKKW-L matching
+63:c
+64:      logical clusinfo
+65:      double precision lhe_version
+66:      COMMON/TO_LHEFORMAT/lhe_version,clusinfo
+67:
+68:c     
+69:C     Controls wheter to perform Monte-Carlo sampling over grouped subprocesses
+70:C
+71:      logical MC_grouped_subproc
+72:      common/to_MC_grouped_subproc/MC_grouped_subproc
+73:
+74:C
+75:C     block for heavy ion beam
+76:C
+77:      integer nb_proton(2), nb_neutron(2)
+78:      common/to_heavyion_pdg/ nb_proton, nb_neutron
+79:      double precision mass_ion(2)
+80:      common/to_heavyion_mass/mass_ion
+81:
+82:C
+83:C Controls what are the PDGs included in the CKKWl merging procedure, i.e. what
+84:C are the PDGs subject to the ktdurham cut
+85:C
+86:      integer pdgs_for_merging_cut(0:1000)
+87:      common/TO_MERGE/pdgs_for_merging_cut
+88:c
+89:c
+90:c
+91:      integer pdg_cut(0:25)
+92:      double precision ptmin4pdg(0:25) 
+93:      double precision ptmax4pdg(0:25) 
+94:      double precision Emin4pdg(0:25) 
+95:      double precision Emax4pdg(0:25) 
+96:      double precision etamin4pdg(0:25) 
+97:      double precision etamax4pdg(0:25) 
+98:      double precision mxxmin4pdg(0:25) 
+99:      logical mxxpart_antipart(1:25)
+100:      common/TO_PDG_SPECIFIC_CUT/pdg_cut, ptmin4pdg,ptmax4pdg, Emin4pdg, Emax4pdg, etamin4pdg,
+101:     &etamax4pdg, mxxmin4pdg,mxxpart_antipart
+102:
+103:       double precision small_width_treatment
+104:       common/narrow_width/small_width_treatment
+105:
+106:       double precision tmin_for_channel
+107:       integer sde_strat ! 1 means standard single diagram enhancement strategy,
+108:c                          2 means approximation by the denominator of the propagator
+109:       common/TO_CHANNEL_STRAT/tmin_for_channel, sde_strat
+
+FILE Source/param_card.inc SHA256 d513695afb685295b4091f7d64076cc6005f093a8bc696a421c7529ea69d5567
+1:      MU_R = 9.118800D+01
+2:      MP__MU_R = 91.188_16
+3:      AEWM1 = 1.325070D+02
+4:      MP__AEWM1 = 132.507_16
+5:      MDL_GF = 1.166390D-05
+6:      MP__MDL_GF = 1.16639E-05_16
+7:      AS = 1.297830D-01
+8:      MP__AS = 0.129783_16
+9:      MDL_YMB = 4.700000D+00
+10:      MP__MDL_YMB = 4.7_16
+11:      MDL_YMT = 1.730000D+02
+12:      MP__MDL_YMT = 173.0_16
+13:      MDL_YMTAU = 1.777000D+00
+14:      MP__MDL_YMTAU = 1.777_16
+15:      MDL_MT = 1.730000D+02
+16:      MP__MDL_MT = 173.0_16
+17:      MDL_MB = 4.700000D+00
+18:      MP__MDL_MB = 4.7_16
+19:      MDL_MZ = 9.118800D+01
+20:      MP__MDL_MZ = 91.188_16
+21:      MDL_MH = 1.250000D+02
+22:      MP__MDL_MH = 125.0_16
+23:      MDL_MTA = 1.777000D+00
+24:      MP__MDL_MTA = 1.777_16
+25:      MDL_WT = 1.491500D+00
+26:      MP__MDL_WT = 1.4915_16
+27:      MDL_WZ = 2.441404D+00
+28:      MP__MDL_WZ = 2.441404_16
+29:      MDL_WW = 2.047600D+00
+30:      MP__MDL_WW = 2.0476_16
+31:      MDL_WH = 4.075980D-03
+32:      MP__MDL_WH = 0.00407598_16
+
+FILE SubProcesses/P0_gg_hh/setscales.f SHA256 6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28
+65:c         m^2+pt^2=p(0)^2-p(3)^2=(p(0)+p(3))*(p(0)-p(3))
+66:          rscale=0d0
+67:          do i=3,nexternal
+68:            rscale=rscale+dsqrt(max(0d0,(P(0,i)+P(3,i))*(P(0,i)-P(3,i))))
+69:          enddo
+70:          rscale=rscale/2d0
+71:      elseif(dynamical_scale_choice.eq.4) then
+72:c     \sqrt(s), partonic energy
+73:         rscale = dsqrt(max(0d0,sumdot(p(0,1), p(0,2), 1d0)))
+74:      elseif(dynamical_scale_choice.eq.5) then
+75:c         \decaying particle mass, for decays
+76:          rscale=dsqrt(max(0d0,dot(P(0,1),P(0,1))))
+77:      elseif(dynamical_scale_choice.eq.0) then
+78:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+79:cc      USER-DEFINED SCALE: ENTER YOUR CODE HERE                                 cc
+80:cc      to use this code you must set                                            cc
+81:cc                 dynamical_scale_choice = 0                                    cc
+82:cc      in the run_card (run_card.dat)                                           cc
+83:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+84:         rscale = user_dynamical_scale(P)
+85:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+86:cc      USER-DEFINED SCALE: END OF USER CODE                                     cc
+87:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+88:      else
+89:        write(*,*)'Unknown option in scale_global_reference',dynamical_scale_choice
+90:        stop
+91:      endif
+92:      rscale = scalefact*rscale
+93:      return
+94:      end
+174:
+175:
+176:
+177:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+178:cc      USER DEFINE SCALE: END of USER CODE                                      cc
+179:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+180:      else
+181:          call set_ren_scale(P,tempscale)
+182:          if(.not.fixed_fac_scale1)  q2factorization(1)=tempscale**2
+183:          if(.not.fixed_fac_scale2)  q2factorization(2)=tempscale**2 !factorization scale**2 for pdf2
+184:      endif
+185:
+186:
+187:      
+188:
+189:      
+190:      return
+
+FILE Source/alfas_functions.f SHA256 3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d
+74:      DOUBLE PRECISION FUNCTION ALPHAS(Q)
+75:c
+76:c     Evaluation of strong coupling constant alpha_S
+77:c     Author: R.K. Ellis
+78:c
+79:c     q -- scale at which alpha_s is to be evaluated
+80:c
+81:c-- common block alfas.inc
+82:c     asmz -- value of alpha_s at the mass of the Z-boson
+83:c     nloop -- the number of loops (1,2, or 3) at which beta 
+84:c
+85:c     function is evaluated to determine running.
+86:c     the values of the cmass and the bmass should be set
+87:c     in common block qmass.
+88:C-----------------------------------------------------------------------------
+89:
+90:      IMPLICIT NONE
+91:c
+92:      include 'alfas.inc'
+93:      DOUBLE PRECISION Q,T,AMZ0,AMB,AMC
+94:      DOUBLE PRECISION AS_OUT
+95:      INTEGER NLOOP0,NF3,NF4,NF5
+96:      PARAMETER(NF5=5,NF4=4,NF3=3)
+97:C
+98:      REAL*8       CMASS,BMASS
+99:      COMMON/QMASS/CMASS,BMASS
+100:      DATA CMASS,BMASS/1.42D0,4.7D0/  ! HEAVY QUARK MASSES FOR THRESHOLDS
+101:C
+102:      REAL*8 ZMASS
+103:      DATA ZMASS/91.188D0/
+104:C
+105:      SAVE AMZ0,NLOOP0,AMB,AMC
+106:      DATA AMZ0,NLOOP0/0D0,0/
+107:      IF (Q .LE. 0D0) THEN 
+108:         WRITE(6,*) 'q .le. 0 in alphas'
+109:         WRITE(6,*) 'q= ',Q
+110:         STOP
+111:      ENDIF
+112:      IF (asmz .LE. 0D0) THEN 
+113:         WRITE(6,*) 'asmz .le. 0 in alphas',asmz
+114:c         WRITE(6,*) 'continue with asmz=0.1185'
+115:         STOP
+116:         asmz=0.1185D0
+117:      ENDIF
+118:      IF (CMASS .LE. 0.3D0) THEN 
+119:         WRITE(6,*) 'cmass .le. 0.3GeV in alphas',CMASS
+120:c         WRITE(6,*) 'continue with cmass=1.5GeV?'
+121:         STOP
+122:         CMASS=1.42D0
+123:      ENDIF
+124:      IF (BMASS .LE. 0D0) THEN 
+125:         WRITE(6,*) 'bmass .le. 0 in alphas',BMASS
+126:         WRITE(6,*) 'COMMON/QMASS/CMASS,BMASS'
+127:         STOP
+128:         BMASS=4.7D0
+129:      ENDIF
+130:c--- establish value of coupling at b- and c-mass and save
+131:      IF ((asmz .NE. AMZ0) .OR. (NLOOP .NE. NLOOP0)) THEN
+132:         AMZ0=asmz
+133:         NLOOP0=NLOOP
+134:         T=2D0*DLOG(BMASS/ZMASS)
+135:         CALL NEWTON1(T,asmz,AMB,NLOOP,NF5)
+136:         T=2D0*DLOG(CMASS/BMASS)
+137:         CALL NEWTON1(T,AMB,AMC,NLOOP,NF4)
+138:      ENDIF
+139:
+140:c--- evaluate strong coupling at scale q
+141:      IF (Q  .LT. BMASS) THEN
+142:           IF (Q  .LT. CMASS) THEN
+143:             T=2D0*DLOG(Q/CMASS)
+144:             CALL NEWTON1(T,AMC,AS_OUT,NLOOP,NF3)
+145:           ELSE
+146:             T=2D0*DLOG(Q/BMASS)
+147:             CALL NEWTON1(T,AMB,AS_OUT,NLOOP,NF4)
+148:           ENDIF
+149:      ELSE
+150:      T=2D0*DLOG(Q/ZMASS)
+151:      CALL NEWTON1(T,asmz,AS_OUT,NLOOP,NF5)
+152:      ENDIF
+153:      ALPHAS=AS_OUT
+154:      RETURN
+155:      END
+156:
+157:
+158:      SUBROUTINE NEWTON1(T,A_IN,A_OUT,NLOOP,NF)
+159:C     Author: R.K. Ellis
+160:
+161:c---  calculate a_out using nloop beta-function evolution 
+162:c---  with nf flavours, given starting value as-in
+163:c---  given as_in and logarithmic separation between 
+164:c---  input scale and output scale t.
+165:c---  Evolution is performed using Newton's method,
+166:c---  with a precision given by tol.
+167:
+168:      IMPLICIT NONE
+169:      INTEGER NLOOP,NF
+170:      REAL*8 T,A_IN,A_OUT,AS,TOL,F2,F3,F,FP,DELTA
+171:      REAL*8 B0(3:5),C1(3:5),C2(3:5),DEL(3:5)
+172:      PARAMETER(TOL=5.D-4)
+173:C---     B0=(11.-2.*NF/3.)/4./PI
+174:      DATA B0/0.716197243913527D0,0.66314559621623D0,0.61009394851893D0/
+175:C---     C1=(102.D0-38.D0/3.D0*NF)/4.D0/PI/(11.D0-2.D0/3.D0*NF)
+176:      DATA C1/.565884242104515D0,0.49019722472304D0,0.40134724779695D0/
+177:C---     C2=(2857.D0/2.D0-5033*NF/18.D0+325*NF**2/54)
+178:C---     /16.D0/PI**2/(11.D0-2.D0/3.D0*NF)
+179:      DATA C2/0.453013579178645D0,0.30879037953664D0,0.14942733137107D0/
+180:C---     DEL=SQRT(4*C2-C1**2)
+181:      DATA DEL/1.22140465909230D0,0.99743079911360D0,0.66077962451190D0/
+182:      F2(AS)=1D0/AS+C1(NF)*LOG((C1(NF)*AS)/(1D0+C1(NF)*AS))
+183:      F3(AS)=1D0/AS+0.5D0*C1(NF)
+184:     & *LOG((C2(NF)*AS**2)/(1D0+C1(NF)*AS+C2(NF)*AS**2))
+185:     & -(C1(NF)**2-2D0*C2(NF))/DEL(NF)
+186:     & *ATAN((2D0*C2(NF)*AS+C1(NF))/DEL(NF))
+187:
+188:           
+189:      A_OUT=A_IN/(1D0+A_IN*B0(NF)*T)
+190:      IF (NLOOP .EQ. 1) RETURN
+191:      A_OUT=A_IN/(1D0+B0(NF)*A_IN*T+C1(NF)*A_IN*LOG(1D0+A_IN*B0(NF)*T))
+192:      IF (A_OUT .LT. 0D0) AS=0.3D0
+193: 30   AS=A_OUT
+194:
+195:      IF (NLOOP .EQ. 2) THEN
+196:      F=B0(NF)*T+F2(A_IN)-F2(AS)
+197:      FP=1D0/(AS**2*(1D0+C1(NF)*AS))
+198:      ENDIF
+
+FILE Source/PDF/pdg2pdf.f SHA256 13427a635e6f2ab64e9492b7b988825d00c3e5e04b6b9801e27fc5782cf100ba
+75:      if (iabs(ih).eq.9) then
+76:         pdg2pdf = 1d0
+77:         return
+78:      endif
+79:
+80:      nb_hadron = (nb_proton(iabs(beamid))+nb_neutron(iabs(beamid)))
+81:c     Make sure we have a reasonable Bjorken x. Note that even though
+82:c     x=0 is not reasonable, we prefer to simply return pdg2pdf=0
+83:c     instead of stopping the code, as this might accidentally happen.
+84:      if (x.eq.0d0) then
+85:         pdg2pdf=0d0
+86:         return
+87:      elseif (x.lt.0d0 .or. (x*nb_hadron).gt.1d0) then
+88:         if (nb_hadron.eq.1.or.x.lt.0d0) then
+89:            write (*,*) 'PDF not supported for Bjorken x ', x*nb_hadron
+90:            open(unit=26,file='../../../error',status='unknown')
+91:            write(26,*) 'Error: PDF not supported for Bjorken x ',x*nb_hadron
+92:            stop 1
+93:         else
+94:            pdg2pdf = 0d0
+95:            return
+96:         endif
+97:      endif
+98:
+99:C     dressed leptons so force lpp to be 3/4 (electron/muon beam)
+100:C      and check that it is not a photon initial state --elastic photon is handle below --
+133:c     For EVA,  group_subprocesses is false and IH=LPP and ipdg are passed, instead.
+134:c     If group_subprocesses is false, the following sets ipdg=ipdg*sgn(IH) if not in EVA
+135:      if(pdlabel.eq.'eva'.or.pdsublabel(iabs(beamid)).eq.'eva') then
+136:         ipart=ipdg
+137:      else
+138:         ipart=sign(1,ih)*ipdg
+139:      endif      
+140:
+141:      if(iabs(ipart).eq.21) then ! g      
+142:         ipart=0
+143:c      else if(ipart.eq.12) then ! ve
+144:c         ipart=12
+145:c      else if(ipart.eq.-12) then ! ve~
+146:c         ipart=-12
+273:      if (pdlabel(1:5) .eq. 'cteq6') then
+274:C        Be carefull u and d are flipped inside cteq6
+275:         if (nb_proton(iabs(beamid)).gt.1.or.nb_neutron(iabs(beamid)).ne.0)then
+276:            if (ipart.eq.1.or.ipart.eq.2)then
+277:               pdflast(1,ireuse)=Ctq6Pdf(2,x*nb_hadron,xmu) ! remember u/d flipping in cteq
+278:               pdflast(2,ireuse)=Ctq6Pdf(1,x*nb_hadron,xmu)
+279:               pdg2pdf = get_ion_pdf(pdflast(-7,ireuse), ipart, nb_proton(iabs(beamid)), nb_neutron(iabs(beamid)))
+280:            else if (ipart.eq.-1.or.ipart.eq.-2)then
+281:               pdflast(-1,ireuse)=Ctq6Pdf(-2,x*nb_hadron,xmu) ! remember u/d flipping in cteq
+282:               pdflast(-2,ireuse)=Ctq6Pdf(-1,x*nb_hadron,xmu)
+283:               pdg2pdf = get_ion_pdf(pdflast(-7,ireuse), ipart, nb_proton(iabs(beamid)), nb_neutron(iabs(beamid)))
+284:            else
+285:               pdflast(ipart,ireuse)=Ctq6Pdf(ipart,x*nb_hadron,xmu)
+286:               pdg2pdf = get_ion_pdf(pdflast(-7,ireuse), ipart, nb_proton(iabs(beamid)), nb_neutron(iabs(beamid)))
+287:            endif 
+288:         else
+289:            if(iabs(ipart).ge.1.and.iabs(ipart).le.2)
+290:     $           ipart=sign(3-iabs(ipart),ipart)
+291:            pdg2pdf=Ctq6Pdf(ipart,x,xmu)
+292:            pdflast(iporg,ireuse)=pdg2pdf
+293:         endif
+294:      else
+295:         call pftopdg(iabs(ih),x*nb_hadron,xmu,pdflast(-7,ireuse))
+296:         pdg2pdf = get_ion_pdf(pdflast(-7, ireuse), iporg, nb_proton(iabs(beamid)),
+297:     $                         nb_neutron(iabs(beamid)))
+298:      endif      
+
+FILE Source/PDF/Ctq6Pdf.f SHA256 faaae1776c4228066687642b39d350ba745f3076c21007516d82dee88601d646
+1:C============================================================================
+2:C                CTEQ Parton Distribution Functions: Version 6
+3:C                             January 24, 2002, v6.0
+4:C                             April 10, 2002, v6.1
+5:C
+6:C   Ref: "New Generation of Parton Distributions with
+7:C         Uncertainties from Global QCD Analysis"
+8:C   By: J. Pumplin, D.R. Stump, J.Huston, H.L. Lai, P. Nadolsky, W.K. Tung
+9:C       hep-ph/0201195
+10:C
+11:C   This package contains 3 standard sets of CTEQ6 PDF's and 40 up/down sets
+12:C   with respect to CTEQ6M PDF's. Details are:
+13:C ---------------------------------------------------------------------------
+14:C  Iset   PDF        Description       Alpha_s(Mz)**Lam4  Lam5   Table_File
+15:C ---------------------------------------------------------------------------
+16:C   1    CTEQ6M   Standard MSbar scheme   0.118     326   226    cteq6m.tbl
+17:C   2    CTEQ6D   Standard DIS scheme     0.118     326   226    cteq6d.tbl
+18:C   3    CTEQ6L   Leading Order           0.118**   326** 226    cteq6l.tbl
+19:C   4    CTEQ6L1  Leading Order           0.130     215   165    cteq6l1.tbl
+20:C     ------------------------------
+21:C   1xx  CTEQ6M1xx  +/- w.r.t. CTEQ6M     0.118     326   226    cteq6m1xx.tbl
+22:C    (where xx=01--40)
+23:C ---------------------------------------------------------------------------
+24:C   ** ALL fits are obtained by using the same coupling strength 
+25:C   \alpha_s(Mz)=0.118 and the NLO running \alpha_s formula, except CTEQ6L1 
+26:C   which uses the LO running \alpha_s and its value determined from the fit.
+27:C   For the LO fits, the evolution of the PDF and the hard cross sections are
+28:C   calculated at LO.  More detailed discussions are given in hep-ph/0201195.
+29:C
+30:C   The table grids are generated for 10^-6 < x < 1 and 1.3 < Q < 10,000 (GeV).
+31:C   PDF values outside of the above range are returned using extrapolation.
+32:C   Lam5 (Lam4) represents Lambda value (in MeV) for 5 (4) flavors.
+33:C   The matching alpha_s between 4 and 5 flavors takes place at Q=4.5 GeV,
+34:C   which is defined as the bottom quark mass, whenever it can be applied.
+35:C
+36:C   The Table_Files are assumed to be in the working directory.
+37:C
+38:C   Before using the PDF, it is necessary to do the initialization by
+39:C       Call SetCtq6(Iset)
+40:C   where Iset is the desired PDF specified in the above table.
+41:C
+42:C   The function Ctq6Pdf (Iparton, X, Q)
+43:C   returns the parton distribution inside the proton for parton [Iparton]
+44:C   at [X] Bjorken_X and scale [Q] (GeV) in PDF set [Iset].
+45:C   Iparton  is the parton label (5, 4, 3, 2, 1, 0, -1, ......, -5)
+46:C                            for (b, c, s, d, u, g, u_bar, ..., b_bar),
+47:C
+48:C   For detailed information on the parameters used, e.q. quark masses,
+49:C   QCD Lambda, ... etc.,  see info lines at the beginning of the
+50:C   Table_Files.
+51:C
+52:C   These programs, as provided, are in double precision.  By removing the
+53:C   "Implicit Double Precision" lines, they can also be run in single
+54:C   precision.
+55:C
+56:C   If you have detailed questions concerning these CTEQ6 distributions,
+57:C   or if you find problems/bugs using this package, direct inquires to
+58:C   Pumplin@pa.msu.edu or Tung@pa.msu.edu.
+59:C
+60:C===========================================================================
+61:
+62:      Function Ctq6Pdf (Iparton, X, Q)
+63:      Implicit Double Precision (A-H,O-Z)
+64:      Logical Warn
+65:      Common
+66:     > / CtqPar2 / Nx, Nt, NfMx
+67:     > / QCDtable /  Alambda, Nfl, Iorder
+68:
+69:      Data Warn /.true./
+70:      save Warn
+71:
+72:      If (X .lt. 0D0 .or. X .gt. 1D0) Then
+73:        Print *, 'X out of range in Ctq6Pdf: ', X
+74:        Stop
+75:      Endif
+76:      If (Q .lt. Alambda) Then
+77:        Print *, 'Q out of range in Ctq6Pdf: ', Q
+78:        Stop
+79:      Endif
+80:      If ((Iparton .lt. -NfMx .or. Iparton .gt. NfMx)) Then
+81:         If (Warn) Then
+82:C        put a warning for calling extra flavor.
+83:             Warn = .false.
+84:             Print *, 'Warning: Iparton out of range in Ctq6Pdf: '
+85:     >              , Iparton
+86:         Endif
+87:         Ctq6Pdf = 0D0
+88:         Return
+89:      Endif
+90:
+91:      Ctq6Pdf = PartonX6 (Iparton, X, Q)
+92:      if(Ctq6Pdf.lt.0.D0)  Ctq6Pdf = 0.D0
+93:
+94:      Return
+95:
+96:C                             ********************
+97:      End
+98:
+99:      Subroutine SetCtq6 (Iset)
+100:      Implicit Double Precision (A-H,O-Z)
+
+FILE Source/PDF/pdfwrap.f SHA256 32164b7098c60d94a3985781aba0ed0b348e3acbf1fe860c153227253c834638
+217:C   1    CTEQ6M   Standard MSbar scheme   0.118     326   226    cteq6m.tbl
+218:C   2    CTEQ6D   Standard DIS scheme     0.118     326   226    cteq6d.tbl
+219:C   3    CTEQ6L   Leading Order           0.118**   326** 226    cteq6l.tbl
+220:C   4    CTEQ6L1  Leading Order           0.130**   215** 165    cteq6l1.tbl
+221:C
+222:C Note:CTEQ6L1 uses the LO running alpha_s 
+223:C
+224:      if (pdlabel .eq. 'cteq6_m') then
+225:      asmz=0.118d0
+226:      Call SetCtq6(1)
+227:      elseif (pdlabel .eq. 'cteq6_d') then
+228:      asmz=0.118d0
+229:      Call SetCtq6(2)
+230:      elseif (pdlabel .eq. 'cteq6_l') then
+231:      asmz=0.118d0
+232:      Call SetCtq6(3)
+233:      elseif (pdlabel .eq. 'cteq6l1') then
+234:      asmz=0.130d0
+235:      nloop=1
+236:      Call SetCtq6(4)
+237:
+238:

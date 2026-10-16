@@ -1,0 +1,60 @@
+{
+  "source_revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "probes": [
+    {
+      "argv": [
+        "ls-files"
+      ],
+      "exit": 0,
+      "reason": null,
+      "timed_out": false,
+      "wall_seconds": 0.04261514399991029,
+      "CPU_seconds": 0.0042109999999999995,
+      "kernel_ru_maxrss_bytes": 15056896,
+      "stdout_bytes": 74133,
+      "stderr_bytes": 0,
+      "stdout_sha256": "ea1b133c2469618dd53231ec7857fb7c2acb28b094adfa00a9fae25500a57c34",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_excerpt": "",
+      "group_cleanup": true
+    },
+    {
+      "argv": [
+        "ls-files"
+      ],
+      "exit": 0,
+      "reason": null,
+      "timed_out": false,
+      "wall_seconds": 0.04254326199998104,
+      "CPU_seconds": 0.0047539999999999995,
+      "kernel_ru_maxrss_bytes": 15138816,
+      "stdout_bytes": 74133,
+      "stderr_bytes": 0,
+      "stdout_sha256": "ea1b133c2469618dd53231ec7857fb7c2acb28b094adfa00a9fae25500a57c34",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_excerpt": "",
+      "group_cleanup": true
+    },
+    {
+      "argv": [
+        "ls-files"
+      ],
+      "exit": 0,
+      "reason": null,
+      "timed_out": false,
+      "wall_seconds": 0.042784717000017736,
+      "CPU_seconds": 0.004654,
+      "kernel_ru_maxrss_bytes": 15220736,
+      "stdout_bytes": 74133,
+      "stderr_bytes": 0,
+      "stdout_sha256": "ea1b133c2469618dd53231ec7857fb7c2acb28b094adfa00a9fae25500a57c34",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_excerpt": "",
+      "group_cleanup": true
+    }
+  ],
+  "context": "Additional separately measured plain git ls-files; initial baseline used NUL-delimited ls-files for exact count.",
+  "tracked_file_count": 1257,
+  "index_bytes": 162545,
+  "index_unchanged": true
+}

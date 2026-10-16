@@ -1,0 +1,145 @@
+{
+  "AGGREGATE_CPU": {
+    "measurement_scope": "GNU time user1.65+system2.87 rounded to hundredths; includes Git. Runtime Budget excludes its initial Git precheck.",
+    "runtime_budget_seconds": 1.095151761,
+    "whole_CLI_user_plus_system_seconds": 4.52
+  },
+  "AGGREGATE_WALL": {
+    "native_supervised_stage_seconds": 0.2922795230000048,
+    "runtime_budget_seconds": 1.8084574689999897,
+    "whole_CLI_seconds": 37.31
+  },
+  "APPROVED_OUTPUT": "LOCAL_HOME/simulations/hh_final_closure/restart_feasibility_58d39888_01",
+  "APPROVED_SOURCE": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "AUTHORIZATION_REMAINING": "NONE_FOR_ANOTHER_ATTEMPT",
+  "AUTOMATIC_RESTART": "NO",
+  "BETWEEN_REPLICA_SE": null,
+  "COMPLETED_REPLICAS": 0,
+  "CONVERGENCE_VERDICT": "NOT_EVALUABLE_NO_COMPLETED_INTEGRALS",
+  "DISK_USAGE": {
+    "human_additional_disk_cap_bytes": 5368709120,
+    "new_runtime_bytes": 28158,
+    "new_runtime_files": 8,
+    "observed_unlinked_regular_files_peak": 0,
+    "prepared_output_bytes": 242240001,
+    "runtime_peak_accounted_bytes": 1132695157,
+    "stricter_native_stop_bytes": 2147483648
+  },
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/24",
+  "EXECUTABLE_HASH_CLOSURE": "PASS_3488_IMMUTABLE_ARTIFACTS_FOUR_EXECUTABLES_DYNAMIC_LIBRARIES_AND_FIVE_UNEDITED_RECEIPTS",
+  "EXECUTED_SOURCE_REVISION": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "FINAL_VERDICT": "BLOCKED_NATIVE_RUNTIME",
+  "FROZEN_BUILD_IDENTITY": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "GATES_BLOCKED": [
+    "same-seed measurement",
+    "remaining three replicas",
+    "any restart, rebuild, patch or alternative output under this consumed authorization",
+    "complete ME/loop/grid/writer/tail/native result validation",
+    "cross section and convergence inference"
+  ],
+  "GATES_FAIL": [
+    "Stage A native point validation exited92; no branch-specific diagnostic"
+  ],
+  "GATES_PASS": [
+    "explicit one-attempt exact-source human authorization",
+    "all pre-dispatch source/build/physics/freshness/resource/kernel gates",
+    "actual execution-route full Git precheck",
+    "real supervised native dispatch PID460",
+    "initial PDF/alpha/mass/beam/endpoint/seed guard",
+    "RANMAR base910001 offsets0/0 configuration1 state26066/23739",
+    "process-group cleanup and no followup stages",
+    "zero retained output postcondition",
+    "all3493 prepared and all3603 previous stopped files unchanged",
+    "all8420 campaign files unchanged",
+    "60 method and10 independent audit tests plus7 read-only validators"
+  ],
+  "GATES_UNKNOWN": [
+    "which of five STOP92 point predicates failed",
+    "actual rejected point values",
+    "final ME/integrand/point counters absent",
+    "full loop return codes",
+    "writer/scratch write-read protocol",
+    "native-only peak RSS",
+    "integral and uncertainty"
+  ],
+  "GITHUB_CI": "PENDING_FINAL_PUBLICATION_HEAD_CHECKS; exact completed head recorded in PR24 and final delivery",
+  "GIT_PREFLIGHT": {
+    "actual_execution_route_seconds": 32.82815668800001,
+    "full_tracked_files": 1257,
+    "read_only_pre_dispatch_seconds": 20.832652054000004,
+    "status": "PASS"
+  },
+  "HISTORICAL_PRESERVATION": {
+    "actual_integral_stages_completed": 0,
+    "frozen_native_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+    "historical_campaign": {
+      "files": 8420,
+      "logical_bytes": 752305317,
+      "status": "PASS_FULL_LOCAL_SHA256_INVENTORY"
+    },
+    "new_stopped_inventory_identity": "6f00d59c8a9dc36ed262091f2a5a7b2ffb7e4edf2ffdf0f3961f848c8a021999",
+    "new_stopped_output_files": 3501,
+    "new_stopped_receipt_sha256": "c263adf18b77b16d9322cc71cd379e709cc7ee25d1408715a1a42e3c2fd198e4",
+    "old_failure_receipt_sha256": "a68d27baf2a23f3a850a4cf683682eb56029cdd60e6bb7b0da2e2ea0b2b1d11e",
+    "original_prepared_files_unchanged": 3493,
+    "previous_stopped_files": 3603,
+    "previous_stopped_inventory_identity": "5164541051b85a11d8ebe94c43373da88f9a2c43490a055e6afc450887c23d16",
+    "status": "PASS_FULL_HISTORICAL_AND_FROZEN_PRESERVATION",
+    "stopped_output_reuse_guards": {
+      "new_stopped": "FAILED_OR_COMPLETED_CAMPAIGN_MUST_NOT_RESTART",
+      "previous_stopped": "STOPPED_ATTEMPT_IMMUTABLE_REQUIRES_SEPARATE_OUTPUT_REVIEW"
+    }
+  },
+  "INTEGRATION_MEAN_PB": null,
+  "INTERNAL_ERRORS": [],
+  "NATIVE_CLI_INVOCATIONS": 1,
+  "NATIVE_STOP_REASON": "NATIVE_EXIT:92",
+  "NEW_INDEPENDENT_EVENTS": 0,
+  "NEW_INTEGRALS_COMPLETED": 0,
+  "NEXT_RECOMMENDED_STEP": "Review the ambiguous hi_point STOP92 source/diagnostic contract. Any diagnostic revision, rebuild and physical retry need separate explicit review and authorization; preserve this stopped output.",
+  "PEAK_MEMORY": {
+    "native_only_peak": null,
+    "scope": "GNU time process-tree ru_maxrss maximum; not simultaneous RSS sum or a separately observed native-only peak.",
+    "whole_CLI_kernel_ru_maxrss_KiB": 27908
+  },
+  "PHYSICAL_NATIVE_DISPATCHES": 1,
+  "PHYSICS_CONTRACT": {
+    "full_loop_ME": "NOT_REACHED",
+    "per_point_scale_PDF_alpha_validation": "STOP92_PREDICATE_UNKNOWN",
+    "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+    "source_and_initial_configuration": "PASS"
+  },
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "REAL_NATIVE_DISPATCH": "YES",
+  "REGRESSION": {
+    "exact_source_method_tests": 60,
+    "independent_receipt_tests": 10,
+    "read_only_reference_validators": 7,
+    "scope": "Nonphysical regression and historical references; not a passing genuine integral.",
+    "status": "PASS"
+  },
+  "REPLICA_910001": "FAILED_ADAPTATION; MEASUREMENT_NOT_STARTED",
+  "REPLICA_910019": "NOT_STARTED",
+  "REPLICA_910037": "NOT_STARTED",
+  "REPLICA_910061": "NOT_STARTED",
+  "REPORT_PUBLICATION_HEAD": "Containing additive report commit; exact SHA is recorded after push in PR24 and final local delivery.",
+  "RESOURCE_STOP_REASON": null,
+  "RETAINED_PHYSICAL_LHE": 0,
+  "STAGE_A_ACTUAL_ME_CALLS": {
+    "final_counter": null,
+    "observed_flushed_outer_entries": 0,
+    "scope": "Flushed HI_ME_ENTRY/RETURN observation; no final HI_COUNTS was emitted. Integrand call count is unavailable."
+  },
+  "STAGE_A_CROSS_SECTION_PB": null,
+  "STAGE_A_GRID": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "EMPTY_NOT_VALIDATED"
+  },
+  "STAGE_A_INTERNAL_ERROR_PB": null,
+  "STAGE_A_LOOP_DIAGNOSTICS": "NOT_REACHED_NO_ME_ENTRY_OR_LOOP_CODE",
+  "STAGE_A_STATUS": "FAILED_PARTIAL_PRESERVED_NATIVE_EXIT_92",
+  "STAGE_A_WRITER_VALIDATION": "NOT_REACHED_NO_H_IO_OR_TAIL_PROTOCOL",
+  "STAGE_A_ZERO_RETENTION": "PASS_FILESYSTEM_POSTCONDITION_ONLY",
+  "TASK": "PHASE7I_EXACT_SOURCE_RESTART_AND_REAL_INTEGRATION_V1"
+}

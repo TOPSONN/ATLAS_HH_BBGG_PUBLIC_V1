@@ -1,0 +1,11 @@
+--- frozen/Source/ranmar.f
++++ A/Source/ranmar.f
+@@ -187,7 +187,7 @@
+  25   iseed = 0
+       end
+ 
+-      subroutine ranmar(rvec)
++      subroutine hh_original_ranmar(rvec)
+ *     -----------------
+ * universal random number generator proposed by marsaglia and zaman
+ * in report fsu-scri-87-50

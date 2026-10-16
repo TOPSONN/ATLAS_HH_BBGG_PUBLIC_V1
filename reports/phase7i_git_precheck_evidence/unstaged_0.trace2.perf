@@ -1,0 +1,40 @@
+13:38:53.887231 common-main.c:55             | d0 | main                     | version      |     |           |           |              | 2.43.0
+13:38:53.888085 common-main.c:56             | d0 | main                     | start        |     |  0.005078 |           |              | git -C REPOSITORY diff --name-only
+13:38:53.889010 compat/linux/procinfo.c:170  | d0 | main                     | cmd_ancestry |     |           |           |              | ancestry:[python3 'Relay(299)' SessionLeader 'init-systemd(Ub' systemd]
+13:38:53.890468 git.c:464                    | d0 | main                     | cmd_name     |     |           |           |              | diff (diff)
+13:38:53.902686 repository.c:143             | d0 | main                     | def_repo     | r1  |           |           |              | worktree:REPOSITORY
+13:38:53.909522 read-cache.c:2384            | d0 | main                     | region_enter | r1  |  0.026516 |           | index        | label:do_read_index .git/index
+13:38:53.911466 cache-tree.c:634             | d0 | main                     | region_enter | r1  |  0.028458 |           | cache_tree   | ..label:read
+13:38:53.911778 cache-tree.c:636             | d0 | main                     | region_leave | r1  |  0.028772 |  0.000314 | cache_tree   | ..label:read
+13:38:53.912456 read-cache.c:2333            | d0 | main                     | data         | r1  |  0.029450 |  0.002934 | index        | ..read/version:2
+13:38:53.912710 read-cache.c:2335            | d0 | main                     | data         | r1  |  0.029705 |  0.003189 | index        | ..read/cache_nr:1202
+13:38:53.912903 read-cache.c:2389            | d0 | main                     | region_leave | r1  |  0.029897 |  0.003381 | index        | label:do_read_index .git/index
+13:38:53.913111 preload-index.c:120          | d0 | main                     | region_enter |     |  0.030105 |           | index        | label:preload
+13:38:55.775807 preload-index.c:168          | d0 | main                     | data         |     |  1.892801 |  1.862696 | index        | ..preload/sum_lstat:1202
+13:38:55.776160 preload-index.c:169          | d0 | main                     | region_leave |     |  1.893153 |  1.863048 | index        | label:preload
+13:38:59.767685 usage.c:87                   | d0 | main                     | error        |     |           |           |              | in the working copy of 'metadata/phase6g_cutflow.csv', CRLF will be replaced by LF the next time Git touches it
+13:39:21.255618 diffcore-rename.c:1405       | d0 | main                     | region_enter | r1  | 26.913124 |           | diff         | label:setup
+13:39:21.255900 diffcore-rename.c:1458       | d0 | main                     | region_leave | r1  | 26.913410 |  0.000286 | diff         | label:setup
+13:39:21.256217 diffcore-rename.c:1637       | d0 | main                     | region_enter | r1  | 26.913726 |           | diff         | label:write back to queue
+13:39:21.256581 diffcore-rename.c:1714       | d0 | main                     | region_leave | r1  | 26.914090 |  0.000364 | diff         | label:write back to queue
+13:39:21.261977 read-cache.c:2384            | d0 | main                     | region_enter | r1  | 26.919483 |           | index        | label:do_read_index .git/index
+13:39:21.263675 cache-tree.c:634             | d0 | main                     | region_enter | r1  | 26.921183 |           | cache_tree   | ..label:read
+13:39:21.263967 cache-tree.c:636             | d0 | main                     | region_leave | r1  | 26.921476 |  0.000293 | cache_tree   | ..label:read
+13:39:21.264402 read-cache.c:2333            | d0 | main                     | data         | r1  | 26.921911 |  0.002428 | index        | ..read/version:2
+13:39:21.264636 read-cache.c:2335            | d0 | main                     | data         | r1  | 26.922146 |  0.002663 | index        | ..read/cache_nr:1202
+13:39:21.264818 read-cache.c:2389            | d0 | main                     | region_leave | r1  | 26.922328 |  0.002845 | index        | label:do_read_index .git/index
+13:39:21.265141 preload-index.c:120          | d0 | main                     | region_enter |     | 26.922650 |           | index        | label:preload
+13:39:23.201011 preload-index.c:168          | d0 | main                     | data         |     | 28.858520 |  1.935870 | index        | ..preload/sum_lstat:1202
+13:39:23.201283 preload-index.c:169          | d0 | main                     | region_leave |     | 28.858792 |  1.936142 | index        | label:preload
+13:39:23.201512 read-cache.c:1544            | d0 | main                     | region_enter |     | 28.859021 |           | index        | label:refresh
+13:39:31.597295 read-cache.c:1626            | d0 | main                     | data         |     | 37.254803 |  8.395782 | index        | ..refresh/sum_lstat:1202
+13:39:31.597598 read-cache.c:1627            | d0 | main                     | data         |     | 37.255107 |  8.396086 | index        | ..refresh/sum_scan:1202
+13:39:31.597866 read-cache.c:1628            | d0 | main                     | region_leave |     | 37.255375 |  8.396354 | index        | label:refresh
+13:39:31.599161 read-cache.c:3146            | d0 | main                     | region_enter | r1  | 37.256668 |           | index        | label:do_write_index REPOSITORY/.git/index.lock
+13:39:31.600776 cache-tree.c:538             | d0 | main                     | region_enter | r1  | 37.258283 |           | cache_tree   | ..label:write
+13:39:31.601313 cache-tree.c:540             | d0 | main                     | region_leave | r1  | 37.258823 |  0.000540 | cache_tree   | ..label:write
+13:39:31.604499 read-cache.c:3106            | d0 | main                     | data         | r1  | 37.262008 |  0.005340 | index        | ..write/version:2
+13:39:31.604742 read-cache.c:3108            | d0 | main                     | data         | r1  | 37.262251 |  0.005583 | index        | ..write/cache_nr:1202
+13:39:31.604935 read-cache.c:3149            | d0 | main                     | region_leave | r1  | 37.262444 |  0.005776 | index        | label:do_write_index REPOSITORY/.git/index.lock
+13:39:31.612188 git.c:723                    | d0 | main                     | exit         |     | 37.269693 |           |              | code:0
+13:39:31.612506 trace2/tr2_tgt_perf.c:217    | d0 | main                     | atexit       |     | 37.270013 |           |              | code:0

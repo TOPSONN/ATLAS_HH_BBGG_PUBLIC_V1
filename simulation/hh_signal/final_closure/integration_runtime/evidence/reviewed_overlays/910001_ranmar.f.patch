@@ -1,0 +1,11 @@
+--- frozen/Source/ranmar.f
++++ isolated/Source/ranmar.f
+@@ -65,6 +65,8 @@
+          do while (kl .gt. 30081)
+             kl = kl - 30081
+          enddo
++        call hi_seed(iseed/31300_8,ioffset,joffset,
++     $ jconfig,ij,kl)
+         call rmarin(ij,kl)         
+       endif
+       call ranmar(x)

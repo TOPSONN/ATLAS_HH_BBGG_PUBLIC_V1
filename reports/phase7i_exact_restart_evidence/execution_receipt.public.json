@@ -1,0 +1,688 @@
+{
+  "actual_integral_stages_completed": 0,
+  "aggregate_CPU_seconds": 1.095151761,
+  "aggregate_wall_seconds": 1.8084574689999897,
+  "binding": {
+    "git_preflight": {
+      "CPU_seconds": 2.172877497,
+      "atomicity": "repeated checks detect observed changes; a later concurrent write remains possible; no execution authorization",
+      "commands": [
+        {
+          "CPU_seconds": 0.004942,
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13357056,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 41,
+          "stdout_sha256": "68077053183db6acbd8a63a954666b415b0afae63fdb9bc3fc35a7794eec5990",
+          "timed_out": false,
+          "wall_seconds": 0.04403548199999818
+        },
+        {
+          "CPU_seconds": 0.002862,
+          "argv": [
+            "rev-parse",
+            "--show-toplevel"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13357056,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 60,
+          "stdout_sha256": "520fbb3827607b9037dc1b02440c85e229cf73182576f463a25997f76ddc64f7",
+          "timed_out": false,
+          "wall_seconds": 0.023423124000004236
+        },
+        {
+          "CPU_seconds": 0.0025689999999999997,
+          "argv": [
+            "rev-parse",
+            "--absolute-git-dir"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13361152,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 65,
+          "stdout_sha256": "bbc95698baf83ae8a4a6114474d4405e5b9f6aabe513a63f2c7e89ed490a885f",
+          "timed_out": false,
+          "wall_seconds": 0.022364438000010978
+        },
+        {
+          "CPU_seconds": 0.002159,
+          "argv": [
+            "config",
+            "--get",
+            "remote.origin.url"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13361152,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 55,
+          "stdout_sha256": "71a85711b80bc8d091c27a265e13642270e15f66de791f539bdc80b2daa2cc1f",
+          "timed_out": false,
+          "wall_seconds": 0.021904417000001786
+        },
+        {
+          "CPU_seconds": 0.0023309999999999997,
+          "argv": [
+            "config",
+            "--get-regexp",
+            "^core\\.(filemode|fsmonitor|ignorestat)$"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13398016,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 20,
+          "stdout_sha256": "5796ed318d69a394b30ea960c2fca0ff14d5758b075d0c925c5c6886601af30d",
+          "timed_out": false,
+          "wall_seconds": 0.02243747999999357
+        },
+        {
+          "CPU_seconds": 0.003909999999999999,
+          "argv": [
+            "ls-files",
+            "--stage",
+            "-z"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 13545472,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 136983,
+          "stdout_sha256": "c744152f008496def89b4c776b4e111a92bedcbc4432771c1316300579357df1",
+          "timed_out": false,
+          "wall_seconds": 0.022365225000001487
+        },
+        {
+          "CPU_seconds": 0.003542,
+          "argv": [
+            "ls-files",
+            "-v",
+            "-z"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14118912,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 76647,
+          "stdout_sha256": "b4d1b49cf8d4cbedf7fb048f338460550c2bb09ee743b26e4f3f432f314ce38e",
+          "timed_out": false,
+          "wall_seconds": 0.022942428999996878
+        },
+        {
+          "CPU_seconds": 0.003371,
+          "argv": [
+            "ls-files",
+            "-f",
+            "-z"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14295040,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 76647,
+          "stdout_sha256": "b4d1b49cf8d4cbedf7fb048f338460550c2bb09ee743b26e4f3f432f314ce38e",
+          "timed_out": false,
+          "wall_seconds": 0.02187331599999709
+        },
+        {
+          "CPU_seconds": 0.005697,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:metadata/phase7i_git_precheck_recovery.json"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14422016,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9132,
+          "stdout_sha256": "5a1d600d659d2309031ddab27307ed5516e5f4ed40e6298cdfc5a3dc3c830632",
+          "timed_out": false,
+          "wall_seconds": 0.06279920800000127
+        },
+        {
+          "CPU_seconds": 0.006032,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/config/physics_contract.json"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14426112,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 637,
+          "stdout_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+          "timed_out": false,
+          "wall_seconds": 0.0634923779999923
+        },
+        {
+          "CPU_seconds": 0.0053609999999999994,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/__init__.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14426112,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 87,
+          "stdout_sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+          "timed_out": false,
+          "wall_seconds": 0.06295285699999909
+        },
+        {
+          "CPU_seconds": 0.006109,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/build.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14426112,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 7734,
+          "stdout_sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+          "timed_out": false,
+          "wall_seconds": 0.06302714200000992
+        },
+        {
+          "CPU_seconds": 0.006064,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/containment.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14430208,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9147,
+          "stdout_sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110",
+          "timed_out": false,
+          "wall_seconds": 0.06311462099999687
+        },
+        {
+          "CPU_seconds": 0.0053609999999999994,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/contract.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14430208,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4732,
+          "stdout_sha256": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf",
+          "timed_out": false,
+          "wall_seconds": 0.06245370700000308
+        },
+        {
+          "CPU_seconds": 0.0050149999999999995,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/control.c"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14430208,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1211,
+          "stdout_sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+          "timed_out": false,
+          "wall_seconds": 0.06247634400000379
+        },
+        {
+          "CPU_seconds": 0.0063349999999999995,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/git_precheck.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14434304,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 10986,
+          "stdout_sha256": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6",
+          "timed_out": false,
+          "wall_seconds": 0.06383696800000394
+        },
+        {
+          "CPU_seconds": 0.004606,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/native_checks.f"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14434304,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3012,
+          "stdout_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+          "timed_out": false,
+          "wall_seconds": 0.0624166390000056
+        },
+        {
+          "CPU_seconds": 0.005137999999999999,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/native_review.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14434304,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5800,
+          "stdout_sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+          "timed_out": false,
+          "wall_seconds": 0.06277706400000227
+        },
+        {
+          "CPU_seconds": 0.004984,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/observers.f90"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14434304,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 3180,
+          "stdout_sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+          "timed_out": false,
+          "wall_seconds": 0.062464672000004384
+        },
+        {
+          "CPU_seconds": 0.006029,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/overlay.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14438400,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 4584,
+          "stdout_sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+          "timed_out": false,
+          "wall_seconds": 0.1036967179999948
+        },
+        {
+          "CPU_seconds": 0.006246999999999999,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/published.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14438400,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2073,
+          "stdout_sha256": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a",
+          "timed_out": false,
+          "wall_seconds": 0.1436778959999998
+        },
+        {
+          "CPU_seconds": 0.006699,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/run.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14442496,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 9003,
+          "stdout_sha256": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910",
+          "timed_out": false,
+          "wall_seconds": 0.08247181899999134
+        },
+        {
+          "CPU_seconds": 0.006613,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14446592,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 14823,
+          "stdout_sha256": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d",
+          "timed_out": false,
+          "wall_seconds": 0.08247323999999878
+        },
+        {
+          "CPU_seconds": 0.006037,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/test_runtime.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14450688,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 8118,
+          "stdout_sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+          "timed_out": false,
+          "wall_seconds": 0.06253514000000848
+        },
+        {
+          "CPU_seconds": 0.007489999999999999,
+          "argv": [
+            "cat-file",
+            "blob",
+            "58d39888a024028e32f3071db9215c0db6fe0a89:simulation/hh_signal/final_closure/integration_runtime/validate.py"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14450688,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 5454,
+          "stdout_sha256": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b",
+          "timed_out": false,
+          "wall_seconds": 0.08266043999999795
+        },
+        {
+          "CPU_seconds": 0.17181599999999997,
+          "argv": [
+            "status",
+            "--porcelain",
+            "--untracked-files=no"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14454784,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "wall_seconds": 1.7655987689999932
+        },
+        {
+          "CPU_seconds": 0.21299099999999999,
+          "argv": [
+            "status",
+            "--porcelain",
+            "--untracked-files=no"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14454784,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "wall_seconds": 3.0300163990000044
+        },
+        {
+          "CPU_seconds": 0.008055,
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "group_cleanup": true,
+          "kernel_ru_maxrss_bytes": 14540800,
+          "reason": null,
+          "stderr_bytes": 0,
+          "stderr_excerpt": "",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 41,
+          "stdout_sha256": "68077053183db6acbd8a63a954666b415b0afae63fdb9bc3fc35a7794eec5990",
+          "timed_out": false,
+          "wall_seconds": 0.046705920999997375
+        }
+      ],
+      "critical_source_sha256": {
+        "metadata/phase7i_git_precheck_recovery.json": "5a1d600d659d2309031ddab27307ed5516e5f4ed40e6298cdfc5a3dc3c830632",
+        "simulation/hh_signal/final_closure/config/physics_contract.json": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+        "simulation/hh_signal/final_closure/integration_runtime/__init__.py": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+        "simulation/hh_signal/final_closure/integration_runtime/build.py": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+        "simulation/hh_signal/final_closure/integration_runtime/containment.py": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110",
+        "simulation/hh_signal/final_closure/integration_runtime/contract.py": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf",
+        "simulation/hh_signal/final_closure/integration_runtime/control.c": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+        "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6",
+        "simulation/hh_signal/final_closure/integration_runtime/native_checks.f": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+        "simulation/hh_signal/final_closure/integration_runtime/native_review.py": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+        "simulation/hh_signal/final_closure/integration_runtime/observers.f90": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+        "simulation/hh_signal/final_closure/integration_runtime/overlay.py": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+        "simulation/hh_signal/final_closure/integration_runtime/published.py": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a",
+        "simulation/hh_signal/final_closure/integration_runtime/run.py": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910",
+        "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d",
+        "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+        "simulation/hh_signal/final_closure/integration_runtime/validate.py": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b"
+      },
+      "index_sha256": "9eb556285811fef450a7b4cfd7fb001ec696137d31723180f46196fe09e74e8f",
+      "limits": {
+        "command_seconds": 30,
+        "overall_CPU_seconds": 30,
+        "overall_wall_seconds": 180,
+        "status_seconds": 120
+      },
+      "status": "PASS_FULL_TRACKED_PREFLIGHT",
+      "tracked_files": 1257,
+      "wall_seconds": 32.82815668800001
+    },
+    "physics_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+    "revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+    "source_identity": [
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+        "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+        "sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+        "sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+        "sha256": "29258b45cfc7d1ef6b95c21647c586495838fdb04f274b7496a9729ccd598dcf"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+        "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+        "sha256": "cbf4a087d569d138c429e5358824a7a7944aa44da9e51533f4277dc0deb29ca6"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+        "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+        "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+        "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+        "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+        "sha256": "3a30c25aa9ebb1b9b227bf8e1b7c1995122ae4dc33fad2ef5f0bf30c6765588a"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+        "sha256": "d377eb630fd1c051d569b8911bdc3fa09ff528de36f4277584e674d2d2f76910"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+        "sha256": "8e5b34b50a07da9c2cd0cb077c8960478bcac3418ae2999eb1f631ef0ac47f8d"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+        "sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+        "sha256": "41aa6e274e2dc6b715f6d0260a1b4810d42173e04ca2e81c8e82e11317b5968b"
+      }
+    ]
+  },
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "disk_bytes": 5368709120,
+    "jobs": 1,
+    "wall_seconds": 14400,
+    "workers": 1
+  },
+  "final_verdict": "BLOCKED_NATIVE_RUNTIME",
+  "human_authorization_scope": "external explicit approval of this exact revision required; no flag/file/env grant",
+  "new_hard_event_production": false,
+  "peak_logical_disk_including_observed_unlinked_bytes": 1132695157,
+  "peak_observed_unlinked_regular_files": 0,
+  "reason": "NATIVE_EXIT:92",
+  "replicas": [],
+  "retained_physical_LHE_events": 0,
+  "reviewed_revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "stages": [
+    {
+      "receipt": {
+        "bounded_runtime_errors": [
+          "STOP 92"
+        ],
+        "execution_class": "REAL_NATIVE_SUPERVISED",
+        "exit": 92,
+        "failure": "NATIVE_EXIT:92",
+        "pid": 460,
+        "process_group_kill_cleanup": true,
+        "raw_stream_SHA256": {
+          "stderr": "be79f3fb7fe2e0f3ea6b3fb434481a4621a520da2d424104fc6699b3e05d3982",
+          "stdout": "0be1f0bae7f0a7846a24e4c28ae5498f71456d83316001c2a8dbb1ff2d677fc5"
+        },
+        "raw_stream_bytes": {
+          "stderr": 8,
+          "stdout": 8049
+        },
+        "raw_streams_retained": false,
+        "records": [
+          "HH_PRE_SAMPLING_CONFIG_PASS               910001           0           0",
+          "HI_INPUTS         250           4           4           2           0 F",
+          "HI_PDF cteq6l1 cteq6l1 cteq6l1",
+          "HI_ALPHA  0.13000000000000000                1",
+          "HI_MASS   125.00000000000000        173.00000000000000        4.7000000000000002",
+          "HI_SCALE           4  0.50000000000000000      F F F",
+          "HI_BEAMS   6500.0000000000000        6500.0000000000000                1           1",
+          "HI_SEED               910001           0           0           1       26066       23739"
+        ],
+        "wall_seconds": 0.2922795230000048
+      },
+      "seed": 910001,
+      "stage": "adaptation",
+      "status": "FAILED_PARTIAL_PRESERVED"
+    }
+  ],
+  "status": "PARTIAL_NO_REPLACEMENT"
+}

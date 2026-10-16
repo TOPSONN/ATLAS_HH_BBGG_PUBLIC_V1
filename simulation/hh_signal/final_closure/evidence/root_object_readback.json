@@ -1,0 +1,139 @@
+{
+  "status": "PASS_READ_ONLY_EXISTING_7000_ROOT_ENTRIES",
+  "streams": [
+    {
+      "process": "S01",
+      "events": 1000,
+      "input_sha256": {
+        "root": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+        "index": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+        "reco": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+        "source": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac"
+      },
+      "derived_pt_sha256": "eec0c09758095d8c83219b5df53d4916446270b0102c95bd0881686d94de6e64",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 4.080450799999994,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B01",
+      "events": 1000,
+      "input_sha256": {
+        "root": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "index": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+        "reco": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+        "source": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343"
+      },
+      "derived_pt_sha256": "0dfcb1caa7f0276864dad2bf2d8b1cb4015787deaf16f21ff9eb8a5fb2858ede",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 1.5424425250000127,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B02",
+      "events": 1000,
+      "input_sha256": {
+        "root": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "index": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+        "reco": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+        "source": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef"
+      },
+      "derived_pt_sha256": "49ec1a2b2f5d451b90f3b93de35181690788cb28a4c16177a672d3e6d60b1aeb",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 1.6703400339999916,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B03",
+      "events": 1000,
+      "input_sha256": {
+        "root": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "index": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+        "reco": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+        "source": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030"
+      },
+      "derived_pt_sha256": "013d842c41b858e9cdaa7a27848735f15729d816b7490c35430dbe28106796c4",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 1.9254587720000131,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B04",
+      "events": 1000,
+      "input_sha256": {
+        "root": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+        "index": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+        "reco": "13a1e6e91e8eb2781ef6b46c7043a6918823fe185f1ed95c7af0c4d922f6edd8",
+        "source": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6"
+      },
+      "derived_pt_sha256": "19c8d2d7a2a0b9faf16bb4a3c3e2ecbd3bb4b18feae0c8e993a9307f522bbe08",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 1.767441770000005,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B05",
+      "events": 1000,
+      "input_sha256": {
+        "root": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+        "index": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+        "reco": "f20484e45630450bb020fb118e3a96241f2ff7e80694046f9078e50e37e7b6e0",
+        "source": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6"
+      },
+      "derived_pt_sha256": "7be616785f94dadd8d3b46b1e96507401404f772bb2a58eca497a7801474b181",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 2.2530480820000207,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    },
+    {
+      "process": "B06",
+      "events": 1000,
+      "input_sha256": {
+        "root": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+        "index": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+        "reco": "b894f1a5ff2c6e2e6424f8db232e936fdf8b72b598df69bc5adfe1b94f0ab410",
+        "source": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5"
+      },
+      "derived_pt_sha256": "c85adcbc3c0a4d00ea8f5b70591cdd18d8ba495868b296e802e9bf74434776cd",
+      "all_named_weight_values_verified": true,
+      "frozen_object_selection_verified": true,
+      "stdout": "PASS_EXISTING_ROOT_OBJECT_PT_AND_ALL_NAMED_WEIGHTS 1000\n",
+      "wall_seconds": 2.112825203,
+      "ROOT_version": "6.40.04",
+      "language": "C++20",
+      "new_detector_events": 0
+    }
+  ],
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "source_sha256": "d251d240eed98856739e29f8ac76e62091204bfb2f2ccd4b4cc14d88165e937f",
+  "executable_sha256": "7eeef5f47d2c71e3afdfceb6b7d00a0826c147d0215b7cfd84b2c33b10a10f2f",
+  "wall_seconds": 23.456969247000018,
+  "final_cut_uses": "unchanged prior actual mass selection; object cuts independently rechecked",
+  "all_input_sources_unchanged": true
+}

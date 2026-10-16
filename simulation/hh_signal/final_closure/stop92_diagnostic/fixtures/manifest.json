@@ -1,0 +1,75 @@
+{
+  "scope": "Small scalar/include projections only; no PDF tables, matrix element, integrator or sampler.",
+  "frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "files": [
+    {
+      "path": "genps.inc",
+      "frozen_path": "SubProcesses/P0_gg_hh/genps.inc",
+      "sha256": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880",
+      "bytes": 2295,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "nexternal.inc",
+      "frozen_path": "SubProcesses/P0_gg_hh/nexternal.inc",
+      "sha256": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28",
+      "bytes": 114,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "run.inc",
+      "frozen_path": "SubProcesses/P0_gg_hh/run.inc",
+      "sha256": "51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330",
+      "bytes": 3622,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "maxparticles.inc",
+      "frozen_path": "Source/maxparticles.inc",
+      "sha256": "f74c474319f9374319e754e43a6e57113420206e069dd21c73578a28399fa202",
+      "bytes": 61,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "coupl.inc",
+      "frozen_path": "Source/MODEL/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "bytes": 877,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "alfas.inc",
+      "frozen_path": "Source/alfas.inc",
+      "sha256": "d5ae9799ae1067a7a5d8a690654408e4626db1f032091eab30286a3dc06c7a1c",
+      "bytes": 453,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "alfas_functions.f",
+      "frozen_path": "Source/alfas_functions.f",
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d",
+      "bytes": 7877,
+      "projection": "EXACT_FILE"
+    },
+    {
+      "path": "sumdot.f",
+      "frozen_path": "Source/kin_functions.f",
+      "sha256": "33ae9a631039d05e9c78496a1271b542e2a9d751d52f4581281cae0aa762b721",
+      "bytes": 602,
+      "projection": "EXACT_SUBPROGRAM",
+      "start_line": 46,
+      "end_line": 75,
+      "parent_sha256": "258ba73d21343e1e9e64f8f1beec0ae9a9f890d01c3d3a907f1091843de6372d"
+    },
+    {
+      "path": "dot.f",
+      "frozen_path": "Source/kin_functions.f",
+      "sha256": "eed53874c22b48557ef889369528142ffdba11fcb35466f11d91ae06926906a2",
+      "bytes": 566,
+      "projection": "EXACT_SUBPROGRAM",
+      "start_line": 588,
+      "end_line": 602,
+      "parent_sha256": "258ba73d21343e1e9e64f8f1beec0ae9a9f890d01c3d3a907f1091843de6372d"
+    }
+  ]
+}

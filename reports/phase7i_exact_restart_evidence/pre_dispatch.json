@@ -1,0 +1,259 @@
+{
+  "Landlock_ABI": 3,
+  "available_RAM_bytes": 7514042368,
+  "build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "campaign_lock_existed_before": false,
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "disk_bytes": 5368709120,
+    "jobs": 1,
+    "wall_seconds": 14400,
+    "workers": 1
+  },
+  "competing_native_processes": [],
+  "complete_build_receipt_sha256": "d8ba4c0cca8945e848d7914b3a55c449e6d9a52abc81a386582ed02a43f04b0b",
+  "exact_prepared_inventory_identity": "fc9521b9799ed5d761c191cfe3367b8809f3865ad4752381c770d719c9b6eb4a",
+  "finished_at_UTC": "2026-10-16T07:45:47.863041+00:00",
+  "free_disk_bytes": 999502307328,
+  "git_precheck_CPU_seconds": 1.8915074890000003,
+  "git_precheck_wall_seconds": 20.832652054000004,
+  "historical_campaign": {
+    "files": 8420,
+    "logical_bytes": 752305317,
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY"
+  },
+  "immutable_artifacts": 3488,
+  "installed_release_files_checked": 4658,
+  "kernel_sealing_capability": true,
+  "main_index_sha256": "47b51d6b783bf7b52dd04f88c79c5170baef4c0e2d627140f87713d7f0f6c46e",
+  "model_sources": {
+    "files": 28,
+    "status": "PASS_INSTALLED_MODEL_SOURCE_HASHES"
+  },
+  "native_budget_accounted_bytes": 1132668802,
+  "output": "LOCAL_HOME/simulations/hh_final_closure/restart_feasibility_58d39888_01",
+  "physical_dispatch": false,
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "replicas": [
+    {
+      "cards": {
+        "seed": 910001,
+        "status": "PASS_REVIEWED_WORKING_EMBEDDED_COMPILED_CARDS"
+      },
+      "dynamic_dependencies": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ],
+      "immutable_files": 872,
+      "per_replica_receipt_sha256": "bb34f6126013627ee74e64bdefa6cae57c2de83dd49efd9e336d58f3976a4133",
+      "seed": 910001,
+      "sha256": "c70949e1538fc53e2725c126a1527edf2e268c85e82e4149d3d3a1f46ccd426c"
+    },
+    {
+      "cards": {
+        "seed": 910019,
+        "status": "PASS_REVIEWED_WORKING_EMBEDDED_COMPILED_CARDS"
+      },
+      "dynamic_dependencies": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ],
+      "immutable_files": 872,
+      "per_replica_receipt_sha256": "292b27c2eb5e5548da2df896004c24f93c87f144f8373c71a387ad4a9ffcdffd",
+      "seed": 910019,
+      "sha256": "7dc0b4150a9f0a17973e23016b679a16bde5621ab46b48f11a0d9c30badff3ff"
+    },
+    {
+      "cards": {
+        "seed": 910037,
+        "status": "PASS_REVIEWED_WORKING_EMBEDDED_COMPILED_CARDS"
+      },
+      "dynamic_dependencies": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ],
+      "immutable_files": 872,
+      "per_replica_receipt_sha256": "c3a48d197f2cc4a836048b1764d817a0da5b6bf6577509f2b0331236ec406ab2",
+      "seed": 910037,
+      "sha256": "1a458edc8320dfe03ef8af681c5d88099f171117b8dc8746def4f2c13f79f3f6"
+    },
+    {
+      "cards": {
+        "seed": 910061,
+        "status": "PASS_REVIEWED_WORKING_EMBEDDED_COMPILED_CARDS"
+      },
+      "dynamic_dependencies": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ],
+      "immutable_files": 872,
+      "per_replica_receipt_sha256": "473769eb4d92132c0b8abe55991cc1b84c904aa1c1fa64d53d0e1108f92f1876",
+      "seed": 910061,
+      "sha256": "ff465034a83e815be7db974e26f0ff6c88215fa15fb6a76cdd20b66dbbf4f6b3"
+    }
+  ],
+  "revision": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "source": "REPOSITORY",
+  "source_binding": {
+    "frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+    "new_source_binding_identity": "18943dd37130641e9315fd77bf728d075f2054d017ec7914d2cfb09dca2f8253",
+    "previous_approved_source": "79f779ef6d96340681242f86afe06bc90975728d",
+    "restart_authorized": false,
+    "status": "UNCHANGED_NATIVE_BUILD_NEW_SOURCE_REAPPROVAL_REQUIRED"
+  },
+  "started_at_UTC": "2026-10-16T07:45:15.074427+00:00",
+  "status": "PASS_ALL_PRE_DISPATCH_GATES",
+  "wall_seconds": 32.788735427
+}

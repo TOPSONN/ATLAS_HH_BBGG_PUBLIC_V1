@@ -1,0 +1,166 @@
+{
+  "status": "PREPARED_NOT_AUTHORIZED",
+  "authorization_request": "AUTHORIZE_PHASE7_FINAL_SM_1000",
+  "physics": {
+    "MG5_version": "3.5.16",
+    "MG5_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "model": "loop_sm",
+    "process": "g g > h h [noborn=QCD]",
+    "MH_GeV": 125,
+    "MT_GeV": 173,
+    "MB_GeV": 4.7,
+    "kappa_lambda": 1,
+    "kappa_top": 1,
+    "PDF": "cteq6l1",
+    "alpha_s_MZ": 0.13,
+    "running_loops": 1,
+    "PDFSUP": [
+      10042,
+      10042
+    ],
+    "muR_muF": "mHH/2",
+    "sqrt_s_GeV": 13000,
+    "accuracy": "LO_LOOP_INDUCED_FINITE_MT_MB",
+    "K_factor": null,
+    "HEFT": false,
+    "NLO_PS": false,
+    "physical_execution_authorized": false,
+    "model_source_inventory_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd"
+  },
+  "proposed_seed": 20261123,
+  "requested_independent_events": 1000,
+  "ceilings": {
+    "concurrent_sources": 1,
+    "generator_workers_max": 2,
+    "aggregate_wall_seconds": 43200,
+    "additional_disk_bytes": 21474836480
+  },
+  "prerequisites": [
+    "Phase7I actual matched integration and scientific gates PASS",
+    "separate human approval of exact revision/config/seed/budget/retention"
+  ],
+  "required_counts": {
+    "source_LHE": 1000,
+    "HepMC3": 1000,
+    "ROOT": 1000
+  },
+  "observed_counts": {
+    "source_LHE": null,
+    "HepMC3": null,
+    "ROOT": null
+  },
+  "production_backend": "FAIL_CLOSED; no authorized dispatch in this revision",
+  "cards_scope": "fresh RunCardLO include only; not compiled runtime or generated-source proof",
+  "BR_scope": "MODEL_BR_ONLY; verify missing 2*BRbb*BRgg exactly once; no automatic physical BR adoption",
+  "detector_card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+  "closure_source_identity": [
+    {
+      "path": "simulation/hh_signal/final_closure/__init__.py",
+      "sha256": "3168d1ecb5886e0924722493ccafa3c7cf1a9aeae431d032f0a3cde7c05e4a0c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/protected_campaign_inventory.csv",
+      "sha256": "ad6c6667159741189815606907593452a8d948b574d490e8c3ca43fc59adacb5"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/source_inputs.json",
+      "sha256": "f8db658d034f4b2ea4a99583f91e0f058c13f8cd586c3896dd3ac8cc414777ad"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/scripts/run_phase7_final.sh",
+      "sha256": "27703556b6c8d7ed88f1ed4ff112aa0bbc283d7f1d1147112313be48f93da61c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/__init__.py",
+      "sha256": "de88d11f096f03ae500da7be35ca1951ffc79895f02c8994b9b61eae6024c36e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/audit_payload.py",
+      "sha256": "df8f3a09953592cd9b64311cf60edf904bf18bc7d9e013f767d9ae7f94cd9ace"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/contracts.py",
+      "sha256": "e73810186926cad27d28e54e5c2b3ae0623e97f32f86e7aec4f56130f1da21b0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/controller.py",
+      "sha256": "b41cc0dd0b20b9897cbe72bc3f1b4fcf511121166aaa00e5a728f30603b3a4ba"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/existing_analysis.py",
+      "sha256": "ad1205f9f0c512d7e215f959522427009071222038046cf42f8c437655df80b2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/extract_object_pt.cxx",
+      "sha256": "d251d240eed98856739e29f8ac76e62091204bfb2f2ccd4b4cc14d88165e937f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/native_preparation.py",
+      "sha256": "949aaed6e5ad4f592535dcdddc1b561f278fc2d9fa1c7d2fafa6171589be39d1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/object_analysis.py",
+      "sha256": "9dc13491595f5b40fece39545f528c3491701000e559a9955b650fadea4a00eb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "sha256": "b1a18c8e29d47c85afea2425f1a3c04c007bcf71fac37139b5f0cf8e01ad2709"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/validate.py",
+      "sha256": "f35d6b21492908f92828e8a156588eb1c1cbe1cb865d1edbb53b639e6d4fb092"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/__init__.py",
+      "sha256": "423b592872e506214aed47fbd93ed020b5d6dd0aeb502048cf029a7098462966"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/test_closure.py",
+      "sha256": "88e68ccbfb4d2612179dfb8859dab17ffe04a2f2a0d62bd182ada4801195af05"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/__init__.py",
+      "sha256": "40be8756bd126e0c7dcb5fea427014553e337052beb2abfad352aca665b881e5"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/contract.py",
+      "sha256": "4803ac8bbbfa45785701e65de70ba7da56016dbbac6d7c502e4849331b10e99b"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/overlay.py",
+      "sha256": "3f2ff46d21e0f061c0aad73146d06253b5d3fec1a3f69bb262eec8d0a035cf85"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/review.py",
+      "sha256": "65bf9391fca6708ed716b61f2f3e513de3afaf57cbca86c9a9ceb8ec9e4ad2f1"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/runner.py",
+      "sha256": "0091c480979428555abea8dbfdc8a739d6bd932bb76e2b3b950150c2abdb390f"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/anonymous_io.c",
+      "sha256": "b3f26af0d2f45663bceaec414a20128d211ebe4758dbd718c3674a0861b05242"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/io_and_rng.f90",
+      "sha256": "464d64c0d1cdb6716ab058e52e9e6fad8783bef811b34af304bde0e4fc1c863c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/method_driver.f",
+      "sha256": "ed0bed151d9f24e6f0487bd5ea89c39f34bb1a75f179b32e467709cfefa55e2c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/test_semantics.py",
+      "sha256": "c2626c4dd1b32afa802a2f924ff8f7212bc29064a6fde402ec71dc3f4ce529a5"
+    }
+  ],
+  "installed_model_source_check": {
+    "status": "PASS_INSTALLED_MODEL_SOURCE_HASHES",
+    "files": 28
+  }
+}

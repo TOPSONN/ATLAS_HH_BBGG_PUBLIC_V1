@@ -1,0 +1,37 @@
+{
+  "STOP92_branches": [
+    {
+      "line": 87,
+      "statement": "if(q.le.0d0.or.g1.lt.0d0.or.g2.lt.0d0) stop 92"
+    },
+    {
+      "line": 88,
+      "statement": "if(abs(MU_R/q-1d0).gt.1d-10) stop 92"
+    },
+    {
+      "line": 89,
+      "statement": "if(any(abs(q2fact/q**2-1d0).gt.1d-10)) stop 92"
+    },
+    {
+      "line": 92,
+      "statement": "if(a.le.0d0) stop 92"
+    },
+    {
+      "line": 95,
+      "statement": "if(abs(a/expected-1d0).gt.1d-10) stop 92"
+    }
+  ],
+  "actual_branch": "UNKNOWN_NO_BRANCH_TAG_OR_POINT_VALUES_RECORDED",
+  "call_order": [
+    "hi_point(PP,G1,G2)",
+    "SMATRIX1(P1,DSIGUU)"
+  ],
+  "callsite_path": "replica_910001/process/SubProcesses/P0_gg_hh/auto_dsig1.f",
+  "callsite_sha256": "f99900fdb49cdcf87908b528d1ae95ad6eff7b3e3c4739c0e5976bb12c82b61d",
+  "matrix_source_sha256": "c1c6334e218931430e39853ba9914ee418b454256a5379b67ecbc248b39f926a",
+  "native_guard_path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+  "native_guard_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+  "outer_ME_entry_instrumentation_sites": 3,
+  "scope": "No debugger, replay, new point, ME, integral, code patch or alternative diagnostic run.",
+  "status": "STATIC_SOURCE_LOCALIZATION_ONLY_NOT_RUNTIME_BRANCH_IDENTIFICATION"
+}

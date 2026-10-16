@@ -1,0 +1,58 @@
+{
+  "status": "NOT_AUTHORIZED_NOT_EXECUTED",
+  "authorization_identifier": "AUTHORIZE_PHASE7_FINAL_INTEGRATION_ONLY",
+  "identifier_is_authorization": false,
+  "configuration_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "replicas": [
+    {
+      "seed": 910001,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "actual_grid": null
+    },
+    {
+      "seed": 910019,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "actual_grid": null
+    },
+    {
+      "seed": 910037,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "actual_grid": null
+    },
+    {
+      "seed": 910061,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "actual_grid": null
+    }
+  ],
+  "mean_cross_section_pb": null,
+  "between_replica_error": null,
+  "internal_errors": null,
+  "convergence": "NOT_EVALUATED",
+  "real_ME_calls": 0,
+  "real_integrals": 0,
+  "retained_independent_events": 0,
+  "genuine_survey_zero_retention": "NOT_EVALUATED",
+  "ceilings": {
+    "wall_seconds": 14400,
+    "CPU_seconds": 14400,
+    "jobs": 1,
+    "workers": 1,
+    "additional_disk_bytes": 5368709120
+  },
+  "native_preparations": "4 actual native builds; pre-ME exits and STOP80 denials only",
+  "Stage_A": "NOT_EXECUTED; must PASS before other replicas",
+  "Stage_B": "NOT_EXECUTED; no automatic replacement or budget increase"
+}

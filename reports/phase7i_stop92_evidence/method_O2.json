@@ -1,0 +1,803 @@
+{
+  "actual_new_ME_calls": 0,
+  "actual_new_events": 0,
+  "actual_new_integrals": 0,
+  "build": {
+    "binaries_local_only": {
+      "diagnostic": {
+        "defined_symbols": 60,
+        "forbidden_ME_sampler_symbols": 0,
+        "sha256": "5c19b615dfe05be0ffb73e52aa31bbdf43961513a5827cdac6f9e9129cc439ce"
+      },
+      "original": {
+        "defined_symbols": 60,
+        "forbidden_ME_sampler_symbols": 0,
+        "sha256": "b0003eb1bdbe31cc337425eb55ebe809e4c340d52cf875a3e8c616d59e70045f"
+      },
+      "scalar": {
+        "defined_symbols": 44,
+        "forbidden_ME_sampler_symbols": 0,
+        "sha256": "0f72ed01c2cfaa0f572308e394c05628e249092524d6f701258b0d769f703ae9"
+      }
+    },
+    "candidate_guard_sha256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2",
+    "compiler_name": "x86_64-conda-linux-gnu-gfortran",
+    "compiler_sha256": "7564cac4a7d02785e005665954fc981338b200686ab9b8bfe6df15da0f2cc1f3",
+    "exact_original_restoration": true,
+    "execution_class": "NONPHYSICAL_FIXED_SCALAR_METHODS",
+    "linked_production_libraries": [],
+    "optimization": "-O2",
+    "original_guard_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+  },
+  "failure_receipts": [
+    {
+      "case": 1,
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "case": 4,
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  2.5250000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  2.5250000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002"
+      ]
+    },
+    {
+      "case": 5,
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "case": 7,
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "case": 8,
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769337E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0099999999999785E-002 native_scale_GeV=  2.5000000000000000E+002",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769337E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0099999999999785E-002 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "case": 9,
+      "execution_class": "METHOD_ONLY",
+      "exit": 90,
+      "failure": "HI_FAILURE NONFINITE",
+      "no_named_or_physical_output": true,
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE NONFINITE"
+      ]
+    }
+  ],
+  "genuine_native_equivalence": "NOT_EVALUATED_UNTIL_AUTHORIZED",
+  "max_record_bytes": 768,
+  "predicate_matrix": [
+    {
+      "case": 0,
+      "diagnostic_exit": 0,
+      "diagnostic_record": null,
+      "original_exit": 0,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 1,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 2,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "-2.0000000000000001E-001",
+            "value": -0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 3,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless= -2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "-2.9999999999999999E-001",
+            "value": -0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 4,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  2.5250000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 240,
+        "scalars": {
+          "MU_R_GeV": {
+            "representation": "2.5250000000000000E+002",
+            "value": 252.5
+          },
+          "MU_R_over_q": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "1.0000000000000009E-002",
+            "value": 0.010000000000000009
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 5,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "6.3125000000000000E+004",
+            "value": 63125.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 6,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=  6.3125000000000000E+004 QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=  1.0100000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.3125000000000000E+004",
+            "value": 63125.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 7,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_ALPHA_NONPOSITIVE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 193,
+        "scalars": {
+          "MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "alpha_actual": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 8,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769337E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0099999999999785E-002 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_ALPHA_RUNNING_MISMATCH",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 248,
+        "scalars": {
+          "alpha_actual": {
+            "representation": "1.1432365095769337E-001",
+            "value": 0.11432365095769337
+          },
+          "alpha_expected": {
+            "representation": "1.1207102338760258E-001",
+            "value": 0.11207102338760258
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "2.0099999999999785E-002",
+            "value": 0.020099999999999785
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 9,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 10,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 11,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 12,
+      "diagnostic_exit": 0,
+      "diagnostic_record": null,
+      "original_exit": 0,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 13,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=                 Infinity q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=                 Infinity QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "nonfinite": "Infinity",
+            "value": null
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "nonfinite": "Infinity",
+            "value": null
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 14,
+      "diagnostic_exit": 0,
+      "diagnostic_record": null,
+      "original_exit": 0,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 15,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -1.0000000000000000E+000 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "-1.0000000000000000E+000",
+            "value": -1.0
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 16,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  4.0000000000000001E-003 relative_mismatch=  9.9600000000000000E-001",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 240,
+        "scalars": {
+          "MU_R_GeV": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "MU_R_over_q": {
+            "representation": "4.0000000000000001E-003",
+            "value": 0.004
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "9.9600000000000000E-001",
+            "value": 0.996
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 17,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  0.0000000000000000E+000 q2fact2_GeV2=  0.0000000000000000E+000 QF1_squared_over_q2=  0.0000000000000000E+000 QF2_squared_over_q2=  0.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "QF2_squared_over_q2": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 18,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 19,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 20,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 21,
+      "diagnostic_exit": 90,
+      "diagnostic_record": null,
+      "original_exit": 90,
+      "parsed": null,
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 22,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    },
+    {
+      "case": 23,
+      "diagnostic_exit": 92,
+      "diagnostic_record": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  3.6475200000000002E-001 relative_mismatch=  6.3524800000000003E-001",
+      "original_exit": 92,
+      "parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 240,
+        "scalars": {
+          "MU_R_GeV": {
+            "representation": "9.1188000000000002E+001",
+            "value": 91.188
+          },
+          "MU_R_over_q": {
+            "representation": "3.6475200000000002E-001",
+            "value": 0.364752
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "6.3524800000000003E-001",
+            "value": 0.635248
+          }
+        }
+      },
+      "same_state_and_non_diagnostic_output": true
+    }
+  ],
+  "production_rebuild": "NOT_EXECUTED",
+  "scalar_probes": {
+    "alpha_probes": [
+      {
+        "fixed_nf5_guard_relative_residual": 0.061748319586564016,
+        "independent_piecewise_alpha": 0.4237117422102372,
+        "native_alpha": 0.42371174221023444,
+        "q_GeV": 1.3,
+        "relative_residual": 6.5503158452884236e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.05107272035647825,
+        "independent_piecewise_alpha": 0.4021612282938473,
+        "native_alpha": 0.4021612282938448,
+        "q_GeV": 1.4199999857999999,
+        "relative_residual": 6.217248937900877e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.051072719208859585,
+        "independent_piecewise_alpha": 0.40216122597718335,
+        "native_alpha": 0.4021612259771809,
+        "q_GeV": 1.42,
+        "relative_residual": 6.106226635438361e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.051072718509739934,
+        "independent_piecewise_alpha": 0.4021612238321242,
+        "native_alpha": 0.40216122383212183,
+        "q_GeV": 1.4200000141999998,
+        "relative_residual": 5.88418203051333e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.604361171165692e-10,
+        "independent_piecewise_alpha": 0.24545838658954994,
+        "native_alpha": 0.24545838658954913,
+        "q_GeV": 4.699999953,
+        "relative_residual": 3.3306690738754696e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 3.3306690738754696e-15,
+        "independent_piecewise_alpha": 0.2454583857904619,
+        "native_alpha": 0.2454583857904611,
+        "q_GeV": 4.7,
+        "relative_residual": 3.3306690738754696e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 3.4416913763379853e-15,
+        "independent_piecewise_alpha": 0.24545838505530093,
+        "native_alpha": 0.2454583850553001,
+        "q_GeV": 4.700000047,
+        "relative_residual": 3.4416913763379853e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.0,
+        "independent_piecewise_alpha": 0.13,
+        "native_alpha": 0.13,
+        "q_GeV": 91.188,
+        "relative_residual": 0.0
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.12380614852685004,
+        "native_alpha": 0.12380614852685007,
+        "q_GeV": 125.0,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.11801251844765541,
+        "native_alpha": 0.11801251844765542,
+        "q_GeV": 172.99999827,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.1180125182777204,
+        "native_alpha": 0.11801251827772041,
+        "q_GeV": 173.0,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 4.440892098500626e-16,
+        "independent_piecewise_alpha": 0.11801251810778536,
+        "native_alpha": 0.1180125181077854,
+        "q_GeV": 173.00000172999998,
+        "relative_residual": 4.440892098500626e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 4.440892098500626e-16,
+        "independent_piecewise_alpha": 0.11207102338760258,
+        "native_alpha": 0.11207102338760264,
+        "q_GeV": 250.0,
+        "relative_residual": 4.440892098500626e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 8.881784197001252e-16,
+        "independent_piecewise_alpha": 0.09421116947203664,
+        "native_alpha": 0.09421116947203673,
+        "q_GeV": 1000.0,
+        "relative_residual": 8.881784197001252e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 1.3322676295501878e-15,
+        "independent_piecewise_alpha": 0.07752897757873731,
+        "native_alpha": 0.0775289775787374,
+        "q_GeV": 6500.0,
+        "relative_residual": 1.3322676295501878e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.030827010360652496,
+        "independent_piecewise_alpha": 0.3400427383138727,
+        "native_alpha": 0.3400427383138711,
+        "q_GeV": 2.0,
+        "relative_residual": 4.773959005888173e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-15,
+        "independent_piecewise_alpha": 0.20018898832648338,
+        "native_alpha": 0.20018898832648294,
+        "q_GeV": 10.0,
+        "relative_residual": 2.220446049250313e-15
+      }
+    ],
+    "scale_expression_grid": {
+      "max_mu_relative_residual": 0.0,
+      "max_q2_relative_residual": 0.0,
+      "points": 441,
+      "scope": "Deterministic scalar beam pairs 125..6500 GeV; exact SumDot/dot, extracted choice4 expression. No phase-space sampling."
+    }
+  },
+  "status": "PASS_NONPHYSICAL_METHODS_ONLY"
+}

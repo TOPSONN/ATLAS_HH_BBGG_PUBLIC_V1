@@ -1,0 +1,17 @@
+--- frozen/Source/ran1.f
++++ B/Source/ran1.f
+@@ -1,4 +1,4 @@
+-      function xran1(idum)
++      function hh_original_xran1(idum)
+       dimension r(97)
+       parameter (m1=259200,ia1=7141,ic1=54773,rm1=3.8580247e-6)
+       parameter (m2=134456,ia2=8121,ic2=28411,rm2=7.4373773e-6)
+@@ -27,7 +27,7 @@
+          write(*,*) 'j is bad in ran1.f',j, 97d0*ix3/m3
+          STOP
+       endif
+-      xran1=r(j)
++      hh_original_xran1=r(j)
+       r(j)=(float(ix1)+float(ix2)*rm2)*rm1
+       return
+       end

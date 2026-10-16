@@ -1,0 +1,15 @@
+{
+  "lib/libgeneric.a": [
+    "FROZEN_PROCESS/lib/libgeneric.a:alfas_functions.o:00000000000003bd T alphas_",
+    "FROZEN_PROCESS/lib/libgeneric.a:alfas_functions.o:0000000000000000 T newton1_"
+  ],
+  "lib/libmodel.a": [
+    "FROZEN_PROCESS/lib/libmodel.a:couplings.o:000000000000116e T update_as_param2_",
+    "FROZEN_PROCESS/lib/libmodel.a:couplings.o:0000000000000000 T update_as_param_",
+    "FROZEN_PROCESS/lib/libmodel.a:rw_para.o:000000000000000c T setpara_"
+  ],
+  "lib/libpdf.a": [
+    "FROZEN_PROCESS/lib/libpdf.a:Ctq6Pdf.o:0000000000001221 T ctq6pdf_",
+    "FROZEN_PROCESS/lib/libpdf.a:pdg2pdf.o:000000000000014b T pdg2pdf_"
+  ]
+}

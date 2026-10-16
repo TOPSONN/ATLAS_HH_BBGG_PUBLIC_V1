@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "tests": 433,
+  "new_tests": 18,
+  "previous_relevant_tests": 415,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "simulation.hh_signal.semantics_recovery.test_semantics",
+        "simulation.hh_signal.final_closure.tests.test_closure",
+        "simulation.hh_signal.matched_integration.test_matched",
+        "simulation.hh_signal.config_lock.test_guards",
+        "simulation.hh_signal.integration_audit.test_audit",
+        "simulation.hh_signal.campaign.test_campaign",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_00.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "simulation/hh_signal/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "d9fe33f97773367a41b8877568401af594eeb2a6",
+      "log": "regression_01.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "simulation/new_backgrounds/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_02.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "simulation/zh_pilot/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_03.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "simulation/heavy_flavour_forensics/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_04.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "simulation/rare_backgrounds/tests",
+        "-v"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_05.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.campaign.validate_references"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_06.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/new_backgrounds/scripts/validate_references.py"
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_07.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/mg5/scripts/validate_lhe.py",
+        "--background-library",
+        "."
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_08.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/pythia8/scripts/validate_hepmc3.py",
+        "--repository",
+        "."
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_09.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/delphes/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit": 0,
+      "snapshot": "CURRENT_CLOSURE_SOURCE",
+      "log": "regression_10.txt"
+    }
+  ]
+}

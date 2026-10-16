@@ -1,0 +1,28 @@
+{
+  "status": "BLOCKED_NATIVE_RUNTIME",
+  "attempted_source_revision": "79f779ef6d96340681242f86afe06bc90975728d",
+  "approved_source_revision": "79f779ef6d96340681242f86afe06bc90975728d",
+  "native_executable_executed": false,
+  "execution_receipt_exists": false,
+  "genuine_stage_directories": [],
+  "reason": "Command '['git', '-C', 'REPOSITORY', 'status', '--porcelain', '--untracked-files=no']' timed out after 30 seconds",
+  "check_revision_order": [
+    "rev-parse HEAD",
+    "status --porcelain --untracked-files=no",
+    "ls-files",
+    "physics contract hash"
+  ],
+  "failure_location": "check_revision() git status; before build verification in execute_reviewed(), lock, Budget creation, STARTED receipt, capability, supervise, or native process creation",
+  "genuine_ME_calls": 0,
+  "genuine_integrals_started": 0,
+  "genuine_integrals_completed": 0,
+  "completed_replicas": 0,
+  "new_independent_hard_events": 0,
+  "retained_physical_LHE_events": 0,
+  "automatic_restart_attempts": 0,
+  "replacement_seeds": 0,
+  "implementation_changes": false,
+  "post_attempt_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "approved_frozen_executables_unchanged": true,
+  "monitoring_caveat": "Zero dispatch follows from the fail-closed code path and absent stage/receipt; the 1-second observer alone is not proof of zero transient execution."
+}

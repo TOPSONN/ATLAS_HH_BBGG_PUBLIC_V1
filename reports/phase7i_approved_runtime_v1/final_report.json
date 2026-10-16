@@ -1,0 +1,138 @@
+{
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE7I_APPROVED_EXACT_REVISION_RUNTIME_V1",
+  "APPROVED_REVISION": "79f779ef6d96340681242f86afe06bc90975728d",
+  "PHYSICS_CONTRACT_SHA256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "FROZEN_BUILD_IDENTITY": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "EXECUTABLE_HASH_CLOSURE": {
+    "910001": "c70949e1538fc53e2725c126a1527edf2e268c85e82e4149d3d3a1f46ccd426c",
+    "910019": "7dc0b4150a9f0a17973e23016b679a16bde5621ab46b48f11a0d9c30badff3ff",
+    "910037": "1a458edc8320dfe03ef8af681c5d88099f171117b8dc8746def4f2c13f79f3f6",
+    "910061": "ff465034a83e815be7db974e26f0ff6c88215fa15fb6a76cdd20b66dbbf4f6b3"
+  },
+  "STAGE_A_STATUS": "NOT_STARTED_PRE_DISPATCH_GIT_STATUS_TIMEOUT",
+  "STAGE_A_ME_CALLS": 0,
+  "STAGE_A_INTEGRAL_PB": null,
+  "STAGE_A_INTERNAL_ERROR_PB": null,
+  "STAGE_A_ZERO_RETENTION": "PASS_NO_NATIVE_DISPATCH_NO_STAGE_DIRECTORY",
+  "STAGE_A_WRITER_SEMANTICS": "NOT_EXERCISED_PHYSICALLY; reviewed anonymous scratch method evidence preserved",
+  "REPLICA_910001": {
+    "status": "NOT_STARTED",
+    "integral_pb": null,
+    "native_internal_error_pb": null,
+    "ME_calls": 0,
+    "effective_runtime_seed": null,
+    "grid_provenance": null,
+    "termination": "pre-dispatch failure for910001; other approved seeds not attempted"
+  },
+  "REPLICA_910019": {
+    "status": "NOT_STARTED",
+    "integral_pb": null,
+    "native_internal_error_pb": null,
+    "ME_calls": 0,
+    "effective_runtime_seed": null,
+    "grid_provenance": null,
+    "termination": "pre-dispatch failure for910001; other approved seeds not attempted"
+  },
+  "REPLICA_910037": {
+    "status": "NOT_STARTED",
+    "integral_pb": null,
+    "native_internal_error_pb": null,
+    "ME_calls": 0,
+    "effective_runtime_seed": null,
+    "grid_provenance": null,
+    "termination": "pre-dispatch failure for910001; other approved seeds not attempted"
+  },
+  "REPLICA_910061": {
+    "status": "NOT_STARTED",
+    "integral_pb": null,
+    "native_internal_error_pb": null,
+    "ME_calls": 0,
+    "effective_runtime_seed": null,
+    "grid_provenance": null,
+    "termination": "pre-dispatch failure for910001; other approved seeds not attempted"
+  },
+  "COMPLETED_REPLICAS": 0,
+  "INTEGRATION_MEAN_PB": null,
+  "BETWEEN_REPLICA_SE": null,
+  "NATIVE_INTERNAL_ERRORS": [],
+  "CONVERGENCE_STATUS": "NOT_ASSESSABLE_ZERO_INTEGRALS",
+  "EFFECTIVE_PDF": "CTEQ6L1 verified frozen cards and earlier pre-ME initialization; genuine runtime NOT_EVALUATED",
+  "ALPHA_S_RUNNING": "ONE_LOOP alpha_s(MZ)=0.130 verified frozen configuration; genuine point checks NOT_EVALUATED",
+  "SEED_CLOSURE": "all four frozen card seeds verified; no actual physical RANMAR initialization",
+  "GRID_STABILITY": "NOT_EVALUATED_NO_GRID_GENERATED",
+  "LOOP_DIAGNOSTICS": "NOT_EVALUATED_ZERO_ME_CALLS",
+  "TAIL_DIAGNOSTICS": "NOT_EVALUATED_NO_CANDIDATES",
+  "TRANSIENT_MONITORING_LIMITS": "1-second read-only /proc sampling observed no native PID; sampling is not continuous proof. Zero dispatch is established by the precise pre-dispatch exception and absence of receipt/stage directories. No native scratch was created.",
+  "NEW_INDEPENDENT_HARD_EVENTS": 0,
+  "RETAINED_PHYSICAL_LHE": 0,
+  "ACTUAL_ME_CALLS": 0,
+  "ACTUAL_INTEGRALS": {
+    "started": 0,
+    "completed": 0
+  },
+  "CPU_USAGE": {
+    "attempted_command_tree_seconds": 1.77,
+    "native_integration_seconds": 0,
+    "precision_seconds": 0.01
+  },
+  "WALLTIME": {
+    "attempted_command_seconds": 31.11,
+    "native_integration_seconds": 0
+  },
+  "PEAK_MEMORY": {
+    "attempted_command_tree_kernel_ru_maxrss_bytes": 34586624,
+    "native_peak_bytes": null,
+    "scope": "GNU time kernel ru_maxrss for command tree, not simultaneous aggregate RSS; native process never started"
+  },
+  "DISK_USAGE": {
+    "new_native_scratch_bytes": 0,
+    "new_integral_output_bytes": 0,
+    "prepared_review_attempts_preexisting_plus_failure_logical_bytes": 823319937,
+    "scope": "No physical Budget object constructed; pre-existing build storage is reported separately from new report/evidence payload."
+  },
+  "HISTORICAL_PRESERVATION": {
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY",
+    "files": 8420,
+    "logical_bytes": 752305317
+  },
+  "REGRESSION": {
+    "tests": 451,
+    "reference_validators": 5,
+    "status": "PASS",
+    "independent_receipt_checks": 8
+  },
+  "GITHUB_CI": "Final publication-head checks must complete after push; exact head and outcomes are recorded in PR24 and final delivery, not inferred from79f779e CI.",
+  "GATES_PASS": [
+    "explicit human exact revision approval",
+    "precheck clean exact checkout",
+    "physics/build/executable/dynamic-library hashes",
+    "frozen effective cards",
+    "Landlock ABI3 and18 fresh containment tests",
+    "no dispatch after timeout",
+    "no automatic restart/replacement",
+    "451 scientific regression tests and5 reference validators",
+    "8420 historical files byte-for-byte unchanged",
+    "8 independent receipt/numerical consistency checks"
+  ],
+  "GATES_FAIL": [
+    "execute-reviewed check_revision Git status exceeded fixed30s timeout before physical dispatch"
+  ],
+  "GATES_BLOCKED": [
+    "genuine Stage A",
+    "all four physical replicas",
+    "genuine writer/ME/PDF/alpha_s/seed/grid/error/tail validation",
+    "between-replica statistics"
+  ],
+  "GATES_UNKNOWN": [
+    "underlying cause of Git status latency",
+    "genuine native integration runtime behavior",
+    "convergence and estimator coverage"
+  ],
+  "EXECUTED_SOURCE_REVISION": "79f779ef6d96340681242f86afe06bc90975728d",
+  "EXECUTED_SOURCE_REVISION_SCOPE": "approved CLI route attempted; native executable never dispatched",
+  "FINAL_PUBLICATION_HEAD": "Containing report-only commit; exact SHA in PR24 and final delivery avoids a self-referential commit hash.",
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/24",
+  "FINAL_VERDICT": "BLOCKED_NATIVE_RUNTIME",
+  "NEXT_RECOMMENDED_STEP": "Diagnose the bounded Git status precheck with read-only checks. Keep the stopped attempt unchanged. Any implementation change requires an exact new revision review; obtain an explicit restart decision before another execute-reviewed invocation. No corrected SM1000 production."
+}

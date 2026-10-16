@@ -1,0 +1,109 @@
+{
+  "actual_new_ME_calls": 0,
+  "actual_new_events": 0,
+  "actual_new_integrals": 0,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "simulation.hh_signal.semantics_recovery.test_semantics",
+        "simulation.hh_signal.final_closure.tests.test_closure",
+        "simulation.hh_signal.final_closure.integration_runtime.test_runtime",
+        "simulation.hh_signal.matched_integration.test_matched",
+        "simulation.hh_signal.config_lock.test_guards",
+        "simulation.hh_signal.integration_audit.test_audit",
+        "simulation.hh_signal.campaign.test_campaign",
+        "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic",
+        "-v"
+      ],
+      "exit": 0,
+      "log_sha256": "a5d25e51b686a5fadfca1f64d2585d27df11d5bfa68fedf0a5fe3ca780eaeb42",
+      "wall_seconds": 23.560623171999964
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.final_closure.src.validate"
+      ],
+      "exit": 0,
+      "log_sha256": "ab85fc611da4f91313904a587184020e3ee575a80c8f6616cc04d4c9bf84ff90",
+      "wall_seconds": 4.929271567000001
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.final_closure.integration_runtime.published"
+      ],
+      "exit": 0,
+      "log_sha256": "14987f5f60d90c0bad28930321de4f65f929bd4f2f236d495d0b42207c2f4485",
+      "wall_seconds": 0.7371216660000073
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.campaign.validate_references"
+      ],
+      "exit": 0,
+      "log_sha256": "3a99c7be09c4f0d9e1ff2306fcd59de8bd509b29378161f09e78edbe2bbb01b0",
+      "wall_seconds": 2.3837835599999835
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/new_backgrounds/scripts/validate_references.py"
+      ],
+      "exit": 0,
+      "log_sha256": "39e014b2b8b0bfae92558b65621f402336e5a8625f3389b4d456199acb34e50c",
+      "wall_seconds": 4.152198626999962
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/mg5/scripts/validate_lhe.py",
+        "--background-library",
+        "."
+      ],
+      "exit": 0,
+      "log_sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "wall_seconds": 1.052744765
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/pythia8/scripts/validate_hepmc3.py",
+        "--repository",
+        "."
+      ],
+      "exit": 0,
+      "log_sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "wall_seconds": 2.1543183900000145
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "simulation/delphes/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit": 0,
+      "log_sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "wall_seconds": 4.854734909999991
+    }
+  ],
+  "scope": "Portable validators inspect retained historical evidence; no fresh shower, detector or ROOT production.",
+  "status": "PASS_143_TESTS_AND_7_VALIDATOR_COMMANDS",
+  "test_summary": "143 tests passed, including 8 STOP92 tests and both O0/O2 native scalar method matrices."
+}
