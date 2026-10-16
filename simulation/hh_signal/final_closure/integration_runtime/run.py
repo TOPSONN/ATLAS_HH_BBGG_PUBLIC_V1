@@ -11,7 +11,8 @@ from simulation.hh_signal.integration_audit.audit import save
 
 def check_build(root):
     root=safe_root(root);review=read_json(root/'review_build.json')
-    require(review['source_identity']==sources() and review['physics_contract_sha256']==PHYSICS_SHA,'REVIEWED_BUILD_SOURCE_DRIFT')
+    verify_source_binding(review)
+    require(review['physics_contract_sha256']==PHYSICS_SHA,'REVIEWED_BUILD_SOURCE_DRIFT')
     require([r['seed'] for r in review['replicas']]==list(SEEDS),'PREPARED_SEEDS_DRIFT')
     for r in review['replicas']:
         folder=root/f'replica_{r["seed"]}'
@@ -20,13 +21,17 @@ def check_build(root):
         for dep in r['dynamic_dependencies']:require(sha(dep['path'])==dep['sha256'],'SHARED_LIBRARY_DRIFT:'+dep['name'])
     return review
 
+def require_fresh_attempt(root):
+    require(not (root/'execution_receipt.json').exists(),'FAILED_OR_COMPLETED_CAMPAIGN_MUST_NOT_RESTART')
+    require(not (root/'review_failure.json').exists(),'STOPPED_ATTEMPT_IMMUTABLE_REQUIRES_SEPARATE_OUTPUT_REVIEW')
+
 def execute_reviewed(root,revision):
     # Human approval is a prerequisite verified outside files/flags/env. This
     # function is not called by review preparation or any positive native test.
     binding=check_revision(revision);root=safe_root(root);review=check_build(root)
     published=read_json(HERE/'evidence/executable_review.json')
     require(identity(review)==published['local_review_build_identity'],'EDITABLE_LOCAL_BUILD_CANNOT_REPLACE_REVIEWED_EXECUTABLE')
-    require(not (root/'execution_receipt.json').exists(),'FAILED_OR_COMPLETED_CAMPAIGN_MUST_NOT_RESTART')
+    require_fresh_attempt(root)
     lock_path=Path.home()/'simulations/hh_final_closure/.physical_integral_campaign.lock'
     lock_path.parent.mkdir(parents=True,exist_ok=True)
     lockfile=lock_path.open('a')
@@ -115,8 +120,10 @@ def main(argv=None):
         return 0 if r.get('status') not in ['PARTIAL_NO_REPLACEMENT'] else 2
     except Exception as exc:
         out=safe_root(a.output)
-        if out.exists() and not (out/'execution_receipt.json').exists():
-            save(out/'review_failure.json',{'status':'FAILED_REVIEW_NO_PHYSICAL_DISPATCH','reason':str(exc),'new_ME_calls':0,'new_integrals':0})
+        if out.exists() and not (out/'execution_receipt.json').exists() and not (out/'review_failure.json').exists():
+            failure={'status':'FAILED_REVIEW_NO_PHYSICAL_DISPATCH','reason':str(exc),'new_ME_calls':0,'new_integrals':0}
+            if hasattr(exc,'diagnostics'):failure['bounded_git_preflight_diagnostics']=exc.diagnostics
+            save(out/'review_failure.json',failure)
         zero=None if (out/'execution_receipt.json').exists() else 0
         print(json.dumps({'status':'BLOCKED_NATIVE_RUNTIME','reason':str(exc),'new_ME_calls':zero,'new_integrals':zero}));return 2
 

@@ -5,6 +5,8 @@ from unittest.mock import patch
 from .contract import *
 from .containment import Budget,StageFailure,capability,supervise
 from .validate import seed_pair,summarize,validate_stage
+# Include the recovery fixtures in the existing CI method-test entry point.
+from .test_git_precheck import GitPrecheckTests, FrozenInputGuards
 
 class RuntimeMethods(unittest.TestCase):
     def work(self,root):

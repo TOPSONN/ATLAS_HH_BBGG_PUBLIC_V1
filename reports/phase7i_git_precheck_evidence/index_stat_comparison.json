@@ -1,0 +1,244 @@
+{
+  "index_version": 2,
+  "tracked": 1202,
+  "mismatch_counts": {
+    "ctime_sec": 550,
+    "dev": 1202,
+    "ino": 1202,
+    "uid": 1202,
+    "gid": 1202
+  },
+  "flags": {},
+  "sample": [
+    {
+      "path": ".gitattributes",
+      "differing_stat_fields": [
+        "ctime_sec",
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1791454218,
+        481456100,
+        1791889096,
+        228377300,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1298
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 817783,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1298
+      }
+    },
+    {
+      "path": ".github/workflows/delphes_reference_samples.yml",
+      "differing_stat_fields": [
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1791886581,
+        273092500,
+        1791886581,
+        274091200,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1733
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 530463,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1733
+      }
+    },
+    {
+      "path": ".github/workflows/heavy_flavour_forensics.yml",
+      "differing_stat_fields": [
+        "ctime_sec",
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1791951442,
+        784976700,
+        1791951867,
+        67930800,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        2503
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 614796,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 2503
+      }
+    },
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "differing_stat_fields": [
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1792037998,
+        4054400,
+        1792037998,
+        4054400,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1417
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 98878,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1417
+      }
+    },
+    {
+      "path": ".github/workflows/hh_signal_config_lock.yml",
+      "differing_stat_fields": [
+        "ctime_sec",
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1792055082,
+        209480900,
+        1792061444,
+        852028100,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1612
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 1461855,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1612
+      }
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "differing_stat_fields": [
+        "ctime_sec",
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1792061445,
+        244868200,
+        1792119306,
+        694413300,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1907
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 1465190,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1907
+      }
+    },
+    {
+      "path": ".github/workflows/hh_signal_integration_audit.yml",
+      "differing_stat_fields": [
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1792052091,
+        936753800,
+        1792052091,
+        936753800,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1141
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 1461285,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1141
+      }
+    },
+    {
+      "path": ".github/workflows/hh_signal_matched_integration.yml",
+      "differing_stat_fields": [
+        "ctime_sec",
+        "dev",
+        "ino",
+        "uid",
+        "gid"
+      ],
+      "index_stat": [
+        1792058026,
+        550106900,
+        1792061445,
+        49534700,
+        0,
+        0,
+        33188,
+        0,
+        0,
+        1816
+      ],
+      "worktree_stat": {
+        "dev_low32": 67,
+        "ino_low32": 1463000,
+        "uid": 1000,
+        "gid": 1000,
+        "size": 1816
+      }
+    }
+  ],
+  "strace_available": null
+}

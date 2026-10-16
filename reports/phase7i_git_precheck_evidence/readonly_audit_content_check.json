@@ -1,0 +1,12 @@
+{
+  "status": "PASS_THREE_FOCUSED_TESTS",
+  "observed_first_audit_error": "HISTORICAL_BLOB_CHANGED:.gitattributes",
+  "cause": "diff.autoRefreshIndex=false exposes stat-only candidates; exact source bytes were unchanged.",
+  "correction": "Compare exact bytes, then read-only Git canonical hash (no -w), before accepting only the existing explicitly allowed compatibility edit.",
+  "regression_cases": [
+    "stat-only exact bytes",
+    "canonical line endings without writes",
+    "actual historical content change rejected"
+  ],
+  "index_or_config_repair_performed": false
+}

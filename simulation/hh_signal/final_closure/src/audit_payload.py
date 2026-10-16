@@ -8,7 +8,8 @@ from simulation.hh_signal.config_lock.audit_payload import manifest_assets as f_
 from simulation.hh_signal.matched_integration.audit_payload import manifest_assets as g_manifest
 PREFIXES=('simulation/hh_signal/final_closure/','simulation/hh_signal/semantics_recovery/',
     'reports/phase7h_','reports/phase7i_','reports/phase7j_','reports/phase7k_','reports/phase7l_',
-    'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml')
+    'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml',
+    'metadata/phase7i_git_precheck_recovery.json')
 PATCHES={
  'simulation/hh_signal/campaign/audit_payload.py':(
   "         'reports/phase7g_','metadata/phase7g_','.github/workflows/hh_signal_matched_integration.yml')\n",
@@ -25,7 +26,14 @@ PATCHES={
 
 def compatibility(path,before,after):
     require(path in PATCHES,'HISTORICAL_BLOB_CHANGED:'+path);old,new=[s.encode() for s in PATCHES[path]]
-    require(before.count(old)==1 and after==before.replace(old,new),'ONLY_DECLARED_CI_COMPATIBILITY_EDIT:'+path)
+    expected=before.replace(old,new)
+    variants=[expected]
+    if path=='simulation/hh_signal/campaign/audit_payload.py':
+        tail=b"         'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml')\n"
+        added=b"         'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml',\n         'metadata/phase7i_git_precheck_recovery.json')\n"
+        require(expected.count(tail)==1,'RECOVERY_SCOPE_PATCH_BASE')
+        variants.append(expected.replace(tail,added))
+    require(before.count(old)==1 and after in variants,'ONLY_DECLARED_CI_COMPATIBILITY_EDIT:'+path)
 
 def manifest_assets(t):
     parent='simulation/hh_signal/final_closure/evidence/';name=parent+'manifest.json'
@@ -36,6 +44,14 @@ def manifest_assets(t):
         data=git('cat-file','blob',t[path]);declared.add(path)
         require(len(data)==row['bytes'] and hashlib.sha256(data).hexdigest()==row['sha256'],'CLOSURE_EVIDENCE_BLOB_DRIFT:'+path)
     require({p for p in t if p.startswith(parent) and p!=name}==declared,'CLOSURE_EVIDENCE_FILE_SET')
+
+def worktree_compatibility(path,oid):
+    before=git('cat-file','blob',oid);current=(REPO/path).read_bytes()
+    if current==before:return
+    # With diff.autoRefreshIndex=false Git can list a stat-only mismatch.
+    # Compare canonical Git content without -w, index refresh or object writes.
+    if git('hash-object','--path='+path,path).decode().strip()==oid:return
+    compatibility(path,before,current)
 
 def audit():
     base=tree(BASE);revs=git('rev-list','--reverse',BASE+'..HEAD').decode().splitlines();index={};seen=set()
@@ -54,7 +70,7 @@ def audit():
             scan(path,git('cat-file','blob',oid));seen.add((path,oid))
         reference_manifests(t);evidence_manifests(t);f_manifest(t);g_manifest(t);manifest_assets(t)
     for path in git('diff','--name-only',BASE).decode().splitlines():
-        if path in base:compatibility(path,git('cat-file','blob',base[path]),(REPO/path).read_bytes())
+        if path in base:worktree_compatibility(path,base[path])
     return {'status':'PASS_EVERY_OUTGOING_COMMIT_AND_INDEX','base_head':BASE,'snapshots':len(revs)+1,
         'baseline_blobs':len(base),'new_blobs_scanned':len(seen),'historical_scientific_blobs_changed':0,
         'exact_CI_compatibility_edits':list(PATCHES),'new_PDF_PNG_physical_samples':0}

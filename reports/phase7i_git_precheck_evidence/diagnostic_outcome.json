@@ -1,0 +1,35 @@
+{
+  "status": "PROBES_COMPLETE_WITH_DETECTED_INDEX_STAT_CACHE_WRITE",
+  "diagnostic_script_exit": 1,
+  "assertion": "READ_ONLY_DIAGNOSIS_CHANGED_INDEX",
+  "index_before": {
+    "sha256": "b21c3f160c07924f6bdba6aaead77fb2578cfb69bee3e02028542883a4fe3e18",
+    "bytes": 155602,
+    "mtime_ns": 1792128702631371700
+  },
+  "index_after": {
+    "sha256": "cecd312cb1a30f9c46948f2fa87d88450b66e6d4ebf5fa25b555c6df305dbb41",
+    "bytes": 155602,
+    "mtime_ns": 1792129171617888100,
+    "first_entry_stat": [
+      1791889096,
+      228377300,
+      1791889096,
+      228377300,
+      67,
+      817783,
+      33188,
+      1000,
+      1000,
+      1298
+    ],
+    "diagnosis": "Index changed during nominally read-only probes; no attribution yet. Probe timing variability is confounded and preserved.",
+    "no_repair_or_reset_performed": true
+  },
+  "attribution": "The requested git diff --name-only probe in installed Git2.43.0 refreshed the stat cache despite GIT_OPTIONAL_LOCKS=0. Its completion aligns with index mtime; isolated fixture reproduces this behavior.",
+  "consequence": "Later fast timings use refreshed Linux stat metadata; they are not evidence that the unchanged30-second guard is reliably fixed.",
+  "tracked_index_content_changed": false,
+  "index_repair_or_reset_performed": false,
+  "source_reference": "https://github.com/git/git/blob/v2.43.0/builtin/diff.c#L222-L234",
+  "future_read_only_diff_policy": "Use a per-invocation diff.autoRefreshIndex=false override for review/audit commands. No persistent config mutation. Runtime precheck itself uses status, not diff."
+}

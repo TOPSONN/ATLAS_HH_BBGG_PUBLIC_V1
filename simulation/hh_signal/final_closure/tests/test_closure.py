@@ -57,4 +57,25 @@ class Closure(unittest.TestCase):
             controller.main(['corrected-signal','--output','invalid','--events','10000'])
         self.assertEqual(r.exception.code,2)
 
+class ReadOnlyAuditContent(unittest.TestCase):
+    def check(self,current,canonical,oid,hash_result=None):
+        from ..src import audit_payload as a
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'.gitattributes').write_bytes(current)
+            def git(*args):
+                if args[0]=='cat-file':return canonical
+                self.assertEqual(args,('hash-object','--path=.gitattributes','.gitattributes'))
+                self.assertNotIn('-w',args)
+                return (hash_result+'\n').encode()
+            with patch.object(a,'REPO',root),patch.object(a,'git',side_effect=git) as calls:
+                a.worktree_compatibility('.gitattributes',oid)
+                return calls.call_count
+    def test_stat_only_false_positive_accepts_exact_bytes_without_refresh(self):
+        self.assertEqual(self.check(b'METHOD_ONLY\n',b'METHOD_ONLY\n','a'*40),1)
+    def test_canonical_line_endings_use_read_only_hash(self):
+        self.assertEqual(self.check(b'METHOD_ONLY\r\n',b'METHOD_ONLY\n','a'*40,'a'*40),2)
+    def test_actual_historical_content_change_is_rejected(self):
+        with self.assertRaisesRegex(ValueError,'HISTORICAL_BLOB_CHANGED'):
+            self.check(b'MODIFIED\n',b'ORIGINAL\n','a'*40,'b'*40)
+
 if __name__=='__main__':unittest.main()
