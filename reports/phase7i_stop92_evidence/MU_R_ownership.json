@@ -1,0 +1,40 @@
+{
+  "matches": [
+    {
+      "line": 1,
+      "path": "Source/param_card.inc",
+      "text": "MU_R = 9.118800D+01"
+    },
+    {
+      "line": 193,
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "text": "MU_R=SQRTS"
+    },
+    {
+      "line": 121,
+      "path": "SubProcesses/PV0_0_1_gg_hh/f2py_wrapper.f",
+      "text": "CALL UPDATE_AS_PARAM2(SCALE2, ALPHAS)"
+    },
+    {
+      "line": 1801,
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "text": "WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "line": 1917,
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "text": "WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "line": 91,
+      "path": "Source/MODEL/couplings.f",
+      "text": "IF (MU_R2.GT.0D0) MU_R = DSQRT(MU_R2)"
+    },
+    {
+      "line": 8,
+      "path": "Source/MODEL/param_write.inc",
+      "text": "WRITE(*,*) 'MU_R = ', MU_R"
+    }
+  ],
+  "scope": "Frozen .f/.inc source search; no dispatch or new physical observation."
+}
