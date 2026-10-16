@@ -1,0 +1,21 @@
+{
+  "actual_integral_stages_completed": 0,
+  "frozen_native_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "historical_campaign": {
+    "files": 8420,
+    "logical_bytes": 752305317,
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY"
+  },
+  "new_stopped_inventory_identity": "6f00d59c8a9dc36ed262091f2a5a7b2ffb7e4edf2ffdf0f3961f848c8a021999",
+  "new_stopped_output_files": 3501,
+  "new_stopped_receipt_sha256": "c263adf18b77b16d9322cc71cd379e709cc7ee25d1408715a1a42e3c2fd198e4",
+  "old_failure_receipt_sha256": "a68d27baf2a23f3a850a4cf683682eb56029cdd60e6bb7b0da2e2ea0b2b1d11e",
+  "original_prepared_files_unchanged": 3493,
+  "previous_stopped_files": 3603,
+  "previous_stopped_inventory_identity": "5164541051b85a11d8ebe94c43373da88f9a2c43490a055e6afc450887c23d16",
+  "status": "PASS_FULL_HISTORICAL_AND_FROZEN_PRESERVATION",
+  "stopped_output_reuse_guards": {
+    "new_stopped": "FAILED_OR_COMPLETED_CAMPAIGN_MUST_NOT_RESTART",
+    "previous_stopped": "STOPPED_ATTEMPT_IMMUTABLE_REQUIRES_SEPARATE_OUTPUT_REVIEW"
+  }
+}
