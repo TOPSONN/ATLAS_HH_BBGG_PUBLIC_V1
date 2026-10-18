@@ -1,0 +1,496 @@
+{
+  "C_flags": [
+    "-O0"
+  ],
+  "Fortran_flags": [
+    "-O0",
+    "-w",
+    "-std=legacy",
+    "-ffixed-line-length-none",
+    "-ffree-line-length-none"
+  ],
+  "base_revision": "4b1635073b6b1cd3096ee268a3c7858dea3da3b1",
+  "build_approval": false,
+  "builder_candidate_sha256": "e74ee57c747e1a7d744a143789e7ee1fc15d5dde10ff41880ce1c454b32241c2",
+  "builder_original_sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+  "ceilings": {
+    "additional_disk_bytes": 5368709120,
+    "aggregate_CPU_seconds": 14400,
+    "aggregate_wall_seconds": 14400,
+    "jobs": 1,
+    "permanent_physical_LHE_records": 0,
+    "seeds": [
+      910001,
+      910019,
+      910037,
+      910061
+    ],
+    "workers": 1
+  },
+  "compiler_linker_identity": [
+    {
+      "name": "x86_64-conda-linux-gnu-gfortran",
+      "sha256": "7564cac4a7d02785e005665954fc981338b200686ab9b8bfe6df15da0f2cc1f3"
+    },
+    {
+      "name": "x86_64-conda-linux-gnu-gcc",
+      "sha256": "7527e73d0f0d8a45d75064e17fcee58eb839afc2cca4b72c3e390621e2377e97"
+    },
+    {
+      "name": "x86_64-conda-linux-gnu-ld",
+      "sha256": "783ccaf764e4f538e4abb045199053a722ec5368ebff5afe4a72f53f2447532a"
+    }
+  ],
+  "dynamic_dependencies_must_be_measured_after_actual_build": true,
+  "fresh_workspace": "New never-used hh_final_closure child directory, regular files/no symlinks; require independent review of complete receipt identity before restart.",
+  "frozen_card_identities": [
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/MG5_banner.json",
+      "seed": 910001,
+      "sha256": "4976e842ebf93902c5d3c81af913d6e5cc1f3274f8114781a38a11e015e10997"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/embedded_run_card.dat",
+      "seed": 910001,
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/param_card.dat",
+      "seed": 910001,
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/reviewed_run_card.dat",
+      "seed": 910001,
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/run_card.inc",
+      "seed": 910001,
+      "sha256": "25694156d527210464b1549e03ffea6ca0b84a2d7b16ef3d64d363f0aeae8830"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/working_run_card.dat",
+      "seed": 910001,
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/MG5_banner.json",
+      "seed": 910019,
+      "sha256": "d387bf6e319083212720c8c374c97e8225fabe23f52c210ef8b02989cb5c5d65"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/embedded_run_card.dat",
+      "seed": 910019,
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/param_card.dat",
+      "seed": 910019,
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/reviewed_run_card.dat",
+      "seed": 910019,
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/run_card.inc",
+      "seed": 910019,
+      "sha256": "bc87d36da307391a68ac46cb50c7548f48a0aca8b2c1c1c7527583b67279f0f4"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/working_run_card.dat",
+      "seed": 910019,
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/MG5_banner.json",
+      "seed": 910037,
+      "sha256": "7b294afd2f6cc4ccb8ebbc0d262582a743d64284ffc1841d3d7bfbc7184c6d4f"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/embedded_run_card.dat",
+      "seed": 910037,
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/param_card.dat",
+      "seed": 910037,
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/reviewed_run_card.dat",
+      "seed": 910037,
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/run_card.inc",
+      "seed": 910037,
+      "sha256": "9bc3ba685995d272d1dce201d24bbed97892762542bb6c5a5aa84b54075603b5"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/working_run_card.dat",
+      "seed": 910037,
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/MG5_banner.json",
+      "seed": 910061,
+      "sha256": "5bf9dda22dbcddb1a0e929d3f087d6d560d7e2afd219bb0d02ad00590aee4c65"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/embedded_run_card.dat",
+      "seed": 910061,
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/param_card.dat",
+      "seed": 910061,
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/reviewed_run_card.dat",
+      "seed": 910061,
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/run_card.inc",
+      "seed": 910061,
+      "sha256": "96f890eff2b461f633aaf278ad0658e19bea5a93b82403553329bd1892a1db6c"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/working_run_card.dat",
+      "seed": 910061,
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff"
+    }
+  ],
+  "frozen_process_dependencies": [
+    {
+      "path": "Source/MODEL/actualize_mp_ext_params.inc",
+      "sha256": "4108b4fb1f82d348413a9f7f777eb94537061f7ccf339d7d23f30f4f835676ac"
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf"
+    },
+    {
+      "path": "Source/MODEL/coupl_write.inc",
+      "sha256": "66bbc4f02ef188062992a54bcae96e10670ebe4e918b9a3002fa1f46ac8960ed"
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "sha256": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a"
+    },
+    {
+      "path": "Source/MODEL/couplings1.f",
+      "sha256": "07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18"
+    },
+    {
+      "path": "Source/MODEL/couplings2.f",
+      "sha256": "f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b"
+    },
+    {
+      "path": "Source/MODEL/formats.inc",
+      "sha256": "1d0c8b3a81b5c4ed3cc50e16edc2d7fa09fa2c2694b9eef3790bff2abc42c3a3"
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "sha256": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49"
+    },
+    {
+      "path": "Source/MODEL/intparam_definition.inc",
+      "sha256": "b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97"
+    },
+    {
+      "path": "Source/MODEL/lha_read.f",
+      "sha256": "fd51c4686981abedbf62153ee537e7dec01a138dd9a560f39303b851f99d6ae0"
+    },
+    {
+      "path": "Source/MODEL/makeinc.inc",
+      "sha256": "6debc7d36db0890fbf27cbcc98d3e9ac586458abf7cd36496f11eba3f0d514c6"
+    },
+    {
+      "path": "Source/MODEL/model_functions.f",
+      "sha256": "a9678291451097495295fb6f894f3fd4c162addca0844f82393db59b69bc981e"
+    },
+    {
+      "path": "Source/MODEL/model_functions.inc",
+      "sha256": "be48cc65d552043c1569e2144501aa3d1c16e69834f20090aceca8ea818bb58f"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f"
+    },
+    {
+      "path": "Source/MODEL/mp_couplings2.f",
+      "sha256": "23096354c99ec3fb224622190da27044e554a305bb95a2f5a51bf92adeacd732"
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "sha256": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382"
+    },
+    {
+      "path": "Source/MODEL/mp_intparam_definition.inc",
+      "sha256": "7fc271a8e1bff7695802922ab343d5961a0f04f83afb5143aa39afeb25404c39"
+    },
+    {
+      "path": "Source/MODEL/param_read.inc",
+      "sha256": "a14a19f2379f69375eea63dfa4c34319f2681e9e037fc4088ec39a7978568cbc"
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "sha256": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc"
+    },
+    {
+      "path": "Source/MODEL/printout.f",
+      "sha256": "c765cbd47475c2c8ca3e229691373124a01f13c775ccd603625e5bf2aadb82c7"
+    },
+    {
+      "path": "Source/MODEL/rw_para.f",
+      "sha256": "8036384b285c6675b96d7c36227e2370d9e703f54e0eaae05064d4056beaf041"
+    },
+    {
+      "path": "Source/MODEL/testprog.f",
+      "sha256": "7570c7961bd45365561047df5a3bd0c529204fb03f4e3562680d3b90e0042c89"
+    },
+    {
+      "path": "Source/alfas_functions.f",
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d"
+    },
+    {
+      "path": "Source/param_card.inc",
+      "sha256": "d513695afb685295b4091f7d64076cc6005f093a8bc696a421c7529ea69d5567"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig1.f",
+      "sha256": "f99900fdb49cdcf87908b528d1ae95ad6eff7b3e3c4739c0e5976bb12c82b61d"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cuts.f",
+      "sha256": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/matrix1.f",
+      "sha256": "c1c6334e218931430e39853ba9914ee418b454256a5379b67ecbc248b39f926a"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/setscales.f",
+      "sha256": "6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "sha256": "49df5ace9539692e27e17db7dcc98f764361b1babe931bd157edddfc457376c3"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopCommons.f",
+      "sha256": "2fd448da6df73baea648d09809b7d98f350f2bdaf8f3f5bc3e9a7d46bd8db122"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopParamReader.f",
+      "sha256": "bd71b67f62ea2d244c303095ba6c207acaed15f04fdcbc116b4d643741fcdcfc"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopParams.inc",
+      "sha256": "8935257f9f7d6eb89ebcf783672f189bbaaa21f87006d7f8c3c3700909ed0bc0"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/TIR_interface.f",
+      "sha256": "59f5cfb9bbe96a5a93f8a962f93b906b62ac2d5447c564ae70e2cbf0f5ad493b"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "sha256": "ac0b88587555884afed1a1e426ceb51f921d39dac0bb7a4785ad8d6c2cbf84df"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "sha256": "7c3205f5426a8e4c819c32ea100dfde543366b9bf085da8578b508fa5eff98cc"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_specs.inc",
+      "sha256": "29b2b6762f337b47d7bb8c145b162e0c9862ef3db2446a4382be23ee21f369d2"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/compute_color_flows.f",
+      "sha256": "a2e0795e20c618b8ef1f2f2b69a48431d93172ab79fe68fc0d0ea6af82674620"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/f2py_wrapper.f",
+      "sha256": "e6373edda6c9f947cc8d9878772061aac379c8a30544cb48c1f718956775cb8b"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/global_specs.inc",
+      "sha256": "5eb5044d09d93463d1513a9c9984af5bf17329d56805e22c3cba88d46938f1f4"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "sha256": "820acd9d760cf1d947a8186ecc0f3d9eea9c16bbae832ff9784ff0f454ec91d8"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/improve_ps.f",
+      "sha256": "f266ee1e4fb25baca4e0d7db7e622cb60ab3ef1e17f8bd4668595000bb895bfa"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "sha256": "92e72cfd43e952e9f58d0add9f2a75a71f67ab2ba0ff1c82da1e648ae7b051fa"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "sha256": "88734bc758b5a99b94729089345fb4f7d9125984fad4f20a1c8696b220192a45"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_max_coefs.inc",
+      "sha256": "1dca06ff691666dab8f666692137cd040e407c276417611d5fcc744f5f82f19d"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_num.f",
+      "sha256": "bedb60fdf54ca7189e8c04b16f3a13720f19e4876d5a82e8fb93baa0c74c0276"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "sha256": "e53133a98a6b6f9948f64ad99562b600c22fa95babbfd46cf13c4915550c80db"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "sha256": "beaf07a9fdba9f22a5d1e06444b27afd7d2f6e798d1e03f36310f047cb27a3c5"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "sha256": "e92ad464d5837b4c70fb1f163246e66ac8da2836388566e594ef6debd6c76482"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/nexternal.inc",
+      "sha256": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/ngraphs.inc",
+      "sha256": "0ac4e610682a658873bf8f20da3b8304a4d95211ee473534c49d675793979c03"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/nsquaredSO.inc",
+      "sha256": "39a4a2d2392d3c4975b88951d0a3e4c86e3c626fe5b0846fb29350301a389bdf"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/pmass.inc",
+      "sha256": "03fc80bf3ad07d425359321f62edf27a31257671637f1955a8d908f22ce32a23"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/polynomial.f",
+      "sha256": "3ce0acc19111d74349455b3342f43e9a51984d4296497181dc52c0f57d8ee0fa"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/process_info.inc",
+      "sha256": "a2163706175ae47c77e94b49ffd225a0335bed2f42f67185fd104f817719d920"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/tir_cache_size.inc",
+      "sha256": "5ed4c7283a063b349e3bf7b1368056c45ca979fd9afef0ccf0a14bd192dcb398"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/unique_id.inc",
+      "sha256": "d60a49c61df4c28973b15a4f965abf3b8fd524c9f59fa91b630abdae15124a2e"
+    },
+    {
+      "path": "lib/libMadLoop.a",
+      "sha256": "c5ed0d827976660884d0b74c3602977386db041d1de7c2ddc26c1fc83db8dc36"
+    },
+    {
+      "path": "lib/libcts.a",
+      "sha256": "d9f85d8861e5ce0d28d0615b47790d73fdfba2320a7587a65004dbbe0a9d7e04"
+    },
+    {
+      "path": "lib/libiregi.a",
+      "sha256": "4b20ae7649e00994c3754d162f4ac42685ba65eebd683d0c74c8df5429ab1ad8"
+    },
+    {
+      "path": "lib/libdhelas.a",
+      "sha256": "bfcf5b636c8201eba3fc967bcb96086d060fc8d179b4f40168c2d9f0a6b0ae68"
+    },
+    {
+      "path": "lib/libdsample.a",
+      "sha256": "47693555d06159654a48eb089aa9315a71710c809cc0d1fb78e2221fd24ff0ea"
+    },
+    {
+      "path": "lib/libmodel.a",
+      "sha256": "61efcde1c8ded73c86a6e663db8001b41cf4c8675364bcfc5d3d73c696ae6204"
+    },
+    {
+      "path": "lib/libgeneric.a",
+      "sha256": "d3a4a9c2cbf2d3df643f7a2f384f72db4d18c6586fa8a8250134d9d80860d668"
+    },
+    {
+      "path": "lib/libpdf.a",
+      "sha256": "2f732c3fa42b5bbb644ddbf3f217c307a1dd2d7c74879b56b641e63a94710871"
+    },
+    {
+      "path": "lib/libgammaUPC.a",
+      "sha256": "a1febd61e1bc705334639f8a4c318e4084607aa30d8c30baacf54e09c3303f1c"
+    },
+    {
+      "path": "lib/libcernlib.a",
+      "sha256": "5f4b1ec8f3379390704424ec044135b127d6a2552df2806698a2dc64cb5d20fa"
+    },
+    {
+      "path": "lib/libbias.a",
+      "sha256": "5010c05ce2882547b7a0cc72a3c8e8618b4dc63836b5c2bb4d335b1360f3fa42"
+    }
+  ],
+  "future_receipt_schema": "HH_ROUTE_A_GUARD_BUILD_REVIEW_V1",
+  "legacy_frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "link_libraries": [
+    "MadLoop",
+    "cts",
+    "iregi",
+    "dhelas",
+    "dsample",
+    "model",
+    "generic",
+    "pdf",
+    "gammaUPC",
+    "cernlib",
+    "bias",
+    "stdc++"
+  ],
+  "model_MU_R_role": "Independent positive dimensional-regularization reference, fixed by frozen generated model to91.188 GeV; no new synchronization API.",
+  "native_guard_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+  "original_guard_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+  "overlay_order": [
+    "Pinned B100 process/library clone",
+    "Existing seven-file observer/anonymous-I/O overlay",
+    "Verify exact finite-LO model/loop/library context",
+    "Verify frozen reviewed cards",
+    "Write corrected guard into fresh subprocess tree",
+    "Compile/link corrected guard in place of old guard",
+    "Zero-ME initialization/denied-entry preflights only",
+    "Freeze new files/dependencies/receipt"
+  ],
+  "physical_restart_approval": false,
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "primary_theory_reference": {
+    "claim": "Finite loop-induced amplitudes need R2 but no UV counterterms; regulator-scale prefactor drops out and renormalization-scale dependence enters through alpha_s running.",
+    "locator": "section2.1 and printed page27 footnote16",
+    "url": "https://arxiv.org/pdf/1507.00020"
+  },
+  "production_build_executed": false,
+  "route": "A_FINITE_LO_NO_BORN_ONLY",
+  "schema": "PHASE7I_GUARD_BUILD_REVIEW_CONTRACT_V1",
+  "source_binding_migration": "New receipt includes full native+guard+builder+contract source identities. Existing reader rejects this new identity. Before any physical authorization, separately review reader migration to validate the new schema and actual files; never rebind old receipt.",
+  "source_revision": "CONTAINING_COMMIT_REQUIRES_SEPARATE_BUILD_APPROVAL",
+  "status": "SOURCE_PROPOSAL_ONLY_BUILD_AND_RESTART_NOT_AUTHORIZED"
+}

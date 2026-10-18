@@ -13,7 +13,9 @@ ALLOWED=('simulation/hh_signal/','reports/phase7a_','reports/phase7b','reports/p
          'reports/phase7h_','reports/phase7i_','reports/phase7j_','reports/phase7k_','reports/phase7l_',
          'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml',
          'metadata/phase7i_git_precheck_recovery.json',
-         'metadata/phase7i_stop92_diagnostic_status.json')
+         'metadata/phase7i_stop92_diagnostic_status.json',
+         'metadata/phase7i_guard_correction_status.json',
+         'metadata/phase7i_builder_review_contract.json')
 
 def git(*args):
     # Read-only audits must not refresh/write the shared Windows/WSL index.

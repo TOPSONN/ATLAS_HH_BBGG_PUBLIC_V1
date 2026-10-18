@@ -1,0 +1,1398 @@
+FILE Source/MODEL/couplings1.f SHA256 07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      SUBROUTINE COUP1()
+6:
+7:      IMPLICIT NONE
+8:      INCLUDE 'model_functions.inc'
+9:
+10:      DOUBLE PRECISION PI, ZERO
+11:      PARAMETER  (PI=3.141592653589793D0)
+12:      PARAMETER  (ZERO=0D0)
+13:      INCLUDE 'input.inc'
+14:      INCLUDE 'coupl.inc'
+15:      REAL*16 MP__PI, MP__ZERO
+16:      PARAMETER (MP__PI=3.1415926535897932384626433832795E0_16)
+17:      PARAMETER (MP__ZERO=0E0_16)
+18:      INCLUDE 'mp_input.inc'
+19:      INCLUDE 'mp_coupl.inc'
+20:
+21:      GC_30 = -6.000000D+00*MDL_COMPLEXI*MDL_LAM*MDL_V
+22:      MP__GC_30 = -6.000000E+00_16*MP__MDL_COMPLEXI*MP__MDL_LAM
+23:     $ *MP__MDL_V
+24:      GC_33 = -((MDL_COMPLEXI*MDL_YB)/MDL_SQRT__2)
+25:      MP__GC_33 = -((MP__MDL_COMPLEXI*MP__MDL_YB)/MP__MDL_SQRT__2)
+26:      GC_37 = -((MDL_COMPLEXI*MDL_YT)/MDL_SQRT__2)
+27:      MP__GC_37 = -((MP__MDL_COMPLEXI*MP__MDL_YT)/MP__MDL_SQRT__2)
+28:      END
+FILE Source/MODEL/couplings2.f SHA256 f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      SUBROUTINE COUP2()
+6:
+7:      IMPLICIT NONE
+8:      INCLUDE 'model_functions.inc'
+9:
+10:      DOUBLE PRECISION PI, ZERO
+11:      PARAMETER  (PI=3.141592653589793D0)
+12:      PARAMETER  (ZERO=0D0)
+13:      INCLUDE 'input.inc'
+14:      INCLUDE 'coupl.inc'
+15:      GC_5 = MDL_COMPLEXI*G
+16:      R2_GGHB = 4.000000D+00*(-((MDL_COMPLEXI*MDL_YB)/MDL_SQRT__2))
+17:     $ *(1.000000D+00/2.000000D+00)*(MDL_G__EXP__2/(8.000000D+00*PI**2)
+18:     $ )*MDL_MB
+19:      R2_GGHT = 4.000000D+00*(-((MDL_COMPLEXI*MDL_YT)/MDL_SQRT__2))
+20:     $ *(1.000000D+00/2.000000D+00)*(MDL_G__EXP__2/(8.000000D+00*PI**2)
+21:     $ )*MDL_MT
+22:      R2_GGHHB = 4.000000D+00*(-MDL_YB__EXP__2/2.000000D+00)
+23:     $ *(1.000000D+00/2.000000D+00)*((MDL_COMPLEXI*MDL_G__EXP__2)
+24:     $ /(8.000000D+00*PI**2))
+25:      R2_GGHHT = 4.000000D+00*(-MDL_YT__EXP__2/2.000000D+00)
+26:     $ *(1.000000D+00/2.000000D+00)*((MDL_COMPLEXI*MDL_G__EXP__2)
+27:     $ /(8.000000D+00*PI**2))
+28:      END
+FILE Source/MODEL/mp_couplings2.f SHA256 23096354c99ec3fb224622190da27044e554a305bb95a2f5a51bf92adeacd732
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      SUBROUTINE MP_COUP2()
+6:
+7:      IMPLICIT NONE
+8:      INCLUDE 'model_functions.inc'
+9:      REAL*16 MP__PI, MP__ZERO
+10:      PARAMETER (MP__PI=3.1415926535897932384626433832795E0_16)
+11:      PARAMETER (MP__ZERO=0E0_16)
+12:      INCLUDE 'mp_input.inc'
+13:      INCLUDE 'mp_coupl.inc'
+14:
+15:      MP__GC_5 = MP__MDL_COMPLEXI*MP__G
+16:      MP__R2_GGHB = 4.000000E+00_16*(-((MP__MDL_COMPLEXI*MP__MDL_YB)
+17:     $ /MP__MDL_SQRT__2))*(1.000000E+00_16/2.000000E+00_16)
+18:     $ *(MP__MDL_G__EXP__2/(8.000000E+00_16*MP__PI**2))*MP__MDL_MB
+19:      MP__R2_GGHT = 4.000000E+00_16*(-((MP__MDL_COMPLEXI*MP__MDL_YT)
+20:     $ /MP__MDL_SQRT__2))*(1.000000E+00_16/2.000000E+00_16)
+21:     $ *(MP__MDL_G__EXP__2/(8.000000E+00_16*MP__PI**2))*MP__MDL_MT
+22:      MP__R2_GGHHB = 4.000000E+00_16*(-MP__MDL_YB__EXP__2/2.000000E
+23:     $ +00_16)*(1.000000E+00_16/2.000000E+00_16)*((MP__MDL_COMPLEXI
+24:     $ *MP__MDL_G__EXP__2)/(8.000000E+00_16*MP__PI**2))
+25:      MP__R2_GGHHT = 4.000000E+00_16*(-MP__MDL_YT__EXP__2/2.000000E
+26:     $ +00_16)*(1.000000E+00_16/2.000000E+00_16)*((MP__MDL_COMPLEXI
+27:     $ *MP__MDL_G__EXP__2)/(8.000000E+00_16*MP__PI**2))
+28:      END
+FILE Source/MODEL/couplings.f SHA256 68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:      SUBROUTINE COUP()
+6:
+7:      IMPLICIT NONE
+8:      DOUBLE PRECISION PI, ZERO
+9:      LOGICAL READLHA
+10:      PARAMETER  (PI=3.141592653589793D0)
+11:      PARAMETER  (ZERO=0D0)
+12:      INCLUDE 'model_functions.inc'
+13:      REAL*16 MP__PI, MP__ZERO
+14:      PARAMETER (MP__PI=3.1415926535897932384626433832795E0_16)
+15:      PARAMETER (MP__ZERO=0E0_16)
+16:      INCLUDE 'mp_input.inc'
+17:      INCLUDE 'mp_coupl.inc'
+18:
+19:      LOGICAL UPDATELOOP
+20:      COMMON /TO_UPDATELOOP/UPDATELOOP
+21:      INCLUDE 'input.inc'
+22:      INCLUDE 'coupl.inc'
+23:      READLHA = .TRUE.
+24:      INCLUDE 'intparam_definition.inc'
+25:      INCLUDE 'mp_intparam_definition.inc'
+26:
+27:      CALL COUP1()
+28:C     
+29:couplings needed to be evaluated points by points
+30:C     
+31:      CALL COUP2()
+32:      CALL MP_COUP2()
+33:
+34:      RETURN
+35:      END
+36:
+37:      SUBROUTINE UPDATE_AS_PARAM()
+38:
+39:      IMPLICIT NONE
+40:      DOUBLE PRECISION PI, ZERO
+41:      LOGICAL READLHA, FIRST
+42:      DATA FIRST /.TRUE./
+43:      SAVE FIRST
+44:      PARAMETER  (PI=3.141592653589793D0)
+45:      PARAMETER  (ZERO=0D0)
+46:      LOGICAL UPDATELOOP
+47:      COMMON /TO_UPDATELOOP/UPDATELOOP
+48:      INCLUDE 'model_functions.inc'
+49:      DOUBLE PRECISION GOTHER
+50:
+51:      DOUBLE PRECISION MODEL_SCALE
+52:      COMMON /MODEL_SCALE/MODEL_SCALE
+53:
+54:
+55:      INCLUDE '../maxparticles.inc'
+56:      INCLUDE '../cuts.inc'
+57:      INCLUDE '../run.inc'
+58:
+59:      DOUBLE PRECISION ALPHAS
+60:      EXTERNAL ALPHAS
+61:
+62:      INCLUDE 'input.inc'
+63:      INCLUDE 'coupl.inc'
+64:      READLHA = .FALSE.
+65:
+66:      INCLUDE 'intparam_definition.inc'
+67:
+68:
+69:
+70:C     
+71:couplings needed to be evaluated points by points
+72:C     
+73:      CALL COUP2()
+74:
+75:      RETURN
+76:      END
+77:
+78:      SUBROUTINE UPDATE_AS_PARAM2(MU_R2,AS2)
+79:
+80:      IMPLICIT NONE
+81:      DOUBLE PRECISION PI
+82:      PARAMETER  (PI=3.141592653589793D0)
+83:      DOUBLE PRECISION MU_R2, AS2
+84:      INCLUDE 'model_functions.inc'
+85:      INCLUDE 'input.inc'
+86:      INCLUDE 'coupl.inc'
+87:      DOUBLE PRECISION MODEL_SCALE
+88:      COMMON /MODEL_SCALE/MODEL_SCALE
+89:
+90:
+91:      IF (MU_R2.GT.0D0) MU_R = DSQRT(MU_R2)
+92:      MODEL_SCALE = DSQRT(MU_R2)
+93:      G = SQRT(4.0D0*PI*AS2)
+94:      AS = AS2
+95:
+96:      CALL UPDATE_AS_PARAM()
+97:
+98:
+99:      RETURN
+100:      END
+101:
+102:      SUBROUTINE MP_UPDATE_AS_PARAM()
+103:
+104:      IMPLICIT NONE
+105:      LOGICAL READLHA
+106:      INCLUDE 'model_functions.inc'
+107:      REAL*16 MP__PI, MP__ZERO
+108:      PARAMETER (MP__PI=3.1415926535897932384626433832795E0_16)
+109:      PARAMETER (MP__ZERO=0E0_16)
+110:      INCLUDE 'mp_input.inc'
+111:      INCLUDE 'mp_coupl.inc'
+112:
+113:      INCLUDE 'input.inc'
+114:      INCLUDE 'coupl.inc'
+115:      INCLUDE 'actualize_mp_ext_params.inc'
+116:      READLHA = .FALSE.
+117:      INCLUDE 'mp_intparam_definition.inc'
+118:
+119:
+120:C     
+121:couplings needed to be evaluated points by points
+122:C     
+123:      CALL MP_COUP2()
+124:
+125:      RETURN
+126:      END
+127:
+FILE Source/MODEL/intparam_definition.inc SHA256 b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97
+1:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+2:c      written by the UFO converter
+3:ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+4:
+5:C     Parameters that should not be recomputed event by event.
+6:C     
+7:      IF(READLHA) THEN
+8:
+9:        G = 2 * DSQRT(AS*PI)  ! for the first init
+10:
+11:        MDL_CONJG__CKM3X3 = 1.000000D+00
+12:
+13:        MDL_CKM22 = 1.000000D+00
+14:
+15:        MDL_LHV = 1.000000D+00
+16:
+17:        MDL_CONJG__CKM22 = 1.000000D+00
+18:
+19:        MDL_CKM3X3 = 1.000000D+00
+20:
+21:        MDL_CKM33 = 1.000000D+00
+22:
+23:        MDL_NCOL = 3.000000D+00
+24:
+25:        MDL_CA = 3.000000D+00
+26:
+27:        MDL_TF = 5.000000D-01
+28:
+29:        MDL_CF = (4.000000D+00/3.000000D+00)
+30:
+31:        MDL_COMPLEXI = DCMPLX(0.000000D+00,1.000000D+00)
+32:
+33:        MDL_MZ__EXP__2 = MDL_MZ**2
+34:
+35:        MDL_MZ__EXP__4 = MDL_MZ**4
+36:
+37:        MDL_SQRT__2 = SQRT(DCMPLX(2.000000D+00))
+38:
+39:        MDL_MH__EXP__2 = MDL_MH**2
+40:
+41:        MDL_NCOL__EXP__2 = MDL_NCOL**2
+42:
+43:        MDL_MB__EXP__2 = MDL_MB**2
+44:
+45:        MDL_MT__EXP__2 = MDL_MT**2
+46:
+47:        MDL_AEW = 1.000000D+00/AEWM1
+48:
+49:        MDL_MW = SQRT(DCMPLX(MDL_MZ__EXP__2/2.000000D+00
+50:     $   +SQRT(DCMPLX(MDL_MZ__EXP__4/4.000000D+00-(MDL_AEW*PI
+51:     $   *MDL_MZ__EXP__2)/(MDL_GF*MDL_SQRT__2)))))
+52:
+53:        MDL_SQRT__AEW = SQRT(DCMPLX(MDL_AEW))
+54:
+55:        MDL_EE = 2.000000D+00*MDL_SQRT__AEW*SQRT(DCMPLX(PI))
+56:
+57:        MDL_MW__EXP__2 = MDL_MW**2
+58:
+59:        MDL_SW2 = 1.000000D+00-MDL_MW__EXP__2/MDL_MZ__EXP__2
+60:
+61:        MDL_CW = SQRT(DCMPLX(1.000000D+00-MDL_SW2))
+62:
+63:        MDL_SQRT__SW2 = SQRT(DCMPLX(MDL_SW2))
+64:
+65:        MDL_SW = MDL_SQRT__SW2
+66:
+67:        MDL_G1 = MDL_EE/MDL_CW
+68:
+69:        MDL_GW = MDL_EE/MDL_SW
+70:
+71:        MDL_V = (2.000000D+00*MDL_MW*MDL_SW)/MDL_EE
+72:
+73:        MDL_V__EXP__2 = MDL_V**2
+74:
+75:        MDL_LAM = MDL_MH__EXP__2/(2.000000D+00*MDL_V__EXP__2)
+76:
+77:        MDL_YB = (MDL_YMB*MDL_SQRT__2)/MDL_V
+78:
+79:        MDL_YT = (MDL_YMT*MDL_SQRT__2)/MDL_V
+80:
+81:        MDL_YTAU = (MDL_YMTAU*MDL_SQRT__2)/MDL_V
+82:
+83:        MDL_MUH = SQRT(DCMPLX(MDL_LAM*MDL_V__EXP__2))
+84:
+85:        MDL_AXIALZUP = (3.000000D+00/2.000000D+00)*(-(MDL_EE*MDL_SW)
+86:     $   /(6.000000D+00*MDL_CW))-(1.000000D+00/2.000000D+00)*((MDL_CW
+87:     $   *MDL_EE)/(2.000000D+00*MDL_SW))
+88:
+89:        MDL_AXIALZDOWN = (-1.000000D+00/2.000000D+00)*(-(MDL_CW*MDL_EE)
+90:     $   /(2.000000D+00*MDL_SW))+(-3.000000D+00/2.000000D+00)*(
+91:     $   -(MDL_EE*MDL_SW)/(6.000000D+00*MDL_CW))
+92:
+93:        MDL_VECTORZUP = (1.000000D+00/2.000000D+00)*((MDL_CW*MDL_EE)
+94:     $   /(2.000000D+00*MDL_SW))+(5.000000D+00/2.000000D+00)*(-(MDL_EE
+95:     $   *MDL_SW)/(6.000000D+00*MDL_CW))
+96:
+97:        MDL_VECTORZDOWN = (1.000000D+00/2.000000D+00)*(-(MDL_CW*MDL_EE)
+98:     $   /(2.000000D+00*MDL_SW))+(-1.000000D+00/2.000000D+00)*(
+99:     $   -(MDL_EE*MDL_SW)/(6.000000D+00*MDL_CW))
+100:
+101:        MDL_VECTORAUP = (2.000000D+00*MDL_EE)/3.000000D+00
+102:
+103:        MDL_VECTORADOWN = -(MDL_EE)/3.000000D+00
+104:
+105:        MDL_VECTORWMDXU = (1.000000D+00/2.000000D+00)*((MDL_EE)
+106:     $   /(MDL_SW*MDL_SQRT__2))
+107:
+108:        MDL_AXIALWMDXU = (-1.000000D+00/2.000000D+00)*((MDL_EE)
+109:     $   /(MDL_SW*MDL_SQRT__2))
+110:
+111:        MDL_VECTORWPUXD = (1.000000D+00/2.000000D+00)*((MDL_EE)
+112:     $   /(MDL_SW*MDL_SQRT__2))
+113:
+114:        MDL_AXIALWPUXD = -(1.000000D+00/2.000000D+00)*((MDL_EE)
+115:     $   /(MDL_SW*MDL_SQRT__2))
+116:
+117:        MDL_I1X33 = MDL_YB*MDL_CONJG__CKM3X3
+118:
+119:        MDL_I2X33 = MDL_YT*MDL_CONJG__CKM3X3
+120:
+121:        MDL_I3X33 = MDL_CKM3X3*MDL_YT
+122:
+123:        MDL_I4X33 = MDL_CKM3X3*MDL_YB
+124:
+125:        MDL_VECTOR_TBGP = MDL_I1X33-MDL_I2X33
+126:
+127:        MDL_AXIAL_TBGP = -MDL_I2X33-MDL_I1X33
+128:
+129:        MDL_VECTOR_TBGM = MDL_I3X33-MDL_I4X33
+130:
+131:        MDL_AXIAL_TBGM = -MDL_I4X33-MDL_I3X33
+132:
+133:        MDL_GW__EXP__2 = MDL_GW**2
+134:
+135:        MDL_CW__EXP__2 = MDL_CW**2
+136:
+137:        MDL_EE__EXP__2 = MDL_EE**2
+138:
+139:        MDL_SW__EXP__2 = MDL_SW**2
+140:
+141:        MDL_YB__EXP__2 = MDL_YB**2
+142:
+143:        MDL_YT__EXP__2 = MDL_YT**2
+144:
+145:      ENDIF
+146:C     
+147:C     Parameters that should be recomputed at an event by even basis.
+148:C     
+149:      AS = G**2/4/PI
+150:
+151:      MDL_SQRT__AS = SQRT(DCMPLX(AS))
+152:
+153:      MDL_G__EXP__4 = G**4
+154:
+155:      MDL_G__EXP__2 = G**2
+156:
+157:      MDL_G__EXP__3 = G**3
+158:
+159:      MDL_MU_R__EXP__2 = MU_R**2
+160:
+161:C     
+162:C     Parameters that should be updated for the loops.
+163:C     
+164:C     
+165:C     Definition of the EW coupling used in the write out of aqed
+166:C     
+167:      GAL(1) = 3.5449077018110318D0 / DSQRT(ABS(AEWM1))
+168:      GAL(2) = 1D0
+169:
+FILE SubProcesses/PV0_0_1_gg_hh/CT_interface.f SHA256 49df5ace9539692e27e17db7dcc98f764361b1babe931bd157edddfc457376c3
+1:C     ===========================================
+2:C     ===== Beginning of CutTools Interface =====
+3:C     ===========================================
+4:      SUBROUTINE ML5_0_0_1_CTLOOP(NLOOPLINE,PL,M2L,RANK,RES,STABLE)
+5:C     
+6:C     Generated by MadGraph5_aMC@NLO v. 3.5.16, 2026-06-03
+7:C     By the MadGraph5_aMC@NLO Development Team
+8:C     Visit launchpad.net/madgraph5 and amcatnlo.web.cern.ch
+9:C     
+10:C     Interface between MG5 and CutTools.
+11:C     
+12:C     Process: g g > h h WEIGHTED<=8 [ noborn = QCD ]
+13:C     
+14:C     
+15:C     CONSTANTS 
+16:C     
+17:      INTEGER    NEXTERNAL
+18:      PARAMETER (NEXTERNAL=4)
+19:      LOGICAL CHECKPCONSERVATION
+20:      PARAMETER (CHECKPCONSERVATION=.TRUE.)
+21:      REAL*8 NORMALIZATION
+22:      PARAMETER (NORMALIZATION = 1.D0/(16.D0*3.14159265358979323846D0*
+23:     $ *2))
+24:C     
+25:C     ARGUMENTS 
+26:C     
+27:      INTEGER NLOOPLINE, RANK
+28:      REAL*8 PL(0:3,NLOOPLINE)
+29:      REAL*8 PCT(0:3,0:NLOOPLINE-1),ABSPCT(0:3)
+30:      REAL*8 REF_P
+31:      COMPLEX*16 M2L(NLOOPLINE)
+32:      COMPLEX*16 M2LCT(0:NLOOPLINE-1)
+33:      COMPLEX*16 RES(3)
+34:      LOGICAL STABLE
+35:C     
+36:C     LOCAL VARIABLES 
+37:C     
+38:      COMPLEX*16 R1, ACC
+39:      INTEGER I, J, K
+40:      LOGICAL CTINIT, TIRINIT, GOLEMINIT, SAMURAIINIT, NINJAINIT
+41:     $ ,COLLIERINIT
+42:      COMMON/REDUCTIONCODEINIT/CTINIT,TIRINIT,GOLEMINIT,SAMURAIINIT
+43:     $ ,NINJAINIT,COLLIERINIT
+44:C     
+45:C     EXTERNAL FUNCTIONS
+46:C     
+47:      EXTERNAL ML5_0_0_1_LOOPNUM
+48:      EXTERNAL ML5_0_0_1_MPLOOPNUM
+49:C     
+50:C     GLOBAL VARIABLES
+51:C     
+52:      INCLUDE 'coupl.inc'
+53:      INTEGER CTMODE
+54:      REAL*8 LSCALE
+55:      COMMON/ML5_0_0_1_CT/LSCALE,CTMODE
+56:
+57:      INTEGER ID,SQSOINDEX,R
+58:      COMMON/ML5_0_0_1_LOOP/ID,SQSOINDEX,R
+59:
+60:C     ----------
+61:C     BEGIN CODE
+62:C     ----------
+63:
+64:C     INITIALIZE CUTTOOLS IF NEEDED
+65:      IF (CTINIT) THEN
+66:        CTINIT=.FALSE.
+67:        CALL ML5_0_0_1_INITCT()
+68:      ENDIF
+69:
+70:C     YOU CAN FIND THE DETAILS ABOUT THE DIFFERENT CTMODE AT THE
+71:C      BEGINNING OF THE FILE CTS_CUTS.F90 IN THE CUTTOOLS DISTRIBUTION
+72:
+73:C     CONVERT THE MASSES TO BE COMPLEX
+74:      DO I=1,NLOOPLINE
+75:        M2LCT(I-1)=M2L(I)
+76:      ENDDO
+77:
+78:C     CONVERT THE MOMENTA FLOWING IN THE LOOP LINES TO CT CONVENTIONS
+79:      DO I=0,3
+80:        ABSPCT(I)=0.D0
+81:        DO J=0,(NLOOPLINE-1)
+82:          PCT(I,J)=0.D0
+83:        ENDDO
+84:      ENDDO
+85:      DO I=0,3
+86:        DO J=1,NLOOPLINE
+87:          PCT(I,0)=PCT(I,0)+PL(I,J)
+88:          ABSPCT(I)=ABSPCT(I)+ABS(PL(I,J))
+89:        ENDDO
+90:      ENDDO
+91:      REF_P = MAX(ABSPCT(0), ABSPCT(1),ABSPCT(2),ABSPCT(3))
+92:      DO I=0,3
+93:        ABSPCT(I) = MAX(REF_P*1E-6, ABSPCT(I))
+94:      ENDDO
+95:      IF (CHECKPCONSERVATION.AND.REF_P.GT.1D-8) THEN
+96:        IF ((PCT(0,0)/ABSPCT(0)).GT.1.D-6) THEN
+97:          WRITE(*,*) 'energy is not conserved (flag:CT95)',PCT(0,0)
+98:          STOP 'energy is not conserved (flag:CT95)'
+99:        ELSEIF ((PCT(1,0)/ABSPCT(1)).GT.1.D-6) THEN
+100:          WRITE(*,*) 'px is not conserved (flag:CT95)',PCT(1,0)
+101:          STOP 'px is not conserved (flag:CT95)'
+102:        ELSEIF ((PCT(2,0)/ABSPCT(2)).GT.1.D-6) THEN
+103:          WRITE(*,*) 'py is not conserved (flag:CT95)',PCT(2,0)
+104:          STOP 'py is not conserved (flag:CT95)'
+105:        ELSEIF ((PCT(3,0)/ABSPCT(3)).GT.1.D-6) THEN
+106:          WRITE(*,*) 'pz is not conserved (flag:CT95)',PCT(3,0)
+107:          STOP 'pz is not conserved (flag:CT95)'
+108:        ENDIF
+109:      ENDIF
+110:      DO I=0,3
+111:        DO J=1,(NLOOPLINE-1)
+112:          DO K=1,J
+113:            PCT(I,J)=PCT(I,J)+PL(I,K)
+114:          ENDDO
+115:        ENDDO
+116:      ENDDO
+117:
+118:      CALL CTSXCUT(CTMODE,LSCALE,MU_R,NLOOPLINE,ML5_0_0_1_LOOPNUM
+119:     $ ,ML5_0_0_1_MPLOOPNUM,RANK,PCT,M2LCT,RES,ACC,R1,STABLE)
+120:      RES(1)=NORMALIZATION*RES(1)
+121:      RES(2)=NORMALIZATION*RES(2)
+122:      RES(3)=NORMALIZATION*RES(3)
+123:C     WRITE(*,*) 'CutTools: Loop ID',ID,' =',RES(1),RES(2),RES(3)
+124:      END
+125:
+126:      SUBROUTINE ML5_0_0_1_INITCT()
+127:C     
+128:C     INITIALISATION OF CUTTOOLS
+129:C     
+130:C     LOCAL VARIABLES 
+131:C     
+132:      REAL*8 THRS
+133:      LOGICAL EXT_NUM_FOR_R1
+134:C     
+135:C     GLOBAL VARIABLES 
+136:C     
+137:      INCLUDE 'MadLoopParams.inc'
+138:C     ----------
+139:C     BEGIN CODE
+140:C     ----------
+141:
+142:C     DEFAULT PARAMETERS FOR CUTTOOLS
+143:C     -------------------------------  
+144:C     THRS1 IS THE PRECISION LIMIT BELOW WHICH THE MP ROUTINES
+145:C      ACTIVATES
+FILE SubProcesses/PV0_0_1_gg_hh/TIR_interface.f SHA256 59f5cfb9bbe96a5a93f8a962f93b906b62ac2d5447c564ae70e2cbf0f5ad493b
+120:
+121:C     CONVERT THE MASSES TO BE COMPLEX
+122:      DO I=1,NLOOPLINE
+123:        M2LCT(I-1)=M2L(I)
+124:      ENDDO
+125:
+126:C     CONVERT THE MOMENTA FLOWING IN THE LOOP LINES TO CT CONVENTIONS
+127:      DO I=0,3
+128:        ABSPCT(I) = 0.D0
+129:        DO J=0,(NLOOPLINE-1)
+130:          PCT(I,J)=0.D0
+131:        ENDDO
+132:      ENDDO
+133:      DO I=0,3
+134:        DO J=1,NLOOPLINE
+135:          PCT(I,0)=PCT(I,0)+PL(I,J)
+136:          ABSPCT(I)=ABSPCT(I)+ABS(PL(I,J))
+137:        ENDDO
+138:      ENDDO
+139:      REF_P = MAX(ABSPCT(0), ABSPCT(1),ABSPCT(2),ABSPCT(3))
+140:      DO I=0,3
+141:        ABSPCT(I) = MAX(REF_P*1E-6, ABSPCT(I))
+142:      ENDDO
+143:
+144:      IF (CHECKPCONSERVATION.AND.REF_P.GT.1D-8) THEN
+145:        IF ((PCT(0,0)/ABSPCT(0)).GT.1.D-6) THEN
+146:          WRITE(*,*) 'energy is not conserved (flag: TIR)',PCT(0,0)
+147:          STOP 'energy is not conserved (flag: TIR)'
+148:        ELSEIF ((PCT(1,0)/ABSPCT(1)).GT.1.D-6) THEN
+149:          WRITE(*,*) 'px is not conserved (flag: TIR)',PCT(1,0)
+150:          STOP 'px is not conserved (flag: TIR)'
+151:        ELSEIF ((PCT(2,0)/ABSPCT(2)).GT.1.D-6) THEN
+152:          WRITE(*,*) 'py is not conserved (flag: TIR)',PCT(2,0)
+153:          STOP 'py is not conserved (flag: TIR)'
+154:        ELSEIF ((PCT(3,0)/ABSPCT(3)).GT.1.D-6) THEN
+155:          WRITE(*,*) 'pz is not conserved (flag: TIR)',PCT(3,0)
+156:          STOP 'pz is not conserved (flag: TIR)'
+157:        ENDIF
+158:      ENDIF
+159:      DO I=0,3
+160:        DO J=1,(NLOOPLINE-1)
+161:          DO K=1,J
+162:            PCT(I,J)=PCT(I,J)+PL(I,K)
+163:          ENDDO
+164:        ENDDO
+165:      ENDDO
+166:
+167:      DO I=0,3
+168:        DO J=1,(NLOOPLINE-1)
+169:          PDEN(I,J)=PCT(I,J)
+170:        ENDDO
+171:      ENDDO
+172:C     NUMBER OF INDEPEDENT LOOPCOEFS FOR RANK=RANK
+173:      NLOOPCOEFS=0
+174:      DO I=0,RANK
+175:        NLOOPCOEFS=NLOOPCOEFS+(3+I)*(2+I)*(1+I)/6
+176:      ENDDO
+177:      IF (TIR_CACHE_SIZE.EQ.0) THEN
+178:        TIR_CACHE_INDEX = 0
+179:      ELSE
+180:        TIR_CACHE_INDEX = ML5_0_0_1_TIRCACHE_INDEX(CTMODE)
+181:C       This way whenever the CTMode exceeds the cache size it rolls
+182:C        back to the beginning and MadLoop will have taken care of
+183:C        having re-initialized TIR_DONE between labels 200 and 205 in
+184:C        loop_matrix.f
+185:        TIR_CACHE_INDEX = MOD(TIR_CACHE_INDEX-1,TIR_CACHE_SIZE)+1
+186:      ENDIF
+187:
+188:      IF(.NOT.TIR_DONE(I_LOOPGROUP,TIR_CACHE_INDEX))THEN
+189:        SELECT CASE(MLREDUCTIONLIB(I_LIB))
+190:        CASE(2)
+191:C       PJFry++
+192:        WRITE(*,*) 'ERROR:: PJFRY++ is not interfaced.'
+193:        STOP
+194:        CASE(3)
+195:C       IREGI
+196:        CALL IMLOOP(CTMODE,IREGIMODE,NLOOPLINE,LOOPMAXCOEFS,RANK,PDEN
+197:     $   ,M2L,MU_R,PJCOEFS,STABLE)
+198:C       CONVERT TO MADLOOP CONVENTION
+199:        CALL ML5_0_0_1_CONVERT_IREGI_COEFFS(RANK,PJCOEFS,TIRCOEFS)
+200:        CASE(7)
+201:C       COLLIER
+202:        WRITE(*,*) 'ERROR:: COLLIER is not interfaced.'
+203:        STOP
+204:        END SELECT
+205:C       The zero index is dummy and means no caching at all since
+206:C        TIR_CACHE_SIZE=0.
+207:        IF(TIR_CACHE_INDEX.NE.0) THEN
+208:          DO I=1,3
+209:            DO J=0,NLOOPCOEFS-1
+210:              TIRCOEFS_CACHING(I,J,I_LOOPGROUP,TIR_CACHE_INDEX)
+211:     $         =TIRCOEFS(J,I)
+212:            ENDDO
+213:          ENDDO
+214:          TIR_DONE(I_LOOPGROUP,TIR_CACHE_INDEX)=.TRUE.
+215:        ENDIF
+216:      ELSE
+217:        DO I=1,3
+218:          DO J=0,NLOOPCOEFS-1
+219:            TIRCOEFS(J,I)=TIRCOEFS_CACHING(I,J,I_LOOPGROUP
+220:     $       ,TIR_CACHE_INDEX)
+221:          ENDDO
+222:        ENDDO
+223:      ENDIF
+224:      DO I=1,3
+225:        RES(I)=(0.0D0,0.0D0)
+FILE SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f SHA256 820acd9d760cf1d947a8186ecc0f3d9eea9c16bbae832ff9784ff0f454ec91d8
+1:      SUBROUTINE ML5_0_0_1_HELAS_CALLS_AMPB_1(P,NHEL,H,IC)
+2:C     
+3:C     Modules
+4:C     
+5:      USE ML5_0_0_1_POLYNOMIAL_CONSTANTS
+6:C     
+7:      IMPLICIT NONE
+8:C     
+9:C     CONSTANTS
+10:C     
+11:      INTEGER    NEXTERNAL
+12:      PARAMETER (NEXTERNAL=4)
+13:      INTEGER    NCOMB
+14:      PARAMETER (NCOMB=4)
+15:      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS
+16:      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)
+17:      INTEGER    NLOOPAMPS
+18:      PARAMETER (NLOOPAMPS=20)
+19:      INTEGER    NWAVEFUNCS,NLOOPWAVEFUNCS
+20:      PARAMETER (NWAVEFUNCS=5,NLOOPWAVEFUNCS=40)
+21:      REAL*8     ZERO
+22:      PARAMETER (ZERO=0D0)
+23:      REAL*16     MP__ZERO
+24:      PARAMETER (MP__ZERO=0.0E0_16)
+25:C     These are constants related to the split orders
+26:      INTEGER    NSO, NSQUAREDSO, NAMPSO
+27:      PARAMETER (NSO=1, NSQUAREDSO=1, NAMPSO=1)
+28:C     
+29:C     ARGUMENTS
+30:C     
+31:      REAL*8 P(0:3,NEXTERNAL)
+32:      INTEGER NHEL(NEXTERNAL), IC(NEXTERNAL)
+33:      INTEGER H
+34:C     
+35:C     LOCAL VARIABLES
+36:C     
+37:      INTEGER I,J,K
+38:      COMPLEX*16 COEFS(MAXLWFSIZE,0:VERTEXMAXCOEFS-1,MAXLWFSIZE)
+39:
+40:      LOGICAL DUMMYFALSE
+41:      DATA DUMMYFALSE/.FALSE./
+42:C     
+43:C     GLOBAL VARIABLES
+44:C     
+45:      INCLUDE 'coupl.inc'
+46:      INCLUDE 'mp_coupl.inc'
+47:
+48:      INTEGER HELOFFSET
+49:      INTEGER GOODHEL(NCOMB)
+50:      LOGICAL GOODAMP(NSQUAREDSO,NLOOPGROUPS)
+51:      COMMON/ML5_0_0_1_FILTERS/GOODAMP,GOODHEL,HELOFFSET
+52:
+53:      LOGICAL CHECKPHASE
+54:      LOGICAL HELDOUBLECHECKED
+55:      COMMON/ML5_0_0_1_INIT/CHECKPHASE, HELDOUBLECHECKED
+56:
+57:      INTEGER SQSO_TARGET
+58:      COMMON/ML5_0_0_1_SOCHOICE/SQSO_TARGET
+59:
+60:      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE
+61:     $ ,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE,MP_LOOP_REQ_SO_DONE
+62:     $ ,CTCALL_REQ_SO_DONE,FILTER_SO
+63:      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE
+64:     $ ,CT_REQ_SO_DONE,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE
+65:     $ ,MP_LOOP_REQ_SO_DONE,CTCALL_REQ_SO_DONE,FILTER_SO
+66:
+67:      INTEGER I_SO
+68:      COMMON/ML5_0_0_1_I_SO/I_SO
+69:      INTEGER I_LIB
+70:      COMMON/ML5_0_0_1_I_LIB/I_LIB
+71:
+72:      COMPLEX*16 W(20,NWAVEFUNCS)
+73:      COMMON/ML5_0_0_1_W/W
+74:
+75:      COMPLEX*16 WL(MAXLWFSIZE,0:LOOPMAXCOEFS-1,MAXLWFSIZE,
+76:     $ -1:NLOOPWAVEFUNCS)
+77:      COMPLEX*16 PL(0:3,-1:NLOOPWAVEFUNCS)
+78:      COMMON/ML5_0_0_1_WL/WL,PL
+79:
+80:      COMPLEX*16 AMPL(3,NLOOPAMPS)
+81:      COMMON/ML5_0_0_1_AMPL/AMPL
+82:
+83:C     
+84:C     ----------
+85:C     BEGIN CODE
+86:C     ----------
+87:
+88:C     The target squared split order contribution is already reached
+89:C      if true.
+90:      IF (FILTER_SO.AND.CT_REQ_SO_DONE) THEN
+91:        GOTO 1001
+92:      ENDIF
+93:
+94:      CALL VXXXXX(P(0,1),ZERO,NHEL(1),-1*IC(1),W(1,1))
+95:      CALL VXXXXX(P(0,2),ZERO,NHEL(2),-1*IC(2),W(1,2))
+96:      CALL SXXXXX(P(0,3),+1*IC(3),W(1,3))
+97:      CALL SXXXXX(P(0,4),+1*IC(4),W(1,4))
+98:C     Counter-term amplitude(s) for loop diagram number 1
+99:      CALL R2_GGHH_0(W(1,1),W(1,2),W(1,4),W(1,3),R2_GGHHB,AMPL(1,1))
+100:      CALL SSS1_1(W(1,3),W(1,4),GC_30,MDL_MH,MDL_WH,W(1,5))
+101:C     Counter-term amplitude(s) for loop diagram number 3
+102:      CALL VVS1_0(W(1,1),W(1,2),W(1,5),R2_GGHB,AMPL(1,2))
+103:C     Counter-term amplitude(s) for loop diagram number 9
+104:      CALL R2_GGHH_0(W(1,1),W(1,2),W(1,4),W(1,3),R2_GGHHT,AMPL(1,3))
+105:C     Counter-term amplitude(s) for loop diagram number 11
+106:      CALL VVS1_0(W(1,1),W(1,2),W(1,5),R2_GGHT,AMPL(1,4))
+107:C     At this point, all CT amps needed for (QCD=4), i.e. of split
+108:C      order ID=1, are computed.
+109:      IF(FILTER_SO.AND.SQSO_TARGET.EQ.1) GOTO 2000
+110:
+111:      GOTO 1001
+112: 2000 CONTINUE
+113:      CT_REQ_SO_DONE=.TRUE.
+114: 1001 CONTINUE
+115:      END
+116:
+FILE SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f SHA256 e92ad464d5837b4c70fb1f163246e66ac8da2836388566e594ef6debd6c76482
+1:      SUBROUTINE ML5_0_0_1_MP_HELAS_CALLS_AMPB_1(P,NHEL,H,IC)
+2:C     
+3:      USE ML5_0_0_1_POLYNOMIAL_CONSTANTS
+4:      IMPLICIT NONE
+5:C     
+6:C     CONSTANTS
+7:C     
+8:      INTEGER    NEXTERNAL
+9:      PARAMETER (NEXTERNAL=4)
+10:      INTEGER    NCOMB
+11:      PARAMETER (NCOMB=4)
+12:
+13:      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS
+14:      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)
+15:      INTEGER    NLOOPAMPS
+16:      PARAMETER (NLOOPAMPS=20)
+17:      INTEGER    NWAVEFUNCS,NLOOPWAVEFUNCS
+18:      PARAMETER (NWAVEFUNCS=5,NLOOPWAVEFUNCS=40)
+19:      REAL*16     ZERO
+20:      PARAMETER (ZERO=0.0E0_16)
+21:      COMPLEX*32     IZERO
+22:      PARAMETER (IZERO=CMPLX(0.0E0_16,0.0E0_16,KIND=16))
+23:C     These are constants related to the split orders
+24:      INTEGER    NSO, NSQUAREDSO, NAMPSO
+25:      PARAMETER (NSO=1, NSQUAREDSO=1, NAMPSO=1)
+26:C     
+27:C     ARGUMENTS
+28:C     
+29:      REAL*16 P(0:3,NEXTERNAL)
+30:      INTEGER NHEL(NEXTERNAL), IC(NEXTERNAL)
+31:      INTEGER H
+32:C     
+33:C     LOCAL VARIABLES
+34:C     
+35:      INTEGER I,J,K
+36:      COMPLEX*32 COEFS(MAXLWFSIZE,0:VERTEXMAXCOEFS-1,MAXLWFSIZE)
+37:C     
+38:C     GLOBAL VARIABLES
+39:C     
+40:      INCLUDE 'mp_coupl_same_name.inc'
+41:
+42:      INTEGER GOODHEL(NCOMB)
+43:      LOGICAL GOODAMP(NSQUAREDSO,NLOOPGROUPS)
+44:      COMMON/ML5_0_0_1_FILTERS/GOODAMP,GOODHEL
+45:
+46:      INTEGER SQSO_TARGET
+47:      COMMON/ML5_0_0_1_SOCHOICE/SQSO_TARGET
+48:
+49:      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE
+50:     $ ,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE,MP_LOOP_REQ_SO_DONE
+51:     $ ,CTCALL_REQ_SO_DONE,FILTER_SO
+52:      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE
+53:     $ ,CT_REQ_SO_DONE,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE
+54:     $ ,MP_LOOP_REQ_SO_DONE,CTCALL_REQ_SO_DONE,FILTER_SO
+55:
+56:      COMPLEX*32 W(20,NWAVEFUNCS)
+57:      COMMON/ML5_0_0_1_MP_W/W
+58:
+59:      COMPLEX*32 WL(MAXLWFSIZE,0:LOOPMAXCOEFS-1,MAXLWFSIZE,
+60:     $ -1:NLOOPWAVEFUNCS)
+61:      COMPLEX*32 PL(0:3,-1:NLOOPWAVEFUNCS)
+62:      COMMON/ML5_0_0_1_MP_WL/WL,PL
+63:
+64:      COMPLEX*32 AMPL(3,NLOOPAMPS)
+65:      COMMON/ML5_0_0_1_MP_AMPL/AMPL
+66:
+67:C     
+68:C     ----------
+69:C     BEGIN CODE
+70:C     ----------
+71:
+72:C     The target squared split order contribution is already reached
+73:C      if true.
+74:      IF (FILTER_SO.AND.MP_CT_REQ_SO_DONE) THEN
+75:        GOTO 1001
+76:      ENDIF
+77:
+78:      CALL MP_VXXXXX(P(0,1),ZERO,NHEL(1),-1*IC(1),W(1,1))
+79:      CALL MP_VXXXXX(P(0,2),ZERO,NHEL(2),-1*IC(2),W(1,2))
+80:      CALL MP_SXXXXX(P(0,3),+1*IC(3),W(1,3))
+81:      CALL MP_SXXXXX(P(0,4),+1*IC(4),W(1,4))
+82:C     Counter-term amplitude(s) for loop diagram number 1
+83:      CALL MP_R2_GGHH_0(W(1,1),W(1,2),W(1,4),W(1,3),R2_GGHHB,AMPL(1,1))
+84:      CALL MP_SSS1_1(W(1,3),W(1,4),GC_30,MDL_MH,MDL_WH,W(1,5))
+85:C     Counter-term amplitude(s) for loop diagram number 3
+86:      CALL MP_VVS1_0(W(1,1),W(1,2),W(1,5),R2_GGHB,AMPL(1,2))
+87:C     Counter-term amplitude(s) for loop diagram number 9
+88:      CALL MP_R2_GGHH_0(W(1,1),W(1,2),W(1,4),W(1,3),R2_GGHHT,AMPL(1,3))
+89:C     Counter-term amplitude(s) for loop diagram number 11
+90:      CALL MP_VVS1_0(W(1,1),W(1,2),W(1,5),R2_GGHT,AMPL(1,4))
+91:C     At this point, all CT amps needed for (QCD=4), i.e. of split
+92:C      order ID=1, are computed.
+93:      IF(FILTER_SO.AND.SQSO_TARGET.EQ.1) GOTO 2000
+94:
+95:      GOTO 1001
+96: 2000 CONTINUE
+97:      MP_CT_REQ_SO_DONE=.TRUE.
+98: 1001 CONTINUE
+99:      END
+100:
+FILE SubProcesses/PV0_0_1_gg_hh/loop_matrix.f SHA256 88734bc758b5a99b94729089345fb4f7d9125984fad4f20a1c8696b220192a45
+1:C     --=========================================--
+2:C     Main subroutine
+3:C     --=========================================--
+4:
+5:      SUBROUTINE ML5_0_0_1_SLOOPMATRIX(P_USER,ANS)
+6:C     
+7:C     Generated by MadGraph5_aMC@NLO v. 3.5.16, 2026-06-03
+8:C     By the MadGraph5_aMC@NLO Development Team
+9:C     Visit launchpad.net/madgraph5 and amcatnlo.web.cern.ch
+10:C     
+11:C     Returns amplitude squared summed/avg over colors
+12:C     and helicities for the point in phase space P(0:3,NEXTERNAL)
+13:C     and external lines W(0:6,NEXTERNAL)
+14:C     
+15:C     Process: g g > h h WEIGHTED<=8 [ noborn = QCD ]
+16:C     
+17:C     Modules
+18:C     
+19:      USE ML5_0_0_1_POLYNOMIAL_CONSTANTS
+20:C     
+21:      IMPLICIT NONE
+22:C     
+23:C     USER CUSTOMIZABLE OPTIONS
+24:C     
+25:C     The variables below are just used in the context of a JAMP
+26:C      consistency check turned off by default.
+27:      REAL*8 JAMP_DOUBLECHECK_THRES
+28:      PARAMETER (JAMP_DOUBLECHECK_THRES=1.0D-9)
+29:      LOGICAL DIRECT_ME_COMPUTATION, ME_COMPUTATION_FROM_JAMP
+30:C     Modify the logicals below to chose how the ME must be computed
+31:C     DIRECT_ME_COMPUTATION    = Each loop amplitude is squared
+32:C      individually against all amplitudes with its own color factor.
+33:C     ME_COMPUTATION_FROM_JAMP = Amplitudes are first projected onto
+34:C      color flows (many less of them) which are then squared to form
+35:C      the ME.
+36:C     When setting both computation method to .TRUE., their systematic
+37:C      comparisons will be printed out.
+38:      DATA DIRECT_ME_COMPUTATION/.FALSE./
+39:C     When using this MadLoop output for integration with MadEvent,
+40:C      ME_COMPUTATION_FROM_JAMP *must* be set to .True. because it is
+41:C      necessary to compute the AMP2 setting up the multichanneling. 
+42:      DATA ME_COMPUTATION_FROM_JAMP/.TRUE./
+43:C     This parameter is designed for the check timing command of MG5.
+44:C      It skips the loop reduction.
+45:      LOGICAL SKIPLOOPEVAL
+46:      PARAMETER (SKIPLOOPEVAL=.FALSE.)
+47:C     For timing checks. Stops the code after having only initialized
+48:C      its arrays from the external data files 
+49:      LOGICAL BOOTANDSTOP
+50:      PARAMETER (BOOTANDSTOP=.FALSE.)
+51:      INTEGER TIR_CACHE_SIZE
+52:C     To change memory foot-print of MadLoop, you can change this
+53:C      parameter to be 0,1 or 2 *and recompile*.
+54:C     Notice that this will impact MadLoop speed performances in the
+55:C      context of stability checks.
+56:      INCLUDE 'tir_cache_size.inc'
+57:C     
+58:C     CONSTANTS
+59:C     
+60:      CHARACTER*512 PARAMFNAME,HELCONFIGFNAME,LOOPFILTERFNAME
+61:      CHARACTER*512 COLORNUMFNAME,COLORDENOMFNAME, HELFILTERFNAME
+62:      CHARACTER*512 PROC_PREFIX
+63:      PARAMETER ( PARAMFNAME='MadLoopParams.dat')
+64:      PARAMETER ( HELCONFIGFNAME='HelConfigs.dat')
+65:      PARAMETER ( LOOPFILTERFNAME='LoopFilter.dat')
+66:      PARAMETER ( HELFILTERFNAME='HelFilter.dat')
+67:      PARAMETER ( COLORNUMFNAME='ColorNumFactors.dat')
+68:      PARAMETER ( COLORDENOMFNAME='ColorDenomFactors.dat')
+69:      PARAMETER ( PROC_PREFIX='ML5_0_0_1_')
+70:
+71:      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS
+72:      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)
+73:      INTEGER    NLOOPAMPS
+74:      PARAMETER (NLOOPAMPS=20)
+75:      INTEGER    NCOLORROWS
+76:      PARAMETER (NCOLORROWS=NLOOPAMPS)
+77:      INTEGER    NEXTERNAL
+78:      PARAMETER (NEXTERNAL=4)
+79:      INTEGER NINITIAL
+80:      PARAMETER (NINITIAL=2)
+81:      INTEGER    NWAVEFUNCS,NLOOPWAVEFUNCS
+82:      PARAMETER (NWAVEFUNCS=5,NLOOPWAVEFUNCS=40)
+83:      INTEGER    NCOMB
+84:      PARAMETER (NCOMB=4)
+85:      REAL*8     ZERO
+86:      PARAMETER (ZERO=0D0)
+87:      REAL*16     MP__ZERO
+88:      PARAMETER (MP__ZERO=0E0_16)
+89:      COMPLEX*16 IMAG1
+90:      PARAMETER (IMAG1=(0D0,1D0))
+91:C     These are constants related to the split orders
+92:      INTEGER NSQSO_BORN
+93:      PARAMETER (NSQSO_BORN=0)
+94:
+95:      INTEGER    NSO, NSQUAREDSO, NAMPSO
+96:      PARAMETER (NSO=1, NSQUAREDSO=1, NAMPSO=1)
+97:      INTEGER ANS_DIMENSION
+98:      PARAMETER(ANS_DIMENSION=MAX(NSQSO_BORN,NSQUAREDSO))
+99:      INTEGER NSQSOXNLG
+100:      PARAMETER (NSQSOXNLG=NSQUAREDSO*NLOOPGROUPS)
+101:      INTEGER NSQUAREDSOP1
+102:      PARAMETER (NSQUAREDSOP1=NSQUAREDSO+1)
+103:C     The total number of loop reduction libraries
+104:C     At present, there are only
+105:C      CutTools,PJFry++,IREGI,Golem95,Samurai, Ninja and COLLIER
+106:      INTEGER NLOOPLIB
+107:      PARAMETER (NLOOPLIB=7)
+108:C     Only CutTools or possibly Ninja (if installed with qp support)
+109:C      provide QP
+110:      INTEGER QP_NLOOPLIB
+111:      PARAMETER (QP_NLOOPLIB=1)
+112:      INTEGER MAXSTABILITYLENGTH
+113:      DATA MAXSTABILITYLENGTH/20/
+114:      COMMON/ML5_0_0_1_STABILITY_TESTS/MAXSTABILITYLENGTH
+115:
+116:C     
+117:C     ARGUMENTS 
+118:C     
+119:      REAL*8 P_USER(0:3,NEXTERNAL)
+120:C     
+121:C     The zeroth component of the second dimension is the result
+122:C      summed over all
+123:C     contributing split orders. The zeroth component of the first one
+124:C      is the Born.
+125:C     Notice that the upper bound of the second integer is not number
+126:C      of squared orders
+127:C     combination for the loops but the maximum between this number
+128:C      for the Born
+129:C     contributions and the loop ones. There are some cases for which
+130:C      the Born contrib.
+131:C     has squared split order contributions than the loop does. For
+132:C      example
+133:C     
+134:C     generate u u~ > d d~ QCD^2<=2 QED^2<=99 [virt=QCD]
+135:C     
+136:C     It is however somehow academical. This is why ANS_DIMENSION is
+137:C      not just NSQSO but rather MAX(NSQSO,NSQSO_BORN)
+138:C     
+139:      REAL*8 ANS(0:3,0:ANS_DIMENSION)
+140:C     
+141:C     LOCAL VARIABLES 
+142:C     
+143:      INTEGER I,J,K,L,H,HEL_MULT,I_QP_LIB,DUMMY
+144:
+145:      CHARACTER*512 PARAMFN,HELCONFIGFN,LOOPFILTERFN,COLORNUMFN
+146:     $ ,COLORDENOMFN,HELFILTERFN
+147:      CHARACTER*512 TMP
+148:      SAVE PARAMFN
+149:      SAVE HELCONFIGFN
+150:      SAVE LOOPFILTERFN
+151:      SAVE COLORNUMFN
+152:      SAVE COLORDENOMFN
+153:      SAVE HELFILTERFN
+154:
+155:      INTEGER CTMODEINIT_BU
+156:      REAL*8 MLSTABTHRES_BU
+157:      INTEGER NEWHELREF
+158:      LOGICAL HEL_INCONSISTENT
+159:      REAL*8 P(0:3,NEXTERNAL)
+160:C     DP_RES STORES THE DOUBLE PRECISION RESULT OBTAINED FROM
+161:C      DIFFERENT EVALUATION METHODS IN ORDER TO ASSESS STABILITY.
+162:C     THE STAB_STAGE COUNTER I CORRESPONDANCE GOES AS FOLLOWS
+163:C     I=1 -> ORIGINAL PS, CTMODE=1
+164:C     I=2 -> ORIGINAL PS, CTMODE=2, (ONLY WITH CTMODERUN=-1)
+165:C     I=3 -> PS WITH ROTATION 1, CTMODE=1, (ONLY WITH CTMODERUN=-2)
+166:C     I=4 -> PS WITH ROTATION 2, CTMODE=1, (ONLY WITH CTMODERUN=-3)
+167:C     I=5 -> POSSIBLY MORE EVALUATION METHODS IN THE FUTURE, MAX IS
+168:C      MAXSTABILITYLENGTH
+169:C     IF UNSTABLE IT GOES TO THE SAME PATTERN BUT STAB_INDEX IS THEN
+170:C      I+20.
+171:      LOGICAL EVAL_DONE(MAXSTABILITYLENGTH)
+172:      LOGICAL DOING_QP_EVALS
+173:      INTEGER STAB_INDEX,BASIC_CT_MODE
+174:
+175:C     This is used for loop-induced where the reference scale for
+176:C      comparisons is inferred from the first 100 points at most
+177:C      (notice that the weight of a  given kinematic configuration can
+178:C      appear more than once because of the stability tests).
+179:C     When changing this parameter, make sure to correspondingly
+180:C      update the parameter with the same name in MadLoopCommons.f.
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+63:      PARAMETER ( PARAMFNAME='MadLoopParams.dat')
+64:      PARAMETER ( HELCONFIGFNAME='HelConfigs.dat')
+65:      PARAMETER ( LOOPFILTERFNAME='LoopFilter.dat')
+66:      PARAMETER ( HELFILTERFNAME='HelFilter.dat')
+67:      PARAMETER ( COLORNUMFNAME='ColorNumFactors.dat')
+68:      PARAMETER ( COLORDENOMFNAME='ColorDenomFactors.dat')
+69:      PARAMETER ( PROC_PREFIX='ML5_0_0_1_')
+70:
+71:      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS
+72:      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)
+73:      INTEGER    NLOOPAMPS
+74:      PARAMETER (NLOOPAMPS=20)
+75:      INTEGER    NCOLORROWS
+76:      PARAMETER (NCOLORROWS=NLOOPAMPS)
+77:      INTEGER    NEXTERNAL
+78:      PARAMETER (NEXTERNAL=4)
+79:      INTEGER NINITIAL
+80:      PARAMETER (NINITIAL=2)
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+64:      PARAMETER ( HELCONFIGFNAME='HelConfigs.dat')
+65:      PARAMETER ( LOOPFILTERFNAME='LoopFilter.dat')
+66:      PARAMETER ( HELFILTERFNAME='HelFilter.dat')
+67:      PARAMETER ( COLORNUMFNAME='ColorNumFactors.dat')
+68:      PARAMETER ( COLORDENOMFNAME='ColorDenomFactors.dat')
+69:      PARAMETER ( PROC_PREFIX='ML5_0_0_1_')
+70:
+71:      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS
+72:      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)
+73:      INTEGER    NLOOPAMPS
+74:      PARAMETER (NLOOPAMPS=20)
+75:      INTEGER    NCOLORROWS
+76:      PARAMETER (NCOLORROWS=NLOOPAMPS)
+77:      INTEGER    NEXTERNAL
+78:      PARAMETER (NEXTERNAL=4)
+79:      INTEGER NINITIAL
+80:      PARAMETER (NINITIAL=2)
+81:      INTEGER    NWAVEFUNCS,NLOOPWAVEFUNCS
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+347:C      SQSO_TARGET and below.
+348:      INTEGER SQSO_TARGET
+349:      DATA SQSO_TARGET/-1/
+350:      COMMON/ML5_0_0_1_SOCHOICE/SQSO_TARGET
+351:C     The following logical are used to broadcast the fact that the
+352:C      target 'required' CT and
+353:C     loop split orders contributions have been reached already and
+354:C      the rest can be skipped.
+355:      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE
+356:     $ ,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE,MP_LOOP_REQ_SO_DONE
+357:     $ ,CTCALL_REQ_SO_DONE,FILTER_SO
+358:      DATA UVCT_REQ_SO_DONE/.FALSE./
+359:      DATA MP_UVCT_REQ_SO_DONE/.FALSE./
+360:      DATA CT_REQ_SO_DONE/.FALSE./
+361:      DATA MP_CT_REQ_SO_DONE/.FALSE./
+362:      DATA LOOP_REQ_SO_DONE/.FALSE./
+363:      DATA MP_LOOP_REQ_SO_DONE/.FALSE./
+364:      DATA CTCALL_REQ_SO_DONE/.FALSE./
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+350:      COMMON/ML5_0_0_1_SOCHOICE/SQSO_TARGET
+351:C     The following logical are used to broadcast the fact that the
+352:C      target 'required' CT and
+353:C     loop split orders contributions have been reached already and
+354:C      the rest can be skipped.
+355:      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE
+356:     $ ,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE,MP_LOOP_REQ_SO_DONE
+357:     $ ,CTCALL_REQ_SO_DONE,FILTER_SO
+358:      DATA UVCT_REQ_SO_DONE/.FALSE./
+359:      DATA MP_UVCT_REQ_SO_DONE/.FALSE./
+360:      DATA CT_REQ_SO_DONE/.FALSE./
+361:      DATA MP_CT_REQ_SO_DONE/.FALSE./
+362:      DATA LOOP_REQ_SO_DONE/.FALSE./
+363:      DATA MP_LOOP_REQ_SO_DONE/.FALSE./
+364:      DATA CTCALL_REQ_SO_DONE/.FALSE./
+365:      DATA FILTER_SO/.FALSE./
+366:      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE
+367:     $ ,CT_REQ_SO_DONE,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+358:      DATA UVCT_REQ_SO_DONE/.FALSE./
+359:      DATA MP_UVCT_REQ_SO_DONE/.FALSE./
+360:      DATA CT_REQ_SO_DONE/.FALSE./
+361:      DATA MP_CT_REQ_SO_DONE/.FALSE./
+362:      DATA LOOP_REQ_SO_DONE/.FALSE./
+363:      DATA MP_LOOP_REQ_SO_DONE/.FALSE./
+364:      DATA CTCALL_REQ_SO_DONE/.FALSE./
+365:      DATA FILTER_SO/.FALSE./
+366:      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE
+367:     $ ,CT_REQ_SO_DONE,MP_CT_REQ_SO_DONE,LOOP_REQ_SO_DONE
+368:     $ ,MP_LOOP_REQ_SO_DONE,CTCALL_REQ_SO_DONE,FILTER_SO
+369:
+370:C     Allows to forbid the zero helicity double check, no matter the
+371:C      value in MadLoopParams.dat
+372:C     This can be accessed with the SET_FORBID_HEL_DOUBLECHECK
+373:C      subroutine of MadLoopCommons.dat
+374:      LOGICAL FORBID_HEL_DOUBLECHECK
+375:      COMMON/FORBID_HEL_DOUBLECHECK/FORBID_HEL_DOUBLECHECK
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1066:     $     .EQ.0.AND.(.NOT.ML5_0_0_1_IS_HEL_SELECTED(H))) THEN
+1067:            CYCLE
+1068:          ENDIF
+1069:
+1070:          DO I=1,NEXTERNAL
+1071:            NHEL(I)=HELC(I,H)
+1072:          ENDDO
+1073:
+1074:          UVCT_REQ_SO_DONE=.FALSE.
+1075:          CT_REQ_SO_DONE=.FALSE.
+1076:          LOOP_REQ_SO_DONE=.FALSE.
+1077:
+1078:          IF (.NOT.CHECKPHASE.AND.HELDOUBLECHECKED.AND.HELPICKED.EQ.-1)
+1079:     $      THEN
+1080:            HEL_MULT=GOODHEL(H)
+1081:          ELSE
+1082:            HEL_MULT=1
+1083:          ENDIF
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1111:C         Helas calls for the counterterm of type 'UVtree' in the UFO.
+1112:C         These are generated irrespectively of the produced loops.
+1113:C         In general, only wavefunction renormalization counterterms
+1114:C         (if needed by the loop UFO model) are of this type.
+1115:C         Quite often and in principle for all loop UFO models from 
+1116:C         FeynRules, there are none of these type of counterterms.
+1117:
+1118: 3000     CONTINUE
+1119:          UVCT_REQ_SO_DONE=.TRUE.
+1120:
+1121:
+1122:          CALL ML5_0_0_1_COEF_CONSTRUCTION_1(P,NHEL,H,IC)
+1123: 4000     CONTINUE
+1124:          LOOP_REQ_SO_DONE=.TRUE.
+1125:
+1126:          IF(SKIPLOOPEVAL.OR.(.NOT.LOOP_REQ_SO_DONE.AND..NOT.MP_LOOP_RE
+1127:     $Q_SO_DONE)) THEN
+1128:            GOTO 5000
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1158:                TEMP2(3) = HEL_MULT*DBLE(CFTOT*(AMPL(3,I)
+1159:     $           *DCONJG(AMPL(1,J)) + AMPL(1,I)*DCONJG(AMPL(3,J))
+1160:     $           +AMPL(2,I)*DCONJG(AMPL(2,J))))
+1161:C               To mimick the structure of the squared amplitude
+1162:C                reduction, we add here the squared counterterm
+1163:C                contribution directly to the result ANS() and put the
+1164:C                loop contributions in the LOOPRES array which will be
+1165:C                added to ANS later
+1166:                IF (I.LE.NCTAMPS) THEN
+1167:                  IF (.NOT.FILTER_SO.OR.SQSO_TARGET.EQ.ITEMP) THEN
+1168:                    DO K=1,3
+1169:                      ANS(K,ITEMP)=ANS(K,ITEMP)+TEMP2(K)
+1170:                      ANS(K,0)=ANS(K,0)+TEMP2(K)
+1171:                    ENDDO
+1172:                  ENDIF
+1173:                ELSE
+1174:                  DO K=1,3
+1175:                    LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1167:                  IF (.NOT.FILTER_SO.OR.SQSO_TARGET.EQ.ITEMP) THEN
+1168:                    DO K=1,3
+1169:                      ANS(K,ITEMP)=ANS(K,ITEMP)+TEMP2(K)
+1170:                      ANS(K,0)=ANS(K,0)+TEMP2(K)
+1171:                    ENDDO
+1172:                  ENDIF
+1173:                ELSE
+1174:                  DO K=1,3
+1175:                    LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I
+1176:     $               -NCTAMPS)+TEMP2(K)
+1177:C                   During the evaluation of the AMPL, we had stored
+1178:C                    the stability in S(1,*) so we now copy over this
+1179:C                    flag to the relevant contributing Squared orders.
+1180:                    S(ITEMP,I-NCTAMPS)=S(1,I-NCTAMPS)
+1181:                  ENDDO
+1182:                ENDIF
+1183:              ENDDO
+1184:            ENDDO
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1168:                    DO K=1,3
+1169:                      ANS(K,ITEMP)=ANS(K,ITEMP)+TEMP2(K)
+1170:                      ANS(K,0)=ANS(K,0)+TEMP2(K)
+1171:                    ENDDO
+1172:                  ENDIF
+1173:                ELSE
+1174:                  DO K=1,3
+1175:                    LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I
+1176:     $               -NCTAMPS)+TEMP2(K)
+1177:C                   During the evaluation of the AMPL, we had stored
+1178:C                    the stability in S(1,*) so we now copy over this
+1179:C                    flag to the relevant contributing Squared orders.
+1180:                    S(ITEMP,I-NCTAMPS)=S(1,I-NCTAMPS)
+1181:                  ENDDO
+1182:                ENDIF
+1183:              ENDDO
+1184:            ENDDO
+1185:          ENDIF
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1172:                  ENDIF
+1173:                ELSE
+1174:                  DO K=1,3
+1175:                    LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I
+1176:     $               -NCTAMPS)+TEMP2(K)
+1177:C                   During the evaluation of the AMPL, we had stored
+1178:C                    the stability in S(1,*) so we now copy over this
+1179:C                    flag to the relevant contributing Squared orders.
+1180:                    S(ITEMP,I-NCTAMPS)=S(1,I-NCTAMPS)
+1181:                  ENDDO
+1182:                ENDIF
+1183:              ENDDO
+1184:            ENDDO
+1185:          ENDIF
+1186:
+1187:C         We should compute the color flow either if it contributes to
+1188:C          the final result (i.e. not used just for the filtering), or
+1189:C          if the computation is only done from the color flows
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1214:C                split order only
+1215:C               The quantity LOOPRES defined below is not physical,'
+1216:C               //' but it's ok since it is only intended for the loop
+1217:C                filtering.
+1218:                IF(.NOT.FOUNDLOOPFILTER.AND.USELOOPFILTER) THEN
+1219:                  DO J=1,NLOOPGROUPS
+1220:                    DO I=1,NSQUAREDSO
+1221:                      DO K=1,3
+1222:                        LOOPRES(K,I,J)=LOOPRES(K,I,J)+AMPL(K,NCTAMPS+J)
+1223:                      ENDDO
+1224:                    ENDDO
+1225:                  ENDDO
+1226:                ENDIF
+1227:C               The if statement below is not strictly necessary but
+1228:C                makes it clear when it is executed.
+1229:              ELSEIF(H.EQ.USERHEL.OR.USERHEL.EQ.-1) THEN
+1230:C               Make sure that that no polarization constraint filters
+1231:C                out this helicity
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1793:     $               ,J),I=1,3)
+1794:                    WRITE(*,*) 'Finite double precision evaluations :'
+1795:     $               ,(DP_RES(1,J,I),I=1,N_DP_EVAL)
+1796:                    WRITE(*,*) 'Finite quad   precision evaluations :'
+1797:     $               ,(QP_RES(1,J,I),I=1,N_QP_EVAL)
+1798:                  ENDIF
+1799:                ENDDO
+1800:                WRITE(*,*) 'PS point specification :'
+1801:                WRITE(*,*) 'Renormalization scale MU_R=',MU_R
+1802:                DO I=1,NEXTERNAL
+1803:                  WRITE (*,'(i2,1x,4e27.17)') I, P(0,I),P(1,I),P(2,I)
+1804:     $             ,P(3,I)
+1805:                ENDDO
+1806:              ENDIF
+1807:              IF(NEPS.EQ.10) THEN
+1808:                WRITE(*,*) 'Further output of the details of these'
+1809:     $           //' unstable PS points will now be suppressed.'
+1810:              ENDIF
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+1909:                    ENDIF
+1910:                    WRITE(*,*) 'Best estimate (fin,1eps,2eps):',(ANS(I
+1911:     $               ,J),I=1,3)
+1912:                    WRITE(*,*) 'Finite double precision evaluations :'
+1913:     $               ,(DP_RES(1,J,I),I=1,N_DP_EVAL)
+1914:                  ENDIF
+1915:                ENDDO
+1916:                WRITE(*,*) 'PS point specification :'
+1917:                WRITE(*,*) 'Renormalization scale MU_R=',MU_R
+1918:                DO I=1,NEXTERNAL
+1919:                  WRITE (*,'(i2,1x,4e27.17)') I, P(0,I),P(1,I),P(2,I)
+1920:     $             ,P(3,I)
+1921:                ENDDO
+1922:              ENDIF
+1923:              IF(NEPS.EQ.10) THEN
+1924:                WRITE(*,*) 'Further output of the details of these'
+1925:     $           //' unstable PS points will now be suppressed.'
+1926:              ENDIF
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+2477:
+2478:      INTEGER FUNCTION ML5_0_0_1_ML5SOINDEX_FOR_BORN_AMP(AMPID)
+2479:C     
+2480:C     For a given born amplitude number, it returns the ID of the
+2481:C      split orders it has
+2482:C     
+2483:C     CONSTANTS
+2484:C     
+2485:      INTEGER NBORNAMPS
+2486:      PARAMETER (NBORNAMPS=0)
+2487:C     
+2488:C     ARGUMENTS
+2489:C     
+2490:      INTEGER AMPID
+2491:C     
+2492:C     LOCAL VARIABLES
+2493:C     
+2494:      INTEGER BORNAMPORDERS(NBORNAMPS)
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+2478:      INTEGER FUNCTION ML5_0_0_1_ML5SOINDEX_FOR_BORN_AMP(AMPID)
+2479:C     
+2480:C     For a given born amplitude number, it returns the ID of the
+2481:C      split orders it has
+2482:C     
+2483:C     CONSTANTS
+2484:C     
+2485:      INTEGER NBORNAMPS
+2486:      PARAMETER (NBORNAMPS=0)
+2487:C     
+2488:C     ARGUMENTS
+2489:C     
+2490:      INTEGER AMPID
+2491:C     
+2492:C     LOCAL VARIABLES
+2493:C     
+2494:      INTEGER BORNAMPORDERS(NBORNAMPS)
+2495:
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+2486:      PARAMETER (NBORNAMPS=0)
+2487:C     
+2488:C     ARGUMENTS
+2489:C     
+2490:      INTEGER AMPID
+2491:C     
+2492:C     LOCAL VARIABLES
+2493:C     
+2494:      INTEGER BORNAMPORDERS(NBORNAMPS)
+2495:
+2496:C     -----------
+2497:C     BEGIN CODE
+2498:C     -----------
+2499:      IF (AMPID.GT.NBORNAMPS) THEN
+2500:        WRITE(*,*) 'ERROR:: Born amplitude ID ',AMPID,' above the'
+2501:     $   //' maximum ',NBORNAMPS
+2502:      ENDIF
+2503:      ML5_0_0_1_ML5SOINDEX_FOR_BORN_AMP = BORNAMPORDERS(AMPID)
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+2491:C     
+2492:C     LOCAL VARIABLES
+2493:C     
+2494:      INTEGER BORNAMPORDERS(NBORNAMPS)
+2495:
+2496:C     -----------
+2497:C     BEGIN CODE
+2498:C     -----------
+2499:      IF (AMPID.GT.NBORNAMPS) THEN
+2500:        WRITE(*,*) 'ERROR:: Born amplitude ID ',AMPID,' above the'
+2501:     $   //' maximum ',NBORNAMPS
+2502:      ENDIF
+2503:      ML5_0_0_1_ML5SOINDEX_FOR_BORN_AMP = BORNAMPORDERS(AMPID)
+2504:
+2505:      END
+2506:
+2507:      INTEGER FUNCTION ML5_0_0_1_ML5SOINDEX_FOR_LOOP_AMP(AMPID)
+2508:C     
+CONTEXT SubProcesses/PV0_0_1_gg_hh/loop_matrix.f
+2493:C     
+2494:      INTEGER BORNAMPORDERS(NBORNAMPS)
+2495:
+2496:C     -----------
+2497:C     BEGIN CODE
+2498:C     -----------
+2499:      IF (AMPID.GT.NBORNAMPS) THEN
+2500:        WRITE(*,*) 'ERROR:: Born amplitude ID ',AMPID,' above the'
+2501:     $   //' maximum ',NBORNAMPS
+2502:      ENDIF
+2503:      ML5_0_0_1_ML5SOINDEX_FOR_BORN_AMP = BORNAMPORDERS(AMPID)
+2504:
+2505:      END
+2506:
+2507:      INTEGER FUNCTION ML5_0_0_1_ML5SOINDEX_FOR_LOOP_AMP(AMPID)
+2508:C     
+2509:C     For a given loop amplitude number, it returns the ID of the
+2510:C      split orders it has

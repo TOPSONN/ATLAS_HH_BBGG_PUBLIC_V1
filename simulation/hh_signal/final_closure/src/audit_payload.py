@@ -10,7 +10,9 @@ PREFIXES=('simulation/hh_signal/final_closure/','simulation/hh_signal/semantics_
     'reports/phase7h_','reports/phase7i_','reports/phase7j_','reports/phase7k_','reports/phase7l_',
     'reports/phase7_final_','metadata/phase7_final_','.github/workflows/hh_signal_final_closure.yml',
     'metadata/phase7i_git_precheck_recovery.json',
-    'metadata/phase7i_stop92_diagnostic_status.json')
+    'metadata/phase7i_stop92_diagnostic_status.json',
+    'metadata/phase7i_guard_correction_status.json',
+    'metadata/phase7i_builder_review_contract.json')
 PATCHES={
  'simulation/hh_signal/campaign/audit_payload.py':(
   "         'reports/phase7g_','metadata/phase7g_','.github/workflows/hh_signal_matched_integration.yml')\n",
@@ -36,6 +38,8 @@ def compatibility(path,before,after):
         variants.append(expected.replace(tail,added))
         diagnostic=added.replace(b"'metadata/phase7i_git_precheck_recovery.json')",b"'metadata/phase7i_git_precheck_recovery.json',\n         'metadata/phase7i_stop92_diagnostic_status.json')")
         variants.append(expected.replace(tail,diagnostic))
+        scientific=diagnostic.replace(b"'metadata/phase7i_stop92_diagnostic_status.json')",b"'metadata/phase7i_stop92_diagnostic_status.json',\n         'metadata/phase7i_guard_correction_status.json',\n         'metadata/phase7i_builder_review_contract.json')")
+        variants.append(expected.replace(tail,scientific))
     require(before.count(old)==1 and after in variants,'ONLY_DECLARED_CI_COMPATIBILITY_EDIT:'+path)
 
 def manifest_assets(t):

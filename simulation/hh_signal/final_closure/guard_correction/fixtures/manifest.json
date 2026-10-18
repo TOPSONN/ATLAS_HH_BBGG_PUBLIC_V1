@@ -1,0 +1,41 @@
+{
+  "scope": "Exact RNG-only subprograms; no sampler, integrand, HH or MadLoop symbols.",
+  "files": [
+    {
+      "path": "ranmar.f",
+      "frozen_path": "Source/ranmar.f",
+      "parent_sha256": "1f983239b8e2f9f9f3172d3da5db952d565bd06d6190431495ff817258345903",
+      "sha256": "e4749cde6c7e13fe496484d3e961e718cd9855fb3a2f35e70e1ce49126902012",
+      "bytes": 737,
+      "start_line": 192,
+      "end_line": 213
+    },
+    {
+      "path": "rmarin.f",
+      "frozen_path": "Source/ranmar.f",
+      "parent_sha256": "1f983239b8e2f9f9f3172d3da5db952d565bd06d6190431495ff817258345903",
+      "sha256": "09e7bfdeed19632a02c1547f337837b420b61b2586c9df226ca9282c14bdb736",
+      "bytes": 2125,
+      "start_line": 215,
+      "end_line": 273
+    },
+    {
+      "path": "ran1.f",
+      "frozen_path": "Source/dsample.f",
+      "parent_sha256": "0a2e88aa712d1fcf0d1fb0486ab78f8ec87ea8207aa71623da853f5b782c0a4d",
+      "sha256": "9aafbd7bd6988231e6b8447fcada897a1d195bb061d4c7cbaca36beb2ee3758e",
+      "bytes": 870,
+      "start_line": 2551,
+      "end_line": 2580
+    },
+    {
+      "path": "xran1.f",
+      "frozen_path": "Source/ran1.f",
+      "parent_sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af",
+      "bytes": 951,
+      "start_line": 1,
+      "end_line": 33
+    }
+  ]
+}

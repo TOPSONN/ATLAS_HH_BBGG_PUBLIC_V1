@@ -1,0 +1,3226 @@
+{
+  "build": {
+    "compiler_name": "x86_64-conda-linux-gnu-gfortran",
+    "compiler_sha256": "7564cac4a7d02785e005665954fc981338b200686ab9b8bfe6df15da0f2cc1f3",
+    "corrected_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+    "diagnostic_sha256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2",
+    "local_only_binaries": {
+      "corrected": {
+        "RNG_symbols_present": true,
+        "defined_symbols": 93,
+        "forbidden_ME_sampler_symbols": 0,
+        "local_binary_sha256": "3bcfff0f33e3c05ccde7e9728e84a9e4ea36879d181789a2448e1fc919d3c510"
+      },
+      "diagnostic": {
+        "RNG_symbols_present": true,
+        "defined_symbols": 93,
+        "forbidden_ME_sampler_symbols": 0,
+        "local_binary_sha256": "0a0e00ee3ebef9374f809c2c965e164c76172c71f203e4fc16719af662ec504b"
+      },
+      "original": {
+        "RNG_symbols_present": true,
+        "defined_symbols": 93,
+        "forbidden_ME_sampler_symbols": 0,
+        "local_binary_sha256": "145348b435f88b0652a7d0fc80602680b55e02abcee0c66334c7e64828557f73"
+      },
+      "scalar": {
+        "RNG_symbols_present": false,
+        "defined_symbols": 44,
+        "forbidden_ME_sampler_symbols": 0,
+        "local_binary_sha256": "0f72ed01c2cfaa0f572308e394c05628e249092524d6f701258b0d769f703ae9"
+      }
+    },
+    "optimization": "-O2",
+    "original_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+    "production_libraries_linked": []
+  },
+  "genuine_runtime_equivalence": "NOT_EVALUATED_UNTIL_AUTHORIZED",
+  "independent_arithmetic": {
+    "independent_mean": "-0.0029296875",
+    "independent_sumw": "-0.1875",
+    "independent_sumw2": "1.67578125",
+    "independent_variance_of_mean": "0.00040899217128753662109375",
+    "nonzero_pole_counterexample_detected": true,
+    "scope": "Artificial Laurent coefficients and fixed bookkeeping weights, not an HH amplitude/integral.",
+    "zero_pole_scale_cancellation": true
+  },
+  "matrix": [
+    {
+      "case": 0,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 1,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 2,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "-2.0000000000000001E-001",
+            "value": -0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "-2.0000000000000001E-001",
+          "value": -0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 3,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless= -2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "-2.9999999999999999E-001",
+            "value": -0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "-2.9999999999999999E-001",
+          "value": -0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless= -2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 4,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "9.1188000000000002E+001",
+          "value": 91.188
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  3.6475200000000002E-001 relative_mismatch=  6.3524800000000003E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 5,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5250000000000000E+002 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5250000000000000E+002",
+            "value": 252.5
+          },
+          "native_scale_over_q": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "1.0000000000000009E-002",
+            "value": 0.010000000000000009
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5250000000000000E+002",
+          "value": 252.5
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 6,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "6.3125000000000000E+004",
+            "value": 63125.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.3125000000000000E+004",
+          "value": 63125.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 7,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=  6.3125000000000000E+004 QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=  1.0100000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.3125000000000000E+004",
+            "value": 63125.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.3125000000000000E+004",
+          "value": 63125.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=  6.3125000000000000E+004 QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=  1.0100000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 8,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_ALPHA_NONPOSITIVE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 193,
+        "scalars": {
+          "MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "alpha_actual": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 9,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769341E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0100000000000229E-002 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_ALPHA_RUNNING_MISMATCH",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 248,
+        "scalars": {
+          "alpha_actual": {
+            "representation": "1.1432365095769341E-001",
+            "value": 0.11432365095769341
+          },
+          "alpha_expected": {
+            "representation": "1.1207102338760258E-001",
+            "value": 0.11207102338760258
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "2.0100000000000229E-002",
+            "value": 0.02010000000000023
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1985964157801463E+000",
+          "value": 1.1985964157801463
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769341E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0100000000000229E-002 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 10,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 11,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=                 Infinity q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=                 Infinity QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 12,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "nonfinite": "-Infinity",
+          "value": null
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=                -Infinity q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=                -Infinity QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 13,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g2": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 14,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.2473146943433304E+000",
+          "value": 1.2473146943433304
+        },
+        "computed_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "9.1188000000000002E+001",
+          "value": 91.188
+        },
+        "native_scale_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "1.5625000000000000E+004",
+          "value": 15625.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "1.5625000000000000E+004",
+          "value": 15625.0
+        },
+        "target_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  1.2500000000000000E+002 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  1.2500000000000000E+002 MU_R_over_q=  7.2950400000000004E-001 relative_mismatch=  2.7049599999999996E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 15,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 16,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 17,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 18,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 19,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=                 Infinity QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=                 Infinity native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 20,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "nonfinite": "-Infinity",
+          "value": null
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=                -Infinity QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=                -Infinity native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 21,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2= -6.2500000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2= -1.0000000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "-1.0000000000000000E+000",
+            "value": -1.0
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "-6.2500000000000000E+004",
+            "value": -62500.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "-6.2500000000000000E+004",
+          "value": -62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2= -6.2500000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2= -1.0000000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 22,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "-2.0000000000000001E-001",
+            "value": -0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "-2.0000000000000001E-001",
+          "value": -0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  2.5000000000000000E+002 g1_dimensionless= -2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 23,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5250000000000000E+002 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5250000000000000E+002",
+            "value": 252.5
+          },
+          "native_scale_over_q": {
+            "representation": "1.0100000000000000E+000",
+            "value": 1.01
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "1.0000000000000009E-002",
+            "value": 0.010000000000000009
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5250000000000000E+002",
+          "value": 252.5
+        },
+        "q2fact1_GeV2": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  0.0000000000000000E+000 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  0.0000000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5250000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 24,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5250000000000000E+002",
+          "value": 252.5
+        },
+        "q2fact1_GeV2": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 25,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 26,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 model_MU_R_GeV= -1.0000000000000000E+000 native_scale_over_q=  1.0000000000000000E+000 relative_mismatch=  0.0000000000000000E+000"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "-1.0000000000000000E+000",
+            "value": -1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_over_q": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "-1.0000000000000000E+000",
+          "value": -1.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV= -1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q= -4.0000000000000001E-003 relative_mismatch=  1.0040000000000000E+000"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 27,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  0.0000000000000000E+000 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  0.0000000000000000E+000 relative_mismatch=  1.0000000000000000E+000"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "native_scale_over_q": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 28,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "1.0000000000000000E+000",
+          "value": 1.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q=  4.0000000000000001E-003 relative_mismatch=  9.9600000000000000E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 29,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 30,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 31,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 32,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.2177803750314218E+000",
+          "value": 1.2177803750314218
+        },
+        "computed_q_GeV": {
+          "representation": "1.7300000000000000E+002",
+          "value": 173.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "9.1188000000000002E+001",
+          "value": 91.188
+        },
+        "native_scale_GeV": {
+          "representation": "1.7300000000000000E+002",
+          "value": 173.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "2.9929000000000000E+004",
+          "value": 29929.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "2.9929000000000000E+004",
+          "value": 29929.0
+        },
+        "target_q_GeV": {
+          "representation": "1.7300000000000000E+002",
+          "value": 173.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  1.7300000000000000E+002 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  1.7300000000000000E+002 MU_R_over_q=  5.2709826589595377E-001 relative_mismatch=  4.7290173410404623E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 33,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.0880682292934640E+000",
+          "value": 1.088068229293464
+        },
+        "computed_q_GeV": {
+          "representation": "1.0000000000000000E+003",
+          "value": 1000.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "9.1188000000000002E+001",
+          "value": 91.188
+        },
+        "native_scale_GeV": {
+          "representation": "1.0000000000000000E+003",
+          "value": 1000.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "1.0000000000000000E+006",
+          "value": 1000000.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "1.0000000000000000E+006",
+          "value": 1000000.0
+        },
+        "target_q_GeV": {
+          "representation": "1.0000000000000000E+003",
+          "value": 1000.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  1.0000000000000000E+003 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  1.0000000000000000E+003 MU_R_over_q=  9.1188000000000005E-002 relative_mismatch=  9.0881199999999995E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 34,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "9.8704501701125913E-001",
+          "value": 0.9870450170112591
+        },
+        "computed_q_GeV": {
+          "representation": "6.5000000000000000E+003",
+          "value": 6500.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "9.1188000000000002E+001",
+          "value": 91.188
+        },
+        "native_scale_GeV": {
+          "representation": "6.5000000000000000E+003",
+          "value": 6500.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "4.2250000000000000E+007",
+          "value": 42250000.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "4.2250000000000000E+007",
+          "value": 42250000.0
+        },
+        "target_q_GeV": {
+          "representation": "6.5000000000000000E+003",
+          "value": 6500.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  6.5000000000000000E+003 MU_R_GeV=  9.1188000000000002E+001 native_scale_GeV=  6.5000000000000000E+003 MU_R_over_q=  1.4028923076923078E-002 relative_mismatch=  9.8597107692307695E-001"
+      ],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 35,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.2473146943433304E+000",
+          "value": 1.2473146943433304
+        },
+        "computed_q_GeV": {
+          "representation": "1.2499999999999255E+002",
+          "value": 124.99999999999255
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "1.2499999999999255E+002",
+          "value": 124.99999999999255
+        },
+        "native_scale_GeV": {
+          "representation": "1.2499999999999255E+002",
+          "value": 124.99999999999255
+        },
+        "q2fact1_GeV2": {
+          "representation": "1.5624999999998139E+004",
+          "value": 15624.99999999814
+        },
+        "q2fact2_GeV2": {
+          "representation": "1.5624999999998139E+004",
+          "value": 15624.99999999814
+        },
+        "target_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 36,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  0.0000000000000000E+000"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_Q_OR_PDF",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 196,
+        "scalars": {
+          "g1_dimensionless": {
+            "representation": "2.0000000000000001E-001",
+            "value": 0.2
+          },
+          "g2_dimensionless": {
+            "representation": "2.9999999999999999E-001",
+            "value": 0.3
+          },
+          "native_scale_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          },
+          "q_GeV": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.2473146943433304E+000",
+          "value": 1.2473146943433304
+        },
+        "computed_q_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "native_scale_GeV": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "target_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  0.0000000000000000E+000"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 37,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 38,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 model_MU_R_GeV= -1.0000000000000000E+000 native_scale_over_q=  1.0000000000000000E+000 relative_mismatch=  0.0000000000000000E+000"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "-1.0000000000000000E+000",
+            "value": -1.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_over_q": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "0.0000000000000000E+000",
+            "value": 0.0
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "0.0000000000000000E+000",
+          "value": 0.0
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "-1.0000000000000000E+000",
+          "value": -1.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 MU_R_GeV= -1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002 MU_R_over_q= -4.0000000000000001E-003 relative_mismatch=  1.0040000000000000E+000"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 39,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000750001E+002",
+          "value": 250.0000000075
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 40,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000007500000E+002 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  1.0000000003000000E+000 relative_mismatch=  3.0000002482211130E-010"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_RENORMALIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 254,
+        "scalars": {
+          "model_MU_R_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000007500000E+002",
+            "value": 250.000000075
+          },
+          "native_scale_over_q": {
+            "representation": "1.0000000003000000E+000",
+            "value": 1.0000000003
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "relative_mismatch": {
+            "representation": "3.0000002482211130E-010",
+            "value": 3.000000248221113e-10
+          }
+        },
+        "schema": "SCIENTIFIC_ROUTE_A_V1"
+      },
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000007500000E+002",
+          "value": 250.000000075
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": true,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": null
+    },
+    {
+      "case": 41,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "nonfinite": "NaN",
+          "value": null
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 42,
+      "corrected_exit": 90,
+      "corrected_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "corrected_parsed": null,
+      "diagnostic_exit": 90,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "nonfinite": "Infinity",
+          "value": null
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 90,
+      "original_failure_records": [
+        "HI_FAILURE NONFINITE"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 43,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000005000002E+004",
+          "value": 62500.000005
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 44,
+      "corrected_exit": 92,
+      "corrected_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=  6.2500000012500001E+004 QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=  1.0000000002000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "corrected_parsed": {
+        "contains_event_vectors": false,
+        "identifier": "POINT92_FACTORIZATION_SCALE",
+        "precision": "ES25.16E3 / binary64 scalar inputs; units encoded in labels",
+        "record_bytes": 291,
+        "scalars": {
+          "QF1_squared_over_q2": {
+            "representation": "1.0000000000000000E+000",
+            "value": 1.0
+          },
+          "QF2_squared_over_q2": {
+            "representation": "1.0000000002000000E+000",
+            "value": 1.0000000002
+          },
+          "native_scale_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          },
+          "q2fact1_GeV2": {
+            "representation": "6.2500000000000000E+004",
+            "value": 62500.0
+          },
+          "q2fact2_GeV2": {
+            "representation": "6.2500000012500001E+004",
+            "value": 62500.0000125
+          },
+          "q_GeV": {
+            "representation": "2.5000000000000000E+002",
+            "value": 250.0
+          }
+        }
+      },
+      "diagnostic_exit": 92,
+      "inputs": {
+        "G": {
+          "representation": "1.1867291245347984E+000",
+          "value": 1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000012500001E+004",
+          "value": 62500.0000125
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 92,
+      "original_failure_records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.2500000000000000E+004 q2fact2_GeV2=  6.2500000012500001E+004 QF1_squared_over_q2=  1.0000000000000000E+000 QF2_squared_over_q2=  1.0000000002000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ],
+      "successful_state": null
+    },
+    {
+      "case": 45,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "-1.1867291245347984E+000",
+          "value": -1.1867291245347984
+        },
+        "computed_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "native_scale_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "6.2500000000000000E+004",
+          "value": 62500.0
+        },
+        "target_q_GeV": {
+          "representation": "2.5000000000000000E+002",
+          "value": 250.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    },
+    {
+      "case": 46,
+      "corrected_exit": 0,
+      "corrected_failure_records": [],
+      "corrected_parsed": null,
+      "diagnostic_exit": 0,
+      "inputs": {
+        "G": {
+          "representation": "1.2473146943433304E+000",
+          "value": 1.2473146943433304
+        },
+        "computed_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        },
+        "g1": {
+          "representation": "2.0000000000000001E-001",
+          "value": 0.2
+        },
+        "g2": {
+          "representation": "2.9999999999999999E-001",
+          "value": 0.3
+        },
+        "model_MU_R_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        },
+        "native_scale_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        },
+        "q2fact1_GeV2": {
+          "representation": "1.5625000000000000E+004",
+          "value": 15625.0
+        },
+        "q2fact2_GeV2": {
+          "representation": "1.5625000000000000E+004",
+          "value": 15625.0
+        },
+        "target_q_GeV": {
+          "representation": "1.2500000000000000E+002",
+          "value": 125.0
+        }
+      },
+      "intentional_failure_semantics_change": false,
+      "original_exit": 0,
+      "original_failure_records": [],
+      "successful_state": {
+        "RANMAR_ran1_xran1_bits_SHA256": "2854c69112fe80d718910fe6ffc87d972dfb1d1fec31598643ac1d94daeb873a",
+        "bookkeeping_and_estimator_bits": "METHOD_STATE    64    64 BFC8000000000000 3FFAD00000000000 3FC8000000000000 0000000000000000 BFC0000000000000 BFD0000000000000 BF68000000000000 3F3ACDC000000000",
+        "guard_equals_no_guard_bitwise": true,
+        "rng_draws_per_routine_after_guard": 64,
+        "rng_draws_per_routine_before_guard": 7
+      }
+    }
+  ],
+  "new_genuine_ME_calls": 0,
+  "new_independent_events": 0,
+  "new_integrals": 0,
+  "partial_receipts": [
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_Q_OR_PDF q_GeV=  0.0000000000000000E+000 g1_dimensionless=  2.0000000000000001E-001 g2_dimensionless=  2.9999999999999999E-001 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5250000000000000E+002 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5250000000000000E+002 model_MU_R_GeV=  2.5000000000000000E+002 native_scale_over_q=  1.0100000000000000E+000 relative_mismatch=  1.0000000000000009E-002"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE q_GeV=  2.5000000000000000E+002 q2fact1_GeV2=  6.3125000000000000E+004 q2fact2_GeV2=  6.2500000000000000E+004 QF1_squared_over_q2=  1.0100000000000000E+000 QF2_squared_over_q2=  1.0000000000000000E+000 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE q_GeV=  2.5000000000000000E+002 alpha_actual=  0.0000000000000000E+000 MU_R_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769341E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0100000000000229E-002 native_scale_GeV=  2.5000000000000000E+002",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH q_GeV=  2.5000000000000000E+002 alpha_actual=  1.1432365095769341E-001 alpha_expected=  1.1207102338760258E-001 relative_mismatch=  2.0100000000000229E-002 native_scale_GeV=  2.5000000000000000E+002"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 90,
+      "failure": "HI_FAILURE NONFINITE",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE NONFINITE"
+      ]
+    },
+    {
+      "execution_class": "METHOD_ONLY",
+      "exit": 92,
+      "failure": "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 model_MU_R_GeV= -1.0000000000000000E+000 native_scale_over_q=  1.0000000000000000E+000 relative_mismatch=  0.0000000000000000E+000",
+      "process_group_kill_cleanup": true,
+      "raw_streams_retained": false,
+      "records": [
+        "HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE q_GeV=  2.5000000000000000E+002 native_scale_GeV=  2.5000000000000000E+002 model_MU_R_GeV= -1.0000000000000000E+000 native_scale_over_q=  1.0000000000000000E+000 relative_mismatch=  0.0000000000000000E+000"
+      ]
+    }
+  ],
+  "physical_restart_executed": false,
+  "production_build_executed": false,
+  "scalar_probes": {
+    "alpha_probes": [
+      {
+        "fixed_nf5_guard_relative_residual": 0.061748319586564016,
+        "independent_piecewise_alpha": 0.4237117422102372,
+        "native_alpha": 0.42371174221023444,
+        "q_GeV": 1.3,
+        "relative_residual": 6.5503158452884236e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.05107272035647825,
+        "independent_piecewise_alpha": 0.4021612282938473,
+        "native_alpha": 0.4021612282938448,
+        "q_GeV": 1.4199999857999999,
+        "relative_residual": 6.217248937900877e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.051072719208859585,
+        "independent_piecewise_alpha": 0.40216122597718335,
+        "native_alpha": 0.4021612259771809,
+        "q_GeV": 1.42,
+        "relative_residual": 6.106226635438361e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.051072718509739934,
+        "independent_piecewise_alpha": 0.4021612238321242,
+        "native_alpha": 0.40216122383212183,
+        "q_GeV": 1.4200000141999998,
+        "relative_residual": 5.88418203051333e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.604361171165692e-10,
+        "independent_piecewise_alpha": 0.24545838658954994,
+        "native_alpha": 0.24545838658954913,
+        "q_GeV": 4.699999953,
+        "relative_residual": 3.3306690738754696e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 3.3306690738754696e-15,
+        "independent_piecewise_alpha": 0.2454583857904619,
+        "native_alpha": 0.2454583857904611,
+        "q_GeV": 4.7,
+        "relative_residual": 3.3306690738754696e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 3.4416913763379853e-15,
+        "independent_piecewise_alpha": 0.24545838505530093,
+        "native_alpha": 0.2454583850553001,
+        "q_GeV": 4.700000047,
+        "relative_residual": 3.4416913763379853e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.0,
+        "independent_piecewise_alpha": 0.13,
+        "native_alpha": 0.13,
+        "q_GeV": 91.188,
+        "relative_residual": 0.0
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.12380614852685004,
+        "native_alpha": 0.12380614852685007,
+        "q_GeV": 125.0,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.11801251844765541,
+        "native_alpha": 0.11801251844765542,
+        "q_GeV": 172.99999827,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-16,
+        "independent_piecewise_alpha": 0.1180125182777204,
+        "native_alpha": 0.11801251827772041,
+        "q_GeV": 173.0,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 4.440892098500626e-16,
+        "independent_piecewise_alpha": 0.11801251810778536,
+        "native_alpha": 0.1180125181077854,
+        "q_GeV": 173.00000172999998,
+        "relative_residual": 4.440892098500626e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 4.440892098500626e-16,
+        "independent_piecewise_alpha": 0.11207102338760258,
+        "native_alpha": 0.11207102338760264,
+        "q_GeV": 250.0,
+        "relative_residual": 4.440892098500626e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 8.881784197001252e-16,
+        "independent_piecewise_alpha": 0.09421116947203664,
+        "native_alpha": 0.09421116947203673,
+        "q_GeV": 1000.0,
+        "relative_residual": 8.881784197001252e-16
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 1.3322676295501878e-15,
+        "independent_piecewise_alpha": 0.07752897757873731,
+        "native_alpha": 0.0775289775787374,
+        "q_GeV": 6500.0,
+        "relative_residual": 1.3322676295501878e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 0.030827010360652496,
+        "independent_piecewise_alpha": 0.3400427383138727,
+        "native_alpha": 0.3400427383138711,
+        "q_GeV": 2.0,
+        "relative_residual": 4.773959005888173e-15
+      },
+      {
+        "fixed_nf5_guard_relative_residual": 2.220446049250313e-15,
+        "independent_piecewise_alpha": 0.20018898832648338,
+        "native_alpha": 0.20018898832648294,
+        "q_GeV": 10.0,
+        "relative_residual": 2.220446049250313e-15
+      }
+    ],
+    "scale_expression_grid": {
+      "max_mu_relative_residual": 0.0,
+      "max_q2_relative_residual": 0.0,
+      "points": 441,
+      "scope": "Deterministic scalar beam pairs 125..6500 GeV; exact SumDot/dot, extracted choice4 expression. No phase-space sampling."
+    }
+  },
+  "status": "PASS_NONPHYSICAL_THREE_VERSION_METHODS"
+}

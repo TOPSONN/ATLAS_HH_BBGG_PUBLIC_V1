@@ -1,0 +1,88 @@
+--- frozen/native_checks.f
++++ proposed/native_checks.f
+@@ -77,6 +77,12 @@
+       include 'run.inc'
+       include 'coupl.inc'
+       real*8 p(0:3,nexternal),g1,g2,q,a,expected
++      integer hi_i,hi_j
++      do hi_j=1,2
++      do hi_i=0,3
++      call finite(p(hi_i,hi_j))
++      enddo
++      enddo
+       q=sqrt(max(0d0,(p(0,1)+p(0,2))**2-
+      $ (p(1,1)+p(1,2))**2-(p(2,1)+p(2,2))**2-
+      $ (p(3,1)+p(3,2))**2))/2d0
+@@ -84,14 +90,67 @@
+       call finite(MU_R)
+       call finite(g1)
+       call finite(g2)
+-      if(q.le.0d0.or.g1.lt.0d0.or.g2.lt.0d0) stop 92
+-      if(abs(MU_R/q-1d0).gt.1d-10) stop 92
+-      if(any(abs(q2fact/q**2-1d0).gt.1d-10)) stop 92
++      call finite(scale)
++      call finite(q2fact(1))
++      call finite(q2fact(2))
++      if(q.le.0d0.or.g1.lt.0d0.or.g2.lt.0d0) then
++      write(*,'(A,4(A,ES25.16E3))')
++     $ 'HI_FAILURE POINT92 POINT92_Q_OR_PDF',
++     $ ' q_GeV=',q,
++     $ ' g1_dimensionless=',g1,
++     $ ' g2_dimensionless=',g2,
++     $ ' native_scale_GeV=',scale
++      flush(6)
++      stop 92
++      endif
++      if(scale.le.0d0.or.MU_R.le.0d0.or.
++     $ abs(scale/q-1d0).gt.1d-10) then
++      write(*,'(A,5(A,ES25.16E3))')
++     $ 'HI_FAILURE POINT92 POINT92_RENORMALIZATION_SCALE',
++     $ ' q_GeV=',q,
++     $ ' native_scale_GeV=',scale,
++     $ ' model_MU_R_GeV=',MU_R,
++     $ ' native_scale_over_q=',scale/q,
++     $ ' relative_mismatch=',abs(scale/q-1d0)
++      flush(6)
++      stop 92
++      endif
++      if(any(abs(q2fact/q**2-1d0).gt.1d-10)) then
++      write(*,'(A,6(A,ES25.16E3))')
++     $ 'HI_FAILURE POINT92 POINT92_FACTORIZATION_SCALE',
++     $ ' q_GeV=',q,
++     $ ' q2fact1_GeV2=',q2fact(1),
++     $ ' q2fact2_GeV2=',q2fact(2),
++     $ ' QF1_squared_over_q2=',q2fact(1)/q**2,
++     $ ' QF2_squared_over_q2=',q2fact(2)/q**2,
++     $ ' native_scale_GeV=',scale
++      flush(6)
++      stop 92
++      endif
+       a=G**2/(16d0*atan(1d0))
+       call finite(a)
+-      if(a.le.0d0) stop 92
++      if(a.le.0d0) then
++      write(*,'(A,4(A,ES25.16E3))')
++     $ 'HI_FAILURE POINT92 POINT92_ALPHA_NONPOSITIVE',
++     $ ' q_GeV=',q,
++     $ ' alpha_actual=',a,
++     $ ' MU_R_GeV=',MU_R,
++     $ ' native_scale_GeV=',scale
++      flush(6)
++      stop 92
++      endif
+       expected=1d0/(1d0/.13d0+
+      $ (23d0/3d0)/(8d0*atan(1d0))*log(q/91.188d0))
+-      if(abs(a/expected-1d0).gt.1d-10) stop 92
++      if(abs(a/expected-1d0).gt.1d-10) then
++      write(*,'(A,5(A,ES25.16E3))')
++     $ 'HI_FAILURE POINT92 POINT92_ALPHA_RUNNING_MISMATCH',
++     $ ' q_GeV=',q,
++     $ ' alpha_actual=',a,
++     $ ' alpha_expected=',expected,
++     $ ' relative_mismatch=',abs(a/expected-1d0),
++     $ ' native_scale_GeV=',scale
++      flush(6)
++      stop 92
++      endif
+       points=points+1
+       end

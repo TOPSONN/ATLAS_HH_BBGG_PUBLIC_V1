@@ -1,0 +1,927 @@
+{
+  "scope": "Complete frozen model/loop .f/.inc sources plus native scale callsite; no physical execution.",
+  "files": [
+    {
+      "path": "Source/MODEL/actualize_mp_ext_params.inc",
+      "sha256": "4108b4fb1f82d348413a9f7f777eb94537061f7ccf339d7d23f30f4f835676ac",
+      "bytes": 243,
+      "lines": 7,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "bytes": 877,
+      "lines": 34,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/coupl_write.inc",
+      "sha256": "66bbc4f02ef188062992a54bcae96e10670ebe4e918b9a3002fa1f46ac8960ed",
+      "bytes": 610,
+      "lines": 15,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "sha256": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a",
+      "bytes": 2856,
+      "lines": 127,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/couplings1.f",
+      "sha256": "07dc835536280cd6908c3286456bf11a01a8329166a3cfbec906078ce0c57f18",
+      "bytes": 1001,
+      "lines": 28,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/couplings2.f",
+      "sha256": "f898bff95d72b08b4128f4720d3664980d980b965dd18b5a156ec5989b05228b",
+      "bytes": 1094,
+      "lines": 28,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/formats.inc",
+      "sha256": "1d0c8b3a81b5c4ed3cc50e16edc2d7fa09fa2c2694b9eef3790bff2abc42c3a3",
+      "bytes": 958,
+      "lines": 30,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "sha256": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49",
+      "bytes": 2173,
+      "lines": 42,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/intparam_definition.inc",
+      "sha256": "b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97",
+      "bytes": 4292,
+      "lines": 169,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/lha_read.f",
+      "sha256": "fd51c4686981abedbf62153ee537e7dec01a138dd9a560f39303b851f99d6ae0",
+      "bytes": 12149,
+      "lines": 421,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/makeinc.inc",
+      "sha256": "6debc7d36db0890fbf27cbcc98d3e9ac586458abf7cd36496f11eba3f0d514c6",
+      "bytes": 304,
+      "lines": 5,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/model_functions.f",
+      "sha256": "a9678291451097495295fb6f894f3fd4c162addca0844f82393db59b69bc981e",
+      "bytes": 31974,
+      "lines": 1038,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/model_functions.inc",
+      "sha256": "be48cc65d552043c1569e2144501aa3d1c16e69834f20090aceca8ea818bb58f",
+      "bytes": 883,
+      "lines": 32,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "bytes": 925,
+      "lines": 33,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "bytes": 741,
+      "lines": 31,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/mp_couplings2.f",
+      "sha256": "23096354c99ec3fb224622190da27044e554a305bb95a2f5a51bf92adeacd732",
+      "bytes": 1292,
+      "lines": 28,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "sha256": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382",
+      "bytes": 2800,
+      "lines": 51,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/mp_intparam_definition.inc",
+      "sha256": "7fc271a8e1bff7695802922ab343d5961a0f04f83afb5143aa39afeb25404c39",
+      "bytes": 5379,
+      "lines": 180,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/param_read.inc",
+      "sha256": "a14a19f2379f69375eea63dfa4c34319f2681e9e037fc4088ec39a7978568cbc",
+      "bytes": 227,
+      "lines": 5,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "sha256": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc",
+      "bytes": 4242,
+      "lines": 94,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/printout.f",
+      "sha256": "c765cbd47475c2c8ca3e229691373124a01f13c775ccd603625e5bf2aadb82c7",
+      "bytes": 1571,
+      "lines": 34,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/rw_para.f",
+      "sha256": "8036384b285c6675b96d7c36227e2370d9e703f54e0eaae05064d4056beaf041",
+      "bytes": 2637,
+      "lines": 96,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/MODEL/testprog.f",
+      "sha256": "7570c7961bd45365561047df5a3bd0c529204fb03f4e3562680d3b90e0042c89",
+      "bytes": 2394,
+      "lines": 72,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/alfas_functions.f",
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d",
+      "bytes": 7877,
+      "lines": 280,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "Source/param_card.inc",
+      "sha256": "d513695afb685295b4091f7d64076cc6005f093a8bc696a421c7529ea69d5567",
+      "bytes": 913,
+      "lines": 32,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig1.f",
+      "sha256": "f99900fdb49cdcf87908b528d1ae95ad6eff7b3e3c4739c0e5976bb12c82b61d",
+      "bytes": 5909,
+      "lines": 219,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/cuts.f",
+      "sha256": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c",
+      "bytes": 55278,
+      "lines": 1746,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/matrix1.f",
+      "sha256": "c1c6334e218931430e39853ba9914ee418b454256a5379b67ecbc248b39f926a",
+      "bytes": 17786,
+      "lines": 505,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/setscales.f",
+      "sha256": "6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28",
+      "bytes": 6849,
+      "lines": 193,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "sha256": "49df5ace9539692e27e17db7dcc98f764361b1babe931bd157edddfc457376c3",
+      "bytes": 18290,
+      "lines": 623,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopCommons.f",
+      "sha256": "2fd448da6df73baea648d09809b7d98f350f2bdaf8f3f5bc3e9a7d46bd8db122",
+      "bytes": 20582,
+      "lines": 681,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopParamReader.f",
+      "sha256": "bd71b67f62ea2d244c303095ba6c207acaed15f04fdcbc116b4d643741fcdcfc",
+      "bytes": 12490,
+      "lines": 343,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/MadLoopParams.inc",
+      "sha256": "8935257f9f7d6eb89ebcf783672f189bbaaa21f87006d7f8c3c3700909ed0bc0",
+      "bytes": 1513,
+      "lines": 30,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/TIR_interface.f",
+      "sha256": "59f5cfb9bbe96a5a93f8a962f93b906b62ac2d5447c564ae70e2cbf0f5ad493b",
+      "bytes": 21219,
+      "lines": 697,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "sha256": "ac0b88587555884afed1a1e426ceb51f921d39dac0bb7a4785ad8d6c2cbf84df",
+      "bytes": 21628,
+      "lines": 703,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "sha256": "7c3205f5426a8e4c819c32ea100dfde543366b9bf085da8578b508fa5eff98cc",
+      "bytes": 10730,
+      "lines": 246,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_specs.inc",
+      "sha256": "29b2b6762f337b47d7bb8c145b162e0c9862ef3db2446a4382be23ee21f369d2",
+      "bytes": 120,
+      "lines": 4,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/compute_color_flows.f",
+      "sha256": "a2e0795e20c618b8ef1f2f2b69a48431d93172ab79fe68fc0d0ea6af82674620",
+      "bytes": 22972,
+      "lines": 735,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "bytes": 877,
+      "lines": 34,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/f2py_wrapper.f",
+      "sha256": "e6373edda6c9f947cc8d9878772061aac379c8a30544cb48c1f718956775cb8b",
+      "bytes": 3948,
+      "lines": 152,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/global_specs.inc",
+      "sha256": "5eb5044d09d93463d1513a9c9984af5bf17329d56805e22c3cba88d46938f1f4",
+      "bytes": 168,
+      "lines": 6,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "sha256": "820acd9d760cf1d947a8186ecc0f3d9eea9c16bbae832ff9784ff0f454ec91d8",
+      "bytes": 3480,
+      "lines": 116,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/improve_ps.f",
+      "sha256": "f266ee1e4fb25baca4e0d7db7e622cb60ab3ef1e17f8bd4668595000bb895bfa",
+      "bytes": 24818,
+      "lines": 1010,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "sha256": "92e72cfd43e952e9f58d0add9f2a75a71f67ab2ba0ff1c82da1e648ae7b051fa",
+      "bytes": 4891,
+      "lines": 148,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "sha256": "88734bc758b5a99b94729089345fb4f7d9125984fad4f20a1c8696b220192a45",
+      "bytes": 104031,
+      "lines": 3179,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_max_coefs.inc",
+      "sha256": "1dca06ff691666dab8f666692137cd040e407c276417611d5fcc744f5f82f19d",
+      "bytes": 61,
+      "lines": 2,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_num.f",
+      "sha256": "bedb60fdf54ca7189e8c04b16f3a13720f19e4876d5a82e8fb93baa0c74c0276",
+      "bytes": 2910,
+      "lines": 124,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "sha256": "e53133a98a6b6f9948f64ad99562b600c22fa95babbfd46cf13c4915550c80db",
+      "bytes": 10972,
+      "lines": 263,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "sha256": "beaf07a9fdba9f22a5d1e06444b27afd7d2f6e798d1e03f36310f047cb27a3c5",
+      "bytes": 21330,
+      "lines": 627,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "bytes": 925,
+      "lines": 33,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "bytes": 741,
+      "lines": 31,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "sha256": "e92ad464d5837b4c70fb1f163246e66ac8da2836388566e594ef6debd6c76482",
+      "bytes": 3197,
+      "lines": 100,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/nexternal.inc",
+      "sha256": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28",
+      "bytes": 114,
+      "lines": 4,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/ngraphs.inc",
+      "sha256": "0ac4e610682a658873bf8f20da3b8304a4d95211ee473534c49d675793979c03",
+      "bytes": 56,
+      "lines": 2,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/nsquaredSO.inc",
+      "sha256": "39a4a2d2392d3c4975b88951d0a3e4c86e3c626fe5b0846fb29350301a389bdf",
+      "bytes": 56,
+      "lines": 2,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/pmass.inc",
+      "sha256": "03fc80bf3ad07d425359321f62edf27a31257671637f1955a8d908f22ce32a23",
+      "bytes": 94,
+      "lines": 4,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/polynomial.f",
+      "sha256": "3ce0acc19111d74349455b3342f43e9a51984d4296497181dc52c0f57d8ee0fa",
+      "bytes": 22228,
+      "lines": 592,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/process_info.inc",
+      "sha256": "a2163706175ae47c77e94b49ffd225a0335bed2f42f67185fd104f817719d920",
+      "bytes": 176,
+      "lines": 6,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/tir_cache_size.inc",
+      "sha256": "5ed4c7283a063b349e3bf7b1368056c45ca979fd9afef0ccf0a14bd192dcb398",
+      "bytes": 34,
+      "lines": 1,
+      "frozen_inventory_member": true
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/unique_id.inc",
+      "sha256": "d60a49c61df4c28973b15a4f965abf3b8fd524c9f59fa91b630abdae15124a2e",
+      "bytes": 52,
+      "lines": 2,
+      "frozen_inventory_member": true
+    }
+  ],
+  "scale_and_counterterm_matches": [
+    {
+      "path": "Source/MODEL/actualize_mp_ext_params.inc",
+      "line": 5,
+      "text": "      MP__MU_R=MU_R"
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "line": 11,
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "line": 12,
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "line": 78,
+      "text": "      SUBROUTINE UPDATE_AS_PARAM2(MU_R2,AS2)"
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "line": 91,
+      "text": "      IF (MU_R2.GT.0D0) MU_R = DSQRT(MU_R2)"
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "line": 6,
+      "text": "     $ ,MDL_G__EXP__3,MDL_MU_R__EXP__2,MDL_CONJG__CKM3X3,MDL_CKM22"
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "line": 20,
+      "text": "     $ ,MDL_G__EXP__3,MDL_MU_R__EXP__2,MDL_CONJG__CKM3X3,MDL_CKM22"
+    },
+    {
+      "path": "Source/MODEL/intparam_definition.inc",
+      "line": 159,
+      "text": "      MDL_MU_R__EXP__2 = MU_R**2"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "line": 11,
+      "text": "      COMPLEX*32 MP__MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "line": 12,
+      "text": "      COMMON/MP_RSCALE/ MP__MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "line": 11,
+      "text": "      COMPLEX*32 MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "line": 12,
+      "text": "      COMMON/MP_RSCALE/ MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "line": 6,
+      "text": "     $ ,MP__MDL_G__EXP__3,MP__MDL_MU_R__EXP__2,MP__MDL_CONJG__CKM3X3"
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "line": 24,
+      "text": "     $ ,MP__MDL_G__EXP__2,MP__MDL_G__EXP__3,MP__MDL_MU_R__EXP__2"
+    },
+    {
+      "path": "Source/MODEL/mp_intparam_definition.inc",
+      "line": 170,
+      "text": "      MP__MDL_MU_R__EXP__2 = MP__MU_R**2"
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "line": 8,
+      "text": "      WRITE(*,*) 'MU_R = ', MU_R"
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "line": 94,
+      "text": "      WRITE(*,*) 'mdl_MU_R__exp__2 = ', MDL_MU_R__EXP__2"
+    },
+    {
+      "path": "Source/param_card.inc",
+      "line": 1,
+      "text": "      MU_R = 9.118800D+01"
+    },
+    {
+      "path": "Source/param_card.inc",
+      "line": 2,
+      "text": "      MP__MU_R = 91.188_16"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 118,
+      "text": "      CALL CTSXCUT(CTMODE,LSCALE,MU_R,NLOOPLINE,ML5_0_0_1_LOOPNUM"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 336,
+      "text": "      INTEGER    NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 337,
+      "text": "      PARAMETER (NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 462,
+      "text": "          CALL ML5_0_0_1_CTLOOP(NLOOPLINE,PL,M2L,RANK,AMPL(1,NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 467,
+      "text": "     $     ,AMPL(1,NCTAMPS+LOOPNUM),S(1,LOOPNUM))"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 470,
+      "text": "        AMPL(1,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 471,
+      "text": "        AMPL(2,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 472,
+      "text": "        AMPL(3,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 485,
+      "text": "      INTEGER    NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 486,
+      "text": "      PARAMETER (NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 609,
+      "text": "          CALL ML5_0_0_1_CTLOOP(NLOOPLINE,PL,M2L,RANK,AMPL(1,NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 614,
+      "text": "     $     ,AMPL(1,NCTAMPS+LOOPNUM),S(1,LOOPNUM))"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 617,
+      "text": "        AMPL(1,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 618,
+      "text": "        AMPL(2,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 619,
+      "text": "        AMPL(3,NCTAMPS+LOOPNUM)=(0.0D0,0.0D0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/TIR_interface.f",
+      "line": 197,
+      "text": "     $   ,M2L,MU_R,PJCOEFS,STABLE)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "line": 193,
+      "text": "        MU_R=SQRTS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "line": 195,
+      "text": "C       Update the couplings with the new MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "line": 15,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "line": 16,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "line": 60,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coef_construction_1.f",
+      "line": 63,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/compute_color_flows.f",
+      "line": 405,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/compute_color_flows.f",
+      "line": 408,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "line": 11,
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "line": 12,
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/f2py_wrapper.f",
+      "line": 121,
+      "text": "      CALL UPDATE_AS_PARAM2(SCALE2, ALPHAS)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "line": 15,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "line": 16,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "line": 60,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/helas_calls_ampb_1.f",
+      "line": 63,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "line": 15,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "line": 16,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "line": 60,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_CT_calls_1.f",
+      "line": 63,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 71,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 72,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 355,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 358,
+      "text": "      DATA UVCT_REQ_SO_DONE/.FALSE./"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 366,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1074,
+      "text": "          UVCT_REQ_SO_DONE=.FALSE."
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1119,
+      "text": "          UVCT_REQ_SO_DONE=.TRUE."
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1166,
+      "text": "                IF (I.LE.NCTAMPS) THEN"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1175,
+      "text": "                    LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1176,
+      "text": "     $               -NCTAMPS)+TEMP2(K)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1180,
+      "text": "                    S(ITEMP,I-NCTAMPS)=S(1,I-NCTAMPS)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1222,
+      "text": "                        LOOPRES(K,I,J)=LOOPRES(K,I,J)+AMPL(K,NCTAMPS+J)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1801,
+      "text": "                WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1917,
+      "text": "                WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 2485,
+      "text": "      INTEGER NBORNAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 2486,
+      "text": "      PARAMETER (NBORNAMPS=0)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 2494,
+      "text": "      INTEGER BORNAMPORDERS(NBORNAMPS)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 2499,
+      "text": "      IF (AMPID.GT.NBORNAMPS) THEN"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 2501,
+      "text": "     $   //' maximum ',NBORNAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "line": 13,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "line": 14,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "line": 49,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coef_construction_1.f",
+      "line": 52,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 23,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 24,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 109,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 112,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 289,
+      "text": "            UVCT_REQ_SO_DONE=.FALSE."
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 349,
+      "text": "            DO I=1,NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 390,
+      "text": "            DO I=1,NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 429,
+      "text": "          DO I=NCTAMPS+1,NLOOPAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 487,
+      "text": "                IF (I.LE.NCTAMPS) THEN"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 506,
+      "text": "                      LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 507,
+      "text": "     $                 -NCTAMPS)+DBLE(TEMP2(K))"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 509,
+      "text": "                      LOOPRES(K,ITEMP,I-NCTAMPS)=LOOPRES(K,ITEMP,I"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 510,
+      "text": "     $                 -NCTAMPS)+DP_TEMP2(K)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 515,
+      "text": "                    S(ITEMP,I-NCTAMPS)=S(1,I-NCTAMPS)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_compute_loop_coefs.f",
+      "line": 575,
+      "text": "                      LOOPRES(K,I,J)=LOOPRES(K,I,J)+DP_AMPL(K,NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "line": 11,
+      "text": "      COMPLEX*32 MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "line": 12,
+      "text": "      COMMON/MP_RSCALE/ MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "line": 11,
+      "text": "      COMPLEX*32 MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "line": 12,
+      "text": "      COMMON/MP_RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "line": 13,
+      "text": "      INTEGER    NLOOPS, NLOOPGROUPS, NCTAMPS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "line": 14,
+      "text": "      PARAMETER (NLOOPS=16, NLOOPGROUPS=16, NCTAMPS=4)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "line": 49,
+      "text": "      LOGICAL UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE,CT_REQ_SO_DONE"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_helas_calls_ampb_1.f",
+      "line": 52,
+      "text": "      COMMON/ML5_0_0_1_SO_REQS/UVCT_REQ_SO_DONE,MP_UVCT_REQ_SO_DONE"
+    }
+  ]
+}
