@@ -1,0 +1,51 @@
+--- frozen/Source/dsample.f
++++ isolated/Source/dsample.f
+@@ -134,6 +134,7 @@
+             ievent=ievent+1
+             call x_to_f_arg(ndim,ipole,mincfig,maxcfig,ninvar,wgt,x,p)
+             if (pass_point(p)) then
++               call hi_integrand
+                fx = dsig(p,wgt,0) !Evaluate function
+                wgt = wgt*fx
+                if (wgt .ne. 0d0) call graph_point(p,wgt) !Update graphs
+@@ -205,6 +206,7 @@
+ 
+       if (nun .lt. 0) nun=-nun   !Case when wrote maximun number allowed
+       if (chi2 .gt. 1) tsigma=tsigma*sqrt(chi2)
++      call hi_result(trmean,tsigma,chi2,cur_it-1,kevent,nw,nun)
+ c     JA 02/2011 Added twgt to results.dat to allow event generation in
+ c     first iteration for gridpack runs
+ C     OM 02/2015 Added maxwgt (target of the secondary unweight) to allow splitted
+@@ -306,6 +308,7 @@
+             call x_to_f_arg(ndim,ipole,mincfig,maxcfig,ninvar,wgt,x,p)
+             if (pass_point(p)) then
+                xzoomfact = 1d0
++               call hi_integrand
+                fx = dsig(p,wgt,0) !Evaluate function
+                if (xzoomfact .gt. 0d0) then
+                   wgt = wgt*fx*xzoomfact
+@@ -377,6 +380,7 @@
+ 
+       if (nun .lt. 0) nun=-nun   !Case when wrote maximun number allowed
+       if (chi2 .gt. 1) tsigma=tsigma*sqrt(chi2)
++      call hi_result(trmean,tsigma,chi2,cur_it-1,kevent,nw,nun)
+ c     JA 02/2011 Added twgt to results.dat to allow event generation in
+ c     first iteration for gridpack runs +02/2015 maxwgt 
+       if (icor .eq. 0) then
+@@ -1869,6 +1873,7 @@
+                xeff(cur_it)= sigma*sqrt(dble(non_zero))/mean
+ c               call sample_writehtm()
+             endif
++            call hi_iteration(cur_it,events,kn,mean,sigma,rmean)
+             write(*,222) 'Iteration',cur_it,'Mean: ',rmean,
+      &           ' Abs mean: ',mean, '  Fluctuation: ',sigma,
+      &           wmax*(dble(non_zero)/dble(kn)),
+@@ -2348,7 +2353,7 @@
+ 
+ c     Remove file events.lhe (otherwise event combination gets screwed up)
+       write(*,*) 'Deleting file events.lhe'
+-      open(unit=67,file='events.lhe',status='unknown')
++      call hh_open_sink(67)
+       write(67,*)
+       close(67)
+ 

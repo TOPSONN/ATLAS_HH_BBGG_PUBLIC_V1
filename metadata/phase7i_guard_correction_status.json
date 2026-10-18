@@ -1,0 +1,287 @@
+{
+  "ALPHA_S_GUARD": "UNCHANGED_FIXED_NF5_ON_PHYSICAL_HH_DOMAIN; exact native piecewise helper and independent matching tested at17 scales",
+  "BUILDER_CHANGE_PLAN": {
+    "candidate_sha256": "e74ee57c747e1a7d744a143789e7ee1fc15d5dde10ff41880ce1c454b32241c2",
+    "current_runtime_reader": "NOT_MIGRATED_REJECTS_PROPOSED_FULL_SOURCE_IDENTITY",
+    "new_receipt_schema": "HH_ROUTE_A_GUARD_BUILD_REVIEW_V1",
+    "original_sha256": "13f2210057ebdce2eac67048523aaa6f3b2a5e73351ada67069bb25a4cfb3d0d",
+    "status": "EXACT_ISOLATED_PROPOSAL_ACTIVE_BUILDER_UNCHANGED"
+  },
+  "DIAGNOSTIC_PROTOCOL": "PASS_5_OF_5_IDS_VERSIONED_NATIVE_SCALE_SCHEMA_291_MEASURED_BYTES_768_CAP_FIRST_FATAL_RECEIPTS",
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/24",
+  "DYNAMIC_SCALE_GUARD": "PASS_SOURCE_AND_SYNTHETIC_NATIVE_SCALE_OVER_Q_WITH_UNCHANGED_1e-10; positive model reference separately checked",
+  "FACTORIZATION_FINITE_GUARD": "PASS_BOTH_Q2FACT_ELEMENTS_NAN_POSINF_NEGINF_STOP90_BEFORE_RATIOS; finite mismatch STOP92",
+  "FINAL_VERDICT": "PASS_SCIENTIFIC_GUARD_CORRECTION_READY_FOR_BUILD_REVIEW",
+  "GATES_BLOCKED": [
+    "Production native build not authorized",
+    "Physical Stage A/restart not authorized; old authorization consumed",
+    "New receipt reader migration must be separately reviewed before runtime activation"
+  ],
+  "GATES_FAIL": [],
+  "GATES_PASS": [
+    "Route-A exact finite-LO dependency audit",
+    "629 frozen source scale-consumer scan",
+    "4658 pinned installation source hashes",
+    "Reversible original/diagnostic/corrected source review",
+    "Native O0/O2 case matrix",
+    "Explicit finite coverage",
+    "Native RNG bitwise control comparison",
+    "Independent alpha/Laurent/bookkeeping arithmetic",
+    "Strict scalar protocol and supervisor receipts",
+    "Stale binary/source/consumed-approval negatives",
+    "Exact builder proposal AST/diff review",
+    "155 tests",
+    "7 retained-reference validator commands",
+    "Full historical preservation"
+  ],
+  "GATES_UNKNOWN": [
+    "Historical actual failed predicate and rejected scalars",
+    "Actual corrected executable/dependency hashes and complete build receipt",
+    "Genuine HH pole/stability/reference cancellation and full integrator equivalence",
+    "Completed integral/error/grid/tail/writer validation"
+  ],
+  "GITHUB_CI": "FINAL_HEAD_COMPLETION_RECORDED_POST_PUBLICATION_ON_PR_AND_LOCAL_DELIVERY",
+  "HISTORICAL_FAILED_BRANCH": "UNKNOWN_UNLESS_NEW_EVIDENCE_EXISTS",
+  "HISTORICAL_PRESERVATION": {
+    "base_revision": "4b1635073b6b1cd3096ee268a3c7858dea3da3b1",
+    "executable_sha256": {
+      "910001": "c70949e1538fc53e2725c126a1527edf2e268c85e82e4149d3d3a1f46ccd426c",
+      "910019": "7dc0b4150a9f0a17973e23016b679a16bde5621ab46b48f11a0d9c30badff3ff",
+      "910037": "1a458edc8320dfe03ef8af681c5d88099f171117b8dc8746def4f2c13f79f3f6",
+      "910061": "ff465034a83e815be7db974e26f0ff6c88215fa15fb6a76cdd20b66dbbf4f6b3"
+    },
+    "execution_receipt_sha256": "c263adf18b77b16d9322cc71cd379e709cc7ee25d1408715a1a42e3c2fd198e4",
+    "existing_public_worktree_EOL_differences": [
+      {
+        "comparison": "EXISTING_WORKTREE_CRLF_RETAINED; ONLY_CRLF_TO_LF_PROJECTION_MATCHES_GIT",
+        "git_LF_blob_sha256": "70aab5e2ba1570d30d14bf0cb5c684d724e08a056843cf3f6faa0db520d2f440",
+        "local_raw_sha256": "d406de8dbbb6551fc1352e87febe3a1dcf4576091dd766f662a4488453da1eed",
+        "path": "metadata/phase6g_cutflow.csv"
+      }
+    ],
+    "frozen_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+    "historical_campaign": {
+      "files": 8420,
+      "logical_bytes": 752305317,
+      "status": "PASS_FULL_LOCAL_SHA256_INVENTORY"
+    },
+    "new_genuine_ME_calls": 0,
+    "new_independent_events": 0,
+    "new_integrals": 0,
+    "old_CI_files_verified": 8,
+    "older_stopped_files": 3603,
+    "physical_restart_executed": false,
+    "production_build_executed": false,
+    "protected_public_files_verified": 577,
+    "runtime_sources_verified": 15,
+    "status": "PASS_FULL_HISTORICAL_AND_STOPPED_SHA256_PRESERVATION",
+    "stopped_files": 3501
+  },
+  "METHOD_TESTS_O0": "PASS_47_THREE_VERSION_CASES_13_CORRECTED_SUCCESSES_7_SUPERVISED_FAILURES_17_ALPHA_441_SCALE",
+  "METHOD_TESTS_O2": "PASS_47_THREE_VERSION_CASES_13_CORRECTED_SUCCESSES_7_SUPERVISED_FAILURES_17_ALPHA_441_SCALE",
+  "MODEL_LOOP_SCALE_DEPENDENCE": "Individual Laurent terms depend on reference; complete finite leading amplitude cancels regulator prefactor in exact arithmetic. Numerical HH reference-independence not executed.",
+  "MODEL_MU_R_SEMANTICS": "Positive dimensional-regularization reference; participates in individual reduction integrals, not an unused variable. Frozen value91.188 GeV retained.",
+  "NATIVE_SCALE_SEMANTICS": "Point-specific mHH/2 used for running alpha_s; QF entries are its square and feed the native PDFs.",
+  "NATIVE_SOURCE_DIFF": {
+    "corrected_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+    "diagnostic_only_sha256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2",
+    "original_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+    "reversible_to_original": true,
+    "scientific_predicate_intentionally_changed": true
+  },
+  "NEW_COMMIT_HASH": "CONTAINING_COMMIT_EXACT_SHA_IN_PR_AND_FINAL_DELIVERY",
+  "NEW_GENUINE_ME_CALLS": 0,
+  "NEW_INDEPENDENT_EVENTS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_SOURCE_REVISION": "CONTAINING_COMMIT_EXACT_SHA_IN_PR_AND_FINAL_DELIVERY",
+  "NEXT_RECOMMENDED_STEP": "Review the exact Route-A guard and isolated builder proposal; separately approve activation/exact source revision and bounded build. Review actual new binaries, receipt, reader binding and fresh workspace before a distinct restart approval.",
+  "ORIGINAL_EXECUTED_SOURCE": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "ORIGINAL_RECEIPT_SHA256": "c263adf18b77b16d9322cc71cd379e709cc7ee25d1408715a1a42e3c2fd198e4",
+  "ORIGINAL_STOP92": "PRESERVED",
+  "PDF_GUARD": "UNCHANGED_ZERO_ACCEPTED_NEGATIVE_REJECTED_NO_FLOOR_OR_REWEIGHTING",
+  "PHYSICAL_RESTART_EXECUTED": "NO",
+  "PRODUCTION_BUILD_EXECUTED": "NO",
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "REGRESSION": "PASS_155_TESTS_AND_7_READ_ONLY_VALIDATOR_COMMANDS",
+  "REMOTE_BLOB_VERIFICATION": "EXACT_POST_PUBLICATION_READBACK_RECORDED_ON_PR_AND_LOCAL_DELIVERY",
+  "SELECTED_CORRECTION_ROUTE": "A_FINITE_LO_NO_BORN_ONLY",
+  "SOURCE_BASE": "4b1635073b6b1cd3096ee268a3c7858dea3da3b1",
+  "SUCCESS_PATH_NONINTERFERENCE": "PASS_BITWISE_GUARD_VS_NO_GUARD_RANMAR_RAN1_XRAN1_AND_ARTIFICIAL_BOOKKEEPING; frozen real estimator sources unchanged; genuine runtime equivalence NOT_EVALUATED_UNTIL_AUTHORIZED",
+  "TASK": "PHASE7I_POINT_GUARD_SCIENTIFIC_CORRECTION_V1",
+  "bounded_evidence_files": [
+    {
+      "bytes": 51101,
+      "path": "reports/phase7i_guard_correction_evidence/dependency_excerpts.txt",
+      "sha256": "2bfdec10031179eeb923ec9d2464c80775d98062f03045eef1626f67acfbd1a3"
+    },
+    {
+      "bytes": 29255,
+      "path": "reports/phase7i_guard_correction_evidence/dependency_ledger.json",
+      "sha256": "4274153e93b788ea3d72151fba9e87a44a108cb2762dded2717e2bd99ec917d3"
+    },
+    {
+      "bytes": 8824,
+      "path": "reports/phase7i_guard_correction_evidence/global_model_scale_search.json",
+      "sha256": "10720a9ca064e15bd3642bca315321b4b1778e7d483523eb0ae6bc1e7e6f9066"
+    },
+    {
+      "bytes": 108802,
+      "path": "reports/phase7i_guard_correction_evidence/method_O0.json",
+      "sha256": "5ab8c5d59adcb72a0069c4d640b225929a3c43ef8be126ceadc69d11a5c312d2"
+    },
+    {
+      "bytes": 108799,
+      "path": "reports/phase7i_guard_correction_evidence/method_O2.json",
+      "sha256": "44d9e6996ba43c01c2b46d6afde31b60302f2daaa171d7c0ccc6bac6fb8d1b5a"
+    },
+    {
+      "bytes": 1531,
+      "path": "reports/phase7i_guard_correction_evidence/preservation.json",
+      "sha256": "e9c9eb18316abf8e0d79f2dae3a3097534326fb71ae92c09496e72bcd202b4ae"
+    },
+    {
+      "bytes": 17404,
+      "path": "reports/phase7i_guard_correction_evidence/reduction_excerpts.txt",
+      "sha256": "0916f546d82d2740bd28d0bb1d500c4e7b88a720a3841d19559ed5bf2a53323e"
+    },
+    {
+      "bytes": 1025,
+      "path": "reports/phase7i_guard_correction_evidence/reduction_identity.json",
+      "sha256": "20fad5abae34a950d3e63d304e8b8212f005c83b8742ae12331c9c4657b235a1"
+    },
+    {
+      "bytes": 3292,
+      "path": "reports/phase7i_guard_correction_evidence/regression.json",
+      "sha256": "ee1b0b97a583cbe338a262748724d8c0f69f75a4aa705bb9eea289af4a2d5210"
+    },
+    {
+      "bytes": 25856,
+      "path": "reports/phase7i_guard_correction_evidence/regression_tests.txt",
+      "sha256": "48846f9e1fec81d5976c39aa45c30d43953a240088dd46962355174f1d3f8471"
+    }
+  ],
+  "build_authorized": false,
+  "publication_scope": "Bounded source/tests/scalar evidence only; no figures, binaries, archives or physical samples.",
+  "resource_contract": {
+    "additional_disk_bytes": 5368709120,
+    "aggregate_CPU_seconds": 14400,
+    "aggregate_wall_seconds": 14400,
+    "jobs": 1,
+    "permanent_physical_LHE_records": 0,
+    "seeds": [
+      910001,
+      910019,
+      910037,
+      910061
+    ],
+    "workers": 1
+  },
+  "restart_authorized": false,
+  "source_files": [
+    {
+      "bytes": 2277,
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "28ec19b7213f021aa2bf51eb6d4fae0677105a94b4ebe9859d87507ce484b76c"
+    },
+    {
+      "bytes": 19163,
+      "path": "metadata/phase7i_builder_review_contract.json",
+      "sha256": "c22eafdbcabb07550c5ffa9eddb39fd8100993fd3bf70d09ad5b1c60a1d57452"
+    },
+    {
+      "bytes": 5784,
+      "path": "simulation/hh_signal/campaign/audit_payload.py",
+      "sha256": "d52556c93419301e635739f8212149faff7c309255b1f24b759dcf8dca3533bf"
+    },
+    {
+      "bytes": 83,
+      "path": "simulation/hh_signal/final_closure/guard_correction/__init__.py",
+      "sha256": "6d1656e18f33126acc25c342ff17870f5802673692eb66d9b85e77f9b52d411e"
+    },
+    {
+      "bytes": 4926,
+      "path": "simulation/hh_signal/final_closure/guard_correction/build_corrected_proposal.patch",
+      "sha256": "793b222d7ebe5d83a0cd7af70e6e3036e10ebf8e6351d2dc224d7407144a5ede"
+    },
+    {
+      "bytes": 8736,
+      "path": "simulation/hh_signal/final_closure/guard_correction/build_corrected_proposal.py",
+      "sha256": "e74ee57c747e1a7d744a143789e7ee1fc15d5dde10ff41880ce1c454b32241c2"
+    },
+    {
+      "bytes": 3004,
+      "path": "simulation/hh_signal/final_closure/guard_correction/builder_proposal.py",
+      "sha256": "36fcd75bf30d40775167f068fcd8c9c5f6e7f3a9cff03e49f13cb97e58e2f7e0"
+    },
+    {
+      "bytes": 1281,
+      "path": "simulation/hh_signal/final_closure/guard_correction/diagnostics.py",
+      "sha256": "df7fdad2aa22413dd823f8922b3936ae45f0e5e4e5f67a35dde6c09bc588d7d9"
+    },
+    {
+      "bytes": 1388,
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/manifest.json",
+      "sha256": "50418da7cd741dc4ae3cc54d7f1eadbeab6a2a36af4913243e5c317d29f0ad1b"
+    },
+    {
+      "bytes": 870,
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/ran1.f",
+      "sha256": "9aafbd7bd6988231e6b8447fcada897a1d195bb061d4c7cbaca36beb2ee3758e"
+    },
+    {
+      "bytes": 737,
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/ranmar.f",
+      "sha256": "e4749cde6c7e13fe496484d3e961e718cd9855fb3a2f35e70e1ce49126902012"
+    },
+    {
+      "bytes": 2125,
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/rmarin.f",
+      "sha256": "09e7bfdeed19632a02c1547f337837b420b61b2586c9df226ca9282c14bdb736"
+    },
+    {
+      "bytes": 951,
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/xran1.f",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af"
+    },
+    {
+      "bytes": 11842,
+      "path": "simulation/hh_signal/final_closure/guard_correction/methods.py",
+      "sha256": "ddd367965b425091ad8b8dc84f62180950d8834b47280b94e0a0c65490d3fd17"
+    },
+    {
+      "bytes": 4681,
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123"
+    },
+    {
+      "bytes": 2745,
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.patch",
+      "sha256": "53f5f8adcb095ce8cecea1076c51ecc9740aea456a4a91a9218674715e8ad03c"
+    },
+    {
+      "bytes": 2223,
+      "path": "simulation/hh_signal/final_closure/guard_correction/overlay.py",
+      "sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071"
+    },
+    {
+      "bytes": 5317,
+      "path": "simulation/hh_signal/final_closure/guard_correction/probe.f",
+      "sha256": "ea9bad773e14dc0ea23789e89731c1fb2a0edb9d70d629ed73016d42da1e139b"
+    },
+    {
+      "bytes": 5860,
+      "path": "simulation/hh_signal/final_closure/guard_correction/review_contract.py",
+      "sha256": "805bdba7b6c42bf388a79d477a9b9d6bfab5750e06b5261b3c69118efa53b993"
+    },
+    {
+      "bytes": 10278,
+      "path": "simulation/hh_signal/final_closure/guard_correction/test_correction.py",
+      "sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d"
+    },
+    {
+      "bytes": 6253,
+      "path": "simulation/hh_signal/final_closure/src/audit_payload.py",
+      "sha256": "3f03da3dd27dc7544e14c2784a452e1132a06e545d3a1fe80c026dcd2997868b"
+    }
+  ]
+}

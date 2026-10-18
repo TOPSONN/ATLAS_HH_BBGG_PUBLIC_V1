@@ -1,0 +1,251 @@
+{
+  "ACTUAL_NEW_EVENTS": 0,
+  "ACTUAL_NEW_INTEGRALS": 0,
+  "ACTUAL_NEW_ME_CALLS": 0,
+  "ALPHA_S_RUNNING_CONSISTENCY": "PASS_17_NATIVE_SCALAR_PROBES; FIXED_NF5_MATCHES_ALLOWED_HH_SCALE_DOMAIN; DOES_NOT_MATCH_ALL_SUB_B_THRESHOLD_SCALES",
+  "CALL_ORDER": "mapping -> PASSCUTS: native scale, ALPHAS/G, QF squared, coupling update -> PDFs -> hi_point(PP) -> SMATRIX1(P1) -> loop",
+  "CANDIDATE_GUARD_SHA256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2",
+  "DIAGNOSTIC_PATCH": "ISOLATED_FAILURE_ONLY_OVERLAY_PROPOSED_NOT_APPLIED_TO_PRODUCTION",
+  "DYNAMIC_SCALE_CONSISTENCY": "CHOICE4_NATIVE_SCALE_AND_QF_EXPRESSIONS_AGREE_IN_441_SCALAR_TESTS; MODEL_MU_R_IDENTITY_NOT_ESTABLISHED",
+  "FAILURE_RECEIPT_COVERAGE": "PASS_5_POINT92_IDS_PLUS_ORIGINAL_NONFINITE_FATAL_RECORD; UNCHANGED_SUPERVISOR_LANDLOCK_GROUP_CLEANUP",
+  "FINAL_VERDICT": "BLOCKED_POINT_GUARD_SEMANTICS",
+  "FROZEN_BUILD_IDENTITY": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "GATES_BLOCKED": [
+    "Production rebuild requires separate reviewed executable source/binding",
+    "Physical restart not authorized; old attempt consumed"
+  ],
+  "GATES_FAIL": [
+    "Model MU_R cannot be certified as point-specific native scale in original branch2",
+    "Original guard lacks q2fact finite coverage"
+  ],
+  "GATES_PASS": [
+    "Frozen source audit",
+    "Exact reversible overlay",
+    "Native synthetic branch matrix",
+    "Independent alpha arithmetic",
+    "Scale expression probes",
+    "First-failure receipt and scalar bounds",
+    "143 regression tests",
+    "7 portable validator commands",
+    "Historical SHA256 preservation",
+    "Exact-source full tracked precheck"
+  ],
+  "GATES_UNKNOWN": [
+    "Historical failed predicate and rejected scalars",
+    "Complete old final ME/integrand counters",
+    "Genuine integrator noninterference",
+    "Completed integral/error/grid/tail/writer validation"
+  ],
+  "GITHUB_CI": "FINAL_HEAD_STATUS_TO_BE_RECORDED_ON_PR_AND_LOCAL_DELIVERY_AFTER_PUBLICATION",
+  "GUARD_TIMING_CONSISTENCY": "NATIVE_SCALE_G_PDF_UPDATED_BEFORE_GUARD; MODEL_MU_R_NOT_SYNCHRONIZED_ON_AUDITED_PATH",
+  "HISTORICAL_PRESERVATION": "PASS_COMPLETE_3501_STOPPED_3603_OLDER_8420_CAMPAIGN_4_BINARIES_28_PUBLISHED_3_CI_15_RUNTIME_SOURCE_IDENTITIES",
+  "INHERITED_FINITE_GAP": "Q2FACT_NAN_PASSES_ORIGINAL_AND_OVERLAY_IN_TESTED_COMPILER_MODES; PRESERVED_NOT_FIXED",
+  "NEGATIVE_TESTS": "PASS_PREDICATES_PRECEDENCE_FINITE_DRIFT_SERIALIZATION_RECEIPTS_SCOPE",
+  "NEW_SOURCE_REVISION": "CONTAINING_GIT_COMMIT; EXACT_SHA_REPORTED_ON_PR_AND_FINAL_DELIVERY",
+  "NEXT_BUILD_APPROVAL_REQUIRED": true,
+  "NEXT_RECOMMENDED_STEP": "Review this exact diagnostic revision and source-supported scale ownership; separately justify any guard/builder correction before approving a new production build and later one-attempt restart.",
+  "NEXT_RESTART_APPROVAL_REQUIRED": true,
+  "NONPHYSICAL_METHOD_TESTS": "PASS_24_CASES_X_2_OPTIMIZATIONS_17_ALPHA_441_SCALE",
+  "OBSERVED_FAILURE_BRANCH": "UNKNOWN_NO_HISTORICAL_BRANCH_RECORD",
+  "ORIGINAL_EXECUTED_SOURCE": "58d39888a024028e32f3071db9215c0db6fe0a89",
+  "ORIGINAL_FAILURE_REPORT_HEAD": "dcb499e1cc436ae71fcb716c36cc32cb93aa92a9",
+  "ORIGINAL_GUARD_SHA256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+  "ORIGINAL_STOP92_RECEIPT": "PRESERVED",
+  "ORIGINAL_STOP92_RECEIPT_SHA256": "c263adf18b77b16d9322cc71cd379e709cc7ee25d1408715a1a42e3c2fd198e4",
+  "PDF_VALUE_SEMANTICS": "DIMENSIONLESS_PROTON_GLUON_DENSITIES_NO_JACOBIAN_NO_EXTRA_X; ZERO_ALLOWED",
+  "PHYSICAL_RESTART": "NOT_EXECUTED",
+  "PHYSICS_CONTRACT_SHA256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "PREDICATE_ID_COVERAGE": "5_OF_5_SYNTHETIC_ONLY",
+  "PRODUCTION_NATIVE_REBUILD": "NOT_EXECUTED",
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "REMOTE_BLOB_VERIFICATION": "POST_PUBLICATION_BYTE_READBACK_TO_BE_RECORDED_ON_PR_AND_LOCAL_DELIVERY",
+  "RESOURCE_AND_RETENTION_POLICY": {
+    "additional_disk_GiB": 5,
+    "aggregate_CPU_hours": 4,
+    "aggregate_wall_hours": 4,
+    "fixed_seeds": [
+      910001,
+      910019,
+      910037,
+      910061
+    ],
+    "jobs": 1,
+    "no_retry_or_seed_replacement": true,
+    "retained_physical_LHE_events": 0,
+    "workers": 1
+  },
+  "RESTART_AUTHORIZED": false,
+  "SCIENTIFIC_ROOT_CAUSE_CONFIDENCE": {
+    "historical_failed_predicate": "UNKNOWN",
+    "native_scale_model_MU_R_ownership": "HIGH_SOURCE_SUPPORTED_CANDIDATE"
+  },
+  "SOURCE_AUDIT": "PASS_ACTUAL_FROZEN_LINE_HASH_AND_LINKED_SCALAR_SYMBOL_AUDIT",
+  "STOP92_BRANCH_COUNT": 5,
+  "SUCCESS_PATH_NONINTERFERENCE": "PASS_EXACT_SOURCE_REVERSAL_AND_BITWISE_METHOD_STATE; GENUINE_RUNTIME_NOT_EVALUATED_UNTIL_AUTHORIZED",
+  "TASK": "PHASE7I_NATIVE_STOP92_DIAGNOSTIC_RECOVERY_V1",
+  "bounded_evidence_files": [
+    {
+      "bytes": 1023,
+      "path": "reports/phase7i_stop92_evidence/MU_R_ownership.json",
+      "sha256": "88dd64600a7cbf0fd8ad67b84b9d061ab04b8a169a5d2a96131387d56336e2d4"
+    },
+    {
+      "bytes": 20560,
+      "path": "reports/phase7i_stop92_evidence/exact_source_precheck.json",
+      "sha256": "99c54305b598ccc6bf17d2489d11e056f01ef1f87f26df7114be3aabf7906035"
+    },
+    {
+      "bytes": 63946,
+      "path": "reports/phase7i_stop92_evidence/frozen_source_excerpts.txt",
+      "sha256": "f3a7bb5f3584361da0189bfedf74e1a4e77f397e068549d2a35c8bd1e207924a"
+    },
+    {
+      "bytes": 642,
+      "path": "reports/phase7i_stop92_evidence/linked_scalar_symbols.json",
+      "sha256": "fb8f25868209d68777df79e420b32ccda56b5e7bc947eecffc6e8d1c29e7f61c"
+    },
+    {
+      "bytes": 30024,
+      "path": "reports/phase7i_stop92_evidence/method_O0.json",
+      "sha256": "f887409cb8c4908dc636faf480b80e99c716a045c63c276c1c38bfbd8ef4ddf3"
+    },
+    {
+      "bytes": 30024,
+      "path": "reports/phase7i_stop92_evidence/method_O2.json",
+      "sha256": "8b7839fc324df770835bee2c5a68377971b0c6920b1cad5756b197d5f246df42"
+    },
+    {
+      "bytes": 7790,
+      "path": "reports/phase7i_stop92_evidence/native_source_ledger.json",
+      "sha256": "7516b848adfcb6c132deda6732460ae57541726a052ff123273ed997f9c54da8"
+    },
+    {
+      "bytes": 1259,
+      "path": "reports/phase7i_stop92_evidence/preservation.json",
+      "sha256": "b5a1d6eefd716b263451e3db17ea2785e07ed2778b4dec95c4172a30a76d92f9"
+    },
+    {
+      "bytes": 3294,
+      "path": "reports/phase7i_stop92_evidence/regression.json",
+      "sha256": "64ef3395e7119ee29e807f37a7e836e02ec9215ba164335aa587eaeb856a8152"
+    },
+    {
+      "bytes": 23306,
+      "path": "reports/phase7i_stop92_evidence/regression_tests.txt",
+      "sha256": "a5d25e51b686a5fadfca1f64d2585d27df11d5bfa68fedf0a5fe3ca780eaeb42"
+    }
+  ],
+  "changed_source_files": [
+    {
+      "bytes": 2096,
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "c2f658fc98a341ce725f87d7504c1f0bac8803e55b77925b8117494bce319509"
+    },
+    {
+      "bytes": 5668,
+      "path": "simulation/hh_signal/campaign/audit_payload.py",
+      "sha256": "54a4978cf8312e378c07190f32b8620cf90f269bcf02d2a826bc6055d447df39"
+    },
+    {
+      "bytes": 5825,
+      "path": "simulation/hh_signal/final_closure/src/audit_payload.py",
+      "sha256": "bf9cb083633436d695e90ce8edbb824ba7346db1674f7725838956a4be1d8988"
+    },
+    {
+      "bytes": 84,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/__init__.py",
+      "sha256": "10cf4eff506c1c87f876a42b1c127977896ad580a09b3a7c90d9ee914867de9e"
+    },
+    {
+      "bytes": 1789,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/diagnostics.py",
+      "sha256": "32a03eddc7ed9e50784384d42a0107bb2faf0c05659f507b586a69edeedf1d23"
+    },
+    {
+      "bytes": 453,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/alfas.inc",
+      "sha256": "d5ae9799ae1067a7a5d8a690654408e4626db1f032091eab30286a3dc06c7a1c"
+    },
+    {
+      "bytes": 7877,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/alfas_functions.f",
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d"
+    },
+    {
+      "bytes": 877,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf"
+    },
+    {
+      "bytes": 566,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/dot.f",
+      "sha256": "eed53874c22b48557ef889369528142ffdba11fcb35466f11d91ae06926906a2"
+    },
+    {
+      "bytes": 2295,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/genps.inc",
+      "sha256": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880"
+    },
+    {
+      "bytes": 2566,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/manifest.json",
+      "sha256": "791a1bc45de5d6bb42f6ddbce336eaec82eee1536a78133ebf914b644232f33a"
+    },
+    {
+      "bytes": 61,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/maxparticles.inc",
+      "sha256": "f74c474319f9374319e754e43a6e57113420206e069dd21c73578a28399fa202"
+    },
+    {
+      "bytes": 114,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/nexternal.inc",
+      "sha256": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28"
+    },
+    {
+      "bytes": 3622,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/run.inc",
+      "sha256": "51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330"
+    },
+    {
+      "bytes": 602,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/sumdot.f",
+      "sha256": "33ae9a631039d05e9c78496a1271b542e2a9d751d52f4581281cae0aa762b721"
+    },
+    {
+      "bytes": 9672,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/methods.py",
+      "sha256": "18fd6e27fac6128a5f70ac4289be94f7b9824f0beb72be567311779f6e21ec0b"
+    },
+    {
+      "bytes": 4426,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/native_checks_diagnostic.f",
+      "sha256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2"
+    },
+    {
+      "bytes": 2248,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/native_checks_diagnostic.patch",
+      "sha256": "e8a4363ee5b1099f29b1a65a79915760537c80e29fec9e4b26cdd018473d3873"
+    },
+    {
+      "bytes": 3118,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/overlay.py",
+      "sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733"
+    },
+    {
+      "bytes": 2643,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/probe.f",
+      "sha256": "73baa4d0870b828b5f16ad517d09090f44771a08118a854334aaa9ce87ff8188"
+    },
+    {
+      "bytes": 1370,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/scalar_probe.f",
+      "sha256": "8bfd37d6bccf5ff038bb444d684c299e9ea88e39d5580b486863719b72014c87"
+    },
+    {
+      "bytes": 5678,
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/test_diagnostic.py",
+      "sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926"
+    }
+  ],
+  "publication_boundary": "No PDF/PNG, production binary, object, sample, raw event vector or private absolute path."
+}

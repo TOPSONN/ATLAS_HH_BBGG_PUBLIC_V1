@@ -1,0 +1,20 @@
+--- frozen/SubProcesses/unwgt.f
++++ isolated/SubProcesses/unwgt.f
+@@ -403,7 +403,7 @@
+ c         return
+ c      endif
+       lunw = 25
+-      open(unit = lunw, file='events.lhe', status='unknown')
++      call hh_open_sink(lunw)
+       done = .false.
+       i=0      
+       xtot = 0
+@@ -438,6 +438,8 @@
+       endif
+       write(*,*) 'Events wgts > 1: ', nover
+       write(*,*) '% Cross section > 1: ',xover, xover/xtot*100.
++      call hi_tail(nw,i,nover,th_nunwgt,xover,xtot,
++     $ target_wgt,th_maxwgt)
+       neventswritten = i
+       maxwgt = target_wgt
+       if (force_max_wgt.lt.0)then

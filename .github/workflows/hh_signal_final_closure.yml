@@ -1,0 +1,39 @@
+name: Phase7 coordinated closure and preserved science
+on:
+  push:
+    branches: [codex/phase7-final-closure]
+  pull_request:
+    paths: ['simulation/hh_signal/**', 'reports/phase7*', 'metadata/phase7*', '.github/workflows/hh_signal_final_closure.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  closure_methods_and_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scientific and fail-closed methods, including independent POSIX I/O attack regression
+        run: python3 -B -m unittest simulation.hh_signal.semantics_recovery.test_semantics simulation.hh_signal.final_closure.tests.test_closure simulation.hh_signal.final_closure.integration_runtime.test_runtime simulation.hh_signal.matched_integration.test_matched simulation.hh_signal.config_lock.test_guards simulation.hh_signal.integration_audit.test_audit simulation.hh_signal.campaign.test_campaign -v
+      - name: Actual method/native-readback evidence, historical references and additive interpretation
+        run: |
+          python3 -B -m simulation.hh_signal.final_closure.src.validate
+          python3 -B -m simulation.hh_signal.final_closure.integration_runtime.published
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: STOP92 isolated native scalar methods; no ME or production rebuild
+        run: python3 -B -m unittest simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic -v
+      - name: Scientific guard correction and builder review methods only
+        run: python3 -B -m unittest simulation.hh_signal.final_closure.guard_correction.test_correction -v
+      - name: Active Route-A builder and strict synthetic receipt methods; no production build
+        run: python3 -B -m unittest simulation.hh_signal.final_closure.integration_runtime.test_route_a -v
+      - name: Audit every outgoing commit and index; freeze historical science
+        run: python3 -B -m simulation.hh_signal.final_closure.src.audit_payload

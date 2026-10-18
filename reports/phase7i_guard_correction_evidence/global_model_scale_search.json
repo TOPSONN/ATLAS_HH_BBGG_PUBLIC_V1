@@ -1,0 +1,247 @@
+{
+  "scope": "All frozen process Fortran/C/include sources, including DHELAS; no execution.",
+  "source_files_scanned": 629,
+  "DHELAS_source_files_scanned": 17,
+  "matches": [
+    {
+      "path": "SubProcesses/mp_coupl.inc",
+      "line": 11,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMPLEX*32 MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/mp_coupl.inc",
+      "line": 12,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMMON/MP_RSCALE/ MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/coupl.inc",
+      "line": 11,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "SubProcesses/coupl.inc",
+      "line": 12,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/mp_coupl_same_name.inc",
+      "line": 11,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMPLEX*32 MU_R"
+    },
+    {
+      "path": "SubProcesses/mp_coupl_same_name.inc",
+      "line": 12,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMMON/MP_RSCALE/ MU_R"
+    },
+    {
+      "path": "Source/param_card.inc",
+      "line": 1,
+      "sha256": "d513695afb685295b4091f7d64076cc6005f093a8bc696a421c7529ea69d5567",
+      "text": "      MU_R = 9.118800D+01"
+    },
+    {
+      "path": "Source/param_card.inc",
+      "line": 2,
+      "sha256": "d513695afb685295b4091f7d64076cc6005f093a8bc696a421c7529ea69d5567",
+      "text": "      MP__MU_R = 91.188_16"
+    },
+    {
+      "path": "Source/coupl.inc",
+      "line": 11,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "Source/coupl.inc",
+      "line": 12,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "line": 11,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMPLEX*32 MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl.inc",
+      "line": 12,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMMON/MP_RSCALE/ MP__MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/CT_interface.f",
+      "line": 118,
+      "sha256": "49df5ace9539692e27e17db7dcc98f764361b1babe931bd157edddfc457376c3",
+      "text": "      CALL CTSXCUT(CTMODE,LSCALE,MU_R,NLOOPLINE,ML5_0_0_1_LOOPNUM"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "line": 193,
+      "sha256": "ac0b88587555884afed1a1e426ceb51f921d39dac0bb7a4785ad8d6c2cbf84df",
+      "text": "        MU_R=SQRTS"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/check_sa.f",
+      "line": 195,
+      "sha256": "ac0b88587555884afed1a1e426ceb51f921d39dac0bb7a4785ad8d6c2cbf84df",
+      "text": "C       Update the couplings with the new MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/TIR_interface.f",
+      "line": 197,
+      "sha256": "59f5cfb9bbe96a5a93f8a962f93b906b62ac2d5447c564ae70e2cbf0f5ad493b",
+      "text": "     $   ,M2L,MU_R,PJCOEFS,STABLE)"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "line": 11,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/coupl.inc",
+      "line": 12,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1801,
+      "sha256": "88734bc758b5a99b94729089345fb4f7d9125984fad4f20a1c8696b220192a45",
+      "text": "                WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/loop_matrix.f",
+      "line": 1917,
+      "sha256": "88734bc758b5a99b94729089345fb4f7d9125984fad4f20a1c8696b220192a45",
+      "text": "                WRITE(*,*) 'Renormalization scale MU_R=',MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "line": 11,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMPLEX*32 MU_R"
+    },
+    {
+      "path": "SubProcesses/PV0_0_1_gg_hh/mp_coupl_same_name.inc",
+      "line": 12,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMMON/MP_RSCALE/ MU_R"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/coupl.inc",
+      "line": 11,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/coupl.inc",
+      "line": 12,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "Source/MODEL/couplings.f",
+      "line": 91,
+      "sha256": "68d8cac7f99fd717b88d9b34deeea97c9803a109cbc1848b91e89ec18cee811a",
+      "text": "      IF (MU_R2.GT.0D0) MU_R = DSQRT(MU_R2)"
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "line": 8,
+      "sha256": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc",
+      "text": "      WRITE(*,*) 'MU_R = ', MU_R"
+    },
+    {
+      "path": "Source/MODEL/param_write.inc",
+      "line": 94,
+      "sha256": "930e3ead9c7deb0cd09912197b13f21b7f94fe3265095be3dd37e3e953ff62bc",
+      "text": "      WRITE(*,*) 'mdl_MU_R__exp__2 = ', MDL_MU_R__EXP__2"
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "line": 6,
+      "sha256": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49",
+      "text": "     $ ,MDL_G__EXP__3,MDL_MU_R__EXP__2,MDL_CONJG__CKM3X3,MDL_CKM22"
+    },
+    {
+      "path": "Source/MODEL/input.inc",
+      "line": 20,
+      "sha256": "f8d8a99b6ac76ab1d31f1413d92c727a36dda2f65e4c597e9f28c8f2f17f4a49",
+      "text": "     $ ,MDL_G__EXP__3,MDL_MU_R__EXP__2,MDL_CONJG__CKM3X3,MDL_CKM22"
+    },
+    {
+      "path": "Source/MODEL/mp_intparam_definition.inc",
+      "line": 170,
+      "sha256": "7fc271a8e1bff7695802922ab343d5961a0f04f83afb5143aa39afeb25404c39",
+      "text": "      MP__MDL_MU_R__EXP__2 = MP__MU_R**2"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "line": 11,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMPLEX*32 MP__MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl.inc",
+      "line": 12,
+      "sha256": "08f9de3b1178eb958b0d1ccc4e5fcb024d779e20a92b27664feb979a5ae1eb7a",
+      "text": "      COMMON/MP_RSCALE/ MP__MU_R"
+    },
+    {
+      "path": "Source/MODEL/actualize_mp_ext_params.inc",
+      "line": 5,
+      "sha256": "4108b4fb1f82d348413a9f7f777eb94537061f7ccf339d7d23f30f4f835676ac",
+      "text": "      MP__MU_R=MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "line": 6,
+      "sha256": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382",
+      "text": "     $ ,MP__MDL_G__EXP__3,MP__MDL_MU_R__EXP__2,MP__MDL_CONJG__CKM3X3"
+    },
+    {
+      "path": "Source/MODEL/mp_input.inc",
+      "line": 24,
+      "sha256": "9a4656252d3845e161d8e4a412d41b6aa776bbfe245653593a08cc0f75f2b382",
+      "text": "     $ ,MP__MDL_G__EXP__2,MP__MDL_G__EXP__3,MP__MDL_MU_R__EXP__2"
+    },
+    {
+      "path": "Source/MODEL/intparam_definition.inc",
+      "line": 159,
+      "sha256": "b37c6419d02580fb2d92c40d5965d32220d8a03687770bb4cd19b09057597b97",
+      "text": "      MDL_MU_R__EXP__2 = MU_R**2"
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "line": 11,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      DOUBLE PRECISION MU_R"
+    },
+    {
+      "path": "Source/MODEL/coupl.inc",
+      "line": 12,
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "text": "      COMMON/RSCALE/ MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "line": 11,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMPLEX*32 MU_R"
+    },
+    {
+      "path": "Source/MODEL/mp_coupl_same_name.inc",
+      "line": 12,
+      "sha256": "613d0b9b9a03e0371c2114286162b24becf59a88410fb9e77b850f240b56918f",
+      "text": "      COMMON/MP_RSCALE/ MU_R"
+    }
+  ]
+}

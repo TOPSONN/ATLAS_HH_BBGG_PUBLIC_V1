@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "task": "PHASE7I_MATCHED_CONFIG_INTEGRATION",
+  "base_head": "081d29a8499a714faeb9e1296d41ac93d48c82d2",
+  "base_branch": "codex/phase7f-hh-effective-config-lock",
+  "branch_alias_from_request": "codex/phase7f-hh-config-lock",
+  "base_resolution": "verified PR22 exact head; existing branch names preserved",
+  "authorization_status": "NOT_GRANTED",
+  "native_STOP80": "PRESERVED",
+  "permanent_writer_STOP86": "PRESERVED",
+  "semantics_gate": "METHOD_LEVEL_ONLY_READY_FOR_AUTHORIZED_NATIVE_VALIDATION",
+  "stage_A_status": "NOT_EXECUTED",
+  "stage_B_status": "NOT_EXECUTED",
+  "configuration_lock_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+  "replicas": [
+    {
+      "seed": 910001,
+      "workspace": "replica_910001",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "planned_source_id": "MATCHED_CTEQ6L1_LO_SEED_910001",
+      "planned_result_id": "d24805cf0403c80f7e91480068a3555448e64ff3335491d44b5a988df87d8cc2",
+      "actual_result_id": null
+    },
+    {
+      "seed": 910019,
+      "workspace": "replica_910019",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "planned_source_id": "MATCHED_CTEQ6L1_LO_SEED_910019",
+      "planned_result_id": "0aed7c1f37c84c43c543d08936b743b7ebf709f08820d0bdcc0651e4dbd66528",
+      "actual_result_id": null
+    },
+    {
+      "seed": 910037,
+      "workspace": "replica_910037",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "planned_source_id": "MATCHED_CTEQ6L1_LO_SEED_910037",
+      "planned_result_id": "564f2c54956a66abdbccdb4f3c226ee853e66b52749ae0badc9d36547fc6804f",
+      "actual_result_id": null
+    },
+    {
+      "seed": 910061,
+      "workspace": "replica_910061",
+      "grid_origin": "FRESH_INDEPENDENT_EMPTY",
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "internal_error_pb": null,
+      "ME_calls": null,
+      "planned_source_id": "MATCHED_CTEQ6L1_LO_SEED_910061",
+      "planned_result_id": "4137d4bed6a8e65d6d5c484cd4b24f9cb43dedd7e05512bdc577b49df73f67eb",
+      "actual_result_id": null
+    }
+  ],
+  "stage_A": {
+    "seed": 910001,
+    "purpose": "first real adaptation survey only, after authorization and semantics review",
+    "blocks_other_replicas_until_pass": true,
+    "reuse_policy": "only exact same adaptation endpoint/config; not a final measurement estimate"
+  },
+  "endpoints": {
+    "adaptation": {
+      "initial_points": 250,
+      "iterations": 4,
+      "minimum_iterations": 4,
+      "accuracy": 0.0,
+      "grid_mode": 2,
+      "moffset": 0
+    },
+    "measurement": {
+      "initial_points": 250,
+      "iterations": 3,
+      "minimum_iterations": 3,
+      "accuracy": 0.0,
+      "grid_mode": 0,
+      "moffset": 1
+    },
+    "native_point_growth": "2x per iteration, not250 constant; initial ME setup calls are separate",
+    "stopping": "fixed predeclared endpoint; no accuracy/luminosity early stop; resource/zero-pass/native failure means PARTIAL, never silently accepted"
+  },
+  "ceilings": {
+    "concurrent_jobs": 1,
+    "workers": 1,
+    "aggregate_wall_seconds": 14400,
+    "aggregate_CPU_seconds": 14400,
+    "additional_disk_bytes": 5368709120,
+    "automatic_expansion": false
+  },
+  "cost_planning_only": {
+    "nominal_phase_space_calls_per_replica": 5500,
+    "assumed_exact_helicities": 4,
+    "nominal_ME_calls_four_replicas": 88000,
+    "pilot_seconds_per_ME": 0.0625797962206441,
+    "nominal_seconds_excluding_setup": 5507.02206741668,
+    "scope": "planning extrapolation from old B timing, not a new measurement, guarantee or spending authorization"
+  },
+  "required_runtime_evidence": [
+    "actual ME counters, distinct from integrand calls",
+    "per-iteration estimates and native errors",
+    "effective config and original seed plus offsets",
+    "all grid snapshots/geometry and provenance",
+    "candidate/write/store/overweight counters",
+    "loop stability diagnostics",
+    "CPU/wall/peak RAM/disk/termination",
+    "transient monitoring method, coverage gaps and final zero-event postcondition",
+    "hash-bound immutable input envelope"
+  ],
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "convergence": "NOT_EVALUATED",
+  "sources": [
+    {
+      "path": "simulation/hh_signal/config_lock/configuration_lock.json",
+      "sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/contract.py",
+      "sha256": "38494fcd0c4775843217d1b2d55e2ad3bd0e2712f4d1ea7cb99d6be2eb404c19"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/controller.py",
+      "sha256": "9c68dab1e38302fc3f1f0c6da1f8f6dc19cdcddb2b64a9de193df81ec499ad02"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/runtime_bridge.py",
+      "sha256": "8f47c0476271b1a6dbddf866a9e1f899b9e69f6655b6a2449ef77038ee02b6ac"
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/writers.py",
+      "sha256": "78c2d1e3005e89a080be00e43f06eb37d110a8b3a2c37af9bd4deced7f00f073"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/__init__.py",
+      "sha256": "f411d7af735c3da1acec4b3ea326403eb9baa187213d37d0d6d855965f1aa633"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/audit_payload.py",
+      "sha256": "64a4cee4c8303ff9e64ddd9130c57eb874bad323ff70bbbf943e018cb67ed187"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/contracts.py",
+      "sha256": "5b442d9d830ad3f5f2db713a7456ceb1dadde2026e73871dec0f1bbe03233bde"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/controller.py",
+      "sha256": "cbb984e2d6185dfe89d1d1523c1ab6a69135604fab07bcd3922b505e1a750dc1"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/integration_only.sh",
+      "sha256": "c629101225c96066efaf39e72a41c46aeb528df4469ebae5f1f08f4affae5585"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/runtime_contract.py",
+      "sha256": "4438dd6f1f484dd5f644527a4ec2e7cda0dc8fc2d64bbffeeaaedcfff24f6d4b"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/semantics.py",
+      "sha256": "d533a1f1afa8aec48d246baad3cc8959d6cde105d861738e12bf7407662bd103"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/fixed_weight_kernel_probe.f90",
+      "sha256": "7b0589d7f8b039facfc4d1b67815db49c0405793993988203721deff0582c3be"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/rng_noninterference_probe.f90",
+      "sha256": "516fd2efd2343ef7d02c65e3c00cfd0c99b8b750ada9a3cc103728835db094b6"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/test_matched.py",
+      "sha256": "0a1bbce0d061bb1b0099a32a0768c5cd7bfa27f54290fa6997feacd2c19842cf"
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/validate.py",
+      "sha256": "ba2874f9a78476056bff3b8acefc92b5fd745d84ba503ef4d49a42a909ca19f9"
+    }
+  ],
+  "authorization_request": "AUTHORIZE_PHASE7_FINAL_INTEGRATION_ONLY",
+  "physics": {
+    "MG5_version": "3.5.16",
+    "MG5_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "model": "loop_sm",
+    "process": "g g > h h [noborn=QCD]",
+    "MH_GeV": 125,
+    "MT_GeV": 173,
+    "MB_GeV": 4.7,
+    "kappa_lambda": 1,
+    "kappa_top": 1,
+    "PDF": "cteq6l1",
+    "alpha_s_MZ": 0.13,
+    "running_loops": 1,
+    "PDFSUP": [
+      10042,
+      10042
+    ],
+    "muR_muF": "mHH/2",
+    "sqrt_s_GeV": 13000,
+    "accuracy": "LO_LOOP_INDUCED_FINITE_MT_MB",
+    "K_factor": null,
+    "HEFT": false,
+    "NLO_PS": false,
+    "physical_execution_authorized": false,
+    "model_source_inventory_sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd"
+  },
+  "new_candidate_design": "native bookkeeping retained; anonymous formatted scratch, descriptor lease/inode check; old F/G implementation unchanged",
+  "native_runtime": "NOT_EVALUATED; no physical executor unlocked",
+  "required_pre_execution_review": "exact final revision + H overlay + F effective config gates + resource watchdog + scratch containment; no CLI/env/file grant",
+  "actual_native_preparations": [
+    {
+      "status": "PASS_REAL_NATIVE_BUILD_AND_PRE_ME_EXIT_ONLY",
+      "seed": 910001,
+      "native_runtime_gate": "NOT_EVALUATED_REAL_SURVEY",
+      "STOP80_exit": 80,
+      "new_physical_ME_calls": 0,
+      "new_integrals": 0,
+      "new_independent_events": 0,
+      "runtime_source_files": 831,
+      "new_objects": 23,
+      "executable_sha256": "521d8b9042092ac12f9a980d3bd8d2364a101a9903795970410f935dad977239",
+      "actual_initialization_stdout": " Warning: file dname.mg not found\n Process in group number            0\n A PDF is used, so alpha_s(MZ) is going to be modified\n Old value of alpha_s from param_card:   0.12978300000000004     \n New value of alpha_s from PDF cteq6l1:  0.13000000000000000     \n Define smin to   62500.000000000000     \n *****************************************************\n *               MadGraph/MadEvent                   *\n *        --------------------------------           *\n *          http://madgraph.hep.uiuc.edu             *\n *          http://madgraph.phys.ucl.ac.be           *\n *          http://madgraph.roma2.infn.it            *\n *        --------------------------------           *\n *                                                   *\n *          PARAMETER AND COUPLING VALUES            *\n *                                                   *\n *****************************************************\n\n  External Params\n  ---------------------------------\n  \n MU_R =    91.188000000000002     \n aEWM1 =    132.50700000000001     \n mdl_Gf =    1.1663900000000000E-005\n aS =   0.12978300000000004     \n mdl_ymb =    4.7000000000000002     \n mdl_ymt =    173.00000000000000     \n mdl_ymtau =    1.7769999999999999     \n mdl_MT =    173.00000000000000     \n mdl_MB =    4.7000000000000002     \n mdl_MZ =    91.188000000000002     \n mdl_MH =    125.00000000000000     \n mdl_MTA =    1.7769999999999999     \n mdl_WT =    1.4915000000000000     \n mdl_WZ =    2.4414039999999999     \n mdl_WW =    2.0476000000000001     \n mdl_WH =    4.0759799999999999E-003\n  Internal Params\n  ---------------------------------\n  \n mdl_conjg__CKM3x3 =    1.0000000000000000     \n mdl_CKM22 =    1.0000000000000000     \n mdl_lhv =    1.0000000000000000     \n mdl_conjg__CKM22 =    1.0000000000000000     \n mdl_CKM3x3 =    1.0000000000000000     \n mdl_CKM33 =    1.0000000000000000     \n mdl_Ncol =    3.0000000000000000     \n mdl_CA =    3.0000000000000000     \n mdl_TF =   0.50000000000000000     \n mdl_CF =    1.3333333333333333     \n mdl_complexi =                (0.0000000000000000,1.0000000000000000)\n mdl_MZ__exp__2 =    8315.2513440000002     \n mdl_MZ__exp__4 =    69143404.913893804     \n mdl_sqrt__2 =    1.4142135623730951     \n mdl_MH__exp__2 =    15625.000000000000     \n mdl_Ncol__exp__2 =    9.0000000000000000     \n mdl_MB__exp__2 =    22.090000000000003     \n mdl_MT__exp__2 =    29929.000000000000     \n mdl_aEW =    7.5467711139788835E-003\n mdl_MW =    80.419002445756163     \n mdl_sqrt__aEW =    8.6872153846781555E-002\n mdl_ee =   0.30795376724436879     \n mdl_MW__exp__2 =    6467.2159543705357     \n mdl_sw2 =   0.22224648578577766     \n mdl_cw =   0.88190334743339216     \n mdl_sqrt__sw2 =   0.47143025548407230     \n mdl_sw =   0.47143025548407230     \n mdl_g1 =   0.34919219678733299     \n mdl_gw =   0.65323293034757990     \n mdl_v =    246.21845810181637     \n mdl_v__exp__2 =    60623.529110035903     \n mdl_lam =   0.12886910601690263     \n mdl_yb =    2.6995554250465490E-002\n mdl_yt =   0.99366614581500623     \n mdl_ytau =    1.0206617000654717E-002\n mdl_muH =    88.388347648318430     \n mdl_AxialZUp =  -0.18517701861793787     \n mdl_AxialZDown =   0.18517701861793787     \n mdl_VectorZUp =    7.5430507588273299E-002\n mdl_VectorZDown =  -0.13030376310310560     \n mdl_VectorAUp =   0.20530251149624587     \n mdl_VectorADown =  -0.10265125574812294     \n mdl_VectorWmDxU =   0.23095271737156670     \n mdl_AxialWmDxU =  -0.23095271737156670     \n mdl_VectorWpUxD =   0.23095271737156670     \n mdl_AxialWpUxD =  -0.23095271737156670     \n mdl_I1x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_I2x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I3x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I4x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_Vector_tbGp =              (-0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGp =              (-1.0206617000654716,-0.0000000000000000)\n mdl_Vector_tbGm =               (0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGm =              (-1.0206617000654716,-0.0000000000000000)\n mdl_gw__exp__2 =   0.42671326129048615     \n mdl_cw__exp__2 =   0.77775351421422245     \n mdl_ee__exp__2 =    9.4835522759998875E-002\n mdl_sw__exp__2 =   0.22224648578577769     \n mdl_yb__exp__2 =    7.2875994928982540E-004\n mdl_yt__exp__2 =   0.98737240933884918     \n  Internal Params evaluated point by point\n  ----------------------------------------\n  \n mdl_sqrt__aS =   0.36025407700677037     \n mdl_G__exp__4 =    2.6598389767664385     \n mdl_G__exp__2 =    1.6309012774433769     \n mdl_G__exp__3 =    2.0827709391582334     \n mdl_MU_R__exp__2 =    8315.2513440000002     \n  Couplings of loop_sm\n  ---------------------------------\n  \n         GC_5 =   0.00000E+00   0.12771E+01\n      R2_GGHb =   0.00000E+00  -0.37063E-02\n      R2_GGHt =   0.00000E+00  -0.50216E+01\n     R2_GGHHb =  -0.00000E+00  -0.15053E-04\n     R2_GGHHt =  -0.00000E+00  -0.20395E-01\n        GC_30 =  -0.00000E+00  -0.19038E+03\n        GC_33 =  -0.00000E+00  -0.19089E-01\n        GC_37 =  -0.00000E+00  -0.70263E+00\n\n Collider parameters:\n --------------------\n\n Running at P P   machine @    13000.000000000000       GeV\n PDF set = cteq6l1\n alpha_s(Mz)= 0.1300 running at 1 loops.\n alpha_s(Mz)= 0.1300 running at 1 loops.\n Renormalization scale set on event-by-event basis\n Factorization   scale set on event-by-event basis\n\n\n getting user params\n Got moffset           0\n HH_PRE_SAMPLING_CONFIG_PASS               910001           0           0\n H_IO           1           1\n HH_NATIVE_PREFLIGHT_ONLY_ZERO_ME_CALLS\n",
+      "output_audit": {
+        "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+        "retained_event_records": 0,
+        "files": [
+          {
+            "path": "iproc.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "moffset.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "randinit",
+            "bytes": 9,
+            "sha256": "2da62daafa81be277c1e2f4b2e58dfc905937202407940f772a1803037aba8b7"
+          }
+        ],
+        "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+      },
+      "native_IO_boundary": "original bookkeeping/serializer retained; approved anonymous regular scratch only",
+      "patched_files": [
+        {
+          "path": "SubProcesses/P0_gg_hh/driver.f",
+          "sha256": "cbd4b64d94414d746a0ea033aac3a438e44ecb5923ee5d72561d9ae0baa439a4"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/unwgt.f",
+          "sha256": "eeede1d1b69c074d172cbf16b35e5057f903220c0c570945000805341254f404"
+        },
+        {
+          "path": "Source/dsample.f",
+          "sha256": "2aec9116a8e40fd36c762bf015fa2c1f4122230cb54fce2040b9ab1c14f6072a"
+        },
+        {
+          "path": "Source/rw_events.f",
+          "sha256": "642148159a2af1b30f214ab8c1e26b81fd83cbe0ee0a677c966dc260b169c331"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/native_io_only.f90",
+          "sha256": "b13ac62e9ac2c872064034e29dc7ecd8f988f718b5ef5ed14ffa0b0fb0b9e513"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/hh_pre_sampling_guard.f",
+          "sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd"
+        }
+      ],
+      "resources_preparation_only": {
+        "wall_seconds": 2.3823164279999958,
+        "child_CPU_seconds": 1.62964,
+        "child_peak_RSS_KiB_process_lifetime_high_water": 49116,
+        "logical_disk_bytes": 60175667
+      }
+    },
+    {
+      "status": "PASS_REAL_NATIVE_BUILD_AND_PRE_ME_EXIT_ONLY",
+      "seed": 910019,
+      "native_runtime_gate": "NOT_EVALUATED_REAL_SURVEY",
+      "STOP80_exit": 80,
+      "new_physical_ME_calls": 0,
+      "new_integrals": 0,
+      "new_independent_events": 0,
+      "runtime_source_files": 831,
+      "new_objects": 23,
+      "executable_sha256": "9c02a0f597c9802dcaa08836a441f041b547fa686ae1d2b9648a07ff5a8a731c",
+      "actual_initialization_stdout": " Warning: file dname.mg not found\n Process in group number            0\n A PDF is used, so alpha_s(MZ) is going to be modified\n Old value of alpha_s from param_card:   0.12978300000000004     \n New value of alpha_s from PDF cteq6l1:  0.13000000000000000     \n Define smin to   62500.000000000000     \n *****************************************************\n *               MadGraph/MadEvent                   *\n *        --------------------------------           *\n *          http://madgraph.hep.uiuc.edu             *\n *          http://madgraph.phys.ucl.ac.be           *\n *          http://madgraph.roma2.infn.it            *\n *        --------------------------------           *\n *                                                   *\n *          PARAMETER AND COUPLING VALUES            *\n *                                                   *\n *****************************************************\n\n  External Params\n  ---------------------------------\n  \n MU_R =    91.188000000000002     \n aEWM1 =    132.50700000000001     \n mdl_Gf =    1.1663900000000000E-005\n aS =   0.12978300000000004     \n mdl_ymb =    4.7000000000000002     \n mdl_ymt =    173.00000000000000     \n mdl_ymtau =    1.7769999999999999     \n mdl_MT =    173.00000000000000     \n mdl_MB =    4.7000000000000002     \n mdl_MZ =    91.188000000000002     \n mdl_MH =    125.00000000000000     \n mdl_MTA =    1.7769999999999999     \n mdl_WT =    1.4915000000000000     \n mdl_WZ =    2.4414039999999999     \n mdl_WW =    2.0476000000000001     \n mdl_WH =    4.0759799999999999E-003\n  Internal Params\n  ---------------------------------\n  \n mdl_conjg__CKM3x3 =    1.0000000000000000     \n mdl_CKM22 =    1.0000000000000000     \n mdl_lhv =    1.0000000000000000     \n mdl_conjg__CKM22 =    1.0000000000000000     \n mdl_CKM3x3 =    1.0000000000000000     \n mdl_CKM33 =    1.0000000000000000     \n mdl_Ncol =    3.0000000000000000     \n mdl_CA =    3.0000000000000000     \n mdl_TF =   0.50000000000000000     \n mdl_CF =    1.3333333333333333     \n mdl_complexi =                (0.0000000000000000,1.0000000000000000)\n mdl_MZ__exp__2 =    8315.2513440000002     \n mdl_MZ__exp__4 =    69143404.913893804     \n mdl_sqrt__2 =    1.4142135623730951     \n mdl_MH__exp__2 =    15625.000000000000     \n mdl_Ncol__exp__2 =    9.0000000000000000     \n mdl_MB__exp__2 =    22.090000000000003     \n mdl_MT__exp__2 =    29929.000000000000     \n mdl_aEW =    7.5467711139788835E-003\n mdl_MW =    80.419002445756163     \n mdl_sqrt__aEW =    8.6872153846781555E-002\n mdl_ee =   0.30795376724436879     \n mdl_MW__exp__2 =    6467.2159543705357     \n mdl_sw2 =   0.22224648578577766     \n mdl_cw =   0.88190334743339216     \n mdl_sqrt__sw2 =   0.47143025548407230     \n mdl_sw =   0.47143025548407230     \n mdl_g1 =   0.34919219678733299     \n mdl_gw =   0.65323293034757990     \n mdl_v =    246.21845810181637     \n mdl_v__exp__2 =    60623.529110035903     \n mdl_lam =   0.12886910601690263     \n mdl_yb =    2.6995554250465490E-002\n mdl_yt =   0.99366614581500623     \n mdl_ytau =    1.0206617000654717E-002\n mdl_muH =    88.388347648318430     \n mdl_AxialZUp =  -0.18517701861793787     \n mdl_AxialZDown =   0.18517701861793787     \n mdl_VectorZUp =    7.5430507588273299E-002\n mdl_VectorZDown =  -0.13030376310310560     \n mdl_VectorAUp =   0.20530251149624587     \n mdl_VectorADown =  -0.10265125574812294     \n mdl_VectorWmDxU =   0.23095271737156670     \n mdl_AxialWmDxU =  -0.23095271737156670     \n mdl_VectorWpUxD =   0.23095271737156670     \n mdl_AxialWpUxD =  -0.23095271737156670     \n mdl_I1x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_I2x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I3x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I4x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_Vector_tbGp =              (-0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGp =              (-1.0206617000654716,-0.0000000000000000)\n mdl_Vector_tbGm =               (0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGm =              (-1.0206617000654716,-0.0000000000000000)\n mdl_gw__exp__2 =   0.42671326129048615     \n mdl_cw__exp__2 =   0.77775351421422245     \n mdl_ee__exp__2 =    9.4835522759998875E-002\n mdl_sw__exp__2 =   0.22224648578577769     \n mdl_yb__exp__2 =    7.2875994928982540E-004\n mdl_yt__exp__2 =   0.98737240933884918     \n  Internal Params evaluated point by point\n  ----------------------------------------\n  \n mdl_sqrt__aS =   0.36025407700677037     \n mdl_G__exp__4 =    2.6598389767664385     \n mdl_G__exp__2 =    1.6309012774433769     \n mdl_G__exp__3 =    2.0827709391582334     \n mdl_MU_R__exp__2 =    8315.2513440000002     \n  Couplings of loop_sm\n  ---------------------------------\n  \n         GC_5 =   0.00000E+00   0.12771E+01\n      R2_GGHb =   0.00000E+00  -0.37063E-02\n      R2_GGHt =   0.00000E+00  -0.50216E+01\n     R2_GGHHb =  -0.00000E+00  -0.15053E-04\n     R2_GGHHt =  -0.00000E+00  -0.20395E-01\n        GC_30 =  -0.00000E+00  -0.19038E+03\n        GC_33 =  -0.00000E+00  -0.19089E-01\n        GC_37 =  -0.00000E+00  -0.70263E+00\n\n Collider parameters:\n --------------------\n\n Running at P P   machine @    13000.000000000000       GeV\n PDF set = cteq6l1\n alpha_s(Mz)= 0.1300 running at 1 loops.\n alpha_s(Mz)= 0.1300 running at 1 loops.\n Renormalization scale set on event-by-event basis\n Factorization   scale set on event-by-event basis\n\n\n getting user params\n Got moffset           0\n HH_PRE_SAMPLING_CONFIG_PASS               910019           0           0\n H_IO           1           1\n HH_NATIVE_PREFLIGHT_ONLY_ZERO_ME_CALLS\n",
+      "output_audit": {
+        "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+        "retained_event_records": 0,
+        "files": [
+          {
+            "path": "iproc.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "moffset.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "randinit",
+            "bytes": 9,
+            "sha256": "208373aa083396a709316830d5a256366d304d7774d701e2dd3904d68a980e1b"
+          }
+        ],
+        "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+      },
+      "native_IO_boundary": "original bookkeeping/serializer retained; approved anonymous regular scratch only",
+      "patched_files": [
+        {
+          "path": "SubProcesses/P0_gg_hh/driver.f",
+          "sha256": "eecd62d7538a1e9f444b66bbd746ac72b73dc1e179722e9cbb15951d1d177e8b"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/unwgt.f",
+          "sha256": "eeede1d1b69c074d172cbf16b35e5057f903220c0c570945000805341254f404"
+        },
+        {
+          "path": "Source/dsample.f",
+          "sha256": "2aec9116a8e40fd36c762bf015fa2c1f4122230cb54fce2040b9ab1c14f6072a"
+        },
+        {
+          "path": "Source/rw_events.f",
+          "sha256": "642148159a2af1b30f214ab8c1e26b81fd83cbe0ee0a677c966dc260b169c331"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/native_io_only.f90",
+          "sha256": "b13ac62e9ac2c872064034e29dc7ecd8f988f718b5ef5ed14ffa0b0fb0b9e513"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/hh_pre_sampling_guard.f",
+          "sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd"
+        }
+      ],
+      "resources_preparation_only": {
+        "wall_seconds": 2.002400109000007,
+        "child_CPU_seconds": 1.6281259999999997,
+        "child_peak_RSS_KiB_process_lifetime_high_water": 49244,
+        "logical_disk_bytes": 60175667
+      }
+    },
+    {
+      "status": "PASS_REAL_NATIVE_BUILD_AND_PRE_ME_EXIT_ONLY",
+      "seed": 910037,
+      "native_runtime_gate": "NOT_EVALUATED_REAL_SURVEY",
+      "STOP80_exit": 80,
+      "new_physical_ME_calls": 0,
+      "new_integrals": 0,
+      "new_independent_events": 0,
+      "runtime_source_files": 831,
+      "new_objects": 23,
+      "executable_sha256": "94aaf7eaab94dce3ba91e17f8fab57b9f1ba0465c49b5adeff3eb50c242b8d71",
+      "actual_initialization_stdout": " Warning: file dname.mg not found\n Process in group number            0\n A PDF is used, so alpha_s(MZ) is going to be modified\n Old value of alpha_s from param_card:   0.12978300000000004     \n New value of alpha_s from PDF cteq6l1:  0.13000000000000000     \n Define smin to   62500.000000000000     \n *****************************************************\n *               MadGraph/MadEvent                   *\n *        --------------------------------           *\n *          http://madgraph.hep.uiuc.edu             *\n *          http://madgraph.phys.ucl.ac.be           *\n *          http://madgraph.roma2.infn.it            *\n *        --------------------------------           *\n *                                                   *\n *          PARAMETER AND COUPLING VALUES            *\n *                                                   *\n *****************************************************\n\n  External Params\n  ---------------------------------\n  \n MU_R =    91.188000000000002     \n aEWM1 =    132.50700000000001     \n mdl_Gf =    1.1663900000000000E-005\n aS =   0.12978300000000004     \n mdl_ymb =    4.7000000000000002     \n mdl_ymt =    173.00000000000000     \n mdl_ymtau =    1.7769999999999999     \n mdl_MT =    173.00000000000000     \n mdl_MB =    4.7000000000000002     \n mdl_MZ =    91.188000000000002     \n mdl_MH =    125.00000000000000     \n mdl_MTA =    1.7769999999999999     \n mdl_WT =    1.4915000000000000     \n mdl_WZ =    2.4414039999999999     \n mdl_WW =    2.0476000000000001     \n mdl_WH =    4.0759799999999999E-003\n  Internal Params\n  ---------------------------------\n  \n mdl_conjg__CKM3x3 =    1.0000000000000000     \n mdl_CKM22 =    1.0000000000000000     \n mdl_lhv =    1.0000000000000000     \n mdl_conjg__CKM22 =    1.0000000000000000     \n mdl_CKM3x3 =    1.0000000000000000     \n mdl_CKM33 =    1.0000000000000000     \n mdl_Ncol =    3.0000000000000000     \n mdl_CA =    3.0000000000000000     \n mdl_TF =   0.50000000000000000     \n mdl_CF =    1.3333333333333333     \n mdl_complexi =                (0.0000000000000000,1.0000000000000000)\n mdl_MZ__exp__2 =    8315.2513440000002     \n mdl_MZ__exp__4 =    69143404.913893804     \n mdl_sqrt__2 =    1.4142135623730951     \n mdl_MH__exp__2 =    15625.000000000000     \n mdl_Ncol__exp__2 =    9.0000000000000000     \n mdl_MB__exp__2 =    22.090000000000003     \n mdl_MT__exp__2 =    29929.000000000000     \n mdl_aEW =    7.5467711139788835E-003\n mdl_MW =    80.419002445756163     \n mdl_sqrt__aEW =    8.6872153846781555E-002\n mdl_ee =   0.30795376724436879     \n mdl_MW__exp__2 =    6467.2159543705357     \n mdl_sw2 =   0.22224648578577766     \n mdl_cw =   0.88190334743339216     \n mdl_sqrt__sw2 =   0.47143025548407230     \n mdl_sw =   0.47143025548407230     \n mdl_g1 =   0.34919219678733299     \n mdl_gw =   0.65323293034757990     \n mdl_v =    246.21845810181637     \n mdl_v__exp__2 =    60623.529110035903     \n mdl_lam =   0.12886910601690263     \n mdl_yb =    2.6995554250465490E-002\n mdl_yt =   0.99366614581500623     \n mdl_ytau =    1.0206617000654717E-002\n mdl_muH =    88.388347648318430     \n mdl_AxialZUp =  -0.18517701861793787     \n mdl_AxialZDown =   0.18517701861793787     \n mdl_VectorZUp =    7.5430507588273299E-002\n mdl_VectorZDown =  -0.13030376310310560     \n mdl_VectorAUp =   0.20530251149624587     \n mdl_VectorADown =  -0.10265125574812294     \n mdl_VectorWmDxU =   0.23095271737156670     \n mdl_AxialWmDxU =  -0.23095271737156670     \n mdl_VectorWpUxD =   0.23095271737156670     \n mdl_AxialWpUxD =  -0.23095271737156670     \n mdl_I1x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_I2x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I3x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I4x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_Vector_tbGp =              (-0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGp =              (-1.0206617000654716,-0.0000000000000000)\n mdl_Vector_tbGm =               (0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGm =              (-1.0206617000654716,-0.0000000000000000)\n mdl_gw__exp__2 =   0.42671326129048615     \n mdl_cw__exp__2 =   0.77775351421422245     \n mdl_ee__exp__2 =    9.4835522759998875E-002\n mdl_sw__exp__2 =   0.22224648578577769     \n mdl_yb__exp__2 =    7.2875994928982540E-004\n mdl_yt__exp__2 =   0.98737240933884918     \n  Internal Params evaluated point by point\n  ----------------------------------------\n  \n mdl_sqrt__aS =   0.36025407700677037     \n mdl_G__exp__4 =    2.6598389767664385     \n mdl_G__exp__2 =    1.6309012774433769     \n mdl_G__exp__3 =    2.0827709391582334     \n mdl_MU_R__exp__2 =    8315.2513440000002     \n  Couplings of loop_sm\n  ---------------------------------\n  \n         GC_5 =   0.00000E+00   0.12771E+01\n      R2_GGHb =   0.00000E+00  -0.37063E-02\n      R2_GGHt =   0.00000E+00  -0.50216E+01\n     R2_GGHHb =  -0.00000E+00  -0.15053E-04\n     R2_GGHHt =  -0.00000E+00  -0.20395E-01\n        GC_30 =  -0.00000E+00  -0.19038E+03\n        GC_33 =  -0.00000E+00  -0.19089E-01\n        GC_37 =  -0.00000E+00  -0.70263E+00\n\n Collider parameters:\n --------------------\n\n Running at P P   machine @    13000.000000000000       GeV\n PDF set = cteq6l1\n alpha_s(Mz)= 0.1300 running at 1 loops.\n alpha_s(Mz)= 0.1300 running at 1 loops.\n Renormalization scale set on event-by-event basis\n Factorization   scale set on event-by-event basis\n\n\n getting user params\n Got moffset           0\n HH_PRE_SAMPLING_CONFIG_PASS               910037           0           0\n H_IO           1           1\n HH_NATIVE_PREFLIGHT_ONLY_ZERO_ME_CALLS\n",
+      "output_audit": {
+        "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+        "retained_event_records": 0,
+        "files": [
+          {
+            "path": "iproc.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "moffset.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "randinit",
+            "bytes": 9,
+            "sha256": "dd916331f3beb0dc8330b9e3749ae6d0edc7318440bfbd04dbcb8c6267e853f9"
+          }
+        ],
+        "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+      },
+      "native_IO_boundary": "original bookkeeping/serializer retained; approved anonymous regular scratch only",
+      "patched_files": [
+        {
+          "path": "SubProcesses/P0_gg_hh/driver.f",
+          "sha256": "1b1aa91b20da756c6e40650d25e7657ec911ba4c34d8ade4aa4c89942c3d771d"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/unwgt.f",
+          "sha256": "eeede1d1b69c074d172cbf16b35e5057f903220c0c570945000805341254f404"
+        },
+        {
+          "path": "Source/dsample.f",
+          "sha256": "2aec9116a8e40fd36c762bf015fa2c1f4122230cb54fce2040b9ab1c14f6072a"
+        },
+        {
+          "path": "Source/rw_events.f",
+          "sha256": "642148159a2af1b30f214ab8c1e26b81fd83cbe0ee0a677c966dc260b169c331"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/native_io_only.f90",
+          "sha256": "b13ac62e9ac2c872064034e29dc7ecd8f988f718b5ef5ed14ffa0b0fb0b9e513"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/hh_pre_sampling_guard.f",
+          "sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd"
+        }
+      ],
+      "resources_preparation_only": {
+        "wall_seconds": 2.364358089999996,
+        "child_CPU_seconds": 1.6063269999999998,
+        "child_peak_RSS_KiB_process_lifetime_high_water": 49244,
+        "logical_disk_bytes": 60175667
+      }
+    },
+    {
+      "status": "PASS_REAL_NATIVE_BUILD_AND_PRE_ME_EXIT_ONLY",
+      "seed": 910061,
+      "native_runtime_gate": "NOT_EVALUATED_REAL_SURVEY",
+      "STOP80_exit": 80,
+      "new_physical_ME_calls": 0,
+      "new_integrals": 0,
+      "new_independent_events": 0,
+      "runtime_source_files": 831,
+      "new_objects": 23,
+      "executable_sha256": "6e25d1177810de5ae7cec473a1c6799f10c55da2080093d81792cbcf954500bc",
+      "actual_initialization_stdout": " Warning: file dname.mg not found\n Process in group number            0\n A PDF is used, so alpha_s(MZ) is going to be modified\n Old value of alpha_s from param_card:   0.12978300000000004     \n New value of alpha_s from PDF cteq6l1:  0.13000000000000000     \n Define smin to   62500.000000000000     \n *****************************************************\n *               MadGraph/MadEvent                   *\n *        --------------------------------           *\n *          http://madgraph.hep.uiuc.edu             *\n *          http://madgraph.phys.ucl.ac.be           *\n *          http://madgraph.roma2.infn.it            *\n *        --------------------------------           *\n *                                                   *\n *          PARAMETER AND COUPLING VALUES            *\n *                                                   *\n *****************************************************\n\n  External Params\n  ---------------------------------\n  \n MU_R =    91.188000000000002     \n aEWM1 =    132.50700000000001     \n mdl_Gf =    1.1663900000000000E-005\n aS =   0.12978300000000004     \n mdl_ymb =    4.7000000000000002     \n mdl_ymt =    173.00000000000000     \n mdl_ymtau =    1.7769999999999999     \n mdl_MT =    173.00000000000000     \n mdl_MB =    4.7000000000000002     \n mdl_MZ =    91.188000000000002     \n mdl_MH =    125.00000000000000     \n mdl_MTA =    1.7769999999999999     \n mdl_WT =    1.4915000000000000     \n mdl_WZ =    2.4414039999999999     \n mdl_WW =    2.0476000000000001     \n mdl_WH =    4.0759799999999999E-003\n  Internal Params\n  ---------------------------------\n  \n mdl_conjg__CKM3x3 =    1.0000000000000000     \n mdl_CKM22 =    1.0000000000000000     \n mdl_lhv =    1.0000000000000000     \n mdl_conjg__CKM22 =    1.0000000000000000     \n mdl_CKM3x3 =    1.0000000000000000     \n mdl_CKM33 =    1.0000000000000000     \n mdl_Ncol =    3.0000000000000000     \n mdl_CA =    3.0000000000000000     \n mdl_TF =   0.50000000000000000     \n mdl_CF =    1.3333333333333333     \n mdl_complexi =                (0.0000000000000000,1.0000000000000000)\n mdl_MZ__exp__2 =    8315.2513440000002     \n mdl_MZ__exp__4 =    69143404.913893804     \n mdl_sqrt__2 =    1.4142135623730951     \n mdl_MH__exp__2 =    15625.000000000000     \n mdl_Ncol__exp__2 =    9.0000000000000000     \n mdl_MB__exp__2 =    22.090000000000003     \n mdl_MT__exp__2 =    29929.000000000000     \n mdl_aEW =    7.5467711139788835E-003\n mdl_MW =    80.419002445756163     \n mdl_sqrt__aEW =    8.6872153846781555E-002\n mdl_ee =   0.30795376724436879     \n mdl_MW__exp__2 =    6467.2159543705357     \n mdl_sw2 =   0.22224648578577766     \n mdl_cw =   0.88190334743339216     \n mdl_sqrt__sw2 =   0.47143025548407230     \n mdl_sw =   0.47143025548407230     \n mdl_g1 =   0.34919219678733299     \n mdl_gw =   0.65323293034757990     \n mdl_v =    246.21845810181637     \n mdl_v__exp__2 =    60623.529110035903     \n mdl_lam =   0.12886910601690263     \n mdl_yb =    2.6995554250465490E-002\n mdl_yt =   0.99366614581500623     \n mdl_ytau =    1.0206617000654717E-002\n mdl_muH =    88.388347648318430     \n mdl_AxialZUp =  -0.18517701861793787     \n mdl_AxialZDown =   0.18517701861793787     \n mdl_VectorZUp =    7.5430507588273299E-002\n mdl_VectorZDown =  -0.13030376310310560     \n mdl_VectorAUp =   0.20530251149624587     \n mdl_VectorADown =  -0.10265125574812294     \n mdl_VectorWmDxU =   0.23095271737156670     \n mdl_AxialWmDxU =  -0.23095271737156670     \n mdl_VectorWpUxD =   0.23095271737156670     \n mdl_AxialWpUxD =  -0.23095271737156670     \n mdl_I1x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_I2x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I3x33 =               (0.99366614581500623,0.0000000000000000)\n mdl_I4x33 =          (2.69955542504654901E-002,0.0000000000000000)\n mdl_Vector_tbGp =              (-0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGp =              (-1.0206617000654716,-0.0000000000000000)\n mdl_Vector_tbGm =               (0.96667059156454072,0.0000000000000000)\n mdl_Axial_tbGm =              (-1.0206617000654716,-0.0000000000000000)\n mdl_gw__exp__2 =   0.42671326129048615     \n mdl_cw__exp__2 =   0.77775351421422245     \n mdl_ee__exp__2 =    9.4835522759998875E-002\n mdl_sw__exp__2 =   0.22224648578577769     \n mdl_yb__exp__2 =    7.2875994928982540E-004\n mdl_yt__exp__2 =   0.98737240933884918     \n  Internal Params evaluated point by point\n  ----------------------------------------\n  \n mdl_sqrt__aS =   0.36025407700677037     \n mdl_G__exp__4 =    2.6598389767664385     \n mdl_G__exp__2 =    1.6309012774433769     \n mdl_G__exp__3 =    2.0827709391582334     \n mdl_MU_R__exp__2 =    8315.2513440000002     \n  Couplings of loop_sm\n  ---------------------------------\n  \n         GC_5 =   0.00000E+00   0.12771E+01\n      R2_GGHb =   0.00000E+00  -0.37063E-02\n      R2_GGHt =   0.00000E+00  -0.50216E+01\n     R2_GGHHb =  -0.00000E+00  -0.15053E-04\n     R2_GGHHt =  -0.00000E+00  -0.20395E-01\n        GC_30 =  -0.00000E+00  -0.19038E+03\n        GC_33 =  -0.00000E+00  -0.19089E-01\n        GC_37 =  -0.00000E+00  -0.70263E+00\n\n Collider parameters:\n --------------------\n\n Running at P P   machine @    13000.000000000000       GeV\n PDF set = cteq6l1\n alpha_s(Mz)= 0.1300 running at 1 loops.\n alpha_s(Mz)= 0.1300 running at 1 loops.\n Renormalization scale set on event-by-event basis\n Factorization   scale set on event-by-event basis\n\n\n getting user params\n Got moffset           0\n HH_PRE_SAMPLING_CONFIG_PASS               910061           0           0\n H_IO           1           1\n HH_NATIVE_PREFLIGHT_ONLY_ZERO_ME_CALLS\n",
+      "output_audit": {
+        "status": "PASS_ZERO_RETAINED_OUTPUT_POSTCONDITION",
+        "retained_event_records": 0,
+        "files": [
+          {
+            "path": "iproc.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "moffset.dat",
+            "bytes": 2,
+            "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+          },
+          {
+            "path": "randinit",
+            "bytes": 9,
+            "sha256": "9f426fe78dbc993c563a39bb380357fbf148756d12b0cbae16103debb9ed6c7a"
+          }
+        ],
+        "scope": "filesystem postcondition; not proof that native survey was executed or never wrote transient records"
+      },
+      "native_IO_boundary": "original bookkeeping/serializer retained; approved anonymous regular scratch only",
+      "patched_files": [
+        {
+          "path": "SubProcesses/P0_gg_hh/driver.f",
+          "sha256": "fcea835e3d6585cbf62406a1ce1fc7f33e859193b2013938fc4c7ac32f5c0bae"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/unwgt.f",
+          "sha256": "eeede1d1b69c074d172cbf16b35e5057f903220c0c570945000805341254f404"
+        },
+        {
+          "path": "Source/dsample.f",
+          "sha256": "2aec9116a8e40fd36c762bf015fa2c1f4122230cb54fce2040b9ab1c14f6072a"
+        },
+        {
+          "path": "Source/rw_events.f",
+          "sha256": "642148159a2af1b30f214ab8c1e26b81fd83cbe0ee0a677c966dc260b169c331"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/native_io_only.f90",
+          "sha256": "b13ac62e9ac2c872064034e29dc7ecd8f988f718b5ef5ed14ffa0b0fb0b9e513"
+        },
+        {
+          "path": "SubProcesses/P0_gg_hh/hh_pre_sampling_guard.f",
+          "sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd"
+        }
+      ],
+      "resources_preparation_only": {
+        "wall_seconds": 1.9369685750000087,
+        "child_CPU_seconds": 1.5939869999999998,
+        "child_peak_RSS_KiB_process_lifetime_high_water": 49252,
+        "logical_disk_bytes": 60175667
+      }
+    }
+  ],
+  "closure_source_identity": [
+    {
+      "path": "simulation/hh_signal/final_closure/__init__.py",
+      "sha256": "3168d1ecb5886e0924722493ccafa3c7cf1a9aeae431d032f0a3cde7c05e4a0c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/protected_campaign_inventory.csv",
+      "sha256": "ad6c6667159741189815606907593452a8d948b574d490e8c3ca43fc59adacb5"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/source_inputs.json",
+      "sha256": "f8db658d034f4b2ea4a99583f91e0f058c13f8cd586c3896dd3ac8cc414777ad"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/scripts/run_phase7_final.sh",
+      "sha256": "27703556b6c8d7ed88f1ed4ff112aa0bbc283d7f1d1147112313be48f93da61c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/__init__.py",
+      "sha256": "de88d11f096f03ae500da7be35ca1951ffc79895f02c8994b9b61eae6024c36e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/audit_payload.py",
+      "sha256": "df8f3a09953592cd9b64311cf60edf904bf18bc7d9e013f767d9ae7f94cd9ace"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/contracts.py",
+      "sha256": "e73810186926cad27d28e54e5c2b3ae0623e97f32f86e7aec4f56130f1da21b0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/controller.py",
+      "sha256": "b41cc0dd0b20b9897cbe72bc3f1b4fcf511121166aaa00e5a728f30603b3a4ba"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/existing_analysis.py",
+      "sha256": "ad1205f9f0c512d7e215f959522427009071222038046cf42f8c437655df80b2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/extract_object_pt.cxx",
+      "sha256": "d251d240eed98856739e29f8ac76e62091204bfb2f2ccd4b4cc14d88165e937f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/native_preparation.py",
+      "sha256": "949aaed6e5ad4f592535dcdddc1b561f278fc2d9fa1c7d2fafa6171589be39d1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/object_analysis.py",
+      "sha256": "9dc13491595f5b40fece39545f528c3491701000e559a9955b650fadea4a00eb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "sha256": "b1a18c8e29d47c85afea2425f1a3c04c007bcf71fac37139b5f0cf8e01ad2709"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/validate.py",
+      "sha256": "f35d6b21492908f92828e8a156588eb1c1cbe1cb865d1edbb53b639e6d4fb092"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/__init__.py",
+      "sha256": "423b592872e506214aed47fbd93ed020b5d6dd0aeb502048cf029a7098462966"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/test_closure.py",
+      "sha256": "88e68ccbfb4d2612179dfb8859dab17ffe04a2f2a0d62bd182ada4801195af05"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/__init__.py",
+      "sha256": "40be8756bd126e0c7dcb5fea427014553e337052beb2abfad352aca665b881e5"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/contract.py",
+      "sha256": "4803ac8bbbfa45785701e65de70ba7da56016dbbac6d7c502e4849331b10e99b"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/overlay.py",
+      "sha256": "3f2ff46d21e0f061c0aad73146d06253b5d3fec1a3f69bb262eec8d0a035cf85"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/review.py",
+      "sha256": "65bf9391fca6708ed716b61f2f3e513de3afaf57cbca86c9a9ceb8ec9e4ad2f1"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/runner.py",
+      "sha256": "0091c480979428555abea8dbfdc8a739d6bd932bb76e2b3b950150c2abdb390f"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/anonymous_io.c",
+      "sha256": "b3f26af0d2f45663bceaec414a20128d211ebe4758dbd718c3674a0861b05242"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/io_and_rng.f90",
+      "sha256": "464d64c0d1cdb6716ab058e52e9e6fad8783bef811b34af304bde0e4fc1c863c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/method_driver.f",
+      "sha256": "ed0bed151d9f24e6f0487bd5ea89c39f34bb1a75f179b32e467709cfefa55e2c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/test_semantics.py",
+      "sha256": "c2626c4dd1b32afa802a2f924ff8f7212bc29064a6fde402ec71dc3f4ce529a5"
+    }
+  ],
+  "installed_model_source_check": {
+    "status": "PASS_INSTALLED_MODEL_SOURCE_HASHES",
+    "files": 28
+  }
+}

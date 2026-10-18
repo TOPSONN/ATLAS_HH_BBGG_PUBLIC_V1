@@ -1,0 +1,215 @@
+{
+  "status": "PASS_ACTUAL_PRE_EXECUTION_CHECKS",
+  "revision": "79f779ef6d96340681242f86afe06bc90975728d",
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "executable_closure": [
+    {
+      "seed": 910001,
+      "executable_sha256": "c70949e1538fc53e2725c126a1527edf2e268c85e82e4149d3d3a1f46ccd426c",
+      "immutable_files": 872,
+      "dynamic_libraries": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ]
+    },
+    {
+      "seed": 910019,
+      "executable_sha256": "7dc0b4150a9f0a17973e23016b679a16bde5621ab46b48f11a0d9c30badff3ff",
+      "immutable_files": 872,
+      "dynamic_libraries": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ]
+    },
+    {
+      "seed": 910037,
+      "executable_sha256": "1a458edc8320dfe03ef8af681c5d88099f171117b8dc8746def4f2c13f79f3f6",
+      "immutable_files": 872,
+      "dynamic_libraries": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ]
+    },
+    {
+      "seed": 910061,
+      "executable_sha256": "ff465034a83e815be7db974e26f0ff6c88215fa15fb6a76cdd20b66dbbf4f6b3",
+      "immutable_files": 872,
+      "dynamic_libraries": [
+        {
+          "name": "libgcc_s.so.1",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgcc_s.so.1",
+          "sha256": "5444fbe71e8cfe3bd05cdf2b44bd8c2e553e6e7e276977089b5e4e1a1ceed531"
+        },
+        {
+          "name": "libgfortran.so.5",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libgfortran.so.5.0.0",
+          "sha256": "8b93406aef97f0f39ebac58aed3b63c58c9c26eb246595d8141dde5baeee5b33"
+        },
+        {
+          "name": "libquadmath.so.0",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libquadmath.so.0.0.0",
+          "sha256": "9fa4807097fa47da1815765f0a43177c45e7ec7cc94e44cfa95a4c3a1a341ee6"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "path": "LOCAL_HOME/.local/share/atlas-hh-phase6a/toolchain/lib/libstdc++.so.6.0.36",
+          "sha256": "10f0d3c46c070acd4abea2ccf2500ff0ec77e9b90154b82ea2720dba05510cb9"
+        },
+        {
+          "name": "libc.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf"
+        },
+        {
+          "name": "libdl.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+          "sha256": "c2994527172cc23b7fb0f7d611b71e00a37da27af12c2e5e9e0dc1a742886c96"
+        },
+        {
+          "name": "libm.so.6",
+          "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0"
+        },
+        {
+          "name": "ld-linux-x86-64.so.2",
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da"
+        }
+      ]
+    }
+  ],
+  "frozen_native_inputs_verified": 831,
+  "review_evidence": {
+    "status": "PASS_REVIEW_EVIDENCE_ONLY",
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "execution_status": "NEW_REVISION_APPROVAL_REQUIRED",
+    "genuine_native_runtime": "NOT_EXECUTED"
+  },
+  "Landlock_ABI": 3,
+  "fresh_nonphysical_tests": 18,
+  "preservation": {
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY",
+    "files": 8420,
+    "logical_bytes": 752305317
+  },
+  "available_RAM_bytes": 7530250240,
+  "available_disk_bytes": 999765807104,
+  "prepared_root_has_no_execution_receipt_or_genuine_stage": true,
+  "timestamp_UTC": "2026-10-16T03:36:39Z"
+}

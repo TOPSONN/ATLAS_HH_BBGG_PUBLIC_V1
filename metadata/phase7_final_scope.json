@@ -1,0 +1,26 @@
+{
+  "task": "PHASE7_FINAL_CLOSURE_CAMPAIGN_V1",
+  "base_PR": 23,
+  "base_head": "a5582e508e452a515670d1edc1d39041e88a8638",
+  "branch": "codex/phase7-final-closure",
+  "created_UTC": "2026-10-15T11:38:49.886910+00:00",
+  "authorized": [
+    "source/method/native non-ME tests",
+    "existing-input read-only analysis",
+    "preparation",
+    "reports/tests/Draft PR"
+  ],
+  "not_authorized": [
+    "real HH integration/phase-space survey/ME",
+    "corrected SM1000 hard events",
+    "new physical shower/detector runs",
+    "large independent kappa production"
+  ],
+  "physical_execution_granted": false,
+  "phase8_outside_scope": [
+    "heavy-flavour matching/overlap",
+    "photon fake calibration",
+    "official detector/systematics",
+    "combined likelihood/sensitivity"
+  ]
+}

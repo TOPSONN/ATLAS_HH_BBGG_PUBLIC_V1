@@ -1,0 +1,36 @@
+{
+  "status": "PASS_ZERO_DISPATCH_AND_IMMUTABLE_INPUTS",
+  "preservation": {
+    "status": "PASS_FULL_LOCAL_SHA256_INVENTORY",
+    "files": 8420,
+    "logical_bytes": 752305317
+  },
+  "build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "prepared_attempt_disk_sizes": [
+    {
+      "attempt": "authorized_bridge_review_01",
+      "logical_bytes": 47956517
+    },
+    {
+      "attempt": "authorized_bridge_review_02",
+      "logical_bytes": 48021191
+    },
+    {
+      "attempt": "authorized_bridge_review_03",
+      "logical_bytes": 242223328
+    },
+    {
+      "attempt": "authorized_bridge_review_04",
+      "logical_bytes": 242239267
+    },
+    {
+      "attempt": "authorized_bridge_review_05",
+      "logical_bytes": 242879634
+    }
+  ],
+  "prepared_attempts_total_logical_bytes": 823319937,
+  "native_processes_remaining": [],
+  "protected_files_changed": 0,
+  "resource_accounting": "Prepared build storage is pre-existing; no active physical Budget was constructed; external time measures the attempted command including its Git precheck.",
+  "named_or_anonymous_new_native_scratch": "NONE_CREATED_NO_NATIVE_PROCESS_DISPATCHED"
+}

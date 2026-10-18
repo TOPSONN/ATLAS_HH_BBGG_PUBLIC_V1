@@ -1,0 +1,173 @@
+[
+  {
+    "attempt": 1,
+    "local_workspace_role": "attempt_01",
+    "status": "COMPILE_ERROR_PARTIAL_DIAGNOSTIC_RETENTION",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "ba2c76ed067036245cdb76d79a9ca156d4745c99621b2b23f9cb604fa40b62d2",
+        "bytes": 2740
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": "attempt01 compiler transcript was observed in-session; no saved full stderr artifact is claimed"
+  },
+  {
+    "attempt": 2,
+    "local_workspace_role": "attempt_02",
+    "status": "LINK_ERROR_PRESERVED",
+    "files": [
+      {
+        "path": "build_A/failed_child_stderr.txt",
+        "sha256": "97620ba17051d6586a9882cffdd72d8ac97331be476ab58822a5b0645c8ff817",
+        "bytes": 3198
+      },
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "1ef3953d7426d18d7529a1cda42bda8615fdf706f27e3756daca6050cb28f168",
+        "bytes": 2740
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 3,
+    "local_workspace_role": "attempt_03",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "ce33d5e831571faccd910e1f4fed361235169d30f0d2be3d6debd3a19e72bca0",
+        "bytes": 2740
+      },
+      {
+        "path": "result.json",
+        "sha256": "5df902f7988fc0c624998ba03a4f0145f52344633c4bc73904fe5f52921eed4c",
+        "bytes": 124820
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 4,
+    "local_workspace_role": "attempt_04",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "2fd877715115e8f76748db7e6f58acdcc4d13a93cda8d14e3577975941b3fdd3",
+        "bytes": 2793
+      },
+      {
+        "path": "result.json",
+        "sha256": "d07fb7d26650bda474807fcc132b2e333d31f3988bc34aefef4d9a217899a17e",
+        "bytes": 129219
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 5,
+    "local_workspace_role": "attempt_05",
+    "status": "IO_REBIND_NEGATIVE_FAILED_PRESERVED",
+    "files": [
+      {
+        "path": "deny_rebound_scratch/failed_child_stderr.txt",
+        "sha256": "25a4e43ff6aa3fd7aba4ad4178403167234a3efef2b70b2b8d5d7efc30d5d46d",
+        "bytes": 8
+      },
+      {
+        "path": "failure_receipt.json",
+        "sha256": "2de919e78f7915fd4f8c17a9d5b3210acf76f0b344a3e785533136676fbce9ba",
+        "bytes": 328
+      },
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "06d90a5d362c3e0ee0949d464a516525f62dd49909917bca065bf9216a2572a7",
+        "bytes": 3505
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 6,
+    "local_workspace_role": "attempt_06",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "6e0fa583772f73f7d7dc1a7a62787c04c0f4239fa5333c2e01b971bf4a589c09",
+        "bytes": 3505
+      },
+      {
+        "path": "result.json",
+        "sha256": "0188cd6b664f315e6e4dbf4a98bae8aef12f52fcc944dce2ee376459210bcdd8",
+        "bytes": 178694
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 7,
+    "local_workspace_role": "final_07",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "cc9527e5a80ecefcb4a78c68c92c025c797dbb0127caa4f0df0f412712c6f7d5",
+        "bytes": 3505
+      },
+      {
+        "path": "result.json",
+        "sha256": "7942fc72e2153ebd3fcc9ae31ca76a27fc753b1d7cdddf167b9fee7557f860dd",
+        "bytes": 178706
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 8,
+    "local_workspace_role": "final_08",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "4310219f0a9b9f94d443adec3a202d935fc4c94d64205d97b323405a08f982e0",
+        "bytes": 3505
+      },
+      {
+        "path": "result.json",
+        "sha256": "159448763c7d790ae324e548cd8a262e79f650e300fd725b33a7d64fe52a0c45",
+        "bytes": 178713
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": ""
+  },
+  {
+    "attempt": 9,
+    "local_workspace_role": "final_09",
+    "status": "METHOD_PASS_WITH_RECORDED_SCOPE",
+    "files": [
+      {
+        "path": "predeclared_policy.json",
+        "sha256": "6be403e03e7617509114e6dcc0bcec7996d51d185d1509d52f3fecaa197d2641",
+        "bytes": 3505
+      },
+      {
+        "path": "result.json",
+        "sha256": "4f1654e24a21f4b517bf43b3f82e1b475b25787e0c1ca6ca4109bd7d32b61478",
+        "bytes": 178698
+      }
+    ],
+    "new_real_ME_calls": 0,
+    "notes": "canonical final method receipt"
+  }
+]

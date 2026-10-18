@@ -1,0 +1,385 @@
+FILE vendor/CutTools/src/cts/cts_cutroutines.f90 SHA256 fe3c47f4993794916b7367f42c166d856296b8c9d4c7e3689bba25746cdcf715
+1:  subroutine ctsxcut(imode,rootsvalue,muscalein,number_propagators, &
+2:                     numdummy,mpnumdummy,rnk,p,m2,amp,ampcc,ampr1,stable)
+3:!
+4:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+5:!                                                                            !
+6:! imode:|  actions performed by ctsxcut:                                     !
+7:!       |                                                                    !
+8:!   0   | (dp_dir,dp_inv)-> dp_Atest -> stable -> (only if stable=.false.) ->!
+9:!       | (mp_dir,mp_inv)-> mp_Atest -> stable                               ! 
+10:!   1   | (dp_dir)       -> dp_Ntest -> stable                               !
+11:!   2   | (dp_inv)       -> dp_Ntest -> stable                               !
+12:!   3   | (dp_dir,dp_inv)-> dp_Atest -> stable                               !
+13:!   4   | (mp_dir)       -> mp_Ntest -> stable                               !  
+14:!   5   | (mp_inv)       -> mp_Ntest -> stable                               ! 
+15:!   6   | (mp_dir,mp_inv)-> mp_Atest -> stable                               !
+16:!                                                                            !
+17:! Legenda:                                                                   !
+18:!                                                                            !
+19:! dp_dir    = compute amp in double precision with normal   propagator order !
+20:! dp_inv    = compute amp in double precision with reversed propagator order !
+21:! mp_dir    = compute amp in multi  precision with normal   propagator order !
+22:! mp_inv    = compute amp in multi  precision with reversed propagator order !
+23:! dp_Atest  = perform the A=A test in double precision                       !
+24:! mp_Atest  = perform the A=A test in multi  precision                       !
+25:! dp_Ntest  = perform the N=N test in double precision                       !
+26:! mp_Ntest  = perform the N=N test in multi  precision                       !
+27:! -> stable = set stable=.true. or stable=.false.                            !
+28:!             according to the outcome of the test                           !
+29:!                                                                            !
+30:! Tests:                                                                     !
+31:!                                                                            !
+32:! -The N=N test is a test on the reconstructed OPP integrand performed       !
+33:!  by comparing original and reconstacted integrands at an arbirtary value   !
+34:!  of the integration momentum.                                              !
+35:!                                                                            ! 
+36:! -The A=A test checks the 2 amplitudes obtained with dir and inv orders.    !
+37:!                                                                            !
+38:! Notes:                                                                     !
+39:!                                                                            ! 
+40:! a) imode= 0 is recommended, unless you really know what you are doing.     !
+41:!                                                                            !
+42:! b) When two determinations of amp are available, that one with more        !
+43:!    accurate recounstructed numerator (coming from the N=N test) is used.   !
+44:!                                                                            !  
+45:! c) When running in multi precision with scaloop= 3 (qcdloop), the loop     !
+46:!    functions are computed in double precision only. A full multi           !
+47:!    precision result can only be obtained with scaloop= 2 (OneLoop).        !
+48:!                                                                            !  
+49:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+50:!
+51:  include 'cts_mprec.h'
+52:  use scale
+53:  use combinatorics
+54:  use mbnvalues
+55:  use loopfunctions
+56:  use mp_loopfunctions
+57:  use coefficients
+58:  use avh_olo_forCutTools
+59:  use dimensions
+60:  use denominators 
+61:  use maxnumden
+62:  use def_propagator                                       
+63:  use def_mp_propagator                                       
+64:  implicit none
+65:  integer, intent(in) :: imode
+66:  integer, intent(in) :: number_propagators
+67:  external numdummy,mpnumdummy
+68:  integer, intent(in) :: rnk
+69:  include 'cts_dpr.h'
+70:   , intent(in) :: rootsvalue,muscalein
+71:  include 'cts_dpr.h'
+72:   , intent(in), dimension(0:3,0:(number_propagators-1)) :: p
+73:  include 'cts_dpc.h'
+74:   , intent(in), dimension(0:(number_propagators-1)) :: m2
+75:  include 'cts_dpc.h'
+76:   , intent(out) :: amp(0:2),ampcc,ampr1
+77:  include 'cts_dpc.h'
+78:   :: amp1(0:2),amp1cc,amp1r1
+79:  include 'cts_mpc.h'
+80:   :: mp_amp(0:2),mp_ampcc,mp_ampr1
+81:  include 'cts_mpc.h'
+82:   :: mp_amp1(0:2),mp_amp1cc,mp_amp1r1
+83:  include 'cts_mpr.h' 
+84:   :: mlt_prec
+85:  include 'cts_dpr.h' 
+86:   :: dbl_prec
+87:  type(propagator), dimension(0:(number_propagators-1)) :: dn
+88:  type(mp_propagator), dimension(0:number_propagators-1) :: mp_dn 
+89:  integer :: i,j,ib,k,dmr,ierr
+90:  logical, intent(out) :: stable
+91:  logical :: stablen1,stablen2
+92:  logical :: passeddp,passedmp
+93:  logical :: dir_stable,mpcomputation
+94:  logical :: firsttime=.true.
+95:  include 'cts_dpr.h' 
+96:   :: precstablen1,precstablen2
+97:  save firsttime
+98:  if (number_propagators.gt.maxden) then
+99:   stop 'increase maxden in cts_combinatorics.f90'
+100:  endif
+101:  if ((imode.lt.0).or.(imode.gt.6)) then
+102:   stop 'wrong input value of imode in ctsxcut'
+103:  endif
+104:!
+105:! Allocating local arrays
+106:!
+107:  ierr= -1
+108:  if (number_propagators.ge.1) then 
+109:   dmns_1= nbn1(number_propagators)
+110:   allocate  (bbn1(number_propagators,dmns_1), stat=ierr)
+111:   if (ierr.ne.0) STOP "Not enough memory to allocate bbn1"
+112:   bbn1= 0
+113:  endif
+114:  if (number_propagators.ge.2) then 
+115:   dmns_2= nbn2(number_propagators)
+116:   allocate  (bbn2(number_propagators,dmns_2), stat=ierr)
+117:   if (ierr.ne.0) STOP "Not enough memory to allocate bbn2"
+118:   bbn2= 0
+119:  endif
+120:  if (number_propagators.ge.3) then 
+121:   dmns_3= nbn3(number_propagators)
+122:   allocate  (bbn3(number_propagators,dmns_3), stat=ierr)
+123:   if (ierr.ne.0) STOP "Not enough memory to allocate bbn3"
+124:   bbn3= 0
+125:  endif
+126:  if (number_propagators.ge.4) then 
+127:   dmns_4= nbn4(number_propagators)
+128:   allocate  (bbn4(number_propagators,dmns_4), stat=ierr)
+129:   if (ierr.ne.0) STOP "Not enough memory to allocate bbn4"
+130:   bbn4= 0
+131:  endif
+132:!
+133:  do i= 1,number_propagators  
+134:   if (number_propagators.ge.1) then
+135:    do j= 1,dmns_1; bbn1(i,j)= bn1(number_propagators,i,j); enddo
+136:   endif
+137:   if (number_propagators.ge.2) then
+138:    do j= 1,dmns_2; bbn2(i,j)= bn2(number_propagators,i,j); enddo
+139:   endif
+140:   if (number_propagators.ge.3) then
+141:    do j= 1,dmns_3; bbn3(i,j)= bn3(number_propagators,i,j); enddo
+142:   endif
+143:   if (number_propagators.ge.4) then
+144:    do j= 1,dmns_4; bbn4(i,j)= bn4(number_propagators,i,j); enddo
+145:   endif
+146:  enddo
+147:!
+148:! count the number of calls to ctsxcut
+149:!
+150:  n_tot= n_tot+1
+151:!
+152:! set the internal scale of CutTools (the result should not depend on that)
+153:!
+154:  roots  = rootsvalue
+155:  muscale= muscalein
+156:  if (scaloop.eq.2) then
+157:    call olo_scale(muscale)
+158:  elseif (scaloop.eq.3) then
+159:!
+160:!   set the scale in qcdloop
+161:!
+162:    musq= muscale**2
+163:!
+164:!   some 2-point OneLoop 2-point function is also used
+165:!
+166:    call olo_scale(muscale)
+167:  else
+168:    stop 'value of scaloop not allowed'
+169:  endif
+170:!
+155:  muscale= muscalein
+157:    call olo_scale(muscale)
+162:    musq= muscale**2
+166:    call olo_scale(muscale)
+275:      call olo_scale(muscale)
+FILE vendor/CutTools/src/cts/cts_loopfunctions.f90 SHA256 6751094ddeed582395754d6a5e3218f64f5d5fbc44b48cdb888b61d190cd14e7
+115:     aloopfun(2,ib)= qlI1(m12,musq,-2)     
+116:     aloopfun(1,ib)= qlI1(m12,musq,-1)     
+117:     aloopfun(0,ib)= qlI1(m12,musq,0)     
+163:     bloopfun(2,ib)= qlI2(k12,m12,m22,musq,-2)     
+164:     bloopfun(1,ib)= qlI2(k12,m12,m22,musq,-1)     
+165:     bloopfun(0,ib)= qlI2(k12,m12,m22,musq,0)     
+216:     cloopfun(2,ib)= qlI3(k12,k22,k32,m12,m22,m32,musq,-2)     
+217:     cloopfun(1,ib)= qlI3(k12,k22,k32,m12,m22,m32,musq,-1)     
+218:     cloopfun(0,ib)= qlI3(k12,k22,k32,m12,m22,m32,musq,0)     
+277:     dloopfun(2,ib)= qlI4(k12,k22,k32,k42,k122,k232,m12,m22,m32,m42,musq,-2)   
+278:     dloopfun(1,ib)= qlI4(k12,k22,k32,k42,k122,k232,m12,m22,m32,m42,musq,-1)   
+279:     dloopfun(0,ib)= qlI4(k12,k22,k32,k42,k122,k232,m12,m22,m32,m42,musq,0)   
+406:     mp_aloopfun(2,ib)= qlI1(dm12,musq,-2)     
+407:     mp_aloopfun(1,ib)= qlI1(dm12,musq,-1)     
+408:     mp_aloopfun(0,ib)= qlI1(dm12,musq,0)     
+459:     mp_bloopfun(2,ib)= qlI2(dk12,dm12,dm22,musq,-2)     
+460:     mp_bloopfun(1,ib)= qlI2(dk12,dm12,dm22,musq,-1)     
+461:     mp_bloopfun(0,ib)= qlI2(dk12,dm12,dm22,musq,0)     
+525:     mp_cloopfun(2,ib)= qlI3(dk12,dk22,dk32,dm12,dm22,dm32,musq,-2)     
+526:     mp_cloopfun(1,ib)= qlI3(dk12,dk22,dk32,dm12,dm22,dm32,musq,-1)     
+527:     mp_cloopfun(0,ib)= qlI3(dk12,dk22,dk32,dm12,dm22,dm32,musq,0)     
+601:     mp_dloopfun(2,ib)= qlI4(dk12,dk22,dk32,dk42,dk122,dk232,dm12,dm22,dm32,dm42,musq,-2)   
+602:     mp_dloopfun(1,ib)= qlI4(dk12,dk22,dk32,dk42,dk122,dk232,dm12,dm22,dm32,dm42,musq,-1)   
+603:     mp_dloopfun(0,ib)= qlI4(dk12,dk22,dk32,dk42,dk122,dk232,dm12,dm22,dm32,dm42,musq,0)   
+FILE vendor/CutTools/src/cts/cts_kinematics.f90 SHA256 6acade51f35f3ae0df6d81b52f462e38bb2ab13fb6ea509a15abe100ba169e00
+9:   , public :: roots,limit,musq,muscale
+FILE vendor/IREGI/src/IREGI4ML5_interface.f90 SHA256 7dea440003e38c7c68688894f0e87758c5ae2f2322a5770b30701aa3929ad3b1
+1:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2:!                                                                !
+3:! THIS FILE IS THE INTERFACE OF IREGI FOR MADLOOP5 CONVENTION    !
+4:!                                                                !
+5:! H.-S.SHAO, 29/10/2013                                          !
+6:!                                                                !
+7:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+8:SUBROUTINE INITIREGI(RECY,LOOPLIB,THR)
+9:  USE global
+10:  IMPLICIT NONE
+11:  INTEGER,INTENT(IN)::LOOPLIB
+12:  REAL(KIND(1d0)),INTENT(IN)::THR
+13:  LOGICAL,INTENT(IN)::RECY
+14:  !RECYCLING=.TRUE.! USE RECYCLING, THEN FOR EACH PS, CLEAR CACHING PLEASE
+15:  NULLIFY(ibp_save)
+16:  NULLIFY(pave_save)
+17:  NULLIFY(shiftpaveden_save)
+18:  NULLIFY(ibp_save2)
+19:  NULLIFY(pave_save2)
+20:  NULLIFY(shiftpaveden_save2)
+21:  NULLIFY(xyzmatrices_save)
+22:  NULLIFY(rsmatrices_save)
+23:  RECYCLING=RECY
+24:  CHECK=.FALSE.
+25:  SELECT CASE(LOOPLIB)
+26:  CASE(1)
+27:     ! LOOPTOOLS, WE WILL USE QCDLOOP INSTEAD
+28:     scalarlib=1
+29:  CASE(2)
+30:     ! AVH,i.e. ONELOOP
+31:     scalarlib=2
+32:  CASE(3)
+33:     ! QCDLOOP
+34:     scalarlib=1
+35:  CASE DEFAULT
+36:     ! USE QCDLOOP FOR OTHER CASES
+37:     scalarlib=1
+38:  END SELECT
+39:  ZEROTHR_IREGI=THR
+40:  ONSHELL_IREGI=.TRUE. ! always set on shell to cure PS
+41:  ML5_CONVENTION=.TRUE. ! set ML5 CONVENTION TO MATCH THAT OF PJFRY++ OR CUTTOOLS
+42:END SUBROUTINE INITIREGI
+43:SUBROUTINE IMLOOP(CTMODE,IMODE,NLOOPLINE,NLOOPCOEFS,RANK,PDEN,M2L,MUR,TIRCOEFS,STABLE)
+44:! CTMODE=1 ---> DO NOTHING
+45:! CTMODE=2 ---> ROTATE THE LOOP PROPAGATOR DIRECTION,i.e D0...DN-1 to DN-1...D0
+46:! CTMODE=4 ---> DO NOTHING BUT IN QUADRUPLE PRECISION (NOT DONE)
+47:! CTMODE=5 ---> ROTATE THE LOOP PROPAGATOR DIRECTION IN QUADRUPLE PRECISION (NOT DONE)
+48:! IMODE=0, IBP reduction
+49:! IMODE=1, PaVe reduction
+50:! IMODE=2, PaVe reduction with stablility improved by IBP reduction 
+51:  USE funlib
+52:  USE ti_reduce
+53:  USE cti_reduce
+54:  USE global
+55:  IMPLICIT NONE
+56:  INTEGER,INTENT(IN)::NLOOPLINE,RANK,NLOOPCOEFS,CTMODE
+57:  REAL(KIND(1d0)),DIMENSION(0:3,NLOOPLINE-1),INTENT(IN)::PDEN
+58:  COMPLEX(KIND(1d0)),DIMENSION(NLOOPLINE),INTENT(IN)::M2L
+59:  REAL(KIND(1d0)),INTENT(IN)::MUR
+60:  COMPLEX(KIND(1d0)),DIMENSION(0:NLOOPCOEFS-1,3),INTENT(OUT)::TIRCOEFS
+61:  LOGICAL,INTENT(OUT)::STABLE
+62:  COMPLEX(KIND(1d0)),DIMENSION(0:NLOOPCOEFS-1,4)::TCOEFS
+63:  !COMPLEX(KIND(1d0)),DIMENSION(0:NLOOPCOEFS-1,3)::TIRCOEFS2
+64:  LOGICAL::TSTABLE
+65:  REAL(KIND(1d0)),DIMENSION(NLOOPLINE)::M2LR
+66:  INTEGER,INTENT(IN)::IMODE
+67:  INTEGER::nlenrank,i,j
+68:  REAL(KIND(1d0)),DIMENSION(NLOOPLINE,0:3)::PL
+69:  !    REAL(KIND(1d0)),PARAMETER::pi=3.141592653589793d0
+70:  REAL(KIND(1d0)),PARAMETER::eulergamma=0.5772156649015329d0
+71:  REAL(KIND(1d0)),PARAMETER::eumlog4pi=-1.9538085820677579324d0 ! eulergamma-log(4*pi)
+72:  REAL(KIND(1d0)),PARAMETER::euplogpi=1.7219455507509331d0 ! eulergamma+log(pi)
+73:  ! (6 EulerGamma^2 + \[Pi]^2 - 12 EulerGamma Log[4 \[Pi]] + 6 Log[4 \[Pi]]^2)/12
+74:  REAL(KIND(1d0)),PARAMETER::exp4eulergamma=2.7311510211049246100d0
+75:  ! (6 EulerGamma^2 + \[Pi]^2 + 12 EulerGamma Log[\[Pi]] + 6 Log[\[Pi]]^2)/12 
+76:  REAL(KIND(1d0)),PARAMETER::exp4eulergamma2=2.3050152732995803d0
+77:  COMPLEX(KIND(1d0)),PARAMETER::cnorm=DCMPLX(0d0,-0.1013211836423377714438794632d0) ! 1/pi**2/i
+78:  INTEGER::nnonzeromass,ml5_sign,ipostemp
+79:  LOGICAL::exist
+80:  LOGICAL::comp_mass_scheme
+81:  INTEGER::scal_save
+82:  !    LOGICAL::INIT=.TRUE.
+83:  !    SAVE INIT
+84:  !    IF(INIT)THEN
+85:  !       RECYCLING=.TRUE. ! USE RECYCLING, THEN FOR EACH PS, CLEAR CACHING PLEASE
+86:  !       INIT=.FALSE.
+87:  !    ENDIF
+88:  nlenrank=0
+89:  DO I=0,RANK
+90:     nlenrank=nlenrank+(3+I)*(2+I)*(1+I)/6
+91:  ENDDO
+92:  IF(nlenrank.GT.NLOOPCOEFS)THEN
+93:     STOP "ERROR IN IMLOOP FOR INCORRECT RANK OR NLOOPCOEFS"
+94:  ENDIF
+95:  nnonzeromass=0
+96:  massref(1:MAXNLOOP_IREGI)=0d0
+97:  comp_mass_scheme=.FALSE.
+98:  DO i=1,NLOOPLINE
+99:     M2LR(i)=DREAL(M2L(i))
+100:     IF(ABS(DIMAG(M2L(i)))/MAX(ABS(M2L(i)),1D-2).GT.1D-15)THEN
+101:        comp_mass_scheme=.TRUE.
+102:     ENDIF
+103:     IF(ABS(M2LR(i)).GT.ZEROTHR_IREGI)THEN
+104:        exist=.FALSE.
+105:        DO J=1,nnonzeromass
+106:           IF(ABS(M2LR(I)-massref(J))/M2LR(I).LT.ZEROTHR_IREGI)THEN
+107:              exist=.TRUE.
+108:              EXIT
+109:           ENDIF
+110:        ENDDO
+111:        IF(.NOT.exist)THEN
+112:           nnonzeromass=nnonzeromass+1
+113:           IF(nnonzeromass.GT.20)STOP 'ERROR:TOO MANY INDEPENDENT MASSES !!!!'
+114:           massref(nnonzeromass)=M2LR(I)
+115:        ENDIF
+116:     ENDIF
+117:     IF(i.EQ.1)THEN
+118:        PL(i,0:3)=0d0
+119:     ELSE
+120:        PL(i,0:3)=PDEN(0:3,i-1)
+121:     ENDIF
+122:  ENDDO
+123:  NMASS=nnonzeromass
+124:  STABLE_IREGI=.TRUE.
+125:  ! IMODE,NLOOPLINE,MAXRANK,NCOEFS,PDEN,M2L,MU,TICOEFS,TSTABLE
+126:  ! IMODE=0, IBP reduction
+127:  ! IMODE=1, PaVe reduction
+128:  ! IMODE=2, PaVe reduction with stablility improved by IBP reduction
+129:  ! I HARD-CODED IMODE=2 HERE
+130:  !IMODE=2
+131:  IF(.NOT.comp_mass_scheme)THEN
+132:     CALL tensor_integral_reduce(IMODE,NLOOPLINE,RANK,nlenrank,&
+133:          PL,M2LR,MUR,TCOEFS(0:nlenrank-1,1:4),TSTABLE,CTMODE)
+134:  ELSE
+135:     scal_save=scalarlib
+136:     scalarlib=2
+137:     ! complex mass scheme
+138:     CALL comp_tensor_integral_reduce(IMODE,NLOOPLINE,RANK,nlenrank,&
+139:          PL,M2L,MUR,TCOEFS(0:nlenrank-1,1:4),TSTABLE,CTMODE)
+140:     scalarlib=scal_save
+141:  ENDIF
+142:  STABLE=TSTABLE
+143:  ! TO MATCH THE CONVENTION OF PJFRY++
+144:  ! MULTIPLY GAMMA(1-eps)*(Pi)^eps instead of GAMMA(1-eps)*(4*Pi)^eps
+145:  DO i=0,nlenrank-1
+146:     ipostemp=POS2RANK(i)
+147:     IF(MOD(ipostemp,2).EQ.0)THEN
+148:        ml5_sign=1
+149:     ELSE
+150:        ml5_sign=-1
+151:     ENDIF
+152:     TIRCOEFS(i,3)=TCOEFS(i,3)*cnorm*ml5_sign
+153:     ! GAMMA(1-eps)*(4*Pi)^eps
+154:     !TIRCOEFS2(i,2)=(TCOEFS(i,1)+TCOEFS(i,2)+TCOEFS(i,3)*eumlog4pi)*cnorm*ml5_sign
+155:     !TIRCOEFS2(i,1)=(TCOEFS(i,4)+(TCOEFS(i,1)+TCOEFS(i,2))*eumlog4pi&
+156:     !     +TCOEFS(i,3)*exp4eulergamma)*cnorm*ml5_sign
+157:     ! GAMMA(1-eps)*(Pi)^eps
+158:     TIRCOEFS(i,2)=(TCOEFS(i,1)+TCOEFS(i,2)+TCOEFS(i,3)*euplogpi)*cnorm*ml5_sign
+159:     TIRCOEFS(i,1)=(TCOEFS(i,4)+(TCOEFS(i,1)+TCOEFS(i,2))*euplogpi&
+160:          +TCOEFS(i,3)*exp4eulergamma2)*cnorm*ml5_sign
+161:  ENDDO
+162:  ! SORT THE ORDER OF COEFFICIENTS (OLD ML5 CONV) WITH THE NEW ML5 CONV
+163:  !CALL SORT_IREGICOEFS(RANK,nlenrank,TIRCOEFS2(0:nlenrank-1,1:3),&
+164:  !     TIRCOEFS(0:nlenrank-1,1:3))
+165:  RETURN
+166:END SUBROUTINE IMLOOP
+167:SUBROUTINE IREGI_FREE_PS
+168:  USE global
+169:  USE binary_tree
+170:  IMPLICIT NONE
+171:  CALL free_ibppave_save
+172:  CALL free_xyzmatrices_bt(xyzmatrices_save)
+173:  CALL free_cxyzmatrices_bt(cxyzmatrices_save)
+174:  CALL free_rsmatrices_bt(rsmatrices_save)
+175:  CALL free_crsmatrices_bt(crsmatrices_save)
+176:  RETURN
+177:END SUBROUTINE IREGI_FREE_PS
+43:SUBROUTINE IMLOOP(CTMODE,IMODE,NLOOPLINE,NLOOPCOEFS,RANK,PDEN,M2L,MUR,TIRCOEFS,STABLE)
+59:  REAL(KIND(1d0)),INTENT(IN)::MUR
+133:          PL,M2LR,MUR,TCOEFS(0:nlenrank-1,1:4),TSTABLE,CTMODE)
+139:          PL,M2L,MUR,TCOEFS(0:nlenrank-1,1:4),TSTABLE,CTMODE)

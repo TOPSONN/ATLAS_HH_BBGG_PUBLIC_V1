@@ -1,0 +1,70 @@
+{
+  "corrected_target": {
+    "status": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "authorization_identifier": "AUTHORIZE_PHASE7_FINAL_SM_1000",
+    "proposed_seed": 20261123,
+    "requested_events": 1000,
+    "observed_LHE_events": null,
+    "observed_HepMC_events": null,
+    "observed_ROOT_entries": null,
+    "actual_effective_PDF": null,
+    "actual_running_order": null,
+    "actual_seed": null,
+    "sigma_pb": null,
+    "integration_uncertainty_pb": null,
+    "canonical_baseline": false,
+    "required_prerequisites": [
+      "Phase7I genuine scientific gates",
+      "separate exact-scope human approval"
+    ]
+  },
+  "historical": {
+    "B100": {
+      "events": 100,
+      "sigma_pb": 0.017276,
+      "native_integration_error_pb": 0.00018503,
+      "actual_seed": 21,
+      "actual_PDF": "CTEQ6L1",
+      "running_loops": 1,
+      "source_weight_convention": "XWGTUP_pb_average_original_N",
+      "model_BR_factor": 0.002653445906720871,
+      "BR_factor_applications": 1,
+      "total_model_weight_pb": 4.5840931484509766e-05,
+      "external_physical_BR_adopted": false,
+      "canonical_corrected_CTEQ_SM1000": false,
+      "all_original_data_unchanged": true
+    },
+    "C1000": {
+      "events": 1000,
+      "sigma_pb": 0.019069,
+      "native_integration_error_pb": 0.00011745,
+      "actual_seed": 20261122,
+      "actual_PDF": "NNPDF23_LO",
+      "running_loops": 2,
+      "source_weight_convention": "XWGTUP_pb_average_original_N",
+      "model_BR_factor": 0.002653445906720871,
+      "BR_factor_applications": 1,
+      "total_model_weight_pb": 5.0598559995260286e-05,
+      "external_physical_BR_adopted": false,
+      "canonical_corrected_CTEQ_SM1000": false,
+      "all_original_data_unchanged": true
+    }
+  },
+  "BR_convention": "MODEL_BR_ONLY: missing 2*BR(Hbb)*BR(Hgammagamma) once; no extra factor for assignment probability",
+  "BR_factor": 0.002653445906720871,
+  "physical_BR_adoption": null,
+  "source_to_ROOT": "actual old full-chain receipts preserved; new read-only named-weight/object regression on C1000 and six backgrounds",
+  "historical_C_final_cutflow": [
+    1000,
+    484,
+    403,
+    143,
+    143
+  ],
+  "corrected_final_cutflow": null,
+  "errata": [
+    "B requested20261121 but actual21",
+    "C/D actual NNPDF23 LO/two-loop despite historical declared CTEQ card/header",
+    "no global rescaling or relabeling"
+  ]
+}

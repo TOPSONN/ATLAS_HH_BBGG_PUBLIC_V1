@@ -1,0 +1,28 @@
+--- frozen/Source/rw_events.f
++++ B/Source/rw_events.f
+@@ -55,7 +55,7 @@
+       buff=' '
+       done=.false.
+       if (.not. banner_open) then
+-         open (unit=lun_ban, status='scratch')
++         call hh_open_sink(lun_ban)
+          banner_open=.true.
+       endif
+  11   read(lun,'(a300)',end=99,err=99) buftmp
+@@ -126,6 +126,7 @@
+          enddo
+          nclus=i
+       endif
++      call hh_real4('READBACK',wgt,sscale,aqcd,aqed)
+       return
+  99   done=.true.
+       return
+@@ -276,6 +277,8 @@
+ c      aqed= gal(1)*gal(1)/4d0/pi
+ c      aqcd = g*g/4d0/pi
+ 
++      call hh_require_transient(lun)
++      call hh_real4('SERIAL',wgt,scale,aqcd,aqed)
+       write(lun,'(a)') '<event>'
+       write(lun,'(i2,i5,e16.7e3,3e15.7)') nexternal,ievent,wgt,scale,aqed,aqcd
+       do i=1,nexternal

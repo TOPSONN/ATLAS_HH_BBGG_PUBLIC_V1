@@ -1,0 +1,56 @@
+{
+  "status": "PASS_PINNED_EXISTING_NATIVE_SOURCES",
+  "PDF_path_resolution": "requested Source/pdf.f and Source/pdfwrap.f resolve in this frozen process to Source/PDF/pdf.f and Source/PDF/pdfwrap.f",
+  "files": [
+    {
+      "path": "Source/dsample.f",
+      "sha256": "2177cc91aafea1343d45999ad9ccb41f65bf55a4d9b3f18a2578d62fb219be8a"
+    },
+    {
+      "path": "Source/ranmar.f",
+      "sha256": "9bb6bbc5f1fda1df1a8df5d8518103b55a3f6c2b13874178b501b7272ecf2888"
+    },
+    {
+      "path": "Source/ran1.f",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af"
+    },
+    {
+      "path": "SubProcesses/unwgt.f",
+      "sha256": "358140b33f896077d529412c3107411cae8516da507ad1fa42315efc2a4cc2ee"
+    },
+    {
+      "path": "Source/rw_events.f",
+      "sha256": "51fac40df2e39e0d20ddbdaed810aabe6e26203ce47f2b11871949085543b67a"
+    },
+    {
+      "path": "Source/PDF/pdf.f",
+      "sha256": "955eb4b5cd06d1e5416c2644e2d31ba677e6fe529c96b9b00619f44e147407f6"
+    },
+    {
+      "path": "Source/PDF/pdfwrap.f",
+      "sha256": "32164b7098c60d94a3985781aba0ed0b348e3acbf1fe860c153227253c834638"
+    },
+    {
+      "path": "Source/PDF/pdg2pdf.f",
+      "sha256": "13427a635e6f2ab64e9492b7b988825d00c3e5e04b6b9801e27fc5782cf100ba"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig.f",
+      "sha256": "6e9c67b58ea9b94228f2972e048d557cee8c11eb71a425a2cbdce81ba3112c2d"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/auto_dsig1.f",
+      "sha256": "9b0ead11f1002cee33a73e7024de5ec9618627ed6cd2b7c65eb24935e163c365"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/driver.f",
+      "sha256": "17ca148dcdeab4fbd0eccfa0e95e677a59e5a5953c426343a649060010238245"
+    },
+    {
+      "path": "SubProcesses/P0_gg_hh/setscales.f",
+      "sha256": "6308378112ef4dfcf12af53bf322f1c564294fc98e63948bd7323fb13a004c28"
+    }
+  ],
+  "source_sampling_to_ME_execution": "NOT_EXECUTED; source-inspected only",
+  "actual_method_kernels": "sample_init/put_point/result and original unwgt/serialization/readback"
+}

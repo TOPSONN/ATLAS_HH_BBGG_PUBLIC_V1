@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "base_head": "a5582e508e452a515670d1edc1d39041e88a8638",
+  "method_only": true,
+  "new_integrals": 0,
+  "new_physical_ME_calls": 0,
+  "comparison": {
+    "discrete": "EXACT",
+    "floating": "BITWISE_EXACT_HEX",
+    "absolute_tolerance": 0.0,
+    "relative_tolerance": 0.0,
+    "justification": "same compiler flags, native computational source and deterministic stream; only regular-file connection differs; native text rounding is retained in both paths",
+    "failure_policy": "preserve first divergence; no post-failure tolerance relaxation"
+  },
+  "independent_decimal_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-14,
+    "justification": "independent high precision sum versus <=270 first-iteration double additions and native variance cancellation; fixed before the independent check"
+  },
+  "cases": [
+    "adaptation",
+    "measurement",
+    "negative_accuracy",
+    "positive_accuracy",
+    "none_pass",
+    "forced_secondary_store",
+    "candidate_limit"
+  ],
+  "negative_mutations": [
+    "candidate",
+    "aux_rng",
+    "stopping",
+    "grid",
+    "arithmetic",
+    "tail"
+  ],
+  "negative_io_cases": [
+    "deny_permanent",
+    "deny_transient",
+    "deny_rebound",
+    "deny_rebound_scratch"
+  ],
+  "adaptation": {
+    "initial_points": 250,
+    "iterations": 4,
+    "minimum_iterations": 4,
+    "accuracy": 0.0,
+    "grid_mode": 2
+  },
+  "measurement": {
+    "initial_points": 250,
+    "iterations": 3,
+    "minimum_iterations": 3,
+    "accuracy": 0.0,
+    "grid_mode": 0
+  },
+  "scope": "native sample_init/put_point/result, unwgt/write_leshouche/addmothers/store/clear and native text serialization/readback; no sample_full/get_point/phase-space or physical ME call",
+  "limits": {
+    "concurrent_jobs": 1,
+    "workers": 1,
+    "child_CPU_seconds": 60,
+    "child_wall_seconds": 60,
+    "child_file_size_bytes": 67108864,
+    "aggregate_wall_seconds": 14400,
+    "additional_disk_bytes": 5368709120
+  },
+  "method_source_identity": [
+    {
+      "path": "simulation/hh_signal/semantics_recovery/__init__.py",
+      "sha256": "40be8756bd126e0c7dcb5fea427014553e337052beb2abfad352aca665b881e5"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/contract.py",
+      "sha256": "4803ac8bbbfa45785701e65de70ba7da56016dbbac6d7c502e4849331b10e99b"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/overlay.py",
+      "sha256": "3f2ff46d21e0f061c0aad73146d06253b5d3fec1a3f69bb262eec8d0a035cf85"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/review.py",
+      "sha256": "65bf9391fca6708ed716b61f2f3e513de3afaf57cbca86c9a9ceb8ec9e4ad2f1"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/runner.py",
+      "sha256": "0091c480979428555abea8dbfdc8a739d6bd932bb76e2b3b950150c2abdb390f"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/anonymous_io.c",
+      "sha256": "b3f26af0d2f45663bceaec414a20128d211ebe4758dbd718c3674a0861b05242"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/io_and_rng.f90",
+      "sha256": "464d64c0d1cdb6716ab058e52e9e6fad8783bef811b34af304bde0e4fc1c863c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/method_driver.f",
+      "sha256": "ed0bed151d9f24e6f0487bd5ea89c39f34bb1a75f179b32e467709cfefa55e2c"
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/test_semantics.py",
+      "sha256": "c2626c4dd1b32afa802a2f924ff8f7212bc29064a6fde402ec71dc3f4ce529a5"
+    }
+  ]
+}

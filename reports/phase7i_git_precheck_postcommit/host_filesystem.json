@@ -1,0 +1,16 @@
+{
+  "scope": "READ_ONLY_WINDOWS_HOST_FILESYSTEM_QUERY",
+  "drive": "C",
+  "initial_probe": {
+    "command": "Get-Volume -DriveLetter C | Select-Object DriveLetter,FileSystemType",
+    "exit": 1,
+    "result": "CIM access unavailable; no filesystem conclusion from this probe"
+  },
+  "successful_probe": {
+    "command": "([System.IO.DriveInfo]::new('C:\\')).DriveFormat",
+    "exit": 0,
+    "stdout": "NTFS",
+    "configuration_mutated": false
+  },
+  "linux_mount_probe": "Initial findmnt receipt identifies9p with DrvFS aname; no mount was changed."
+}

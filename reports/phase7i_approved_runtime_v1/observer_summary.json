@@ -1,0 +1,10 @@
+{
+  "scope": "READ_ONLY_PROC_METADATA_SAMPLING_NOT_CONTINUOUS",
+  "poll_seconds": 1,
+  "samples": 0,
+  "native_pids_observed": [],
+  "peak_observed_native_VmHWM_bytes": null,
+  "observer_wall_seconds": 30.03837054899998,
+  "observer_CPU_seconds": 0.027832643999999997,
+  "limitations": "May miss subsecond processes and transient peaks; /usr/bin/time supplies kernel child ru_maxrss; no event or scratch content read."
+}

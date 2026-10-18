@@ -1,0 +1,20 @@
+--- frozen/Source/rw_events.f
++++ isolated/Source/rw_events.f
+@@ -55,7 +55,7 @@
+       buff=' '
+       done=.false.
+       if (.not. banner_open) then
+-         open (unit=lun_ban, status='scratch')
++         call hh_open_sink(lun_ban)
+          banner_open=.true.
+       endif
+  11   read(lun,'(a300)',end=99,err=99) buftmp
+@@ -276,6 +276,8 @@
+ c      aqed= gal(1)*gal(1)/4d0/pi
+ c      aqcd = g*g/4d0/pi
+ 
++      call hh_require_transient(lun)
++      call hi_writer
+       write(lun,'(a)') '<event>'
+       write(lun,'(i2,i5,e16.7e3,3e15.7)') nexternal,ievent,wgt,scale,aqed,aqcd
+       do i=1,nexternal

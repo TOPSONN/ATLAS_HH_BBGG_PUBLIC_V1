@@ -1,0 +1,16 @@
+13:39:36.302231 common-main.c:55             | d0 | main                     | version      |     |           |           |              | 2.43.0
+13:39:36.302711 common-main.c:56             | d0 | main                     | start        |     |  0.004452 |           |              | git -C REPOSITORY diff-files --quiet
+13:39:36.303051 compat/linux/procinfo.c:170  | d0 | main                     | cmd_ancestry |     |           |           |              | ancestry:[python3 'Relay(299)' SessionLeader 'init-systemd(Ub' systemd]
+13:39:36.311828 repository.c:143             | d0 | main                     | def_repo     | r1  |           |           |              | worktree:REPOSITORY
+13:39:36.316273 git.c:464                    | d0 | main                     | cmd_name     |     |           |           |              | diff-files (diff-files)
+13:39:36.318810 read-cache.c:2384            | d0 | main                     | region_enter | r1  |  0.020558 |           | index        | label:do_read_index .git/index
+13:39:36.320356 cache-tree.c:634             | d0 | main                     | region_enter | r1  |  0.022103 |           | cache_tree   | ..label:read
+13:39:36.320598 cache-tree.c:636             | d0 | main                     | region_leave | r1  |  0.022347 |  0.000244 | cache_tree   | ..label:read
+13:39:36.321037 read-cache.c:2333            | d0 | main                     | data         | r1  |  0.022785 |  0.002227 | index        | ..read/version:2
+13:39:36.321197 read-cache.c:2335            | d0 | main                     | data         | r1  |  0.022946 |  0.002388 | index        | ..read/cache_nr:1202
+13:39:36.321355 read-cache.c:2389            | d0 | main                     | region_leave | r1  |  0.023104 |  0.002546 | index        | label:do_read_index .git/index
+13:39:36.321497 preload-index.c:120          | d0 | main                     | region_enter |     |  0.023245 |           | index        | label:preload
+13:39:37.643589 preload-index.c:168          | d0 | main                     | data         |     |  1.345336 |  1.322091 | index        | ..preload/sum_lstat:1202
+13:39:37.643867 preload-index.c:169          | d0 | main                     | region_leave |     |  1.345615 |  1.322370 | index        | label:preload
+13:39:37.644161 git.c:723                    | d0 | main                     | exit         |     |  1.345909 |           |              | code:0
+13:39:37.644342 trace2/tr2_tgt_perf.c:217    | d0 | main                     | atexit       |     |  1.346090 |           |              | code:0

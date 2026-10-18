@@ -1,0 +1,168 @@
+{
+  "date_Asia_Taipei": "2026-10-16",
+  "task": "AUTHORIZE_PHASE7_FINAL_INTEGRATION_ONLY",
+  "base_PR": 24,
+  "authorized_base_revision": "1f3c5fc4efa141a0e3e6831aa3b44c0e6bd32ee7",
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "authorization": "GRANTED_FOR_BASE_REVISION_WITH_EXPLICIT_CHANGE_REAPPROVAL_CONDITION",
+  "implementation_changed": true,
+  "execution_status": "NOT_EXECUTED_NEW_REVISION_APPROVAL_REQUIRED",
+  "proposed_revision": "resolve containing commit; exact full SHA recorded in PR and delivery after commit",
+  "frozen_local_review_build_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "executables": [
+    {
+      "seed": 910001,
+      "sha256": "c70949e1538fc53e2725c126a1527edf2e268c85e82e4149d3d3a1f46ccd426c",
+      "pre_ME_probes": 2,
+      "unsupervised_native_exit": 80
+    },
+    {
+      "seed": 910019,
+      "sha256": "7dc0b4150a9f0a17973e23016b679a16bde5621ab46b48f11a0d9c30badff3ff",
+      "pre_ME_probes": 2,
+      "unsupervised_native_exit": 80
+    },
+    {
+      "seed": 910037,
+      "sha256": "1a458edc8320dfe03ef8af681c5d88099f171117b8dc8746def4f2c13f79f3f6",
+      "pre_ME_probes": 2,
+      "unsupervised_native_exit": 80
+    },
+    {
+      "seed": 910061,
+      "sha256": "ff465034a83e815be7db974e26f0ff6c88215fa15fb6a76cdd20b66dbbf4f6b3",
+      "pre_ME_probes": 2,
+      "unsupervised_native_exit": 80
+    }
+  ],
+  "replicas": [
+    {
+      "seed": 910001,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "native_internal_error_pb": null,
+      "actual_ME_entries": null,
+      "actual_grid": null,
+      "actual_tail": null
+    },
+    {
+      "seed": 910019,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "native_internal_error_pb": null,
+      "actual_ME_entries": null,
+      "actual_grid": null,
+      "actual_tail": null
+    },
+    {
+      "seed": 910037,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "native_internal_error_pb": null,
+      "actual_ME_entries": null,
+      "actual_grid": null,
+      "actual_tail": null
+    },
+    {
+      "seed": 910061,
+      "status": "NOT_EXECUTED",
+      "sigma_pb": null,
+      "native_internal_error_pb": null,
+      "actual_ME_entries": null,
+      "actual_grid": null,
+      "actual_tail": null
+    }
+  ],
+  "actual_new_genuine_ME_calls": 0,
+  "actual_new_integrals": 0,
+  "retained_physical_LHE_events": 0,
+  "mean_pb": null,
+  "between_replica_SE_pb": null,
+  "convergence": "NOT_EVALUATED",
+  "ceilings": {
+    "wall_seconds": 14400,
+    "CPU_seconds": 14400,
+    "disk_bytes": 5368709120,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_tests": 18,
+  "relevant_tests": 451,
+  "reference_validators": 5,
+  "native_method_scope": "6 exact computational-body source projections; 6 fixed synthetic point cases, no ME/sampler link; sealed C control positive/wrong-seed checks",
+  "preserved_original_campaign_files": 8420,
+  "historical_failures_preserved": true,
+  "native_F_G_STOP80_STOP86_modified": false,
+  "code_change_reason": "old Python/native bridges unconditionally deny; add isolated supervised route and full-amplitude input assertions",
+  "new_preparation_attempts": [
+    {
+      "attempt": 1,
+      "status": "FAILED_PREPARATION_PRESERVED",
+      "canonical": false,
+      "new_genuine_ME_calls": 0,
+      "new_integrals": 0,
+      "logical_bytes": 47956517,
+      "failure": {
+        "status": "FAILED_REVIEW_NO_PHYSICAL_DISPATCH",
+        "reason": "OVERLAY_BOUNDARY_NOT_UNIQUE:               fx = dsig(p,wgt,0) !Evaluate function",
+        "new_ME_calls": 0,
+        "new_integrals": 0
+      },
+      "failed_compiler_logs": []
+    },
+    {
+      "attempt": 2,
+      "status": "FAILED_PREPARATION_PRESERVED",
+      "canonical": false,
+      "new_genuine_ME_calls": 0,
+      "new_integrals": 0,
+      "logical_bytes": 48021191,
+      "failure": {
+        "status": "FAILED_REVIEW_NO_PHYSICAL_DISPATCH",
+        "reason": "METHOD_CHILD_FAILED:                      1\nError: Symbol 'multi_channel' at (1) has no IMPLICIT type\nrun.inc:54:44:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                            1\nError: Symbol 'max_particles' at (1) has no IMPLICIT type\nrun.inc:55:52:\n\n   55 |       INTEGER n_pdfrw(2),i_pdgpdf(max_particles-2,2)\n      |                                                    1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                               \nError: Automatic object 'i_pdgpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:47:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                               1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                          \nError: Automatic object 's_qalps' at (1) cannot appear in COMMON at (2)\nrun.inc:56:48:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                           \nError: Automatic object 's_xpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:56:74:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                                          1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                                                     \nError: Automatic object 's_qpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:44:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                            1\nError: Symbol 'max_particles' at (1) has no IMPLICIT type\nrun.inc:55:52:\n\n   55 |       INTEGER n_pdfrw(2),i_pdgpdf(max_particles-2,2)\n      |                                                    1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                               \nError: Automatic object 'i_pdgpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:47:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                               1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                          \nError: Automatic object 's_qalps' at (1) cannot appear in COMMON at (2)\nrun.inc:56:48:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                           \nError: Automatic object 's_xpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:56:74:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                                          1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                                                     \nError: Automatic object 's_qpdf' at (1) cannot appear in COMMON at (2)\n",
+        "new_ME_calls": 0,
+        "new_integrals": 0
+      },
+      "failed_compiler_logs": [
+        {
+          "role": "replica_910001/process/SubProcesses/P0_gg_hh/failed_child_stderr.txt",
+          "sha256": "efde735002633ac46de4b2adf2137b1facc777074120b53a9d0def8fbfca8a25",
+          "bytes": 3919
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+      "canonical": false,
+      "new_genuine_ME_calls": 0,
+      "new_integrals": 0,
+      "logical_bytes": 242223328,
+      "receipt_sha256": "938e46fa1e2f3851100b21dd58128965834982205266813f6fb61fbe235ff757",
+      "failed_compiler_logs": []
+    },
+    {
+      "attempt": 4,
+      "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+      "canonical": false,
+      "new_genuine_ME_calls": 0,
+      "new_integrals": 0,
+      "logical_bytes": 242239267,
+      "receipt_sha256": "a6ba8dd2b94c2864feed1a050e01d0164d4448bef57f44ee9a981ca3c1cd7a0d",
+      "failed_compiler_logs": []
+    },
+    {
+      "attempt": 5,
+      "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+      "canonical": true,
+      "new_genuine_ME_calls": 0,
+      "new_integrals": 0,
+      "logical_bytes": 242879410,
+      "receipt_sha256": "d8ba4c0cca8945e848d7914b3a55c449e6d9a52abc81a386582ed02a43f04b0b",
+      "failed_compiler_logs": []
+    }
+  ],
+  "final_verdict": "BLOCKED_NATIVE_RUNTIME",
+  "verdict_reason": "changed executable revision must receive separate approval under user execution sequence item2; not an observed genuine runtime failure",
+  "next_step": "approve exact new full commit and frozen executable identities, then execute seed910001 StageA before further physical stages"
+}

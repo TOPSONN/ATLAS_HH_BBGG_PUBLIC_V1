@@ -1,0 +1,11 @@
+{
+  "status": "PARTIAL_PRESERVED",
+  "error": "METHOD_CHILD_FAILED: METHOD_ONLY_FIXED_STREAM_NO_PHASESPACE_NO_ME\nH_R SERIAL 3FF0000000000000 3FF0000000000000 3FF0000000000000 3FF0000000000000\nSTOP 99\n",
+  "policy_changed_to_force_PASS": false,
+  "new_physical_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "original_receipt_sha256": "2de919e78f7915fd4f8c17a9d5b3210acf76f0b344a3e785533136676fbce9ba",
+  "cause": "immediate inode reuse after closing unlinked scratch; device/inode alone did not distinguish a new connection",
+  "bounded_fix": "hold a duplicate descriptor lease until the next reviewed open or process exit; independently reject 100 unlinked rebind attempts"
+}

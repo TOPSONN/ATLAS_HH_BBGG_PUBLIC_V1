@@ -1,0 +1,68 @@
+[
+  {
+    "attempt": 1,
+    "status": "FAILED_PREPARATION_PRESERVED",
+    "canonical": false,
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "logical_bytes": 47956517,
+    "failure": {
+      "status": "FAILED_REVIEW_NO_PHYSICAL_DISPATCH",
+      "reason": "OVERLAY_BOUNDARY_NOT_UNIQUE:               fx = dsig(p,wgt,0) !Evaluate function",
+      "new_ME_calls": 0,
+      "new_integrals": 0
+    },
+    "failed_compiler_logs": []
+  },
+  {
+    "attempt": 2,
+    "status": "FAILED_PREPARATION_PRESERVED",
+    "canonical": false,
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "logical_bytes": 48021191,
+    "failure": {
+      "status": "FAILED_REVIEW_NO_PHYSICAL_DISPATCH",
+      "reason": "METHOD_CHILD_FAILED:                      1\nError: Symbol 'multi_channel' at (1) has no IMPLICIT type\nrun.inc:54:44:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                            1\nError: Symbol 'max_particles' at (1) has no IMPLICIT type\nrun.inc:55:52:\n\n   55 |       INTEGER n_pdfrw(2),i_pdgpdf(max_particles-2,2)\n      |                                                    1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                               \nError: Automatic object 'i_pdgpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:47:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                               1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                          \nError: Automatic object 's_qalps' at (1) cannot appear in COMMON at (2)\nrun.inc:56:48:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                           \nError: Automatic object 's_xpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:56:74:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                                          1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                                                     \nError: Automatic object 's_qpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:44:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                            1\nError: Symbol 'max_particles' at (1) has no IMPLICIT type\nrun.inc:55:52:\n\n   55 |       INTEGER n_pdfrw(2),i_pdgpdf(max_particles-2,2)\n      |                                                    1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                               \nError: Automatic object 'i_pdgpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:54:47:\n\n   54 |       DOUBLE PRECISION s_qalps(max_particles-2)\n      |                                               1\n......\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                          \nError: Automatic object 's_qalps' at (1) cannot appear in COMMON at (2)\nrun.inc:56:48:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                           \nError: Automatic object 's_xpdf' at (1) cannot appear in COMMON at (2)\nrun.inc:56:74:\n\n   56 |       DOUBLE PRECISION s_xpdf(max_particles-2,2),s_qpdf(max_particles-2,2)\n      |                                                                          1\n   57 |       DOUBLE PRECISION s_rwfact\n   58 |       COMMON/TO_SYST/use_syst,n_qcd,n_alpsem,n_pdfrw,i_pdgpdf,\n      |                     2                                                     \nError: Automatic object 's_qpdf' at (1) cannot appear in COMMON at (2)\n",
+      "new_ME_calls": 0,
+      "new_integrals": 0
+    },
+    "failed_compiler_logs": [
+      {
+        "role": "replica_910001/process/SubProcesses/P0_gg_hh/failed_child_stderr.txt",
+        "sha256": "efde735002633ac46de4b2adf2137b1facc777074120b53a9d0def8fbfca8a25",
+        "bytes": 3919
+      }
+    ]
+  },
+  {
+    "attempt": 3,
+    "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+    "canonical": false,
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "logical_bytes": 242223328,
+    "receipt_sha256": "938e46fa1e2f3851100b21dd58128965834982205266813f6fb61fbe235ff757",
+    "failed_compiler_logs": []
+  },
+  {
+    "attempt": 4,
+    "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+    "canonical": false,
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "logical_bytes": 242239267,
+    "receipt_sha256": "a6ba8dd2b94c2864feed1a050e01d0164d4448bef57f44ee9a981ca3c1cd7a0d",
+    "failed_compiler_logs": []
+  },
+  {
+    "attempt": 5,
+    "status": "NATIVE_BUILD_PREFLIGHT_PASS_NONPHYSICAL",
+    "canonical": true,
+    "new_genuine_ME_calls": 0,
+    "new_integrals": 0,
+    "logical_bytes": 242879410,
+    "receipt_sha256": "d8ba4c0cca8945e848d7914b3a55c449e6d9a52abc81a386582ed02a43f04b0b",
+    "failed_compiler_logs": []
+  }
+]

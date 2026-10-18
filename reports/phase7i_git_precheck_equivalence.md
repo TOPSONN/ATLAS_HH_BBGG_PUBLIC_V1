@@ -1,0 +1,29 @@
+# Phase7I full tracked precheck and equivalence review
+
+**No plumbing-only optimization is accepted.** Both full-tree checks still execute `git status --porcelain --untracked-files=no`, without a path filter. `diff-index --cached --quiet HEAD --` and `diff-files --quiet` were measured as candidates. The latter reports a difference on the same timestamp-only, content-identical isolated fixture that original status accepts; without a proved refresh strategy it is not substituted.
+
+## Trust boundary
+
+The new guard verifies exact40-digit reviewed HEAD, actual repository root, ordinary.git layout and exact expected origin URL; invalid/error/timeout/incomplete output fails closed. It rejects alternate Git directory/index environment overrides. Full stage-zero membership and regular accessible tracked paths are enumerated; missing paths, unmerged index, unexpected symlinks, gitlinks/submodules, skip-worktree/assume flags and unreviewed fsmonitor settings/valid flags are rejected. No staged or unstaged tracked change may pass merely because it is outside a scientific path list. The whole tree is scanned twice.
+
+Every required execution source, the new recovery descriptor and physics contract additionally match exact reviewed Git blob bytes, not just Git's normalized-content/stat-cache view. Their hashes, whole-index hash, HEAD and tracked stat snapshots are checked again to detect an observed race. Critical source enumeration/hashing is inside the overall watchdog. The returned source IDs come from the validated snapshot. These observations are not an atomic filesystem lock: a later concurrent writer remains possible, so concurrent worktree/index changes are forbidden operationally and trigger rejection when observed.
+
+The supported current tree has no submodules or tracked symlinks; unsupported layouts fail closed and need review. Git's existing core.filemode=false policy on this Windows-mounted tree is preserved, not presented as POSIX executable-bit validation. A core.filemode=true fixture proves rejection when Git tracks that mode. Native files are independently checked by their frozen hashes. Untracked personal files remain excluded, consistently with the original command; untracked execution source files cannot enter the required-source membership list unnoticed.
+
+## External native hash closure
+
+The old stopped build remains exactly **98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281**; its immutable source/card/archive/library and executable hashes and actual resolved dynamic-library hashes were revalidated read-only. No build occurred. Its original13source-ID entries and historical method evidence are immutable. A new committed descriptor records the current15execution-source entries and limits changes to six enumerated Python files. No Fortran/C numerical, RNG/grid/writer/stopping body is changed.
+
+`verify_source_binding()` accepts reuse only of that exact prior native build (or its exact deidentified public form), with the declared current Python IDs. This is a new source binding, **not continuation of79f779e approval** and not authorization. `check_revision()` still requires the exact newly reviewed HEAD. Existing failed/completed output markers prohibit reuse, and failure handling does not overwrite their receipts. Future prepared output review is separate; no new physical execution workspace was created here.
+
+## Negative matrix and acceptance
+
+All **42** isolated tests passed. The full prior-plus-new suite passed **496** tests and five existing-input validators. Dedicated negative tests cover clean/wrong HEAD; staged and unstaged modifications outside required paths; deletion; source/physics/card/executable/library corruption; invalid index/missing path; subprocess failure/timeout/group descendants; independent watchdog/CPU cap; symlinks; modes; rename/replacement; same-size/restored-mtime edits; source/index/noncritical-path races; flags/fsmonitor/environment overrides; historical source rebinding; and immutable stopped markers. Dummy build fixtures contain non-executable METHOD_ONLY bytes and never launch a physics executable.
+
+Original status outcomes and new rejection outcomes are recorded together for representative cases in `phase7i_git_precheck_evidence/negative_test_matrix.json`; all42test IDs and results are listed. Original status alone can accept assume/skip-marked changes; the new guard rejects these explicitly. This is deliberate strengthening, not a claim that every acceptance/error outcome is identical. The accepted equivalence is preservation of the original full tracked cleanliness requirement, with additional conservative identity/race/layout denials, and unchanged native hash closure.
+
+The installed Git diff stat-cache behavior is tested separately in a temporary repository. Only these isolated fixtures deliberately modify their indexes/configuration/flags. No reset/clean/checkout/gc/repack or hiding flags were applied to the active tree. The earlier diagnostic stat-cache write is disclosed rather than erased.
+
+The read-only outgoing-payload audit also needed a directly related correction: disabling automatic diff refresh can list stat-only candidates. It now accepts exact original bytes directly, or an unchanged canonical Git blob hash computed without `-w`; genuine historical content changes still go through the exact compatibility allowlist and are rejected otherwise. Three additional focused tests cover these branches. This avoids refreshing the index just to suppress a metadata false positive.
+
+Physical ME/PDF/alpha_s/seed/grid/writer/tail behavior is **NOT_EVALUATED**. Passing these tests does not certify an integral, error estimator or convergence. The source commit SHA is recorded after commit in `phase7i_restart_readiness.md`; separate exact-revision restart approval is mandatory.
