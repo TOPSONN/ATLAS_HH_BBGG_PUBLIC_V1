@@ -16,6 +16,25 @@ class GitPrecheckTests(unittest.TestCase):
             (self.repo/name).write_text(value)
         self.git('add','.');self.git('commit','-qm','METHOD_ONLY')
         self.rev=self.git('rev-parse','HEAD').strip();self.physics=hashlib.sha256((self.repo/'physics.json').read_bytes()).hexdigest()
+    def test_bounded_blob_batches_preserve_exact_full_preflight(self):
+        from .git_precheck import OUTPUT_BYTES
+        for name in ['large_a.dat','large_b.dat']:(self.repo/name).write_bytes(b'METHOD_ONLY\n'*50000)
+        self.git('add','large_a.dat','large_b.dat');self.git('commit','-qm','NONPHYSICAL_BATCH_FIXTURE')
+        self.rev=self.git('rev-parse','HEAD').strip();before=(self.repo/'.git/index').read_bytes()
+        r=verify_checkout(self.repo,self.rev,['source.py','large_a.dat','large_b.dat'],'physics.json',self.physics)
+        self.assertEqual(r['status'],'PASS_FULL_TRACKED_PREFLIGHT');self.assertEqual(r['tracked_files'],5)
+        self.assertEqual(before,(self.repo/'.git/index').read_bytes())
+        self.assertEqual(sum(row['argv'][0]=='status' for row in r['commands']),2)
+        self.assertTrue(all(row['stdout_bytes']<OUTPUT_BYTES for row in r['commands']))
+        for name in ['large_a.dat','large_b.dat']:
+            self.assertEqual(r['critical_source_sha256'][name],hashlib.sha256((self.repo/name).read_bytes()).hexdigest())
+    def test_batch_parser_rejects_missing_truncated_wrong_hash_and_extra_data(self):
+        from .git_precheck import parse_blob_batch
+        body=b'METHOD_ONLY\n';oid=hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest().encode()
+        good=oid+b' blob '+str(len(body)).encode()+b'\n'+body+b'\n'
+        self.assertEqual(parse_blob_batch(good,['source.py']),{'source.py':hashlib.sha256(body).hexdigest()})
+        for bad in [b'UNKNOWN missing\n',good[:-1],good.replace(b'blob',b'tree',1),b'0'*40+good[40:],good+b'EXTRA']:
+            with self.assertRaises(ValueError):parse_blob_batch(bad,['source.py'])
     def tearDown(self):self.tmp.cleanup()
     def git(self,*args,check=True):
         r=subprocess.run(['git','-C',str(self.repo),*args],env=self.env,capture_output=True,text=True,timeout=10)
@@ -99,8 +118,8 @@ class GitPrecheckTests(unittest.TestCase):
         self.rejects('same size and restored mtime')
     def test_edit_between_status_and_hash(self):
         original=GitGuard.git;count=[0]
-        def raced(guard,*args):
-            data=original(guard,*args)
+        def raced(guard,*args,**kwargs):
+            data=original(guard,*args,**kwargs)
             if args[0]=='status':
                 count[0]+=1
                 if count[0]==2:(self.repo/'source.py').write_text('VALUE=2\n')
@@ -110,8 +129,8 @@ class GitPrecheckTests(unittest.TestCase):
     def test_index_race(self):
         original=GitGuard.git;count=[0]
         # Deterministically change an otherwise valid index extension/checksum.
-        def mutate(guard,*args):
-            data=original(guard,*args)
+        def mutate(guard,*args,**kwargs):
+            data=original(guard,*args,**kwargs)
             if args[0]=='status':
                 count[0]+=1
                 if count[0]==2:
@@ -121,8 +140,8 @@ class GitPrecheckTests(unittest.TestCase):
             with self.assertRaisesRegex(GitPrecheckError,'INDEX_CHANGED'):self.verify()
     def test_outside_path_edit_after_status(self):
         original=GitGuard.git;count=[0]
-        def raced(guard,*args):
-            data=original(guard,*args)
+        def raced(guard,*args,**kwargs):
+            data=original(guard,*args,**kwargs)
             if args[0]=='status':
                 count[0]+=1
                 if count[0]==2:(self.repo/'outside.txt').write_text('changed after status\n')
@@ -189,7 +208,9 @@ class FrozenInputGuards(unittest.TestCase):
         (self.root/'review_build.json').write_text(json.dumps({'source_identity':sources(),'physics_contract_sha256':PHYSICS_SHA,'replicas':rows}))
     def tearDown(self):self.tmp.cleanup()
     def check(self):
-        with patch.object(self.run,'safe_root',lambda p:Path(p)):return self.run.check_build(self.root)
+        # Legacy hash-check method fixture only; never Route-A acceptance.
+        with patch.object(self.run,'safe_root',lambda p:Path(p)),patch.object(self.run,'verify_source_binding'):
+            return self.run.audit_historical_build(self.root)
     def test_clean_method_only_build(self):self.check()
     def test_stopped_attempt_is_not_reused_or_overwritten(self):
         marker=self.root/'review_failure.json';marker.write_text('IMMUTABLE_METHOD_FIXTURE')
@@ -210,8 +231,8 @@ class FrozenInputGuards(unittest.TestCase):
     def test_historical_public_native_build_binding(self):
         from .contract import HERE,read_json,verify_source_binding
         b=read_json(HERE/'evidence/executable_review.json')['public_native_build']
-        r=verify_source_binding(b,public=True)
-        self.assertEqual(r['status'],'UNCHANGED_NATIVE_BUILD_NEW_SOURCE_REAPPROVAL_REQUIRED')
+        r=verify_source_binding(b,public=True,historical_audit=True)
+        self.assertEqual(r['status'],'HISTORICAL_FROZEN_BUILD_AUDIT_ONLY')
         self.assertIs(r['restart_authorized'],False)
     def test_changed_recovery_source_identity_rejected(self):
         from . import contract

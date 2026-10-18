@@ -59,8 +59,9 @@ class GitGuard:
     def check(self):
         require(time.monotonic()-self.start<self.wall,'GIT_PREFLIGHT_WALL_WATCHDOG')
         require(self.spent_cpu()<self.cpu,'GIT_PREFLIGHT_CPU_BUDGET')
-    def git(self,*args):
+    def git(self,*args,stdin_bytes=None):
         self.check()
+        require(stdin_bytes is None or isinstance(stdin_bytes,bytes) and len(stdin_bytes)<=65536,'GIT_INPUT_CAP')
         forbidden=('GIT_DIR','GIT_WORK_TREE','GIT_INDEX_FILE','GIT_COMMON_DIR','GIT_OBJECT_DIRECTORY','GIT_ALTERNATE_OBJECT_DIRECTORIES','GIT_NAMESPACE')
         require(not any(os.environ.get(k) for k in forbidden),'UNSAFE_GIT_ENVIRONMENT')
         env={**os.environ,'GIT_OPTIONAL_LOCKS':'0','GIT_NO_REPLACE_OBJECTS':'1','LC_ALL':'C'}
@@ -74,8 +75,10 @@ class GitGuard:
         with tempfile.TemporaryFile() as stdout,tempfile.TemporaryFile() as stderr:
             try:
                 child=subprocess.Popen(['git','-C',str(self.repo),*args],env=env,stdout=stdout,stderr=stderr,
+                    stdin=subprocess.PIPE if stdin_bytes is not None else subprocess.DEVNULL,
                     start_new_session=True,preexec_fn=limits)
                 self.active=child
+                if stdin_bytes is not None:child.stdin.write(stdin_bytes);child.stdin.close()
                 while True:
                     pid,ws,ru=os.wait4(child.pid,os.WNOHANG)
                     if pid:
@@ -97,6 +100,7 @@ class GitGuard:
                 raise
             finally:
                 if self.active is not None:
+                    if self.active.stdin is not None and not self.active.stdin.closed:self.active.stdin.close()
                     self.kill(self.active)
                     if code is None:code=self.active.returncode
                     self.active=None
@@ -107,11 +111,44 @@ class GitGuard:
                      'kernel_ru_maxrss_bytes':None if usage is None else usage.ru_maxrss*1024,
                      'stdout_bytes':len(out),'stderr_bytes':len(err),'stdout_sha256':sha(out),'stderr_sha256':sha(err),
                      'stderr_excerpt':err[:512].decode('utf-8','replace'),'group_cleanup':True}
+                if stdin_bytes is not None:row.update(stdin_bytes=len(stdin_bytes),stdin_sha256=sha(stdin_bytes))
                 self.records.append(row)
         require(code==0,'GIT_SUBPROCESS_FAILURE:'+args[0]+':'+str(code))
         require(not err,'GIT_UNEXPECTED_DIAGNOSTIC:'+args[0])
         require(len(out)<OUTPUT_BYTES,'GIT_OUTPUT_CAP')
         return out
+
+    def blob_hashes(self,revision,names,sizes):
+        """Same exact blobs, bounded batches; no status or hash scope reduction."""
+        batches=[];batch=[];size=0
+        for name in names:
+            require('\n' not in name and '\r' not in name,'UNSAFE_BATCH_BLOB_PATH')
+            amount=sizes[name]+128
+            require(amount<OUTPUT_BYTES-65536,'CRITICAL_BATCH_FILE_SIZE_CAP')
+            if batch and (size+amount>=OUTPUT_BYTES-65536 or len(batch)>=128):
+                batches.append(batch);batch=[];size=0
+            batch.append(name);size+=amount
+        if batch:batches.append(batch)
+        hashes={}
+        for batch in batches:
+            requests=''.join(revision+':'+name+'\n' for name in batch).encode()
+            data=self.git('cat-file','--batch',stdin_bytes=requests)
+            hashes.update(parse_blob_batch(data,batch))
+        return hashes
+
+def parse_blob_batch(data,names):
+    offset=0;result={}
+    for name in names:
+        end=data.find(b'\n',offset);require(end>=offset,'TRUNCATED_GIT_BLOB_HEADER')
+        fields=data[offset:end].split();require(len(fields)==3 and re.fullmatch(b'[0-9a-f]{40}',fields[0]) and
+            fields[1]==b'blob' and fields[2].isdigit(),'MISSING_OR_INVALID_GIT_BLOB')
+        size=int(fields[2]);require(size<OUTPUT_BYTES,'GIT_BLOB_SIZE_CAP');offset=end+1
+        require(offset+size<len(data) and data[offset+size:offset+size+1]==b'\n','TRUNCATED_GIT_BLOB_BODY')
+        body=data[offset:offset+size];offset+=size+1
+        require(hashlib.sha1(b'blob '+str(size).encode()+b'\0'+body).hexdigest().encode()==fields[0],'GIT_BLOB_HEADER_IDENTITY_DRIFT')
+        result[name]=sha(body)
+    require(offset==len(data),'UNEXPECTED_GIT_BATCH_PAYLOAD')
+    return result
 
 def regular_bytes(repo,relative):
     path=Path(relative)
@@ -156,7 +193,8 @@ def verify_checkout(repo,revision,required,physics_path,physics_sha,*,remote=EXP
         monitored=guard.git('ls-files','-f','-z').split(b'\0')
         require(all(not row or row[:1]==b'H' for row in monitored),'FSMONITOR_VALID_INDEX_FLAGS')
         require((set(required)|{physics_path})<=tracked,'MISSING_REQUIRED_TRACKED_PATH')
-        expected={name:sha(guard.git('cat-file','blob',revision+':'+name)) for name in sorted(set(required)|{physics_path})}
+        critical_names=sorted(set(required)|{physics_path})
+        expected=guard.blob_hashes(revision,critical_names,{name:metadata[name][3] for name in critical_names})
         require(expected[physics_path]==physics_sha,'REVIEWED_PHYSICS_CONTRACT_DRIFT')
         initial={name:sha(regular_bytes(repo,name)) for name in expected}
         require(initial==expected,'REVIEWED_CRITICAL_BYTES_DRIFT')

@@ -15,6 +15,33 @@ def seed_pair(base,io,joffset,config):
     while kl>30081:kl-=30081
     return ij,kl
 
+def validate_preflight(r,seed):
+    require(r.get('execution_class')=='REAL_NATIVE_SUPERVISED' and r.get('exit')==0 and r.get('failure') is None and
+        r.get('process_group_kill_cleanup') is True and r.get('raw_streams_retained') is False,'INVALID_ZERO_ME_PREFLIGHT')
+    require(isinstance(r.get('pid'),int) and r['pid']>0 and math.isfinite(r.get('wall_seconds',math.nan)) and r['wall_seconds']>=0,
+        'MISSING_ACTUAL_PREFLIGHT_MEASUREMENTS')
+    require(set(r.get('raw_stream_SHA256',{}))=={'stdout','stderr'} and all(re.fullmatch('[0-9a-f]{64}',v)
+        for v in r['raw_stream_SHA256'].values()),'MISSING_PREFLIGHT_STREAM_IDENTITIES')
+    require(set(r.get('raw_stream_bytes',{}))=={'stdout','stderr'} and r['raw_stream_bytes']['stdout']>0 and
+        all(isinstance(x,int) and 0<=x<16*1024**2 for x in r['raw_stream_bytes'].values()),'INVALID_PREFLIGHT_STREAM_COUNTS')
+    records=r['records'];mo=0 if r['stage']=='adaptation' else 1;n=4 if mo==0 else 3
+    require(one(records,'HI_PREFLIGHT_ZERO_ME')==[],'PREFLIGHT_ENDPOINT_MISSING')
+    require(one(records,'HH_PRE_SAMPLING_CONFIG_PASS')==list(map(str,[seed,0,mo])),'PREFLIGHT_SEED_DRIFT')
+    require(one(records,'HI_INPUTS')==['250',str(n),str(n),'2' if mo==0 else '0','0','F'],'PREFLIGHT_ENDPOINT_DRIFT')
+    require(one(records,'HI_PDF')==['cteq6l1']*3,'PREFLIGHT_PDF_DRIFT')
+    a=one(records,'HI_ALPHA');require(number(a[0])==.13 and a[1]=='1','PREFLIGHT_ALPHA_DRIFT')
+    require(list(map(number,one(records,'HI_MASS')))==[125.,173.,4.7],'PREFLIGHT_MASS_DRIFT')
+    s=one(records,'HI_SCALE');require(s[0]=='4' and number(s[1])==.5 and s[2:]==['F','F','F'],'PREFLIGHT_SCALE_DRIFT')
+    b=one(records,'HI_BEAMS');require(list(map(number,b[:2]))==[6500.,6500.] and b[2:]==['1','1'],'PREFLIGHT_BEAM_DRIFT')
+    allowed={'HH_PRE_SAMPLING_CONFIG_PASS','HI_INPUTS','HI_PDF','HI_ALPHA','HI_MASS','HI_SCALE','HI_BEAMS','HI_PREFLIGHT_ZERO_ME','H_IO'}
+    require(all(s.split()[0] in allowed for s in records),'PREFLIGHT_ME_OR_EXTRA_PROTOCOL')
+    # Initialization opens one verified anonymous sink; these are I/O-boundary
+    # counters, not event-writer or ME counters. Preserve the actual protocol.
+    io=one(records,'H_IO');require(list(map(int,io))==[1,1],'PREFLIGHT_ANONYMOUS_IO_DRIFT')
+    require(r.get('scope')=='ACTUAL_NATIVE_INPUT_PARSE_EXIT_BEFORE_MAPPING_OR_ME' and
+        r.get('postcondition',{}).get('retained_event_records')==0,'PREFLIGHT_ZERO_RETENTION_NOT_VERIFIED')
+    return {'status':'PASS_INITIALIZATION_ONLY_NO_ME'}
+
 def validate_stage(receipt,seed,stage,work):
     require(receipt.get('execution_class')=='REAL_NATIVE_SUPERVISED','METHOD_FIXTURE_IS_NOT_PHYSICAL_EVIDENCE')
     require(receipt['exit']==0 and not receipt['failure'] and not receipt['raw_streams_retained'],'FAILED_NATIVE_STAGE')

@@ -9,9 +9,9 @@ from .containment import Budget,supervise,capability,StageFailure
 from .validate import validate_stage,summarize
 from simulation.hh_signal.integration_audit.audit import save
 
-def check_build(root):
+def audit_historical_build(root):
     root=safe_root(root);review=read_json(root/'review_build.json')
-    verify_source_binding(review)
+    verify_source_binding(review,historical_audit=True)
     require(review['physics_contract_sha256']==PHYSICS_SHA,'REVIEWED_BUILD_SOURCE_DRIFT')
     require([r['seed'] for r in review['replicas']]==list(SEEDS),'PREPARED_SEEDS_DRIFT')
     for r in review['replicas']:
@@ -21,16 +21,42 @@ def check_build(root):
         for dep in r['dynamic_dependencies']:require(sha(dep['path'])==dep['sha256'],'SHARED_LIBRARY_DRIFT:'+dep['name'])
     return review
 
+def inspect_build(root,revision):
+    """Read-only, non-executing validation; does not grant binary review."""
+    from .route_a import validate_receipt,full_sources
+    root=safe_root(root);review=read_json(root/'review_build.json')
+    result=validate_receipt(review,root,revision,full_sources())
+    return review,result
+
+def check_build(root,revision=None,*,binary_review=None):
+    from .route_a import full_sources,identities,validate_receipt
+    from .approval import verify,scope
+    root=safe_root(root);review=read_json(root/'review_build.json');ids=identities(review)
+    verify(binary_review,scope('BINARY_REVIEW',revision,root,full_sources(),
+        full_receipt=ids['FULL_BUILD_RECEIPT_IDENTITY'],binary_identity=ids['IMMUTABLE_BINARY_SOURCE_IDENTITY']))
+    check_revision(revision,full=True)
+    validate_receipt(review,root,revision,full_sources(),check_linkage=True)
+    return review
+
 def require_fresh_attempt(root):
     require(not (root/'execution_receipt.json').exists(),'FAILED_OR_COMPLETED_CAMPAIGN_MUST_NOT_RESTART')
     require(not (root/'review_failure.json').exists(),'STOPPED_ATTEMPT_IMMUTABLE_REQUIRES_SEPARATE_OUTPUT_REVIEW')
+    require(not any((root/f'replica_{seed}/process/SubProcesses/P0_gg_hh'/stage).exists() for seed in SEEDS
+        for stage in ['adaptation','measurement']),'CONSUMED_STAGE_WORKSPACE_WITHOUT_RECEIPT')
 
-def execute_reviewed(root,revision):
+def execute_reviewed(root,revision,*,binary_review=None,physical_review=None):
     # Human approval is a prerequisite verified outside files/flags/env. This
     # function is not called by review preparation or any positive native test.
-    binding=check_revision(revision);root=safe_root(root);review=check_build(root)
-    published=read_json(HERE/'evidence/executable_review.json')
-    require(identity(review)==published['local_review_build_identity'],'EDITABLE_LOCAL_BUILD_CANNOT_REPLACE_REVIEWED_EXECUTABLE')
+    from .approval import verify,scope
+    from .route_a import full_sources,identities
+    root=safe_root(root)
+    # No physical capability, lock, output receipt or dispatch before separate
+    # human binary AND physical decisions bound to the exact complete receipt.
+    require(physical_review is not None,'SEPARATE_PHYSICAL_RESTART_APPROVAL_REQUIRED')
+    review=check_build(root,revision,binary_review=binary_review);ids=identities(review)
+    verify(physical_review,scope('PHYSICAL_RESTART',revision,root,full_sources(),
+        full_receipt=ids['FULL_BUILD_RECEIPT_IDENTITY'],binary_identity=ids['IMMUTABLE_BINARY_SOURCE_IDENTITY']))
+    binding=check_revision(revision,full=True)
     require_fresh_attempt(root)
     lock_path=Path.home()/'simulations/hh_final_closure/.physical_integral_campaign.lock'
     lock_path.parent.mkdir(parents=True,exist_ok=True)
@@ -39,6 +65,9 @@ def execute_reviewed(root,revision):
     except BlockingIOError:lockfile.close();raise ValueError('ANOTHER_PHYSICAL_CAMPAIGN_ACTIVE')
     budget=Budget(root);stages=[];replicas=[];reason=None;verdict='BLOCKED_NATIVE_RUNTIME'
     receipt={'status':'STARTED','reviewed_revision':revision,'binding':binding,'ceilings':CAPS,
+        'binary_review_scope':binary_review.scope,'physical_restart_review_scope':physical_review.scope,
+        'FULL_BUILD_RECEIPT_IDENTITY':ids['FULL_BUILD_RECEIPT_IDENTITY'],
+        'IMMUTABLE_BINARY_SOURCE_IDENTITY':ids['IMMUTABLE_BINARY_SOURCE_IDENTITY'],
         'human_authorization_scope':'external explicit approval of this exact revision required; no flag/file/env grant',
         'stages':stages,'replicas':replicas,'retained_physical_LHE_events':0}
     save(root/'execution_receipt.json',receipt)
@@ -62,7 +91,7 @@ def execute_reviewed(root,revision):
             sub=folder/'process/SubProcesses/P0_gg_hh';per={'seed':seed}
             own_grid=None
             for stage,mo in [('adaptation',0),('measurement',1)]:
-                budget.check();check_build(root);work=sub/stage;require(not work.exists(),'STALE_STAGE_OR_GRID_REUSE');work.mkdir()
+                budget.check();check_build(root,revision,binary_review=binary_review);work=sub/stage;require(not work.exists(),'STALE_STAGE_OR_GRID_REUSE');work.mkdir()
                 (work/'temporary').mkdir()
                 for name,value in [('randinit',f'r={seed}'),('iproc.dat','0'),('moffset.dat',str(mo))]:(work/name).write_text(value+'\n')
                 text=stage_input(stage);(work/'input_app.txt').write_text(text)
@@ -79,7 +108,7 @@ def execute_reviewed(root,revision):
                 finally:os.close(control)
                 stages.append({'seed':seed,'stage':stage,'status':'PENDING_SCIENTIFIC_VALIDATION','receipt':r})
                 facts=validate_stage(r,seed,stage,work)
-                check_build(root)
+                check_build(root,revision,binary_review=binary_review)
                 pair=tuple(facts['RANMAR_base_and_offsets'][-2:]);require(pair not in pairs,'REPLICA_RNG_PAIR_COLLISION');pairs.add(pair)
                 facts['receipt']=r;facts['measurement_grid_input_sha256']=None if not mo else own_grid['sha256']
                 if not mo:
@@ -108,19 +137,37 @@ def execute_reviewed(root,revision):
     return receipt
 
 def main(argv=None):
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['prepare-review','verify-build','execute-reviewed'])
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['prepare-review','verify-build','audit-historical','execute-reviewed'])
     p.add_argument('--output',required=True);p.add_argument('--reviewed-revision');a=p.parse_args(argv)
     try:
         if a.mode=='prepare-review':
             from .build import prepare
-            r=prepare(a.output)
-        elif a.mode=='verify-build':r=check_build(a.output)
-        else:r=execute_reviewed(a.output,a.reviewed_revision)
+            from .approval import confirm,scope
+            from .route_a import full_sources
+            root=safe_root(a.output);check_revision(a.reviewed_revision,full=True)
+            require(not root.exists(),'EXISTING_REVIEW_WORKSPACE_PRESERVED')
+            approval=confirm(scope('BUILD_ONLY',a.reviewed_revision,root,full_sources()))
+            r=prepare(root,revision=a.reviewed_revision,build_review=approval)
+        elif a.mode=='verify-build':
+            _,r=inspect_build(a.output,a.reviewed_revision)
+            print(json.dumps(r));return 0
+        elif a.mode=='audit-historical':
+            r=audit_historical_build(a.output);print(json.dumps({'status':'HISTORICAL_AUDIT_ONLY','identity':identity(r),'restart_authorized':False}));return 0
+        else:
+            from .approval import confirm,scope
+            from .route_a import full_sources,identities
+            root=safe_root(a.output);require_fresh_attempt(root)
+            reviewed,_=inspect_build(root,a.reviewed_revision);ids=identities(reviewed)
+            args={'full_receipt':ids['FULL_BUILD_RECEIPT_IDENTITY'],'binary_identity':ids['IMMUTABLE_BINARY_SOURCE_IDENTITY']}
+            binary=confirm(scope('BINARY_REVIEW',a.reviewed_revision,root,full_sources(),**args))
+            check_build(root,a.reviewed_revision,binary_review=binary)
+            physical=confirm(scope('PHYSICAL_RESTART',a.reviewed_revision,root,full_sources(),**args))
+            r=execute_reviewed(root,a.reviewed_revision,binary_review=binary,physical_review=physical)
         print(json.dumps({k:r.get(k) for k in ['status','final_verdict','reason','new_ME_calls','new_integrals','retained_physical_events']}))
         return 0 if r.get('status') not in ['PARTIAL_NO_REPLACEMENT'] else 2
     except Exception as exc:
         out=safe_root(a.output)
-        if out.exists() and not (out/'execution_receipt.json').exists() and not (out/'review_failure.json').exists():
+        if a.mode in ['prepare-review','execute-reviewed'] and out.exists() and not (out/'execution_receipt.json').exists() and not (out/'review_failure.json').exists():
             failure={'status':'FAILED_REVIEW_NO_PHYSICAL_DISPATCH','reason':str(exc),'new_ME_calls':0,'new_integrals':0}
             if hasattr(exc,'diagnostics'):failure['bounded_git_preflight_diagnostics']=exc.diagnostics
             save(out/'review_failure.json',failure)

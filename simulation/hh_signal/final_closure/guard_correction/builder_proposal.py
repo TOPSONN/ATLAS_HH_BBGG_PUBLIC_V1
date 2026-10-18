@@ -24,4 +24,7 @@ def restore(proposed):
     for old,new in reversed(REGIONS):proposed=once(proposed,new,old)
     if hashlib.sha256(proposed.encode()).hexdigest()!=BUILDER_ORIGINAL_SHA256:raise ValueError('BUILDER_UNDECLARED_CHANGE')
     return proposed
-def source():return candidate((HERE.parent/'integration_runtime/build.py').read_text())
+def source():
+    # Preserve the exact published proposal after activation changes build.py.
+    proposed=(HERE/'build_corrected_proposal.py').read_text()
+    return candidate(restore(proposed))

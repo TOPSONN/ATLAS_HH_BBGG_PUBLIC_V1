@@ -25,13 +25,21 @@ def sources():
     return [{'path':p.relative_to(REPO).as_posix(),'sha256':sha(p)} for p in sorted(HERE.rglob('*'))
         if p.is_file() and p.suffix in ['.py','.f','.f90','.c'] and 'evidence' not in p.parts]
 
-def verify_source_binding(review,*,public=False):
+def verify_source_binding(review,*,public=False,historical_audit=False):
     """Reuse only the exact old native build; never rewrite its stopped receipt.
 
     A separate committed engineering descriptor binds the changed Python-only
     precheck to the same native bytes. It is not restart authorization. The
     execution route still requires the exact new HEAD and external human review.
     """
+    if historical_audit:
+        # Frozen old receipts are independently readable; they are NEVER
+        # rebound to changed Route-A native sources or accepted for execution.
+        m=read_json(REPO/RECOVERY_METADATA)
+        expected=m['previous_public_build_identity'] if public else PREVIOUS_FROZEN_BUILD
+        require(identity(review)==expected and review['source_identity']==m['previous_execution_source_identity'],
+            'HISTORICAL_RECEIPT_IDENTITY_DRIFT')
+        return {'status':'HISTORICAL_FROZEN_BUILD_AUDIT_ONLY','restart_authorized':False}
     current=sources()
     if review['source_identity']==current:return {'status':'SOURCE_IDENTICAL_TO_BUILD'}
     m=read_json(REPO/RECOVERY_METADATA)
@@ -51,10 +59,14 @@ def verify_source_binding(review,*,public=False):
         'new_source_binding_identity':identity({'previous_build':expected,'current_sources':current}),
         'restart_authorized':False}
 
-def check_revision(revision):
+def check_revision(revision,*,full=False):
     from .git_precheck import verify_checkout
     # Evaluate source enumeration/hashing inside the independent Git watchdog.
-    required=lambda:[r['path'] for r in sources()]+[RECOVERY_METADATA]
+    def required():
+        if full:
+            from .route_a import full_sources
+            return [r['path'] for r in full_sources()]+[RECOVERY_METADATA]
+        return [r['path'] for r in sources()]+[RECOVERY_METADATA]
     checked=verify_checkout(REPO,revision,required,
         'simulation/hh_signal/final_closure/config/physics_contract.json',PHYSICS_SHA)
     # This checks identity only. The human's separate approval must be checked

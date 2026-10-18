@@ -8,7 +8,7 @@ def validate():
     for row in m['files']:require(sha(e/row['path'])==row['sha256'],'REVIEW_EVIDENCE_DRIFT')
     r=read_json(e/'executable_review.json')
     require(r['source_identity']==r['public_native_build']['source_identity'] and r['physics_contract_sha256']==PHYSICS_SHA,'REVIEW_SOURCE_OR_CONTRACT_DRIFT')
-    verify_source_binding(r['public_native_build'],public=True)
+    verify_source_binding(r['public_native_build'],public=True,historical_audit=True)
     require(r['status']=='NEW_EXECUTABLE_REVISION_REQUIRES_EXPLICIT_APPROVAL' and r['new_genuine_ME_calls']==r['new_integrals']==0,'UNAPPROVED_PHYSICS_OVERCLAIM')
     b=r['public_native_build'];require([x['seed'] for x in b['replicas']]==list(SEEDS),'REVIEW_SEEDS_DRIFT')
     for replica in b['replicas']:
@@ -22,6 +22,6 @@ def validate():
         'NATIVE_SOURCE_OR_METHOD_REVIEW_DRIFT')
     require([s['exit'] for s in n['synthetic_point_cases']]==[0,92,92,92,92,90],'NATIVE_POINT_NEGATIVE_FAILURE')
     return {'status':'PASS_REVIEW_EVIDENCE_ONLY','new_genuine_ME_calls':0,'new_integrals':0,
-        'execution_status':'NEW_REVISION_APPROVAL_REQUIRED','genuine_native_runtime':'NOT_EXECUTED'}
+        'execution_status':'HISTORICAL_AUDIT_ONLY_NOT_ROUTE_A_EXECUTABLE','genuine_native_runtime':'NOT_EXECUTED'}
 
 if __name__=='__main__':print(json.dumps(validate(),indent=2))

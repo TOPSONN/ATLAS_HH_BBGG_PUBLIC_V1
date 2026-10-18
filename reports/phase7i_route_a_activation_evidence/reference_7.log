@@ -1,0 +1,38 @@
+{
+  "validation_status": "PASS",
+  "validator": "portable_files_source_cards_indices_and_native_report_binding",
+  "samples": [
+    {
+      "process": "bbgg",
+      "events": 100,
+      "root_sha256": "fc73c51169d1402d496fe445769adbc2634ba6e0b99ee25726919e100b1c8c67",
+      "root_bytes": 2959022,
+      "portable_integrity_status": "PASS",
+      "native_ROOT_readback": "NOT_EXECUTED_BY_PORTABLE_CI",
+      "physical_validation_evidence": "HASH_BOUND_EXISTING_NATIVE_REPORT",
+      "truth_ancestry_recomputation": "NOT_EXECUTED_BY_PORTABLE_CI"
+    },
+    {
+      "process": "ccgg",
+      "events": 100,
+      "root_sha256": "479d628cdafce05ea885176753b51fca90db9db7f552e1dca03947b5fa46e562",
+      "root_bytes": 3098810,
+      "portable_integrity_status": "PASS",
+      "native_ROOT_readback": "NOT_EXECUTED_BY_PORTABLE_CI",
+      "physical_validation_evidence": "HASH_BOUND_EXISTING_NATIVE_REPORT",
+      "truth_ancestry_recomputation": "NOT_EXECUTED_BY_PORTABLE_CI"
+    },
+    {
+      "process": "jjgg",
+      "events": 100,
+      "root_sha256": "2a6ed16ddd26e440d15f661c359b8760af1397a947a9be6f0bd5e5ca432a160a",
+      "root_bytes": 3028524,
+      "portable_integrity_status": "PASS",
+      "native_ROOT_readback": "NOT_EXECUTED_BY_PORTABLE_CI",
+      "physical_validation_evidence": "HASH_BOUND_EXISTING_NATIVE_REPORT",
+      "truth_ancestry_recomputation": "NOT_EXECUTED_BY_PORTABLE_CI"
+    }
+  ],
+  "reviewed_input_index_bytes": 22100897,
+  "reviewed_input_index_budget_bytes": 31457280
+}
