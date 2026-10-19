@@ -1,0 +1,26 @@
+{
+  "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
+  "mode": "SOURCE_ENGINEERING_AND_EXISTING_DATA_ANALYSIS_ONLY",
+  "base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "wall_seconds": 14400,
+    "additional_output_bytes": 2147483648,
+    "analysis_jobs": 1,
+    "analysis_workers": 1
+  },
+  "ceiling_origin": "Conservative Phase10 analysis-output containment, separate from all prior physical-integration authorizations",
+  "forbidden": [
+    "new_ME",
+    "physical_integration",
+    "MG5_run",
+    "Pythia_production",
+    "Delphes_production",
+    "Phase7I_build_restart",
+    "physical_pilot_execution",
+    "PDF_PNG_publication"
+  ],
+  "allowed_native_loop_reason": "Read existing background photon observables omitted from Phase8 normalized reader; no full pipeline repeat",
+  "figure_policy": "Preserve all12existingPhase9 sets; do not regenerate or publish figures",
+  "new_physical_production": 0
+}

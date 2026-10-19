@@ -1,0 +1,1729 @@
+{
+  "status": "AWAITING_USER_APPROVAL",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "figure_sets": 12,
+  "review_scope": "Existing source manifests/captions and exact prior image hashes; no new visual QA or plot regeneration. Historical QA remains QA_PASSED only.",
+  "new_figures": 0,
+  "figure_publication_authorized": false,
+  "manifest": {
+    "path": "analysis/phase9/evidence/phase9_plot_manifest.json",
+    "sha256": "26fc813cce65789ebbdcbbce57cab8ebe4fb0ac31e028fb8395cc9d9cdcf3ee5"
+  },
+  "captions_and_support": {
+    "status": "AWAITING_USER_APPROVAL",
+    "qa_status": "QA_PASSED",
+    "ROOT_version": "6.40.04",
+    "figure_count": 12,
+    "publication_authorized": false,
+    "local_full_manifest_sha256": "772867efd37756d533d8dbe9df3b42674bf09a7fbff6a0a80000ce78fd9b47a9",
+    "final_plot_spec_sha256": "bf11aeef3a22f101eccde4d21a060d949dabc33d2bc575bc4c79fa99e091cabf",
+    "figures": [
+      {
+        "figure_id": "phase9_01_signal_mgg",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_01_signal_mgg.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_01_signal_mgg.png",
+        "pdf_sha256": "c1baa27276cbc06201fca0083c2a91de44afe36f3d37539bbf1ec2221c3a2267",
+        "png_sha256": "e0ea9e881e363efc96d7c59dccfff4f320cea693e4b13f9f3e96575cde5a88ec",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "046fb03b576b59b19d1161b46ec5e83080c6160f525c7facd8768cf42892f18c",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            560.1414141414141,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "00c4a2164a5bfebe6e9aa4a2cea1150853cb97216f95fa11e641f7b2a7c4f313",
+          "decoded_vector_stream_sha256_after": "00c4a2164a5bfebe6e9aa4a2cea1150853cb97216f95fa11e641f7b2a7c4f313",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Input: S01_C1000, original N=1000. No luminosity scaling.",
+          "Stage: INPUT (valid candidates only); frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-original-N delta; bin-total covariance included.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Signal diphoton mass",
+        "panels": [
+          {
+            "title": "S01_C1000 | historical proposal",
+            "x_title": "m_{#gamma#gamma} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 105,
+            "xmax": 160,
+            "series": [
+              {
+                "label": "S01_C1000 (n=484)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 484,
+                "ESS": 483.99999999999994,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "INPUT",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_02_signal_mbb",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_02_signal_mbb.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_02_signal_mbb.png",
+        "pdf_sha256": "ef8b8a0663331358d1e0f771ba625eab9c089a020d41645e3c4e5b52f1e6da94",
+        "png_sha256": "c7c228880b807eebffadce1be390b4e84f0fd7c4aeef21f4d4ac741184ed2514",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "933bf4432108fa742c4a97ea5ee98d59a82ad599a6c989684ebf184e5d031ba2",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            560.1414141414141,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "ce527998c286adedbb9d403527f14806876282b8c11c25854863d94a33929ed5",
+          "decoded_vector_stream_sha256_after": "ce527998c286adedbb9d403527f14806876282b8c11c25854863d94a33929ed5",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Input: S01_C1000, original N=1000. No luminosity scaling.",
+          "Stage: INPUT (valid candidates only); frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-original-N delta; bin-total covariance included.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Signal tagged dijet mass",
+        "panels": [
+          {
+            "title": "S01_C1000 | historical proposal",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=305)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 305,
+                "ESS": 305.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "INPUT",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.003278688524590164
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_03_signal_mhh",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_03_signal_mhh.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_03_signal_mhh.png",
+        "pdf_sha256": "782f626e68856312c919ef8b20ced38e9685f779f2490fbd340d7df008727133",
+        "png_sha256": "35ed34888ad3551bbbc159dfd4559732c79275a0d264cf139944c4b9db152c64",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "9ac53a386722f84e9a184e65a3588703e0a33975e6c93e85b419933250ef6159",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            554.1313131313132,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "903ebd484f22fd74ec90b531c2a7c5b7c41ef1a9cf7a89d1f285548ab441be6f",
+          "decoded_vector_stream_sha256_after": "903ebd484f22fd74ec90b531c2a7c5b7c41ef1a9cf7a89d1f285548ab441be6f",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Input: S01_C1000, original N=1000. No luminosity scaling.",
+          "Stage: INPUT (valid candidates only); frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-original-N delta; bin-total covariance included.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Signal reconstructed HH mass",
+        "panels": [
+          {
+            "title": "S01_C1000 | historical proposal",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "INPUT",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_04_signal_b01_mgg",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_04_signal_b01_mgg.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_04_signal_b01_mgg.png",
+        "pdf_sha256": "75729be3d6a085ee1ddf76001198ffd38263759e87aebe5503938652025dc866",
+        "png_sha256": "3502d3ce503abdd97bd3c580d1092f1f802669511b7c1f702e9aa135a4f7c768",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "69214f3c053245491df0e9ae2f2c1bec707cc8fbea4b63d40fc821bbedef5ab9",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            560.1414141414141,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "b262a0af7a08ceb86eee5f11522b2543aedbc07e004e5627886fcaf34cb5aa3f",
+          "decoded_vector_stream_sha256_after": "b262a0af7a08ceb86eee5f11522b2543aedbc07e004e5627886fcaf34cb5aa3f",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: S01_C1000 and B01, N=1000 each. No luminosity scaling.",
+          "Stage: FINAL_MGG; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-N normalized-bin delta; sparse-bin limits retained.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Signal and continuum B01 diphoton shape",
+        "panels": [
+          {
+            "title": "Separate unit-area shapes",
+            "x_title": "m_{#gamma#gamma} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 105,
+            "xmax": 160,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B01 (n=28)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 28,
+                "ESS": 27.999999999999996,
+                "source_histogram_key": [
+                  "B01",
+                  "FINAL_MGG",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_05_signal_b04_b05_mgg",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_05_signal_b04_b05_mgg.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_05_signal_b04_b05_mgg.png",
+        "pdf_sha256": "3856ac8770c2bbf0e9c96d5505ad5df63cd51406acff3f50476d5dd264f77a7f",
+        "png_sha256": "bfa60de2e3e12a1950f02da6e2bfd39e82ed003b655bf036189bb2b558f99dc2",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "c6c1d7e45b04061a99f8933319c08cfefa2ebbc83da63971bb698159f8a7e08f",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            560.1414141414141,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "0762925d7411b890d347c86dc48e69b12f194da63a8d5e65d57aa0be3ad1b215",
+          "decoded_vector_stream_sha256_after": "0762925d7411b890d347c86dc48e69b12f194da63a8d5e65d57aa0be3ad1b215",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: S01_C1000, B04, B05; N=1000 each. No luminosity scaling.",
+          "Stage: FINAL_MGG; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-N normalized-bin delta; no summed background.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Signal and separate single-Higgs diphoton shapes",
+        "panels": [
+          {
+            "title": "B04 and B05 overlaid individually",
+            "x_title": "m_{#gamma#gamma} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 105,
+            "xmax": 160,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B04 (n=75)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 75,
+                "ESS": 75.0,
+                "source_histogram_key": [
+                  "B04",
+                  "FINAL_MGG",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B05 (n=131)",
+                "points": 0,
+                "bins": 16,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 131,
+                "ESS": 131.0,
+                "source_histogram_key": [
+                  "B05",
+                  "FINAL_MGG",
+                  "m_gamma_gamma",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_06_signal_backgrounds_mbb",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_06_signal_backgrounds_mbb.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_06_signal_backgrounds_mbb.png",
+        "pdf_sha256": "f33f88535886ff03c79f6e617c689d2a8d30a8b098fe9c1932e719f3b179266b",
+        "png_sha256": "00f5fb15dbe2f796fa349ab71f23e2b9d70c9cdf0e09ad37a20ffe0367a26de2",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "f217e1611bb819f260ab4b827832845c93e9b13093c99bf1005a70e4b8e863cd",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            36.66161616161616,
+            40.89714285714285,
+            575.1666666666666,
+            460.0928571428571
+          ],
+          "decoded_vector_stream_sha256_before": "068346d934cb63cb5f7127f3933761ed11896e832530d3723eed2890cbc36301",
+          "decoded_vector_stream_sha256_after": "068346d934cb63cb5f7127f3933761ed11896e832530d3723eed2890cbc36301",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: S01_C1000 and B01-B06, N=1000 each. No luminosity scaling.",
+          "Stage: FINAL_MGG; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-N normalized-bin delta; B03/B06 empty = undefined, B02 n=1 unsupported.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Tagged dijet mass: each background separately",
+        "panels": [
+          {
+            "title": "S01_C1000 vs B01",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B01 (n=28)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 28,
+                "ESS": 27.999999999999996,
+                "source_histogram_key": [
+                  "B01",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B02",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B02 (n=1)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 1,
+                "ESS": 1.0,
+                "source_histogram_key": [
+                  "B02",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B03",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B03 (n=0)",
+                "points": 0,
+                "bins": 0,
+                "undefined": true,
+                "N_original": 1000,
+                "N_defined": 0,
+                "ESS": null,
+                "source_histogram_key": [
+                  "B03",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B04",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B04 (n=75)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 75,
+                "ESS": 75.0,
+                "source_histogram_key": [
+                  "B04",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B05",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B05 (n=131)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 131,
+                "ESS": 131.0,
+                "source_histogram_key": [
+                  "B05",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.030534351145038167
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B06",
+            "x_title": "m_{bb} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 11,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B06 (n=0)",
+                "points": 0,
+                "bins": 0,
+                "undefined": true,
+                "N_original": 1000,
+                "N_defined": 0,
+                "ESS": null,
+                "source_histogram_key": [
+                  "B06",
+                  "FINAL_MGG",
+                  "m_bb",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_07_signal_backgrounds_mhh",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_07_signal_backgrounds_mhh.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_07_signal_backgrounds_mhh.png",
+        "pdf_sha256": "91f426b61d369a999706e834630768de24764a8d9597273ecc159329b40fc797",
+        "png_sha256": "708037bbe68793a74200be97f9aa9404ce261f1b97e1526327bfba0090014550",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "8a0beb37da1c8a7b0eaae7b36b889228dca05a4f4a60faa59c697be9fa445774",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            36.66161616161616,
+            40.89714285714285,
+            572.1616161616162,
+            460.0928571428571
+          ],
+          "decoded_vector_stream_sha256_before": "574500f453b8e60c7b87203a992a7f5baab44b209b356d2869c164c0bf57b0bb",
+          "decoded_vector_stream_sha256_after": "574500f453b8e60c7b87203a992a7f5baab44b209b356d2869c164c0bf57b0bb",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: S01_C1000 and B01-B06, N=1000 each. No luminosity scaling.",
+          "Stage: FINAL_MGG; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw-source shapes; flows included; own constant MODEL_BR factor cancels.",
+          "Errors: 1 SE fixed-N normalized-bin delta; B03/B06 empty = undefined, B02 n=1 unsupported.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Reconstructed HH mass: each background separately",
+        "panels": [
+          {
+            "title": "S01_C1000 vs B01",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B01 (n=28)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 28,
+                "ESS": 27.999999999999996,
+                "source_histogram_key": [
+                  "B01",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B02",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B02 (n=1)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 1,
+                "ESS": 1.0,
+                "source_histogram_key": [
+                  "B02",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B03",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B03 (n=0)",
+                "points": 0,
+                "bins": 0,
+                "undefined": true,
+                "N_original": 1000,
+                "N_defined": 0,
+                "ESS": null,
+                "source_histogram_key": [
+                  "B03",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B04",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B04 (n=75)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 75,
+                "ESS": 75.0,
+                "source_histogram_key": [
+                  "B04",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B05",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B05 (n=131)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 131,
+                "ESS": 131.0,
+                "source_histogram_key": [
+                  "B05",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              }
+            ]
+          },
+          {
+            "title": "S01_C1000 vs B06",
+            "x_title": "m_{HH} [GeV]",
+            "y_title": "Fraction per bin",
+            "xmin": 0,
+            "xmax": 1500,
+            "series": [
+              {
+                "label": "S01_C1000 (n=143)",
+                "points": 0,
+                "bins": 12,
+                "undefined": false,
+                "N_original": 1000,
+                "N_defined": 143,
+                "ESS": 143.0,
+                "source_histogram_key": [
+                  "S01_C1000",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": 0.0,
+                "overflow_fraction": 0.0
+              },
+              {
+                "label": "B06 (n=0)",
+                "points": 0,
+                "bins": 0,
+                "undefined": true,
+                "N_original": 1000,
+                "N_defined": 0,
+                "ESS": null,
+                "source_histogram_key": [
+                  "B06",
+                  "FINAL_MGG",
+                  "m_HH",
+                  "SOURCE_WEIGHTED"
+                ],
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_08_heavy_flavour_tags",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_08_heavy_flavour_tags.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_08_heavy_flavour_tags.png",
+        "pdf_sha256": "bbf32cc16b1edcf3ecebcbb331c10db4713146911140cb18ce1dcc5275ce4a18",
+        "png_sha256": "2def0a666321acfce17045d2735c04a986c746fd567e7c7bf2cc1dea65603310",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "4fafb79496cef2c659d975a99f0e95a7efeb4865e68f70041336656d6fe5f8f5",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            36.06060606060606,
+            33.68,
+            572.1616161616162,
+            322.36571428571426
+          ],
+          "decoded_vector_stream_sha256_before": "1f69d782ac66342a66be540db93ae5744784a60d31608568828411798a390ddf",
+          "decoded_vector_stream_sha256_after": "1f69d782ac66342a66be540db93ae5744784a60d31608568828411798a390ddf",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: B01, B02, B03; N=1000 each. No luminosity scaling.",
+          "Stage: TWO_JETS; all eligible native jets; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Unweighted event indicators; no physical HF sum.",
+          "Errors: Pointwise Wilson 95% acceptance intervals; origin indicators overlap.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Heavy-flavour evidence and native bit0 tags",
+        "panels": [
+          {
+            "title": "B01 | photon/jet selection",
+            "x_title": "",
+            "y_title": "Fraction / original N",
+            "xmin": 0,
+            "xmax": 6,
+            "series": [
+              {
+                "label": "Event indicators",
+                "points": 6,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B02 | photon/jet selection",
+            "x_title": "",
+            "y_title": "Fraction / original N",
+            "xmin": 0,
+            "xmax": 6,
+            "series": [
+              {
+                "label": "Event indicators",
+                "points": 6,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B03 | photon/jet selection",
+            "x_title": "",
+            "y_title": "Fraction / original N",
+            "xmin": 0,
+            "xmax": 6,
+            "series": [
+              {
+                "label": "Event indicators",
+                "points": 6,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_09_cutflow_efficiency",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_09_cutflow_efficiency.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_09_cutflow_efficiency.png",
+        "pdf_sha256": "c4bf8172de1e5fdb340d90fabb51d944091782f7bc35a0fb6337e2ef3a4a753f",
+        "png_sha256": "2122e4a27f46cdd03a7fa53fdbe150b2b179fe9f51a6f3bb2148c9aacabb3c34",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "4f096f3cb38dc966b3dbf0ab46f4d6bc6867e60cf343b39945c80ea35b7a65ad",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            538.5050505050506,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "febe959b58bfbcfbf75275a6322372b6aee9386dbe893db0c73ffe95361f3573",
+          "decoded_vector_stream_sha256_after": "febe959b58bfbcfbf75275a6322372b6aee9386dbe893db0c73ffe95361f3573",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: S01_B100 N=100; other seven cohorts N=1000 each. No luminosity scaling.",
+          "Stage: Cumulative frozen Phase8 baseline; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Unweighted selection acceptance, including failed source events.",
+          "Errors: Pointwise Wilson 95%; stages correlated, not independent tests.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Cumulative selection efficiency by source cohort",
+        "panels": [
+          {
+            "title": "Eight historical cohorts; no pooling",
+            "x_title": "",
+            "y_title": "N pass / original N",
+            "xmin": 0,
+            "xmax": 5,
+            "series": [
+              {
+                "label": "S01_B100 (N=100)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "S01_C1000 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B01 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B02 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B03 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B04 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B05 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "B06 (N=1000)",
+                "points": 5,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_10_kappa_weight_concentration",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_10_kappa_weight_concentration.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_10_kappa_weight_concentration.png",
+        "pdf_sha256": "c1682dfd4f19d29c7aa3f06995b0ff7c333de92cc7e2b116dccf92528a056e25",
+        "png_sha256": "46bb5d7da60d28ad54b6b579e5cde3114a8fc33186044ba1eafded8ac1fc5595",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "60ea897f8a791560f66df35a0ad032f2cca5cf06138a40ceed733db49ecde4ce",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            491.02525252525254,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "72a9e12724c6645431497d7feabab0691b42f76afe4be1bc0094efac73743698",
+          "decoded_vector_stream_sha256_after": "72a9e12724c6645431497d7feabab0691b42f76afe4be1bc0094efac73743698",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Input: S01_C1000 and frozen six-hypothesis reweight CSV; N=1000. No luminosity scaling.",
+          "Stage: INPUT, ranked within each hypothesis; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw source weight times frozen kappa ratio; denominator is all 1000 |w|.",
+          "Errors: None: deterministic support diagnostic; hypotheses strongly correlated.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Reweighting source concentration (first 10% of ranked events)",
+        "panels": [
+          {
+            "title": "Same C1000 sources for every hypothesis",
+            "x_title": "Rank / 1000 (largest |w| first)",
+            "y_title": "Cumulative fraction of total |w|",
+            "xmin": 0,
+            "xmax": 0.1,
+            "series": [
+              {
+                "label": "#kappa_{#lambda}=-1",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "#kappa_{#lambda}=0",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "#kappa_{#lambda}=1",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "#kappa_{#lambda}=2",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "#kappa_{#lambda}=2.5",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "#kappa_{#lambda}=5",
+                "points": 1001,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_11_kappa_final_ess",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_11_kappa_final_ess.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_11_kappa_final_ess.png",
+        "pdf_sha256": "2fdc3e6d440f9549f9e6bdb93505bdabf19d230411d4810ad53bd124eb7fe5b3",
+        "png_sha256": "3155c2215cb505702b616df3312b0da7e63e8a1539483b6e7e157b96827b5886",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "e36da3b90472c3afa19a9e6161d961129c4a9bcb7f624e63e5cbef1bb6d59f72",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            46.878787878787875,
+            40.89714285714285,
+            554.1313131313132,
+            420.3985714285714
+          ],
+          "decoded_vector_stream_sha256_before": "8b7c2226b9d79d881936cc7c9b7b930de9db4bc1f2821ceaa6812f8538b3d241",
+          "decoded_vector_stream_sha256_after": "8b7c2226b9d79d881936cc7c9b7b930de9db4bc1f2821ceaa6812f8538b3d241",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Input: S01_C1000 N=1000, frozen ratios; no new generated events. No luminosity scaling.",
+          "Stage: FINAL_MGG; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw source weight times frozen kappa ratio; constant model BR cancels.",
+          "Errors: None: deterministic weight-support metric; not a confidence interval.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Final reweighting effective sample size",
+        "panels": [
+          {
+            "title": "#kappa_{#lambda}=2.5 and 5: INCONCLUSIVE_REWEIGHTING",
+            "x_title": "#kappa_{#lambda}",
+            "y_title": "(sum w)^{2} / sum w^{2}",
+            "xmin": -1.3,
+            "xmax": 5.3,
+            "series": [
+              {
+                "label": "Final ESS (143 source events pass)",
+                "points": 6,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "figure_id": "phase9_12_background_regions",
+        "pdf": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_12_background_regions.pdf",
+        "png": "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_12_background_regions.png",
+        "pdf_sha256": "619eac8692ac125b153671254cb16a52b6aef1f8ee110a211a12efa24c9c37f1",
+        "png_sha256": "e59eaa34bda4a2ea8c7429fa0f42ca2d3cc70a059de31729676ceaa556ad3c23",
+        "paper_trim": {
+          "source_ROOT_PDF_sha256": "5ed76c6c702ece08ae392a462c84ce43c4d35c2424e55a728c73330a92b2ebc5",
+          "source_media_box": [
+            0.0,
+            0.0,
+            595.0,
+            842.0
+          ],
+          "final_media_box": [
+            37.26262626262626,
+            40.89714285714285,
+            572.1616161616162,
+            460.0928571428571
+          ],
+          "decoded_vector_stream_sha256_before": "115422e7748726b23a0165ff9955f5a7abb3863a6ac1e6e8433e6744106e0e23",
+          "decoded_vector_stream_sha256_after": "115422e7748726b23a0165ff9955f5a7abb3863a6ac1e6e8433e6744106e0e23",
+          "data_or_drawing_changed": false,
+          "raster_used_only_for_page_bounds": true
+        },
+        "status": "AWAITING_USER_APPROVAL",
+        "qa_status": "QA_PASSED",
+        "publication_authorized": false,
+        "caption_lines": [
+          "Inputs: B01-B06, original N=1000 per source. No luminosity scaling.",
+          "Stage: TWO_JETS; exclusive tags x frozen mgg bands; frozen Phase8 selection and bin edges; candidate-defined denominators.",
+          "Weights: Raw event counts; no luminosity / physical summed background.",
+          "Errors: Pointwise Wilson 95% x original N; correlated partitions, zero has upper limit.",
+          "Limits: finite MC; exploratory signal normalization; HF exclusivity / fake and detector calibration unresolved."
+        ],
+        "title": "Background control-region counts in separate panels",
+        "panels": [
+          {
+            "title": "B01 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B02 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B03 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B04 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B05 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          },
+          {
+            "title": "B06 | no process sum",
+            "x_title": "",
+            "y_title": "Observed source events",
+            "xmin": 0,
+            "xmax": 4,
+            "series": [
+              {
+                "label": "0 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "1 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              },
+              {
+                "label": "GE2 tags",
+                "points": 4,
+                "bins": 0,
+                "undefined": false,
+                "N_original": null,
+                "N_defined": null,
+                "ESS": null,
+                "source_histogram_key": null,
+                "underflow_fraction": null,
+                "overflow_fraction": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "all_previous_local_versions_preserved_by": "historical_preservation_after.json"
+}

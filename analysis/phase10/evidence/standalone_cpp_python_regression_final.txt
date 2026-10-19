@@ -1,0 +1,25 @@
+Test project /home/btu/build/atlas_hh_phase10_v1/standalone_final
+    Start 1: phase10_source_methods
+1/7 Test #1: phase10_source_methods ...........   Passed    0.16 sec
+    Start 2: phase8_physics
+2/7 Test #2: phase8_physics ...................   Passed    0.18 sec
+    Start 3: phase8_selection
+3/7 Test #3: phase8_selection .................   Passed    0.13 sec
+    Start 4: phase8_histograms
+4/7 Test #4: phase8_histograms ................   Passed    0.13 sec
+    Start 5: phase8_statistics
+5/7 Test #5: phase8_statistics ................   Passed    0.13 sec
+    Start 6: phase8_likelihood
+6/7 Test #6: phase8_likelihood ................   Passed    0.38 sec
+    Start 7: phase8_native_methods
+7/7 Test #7: phase8_native_methods ............   Passed    0.12 sec
+
+100% tests passed out of 7
+
+Label Time Summary:
+phase10             =   0.16 sec*proc (1 test)
+phase8              =   1.06 sec*proc (6 tests)
+source              =   0.16 sec*proc (1 test)
+synthetic_method    =   1.23 sec*proc (7 tests)
+
+Total Test time (real) =   1.24 sec

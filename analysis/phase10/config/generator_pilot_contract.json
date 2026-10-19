@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
+  "base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+  "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+  "status": "PREPARED_INACTIVE_BLOCKED",
+  "instantiable": false,
+  "execution_authorized": false,
+  "physical_pilot_executed": false,
+  "dispatcher": null,
+  "exact_source_approval_receipt": null,
+  "independent_human_review_receipt": null,
+  "scientific_status": "NO_VALIDATED_MATCHING_PRESCRIPTION_YET",
+  "actual_new_production": {
+    "new_me_calls": 0,
+    "new_integrals": 0,
+    "new_hard_events": 0,
+    "new_pythia_events": 0,
+    "new_delphes_events": 0
+  },
+  "purpose": "Prepare separately reviewed source contracts for diphoton heavy-flavour components or a common inclusive QCD multiplicity family. No physical production now.",
+  "source_versions": {
+    "mg5_aMC": "3.5.16",
+    "pythia": "8.317",
+    "model_variants_audited": [
+      "sm",
+      "sm-no_b_mass",
+      "sm-c_mass"
+    ],
+    "hash_manifest": "metadata/phase10_generator_scheme_review.json:local_source_audit",
+    "future_exact_source_hash_approval_required": true
+  },
+  "process_proposals": [
+    {
+      "id": "4F_BB_COMPONENT",
+      "scheme": "A_4F_BB_LOPS",
+      "model": "sm",
+      "syntax": [
+        "import model sm",
+        "define p4 = g u u~ d d~ s s~ c c~",
+        "generate p4 p4 > b b~ a a QCD=2 QED=2"
+      ],
+      "order": "LO tree QCD continuum only",
+      "parser_executed": false,
+      "me_evaluated": false,
+      "mass_source": "sm/restrict_default.dat: MB=4.7 GeV, MC=0; values observed in source, not adopted as a full PDF/mass contract",
+      "scope": "bb component only; no inclusive total"
+    },
+    {
+      "id": "5F_AA_JETS",
+      "scheme": "UNSELECTED_MLM_OR_CKKWL",
+      "model": "sm-no_b_mass",
+      "syntax": [
+        "import model sm-no_b_mass",
+        "define p5 = g u u~ d d~ s s~ c c~ b b~",
+        "define j5 = g u u~ d d~ s s~ c c~ b b~",
+        "generate p5 p5 > a a QCD=0 QED=2 @0",
+        "add process p5 p5 > a a j5 QCD=1 QED=2 @1",
+        "add process p5 p5 > a a j5 j5 QCD=2 QED=2 @2"
+      ],
+      "order": "LO QCD tree 0..2 parton family; not all diphoton channels",
+      "parser_executed": false,
+      "me_evaluated": false,
+      "mass_source": "sm-no_b_mass restriction: MC=MB=0",
+      "scope": "Common tree multiplicity family proposal; loop-induced gg->aa/QED fragmentation outside present source family"
+    }
+  ],
+  "pdf": {
+    "frozen": false,
+    "library": "UNSELECTED",
+    "set_name": null,
+    "lhaid": null,
+    "flavour_number": null,
+    "member": null,
+    "sha256": null,
+    "requirement": "Match active proton flavours, mass thresholds and alpha_s; verify actual installed PDF data files before new approval."
+  },
+  "alpha_s": {
+    "frozen": false,
+    "me_order": null,
+    "me_alpha_s_mz": null,
+    "isr_alpha_s_mz": null,
+    "fsr_alpha_s_mz": null,
+    "coupling_scheme": null,
+    "requirement": "Do not assume ME PDF alpha_s equals tuned shower alpha_s; state and validate any intentional difference."
+  },
+  "hard_scale": {
+    "frozen": false,
+    "choice": null,
+    "renormalization": null,
+    "factorization": null,
+    "shower_starting_scale": null,
+    "variation_protocol": "Future reviewed central dynamical/fixed definition plus correlated and independent variations; match prescription-specific scale assignment; do not silently reuse fixed125."
+  },
+  "mass_flavour_scheme": {
+    "frozen": false,
+    "selected": null,
+    "bottom_mass_gev": null,
+    "charm_mass_gev": null,
+    "initial_hf_definition": null,
+    "final_hf_definition": null,
+    "requirement": "Model restriction, PDF, ME, shower and flavour-jet target must be mutually consistent."
+  },
+  "matching": {
+    "validated": false,
+    "selected_scheme": null,
+    "xqcut_gev": null,
+    "qcut_gev": null,
+    "merging_tms_gev": null,
+    "fxfx_qcut_me_gev": null,
+    "nmax_validated": null,
+    "interface": "MG5 LO Pythia8 generic interface exists; exact prescription not chosen",
+    "future_scan_protocol": {
+      "approval_required": true,
+      "numeric_scale_grid_gev": null,
+      "max_points_proposal": 3,
+      "steps": [
+        "Select one exact process/order/flavour prescription and IR-safe photon/jet target; freeze model/PDF/scale/shower.",
+        "Review generation-cut coverage and derive a finite scale grid from target hard scales, ME cuts and shower conventions; do not take numerical defaults as validated.",
+        "Obtain exact-source/card/hash and finite-envelope approval in a new output directory before even process/ME execution.",
+        "Within approved bounded events, compare per-multiplicity accepted cross sections, veto efficiencies, differential jet rates and inclusive/flavour-resolved shapes; retain correlated statistical errors.",
+        "Check generation-cut loosening, merging-scale variations, hard-tail support, HF histories, signed-weight normalization and repeat seeds; reject gaps, pathologies or unresolved closure.",
+        "A small bounded sample may be inconclusive; stop at cap and do not upgrade matching validity without sufficient evidence."
+      ]
+    }
+  },
+  "shower": {
+    "frozen": false,
+    "engine": "Pythia 8.317",
+    "configuration": null,
+    "QCD_g_to_bb_cc": "Unfrozen; retain histories, do not veto to claim exclusivity.",
+    "QED_radiation": "Unfrozen; direct ME photons vs QED shower must have a defined scope, no invented subtraction.",
+    "mpi_tune_hadronization": "Unfrozen; include in later systematic/migration review.",
+    "me_ps_interface_validation": "Required; no new interface run in Phase10."
+  },
+  "photon_cuts": {
+    "frozen": false,
+    "pt_min_gev": null,
+    "eta_max": null,
+    "pair_min_mass_gev": null,
+    "delta_r_gamma_gamma": null,
+    "delta_r_gamma_parton": null,
+    "requirement": "Need common IR-safe generation coverage below reconstruction thresholds with cut-loosening study; no invented values."
+  },
+  "photon_isolation": {
+    "frozen": false,
+    "definition": null,
+    "r0gamma": null,
+    "epsgamma": null,
+    "xn": null,
+    "isoEM": null,
+    "requirement": "Smooth-cone direct-photon isolation fields verified in MG5 template; fragmentation/fixed-cone mapping and reconstructed isolation must be separately declared."
+  },
+  "truth_provenance": {
+    "required": [
+      "SHA256 of exact source/model/restriction/PDF/cards/build identity",
+      "Full original LHE run/init/weight headers, integration uncertainty and event-normalization convention",
+      "Deterministic unique run/dataset/source-event IDs before any rejection; all attempted/accepted/written failure counters",
+      "Complete signed LHE nominal/variation weights and original source denominator",
+      "LHE to HepMC to reconstructed-object join, shower mother/daughter histories and HF births",
+      "Separate ME, shower, hadron, reconstructed-flavour and bit0 flags; preserve unknown ancestry",
+      "No event resampling counted as additional independent hard statistics"
+    ]
+  },
+  "weight_contract": {
+    "frozen": false,
+    "historical_context": "Historical event_norm=average and IDWTUP=-4 need sigma/N scaling; neither copied blindly into new samples nor applied twice.",
+    "required": "Read future LHE headers and actual ME/PS writer semantics; preserve signed sumW/sumW2 and integration uncertainty; for CKKW-L audit event x merging weight and accepted cross-section normalization per multiplicity."
+  },
+  "output_scope": {
+    "future_output_directory": null,
+    "new_directory_required": true,
+    "allowed_future_outputs": "Only exact-source approved bounded LHE, accepted/rejected ledger, ancestry/HepMC and source-normalization diagnostics. Detector stage requires separate approval and scope.",
+    "physical_total_background": "BLOCKED",
+    "physical_significance": "NOT_EVALUATED",
+    "physical_CLs": "NOT_EVALUATED",
+    "physical_kappa_interval": "NOT_EVALUATED",
+    "figures": "LOCAL_DRAFT until separate exact path/hash/caption/provenance approval."
+  },
+  "independent_review_checks": [
+    "Review exact source/model/PDF/cards/hashes before approval; no invented human signoff.",
+    "Independent sumW/sumW2/source-denominator and covariance arithmetic.",
+    "Energy-momentum, mass-shell, source-event joins and signed-weight closure.",
+    "IR/collinear and flavour-jet applicability; gaps/double counting tested at generator level.",
+    "Physical scope separates direct continuum, fragmentation/radiation, detector fakes and missing orders.",
+    "Only separately signed/recorded reviewer evidence can count as external human approval."
+  ],
+  "failure_criteria": [
+    "Any current physical production, nonzero Phase10 new-event counter or unapproved generator invocation.",
+    "Unknown PDF/mass/alpha_s, photon IR target, merging scale or multiplicity definition.",
+    "Invalid/incomplete/ambiguous ancestry or mismatched weights without quantified preservation.",
+    "Visible merging discontinuity or statistically unresolved normalization/stability; insufficient data is inconclusive.",
+    "Resource cap exhaustion, output collision, overwritten historical artifact, uncontrolled event rejection or unknown proposal density.",
+    "Any claim of a physical background total/significance/calibrated fake rate from this source-only contract."
+  ],
+  "resource_planning": {
+    "approved": false,
+    "actual_pilot_measurement": false,
+    "enforcement_reviewed": false,
+    "illustrative_ceiling": {
+      "cpu_threads": 2,
+      "wall_seconds": 7200,
+      "ram_bytes": 4294967296,
+      "disk_bytes": 2147483648,
+      "total_new_hard_events": 1000,
+      "max_scan_points": 3,
+      "max_me_evaluations": 1000000,
+      "max_integration_cycles": 20,
+      "max_event_trials": 100000
+    },
+    "ceiling_scope": "All configurations combined; purely illustrative operational proposal, not authorization or implemented enforcement.",
+    "timing_estimate": {
+      "new_me_integration_wall_seconds": null,
+      "new_me_timing_status": "UNKNOWN_NO_MATCHED_PILOT",
+      "historical_shower_only_seconds_for_1000": [
+        14.212730925,
+        16.988925644
+      ],
+      "historical_shower_only_scope": "Phase6B bbgg/ccgg fixed existing LO LHE on earlier setup; excludes new ME/integration/matching veto/Delphes; not a forecast.",
+      "historical_mean_hepmc_gzip_bytes_per_1000": [
+        25204359,
+        27381014
+      ],
+      "planning_disk_multiplier_assumption": 4,
+      "planning_shower_disk_range_bytes": [
+        100817436,
+        109524056
+      ],
+      "estimation_limit": "Disk arithmetic scales historical bbgg/ccgg compressed HepMC by 4 for bookkeeping/temporary copies only. Full new production size and integration CPU unknown; cap can stop inconclusively."
+    },
+    "future_enforcement_requirements": [
+      "Approve exact finite counters and cumulative CPU/wall/RAM/disk ceilings before a new source job.",
+      "Review a separate bounded enforcement design; this repository adds no dispatcher.",
+      "Stop rather than extend caps automatically."
+    ]
+  },
+  "precision_objectives": {
+    "guaranteed_precision": false,
+    "role": "Feasibility and differential-rate/normalization sanity only, not precision production.",
+    "targets_relative_mc": [
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "condition": "Per-process acceptance/weighted selected-rate precision must use actual pilot variance and independent N; no finite guaranteed N from zero support.",
+    "final_selection_reference": "Historical B01 28/1000, B02 1/1000, B03/B06 0/1000; a 1000-event total scan ceiling cannot certify all tails or target precision.",
+    "precision_plan_dependency": "reports/phase10f_precision_plan.md"
+  },
+  "blockers": [
+    "EXACT_PROCESS_MATCHING_NOT_VALIDATED",
+    "PDF_ALPHA_S_NOT_FROZEN",
+    "PHOTON_IR_ISOLATION_NOT_FROZEN",
+    "FLAVOUR_JET_DEFINITION_NOT_FROZEN",
+    "EXACT_SOURCE_APPROVAL_ABSENT",
+    "FINITE_RESOURCE_ENVELOPE_NOT_APPROVED",
+    "PRODUCTION_ENFORCEMENT_NOT_REVIEWED",
+    "MATCHED_SIGNAL_NORMALIZATION_BLOCKED_PHASE7I",
+    "PHYSICAL_TOTAL_BACKGROUND_BLOCKED"
+  ],
+  "inactive_cards": [
+    {
+      "path": "analysis/phase10/config/cards/gamma_gamma_hf_processes.inactive.txt",
+      "status": "COMMENT_ONLY_REVIEW_SOURCE"
+    },
+    {
+      "path": "analysis/phase10/config/cards/gamma_gamma_matching_scan.inactive.txt",
+      "status": "COMMENT_ONLY_REVIEW_SOURCE"
+    }
+  ]
+}

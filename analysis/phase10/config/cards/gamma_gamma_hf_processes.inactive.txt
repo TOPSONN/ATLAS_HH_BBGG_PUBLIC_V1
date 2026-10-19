@@ -1,0 +1,24 @@
+# FUTURE_UNEXECUTED_PROPOSAL; DO_NOT_EXECUTE
+# This entire file is comments. No output, launch, integration or shower command exists.
+# 4F massive-bottom component syntax proposal, exact-process parser NOT executed:
+# import model sm
+# define p4 = g u u~ d d~ s s~ c c~
+# generate p4 p4 > b b~ a a QCD=2 QED=2
+# Model restriction source: sm/restrict_default.dat: MC=0, MB=4.7 GeV.
+# A matching four-flavour PDF, alpha_s prescription, photon isolation and cut values
+# remain UNFROZEN. Excluding b in p4 alone does NOT establish a four-flavour PDF.
+# This component must not be added to a separate overlapping inclusive 5F sample.
+#
+# Alternative inclusive 5F LO QCD multiplicity family syntax proposal:
+# import model sm-no_b_mass
+# define p5 = g u u~ d d~ s s~ c c~ b b~
+# define j5 = g u u~ d d~ s s~ c c~ b b~
+# generate p5 p5 > a a QCD=0 QED=2 @0
+# add process p5 p5 > a a j5 QCD=1 QED=2 @1
+# add process p5 p5 > a a j5 j5 QCD=2 QED=2 @2
+# This is a QCD tree multiplicity family, not full inclusive diphoton physics.
+# Loop-induced gg->aa, QED fragmentation, mixed-coupling contributions and higher
+# multiplicities require a declared scope and independent compatibility review.
+# No MLM/CKKW-L/FxFx setting or numerical merging scale is selected here.
+# Massive-charm alternative needs a separately checked three-flavour PDF/model
+# contract: sm-c_mass exists, but its restriction has MC=1.55, MB=4.7 GeV.

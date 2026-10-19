@@ -1,0 +1,39 @@
+{
+  "status": "PASS_ASSUMPTION_EXPLICIT_PRECISION_PLANNING",
+  "source_inputs": {
+    "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_rare_event_precision.csv": {
+      "sha256": "16dab8fd42b0ab9f70eaeae877a94be09a0a41f4368a0dff4614dc17d2372c87",
+      "bytes": 18223
+    },
+    "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_plot_data.json": {
+      "sha256": "4ec74e50dcd66c94f7a314ec82316b51cf47a08208ecc68fa966f9439f093bd5",
+      "bytes": 2848328
+    },
+    "/home/btu/simulations/hh_phase9/run_01/science_review_final/phase9a_independent_review.json": {
+      "sha256": "a86d894470f6e0f24777dd1e9801ba86d564fe2b562c7707ece364d87de152fc",
+      "bytes": 41742
+    }
+  },
+  "scenarios": 88,
+  "bin_support_rows": 3648,
+  "kappa_plan_rows": 16,
+  "original_independent_events": 7100,
+  "additional_independent_events": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "assumptions": {
+    "acceptance": "same fixed selection / IID source proposal; CP pilot envelope not future achieved-precision guarantee",
+    "weighted_rate": "unbiased raw source trial contributions, finite variance and stable higher moments; N0*pilot variance extrapolation; rare support can invalidate it",
+    "histogram": "separate raw bin rate and fraction/bin; normalized delta includes covariance already verified in Phase9; singleton/zero-variance empirical shape plans left undefined",
+    "proposal_uncertainty": "Historical proposal acceptance and weight moments do not transport to different matching/PDF/cuts; independent pilot and explicit densities required",
+    "physical_normalization": "UNKNOWN/BLOCKED; never folded into source MC precision",
+    "resampling": "No bootstrap/resample is counted as a new independent hard event",
+    "kappa": "2.5 and5 share old1000 sources; new independent-generation or known-density multiple proposals require separate authorization and full cross-kappa bookkeeping"
+  },
+  "physical_total_background": "BLOCKED",
+  "physical_significance": "NOT_EVALUATED",
+  "B02_20percent_acceptance_N": 24975,
+  "B02_20percent_weighted_Bessel_moment_N": 25000,
+  "B02_difference_explanation": "Bernoulli plugin p(1-p) vs finite-pilot Bessel variance N0/(N0-1); both conditional estimates, neither guaranteed."
+}

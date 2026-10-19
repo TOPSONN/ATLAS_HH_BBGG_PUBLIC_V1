@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_EVENT_UNIT_HF_STATISTICS_WITH_LIMITS",
+  "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+  "independent_implementation": "Integer source-event bit masks, exact Fraction raw moments, Decimal80 correlations; no production-module imports",
+  "metrics": {
+    "checks": 40296,
+    "existing_events_joined": 6000,
+    "unknown_endpoint_jets_preserved": 6637,
+    "covariance_schema_symmetry_rows": 6000,
+    "observed_constant_weight_cohorts": 3,
+    "selected_flag_stratum_checks": 180,
+    "independent_covariance_entries": 2160
+  },
+  "error_count": 0,
+  "errors": [],
+  "selected_flags": [
+    "ME_BOTTOM",
+    "ME_CHARM",
+    "ME_LIGHT_OR_GLUON",
+    "HAS_NATIVE_BOTTOM_JET",
+    "HAS_NATIVE_CHARM_JET",
+    "NATIVE_TAGS_0",
+    "NATIVE_TAGS_1",
+    "NATIVE_TAGS_GE2",
+    "HAS_SHOWER_BOTTOM_BIRTH",
+    "HAS_SHOWER_CHARM_BIRTH",
+    "HAS_DIRECT_G_TO_HEAVY_PAIR",
+    "HAS_HEAVY_HADRON_ELIGIBLE_JET"
+  ],
+  "source_files": {
+    "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_event_details.jsonl": {
+      "bytes": 23421671,
+      "sha256": "33e735989b03b98b49b98ad6eadbcc1681fb188d0e1380e0921dad98d639f45c"
+    },
+    "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl": {
+      "bytes": 17665060,
+      "sha256": "6535b5722c930898c3b7313af88ab62f492602be41eb6684c422ed90c19708eb"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_strata.csv": {
+      "bytes": 1280631,
+      "sha256": "3f5820028170a11666008aa15493be0d1b53f0a77f07fe8c3fed4d75e9f11be2"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_covariance.csv": {
+      "bytes": 761375,
+      "sha256": "0b3f567a279aedf56d968c69afe87031d474c4a5115ae752d20ea7064fa59c3e"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_summary.json": {
+      "bytes": 13507,
+      "sha256": "b025b32b8311302948c0cf88ab417935cf9c262981c77a070f6342fa92b2b2f9"
+    }
+  },
+  "limits": [
+    "No LHE/HepMC/ROOT raw truth graph reclassification; persisted shower/hadron labels are shared input evidence.",
+    "ME outgoing species and native bit0 are independently formed from persisted PDG/native fields.",
+    "All 6000 covariance rows receive schema/symmetry/bound checks; exact mask arithmetic covers selected 12x12 entries per dataset/stage.",
+    "Uses original-source-event statistical unit with all jets clustered; no independent per-jet sample count.",
+    "No claim of external human review, generator exclusivity or physical background normalization."
+  ],
+  "new_physical_events": 0,
+  "heavy_flavour_generator_exclusivity": "UNVERIFIED",
+  "physical_total_background": "BLOCKED"
+}

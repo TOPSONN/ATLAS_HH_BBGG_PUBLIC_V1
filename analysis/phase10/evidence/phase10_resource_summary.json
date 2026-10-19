@@ -1,0 +1,17 @@
+{
+  "status": "PASS_WITHIN_PHASE10_ANALYSIS_CAPS",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "recorded_jobs": 34,
+  "recorded_job_wall_seconds": 355.9303972230082,
+  "recorded_job_cpu_seconds": 332.749232,
+  "maximum_sampled_process_group_RSS_bytes": 941699072,
+  "current_build_and_result_bytes": 34110660,
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "wall_seconds": 14400,
+    "additional_output_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "scope": "Recorded computational jobs; not total human editing/system CPU. RSS is sampled. CPU/wall/disk containment applied per process group; no physical production."
+}

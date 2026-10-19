@@ -1,0 +1,570 @@
+{
+  "actual_existing_source_events_joined": 6000,
+  "checklist": [
+    {
+      "check": "EXACT_PHASE9_SOURCE_AND_PUBLICATION_BYTES",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "status": "PASS"
+    },
+    {
+      "check": "FULL_6000_RAW_LHE_HEPMC_INDEX_NATIVE_PERSISTED_JOINS",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS"
+    },
+    {
+      "check": "INDEPENDENT_SELECTION_BIT0_WEIGHTS_REGIONS",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS"
+    },
+    {
+      "check": "SELECTED_RAW_PYTHIA_GRAPH_WITNESSES",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS"
+    },
+    {
+      "check": "INDEPENDENT_RARE_INTERVALS_AND_FIXED_N_STATISTICS",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS"
+    },
+    {
+      "check": "PHOTON_UNKNOWN_AND_MULTI_MOTHER_UNKNOWN_PRESERVED",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS"
+    },
+    {
+      "check": "HISTORICAL_4668_ROOT_CANONICAL_BINDING",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "status": "PASS"
+    },
+    {
+      "check": "EXACT_CRLF_CSV_GIT_BLOB_IDENTITY",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "status": "PASS"
+    },
+    {
+      "check": "SCIENTIFIC_PHYSICAL_BLOCKERS_PRESERVED",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "status": "PASS"
+    }
+  ],
+  "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+  "external_independent_human_approval": false,
+  "fresh_native_ROOT_loops_in_this_review": 0,
+  "historical_ROOT_histogram_binding": {
+    "TH1D_count": 4052,
+    "TH2D_count": 616,
+    "actual_ROOT_objects": 4668,
+    "canonical_sha256": "4a8899dfde5b484d49e30438b704f81e77b648cb07d643e7360b0c181a2a9ed2",
+    "fresh_ROOT_readback": false,
+    "logical_descriptors": 4800,
+    "scope": "EXACT_FROZEN_MANIFEST_TO_HISTORICAL_NATIVE_ROOT_DIGEST_AND_OBJECT_COUNTS",
+    "undefined_shape_descriptors": 132
+  },
+  "independent_arithmetic": {
+    "HF_Decimal70_comparisons": 1200,
+    "background_histograms_recomputed": 108,
+    "cutflows": {
+      "B01": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "B02": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "B03": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "B04": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "B05": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "B06": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "eligible_native_jets_bit0_checked": 16569,
+    "histogram_comparisons": 3862,
+    "raw_source_BR_applied_once": true,
+    "selected_photon_objects": {
+      "ELECTRON_ASSOCIATED": 3,
+      "PROMPT_HARD_PROCESS": 6298,
+      "SHOWER_RADIATION": 24,
+      "UNCLASSIFIED": 674
+    },
+    "stage_region_Decimal70_comparisons": 510,
+    "unclassified_native_photon_objects": 756
+  },
+  "input_file_hashes": [
+    {
+      "bytes": 28747494,
+      "dataset_id": "B01",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/detector.root",
+      "role": "root",
+      "sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111"
+    },
+    {
+      "bytes": 71150226,
+      "dataset_id": "B01",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f"
+    },
+    {
+      "bytes": 166818,
+      "dataset_id": "B01",
+      "path": "/home/btu/projects/atlas_hh_phase8_v1/reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "role": "lhe",
+      "sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343"
+    },
+    {
+      "bytes": 71497127,
+      "dataset_id": "B01",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/input.hepmc3",
+      "role": "hepmc",
+      "sha256": "97ebc8dcbdd7ff249581a584f23e42e4d722961f65e8a370f6ca052d85c98db0"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B01",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47"
+    },
+    {
+      "bytes": 30570772,
+      "dataset_id": "B02",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/detector.root",
+      "role": "root",
+      "sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2"
+    },
+    {
+      "bytes": 76955296,
+      "dataset_id": "B02",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77"
+    },
+    {
+      "bytes": 165830,
+      "dataset_id": "B02",
+      "path": "/home/btu/projects/atlas_hh_phase8_v1/reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "role": "lhe",
+      "sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef"
+    },
+    {
+      "bytes": 78033465,
+      "dataset_id": "B02",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/input.hepmc3",
+      "role": "hepmc",
+      "sha256": "8259af7279df4828249da9e0f68dc9b3bf8ffc54ae8e8a112e2c9c16adba83bc"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B02",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522"
+    },
+    {
+      "bytes": 30235463,
+      "dataset_id": "B03",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/detector.root",
+      "role": "root",
+      "sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e"
+    },
+    {
+      "bytes": 76446710,
+      "dataset_id": "B03",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95"
+    },
+    {
+      "bytes": 168744,
+      "dataset_id": "B03",
+      "path": "/home/btu/projects/atlas_hh_phase8_v1/reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+      "role": "lhe",
+      "sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030"
+    },
+    {
+      "bytes": 78057236,
+      "dataset_id": "B03",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/input.hepmc3",
+      "role": "hepmc",
+      "sha256": "c62ba365bba6ddc4d4d1e613288af3215b89dce02d837f548f137b258d84ec5f"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B03",
+      "path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134"
+    },
+    {
+      "bytes": 24640561,
+      "dataset_id": "B04",
+      "path": "/home/btu/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/detector.root",
+      "role": "root",
+      "sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c"
+    },
+    {
+      "bytes": 47916529,
+      "dataset_id": "B04",
+      "path": "/home/btu/simulations/phase6g_runs/zh_1k_chain_v2/pythia/full1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31"
+    },
+    {
+      "bytes": 164495,
+      "dataset_id": "B04",
+      "path": "/home/btu/simulations/phase6g_runs/zh_1k_v2/mg5/process/Events/zh1000/unweighted_events.lhe.gz",
+      "role": "lhe",
+      "sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6"
+    },
+    {
+      "bytes": 95013521,
+      "dataset_id": "B04",
+      "path": "/home/btu/simulations/phase6g_runs/zh_1k_chain_v2/pythia/full1000/shower.hepmc3",
+      "role": "hepmc",
+      "sha256": "ae2055e5738ea228b38927c4b4008b6cd2e3ba7acecb28276dd0acd4c38cd0f5"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B04",
+      "path": "/home/btu/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d"
+    },
+    {
+      "bytes": 45839687,
+      "dataset_id": "B05",
+      "path": "/home/btu/simulations/phase6g_runs/tth_1k/delphes/full1000/detector.root",
+      "role": "root",
+      "sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e"
+    },
+    {
+      "bytes": 93166637,
+      "dataset_id": "B05",
+      "path": "/home/btu/simulations/phase6g_runs/tth_1k/pythia/full1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0"
+    },
+    {
+      "bytes": 134068,
+      "dataset_id": "B05",
+      "path": "/home/btu/simulations/phase6g_runs/tth_1k/mg5/process/Events/tth1000/unweighted_events.lhe.gz",
+      "role": "lhe",
+      "sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6"
+    },
+    {
+      "bytes": 177575532,
+      "dataset_id": "B05",
+      "path": "/home/btu/simulations/phase6g_runs/tth_1k/pythia/full1000/shower.hepmc3",
+      "role": "hepmc",
+      "sha256": "524a47c8a87516c30ff01cf03e9097e68d0eff9aa74b39a3a1d502a9ec6f90e4"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B05",
+      "path": "/home/btu/simulations/phase6g_runs/tth_1k/delphes/full1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742"
+    },
+    {
+      "bytes": 36916961,
+      "dataset_id": "B06",
+      "path": "/home/btu/simulations/phase6g_runs/bbgj_1k/delphes/full1000/detector.root",
+      "role": "root",
+      "sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+    },
+    {
+      "bytes": 72148612,
+      "dataset_id": "B06",
+      "path": "/home/btu/simulations/phase6g_runs/bbgj_1k/pythia/full1000/input_event_index.dat",
+      "role": "input_index",
+      "sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056"
+    },
+    {
+      "bytes": 171154,
+      "dataset_id": "B06",
+      "path": "/home/btu/simulations/phase6g_runs/bbgj_1k/mg5/process/Events/bbgj1000/unweighted_events.lhe.gz",
+      "role": "lhe",
+      "sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5"
+    },
+    {
+      "bytes": 146589922,
+      "dataset_id": "B06",
+      "path": "/home/btu/simulations/phase6g_runs/bbgj_1k/pythia/full1000/shower.hepmc3",
+      "role": "hepmc",
+      "sha256": "511eb6ea2bbdd053024b900b716cd433144d9e8f9f2d4677712cba88728d562a"
+    },
+    {
+      "bytes": 22243,
+      "dataset_id": "B06",
+      "path": "/home/btu/simulations/phase6g_runs/bbgj_1k/delphes/full1000/detector_card.tcl",
+      "role": "card",
+      "sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a"
+    }
+  ],
+  "limits": [
+    "Persisted Phase9 native records are not a fresh ROOT loop. Historical tuple validation is bound by exact original ROOT/index file hashes and original native receipt.",
+    "Three selected raw Pythia graph witnesses are independent selected checks, not independent all-event graph reclassification.",
+    "Hadron multi-mother endpoints and native flavour boundary ambiguity remain UNKNOWN.",
+    "Phase-space overlap does not establish ME/PS double counting or generator exclusivity.",
+    "Unclassified photons remain unclassified; no physical fake-rate estimate.",
+    "No external independent human signoff is claimed.",
+    "No physical total background or significance/CLs/kappa inference is evaluated."
+  ],
+  "new_physical_events": 0,
+  "publication": {
+    "csv_exact_byte_records": [
+      {
+        "CRLF": 4561,
+        "LF": 4561,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_bin_quality.csv",
+        "sha256": "ee0996afb8e2d34cf35a7b1e136d99d1f957db406966ef036c070e15bfdf6257"
+      },
+      {
+        "CRLF": 981,
+        "LF": 981,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_heavy_flavour_origins.csv",
+        "sha256": "efc780381f213616d93a492e707c24e66a178d3c53cc12f9694847dfa0b965ab"
+      },
+      {
+        "CRLF": 7,
+        "LF": 7,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_kappa_support.csv",
+        "sha256": "383b8b901ad744e23352274c8726c5463c1344e82e96ad990a10ac206b2eae57"
+      },
+      {
+        "CRLF": 43,
+        "LF": 43,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_mc_planning.csv",
+        "sha256": "f0490d48cd487c767360a3aaf8a3b20cee5bd731dbbf65c702c5a4294d732da5"
+      },
+      {
+        "CRLF": 751,
+        "LF": 751,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_photon_origin_study.csv",
+        "sha256": "aca72e8876bbf9f87fb61c2b8a1f915b4586c2132a65c26d18070143c81c9497"
+      },
+      {
+        "CRLF": 41,
+        "LF": 41,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_rare_event_precision.csv",
+        "sha256": "16dab8fd42b0ab9f70eaeae877a94be09a0a41f4368a0dff4614dc17d2372c87"
+      },
+      {
+        "CRLF": 121,
+        "LF": 121,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_region_diagnostics.csv",
+        "sha256": "e52ac09f437519ecd3cf3b276599ed96cfac01183149380fb5ffb3244000da02"
+      },
+      {
+        "CRLF": 1081,
+        "LF": 1081,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_region_observables.csv",
+        "sha256": "13b562f7ab47a88cdc3f9191aac6159dc4d2fc22541a861e2070f0874b1da5d4"
+      },
+      {
+        "CRLF": 865,
+        "LF": 865,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_shape_metrics.csv",
+        "sha256": "24a1ec5ae7e2f090311517e07b33633e67c23050d32845761898e4ba131e0aa8"
+      },
+      {
+        "CRLF": 1605,
+        "LF": 1605,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_shape_ratios.csv",
+        "sha256": "b9f71a55c807845093133f64b48d1414780dbcf3ae74ed4948f020d0f3d472e3"
+      },
+      {
+        "CRLF": 41,
+        "LF": 41,
+        "git_blob_bytes_equal": true,
+        "path": "analysis/phase9/evidence/phase9_source_tail_support.csv",
+        "sha256": "ba49bd7a4abfd7ba70a7521c957a769f0717613bd5a4bf58f7c80c86b98c7443"
+      }
+    ],
+    "current_Phase10_worktree_divergences": [],
+    "executed_source_files_verified": 44,
+    "executed_source_revision": "2584e342b80b20c314392d20d77d92a6ccb850c4",
+    "executed_to_base_changed_paths": [
+      "metadata/phase9_quality_gates.json",
+      "metadata/phase9_source_manifest.json",
+      "reports/phase9_final_report.md"
+    ],
+    "figure_publication_authorized": false,
+    "final_delivery_manifest_source_records": [
+      {
+        "path": "metadata/phase9_quality_gates.json",
+        "reason": "EXPLICIT_FINAL_REPORT_ONLY_DELIVERY_PATH_NOT_EXECUTABLE_SCIENTIFIC_SOURCE",
+        "revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+        "sha256": "771c9479262b90a26b4c4b5ebaa29359c502b1adcef4ae2f5c20b8e6f1a6c082"
+      },
+      {
+        "path": "reports/phase9_final_report.md",
+        "reason": "EXPLICIT_FINAL_REPORT_ONLY_DELIVERY_PATH_NOT_EXECUTABLE_SCIENTIFIC_SOURCE",
+        "revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+        "sha256": "e8291ae6ba75457db48da93e44e44a129dda9525617f4976ba2a3a1a33099c26"
+      }
+    ],
+    "old_phase9_checkout": {
+      "HEAD": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "clean": true,
+      "index_sha256": "16bafc85092721f3dd5c70764c4c9516049be363fb7211c8d8564fa4ced7f3cb",
+      "initial_audit_sha256": "97e2f03f463658880ecb5f396dd095f2786d41be497bdfceb7842ab77febe621",
+      "path": "/home/btu/projects/atlas_hh_phase9_v1"
+    },
+    "published_files_verified": 88,
+    "reviewed_base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+    "scope": "BASE_GIT_BLOBS_EQUALS_ACTUAL_SAVED_PHASE9_REMOTE_DOWNLOADS_EQUALS_RECEIPT_HASHES_AND_OLD_PHASE9_CHECKOUT; NO_FRESH_REMOTE_DOWNLOAD"
+  },
+  "reviewer": "SEPARATE_PHASE10_IMPLEMENTATION_AGENT",
+  "schema_version": 1,
+  "selected_raw_graph_witnesses": [
+    {
+      "dataset_id": "B01",
+      "independent_graph_counts": {
+        "direct_gluon_splitting_mothers": [],
+        "heavy_quark_birth_counts": {
+          "ME_HEAVY_FLAVOUR_RECORD": 2
+        },
+        "shower_bottom_births": 0,
+        "shower_charm_births": 0,
+        "terminal_b_hadrons": 2,
+        "terminal_c_hadrons": 4
+      },
+      "independent_hadron_jet_labels": {
+        "0": 5,
+        "1": 5,
+        "3": 0
+      },
+      "raw_diagnostic_file_sha256": "9dacab7f07efe22ff3fd84cc6cd1d4429214f656f258f60a44513b5f7179fc46",
+      "source_event_index": 1,
+      "source_event_sha256": "75c77f7b7c349095c8b38366a30a3992be8396440ff08c31fd46f09fc7c4a9b7",
+      "unknown_endpoint_preserved": true
+    },
+    {
+      "dataset_id": "B02",
+      "independent_graph_counts": {
+        "direct_gluon_splitting_mothers": [],
+        "heavy_quark_birth_counts": {
+          "ME_HEAVY_FLAVOUR_RECORD": 2
+        },
+        "shower_bottom_births": 0,
+        "shower_charm_births": 0,
+        "terminal_b_hadrons": 0,
+        "terminal_c_hadrons": 2
+      },
+      "independent_hadron_jet_labels": {
+        "0": 0,
+        "1": 4,
+        "2": 4,
+        "3": 0
+      },
+      "raw_diagnostic_file_sha256": "578e3d69330bac21f0864555d797072153026b0244bbe1ae29e11f9594150d07",
+      "source_event_index": 1,
+      "source_event_sha256": "53839a29c4d0d931711a89dc3f78116713f8332888b15087e857c6e6de03b4ce",
+      "unknown_endpoint_preserved": true
+    },
+    {
+      "dataset_id": "B03",
+      "independent_graph_counts": {
+        "direct_gluon_splitting_mothers": [
+          17
+        ],
+        "heavy_quark_birth_counts": {
+          "SHOWER_HEAVY_FLAVOUR_BIRTH": 2
+        },
+        "shower_bottom_births": 2,
+        "shower_charm_births": 0,
+        "terminal_b_hadrons": 2,
+        "terminal_c_hadrons": 3
+      },
+      "independent_hadron_jet_labels": {
+        "0": 5,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "raw_diagnostic_file_sha256": "a670b8e3b8bf23fa02337416241dd5cdad458133e603169624445a0706e1ab5a",
+      "source_event_index": 997,
+      "source_event_sha256": "322457dfbd206b7cbd2c243f7b437970b82bb03c38fafe7721e40709f77127b8",
+      "unknown_endpoint_preserved": true
+    }
+  ],
+  "source_joins": [
+    {
+      "dataset_id": "B01",
+      "ordered_source_identity_sha256": "d9fccf350f610ce89835f8dc40367240270d274b61c3d265edcec43fb3d955e3",
+      "source_joins": 1000
+    },
+    {
+      "dataset_id": "B02",
+      "ordered_source_identity_sha256": "710c98fd81ef9df31acf0721817ef9b628006dd4f50b810f75236a5517eb6eaa",
+      "source_joins": 1000
+    },
+    {
+      "dataset_id": "B03",
+      "ordered_source_identity_sha256": "0efca121592ef6809e3dfafe256b04e1e8ce76fc568e5e64638933be0dd33bb5",
+      "source_joins": 1000
+    },
+    {
+      "dataset_id": "B04",
+      "ordered_source_identity_sha256": "7dda8f1f7d82bdc2c58ca0b1692c021ecfec01115d0f8ca0d2c6caf913f32b47",
+      "source_joins": 1000
+    },
+    {
+      "dataset_id": "B05",
+      "ordered_source_identity_sha256": "c649e4a70074c331aff9969614ab398a090342a0c0514d5e168ff965fbe51ebf",
+      "source_joins": 1000
+    },
+    {
+      "dataset_id": "B06",
+      "ordered_source_identity_sha256": "1d4fcfd3738729f574259a976b5e5378c3baa7796d73302bc7d6922ac0b99b04",
+      "source_joins": 1000
+    }
+  ],
+  "source_scope": [
+    "ACTUAL_EXISTING_DATA_READBACK",
+    "HISTORICAL_SOURCE_AUDIT"
+  ],
+  "status": "PASS_INDEPENDENT_PHASE9_REVIEW_WITH_LIMITS"
+}

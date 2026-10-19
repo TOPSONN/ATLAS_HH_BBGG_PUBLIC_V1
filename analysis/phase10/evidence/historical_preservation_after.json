@@ -1,0 +1,51 @@
+{
+  "status": "PASS_EXACT_HISTORICAL_BYTES",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "file_count": 970,
+  "bytes": 2437833683,
+  "all_preexisting_phase9_local_versions_preserved": true,
+  "errors": [],
+  "before_manifest_sha256": "f37be9c716b09cddd791aae83c151cf4ad6b8d2e072b508c7bb5e6f4ee9adf24",
+  "scope": "970 explicitly monitored historical input/result/report/receipt/figure files; not a recursive audit of every file in all stopped workspaces.",
+  "old_phase9_index_sha256": "16bafc85092721f3dd5c70764c4c9516049be363fb7211c8d8564fa4ced7f3cb",
+  "old_source_checks": {
+    "Phase9": {
+      "path": "/home/btu/projects/atlas_hh_phase9_v1",
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "index_sha256": "16bafc85092721f3dd5c70764c4c9516049be363fb7211c8d8564fa4ced7f3cb",
+      "no_write_dispatch_to_this_workspace": true
+    },
+    "Phase8": {
+      "path": "/home/btu/projects/atlas_hh_phase8_v1",
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "index_sha256": "67954b682f4401670304c84d9e50cf9c8be0f42668e4ab0cbee5a3da7c91d3e6",
+      "no_write_dispatch_to_this_workspace": true
+    },
+    "Phase7I_stopped": {
+      "path": "/home/btu/projects/atlas_hh_phase7i_b80e1677",
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "index_sha256": "2661d7332a5b50f4626631c9ccce5cfbfaceff9f0384a2e85e523a720ea42d18",
+      "no_write_dispatch_to_this_workspace": true
+    }
+  },
+  "old_PRs": {
+    "24": {
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "draft": true,
+      "state": "open",
+      "merged_at": null
+    },
+    "25": {
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "draft": true,
+      "state": "open",
+      "merged_at": null
+    },
+    "26": {
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "draft": true,
+      "state": "open",
+      "merged_at": null
+    }
+  }
+}
