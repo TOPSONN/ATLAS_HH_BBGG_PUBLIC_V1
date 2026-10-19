@@ -99,6 +99,17 @@ class ScientificContractTests(unittest.TestCase):
         c=self.contract["resource_ceilings"]
         self.assertEqual((c["wall_seconds"],c["CPU_seconds"],c["additional_output_bytes"],c["concurrent_analysis_jobs"],c["workers"]),(14400,14400,2*1024**3,1,1))
 
+class PublicNumericEvidenceTests(unittest.TestCase):
+    def test_actual_published_payload_sha256(self):
+        import hashlib
+        directory=Path(__file__).resolve().parents[3]/'reference_samples/phase8/v1'
+        manifest=json.loads((directory/'manifest.json').read_text())
+        self.assertLess(sum(v['bytes'] for v in manifest['files'].values()),5*1024*1024)
+        for name,expected in manifest['files'].items():
+            data=(directory/name).read_bytes()
+            self.assertEqual(len(data),expected['bytes'],name)
+            self.assertEqual(hashlib.sha256(data).hexdigest(),expected['sha256'],name)
+
 class IndependentNumericalMethodTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):cls.stat=module("independent_statistics");cls.post=module("postprocess")

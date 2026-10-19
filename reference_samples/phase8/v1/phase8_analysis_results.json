@@ -1112,7 +1112,7 @@
   "PEAK_OBSERVED_MEMORY": 863653888,
   "ACTUAL_DISK_USAGE": 163876163,
   "RESOURCE_MEASUREMENT_SCOPE": "Contained build, method, existing-input analysis and regression commands; lightweight source-inspection/report-authoring subprocess CPU is not metered. Wall is summed command wall, not human conversation elapsed time.",
-  "METHOD_TESTS": "PASS_9_CTEST_91_PYTHON_PLUS_ACTUAL_ROOFIT_TOY",
+  "METHOD_TESTS": "PASS_9_CTEST_92_PYTHON_PLUS_26_ACTUAL_ROOFIT_TOY_CHECKS",
   "REFERENCE_PREFIX_TESTS": {
     "status": "PASS_EXACT_PREFIX_FULL_EVENT_SUMMARY_IDENTITY",
     "actual_prefix_entries_read": 800,
@@ -1164,5 +1164,6 @@
   "PHASE8J_LIKELIHOOD_METHODS": "PASS_SYNTHETIC_METHOD_ONLY_PHYSICAL_FIT_BLOCKED",
   "PHASE8K_SYSTEMATICS": "READINESS_RECORDED_PHYSICAL_NUISANCES_UNKNOWN",
   "PHASE8L_FINAL_VALIDATION": "PASS_LOCAL_VALIDATION_REMOTE_CI_PENDING",
-  "reviewable_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930"
+  "reviewable_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+  "publication_serialization_gate": "PASS_EXACT_PUBLIC_CSV_BYTES"
 }

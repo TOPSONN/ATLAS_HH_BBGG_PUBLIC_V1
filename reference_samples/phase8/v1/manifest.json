@@ -14,8 +14,8 @@
       "bytes": 1539
     },
     "phase8_analysis_results.json": {
-      "sha256": "61b7a90edfe97c22a4ef37085142c6839f8ce57fe5b26bc50984576f9ff6a33c",
-      "bytes": 48252
+      "sha256": "fdd11b3562928fed6cdc568f78e7e5f9d8b58652030acbf46b7fca1b9946c530",
+      "bytes": 48329
     },
     "phase8_background_overlap_matrix.json": {
       "sha256": "008b4db972b837e63d10ad378d4debd54e77c4d545475bbfebf1d592d3a352d0",
@@ -38,8 +38,8 @@
       "bytes": 5951
     },
     "phase8_execution_manifest.json": {
-      "sha256": "254ed2ddd07f64a4805a4a4aa3ea9f0f2f992c848f52d34f91a190cd7b4728c5",
-      "bytes": 19941
+      "sha256": "aae545639aab4ce2d526ac4df0d9100236c90010ac2aed31f994a10f6b097183",
+      "bytes": 20259
     },
     "phase8_fake_photon_readiness.json": {
       "sha256": "783693ccb7ee6d35b236b009d673965c8a574bed911aed156fc0f05c82adf310",
@@ -123,5 +123,6 @@
     }
   },
   "publication_head_and_CI": "Final exact head receipt saved locally after publication; GitHub checks attached to PR are authoritative.",
-  "source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930"
+  "source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+  "git_serialization": "Scoped .gitattributes preserves exact emitted CSV bytes (including original CRLF where present); payload SHA256 binds the published blob bytes."
 }

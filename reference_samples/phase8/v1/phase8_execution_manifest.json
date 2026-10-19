@@ -435,5 +435,12 @@
     "new_Pythia_events": 0,
     "new_Delphes_events": 0
   },
-  "reviewable_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930"
+  "reviewable_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+  "post_analysis_publication_regression": {
+    "Python_tests": 92,
+    "status": "PASS",
+    "additional_test": "Every bounded public numeric payload byte count and SHA256",
+    "test_source_sha256": "8c3802b83a579366acef218d5660085712fd920a0c1c9a817069dcec041850a1",
+    "core_analysis_sources_unchanged": true
+  }
 }

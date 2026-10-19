@@ -61,7 +61,7 @@ Shape比較是固定分箱descriptive metrics，normalized-bin variance保留bin
 ## 方法與regression
 
 - Native CTest 9/9 PASS，包括3項既有ROOT step1 regression。
-- Python unittest 91/91 PASS，包含truncated/duplicate/missing-cell/source/hash、zero/signed weights、prefix完整度、resource timeout與orphan process-group negative tests。
+- Python unittest 92/92 PASS，包含truncated/duplicate/missing-cell/source/hash、zero/signed weights、prefix完整度、resource timeout與orphan process-group negative tests。
 - Actual RooFit/RooStats synthetic methods 26/26 PASS；Asimov μ=0.999999806946、EDM=1.723×10⁻¹²。
 - 五個既有signal/new-background/MG5-LHE/Pythia-HepMC/Delphes frozen-reference validators全部PASS。
 - 獨立完整native/historical event-level regression、Decimal70 moments/covariance、prefix readback與repeatability全部PASS。
@@ -84,4 +84,4 @@ Aggregate ceiling為4h CPU／4h command wall、1job／1worker、2GiB額外analys
 
 技術gate已通過；physical overlap、fake calibration、official detector/systematic calibration與κλ=2.5／5支持仍blocked，相關uncertainties未知而非0。下一步是審查本次source與數值證據，取得獨立校準資料及source-definition方案；任何新physical production都需另外授權。本次不以完成analysis宣稱ATLAS physics precision、發現、顯著度或limit。
 
-Native implementation與方法source commit：`19faeaf487fb1f9b49ff00f5cf85eeeb1c949930`。該commit的所有C++／Python／config bytes均與execution manifest source hashes相符；後續commit僅加入metadata、數值證據與報告。
+Native implementation與方法source commit：`19faeaf487fb1f9b49ff00f5cf85eeeb1c949930`。該commit的所有C++／Python／config bytes均與execution manifest source hashes相符；後續publication commits加入metadata、數值證據、報告、CSV byte-preservation設定與其SHA regression；不改變該次native分析或科學計算。
