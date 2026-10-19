@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
   "base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
-  "source_payload_commit": null,
+  "source_payload_commit": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
   "source_capture_semantics": "Final executable sources bound by per-module before/after hashes and reviewed source commit. Only quality gates, source manifest and final report may change in delivery commit; published numerical evidence immutable.",
   "source_files": [
     {
@@ -177,13 +177,13 @@
     },
     {
       "path": "metadata/phase10_quality_gates.json",
-      "bytes": 4367,
-      "sha256": "5fea842836c14ce3978c72a4b26084346101934e6cb43ab8ad032202e8761d31"
+      "bytes": 4485,
+      "sha256": "eeace589ff330556658702abfea5bcafe966e164aee3665c8e86fc21dc11a50e"
     },
     {
       "path": "reports/phase10_final_report.md",
-      "bytes": 9388,
-      "sha256": "44d97cdbdba88977b4b09ab47bfdc5e9042489681d5f47534c3c014cf9510c69"
+      "bytes": 10289,
+      "sha256": "7f2a70ba851d0bdbe8ce693130906a9e5c8531920d9a85722b5bb690c972a856"
     },
     {
       "path": "reports/phase10a_independent_review.md",
@@ -530,5 +530,10 @@
     }
   ],
   "historical_core": "Unchanged Phase8/9 source at exact BASE; Phase9 executed source2584e342b80b20c314392d20d77d92a6ccb850c4, with exact 3 delivery-only paths checked by A05.",
-  "figure_publication_authorized": false
+  "figure_publication_authorized": false,
+  "delivery_only_paths": [
+    "metadata/phase10_quality_gates.json",
+    "metadata/phase10_source_manifest.json",
+    "reports/phase10_final_report.md"
+  ]
 }

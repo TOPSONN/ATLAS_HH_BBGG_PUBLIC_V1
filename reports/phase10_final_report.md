@@ -40,11 +40,11 @@ ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a
 
 **NEW_SOURCE_REVISION:**
 
-reviewed worktree; source commit recorded by delivery commit
+82bb66821c5bbf2bac58e9945fe7c0e9239220dd
 
 **DRAFT_PR_URL:**
 
-new stacked Draft PR created after reviewed source payload push
+https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/27
 
 **PHASE9_INDEPENDENT_REVIEW:**
 
@@ -301,3 +301,9 @@ Review inactive exact-process flavour/PDF/alpha_s/photon-IR and calibration cont
 - [G 完整科學筆記](phase10g_analysis_note.md)／[操作說明](../analysis/phase10/README_ZH_TW.md)
 
 已知物理blockers保留；下一步僅為review，任何新pilot都需要另外明確授權。
+
+## 最終來源與 delivery 綁定
+
+科學與執行來源 commit 為 `82bb66821c5bbf2bac58e9945fe7c0e9239220dd`；本次後續 delivery commit 僅更新 `metadata/phase10_quality_gates.json`、`metadata/phase10_source_manifest.json`、本報告三個檔案。所有計算來源及數值證據與該 source commit 完全一致。最終 delivery HEAD 的 GitHub CI 與逐檔遠端 bytes 收據，於 push 後保存在本機 `FINAL_REPORT.json`，避免報告引用自己的未產生 commit。
+
+推送前出版檢查另外抓到一個數值檢查 JSON 的 evidence_class 使用複合文字；已改為允許的 HISTORICAL_SOURCE_AUDIT，重跑 planner／獨立覆核與143項測試。逐檔證明除該分類文字外所有 precision 輸出完全相同，舊收據保留，見 `phase10_classification_closure.json`。CSV 以 -text 保留原始 CRLF bytes；Git whitespace 檢查明確使用 cr-at-eol，未正規化原結果。
