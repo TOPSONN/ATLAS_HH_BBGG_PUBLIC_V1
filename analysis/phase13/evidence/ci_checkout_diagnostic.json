@@ -1,0 +1,41 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "CONFIRMED_CI_CHECKOUT_MISMATCH_NOT_RELAXED_PUBLICATION_GATE",
+  "source_revision": "bea266671de8555c672f73c8d7728b87e958ad8c",
+  "runs": [
+    {
+      "conclusion": "failure",
+      "databaseId": 39240283690,
+      "event": "pull_request",
+      "headSha": "bea266671de8555c672f73c8d7728b87e958ad8c",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240283690",
+      "workflowName": "Phase13 isolated runtime source and parser approval boundary"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39240226915,
+      "event": "push",
+      "headSha": "bea266671de8555c672f73c8d7728b87e958ad8c",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240226915",
+      "workflowName": "Phase13 isolated runtime source and parser approval boundary"
+    }
+  ],
+  "PR_ci_error": "OUTGOING_MERGE_COMMIT_FORBIDDEN",
+  "synthetic_merge_commit": "e5e9a0ff7b95af7813fbc1aaf3b3a36ed24a9f33",
+  "parents": [
+    "d95ca4c98352f460af955a1bad5372f63cfcee4a",
+    "bea266671de8555c672f73c8d7728b87e958ad8c"
+  ],
+  "fix": "Checkout exact pull_request.head.sha on PR events and github.sha on push events. Keep merge rejection unchanged.",
+  "workflow_before": {
+    "bytes": 1718,
+    "sha256": "48dfcdaf5bf3f958545b24f84a28c6cf428074217764e0ea75bd4e34c348d24f"
+  },
+  "workflow_after": {
+    "bytes": 1789,
+    "sha256": "3f2f4b0a114c168fcd358dd50e0de16fe7f25351ab9e6390a2fbd984b2bcc593"
+  },
+  "MG5_and_physical_execution": false
+}

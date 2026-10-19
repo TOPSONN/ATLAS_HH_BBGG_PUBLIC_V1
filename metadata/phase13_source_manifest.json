@@ -4,8 +4,8 @@
   "source_files": [
     {
       "path": ".github/workflows/phase13-source.yml",
-      "bytes": 1718,
-      "sha256": "48dfcdaf5bf3f958545b24f84a28c6cf428074217764e0ea75bd4e34c348d24f"
+      "bytes": 1789,
+      "sha256": "3f2f4b0a114c168fcd358dd50e0de16fe7f25351ab9e6390a2fbd984b2bcc593"
     },
     {
       "path": "analysis/phase13/README_ZH_TW.md",
@@ -187,6 +187,18 @@
       "evidence_class": "PUBLIC_SOURCE_AUDIT"
     },
     {
+      "path": "analysis/phase13/evidence/ci_checkout_diagnostic.json",
+      "bytes": 1602,
+      "sha256": "e4da1fbdc939e8fbe265dae07ec35b43b5bc4403bc94d2c66c4d6964d4b5677a",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase13/evidence/ci_checkout_independent_review.json",
+      "bytes": 12666,
+      "sha256": "b518cc4d9ebe3af0b26c47c10b0ff864f2b92e1d130017683629bf0dd44c5465",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
       "path": "analysis/phase13/evidence/historical_pr_preservation.json",
       "bytes": 2029,
       "sha256": "af44f73365112868392b67ef7dbb6fc5d7783286485186d9b6a389bb8d61d675",
@@ -346,6 +358,18 @@
       "path": "analysis/phase13/evidence/phase13_unit_03_execution.json",
       "bytes": 638,
       "sha256": "d705fef36769f4e75f30f6c55cc6c1a0d8618dea04d78803416fa828ecf1233f",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase13/evidence/phase13_unit_04.log",
+      "bytes": 24283,
+      "sha256": "8101c73dc7199fcd260b8608975516c2c2a18fc6269f8ed7da1d1df6f0f5ef79",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase13/evidence/phase13_unit_04_execution.json",
+      "bytes": 640,
+      "sha256": "ded59575b7febc362c5e114960f97c9365090cd7d29d918f298dec376f522b0a",
       "evidence_class": "HISTORICAL_SOURCE_AUDIT"
     },
     {

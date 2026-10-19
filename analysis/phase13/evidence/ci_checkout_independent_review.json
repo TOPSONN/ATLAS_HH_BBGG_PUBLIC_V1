@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_ONE_LINE_CI_HEAD_CHECKOUT_REVIEW_NO_GATE_RELAXATION",
+  "observed_UTC": "2026-10-19T10:54:20.785040+00:00",
+  "review_scope": "Read-only Git blob/worktree byte comparison, AST constant review, preserved CI diagnostic and package01 identity; no workflow rerun or MG5 invocation",
+  "reviewed_prior_source_revision": "bea266671de8555c672f73c8d7728b87e958ad8c",
+  "workflow_path": ".github/workflows/phase13-source.yml",
+  "workflow_before": {
+    "bytes": 1718,
+    "sha256": "48dfcdaf5bf3f958545b24f84a28c6cf428074217764e0ea75bd4e34c348d24f"
+  },
+  "workflow_after": {
+    "bytes": 1789,
+    "sha256": "3f2f4b0a114c168fcd358dd50e0de16fe7f25351ab9e6390a2fbd984b2bcc593"
+  },
+  "exact_added_line": "          ref: ${{ github.event.pull_request.head.sha || github.sha }}",
+  "checks_passed": 44,
+  "checks": [
+    {
+      "check": "baseline_source_revision_full_identity",
+      "result": "PASS"
+    },
+    {
+      "check": "workflow_change_exactly_one_added_ref_line",
+      "result": "PASS"
+    },
+    {
+      "check": "workflow_size_and_SHA_matches_saved_diagnostic",
+      "result": "PASS"
+    },
+    {
+      "check": "checkout_action_version_unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "full_git_history_fetch_unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "read_only_workflow_permissions_unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "no_new_workflow_triggers_or_job_commands",
+      "result": "PASS"
+    },
+    {
+      "check": "head_SHA_used_for_PR_and_github_SHA_for_absent_PR_context",
+      "result": "PASS"
+    },
+    {
+      "check": "saved_PR_failure_is_merge_guard_reason",
+      "result": "PASS"
+    },
+    {
+      "check": "synthetic_merge_parents_are_base_and_proposed_source",
+      "result": "PASS"
+    },
+    {
+      "check": "saved_same_source_push_PASS_and_PR_failure_distinguished",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/config/model_process_ir.json",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/config/process.inactive.txt",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/config/runtime_layout.json",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/audit_model_ir.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/audit_pdf_backend.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/check_publication.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/parser_child.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/prepare_parser_package.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/prepare_runtime.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/run_parser_review.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/run_resource_fixtures.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/scripts/validate_parser_rejections.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/model_ir.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/native_guard.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/parser_contract.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/pdf_backend.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/publication.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/source/runtime_layout.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_model_ir.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_native_guard.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_parser_contract.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_pdf_backend.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_publication.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_analysis/phase13/tests/test_runtime_layout.py",
+      "result": "PASS"
+    },
+    {
+      "check": "source_unchanged_metadata/phase13_parser_review_contract.json",
+      "result": "PASS"
+    },
+    {
+      "check": "all_runtime_scientific_authorization_and_gate_sources_unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "merge_rejection_policy_still_present_unmodified",
+      "result": "PASS"
+    },
+    {
+      "check": "current_source_parser_dispatch_still_hard_blocked",
+      "result": "PASS"
+    },
+    {
+      "check": "package01_stays_at_original_source_revision",
+      "result": "PASS"
+    },
+    {
+      "check": "package01_remains_unauthorized_unexecuted_ineligible",
+      "result": "PASS"
+    },
+    {
+      "check": "package01_pins_original_workflow_hash",
+      "result": "PASS"
+    },
+    {
+      "check": "package01_workflow_source_closure_now_requires_new_package",
+      "result": "PASS"
+    },
+    {
+      "check": "package01_and_workflow_unchanged_during_review",
+      "result": "PASS"
+    }
+  ],
+  "unchanged_source_file_count": 25,
+  "unchanged_sources": [
+    {
+      "path": "analysis/phase13/config/model_process_ir.json",
+      "bytes": 9932,
+      "sha256": "4fdae751752f3da3e4cb56198f90c36c24ec884d179adecca855d26582a43a23"
+    },
+    {
+      "path": "analysis/phase13/config/process.inactive.txt",
+      "bytes": 267,
+      "sha256": "8cee7cffd159b3c63afa24acef42ee872ea9188b5931b3e3f24149aeefbd19d4"
+    },
+    {
+      "path": "analysis/phase13/config/runtime_layout.json",
+      "bytes": 1119,
+      "sha256": "dbc01431247e87f4f48d759e8ef54662ec0778a3afa1e70589ea4f5c19f09e32"
+    },
+    {
+      "path": "analysis/phase13/scripts/audit_model_ir.py",
+      "bytes": 2098,
+      "sha256": "cae6f439503cc9794da04c57f50e3b67fe5654b71e70c7f33875192737ebc410"
+    },
+    {
+      "path": "analysis/phase13/scripts/audit_pdf_backend.py",
+      "bytes": 2383,
+      "sha256": "48276a543354b0b291979eea959b54aecc1a05e34c87c030d1fa317c6c06f2a1"
+    },
+    {
+      "path": "analysis/phase13/scripts/check_publication.py",
+      "bytes": 466,
+      "sha256": "e280395a5b8dc0ac07ffb1a338ccb5c261a845558a21b02fbbcb3612e0121f2e"
+    },
+    {
+      "path": "analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "analysis/phase13/scripts/prepare_runtime.py",
+      "bytes": 1000,
+      "sha256": "0e9297d7279e785d0983c49079cea2ec739d27aa7e131273e9834bba04cc8159"
+    },
+    {
+      "path": "analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "analysis/phase13/scripts/run_resource_fixtures.py",
+      "bytes": 3599,
+      "sha256": "0613e015827a1a373d0cf1a5cc0dd536c3b410d3e7e4d4496be574e7394f3f11"
+    },
+    {
+      "path": "analysis/phase13/scripts/validate_parser_rejections.py",
+      "bytes": 1650,
+      "sha256": "1d87b41b34b7052efc65ef5212680849073f52e98d2726fbe6ffaacfb6a684ce"
+    },
+    {
+      "path": "analysis/phase13/source/model_ir.py",
+      "bytes": 12149,
+      "sha256": "0552158f575ada7a3689d9807657e767d59deac2407c5f4d18b14cc2ee8c1f5d"
+    },
+    {
+      "path": "analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "analysis/phase13/source/parser_contract.py",
+      "bytes": 11370,
+      "sha256": "5549d5c496d10d9d6e1eab3f41f0af82ed4aff4fa2e24437ef5b518856b01d30"
+    },
+    {
+      "path": "analysis/phase13/source/pdf_backend.py",
+      "bytes": 20416,
+      "sha256": "c067bcac44ade78380f5fe462fb1a4c35941887b1cb917aa914cfea3f248fc9d"
+    },
+    {
+      "path": "analysis/phase13/source/publication.py",
+      "bytes": 11084,
+      "sha256": "707117e75a9db22672eabacf0d53e45a5c30f1d028e6b7a52967a1ae78feb993"
+    },
+    {
+      "path": "analysis/phase13/source/runtime_layout.py",
+      "bytes": 15262,
+      "sha256": "07b5bd7e9e4b71a2b70e66fc0102865101af8a01460bc981c5dac6568560c65c"
+    },
+    {
+      "path": "analysis/phase13/tests/test_model_ir.py",
+      "bytes": 7136,
+      "sha256": "c265a7ca4b550eeecddc3e86e2dc82115f5363bfd46ed60f44b6048285526175"
+    },
+    {
+      "path": "analysis/phase13/tests/test_native_guard.py",
+      "bytes": 6131,
+      "sha256": "bd3483f790e9d954850e2261706c3ed02e2bca7882765b9e127e7f7846c3b909"
+    },
+    {
+      "path": "analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    },
+    {
+      "path": "analysis/phase13/tests/test_pdf_backend.py",
+      "bytes": 9962,
+      "sha256": "e386f1d1790ff13addd9f25193ea097e2caad45b8f10ad6b7ee7eeae551c5736"
+    },
+    {
+      "path": "analysis/phase13/tests/test_publication.py",
+      "bytes": 11440,
+      "sha256": "6a8824cb8814a21e1c17b5c4a9e66d03984253d4c261362b04c34f101911de82"
+    },
+    {
+      "path": "analysis/phase13/tests/test_runtime_layout.py",
+      "bytes": 11576,
+      "sha256": "02b10f1da3921829b159e5922aa5ed94cab20a57dc253cebecea7c0a0834f633"
+    },
+    {
+      "path": "metadata/phase13_parser_review_contract.json",
+      "bytes": 2167,
+      "sha256": "601386c8a13732ff1f3ed89ef08b1b54d7ef2f839147af7aa83fb552b0be00ac"
+    }
+  ],
+  "diagnostic_identity": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/ci_checkout_diagnostic.json",
+    "bytes": 1602,
+    "sha256": "e4da1fbdc939e8fbe265dae07ec35b43b5bc4403bc94d2c66c4d6964d4b5677a"
+  },
+  "package01_preserved_identity": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/parser_only_approval_package.json",
+    "bytes": 11610,
+    "sha256": "244c9848c9f7cb0b95031f6b336a5781604c7c327e8c078087b6fe049b5c60a6"
+  },
+  "interpretation_zh_tw": "PR 事件改用 event payload 的 exact head SHA；非 PR 事件回到 github.sha。完整 Git history 與每個 outgoing commit 的 merge／payload gate 保持原樣。這避免 synthetic merge 成為被審查的 source history；不是放寬 merge 政策。",
+  "official_primary_sources": [
+    {
+      "url": "https://github.com/actions/checkout/tree/v4#checkout-pull-request-head-commit-instead-of-merge-commit",
+      "supports": "Checkout v4 officially documents pull_request.head.sha for checking PR head rather than synthetic merge."
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request",
+      "supports": "pull_request default GITHUB_SHA/GITHUB_REF describe the synthetic merge; head.sha selects head commit."
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts",
+      "supports": "A nonexistent context property evaluates to an empty string."
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/expressions",
+      "supports": "Empty string is falsy; logical OR supports the github.sha fallback."
+    }
+  ],
+  "limits_zh_tw": [
+    "尚未執行修正後的 GitHub workflow；新的 CI conclusion 待 root push 後查驗。",
+    "本 CI 的 checkout scope 是 exact head source／method audit，不宣稱合成 merge integration testing 已通過。",
+    "workflow 是 source closure 的一部分；package01 不能靜默改綁新 revision，必須保留並建立新 blocked package02。",
+    "沒有改變 resource blocker、human approval、physics contract、scientific cuts、PDF binding 或 publication gate。"
+  ],
+  "new_MG5_processes": 0,
+  "MG5_parser_executed": false,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "new_human_approval_created": false,
+  "source_files_modified_by_reviewer": false
+}
