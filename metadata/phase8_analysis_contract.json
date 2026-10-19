@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task": "PHASE8_FULL_HH_BBGG_ANALYSIS_V1",
+  "base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
+  "implementation": "C++20 ROOT 6.40.04 EXACT",
+  "mode": "EXISTING_DATA_ONLY",
+  "datasets": [
+    "S01_B100",
+    "S01_C1000",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ],
+  "expected_independent_sources": 7100,
+  "kappa_rows_are_independent_events": false,
+  "selection": "selection_v1.json",
+  "histogram_edges": "histogram_edges_v1.json",
+  "regions": "regions_v1.json",
+  "weights": {
+    "source": "LHE_XWGTUP_pb / original_N once",
+    "MODEL_BR_ONLY": "own pinned model factor once after source normalization",
+    "pb_to_100fb_inverse": 100000,
+    "statistical_variance": "fixed original N centered estimator; zeros after cuts retained",
+    "sumw2_is_sampling_variance": false,
+    "conditional_tag_variance_added_to_observed_sampling_variance": false,
+    "integration_error_combined_with_event_variance": false
+  },
+  "prohibited_operations": [
+    "NEW_ME_CALLS",
+    "NEW_INTEGRALS",
+    "NEW_HARD_EVENTS",
+    "NEW_PYTHIA_EVENTS",
+    "NEW_DELPHES_EVENTS",
+    "PHASE7I_RESTART",
+    "PHYSICAL_COMBINED_LIKELIHOOD",
+    "PHYSICAL_SIGNIFICANCE",
+    "PHYSICAL_CLS",
+    "PHYSICAL_KAPPA_LIMIT"
+  ],
+  "all_production_counters_required_zero": true,
+  "publication": {
+    "one_new_stacked_Draft_PR": true,
+    "base_branch": "codex/phase7-final-closure",
+    "include": "source tests Traditional Chinese reports bounded numerical evidence",
+    "unapproved_PNG_PDF": false,
+    "physical_ROOT_samples_native_binaries_full_event_dump": false,
+    "merge": false,
+    "force_push": false
+  },
+  "resource_ceilings": {
+    "wall_seconds": 14400,
+    "CPU_seconds": 14400,
+    "additional_output_bytes": 2147483648,
+    "concurrent_analysis_jobs": 1,
+    "workers": 1
+  },
+  "scientific_limits": [
+    "B100 and C1000 effective PDF and alpha_s configurations differ; no homogeneous pooling",
+    "B01/B02/B03 ME/PS heavy flavour overlap unresolved",
+    "B04/B05 MODEL_BR_ONLY, no official calibrated normalization",
+    "B06 photon fake model uncalibrated; zero survivors do not prove zero background",
+    "kappa=2.5 and5 INCONCLUSIVE_REWEIGHTING",
+    "all native Delphes results ATLAS-like exploratory; no official ATLAS calibration"
+  ],
+  "reviewable_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+  "execution_source_content_identity_sha256": "e08e4383b67c6b616d268491bad31d644747c70696deb23187a360fe53ce8f4d"
+}

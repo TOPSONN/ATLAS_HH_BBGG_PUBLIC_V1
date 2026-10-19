@@ -1,0 +1,60 @@
+{
+  "status": "PASS_INDEPENDENT_DECIMAL70_STATISTICS",
+  "evidence_class": "ACTUAL_FULL_DATA_READBACK",
+  "method": "Independent Decimal70 centered moments and full Poisson-binomial PMF; no imported production code",
+  "comparisons": 378351,
+  "datasets": [
+    {
+      "dataset_id": "S01_B100",
+      "N_original": 100,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "S01_C1000",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B01",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B02",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B03",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B04",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B05",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B06",
+      "N_original": 1000,
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    }
+  ],
+  "kappa": {
+    "source_events": 1000,
+    "ME_rows": 6000,
+    "covariance_entries_verified": 180,
+    "bin_quality_rows_verified": 10770,
+    "new_ME_calls": 0
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_events": 0,
+  "conditional_variance_added_to_observed": false,
+  "physical_inference": "NOT_EVALUATED"
+}
