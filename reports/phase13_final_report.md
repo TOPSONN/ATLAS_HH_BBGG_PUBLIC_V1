@@ -8,10 +8,10 @@ BASE_REVISION: d95ca4c98352f460af955a1bad5372f63cfcee4a
 
 已完成獨立 runtime、來源與模型/PDF 稽核、13 個實際無害 kernel fixtures、527 個 offline unit regressions 及2個實際 CLI 拒絕案例。完整 supervisor/job 的資源限制仍未證明，因此目前不接受正向 parser 派發。這不是 MG5 parser 或物理產出的驗收通過。
 
-NEW_SOURCE_REVISION: PENDING_SOURCE_COMMIT  
-DRAFT_PR_URL: PENDING_ONE_STACKED_DRAFT_ON_PR29  
-GITHUB_CI: PENDING_NEW_DRAFT_PR  
-SOURCE_HASH_CLOSURE: SOURCE_MANIFEST_PREPARED; FINAL_COMMIT_AND_REMOTE_PENDING
+NEW_SOURCE_REVISION: ff99082f8c15f0e2850c517c97cddc971c514552  
+DRAFT_PR_URL: https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/30  
+GITHUB_CI: exact source push + PR 均 PASS；[push](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240873484)、[PR](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240880386)。report-only delivery HEAD會在push後另存本機最終收據，不用遞迴新增報告commit。  
+SOURCE_HASH_CLOSURE: 88個公開檔案由manifest/index/raw bytes驗證；source_payload_commit綁定ff99082f8c15f0e2850c517c97cddc971c514552，delivery只允許manifest／quality／final_report三檔。最後remote blob核對與delivery CI寫入本機FINAL_REPORT.json。
 
 | 驗收欄位 | 結果與範圍 |
 |---|---|
@@ -33,7 +33,7 @@ SOURCE_HASH_CLOSURE: SOURCE_MANIFEST_PREPARED; FINAL_COMMIT_AND_REMOTE_PENDING
 | HUMAN_CONFIRMATION | 沒有新human approval或HumanReview；未代輸入正式確認。future TTY/file機械核對不是human identity的密碼學證明，pipe只是handoff consistency。 |
 | PHASE7I_DEPENDENCY_STATUS | NOT_BOUND_BY_REVIEWED_CONTRACT僅限exact Route-A b80靜態結論；本次獨立copy不改Phase7I checkout，沒有build/native/StageA。沒有提升未執行行為為PASS。 |
 | HISTORICAL_PRESERVATION | 6756 monitored files／2946918057 bytes與24installed targets零變更或遺失；原MG5及獨立copytree相同。PR24–29 exactheads維持OPEN/Draft且未merge。不是全主機遞迴保證。 |
-| TESTS | 最後source變動後unit03再次188 PASS；最終P13 188、P12 167、P11 172，共527全部PASS；13實際kernel fixtures、2個實際negativeCLI PASS。首次source witness失敗與unit01 186tests／2fail1error均保留，修正後才重跑；沒有把synthetic當parser validation。 |
+| TESTS | 最後parser source變動後unit03及CI修正後unit04都再次188 PASS；最終P13 188、P12 167、P11 172，共527全部PASS；13實際kernel fixtures、2個實際negativeCLI PASS。首次source witness失敗與unit01 186tests／2fail1error均保留，修正後才重跑；沒有把synthetic當parser validation。 |
 
 NEW_ME_CALLS: 0  
 NEW_INTEGRALS: 0  
@@ -57,3 +57,19 @@ NEXT_RECOMMENDED_STEP: 最小化補齊並實測從preflight到postflight的super
 來源與 bounded receipts 在 `analysis/phase13/`；詳細 runtime、PDF backend、alpha、model/IR、parser contract 分別見 phase13a–e reports。full private source/config/PDFgrid/binary/test LHE不進Git，沒有未核准PDF/PNG。所有staged paths及每個outgoing commit的中間payload都要在push前稽核；Draft PR不merge、不forcepush。
 
 本機 evidence 根目錄：`/home/btu/simulations/hh_phase13/run_01`。source-job ledger的1800s CPU/wall、1GiB disk是本次來源工程監控設定，不是future parser的完整硬限制證明；資源帳本不包括Git/network、文字編輯與唯讀hash inventories。
+
+## Exact-source proposal 與 CI 修正驗證
+
+目前 proposal：`/home/btu/simulations/hh_phase13/run_01/parser_only_approval_package_02.json`，11610 bytes，SHA256 `64a2f4f14b78ec72a8496b85ee7a1de745dafb571230068518736577835c9586`。已由 exact source `ff99082f8c15f0e2850c517c97cddc971c514552` 實際組裝（blocked_package_02，wall約2.091s）；raw runtime/model/config hashes通過，`execution_eligible=false`，`parser_review_02` output仍不存在。原第一份 proposal、source bea2666、失敗CI及所有receipts保留。**這兩份都是未授權、不能派發的proposal**，目前不能請求正向啟動核准。
+
+未來被阻擋的實際入口形狀（本次不執行正向request）：
+
+```bash
+python3 -B /home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py \
+  --package /home/btu/simulations/hh_phase13/run_01/parser_only_approval_package_02.json \
+  --approval /path/to/new_explicit_user_parser_approval.json
+```
+
+首次 source commit 的 push CI成功，PR CI因GitHub預設checkout合成merge而被既有publication guard拒絕。精確錯誤為OUTGOING_MERGE_COMMIT_FORBIDDEN，合成merge e5e9a0ff7b95af7813fbc1aaf3b3a36ed24a9f33；沒有合併任何PR。只新增workflow的exact PR-head ref，guard完全未改；獨立44項檢查與25個關鍵檔案相等證據保留。修正後source的push及PR CI都成功。GitHub runner上每次均執行188+167+172 offline tests及完整publication guard，沒有下載或MG5/native物理作業。
+
+來源工程registered jobs的最終CPU/wall／local disk用量、最終delivery head／remote blobs／CI驗證會列入本機FINAL_REPORT.json；不將其冒充完整future parser硬限制。此report-only提交不改變任何已執行的工程程式或歷史數據。

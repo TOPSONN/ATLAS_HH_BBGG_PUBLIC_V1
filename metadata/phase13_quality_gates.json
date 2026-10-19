@@ -25,8 +25,32 @@
   "schema_version": 1,
   "evidence_class": "PUBLIC_SOURCE_AUDIT",
   "FINAL_VERDICT": "BLOCKED_PHASE13_RESOURCE_ENFORCEMENT",
-  "SOURCE_REVISION": "PENDING_SOURCE_COMMIT",
-  "GITHUB_CI": "PENDING_NEW_DRAFT_PR",
+  "SOURCE_REVISION": "ff99082f8c15f0e2850c517c97cddc971c514552",
+  "GITHUB_CI": {
+    "source_revision": "ff99082f8c15f0e2850c517c97cddc971c514552",
+    "status": "PASS_BOTH_SOURCE_PUSH_AND_PR",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 39240880386,
+        "event": "pull_request",
+        "headSha": "ff99082f8c15f0e2850c517c97cddc971c514552",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240880386",
+        "workflowName": "Phase13 isolated runtime source and parser approval boundary"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 39240873484,
+        "event": "push",
+        "headSha": "ff99082f8c15f0e2850c517c97cddc971c514552",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39240873484",
+        "workflowName": "Phase13 isolated runtime source and parser approval boundary"
+      }
+    ],
+    "delivery_head": "REPORT_ONLY_COMMIT_WILL_BE_VERIFIED_AFTER_PUSH_WITHOUT_RECURSIVE_REPORT_COMMITS"
+  },
   "RUNTIME_ISOLATION": "EXACT_PRIVATE_COPY_AND_CHILD_GUARD_PROVEN",
   "RESOURCE_CHILD_FIXTURES": "PASS_13",
   "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
@@ -55,5 +79,26 @@
     "new_hard_events": 0,
     "new_pythia_events": 0,
     "new_delphes_events": 0
-  }
+  },
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/30",
+  "CURRENT_PARSER_PACKAGE": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/parser_only_approval_package_02.json",
+    "bytes": 11610,
+    "sha256": "64a2f4f14b78ec72a8496b85ee7a1de745dafb571230068518736577835c9586",
+    "execution_eligible": false,
+    "status": "BLOCKED_PHASE13_RESOURCE_ENFORCEMENT"
+  },
+  "EARLIER_PARSER_PACKAGE_PRESERVED": "/home/btu/simulations/hh_phase13/run_01/parser_only_approval_package.json",
+  "SOURCE_HASH_CLOSURE": "EXACT_SOURCE_COMMIT_AND_MANIFEST; FINAL_REMOTE_HEAD_CHECK_RECORDED_LOCALLY_AFTER_PUSH",
+  "GATES_FAIL": [
+    "FULL_LAUNCH_RESOURCE_ACCEPTANCE_NOT_MET"
+  ],
+  "GATES_BLOCKED": [
+    "MG5_PARSER",
+    "NUMERICAL_MG5_PDF_BINDING",
+    "PHYSICAL_PILOT",
+    "TOTAL_BACKGROUND",
+    "SIGNIFICANCE",
+    "CLs"
+  ]
 }
