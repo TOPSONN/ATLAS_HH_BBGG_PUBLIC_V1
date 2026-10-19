@@ -3,8 +3,8 @@
   "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
   "TASK": "PHASE11_EXACT_GENERATOR_CONFIGURATION_AND_PILOT_GATE_V1",
   "BASE_REVISION": "7b65428648bd3b1040721cf569604e6d8ad1625c",
-  "NEW_SOURCE_REVISION": null,
-  "DRAFT_PR_URL": null,
+  "NEW_SOURCE_REVISION": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28",
   "SELECTED_PILOT_COMPONENT": "NONE_READY",
   "EXACT_PROCESS_VALIDATION": "PARSER_NOT_VALIDATED",
   "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
@@ -17,8 +17,38 @@
   "PILOT_APPROVAL": "NOT_AUTHORIZED",
   "PILOT_EXECUTED": false,
   "figure_publication_authorized": false,
-  "GITHUB_CI": "PENDING_DELIVERY",
-  "REMOTE_BLOB_VERIFICATION": "PENDING_DELIVERY",
+  "GITHUB_CI": {
+    "status": "PASS_SOURCE_PAYLOAD_PUSH_AND_PR",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 39227487824,
+        "event": "pull_request",
+        "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+        "name": "Phase11 exact configuration source and pilot boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227487824"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 39227435025,
+        "event": "push",
+        "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+        "name": "Phase11 exact configuration source and pilot boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227435025"
+      }
+    ],
+    "scope": "Source/method and bounded evidence; no generator parser/production or native full ROOT data rerun"
+  },
+  "REMOTE_BLOB_VERIFICATION": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "files": 125,
+    "bytes": 2939322,
+    "all_bytes_equal_Git": true
+  },
   "external_human_review_approval": false,
   "INSTALLED_RUNTIME_RAW_IDENTITY": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
   "RUNTIME_CONFIGURATION_WRITER": "UNKNOWN",
@@ -29,7 +59,9 @@
     "3000 original LHE incoming flavour readback",
     "2874 historical files exact byte preservation",
     "inactive comment-only cards and no dispatcher",
-    "signed-weight algebra/null/resource/production negative guards"
+    "signed-weight algebra/null/resource/production negative guards",
+    "source payload push/PR GitHub CI passed at exact source revision",
+    "all125selected immutable source-payload blobs match Git bytes and SHA256"
   ],
   "GATES_FAIL": [
     "exact installed runtime configuration raw SHA256 freeze differs from A02 receipt"
@@ -80,5 +112,6 @@
     "earlier_policy_probes": 68,
     "final_drift_gate_checks": 42,
     "scope": "SYNTHETIC_METHOD_ONLY; not external human approval"
-  }
+  },
+  "DELIVERY_CLOSURE": "Source code and bounded evidence frozen at NEW_SOURCE_REVISION; only this gate JSON, source-identity manifest and final report change in report-only delivery. Final-head CI and all125remote blobs recorded in local FINAL_REPORT.json after push."
 }

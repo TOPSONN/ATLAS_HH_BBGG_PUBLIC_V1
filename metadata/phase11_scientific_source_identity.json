@@ -4,8 +4,8 @@
   "base_revision": "7b65428648bd3b1040721cf569604e6d8ad1625c",
   "source_science_predecessor": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
   "branch": "codex/phase11-exact-generator-pilot-gate",
-  "source_payload_commit": null,
-  "Draft_PR_URL": null,
+  "source_payload_commit": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+  "Draft_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28",
   "source_files": [
     {
       "path": ".github/workflows/phase11-pilot-gate.yml",
@@ -174,13 +174,13 @@
     },
     {
       "path": "metadata/phase11_quality_gates.json",
-      "bytes": 3361,
-      "sha256": "741d5f213b27be704e98f118fdd4b2cd6922ff7710758d45052a1ff786847604"
+      "bytes": 5023,
+      "sha256": "0daad7c9680cccac0e4874c4b2aff8b50db279b993c800186f15fac0da4b8670"
     },
     {
       "path": "reports/phase11_final_report.md",
-      "bytes": 30680,
-      "sha256": "03eabbd79f1145ef38bf623441242f0af04b9e9cd5fecb1e40fb440f7471e360"
+      "bytes": 31372,
+      "sha256": "e33121e1befe294b663017a8ff9d67309b1391768a636af2215133529aede0ab"
     },
     {
       "path": "reports/phase11a_4f_massive_bottom.md",
@@ -719,5 +719,32 @@
   "physical_approval": "NOT_AUTHORIZED",
   "figure_publication": false,
   "receipt_scope": "Five evidence classes remain explicit; synthetic methods/automated peer review do not establish independent human review or physical validity. Original external local-path input SHA identities remain in historical audit evidence.",
-  "delivery_note": "Manifest self-hash is bound by Git commit; executable/source payload commit added by a later three-file report-only delivery commit. No generation authorized."
+  "delivery_note": "Only source-identity manifest, quality-gates JSON and final report change after immutable source/evidence commit; final report-only HEAD CI and all blobs verified in local FINAL_REPORT.json after normal push.",
+  "source_payload_CI": [
+    {
+      "conclusion": "success",
+      "databaseId": 39227487824,
+      "event": "pull_request",
+      "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+      "name": "Phase11 exact configuration source and pilot boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227487824"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39227435025,
+      "event": "push",
+      "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+      "name": "Phase11 exact configuration source and pilot boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227435025"
+    }
+  ],
+  "source_payload_remote_verification": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "files": 125,
+    "bytes": 2939322,
+    "all_bytes_equal_Git": true
+  }
 }

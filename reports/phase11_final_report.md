@@ -6,7 +6,7 @@
 
 另有一項必須獨立報告的例外：受監測的 2874 個歷史資料／報告／來源檔案保持原始 bytes，但已安裝 MG5 的 `input/mg5_configuration.txt` 出現三個不同 raw SHA-256。其有效設定相同不能替代 raw identity；變更呼叫者 UNKNOWN，未還原或改寫安裝檔。安裝 runtime configuration freeze 因此仍受阻。下列所有新物理計數只適用於本任務已登錄的 source／existing-data jobs，不是整台主機的完整歷史程序歸因。
 
-本報告記錄目前已取得的本機證據；新 commit、Draft PR、GitHub CI 與遠端逐 byte 驗證尚待交付階段完成，均標為 **PENDING_DELIVERY**。最終 gate 修正後已實際重跑 172 個 Phase11 測試；方法全部通過，raw runtime identity 仍有一個 mismatch，不以方法綠燈取代來源驗收。
+本報告已綁定來源 commit `3652fea6f2dc8bce255cbe8cce49fe8241ba27d4` 與 [Draft PR28](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28)。該來源 commit 的 push／pull_request CI 均成功，125 個 source/evidence blobs 已從 immutable URL 下載並逐 byte 核對。後續僅三個交付文件更新，其最終 HEAD CI／remote closure 另記本機 `FINAL_REPORT.json`。最終 172 項方法測試全通過，不能解除 raw runtime identity mismatch。
 
 ## 1. 身份、基底與授權邊界
 
@@ -19,10 +19,10 @@
 | BASE_PR | 27；僅作堆疊基底，不修改舊 PR |
 | SOURCE_SCIENCE_PREDECESSOR | `82bb66821c5bbf2bac58e9945fe7c0e9239220dd` |
 | NEW_BRANCH | `codex/phase11-exact-generator-pilot-gate` |
-| NEW_SOURCE_REVISION | PENDING_DELIVERY |
-| DRAFT_PR_URL | PENDING_DELIVERY；目標為唯一一個堆疊在 PR27 上的新 Draft PR |
-| GITHUB_CI | PENDING_DELIVERY |
-| REMOTE_BLOB_VERIFICATION | PENDING_DELIVERY |
+| NEW_SOURCE_REVISION | `3652fea6f2dc8bce255cbe8cce49fe8241ba27d4` |
+| DRAFT_PR_URL | [PR28](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28)；唯一 stacked Draft，base=PR27 branch |
+| GITHUB_CI | PASS：exact source revision 的 push／PR CI；只檢查來源／方法與 bounded evidence，final delivery closure另記 |
+| REMOTE_BLOB_VERIFICATION | PASS：source revision 的125檔、2,939,322bytes exact match；final delivery closure另記 |
 
 本次允許文字／設定來源閱讀、既有資料讀回、靜態介面審查、獨立代數測試、inactive card 與有限資源合約。沒有執行 MG5 parser／process generation、ME、積分、新 hard events、Pythia、Delphes、Phase7I build／restart 或物理 likelihood。現有 ROOT 6.40.04／C++20 環境原樣保留；本階段沒有新 native build，也沒有重跑全部歷史 ROOT analyses。
 
@@ -172,7 +172,7 @@ B03 的 6 個 combined-HF 全是 charm；p4 允許 charm，不能把它們視為
 | 精確 incoming PDG | 原始 LHE 3000 筆，actual PASS；零新 events |
 | 獨立自動審查 | 68 個負向 probe 有機器收據；屬 synthetic/method，不是外部人工 approval |
 | Drift gate 獨立修正審查 | 另有 42 個 method checks 通過，核對 actual 60 records／56 paths／1 mismatch；不解除 runtime drift gate |
-| GitHub CI | PENDING_DELIVERY；只允許來源／方法與 bounded evidence 檢查 |
+| GITHUB_CI | PASS：exact source revision 的 push／PR CI；只檢查來源／方法與 bounded evidence，final delivery closure另記 |
 
 測試覆蓋 model restrictions、4F/5F／PDF／alpha metadata、order operators、LO photon IR、matching flavour/weight、未審 merging scale、混合組件拒絕、missing fake controls、null/zero、signed cancellation、resource 未批准、inactive 卡、來源身份與 zero-production gate。最終 gate 另逐 byte 重讀 60 個 raw identity records、56 個 unique paths，只發現一個 mismatch：installed MG5 configuration。
 
@@ -227,7 +227,7 @@ Phase7I／8／9／10 的舊 source HEAD／index 亦有精確 identity 控制；�
 - 精確 Candidate overlap provenance writer 與相容 fake-control 分母／校準。
 - future executable revision、獨立人類審核、明確物理授權、approved ceilings、hard RAM／native counter enforcement、fresh execution workspace。
 - MATCHED_SIGNAL_NORMALIZATION=BLOCKED_PHASE7I；PHYSICAL_TOTAL_BACKGROUND=BLOCKED。
-- GitHub CI、exact publication payload／remote blobs 尚為 PENDING_DELIVERY，不先宣稱完成。
+- Source payload 的 GitHub CI／125 remote blobs 已通過；report-only HEAD 的最終 closure 不提升任何物理 gate。
 
 ### GATES_UNKNOWN
 
@@ -265,7 +265,7 @@ PHYSICAL_SIGNIFICANCE、PHYSICAL_CLs、PHYSICAL_KAPPA_INTERVAL 都是 **NOT_EVAL
 | bounded evidence | model/PDF 與 family/IR inventories、source witnesses、event-unit counts/covariance、incoming PDGs、獨立驗證、保全、drift、受控執行收據；不包含新 physical samples |
 | 本機最終 receipt | FINAL_REPORT.json：於最終 commit／PR／CI／遠端查核後寫入真實交付身份 |
 
-**NEW_SOURCE_REVISION=PENDING_DELIVERY；DRAFT_PR_URL=PENDING_DELIVERY；GITHUB_CI=PENDING_DELIVERY；REMOTE_BLOB_VERIFICATION=PENDING_DELIVERY。** 後續必須逐項改成實際值，不能只根據本機測試報 GitHub 成功。執行來源 revision 與 report-only delivery head 如不同，應明確分列；遠端須以 immutable head 下載全部選定 source/evidence，核對 byte 數與 SHA-256。
+**NEW_SOURCE_REVISION=`3652fea6f2dc8bce255cbe8cce49fe8241ba27d4`；DRAFT_PR_URL=[PR28](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28)。** GitHub [push CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227435025) 與 [PR CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227487824) 均成功。REMOTE_BLOB_VERIFICATION=PASS_EXACT_IMMUTABLE_REMOTE_BLOBS：125檔、2,939,322bytes，與該 source commit 的 Git bytes/SHA256 完全相同。執行來源與 report-only delivery HEAD 分列；後者實際 CI 與全部 blobs 最終核對在本機 FINAL_REPORT.json 閉合。
 
 GitHub 只發布 source、tests、reports 與有界 numerical evidence。每次 push 前都要檢查 staged files 及所有 outgoing commits，包含中間版本；不帶未批准 PDF／PNG，不動舊 PR24–27、不 merge、不 force-push。既有 Phase9 圖件的狀態仍為 **AWAITING_USER_APPROVAL**，不因歷史發布或測試通過而取得新版本批准。本次沒有新圖可供自動發布。
 
@@ -275,4 +275,4 @@ GitHub 只發布 source、tests、reports 與有界 numerical evidence。每次 
 
 此結果已減少實際設定不確定性：預設 sm 的有效 MC／MB、PDF payload 與 catalogue 的差異、alpha reference-scale 語意、amplitude 上限與精確等階、LO bottom isolation coverage、MLM header/flavour 與 CKKW-L weight、pre-isolation 持久化機制，以及 incoming b/c 的精確歷史數目都已具體確認。仍沒有足以被凍結並授權的完整第一組件，故不製造 selected scheme。
 
-**NEXT_RECOMMENDED_STEP：** 先完成 source/evidence 的 Draft 交付與遠端驗證，同時保留 runtime drift 為未解 gate。未來如要聚焦 massive-4F review target，須先取得另行允許的精確相容 4F member payload 與 metadata，定義 alpha/reference/threshold、bottom photon-IR／cuts／scales／shower，並重新審查確切 runtime bytes 與 executable revision。只有缺件有了具體證據，才提出狹窄 parser/process review；任何真正 ME、積分或新事件仍須另行明確人類授權。不得從本次 source-only 任務、先前 Phase7I 授權或 illustrative resource envelope 推定物理 pilot 已獲批准。
+**NEXT_RECOMMENDED_STEP：** 保留已完成的 Draft source/evidence 交付與精確遠端驗證，同時維持 runtime drift 為未解 gate。未來如要聚焦 massive-4F review target，須先取得另行允許的精確相容 4F member payload 與 metadata，定義 alpha/reference/threshold、bottom photon-IR／cuts／scales／shower，並重新審查確切 runtime bytes 與 executable revision。只有缺件有了具體證據，才提出狹窄 parser/process review；任何真正 ME、積分或新事件仍須另行明確人類授權。不得從本次 source-only 任務、先前 Phase7I 授權或 illustrative resource envelope 推定物理 pilot 已獲批准。
