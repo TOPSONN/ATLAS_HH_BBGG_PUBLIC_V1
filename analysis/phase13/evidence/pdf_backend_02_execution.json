@@ -1,0 +1,39 @@
+{
+  "label": "pdf_backend_02",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "analysis/phase13/scripts/audit_pdf_backend.py",
+    "--repo",
+    "/home/btu/projects/atlas_hh_phase13_v1",
+    "--mg5-root",
+    "/home/btu/opt/mg5amcnlo",
+    "--lhapdf-prefix",
+    "/home/btu/miniforge3/envs/atlas-hh-root",
+    "--pdf-root",
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01",
+    "--phase12-readback",
+    "/home/btu/simulations/hh_phase12/run_01/pdf_readback_04",
+    "--output",
+    "/home/btu/simulations/hh_phase13/run_01/pdf_backend_review.json",
+    "--alpha-output",
+    "/home/btu/simulations/hh_phase13/run_01/alpha_s_reference_review.json"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.2971007490014017,
+  "cpu_seconds": 0.100253,
+  "peak_observed_process_group_RSS_bytes": 4980736,
+  "aggregate_observed_disk_bytes": 142127340,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 1800,
+    "cpu_seconds": 1800,
+    "disk_bytes": 1073741824,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+}

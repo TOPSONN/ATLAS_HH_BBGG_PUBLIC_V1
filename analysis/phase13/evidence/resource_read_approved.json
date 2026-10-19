@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "fixture": "read_approved",
+  "status": "PASS_EXPECTED_CONTAINMENT",
+  "guard_installed": true,
+  "exit_code": 0,
+  "signal": null,
+  "wall_watchdog_triggered": false,
+  "wall_seconds": 0.011119667000457412,
+  "CPU_seconds": 0.0037679999999999996,
+  "maxrss_KiB": 14540,
+  "process_group_kill_sent": false,
+  "reaped_group_children": [],
+  "logs": {
+    "stdout": {
+      "path": "/home/btu/simulations/hh_phase13/run_01/resource_01/read_approved/stdout.log",
+      "bytes": 551,
+      "sha256": "b75010f79dedb35661f387ea25d0cbf8f859e42ca08cb08a7af2560d98227ff7",
+      "records": [
+        {
+          "guard": {
+            "fork_clone_exec_network_forbidden": true,
+            "landlock_ABI": 3,
+            "landlock_readonly": true,
+            "limits": {
+              "address_space_bytes": 536870912,
+              "cpu_seconds": 2,
+              "output_file_bytes": 65536,
+              "wall_seconds": 3
+            },
+            "no_new_privs": true,
+            "read_roots": [
+              "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5",
+              "/home/btu/simulations/hh_phase13/run_01/resource_01"
+            ],
+            "seccomp_default": "KILL_PROCESS",
+            "seccomp_instruction_count": 141,
+            "write_fds": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "fixture_read_bytes": 9302,
+          "fixture_read_sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+        }
+      ]
+    },
+    "stderr": {
+      "path": "/home/btu/simulations/hh_phase13/run_01/resource_01/read_approved/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "records": []
+    }
+  },
+  "limits": {
+    "cpu_seconds": 2,
+    "wall_seconds": 3,
+    "address_space_bytes": 536870912,
+    "output_file_bytes": 65536
+  },
+  "max_guarded_children": 1,
+  "parser_execution_authorized": false,
+  "new_baseline_approved": false,
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}

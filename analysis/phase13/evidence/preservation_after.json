@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_BOUNDED_HISTORICAL_AND_RUNTIME_PRESERVATION",
+  "audit_started_UTC": "2026-10-19T10:43:44.758423+00:00",
+  "audit_completed_UTC": "2026-10-19T10:44:18.700042+00:00",
+  "wall_seconds": 33.94170402799864,
+  "baseline": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/preservation_before.json",
+    "bytes": 1547267,
+    "sha256": "8e51e937e4dfc02dfc717a3cf196c8c0294ce5c3349133db4154c743ab249cb3",
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "observed_UTC": "2026-10-19T10:28:30.784356+00:00",
+    "scope": "Prior4764monitoredhistorical paths plus allPhase12results/privatecopies/PDFpayloads/receipts and everyoldPhase12trackedfile; earlierP7Istoppedsource HEAD/index separately protected; noallhostrecursiveclaim."
+  },
+  "historical_files_checked": 6756,
+  "historical_baseline_bytes": 2946918057,
+  "historical_current_bytes_read": 2946918057,
+  "installed_targets_checked": 24,
+  "installed_current_bytes_read": 8072701,
+  "changed_or_missing_file_count": 0,
+  "changed_or_missing_files": [],
+  "changed_files_truncated": false,
+  "tree_reference_files": {
+    "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/original_source_manifest.json": "6221aa8210bd85ce66cc5d29d7110123b73420e47357def1f7a08ffef611a2d8",
+    "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/copied_source_manifest.json": "4f6e63b4e0cc101a1038a4f9685183ff0d3aaa7fb45994bfe809bdb6fa95813b"
+  },
+  "runtime_tree_comparison": {
+    "original_installed_runtime": {
+      "status": "PASS_UNCHANGED",
+      "reference_content_manifest_sha256": "d1d4976a39c5fbd08e3a7fa4db7e42c525c40c84f7be701c1dead3f81afb9e61",
+      "current_content_manifest_sha256": "d1d4976a39c5fbd08e3a7fa4db7e42c525c40c84f7be701c1dead3f81afb9e61",
+      "regular_files": 4733,
+      "regular_bytes": 133901130,
+      "symlink_count": 45,
+      "broken_internal_symlinks": 2,
+      "raw_entries_equal": true,
+      "regular_file_device_inode_mtime_ctime_equal": true,
+      "changed_content_row_count": 0,
+      "changed_content_rows": [],
+      "changed_content_rows_truncated": false
+    },
+    "isolated_runtime_copy": {
+      "status": "PASS_UNCHANGED",
+      "reference_content_manifest_sha256": "d1d4976a39c5fbd08e3a7fa4db7e42c525c40c84f7be701c1dead3f81afb9e61",
+      "current_content_manifest_sha256": "d1d4976a39c5fbd08e3a7fa4db7e42c525c40c84f7be701c1dead3f81afb9e61",
+      "regular_files": 4733,
+      "regular_bytes": 133901130,
+      "symlink_count": 45,
+      "broken_internal_symlinks": 2,
+      "raw_entries_equal": true,
+      "regular_file_device_inode_mtime_ctime_equal": true,
+      "changed_content_row_count": 0,
+      "changed_content_rows": [],
+      "changed_content_rows_truncated": false
+    }
+  },
+  "independent_copy_isolation_reverified": {
+    "exact_content_and_link_manifest_equal": true,
+    "no_shared_original_inodes": true,
+    "no_copied_regular_file_hardlinks": true,
+    "symlinks_resolve_inside_new_tree": true,
+    "broken_internal_links_explicitly_retained": 2
+  },
+  "raw_config_expected": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "raw_config_current": {
+    "original": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    },
+    "copy": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    }
+  },
+  "raw_config_unchanged": true,
+  "audit_helper": {
+    "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/runtime_layout.py",
+    "sha256": "07b5bd7e9e4b71a2b70e66fc0102865101af8a01460bc981c5dac6568560c65c"
+  },
+  "scope_limitations": [
+    "Only listed baseline paths and the two exact runtime trees were read; no recursive all-host preservation claim.",
+    "File atime may change from read-only hashing and is not a preservation gate.",
+    "Earlier Phase7I HEAD/index protection remains a separate root gate; this audit did not invoke Git.",
+    "Resource fixture child proof does not establish complete-launcher resource enforcement.",
+    "No MG5, model, parser, ME, integration, events, build, tracing or unrelated terminal history accessed."
+  ],
+  "historical_writer": "UNKNOWN",
+  "old_Phase11_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "new_baseline_approved": false,
+  "parser_execution_authorized": false,
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}

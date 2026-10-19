@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_CURRENT_SOURCE_DISPATCH_BLOCK_REVIEW_WITH_FULL_JOB_RESOURCE_BLOCKED",
+  "observed_UTC": "2026-10-19T10:48:16.976746+00:00",
+  "scope": "Independent read-only AST/text/source-hash review; no reviewed code executed or imported",
+  "reviewed_sources_before": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 11370,
+      "sha256": "5549d5c496d10d9d6e1eab3f41f0af82ed4aff4fa2e24437ef5b518856b01d30"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/runtime_layout.py",
+      "bytes": 15262,
+      "sha256": "07b5bd7e9e4b71a2b70e66fc0102865101af8a01460bc981c5dac6568560c65c"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/metadata/phase13_parser_review_contract.json",
+      "bytes": 2167,
+      "sha256": "601386c8a13732ff1f3ed89ef08b1b54d7ef2f839147af7aa83fb552b0be00ac"
+    }
+  ],
+  "reviewed_sources_after": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 11370,
+      "sha256": "5549d5c496d10d9d6e1eab3f41f0af82ed4aff4fa2e24437ef5b518856b01d30"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/runtime_layout.py",
+      "bytes": 15262,
+      "sha256": "07b5bd7e9e4b71a2b70e66fc0102865101af8a01460bc981c5dac6568560c65c"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/metadata/phase13_parser_review_contract.json",
+      "bytes": 2167,
+      "sha256": "601386c8a13732ff1f3ed89ef08b1b54d7ef2f839147af7aa83fb552b0be00ac"
+    }
+  ],
+  "checks_passed": 46,
+  "checks": [
+    {
+      "check": "base_exact_Phase12_final_revision",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "current_source_full_launch_constant_false",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "three_semantic_commands_plus_quit",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "future_child_limits_exact_and_integer",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "metadata_contract_matches_source_schema",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "symbolic_enumeration_explicit",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_code_generation",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_numerical_ME",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_integration",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_event_production",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_output_process_build",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_launch",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_Pythia",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_Delphes",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_StageA",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_check_process",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_parser_approved",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "forbidden_or_unexecuted_parser_executed",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "PDF_is_symbolic_dependency_classification_not_binding_pass",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "new_explicit_human_scope_not_old_BUILD_ONLY",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "full_launch_envelope_required_by_contract",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "exact_forbidden_command_set_present",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "startup_compatibility_remains_unverified",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "missing_approval_checked_before_package_read",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "current_constant_blocks_authorization_before_TTY_or_activation",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "approval_binds_package_revision_contract_fresh_output",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "exact_TTY_challenge_is_required",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "package_eligibility_includes_current_source_constant",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "package_READY_also_requires_current_source_constant",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "implementation_blocker_preserved_in_proposal",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "resource_full_envelope_status_boolean_required",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "source_inputs_excludes_evidence_and_delivery_self_reference",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "only_three_delivery_paths_exception",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "checkout_closure_has_commit_blob_and_worktree_checks",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "child_first_statement_blocks_before_arguments_FIFO_or_MG5",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "child_guard_before_future_runpy",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "launcher_authorization_before_any_runtime_activation_or_output",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "future_activation_only_copy_plus_exact_identity",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "future_group_cleanup_has_term_and_kill",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "numerical_counter_basis_not_instrumentation_claim",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "no_MG5_model_or_LHAPDF_import_in_reviewed_entrypoint_parser_contract.py",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "no_MG5_model_or_LHAPDF_import_in_reviewed_entrypoint_prepare_parser_package.py",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "no_MG5_model_or_LHAPDF_import_in_reviewed_entrypoint_run_parser_review.py",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "no_MG5_model_or_LHAPDF_import_in_reviewed_entrypoint_parser_child.py",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "actual_child_fixture_receipt_scope_retains_full_launch_false",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "all_eight_reviewed_sources_before_after_equal",
+      "result": "PASS_SOURCE_INSPECTION"
+    }
+  ],
+  "resource_receipt_identity": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/resource_enforcement_review.json",
+    "bytes": 4301,
+    "sha256": "ca15c4558b84185c3ccf4b713b3c1120ffb75175978f45e0480351f7b737ce5e"
+  },
+  "material_findings": [
+    {
+      "id": "WHOLE_JOB_RESOURCE_ENVELOPE",
+      "status": "BLOCKED_AND_DISPATCH_PREVENTED",
+      "finding": "Child fixture CPU/AS/file caps and child watchdog do not prove parent/supervisor preflight, activation, postflight CPU/RAM/total-wall/disk containment. Current source constant=False blocks both launcher authorization and direct child main before activation or MG5."
+    },
+    {
+      "id": "FIFO_AUTHORIZATION_INTERPRETATION",
+      "status": "LIMIT_RETAINED_AND_BYPASS_CLOSED_IN_CURRENT_SOURCE",
+      "finding": "FIFO/parent PID/token equality is handoff consistency, not human identity proof. Current child hard blocker prevents direct helper dispatch; future new implementation/source review remains required."
+    }
+  ],
+  "package_eligibility_under_current_source": false,
+  "future_parser_approval_status": "NOT_AUTHORIZED",
+  "whole_job_resource_enforcement": "BLOCKED",
+  "scientific_scope": "Three sm/model/alias/process semantic commands plus quit; symbolic diagram enumeration only; no numerical ME/code generation/output/integration/events",
+  "limitations": [
+    "No actual MG5 startup/model import/parser/diagram enumeration run.",
+    "No future supervisor full-envelope or Python shared-library dependency closure acceptance established.",
+    "Current raw source must be reviewed again if constant, scope, guards, resources or executable identities change.",
+    "Mechanical JSON/TTY consistency cannot authenticate a human identity; no external human approval is claimed.",
+    "Post-blocker future launcher code remains unexecuted and startup compatibility is UNKNOWN."
+  ],
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "human_approval_created": false,
+  "installed_configuration_read_or_written_by_this_review": false,
+  "supplementary_package_fields_checks_passed": 3,
+  "supplementary_package_fields_checks": [
+    {
+      "check": "package_explicit_sm_default_MB47_MC0_with_raw_source_identities",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "package_explicit_three_semantic_process_commands",
+      "result": "PASS_SOURCE_INSPECTION"
+    },
+    {
+      "check": "package_explicit_pinned_PDF_not_numeric_binding_pass",
+      "result": "PASS_SOURCE_INSPECTION"
+    }
+  ],
+  "prior_peer_review_preserved": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/parser_contract_peer_review_01.json",
+    "bytes": 11444,
+    "sha256": "35bddfc6be8965ef75f72390e2da28a2ef1b6e470a7546cfcd93f5e33f5cc890"
+  },
+  "final_source_reinspection": "All 46 core checks rerun after last package metadata-only correction; 3 additional model/process/PDF descriptor checks; no executable dispatch."
+}

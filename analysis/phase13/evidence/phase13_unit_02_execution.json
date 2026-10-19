@@ -1,0 +1,30 @@
+{
+  "label": "phase13_unit_02",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "analysis/phase13/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.8990099049988203,
+  "cpu_seconds": 0.896566,
+  "peak_observed_process_group_RSS_bytes": 32768000,
+  "aggregate_observed_disk_bytes": 142421757,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 1800,
+    "cpu_seconds": 1800,
+    "disk_bytes": 1073741824,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+}

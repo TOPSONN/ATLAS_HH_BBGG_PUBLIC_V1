@@ -1,0 +1,237 @@
+test_active_command_rejected (test_model_ir.ModelIRTests.test_active_command_rejected) ... ok
+test_alias_cannot_include_bottom (test_model_ir.ModelIRTests.test_alias_cannot_include_bottom) ... ok
+test_ast_read_does_not_execute_model (test_model_ir.ModelIRTests.test_ast_read_does_not_execute_model) ... ok
+test_ast_symbolic_mass_reference (test_model_ir.ModelIRTests.test_ast_symbolic_mass_reference) ... ok
+test_bool_not_accepted_as_numeric_cut (test_model_ir.ModelIRTests.test_bool_not_accepted_as_numeric_cut) ... ok
+test_charm_and_gluon_in_light_sum (test_model_ir.ModelIRTests.test_charm_and_gluon_in_light_sum) ... ok
+test_current_exact_plan (test_model_ir.ModelIRTests.test_current_exact_plan) ... ok
+test_default_charm_mass_not_raw_UFO_default (test_model_ir.ModelIRTests.test_default_charm_mass_not_raw_UFO_default) ... ok
+test_duplicate_mass_rejected (test_model_ir.ModelIRTests.test_duplicate_mass_rejected) ... ok
+test_exact_not_equal_order_claim_rejected (test_model_ir.ModelIRTests.test_exact_not_equal_order_claim_rejected) ... ok
+test_five_flavour_cut_classification_not_substituted (test_model_ir.ModelIRTests.test_five_flavour_cut_classification_not_substituted) ... ok
+test_four_flavour_bottom_is_separate_category (test_model_ir.ModelIRTests.test_four_flavour_bottom_is_separate_category) ... ok
+test_massless_bottom_rejected (test_model_ir.ModelIRTests.test_massless_bottom_rejected) ... ok
+test_missing_convention_rejected (test_model_ir.ModelIRTests.test_missing_convention_rejected) ... ok
+test_missing_cut_rationale_rejected (test_model_ir.ModelIRTests.test_missing_cut_rationale_rejected) ... ok
+test_missing_mass_rejected (test_model_ir.ModelIRTests.test_missing_mass_rejected) ... ok
+test_missing_source_manifest_member_rejected (test_model_ir.ModelIRTests.test_missing_source_manifest_member_rejected) ... ok
+test_no_generator_import_or_subprocess_in_auditor (test_model_ir.ModelIRTests.test_no_generator_import_or_subprocess_in_auditor) ... ok
+test_nonfinite_mass_rejected (test_model_ir.ModelIRTests.test_nonfinite_mass_rejected) ... ok
+test_numeric_process_check_rejected (test_model_ir.ModelIRTests.test_numeric_process_check_rejected) ... ok
+test_order_semantics_must_be_bounds (test_model_ir.ModelIRTests.test_order_semantics_must_be_bounds) ... ok
+test_output_codegen_command_rejected (test_model_ir.ModelIRTests.test_output_codegen_command_rejected) ... ok
+test_physical_approval_cannot_be_inferred (test_model_ir.ModelIRTests.test_physical_approval_cannot_be_inferred) ... ok
+test_process_remains_all_comments (test_model_ir.ModelIRTests.test_process_remains_all_comments) ... ok
+test_read_source_exact_bytes_and_reject_drift (test_model_ir.ModelIRTests.test_read_source_exact_bytes_and_reject_drift) ... ok
+test_read_source_rejects_symlink (test_model_ir.ModelIRTests.test_read_source_rejects_symlink) ... ok
+test_read_source_rejects_traversal (test_model_ir.ModelIRTests.test_read_source_rejects_traversal) ... ok
+test_restriction_parser_ignores_yukawa (test_model_ir.ModelIRTests.test_restriction_parser_ignores_yukawa) ... ok
+test_silent_drab_zero_rejected (test_model_ir.ModelIRTests.test_silent_drab_zero_rejected) ... ok
+test_source_counterexample_five_not_four (test_model_ir.ModelIRTests.test_source_counterexample_five_not_four) ... ok
+test_stale_source_manifest_rejected (test_model_ir.ModelIRTests.test_stale_source_manifest_rejected) ... ok
+test_symbolic_enumeration_scope_must_be_explicit (test_model_ir.ModelIRTests.test_symbolic_enumeration_scope_must_be_explicit) ... ok
+test_unknown_matching_not_filled_with_default (test_model_ir.ModelIRTests.test_unknown_matching_not_filled_with_default) ... ok
+test_unknown_mmaa_not_filled_with_default (test_model_ir.ModelIRTests.test_unknown_mmaa_not_filled_with_default) ... ok
+test_unknown_scale_not_filled_with_default (test_model_ir.ModelIRTests.test_unknown_scale_not_filled_with_default) ... ok
+test_unlabeled_numeric_cut_rejected (test_model_ir.ModelIRTests.test_unlabeled_numeric_cut_rejected) ... ok
+test_wrong_restriction_rejected (test_model_ir.ModelIRTests.test_wrong_restriction_rejected) ... ok
+test_alternate_output_syscalls_are_killed (test_native_guard.GuardPolicyTests.test_alternate_output_syscalls_are_killed) ... ok
+test_approved_root_is_resolved_and_deduplicated (test_native_guard.GuardPolicyTests.test_approved_root_is_resolved_and_deduplicated) ... ok
+test_boolean_resource_counter_is_rejected (test_native_guard.GuardPolicyTests.test_boolean_resource_counter_is_rejected) ... ok
+test_empty_or_excessive_read_roots_rejected (test_native_guard.GuardPolicyTests.test_empty_or_excessive_read_roots_rejected) ... ok
+test_exact_four_field_resource_profile (test_native_guard.GuardPolicyTests.test_exact_four_field_resource_profile) ... ok
+test_fixture_enum_contains_no_physics_dispatch (test_native_guard.GuardPolicyTests.test_fixture_enum_contains_no_physics_dispatch) ... ok
+test_fork_clone_vfork_exec_are_killed (test_native_guard.GuardPolicyTests.test_fork_clone_vfork_exec_are_killed) ... ok
+test_install_bad_limits_rejected_before_kernel_actions (test_native_guard.GuardPolicyTests.test_install_bad_limits_rejected_before_kernel_actions) ... ok
+test_landlock_abi2_fails_closed_before_ruleset_creation (test_native_guard.GuardPolicyTests.test_landlock_abi2_fails_closed_before_ruleset_creation) ... ok
+test_missing_extra_resource_fields_are_rejected (test_native_guard.GuardPolicyTests.test_missing_extra_resource_fields_are_rejected) ... ok
+test_mutating_filesystem_calls_are_killed (test_native_guard.GuardPolicyTests.test_mutating_filesystem_calls_are_killed) ... ok
+test_network_socket_and_socketpair_are_killed (test_native_guard.GuardPolicyTests.test_network_socket_and_socketpair_are_killed) ... ok
+test_non_native_arch_and_x32_numbers_are_killed (test_native_guard.GuardPolicyTests.test_non_native_arch_and_x32_numbers_are_killed) ... ok
+test_openat2_cannot_bypass_flag_inspection (test_native_guard.GuardPolicyTests.test_openat2_cannot_bypass_flag_inspection) ... ok
+test_read_only_basic_syscalls_allowed (test_native_guard.GuardPolicyTests.test_read_only_basic_syscalls_allowed) ... ok
+test_read_roots_reject_all_filesystem_or_relative_paths (test_native_guard.GuardPolicyTests.test_read_roots_reject_all_filesystem_or_relative_paths) ... ok
+test_readonly_fcntl_allowed_and_setting_or_dup_killed (test_native_guard.GuardPolicyTests.test_readonly_fcntl_allowed_and_setting_or_dup_killed) ... ok
+test_readonly_ioctl_queries_allowed (test_native_guard.GuardPolicyTests.test_readonly_ioctl_queries_allowed) ... ok
+test_readonly_open_and_openat_flags (test_native_guard.GuardPolicyTests.test_readonly_open_and_openat_flags) ... ok
+test_resource_increase_rejected (test_native_guard.GuardPolicyTests.test_resource_increase_rejected) ... ok
+test_terminal_and_device_writing_ioctl_kills (test_native_guard.GuardPolicyTests.test_terminal_and_device_writing_ioctl_kills) ... ok
+test_unknown_fixture_rejected_without_output_or_fork (test_native_guard.GuardPolicyTests.test_unknown_fixture_rejected_without_output_or_fork) ... ok
+test_unknown_syscall_default_kills (test_native_guard.GuardPolicyTests.test_unknown_syscall_default_kills) ... ok
+test_write_create_truncate_append_flags_kill (test_native_guard.GuardPolicyTests.test_write_create_truncate_append_flags_kill) ... ok
+test_writes_only_preopened_stdout_stderr (test_native_guard.GuardPolicyTests.test_writes_only_preopened_stdout_stderr) ... ok
+test_current_source_cannot_dispatch (test_parser_contract.ContractTests.test_current_source_cannot_dispatch) ... ok
+test_exact_approval_requires_tty_and_challenge (test_parser_contract.ContractTests.test_exact_approval_requires_tty_and_challenge) ... NEW EXPLICIT USER AUTHORIZATION REQUIRED; EXACT SCOPE:
+{
+  "source": "0000000000000000000000000000000000000000",
+  "commands": [
+    "import model sm",
+    "define p4 = g u u~ d d~ s s~ c c~",
+    "generate p4 p4 > b b~ a a QCD=2 QED=2",
+    "quit"
+  ],
+  "limits": {
+    "cpu_seconds": 2,
+    "wall_seconds": 3,
+    "address_space_bytes": 536870912,
+    "output_file_bytes": 65536
+  },
+  "output": "/tmp/tmpdb0ng693/out",
+  "config_activation": {
+    "bytes": 1,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}
+AUTHORIZE SYMBOLIC_PARSER 805b9fc55e1180406a0eecfa413f9d5c6d548ed0081569248777c4b774fc26bc
+NEW EXPLICIT USER AUTHORIZATION REQUIRED; EXACT SCOPE:
+{
+  "source": "0000000000000000000000000000000000000000",
+  "commands": [
+    "import model sm",
+    "define p4 = g u u~ d d~ s s~ c c~",
+    "generate p4 p4 > b b~ a a QCD=2 QED=2",
+    "quit"
+  ],
+  "limits": {
+    "cpu_seconds": 2,
+    "wall_seconds": 3,
+    "address_space_bytes": 536870912,
+    "output_file_bytes": 65536
+  },
+  "output": "/tmp/tmpdb0ng693/out",
+  "config_activation": {
+    "bytes": 1,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}
+AUTHORIZE SYMBOLIC_PARSER 805b9fc55e1180406a0eecfa413f9d5c6d548ed0081569248777c4b774fc26bc
+ok
+test_exact_contract (test_parser_contract.ContractTests.test_exact_contract) ... ok
+test_missing_approval_before_package_read (test_parser_contract.ContractTests.test_missing_approval_before_package_read) ... ok
+test_missing_approval_path (test_parser_contract.ContractTests.test_missing_approval_path) ... ok
+test_no_numerical_or_dispatch_authorization (test_parser_contract.ContractTests.test_no_numerical_or_dispatch_authorization) ... ok
+test_no_old_review_reuse (test_parser_contract.ContractTests.test_no_old_review_reuse) ... ok
+test_output_fresh_and_contained (test_parser_contract.ContractTests.test_output_fresh_and_contained) ... ok
+test_scope_and_caps_mutations (test_parser_contract.ContractTests.test_scope_and_caps_mutations) ... ok
+test_symbolic_generate_explicit (test_parser_contract.ContractTests.test_symbolic_generate_explicit) ... ok
+test_unknown_field_rejected (test_parser_contract.ContractTests.test_unknown_field_rejected) ... ok
+test_unproven_complete_launch_is_rejected_before_challenge (test_parser_contract.ContractTests.test_unproven_complete_launch_is_rejected_before_challenge) ... ok
+test_alpha_max5_not_accepted (test_pdf_backend.BackendMethods.test_alpha_max5_not_accepted) ... ok
+test_bottom_native_rejected (test_pdf_backend.BackendMethods.test_bottom_native_rejected) ... ok
+test_changed_historical_native_result_rejected (test_pdf_backend.BackendMethods.test_changed_historical_native_result_rejected) ... ok
+test_different_alpha_type_not_silently_analytic (test_pdf_backend.BackendMethods.test_different_alpha_type_not_silently_analytic) ... ok
+test_duplicate_metadata_key_rejected (test_pdf_backend.BackendMethods.test_duplicate_metadata_key_rejected) ... ok
+test_historical_unverified_fallback_rejected (test_pdf_backend.BackendMethods.test_historical_unverified_fallback_rejected) ... ok
+test_identity_raw_whitespace_and_size (test_pdf_backend.BackendMethods.test_identity_raw_whitespace_and_size) ... ok
+test_member_override_rejected (test_pdf_backend.BackendMethods.test_member_override_rejected) ... ok
+test_mismatched_alpha_tables_rejected (test_pdf_backend.BackendMethods.test_mismatched_alpha_tables_rejected) ... ok
+test_missing_historical_dependency_closure_rejected (test_pdf_backend.BackendMethods.test_missing_historical_dependency_closure_rejected) ... ok
+test_missing_payload_rejected (test_pdf_backend.BackendMethods.test_missing_payload_rejected) ... ok
+test_native_scope_cannot_be_promoted (test_pdf_backend.BackendMethods.test_native_scope_cannot_be_promoted) ... ok
+test_no_bottom_flavour_and_max4 (test_pdf_backend.BackendMethods.test_no_bottom_flavour_and_max4) ... ok
+test_no_native_package_import_or_subprocess (test_pdf_backend.BackendMethods.test_no_native_package_import_or_subprocess) ... ok
+test_nonfinite_native_rejected (test_pdf_backend.BackendMethods.test_nonfinite_native_rejected) ... ok
+test_nonzero_native_physics_count_rejected (test_pdf_backend.BackendMethods.test_nonzero_native_physics_count_rejected) ... ok
+test_numflavors_not_inferred_from_name (test_pdf_backend.BackendMethods.test_numflavors_not_inferred_from_name) ... ok
+test_off_knot_reference_preserves_failed_strict_diagnostic (test_pdf_backend.BackendMethods.test_off_knot_reference_preserves_failed_strict_diagnostic) ... ok
+test_output_parent_symlink_rejected (test_pdf_backend.BackendMethods.test_output_parent_symlink_rejected) ... ok
+test_outputs_are_new_only (test_pdf_backend.BackendMethods.test_outputs_are_new_only) ... ok
+test_resolved_path_redirect_rejected (test_pdf_backend.BackendMethods.test_resolved_path_redirect_rejected) ... ok
+test_setname_0130_not_reference (test_pdf_backend.BackendMethods.test_setname_0130_not_reference) ... ok
+test_source_anchor_missing_rejected (test_pdf_backend.BackendMethods.test_source_anchor_missing_rejected) ... ok
+test_unordered_table_rejected (test_pdf_backend.BackendMethods.test_unordered_table_rejected) ... ok
+test_wrong_backend_density_anchor_rejected (test_pdf_backend.BackendMethods.test_wrong_backend_density_anchor_rejected) ... ok
+test_wrong_lo_lhaid_anchor_not_replaced_by_nlo_or_default (test_pdf_backend.BackendMethods.test_wrong_lo_lhaid_anchor_not_replaced_by_nlo_or_default) ... ok
+test_wrong_member_id_rejected (test_pdf_backend.BackendMethods.test_wrong_member_id_rejected) ... ok
+test_wrong_order_rejected (test_pdf_backend.BackendMethods.test_wrong_order_rejected) ... ok
+test_wrong_reference_is_rejected (test_pdf_backend.BackendMethods.test_wrong_reference_is_rejected) ... ok
+test_deleted_intermediate_unlisted_path_cannot_disappear (test_publication.GitPayloadFixtures.test_deleted_intermediate_unlisted_path_cannot_disappear) ... ok
+test_every_intermediate_blob_is_checked (test_publication.GitPayloadFixtures.test_every_intermediate_blob_is_checked) ... ok
+test_git_symlink_payload_rejected (test_publication.GitPayloadFixtures.test_git_symlink_payload_rejected) ... ok
+test_index_raw_bytes_are_checked (test_publication.GitPayloadFixtures.test_index_raw_bytes_are_checked) ... ok
+test_intermediate_private_config_is_not_erased_by_final (test_publication.GitPayloadFixtures.test_intermediate_private_config_is_not_erased_by_final) ... ok
+test_ordinary_bounded_source_history_passes (test_publication.GitPayloadFixtures.test_ordinary_bounded_source_history_passes) ... ok
+test_deleted_intermediate_unlisted_path_cannot_disappear (test_publication.MoreGitPayloadFixtures.test_deleted_intermediate_unlisted_path_cannot_disappear) ... ok
+test_every_intermediate_blob_is_checked (test_publication.MoreGitPayloadFixtures.test_every_intermediate_blob_is_checked) ... ok
+test_git_symlink_payload_rejected (test_publication.MoreGitPayloadFixtures.test_git_symlink_payload_rejected) ... ok
+test_index_pdf_bytes_checked_even_with_clean_worktree (test_publication.MoreGitPayloadFixtures.test_index_pdf_bytes_checked_even_with_clean_worktree) ... ok
+test_index_raw_bytes_are_checked (test_publication.MoreGitPayloadFixtures.test_index_raw_bytes_are_checked) ... ok
+test_intermediate_lhe_is_not_erased_by_final_text (test_publication.MoreGitPayloadFixtures.test_intermediate_lhe_is_not_erased_by_final_text) ... ok
+test_intermediate_private_config_is_not_erased_by_final (test_publication.MoreGitPayloadFixtures.test_intermediate_private_config_is_not_erased_by_final) ... ok
+test_ordinary_bounded_source_history_passes (test_publication.MoreGitPayloadFixtures.test_ordinary_bounded_source_history_passes) ... ok
+test_staged_payload_count_is_recorded (test_publication.MoreGitPayloadFixtures.test_staged_payload_count_is_recorded) ... ok
+test_binary_control_bytes_rejected (test_publication.Phase13AdditionalBoundaries.test_binary_control_bytes_rejected) ... ok
+test_bounded_count_csv_allowed (test_publication.Phase13AdditionalBoundaries.test_bounded_count_csv_allowed) ... ok
+test_disguised_lhe_is_rejected (test_publication.Phase13AdditionalBoundaries.test_disguised_lhe_is_rejected) ... ok
+test_event_dump_name_rejected (test_publication.Phase13AdditionalBoundaries.test_event_dump_name_rejected) ... ok
+test_json_embedded_lhe_is_rejected (test_publication.Phase13AdditionalBoundaries.test_json_embedded_lhe_is_rejected) ... ok
+test_only_fixed_base_accepted (test_publication.Phase13AdditionalBoundaries.test_only_fixed_base_accepted) ... ok
+test_particle_csv_dump_rejected (test_publication.Phase13AdditionalBoundaries.test_particle_csv_dump_rejected) ... ok
+test_publication_guard_can_publish_own_source_as_text (test_publication.Phase13AdditionalBoundaries.test_publication_guard_can_publish_own_source_as_text) ... ok
+test_raw_private_config_without_header_rejected (test_publication.Phase13AdditionalBoundaries.test_raw_private_config_without_header_rejected) ... ok
+test_baseline_parser_matching_approval_promotions_rejected (test_publication.Publication.test_baseline_parser_matching_approval_promotions_rejected) ... ok
+test_binary_grid_event_extensions_rejected (test_publication.Publication.test_binary_grid_event_extensions_rejected) ... ok
+test_canonical_paths_only (test_publication.Publication.test_canonical_paths_only) ... ok
+test_crlf_exact_identity_preserved (test_publication.Publication.test_crlf_exact_identity_preserved) ... ok
+test_current_runtime_hash_rejected_without_publishing_raw_bytes (test_publication.Publication.test_current_runtime_hash_rejected_without_publishing_raw_bytes) ... ok
+test_delivery_exceptions_are_only_three (test_publication.Publication.test_delivery_exceptions_are_only_three) ... ok
+test_disguised_lhapdf_grid_or_info_rejected (test_publication.Publication.test_disguised_lhapdf_grid_or_info_rejected) ... ok
+test_disguised_magic_rejected (test_publication.Publication.test_disguised_magic_rejected) ... ok
+test_empty_unbounded_rejected (test_publication.Publication.test_empty_unbounded_rejected) ... ok
+test_encoded_private_field_rejected (test_publication.Publication.test_encoded_private_field_rejected) ... ok
+test_exact_evidence_class_allowlist (test_publication.Publication.test_exact_evidence_class_allowlist) ... ok
+test_gates_current_boundary (test_publication.Publication.test_gates_current_boundary) ... ok
+test_gitattributes_allowed (test_publication.Publication.test_gitattributes_allowed) ... ok
+test_historical_scopes_rejected (test_publication.Publication.test_historical_scopes_rejected) ... ok
+test_identity_counts_and_redaction_are_allowed (test_publication.Publication.test_identity_counts_and_redaction_are_allowed) ... ok
+test_only_one_workflow_allowed (test_publication.Publication.test_only_one_workflow_allowed) ... ok
+test_pdf_png_extensions_rejected (test_publication.Publication.test_pdf_png_extensions_rejected) ... ok
+test_physics_promotions_rejected (test_publication.Publication.test_physics_promotions_rejected) ... ok
+test_production_counters_must_be_integer_zero (test_publication.Publication.test_production_counters_must_be_integer_zero) ... ok
+test_raw_config_names_rejected (test_publication.Publication.test_raw_config_names_rejected) ... ok
+test_raw_private_config_embedded_in_json_rejected (test_publication.Publication.test_raw_private_config_embedded_in_json_rejected) ... ok
+test_raw_private_configuration_body_rejected (test_publication.Publication.test_raw_private_configuration_body_rejected) ... ok
+test_source_extensions_allowed (test_publication.Publication.test_source_extensions_allowed) ... ok
+test_unlisted_rejected (test_publication.Publication.test_unlisted_rejected) ... ok
+test_absolute_symlink_is_rejected_even_when_target_is_inside (test_runtime_layout.LayoutTests.test_absolute_symlink_is_rejected_even_when_target_is_inside) ... ok
+test_broken_internal_symlink_is_preserved_and_explicit (test_runtime_layout.LayoutTests.test_broken_internal_symlink_is_preserved_and_explicit) ... ok
+test_changed_symlink_text_is_rejected (test_runtime_layout.LayoutTests.test_changed_symlink_text_is_rejected) ... ok
+test_complete_prepare_rejects_whitespace_drift_before_output_creation (test_runtime_layout.LayoutTests.test_complete_prepare_rejects_whitespace_drift_before_output_creation) ... ok
+test_complete_synthetic_prepare_preserves_source_and_raw_config (test_runtime_layout.LayoutTests.test_complete_synthetic_prepare_preserves_source_and_raw_config) ... ok
+test_current_policy_has_no_execution_or_new_approval (test_runtime_layout.LayoutTests.test_current_policy_has_no_execution_or_new_approval) ... ok
+test_destination_inside_original_is_rejected (test_runtime_layout.LayoutTests.test_destination_inside_original_is_rejected) ... ok
+test_duplicate_destination_hardlinks_cannot_pass (test_runtime_layout.LayoutTests.test_duplicate_destination_hardlinks_cannot_pass) ... ok
+test_entry_cap (test_runtime_layout.LayoutTests.test_entry_cap) ... ok
+test_existing_destination_is_rejected (test_runtime_layout.LayoutTests.test_existing_destination_is_rejected) ... ok
+test_fresh_output_rejects_existing_path (test_runtime_layout.LayoutTests.test_fresh_output_rejects_existing_path) ... ok
+test_fresh_output_rejects_literal_parent_traversal (test_runtime_layout.LayoutTests.test_fresh_output_rejects_literal_parent_traversal) ... ok
+test_fresh_output_rejects_outside_reviewed_parent (test_runtime_layout.LayoutTests.test_fresh_output_rejects_outside_reviewed_parent) ... ok
+test_fresh_output_rejects_symlink_ancestor (test_runtime_layout.LayoutTests.test_fresh_output_rejects_symlink_ancestor) ... ok
+test_independent_bytes_and_inodes (test_runtime_layout.LayoutTests.test_independent_bytes_and_inodes) ... ok
+test_manifest_path_traversal_is_rejected (test_runtime_layout.LayoutTests.test_manifest_path_traversal_is_rejected) ... ok
+test_new_output_must_have_existing_parent (test_runtime_layout.LayoutTests.test_new_output_must_have_existing_parent) ... ok
+test_original_hardlinks_become_independent_destination_files (test_runtime_layout.LayoutTests.test_original_hardlinks_become_independent_destination_files) ... ok
+test_policy_does_not_accept_silently_rebased_raw_hash (test_runtime_layout.LayoutTests.test_policy_does_not_accept_silently_rebased_raw_hash) ... ok
+test_policy_rejects_parser_or_physical_authorization (test_runtime_layout.LayoutTests.test_policy_rejects_parser_or_physical_authorization) ... ok
+test_privileged_file_mode_is_rejected (test_runtime_layout.LayoutTests.test_privileged_file_mode_is_rejected) ... ok
+test_proposal_changes_only_mg5_path_in_separate_bytes (test_runtime_layout.LayoutTests.test_proposal_changes_only_mg5_path_in_separate_bytes) ... ok
+test_proposal_duplicate_key_is_rejected (test_runtime_layout.LayoutTests.test_proposal_duplicate_key_is_rejected) ... ok
+test_proposal_inline_comment_requires_review (test_runtime_layout.LayoutTests.test_proposal_inline_comment_requires_review) ... ok
+test_proposal_wrong_embedded_original_is_rejected (test_runtime_layout.LayoutTests.test_proposal_wrong_embedded_original_is_rejected) ... ok
+test_relative_file_and_directory_links_remain_inside_copy (test_runtime_layout.LayoutTests.test_relative_file_and_directory_links_remain_inside_copy) ... ok
+test_relative_symlink_escape_is_rejected (test_runtime_layout.LayoutTests.test_relative_symlink_escape_is_rejected) ... ok
+test_root_must_be_directory (test_runtime_layout.LayoutTests.test_root_must_be_directory) ... ok
+test_same_bytes_replaced_source_inode_is_rejected (test_runtime_layout.LayoutTests.test_same_bytes_replaced_source_inode_is_rejected) ... ok
+test_shared_original_hardlink_cannot_pass_byte_equality (test_runtime_layout.LayoutTests.test_shared_original_hardlink_cannot_pass_byte_equality) ... ok
+test_single_file_cap (test_runtime_layout.LayoutTests.test_single_file_cap) ... ok
+test_special_fifo_is_rejected (test_runtime_layout.LayoutTests.test_special_fifo_is_rejected) ... ok
+test_stale_manifest_raw_byte_change_is_rejected (test_runtime_layout.LayoutTests.test_stale_manifest_raw_byte_change_is_rejected) ... ok
+test_symlink_loop_is_rejected (test_runtime_layout.LayoutTests.test_symlink_loop_is_rejected) ... ok
+test_total_byte_cap (test_runtime_layout.LayoutTests.test_total_byte_cap) ... ok
+test_write_new_never_overwrites_existing_file (test_runtime_layout.LayoutTests.test_write_new_never_overwrites_existing_file) ... ok
+test_write_new_rejects_destination_symlink (test_runtime_layout.LayoutTests.test_write_new_rejects_destination_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 188 tests in 0.814s
+
+OK

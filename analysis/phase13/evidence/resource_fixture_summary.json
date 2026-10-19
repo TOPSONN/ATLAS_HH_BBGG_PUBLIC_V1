@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_NATIVE_RESOURCE_FIXTURES",
+  "enforcement_verified": true,
+  "fixture_count": 13,
+  "required_fixture_count": 13,
+  "runtime_receipt": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/isolated_runtime_identity.json",
+    "sha256": "ae02b9c46b49a930c9fbcddb71649ddc335d635438b4369e01132917c74b7997"
+  },
+  "raw_config_before": {
+    "runtime_config": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    },
+    "installed_config": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    }
+  },
+  "raw_config_after": {
+    "runtime_config": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    },
+    "installed_config": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    }
+  },
+  "raw_preservation_verified": true,
+  "resource_profile": {
+    "cpu_seconds": 2,
+    "wall_seconds": 3,
+    "address_space_bytes": 536870912,
+    "output_file_bytes": 65536
+  },
+  "fixture_names": [
+    "read_approved",
+    "write_installed_config",
+    "write_runtime_config",
+    "write_escape_symlink",
+    "fork",
+    "exec",
+    "network",
+    "cpu_spin",
+    "wall_sleep",
+    "memory_overflow",
+    "stdout_overflow",
+    "stderr_overflow",
+    "orphan_cleanup"
+  ],
+  "results": [
+    {
+      "fixture": "read_approved",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.0037679999999999996,
+      "wall_seconds": 0.011119667000457412
+    },
+    {
+      "fixture": "write_installed_config",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.055117,
+      "wall_seconds": 0.3646235300002445
+    },
+    {
+      "fixture": "write_runtime_config",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.048535999999999996,
+      "wall_seconds": 0.3759032020025188
+    },
+    {
+      "fixture": "write_escape_symlink",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.043768999999999995,
+      "wall_seconds": 0.13885096800004249
+    },
+    {
+      "fixture": "fork",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.05655,
+      "wall_seconds": 0.3560541729966644
+    },
+    {
+      "fixture": "exec",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.034606,
+      "wall_seconds": 0.28902858199944603
+    },
+    {
+      "fixture": "network",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.042564,
+      "wall_seconds": 0.2547976440000639
+    },
+    {
+      "fixture": "cpu_spin",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 9,
+      "CPU_seconds": 2.02432,
+      "wall_seconds": 2.0259695499989903
+    },
+    {
+      "fixture": "wall_sleep",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 9,
+      "CPU_seconds": 0.001893,
+      "wall_seconds": 3.009862939001323
+    },
+    {
+      "fixture": "memory_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.002276,
+      "wall_seconds": 0.010506008999072947
+    },
+    {
+      "fixture": "stdout_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 25,
+      "CPU_seconds": 0.015688,
+      "wall_seconds": 0.07126563000201713
+    },
+    {
+      "fixture": "stderr_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 25,
+      "CPU_seconds": 0.022434,
+      "wall_seconds": 0.09226086100170505
+    },
+    {
+      "fixture": "orphan_cleanup",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.004384,
+      "wall_seconds": 0.023434568000084255
+    }
+  ],
+  "future_parser_or_MG5_success": "UNVERIFIED_NOT_EXECUTED",
+  "parser_execution_authorized": false,
+  "new_baseline_approved": false,
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}
