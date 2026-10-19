@@ -1,0 +1,1018 @@
+{
+  "schema_version": 1,
+  "task": "PHASE9A_INDEPENDENT_PHASE8_SCIENCE_REVIEW",
+  "status": "PASS_INDEPENDENT_SCIENCE_REVIEW_WITH_PHYSICAL_BLOCKERS",
+  "reviewed_source_revision": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+  "executed_core_source_revision": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+  "reviewer": "Independent Phase9 science-review agent",
+  "signoff_meaning": "All stated source/persisted-event checks were physically executed; this signoff does not approve a physical likelihood or claim a new native ROOT readback.",
+  "source_events_independently_recomputed": 7100,
+  "additional_independent_sources": 0,
+  "fresh_native_ROOT_dispatches": 0,
+  "fresh_Phase9_native_ROOT_receipt_status": "PENDING_ROOT_ORCHESTRATOR",
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_events": 0,
+  "matrix": [
+    {
+      "check": "EXACT_PHASE8_SOURCE",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "revision": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+        "executed_core": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
+        "tracked_files_verified": 56
+      },
+      "evidence": [
+        "PHASE8_SOURCE/analysis/phase8/CMakeLists.txt",
+        "PHASE8_SOURCE/analysis/phase8/README_ZH_TW.md",
+        "PHASE8_SOURCE/analysis/phase8/apps/phase8_analyze.cxx",
+        "PHASE8_SOURCE/analysis/phase8/apps/phase8_methods.cxx",
+        "PHASE8_SOURCE/analysis/phase8/apps/phase8_validate.cxx",
+        "PHASE8_SOURCE/analysis/phase8/config/datasets.json",
+        "PHASE8_SOURCE/analysis/phase8/config/histogram_edges_v1.json",
+        "PHASE8_SOURCE/analysis/phase8/config/observables_v1.json",
+        "PHASE8_SOURCE/analysis/phase8/config/regions_v1.json",
+        "PHASE8_SOURCE/analysis/phase8/config/selection_v1.json",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Dataset.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Event.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Histogram.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Kappa.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Likelihood.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Provenance.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Reader.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Reconstruction.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Selection.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Statistics.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8TruthMatching.hxx",
+        "PHASE8_SOURCE/analysis/phase8/include/Phase8Weights.hxx",
+        "PHASE8_SOURCE/analysis/phase8/scripts/audit_inputs.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/background_contract.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/independent_statistics.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/independent_validation.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/inspect_histograms.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/make_prefix_manifest.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/postprocess.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/run_full_analysis.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/select_public_evidence.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/summarize_outputs.py",
+        "PHASE8_SOURCE/analysis/phase8/scripts/write_statistics_reports.py",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Histogram.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Kappa.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Likelihood.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Provenance.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Reader.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Reconstruction.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Selection.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Statistics.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8TruthMatching.cxx",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Weights.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_independent_statistics.py",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_contract.py",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_histograms.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_likelihood.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_physics.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_provenance.py",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_readback_integrity.py",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_resources.py",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_selection.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_statistics.cxx",
+        "PHASE8_SOURCE/analysis/phase8/tests/test_regions_and_shapes_independent.py",
+        "PHASE8_SOURCE/metadata/phase7e_audit.json",
+        "PHASE8_SOURCE/metadata/phase8_dataset_manifest.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "FULL_COHORTS",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "unique_independent_sources": 7100,
+        "datasets": [
+          {
+            "dataset_id": "S01_B100",
+            "N_original": 100,
+            "cutflow": [
+              100,
+              45,
+              38,
+              18,
+              18
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "S01_C1000",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              484,
+              403,
+              143,
+              143
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B01",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              446,
+              266,
+              91,
+              28
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B02",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              378,
+              241,
+              7,
+              1
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B03",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              445,
+              277,
+              0,
+              0
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B04",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              370,
+              220,
+              77,
+              75
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B05",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              327,
+              322,
+              131,
+              131
+            ],
+            "status": "PASS"
+          },
+          {
+            "dataset_id": "B06",
+            "N_original": 1000,
+            "cutflow": [
+              1000,
+              2,
+              2,
+              2,
+              0
+            ],
+            "status": "PASS"
+          }
+        ],
+        "prefix_independent_count_increment": 0
+      },
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_events.jsonl"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "SOURCE_EVENT_IDENTITY",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": [
+        {
+          "dataset_id": "S01_B100",
+          "unique_source_keys": 100,
+          "input_index_sha256": "1ab21fa10038b0081a2d5cbc79f01a38bdab0cf84b7a493e92d5b5ee5808c6f3"
+        },
+        {
+          "dataset_id": "S01_C1000",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a"
+        },
+        {
+          "dataset_id": "B01",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f"
+        },
+        {
+          "dataset_id": "B02",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77"
+        },
+        {
+          "dataset_id": "B03",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95"
+        },
+        {
+          "dataset_id": "B04",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31"
+        },
+        {
+          "dataset_id": "B05",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0"
+        },
+        {
+          "dataset_id": "B06",
+          "unique_source_keys": 1000,
+          "input_index_sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056"
+        }
+      ],
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_events.jsonl",
+        "PHASE8_LOCAL/phase8a_event_identity_audit.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "SOURCE_WEIGHTS_AND_FIXED_N_VARIANCE",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "normalization": "raw XWGTUP / original N once",
+        "variance": "centered fixed original N, failed selections retained as zero",
+        "stage_rows": 40
+      },
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_events.jsonl",
+        "PHASE8_LOCAL/phase8_cutflow_weighted.csv"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "MODEL_BR_ONCE",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "HH": 0.002653445906720871,
+        "ZH": 0.0022965313147512443,
+        "ttH": 0.002297546784308979,
+        "background_without_Higgs_BR": "B01 B02 B03 B06",
+        "rows": 40
+      },
+      "evidence": [
+        "PHASE8_LOCAL/phase8_weight_accounting.csv"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "NATIVE_BIT0",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "eligible_native_jets_checked": 19483,
+        "predicate": "(BTag & 1) != 0",
+        "reco_flavour_not_substituted_for_tag": true
+      },
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_events.jsonl",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Selection.cxx"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "SIGNAL_PDF_ALPHA_IDENTITY",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "B100_PDF": "cteq6l1",
+        "B100_alpha_loops": 1,
+        "B100_effective_seed": 21,
+        "C1000_PDF": "NNPDF23_lo_as_0130_qed_mem0",
+        "C1000_alpha_loops": 2,
+        "pooling": "FORBIDDEN_DIFFERENT_EFFECTIVE_CONFIGURATIONS"
+      },
+      "evidence": [
+        "PHASE8_SOURCE/metadata/phase7e_audit.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "CONTROL_REGION_PARTITION",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "rows": 120,
+        "eligible_total": 1769,
+        "all_weighted_count_closures": true
+      },
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_events.jsonl",
+        "PHASE8_LOCAL/phase8_control_regions.csv"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "HISTOGRAM_HASH_BINDING",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "canonical_content_sha256": "4a8899dfde5b484d49e30438b704f81e77b648cb07d643e7360b0c181a2a9ed2",
+        "native_objects": 4668,
+        "fresh_ROOT_readback_in_this_script": false,
+        "fresh_Phase9_native_receipt": "ROOT_ORCHESTRATOR_SEPARATE_EVIDENCE"
+      },
+      "evidence": [
+        "PHASE8_LOCAL/native/phase8_native_histogram_validation.json",
+        "PHASE8_LOCAL/repeatability_validation.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "KAPPA_COMMON_SOURCE_COVARIANCE_AND_ESS",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "shared_sources": 1000,
+        "rows_not_independent_samples": 6000,
+        "covariance_entries_independently_recomputed": 180,
+        "kappa_statuses": {
+          "-1": "VALID_DESCRIPTIVE_ONLY",
+          "0": "VALID_DESCRIPTIVE_ONLY",
+          "1": "VALID_DESCRIPTIVE_ONLY",
+          "2": "VALID_DESCRIPTIVE_ONLY",
+          "2.5": "INCONCLUSIVE_REWEIGHTING",
+          "5": "INCONCLUSIVE_REWEIGHTING"
+        }
+      },
+      "evidence": [
+        "PHASE8_SOURCE/reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/event_reweights.csv",
+        "PHASE8_LOCAL/phase8_kappa_covariance.csv",
+        "PHASE8_LOCAL/phase8_kappa_summary.csv"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "EMPTY_LOW_ESS_GUARDS",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "phase8_bin_quality.csv": {
+          "EMPTY_BIN": 7868,
+          "LOW_ESS_LT10": 3191,
+          "LOW_ESS_LT20": 1202,
+          "VALID_DESCRIPTIVE_ONLY": 2099
+        },
+        "phase8_kappa_bin_quality.csv": {
+          "EMPTY_BIN": 4086,
+          "LOW_ESS_LT10": 3531,
+          "LOW_ESS_LT20": 1310,
+          "HIGH_SINGLE_EVENT_DOMINANCE": 240,
+          "VALID_DESCRIPTIVE_ONLY": 1603
+        }
+      },
+      "evidence": [
+        "PHASE8_LOCAL/phase8_bin_quality.csv",
+        "PHASE8_LOCAL/phase8_kappa_bin_quality.csv"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "NO_PHYSICAL_SUM_AND_INFERENCE_BLOCKERS",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "background_sum": "BLOCKED",
+        "fake_model": "UNKNOWN_NOT_ZERO",
+        "physical_significance_CLs_kappa": "NOT_EVALUATED",
+        "unknown_physical_nuisance_rows": 22
+      },
+      "evidence": [
+        "PHASE8_LOCAL/phase8_background_overlap_matrix.json",
+        "PHASE8_LOCAL/phase8_fake_photon_readiness.json",
+        "PHASE8_LOCAL/phase8_template_manifest.json",
+        "PHASE8_LOCAL/phase8_systematics_readiness.csv",
+        "PHASE8_LOCAL/phase8_likelihood_method_tests.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    },
+    {
+      "check": "EVIDENCE_SCOPE_SEPARATION",
+      "status": "PASS",
+      "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+      "detail": {
+        "historical_local_native_ROOT": "ACTUAL_EXISTING_DATA_READBACK",
+        "this_review": "HISTORICAL_EVIDENCE_AUDIT plus independent persisted-event numerical recomputation",
+        "GitHub_CI": "SOURCE_METHODS_AND_FROZEN_REFERENCE_EVIDENCE; native full ROOT readback is separately measured local evidence",
+        "published_numeric_summaries": "frozen bounded subset, not new ROOT readback"
+      },
+      "evidence": [
+        "PHASE8_LOCAL/phase8_publication_receipt.json"
+      ],
+      "independent_review": "Phase9 science reviewer; source plus independent Decimal70 calculations"
+    }
+  ],
+  "evidence": {
+    "PHASE8_SOURCE/analysis/phase8/CMakeLists.txt": {
+      "sha256": "674a6a363c6afd1d0fac60e269f2078bf4016f4cfb8cafecda28117df850e1f3",
+      "bytes": 3360,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/README_ZH_TW.md": {
+      "sha256": "30570f9d4fc7c6a82ef90d420e75b4d45303629ef69f620eb9f76919ffc0701f",
+      "bytes": 12150,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/apps/phase8_analyze.cxx": {
+      "sha256": "7914fbcd77e9232c0a3093f303e4e7e3ea7d4c13ecc3464d4b7d6bdaea327bf3",
+      "bytes": 9112,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/apps/phase8_methods.cxx": {
+      "sha256": "7b34be94733e302e5dbd6cd4557dd8186ca18e3b492e49d6fcef292dae622a1b",
+      "bytes": 7164,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/apps/phase8_validate.cxx": {
+      "sha256": "11cb57656014ffea8f8861c23de1dc6ef9cbac7afeaf363f3b47641f97381e63",
+      "bytes": 313,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/datasets.json": {
+      "sha256": "4a45f025f7044a282ff51164ffca2d3c371b35d497a7bb53dac98adc87bdb8ef",
+      "bytes": 40276,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/histogram_edges_v1.json": {
+      "sha256": "f3e0d1bda28f8b2415660a567c1aaa2d5dfea745d120d603fbae16b370d274c9",
+      "bytes": 11602,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/observables_v1.json": {
+      "sha256": "640294e98464b5ac4a4d0dbe32f8b87acc1b315fbcd9e547b39a689642fff8db",
+      "bytes": 942,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/regions_v1.json": {
+      "sha256": "4e2736dfc08dd68f695626d33d2a342d0860066bb730257f53e039b2299cc6bc",
+      "bytes": 1107,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/selection_v1.json": {
+      "sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "bytes": 566,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Dataset.hxx": {
+      "sha256": "a2ec69afc13fc724498e97252bb22b623bbee399453de703cd3f42b1f65ef67c",
+      "bytes": 450,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Event.hxx": {
+      "sha256": "7f5269a5d7d1ec3f788b3c8d072e72e49e9c9041a3137b261bd41b1081b43d94",
+      "bytes": 896,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Histogram.hxx": {
+      "sha256": "09e1e3f0aa6955de85a410d4df3a530b63aa16ff70d6c5b598f123cb927cd7d4",
+      "bytes": 821,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Kappa.hxx": {
+      "sha256": "730338fd39fa07587a05279dfb68dde916dc570255ef2786b76641ff913a421b",
+      "bytes": 587,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Likelihood.hxx": {
+      "sha256": "ca956ef23738cb0f8e7b01107b2766e043db231cd5765c42d109de2367932bcb",
+      "bytes": 576,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Provenance.hxx": {
+      "sha256": "052fd087ee336b998eafa185cc1ebc3d3307a0187ce9b142b5fbe2dcfd2d5814",
+      "bytes": 509,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Reader.hxx": {
+      "sha256": "06b40bf7c9d6f1988885012e2b286507e232dac9dbca8dcf69f25c7c430d6d22",
+      "bytes": 224,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Reconstruction.hxx": {
+      "sha256": "85f3dca0314b7017b377fe08661e1361f2d87c67a78ebce02f8857818f4f6dd8",
+      "bytes": 231,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Selection.hxx": {
+      "sha256": "ac9227eb6a4989a9f35b71074e47a623261ad956954ae2c3774b44eddde26735",
+      "bytes": 137,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Statistics.hxx": {
+      "sha256": "38b42c1571500fb8ccc9cac85a6765589f7376260163e95d3a1073c3707cd561",
+      "bytes": 1214,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8TruthMatching.hxx": {
+      "sha256": "aa555fe9739f398fbe53ee174f6b51bbbf39849e3351b177ed54453b50eec365",
+      "bytes": 375,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/include/Phase8Weights.hxx": {
+      "sha256": "67d146929b5503bd06a9bab85dc545ff930ef89aa0f3683ccc9d38a88947a081",
+      "bytes": 279,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/audit_inputs.py": {
+      "sha256": "1ce38d415b178354ee8f2b0c668fa998b6b96c9e76d6f93af7055f8b5f442231",
+      "bytes": 13072,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/background_contract.py": {
+      "sha256": "a14fa34bd72ad2f7eca410beab757c4e955e1923c10e06c55d7a050ee962b8ec",
+      "bytes": 5144,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/independent_statistics.py": {
+      "sha256": "601b3c0210c0c58ecb124503705dd292fc8eb483e94a5b1d2e403748aa6fa3df",
+      "bytes": 14248,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/independent_validation.py": {
+      "sha256": "075583742ad8f9e5bb71cfd92ee082453f0061b3d90dc67852956dda16ccae54",
+      "bytes": 9550,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/inspect_histograms.py": {
+      "sha256": "bb409b8cfe21927d13d03608ee4fd8398f1a1c71e19c261ef6c56a5f4c4e0cff",
+      "bytes": 5530,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/make_prefix_manifest.py": {
+      "sha256": "188474828ae5a7b760baefbf3073731db568ba53b7dc008512f8a42f38b92fbb",
+      "bytes": 2923,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/postprocess.py": {
+      "sha256": "023f5f72b2dac194be31f7732f993679353d232cfadb312d7cec4b3a5faf7bb7",
+      "bytes": 14615,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/run_full_analysis.py": {
+      "sha256": "a05e4f754a70e14b71563a28f81f393c8eb1ac9ed575c037fca422f88e43659e",
+      "bytes": 11139,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/select_public_evidence.py": {
+      "sha256": "aa0697052926f04d98fe9c631d19407eacaafbcfb4e1098e92802e14ba0069ea",
+      "bytes": 3932,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/summarize_outputs.py": {
+      "sha256": "699529aa78ca41d5f03ae5f23b4c6100690287d6b42a873599d2f7d949c7c027",
+      "bytes": 14476,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/scripts/write_statistics_reports.py": {
+      "sha256": "f865d19eac12b966c93ca0fbb79ad2c6e2c3297c230c2c15e8aae5f039400f11",
+      "bytes": 12820,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Histogram.cxx": {
+      "sha256": "868c65e1243f6f20f09a3b11cdac3c4eccc6486216c694e5a1b001f10cf252e5",
+      "bytes": 8573,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Kappa.cxx": {
+      "sha256": "9e695452a7208dbb998b9b70ea6c60c60f1c4a351675c27877f400cc02a6ff9a",
+      "bytes": 10818,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Likelihood.cxx": {
+      "sha256": "1211a6668272e71437d1cefc14c1e554edb182ec9b4c1dcef124aa9e4ad097a1",
+      "bytes": 16438,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Provenance.cxx": {
+      "sha256": "0e0940d85799c2678e663f083cdc2b97183c9ac173c15539b554e71ce9b88317",
+      "bytes": 4314,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Reader.cxx": {
+      "sha256": "3bbc819848e297f69dbe920aedd6ec82166d7ac4a47967c10f93839eba5992bd",
+      "bytes": 6691,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Reconstruction.cxx": {
+      "sha256": "e7bcfb21fa837f0ae6604ccee7e476536f2219acb62551462c14d1406f7e6b97",
+      "bytes": 4452,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Selection.cxx": {
+      "sha256": "aa4cfde6f08d3812ba16024e9f148f98f7aa4bbe14c62cb93187cea66c0e2937",
+      "bytes": 841,
+      "scope": "SOURCE_SELECTION_REVIEW"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Statistics.cxx": {
+      "sha256": "86189aee9f0a478b35b553e2e0e088a218039cf015ab9fc87957555af83a612f",
+      "bytes": 12972,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8TruthMatching.cxx": {
+      "sha256": "27db4c823abe37ede39ad52db76fed89ddca07c6a1e58c5b69b8ffcddfd9e67c",
+      "bytes": 4190,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Weights.cxx": {
+      "sha256": "2d7f0d253f873bf468c19a0b67d3fbfd74b37e5c472fceb9d56faf610c8f95fa",
+      "bytes": 1007,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_independent_statistics.py": {
+      "sha256": "f07bc82ce23ac922421157edaa7be144db8cb10a80193ef74c62f177251afd66",
+      "bytes": 1540,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_contract.py": {
+      "sha256": "8c3802b83a579366acef218d5660085712fd920a0c1c9a817069dcec041850a1",
+      "bytes": 9997,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_histograms.cxx": {
+      "sha256": "267157ad00f76dfd6a7b8d0e3fafc4b1f16dc6334d0a8d8bf42c6a0a9bb079af",
+      "bytes": 1441,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_likelihood.cxx": {
+      "sha256": "8206c755a3ad6eba327b0280855cee40b99ea33d0f96314e0d5d81126179a45a",
+      "bytes": 318,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_physics.cxx": {
+      "sha256": "6b4fd2b207b1c477437ab8ff16f1b16afc99824facb55749dc2c434785524ba2",
+      "bytes": 1728,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_provenance.py": {
+      "sha256": "6c2b6a7ce3a504c563d0b3bcf9a28bd2cad362d301c939363520eee6dfee1334",
+      "bytes": 6583,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_readback_integrity.py": {
+      "sha256": "29ad05134fd2f5b9dc7e38fc4bb4940c054c1aa24a8a3d98dcc45ec0890d4624",
+      "bytes": 11522,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_resources.py": {
+      "sha256": "eb7cd68277782d92722bcc1fa47bd5156555d0f738db5603072598a2c3b45895",
+      "bytes": 3587,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_selection.cxx": {
+      "sha256": "1dcf5d891d91e4fd5f96bc382fec2d05723cd841b43903b054698d78fff61c28",
+      "bytes": 1709,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_phase8_statistics.cxx": {
+      "sha256": "0c062f7d8657419a28b643abd4eeb9839eab234704a0732cb53f30bfde50b591",
+      "bytes": 6434,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/analysis/phase8/tests/test_regions_and_shapes_independent.py": {
+      "sha256": "fb308f53d1a63376ffba77fef2a6d4f8c52d604434497baf4abbc9d177474ffe",
+      "bytes": 2821,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_SOURCE/metadata/phase7e_audit.json": {
+      "sha256": "facb9646c4afae0f1e3558b00cf1bbc317964c9e144430e0d9ea42502af88f75",
+      "bytes": 4642,
+      "scope": "EFFECTIVE_RUNTIME_CONFIGURATION_AUDIT"
+    },
+    "PHASE8_SOURCE/metadata/phase8_dataset_manifest.json": {
+      "sha256": "18ca5fa8307e4e6f5a89957e5b61801e4e15c6cdc2f19c09baae7ca1d2725cfa",
+      "bytes": 121283,
+      "scope": "EXACT_PUBLISHED_SOURCE"
+    },
+    "PHASE8_LOCAL/native/phase8_events.jsonl": {
+      "sha256": "c6765f7ebcbcf7068f9b12ddf193b578c4fd07c975214fce5b857cfeab02c0eb",
+      "bytes": 14253194,
+      "scope": "PERSISTED_ACTUAL_EXISTING_ROOT_EVENT_READBACK"
+    },
+    "INPUT/S01_B100/root": {
+      "sha256": "39d0a544febdbdcd9711593f613e2f81ba89e396fa5db0e3f76e64c90e107dc8",
+      "bytes": 3602892,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_B100/input_index": {
+      "sha256": "1ab21fa10038b0081a2d5cbc79f01a38bdab0cf84b7a493e92d5b5ee5808c6f3",
+      "bytes": 6848916,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_B100/truth_index": {
+      "sha256": "b6c6ac5f3e4672664c6e90cff3f02c425aa14a358fb855d44abddf476308f3bb",
+      "bytes": 10208,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_B100/card": {
+      "sha256": "949b199f9ad16ec8d0543eb545bce0ab37a4d8968fd73f65b96a9302afddf772",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_B100/lhe": {
+      "sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+      "bytes": 15997,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_C1000/root": {
+      "sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+      "bytes": 36703913,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_C1000/input_index": {
+      "sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+      "bytes": 71527185,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_C1000/truth_index": {
+      "sha256": "8633893a909fa8d7d30a532e935389b8dd0ba732d471f6d7278ea8b656314d1d",
+      "bytes": 102878,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_C1000/card": {
+      "sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/S01_C1000/lhe": {
+      "sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "bytes": 98857,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B01/root": {
+      "sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "bytes": 28747494,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B01/input_index": {
+      "sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "bytes": 71150226,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B01/truth_index": {
+      "sha256": "fe0bd96df52528c4bd6dfd36f47bcc19f6d69596658cca1a6fb916358ab9e87b",
+      "bytes": 1374614,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B01/card": {
+      "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B01/lhe": {
+      "sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "bytes": 166818,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B02/root": {
+      "sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "bytes": 30570772,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B02/input_index": {
+      "sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "bytes": 76955296,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B02/truth_index": {
+      "sha256": "b84a4056adf90dfbd2baa35010f3123fbc9f272a236f38364f1d7b3408886e24",
+      "bytes": 1079742,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B02/card": {
+      "sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B02/lhe": {
+      "sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "bytes": 165830,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B03/root": {
+      "sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "bytes": 30235463,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B03/input_index": {
+      "sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "bytes": 76446710,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B03/truth_index": {
+      "sha256": "8aafa9966f87ad77246533d69d6319af72b2b311a74d2ffa6b1bb560cf515a57",
+      "bytes": 856672,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B03/card": {
+      "sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B03/lhe": {
+      "sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "bytes": 168744,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B04/root": {
+      "sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "bytes": 24640561,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B04/input_index": {
+      "sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+      "bytes": 47916529,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B04/truth_index": {
+      "sha256": "fec43e8fd83cc3fed28150ed2a397e880aa15b787c4455be80ca59b6bf510f04",
+      "bytes": 343901,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B04/card": {
+      "sha256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B04/lhe": {
+      "sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "bytes": 164495,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B05/root": {
+      "sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "bytes": 45839687,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B05/input_index": {
+      "sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+      "bytes": 93166637,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B05/truth_index": {
+      "sha256": "5ce457f2d210ae3ba5ffcd40744363323fb59f2796fff53c258b8645fbcfac8b",
+      "bytes": 536626,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B05/card": {
+      "sha256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B05/lhe": {
+      "sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+      "bytes": 134068,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B06/root": {
+      "sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "bytes": 36916961,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B06/input_index": {
+      "sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+      "bytes": 72148612,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B06/truth_index": {
+      "sha256": "0963ac1a6d22a523773940d8c425b6e7683af08981f7147de09581e83a118090",
+      "bytes": 426189,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B06/card": {
+      "sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+      "bytes": 22243,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "INPUT/B06/lhe": {
+      "sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+      "bytes": 171154,
+      "scope": "ACTUAL_FILE_HASH_AVAILABILITY_NOT_FRESH_ROOT_READBACK"
+    },
+    "PHASE8_LOCAL/phase8a_event_identity_audit.json": {
+      "sha256": "7987a598b77df87f66a1da7438a3c1cd9c8f04b7fd740557efc866626a25be3e",
+      "bytes": 13030,
+      "scope": "FROZEN_INDEX_LHE_IDENTITY_RECEIPT"
+    },
+    "PHASE8_LOCAL/phase8_cutflow_weighted.csv": {
+      "sha256": "8c5a76e6f2771761c8b4fd96fe8de3bad36b8346b181a2658818e6bc5228aca5",
+      "bytes": 5951,
+      "scope": "INDEPENDENTLY_RECOMPUTED"
+    },
+    "PHASE8_LOCAL/phase8_weight_accounting.csv": {
+      "sha256": "4b6508f2e68a4b55c52c498a5c45c1a31bd9e04b4dd074b1717a5f3fd6535de2",
+      "bytes": 5385,
+      "scope": "INDEPENDENTLY_RECOMPUTED"
+    },
+    "PHASE8_LOCAL/phase8_control_regions.csv": {
+      "sha256": "471cc1efe06e0c360b7000c1e42df8f6d04e21e7a728105612ddd602b0c22b6a",
+      "bytes": 38299,
+      "scope": "INDEPENDENTLY_RECOMPUTED"
+    },
+    "PHASE8_LOCAL/native/phase8_histograms.root": {
+      "sha256": "dd89bd7e13d70435b4df958d8129d41bac5c1a8497fc467af3b78277f4efaa26",
+      "bytes": 2480142,
+      "scope": "EXACT_HISTORICAL_ROOT_BYTES_OR_MANIFEST"
+    },
+    "PHASE8_LOCAL/phase8_histograms.root": {
+      "sha256": "dd89bd7e13d70435b4df958d8129d41bac5c1a8497fc467af3b78277f4efaa26",
+      "bytes": 2480142,
+      "scope": "EXACT_HISTORICAL_ROOT_BYTES_OR_MANIFEST"
+    },
+    "PHASE8_LOCAL/native/phase8_histogram_manifest.json": {
+      "sha256": "96cb878f1dcf686f8b742548968a016137c781de51dbe0fa0bf54b3ea6fa7a26",
+      "bytes": 6237372,
+      "scope": "EXACT_HISTORICAL_ROOT_BYTES_OR_MANIFEST"
+    },
+    "PHASE8_LOCAL/native/phase8_native_histogram_validation.json": {
+      "sha256": "43733f21a68c1d8572c86d6d871d926fad71787957e4e2eb453b5cb11a1ed168",
+      "bytes": 254,
+      "scope": "HISTORICAL_ACTUAL_NATIVE_ROOT_DIGEST_VALIDATION"
+    },
+    "PHASE8_LOCAL/repeatability_validation.json": {
+      "sha256": "9946618085afbc0ac241f072ed0a8f3f82e4993076d2d2f972d056018740b5c9",
+      "bytes": 513,
+      "scope": "HISTORICAL_ACTUAL_NATIVE_REPEATABILITY"
+    },
+    "PHASE8_SOURCE/reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/event_reweights.csv": {
+      "sha256": "c76dd54b9236ee8110385fe746eb465125c70f1f30e0d580ac95acacc03a9e0f",
+      "bytes": 1482280,
+      "scope": "FROZEN_REWEIGHTING_NO_NEW_ME"
+    },
+    "PHASE8_LOCAL/phase8_kappa_covariance.csv": {
+      "sha256": "02ba74806fc8672bf1e44459351d5c148bd6bbe4fa1de7d24470fc3c01b9adda",
+      "bytes": 9624,
+      "scope": "INDEPENDENT_DECIMAL70_RECOMPUTATION"
+    },
+    "PHASE8_LOCAL/phase8_kappa_summary.csv": {
+      "sha256": "b5057b0d8d1eb11fb80bd6847854e2de0179b28188857afd19141b5536d3beb2",
+      "bytes": 1732,
+      "scope": "INDEPENDENT_DECIMAL70_ESS"
+    },
+    "PHASE8_LOCAL/phase8_bin_quality.csv": {
+      "sha256": "48e354ebb7151f5dbd2511f581406156876a59feb87b91ae385ed913bacfc6ef",
+      "bytes": 1507151,
+      "scope": "QUALITY_FLAGS_INDEPENDENT_REVIEW"
+    },
+    "PHASE8_LOCAL/phase8_kappa_bin_quality.csv": {
+      "sha256": "f73e26c39c0d44f8c484b45e1943453863a5761da69b1f0ccbf4292c9a61bed5",
+      "bytes": 1349794,
+      "scope": "QUALITY_FLAGS_INDEPENDENT_REVIEW"
+    },
+    "PHASE8_LOCAL/phase8_background_overlap_matrix.json": {
+      "sha256": "008b4db972b837e63d10ad378d4debd54e77c4d545475bbfebf1d592d3a352d0",
+      "bytes": 21196,
+      "scope": "PHYSICAL_READINESS_CONTRACT"
+    },
+    "PHASE8_LOCAL/phase8_fake_photon_readiness.json": {
+      "sha256": "783693ccb7ee6d35b236b009d673965c8a574bed911aed156fc0f05c82adf310",
+      "bytes": 623,
+      "scope": "PHYSICAL_READINESS_CONTRACT"
+    },
+    "PHASE8_LOCAL/phase8_template_manifest.json": {
+      "sha256": "ae9c2d5131bafcdd1acdad287c2e93d7bb58b7cb18521ad6332e4da78a07edfe",
+      "bytes": 374248,
+      "scope": "PHYSICAL_READINESS_CONTRACT"
+    },
+    "PHASE8_LOCAL/phase8_systematics_readiness.csv": {
+      "sha256": "ea1ee76395266a7ae30b2c5041f07b32bc86bf6486c3e1c662f211c076e7757a",
+      "bytes": 11345,
+      "scope": "PHYSICAL_READINESS_CONTRACT"
+    },
+    "PHASE8_LOCAL/phase8_likelihood_method_tests.json": {
+      "sha256": "66c3dca5222c17bcb5f51a43e28f4fc5d86a0b2359317b8bf8caaca1ffdafc58",
+      "bytes": 5664,
+      "scope": "PHYSICAL_READINESS_CONTRACT"
+    },
+    "PHASE8_LOCAL/phase8_publication_receipt.json": {
+      "sha256": "8da1c358dd81809bbb373560f9a92e0d412055942c2e4cd6bb4ebc354ff3966e",
+      "bytes": 14152,
+      "scope": "HISTORICAL_GITHUB_PUBLICATION_RECEIPT"
+    }
+  },
+  "physical_total_background": "BLOCKED",
+  "physical_significance": "NOT_EVALUATED",
+  "physical_CLs": "NOT_EVALUATED",
+  "physical_kappa_interval": "NOT_EVALUATED"
+}

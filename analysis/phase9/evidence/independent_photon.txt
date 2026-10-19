@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/btu/projects/atlas_hh_phase9_v1/analysis/phase9/scripts/validate_photon_evidence.py", line 83, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/btu/projects/atlas_hh_phase9_v1/analysis/phase9/scripts/validate_photon_evidence.py", line 80, in main
+    out=validate(args.details,args.summary,args.csv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/btu/projects/atlas_hh_phase9_v1/analysis/phase9/scripts/validate_photon_evidence.py", line 63, in validate
+    need(len(rows)==150,'unexpected photon event-indicator row count')
+  File "/home/btu/projects/atlas_hh_phase9_v1/analysis/phase9/scripts/validate_photon_evidence.py", line 19, in need
+    if not ok: raise ValueError(why)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: unexpected photon event-indicator row count

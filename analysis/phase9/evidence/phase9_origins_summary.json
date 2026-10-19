@@ -1,0 +1,5776 @@
+{
+  "classified_HF_events": 3000,
+  "datasets": {
+    "B01": {
+      "cutflow": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "heavy_quark_origin_counts": {
+        "ME_HEAVY_FLAVOUR_RECORD": 2000,
+        "ME_INITIAL_HEAVY_FLAVOUR_RECORD": 116,
+        "SHOWER_HEAVY_FLAVOUR_BIRTH": 559
+      },
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 98,
+            "maximum": 4.380722099589666,
+            "mean": -0.4720605184828535,
+            "minimum": -5.739568702082531,
+            "missing": 902
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 98,
+            "maximum": 3.1370258601592327,
+            "mean": 2.553004421186193,
+            "minimum": 0.11650378002329581,
+            "missing": 902
+          },
+          "DeltaPhi_bb": {
+            "defined": 215,
+            "maximum": 3.1387898921966553,
+            "mean": 2.0518869430042788,
+            "minimum": 0.05334758758544922,
+            "missing": 785
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 484,
+            "maximum": 3.1383864283561707,
+            "mean": 1.9834393177897955,
+            "minimum": 0.006755173206329346,
+            "missing": 516
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 98,
+            "maximum": 6.464802961236327,
+            "mean": 3.0382317646682715,
+            "minimum": 0.5499826651510544,
+            "missing": 902
+          },
+          "DeltaR_bb": {
+            "defined": 215,
+            "maximum": 4.39036633656876,
+            "mean": 2.5171640071598436,
+            "minimum": 0.4123750571148134,
+            "missing": 785
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 484,
+            "maximum": 4.685039823889472,
+            "mean": 2.3285408240902754,
+            "minimum": 0.5459132690705589,
+            "missing": 516
+          },
+          "HH_eta": {
+            "defined": 98,
+            "maximum": 4.855437248455493,
+            "mean": -0.35897216290079226,
+            "minimum": -5.712936124340096,
+            "missing": 902
+          },
+          "HH_pT": {
+            "defined": 98,
+            "maximum": 439.599046430801,
+            "mean": 46.268148419895226,
+            "minimum": 2.591746133584927,
+            "missing": 902
+          },
+          "dijet_pT": {
+            "defined": 215,
+            "maximum": 270.1162105713056,
+            "mean": 75.1320729122259,
+            "minimum": 2.212302035968975,
+            "missing": 785
+          },
+          "diphoton_pT": {
+            "defined": 484,
+            "maximum": 868.8365519213916,
+            "mean": 77.93503440005398,
+            "minimum": 1.3366657076020314,
+            "missing": 516
+          },
+          "m_HH": {
+            "defined": 98,
+            "maximum": 1164.699496638142,
+            "mean": 389.1833843492059,
+            "minimum": 140.08630309368206,
+            "missing": 902
+          },
+          "m_bb": {
+            "defined": 215,
+            "maximum": 756.735994073567,
+            "mean": 156.88575846087488,
+            "minimum": 17.987541337419927,
+            "missing": 785
+          },
+          "m_gamma_gamma": {
+            "defined": 484,
+            "maximum": 880.8467719835375,
+            "mean": 127.96271699530153,
+            "minimum": 17.838090215543875,
+            "missing": 516
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 3.0,
+            "mean": 0.899,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 901,
+            "maximum": 2.361323118209839,
+            "mean": -0.053319869781472205,
+            "minimum": -2.3690168857574463,
+            "missing": 99
+          },
+          "photon1_pT": {
+            "defined": 901,
+            "maximum": 888.7639770507812,
+            "mean": 76.44319743242168,
+            "minimum": 25.045930862426758,
+            "missing": 99
+          },
+          "photon2_eta": {
+            "defined": 484,
+            "maximum": 2.3467206954956055,
+            "mean": -0.0005476714269650623,
+            "minimum": -2.245176315307617,
+            "missing": 516
+          },
+          "photon2_pT": {
+            "defined": 484,
+            "maximum": 333.84381103515625,
+            "mean": 46.23156543211503,
+            "minimum": 25.012348175048828,
+            "missing": 516
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 831,
+            "maximum": 4.838732468817766,
+            "mean": 1.6711623857322238,
+            "minimum": 0.4899011944569995,
+            "missing": 169
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 7.0,
+            "mean": 2.535,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 1695.1492919921875,
+            "mean": 258.28378365707397,
+            "minimum": 48.529884338378906,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 669,
+            "maximum": 2.4970831871032715,
+            "mean": -0.09051423114223298,
+            "minimum": -2.491135358810425,
+            "missing": 331
+          },
+          "tagged_jet1_pT": {
+            "defined": 669,
+            "maximum": 386.6417236328125,
+            "mean": 77.17908021616115,
+            "minimum": 25.063379287719727,
+            "missing": 331
+          },
+          "tagged_jet2_eta": {
+            "defined": 215,
+            "maximum": 2.4744505882263184,
+            "mean": -0.017425920656708956,
+            "minimum": -2.4755098819732666,
+            "missing": 785
+          },
+          "tagged_jet2_pT": {
+            "defined": 215,
+            "maximum": 243.763916015625,
+            "mean": 52.794529094252475,
+            "minimum": 25.09205436706543,
+            "missing": 785
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.8537216053250307,
+            "mean": -0.49168719962985874,
+            "minimum": -5.739568702082531,
+            "missing": 355
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.1370258601592327,
+            "mean": 2.554470746906054,
+            "minimum": 0.11650378002329581,
+            "missing": 355
+          },
+          "DeltaPhi_bb": {
+            "defined": 91,
+            "maximum": 3.1387898921966553,
+            "mean": 2.054739320400665,
+            "minimum": 0.1297856569290161,
+            "missing": 355
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 446,
+            "maximum": 3.1351531744003296,
+            "mean": 1.9699893581897359,
+            "minimum": 0.006755173206329346,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 6.464802961236327,
+            "mean": 3.017765719576908,
+            "minimum": 0.5499826651510544,
+            "missing": 355
+          },
+          "DeltaR_bb": {
+            "defined": 91,
+            "maximum": 4.049026709912142,
+            "mean": 2.5144417927870015,
+            "minimum": 0.4314902178139022,
+            "missing": 355
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 446,
+            "maximum": 4.685039823889472,
+            "mean": 2.322460488741931,
+            "minimum": 0.5459132690705589,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 91,
+            "maximum": 4.855437248455493,
+            "mean": -0.49001082443626304,
+            "minimum": -5.712936124340096,
+            "missing": 355
+          },
+          "HH_pT": {
+            "defined": 91,
+            "maximum": 439.599046430801,
+            "mean": 48.209577020919355,
+            "minimum": 2.591746133584927,
+            "missing": 355
+          },
+          "dijet_pT": {
+            "defined": 91,
+            "maximum": 257.2861238909807,
+            "mean": 82.89453853420574,
+            "minimum": 4.370624856935156,
+            "missing": 355
+          },
+          "diphoton_pT": {
+            "defined": 446,
+            "maximum": 868.8365519213916,
+            "mean": 82.35782462919514,
+            "minimum": 8.160448684822631,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 91,
+            "maximum": 1164.699496638142,
+            "mean": 402.14168456767965,
+            "minimum": 162.50559903078616,
+            "missing": 355
+          },
+          "m_bb": {
+            "defined": 91,
+            "maximum": 756.735994073567,
+            "mean": 170.177676240467,
+            "minimum": 17.987541337419927,
+            "missing": 355
+          },
+          "m_gamma_gamma": {
+            "defined": 446,
+            "maximum": 880.8467719835375,
+            "mean": 133.89858886155704,
+            "minimum": 21.823252911597436,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 446,
+            "maximum": 3.0,
+            "mean": 0.8878923766816144,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 446,
+            "maximum": 2.336945056915283,
+            "mean": -0.05863848486325324,
+            "minimum": -2.3432252407073975,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 446,
+            "maximum": 888.7639770507812,
+            "mean": 92.52061977300943,
+            "minimum": 35.048152923583984,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 446,
+            "maximum": 2.3467206954956055,
+            "mean": -0.007454407470292441,
+            "minimum": -2.239156723022461,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 446,
+            "maximum": 333.84381103515625,
+            "mean": 47.785270566897545,
+            "minimum": 25.04077911376953,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 408,
+            "maximum": 4.838732468817766,
+            "mean": 1.543005277137892,
+            "minimum": 0.4899011944569995,
+            "missing": 38
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 446,
+            "maximum": 7.0,
+            "mean": 2.197309417040359,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 446,
+            "maximum": 1695.1492919921875,
+            "mean": 282.21285610455567,
+            "minimum": 64.56253814697266,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 300,
+            "maximum": 2.4970831871032715,
+            "mean": -0.018914459045821178,
+            "minimum": -2.491135358810425,
+            "missing": 146
+          },
+          "tagged_jet1_pT": {
+            "defined": 300,
+            "maximum": 386.6417236328125,
+            "mean": 80.89951802571615,
+            "minimum": 25.325956344604492,
+            "missing": 146
+          },
+          "tagged_jet2_eta": {
+            "defined": 91,
+            "maximum": 2.2746901512145996,
+            "mean": 0.025587167349070884,
+            "minimum": -2.245950222015381,
+            "missing": 355
+          },
+          "tagged_jet2_pT": {
+            "defined": 91,
+            "maximum": 243.763916015625,
+            "mean": 56.63424823048351,
+            "minimum": 25.5588321685791,
+            "missing": 355
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.8537216053250307,
+            "mean": -0.49168719962985874,
+            "minimum": -5.739568702082531,
+            "missing": 175
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.1370258601592327,
+            "mean": 2.554470746906054,
+            "minimum": 0.11650378002329581,
+            "missing": 175
+          },
+          "DeltaPhi_bb": {
+            "defined": 91,
+            "maximum": 3.1387898921966553,
+            "mean": 2.054739320400665,
+            "minimum": 0.1297856569290161,
+            "missing": 175
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 266,
+            "maximum": 3.1351531744003296,
+            "mean": 1.942071868841791,
+            "minimum": 0.006755173206329346,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 6.464802961236327,
+            "mean": 3.017765719576908,
+            "minimum": 0.5499826651510544,
+            "missing": 175
+          },
+          "DeltaR_bb": {
+            "defined": 91,
+            "maximum": 4.049026709912142,
+            "mean": 2.5144417927870015,
+            "minimum": 0.4314902178139022,
+            "missing": 175
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 266,
+            "maximum": 4.685039823889472,
+            "mean": 2.3131437530584193,
+            "minimum": 0.5459132690705589,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 91,
+            "maximum": 4.855437248455493,
+            "mean": -0.49001082443626304,
+            "minimum": -5.712936124340096,
+            "missing": 175
+          },
+          "HH_pT": {
+            "defined": 91,
+            "maximum": 439.599046430801,
+            "mean": 48.209577020919355,
+            "minimum": 2.591746133584927,
+            "missing": 175
+          },
+          "dijet_pT": {
+            "defined": 91,
+            "maximum": 257.2861238909807,
+            "mean": 82.89453853420574,
+            "minimum": 4.370624856935156,
+            "missing": 175
+          },
+          "diphoton_pT": {
+            "defined": 266,
+            "maximum": 868.8365519213916,
+            "mean": 92.49187509800346,
+            "minimum": 9.529608879832807,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 91,
+            "maximum": 1164.699496638142,
+            "mean": 402.14168456767965,
+            "minimum": 162.50559903078616,
+            "missing": 175
+          },
+          "m_bb": {
+            "defined": 91,
+            "maximum": 756.735994073567,
+            "mean": 170.177676240467,
+            "minimum": 17.987541337419927,
+            "missing": 175
+          },
+          "m_gamma_gamma": {
+            "defined": 266,
+            "maximum": 792.0867148557273,
+            "mean": 142.6474297023856,
+            "minimum": 21.823252911597436,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 266,
+            "maximum": 3.0,
+            "mean": 1.1917293233082706,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 266,
+            "maximum": 2.328455686569214,
+            "mean": -0.06220536568216083,
+            "minimum": -2.3432252407073975,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 266,
+            "maximum": 888.7639770507812,
+            "mean": 101.69954691435161,
+            "minimum": 35.048152923583984,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 266,
+            "maximum": 2.3467206954956055,
+            "mean": -0.041828709812064595,
+            "minimum": -2.239156723022461,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 266,
+            "maximum": 228.2344970703125,
+            "mean": 48.996407293735594,
+            "minimum": 25.069400787353516,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 266,
+            "maximum": 3.0823232190856302,
+            "mean": 1.2885183020323097,
+            "minimum": 0.4899011944569995,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 266,
+            "maximum": 7.0,
+            "mean": 2.718045112781955,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 266,
+            "maximum": 1695.1492919921875,
+            "mean": 339.21580522580257,
+            "minimum": 125.71092224121094,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 221,
+            "maximum": 2.444885730743408,
+            "mean": 0.042986131017201695,
+            "minimum": -2.4534661769866943,
+            "missing": 45
+          },
+          "tagged_jet1_pT": {
+            "defined": 221,
+            "maximum": 386.6417236328125,
+            "mean": 88.49751441403212,
+            "minimum": 25.325956344604492,
+            "missing": 45
+          },
+          "tagged_jet2_eta": {
+            "defined": 91,
+            "maximum": 2.2746901512145996,
+            "mean": 0.025587167349070884,
+            "minimum": -2.245950222015381,
+            "missing": 175
+          },
+          "tagged_jet2_pT": {
+            "defined": 91,
+            "maximum": 243.763916015625,
+            "mean": 56.63424823048351,
+            "minimum": 25.5588321685791,
+            "missing": 175
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.8537216053250307,
+            "mean": -0.49168719962985874,
+            "minimum": -5.739568702082531,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 3.1370258601592327,
+            "mean": 2.554470746906054,
+            "minimum": 0.11650378002329581,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 91,
+            "maximum": 3.1387898921966553,
+            "mean": 2.054739320400665,
+            "minimum": 0.1297856569290161,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 91,
+            "maximum": 3.1351531744003296,
+            "mean": 1.9400426511670092,
+            "minimum": 0.025368764996528625,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 91,
+            "maximum": 6.464802961236327,
+            "mean": 3.017765719576908,
+            "minimum": 0.5499826651510544,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 91,
+            "maximum": 4.049026709912142,
+            "mean": 2.5144417927870015,
+            "minimum": 0.4314902178139022,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 91,
+            "maximum": 3.8585607285749957,
+            "mean": 2.3116996417758346,
+            "minimum": 0.6087642438940821,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 91,
+            "maximum": 4.855437248455493,
+            "mean": -0.49001082443626304,
+            "minimum": -5.712936124340096,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 91,
+            "maximum": 439.599046430801,
+            "mean": 48.209577020919355,
+            "minimum": 2.591746133584927,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 91,
+            "maximum": 257.2861238909807,
+            "mean": 82.89453853420574,
+            "minimum": 4.370624856935156,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 91,
+            "maximum": 345.0127475369926,
+            "mean": 90.27603861928932,
+            "minimum": 10.19458431356803,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 91,
+            "maximum": 1164.699496638142,
+            "mean": 402.14168456767965,
+            "minimum": 162.50559903078616,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 91,
+            "maximum": 756.735994073567,
+            "mean": 170.177676240467,
+            "minimum": 17.987541337419927,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 91,
+            "maximum": 481.7978801911266,
+            "mean": 136.23761480295477,
+            "minimum": 27.22534850299486,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 91,
+            "maximum": 3.0,
+            "mean": 2.0549450549450547,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 91,
+            "maximum": 2.1796910762786865,
+            "mean": -0.3143704078866394,
+            "minimum": -2.252662420272827,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 91,
+            "maximum": 381.5040588378906,
+            "mean": 98.8849846976144,
+            "minimum": 36.220375061035156,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 91,
+            "maximum": 2.3467206954956055,
+            "mean": -0.10977531824220013,
+            "minimum": -2.235111713409424,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 91,
+            "maximum": 220.741943359375,
+            "mean": 46.91881544511397,
+            "minimum": 25.160297393798828,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 91,
+            "maximum": 2.799448110949043,
+            "mean": 1.2047151957736422,
+            "minimum": 0.5489727258516393,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 91,
+            "maximum": 7.0,
+            "mean": 2.7362637362637363,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 91,
+            "maximum": 1066.105224609375,
+            "mean": 344.9242448073167,
+            "minimum": 139.0989227294922,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 91,
+            "maximum": 2.444885730743408,
+            "mean": -0.015966236417355773,
+            "minimum": -2.4534661769866943,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 91,
+            "maximum": 386.6417236328125,
+            "mean": 102.95206570887304,
+            "minimum": 27.570398330688477,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 91,
+            "maximum": 2.2746901512145996,
+            "mean": 0.025587167349070884,
+            "minimum": -2.245950222015381,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 91,
+            "maximum": 243.763916015625,
+            "mean": 56.63424823048351,
+            "minimum": 25.5588321685791,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 28,
+            "maximum": 3.8537216053250307,
+            "mean": -0.45037402509866975,
+            "minimum": -5.739568702082531,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 28,
+            "maximum": 3.1370258601592327,
+            "mean": 2.643304338323168,
+            "minimum": 0.11650378002329581,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 28,
+            "maximum": 3.086433708667755,
+            "mean": 1.8965597239797625,
+            "minimum": 0.22861194610595703,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 28,
+            "maximum": 3.1351531744003296,
+            "mean": 2.1079592087143135,
+            "minimum": 0.6039021650897427,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 28,
+            "maximum": 6.464802961236327,
+            "mean": 3.06658295388604,
+            "minimum": 1.3600189137092384,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 28,
+            "maximum": 3.637852052915863,
+            "mean": 2.464064173928938,
+            "minimum": 0.48129531240240847,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 28,
+            "maximum": 3.568208104541546,
+            "mean": 2.5186077805831637,
+            "minimum": 1.1737889227750071,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 28,
+            "maximum": 4.855437248455493,
+            "mean": -0.8094053151643374,
+            "minimum": -4.400640056936891,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 28,
+            "maximum": 106.06098135018976,
+            "mean": 44.728605880356376,
+            "minimum": 7.26045880168409,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 28,
+            "maximum": 214.00456622650415,
+            "mean": 87.28240959956607,
+            "minimum": 19.005928009807015,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 28,
+            "maximum": 193.42285375850605,
+            "mean": 87.37520321598993,
+            "minimum": 13.65760640600144,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 28,
+            "maximum": 653.8855702316865,
+            "mean": 395.3213922162305,
+            "minimum": 196.59296406325996,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 28,
+            "maximum": 454.0050717899978,
+            "mean": 174.872064300785,
+            "minimum": 27.975223525855213,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 28,
+            "maximum": 159.63559561397318,
+            "mean": 132.73487671173228,
+            "minimum": 105.09663242958219,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 28,
+            "maximum": 3.0,
+            "mean": 2.0357142857142856,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 28,
+            "maximum": 1.870735764503479,
+            "mean": -0.48902544751763344,
+            "minimum": -2.252662420272827,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 28,
+            "maximum": 178.04745483398438,
+            "mean": 97.06627777644566,
+            "minimum": 43.834957122802734,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 28,
+            "maximum": 2.255159378051758,
+            "mean": -0.23358117256845748,
+            "minimum": -2.235111713409424,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 28,
+            "maximum": 86.81656646728516,
+            "mean": 43.23844133104597,
+            "minimum": 25.628448486328125,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 28,
+            "maximum": 2.4745247351846364,
+            "mean": 1.2533594475088858,
+            "minimum": 0.5627498052135234,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 28,
+            "maximum": 5.0,
+            "mean": 2.75,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 28,
+            "maximum": 542.3408203125,
+            "mean": 333.59530966622486,
+            "minimum": 165.81556701660156,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 28,
+            "maximum": 2.444885730743408,
+            "mean": 0.05112667491526476,
+            "minimum": -2.054807186126709,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 28,
+            "maximum": 222.66514587402344,
+            "mean": 100.0689376422337,
+            "minimum": 27.570398330688477,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 28,
+            "maximum": 2.2746901512145996,
+            "mean": -0.39611211898071425,
+            "minimum": -2.015557289123535,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 28,
+            "maximum": 119.8960189819336,
+            "mean": 58.46016958781651,
+            "minimum": 25.629743576049805,
+            "missing": 0
+          }
+        }
+      },
+      "native_flavour_mismatch_events": 0,
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 56,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 1703,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 5,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 0,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 1479,
+        "NATIVE_RECO_SHOWER_RADIATION": 7,
+        "NATIVE_RECO_UNCLASSIFIED": 114,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 0,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 1287,
+        "SELECTED_RECO_SHOWER_RADIATION": 3,
+        "SELECTED_RECO_UNCLASSIFIED": 98,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 1,
+        "STABLE_TRUTH_HADRON_DECAY": 72871,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 2000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 67,
+        "STABLE_TRUTH_UNCLASSIFIED": 0
+      },
+      "pythia_mapping": {
+        "total_pythia": 426370,
+        "unique_matches": 426370
+      }
+    },
+    "B02": {
+      "cutflow": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "heavy_quark_origin_counts": {
+        "ME_HEAVY_FLAVOUR_RECORD": 2000,
+        "ME_INITIAL_HEAVY_FLAVOUR_RECORD": 138,
+        "SHOWER_HEAVY_FLAVOUR_BIRTH": 628
+      },
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 1.2021864998776428,
+            "mean": -0.37828171347892264,
+            "minimum": -1.8582450058128168,
+            "missing": 993
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.0874977204302003,
+            "mean": 2.7312562465443286,
+            "minimum": 1.6712179570746453,
+            "missing": 993
+          },
+          "DeltaPhi_bb": {
+            "defined": 13,
+            "maximum": 3.0530090967761443,
+            "mean": 1.70766796010948,
+            "minimum": 0.04461169242858887,
+            "missing": 987
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 417,
+            "maximum": 3.135589245949881,
+            "mean": 2.114894751211982,
+            "minimum": 0.03499555587768555,
+            "missing": 583
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.6035699903415166,
+            "mean": 2.9653379613293596,
+            "minimum": 1.9690719848424747,
+            "missing": 993
+          },
+          "DeltaR_bb": {
+            "defined": 13,
+            "maximum": 3.6740676962286374,
+            "mean": 2.212555786584452,
+            "minimum": 0.4378942983309002,
+            "missing": 987
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 417,
+            "maximum": 4.698607935891827,
+            "mean": 2.4556185579438523,
+            "minimum": 0.55033828989323,
+            "missing": 583
+          },
+          "HH_eta": {
+            "defined": 7,
+            "maximum": 3.0645790887535753,
+            "mean": -0.2811676232485481,
+            "minimum": -1.8127382092744795,
+            "missing": 993
+          },
+          "HH_pT": {
+            "defined": 7,
+            "maximum": 218.93564292357928,
+            "mean": 82.67844034456073,
+            "minimum": 19.365029678694718,
+            "missing": 993
+          },
+          "dijet_pT": {
+            "defined": 13,
+            "maximum": 193.9871450007191,
+            "mean": 105.3756968189508,
+            "minimum": 19.957769116233354,
+            "missing": 987
+          },
+          "diphoton_pT": {
+            "defined": 417,
+            "maximum": 377.9430092569086,
+            "mean": 62.519258648354054,
+            "minimum": 1.55483927079776,
+            "missing": 583
+          },
+          "m_HH": {
+            "defined": 7,
+            "maximum": 770.8298845039463,
+            "mean": 448.6033279904838,
+            "minimum": 342.66779105068116,
+            "missing": 993
+          },
+          "m_bb": {
+            "defined": 13,
+            "maximum": 613.7028260023094,
+            "mean": 169.21612262971018,
+            "minimum": 34.881753035330426,
+            "missing": 987
+          },
+          "m_gamma_gamma": {
+            "defined": 417,
+            "maximum": 466.7063533535213,
+            "mean": 111.73199665659901,
+            "minimum": 19.61341800844092,
+            "missing": 583
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 2.0,
+            "mean": 0.2,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 879,
+            "maximum": 2.366370677947998,
+            "mean": -0.002644093817791799,
+            "minimum": -2.339810609817505,
+            "missing": 121
+          },
+          "photon1_pT": {
+            "defined": 879,
+            "maximum": 442.9283447265625,
+            "mean": 64.69820015422313,
+            "minimum": 25.021007537841797,
+            "missing": 121
+          },
+          "photon2_eta": {
+            "defined": 417,
+            "maximum": 2.3573787212371826,
+            "mean": -0.030476855211813064,
+            "minimum": -2.3399734497070312,
+            "missing": 583
+          },
+          "photon2_pT": {
+            "defined": 417,
+            "maximum": 250.06553649902344,
+            "mean": 41.31365078987835,
+            "minimum": 25.036853790283203,
+            "missing": 583
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 839,
+            "maximum": 3.7335673969774326,
+            "mean": 1.5630722545320255,
+            "minimum": 0.4979373324265543,
+            "missing": 161
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 9.0,
+            "mean": 2.784,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 1334.259033203125,
+            "mean": 246.9006442260742,
+            "minimum": 53.732093811035156,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 187,
+            "maximum": 2.4467904567718506,
+            "mean": 0.12711769914398352,
+            "minimum": -2.488149404525757,
+            "missing": 813
+          },
+          "tagged_jet1_pT": {
+            "defined": 187,
+            "maximum": 310.045166015625,
+            "mean": 71.11780585834687,
+            "minimum": 25.201805114746094,
+            "missing": 813
+          },
+          "tagged_jet2_eta": {
+            "defined": 13,
+            "maximum": 1.673130750656128,
+            "mean": -0.04366948052596014,
+            "minimum": -1.7474560737609863,
+            "missing": 987
+          },
+          "tagged_jet2_pT": {
+            "defined": 13,
+            "maximum": 123.02083587646484,
+            "mean": 58.83495858999399,
+            "minimum": 31.49118423461914,
+            "missing": 987
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 1.2021864998776428,
+            "mean": -0.37828171347892264,
+            "minimum": -1.8582450058128168,
+            "missing": 371
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.0874977204302003,
+            "mean": 2.7312562465443286,
+            "minimum": 1.6712179570746453,
+            "missing": 371
+          },
+          "DeltaPhi_bb": {
+            "defined": 7,
+            "maximum": 3.0530090967761443,
+            "mean": 1.8589961040557548,
+            "minimum": 0.314943615590231,
+            "missing": 371
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 378,
+            "maximum": 3.135589245949881,
+            "mean": 2.109251689446319,
+            "minimum": 0.03499555587768555,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.6035699903415166,
+            "mean": 2.9653379613293596,
+            "minimum": 1.9690719848424747,
+            "missing": 371
+          },
+          "DeltaR_bb": {
+            "defined": 7,
+            "maximum": 3.6740676962286374,
+            "mean": 2.5390588683141657,
+            "minimum": 0.886140037793144,
+            "missing": 371
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 378,
+            "maximum": 4.698607935891827,
+            "mean": 2.4483450534641245,
+            "minimum": 0.55033828989323,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 7,
+            "maximum": 3.0645790887535753,
+            "mean": -0.2811676232485481,
+            "minimum": -1.8127382092744795,
+            "missing": 371
+          },
+          "HH_pT": {
+            "defined": 7,
+            "maximum": 218.93564292357928,
+            "mean": 82.67844034456073,
+            "minimum": 19.365029678694718,
+            "missing": 371
+          },
+          "dijet_pT": {
+            "defined": 7,
+            "maximum": 187.82227388115248,
+            "mean": 117.40821860148469,
+            "minimum": 45.57127653266249,
+            "missing": 371
+          },
+          "diphoton_pT": {
+            "defined": 378,
+            "maximum": 377.9430092569086,
+            "mean": 66.36925539322694,
+            "minimum": 2.220267189831945,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 7,
+            "maximum": 770.8298845039463,
+            "mean": 448.6033279904838,
+            "minimum": 342.66779105068116,
+            "missing": 371
+          },
+          "m_bb": {
+            "defined": 7,
+            "maximum": 613.7028260023094,
+            "mean": 229.39618154870547,
+            "minimum": 53.82484045856201,
+            "missing": 371
+          },
+          "m_gamma_gamma": {
+            "defined": 378,
+            "maximum": 466.7063533535213,
+            "mean": 116.74480686495295,
+            "minimum": 19.61341800844092,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 378,
+            "maximum": 2.0,
+            "mean": 0.1746031746031746,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 378,
+            "maximum": 2.295140027999878,
+            "mean": 0.054402532977133336,
+            "minimum": -2.253540277481079,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 378,
+            "maximum": 374.0336608886719,
+            "mean": 77.13563927140817,
+            "minimum": 35.06831741333008,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 378,
+            "maximum": 2.3573787212371826,
+            "mean": -0.02663256497942798,
+            "minimum": -2.3399734497070312,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 378,
+            "maximum": 250.06553649902344,
+            "mean": 42.68752255010857,
+            "minimum": 25.036853790283203,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 353,
+            "maximum": 3.3482332856449863,
+            "mean": 1.3927970313724924,
+            "minimum": 0.5098515801175433,
+            "missing": 25
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 378,
+            "maximum": 7.0,
+            "mean": 2.253968253968254,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 378,
+            "maximum": 893.1676025390625,
+            "mean": 254.36309837664245,
+            "minimum": 63.1119270324707,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 59,
+            "maximum": 2.3640360832214355,
+            "mean": 0.26776128426446755,
+            "minimum": -2.0864675045013428,
+            "missing": 319
+          },
+          "tagged_jet1_pT": {
+            "defined": 59,
+            "maximum": 310.045166015625,
+            "mean": 78.00308660733498,
+            "minimum": 26.375890731811523,
+            "missing": 319
+          },
+          "tagged_jet2_eta": {
+            "defined": 7,
+            "maximum": 0.4500472843647003,
+            "mean": -0.5062271931341716,
+            "minimum": -1.7474560737609863,
+            "missing": 371
+          },
+          "tagged_jet2_pT": {
+            "defined": 7,
+            "maximum": 123.02083587646484,
+            "mean": 65.71203286307198,
+            "minimum": 31.49118423461914,
+            "missing": 371
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 1.2021864998776428,
+            "mean": -0.37828171347892264,
+            "minimum": -1.8582450058128168,
+            "missing": 234
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.0874977204302003,
+            "mean": 2.7312562465443286,
+            "minimum": 1.6712179570746453,
+            "missing": 234
+          },
+          "DeltaPhi_bb": {
+            "defined": 7,
+            "maximum": 3.0530090967761443,
+            "mean": 1.8589961040557548,
+            "minimum": 0.314943615590231,
+            "missing": 234
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 241,
+            "maximum": 3.134281486272812,
+            "mean": 2.0795898102234336,
+            "minimum": 0.15507829189300537,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.6035699903415166,
+            "mean": 2.9653379613293596,
+            "minimum": 1.9690719848424747,
+            "missing": 234
+          },
+          "DeltaR_bb": {
+            "defined": 7,
+            "maximum": 3.6740676962286374,
+            "mean": 2.5390588683141657,
+            "minimum": 0.886140037793144,
+            "missing": 234
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 241,
+            "maximum": 4.449048934753661,
+            "mean": 2.4008912218570853,
+            "minimum": 0.6044373488145847,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 7,
+            "maximum": 3.0645790887535753,
+            "mean": -0.2811676232485481,
+            "minimum": -1.8127382092744795,
+            "missing": 234
+          },
+          "HH_pT": {
+            "defined": 7,
+            "maximum": 218.93564292357928,
+            "mean": 82.67844034456073,
+            "minimum": 19.365029678694718,
+            "missing": 234
+          },
+          "dijet_pT": {
+            "defined": 7,
+            "maximum": 187.82227388115248,
+            "mean": 117.40821860148469,
+            "minimum": 45.57127653266249,
+            "missing": 234
+          },
+          "diphoton_pT": {
+            "defined": 241,
+            "maximum": 312.4388122972661,
+            "mean": 70.92671860171323,
+            "minimum": 3.044533755495257,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 7,
+            "maximum": 770.8298845039463,
+            "mean": 448.6033279904838,
+            "minimum": 342.66779105068116,
+            "missing": 234
+          },
+          "m_bb": {
+            "defined": 7,
+            "maximum": 613.7028260023094,
+            "mean": 229.39618154870547,
+            "minimum": 53.82484045856201,
+            "missing": 234
+          },
+          "m_gamma_gamma": {
+            "defined": 241,
+            "maximum": 466.7063533535213,
+            "mean": 120.40840810211179,
+            "minimum": 19.61341800844092,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 241,
+            "maximum": 2.0,
+            "mean": 0.22406639004149378,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 241,
+            "maximum": 2.291447639465332,
+            "mean": 0.12295744324603439,
+            "minimum": -2.253540277481079,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 241,
+            "maximum": 321.1933288574219,
+            "mean": 81.40461602745215,
+            "minimum": 35.116939544677734,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 241,
+            "maximum": 2.3573787212371826,
+            "mean": -0.025689208526473446,
+            "minimum": -2.2154312133789062,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 241,
+            "maximum": 250.06553649902344,
+            "mean": 44.699266481201676,
+            "minimum": 25.107036590576172,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 241,
+            "maximum": 2.7233958816912116,
+            "mean": 1.2157421706232536,
+            "minimum": 0.5098515801175433,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 241,
+            "maximum": 7.0,
+            "mean": 2.7178423236514524,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 241,
+            "maximum": 893.1676025390625,
+            "mean": 296.7323576741199,
+            "minimum": 133.84515380859375,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 47,
+            "maximum": 2.3640360832214355,
+            "mean": 0.27911492167635166,
+            "minimum": -1.9986294507980347,
+            "missing": 194
+          },
+          "tagged_jet1_pT": {
+            "defined": 47,
+            "maximum": 310.045166015625,
+            "mean": 81.56031551766903,
+            "minimum": 26.375890731811523,
+            "missing": 194
+          },
+          "tagged_jet2_eta": {
+            "defined": 7,
+            "maximum": 0.4500472843647003,
+            "mean": -0.5062271931341716,
+            "minimum": -1.7474560737609863,
+            "missing": 234
+          },
+          "tagged_jet2_pT": {
+            "defined": 7,
+            "maximum": 123.02083587646484,
+            "mean": 65.71203286307198,
+            "minimum": 31.49118423461914,
+            "missing": 234
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 1.2021864998776428,
+            "mean": -0.37828171347892264,
+            "minimum": -1.8582450058128168,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.0874977204302003,
+            "mean": 2.7312562465443286,
+            "minimum": 1.6712179570746453,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 7,
+            "maximum": 3.0530090967761443,
+            "mean": 1.8589961040557548,
+            "minimum": 0.314943615590231,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 7,
+            "maximum": 2.67218554019928,
+            "mean": 1.69867311900495,
+            "minimum": 0.40595555305480957,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 7,
+            "maximum": 3.6035699903415166,
+            "mean": 2.9653379613293596,
+            "minimum": 1.9690719848424747,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 7,
+            "maximum": 3.6740676962286374,
+            "mean": 2.5390588683141657,
+            "minimum": 0.886140037793144,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 7,
+            "maximum": 2.8085418572926826,
+            "mean": 1.9637430117984607,
+            "minimum": 1.2408864293811384,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 7,
+            "maximum": 3.0645790887535753,
+            "mean": -0.2811676232485481,
+            "minimum": -1.8127382092744795,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 7,
+            "maximum": 218.93564292357928,
+            "mean": 82.67844034456073,
+            "minimum": 19.365029678694718,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 7,
+            "maximum": 187.82227388115248,
+            "mean": 117.40821860148469,
+            "minimum": 45.57127653266249,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 7,
+            "maximum": 134.02109441732165,
+            "mean": 111.34586080360495,
+            "minimum": 56.9710829057617,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 7,
+            "maximum": 770.8298845039463,
+            "mean": 448.6033279904838,
+            "minimum": 342.66779105068116,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 7,
+            "maximum": 613.7028260023094,
+            "mean": 229.39618154870547,
+            "minimum": 53.82484045856201,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 7,
+            "maximum": 198.1198484237491,
+            "mean": 127.43561890661258,
+            "minimum": 45.6336213449469,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 7,
+            "maximum": 2.0,
+            "mean": 2.0,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 7,
+            "maximum": 1.9740197658538818,
+            "mean": 0.05678142405979868,
+            "minimum": -0.8582301735877991,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 7,
+            "maximum": 173.57936096191406,
+            "mean": 106.39958899361747,
+            "minimum": 40.603885650634766,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 7,
+            "maximum": 0.8990111351013184,
+            "mean": -0.04476508331884231,
+            "minimum": -1.220365047454834,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 7,
+            "maximum": 67.1122055053711,
+            "mean": 52.09757014683315,
+            "minimum": 28.779449462890625,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 7,
+            "maximum": 1.8626101508472073,
+            "mean": 1.1711503665682328,
+            "minimum": 0.6714752956890708,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 7,
+            "maximum": 4.0,
+            "mean": 3.142857142857143,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 7,
+            "maximum": 718.3302001953125,
+            "mean": 425.673839024135,
+            "minimum": 213.1044158935547,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 7,
+            "maximum": 2.140263795852661,
+            "mean": 0.5754513325435775,
+            "minimum": -1.0191267728805542,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 7,
+            "maximum": 310.045166015625,
+            "mean": 137.95113372802734,
+            "minimum": 37.545082092285156,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 7,
+            "maximum": 0.4500472843647003,
+            "mean": -0.5062271931341716,
+            "minimum": -1.7474560737609863,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 7,
+            "maximum": 123.02083587646484,
+            "mean": 65.71203286307198,
+            "minimum": 31.49118423461914,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 1,
+            "maximum": 1.073203096665753,
+            "mean": 1.073203096665753,
+            "minimum": 1.073203096665753,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 1,
+            "maximum": 2.5282881433173143,
+            "mean": 2.5282881433173143,
+            "minimum": 2.5282881433173143,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 1,
+            "maximum": 1.5453261137008667,
+            "mean": 1.5453261137008667,
+            "minimum": 1.5453261137008667,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 1,
+            "maximum": 1.6076077858554287,
+            "mean": 1.6076077858554287,
+            "minimum": 1.6076077858554287,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 1,
+            "maximum": 2.746635363919258,
+            "mean": 2.746635363919258,
+            "minimum": 2.746635363919258,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 1,
+            "maximum": 2.516722547636466,
+            "mean": 2.516722547636466,
+            "minimum": 2.516722547636466,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 1,
+            "maximum": 1.7091542057097575,
+            "mean": 1.7091542057097575,
+            "minimum": 1.7091542057097575,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 1,
+            "maximum": -1.5822144371924711,
+            "mean": -1.5822144371924711,
+            "minimum": -1.5822144371924711,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 1,
+            "maximum": 65.29877307864061,
+            "mean": 65.29877307864061,
+            "minimum": 65.29877307864061,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 1,
+            "maximum": 113.02476917293546,
+            "mean": 113.02476917293546,
+            "minimum": 113.02476917293546,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 1,
+            "maximum": 98.07479209698324,
+            "mean": 98.07479209698324,
+            "minimum": 98.07479209698324,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 1,
+            "maximum": 392.2120936664807,
+            "mean": 392.2120936664807,
+            "minimum": 392.2120936664807,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 1,
+            "maximum": 206.8113186138523,
+            "mean": 206.8113186138523,
+            "minimum": 206.8113186138523,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 1,
+            "maximum": 108.60954715759095,
+            "mean": 108.60954715759095,
+            "minimum": 108.60954715759095,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 1,
+            "maximum": 2.0,
+            "mean": 2.0,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 1,
+            "maximum": 0.2451832890510559,
+            "mean": 0.2451832890510559,
+            "minimum": 0.2451832890510559,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 1,
+            "maximum": 77.78424835205078,
+            "mean": 77.78424835205078,
+            "minimum": 77.78424835205078,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 1,
+            "maximum": -0.33516600728034973,
+            "mean": -0.33516600728034973,
+            "minimum": -0.33516600728034973,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 1,
+            "maximum": 62.66630554199219,
+            "mean": 62.66630554199219,
+            "minimum": 62.66630554199219,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 1,
+            "maximum": 1.1820145289792616,
+            "mean": 1.1820145289792616,
+            "minimum": 1.1820145289792616,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1,
+            "maximum": 4.0,
+            "mean": 4.0,
+            "minimum": 4.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1,
+            "maximum": 384.8619689941406,
+            "mean": 384.8619689941406,
+            "minimum": 384.8619689941406,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 1,
+            "maximum": 0.23896270990371704,
+            "mean": 0.23896270990371704,
+            "minimum": 0.23896270990371704,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 1,
+            "maximum": 92.95958709716797,
+            "mean": 92.95958709716797,
+            "minimum": 92.95958709716797,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 1,
+            "maximum": -1.7474560737609863,
+            "mean": -1.7474560737609863,
+            "minimum": -1.7474560737609863,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 1,
+            "maximum": 61.96542739868164,
+            "mean": 61.96542739868164,
+            "minimum": 61.96542739868164,
+            "missing": 0
+          }
+        }
+      },
+      "native_flavour_mismatch_events": 0,
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 59,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 1720,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 9,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 0,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 1315,
+        "NATIVE_RECO_SHOWER_RADIATION": 11,
+        "NATIVE_RECO_UNCLASSIFIED": 157,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 0,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 1155,
+        "SELECTED_RECO_SHOWER_RADIATION": 7,
+        "SELECTED_RECO_UNCLASSIFIED": 138,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "STABLE_TRUTH_HADRON_DECAY": 76990,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 2000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 78,
+        "STABLE_TRUTH_UNCLASSIFIED": 0
+      },
+      "pythia_mapping": {
+        "ambiguous_or_missing": 4,
+        "total_pythia": 468551,
+        "unique_matches": 468547
+      }
+    },
+    "B03": {
+      "cutflow": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "heavy_quark_origin_counts": {
+        "ME_INITIAL_HEAVY_FLAVOUR_RECORD": 12,
+        "SHOWER_HEAVY_FLAVOUR_BIRTH": 501
+      },
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "DeltaPhi_bb": {
+            "defined": 4,
+            "maximum": 2.653625075017111,
+            "mean": 1.6169832117816034,
+            "minimum": 0.769710972905159,
+            "missing": 996
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 473,
+            "maximum": 3.132459942494528,
+            "mean": 2.060374424286629,
+            "minimum": 0.007493257522583008,
+            "missing": 527
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "DeltaR_bb": {
+            "defined": 4,
+            "maximum": 3.109754312225506,
+            "mean": 1.76335378713356,
+            "minimum": 0.785055020979028,
+            "missing": 996
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 473,
+            "maximum": 4.874680248746638,
+            "mean": 2.374959431773321,
+            "minimum": 0.5006319731267795,
+            "missing": 527
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "dijet_pT": {
+            "defined": 4,
+            "maximum": 189.4357186830492,
+            "mean": 136.29207300726148,
+            "minimum": 99.99277073044234,
+            "missing": 996
+          },
+          "diphoton_pT": {
+            "defined": 473,
+            "maximum": 1248.8053491084465,
+            "mean": 79.3097123439646,
+            "minimum": 0.6750345172489571,
+            "missing": 527
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 1000
+          },
+          "m_bb": {
+            "defined": 4,
+            "maximum": 561.3313127768505,
+            "mean": 206.72344154744184,
+            "minimum": 54.176921971350815,
+            "missing": 996
+          },
+          "m_gamma_gamma": {
+            "defined": 473,
+            "maximum": 873.3444573829483,
+            "mean": 136.46433115992537,
+            "minimum": 19.9050854246448,
+            "missing": 527
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 2.0,
+            "mean": 0.033,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 880,
+            "maximum": 2.3663523197174072,
+            "mean": 0.04271123946845447,
+            "minimum": -2.3657374382019043,
+            "missing": 120
+          },
+          "photon1_pT": {
+            "defined": 880,
+            "maximum": 1289.382568359375,
+            "mean": 83.08061702901666,
+            "minimum": 25.025867462158203,
+            "missing": 120
+          },
+          "photon2_eta": {
+            "defined": 473,
+            "maximum": 2.3652546405792236,
+            "mean": 0.07069222356654122,
+            "minimum": -2.361175537109375,
+            "missing": 527
+          },
+          "photon2_pT": {
+            "defined": 473,
+            "maximum": 232.7835235595703,
+            "mean": 49.04307188796191,
+            "minimum": 25.03680992126465,
+            "missing": 527
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 831,
+            "maximum": 4.717515829642682,
+            "mean": 1.6882699076093834,
+            "minimum": 0.46340521066452883,
+            "missing": 169
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 7.0,
+            "mean": 2.706,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 2755.262939453125,
+            "mean": 288.3799111480713,
+            "minimum": 48.05714797973633,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 29,
+            "maximum": 2.193885087966919,
+            "mean": -0.2719308173861997,
+            "minimum": -2.454495668411255,
+            "missing": 971
+          },
+          "tagged_jet1_pT": {
+            "defined": 29,
+            "maximum": 390.8909606933594,
+            "mean": 100.74867972012224,
+            "minimum": 26.909299850463867,
+            "missing": 971
+          },
+          "tagged_jet2_eta": {
+            "defined": 4,
+            "maximum": 1.4379569292068481,
+            "mean": -0.28061161283403635,
+            "minimum": -1.6669946908950806,
+            "missing": 996
+          },
+          "tagged_jet2_pT": {
+            "defined": 4,
+            "maximum": 143.63697814941406,
+            "mean": 73.83982706069946,
+            "minimum": 25.629819869995117,
+            "missing": 996
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "DeltaPhi_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 445,
+            "maximum": 3.132459942494528,
+            "mean": 2.0672954344406733,
+            "minimum": 0.007493257522583008,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "DeltaR_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 445,
+            "maximum": 4.874680248746638,
+            "mean": 2.381953475623857,
+            "minimum": 0.5006319731267795,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "dijet_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "diphoton_pT": {
+            "defined": 445,
+            "maximum": 1248.8053491084465,
+            "mean": 82.45436965265634,
+            "minimum": 1.5524095772174953,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "m_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "m_gamma_gamma": {
+            "defined": 445,
+            "maximum": 873.3444573829483,
+            "mean": 141.4897689234497,
+            "minimum": 19.9050854246448,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 445,
+            "maximum": 1.0,
+            "mean": 0.015730337078651686,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 445,
+            "maximum": 2.3291540145874023,
+            "mean": -0.01578757374578815,
+            "minimum": -2.3657374382019043,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 445,
+            "maximum": 1289.382568359375,
+            "mean": 97.8144736557864,
+            "minimum": 35.147918701171875,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 445,
+            "maximum": 2.3652546405792236,
+            "mean": 0.07378824353312911,
+            "minimum": -2.361175537109375,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 445,
+            "maximum": 232.7835235595703,
+            "mean": 50.376137847043154,
+            "minimum": 25.03680992126465,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 409,
+            "maximum": 4.141892860348917,
+            "mean": 1.4955362728168766,
+            "minimum": 0.46340521066452883,
+            "missing": 36
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 445,
+            "maximum": 6.0,
+            "mean": 2.2853932584269665,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 445,
+            "maximum": 2755.262939453125,
+            "mean": 300.60085188619206,
+            "minimum": 66.52828216552734,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 7,
+            "maximum": 0.6658839583396912,
+            "mean": -0.602989450097084,
+            "minimum": -1.8413071632385254,
+            "missing": 438
+          },
+          "tagged_jet1_pT": {
+            "defined": 7,
+            "maximum": 299.9334411621094,
+            "mean": 97.3662245614188,
+            "minimum": 29.81372833251953,
+            "missing": 438
+          },
+          "tagged_jet2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          },
+          "tagged_jet2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 445
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "DeltaPhi_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 277,
+            "maximum": 3.132459942494528,
+            "mean": 1.9650668640181566,
+            "minimum": 0.08119630813598633,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "DeltaR_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 277,
+            "maximum": 4.423927385029498,
+            "mean": 2.3293379852983924,
+            "minimum": 0.5006319731267795,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "dijet_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "diphoton_pT": {
+            "defined": 277,
+            "maximum": 1248.8053491084465,
+            "mean": 96.02536571378265,
+            "minimum": 1.5524095772174953,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "m_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "m_gamma_gamma": {
+            "defined": 277,
+            "maximum": 873.3444573829483,
+            "mean": 149.6397387627421,
+            "minimum": 19.9050854246448,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 277,
+            "maximum": 1.0,
+            "mean": 0.021660649819494584,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 277,
+            "maximum": 2.3232192993164062,
+            "mean": -0.0019675279624544973,
+            "minimum": -2.3657374382019043,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 277,
+            "maximum": 1289.382568359375,
+            "mean": 107.94201110674587,
+            "minimum": 35.147918701171875,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 277,
+            "maximum": 2.3652546405792236,
+            "mean": 0.1733126941098456,
+            "minimum": -2.361175537109375,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 277,
+            "maximum": 232.7835235595703,
+            "mean": 51.53760162931918,
+            "minimum": 25.03680992126465,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 277,
+            "maximum": 3.1602101698503677,
+            "mean": 1.330348022450844,
+            "minimum": 0.46340521066452883,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 277,
+            "maximum": 6.0,
+            "mean": 2.8231046931407944,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 277,
+            "maximum": 2755.262939453125,
+            "mean": 360.45752173468526,
+            "minimum": 129.5837860107422,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 6,
+            "maximum": 0.6658839583396912,
+            "mean": -0.514354981482029,
+            "minimum": -1.8413071632385254,
+            "missing": 271
+          },
+          "tagged_jet1_pT": {
+            "defined": 6,
+            "maximum": 299.9334411621094,
+            "mean": 103.94014803568523,
+            "minimum": 29.81372833251953,
+            "missing": 271
+          },
+          "tagged_jet2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          },
+          "tagged_jet2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 277
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          }
+        }
+      },
+      "native_flavour_mismatch_events": 0,
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 105,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 1709,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 2,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 0,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 1433,
+        "NATIVE_RECO_SHOWER_RADIATION": 1,
+        "NATIVE_RECO_UNCLASSIFIED": 128,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 0,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 1238,
+        "SELECTED_RECO_SHOWER_RADIATION": 0,
+        "SELECTED_RECO_UNCLASSIFIED": 115,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 1,
+        "STABLE_TRUTH_HADRON_DECAY": 75902,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 2000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 53,
+        "STABLE_TRUTH_UNCLASSIFIED": 0
+      },
+      "pythia_mapping": {
+        "ambiguous_or_missing": 2,
+        "total_pythia": 470232,
+        "unique_matches": 470230
+      }
+    },
+    "B04": {
+      "cutflow": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 2.290368492109941,
+            "mean": -0.09223826677820159,
+            "minimum": -3.677442635217709,
+            "missing": 923
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 3.141053551744776,
+            "mean": 2.8348702950860685,
+            "minimum": 0.20898259872670433,
+            "missing": 923
+          },
+          "DeltaPhi_bb": {
+            "defined": 182,
+            "maximum": 3.058765232563019,
+            "mean": 1.3257867384954165,
+            "minimum": 0.030062198638916016,
+            "missing": 818
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 371,
+            "maximum": 3.1325738430023193,
+            "mean": 1.9935539933010624,
+            "minimum": 0.012152612209320068,
+            "missing": 629
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 4.77742089208451,
+            "mean": 3.0524576001368344,
+            "minimum": 0.41741762455667836,
+            "missing": 923
+          },
+          "DeltaR_bb": {
+            "defined": 182,
+            "maximum": 4.03304154685425,
+            "mean": 1.597862411835246,
+            "minimum": 0.47437864385529444,
+            "missing": 818
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 371,
+            "maximum": 3.696024699616084,
+            "mean": 2.276358620360986,
+            "minimum": 0.5784814446294788,
+            "missing": 629
+          },
+          "HH_eta": {
+            "defined": 77,
+            "maximum": 5.682068653437805,
+            "mean": 0.21335256211764078,
+            "minimum": -5.012167333503947,
+            "missing": 923
+          },
+          "HH_pT": {
+            "defined": 77,
+            "maximum": 150.5177189211239,
+            "mean": 40.92385881164192,
+            "minimum": 2.5398629782715343,
+            "missing": 923
+          },
+          "dijet_pT": {
+            "defined": 182,
+            "maximum": 332.7360618722974,
+            "mean": 107.84273912338908,
+            "minimum": 9.034748395635948,
+            "missing": 818
+          },
+          "diphoton_pT": {
+            "defined": 371,
+            "maximum": 473.38105345473576,
+            "mean": 100.58190426385596,
+            "minimum": 5.965178683242008,
+            "missing": 629
+          },
+          "m_HH": {
+            "defined": 77,
+            "maximum": 695.9416689892024,
+            "mean": 358.24441722800566,
+            "minimum": 187.5776451931984,
+            "missing": 923
+          },
+          "m_bb": {
+            "defined": 182,
+            "maximum": 359.0520783071165,
+            "mean": 83.38970013948456,
+            "minimum": 18.13035878584424,
+            "missing": 818
+          },
+          "m_gamma_gamma": {
+            "defined": 371,
+            "maximum": 178.28864928306314,
+            "mean": 124.85837896970459,
+            "minimum": 31.34899179406314,
+            "missing": 629
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 3.0,
+            "mean": 0.846,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 816,
+            "maximum": 2.3601155281066895,
+            "mean": -0.016895371523323953,
+            "minimum": -2.3529791831970215,
+            "missing": 184
+          },
+          "photon1_pT": {
+            "defined": 816,
+            "maximum": 394.4637756347656,
+            "mean": 91.13288255766327,
+            "minimum": 25.168411254882812,
+            "missing": 184
+          },
+          "photon2_eta": {
+            "defined": 371,
+            "maximum": 2.3430001735687256,
+            "mean": -0.07092337080872445,
+            "minimum": -2.35260009765625,
+            "missing": 629
+          },
+          "photon2_pT": {
+            "defined": 371,
+            "maximum": 162.24685668945312,
+            "mean": 53.37803736786958,
+            "minimum": 25.113676071166992,
+            "missing": 629
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 756,
+            "maximum": 3.6370917409192054,
+            "mean": 1.8946942150847832,
+            "minimum": 0.5382722905725182,
+            "missing": 244
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 8.0,
+            "mean": 2.48,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 1425.0447998046875,
+            "mean": 257.78907413101194,
+            "minimum": 27.708919525146484,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 657,
+            "maximum": 2.484893560409546,
+            "mean": 0.026325301884898924,
+            "minimum": -2.456355094909668,
+            "missing": 343
+          },
+          "tagged_jet1_pT": {
+            "defined": 657,
+            "maximum": 550.2471313476562,
+            "mean": 72.85834373404447,
+            "minimum": 25.10517120361328,
+            "missing": 343
+          },
+          "tagged_jet2_eta": {
+            "defined": 182,
+            "maximum": 2.455030679702759,
+            "mean": 0.06469816239269266,
+            "minimum": -2.4945778846740723,
+            "missing": 818
+          },
+          "tagged_jet2_pT": {
+            "defined": 182,
+            "maximum": 130.93011474609375,
+            "mean": 47.925977088592866,
+            "minimum": 25.037717819213867,
+            "missing": 818
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 2.290368492109941,
+            "mean": -0.09223826677820159,
+            "minimum": -3.677442635217709,
+            "missing": 293
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 3.141053551744776,
+            "mean": 2.8348702950860685,
+            "minimum": 0.20898259872670433,
+            "missing": 293
+          },
+          "DeltaPhi_bb": {
+            "defined": 77,
+            "maximum": 2.9523823857307434,
+            "mean": 1.192051001370645,
+            "minimum": 0.0843656063079834,
+            "missing": 293
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 370,
+            "maximum": 3.1325738430023193,
+            "mean": 1.9919225529504516,
+            "minimum": 0.012152612209320068,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 4.77742089208451,
+            "mean": 3.0524576001368344,
+            "minimum": 0.41741762455667836,
+            "missing": 293
+          },
+          "DeltaR_bb": {
+            "defined": 77,
+            "maximum": 3.4123713758902947,
+            "mean": 1.4488798166764871,
+            "minimum": 0.4771431318500211,
+            "missing": 293
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 370,
+            "maximum": 3.55436043742299,
+            "mean": 2.2725216850116476,
+            "minimum": 0.5784814446294788,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 77,
+            "maximum": 5.682068653437805,
+            "mean": 0.21335256211764078,
+            "minimum": -5.012167333503947,
+            "missing": 293
+          },
+          "HH_pT": {
+            "defined": 77,
+            "maximum": 150.5177189211239,
+            "mean": 40.92385881164192,
+            "minimum": 2.5398629782715343,
+            "missing": 293
+          },
+          "dijet_pT": {
+            "defined": 77,
+            "maximum": 332.7360618722974,
+            "mean": 119.70071860566843,
+            "minimum": 9.034748395635948,
+            "missing": 293
+          },
+          "diphoton_pT": {
+            "defined": 370,
+            "maximum": 473.38105345473576,
+            "mean": 100.80611772938707,
+            "minimum": 5.965178683242008,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 77,
+            "maximum": 695.9416689892024,
+            "mean": 358.24441722800566,
+            "minimum": 187.5776451931984,
+            "missing": 293
+          },
+          "m_bb": {
+            "defined": 77,
+            "maximum": 217.5766598055087,
+            "mean": 77.01686476418898,
+            "minimum": 19.797713094629454,
+            "missing": 293
+          },
+          "m_gamma_gamma": {
+            "defined": 370,
+            "maximum": 178.28864928306314,
+            "mean": 124.85251179975505,
+            "minimum": 31.34899179406314,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 370,
+            "maximum": 3.0,
+            "mean": 0.9081081081081082,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 370,
+            "maximum": 2.344970941543579,
+            "mean": -0.026080555070783138,
+            "minimum": -2.3529791831970215,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 370,
+            "maximum": 394.4637756347656,
+            "mean": 101.769203402545,
+            "minimum": 36.63259506225586,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 370,
+            "maximum": 2.3430001735687256,
+            "mean": -0.07261825300048332,
+            "minimum": -2.35260009765625,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 370,
+            "maximum": 162.24685668945312,
+            "mean": 53.44016916429674,
+            "minimum": 25.113676071166992,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 343,
+            "maximum": 3.6370917409192054,
+            "mean": 1.6579280130904672,
+            "minimum": 0.5382722905725182,
+            "missing": 27
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 370,
+            "maximum": 6.0,
+            "mean": 1.991891891891892,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 370,
+            "maximum": 969.2211303710938,
+            "mean": 284.3082968840728,
+            "minimum": 92.966064453125,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 257,
+            "maximum": 2.484893560409546,
+            "mean": 0.05063401896357971,
+            "minimum": -2.3979899883270264,
+            "missing": 113
+          },
+          "tagged_jet1_pT": {
+            "defined": 257,
+            "maximum": 404.0233459472656,
+            "mean": 79.22301279060572,
+            "minimum": 25.10517120361328,
+            "missing": 113
+          },
+          "tagged_jet2_eta": {
+            "defined": 77,
+            "maximum": 2.455030679702759,
+            "mean": 0.04070193276970417,
+            "minimum": -2.4497687816619873,
+            "missing": 293
+          },
+          "tagged_jet2_pT": {
+            "defined": 77,
+            "maximum": 130.93011474609375,
+            "mean": 49.129338375933756,
+            "minimum": 25.274532318115234,
+            "missing": 293
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 2.290368492109941,
+            "mean": -0.09223826677820159,
+            "minimum": -3.677442635217709,
+            "missing": 143
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 3.141053551744776,
+            "mean": 2.8348702950860685,
+            "minimum": 0.20898259872670433,
+            "missing": 143
+          },
+          "DeltaPhi_bb": {
+            "defined": 77,
+            "maximum": 2.9523823857307434,
+            "mean": 1.192051001370645,
+            "minimum": 0.0843656063079834,
+            "missing": 143
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 220,
+            "maximum": 3.1325738430023193,
+            "mean": 1.8096135901611958,
+            "minimum": 0.016886234283447266,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 4.77742089208451,
+            "mean": 3.0524576001368344,
+            "minimum": 0.41741762455667836,
+            "missing": 143
+          },
+          "DeltaR_bb": {
+            "defined": 77,
+            "maximum": 3.4123713758902947,
+            "mean": 1.4488798166764871,
+            "minimum": 0.4771431318500211,
+            "missing": 143
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 220,
+            "maximum": 3.55436043742299,
+            "mean": 2.109674709697656,
+            "minimum": 0.5784814446294788,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 77,
+            "maximum": 5.682068653437805,
+            "mean": 0.21335256211764078,
+            "minimum": -5.012167333503947,
+            "missing": 143
+          },
+          "HH_pT": {
+            "defined": 77,
+            "maximum": 150.5177189211239,
+            "mean": 40.92385881164192,
+            "minimum": 2.5398629782715343,
+            "missing": 143
+          },
+          "dijet_pT": {
+            "defined": 77,
+            "maximum": 332.7360618722974,
+            "mean": 119.70071860566843,
+            "minimum": 9.034748395635948,
+            "missing": 143
+          },
+          "diphoton_pT": {
+            "defined": 220,
+            "maximum": 454.1598040343223,
+            "mean": 118.57286936072683,
+            "minimum": 5.965178683242008,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 77,
+            "maximum": 695.9416689892024,
+            "mean": 358.24441722800566,
+            "minimum": 187.5776451931984,
+            "missing": 143
+          },
+          "m_bb": {
+            "defined": 77,
+            "maximum": 217.5766598055087,
+            "mean": 77.01686476418898,
+            "minimum": 19.797713094629454,
+            "missing": 143
+          },
+          "m_gamma_gamma": {
+            "defined": 220,
+            "maximum": 178.28864928306314,
+            "mean": 124.71038593002069,
+            "minimum": 31.34899179406314,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 220,
+            "maximum": 3.0,
+            "mean": 1.2,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 220,
+            "maximum": 2.344970941543579,
+            "mean": -0.04029279181109318,
+            "minimum": -2.3529791831970215,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 220,
+            "maximum": 394.4637756347656,
+            "mean": 110.50238612781871,
+            "minimum": 36.77301788330078,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 220,
+            "maximum": 2.262155055999756,
+            "mean": -0.09903277392414483,
+            "minimum": -2.35260009765625,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 220,
+            "maximum": 162.24685668945312,
+            "mean": 55.86061019897461,
+            "minimum": 25.113676071166992,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 220,
+            "maximum": 3.106350746479459,
+            "mean": 1.544089433076956,
+            "minimum": 0.5382722905725182,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 220,
+            "maximum": 6.0,
+            "mean": 2.55,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 220,
+            "maximum": 969.2211303710938,
+            "mean": 334.4166664817117,
+            "minimum": 132.9535369873047,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 185,
+            "maximum": 2.484893560409546,
+            "mean": 0.07932705691310804,
+            "minimum": -2.3979899883270264,
+            "missing": 35
+          },
+          "tagged_jet1_pT": {
+            "defined": 185,
+            "maximum": 404.0233459472656,
+            "mean": 84.271876402159,
+            "minimum": 25.10517120361328,
+            "missing": 35
+          },
+          "tagged_jet2_eta": {
+            "defined": 77,
+            "maximum": 2.455030679702759,
+            "mean": 0.04070193276970417,
+            "minimum": -2.4497687816619873,
+            "missing": 143
+          },
+          "tagged_jet2_pT": {
+            "defined": 77,
+            "maximum": 130.93011474609375,
+            "mean": 49.129338375933756,
+            "minimum": 25.274532318115234,
+            "missing": 143
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 2.290368492109941,
+            "mean": -0.09223826677820159,
+            "minimum": -3.677442635217709,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 3.141053551744776,
+            "mean": 2.8348702950860685,
+            "minimum": 0.20898259872670433,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 77,
+            "maximum": 2.9523823857307434,
+            "mean": 1.192051001370645,
+            "minimum": 0.0843656063079834,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 77,
+            "maximum": 3.1325738430023193,
+            "mean": 1.830819729666312,
+            "minimum": 0.0955866314470768,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 77,
+            "maximum": 4.77742089208451,
+            "mean": 3.0524576001368344,
+            "minimum": 0.41741762455667836,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 77,
+            "maximum": 3.4123713758902947,
+            "mean": 1.4488798166764871,
+            "minimum": 0.4771431318500211,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 77,
+            "maximum": 3.55436043742299,
+            "mean": 2.1031076813240097,
+            "minimum": 0.7778404167988412,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 77,
+            "maximum": 5.682068653437805,
+            "mean": 0.21335256211764078,
+            "minimum": -5.012167333503947,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 77,
+            "maximum": 150.5177189211239,
+            "mean": 40.92385881164192,
+            "minimum": 2.5398629782715343,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 77,
+            "maximum": 332.7360618722974,
+            "mean": 119.70071860566843,
+            "minimum": 9.034748395635948,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 77,
+            "maximum": 347.5762306541844,
+            "mean": 127.75160064989196,
+            "minimum": 17.519204713936965,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 77,
+            "maximum": 695.9416689892024,
+            "mean": 358.24441722800566,
+            "minimum": 187.5776451931984,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 77,
+            "maximum": 217.5766598055087,
+            "mean": 77.01686476418898,
+            "minimum": 19.797713094629454,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 77,
+            "maximum": 178.28864928306314,
+            "mean": 124.99648541000614,
+            "minimum": 70.16739377146153,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 77,
+            "maximum": 3.0,
+            "mean": 2.0259740259740258,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 77,
+            "maximum": 1.9428911209106445,
+            "mean": 0.03290258327426462,
+            "minimum": -2.0671579837799072,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 77,
+            "maximum": 333.18011474609375,
+            "mean": 119.8809604892483,
+            "minimum": 36.77301788330078,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 77,
+            "maximum": 2.221660852432251,
+            "mean": 0.07136085547216527,
+            "minimum": -2.2430009841918945,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 77,
+            "maximum": 162.24685668945312,
+            "mean": 54.00329409017191,
+            "minimum": 25.113676071166992,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 77,
+            "maximum": 2.8418801059444383,
+            "mean": 1.5504472407658,
+            "minimum": 0.5382722905725182,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 77,
+            "maximum": 4.0,
+            "mean": 2.5324675324675323,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 77,
+            "maximum": 730.3170166015625,
+            "mean": 345.46090539709314,
+            "minimum": 152.82144165039062,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 77,
+            "maximum": 2.3897910118103027,
+            "mean": 0.11441326646932534,
+            "minimum": -2.3979899883270264,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 77,
+            "maximum": 272.5450134277344,
+            "mean": 92.2981585713176,
+            "minimum": 33.743568420410156,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 77,
+            "maximum": 2.455030679702759,
+            "mean": 0.04070193276970417,
+            "minimum": -2.4497687816619873,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 77,
+            "maximum": 130.93011474609375,
+            "mean": 49.129338375933756,
+            "minimum": 25.274532318115234,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 75,
+            "maximum": 2.290368492109941,
+            "mean": -0.11850737308091297,
+            "minimum": -3.677442635217709,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 75,
+            "maximum": 3.141053551744776,
+            "mean": 2.847673013689745,
+            "minimum": 0.20898259872670433,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 75,
+            "maximum": 2.9523823857307434,
+            "mean": 1.2163787446354974,
+            "minimum": 0.09270346164703369,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 75,
+            "maximum": 3.1325738430023193,
+            "mean": 1.8307477701629715,
+            "minimum": 0.0955866314470768,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 75,
+            "maximum": 4.77742089208451,
+            "mean": 3.0667002720020973,
+            "minimum": 0.41741762455667836,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 75,
+            "maximum": 3.4123713758902947,
+            "mean": 1.4650998290450963,
+            "minimum": 0.4771431318500211,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 75,
+            "maximum": 3.55436043742299,
+            "mean": 2.108093926943905,
+            "minimum": 0.7778404167988412,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 75,
+            "maximum": 5.682068653437805,
+            "mean": 0.2764932788552678,
+            "minimum": -5.012167333503947,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 75,
+            "maximum": 150.5177189211239,
+            "mean": 38.97369258161717,
+            "minimum": 2.5398629782715343,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 75,
+            "maximum": 332.7360618722974,
+            "mean": 118.35789568026846,
+            "minimum": 9.034748395635948,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 75,
+            "maximum": 347.5762306541844,
+            "mean": 128.462943916355,
+            "minimum": 17.519204713936965,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 75,
+            "maximum": 695.9416689892024,
+            "mean": 357.78344170229616,
+            "minimum": 187.5776451931984,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 75,
+            "maximum": 217.5766598055087,
+            "mean": 77.03563593281088,
+            "minimum": 19.797713094629454,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 75,
+            "maximum": 128.46223160841885,
+            "mean": 125.01697778021264,
+            "minimum": 122.48964334465231,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 75,
+            "maximum": 3.0,
+            "mean": 2.026666666666667,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 75,
+            "maximum": 1.9428911209106445,
+            "mean": 0.039569694387416046,
+            "minimum": -2.0671579837799072,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 75,
+            "maximum": 333.18011474609375,
+            "mean": 120.68644226074218,
+            "minimum": 36.77301788330078,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 75,
+            "maximum": 2.221660852432251,
+            "mean": 0.09389346157511075,
+            "minimum": -2.2430009841918945,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 75,
+            "maximum": 162.24685668945312,
+            "mean": 53.698384272257485,
+            "minimum": 25.113676071166992,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 75,
+            "maximum": 2.8418801059444383,
+            "mean": 1.557001689792303,
+            "minimum": 0.5382722905725182,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 75,
+            "maximum": 4.0,
+            "mean": 2.52,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 75,
+            "maximum": 730.3170166015625,
+            "mean": 341.89732055664064,
+            "minimum": 152.82144165039062,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 75,
+            "maximum": 2.3897910118103027,
+            "mean": 0.14893794419864814,
+            "minimum": -2.3979899883270264,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 75,
+            "maximum": 272.5450134277344,
+            "mean": 92.25392532348633,
+            "minimum": 33.743568420410156,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 75,
+            "maximum": 2.455030679702759,
+            "mean": 0.09344057882825534,
+            "minimum": -2.4497687816619873,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 75,
+            "maximum": 130.93011474609375,
+            "mean": 48.33695589701335,
+            "minimum": 25.274532318115234,
+            "missing": 0
+          }
+        }
+      },
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 39,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 1392,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 4,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 0,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 1275,
+        "NATIVE_RECO_SHOWER_RADIATION": 6,
+        "NATIVE_RECO_UNCLASSIFIED": 105,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 0,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 1092,
+        "SELECTED_RECO_SHOWER_RADIATION": 4,
+        "SELECTED_RECO_UNCLASSIFIED": 93,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 1,
+        "STABLE_TRUTH_HADRON_DECAY": 64958,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 2000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 54,
+        "STABLE_TRUTH_UNCLASSIFIED": 0
+      }
+    },
+    "B05": {
+      "cutflow": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8745255416172775,
+            "mean": -0.003406193790015276,
+            "minimum": -3.793224268825571,
+            "missing": 869
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.1415362596022756,
+            "mean": 2.2139680291046098,
+            "minimum": 0.15285298738173844,
+            "missing": 869
+          },
+          "DeltaPhi_bb": {
+            "defined": 386,
+            "maximum": 3.1365994776235984,
+            "mean": 1.9558602116420107,
+            "minimum": 0.002432584762573242,
+            "missing": 614
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 328,
+            "maximum": 3.140137553215027,
+            "mean": 1.5994586522093677,
+            "minimum": 0.0028200894594192505,
+            "missing": 672
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8882432778227245,
+            "mean": 2.6147089479151013,
+            "minimum": 0.23710277669342258,
+            "missing": 869
+          },
+          "DeltaR_bb": {
+            "defined": 386,
+            "maximum": 4.489748620900576,
+            "mean": 2.2874834324966797,
+            "minimum": 0.4352133152489251,
+            "missing": 614
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 328,
+            "maximum": 3.7340972640743266,
+            "mean": 1.932212659390117,
+            "minimum": 0.5074781657864621,
+            "missing": 672
+          },
+          "HH_eta": {
+            "defined": 131,
+            "maximum": 5.697732879685042,
+            "mean": -0.13123165130815997,
+            "minimum": -4.049544977628378,
+            "missing": 869
+          },
+          "HH_pT": {
+            "defined": 131,
+            "maximum": 561.9708699657351,
+            "mean": 124.95307557638516,
+            "minimum": 12.74518691442114,
+            "missing": 869
+          },
+          "dijet_pT": {
+            "defined": 386,
+            "maximum": 492.42193610653374,
+            "mean": 115.38656600291917,
+            "minimum": 2.3683189713050785,
+            "missing": 614
+          },
+          "diphoton_pT": {
+            "defined": 328,
+            "maximum": 798.0999701927385,
+            "mean": 150.54614932772037,
+            "minimum": 9.410150317348448,
+            "missing": 672
+          },
+          "m_HH": {
+            "defined": 131,
+            "maximum": 1224.6756151241214,
+            "mean": 446.3066429576781,
+            "minimum": 182.25224022470658,
+            "missing": 869
+          },
+          "m_bb": {
+            "defined": 386,
+            "maximum": 1057.6202016851169,
+            "mean": 190.47064276230088,
+            "minimum": 21.802376575826077,
+            "missing": 614
+          },
+          "m_gamma_gamma": {
+            "defined": 328,
+            "maximum": 440.689515894818,
+            "mean": 126.59731679577418,
+            "minimum": 71.76383352770088,
+            "missing": 672
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 4.0,
+            "mean": 1.269,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 815,
+            "maximum": 2.3635494709014893,
+            "mean": 0.014507651266333379,
+            "minimum": -2.3103766441345215,
+            "missing": 185
+          },
+          "photon1_pT": {
+            "defined": 815,
+            "maximum": 773.0326538085938,
+            "mean": 114.7774757900121,
+            "minimum": 25.06144905090332,
+            "missing": 185
+          },
+          "photon2_eta": {
+            "defined": 328,
+            "maximum": 2.318507671356201,
+            "mean": 0.023069744216982366,
+            "minimum": -2.347835063934326,
+            "missing": 672
+          },
+          "photon2_pT": {
+            "defined": 328,
+            "maximum": 199.76303100585938,
+            "mean": 59.38831734075779,
+            "minimum": 25.049428939819336,
+            "missing": 672
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 815,
+            "maximum": 2.9388539011655173,
+            "mean": 1.1821113120666507,
+            "minimum": 0.45925636521938584,
+            "missing": 185
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 13.0,
+            "mean": 5.536,
+            "minimum": 1.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 1898.39013671875,
+            "mean": 605.901639907837,
+            "minimum": 169.65098571777344,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 835,
+            "maximum": 2.481236457824707,
+            "mean": -0.03292912070578087,
+            "minimum": -2.4706783294677734,
+            "missing": 165
+          },
+          "tagged_jet1_pT": {
+            "defined": 835,
+            "maximum": 628.3904418945312,
+            "mean": 115.62334151353664,
+            "minimum": 25.434476852416992,
+            "missing": 165
+          },
+          "tagged_jet2_eta": {
+            "defined": 386,
+            "maximum": 2.446650505065918,
+            "mean": 0.04676325027372476,
+            "minimum": -2.498655080795288,
+            "missing": 614
+          },
+          "tagged_jet2_pT": {
+            "defined": 386,
+            "maximum": 344.25933837890625,
+            "mean": 71.61337104856659,
+            "minimum": 25.28392219543457,
+            "missing": 614
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8745255416172775,
+            "mean": -0.003406193790015276,
+            "minimum": -3.793224268825571,
+            "missing": 196
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.1415362596022756,
+            "mean": 2.2139680291046098,
+            "minimum": 0.15285298738173844,
+            "missing": 196
+          },
+          "DeltaPhi_bb": {
+            "defined": 131,
+            "maximum": 3.1313945055007935,
+            "mean": 1.9545290431806288,
+            "minimum": 0.055303335189819336,
+            "missing": 196
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 327,
+            "maximum": 3.140137553215027,
+            "mean": 1.5987936036865324,
+            "minimum": 0.0028200894594192505,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8882432778227245,
+            "mean": 2.6147089479151013,
+            "minimum": 0.23710277669342258,
+            "missing": 196
+          },
+          "DeltaR_bb": {
+            "defined": 131,
+            "maximum": 4.353919190245769,
+            "mean": 2.2469856084106588,
+            "minimum": 0.4352133152489251,
+            "missing": 196
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 327,
+            "maximum": 3.7340972640743266,
+            "mean": 1.9274208589886406,
+            "minimum": 0.5074781657864621,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 131,
+            "maximum": 5.697732879685042,
+            "mean": -0.13123165130815997,
+            "minimum": -4.049544977628378,
+            "missing": 196
+          },
+          "HH_pT": {
+            "defined": 131,
+            "maximum": 561.9708699657351,
+            "mean": 124.95307557638516,
+            "minimum": 12.74518691442114,
+            "missing": 196
+          },
+          "dijet_pT": {
+            "defined": 131,
+            "maximum": 492.42193610653374,
+            "mean": 114.84706768789954,
+            "minimum": 2.3683189713050785,
+            "missing": 196
+          },
+          "diphoton_pT": {
+            "defined": 327,
+            "maximum": 798.0999701927385,
+            "mean": 150.9016352389366,
+            "minimum": 9.410150317348448,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 131,
+            "maximum": 1224.6756151241214,
+            "mean": 446.3066429576781,
+            "minimum": 182.25224022470658,
+            "missing": 196
+          },
+          "m_bb": {
+            "defined": 131,
+            "maximum": 903.8504572087609,
+            "mean": 185.04029086569457,
+            "minimum": 21.802376575826077,
+            "missing": 196
+          },
+          "m_gamma_gamma": {
+            "defined": 327,
+            "maximum": 440.689515894818,
+            "mean": 126.60175709580253,
+            "minimum": 71.76383352770088,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 327,
+            "maximum": 4.0,
+            "mean": 1.2966360856269112,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 327,
+            "maximum": 2.3491806983947754,
+            "mean": 0.012755431616835478,
+            "minimum": -2.3043460845947266,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 327,
+            "maximum": 773.0326538085938,
+            "mean": 132.80250370830572,
+            "minimum": 36.383209228515625,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 327,
+            "maximum": 2.318507671356201,
+            "mean": 0.025859949025197313,
+            "minimum": -2.347835063934326,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 327,
+            "maximum": 199.76303100585938,
+            "mean": 59.49136097642624,
+            "minimum": 25.049428939819336,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 327,
+            "maximum": 2.9159671312145576,
+            "mean": 1.0920683357428256,
+            "minimum": 0.46545404643115573,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 327,
+            "maximum": 10.0,
+            "mean": 4.978593272171254,
+            "minimum": 1.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 327,
+            "maximum": 1898.39013671875,
+            "mean": 622.7894172785115,
+            "minimum": 169.65098571777344,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 276,
+            "maximum": 2.481236457824707,
+            "mean": -0.00300404390293187,
+            "minimum": -2.2756412029266357,
+            "missing": 51
+          },
+          "tagged_jet1_pT": {
+            "defined": 276,
+            "maximum": 628.3904418945312,
+            "mean": 117.73596973004548,
+            "minimum": 26.6646671295166,
+            "missing": 51
+          },
+          "tagged_jet2_eta": {
+            "defined": 131,
+            "maximum": 2.2026891708374023,
+            "mean": 0.06969160622853132,
+            "minimum": -2.460306167602539,
+            "missing": 196
+          },
+          "tagged_jet2_pT": {
+            "defined": 131,
+            "maximum": 344.25933837890625,
+            "mean": 70.28842495051958,
+            "minimum": 26.138105392456055,
+            "missing": 196
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8745255416172775,
+            "mean": -0.003406193790015276,
+            "minimum": -3.793224268825571,
+            "missing": 191
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.1415362596022756,
+            "mean": 2.2139680291046098,
+            "minimum": 0.15285298738173844,
+            "missing": 191
+          },
+          "DeltaPhi_bb": {
+            "defined": 131,
+            "maximum": 3.1313945055007935,
+            "mean": 1.9545290431806288,
+            "minimum": 0.055303335189819336,
+            "missing": 191
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 322,
+            "maximum": 3.140137553215027,
+            "mean": 1.6049743424647056,
+            "minimum": 0.0028200894594192505,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8882432778227245,
+            "mean": 2.6147089479151013,
+            "minimum": 0.23710277669342258,
+            "missing": 191
+          },
+          "DeltaR_bb": {
+            "defined": 131,
+            "maximum": 4.353919190245769,
+            "mean": 2.2469856084106588,
+            "minimum": 0.4352133152489251,
+            "missing": 191
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 322,
+            "maximum": 3.7340972640743266,
+            "mean": 1.9330126752065588,
+            "minimum": 0.5074781657864621,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 131,
+            "maximum": 5.697732879685042,
+            "mean": -0.13123165130815997,
+            "minimum": -4.049544977628378,
+            "missing": 191
+          },
+          "HH_pT": {
+            "defined": 131,
+            "maximum": 561.9708699657351,
+            "mean": 124.95307557638516,
+            "minimum": 12.74518691442114,
+            "missing": 191
+          },
+          "dijet_pT": {
+            "defined": 131,
+            "maximum": 492.42193610653374,
+            "mean": 114.84706768789954,
+            "minimum": 2.3683189713050785,
+            "missing": 191
+          },
+          "diphoton_pT": {
+            "defined": 322,
+            "maximum": 798.0999701927385,
+            "mean": 149.83997345646665,
+            "minimum": 9.410150317348448,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 131,
+            "maximum": 1224.6756151241214,
+            "mean": 446.3066429576781,
+            "minimum": 182.25224022470658,
+            "missing": 191
+          },
+          "m_bb": {
+            "defined": 131,
+            "maximum": 903.8504572087609,
+            "mean": 185.04029086569457,
+            "minimum": 21.802376575826077,
+            "missing": 191
+          },
+          "m_gamma_gamma": {
+            "defined": 322,
+            "maximum": 440.689515894818,
+            "mean": 126.79287546309841,
+            "minimum": 79.60863384213187,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 322,
+            "maximum": 4.0,
+            "mean": 1.3043478260869565,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 322,
+            "maximum": 2.3491806983947754,
+            "mean": 4.300960485667268e-05,
+            "minimum": -2.3043460845947266,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 322,
+            "maximum": 773.0326538085938,
+            "mean": 131.87579185770164,
+            "minimum": 36.383209228515625,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 322,
+            "maximum": 2.318507671356201,
+            "mean": 0.017333340955470105,
+            "minimum": -2.347835063934326,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 322,
+            "maximum": 199.76303100585938,
+            "mean": 59.58156825592799,
+            "minimum": 25.049428939819336,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 322,
+            "maximum": 2.8117599849655535,
+            "mean": 1.0768024156736204,
+            "minimum": 0.46545404643115573,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 322,
+            "maximum": 10.0,
+            "mean": 5.0186335403726705,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 322,
+            "maximum": 1898.39013671875,
+            "mean": 623.8828977028036,
+            "minimum": 181.779296875,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 272,
+            "maximum": 2.481236457824707,
+            "mean": -0.008656797533416572,
+            "minimum": -2.2756412029266357,
+            "missing": 50
+          },
+          "tagged_jet1_pT": {
+            "defined": 272,
+            "maximum": 628.3904418945312,
+            "mean": 116.45022641209995,
+            "minimum": 26.6646671295166,
+            "missing": 50
+          },
+          "tagged_jet2_eta": {
+            "defined": 131,
+            "maximum": 2.2026891708374023,
+            "mean": 0.06969160622853132,
+            "minimum": -2.460306167602539,
+            "missing": 191
+          },
+          "tagged_jet2_pT": {
+            "defined": 131,
+            "maximum": 344.25933837890625,
+            "mean": 70.28842495051958,
+            "minimum": 26.138105392456055,
+            "missing": 191
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8745255416172775,
+            "mean": -0.003406193790015276,
+            "minimum": -3.793224268825571,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.1415362596022756,
+            "mean": 2.2139680291046098,
+            "minimum": 0.15285298738173844,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 131,
+            "maximum": 3.1313945055007935,
+            "mean": 1.9545290431806288,
+            "minimum": 0.055303335189819336,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 131,
+            "maximum": 3.1347547213183806,
+            "mean": 1.5678318075637654,
+            "minimum": 0.0028200894594192505,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8882432778227245,
+            "mean": 2.6147089479151013,
+            "minimum": 0.23710277669342258,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 131,
+            "maximum": 4.353919190245769,
+            "mean": 2.2469856084106588,
+            "minimum": 0.4352133152489251,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 131,
+            "maximum": 3.5034904983650583,
+            "mean": 1.8900066020550021,
+            "minimum": 0.5074781657864621,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 131,
+            "maximum": 5.697732879685042,
+            "mean": -0.13123165130815997,
+            "minimum": -4.049544977628378,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 131,
+            "maximum": 561.9708699657351,
+            "mean": 124.95307557638516,
+            "minimum": 12.74518691442114,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 131,
+            "maximum": 492.42193610653374,
+            "mean": 114.84706768789954,
+            "minimum": 2.3683189713050785,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 131,
+            "maximum": 502.9734019254215,
+            "mean": 145.50693553419848,
+            "minimum": 9.530565964618745,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 131,
+            "maximum": 1224.6756151241214,
+            "mean": 446.3066429576781,
+            "minimum": 182.25224022470658,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 131,
+            "maximum": 903.8504572087609,
+            "mean": 185.04029086569457,
+            "minimum": 21.802376575826077,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 131,
+            "maximum": 154.67373933007423,
+            "mean": 125.02857796168271,
+            "minimum": 110.78636482098914,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 131,
+            "maximum": 4.0,
+            "mean": 2.1297709923664123,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 131,
+            "maximum": 2.0290780067443848,
+            "mean": -0.05680485847512729,
+            "minimum": -2.261329174041748,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 131,
+            "maximum": 362.9207458496094,
+            "mean": 124.33953423536461,
+            "minimum": 44.36286544799805,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 131,
+            "maximum": 2.318507671356201,
+            "mean": -0.0012283493259935888,
+            "minimum": -2.1986947059631348,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 131,
+            "maximum": 191.40562438964844,
+            "mean": 62.356889826650836,
+            "minimum": 25.049428939819336,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 131,
+            "maximum": 2.796762822317462,
+            "mean": 1.0384662793361532,
+            "minimum": 0.5397604542676451,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 131,
+            "maximum": 10.0,
+            "mean": 5.106870229007634,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 131,
+            "maximum": 1736.6700439453125,
+            "mean": 632.4193117563962,
+            "minimum": 270.3896789550781,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 131,
+            "maximum": 2.481236457824707,
+            "mean": -0.09778943535594539,
+            "minimum": -2.2756412029266357,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 131,
+            "maximum": 628.3904418945312,
+            "mean": 131.45754696212651,
+            "minimum": 34.369205474853516,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 131,
+            "maximum": 2.2026891708374023,
+            "mean": 0.06969160622853132,
+            "minimum": -2.460306167602539,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 131,
+            "maximum": 344.25933837890625,
+            "mean": 70.28842495051958,
+            "minimum": 26.138105392456055,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8745255416172775,
+            "mean": -0.003406193790015276,
+            "minimum": -3.793224268825571,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.1415362596022756,
+            "mean": 2.2139680291046098,
+            "minimum": 0.15285298738173844,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 131,
+            "maximum": 3.1313945055007935,
+            "mean": 1.9545290431806288,
+            "minimum": 0.055303335189819336,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 131,
+            "maximum": 3.1347547213183806,
+            "mean": 1.5678318075637654,
+            "minimum": 0.0028200894594192505,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 131,
+            "maximum": 3.8882432778227245,
+            "mean": 2.6147089479151013,
+            "minimum": 0.23710277669342258,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 131,
+            "maximum": 4.353919190245769,
+            "mean": 2.2469856084106588,
+            "minimum": 0.4352133152489251,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 131,
+            "maximum": 3.5034904983650583,
+            "mean": 1.8900066020550021,
+            "minimum": 0.5074781657864621,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 131,
+            "maximum": 5.697732879685042,
+            "mean": -0.13123165130815997,
+            "minimum": -4.049544977628378,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 131,
+            "maximum": 561.9708699657351,
+            "mean": 124.95307557638516,
+            "minimum": 12.74518691442114,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 131,
+            "maximum": 492.42193610653374,
+            "mean": 114.84706768789954,
+            "minimum": 2.3683189713050785,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 131,
+            "maximum": 502.9734019254215,
+            "mean": 145.50693553419848,
+            "minimum": 9.530565964618745,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 131,
+            "maximum": 1224.6756151241214,
+            "mean": 446.3066429576781,
+            "minimum": 182.25224022470658,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 131,
+            "maximum": 903.8504572087609,
+            "mean": 185.04029086569457,
+            "minimum": 21.802376575826077,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 131,
+            "maximum": 154.67373933007423,
+            "mean": 125.02857796168271,
+            "minimum": 110.78636482098914,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 131,
+            "maximum": 4.0,
+            "mean": 2.1297709923664123,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 131,
+            "maximum": 2.0290780067443848,
+            "mean": -0.05680485847512729,
+            "minimum": -2.261329174041748,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 131,
+            "maximum": 362.9207458496094,
+            "mean": 124.33953423536461,
+            "minimum": 44.36286544799805,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 131,
+            "maximum": 2.318507671356201,
+            "mean": -0.0012283493259935888,
+            "minimum": -2.1986947059631348,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 131,
+            "maximum": 191.40562438964844,
+            "mean": 62.356889826650836,
+            "minimum": 25.049428939819336,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 131,
+            "maximum": 2.796762822317462,
+            "mean": 1.0384662793361532,
+            "minimum": 0.5397604542676451,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 131,
+            "maximum": 10.0,
+            "mean": 5.106870229007634,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 131,
+            "maximum": 1736.6700439453125,
+            "mean": 632.4193117563962,
+            "minimum": 270.3896789550781,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 131,
+            "maximum": 2.481236457824707,
+            "mean": -0.09778943535594539,
+            "minimum": -2.2756412029266357,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 131,
+            "maximum": 628.3904418945312,
+            "mean": 131.45754696212651,
+            "minimum": 34.369205474853516,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 131,
+            "maximum": 2.2026891708374023,
+            "mean": 0.06969160622853132,
+            "minimum": -2.460306167602539,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 131,
+            "maximum": 344.25933837890625,
+            "mean": 70.28842495051958,
+            "minimum": 26.138105392456055,
+            "missing": 0
+          }
+        }
+      },
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 2,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 324,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 1617,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 27,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 7,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 1132,
+        "NATIVE_RECO_SHOWER_RADIATION": 14,
+        "NATIVE_RECO_UNCLASSIFIED": 192,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 3,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 965,
+        "SELECTED_RECO_SHOWER_RADIATION": 8,
+        "SELECTED_RECO_UNCLASSIFIED": 176,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 188,
+        "STABLE_TRUTH_HADRON_DECAY": 110671,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 2000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 494,
+        "STABLE_TRUTH_UNCLASSIFIED": 0
+      }
+    },
+    "B06": {
+      "cutflow": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "kinematics": {
+        "00_INPUT": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": -2.2444522594609206,
+            "mean": -2.3275610112987395,
+            "minimum": -2.4106697631365583,
+            "missing": 998
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.1019082825830178,
+            "mean": 3.0161568953913767,
+            "minimum": 2.9304055081997356,
+            "missing": 998
+          },
+          "DeltaPhi_bb": {
+            "defined": 335,
+            "maximum": 3.1358906070338652,
+            "mean": 1.7826349903467122,
+            "minimum": 0.00517582893371582,
+            "missing": 665
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.244433581829071,
+            "mean": 1.6192868053913116,
+            "minimum": 0.9941400289535522,
+            "missing": 998
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.9285065483537123,
+            "mean": 3.809845481808771,
+            "minimum": 3.69118441526383,
+            "missing": 998
+          },
+          "DeltaR_bb": {
+            "defined": 335,
+            "maximum": 4.857933456473163,
+            "mean": 2.222646078727683,
+            "minimum": 0.42145826184800433,
+            "missing": 665
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.257654001733433,
+            "mean": 1.626833377530234,
+            "minimum": 0.9960127533270348,
+            "missing": 998
+          },
+          "HH_eta": {
+            "defined": 2,
+            "maximum": -0.6958361669797566,
+            "mean": -1.725636483829015,
+            "minimum": -2.7554368006782735,
+            "missing": 998
+          },
+          "HH_pT": {
+            "defined": 2,
+            "maximum": 28.315743509806513,
+            "mean": 25.194799837430423,
+            "minimum": 22.073856165054334,
+            "missing": 998
+          },
+          "dijet_pT": {
+            "defined": 335,
+            "maximum": 447.69235809006557,
+            "mean": 83.35072753084003,
+            "minimum": 3.354509813570302,
+            "missing": 665
+          },
+          "diphoton_pT": {
+            "defined": 2,
+            "maximum": 85.58564563641642,
+            "mean": 60.41823695566995,
+            "minimum": 35.25082827492348,
+            "missing": 998
+          },
+          "m_HH": {
+            "defined": 2,
+            "maximum": 258.5416664834424,
+            "mean": 230.47229033001173,
+            "minimum": 202.4029141765811,
+            "missing": 998
+          },
+          "m_bb": {
+            "defined": 335,
+            "maximum": 1165.2295957038434,
+            "mean": 139.84545127529472,
+            "minimum": 19.6349367901496,
+            "missing": 665
+          },
+          "m_gamma_gamma": {
+            "defined": 2,
+            "maximum": 72.4906117637534,
+            "mean": 57.79123366826687,
+            "minimum": 43.09185557278034,
+            "missing": 998
+          },
+          "native_btag_multiplicity": {
+            "defined": 1000,
+            "maximum": 4.0,
+            "mean": 1.151,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 615,
+            "maximum": 2.363013505935669,
+            "mean": 0.037100506270667764,
+            "minimum": -2.353879690170288,
+            "missing": 385
+          },
+          "photon1_pT": {
+            "defined": 615,
+            "maximum": 416.929443359375,
+            "mean": 56.54826446161037,
+            "minimum": 25.4274959564209,
+            "missing": 385
+          },
+          "photon2_eta": {
+            "defined": 2,
+            "maximum": -0.9698285460472107,
+            "mean": -1.3497051894664764,
+            "minimum": -1.7295818328857422,
+            "missing": 998
+          },
+          "photon2_pT": {
+            "defined": 2,
+            "maximum": 36.568241119384766,
+            "mean": 34.16232490539551,
+            "minimum": 31.75640869140625,
+            "missing": 998
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 611,
+            "maximum": 4.5658857871462635,
+            "mean": 1.5151740009236705,
+            "minimum": 0.5345109479718984,
+            "missing": 389
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 1000,
+            "maximum": 9.0,
+            "mean": 3.527,
+            "minimum": 0.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 1000,
+            "maximum": 1505.2672119140625,
+            "mean": 257.55047575378416,
+            "minimum": 35.31845474243164,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 793,
+            "maximum": 2.4776523113250732,
+            "mean": 0.03425258020682479,
+            "minimum": -2.4836084842681885,
+            "missing": 207
+          },
+          "tagged_jet1_pT": {
+            "defined": 793,
+            "maximum": 631.2766723632812,
+            "mean": 78.36931819362569,
+            "minimum": 25.11606216430664,
+            "missing": 207
+          },
+          "tagged_jet2_eta": {
+            "defined": 335,
+            "maximum": 2.483678102493286,
+            "mean": 0.058028039989520365,
+            "minimum": -2.4654712677001953,
+            "missing": 665
+          },
+          "tagged_jet2_pT": {
+            "defined": 335,
+            "maximum": 410.0056457519531,
+            "mean": 52.45616104923077,
+            "minimum": 25.23166847229004,
+            "missing": 665
+          }
+        },
+        "01_TWO_PHOTONS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": -2.2444522594609206,
+            "mean": -2.3275610112987395,
+            "minimum": -2.4106697631365583,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.1019082825830178,
+            "mean": 3.0161568953913767,
+            "minimum": 2.9304055081997356,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 2,
+            "maximum": 1.1641784350024624,
+            "mean": 0.8531465848260603,
+            "minimum": 0.5421147346496582,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.244433581829071,
+            "mean": 1.6192868053913116,
+            "minimum": 0.9941400289535522,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.9285065483537123,
+            "mean": 3.809845481808771,
+            "minimum": 3.69118441526383,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 2,
+            "maximum": 1.3403164911392837,
+            "mean": 1.084534156067996,
+            "minimum": 0.8287518209967081,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.257654001733433,
+            "mean": 1.626833377530234,
+            "minimum": 0.9960127533270348,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 2,
+            "maximum": -0.6958361669797566,
+            "mean": -1.725636483829015,
+            "minimum": -2.7554368006782735,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 2,
+            "maximum": 28.315743509806513,
+            "mean": 25.194799837430423,
+            "minimum": 22.073856165054334,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 2,
+            "maximum": 61.77712358008019,
+            "mean": 59.514852946403934,
+            "minimum": 57.25258231272768,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 2,
+            "maximum": 85.58564563641642,
+            "mean": 60.41823695566995,
+            "minimum": 35.25082827492348,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 2,
+            "maximum": 258.5416664834424,
+            "mean": 230.47229033001173,
+            "minimum": 202.4029141765811,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 2,
+            "maximum": 44.94025279629743,
+            "mean": 36.42345030092491,
+            "minimum": 27.906647805552403,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 2,
+            "maximum": 72.4906117637534,
+            "mean": 57.79123366826687,
+            "minimum": 43.09185557278034,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 2,
+            "maximum": 2.0,
+            "mean": 2.0,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 2,
+            "maximum": -0.7258623838424683,
+            "mean": -1.1971974968910217,
+            "minimum": -1.6685326099395752,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 2,
+            "maximum": 64.02579498291016,
+            "mean": 53.73651313781738,
+            "minimum": 43.44723129272461,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 2,
+            "maximum": -0.9698285460472107,
+            "mean": -1.3497051894664764,
+            "minimum": -1.7295818328857422,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 2,
+            "maximum": 36.568241119384766,
+            "mean": 34.16232490539551,
+            "minimum": 31.75640869140625,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 2,
+            "maximum": 3.063819721478118,
+            "mean": 2.6125541670128696,
+            "minimum": 2.1612886125476214,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 2,
+            "maximum": 3.0,
+            "mean": 2.5,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 2,
+            "maximum": 183.96690368652344,
+            "mean": 165.9476089477539,
+            "minimum": 147.92831420898438,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 2,
+            "maximum": 0.48667311668395996,
+            "mean": 0.30984435975551605,
+            "minimum": 0.13301560282707214,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 2,
+            "maximum": 40.98439407348633,
+            "mean": 38.17385482788086,
+            "minimum": 35.36331558227539,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 2,
+            "maximum": 1.150854468345642,
+            "mean": 0.9553601443767548,
+            "minimum": 0.7598658204078674,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 2,
+            "maximum": 28.72835350036621,
+            "mean": 27.828404426574707,
+            "minimum": 26.928455352783203,
+            "missing": 0
+          }
+        },
+        "02_TWO_JETS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": -2.2444522594609206,
+            "mean": -2.3275610112987395,
+            "minimum": -2.4106697631365583,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.1019082825830178,
+            "mean": 3.0161568953913767,
+            "minimum": 2.9304055081997356,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 2,
+            "maximum": 1.1641784350024624,
+            "mean": 0.8531465848260603,
+            "minimum": 0.5421147346496582,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.244433581829071,
+            "mean": 1.6192868053913116,
+            "minimum": 0.9941400289535522,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.9285065483537123,
+            "mean": 3.809845481808771,
+            "minimum": 3.69118441526383,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 2,
+            "maximum": 1.3403164911392837,
+            "mean": 1.084534156067996,
+            "minimum": 0.8287518209967081,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.257654001733433,
+            "mean": 1.626833377530234,
+            "minimum": 0.9960127533270348,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 2,
+            "maximum": -0.6958361669797566,
+            "mean": -1.725636483829015,
+            "minimum": -2.7554368006782735,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 2,
+            "maximum": 28.315743509806513,
+            "mean": 25.194799837430423,
+            "minimum": 22.073856165054334,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 2,
+            "maximum": 61.77712358008019,
+            "mean": 59.514852946403934,
+            "minimum": 57.25258231272768,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 2,
+            "maximum": 85.58564563641642,
+            "mean": 60.41823695566995,
+            "minimum": 35.25082827492348,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 2,
+            "maximum": 258.5416664834424,
+            "mean": 230.47229033001173,
+            "minimum": 202.4029141765811,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 2,
+            "maximum": 44.94025279629743,
+            "mean": 36.42345030092491,
+            "minimum": 27.906647805552403,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 2,
+            "maximum": 72.4906117637534,
+            "mean": 57.79123366826687,
+            "minimum": 43.09185557278034,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 2,
+            "maximum": 2.0,
+            "mean": 2.0,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 2,
+            "maximum": -0.7258623838424683,
+            "mean": -1.1971974968910217,
+            "minimum": -1.6685326099395752,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 2,
+            "maximum": 64.02579498291016,
+            "mean": 53.73651313781738,
+            "minimum": 43.44723129272461,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 2,
+            "maximum": -0.9698285460472107,
+            "mean": -1.3497051894664764,
+            "minimum": -1.7295818328857422,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 2,
+            "maximum": 36.568241119384766,
+            "mean": 34.16232490539551,
+            "minimum": 31.75640869140625,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 2,
+            "maximum": 3.063819721478118,
+            "mean": 2.6125541670128696,
+            "minimum": 2.1612886125476214,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 2,
+            "maximum": 3.0,
+            "mean": 2.5,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 2,
+            "maximum": 183.96690368652344,
+            "mean": 165.9476089477539,
+            "minimum": 147.92831420898438,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 2,
+            "maximum": 0.48667311668395996,
+            "mean": 0.30984435975551605,
+            "minimum": 0.13301560282707214,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 2,
+            "maximum": 40.98439407348633,
+            "mean": 38.17385482788086,
+            "minimum": 35.36331558227539,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 2,
+            "maximum": 1.150854468345642,
+            "mean": 0.9553601443767548,
+            "minimum": 0.7598658204078674,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 2,
+            "maximum": 28.72835350036621,
+            "mean": 27.828404426574707,
+            "minimum": 26.928455352783203,
+            "missing": 0
+          }
+        },
+        "03_TWO_BTAGS": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": -2.2444522594609206,
+            "mean": -2.3275610112987395,
+            "minimum": -2.4106697631365583,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.1019082825830178,
+            "mean": 3.0161568953913767,
+            "minimum": 2.9304055081997356,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 2,
+            "maximum": 1.1641784350024624,
+            "mean": 0.8531465848260603,
+            "minimum": 0.5421147346496582,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.244433581829071,
+            "mean": 1.6192868053913116,
+            "minimum": 0.9941400289535522,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 2,
+            "maximum": 3.9285065483537123,
+            "mean": 3.809845481808771,
+            "minimum": 3.69118441526383,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 2,
+            "maximum": 1.3403164911392837,
+            "mean": 1.084534156067996,
+            "minimum": 0.8287518209967081,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 2,
+            "maximum": 2.257654001733433,
+            "mean": 1.626833377530234,
+            "minimum": 0.9960127533270348,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 2,
+            "maximum": -0.6958361669797566,
+            "mean": -1.725636483829015,
+            "minimum": -2.7554368006782735,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 2,
+            "maximum": 28.315743509806513,
+            "mean": 25.194799837430423,
+            "minimum": 22.073856165054334,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 2,
+            "maximum": 61.77712358008019,
+            "mean": 59.514852946403934,
+            "minimum": 57.25258231272768,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 2,
+            "maximum": 85.58564563641642,
+            "mean": 60.41823695566995,
+            "minimum": 35.25082827492348,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 2,
+            "maximum": 258.5416664834424,
+            "mean": 230.47229033001173,
+            "minimum": 202.4029141765811,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 2,
+            "maximum": 44.94025279629743,
+            "mean": 36.42345030092491,
+            "minimum": 27.906647805552403,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 2,
+            "maximum": 72.4906117637534,
+            "mean": 57.79123366826687,
+            "minimum": 43.09185557278034,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 2,
+            "maximum": 2.0,
+            "mean": 2.0,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 2,
+            "maximum": -0.7258623838424683,
+            "mean": -1.1971974968910217,
+            "minimum": -1.6685326099395752,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 2,
+            "maximum": 64.02579498291016,
+            "mean": 53.73651313781738,
+            "minimum": 43.44723129272461,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 2,
+            "maximum": -0.9698285460472107,
+            "mean": -1.3497051894664764,
+            "minimum": -1.7295818328857422,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 2,
+            "maximum": 36.568241119384766,
+            "mean": 34.16232490539551,
+            "minimum": 31.75640869140625,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 2,
+            "maximum": 3.063819721478118,
+            "mean": 2.6125541670128696,
+            "minimum": 2.1612886125476214,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 2,
+            "maximum": 3.0,
+            "mean": 2.5,
+            "minimum": 2.0,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 2,
+            "maximum": 183.96690368652344,
+            "mean": 165.9476089477539,
+            "minimum": 147.92831420898438,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 2,
+            "maximum": 0.48667311668395996,
+            "mean": 0.30984435975551605,
+            "minimum": 0.13301560282707214,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 2,
+            "maximum": 40.98439407348633,
+            "mean": 38.17385482788086,
+            "minimum": 35.36331558227539,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 2,
+            "maximum": 1.150854468345642,
+            "mean": 0.9553601443767548,
+            "minimum": 0.7598658204078674,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 2,
+            "maximum": 28.72835350036621,
+            "mean": 27.828404426574707,
+            "minimum": 26.928455352783203,
+            "missing": 0
+          }
+        },
+        "04_MGG_105_160": {
+          "DeltaEta_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaPhi_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_Hgg_Hbb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "DeltaR_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "HH_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "dijet_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "diphoton_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_HH": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_bb": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "m_gamma_gamma": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "native_btag_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "photon_jet_min_DeltaR": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "reconstructed_jet_multiplicity": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "scalar_H_T": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet1_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_eta": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          },
+          "tagged_jet2_pT": {
+            "defined": 0,
+            "maximum": null,
+            "mean": null,
+            "minimum": null,
+            "missing": 0
+          }
+        }
+      },
+      "original_N": 1000,
+      "photon_object_totals": {
+        "FIDUCIAL_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "FIDUCIAL_TRUTH_HADRON_DECAY": 93,
+        "FIDUCIAL_TRUTH_PROMPT_HARD_PROCESS": 857,
+        "FIDUCIAL_TRUTH_SHOWER_RADIATION": 5,
+        "FIDUCIAL_TRUTH_UNCLASSIFIED": 0,
+        "NATIVE_RECO_ELECTRON_ASSOCIATED": 0,
+        "NATIVE_RECO_HADRON_DECAY": 0,
+        "NATIVE_RECO_PROMPT_HARD_PROCESS": 639,
+        "NATIVE_RECO_SHOWER_RADIATION": 4,
+        "NATIVE_RECO_UNCLASSIFIED": 60,
+        "SELECTED_RECO_ELECTRON_ASSOCIATED": 0,
+        "SELECTED_RECO_HADRON_DECAY": 0,
+        "SELECTED_RECO_PROMPT_HARD_PROCESS": 561,
+        "SELECTED_RECO_SHOWER_RADIATION": 2,
+        "SELECTED_RECO_UNCLASSIFIED": 54,
+        "STABLE_TRUTH_ELECTRON_ASSOCIATED": 0,
+        "STABLE_TRUTH_HADRON_DECAY": 91077,
+        "STABLE_TRUTH_PROMPT_HARD_PROCESS": 1000,
+        "STABLE_TRUTH_SHOWER_RADIATION": 57,
+        "STABLE_TRUTH_UNCLASSIFIED": 1
+      }
+    }
+  },
+  "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+  "exclusive_background_definition": "NOT_VERIFIED",
+  "input_manifest_sha256": "c505862ec0bc7be07630b6537de812f60e0881cf58873f28d1752985591dc8f7",
+  "native_background_events": 6000,
+  "native_objects_sha256": "6535b5722c930898c3b7313af88ab62f492602be41eb6684c422ed90c19708eb",
+  "new_ME_calls": 0,
+  "new_events": 0,
+  "new_integrals": 0,
+  "output_hashes": {
+    "phase9_heavy_flavour_origins.csv": "efc780381f213616d93a492e707c24e66a178d3c53cc12f9694847dfa0b965ab",
+    "phase9_origins_event_details.jsonl": "33e735989b03b98b49b98ad6eadbcc1681fb188d0e1380e0921dad98d639f45c",
+    "phase9_photon_origin_study.csv": "aca72e8876bbf9f87fb61c2b8a1f915b4586c2132a65c26d18070143c81c9497"
+  },
+  "overlap_status": "OVERLAP_UNRESOLVED_REQUIRES_MATCHED_GENERATION_OR_VALIDATED_EXCLUSIVE_DEFINITION",
+  "photon_fake": "BLOCKED_CALIBRATION_UNAVAILABLE",
+  "status": "PASS_EXISTING_EVENT_CLASSIFICATION_WITH_LIMITS"
+}

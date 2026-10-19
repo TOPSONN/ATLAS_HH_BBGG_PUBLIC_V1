@@ -1,0 +1,870 @@
+{
+  "CXX_standard": 20,
+  "ROOT_version": "6.40.04",
+  "actual_native_background_events": 6000,
+  "datasets": [
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "cutflow": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "dataset_id": "B01",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "input_index_sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "native_electrons": 0,
+      "native_particle_tuples_compared": 426370,
+      "native_photons": 1600,
+      "ordered_source_identity_sha256": "d9fccf350f610ce89835f8dc40367240270d274b61c3d265edcec43fb3d955e3",
+      "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    },
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "cutflow": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "dataset_id": "B02",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "input_index_sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "native_electrons": 0,
+      "native_particle_tuples_compared": 468551,
+      "native_photons": 1483,
+      "ordered_source_identity_sha256": "710c98fd81ef9df31acf0721817ef9b628006dd4f50b810f75236a5517eb6eaa",
+      "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    },
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "cutflow": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "dataset_id": "B03",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "input_index_sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "native_electrons": 0,
+      "native_particle_tuples_compared": 470232,
+      "native_photons": 1562,
+      "ordered_source_identity_sha256": "0efca121592ef6809e3dfafe256b04e1e8ce76fc568e5e64638933be0dd33bb5",
+      "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    },
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+      "cutflow": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "dataset_id": "B04",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "input_index_sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+      "native_electrons": 0,
+      "native_particle_tuples_compared": 353821,
+      "native_photons": 1386,
+      "ordered_source_identity_sha256": "7dda8f1f7d82bdc2c58ca0b1692c021ecfec01115d0f8ca0d2c6caf913f32b47",
+      "root_sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    },
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+      "cutflow": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "dataset_id": "B05",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "input_index_sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+      "native_electrons": 132,
+      "native_particle_tuples_compared": 644591,
+      "native_photons": 1345,
+      "ordered_source_identity_sha256": "c649e4a70074c331aff9969614ab398a090342a0c0514d5e168ff965fbe51ebf",
+      "root_sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    },
+    {
+      "N_original": 1000,
+      "actual_ROOT_entries": 1000,
+      "branches": [
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowNeutralHadron",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "EFlowPhoton",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "EFlowTrack",
+          "present": true
+        },
+        {
+          "class": "Electron",
+          "dictionary_checksum": 3973934735,
+          "dictionary_version": 4,
+          "name": "Electron",
+          "present": true
+        },
+        {
+          "class": "HepMCEvent",
+          "dictionary_checksum": 2026647734,
+          "dictionary_version": 3,
+          "name": "Event",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "GenJet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "GenMissingET",
+          "present": true
+        },
+        {
+          "class": "Jet",
+          "dictionary_checksum": 527275606,
+          "dictionary_version": 5,
+          "name": "Jet",
+          "present": true
+        },
+        {
+          "class": "MissingET",
+          "dictionary_checksum": 1034148504,
+          "dictionary_version": 1,
+          "name": "MissingET",
+          "present": true
+        },
+        {
+          "class": "Muon",
+          "dictionary_checksum": 264472101,
+          "dictionary_version": 4,
+          "name": "Muon",
+          "present": true
+        },
+        {
+          "class": "GenParticle",
+          "dictionary_checksum": 3403479520,
+          "dictionary_version": 2,
+          "name": "Particle",
+          "present": true
+        },
+        {
+          "class": "Photon",
+          "dictionary_checksum": 4175710330,
+          "dictionary_version": 4,
+          "name": "Photon",
+          "present": true
+        },
+        {
+          "class": "ScalarHT",
+          "dictionary_checksum": 4118442578,
+          "dictionary_version": 1,
+          "name": "ScalarHT",
+          "present": true
+        },
+        {
+          "class": "Tower",
+          "dictionary_checksum": 2195636175,
+          "dictionary_version": 5,
+          "name": "Tower",
+          "present": true
+        },
+        {
+          "class": "Track",
+          "dictionary_checksum": 968497457,
+          "dictionary_version": 4,
+          "name": "Track",
+          "present": true
+        },
+        {
+          "class": "Weight",
+          "dictionary_checksum": 1453428690,
+          "dictionary_version": 1,
+          "name": "Weight",
+          "present": true
+        }
+      ],
+      "card_sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+      "cutflow": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "dataset_id": "B06",
+      "electrons_available": true,
+      "expected_cutflow": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "input_index_sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+      "native_electrons": 0,
+      "native_particle_tuples_compared": 547708,
+      "native_photons": 703,
+      "ordered_source_identity_sha256": "1d4fcfd3738729f574259a976b5e5378c3baa7796d73302bc7d6922ac0b99b04",
+      "root_sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+    }
+  ],
+  "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+  "new_Delphes_events": 0,
+  "new_ME_calls": 0,
+  "new_Pythia_events": 0,
+  "new_hard_events": 0,
+  "new_integrals": 0,
+  "new_signal_full_ROOT_event_loop": false,
+  "prefix_events_reread": 0,
+  "schema_version": 1,
+  "signal_original_sources_reused_from_Phase8": 1100,
+  "status": "PASS_FULL_EXISTING_BACKGROUND_NATIVE_READBACK"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS_CONTAINED_PHASE9_ANALYSIS_BUDGET",
+  "recorded_jobs": 92,
+  "recorded_job_CPU_seconds": 457.672734,
+  "recorded_job_wall_seconds": 484.71795252398806,
+  "peak_observed_process_group_RSS_bytes": 818286592,
+  "disk_bytes_current_results": 120854721,
+  "disk_bytes_current_build": 13888677,
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "wall_seconds": 14400,
+    "additional_output_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "scope": "Sum of contained computational commands, including failed and superseded attempts. Source editing, clone preparation, small peer fixture runs and initial/final bookkeeping are not full end-to-end CPU accounting. RSS is sampled process-group RSS, not a kernel high-water guarantee.",
+  "resolved_failed_attempts": [
+    {
+      "label": "independent_photon",
+      "exit_code": 1
+    },
+    {
+      "label": "render_v2_phase9_01_signal_mgg",
+      "exit_code": 1
+    }
+  ]
+}

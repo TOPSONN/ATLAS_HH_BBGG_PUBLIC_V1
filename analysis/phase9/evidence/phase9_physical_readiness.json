@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "task": "PHASE9G_PHYSICAL_LIKELIHOOD_READINESS",
+  "base_Phase8_revision": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+  "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+  "status": "BLOCKED_PHYSICAL_INFERENCE_REQUIRED_INPUTS_MISSING",
+  "gates": {
+    "SIGNAL_MATCHED_NORMALIZATION": {
+      "status": "BLOCKED",
+      "reason": "B100 and C1000 have different effective PDF/alpha_s running. C1000 is not the declared future CTEQ6L1 one-loop target; matched integration/convergence and its physical rate uncertainty remain unavailable.",
+      "evidence": [
+        "PHASE8_SOURCE/metadata/phase7e_audit.json"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Separately authorized corrected matched integration, independently validated cross section/error, corrected event chain, immutable new source identities; do not rescale or replace historical events silently."
+    },
+    "HEAVY_FLAVOUR_BACKGROUND_EXCLUSIVITY": {
+      "status": "BLOCKED",
+      "reason": "B01/B02/B03 reconstructed phase-space sharing or ancestry labels do not establish perturbative ME/PS exclusivity.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_background_overlap_matrix.json"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Matched/merged generation or a validated generator-level exclusive definition, with uncertainty and source-level closure."
+    },
+    "FAKE_PHOTON_ESTIMATION": {
+      "status": "BLOCKED",
+      "reason": "B06 contains one Born photon and zero final survivors; neither is a calibrated jet-to-photon fake estimate. Missing fake rate is null, not zero.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_fake_photon_readiness.json"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Applicable public/data-derived fake transfer factor with object/period/energy/region definitions, composition, contamination, uncertainty, correlations and closure."
+    },
+    "SINGLE_HIGGS_MODELING": {
+      "status": "BLOCKED",
+      "reason": "ZH and ttH have correctly applied own MODEL_BR_ONLY factors; physical normalization, top-decay/spin assumptions and modeling uncertainties are not fully validated.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_weight_accounting.csv",
+        "PHASE8_LOCAL/phase8_background_overlap_matrix.json"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Review process/decay/BR convention and single-Higgs normalization, topology, spin correlations, generator/PS systematics."
+    },
+    "DETECTOR_CALIBRATION": {
+      "status": "BLOCKED",
+      "reason": "Native Delphes bit0/kinematics closure validates this fast-simulation implementation; it does not supply official detector object efficiencies, scales, resolution, trigger or pileup calibrations.",
+      "evidence": [
+        "PHASE8_SOURCE/analysis/phase8/config/selection_v1.json",
+        "PHASE8_LOCAL/phase8_systematics_readiness.csv"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Compatible detector/object calibrations and independently established selection applicability."
+    },
+    "SYSTEMATIC_NUISANCE_VALUES": {
+      "status": "UNKNOWN",
+      "reason": "All 22 physical nuisance values/constraints are unavailable; synthetic widths are method inputs only.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_systematics_readiness.csv"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Traceable process/object/rate/shape physical values, units, constraints and validation."
+    },
+    "NUISANCE_CORRELATIONS": {
+      "status": "UNKNOWN",
+      "reason": "No validated physical nuisance correlation model across processes, objects, bins or data periods. Common-source kappa statistical covariance does not replace systematic correlations.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_systematics_readiness.csv",
+        "PHASE8_LOCAL/phase8_kappa_covariance.csv"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Reviewed correlation matrix/model with provenance, PSD/constraint and likelihood closure checks."
+    },
+    "MC_BIN_STATISTICAL_SUPPORT": {
+      "status": "BLOCKED",
+      "reason": "B02 final 1/1000, B03/B06 final 0/1000 and empty/low-ESS bins prevent reliable finely binned physical templates; kappa 2.5/5 remain under-supported.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_cutflow_raw.csv",
+        "PHASE8_LOCAL/phase8_bin_quality.csv",
+        "PHASE8_LOCAL/phase8_kappa_summary.csv"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "Predeclared bins with sufficient independent proposal support, rare-event interval/planning diagnostics, validated finite-MC likelihood and independent source checks."
+    },
+    "SIGNED_EXPECTATION_MODEL_IF_APPLICABLE": {
+      "status": "PASS_CURRENT_INPUTS_ONLY",
+      "reason": "The present raw source cohorts have0 negative-weight events. Phase8 rejects unsupported signed physical templates. This conditional check does not establish support for future signed inputs.",
+      "evidence": [
+        "PHASE8_LOCAL/phase8_cutflow_weighted.csv",
+        "PHASE8_SOURCE/analysis/phase8/src/Phase8Likelihood.cxx"
+      ],
+      "physical_numerical_value": null,
+      "future_requirement": "If future negative contributions occur, validate a signed estimator/expectation model; reject unsupported rates, retain signs, and never replace negatives with zero."
+    }
+  },
+  "blocking_or_unknown_gates": [
+    "SIGNAL_MATCHED_NORMALIZATION",
+    "HEAVY_FLAVOUR_BACKGROUND_EXCLUSIVITY",
+    "FAKE_PHOTON_ESTIMATION",
+    "SINGLE_HIGGS_MODELING",
+    "DETECTOR_CALIBRATION",
+    "SYSTEMATIC_NUISANCE_VALUES",
+    "NUISANCE_CORRELATIONS",
+    "MC_BIN_STATISTICAL_SUPPORT"
+  ],
+  "negative_source_events": 0,
+  "missing_gate_is_zero": false,
+  "synthetic_fit_can_unlock_physical_inference": false,
+  "likelihood_framework": "REUSE_VALIDATED_PHASE8_ROOT_ROOFIT_ROOSTATS; no new physical fit",
+  "method_fits": "SYNTHETIC_METHOD_ONLY",
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+  "physical_nuisance_values": null,
+  "physical_nuisance_correlations": null,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_events": 0,
+  "Phase7I_dependency": "TRACKED_ONLY_NO_BUILD_OR_RESTART; future corrected matched integration and event chain require separate authorization",
+  "evidence": {
+    "PHASE8_SOURCE/metadata/phase7e_audit.json": {
+      "sha256": "facb9646c4afae0f1e3558b00cf1bbc317964c9e144430e0d9ea42502af88f75",
+      "bytes": 4642
+    },
+    "PHASE8_SOURCE/analysis/phase8/config/selection_v1.json": {
+      "sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "bytes": 566
+    },
+    "PHASE8_SOURCE/analysis/phase8/src/Phase8Likelihood.cxx": {
+      "sha256": "1211a6668272e71437d1cefc14c1e554edb182ec9b4c1dcef124aa9e4ad097a1",
+      "bytes": 16438
+    },
+    "PHASE8_LOCAL/phase8_background_overlap_matrix.json": {
+      "sha256": "008b4db972b837e63d10ad378d4debd54e77c4d545475bbfebf1d592d3a352d0",
+      "bytes": 21196
+    },
+    "PHASE8_LOCAL/phase8_fake_photon_readiness.json": {
+      "sha256": "783693ccb7ee6d35b236b009d673965c8a574bed911aed156fc0f05c82adf310",
+      "bytes": 623
+    },
+    "PHASE8_LOCAL/phase8_weight_accounting.csv": {
+      "sha256": "4b6508f2e68a4b55c52c498a5c45c1a31bd9e04b4dd074b1717a5f3fd6535de2",
+      "bytes": 5385
+    },
+    "PHASE8_LOCAL/phase8_systematics_readiness.csv": {
+      "sha256": "ea1ee76395266a7ae30b2c5041f07b32bc86bf6486c3e1c662f211c076e7757a",
+      "bytes": 11345
+    },
+    "PHASE8_LOCAL/phase8_kappa_covariance.csv": {
+      "sha256": "02ba74806fc8672bf1e44459351d5c148bd6bbe4fa1de7d24470fc3c01b9adda",
+      "bytes": 9624
+    },
+    "PHASE8_LOCAL/phase8_cutflow_raw.csv": {
+      "sha256": "d78835ee2b61690d6e6d8451a9d56b295df990f994b4cdda6702f741dd3e70ce",
+      "bytes": 1921
+    },
+    "PHASE8_LOCAL/phase8_bin_quality.csv": {
+      "sha256": "48e354ebb7151f5dbd2511f581406156876a59feb87b91ae385ed913bacfc6ef",
+      "bytes": 1507151
+    },
+    "PHASE8_LOCAL/phase8_kappa_summary.csv": {
+      "sha256": "b5057b0d8d1eb11fb80bd6847854e2de0179b28188857afd19141b5536d3beb2",
+      "bytes": 1732
+    },
+    "PHASE8_LOCAL/phase8_cutflow_weighted.csv": {
+      "sha256": "8c5a76e6f2771761c8b4fd96fe8de3bad36b8346b181a2658818e6bc5228aca5",
+      "bytes": 5951
+    }
+  }
+}
