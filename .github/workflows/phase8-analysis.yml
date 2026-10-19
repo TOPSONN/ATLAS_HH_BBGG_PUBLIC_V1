@@ -1,0 +1,33 @@
+name: Phase8 existing-data source and numerical evidence
+on:
+  push:
+    branches: [codex/phase8-full-hh-bbgg-analysis]
+  pull_request:
+    paths: ['analysis/phase8/**', 'metadata/phase8*', 'reports/phase8*', '.github/workflows/phase8-analysis.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_methods_and_frozen_reference_evidence_only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Phase8 source contracts, independent Decimal methods, and negative provenance tests
+        run: python3 -B -m unittest discover -s analysis/phase8/tests -p 'test_*.py' -v
+      - name: Preserve genuine historical signal and six-background reference bytes
+        run: |
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py --repo .
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: Classify CI evidence without claiming remote full ROOT readback
+        run: |
+          echo '### Phase8 CI evidence scope' >> "$GITHUB_STEP_SUMMARY"
+          echo 'SOURCE_ONLY Python method/configuration tests and HISTORICAL_EVIDENCE_AUDIT of frozen references.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Native ROOT 6.40.04 / Delphes full-data and prefix event loops are separately recorded local evidence; this job does not rerun them.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No generator, ME, integration, Pythia or Delphes production dispatch occurs in this workflow.' >> "$GITHUB_STEP_SUMMARY"

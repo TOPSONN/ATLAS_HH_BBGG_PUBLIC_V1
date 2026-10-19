@@ -1,0 +1,22 @@
+#include "Phase8Reconstruction.hxx"
+#include <numeric>
+namespace atlas_hh::phase8 {
+const std::vector<std::string>& observable_names(){static const std::vector<std::string> n{"m_gamma_gamma","m_bb","m_HH","photon1_pT","photon2_pT","photon1_eta","photon2_eta","diphoton_pT","tagged_jet1_pT","tagged_jet2_pT","tagged_jet1_eta","tagged_jet2_eta","dijet_pT","HH_pT","HH_eta","DeltaR_gamma_gamma","DeltaR_bb","DeltaPhi_gamma_gamma","DeltaPhi_bb","DeltaR_Hgg_Hbb","DeltaPhi_Hgg_Hbb","DeltaEta_Hgg_Hbb","photon_jet_min_DeltaR","reconstructed_jet_multiplicity","native_btag_multiplicity","scalar_H_T"};return n;}
+double delta_phi(const P4&a,const P4&b){return double(std::abs(std::remainder(a.phi()-b.phi(),2*std::acos(-1.L))));}
+void reconstruct(Event& e,std::optional<double> ht){auto& o=e.observables;for(const auto&n:observable_names())o[n]=std::nullopt;
+ auto set=[&](const std::string&n,long double x){demand(std::isfinite(x),"invalid reconstructed observable "+n);o[n]=double(x);};
+ for(std::size_t k=0;k<2;++k){auto n=std::to_string(k+1);if(e.selected.size()>k){set("photon"+n+"_pT",e.selected[k].pt);set("photon"+n+"_eta",e.selected[k].eta);}if(e.tagged.size()>k){set("tagged_jet"+n+"_pT",e.tagged[k].pt);set("tagged_jet"+n+"_eta",e.tagged[k].eta);}}
+ bool gg=e.selected.size()>=2,bb=e.tagged.size()>=2;P4 a{},b{};
+ if(gg){a=e.selected[0].p+e.selected[1].p;set("m_gamma_gamma",a.mass());set("diphoton_pT",a.pt());set("DeltaR_gamma_gamma",atlas_hh::delphes::dr(e.selected[0].p,e.selected[1].p));set("DeltaPhi_gamma_gamma",delta_phi(e.selected[0].p,e.selected[1].p));}
+ if(bb){b=e.tagged[0].p+e.tagged[1].p;set("m_bb",b.mass());set("dijet_pT",b.pt());set("DeltaR_bb",atlas_hh::delphes::dr(e.tagged[0].p,e.tagged[1].p));set("DeltaPhi_bb",delta_phi(e.tagged[0].p,e.tagged[1].p));}
+ auto candidate=[](const P4& p){Json c{{"mass",double(p.mass())},{"pT",double(p.pt())},{"eta",nullptr},{"phi",nullptr}};if(p.pt()>0){c["eta"]=double(p.eta());c["phi"]=double(p.phi());}return c;};
+ e.reconstruction={{"Hgg",gg?candidate(a):Json(nullptr)},{"Hbb",bb?candidate(b):Json(nullptr)},{"HH",gg&&bb?candidate(a+b):Json(nullptr)}};
+ if(gg&&bb){auto hh=a+b;set("m_HH",hh.mass());set("HH_pT",hh.pt());if(hh.pt()>0)set("HH_eta",hh.eta());if(a.pt()>0&&b.pt()>0){set("DeltaR_Hgg_Hbb",atlas_hh::delphes::dr(a,b));set("DeltaEta_Hgg_Hbb",a.eta()-b.eta());set("DeltaPhi_Hgg_Hbb",delta_phi(a,b));}}
+ if(!e.selected.empty()&&!e.eligible.empty()){long double best=std::numeric_limits<long double>::infinity();for(const auto&p:e.selected)for(const auto&j:e.eligible)best=std::min(best,atlas_hh::delphes::dr(p.p,j.p));set("photon_jet_min_DeltaR",best);}
+ set("reconstructed_jet_multiplicity",e.jets.size());set("native_btag_multiplicity",e.tagged.size());if(ht)set("scalar_H_T",*ht);
+}
+Json descriptive(const std::vector<double>& x,long total){Json j{{"defined_count",x.size()},{"missing_count",total-long(x.size())},{"invalid_count",0},{"finite_count",x.size()},{"min",nullptr},{"median",nullptr},{"mean",nullptr},{"sample_std",nullptr},{"max",nullptr}};if(x.empty())return j;auto v=x;std::sort(v.begin(),v.end());long double sum=0;for(auto z:v)sum+=z;auto mean=sum/v.size();long double sq=0;for(auto z:v)sq+=(z-mean)*(z-mean);j["min"]=v.front();j["max"]=v.back();j["median"]=v.size()%2?v[v.size()/2]:(v[v.size()/2-1]+v[v.size()/2])/2;j["mean"]=double(mean);if(v.size()>1)j["sample_std"]=double(std::sqrt(sq/(v.size()-1)));return j;}
+Json event_json(const Event& e){Json o=Json::object();for(const auto&[k,v]:e.observables)o[k]=v?Json(*v):Json(nullptr);Json jets=Json::array();for(const auto&j:e.eligible)jets.push_back({{"index",j.index},{"pt",j.pt},{"eta",j.eta},{"phi",j.phi},{"mass",j.mass},{"flavour",j.flavour},{"tagged",bool(j.btag&1U)},{"native_btag_bits",j.btag}});
+ return Json{{"dataset_id",e.dataset},{"source_event_ordinal",e.ordinal},{"detector_event_ordinal",e.ordinal},{"native_event_number",e.native_number},{"source_event_sha256",e.source_hash},{"hepmc_event_sha256",e.hepmc_hash},{"N_original",e.original},{"source_weight_pb",e.weight},{"raw_LHE_XWGTUP_pb",e.raw_weight},{"source_weight_scope",e.weight_scope},{"model_factor_applied",0},{"stages",e.stages},{"observables",o},{"eligible_jets",jets},{"photon_multiplicity",e.photons.size()},{"selected_photon_multiplicity",e.selected.size()},{"native_btag_multiplicity",e.tagged.size()},{"truth_matching",e.truth},{"reconstruction",e.reconstruction},{"negative_native_jet_masses",e.negative_native_jet_masses}};
+}
+}

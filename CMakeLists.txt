@@ -87,3 +87,8 @@ file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/step1_cmake_environment.txt"
   "CXX_STANDARD_REQUIRED=${CMAKE_CXX_STANDARD_REQUIRED}\n"
   "CXX_EXTENSIONS=${CMAKE_CXX_EXTENSIONS}\n"
   "CMAKE_VERSION=${CMAKE_VERSION}\n")
+
+option(ATLAS_BUILD_PHASE8 "Build existing-event Phase8 ROOT analysis" OFF)
+if(ATLAS_BUILD_PHASE8)
+  add_subdirectory(analysis/phase8)
+endif()

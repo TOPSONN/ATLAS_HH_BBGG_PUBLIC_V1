@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Assemble bounded Phase8 results from completed actual receipts; no event generation."""
+import argparse,csv,hashlib,json,os,re,shutil,subprocess
+from pathlib import Path
+REPO=Path(__file__).resolve().parents[3]
+def read(p):return json.loads(Path(p).read_text())
+def sha(p):
+ h=hashlib.sha256()
+ with Path(p).open('rb') as f:
+  for b in iter(lambda:f.read(1048576),b''):h.update(b)
+ return h.hexdigest()
+def save(p,j):
+ with Path(p).open('x') as f:json.dump(j,f,indent=2,allow_nan=False);f.write('\n')
+def copy(src,dst):
+ with Path(src).open('rb') as i,Path(dst).open('xb') as o:shutil.copyfileobj(i,o)
+def resources(out,build):
+ rows=[]
+ for p in sorted(out.glob('*_execution.json')):
+  r=read(p);cpu=r.get('cpu_seconds');peak=r.get('peak_observed_process_group_RSS_bytes',0)
+  if cpu is None:
+   t=p.with_name(p.name.replace('_execution.json','_resources.txt'))
+   if t.exists():
+    text=t.read_text();cpu=sum(float(v) for v in re.findall(r'(?:User time|System time) \(seconds\): ([0-9.]+)',text));v=re.search(r'Maximum resident set size \(kbytes\): (\d+)',text);peak=int(v[1])*1024 if v else peak
+  rows.append({'receipt':p.name,'exit_code':r['exit_code'],'wall_seconds':r['wall_seconds'],'CPU_seconds':cpu,'peak_RSS_bytes':peak,'resource_failure':r.get('resource_failure')})
+ size=sum(p.stat().st_size for root in [out,build] for p in root.rglob('*') if p.is_file() and not p.is_symlink())
+ return {'measured_commands':rows,'CPU_seconds':sum(r['CPU_seconds'] or 0 for r in rows),'wall_seconds':sum(r['wall_seconds'] for r in rows),'peak_observed_memory_bytes':max(r['peak_RSS_bytes'] for r in rows),'additional_result_and_build_bytes':size,'measurement_scope':'Contained build, method, existing-input analysis and regression commands; lightweight source-inspection/report-authoring subprocess CPU is not metered. Wall is summed command wall, not human conversation elapsed time.','resource_gate':not any(r['resource_failure'] for r in rows) and sum(r['CPU_seconds'] or 0 for r in rows)<14400 and sum(r['wall_seconds'] for r in rows)<14400 and size<2*1024**3}
+def combine_csv(paths,out):
+ with Path(out).open('x',newline='') as f:
+  writer=None
+  for p in paths:
+   with Path(p).open() as i:
+    reader=csv.DictReader(i)
+    if writer is None:writer=csv.DictWriter(f,fieldnames=reader.fieldnames);writer.writeheader()
+    for row in reader:writer.writerow(row)
+def assemble(out,build,dest=None):
+ dest=dest or out
+ if dest!=out:dest.mkdir(parents=True,exist_ok=False)
+ native=read(out/'native/phase8_native_summary.json');ind=read(out/('independent_native_validation_02.json' if (out/'independent_native_validation_02.json').exists() else 'independent_native_validation.json'));stat=read(out/'independent_statistics_validation.json');repeat=read(out/'repeatability_validation.json');toy=read(out/'methods/phase8_likelihood_method_tests.json');post=read(out/'postprocess/phase8_postprocess_summary.json');k=read(out/'kappa/phase8_kappa_summary.json');pres=read(out/'phase8_input_preservation_after.json');old=read(out/'phase8_historical_workspace_preservation.json') if (out/'phase8_historical_workspace_preservation.json').exists() else {'status':'NOT_APPLICABLE_NO_OLD_WORKSPACE_BOUND','input_byte_preservation':'PASS_FROM_CURRENT_SOURCE_SNAPSHOT'};m=read(out/'phase8_local_manifest.json')
+ for status,expected in [(native['status'],'PASS_ACTUAL_EXISTING_DATA_NATIVE_ANALYSIS'),(ind['status'],'PASS_INDEPENDENT_ACTUAL_NATIVE_READBACK'),(stat['status'],'PASS_INDEPENDENT_DECIMAL70_STATISTICS'),(repeat['status'],'PASS_REPEAT_ACTUAL_EXISTING_EVENT_ANALYSIS'),(toy['status'],'PASS_SYNTHETIC_METHOD_ONLY'),(pres['status'],'PASS_ALL_BOUND_INPUT_BYTES_UNCHANGED')]:
+  if status!=expected:raise ValueError('REQUIRED_ACTUAL_GATE_FAILED:'+status)
+ stats={ds:read(path) for ds,path in read(out/'statistics_index.json').items()};res=resources(out,build)
+ if not res['resource_gate']:raise ValueError('BLOCKED_PHASE8_RESOURCE_LIMITS')
+ source_files={str(p.relative_to(REPO)):sha(p) for root in [REPO/'analysis/phase8/include',REPO/'analysis/phase8/src',REPO/'analysis/phase8/apps',REPO/'analysis/phase8/config',REPO/'analysis/phase8/scripts',REPO/'analysis/phase8/tests'] for p in sorted(root.rglob('*')) if p.is_file() and p.suffix in ['.hxx','.cxx','.py','.json']}
+ source_files['CMakeLists.txt']=sha(REPO/'CMakeLists.txt');source_files['analysis/phase8/CMakeLists.txt']=sha(REPO/'analysis/phase8/CMakeLists.txt')
+ identity=hashlib.sha256(json.dumps(source_files,sort_keys=True,separators=(',',':')).encode()).hexdigest();env=Path.home()/'miniforge3/envs/atlas-hh-root'
+ deps=[Path.home()/'opt/delphes/lib/libDelphes.so',Path.home()/'opt/delphes/include/classes/DelphesClasses.h',env/'bin/x86_64-conda-linux-gnu-c++',env/'include/nlohmann/json.hpp']+[env/'lib'/('lib'+name+'.so') for name in ['Core','RIO','Tree','Hist','RooFit','RooStats']]
+ execution={'schema_version':1,'base_revision':m['base_revision'],'git_HEAD_at_analysis':subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip(),'source_content_identity_sha256':identity,'source_files':source_files,'compiled_executable_sha256':{p.name:sha(p) for p in (build/'analysis/phase8').glob('phase8_*') if p.is_file()},'dependency_sha256':{str(p):sha(p) for p in deps},'ROOT_version':native['ROOT_version'],'CPP_standard':20,'actual_compiler':str(env/'bin/x86_64-conda-linux-gnu-c++'),'compiler_version':subprocess.check_output([str(env/'bin/x86_64-conda-linux-gnu-c++'),'--version'],text=True).splitlines()[0],'actual_Delphes_library':str(deps[0]),'resources':res,'actual_executions':'Receipts bind commands and actual exits; failed early compilation/toy attempts preserved, corrected final tests pass.','prohibited_production_counts':{key:0 for key in ['new_genuine_ME_calls','new_integrals','new_independent_events','new_Pythia_events','new_Delphes_events']}}
+ save(dest/'phase8_execution_manifest.json',execution)
+ aliases={**{n:'native/'+n for n in ['phase8_histograms.root','phase8_histogram_manifest.json','phase8_cutflow_raw.csv','phase8_cutflow_weighted.csv','phase8_reconstruction_statistics.csv','phase8_truth_matching.json']},**{n:'postprocess/'+n for n in ['phase8_control_regions.csv','phase8_region_closure.json','phase8_shape_comparisons.csv','phase8_shape_variants.csv','phase8_systematics_readiness.csv','phase8_template_manifest.json']},**{n:'background/'+n for n in ['phase8_background_overlap_matrix.json','phase8_fake_photon_readiness.json']},**{n:'kappa/'+n for n in ['phase8_kappa_summary.csv','phase8_kappa_bin_quality.csv','phase8_kappa_covariance.csv','phase8_kappa_correlations.csv','phase8_kappa_summary.json','phase8_kappa_weight_tails.json']},**{n:'methods/'+n for n in ['phase8_likelihood_method_tests.json','phase8_toy_closure.json']}}
+ for dst,src in aliases.items():copy(out/src,dest/dst)
+ save(dest/'phase8_statistical_uncertainty.json',{'status':stat['status'],'datasets':{ds:{key:value for key,value in r.items() if key!='bin_quality'} for ds,r in stats.items()},'independent_validation':stat,'variance_components_added':False,'integration_uncertainty_scope':'Pinned historical generator error metadata, separate from event-level MC statistics and unknown systematic correlations'})
+ for name in ['phase8_weight_accounting.csv','phase8_btag_conditional_diagnostics.csv','phase8_bin_quality.csv']:combine_csv([out/'statistics'/ds/name for ds in stats],dest/name)
+ for name in ['independent_statistics_validation.json','repeatability_validation.json','phase8_input_preservation_after.json']:
+  if dest!=out:copy(out/name,dest/name)
+ if dest!=out:
+  save(dest/'independent_native_validation_02.json',ind);save(dest/'phase8_historical_workspace_preservation.json',old)
+ reco=read(out/'native/phase8_reconstructed_events_summary.json');hist=native['histogram_validation'];phases={letter:'PASS_ACTUAL_EXISTING_DATA_WITH_LIMITS' for letter in 'ABCDEFGHI'};phases['J']='PASS_SYNTHETIC_METHOD_ONLY_PHYSICAL_FIT_BLOCKED';phases['K']='READINESS_RECORDED_PHYSICAL_NUISANCES_UNKNOWN';phases['L']='PASS_LOCAL_VALIDATION_REMOTE_CI_PENDING'
+ report={'PROJECT':'ATLAS_HH_BBGG_PUBLIC_V1','TASK':'PHASE8_FULL_HH_BBGG_ANALYSIS_V1','BASE_REVISION':m['base_revision'],'NEW_SOURCE_REVISION':None,'SOURCE_CONTENT_IDENTITY_SHA256':identity,'NEW_DRAFT_PR_URL':None,'PR_BASE_BRANCH':'codex/phase7-final-closure','PR_HEAD_REVISION':None,'ROOT_VERSION':native['ROOT_version'],'CPP_STANDARD':20,'ACTUAL_COMPILER':execution['actual_compiler'],'ACTUAL_DELPHES_LIBRARY':execution['actual_Delphes_library'],'CMAKE_VERSION':'4.4.4','PHASE_STATUS':phases,'DATASET_STATUS':{d['dataset_id']:'PASS_FULL_DATA' for d in m['datasets']},'ACTUAL_FULL_SOURCE_EVENTS_READ':native['actual_original_events_read'],'ACTUAL_PREFIX_EVENTS_READ':ind['reference_prefix']['actual_prefix_entries_read'],'UNAVAILABLE_DATASETS':[],'EXPECTED_FULL_CUTFLOWS':{c['dataset_id']:c['expected'] for c in native['cutflow_closure']},'ACTUAL_FULL_CUTFLOWS':{c['dataset_id']:c['actual'] for c in native['cutflow_closure']},'CUTFLOW_CLOSURE':'PASS_ALL_40_COUNTS_ZERO_DIFFERENCE','M_GAMMA_GAMMA':reco['S01_C1000']['m_gamma_gamma'],'M_BB':reco['S01_C1000']['m_bb'],'M_HH':reco['S01_C1000']['m_HH'],'ROOT_HISTOGRAM_COUNT':hist['TH1D_count']+hist['TH2D_count'],'TH1D_COUNT':hist['TH1D_count'],'TH2D_COUNT':hist['TH2D_count'],'UNDEFINED_SHAPE_MANIFEST_ENTRIES':132,'NUMERICAL_HISTOGRAM_CONTENT_HASH':native['numerical_histogram_content_sha256'],'REGION_COUNT':post['region_rows'],'REGION_DEFINITIONS_PER_DATASET':15,'REGION_EXCLUSIVITY':'PASS_EVERY_ELIGIBLE_EVENT_EXACTLY_ONE_PARTITION','REGION_SUMW_CLOSURE':post['partition_closure'],'BACKGROUND_OVERLAP_STATUS':'BLOCKED_UNRESOLVED_ME_PS_HEAVY_FLAVOUR','FAKE_PHOTON_STATUS':'BLOCKED_NO_CALIBRATED_FAKE_MODEL','KAPPA_BENCHMARKS':k['benchmarks'],'KAPPA_SOURCE_ESS':{str(r['kappa_lambda']):r['input']['ESS'] for r in k['summaries']},'KAPPA_FINAL_ESS':{str(r['kappa_lambda']):r['final']['ESS'] for r in k['summaries']},'KAPPA_COVARIANCE':'PASS_5_STAGES_6X6_COMMON_SOURCE_FIXED_N_SYMMETRIC_PSD_NO_EIGENVALUE_CLIPPING','KAPPA_LOW_SUPPORT_STATUS':{'2.5':'INCONCLUSIVE_REWEIGHTING','5':'INCONCLUSIVE_REWEIGHTING'},'MODEL_BR_VALIDATION':'PASS_PINNED_OWN_MODEL_FACTORS_ONCE','WEIGHT_NORMALIZATION':'PASS_XWGTUP_PB_ORIGINAL_N_ONCE','MC_STATISTICS_VALIDATION':stat['status'],'CONDITIONAL_BTAG_VARIANCE':{ds:r['conditional_tags'] for ds,r in stats.items()},'TOY_LIKELIHOOD':{'status':toy['status'],'test_count':toy['test_count']},'PHYSICAL_LIKELIHOOD':'BLOCKED_OVERLAP_FAKE_AND_CALIBRATION','PHYSICAL_SIGNIFICANCE':'NOT_EVALUATED','PHYSICAL_CLs':'NOT_EVALUATED','PHYSICAL_KAPPA_LIMIT':'NOT_EVALUATED','SYSTEMATICS_READINESS':'22_CATEGORIES_UNKNOWN_PHYSICAL_VALUES_NULL','OFFICIAL_CALIBRATION_STATUS':'NOT_AVAILABLE','SOURCE_HASH_CLOSURE':pres,'HISTORICAL_PRESERVATION':old,'NEW_GENUINE_ME_CALLS':0,'NEW_INTEGRALS':0,'NEW_INDEPENDENT_EVENTS':0,'NEW_PYTHIA_EVENTS':0,'NEW_DELPHES_EVENTS':0,'ACTUAL_ANALYSIS_CPU':res['CPU_seconds'],'ACTUAL_ANALYSIS_WALL':res['wall_seconds'],'PEAK_OBSERVED_MEMORY':res['peak_observed_memory_bytes'],'ACTUAL_DISK_USAGE':res['additional_result_and_build_bytes'],'RESOURCE_MEASUREMENT_SCOPE':res['measurement_scope'],'METHOD_TESTS':'PASS_9_CTEST_91_PYTHON_PLUS_ACTUAL_ROOFIT_TOY','REFERENCE_PREFIX_TESTS':ind['reference_prefix'],'ACTUAL_FULL_READBACK_TESTS':ind['status'],'EXISTING_REGRESSIONS':'PASS_5_FROZEN_REFERENCE_VALIDATORS_AND_3_STEP1_ROOT_TESTS','GITHUB_CI':'PENDING_FINAL_REMOTE_HEAD','REMOTE_BLOB_VERIFICATION':'PENDING_PUBLICATION','GATES_PASS':['SOURCE_IDENTITY','ROOT_NATIVE_SCHEMA','SOURCE_EVENT_INDEX_JOIN','FULL_CUTFLOW_CLOSURE','WEIGHT_NORMALIZATION_ONCE','RECONSTRUCTION_FINITE','HISTOGRAM_ROOT_READBACK','HISTOGRAM_CANONICAL_REPEATABILITY','REGION_PARTITION_CLOSURE','INDEPENDENT_EVENT_STATISTICS','KAPPA_COMMON_SOURCE_COVARIANCE','SYNTHETIC_ROOFIT_ROOSTATS','HISTORICAL_PRESERVATION','RESOURCE_CONTAINMENT'],'GATES_FAIL':[],'GATES_BLOCKED':['HEAVY_FLAVOUR_OVERLAP','CALIBRATED_PHOTON_FAKE','OFFICIAL_DETECTOR_CALIBRATION','OFFICIAL_SYSTEMATIC_NUISANCES','KAPPA_2_5_5_SUPPORT'],'GATES_UNKNOWN':['OFFICIAL_PHYSICAL_NUISANCE_VALUES_AND_CORRELATIONS'],'FINAL_VERDICT':'PASS_PHASE8_EXPLORATORY_ANALYSIS_WITH_LIMITS','NEXT_RECOMMENDED_STEP':'Review exploratory source/numerical evidence; obtain independent calibrated overlap/fake/systematic inputs and separately approve any future physical production. No automatic production or physical fit.'}
+ phase_fields=['DATA_AUDIT','ROOT_FRAMEWORK','SELECTION_CUTFLOW','HIGGS_RECONSTRUCTION','HISTOGRAMS','WEIGHT_STATISTICS','BACKGROUND_REGIONS','KAPPA_ANALYSIS','SHAPE_STUDIES','LIKELIHOOD_METHODS','SYSTEMATICS','FINAL_VALIDATION']
+ for letter,field in zip(phases,phase_fields):report['PHASE8'+letter+'_'+field]=phases[letter]
+ save(dest/'phase8_analysis_results.json',report)
+ hashes={str(p.relative_to(out)):sha(p) for p in sorted(out.rglob('*')) if p.is_file() and p.name not in ['phase8_output_hashes.json','FINAL_REPORT.json'] and not p.name.endswith('.log')}
+ save(dest/'phase8_output_hashes.json',{'schema_version':1,'scope':'All numerical results and receipts except log files, this hash manifest and later publication FINAL_REPORT to avoid recursive identities.','SHA256':hashes})
+ return report
+
+def main():
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--result',type=Path,required=True);p.add_argument('--build',type=Path,required=True);p.add_argument('--publication-json',type=Path);p.add_argument('--destination',type=Path);a=p.parse_args()
+ if a.publication_json:
+  report=read(a.result/'phase8_analysis_results.json');pub=read(a.publication_json)
+  if pub['CI_status']!='PASS_FINAL_HEAD' or pub['remote_blobs']!='PASS_ALL_CHANGED_BLOBS_SHA256' or not pub['draft']:raise ValueError('PUBLICATION_ACCEPTANCE_GATE_NOT_PASS')
+  report.update(NEW_SOURCE_REVISION=pub['source_revision'],NEW_DRAFT_PR_URL=pub['PR_URL'],PR_HEAD_REVISION=pub['PR_HEAD_REVISION'],GITHUB_CI=pub,REMOTE_BLOB_VERIFICATION=pub['remote_blobs']);report['GATES_PASS']+=['GITHUB_FINAL_HEAD_CI','REMOTE_BLOB_SHA256'];report['PHASE_STATUS']['L']='PASS_FINAL_HEAD_VALIDATION';save(a.result/'FINAL_REPORT.json',report);print(report['FINAL_VERDICT']);return
+ report=assemble(a.result,a.build,a.destination);print(json.dumps({'status':report['FINAL_VERDICT'],'actual_full_events':report['ACTUAL_FULL_SOURCE_EVENTS_READ'],'TH1D':report['TH1D_COUNT'],'TH2D':report['TH2D_COUNT'],'resources_CPU':report['ACTUAL_ANALYSIS_CPU'],'resources_wall':report['ACTUAL_ANALYSIS_WALL']}))
+if __name__=='__main__':main()

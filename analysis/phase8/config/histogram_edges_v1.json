@@ -1,0 +1,521 @@
+{
+  "flow_policy": "INCLUDE_UNDERFLOW_AND_OVERFLOW_IN_SHAPE_DENOMINATOR",
+  "observables": {
+    "DeltaEta_Hgg_Hbb": {
+      "edges": [
+        -8,
+        -6,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "DeltaPhi_Hgg_Hbb": {
+      "edges": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1,
+        1.25,
+        1.5,
+        1.75,
+        2,
+        2.25,
+        2.5,
+        2.75,
+        3,
+        3.141592653589793
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "radian"
+    },
+    "DeltaPhi_bb": {
+      "edges": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1,
+        1.25,
+        1.5,
+        1.75,
+        2,
+        2.25,
+        2.5,
+        2.75,
+        3,
+        3.141592653589793
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "radian"
+    },
+    "DeltaPhi_gamma_gamma": {
+      "edges": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1,
+        1.25,
+        1.5,
+        1.75,
+        2,
+        2.25,
+        2.5,
+        2.75,
+        3,
+        3.141592653589793
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "radian"
+    },
+    "DeltaR_Hgg_Hbb": {
+      "edges": [
+        0,
+        0.2,
+        0.4,
+        0.8,
+        1.2,
+        1.6,
+        2,
+        2.5,
+        3,
+        4,
+        5,
+        7,
+        10
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "DeltaR_bb": {
+      "edges": [
+        0,
+        0.4,
+        0.8,
+        1.2,
+        1.6,
+        2,
+        2.4,
+        2.8,
+        3.2,
+        4,
+        5,
+        7
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "DeltaR_gamma_gamma": {
+      "edges": [
+        0,
+        0.4,
+        0.8,
+        1.2,
+        1.6,
+        2,
+        2.4,
+        2.8,
+        3.2,
+        4,
+        5,
+        7
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "HH_eta": {
+      "edges": [
+        -6,
+        -4,
+        -3,
+        -2.5,
+        -2,
+        -1.5,
+        -1,
+        0,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        6
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "HH_pT": {
+      "edges": [
+        0,
+        25,
+        35,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "dijet_pT": {
+      "edges": [
+        0,
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "diphoton_pT": {
+      "edges": [
+        0,
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "m_HH": {
+      "edges": [
+        0,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        600,
+        750,
+        1000,
+        1500,
+        2500
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "m_bb": {
+      "edges": [
+        0,
+        25,
+        50,
+        75,
+        100,
+        125,
+        150,
+        175,
+        200,
+        250,
+        350,
+        500
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "m_gamma_gamma": {
+      "edges": [
+        0,
+        80,
+        100,
+        105,
+        110,
+        115,
+        120,
+        122.5,
+        125,
+        127.5,
+        130,
+        135,
+        140,
+        150,
+        160,
+        180,
+        250
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "native_btag_multiplicity": {
+      "edges": [
+        -0.5,
+        0.5,
+        1.5,
+        2.5,
+        3.5,
+        4.5,
+        6.5
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "photon1_eta": {
+      "edges": [
+        -6,
+        -4,
+        -3,
+        -2.5,
+        -2,
+        -1.5,
+        -1,
+        0,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        6
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "photon1_pT": {
+      "edges": [
+        0,
+        25,
+        35,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "photon2_eta": {
+      "edges": [
+        -6,
+        -4,
+        -3,
+        -2.5,
+        -2,
+        -1.5,
+        -1,
+        0,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        6
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "photon2_pT": {
+      "edges": [
+        0,
+        25,
+        35,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "photon_jet_min_DeltaR": {
+      "edges": [
+        0,
+        0.2,
+        0.4,
+        0.8,
+        1.2,
+        1.6,
+        2,
+        2.5,
+        3,
+        4,
+        5,
+        7,
+        10
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "reconstructed_jet_multiplicity": {
+      "edges": [
+        -0.5,
+        0.5,
+        1.5,
+        2.5,
+        3.5,
+        4.5,
+        5.5,
+        6.5,
+        8.5,
+        12.5
+      ],
+      "origin": "PHASE7D_REVIEWED_COMMON_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "scalar_H_T": {
+      "edges": [
+        0,
+        50,
+        100,
+        150,
+        200,
+        300,
+        400,
+        600,
+        800,
+        1000,
+        1500,
+        2500
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "tagged_jet1_eta": {
+      "edges": [
+        -6,
+        -4,
+        -3,
+        -2.5,
+        -2,
+        -1.5,
+        -1,
+        0,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        6
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "tagged_jet1_pT": {
+      "edges": [
+        0,
+        25,
+        35,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    },
+    "tagged_jet2_eta": {
+      "edges": [
+        -6,
+        -4,
+        -3,
+        -2.5,
+        -2,
+        -1.5,
+        -1,
+        0,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4,
+        6
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "dimensionless"
+    },
+    "tagged_jet2_pT": {
+      "edges": [
+        0,
+        25,
+        35,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        450,
+        650,
+        1000
+      ],
+      "origin": "PHASE8_V1_NEW_EXPLICIT_EDGES",
+      "rationale": "Frozen historical edges when defined; otherwise descriptive predefined V1 range with explicit under/overflow, not data-optimized.",
+      "unit": "GeV"
+    }
+  },
+  "schema_version": 1
+}
