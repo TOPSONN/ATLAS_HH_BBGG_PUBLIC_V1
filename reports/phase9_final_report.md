@@ -12,14 +12,16 @@
 | TASK | PHASE9_BACKGROUND_MODEL_AND_PHYSICS_REVIEW_V1 |
 | BASE_PHASE8_REVISION | `8ecd91106acb1dae065cde14f1d62867d10b073f` |
 | EXECUTED_PHASE8_CORE | `19faeaf487fb1f9b49ff00f5cf85eeeb1c949930` |
-| NEW_SOURCE_REVISION | `277fd42f4985234f327ef12a159772f537054fb0` |
+| NEW_SOURCE_REVISION | `2584e342b80b20c314392d20d77d92a6ccb850c4` |
 | SOURCE_REVISION_SCOPE | 此commit完整捕捉最終executable source；之後僅加入bounded evidence與delivery reports。個別最終ancestry／statistics run另外有前後source SHA閉合。 |
-| DRAFT_PR_URL | PENDING_DRAFT_PR_URL |
+| DRAFT_PR_URL | https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/26 |
 | BRANCH | `codex/phase9-background-model-review`，疊在PR25分支上 |
 | NEW_ME_CALLS | 0 |
 | NEW_INTEGRALS | 0 |
 | NEW_HARD_EVENTS | 0 |
 | 新物理產生 | ME=0、積分=0、hard events=0、Pythia=0、Delphes=0 |
+
+最終source包含CSV/index byte-preservation修正；物理分析程式與`277fd42f4985234f327ef12a159772f537054fb0`一致。
 
 本機source為`/home/btu/projects/atlas_hh_phase9_v1`；結果為`/home/btu/simulations/hh_phase9/run_01`。舊Phase8／Phase7I checkout與PR24／25不變；沒有merge或force-push。
 

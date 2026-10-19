@@ -3,8 +3,8 @@
   "task": "PHASE9_BACKGROUND_MODEL_AND_PHYSICS_REVIEW_V1",
   "base_revision": "8ecd91106acb1dae065cde14f1d62867d10b073f",
   "executed_Phase8_core": "19faeaf487fb1f9b49ff00f5cf85eeeb1c949930",
-  "source_payload_commit": "277fd42f4985234f327ef12a159772f537054fb0",
-  "source_capture_semantics": "Computations ran on the reviewed worktree; this commit captures the exact final executable source. Per-module before/after hashes bind final ancestry/statistics runs. Report/evidence delivery commits do not alter executable files.",
+  "source_payload_commit": "2584e342b80b20c314392d20d77d92a6ccb850c4",
+  "source_capture_semantics": "Computations ran on reviewed worktree; source_payload_commit captures exact final executable/source files, including subsequent CSV/index publication protection. Scientific analysis sources are unchanged from feature commit. Final report/evidence delivery commit does not alter executable source. Ancestry/statistics module hashes bind final computations.",
   "source_files": [
     {
       "path": ".github/workflows/phase9-review.yml",
@@ -193,13 +193,13 @@
     },
     {
       "path": "metadata/phase9_quality_gates.json",
-      "bytes": 2269,
-      "sha256": "e92acbc92a4cceb642f0747eb029ae2b1b67b17759f2a442101029479b0eb1f9"
+      "bytes": 2427,
+      "sha256": "771c9479262b90a26b4c4b5ebaa29359c502b1adcef4ae2f5c20b8e6f1a6c082"
     },
     {
       "path": "reports/phase9_final_report.md",
-      "bytes": 12312,
-      "sha256": "e4553f251e40b81a4bf308212d0bb172864d6c738d392f2586914380efa9c33f"
+      "bytes": 12478,
+      "sha256": "e8291ae6ba75457db48da93e44e44a129dda9525617f4976ba2a3a1a33099c26"
     },
     {
       "path": "reports/phase9a_phase8_review.md",
@@ -491,5 +491,7 @@
   "additional_independent_source_events": 0,
   "actual_new_native_background_entries_read": 6000,
   "persisted_independent_source_events_audited": 7100,
-  "git_CSV_policy": "analysis/phase9/.gitattributes preserves exact evidence/*.csv bytes; validated index/worktree equality and remote final-head bytes"
+  "git_CSV_policy": "analysis/phase9/.gitattributes preserves exact evidence/*.csv bytes; validated index/worktree equality and remote final-head bytes",
+  "scientific_analysis_feature_commit": "277fd42f4985234f327ef12a159772f537054fb0",
+  "draft_PR_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/26"
 }

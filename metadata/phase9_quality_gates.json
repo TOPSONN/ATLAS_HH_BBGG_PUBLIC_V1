@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "task": "PHASE9_BACKGROUND_MODEL_AND_PHYSICS_REVIEW_V1",
-  "source_payload_commit": "277fd42f4985234f327ef12a159772f537054fb0",
+  "source_payload_commit": "2584e342b80b20c314392d20d77d92a6ccb850c4",
   "scientific_diagnostics_verdict": "PASS_PHASE9_EXISTING_DATA_DIAGNOSTICS_WITH_LIMITS",
   "physical_total_background": "BLOCKED",
   "physical_significance": "NOT_EVALUATED",
@@ -54,8 +54,9 @@
     "UNVALIDATED_NUISANCE_VALUES_AND_CORRELATIONS"
   ],
   "delivery_gates": {
-    "github_ci": "PENDING_EXACT_FINAL_HEAD_VERIFICATION",
-    "remote_blob_verification": "PENDING_PUBLICATION"
+    "github_ci": "EXACT_FINAL_HEAD_ACTIONS_STATUS_VERIFIED_EXTERNALLY_IN_FINAL_REPORT_JSON",
+    "remote_blob_verification": "FINAL_HEAD_BYTES_VERIFIED_EXTERNALLY_IN_LOCAL_DELIVERY_RECEIPT"
   },
-  "test_scope": "Local actual ROOT and ancestry evidence is separate from GitHub source/method and bounded-reference CI."
+  "test_scope": "Local actual ROOT and ancestry evidence is separate from GitHub source/method and bounded-reference CI.",
+  "draft_PR_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/26"
 }
