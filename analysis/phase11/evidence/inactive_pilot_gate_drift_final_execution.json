@@ -1,0 +1,36 @@
+{
+  "label": "inactive_pilot_gate_drift_final",
+  "command": [
+    "python3",
+    "-B",
+    "analysis/phase11/scripts/audit_pilot_gate.py",
+    "--repo",
+    "/home/btu/projects/atlas_hh_phase11_v1",
+    "--model-audit",
+    "/home/btu/simulations/hh_phase11/run_01/phase11_model_pdf_audit_02.json",
+    "--family-audit",
+    "/home/btu/simulations/hh_phase11/run_01/phase11_family_ir_audit_03.json",
+    "--detector-summary",
+    "/home/btu/simulations/hh_phase11/run_01/detector_events_02/phase11_existing_hf_event_crosscheck.json",
+    "--independent-covariance",
+    "/home/btu/simulations/hh_phase11/run_01/phase11_independent_event_covariance.json",
+    "--output",
+    "/home/btu/simulations/hh_phase11/run_01/final_02/phase11_pilot_readiness.json"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.2529801340024278,
+  "cpu_seconds": 0.196571,
+  "peak_observed_process_group_RSS_bytes": 4194304,
+  "aggregate_observed_disk_bytes": 2588377,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

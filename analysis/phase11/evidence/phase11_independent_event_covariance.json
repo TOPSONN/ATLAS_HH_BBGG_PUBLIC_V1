@@ -1,0 +1,124 @@
+{
+  "Phase10_stage_counts_rates_variances_match": true,
+  "covariance_pairs_checked": 3825,
+  "datasets": {
+    "B01": {
+      "covariance_vectors": 50,
+      "equal_source_weight_pb": 6.6246662e-05,
+      "original_N": 1000,
+      "stage_checks": {
+        "00_INPUT": {
+          "events": 1000,
+          "sumw_pb": 0.066246662,
+          "variance_pb2": 0.0
+        },
+        "01_TWO_PHOTONS": {
+          "events": 446,
+          "sumw_pb": 0.029546011252,
+          "variance_pb2": 1.0854432832393696e-06
+        },
+        "02_TWO_JETS": {
+          "events": 266,
+          "sumw_pb": 0.017621612092,
+          "variance_pb2": 8.577094769098261e-07
+        },
+        "03_TWO_BTAGS": {
+          "events": 91,
+          "sumw_pb": 0.006028446242,
+          "variance_pb2": 3.633856621484087e-07
+        },
+        "04_MGG_105_160": {
+          "events": 28,
+          "sumw_pb": 0.001854906536,
+          "variance_pb2": 1.1956024832301032e-07
+        }
+      },
+      "upper_triangle_rows": 1275
+    },
+    "B02": {
+      "covariance_vectors": 50,
+      "equal_source_weight_pb": 0.0006274417,
+      "original_N": 1000,
+      "stage_checks": {
+        "00_INPUT": {
+          "events": 1000,
+          "sumw_pb": 0.6274417,
+          "variance_pb2": 0.0
+        },
+        "01_TWO_PHOTONS": {
+          "events": 378,
+          "sumw_pb": 0.2371729626,
+          "variance_pb2": 9.265384650582524e-05
+        },
+        "02_TWO_JETS": {
+          "events": 241,
+          "sumw_pb": 0.1512134497,
+          "variance_pb2": 7.208420077323129e-05
+        },
+        "03_TWO_BTAGS": {
+          "events": 7,
+          "sumw_pb": 0.0043920919,
+          "variance_pb2": 2.739230367401586e-06
+        },
+        "04_MGG_105_160": {
+          "events": 1,
+          "sumw_pb": 0.0006274417,
+          "variance_pb2": 3.9368308689889e-07
+        }
+      },
+      "upper_triangle_rows": 1275
+    },
+    "B03": {
+      "covariance_vectors": 50,
+      "equal_source_weight_pb": 0.0094365561,
+      "original_N": 1000,
+      "stage_checks": {
+        "00_INPUT": {
+          "events": 1000,
+          "sumw_pb": 9.4365561,
+          "variance_pb2": 0.0
+        },
+        "01_TWO_PHOTONS": {
+          "events": 445,
+          "sumw_pb": 4.1992674645,
+          "variance_pb2": 0.022014790559810562
+        },
+        "02_TWO_JETS": {
+          "events": 277,
+          "sumw_pb": 2.6139260397,
+          "variance_pb2": 0.017851702075934086
+        },
+        "03_TWO_BTAGS": {
+          "events": 0,
+          "sumw_pb": 0.0,
+          "variance_pb2": 0.0
+        },
+        "04_MGG_105_160": {
+          "events": 0,
+          "sumw_pb": 0.0,
+          "variance_pb2": 0.0
+        }
+      },
+      "upper_triangle_rows": 1275
+    }
+  },
+  "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+  "independent_arithmetic": "Fraction + integer event bitsets, exact overlap counts and rational moments; no production imports",
+  "input_hashes": {
+    "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_summary.json": "b025b32b8311302948c0cf88ab417935cf9c262981c77a070f6342fa92b2b2f9",
+    "/home/btu/simulations/hh_phase11/run_01/detector_events_02/phase11_event_source_covariance.csv": "93cf3675025c486039fbddf898e0fb8e6ac9b1843a2fb99c4091add8d61f5d1e",
+    "/home/btu/simulations/hh_phase11/run_01/detector_events_02/phase11_existing_hf_event_crosscheck.json": "ff8f3e39ab1ca0a8ae7b4394de87cf16557da5cb57c8a61b61a2fa15a3a7e233",
+    "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl": "6535b5722c930898c3b7313af88ab62f492602be41eb6684c422ed90c19708eb",
+    "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_event_details.jsonl": "33e735989b03b98b49b98ad6eadbcc1681fb188d0e1380e0921dad98d639f45c"
+  },
+  "negative_disjoint_region_covariances_checked": 132,
+  "new_ME_calls": 0,
+  "new_events": 0,
+  "new_integrals": 0,
+  "numeric_comparisons": 3885,
+  "physical_total_background": "BLOCKED",
+  "schema_version": 1,
+  "scope_limit": "Specialized to verified equal-weight historical cohorts. Signed-weight readiness tested separately with fixtures; no fresh origin classification or ROOT loop.",
+  "source_events": 3000,
+  "status": "PASS_INDEPENDENT_RATIONAL_BITSET_EXISTING_DATA"
+}

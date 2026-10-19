@@ -1,0 +1,26 @@
+{
+  "label": "historical_reference_mg5",
+  "command": [
+    "python3",
+    "-B",
+    "simulation/mg5/scripts/validate_lhe.py",
+    "--background-library",
+    "."
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.5051366229999985,
+  "cpu_seconds": 0.328730999999999,
+  "peak_observed_process_group_RSS_bytes": 26722304,
+  "aggregate_observed_disk_bytes": 2506415,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

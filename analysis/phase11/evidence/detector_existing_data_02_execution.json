@@ -1,0 +1,34 @@
+{
+  "label": "detector_existing_data_02",
+  "command": [
+    "python3",
+    "-B",
+    "analysis/phase11/scripts/audit_detector_events.py",
+    "--repo",
+    "/home/btu/projects/atlas_hh_phase11_v1",
+    "--phase9",
+    "/home/btu/simulations/hh_phase9/run_01",
+    "--phase8-manifest",
+    "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+    "--delphes-source",
+    "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1",
+    "--output",
+    "/home/btu/simulations/hh_phase11/run_01/detector_events_02"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 4.027814494002087,
+  "cpu_seconds": 3.956245,
+  "peak_observed_process_group_RSS_bytes": 189079552,
+  "aggregate_observed_disk_bytes": 1542044,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

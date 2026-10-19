@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "task": "PHASE11_EXACT_GENERATOR_CONFIGURATION_AND_PILOT_GATE_V1",
+  "base_revision": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+  "source_science_predecessor": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
+  "branch": "codex/phase11-exact-generator-pilot-gate",
+  "source_payload_commit": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+  "Draft_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28",
+  "source_files": [
+    {
+      "path": ".github/workflows/phase11-pilot-gate.yml",
+      "bytes": 2249,
+      "sha256": "8015ea62fcf1c167a0c029cbaccacc93e65bfb8fc7bb8240f85f05510cb5c380"
+    },
+    {
+      "path": "analysis/phase11/.gitattributes",
+      "bytes": 92,
+      "sha256": "bf1ad6c4f7257d0d4f1c48152007ce75d22b4e6d54c7b7f250976fc5abbcd615"
+    },
+    {
+      "path": "analysis/phase11/README_ZH_TW.md",
+      "bytes": 7066,
+      "sha256": "33c7c7662371c7a07e15ff17876da3a9caf8fe14637a2bf835eb6ac1679035dd"
+    },
+    {
+      "path": "analysis/phase11/config/bounded_pilot_contract.json",
+      "bytes": 16280,
+      "sha256": "e6bb7db7e814dcd5d8de50edbd3da395be368fa75e91f05efd4aefbc7c0dacb9"
+    },
+    {
+      "path": "analysis/phase11/config/candidate_a.json",
+      "bytes": 3783,
+      "sha256": "e76259e8e1401d46a21323791c2bff81bd47753a1a18ec8772e67433d6a24e8d"
+    },
+    {
+      "path": "analysis/phase11/config/candidate_b.json",
+      "bytes": 5897,
+      "sha256": "fd18519bf756595f315cd4cd3ae301f5f13d2a8885e2f3d915a31421bcc6badf"
+    },
+    {
+      "path": "analysis/phase11/config/cards/candidate_a.inactive.txt",
+      "bytes": 600,
+      "sha256": "4537009b2566fdcadb1f4927b82dd4bdc484c23377f4e60c9953a89ce968a7b0"
+    },
+    {
+      "path": "analysis/phase11/config/cards/candidate_b.inactive.txt",
+      "bytes": 1049,
+      "sha256": "e7cf3e98da05cfc46aed2ac3057f8b0b9315d3b7677966c655e06e2adf954f0f"
+    },
+    {
+      "path": "analysis/phase11/config/inactive_detector_diff.txt",
+      "bytes": 3459,
+      "sha256": "16becd98e8ccdff2c61e280f0cb8b8980162fd280f481b685b86c5b5ae724752"
+    },
+    {
+      "path": "analysis/phase11/config/parser_process_review_request.json",
+      "bytes": 1487,
+      "sha256": "bfb9240e597906a1b5bb9da0656a5b9fe17b665ccb9d7eaeb23bd90c82a0224e"
+    },
+    {
+      "path": "analysis/phase11/config/photon_ir.json",
+      "bytes": 3752,
+      "sha256": "3e446a47a65882a3176a6dd817b365ce7d69643af3fc212355e660dcccfb8bdf"
+    },
+    {
+      "path": "analysis/phase11/config/pilot_contract.schema.json",
+      "bytes": 4029,
+      "sha256": "12c5d5305f87769570def079a60e2919a912e360fae944b025acaadc31e41518"
+    },
+    {
+      "path": "analysis/phase11/config/public_pdf_metadata_reference.json",
+      "bytes": 1628,
+      "sha256": "96f103b7b8012bf33c2d3895040c27c33558cf7ffd0591937ef95be2fec59e39"
+    },
+    {
+      "path": "analysis/phase11/scripts/audit_detector_events.py",
+      "bytes": 4956,
+      "sha256": "f528709f3c893e4e0ddc9f042092ebd71e05363113fb1e172e5d1d9cccee271e"
+    },
+    {
+      "path": "analysis/phase11/scripts/audit_family_ir.py",
+      "bytes": 2384,
+      "sha256": "9120003aebb4701b8f8c386347a7c5b15541ea629032f24e4974aeba302f4d1b"
+    },
+    {
+      "path": "analysis/phase11/scripts/audit_initial_flavours.py",
+      "bytes": 10380,
+      "sha256": "0de597ed3ec85cbe72af91528fb70eca66260dbae78152a54198826b95e16788"
+    },
+    {
+      "path": "analysis/phase11/scripts/audit_model_pdf.py",
+      "bytes": 1517,
+      "sha256": "3b7ae278486c0d4f6fce4177b388994d755469c549f6ddd9a77c1cc58e2feb98"
+    },
+    {
+      "path": "analysis/phase11/scripts/audit_pilot_gate.py",
+      "bytes": 10959,
+      "sha256": "cfc991740f8771f9ce90b96f9438a6440c9bf20c6783be944203fa6c43ee2f33"
+    },
+    {
+      "path": "analysis/phase11/scripts/validate_event_covariance.py",
+      "bytes": 8120,
+      "sha256": "ab5bf491c9aed38156ae5dd99b122928a3e359143722fd8cdbff27feac8039c1"
+    },
+    {
+      "path": "analysis/phase11/scripts/validate_publication.py",
+      "bytes": 5073,
+      "sha256": "bf736cfb5755b06d2eaf20b58ba8312443c4ab3805b2eb6302a21944d3098181"
+    },
+    {
+      "path": "analysis/phase11/source/detector_events.py",
+      "bytes": 17658,
+      "sha256": "a15776ab1f757b2b7a60bda600518e2310903d1145562130256965243b8306b3"
+    },
+    {
+      "path": "analysis/phase11/source/family_ir.py",
+      "bytes": 10163,
+      "sha256": "add40bb8e4a2be7e9714fa2fda7914eaea9c1a469341a14c650021ee7428afb0"
+    },
+    {
+      "path": "analysis/phase11/source/model_pdf.py",
+      "bytes": 19273,
+      "sha256": "abcae4504f2963e98aa61b0e735930daa15a60f9ebd21727e58d6d1a95fec20a"
+    },
+    {
+      "path": "analysis/phase11/source/pilot_policy.py",
+      "bytes": 6436,
+      "sha256": "3ebbfe8746e9d0d7b61481f212662f69dca6c051acc3b2524495d55ebd079101"
+    },
+    {
+      "path": "analysis/phase11/tests/test_detector_events.py",
+      "bytes": 8824,
+      "sha256": "0cf86941b5d5eba419393b879bf1acdadca349f1bd3793dbbc1882d584d4ad05"
+    },
+    {
+      "path": "analysis/phase11/tests/test_event_covariance_independent.py",
+      "bytes": 2238,
+      "sha256": "670565358fec52b40b267f8e31435beeb2d3295f6b3e0fba0bff1e3f63ec0b97"
+    },
+    {
+      "path": "analysis/phase11/tests/test_family_ir.py",
+      "bytes": 8877,
+      "sha256": "32b07dea837b911d4439c7ba80751b8e81c4da1d79ebe1eb9868d964784b7592"
+    },
+    {
+      "path": "analysis/phase11/tests/test_gate_evidence.py",
+      "bytes": 6870,
+      "sha256": "9b067e8ca18c7a0ac317270341ffb6668255aba370a5226b8d732ef9da23eee8"
+    },
+    {
+      "path": "analysis/phase11/tests/test_initial_flavours.py",
+      "bytes": 2970,
+      "sha256": "228386193310887b5143ef926cdf511ff1bbd81aea2bdd42d9602d1f5f4e8ca6"
+    },
+    {
+      "path": "analysis/phase11/tests/test_model_pdf.py",
+      "bytes": 8090,
+      "sha256": "cc6c054af13aa8ba3fa14954ce97ff74b936b76a1903c4aca53ffef9bd894584"
+    },
+    {
+      "path": "analysis/phase11/tests/test_pilot_policy.py",
+      "bytes": 6113,
+      "sha256": "f6a29b857234c8452717c449180bfd0cafd26a9b9231ed20cb0d275978615e40"
+    },
+    {
+      "path": "analysis/phase11/tests/test_publication.py",
+      "bytes": 1771,
+      "sha256": "9172f47b1070f00daa42c9b25af6b954c9281f6c2d7ce8ab940a58245f404c39"
+    },
+    {
+      "path": "metadata/phase11_candidate_configurations.json",
+      "bytes": 31683,
+      "sha256": "95ee386a6c0ce82df055bfbda7f3f248661571ea4afea4415f6d1d0f5690c21f"
+    },
+    {
+      "path": "metadata/phase11_quality_gates.json",
+      "bytes": 5023,
+      "sha256": "0daad7c9680cccac0e4874c4b2aff8b50db279b993c800186f15fac0da4b8670"
+    },
+    {
+      "path": "reports/phase11_final_report.md",
+      "bytes": 31372,
+      "sha256": "e33121e1befe294b663017a8ff9d67309b1391768a636af2215133529aede0ab"
+    },
+    {
+      "path": "reports/phase11a_4f_massive_bottom.md",
+      "bytes": 9706,
+      "sha256": "5e3b4ecef2585fc4abc4390e7b018d0230dd4a18352adb3ba5369b15201e943c"
+    },
+    {
+      "path": "reports/phase11b_5f_merged_family.md",
+      "bytes": 8009,
+      "sha256": "a5ddf0d545fd29fc2136e65eee4887b1dba88a1c17135baaacbfc5cd53c243e7"
+    },
+    {
+      "path": "reports/phase11c_photon_IR_definition.md",
+      "bytes": 6755,
+      "sha256": "a2576fbb4b7a769bcae86d750062c97cbdff25dcb9b2164b0e5b71eeb35f509a"
+    },
+    {
+      "path": "reports/phase11d_generator_selection.md",
+      "bytes": 6817,
+      "sha256": "c0a2c5e2eea3564ec9d3d825eda4e491e1e2cbb6ae8af73650f93b2079dc4eca"
+    },
+    {
+      "path": "reports/phase11e_fake_control_observability.md",
+      "bytes": 15384,
+      "sha256": "0f52dd591e363e8e69a5d4e79d58dbf90b0eedeeb355f8b1f21088a77175f606"
+    },
+    {
+      "path": "reports/phase11f_bounded_pilot_review.md",
+      "bytes": 5971,
+      "sha256": "efdc77638f67aa4d90d701d81867b7b0b3ec3a3077e10ce7d3f1d1d79fa0b59f"
+    }
+  ],
+  "published_evidence": [
+    {
+      "path": "analysis/phase11/evidence/actual_source_audits_02_after.json",
+      "bytes": 1292,
+      "sha256": "76ee0c2932e2409e865932b4c530b86e88e195b7a026f4f71633f378bc9179de",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/actual_source_audits_02_before.json",
+      "bytes": 1292,
+      "sha256": "76ee0c2932e2409e865932b4c530b86e88e195b7a026f4f71633f378bc9179de",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector01_source_before.json",
+      "bytes": 366,
+      "sha256": "05aba21610a697ae8d553e4a22a9db68d32a5293d3632fcfb24f6430861b37ad",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_events_02/phase11_detector_source_trace.json",
+      "bytes": 21074,
+      "sha256": "68353963fb0239eb04b692157449cacbe8b70d536ec89a1dcf73fa9835edcf66",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_events_02/phase11_event_source_covariance.csv",
+      "bytes": 520827,
+      "sha256": "93cf3675025c486039fbddf898e0fb8e6ac9b1843a2fb99c4091add8d61f5d1e",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_events_02/phase11_existing_hf_event_crosscheck.json",
+      "bytes": 46226,
+      "sha256": "ff8f3e39ab1ca0a8ae7b4394de87cf16557da5cb57c8a61b61a2fa15a3a7e233",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_events_02/phase11_hf_origin_stage_counts.csv",
+      "bytes": 50034,
+      "sha256": "b597777809cf9baba7b258d0c60b27cc7ea7df63e3af2c21cc4b4cc8fa51545b",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_events_02/phase11_hf_region_migration.csv",
+      "bytes": 146019,
+      "sha256": "2b2b94503982edbe84d558aaf62753341614584614e9271aebd8ef04da25899c",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_existing_data_01.txt",
+      "bytes": 744,
+      "sha256": "90af01cb812929863e70bd3441b4a91e6d8fad2b6c68975741c44cbe90b4b265",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_existing_data_01_execution.json",
+      "bytes": 960,
+      "sha256": "3ab108ed456125ba5274b63cb3f5420817667bef4db82bfad4793d99a6caf22a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_existing_data_02.txt",
+      "bytes": 131,
+      "sha256": "acdca0c7b399ffc9d71fad358db79db48adc3850522aad8ccb6c893533f7cb26",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/detector_existing_data_02_execution.json",
+      "bytes": 950,
+      "sha256": "d871628892905bd33575dea565cd126d0dd9ebea0ea48226415722035f9a89cc",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_detector_source_before.json",
+      "bytes": 819,
+      "sha256": "8c39871a574aec250ae79878b33d3fb0b753043bc650373ec0fad981fdc561cf",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_01.txt",
+      "bytes": 809,
+      "sha256": "1ade6eb9ed50b820cc5454769a0403ec8ee5d12ac03fd4717961fad76aeac181",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_01_execution.json",
+      "bytes": 821,
+      "sha256": "42fdb25cf6d8f50512efabe4bea95d0a07be2c081b2bbd3c68606019abea61a3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_02.txt",
+      "bytes": 199,
+      "sha256": "57edc2334da1ee9bbf58a47bc24d539f993b3383efa166e58cfdb815c250abfb",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_02_execution.json",
+      "bytes": 824,
+      "sha256": "26e52b9aaeb4f0152fa97629cc2f6c5388da80d03561c0990d63adf6300b205e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_03.txt",
+      "bytes": 199,
+      "sha256": "92998200b7218d33b7536bcc3fcb840f5ebc872f99f6a90a4a3f4ac8cd9a43ed",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/family_photon_ir_source_audit_03_execution.json",
+      "bytes": 815,
+      "sha256": "6ae66d87188d31ab5d262cff6790170999baff3bdcf3bb87ac936d3205885665",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final/phase11_compatibility_matrix.json",
+      "bytes": 12176,
+      "sha256": "2d09e24cc67e7280da49bbbe290267a5cea554893de80b5b193e3b594b041547",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final/phase11_independent_peer_review.json",
+      "bytes": 1244,
+      "sha256": "ccfef9f05713265003e73b914a58e946a4f9b69264266d3aa681c4d2fd50d27e",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/final/phase11_input_preservation.json",
+      "bytes": 2131,
+      "sha256": "272b1883aedf31e6a06c90d918000d9f445ae86910f781f3b5d38db9557210d5",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final/phase11_pilot_readiness.json",
+      "bytes": 9629,
+      "sha256": "2db149b6788e7cb59d40b4baa04da89d797df302e2ec27130802ffa54a8e744e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/phase11_drift_gate_peer_review.json",
+      "bytes": 10713,
+      "sha256": "774f01d0f343a97326d34ef649c3bf30d65a9040d9911c967d73549af123ca56",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/phase11_input_preservation.json",
+      "bytes": 2276,
+      "sha256": "1280832d9974bdf91a380241398f709e07de95f835def143c0ff8b8fd3f07bb3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/phase11_pilot_readiness.json",
+      "bytes": 10797,
+      "sha256": "fb8cc6935d50c906515044dc0e831359d4ae964b020410445ba54a64d0bb7043",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/phase11_resource_summary.json",
+      "bytes": 1098,
+      "sha256": "618f396cc180a2abc0d3747562e093c5af24fe35c49ff167eb1b11d28ce08059",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/phase11_runtime_configuration_drift.json",
+      "bytes": 2122,
+      "sha256": "858b288b56addf87e59f12f219b62aa660cdd1397f9e985fbe7c05ced3bbad27",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/source_after.json",
+      "bytes": 3591,
+      "sha256": "4d3cb5f0cf5963e9c8805581a8767f587d71c3334a170ef111e886e2abda2383",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_02/source_before.json",
+      "bytes": 3591,
+      "sha256": "4d3cb5f0cf5963e9c8805581a8767f587d71c3334a170ef111e886e2abda2383",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_readiness_source_after.json",
+      "bytes": 939,
+      "sha256": "cd90a05d3c1d3199f654e89c06a0b4bb745602ed53c408d71333f774a64c4de6",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_readiness_source_before.json",
+      "bytes": 939,
+      "sha256": "cd90a05d3c1d3199f654e89c06a0b4bb745602ed53c408d71333f774a64c4de6",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_validation_source_after.json",
+      "bytes": 3486,
+      "sha256": "70270d3838ba4c21f57a11dfdc520e7629c9d5b89ee5afc0fe90388edbc320fd",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/final_validation_source_before.json",
+      "bytes": 3486,
+      "sha256": "70270d3838ba4c21f57a11dfdc520e7629c9d5b89ee5afc0fe90388edbc320fd",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_delphes.txt",
+      "bytes": 1496,
+      "sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_delphes_execution.json",
+      "bytes": 584,
+      "sha256": "48142c94e86e7cab267677098261a7447b1f0e3d0dad218f26c337120484839e",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_mg5.txt",
+      "bytes": 7358,
+      "sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_mg5_execution.json",
+      "bytes": 593,
+      "sha256": "03518122bd3d5ff85d17c9c47fbdb511117f3c47a1379db7a05ea1b3692982c4",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_new_backgrounds.txt",
+      "bytes": 6931,
+      "sha256": "39e014b2b8b0bfae92558b65621f402336e5a8625f3389b4d456199acb34e50c",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_new_backgrounds_execution.json",
+      "bytes": 601,
+      "sha256": "3edc947bea5f43c2d4c7414130760454d295746bf69f4f7d6679ed65295c4ed1",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_pythia8.txt",
+      "bytes": 12208,
+      "sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_pythia8_execution.json",
+      "bytes": 597,
+      "sha256": "77af49283b4ae911e2b4e4256068a180fe071487f286ba6cc35d257ba2e33e05",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_signal.txt",
+      "bytes": 667,
+      "sha256": "3a99c7be09c4f0d9e1ff2306fcd59de8bd509b29378161f09e78edbe2bbb01b0",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/historical_reference_signal_execution.json",
+      "bytes": 581,
+      "sha256": "ee4d57a638c8cb3338f6f8a75c6fc1451d64e05c2f93de4e413fb60a7987ef0b",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate.txt",
+      "bytes": 104,
+      "sha256": "e9be66308cc6d5e5c7a812d819452f707f73b70b5fea7f3462de40e932d21428",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate_drift_final.txt",
+      "bytes": 104,
+      "sha256": "e9be66308cc6d5e5c7a812d819452f707f73b70b5fea7f3462de40e932d21428",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate_drift_final_execution.json",
+      "bytes": 1176,
+      "sha256": "021f01cc773a9278aa857e2e832d23ff38e2bba2f8f097457a056db40a7f7b08",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate_execution.json",
+      "bytes": 1167,
+      "sha256": "e821c4348391b5c371827810e37670d5791300339e0e57c4a1c68f7d67855c13",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate_final.txt",
+      "bytes": 104,
+      "sha256": "e9be66308cc6d5e5c7a812d819452f707f73b70b5fea7f3462de40e932d21428",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/inactive_pilot_gate_final_execution.json",
+      "bytes": 1178,
+      "sha256": "1e4c390834d159eba52d6f4ae07de5e200c6018262a809117101b8954eaf5a8c",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/independent_event_covariance.txt",
+      "bytes": 124,
+      "sha256": "2abf4c8d6d3330b22b790a4bc0cf85bb88df172be3805fddec25e9f8f9542541",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/independent_event_covariance_execution.json",
+      "bytes": 933,
+      "sha256": "b839c425e6c1872fd739a60ef5ee1f93e92c2a41765ab96033e00702f8819730",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavour_existing_LHE.txt",
+      "bytes": 127,
+      "sha256": "60f730d2859ae5e4c93d8aef2e10962f99696543d6ea4b8626d399b546cd94c9",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavour_existing_LHE_execution.json",
+      "bytes": 808,
+      "sha256": "f99720093f2c9025e8290101a55dfb2db5d7228e9826107f6ca52ab800ee619c",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavours_01/phase11_initial_flavour_audit.json",
+      "bytes": 7496,
+      "sha256": "b1da41f80f92b5a3948dc7bb392c99d1d44c67dc1cca332acefcbd4fd919fe82",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavours_01/phase11_initial_flavour_covariance.csv",
+      "bytes": 161519,
+      "sha256": "19e3c1d6635ae73d01e1853de663e592da447881d0fe981bece50939860e6ff3",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavours_01/phase11_initial_flavour_source_events.csv",
+      "bytes": 572160,
+      "sha256": "ed669df48b4c4f80682be9d18f38cab1fffdf4c5d66fe21845fc30221d1e3309",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/initial_flavours_01/phase11_initial_flavour_stage_counts.csv",
+      "bytes": 43391,
+      "sha256": "30ab8f7a84205665191a8d565625cbf0f6b7642bf757d1282c5b36b7bfa1d168",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/model_detector_source_before.json",
+      "bytes": 707,
+      "sha256": "c7ad1528a8bff823edc4f9d59b43b21c44850c753d36618d0db99b5a54bddded",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/model_pdf_source_audit_01.txt",
+      "bytes": 1275,
+      "sha256": "f30f6b9aca324a22ed907444507f4895c61a8fdfe48f13c87b8224d22cd7ab64",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/model_pdf_source_audit_01_execution.json",
+      "bytes": 656,
+      "sha256": "ae2db4a4f09131b621047aacf80d0a554ccaca18592fff2f1d11af7e7d9f82c4",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/model_pdf_source_audit_02.txt",
+      "bytes": 189,
+      "sha256": "c26537f7232f26937d87b80ec4f02f7f4c3826c6430d54c4a601b2b17c568fa3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/model_pdf_source_audit_02_execution.json",
+      "bytes": 658,
+      "sha256": "0a9bb422f17da6cdc5936eaada075617fc01c0dcb353afa2891973cddd0bea2e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase10_methods_final.txt",
+      "bytes": 19004,
+      "sha256": "805a9ab44e89f09ad616a2f6fd3b1d0371b71870266b45ffdde8f45a24fcebc3",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase10_methods_final_execution.json",
+      "bytes": 627,
+      "sha256": "3c918f5a296eeff601d0750a677ae75ca739ecfa9a2b84c11377f78498c2fed9",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_family_ir_audit_02.json",
+      "bytes": 35341,
+      "sha256": "d57d9f16b6b4bdbf4a6ae9d4c107414e7f2dc5a84ef76fb5971a5c0e13a6c33a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_family_ir_audit_03.json",
+      "bytes": 35341,
+      "sha256": "8e8f12ec5b30766c78c37be02d0e05fd3018602e8c92ba2e99d540d9daa7da8a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_independent_event_covariance.json",
+      "bytes": 4225,
+      "sha256": "61745b60d233cca3ded0809851474b7b64fc62c4f436c3b90f767d68aea02891",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_01.txt",
+      "bytes": 16514,
+      "sha256": "c3407fc70baa372e6e00619995276748f095274f094937b661a79deff55fb4b2",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_01_execution.json",
+      "bytes": 623,
+      "sha256": "0987f10c09190459a8248e282e56979c8a262f6e2c261784c137bc338bba478c",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_drift_final.txt",
+      "bytes": 20550,
+      "sha256": "51c50e9a41692b38a8977e81d2660b6a3a2a4dcb605bffb26cbfdd4b1a972b6b",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_drift_final_execution.json",
+      "bytes": 623,
+      "sha256": "684280a300acabdb9e978e9fe1a032398b0a626ff2a3cb924eab9f88566645c2",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_final.txt",
+      "bytes": 18863,
+      "sha256": "8faa2d1ac412b3a3686603d1436bde21195860057c34340227b91588f8d4b82d",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_methods_final_execution.json",
+      "bytes": 628,
+      "sha256": "e55ed28fffd4f5d45dd0b82adfe7d4159bfffc8cb377fa9a7c2332355ddccfea",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_model_pdf_audit_02.json",
+      "bytes": 62315,
+      "sha256": "4014ec3c04dae9dd67798f58b77392aa5f77a47a9c1e4653498a9c2c565fe00a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_pilot_readiness.json",
+      "bytes": 9629,
+      "sha256": "57dc9d3a8f53a1a7a869b8dc4220ffeb8ed88838e85ff1d0b942e6072dd63726",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase11_preservation_before.json",
+      "bytes": 648801,
+      "sha256": "02d8c668eff2adca96cefb3319464560d0636d173acceb9a1ebe9de69630a314",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase8_methods_final.txt",
+      "bytes": 11599,
+      "sha256": "d455ce0d328a38677fab429583b1b8d12b2b340a4e8738e23ab6294a9c5eee52",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase8_methods_final_execution.json",
+      "bytes": 625,
+      "sha256": "9752c931fedaa7162106918a7909d18e2c0a279ffcb48cf70c13deb80a0c3334",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase9_methods_final.txt",
+      "bytes": 22563,
+      "sha256": "cb2158931563397edd6c4dafa5025f119d536ba07296683af6d6ec8899130b31",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/phase9_methods_final_execution.json",
+      "bytes": 632,
+      "sha256": "61c9996bb8c44f2a57a60939229c338920ee36821cbb03f225939ff29b01ec88",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase11/evidence/source_analysis_resource_contract.json",
+      "bytes": 354,
+      "sha256": "e0e3d8c24d2f90378278a303e602984a2147c29ac6e0923ef0ced8a63d78958a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase11/evidence/workspace_initial_audit.json",
+      "bytes": 603,
+      "sha256": "c6585bdabf679c0d54e8e3b19d0222a53d2dc815e315380c7ca4e90808c91859",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    }
+  ],
+  "external_identity_status": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "external_identity_scope": "60 declared raw records /56 unique paths; only installed MG5 runtime configuration differs. Historical A02 remains time-scoped, no normalization/replacement.",
+  "selection": "NONE_READY",
+  "physical_approval": "NOT_AUTHORIZED",
+  "figure_publication": false,
+  "receipt_scope": "Five evidence classes remain explicit; synthetic methods/automated peer review do not establish independent human review or physical validity. Original external local-path input SHA identities remain in historical audit evidence.",
+  "delivery_note": "Only source-identity manifest, quality-gates JSON and final report change after immutable source/evidence commit; final report-only HEAD CI and all blobs verified in local FINAL_REPORT.json after normal push.",
+  "source_payload_CI": [
+    {
+      "conclusion": "success",
+      "databaseId": 39227487824,
+      "event": "pull_request",
+      "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+      "name": "Phase11 exact configuration source and pilot boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227487824"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39227435025,
+      "event": "push",
+      "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+      "name": "Phase11 exact configuration source and pilot boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227435025"
+    }
+  ],
+  "source_payload_remote_verification": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "files": 125,
+    "bytes": 2939322,
+    "all_bytes_equal_Git": true
+  }
+}

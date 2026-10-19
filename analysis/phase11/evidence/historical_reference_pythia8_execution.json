@@ -1,0 +1,26 @@
+{
+  "label": "historical_reference_pythia8",
+  "command": [
+    "python3",
+    "-B",
+    "simulation/pythia8/scripts/validate_hepmc3.py",
+    "--repository",
+    "."
+  ],
+  "exit_code": 0,
+  "wall_seconds": 2.0222226820005744,
+  "cpu_seconds": 1.8801690000000009,
+  "peak_observed_process_group_RSS_bytes": 24702976,
+  "aggregate_observed_disk_bytes": 2519216,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

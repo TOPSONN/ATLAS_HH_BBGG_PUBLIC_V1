@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_AUTOMATED_INDEPENDENT_PEER_NEGATIVE_PROBES",
+  "reviewer_type": "Independent automated subagent; not external human approval",
+  "negative_probes": 68,
+  "details": [
+    "18 mandatory counters: missing/False/nonzero rejected",
+    "4 evidence role classes rejected when changed",
+    "synthetic/generic PASS cannot impersonate complete actual covariance",
+    "detector summary and shared-input hashes bound",
+    "5F substitution/unknown-alpha-zero/fabricated complete selection contradictions rejected",
+    "future aggregate CPU0/7200/False/deleted rejected"
+  ],
+  "reviewed_hashes": {
+    "analysis/phase11/source/pilot_policy.py": "3ebbfe8746e9d0d7b61481f212662f69dca6c051acc3b2524495d55ebd079101",
+    "analysis/phase11/scripts/audit_pilot_gate.py": "c476398c08ce13bf331d13929579b682e5df63b886dd49ff561593de9ac1b2d9",
+    "analysis/phase11/config/bounded_pilot_contract.json": "15a51027545207d54003cb3a3b283b58a10e3371be2251e85ef5700b2f659993"
+  },
+  "execution_scope": "Independent in-memory probes outside registered computational ledger; no artifact output or production",
+  "external_human_review_approval": false,
+  "new_physical_events": 0
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/scripts/audit_family_ir.py", line 32, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/scripts/audit_family_ir.py", line 25, in main
+    result=m.audit_sources(a.mg5_root,a.pythia_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/source/family_ir.py", line 119, in audit_sources
+    if not found:raise ValueError('SOURCE_WITNESS_MISSING:'+identity+':'+anchor)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: SOURCE_WITNESS_MISSING:COUPLING_OPERATORS:"==" request exactly that number of coupling

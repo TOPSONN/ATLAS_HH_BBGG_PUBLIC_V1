@@ -1,0 +1,41 @@
+name: Phase11 exact configuration source and pilot boundary
+on:
+  push:
+    branches: [codex/phase11-exact-generator-pilot-gate]
+  pull_request:
+    paths: ['analysis/phase11/**','metadata/phase11*','reports/phase11*','.github/workflows/phase11-pilot-gate.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_methods_bounded_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Phase11 schema, static scientific semantics and negative execution guards
+        run: python3 -B -m unittest discover -s analysis/phase11/tests -p 'test_*.py' -v
+      - name: Preserve Phase8-10 scientific methods
+        run: |
+          python3 -B -m unittest discover -s analysis/phase10/tests -p 'test_*.py' -v
+          python3 -B -m unittest discover -s analysis/phase9/tests -p 'test_phase9_*.py' -v
+          python3 -B -m unittest discover -s analysis/phase8/tests -p 'test_*.py' -v
+      - name: Exact source, bounded evidence and every outgoing payload
+        run: python3 -B analysis/phase11/scripts/validate_publication.py --repo .
+      - name: Historical physical references, no generation
+        run: |
+          python3 -B -m simulation.hh_signal.campaign.validate_references
+          python3 -B simulation/new_backgrounds/scripts/validate_references.py --repo .
+          python3 -B simulation/mg5/scripts/validate_lhe.py --background-library .
+          python3 -B simulation/pythia8/scripts/validate_hepmc3.py --repository .
+          python3 -B simulation/delphes/scripts/validate_references.py --repo .
+      - name: Evidence scope
+        run: |
+          echo '### Phase11 evidence scope' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Synthetic/source-method tests and exact bounded historical evidence. Installed-source inspection and local 6000 persisted joins/3000 HF covariance are separately recorded local readback.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'NONE_READY. No MG5 parser/process, ME, integral, hard events, Pythia/Delphes production, Phase7I build, physical inference or figure publication.' >> "$GITHUB_STEP_SUMMARY"

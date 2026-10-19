@@ -1,0 +1,560 @@
+{
+  "Delphes_executed": false,
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "calibrated_fake_rate": null,
+  "detector_card_parser_executed": false,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "exact_candidate_overlap_map": "BLOCKED_REQUIRES_REVIEWED_WRITER",
+  "future_saved_denominator": "EFFICIENCY_PASSING_PRE_ISOLATION_CANDIDATES; NOT_PRE_EFFICIENCY_RAW_PARTICLE_DENOMINATOR",
+  "historical_runtime_cards": [
+    {
+      "card_path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/detector_card.tcl",
+      "card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "dataset_id": "B01",
+      "trace": {
+        "ATLAS_shower_shapes_available": false,
+        "PHOTON_FAKE_RATE": "UNKNOWN",
+        "calibrated_fake_probability": null,
+        "exact_overlap_graph_persisted_by_standard_treewriter": false,
+        "exact_overlap_graph_status": "BLOCKED_REQUIRES_REVIEWED_CANDIDATE_UID_AND_OVERLAP_MAP_WRITER",
+        "execution_sequence": [
+          "ParticlePropagator",
+          "ChargedHadronTrackingEfficiency",
+          "ElectronTrackingEfficiency",
+          "MuonTrackingEfficiency",
+          "ChargedHadronMomentumSmearing",
+          "ElectronMomentumSmearing",
+          "MuonMomentumSmearing",
+          "TrackMerger",
+          "ECal",
+          "HCal",
+          "Calorimeter",
+          "EFlowMerger",
+          "EFlowFilter",
+          "PhotonEfficiency",
+          "PhotonIsolation",
+          "ElectronFilter",
+          "ElectronEfficiency",
+          "ElectronIsolation",
+          "ChargedHadronFilter",
+          "MuonEfficiency",
+          "MuonIsolation",
+          "MissingET",
+          "NeutrinoFilter",
+          "GenJetFinder",
+          "GenMissingET",
+          "FastJetFinder",
+          "JetEnergyScale",
+          "JetFlavorAssociation",
+          "BTagging",
+          "TauTagging",
+          "UniqueObjectFinder",
+          "ScalarHT",
+          "TreeWriter"
+        ],
+        "historical_electron_chain": [
+          "HCal/eflowTracks",
+          "ElectronFilter/electrons",
+          "ElectronEfficiency/electrons",
+          "ElectronIsolation/electrons",
+          "UniqueObjectFinder/electrons",
+          "TreeWriter:Electron"
+        ],
+        "historical_photon_chain": [
+          "ECal/eflowPhotons",
+          "PhotonEfficiency/photons",
+          "PhotonIsolation/photons",
+          "UniqueObjectFinder/photons",
+          "TreeWriter:Photon"
+        ],
+        "native_pointer_lifetime_runtime_test_executed": false,
+        "new_Delphes_events": 0,
+        "overlap_algorithm": "UniqueObjectFinder earlier arrays take precedence; UseUniqueID=false -> recursive Candidate::Overlaps",
+        "photon_isolation": {
+          "DeltaRMax": 0.5,
+          "PTMin": 0.5,
+          "PTRatioMax": 0.12,
+          "RhoInputArray": null,
+          "UsePTSum": false,
+          "UseRhoCorrection": true,
+          "components": [
+            "IsolationVar",
+            "IsolationVarRhoCorr",
+            "SumPtCharged",
+            "SumPtNeutral",
+            "SumPtChargedPU",
+            "SumPt"
+          ],
+          "rho_effectively_zero_without_array": true,
+          "self_exclusion": "candidate UniqueID != isolation UniqueID"
+        },
+        "photon_status_not_calibrated_ID": true,
+        "pointer_alias_source_supported": true,
+        "post_isolation_before_overlap_available_via_future_branch": true,
+        "pre_isolation_collection_fields_at_treewriter": "ALL_CANDIDATES_MUTATED_BEFORE_REJECTION; not a snapshot before isolation calculation",
+        "source_association": "Photon.Particles / Electron.Particle / Jet.Particles native TRefs; closure requires future reviewed readback",
+        "source_identities": {
+          "card": {
+            "bytes": 22243,
+            "path": "/home/btu/simulations/delphes_runs/stage_c_bbgg_1000/detector_card.tcl",
+            "sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47"
+          },
+          "classes/DelphesClasses.cc": {
+            "bytes": 15972,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.cc",
+            "sha256": "4af575be5300f59c58c81e86a9c04a817fd9ce40d01ee91760b86706f72b03ef"
+          },
+          "classes/DelphesClasses.h": {
+            "bytes": 26584,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.h",
+            "sha256": "ed65180989c34410390cf36ca2499009ecc123f243260d25f7cde49cb2ac5ce9"
+          },
+          "modules/Efficiency.cc": {
+            "bytes": 3480,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Efficiency.cc",
+            "sha256": "cd900285e24e08816e2f872d65ee657049d5a46285bd49d68ef02627d54e0dc9"
+          },
+          "modules/Isolation.cc": {
+            "bytes": 7724,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Isolation.cc",
+            "sha256": "e8f12d4a008446742f632aad918f752155ecad408ef0a45272a27e49ed0a7724"
+          },
+          "modules/TreeWriter.cc": {
+            "bytes": 32442,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/TreeWriter.cc",
+            "sha256": "493b200746370317e16be7060aa531947c592af1c4e15bcd0aa29ceb3dcbdd92"
+          },
+          "modules/UniqueObjectFinder.cc": {
+            "bytes": 4564,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/UniqueObjectFinder.cc",
+            "sha256": "17bca136f0a78545719286d49a6d8798654e20c958af359a461aaabd223fb172"
+          }
+        },
+        "source_witness_lines": {
+          "classes/DelphesClasses.cc": [
+            {
+              "line": 313,
+              "token": "Bool_t Candidate::Overlaps"
+            }
+          ],
+          "modules/Efficiency.cc": [
+            {
+              "line": 122,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/Isolation.cc": [
+            {
+              "line": 253,
+              "token": "candidate->IsolationVar ="
+            },
+            {
+              "line": 261,
+              "token": "if(fUsePTSum && sum > fPTSumMax) continue;"
+            },
+            {
+              "line": 266,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/TreeWriter.cc": [
+            {
+              "line": 639,
+              "token": "void TreeWriter::ProcessPhotons"
+            },
+            {
+              "line": 690,
+              "token": "void TreeWriter::ProcessElectrons"
+            },
+            {
+              "line": 801,
+              "token": "void TreeWriter::ProcessJets"
+            },
+            {
+              "line": 150,
+              "token": "void TreeWriter::FillParticles"
+            }
+          ],
+          "modules/UniqueObjectFinder.cc": [
+            {
+              "line": 69,
+              "token": "GetBool(\"UseUniqueID\", false)"
+            },
+            {
+              "line": 159,
+              "token": "candidate->Overlaps(previousCandidate)"
+            }
+          ]
+        },
+        "status": "SOURCE_SUPPORTED_PARSER_NOT_VALIDATED"
+      }
+    },
+    {
+      "card_path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/detector_card.tcl",
+      "card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "dataset_id": "B02",
+      "trace": {
+        "ATLAS_shower_shapes_available": false,
+        "PHOTON_FAKE_RATE": "UNKNOWN",
+        "calibrated_fake_probability": null,
+        "exact_overlap_graph_persisted_by_standard_treewriter": false,
+        "exact_overlap_graph_status": "BLOCKED_REQUIRES_REVIEWED_CANDIDATE_UID_AND_OVERLAP_MAP_WRITER",
+        "execution_sequence": [
+          "ParticlePropagator",
+          "ChargedHadronTrackingEfficiency",
+          "ElectronTrackingEfficiency",
+          "MuonTrackingEfficiency",
+          "ChargedHadronMomentumSmearing",
+          "ElectronMomentumSmearing",
+          "MuonMomentumSmearing",
+          "TrackMerger",
+          "ECal",
+          "HCal",
+          "Calorimeter",
+          "EFlowMerger",
+          "EFlowFilter",
+          "PhotonEfficiency",
+          "PhotonIsolation",
+          "ElectronFilter",
+          "ElectronEfficiency",
+          "ElectronIsolation",
+          "ChargedHadronFilter",
+          "MuonEfficiency",
+          "MuonIsolation",
+          "MissingET",
+          "NeutrinoFilter",
+          "GenJetFinder",
+          "GenMissingET",
+          "FastJetFinder",
+          "JetEnergyScale",
+          "JetFlavorAssociation",
+          "BTagging",
+          "TauTagging",
+          "UniqueObjectFinder",
+          "ScalarHT",
+          "TreeWriter"
+        ],
+        "historical_electron_chain": [
+          "HCal/eflowTracks",
+          "ElectronFilter/electrons",
+          "ElectronEfficiency/electrons",
+          "ElectronIsolation/electrons",
+          "UniqueObjectFinder/electrons",
+          "TreeWriter:Electron"
+        ],
+        "historical_photon_chain": [
+          "ECal/eflowPhotons",
+          "PhotonEfficiency/photons",
+          "PhotonIsolation/photons",
+          "UniqueObjectFinder/photons",
+          "TreeWriter:Photon"
+        ],
+        "native_pointer_lifetime_runtime_test_executed": false,
+        "new_Delphes_events": 0,
+        "overlap_algorithm": "UniqueObjectFinder earlier arrays take precedence; UseUniqueID=false -> recursive Candidate::Overlaps",
+        "photon_isolation": {
+          "DeltaRMax": 0.5,
+          "PTMin": 0.5,
+          "PTRatioMax": 0.12,
+          "RhoInputArray": null,
+          "UsePTSum": false,
+          "UseRhoCorrection": true,
+          "components": [
+            "IsolationVar",
+            "IsolationVarRhoCorr",
+            "SumPtCharged",
+            "SumPtNeutral",
+            "SumPtChargedPU",
+            "SumPt"
+          ],
+          "rho_effectively_zero_without_array": true,
+          "self_exclusion": "candidate UniqueID != isolation UniqueID"
+        },
+        "photon_status_not_calibrated_ID": true,
+        "pointer_alias_source_supported": true,
+        "post_isolation_before_overlap_available_via_future_branch": true,
+        "pre_isolation_collection_fields_at_treewriter": "ALL_CANDIDATES_MUTATED_BEFORE_REJECTION; not a snapshot before isolation calculation",
+        "source_association": "Photon.Particles / Electron.Particle / Jet.Particles native TRefs; closure requires future reviewed readback",
+        "source_identities": {
+          "card": {
+            "bytes": 22243,
+            "path": "/home/btu/simulations/delphes_runs/stage_c_ccgg_1000/detector_card.tcl",
+            "sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522"
+          },
+          "classes/DelphesClasses.cc": {
+            "bytes": 15972,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.cc",
+            "sha256": "4af575be5300f59c58c81e86a9c04a817fd9ce40d01ee91760b86706f72b03ef"
+          },
+          "classes/DelphesClasses.h": {
+            "bytes": 26584,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.h",
+            "sha256": "ed65180989c34410390cf36ca2499009ecc123f243260d25f7cde49cb2ac5ce9"
+          },
+          "modules/Efficiency.cc": {
+            "bytes": 3480,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Efficiency.cc",
+            "sha256": "cd900285e24e08816e2f872d65ee657049d5a46285bd49d68ef02627d54e0dc9"
+          },
+          "modules/Isolation.cc": {
+            "bytes": 7724,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Isolation.cc",
+            "sha256": "e8f12d4a008446742f632aad918f752155ecad408ef0a45272a27e49ed0a7724"
+          },
+          "modules/TreeWriter.cc": {
+            "bytes": 32442,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/TreeWriter.cc",
+            "sha256": "493b200746370317e16be7060aa531947c592af1c4e15bcd0aa29ceb3dcbdd92"
+          },
+          "modules/UniqueObjectFinder.cc": {
+            "bytes": 4564,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/UniqueObjectFinder.cc",
+            "sha256": "17bca136f0a78545719286d49a6d8798654e20c958af359a461aaabd223fb172"
+          }
+        },
+        "source_witness_lines": {
+          "classes/DelphesClasses.cc": [
+            {
+              "line": 313,
+              "token": "Bool_t Candidate::Overlaps"
+            }
+          ],
+          "modules/Efficiency.cc": [
+            {
+              "line": 122,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/Isolation.cc": [
+            {
+              "line": 253,
+              "token": "candidate->IsolationVar ="
+            },
+            {
+              "line": 261,
+              "token": "if(fUsePTSum && sum > fPTSumMax) continue;"
+            },
+            {
+              "line": 266,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/TreeWriter.cc": [
+            {
+              "line": 639,
+              "token": "void TreeWriter::ProcessPhotons"
+            },
+            {
+              "line": 690,
+              "token": "void TreeWriter::ProcessElectrons"
+            },
+            {
+              "line": 801,
+              "token": "void TreeWriter::ProcessJets"
+            },
+            {
+              "line": 150,
+              "token": "void TreeWriter::FillParticles"
+            }
+          ],
+          "modules/UniqueObjectFinder.cc": [
+            {
+              "line": 69,
+              "token": "GetBool(\"UseUniqueID\", false)"
+            },
+            {
+              "line": 159,
+              "token": "candidate->Overlaps(previousCandidate)"
+            }
+          ]
+        },
+        "status": "SOURCE_SUPPORTED_PARSER_NOT_VALIDATED"
+      }
+    },
+    {
+      "card_path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/detector_card.tcl",
+      "card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "dataset_id": "B03",
+      "trace": {
+        "ATLAS_shower_shapes_available": false,
+        "PHOTON_FAKE_RATE": "UNKNOWN",
+        "calibrated_fake_probability": null,
+        "exact_overlap_graph_persisted_by_standard_treewriter": false,
+        "exact_overlap_graph_status": "BLOCKED_REQUIRES_REVIEWED_CANDIDATE_UID_AND_OVERLAP_MAP_WRITER",
+        "execution_sequence": [
+          "ParticlePropagator",
+          "ChargedHadronTrackingEfficiency",
+          "ElectronTrackingEfficiency",
+          "MuonTrackingEfficiency",
+          "ChargedHadronMomentumSmearing",
+          "ElectronMomentumSmearing",
+          "MuonMomentumSmearing",
+          "TrackMerger",
+          "ECal",
+          "HCal",
+          "Calorimeter",
+          "EFlowMerger",
+          "EFlowFilter",
+          "PhotonEfficiency",
+          "PhotonIsolation",
+          "ElectronFilter",
+          "ElectronEfficiency",
+          "ElectronIsolation",
+          "ChargedHadronFilter",
+          "MuonEfficiency",
+          "MuonIsolation",
+          "MissingET",
+          "NeutrinoFilter",
+          "GenJetFinder",
+          "GenMissingET",
+          "FastJetFinder",
+          "JetEnergyScale",
+          "JetFlavorAssociation",
+          "BTagging",
+          "TauTagging",
+          "UniqueObjectFinder",
+          "ScalarHT",
+          "TreeWriter"
+        ],
+        "historical_electron_chain": [
+          "HCal/eflowTracks",
+          "ElectronFilter/electrons",
+          "ElectronEfficiency/electrons",
+          "ElectronIsolation/electrons",
+          "UniqueObjectFinder/electrons",
+          "TreeWriter:Electron"
+        ],
+        "historical_photon_chain": [
+          "ECal/eflowPhotons",
+          "PhotonEfficiency/photons",
+          "PhotonIsolation/photons",
+          "UniqueObjectFinder/photons",
+          "TreeWriter:Photon"
+        ],
+        "native_pointer_lifetime_runtime_test_executed": false,
+        "new_Delphes_events": 0,
+        "overlap_algorithm": "UniqueObjectFinder earlier arrays take precedence; UseUniqueID=false -> recursive Candidate::Overlaps",
+        "photon_isolation": {
+          "DeltaRMax": 0.5,
+          "PTMin": 0.5,
+          "PTRatioMax": 0.12,
+          "RhoInputArray": null,
+          "UsePTSum": false,
+          "UseRhoCorrection": true,
+          "components": [
+            "IsolationVar",
+            "IsolationVarRhoCorr",
+            "SumPtCharged",
+            "SumPtNeutral",
+            "SumPtChargedPU",
+            "SumPt"
+          ],
+          "rho_effectively_zero_without_array": true,
+          "self_exclusion": "candidate UniqueID != isolation UniqueID"
+        },
+        "photon_status_not_calibrated_ID": true,
+        "pointer_alias_source_supported": true,
+        "post_isolation_before_overlap_available_via_future_branch": true,
+        "pre_isolation_collection_fields_at_treewriter": "ALL_CANDIDATES_MUTATED_BEFORE_REJECTION; not a snapshot before isolation calculation",
+        "source_association": "Photon.Particles / Electron.Particle / Jet.Particles native TRefs; closure requires future reviewed readback",
+        "source_identities": {
+          "card": {
+            "bytes": 22243,
+            "path": "/home/btu/simulations/delphes_runs/stage_c_jjgg_1000/detector_card.tcl",
+            "sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134"
+          },
+          "classes/DelphesClasses.cc": {
+            "bytes": 15972,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.cc",
+            "sha256": "4af575be5300f59c58c81e86a9c04a817fd9ce40d01ee91760b86706f72b03ef"
+          },
+          "classes/DelphesClasses.h": {
+            "bytes": 26584,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/classes/DelphesClasses.h",
+            "sha256": "ed65180989c34410390cf36ca2499009ecc123f243260d25f7cde49cb2ac5ce9"
+          },
+          "modules/Efficiency.cc": {
+            "bytes": 3480,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Efficiency.cc",
+            "sha256": "cd900285e24e08816e2f872d65ee657049d5a46285bd49d68ef02627d54e0dc9"
+          },
+          "modules/Isolation.cc": {
+            "bytes": 7724,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/Isolation.cc",
+            "sha256": "e8f12d4a008446742f632aad918f752155ecad408ef0a45272a27e49ed0a7724"
+          },
+          "modules/TreeWriter.cc": {
+            "bytes": 32442,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/TreeWriter.cc",
+            "sha256": "493b200746370317e16be7060aa531947c592af1c4e15bcd0aa29ceb3dcbdd92"
+          },
+          "modules/UniqueObjectFinder.cc": {
+            "bytes": 4564,
+            "path": "/home/btu/.local/share/atlas-hh-phase6c/src/delphes-3.5.1/modules/UniqueObjectFinder.cc",
+            "sha256": "17bca136f0a78545719286d49a6d8798654e20c958af359a461aaabd223fb172"
+          }
+        },
+        "source_witness_lines": {
+          "classes/DelphesClasses.cc": [
+            {
+              "line": 313,
+              "token": "Bool_t Candidate::Overlaps"
+            }
+          ],
+          "modules/Efficiency.cc": [
+            {
+              "line": 122,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/Isolation.cc": [
+            {
+              "line": 253,
+              "token": "candidate->IsolationVar ="
+            },
+            {
+              "line": 261,
+              "token": "if(fUsePTSum && sum > fPTSumMax) continue;"
+            },
+            {
+              "line": 266,
+              "token": "fOutputArray->Add(candidate);"
+            }
+          ],
+          "modules/TreeWriter.cc": [
+            {
+              "line": 639,
+              "token": "void TreeWriter::ProcessPhotons"
+            },
+            {
+              "line": 690,
+              "token": "void TreeWriter::ProcessElectrons"
+            },
+            {
+              "line": 801,
+              "token": "void TreeWriter::ProcessJets"
+            },
+            {
+              "line": 150,
+              "token": "void TreeWriter::FillParticles"
+            }
+          ],
+          "modules/UniqueObjectFinder.cc": [
+            {
+              "line": 69,
+              "token": "GetBool(\"UseUniqueID\", false)"
+            },
+            {
+              "line": 159,
+              "token": "candidate->Overlaps(previousCandidate)"
+            }
+          ]
+        },
+        "status": "SOURCE_SUPPORTED_PARSER_NOT_VALIDATED"
+      }
+    }
+  ],
+  "inactive_future_diff_sha256": "16becd98e8ccdff2c61e280f0cb8b8980162fd280f481b685b86c5b5ae724752",
+  "schema_version": 1,
+  "status": "INACTIVE_SOURCE_SUPPORTED_WITH_LIMITS"
+}

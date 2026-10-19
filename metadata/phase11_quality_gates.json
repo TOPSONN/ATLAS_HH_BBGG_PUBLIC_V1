@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE11_EXACT_GENERATOR_CONFIGURATION_AND_PILOT_GATE_V1",
+  "BASE_REVISION": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+  "NEW_SOURCE_REVISION": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/28",
+  "SELECTED_PILOT_COMPONENT": "NONE_READY",
+  "EXACT_PROCESS_VALIDATION": "PARSER_NOT_VALIDATED",
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+  "PILOT_APPROVAL": "NOT_AUTHORIZED",
+  "PILOT_EXECUTED": false,
+  "figure_publication_authorized": false,
+  "GITHUB_CI": {
+    "status": "PASS_SOURCE_PAYLOAD_PUSH_AND_PR",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 39227487824,
+        "event": "pull_request",
+        "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+        "name": "Phase11 exact configuration source and pilot boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227487824"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 39227435025,
+        "event": "push",
+        "headSha": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+        "name": "Phase11 exact configuration source and pilot boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39227435025"
+      }
+    ],
+    "scope": "Source/method and bounded evidence; no generator parser/production or native full ROOT data rerun"
+  },
+  "REMOTE_BLOB_VERIFICATION": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3652fea6f2dc8bce255cbe8cce49fe8241ba27d4",
+    "files": 125,
+    "bytes": 2939322,
+    "all_bytes_equal_Git": true
+  },
+  "external_human_review_approval": false,
+  "INSTALLED_RUNTIME_RAW_IDENTITY": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "RUNTIME_CONFIGURATION_WRITER": "UNKNOWN",
+  "GATES_PASS": [
+    "version-bound model restrictions and coupling/IR source semantics",
+    "6000 persisted-event joins and 3000 HF source readback",
+    "3825 independently recomputed covariance pairs /3885 comparisons",
+    "3000 original LHE incoming flavour readback",
+    "2874 historical files exact byte preservation",
+    "inactive comment-only cards and no dispatcher",
+    "signed-weight algebra/null/resource/production negative guards",
+    "source payload push/PR GitHub CI passed at exact source revision",
+    "all125selected immutable source-payload blobs match Git bytes and SHA256"
+  ],
+  "GATES_FAIL": [
+    "exact installed runtime configuration raw SHA256 freeze differs from A02 receipt"
+  ],
+  "GATES_BLOCKED": [
+    "selected compatible PDF/member/grid and alpha_s/threshold binding",
+    "complete photon IR target/numerical cut sensitivity",
+    "exact-process parser/matching/native weight closure",
+    "candidate-specific central scale and shower settings",
+    "reviewed overlap-identity writer and nonisolated control denominator",
+    "future resource enforcement, aggregate CPU ceiling and physical authorization",
+    "physical background total and matched signal normalization"
+  ],
+  "GATES_UNKNOWN": [
+    "runtime configuration writer",
+    "calibrated photon fake rate",
+    "cross-dataset physical covariance",
+    "physical significance and CLs"
+  ],
+  "FINAL_VERDICT": "BLOCKED_PHASE11_NO_VALIDATED_COMPONENT",
+  "NEXT_RECOMMENDED_STEP": "Review the exact source/config evidence, stabilize the external runtime raw identity, resolve PDF/alpha_s and IR fields; separately authorize only a narrow parser/process test if needed. No pilot activation.",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "TESTS": {
+    "Phase11": 172,
+    "Phase10": 143,
+    "Phase9": 165,
+    "Phase8": 92,
+    "historical_reference_validators": 5,
+    "all_pass": true,
+    "new_ROOT_native_build_or_full_ROOT_loop": false
+  },
+  "SOURCE_INTEGRITY_RECORDS": {
+    "checked_records": 60,
+    "unique_paths": 56,
+    "mismatches": 1
+  },
+  "HISTORICAL_PRESERVATION": {
+    "files": 2874,
+    "bytes": 2611429240,
+    "status": "PASS_EXACT_HISTORICAL_BYTES",
+    "external_runtime_config": "SEPARATE_BLOCKED_SCOPE"
+  },
+  "AUTOMATED_INDEPENDENT_REVIEW": {
+    "earlier_policy_probes": 68,
+    "final_drift_gate_checks": 42,
+    "scope": "SYNTHETIC_METHOD_ONLY; not external human approval"
+  },
+  "DELIVERY_CLOSURE": "Source code and bounded evidence frozen at NEW_SOURCE_REVISION; only this gate JSON, source-identity manifest and final report change in report-only delivery. Final-head CI and all125remote blobs recorded in local FINAL_REPORT.json after push."
+}

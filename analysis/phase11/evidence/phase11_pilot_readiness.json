@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "status": "BLOCKED_PHASE11_NO_VALIDATED_COMPONENT",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "selected_pilot_component": "NONE_READY",
+  "source_supported": [
+    "effective model restrictions and flavours",
+    "coupling order and generic interface semantics",
+    "exact LO isolation field interactions",
+    "detector isolation mutation/collection sequence"
+  ],
+  "exact_process_validation": "PARSER_NOT_VALIDATED",
+  "physical_pilot_status": "PHYSICAL_PILOT_NOT_EXECUTED",
+  "matching_status": "MATCHING_NOT_VALIDATED",
+  "source_requirements": {
+    "MASSIVE_4F_BB_COMPONENT": {
+      "model_masses_flavours": {
+        "status": "SOURCE_SUPPORTED",
+        "reason": "Actual sm/restrict_default MB4.7 MC0 for A; sm-no_b_mass MB=MC=0 for B; source text only, parser unvalidated.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "installed_PDF_member": {
+        "status": "BLOCKED",
+        "reason": "No compatible selected member/grid/hash binding has been established for this candidate.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "alpha_s_threshold_binding": {
+        "status": "BLOCKED",
+        "reason": "Reference scale, running and threshold/backend/shower binding remain unresolved.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "photon_IR_target": {
+        "status": "BLOCKED",
+        "reason": "4F b coverage and detector mapping unresolved; 5F soft/collinear QCD multiplicity resolution also unresolved.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "generation_cut_definition": {
+        "status": "BLOCKED",
+        "reason": "No reviewed numerical generation cuts or sensitivity closure selected.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "hard_scale_definition": {
+        "status": "BLOCKED",
+        "reason": "No candidate-specific central scale expression has been frozen.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "ME_PS_interface": {
+        "status": "BLOCKED",
+        "reason": "A isolated LO+PS still requires frozen shower settings; B generic MLM/CKKW-L is not exact-process validation.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      },
+      "shower_and_weight_identity": {
+        "status": "BLOCKED",
+        "reason": "Effective QCD/QED/flavour settings and native signed/merging weight closure are unvalidated.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_a.json"
+        ]
+      }
+    },
+    "COMMON_5F_AA_JETS_COMPONENT": {
+      "model_masses_flavours": {
+        "status": "SOURCE_SUPPORTED",
+        "reason": "Actual sm/restrict_default MB4.7 MC0 for A; sm-no_b_mass MB=MC=0 for B; source text only, parser unvalidated.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "installed_PDF_member": {
+        "status": "BLOCKED",
+        "reason": "No compatible selected member/grid/hash binding has been established for this candidate.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "alpha_s_threshold_binding": {
+        "status": "BLOCKED",
+        "reason": "Reference scale, running and threshold/backend/shower binding remain unresolved.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "photon_IR_target": {
+        "status": "BLOCKED",
+        "reason": "4F b coverage and detector mapping unresolved; 5F soft/collinear QCD multiplicity resolution also unresolved.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "generation_cut_definition": {
+        "status": "BLOCKED",
+        "reason": "No reviewed numerical generation cuts or sensitivity closure selected.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "hard_scale_definition": {
+        "status": "BLOCKED",
+        "reason": "No candidate-specific central scale expression has been frozen.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "ME_PS_interface": {
+        "status": "BLOCKED",
+        "reason": "A isolated LO+PS still requires frozen shower settings; B generic MLM/CKKW-L is not exact-process validation.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      },
+      "shower_and_weight_identity": {
+        "status": "BLOCKED",
+        "reason": "Effective QCD/QED/flavour settings and native signed/merging weight closure are unvalidated.",
+        "evidence": [
+          "phase11_model_pdf_audit_02.json",
+          "phase11_family_ir_audit_03.json",
+          "analysis/phase11/config/candidate_b.json"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "model_pdf": {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_model_pdf_audit_02.json",
+      "bytes": 62315,
+      "sha256": "4014ec3c04dae9dd67798f58b77392aa5f77a47a9c1e4653498a9c2c565fe00a"
+    },
+    "family_IR": {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_family_ir_audit_03.json",
+      "bytes": 35341,
+      "sha256": "8e8f12ec5b30766c78c37be02d0e05fd3018602e8c92ba2e99d540d9daa7da8a"
+    },
+    "existing_HF": {
+      "path": "/home/btu/simulations/hh_phase11/run_01/detector_events_02/phase11_existing_hf_event_crosscheck.json",
+      "bytes": 46226,
+      "sha256": "ff8f3e39ab1ca0a8ae7b4394de87cf16557da5cb57c8a61b61a2fa15a3a7e233"
+    },
+    "independent_covariance": {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_independent_event_covariance.json",
+      "bytes": 4225,
+      "sha256": "61745b60d233cca3ded0809851474b7b64fc62c4f436c3b90f767d68aea02891"
+    }
+  },
+  "inactive_cards": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/cards/candidate_a.inactive.txt",
+      "bytes": 600,
+      "sha256": "4537009b2566fdcadb1f4927b82dd4bdc484c23377f4e60c9953a89ce968a7b0"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/cards/candidate_b.inactive.txt",
+      "bytes": 1049,
+      "sha256": "e7cf3e98da05cfc46aed2ac3057f8b0b9315d3b7677966c655e06e2adf954f0f"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/inactive_detector_diff.txt",
+      "bytes": 3459,
+      "sha256": "16becd98e8ccdff2c61e280f0cb8b8980162fd280f481b685b86c5b5ae724752"
+    }
+  ],
+  "contract": {
+    "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/bounded_pilot_contract.json",
+    "bytes": 15327,
+    "sha256": "dcde570c951731a8f8cac2b4533cc3e42ab811f8e0260bc8178773e9664ebf9b"
+  },
+  "current_kernel_resource_observations": {
+    "/proc/self/cgroup": {
+      "text": "0::/init.scope",
+      "sha256": "778ccdf3058cfbe3d54f8973730b4abb4e0fa0aee3fbc3f53138c757812bc461"
+    },
+    "/sys/fs/cgroup/cgroup.controllers": {
+      "text": "cpuset cpu io memory hugetlb pids rdma",
+      "sha256": "5bcebcfaf6c1982791d93e1f1b4327d7026ecbb7f993f4ea3bb6e424d245aa30"
+    }
+  },
+  "resource_interpretation": "Kernel controller presence is not delegated per-job enforcement. Existing P8 monitor bounds process-group CPU/wall/disk but native ME/trial/cycle counters and hard job RAM containment remain unreviewed. All illustrative pilot caps unapproved.",
+  "physical_pilot_executed": false,
+  "physical_approval": "NOT_AUTHORIZED",
+  "external_human_review_approval": false,
+  "new_ROOT_loops": 0,
+  "parser_process_generation_executed": false,
+  "figure_publication_authorized": false,
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0
+}

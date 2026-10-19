@@ -1,0 +1,31 @@
+{
+  "label": "phase8_methods_final",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "analysis/phase8/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 1.0089108749998559,
+  "cpu_seconds": 0.2901979999999995,
+  "peak_observed_process_group_RSS_bytes": 29077504,
+  "aggregate_observed_disk_bytes": 2489652,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

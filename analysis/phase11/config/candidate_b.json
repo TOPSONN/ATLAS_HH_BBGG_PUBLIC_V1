@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "candidate_id": "B_COMMON_5F_AA_JETS",
+  "status": "SOURCE_CONDITIONAL_NOT_READY",
+  "execution_authorized": false,
+  "model": "sm-no_b_mass",
+  "model_masses_GeV": {
+    "bottom": 0,
+    "charm": 0
+  },
+  "incoming_pdg_ids": [
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    21
+  ],
+  "additional_parton_pdg_ids": [
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    21
+  ],
+  "multiplicities": [
+    0,
+    1,
+    2
+  ],
+  "process_definitions": [
+    {
+      "multiplicity": 0,
+      "phase10_text": "generate p5 p5 > a a QCD=0 QED=2 @0",
+      "exact_order_text": "generate p5 p5 > a a QCD==0 QED==2 @0",
+      "classification": "TREE_AMPLITUDE_gs^0_e^2; squared order alpha_s^0 alpha_em^2; exact order syntax proposal, parser NOT executed",
+      "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+    },
+    {
+      "multiplicity": 1,
+      "phase10_text": "add process p5 p5 > a a j5 QCD=1 QED=2 @1",
+      "exact_order_text": "add process p5 p5 > a a j5 QCD==1 QED==2 @1",
+      "classification": "TREE_AMPLITUDE_gs^1_e^2; squared order alpha_s^1 alpha_em^2; exact order syntax proposal, parser NOT executed",
+      "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+    },
+    {
+      "multiplicity": 2,
+      "phase10_text": "add process p5 p5 > a a j5 j5 QCD=2 QED=2 @2",
+      "exact_order_text": "add process p5 p5 > a a j5 j5 QCD==2 QED==2 @2",
+      "classification": "TREE_AMPLITUDE_gs^2_e^2; squared order alpha_s^2 alpha_em^2; exact order syntax proposal, parser NOT executed",
+      "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+    }
+  ],
+  "tree_level_only": true,
+  "loop_induced_gg_aa_included": false,
+  "fragmentation_contribution_included": false,
+  "separate_explicit_HF_addition_allowed": false,
+  "parser_validated": false,
+  "physical_pilot_executed": false,
+  "matching_validated": false,
+  "photon_ir_config": "analysis/phase11/config/photon_ir.json",
+  "pdf": {
+    "set": null,
+    "member": null,
+    "lhaid": null,
+    "sha256": null
+  },
+  "alpha_s": {
+    "value_MZ": null,
+    "running_order": null,
+    "thresholds_GeV": null
+  },
+  "matching": {
+    "selected_prescription": null,
+    "numerical_scale_GeV": null,
+    "mlm_required_nQmatch": 5,
+    "ckkwl_required_nQuarksMerge": 5,
+    "required_maxjetflavor": 5,
+    "highest_multiplicity_candidate": 2,
+    "highest_multiplicity_validated": false,
+    "MLM_status": "GENERIC_INTERFACE_SOURCE_SUPPORTED_EXACT_FAMILY_UNVALIDATED",
+    "CKKWL_status": "PHOTON_CORE_TOKEN_SOURCE_SUPPORTED_EXACT_HISTORIES_UNVALIDATED",
+    "FxFx_for_historical_LO": "INAPPLICABLE",
+    "ckkwl_core_string_proposal": "pp>aa",
+    "ckkwl_core_string_parser_validated": false,
+    "weight_writer_closure_validated": false
+  },
+  "shower_selected_settings": {
+    "SpaceShower:QCDshower": null,
+    "TimeShower:QCDshower": null,
+    "SpaceShower:QEDshowerByQ": null,
+    "TimeShower:QEDshowerByQ": null,
+    "SpaceShower:nQuarkIn": null,
+    "TimeShower:nGluonToQuark": null,
+    "SpaceShower:alphaSvalue": null,
+    "TimeShower:alphaSvalue": null,
+    "SpaceShower:alphaSorder": null,
+    "TimeShower:alphaSorder": null
+  },
+  "unresolved_fields": {
+    "PDF": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "No selected compatible 5F PDF payload/member/hash for this new family; historical choice is not automatic approval.",
+      "evidence_required": "Exact installed payload, member/LHAID/hash plus active-flavour and alpha metadata agreement"
+    },
+    "alpha_s": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "PDF alpha_s evolution thresholds and ME/shower definitions are not closed for the proposed family.",
+      "evidence_required": "Frozen PDF/ME/ISR/FSR value, running order, matching thresholds and scale conventions"
+    },
+    "matching_prescription": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "Generic MLM/CKKW-L interfaces do not establish exact aa+0/1/2-parton compatibility.",
+      "evidence_required": "Separately approved exact process/parser and history/weight validation"
+    },
+    "matching_scale": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "No numerical matching scale or scan result exists.",
+      "evidence_required": "Reviewed finite scan grid and genuine merging-scale closure"
+    },
+    "photon_parameters": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "Smooth-cone method source is available, numerical thresholds and acceptance closure absent.",
+      "evidence_required": "Reviewed direct-photon target thresholds and cut/scale sensitivity checks"
+    },
+    "shower_QCD_QED": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "Neither switching off QED nor retaining QED defaults establishes fragmentation completeness or photon partition.",
+      "evidence_required": "Frozen QCD/QED ISR/FSR settings and explicit ME/shower photon scope and overlap proof"
+    },
+    "normalization": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "CKKW-L extra weight and accepted per-multiplicity normalization have not been propagated through the actual future writer.",
+      "evidence_required": "Signed LHE/Info weight, mergingWeight, accepted sigma, sumW/sumW2, counters and HepMC closure"
+    },
+    "Nmax_coverage": {
+      "value": null,
+      "status": "BLOCKED",
+      "reason": "0/1/2 is finite candidate coverage, not demonstrated sufficient inclusive phase space.",
+      "evidence_required": "Highest-multiplicity inclusive treatment, differential rates, rejected histories and flavour-resolved closure"
+    }
+  },
+  "evidence_references": [
+    "MODEL_NO_B_MASS",
+    "COUPLING_OPERATORS",
+    "MLM_HEADER_PRECEDENCE",
+    "MLM_FLAVOUR",
+    "CKKWL_PHOTON_CORE",
+    "CKKWL_FLAVOUR",
+    "CKKWL_WEIGHT",
+    "QCD_QED_SHOWER",
+    "MG5_LO_INTERFACE"
+  ]
+}
