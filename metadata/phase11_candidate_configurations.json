@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "task": "PHASE11_EXACT_GENERATOR_CONFIGURATION_AND_PILOT_GATE_V1",
+  "base_revision": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+  "source_science_predecessor": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
+  "selected_pilot_component": "NONE_READY",
+  "candidate_A": {
+    "schema_version": 1,
+    "candidate_id": "MASSIVE_4F_BB_COMPONENT",
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "execution_enabled": false,
+    "physical_approval": "NOT_AUTHORIZED",
+    "mg5_version": "3.5.16",
+    "model": "sm",
+    "restriction": "restrict_default.dat",
+    "bottom_mass_GeV": 4.7,
+    "charm_mass_GeV": 0,
+    "unrestricted_ufo_charm_default_GeV": 1.27,
+    "model_mass_status": "SOURCE_SUPPORTED_DEFAULT_RESTRICTION_NOT_PARSER_VALIDATED",
+    "initial_pdg_ids": [
+      21,
+      1,
+      -1,
+      2,
+      -2,
+      3,
+      -3,
+      4,
+      -4
+    ],
+    "process": "p4 p4 > b b~ a a QCD=2 QED=2",
+    "orders": {
+      "QCD_amplitude_maximum": 2,
+      "QED_amplitude_maximum": 2,
+      "leading_cross_section_power": "alpha_s^2 alpha_EM^2",
+      "status": "SOURCE_POWER_COUNTING_ONLY_PARSER_NOT_VALIDATED"
+    },
+    "pdf": {
+      "set_name": null,
+      "member": null,
+      "lhaid": null,
+      "grid_sha256": null,
+      "flavour_scheme": null,
+      "num_flavours": null,
+      "order_qcd": null,
+      "alpha_s_mz": null,
+      "alpha_s_order_qcd": null,
+      "alpha_s_flavour_scheme": null,
+      "alpha_s_num_flavours": null,
+      "alpha_s_thresholds_GeV": null,
+      "info_sha256": null,
+      "flavour_pdg_ids": null,
+      "alpha_s_reference_scale_GeV": null,
+      "alpha_s_type": null
+    },
+    "pdf_requirement": {
+      "flavour_scheme": null,
+      "num_flavours": 4,
+      "order_qcd": 0,
+      "alpha_s_order_qcd": 0,
+      "bottom_pdf_activation": false,
+      "alpha_s_flavour_scheme": null,
+      "alpha_s_num_flavours": 4,
+      "metadata_must_bind_member_payload": true,
+      "allowed_flavour_schemes": [
+        "fixed",
+        "variable"
+      ],
+      "allowed_alpha_s_flavour_schemes": [
+        "fixed",
+        "variable"
+      ],
+      "alpha_reference_scale_must_be_explicit": true,
+      "bottom_alpha_activation": false
+    },
+    "photon_ir": null,
+    "photon_ir_blocker": "PHOTON_IR_A_BOTTOM_COVERAGE_UNRESOLVED",
+    "generation_cuts": null,
+    "shower_settings": null,
+    "scale_definition": null,
+    "matching_scale_GeV": null,
+    "inclusive_background_total": false,
+    "physical_pilot_executed": false,
+    "zero_means_known_zero_only": true,
+    "status": "BLOCKED_PHASE11_PDF_OR_ALPHA_S",
+    "exact_process_validation": "PARSER_NOT_VALIDATED",
+    "null_reasons": {
+      "pdf.*": "No compatible maximum-four-active-flavour/no-bottom LO member payload and metadata found in explicitly bounded installed roots; catalogue entries are not payloads. PDF and alpha flavour schemes plus alpha reference scale require exact member evidence.",
+      "photon_ir": "maxjetflavor=4 makes installed LO Frixione sum omit bottom; finite bottom mass plus separately active drab needs a defined target, not universal isolation equivalence.",
+      "generation_cuts": "Requires candidate-specific all-QCD photon IR definition and reviewed acceptance rationale.",
+      "shower_settings": "Requires PDF/alpha_s threshold binding and reviewed finite-mass g->heavy treatment; no tune defaults are selected.",
+      "scale_definition": "No validated source-bound scale choice has been selected for this candidate.",
+      "matching_scale_GeV": "No matching prescription or numerical merging scale has been validated; isolated component only."
+    },
+    "provenance": {
+      "mg5_version": "MG5/VERSION:1",
+      "restriction": "MG5/models/import_ufo.py:227-228",
+      "bottom_mass_GeV": "MG5/models/sm/restrict_default.dat:18",
+      "charm_mass_GeV": "MG5/models/sm/restrict_default.dat:17",
+      "unrestricted_ufo_charm_default_GeV": "MG5/models/sm/parameters.py:133-139; not effective default restriction",
+      "process": "User Candidate A and Phase10 inactive proposal; not parsed or generated",
+      "pdf": "Phase11 explicit bounded inventory; source hashes emitted by audit_model_pdf.py",
+      "orders": "models/sm/coupling_orders.py and power counting; parser not executed"
+    }
+  },
+  "candidate_B": {
+    "schema_version": 1,
+    "candidate_id": "B_COMMON_5F_AA_JETS",
+    "status": "SOURCE_CONDITIONAL_NOT_READY",
+    "execution_authorized": false,
+    "model": "sm-no_b_mass",
+    "model_masses_GeV": {
+      "bottom": 0,
+      "charm": 0
+    },
+    "incoming_pdg_ids": [
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      21
+    ],
+    "additional_parton_pdg_ids": [
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      21
+    ],
+    "multiplicities": [
+      0,
+      1,
+      2
+    ],
+    "process_definitions": [
+      {
+        "multiplicity": 0,
+        "phase10_text": "generate p5 p5 > a a QCD=0 QED=2 @0",
+        "exact_order_text": "generate p5 p5 > a a QCD==0 QED==2 @0",
+        "classification": "TREE_AMPLITUDE_gs^0_e^2; squared order alpha_s^0 alpha_em^2; exact order syntax proposal, parser NOT executed",
+        "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+      },
+      {
+        "multiplicity": 1,
+        "phase10_text": "add process p5 p5 > a a j5 QCD=1 QED=2 @1",
+        "exact_order_text": "add process p5 p5 > a a j5 QCD==1 QED==2 @1",
+        "classification": "TREE_AMPLITUDE_gs^1_e^2; squared order alpha_s^1 alpha_em^2; exact order syntax proposal, parser NOT executed",
+        "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+      },
+      {
+        "multiplicity": 2,
+        "phase10_text": "add process p5 p5 > a a j5 j5 QCD=2 QED=2 @2",
+        "exact_order_text": "add process p5 p5 > a a j5 j5 QCD==2 QED==2 @2",
+        "classification": "TREE_AMPLITUDE_gs^2_e^2; squared order alpha_s^2 alpha_em^2; exact order syntax proposal, parser NOT executed",
+        "phase10_equal_operator": "UPPER_BOUND_NOT_EXACT"
+      }
+    ],
+    "tree_level_only": true,
+    "loop_induced_gg_aa_included": false,
+    "fragmentation_contribution_included": false,
+    "separate_explicit_HF_addition_allowed": false,
+    "parser_validated": false,
+    "physical_pilot_executed": false,
+    "matching_validated": false,
+    "photon_ir_config": "analysis/phase11/config/photon_ir.json",
+    "pdf": {
+      "set": null,
+      "member": null,
+      "lhaid": null,
+      "sha256": null
+    },
+    "alpha_s": {
+      "value_MZ": null,
+      "running_order": null,
+      "thresholds_GeV": null
+    },
+    "matching": {
+      "selected_prescription": null,
+      "numerical_scale_GeV": null,
+      "mlm_required_nQmatch": 5,
+      "ckkwl_required_nQuarksMerge": 5,
+      "required_maxjetflavor": 5,
+      "highest_multiplicity_candidate": 2,
+      "highest_multiplicity_validated": false,
+      "MLM_status": "GENERIC_INTERFACE_SOURCE_SUPPORTED_EXACT_FAMILY_UNVALIDATED",
+      "CKKWL_status": "PHOTON_CORE_TOKEN_SOURCE_SUPPORTED_EXACT_HISTORIES_UNVALIDATED",
+      "FxFx_for_historical_LO": "INAPPLICABLE",
+      "ckkwl_core_string_proposal": "pp>aa",
+      "ckkwl_core_string_parser_validated": false,
+      "weight_writer_closure_validated": false
+    },
+    "shower_selected_settings": {
+      "SpaceShower:QCDshower": null,
+      "TimeShower:QCDshower": null,
+      "SpaceShower:QEDshowerByQ": null,
+      "TimeShower:QEDshowerByQ": null,
+      "SpaceShower:nQuarkIn": null,
+      "TimeShower:nGluonToQuark": null,
+      "SpaceShower:alphaSvalue": null,
+      "TimeShower:alphaSvalue": null,
+      "SpaceShower:alphaSorder": null,
+      "TimeShower:alphaSorder": null
+    },
+    "unresolved_fields": {
+      "PDF": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No selected compatible 5F PDF payload/member/hash for this new family; historical choice is not automatic approval.",
+        "evidence_required": "Exact installed payload, member/LHAID/hash plus active-flavour and alpha metadata agreement"
+      },
+      "alpha_s": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "PDF alpha_s evolution thresholds and ME/shower definitions are not closed for the proposed family.",
+        "evidence_required": "Frozen PDF/ME/ISR/FSR value, running order, matching thresholds and scale conventions"
+      },
+      "matching_prescription": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Generic MLM/CKKW-L interfaces do not establish exact aa+0/1/2-parton compatibility.",
+        "evidence_required": "Separately approved exact process/parser and history/weight validation"
+      },
+      "matching_scale": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No numerical matching scale or scan result exists.",
+        "evidence_required": "Reviewed finite scan grid and genuine merging-scale closure"
+      },
+      "photon_parameters": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Smooth-cone method source is available, numerical thresholds and acceptance closure absent.",
+        "evidence_required": "Reviewed direct-photon target thresholds and cut/scale sensitivity checks"
+      },
+      "shower_QCD_QED": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Neither switching off QED nor retaining QED defaults establishes fragmentation completeness or photon partition.",
+        "evidence_required": "Frozen QCD/QED ISR/FSR settings and explicit ME/shower photon scope and overlap proof"
+      },
+      "normalization": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "CKKW-L extra weight and accepted per-multiplicity normalization have not been propagated through the actual future writer.",
+        "evidence_required": "Signed LHE/Info weight, mergingWeight, accepted sigma, sumW/sumW2, counters and HepMC closure"
+      },
+      "Nmax_coverage": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "0/1/2 is finite candidate coverage, not demonstrated sufficient inclusive phase space.",
+        "evidence_required": "Highest-multiplicity inclusive treatment, differential rates, rejected histories and flavour-resolved closure"
+      }
+    },
+    "evidence_references": [
+      "MODEL_NO_B_MASS",
+      "COUPLING_OPERATORS",
+      "MLM_HEADER_PRECEDENCE",
+      "MLM_FLAVOUR",
+      "CKKWL_PHOTON_CORE",
+      "CKKWL_FLAVOUR",
+      "CKKWL_WEIGHT",
+      "QCD_QED_SHOWER",
+      "MG5_LO_INTERFACE"
+    ]
+  },
+  "photon_IR": {
+    "schema_version": 1,
+    "status": "DEFINITION_SOURCE_SUPPORTED_PARAMETERS_BLOCKED",
+    "execution_authorized": false,
+    "method_proposal": "SMOOTH_CONE_DIRECT_PHOTON",
+    "selected_parameters": {
+      "ptgmin_GeV": null,
+      "r0gamma": null,
+      "xn": null,
+      "epsgamma": null,
+      "isoEM": null,
+      "etaa": null,
+      "mmaa_GeV": null,
+      "draa": null,
+      "draj": null,
+      "drab": null
+    },
+    "selected_generation_jet_cuts": {
+      "ptj_GeV": null,
+      "etaj": null,
+      "ptb_GeV": null,
+      "etab": null,
+      "drjj": null,
+      "drbb": null,
+      "drbj": null
+    },
+    "source_semantics": {
+      "LO_implementation_present": true,
+      "activation": "ptgmin != 0 in cuts.f; banner disable logic only ptgmin > 0; physical proposal requires ptgmin > 0",
+      "formula": "sum_i pT_i(theta_i<=r) <= epsgamma*pTgamma*((1-cos(r))/(1-cos(R0gamma)))**abs(xn) for each constituent radius <=R0gamma",
+      "xn_zero": "constant energy bound; no smooth vanishing bound at r->0",
+      "QCD_energy_sum": "is_a_j only; not is_a_b",
+      "maxjetflavor_4": "bottom classified is_a_b, omitted from this smooth-cone QCD sum",
+      "maxjetflavor_5": "b/c/gluon classified is_a_j and included",
+      "isoEM_true": "separate additional sum over other photons and charged leptons; target photon removed",
+      "disabled_by_positive_ptgmin": [
+        "pta",
+        "draj"
+      ],
+      "not_disabled": [
+        "drab",
+        "etaa",
+        "draa",
+        "mmaa"
+      ],
+      "eta_metric": "pseudorapidity DeltaR in isolation; generic rap for massless photons coincides",
+      "frame": "parton center-of-mass momenta; pT and massless eta differences longitudinal-boost invariant",
+      "execution_order": [
+        "generic_pT",
+        "generic_eta",
+        "generic_DeltaR",
+        "pair_invariant_mass",
+        "other_special_cuts",
+        "photon_smooth_cone"
+      ],
+      "fixed_cone_equivalence_established": false,
+      "fragmentation_calibrated": false,
+      "cut_independence_established": false
+    },
+    "unresolved_fields": {
+      "numerical_thresholds": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "All photon and jet thresholds remain unselected; source defaults are audited evidence only.",
+        "evidence_required": "Traceable reviewed target acceptance and finite generation-cut sensitivity protocol"
+      },
+      "A_bottom_coverage": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "maxjetflavor=4 omits massive b from LO smooth-cone hadronic sum; drab is separate.",
+        "evidence_required": "Choose a declared restricted target or review an all-QCD isolation implementation, then authorize validation"
+      },
+      "reco_mapping": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Smooth-cone parton isolation is not the existing detector fixed-cone relative isolation.",
+        "evidence_required": "Particle/shower/detector migration and fragmentation/acceptance comparison"
+      },
+      "fragmentation": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No photon fragmentation functions or direct/fragmentation matching prescription selected.",
+        "evidence_required": "A separately justified target definition or validated fragmentation-inclusive prescription"
+      },
+      "B_soft_collinear": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Smooth cone regulates photon-parton collinear region but does not alone regulate soft/collinear QCD extra partons.",
+        "evidence_required": "Consistent matching/generation jet resolution and multiplicity coverage"
+      }
+    },
+    "evidence_references": [
+      "LO_ISOLATION",
+      "LO_ISOLATION_FUNCTION",
+      "JET_FLAVOUR_CLASSIFICATION",
+      "PHOTON_CUT_MAPPING",
+      "POSITIVE_PTGMIN_CUT_OVERRIDE",
+      "GENERIC_CUT_ORDER",
+      "FRIXIONE_PRIMARY"
+    ]
+  },
+  "pilot_contract": {
+    "schema_version": 1,
+    "task": "PHASE11_EXACT_GENERATOR_CONFIGURATION_AND_PILOT_GATE_V1",
+    "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+    "status": "INACTIVE_REVIEW_ONLY",
+    "selected_component": "NONE_READY",
+    "review_target_component": "MASSIVE_4F_BB_COMPONENT_CONDITIONAL_REVIEW_TARGET_NOT_SELECTED",
+    "exact_future_execution_source_revision": null,
+    "base_revision": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+    "MG5_version": "3.5.16",
+    "model_review_proposal": "sm / restrict_default.dat",
+    "Pythia_version": "8.317",
+    "process_review_proposal": "p4 p4 > b b~ a a QCD=2 QED=2",
+    "PDF_member_flavour_scheme": null,
+    "alpha_s_and_thresholds": null,
+    "photon_IR_definition": null,
+    "generation_cuts": null,
+    "shower_settings": null,
+    "scale_definition": null,
+    "execution_authorized": false,
+    "instantiable": false,
+    "dispatcher": null,
+    "approval_override_flag": null,
+    "physical_pilot_executed": false,
+    "physical_approval": {
+      "status": "NOT_AUTHORIZED",
+      "receipt": null
+    },
+    "external_human_review_approval": false,
+    "inclusive_background_total": false,
+    "calibrated_fake_probability": null,
+    "unknown_nuisances": {
+      "status": "UNKNOWN_NOT_ZERO",
+      "values": null,
+      "covariance": null
+    },
+    "fresh_output_required": true,
+    "existing_output_reuse_allowed": false,
+    "retained_new_physical_events": 0,
+    "resource_review": {
+      "threads": {
+        "illustrative_unapproved_limit": 2,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "wall_seconds": {
+        "illustrative_unapproved_limit": 7200,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "RAM_bytes": {
+        "illustrative_unapproved_limit": 4294967296,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "disk_bytes": {
+        "illustrative_unapproved_limit": 2147483648,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "new_hard_events": {
+        "illustrative_unapproved_limit": 1000,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "scan_points": {
+        "illustrative_unapproved_limit": 3,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "ME_evaluations": {
+        "illustrative_unapproved_limit": 1000000,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "integration_cycles": {
+        "illustrative_unapproved_limit": 20,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      },
+      "event_trials": {
+        "illustrative_unapproved_limit": 100000,
+        "approved_limit": null,
+        "enforcement_status": "UNVERIFIED",
+        "review_requirement": "Separate exact-source bounded process-group/kernel/counter enforcement review; no current dispatcher."
+      }
+    },
+    "unresolved_fields": {
+      "exact_source_revision": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No executable pilot revision has been approved.",
+        "evidence_required": "Independently review exact P11 source/model/PDF/card hashes and explicit human authorization."
+      },
+      "PDF_member_LHAID_grid": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No compatible installed 4F grid/member binding established; 5F substitute is not justified.",
+        "evidence_required": "Actual .info and member payload, set/member/LHAID/SHA256, active flavour support and threshold policy."
+      },
+      "alpha_s_and_thresholds": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Reference scale/running/active flavour thresholds not bound to an installed selected PDF.",
+        "evidence_required": "PDF-native alpha_s metadata and actual MG5 backend/shower binding including reference scale, not a presumed MZ label."
+      },
+      "photon_IR_parameters_and_bottom_coverage": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "MG5 LO smooth-cone sums is_a_j; massive b with maxjetflavor4 is separate is_a_b.",
+        "evidence_required": "Explicit direct-photon target with bottom treatment, generation-cut sensitivity and detector isolation relation."
+      },
+      "generation_cuts_and_cut_sensitivity": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No numerical threshold has demonstrated phase-space coverage/cut stability.",
+        "evidence_required": "Reviewed target-derived threshold choices followed by separately authorized finite sensitivity measurements."
+      },
+      "hard_scale_definition": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No selected central ME/PDF/shower scale identity.",
+        "evidence_required": "Exact central scale expression and correlated variation protocol with source witnesses."
+      },
+      "shower_settings_and_weight_interface": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Generic matching support does not bind exact flavour thresholds or native merging weights.",
+        "evidence_required": "Effective Pythia settings after header overrides, source event/weight/counter/normalization identities."
+      },
+      "resource_enforcement_and_counters": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Illustrative Phase10 caps are not approved and hard ME/trial/cycle/RAM enforcement is unverified.",
+        "evidence_required": "Reviewed process-group termination, kernel memory limit, aggregate CPU/wall/disk and native counter limits."
+      },
+      "physical_approval": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "This task permits source/existing-data validation only.",
+        "evidence_required": "Separate exact-source explicit human authorization in a fresh physical output directory."
+      },
+      "aggregate_future_CPU_seconds": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "No future aggregate CPU ceiling has been frozen; threads multiplied by walltime is not an approved CPU budget. Current Phase11 analysis ceiling is separate.",
+        "evidence_required": "A separately reviewed explicit finite aggregate CPU ceiling and enforceable process-group/native counter policy before physical approval."
+      },
+      "runtime_configuration_identity": {
+        "value": null,
+        "status": "BLOCKED",
+        "reason": "Installed MG5 runtime configuration raw SHA256 drifted after A02; whitespace-only serialization equivalence does not preserve exact file identity; writer unknown.",
+        "evidence_required": "Fresh independently reviewed exact runtime configuration byte identity and stable read-only preflight; never substitute reconstructed bytes or normalize a failed raw SHA."
+      }
+    },
+    "weight_contract": {
+      "status": "SIGNED_ALGEBRA_METHOD_ONLY_INTERFACE_NOT_VALIDATED",
+      "source_event_key": [
+        "dataset_uuid",
+        "original_source_ordinal",
+        "hard_event_sha256"
+      ],
+      "preserve": [
+        "LHE_IDWTUP_XWGTUP_SCALUP",
+        "original_and_selected_signed_sumW_sumW2",
+        "Pythia_native_weight",
+        "native_merging_weight",
+        "effective_combined_weight_definition",
+        "cross_section_units_and_integration_error",
+        "source_trials_accepted_rejected_veto_counters"
+      ],
+      "rules": [
+        "Keep all zero selection contributions in original-source N.",
+        "Do not infer normalization from retained count or discard negative weights.",
+        "Apply branching ratios once using exact decay convention.",
+        "Bind native mergingWeight operation and avoid double application.",
+        "Zero signed denominator is undefined, not zero uncertainty."
+      ],
+      "physical_signed_interface_validated": false
+    },
+    "integration_reporting": {
+      "required": [
+        "survey/refine grids and seeds",
+        "effective PDF/alpha_s/scales",
+        "reported error plus between-run dispersion",
+        "ME/trial/accept/reject/veto counters",
+        "unweighting efficiency and candidate truncation"
+      ],
+      "new_integral_executed": false
+    },
+    "independent_validation_protocol": [
+      "Source/model/restriction/PDF/member/threshold/card identity review.",
+      "Separate parser/process-only approval if needed; no launch or numeric ME evaluation.",
+      "Define IR target and validate cut applicability before physical interpretation.",
+      "Require enforceable aggregate caps and native counters; missing counter blocks execution.",
+      "Future authorized finite pilot must stop on first scientific/resource/output failure; no replacement or expansion.",
+      "Keep component separate; no physical total/exclusivity/fake calibration without closure."
+    ],
+    "stop_conditions": [
+      "source/grid/card hash mismatch",
+      "missing incompatible PDF/alpha_s/IR/weight identity",
+      "unreviewed matching scale or lost original-source denominator",
+      "resource counter absent or cap reached",
+      "scientific gate failure or unexpected output",
+      "historical overwrite or unapproved figures"
+    ],
+    "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+    "PHOTON_FAKE_RATE": "UNKNOWN",
+    "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+    "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+    "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+    "PHYSICAL_CLs": "NOT_EVALUATED",
+    "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+    "NEW_ME_CALLS": 0,
+    "NEW_INTEGRALS": 0,
+    "NEW_HARD_EVENTS": 0,
+    "NEW_PYTHIA_EVENTS": 0,
+    "NEW_DELPHES_EVENTS": 0,
+    "source_requirements": {
+      "MASSIVE_4F_BB_COMPONENT": {
+        "model_masses_flavours": {
+          "status": "SOURCE_SUPPORTED",
+          "reason": "Actual sm/restrict_default MB4.7 MC0 for A; sm-no_b_mass MB=MC=0 for B; source text only, parser unvalidated.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "installed_PDF_member": {
+          "status": "BLOCKED",
+          "reason": "No compatible selected member/grid/hash binding has been established for this candidate.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "alpha_s_threshold_binding": {
+          "status": "BLOCKED",
+          "reason": "Reference scale, running and threshold/backend/shower binding remain unresolved.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "photon_IR_target": {
+          "status": "BLOCKED",
+          "reason": "4F b coverage and detector mapping unresolved; 5F soft/collinear QCD multiplicity resolution also unresolved.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "generation_cut_definition": {
+          "status": "BLOCKED",
+          "reason": "No reviewed numerical generation cuts or sensitivity closure selected.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "hard_scale_definition": {
+          "status": "BLOCKED",
+          "reason": "No candidate-specific central scale expression has been frozen.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "ME_PS_interface": {
+          "status": "BLOCKED",
+          "reason": "A isolated LO+PS still requires frozen shower settings; B generic MLM/CKKW-L is not exact-process validation.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        },
+        "shower_and_weight_identity": {
+          "status": "BLOCKED",
+          "reason": "Effective QCD/QED/flavour settings and native signed/merging weight closure are unvalidated.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_a.json"
+          ]
+        }
+      },
+      "COMMON_5F_AA_JETS_COMPONENT": {
+        "model_masses_flavours": {
+          "status": "SOURCE_SUPPORTED",
+          "reason": "Actual sm/restrict_default MB4.7 MC0 for A; sm-no_b_mass MB=MC=0 for B; source text only, parser unvalidated.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "installed_PDF_member": {
+          "status": "BLOCKED",
+          "reason": "No compatible selected member/grid/hash binding has been established for this candidate.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "alpha_s_threshold_binding": {
+          "status": "BLOCKED",
+          "reason": "Reference scale, running and threshold/backend/shower binding remain unresolved.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "photon_IR_target": {
+          "status": "BLOCKED",
+          "reason": "4F b coverage and detector mapping unresolved; 5F soft/collinear QCD multiplicity resolution also unresolved.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "generation_cut_definition": {
+          "status": "BLOCKED",
+          "reason": "No reviewed numerical generation cuts or sensitivity closure selected.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "hard_scale_definition": {
+          "status": "BLOCKED",
+          "reason": "No candidate-specific central scale expression has been frozen.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "ME_PS_interface": {
+          "status": "BLOCKED",
+          "reason": "A isolated LO+PS still requires frozen shower settings; B generic MLM/CKKW-L is not exact-process validation.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        },
+        "shower_and_weight_identity": {
+          "status": "BLOCKED",
+          "reason": "Effective QCD/QED/flavour settings and native signed/merging weight closure are unvalidated.",
+          "evidence": [
+            "phase11_model_pdf_audit_02.json",
+            "phase11_family_ir_audit_03.json",
+            "analysis/phase11/config/candidate_b.json"
+          ]
+        }
+      }
+    },
+    "aggregate_future_CPU_seconds": null
+  },
+  "exact_process_status": "PARSER_NOT_VALIDATED",
+  "physical_pilot_executed": false,
+  "figure_publication_authorized": false
+}

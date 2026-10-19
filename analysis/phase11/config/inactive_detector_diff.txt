@@ -1,0 +1,51 @@
+# INACTIVE_REVIEW_DIFF_ONLY -- DO NOT SOURCE, DO NOT APPLY, DO NOT EXECUTE.
+# All lines are comments. No historical card is modified. No Delphes run allowed.
+# Source: Delphes 3.5.1, exact source witnesses/hashes in phase11_detector_source_trace.json.
+# Target future card: new copy of atlas_like_bbgg_baseline.tcl, never historical cards.
+# This is a SOURCE_SUPPORTED proposal; Tcl/parser/native runtime NOT VALIDATED.
+#
+# --- historical TreeWriter block
+# +++ future separately reviewed TreeWriter block
+# @@ module TreeWriter TreeWriter (append; keep every historical branch)
+# +  add Branch PhotonEfficiency/photons PhotonPreIsolation Photon
+# +  add Branch PhotonIsolation/photons PhotonPostIsolation Photon
+# +  add Branch ElectronEfficiency/electrons ElectronPreIsolation Electron
+# +  add Branch ElectronIsolation/electrons ElectronPostIsolation Electron
+# +  add Branch JetEnergyScale/jets JetPreOverlap Jet
+#
+# Semantics: TreeWriter stays LAST. Efficiency exports the SAME Candidate pointer.
+# Isolation mutates every input Candidate's IsolationVar/IsolationVarRhoCorr and
+# SumPtCharged/SumPtNeutral/SumPtChargedPU/SumPt BEFORE rejecting candidates.
+# Therefore PhotonPreIsolation records pre-selection MEMBERSHIP at TreeWriter
+# time, with calculated isolation components, including isolation failures.
+# It is NOT an immutable before-calculation snapshot and NOT pre-efficiency truth.
+# No duplicated Isolation module and no change to existing photon selection.
+# PhotonPostIsolation saves the accepted collection BEFORE overlap removal;
+# the historical Photon branch stays the UniqueObjectFinder output.
+# Electron analogues use the existing ElectronIsolation calculation.
+#
+# Native association already supported by existing branch classes:
+# Photon.Particles (TRefArray), Electron.Particle (TRef), Jet.Particles (TRefArray),
+# Jet.Constituents (TRefArray), plus existing Particle/Track/Tower branches.
+# Truth-reference set intersection is only a diagnostic source association.
+# It does NOT recreate arbitrary Candidate::Overlaps edges exactly.
+#
+# REQUIRED FUTURE WRITER CONTRACT -- NOT IMPLEMENTED BY THIS CARD DIFF:
+# Add a separately reviewed native-provenance writer that records event identity,
+# Candidate UID, collection role, parent-candidate UID edges, native Particle IDs,
+# pre/post isolation membership, and the exact recursive jet/photon overlap map
+# before UniqueObjectFinder discards candidates. Photon/Electron/Jet writers do
+# not preserve the original Candidate UID as an exact cross-branch identity.
+# Preserve the sorted branch ordinal independently of Candidate UID. Validate
+# joins, duplicate/empty references, rejected candidates, and ambiguous mapping.
+# A future reference readback must prove that references resolve and all input
+# candidates and overlap decisions have one-to-one provenance. Until then:
+# EXACT_OVERLAP_IDENTITY = BLOCKED_REQUIRES_REVIEWED_WRITER.
+#
+# Missing ATLAS observables remain missing: no tight/anti-tight shower-shape ID,
+# no calibrated conversion classification, no calibrated jet/electron fake rate.
+# Candidate IsFromConversion exists internally but is NOT copied to Photon v4;
+# saving the standard Photon class alone does not add that observable.
+# No status or truth-origin flag may be substituted for calibrated ATLAS ID.
+# PHOTON_FAKE_RATE = UNKNOWN. Additional branches alone do not calibrate it.
+# Parser/process/simulation checks need separate explicit human authorization.

@@ -1,0 +1,25 @@
+{
+  "label": "historical_reference_signal",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "simulation.hh_signal.campaign.validate_references"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 1.0089177440022468,
+  "cpu_seconds": 0.9216700000000012,
+  "peak_observed_process_group_RSS_bytes": 74489856,
+  "aggregate_observed_disk_bytes": 2490944,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

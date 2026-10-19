@@ -1,0 +1,1870 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "scope": "STATIC_TEXT_AND_GRID_IDENTITY_ONLY_NO_GENERATOR_IMPORT_OR_EXECUTION",
+  "status": "BLOCKED_PHASE11_PDF_OR_ALPHA_S",
+  "candidate": {
+    "schema_version": 1,
+    "candidate_id": "MASSIVE_4F_BB_COMPONENT",
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "execution_enabled": false,
+    "physical_approval": "NOT_AUTHORIZED",
+    "mg5_version": "3.5.16",
+    "model": "sm",
+    "restriction": "restrict_default.dat",
+    "bottom_mass_GeV": 4.7,
+    "charm_mass_GeV": 0,
+    "unrestricted_ufo_charm_default_GeV": 1.27,
+    "model_mass_status": "SOURCE_SUPPORTED_DEFAULT_RESTRICTION_NOT_PARSER_VALIDATED",
+    "initial_pdg_ids": [
+      21,
+      1,
+      -1,
+      2,
+      -2,
+      3,
+      -3,
+      4,
+      -4
+    ],
+    "process": "p4 p4 > b b~ a a QCD=2 QED=2",
+    "orders": {
+      "QCD_amplitude_maximum": 2,
+      "QED_amplitude_maximum": 2,
+      "leading_cross_section_power": "alpha_s^2 alpha_EM^2",
+      "status": "SOURCE_POWER_COUNTING_ONLY_PARSER_NOT_VALIDATED"
+    },
+    "pdf": {
+      "set_name": null,
+      "member": null,
+      "lhaid": null,
+      "grid_sha256": null,
+      "flavour_scheme": null,
+      "num_flavours": null,
+      "order_qcd": null,
+      "alpha_s_mz": null,
+      "alpha_s_order_qcd": null,
+      "alpha_s_flavour_scheme": null,
+      "alpha_s_num_flavours": null,
+      "alpha_s_thresholds_GeV": null,
+      "info_sha256": null,
+      "flavour_pdg_ids": null,
+      "alpha_s_reference_scale_GeV": null,
+      "alpha_s_type": null
+    },
+    "pdf_requirement": {
+      "flavour_scheme": null,
+      "num_flavours": 4,
+      "order_qcd": 0,
+      "alpha_s_order_qcd": 0,
+      "bottom_pdf_activation": false,
+      "alpha_s_flavour_scheme": null,
+      "alpha_s_num_flavours": 4,
+      "metadata_must_bind_member_payload": true,
+      "allowed_flavour_schemes": [
+        "fixed",
+        "variable"
+      ],
+      "allowed_alpha_s_flavour_schemes": [
+        "fixed",
+        "variable"
+      ],
+      "alpha_reference_scale_must_be_explicit": true,
+      "bottom_alpha_activation": false
+    },
+    "photon_ir": null,
+    "photon_ir_blocker": "PHOTON_IR_A_BOTTOM_COVERAGE_UNRESOLVED",
+    "generation_cuts": null,
+    "shower_settings": null,
+    "scale_definition": null,
+    "matching_scale_GeV": null,
+    "inclusive_background_total": false,
+    "physical_pilot_executed": false,
+    "zero_means_known_zero_only": true,
+    "status": "BLOCKED_PHASE11_PDF_OR_ALPHA_S",
+    "exact_process_validation": "PARSER_NOT_VALIDATED",
+    "null_reasons": {
+      "pdf.*": "No compatible maximum-four-active-flavour/no-bottom LO member payload and metadata found in explicitly bounded installed roots; catalogue entries are not payloads. PDF and alpha flavour schemes plus alpha reference scale require exact member evidence.",
+      "photon_ir": "maxjetflavor=4 makes installed LO Frixione sum omit bottom; finite bottom mass plus separately active drab needs a defined target, not universal isolation equivalence.",
+      "generation_cuts": "Requires candidate-specific all-QCD photon IR definition and reviewed acceptance rationale.",
+      "shower_settings": "Requires PDF/alpha_s threshold binding and reviewed finite-mass g->heavy treatment; no tune defaults are selected.",
+      "scale_definition": "No validated source-bound scale choice has been selected for this candidate.",
+      "matching_scale_GeV": "No matching prescription or numerical merging scale has been validated; isolated component only."
+    },
+    "provenance": {
+      "mg5_version": "MG5/VERSION:1",
+      "restriction": "MG5/models/import_ufo.py:227-228",
+      "bottom_mass_GeV": "MG5/models/sm/restrict_default.dat:18",
+      "charm_mass_GeV": "MG5/models/sm/restrict_default.dat:17",
+      "unrestricted_ufo_charm_default_GeV": "MG5/models/sm/parameters.py:133-139; not effective default restriction",
+      "process": "User Candidate A and Phase10 inactive proposal; not parsed or generated",
+      "pdf": "Phase11 explicit bounded inventory; source hashes emitted by audit_model_pdf.py",
+      "orders": "models/sm/coupling_orders.py and power counting; parser not executed"
+    }
+  },
+  "model_restrictions": {
+    "default": {
+      "MC_GeV": 0.0,
+      "MB_GeV": 4.7,
+      "model_card_aS": 0.118
+    },
+    "no_b_mass": {
+      "MC_GeV": 0.0,
+      "MB_GeV": 0.0,
+      "model_card_aS": 0.118
+    },
+    "c_mass": {
+      "MC_GeV": 1.55,
+      "MB_GeV": 4.7,
+      "model_card_aS": 0.118
+    }
+  },
+  "unrestricted_ufo_parameter_defaults": {
+    "aS": 0.118,
+    "MC": 1.27,
+    "MB": 4.7
+  },
+  "model_card_aS_is_selected_pdf_alpha_s": false,
+  "pdf_inventories": [
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/lib/Pdfdata",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/lib/Pdfdata",
+      "purpose": "actual MG5 built-in grid payloads",
+      "exists": true,
+      "maximum_depth": 0,
+      "files": [
+        {
+          "relative_path": "NNPDF23_lo_as_0119_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2195378,
+          "sha256": "372e1da9f61b7aca03c25884fd05ab47399809de578ac7ee30df0d09a5c99558"
+        },
+        {
+          "relative_path": "NNPDF23_lo_as_0130_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2195382,
+          "sha256": "5d7378dd34444682a01acbc7215caccf38dffe31b65786a922bb586aee4369b5"
+        },
+        {
+          "relative_path": "NNPDF23nlo_as_0119_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2195169,
+          "sha256": "e1ad3115d9bc36f4cdf43268138ab6c2efb9a4803bff376f493c85260181213e"
+        },
+        {
+          "relative_path": "cteq5l.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 134476,
+          "sha256": "8d7d234ec1b3b6c81f76f69e9b8a3114b487344963036bd882246e752a63ef4b"
+        },
+        {
+          "relative_path": "cteq5m.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 125607,
+          "sha256": "0c1585bb7e16eef45fef4b7275d206538a0aca157a93159b82dccdeeb3e6adbe"
+        },
+        {
+          "relative_path": "cteq6d.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219892,
+          "sha256": "25912796d9d954a0ee0c7cbc7b7d915c1edb2c378664eb4cc702479ccd39acc1"
+        },
+        {
+          "relative_path": "cteq6l.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219892,
+          "sha256": "8525243c99321fe64d5e8e9f223fd9106069d07bd12bdb14f4b99316e848873e"
+        },
+        {
+          "relative_path": "cteq6l1.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219850,
+          "sha256": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058"
+        },
+        {
+          "relative_path": "cteq6m.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219888,
+          "sha256": "570c8bda925461c5f15f877a24555d1be9cb17434fe347f8afe6c8724bac4470"
+        },
+        {
+          "relative_path": "mrsb.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 62054,
+          "sha256": "8e957739754db8a1584d25beb7eab00a55501f794dc38a5d20d539c4347de4ff"
+        },
+        {
+          "relative_path": "mrse.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 62054,
+          "sha256": "c8b4b7e4f6643563302971d1c9a2acd7bec217515ead22a586839125cab98e8a"
+        },
+        {
+          "relative_path": "mrst2002nlo.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 145632,
+          "sha256": "bec81dcb0093a68b44e6b15472bbe67c2b883fb59833529307d80a7f16688d4f"
+        }
+      ],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/vendor/SudGen",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/vendor/SudGen",
+      "purpose": "SudGen auxiliary directory; not an independent MG5 4F backend",
+      "exists": true,
+      "maximum_depth": 0,
+      "files": [
+        {
+          "relative_path": "MCmasses_PYTHIA8.inc",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 295,
+          "sha256": "0374ba4b1855d0dc1de74f8f68ecc990ffe93d289cda0e01041f3274c04aae94"
+        },
+        {
+          "relative_path": "NNPDF23_lo_as_0119_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/lib/Pdfdata/NNPDF23_lo_as_0119_qed_mem0.grid",
+          "bytes": 2195378,
+          "sha256": "372e1da9f61b7aca03c25884fd05ab47399809de578ac7ee30df0d09a5c99558"
+        },
+        {
+          "relative_path": "NNPDF23_lo_as_0130_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/lib/Pdfdata/NNPDF23_lo_as_0130_qed_mem0.grid",
+          "bytes": 2195382,
+          "sha256": "5d7378dd34444682a01acbc7215caccf38dffe31b65786a922bb586aee4369b5"
+        },
+        {
+          "relative_path": "NNPDF23nlo_as_0119_qed_mem0.grid",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/lib/Pdfdata/NNPDF23nlo_as_0119_qed_mem0.grid",
+          "bytes": 2195169,
+          "sha256": "e1ad3115d9bc36f4cdf43268138ab6c2efb9a4803bff376f493c85260181213e"
+        },
+        {
+          "relative_path": "NNPDFDriver.f",
+          "status": "BROKEN_SYMLINK",
+          "link_target": "../../Template/NLO/Source/PDF/NNPDFDriver.f",
+          "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/NLO/Source/PDF/NNPDFDriver.f",
+          "bytes": null,
+          "sha256": null,
+          "null_reason": "target absent; no payload bytes available"
+        },
+        {
+          "relative_path": "PDF_test.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2270,
+          "sha256": "4cdd2aa2c04324019e82e89ff92c664c22bbbc85139f9f1f913223c031b2d58d"
+        },
+        {
+          "relative_path": "README_grid_clust",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 5245,
+          "sha256": "b295041e6930e036b83f3b101be2ea61352285397ed3788f60cb9c6f378fd4de"
+        },
+        {
+          "relative_path": "abend.f",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/Source/CERNLIB/abend.f",
+          "bytes": 405,
+          "sha256": "3f82a246769f71f4181fb459a0cdefb1f6f3426cbbbb47ac093a53dad17e87f4"
+        },
+        {
+          "relative_path": "condor_submit_gridsudgen.sh",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1319,
+          "sha256": "845639dd046cb1a45732bf999a6b3b17955b56dea3a260350a6543c9a24e603f"
+        },
+        {
+          "relative_path": "csub-local.sh",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 3135,
+          "sha256": "b227bc3905768518e0ab2dce82e0a51f01875e3e5ccf1423d427d30659aac453"
+        },
+        {
+          "relative_path": "dfint.f",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/Source/CERNLIB/dfint.f",
+          "bytes": 2593,
+          "sha256": "61eff004b8fb8390324eba77f2b2644a723f09d7412af63e4b74145c6b2b1ef3"
+        },
+        {
+          "relative_path": "grid_combine.sh",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 342,
+          "sha256": "6849697d7ab93d6c24b55951dd0b37141802d8be2ffda1f8086a4390d64928f1"
+        },
+        {
+          "relative_path": "gridsudcomb.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 15559,
+          "sha256": "6e030d5a7193eb4625c31bedb8a90ffe14558283476e03c7997dddc853d41fe0"
+        },
+        {
+          "relative_path": "gridsudcomb2.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 19357,
+          "sha256": "6de39916392a12237bdbdbc5ae3968f80b17a90cd7d843c42b44faf0c2e34b35"
+        },
+        {
+          "relative_path": "gridsudgen.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 20323,
+          "sha256": "438454cd53c2e7152f02eb536fbe30aff05949d3b6da3261fd740159ea09b188"
+        },
+        {
+          "relative_path": "gridsudgen2.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 14296,
+          "sha256": "1ec174fecaba41ccc9027a1a284290a81184efbc5698db6adb366a5725e08954"
+        },
+        {
+          "relative_path": "gridsudgen_MPI.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 23845,
+          "sha256": "15fc152895ad0de02da09150bd4f97cb109d91b4f95092b074edfc56d05790da"
+        },
+        {
+          "relative_path": "gridsudgen_clust.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 12561,
+          "sha256": "21e7ae29235d4b29c6015c92e09873c67056b33d37181451066db568f0cf7a6b"
+        },
+        {
+          "relative_path": "gridsudgen_fromlog.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 18119,
+          "sha256": "7ce2fced7a3a14e5e7788b21ac2e0b53f1c0bd400bef90958a5b2b7bec5e80e6"
+        },
+        {
+          "relative_path": "gridsudgen_sep.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 21595,
+          "sha256": "c683d34949eab46a95580294eff108e334194013d7fb2bfcd2e79efc6e4b87eb"
+        },
+        {
+          "relative_path": "input",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 35,
+          "sha256": "527dfe6a92218440e28e25468aaef8b73e8c61eb4a4a6d01a80e27b302281f74"
+        },
+        {
+          "relative_path": "kerset.f",
+          "status": "FILE",
+          "link_target": "../../Template/NLO/Source/CERNLIB/kerset.f",
+          "bytes": 3952,
+          "sha256": "34c45d8a70bd4d66aa561537651e0456972435a9b0756a495fa0a17734dfd226"
+        },
+        {
+          "relative_path": "makefile",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 3129,
+          "sha256": "882043ef96b32c757d6dfaa4fdb81115e2d5803bafa13347d389aa2d1930d05d"
+        },
+        {
+          "relative_path": "opendata.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2589,
+          "sha256": "bfaa0cd1c1d12b64785d833ae35e6dad093d80c45a5d26613e9fb6fc4e90b1c2"
+        },
+        {
+          "relative_path": "ps_interface.cc",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 5098,
+          "sha256": "3c34ef3afcea1d47a0bb9839479ca785889dc4d775e58409324f43584c7010cf"
+        },
+        {
+          "relative_path": "pythia_interface_for_sudgen.cc",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4218,
+          "sha256": "975343f8f89732fde62d502f1b8631fbe3d29914d97548946fdbaa36081bbbd7"
+        },
+        {
+          "relative_path": "pythia_path.py",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1348,
+          "sha256": "12196144a38e51a2dad306beb75d2230b7c352cfcc79faab53c2dd1c62db9c60"
+        },
+        {
+          "relative_path": "run_gridsudgen.sh",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 159,
+          "sha256": "3cbffb05248fd112273b118a736b4cb6b58d7639c5aba5bc8f0554a1c9690cc6"
+        },
+        {
+          "relative_path": "sub_jobs.sge",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 821,
+          "sha256": "08ab99e0bee4099acda2c25abbbb99bbee73a81e4acfeaa4ea118a032fdfb291"
+        },
+        {
+          "relative_path": "sudakov.f",
+          "status": "FILE",
+          "link_target": "sudakov_template.f",
+          "bytes": 2648508,
+          "sha256": "dc5894b2fd611f7c6cf0a1b3ad7c8705ab652ad8070d4ed44de4b43447b8d0e9"
+        },
+        {
+          "relative_path": "sudakov_r515_PDFmode0.f.gz",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 286199,
+          "sha256": "55d18d010c9b3939e4117629b2daf120991a55a6b62a44bb72ef16082cce5a92"
+        },
+        {
+          "relative_path": "sudakov_r515_PDFmode1.f.gz",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 296393,
+          "sha256": "a59f3a7ad1396d74175120c957fa564991d614f064d482e07839b4b1969463a6"
+        },
+        {
+          "relative_path": "sudakov_r515_PDFmode2.f.gz",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 284177,
+          "sha256": "b360d1b9fe0d8db6d572231fb1681688ea48235da5069d5fed516235d85c18ca"
+        },
+        {
+          "relative_path": "sudakov_template.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 2648508,
+          "sha256": "dc5894b2fd611f7c6cf0a1b3ad7c8705ab652ad8070d4ed44de4b43447b8d0e9"
+        },
+        {
+          "relative_path": "testgrid.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 9739,
+          "sha256": "9e959b2da6467021597d4afdc07e88fd7d143f091dacc072d6468c46848c6afd"
+        },
+        {
+          "relative_path": "testgrid2.f",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 21281,
+          "sha256": "2af6cca700c8be0e80be6468a6c745ea2264ffdc2d48a1c81f222727bcb1276e"
+        }
+      ],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/pdfdata",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/pdfdata",
+      "purpose": "Pythia internal grids; not assumed MG5-compatible",
+      "exists": true,
+      "maximum_depth": 0,
+      "files": [
+        {
+          "relative_path": "CT14qed_proton_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1107785,
+          "sha256": "6014ff899b1bd2fe7f0c6da8cf47d96f32dec4645bdbd14ac883d1ef2e50ecf9"
+        },
+        {
+          "relative_path": "EPS09LOR_208",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 5901873,
+          "sha256": "7fc9ec084d67b1c98323716b03211a10d741d1ece7158d2c059d57892b2b6193"
+        },
+        {
+          "relative_path": "GJR07LOproton.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4345009,
+          "sha256": "0e04155a95a44ca9bb60ef8bf6efbbc160313129fe962841e7d1aee8bdf364da"
+        },
+        {
+          "relative_path": "GKG18_DPDF_FitA_LO_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4491460,
+          "sha256": "57c19523cfd3d43f71d6780a699e442636af287a5e326dcab8c27816f3c48731"
+        },
+        {
+          "relative_path": "GKG18_DPDF_FitA_NLO_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4491460,
+          "sha256": "5a4f51f8b3d52ed3e36884732e4feff46f8d096ef57c7e30faddf75b9ec41a4f"
+        },
+        {
+          "relative_path": "GKG18_DPDF_FitB_LO_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4491460,
+          "sha256": "fcbbcada81b168672fd0eb021f3419fa773772d1424f70d6082161e4f75a2e0c"
+        },
+        {
+          "relative_path": "GKG18_DPDF_FitB_NLO_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4491460,
+          "sha256": "5bf4a5ae96fa53864494d9b06cc8878fdffcdd39881b0d57ac65f11ef1216bdd"
+        },
+        {
+          "relative_path": "GRS99LOKplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 4345009,
+          "sha256": "2130755b85767f4d1dcfe2c81965b9502fe8aac19cb2499caaefc5317a708d8a"
+        },
+        {
+          "relative_path": "GRS99LOpi.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 208878,
+          "sha256": "99434fb335d9c5bd91beff36049eb5caad22ff15331c4d8ccc61c9b47fb33bb9"
+        },
+        {
+          "relative_path": "NNPDF23_lo_as_0119_qed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1052028,
+          "sha256": "9303fa5d639cae20c08ba26d6dacb8419be5c8ff4ce7eb450000d21f3dc9334e"
+        },
+        {
+          "relative_path": "NNPDF23_lo_as_0130_qed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1052028,
+          "sha256": "5ac9499dcf7f6fe0a363f89f9320782f412eb91732725f7c435f0e2c119e2bf0"
+        },
+        {
+          "relative_path": "NNPDF23_nlo_as_0119_qed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 934672,
+          "sha256": "8315541674b604fe82ba900436255551fda350c98fdd4d1190b398ed2423accc"
+        },
+        {
+          "relative_path": "NNPDF23_nnlo_as_0119_qed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 934672,
+          "sha256": "a6d23361a7292c4a14312d96c0ac5d6bf0543577ab2b4bc42d0d12de48aed753"
+        },
+        {
+          "relative_path": "NNPDF31_lo_as_0118_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1257508,
+          "sha256": "911e647f0a10a7131294be8830a5049e1c9f08c5bb2341828e3cd3d885f576d9"
+        },
+        {
+          "relative_path": "NNPDF31_lo_as_0130_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1257508,
+          "sha256": "3a5aa9800b8c0ee7ea324eb680f42b0f3d6bba4ba6c87dcea25eb7262ed3535a"
+        },
+        {
+          "relative_path": "NNPDF31_nlo_as_0118_luxqed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1370014,
+          "sha256": "bf2795712ada50f3761d6aaf32b94caffcd3f1ac48e33b49f8556dfd9364232f"
+        },
+        {
+          "relative_path": "NNPDF31_nnlo_as_0118_luxqed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1370014,
+          "sha256": "fad21eefad6fda087b71ba0ff2ce130649ddec05274bf693f961c8fa9507caa9"
+        },
+        {
+          "relative_path": "NNPDF31sx_nlonllx_as_0118_LHCb_luxqed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1287906,
+          "sha256": "0b4a9baca4b5d60207479add0f83d521ee4e6453fb61f9375548143b5139671c"
+        },
+        {
+          "relative_path": "NNPDF31sx_nnlonllx_as_0118_LHCb_luxqed_0000.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 1287754,
+          "sha256": "864ecf9bf99128948356cf27ea9c84d81668413894bccadfd5b1f68d7ed04382"
+        },
+        {
+          "relative_path": "SU21Bcplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "e4b9e367451e8dc5d4fa110187c003be88db034c9c132294b35a3efc73079372"
+        },
+        {
+          "relative_path": "SU21Bplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "4def179c89ffee48d17d1b54a36eaf7f0d9e3e4f9efdb488686c4de638f788c0"
+        },
+        {
+          "relative_path": "SU21Bszero.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "4679f2807dc17ea8bbd59c7c74726ad8abf75171492eaf8d89af2afd9896b808"
+        },
+        {
+          "relative_path": "SU21Dsplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "335e66733958b0e010965fd8274931af27ad2aac4d5ba0def67062c857ec7b8c"
+        },
+        {
+          "relative_path": "SU21Dzero.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "d7a560aeae06a1496532cfa3c499330717b9e9174c5f757e7dc7265566288b0d"
+        },
+        {
+          "relative_path": "SU21Jpsi.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 164422,
+          "sha256": "01a44796f0ef2aed5db7e32a3f998ce5d35f6cdecc9c4983a043a31ec7979bd4"
+        },
+        {
+          "relative_path": "SU21Kplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "cf2e92da7bb72a32c3bd070b6af2b085dd86e4997c3449b8dd643bc98854c076"
+        },
+        {
+          "relative_path": "SU21Omega.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "7cd2f2535cf2d3ab890d1c309a291f643aee82dc87a239552b2d06883290354c"
+        },
+        {
+          "relative_path": "SU21Omegab.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "bdb7a130fa2bbb04298b01a259483cee99ad552c0b575273ec4b1d8d29fb85e7"
+        },
+        {
+          "relative_path": "SU21Omegac.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "c30b280a3e087ee93481f8fbc0925d0105b386bf4225f5c0d23d64f5324878f7"
+        },
+        {
+          "relative_path": "SU21Sigmabplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "69154dd46b267d125dca9c7e77f28ac58db84e00268f9f6d667b3c72a42a933b"
+        },
+        {
+          "relative_path": "SU21Sigmacplusplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "2afbcac6c7c46543b2e300dd5af16bb1e1931edfa66423df85482f6a57f134e3"
+        },
+        {
+          "relative_path": "SU21Sigmaplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "15109b8c77384e4dc92466ab21931a099f9b1edfbfd4757d97e9e4bd44cd0a29"
+        },
+        {
+          "relative_path": "SU21Upsilon.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 164422,
+          "sha256": "6d856a6031f665f16195afc3d63189daec184059498c7de8ca2fe9cba45c2803"
+        },
+        {
+          "relative_path": "SU21Xibzero.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "fafca2b7616b1565a982227c926cbc26e375b2f238bfa744e9015e1d8ced5528"
+        },
+        {
+          "relative_path": "SU21Xicplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "60d778e848841a2bbdb9fff304c995c891f86288544b4af584de4f9a430754c6"
+        },
+        {
+          "relative_path": "SU21Xizero.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "3ae5f4243adb4360d9f0f9033e21944e29c666ba094f9f0fa8d7a742224c6a7d"
+        },
+        {
+          "relative_path": "SU21eta.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 164422,
+          "sha256": "c21cfe2ca99c4b27f44a47b98a80189e27ba08e817864e593feaec70decdb281"
+        },
+        {
+          "relative_path": "SU21phi.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 164422,
+          "sha256": "073f3bfe3f9c08f437d95e0c78d54e0bf84ea9c3124cb77f30a1ea17a8418e15"
+        },
+        {
+          "relative_path": "SU21piplus.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "e979349aa01d08b60bb844dfba7bd89c5bf0e5aa0e08d30df606385d8f0645a8"
+        },
+        {
+          "relative_path": "SU21proton.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 165346,
+          "sha256": "74c5f1c5b1b978deb07e978dc6ec11bf8c65fa041db0d8d1f1b4bfc3a421e121"
+        },
+        {
+          "relative_path": "ct09mc1.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 506771,
+          "sha256": "dd63e683cbbf85ed2f062397bda97492c711a85fd9dd2d6f8d8d6e4d1f738a48"
+        },
+        {
+          "relative_path": "ct09mc2.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 506771,
+          "sha256": "ac156f4b2430e751958974760be4f71906ab89a0e811830bca575cc24143a380"
+        },
+        {
+          "relative_path": "ct09mcs.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 506807,
+          "sha256": "c448cbd57d06592f798679aa12fc5d1f43e012caf43be9c831311f6beed9ea0a"
+        },
+        {
+          "relative_path": "cteq6l.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219892,
+          "sha256": "8525243c99321fe64d5e8e9f223fd9106069d07bd12bdb14f4b99316e848873e"
+        },
+        {
+          "relative_path": "cteq6l1.tbl",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 219850,
+          "sha256": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058"
+        },
+        {
+          "relative_path": "ctq66.00.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 400910,
+          "sha256": "8c31b12d5a33632fd6f4d8a0b4b59c86e75bfcf5b8473b5b6ef7e9afec5a513d"
+        },
+        {
+          "relative_path": "mrstlostar.00.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 329977,
+          "sha256": "f265bd2eae169532570b2448c7600be44d4c4598de2e1cec8e5eba9148b20c25"
+        },
+        {
+          "relative_path": "mrstlostarstar.00.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 333011,
+          "sha256": "4cfd9612338c108e8a0614d7951876769eab57664403f3ebaebb0ad5d849075e"
+        },
+        {
+          "relative_path": "mstw2008lo.00.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 329976,
+          "sha256": "73cd19622929d3a70b78b6c2f3c6f586b50acdf92e98d635fa92ff0ff83f65a2"
+        },
+        {
+          "relative_path": "mstw2008nlo.00.dat",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 329977,
+          "sha256": "70a92aca0b689fc9be25c58e96dbab43d6c491f311fa828c6db9d973112ec6de"
+        },
+        {
+          "relative_path": "pomH1FitA.data",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 86419,
+          "sha256": "5b4935ddd63453ca4bb6053aaeda89e03ae710966d06044fe49ec685795ed3de"
+        },
+        {
+          "relative_path": "pomH1FitB.data",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 86419,
+          "sha256": "08cdc22f7681b791105b86793a603c438d5a7c2bd053e59fd5cf953230474f94"
+        },
+        {
+          "relative_path": "pomH1FitBlo.data",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 85223,
+          "sha256": "c7bc4f565f5eff856a3225d1763bdb69adb172fbfbf46eaec18158b2c8d09b4e"
+        },
+        {
+          "relative_path": "pomH1Jets.data",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 350164,
+          "sha256": "1065eb94aca955178aa92544496c71468c5241842a5e0b6b1ab5cc173abc811c"
+        },
+        {
+          "relative_path": "pomactwb14.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 65842,
+          "sha256": "c13dbe3c4b890c9fd7e3e9dcb2ba8069348ecdbdf1d6fa468beb31b6324b18a9"
+        },
+        {
+          "relative_path": "pomactwd14.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 65842,
+          "sha256": "7c210567a320af3f3cc1b12071b4714319a560a074f539be25d90edcb2b33b87"
+        },
+        {
+          "relative_path": "pomactwd19.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 65842,
+          "sha256": "5252e59982ec938537323dd4e8fea815430c0ed50ce44fd3037001c098559ee3"
+        },
+        {
+          "relative_path": "pomactwsg14.pds",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 65843,
+          "sha256": "be49f813b873c99a2975a2523e78912d8c925d5a3089136584173f5fae876f4e"
+        }
+      ],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF",
+      "purpose": "installed LHAPDF configured data root",
+      "exists": true,
+      "maximum_depth": 2,
+      "files": [
+        {
+          "relative_path": "lhapdf.conf",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 220,
+          "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+        },
+        {
+          "relative_path": "pdfsets.index",
+          "status": "FILE",
+          "link_target": null,
+          "bytes": 46870,
+          "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+        }
+      ],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/.local/share/LHAPDF",
+      "resolved_path": "/home/btu/.local/share/LHAPDF",
+      "purpose": "user-local conventional LHAPDF root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/.local/share/lhapdf",
+      "resolved_path": "/home/btu/.local/share/lhapdf",
+      "purpose": "lowercase conventional LHAPDF root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/.lhapdf",
+      "resolved_path": "/home/btu/.lhapdf",
+      "purpose": "user conventional LHAPDF root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/usr/local/share/LHAPDF",
+      "resolved_path": "/usr/local/share/LHAPDF",
+      "purpose": "system conventional LHAPDF root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/usr/share/LHAPDF",
+      "resolved_path": "/usr/share/LHAPDF",
+      "purpose": "system conventional LHAPDF root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/HEPTools/lhapdf6/share/LHAPDF",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/HEPTools/lhapdf6/share/LHAPDF",
+      "purpose": "MG5 HEPTools conventional data root",
+      "exists": false,
+      "maximum_depth": 2,
+      "files": [],
+      "untraversed_symlink_directories": [],
+      "depth_limit_directories": []
+    }
+  ],
+  "pdf_search_environment": {
+    "LHAPDF_DATA_PATH": null,
+    "LHAPATH": null
+  },
+  "inventory_scope_limit": "Explicit configured/conventional roots only; not a proof about every filesystem path or unconfigured archive",
+  "compatible_installed_4f_pdf": null,
+  "compatible_4f_pdf_member": null,
+  "compatible_4f_lhaid": null,
+  "compatible_4f_grid_sha256": null,
+  "catalogued_cteq5f4": {
+    "grid_filename": "cteq5f4.tbl",
+    "grid_present_in_mg5_backend": false,
+    "catalog_alpha_s_mz": 0.112,
+    "catalog_running_loops": 2,
+    "selected": false,
+    "backend_branch_active": false,
+    "reason": "catalogue entry is not installed payload; cteq5f4 pdfwrap branch is commented out; NLO alpha source is not silently accepted for proposed LO definition"
+  },
+  "catalogued_future_4f_candidates": [
+    "CT14lo_NF4",
+    "NNPDF30_lo_as_0130_nf_4"
+  ],
+  "future_4f_candidates_selected_or_downloaded": false,
+  "builtin_cteq6l1_diagnostic_not_substitution": {
+    "pdf_header": {
+      "order_loops": 1,
+      "maximum_flavours": 5,
+      "lambda5_GeV": 0.1652,
+      "quark_mass_parameters_GeV": {
+        "down": 0.0,
+        "up": 0.0,
+        "strange": 0.2,
+        "charm": 1.3,
+        "bottom": 4.5,
+        "top": 180.0
+      },
+      "maximum_pdf_parton_flavour": 5
+    },
+    "backend_alpha_s_mz": 0.13,
+    "backend_running_loops": 1,
+    "backend_alpha_s_threshold_defaults_GeV": {
+      "charm": 1.42,
+      "bottom": 4.7
+    },
+    "backend_alpha_s_maximum_flavours": 5,
+    "threshold_identity": "NOT_IDENTICAL_PDF_1P3_4P5_VS_BACKEND_DEFAULT_1P42_4P7",
+    "future_generated_effective_threshold_binding": null,
+    "interpretation": "PDF evolution mass parameters, model pole masses and alpha_s matching thresholds are distinct; nonidentity is a review item, not alone a universal inconsistency theorem",
+    "used_for_candidate_a": false
+  },
+  "future_lhapdf_alpha_binding": {
+    "source_supported_interface": "ALPHAS(Q) -> alphasPDF(Q) -> active_member.alphasQ(Q)",
+    "actual_4f_member_bound": false,
+    "library_or_generator_executed": false
+  },
+  "precise_missing_requirement": "Reviewed installed LO maximum-Nf=4/no-bottom proton PDF member payload plus .info/member metadata and SHA256, LHAID/member identity, alpha_s reference value AND reference scale/one-loop maximum-four-flavour evolution and threshold policy, a proven MG5 backend binding; no bottom-PDF activation; independent review of mass/scale/IR compatibility",
+  "blockers": [
+    "PDF_METADATA_MISSING:set_name",
+    "PDF_METADATA_MISSING:member",
+    "PDF_METADATA_MISSING:lhaid",
+    "PDF_METADATA_MISSING:grid_sha256",
+    "PDF_METADATA_MISSING:info_sha256",
+    "PDF_METADATA_MISSING:flavour_pdg_ids",
+    "PDF_METADATA_MISSING:flavour_scheme",
+    "PDF_METADATA_MISSING:num_flavours",
+    "PDF_METADATA_MISSING:order_qcd",
+    "PDF_METADATA_MISSING:alpha_s_mz",
+    "PDF_METADATA_MISSING:alpha_s_order_qcd",
+    "PDF_METADATA_MISSING:alpha_s_flavour_scheme",
+    "PDF_METADATA_MISSING:alpha_s_num_flavours",
+    "PDF_METADATA_MISSING:alpha_s_thresholds_GeV",
+    "PDF_METADATA_MISSING:alpha_s_reference_scale_GeV",
+    "PDF_METADATA_MISSING:alpha_s_type",
+    "UNRESOLVED_PHOTON_IR",
+    "UNRESOLVED_GENERATION_CUTS",
+    "UNRESOLVED_SHOWER_SETTINGS",
+    "UNRESOLVED_SCALE_DEFINITION"
+  ],
+  "source_identity": [
+    {
+      "path": "/home/btu/opt/mg5amcnlo/VERSION",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/VERSION",
+      "bytes": 35,
+      "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c",
+      "witnesses": [
+        {
+          "line": 1,
+          "text": "version = 3.5.16"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/import_ufo.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/import_ufo.py",
+      "bytes": 127324,
+      "sha256": "d030835ea14a700ab40c29e4e2fb73df4d7f4fd846cf4ba22db3589a14549a38",
+      "witnesses": [
+        {
+          "line": 227,
+          "text": "        if restrict and os.path.exists(os.path.join(model_path,'restrict_default.dat')):"
+        },
+        {
+          "line": 228,
+          "text": "            restrict_file = os.path.join(model_path,'restrict_default.dat')"
+        },
+        {
+          "line": 452,
+          "text": "    #if default and os.path.exists(os.path.join(model_path, 'restrict_default.dat')):"
+        },
+        {
+          "line": 453,
+          "text": "    #    restrict_file = os.path.join(model_path, 'restrict_default.dat') "
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/parameters.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/parameters.py",
+      "bytes": 15693,
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+      "witnesses": [
+        {
+          "line": 77,
+          "text": "ymc = Parameter(name = 'ymc',"
+        },
+        {
+          "line": 80,
+          "text": "                value = 1.27,"
+        },
+        {
+          "line": 85,
+          "text": "ymb = Parameter(name = 'ymb',"
+        },
+        {
+          "line": 133,
+          "text": "MC = Parameter(name = 'MC',"
+        },
+        {
+          "line": 136,
+          "text": "               value = 1.27,"
+        },
+        {
+          "line": 149,
+          "text": "MB = Parameter(name = 'MB',"
+        },
+        {
+          "line": 152,
+          "text": "               value = 4.7,"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_default.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_default.dat",
+      "bytes": 1437,
+      "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53",
+      "witnesses": [
+        {
+          "line": 11,
+          "text": "    3 1.180000e-01 # aS "
+        },
+        {
+          "line": 17,
+          "text": "    4 0.000000e+00 # MC "
+        },
+        {
+          "line": 18,
+          "text": "    5 4.700000e+00 # MB "
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_no_b_mass.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_no_b_mass.dat",
+      "bytes": 1438,
+      "sha256": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+      "witnesses": [
+        {
+          "line": 17,
+          "text": "    4 0.000000e+00 # MC "
+        },
+        {
+          "line": 18,
+          "text": "    5 0.000000e+00 # MB "
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_c_mass.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_c_mass.dat",
+      "bytes": 1437,
+      "sha256": "69618093a3ab854b954dd7ceb4df4e0775324be736b581ef0694bc19c1077ee6",
+      "witnesses": [
+        {
+          "line": 17,
+          "text": "    4 1.550000e+00 # MC "
+        },
+        {
+          "line": 18,
+          "text": "    5 4.700000e+00 # MB "
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/particles.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/particles.py",
+      "bytes": 10444,
+      "sha256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414",
+      "witnesses": []
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/coupling_orders.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/coupling_orders.py",
+      "bytes": 443,
+      "sha256": "c89fc6f38d118a50a1e562da8653a2ccc96a9e00be22696bf5fb771a4df313b4",
+      "witnesses": [
+        {
+          "line": 9,
+          "text": "QCD = CouplingOrder(name = 'QCD',"
+        },
+        {
+          "line": 11,
+          "text": "                    hierarchy = 1)"
+        },
+        {
+          "line": 13,
+          "text": "QED = CouplingOrder(name = 'QED',"
+        },
+        {
+          "line": 15,
+          "text": "                    hierarchy = 2)"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/PDF/pdf_list.txt",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/PDF/pdf_list.txt",
+      "bytes": 4297,
+      "sha256": "554cfd7859541a5364716cf7228f75fc52fc3bd72029ebfb72e964baebd066d5",
+      "witnesses": [
+        {
+          "line": 43,
+          "text": " CTEQ6L1           cteq6l1     cteq6l1.tbl        0.130          1"
+        },
+        {
+          "line": 52,
+          "text": " CTEQ5F4           cteq5f4     cteq5f4.tbl        0.112          2"
+        },
+        {
+          "line": 75,
+          "text": " NNPDF23LO         nn23lo      NNPDF23_lo_as_0119_qed_mem0.grid  0.119  2"
+        },
+        {
+          "line": 76,
+          "text": " NNPDF23LO1        nn23lo1     NNPDF23_lo_as_0130_qed_mem0.grid  0.130  1"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/PDF/pdfwrap.f",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/PDF/pdfwrap.f",
+      "bytes": 10277,
+      "sha256": "32164b7098c60d94a3985781aba0ed0b348e3acbf1fe860c153227253c834638",
+      "witnesses": [
+        {
+          "line": 13,
+          "text": "      nloop=2 ! NLO running unless set otherwise"
+        },
+        {
+          "line": 113,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 116,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 119,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 122,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 124,
+          "text": "c      asmz=0.130d0"
+        },
+        {
+          "line": 125,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 144,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 154,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 179,
+          "text": "C   7    CTEQ5F4  Nf=4 FixedFlavorNumber  0.112     309   XXX    cteq5f4.tbl"
+        },
+        {
+          "line": 194,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 197,
+          "text": "c      nloop=1"
+        },
+        {
+          "line": 207,
+          "text": "c      elseif (pdlabel .eq. 'cteq5f4') then"
+        },
+        {
+          "line": 220,
+          "text": "C   4    CTEQ6L1  Leading Order           0.130**   215** 165    cteq6l1.tbl"
+        },
+        {
+          "line": 222,
+          "text": "C Note:CTEQ6L1 uses the LO running alpha_s "
+        },
+        {
+          "line": 233,
+          "text": "      elseif (pdlabel .eq. 'cteq6l1') then"
+        },
+        {
+          "line": 234,
+          "text": "      asmz=0.130d0"
+        },
+        {
+          "line": 235,
+          "text": "      nloop=1"
+        },
+        {
+          "line": 255,
+          "text": "      asmz=0.130d0"
+        },
+        {
+          "line": 273,
+          "text": "c     . 'cteq6_m,','cteq6_d,','cteq6_l,','cteq6l1,',"
+        },
+        {
+          "line": 278,
+          "text": "c\t   write(6,*) 'Setting it to default cteq6l1'"
+        },
+        {
+          "line": 279,
+          "text": "c       pdlabel='cteq6l1'"
+        },
+        {
+          "line": 280,
+          "text": "c       asmz=0.130d0"
+        },
+        {
+          "line": 281,
+          "text": "c       nloop=1"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/alfas_functions.f",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/alfas_functions.f",
+      "bytes": 7877,
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d",
+      "witnesses": [
+        {
+          "line": 96,
+          "text": "      PARAMETER(NF5=5,NF4=4,NF3=3)"
+        },
+        {
+          "line": 100,
+          "text": "      DATA CMASS,BMASS/1.42D0,4.7D0/  ! HEAVY QUARK MASSES FOR THRESHOLDS"
+        },
+        {
+          "line": 141,
+          "text": "      IF (Q  .LT. BMASS) THEN"
+        },
+        {
+          "line": 142,
+          "text": "           IF (Q  .LT. CMASS) THEN"
+        },
+        {
+          "line": 151,
+          "text": "      CALL NEWTON1(T,asmz,AS_OUT,NLOOP,NF5)"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/alfas_functions_lhapdf.f",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/alfas_functions_lhapdf.f",
+      "bytes": 3944,
+      "sha256": "7b9439bb225674fa3126daa993a62b5b32b6201ed2a6875003be2ad820deb7c2",
+      "witnesses": [
+        {
+          "line": 75,
+          "text": "C     wrapper to the lhapdf alphaS"
+        },
+        {
+          "line": 83,
+          "text": "      ALPHAS=alphasPDF(Q)"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/Common/Source/PDF/Ctq6Pdf.f",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/Common/Source/PDF/Ctq6Pdf.f",
+      "bytes": 15036,
+      "sha256": "faaae1776c4228066687642b39d350ba745f3076c21007516d82dee88601d646",
+      "witnesses": [
+        {
+          "line": 33,
+          "text": "C   The matching alpha_s between 4 and 5 flavors takes place at Q=4.5 GeV,"
+        },
+        {
+          "line": 152,
+          "text": "      Nfl = Nint(Fl)"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+      "bytes": 41276,
+      "sha256": "ced11dfb36e8ca939029ce2aef0bd0173ed2da6822f9ec9cda341b75ae7c880a",
+      "witnesses": [
+        {
+          "line": 429,
+          "text": "    oas = lhapdf_amc::ACTIVESETS[nset].activemember()->info().get_entry_as<int>(\"AlphaS_OrderQCD\");"
+        },
+        {
+          "line": 441,
+          "text": "  double alphaspdfm_(const int& nset, const double& Q){"
+        },
+        {
+          "line": 444,
+          "text": "    return lhapdf_amc::ACTIVESETS[nset].activemember()->alphasQ(Q);"
+        },
+        {
+          "line": 451,
+          "text": "    return alphaspdfm_(nset1, Q);"
+        },
+        {
+          "line": 970,
+          "text": "  return ACTIVESETS[nset].activemember()->alphasQ(Q);"
+        },
+        {
+          "line": 988,
+          "text": "  return ACTIVESETS[nset].activemember()->info().get_entry_as<int>(\"AlphaS_OrderQCD\", -1);"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/Common/Source/PDF/NNPDFDriver.f",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/Common/Source/PDF/NNPDFDriver.f",
+      "bytes": 9319,
+      "sha256": "569c080439879972784ada0d6e0b040e8a7a93a0cf363cf99fa3bead12abae14",
+      "witnesses": []
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/lib/Pdfdata/cteq6l1.tbl",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/lib/Pdfdata/cteq6l1.tbl",
+      "bytes": 219850,
+      "sha256": "023dce6f7e6f64dfab376ced5d2c487f8ef8d0ccb976d383a2f0a8049370f058",
+      "witnesses": [
+        {
+          "line": 2,
+          "text": "  Ordr, Nfl, lambda        Qmass 1,  2,  3,         4,  5,  6"
+        },
+        {
+          "line": 3,
+          "text": "    1.    5. 0.1652    0.000    0.000    0.200    1.300    4.500  180.000"
+        },
+        {
+          "line": 4,
+          "text": "   NX,  NT,  NfMx"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/input/mg5_configuration.txt",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt",
+      "bytes": 9212,
+      "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85",
+      "witnesses": []
+    }
+  ],
+  "dependency_identity": [
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/lhapdf-config",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/lhapdf-config",
+      "bytes": 4435,
+      "sha256": "b3f784077d27241b198a6cf8aef710f1b73e2eb74824d9a1e67845041eac016e",
+      "witnesses": [
+        {
+          "line": 18,
+          "text": "  --datadir             : show the path to the LHAPDF data directory"
+        },
+        {
+          "line": 28,
+          "text": "  --version     : return LHAPDF release version number"
+        },
+        {
+          "line": 33,
+          "text": "show_prefix=0"
+        },
+        {
+          "line": 48,
+          "text": "    --version)      echo \"6.5.6\" && exit 0 ;;"
+        },
+        {
+          "line": 49,
+          "text": "    --prefix)       show_prefix=1 ;;"
+        },
+        {
+          "line": 52,
+          "text": "    --datadir)      show_datdir=1 ;;"
+        },
+        {
+          "line": 84,
+          "text": "prefix=/home/btu/miniforge3/envs/atlas-hh-root"
+        },
+        {
+          "line": 85,
+          "text": "exec_prefix=${prefix}"
+        },
+        {
+          "line": 99,
+          "text": "[ \"$show_cflags\" -eq 1 ] && OUT=\"$OUT  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /home/btu/miniforge3/envs/atlas-hh-root/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_lhapdf_1789260161/work=/usr/local/src/conda/lhapdf-6.5.6 -fdebug-prefix-map=/home/btu/miniforge3/envs/atlas-hh-root=/usr/local/src/conda-prefix\""
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048",
+      "witnesses": [
+        {
+          "line": 5,
+          "text": "AlphaS_Type: analytic"
+        },
+        {
+          "line": 10,
+          "text": "MCharm: 1.29"
+        },
+        {
+          "line": 11,
+          "text": "MBottom: 4.19"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695",
+      "witnesses": [
+        {
+          "line": 129,
+          "text": "13202 CT14lo_NF4 1"
+        },
+        {
+          "line": 502,
+          "text": "60650 HERAPDF15NNLO_ALPHAS 1"
+        },
+        {
+          "line": 505,
+          "text": "60750 HERAPDF15NLO_ALPHAS 1"
+        },
+        {
+          "line": 538,
+          "text": "61710 HERAPDF20_NLO_ALPHAS_110 2"
+        },
+        {
+          "line": 539,
+          "text": "61711 HERAPDF20_NLO_ALPHAS_111 2"
+        },
+        {
+          "line": 540,
+          "text": "61712 HERAPDF20_NLO_ALPHAS_112 2"
+        },
+        {
+          "line": 541,
+          "text": "61713 HERAPDF20_NLO_ALPHAS_113 2"
+        },
+        {
+          "line": 542,
+          "text": "61714 HERAPDF20_NLO_ALPHAS_114 2"
+        },
+        {
+          "line": 543,
+          "text": "61715 HERAPDF20_NLO_ALPHAS_115 2"
+        },
+        {
+          "line": 544,
+          "text": "61716 HERAPDF20_NLO_ALPHAS_116 2"
+        },
+        {
+          "line": 545,
+          "text": "61717 HERAPDF20_NLO_ALPHAS_117 2"
+        },
+        {
+          "line": 546,
+          "text": "61718 HERAPDF20_NLO_ALPHAS_118 2"
+        },
+        {
+          "line": 547,
+          "text": "61719 HERAPDF20_NLO_ALPHAS_119 2"
+        },
+        {
+          "line": 548,
+          "text": "61720 HERAPDF20_NLO_ALPHAS_120 2"
+        },
+        {
+          "line": 549,
+          "text": "61721 HERAPDF20_NLO_ALPHAS_121 2"
+        },
+        {
+          "line": 550,
+          "text": "61722 HERAPDF20_NLO_ALPHAS_122 2"
+        },
+        {
+          "line": 551,
+          "text": "61723 HERAPDF20_NLO_ALPHAS_123 2"
+        },
+        {
+          "line": 552,
+          "text": "61724 HERAPDF20_NLO_ALPHAS_124 2"
+        },
+        {
+          "line": 553,
+          "text": "61725 HERAPDF20_NLO_ALPHAS_125 2"
+        },
+        {
+          "line": 554,
+          "text": "61726 HERAPDF20_NLO_ALPHAS_126 2"
+        },
+        {
+          "line": 555,
+          "text": "61727 HERAPDF20_NLO_ALPHAS_127 2"
+        },
+        {
+          "line": 556,
+          "text": "61728 HERAPDF20_NLO_ALPHAS_128 2"
+        },
+        {
+          "line": 557,
+          "text": "61729 HERAPDF20_NLO_ALPHAS_129 2"
+        },
+        {
+          "line": 558,
+          "text": "61730 HERAPDF20_NLO_ALPHAS_130 2"
+        },
+        {
+          "line": 559,
+          "text": "61740 HERAPDF20_NNLO_ALPHAS_110 2"
+        },
+        {
+          "line": 560,
+          "text": "61741 HERAPDF20_NNLO_ALPHAS_111 2"
+        },
+        {
+          "line": 561,
+          "text": "61742 HERAPDF20_NNLO_ALPHAS_112 2"
+        },
+        {
+          "line": 562,
+          "text": "61743 HERAPDF20_NNLO_ALPHAS_113 2"
+        },
+        {
+          "line": 563,
+          "text": "61744 HERAPDF20_NNLO_ALPHAS_114 2"
+        },
+        {
+          "line": 564,
+          "text": "61745 HERAPDF20_NNLO_ALPHAS_115 2"
+        },
+        {
+          "line": 565,
+          "text": "61746 HERAPDF20_NNLO_ALPHAS_116 2"
+        },
+        {
+          "line": 566,
+          "text": "61747 HERAPDF20_NNLO_ALPHAS_117 2"
+        },
+        {
+          "line": 567,
+          "text": "61748 HERAPDF20_NNLO_ALPHAS_118 3"
+        },
+        {
+          "line": 568,
+          "text": "61749 HERAPDF20_NNLO_ALPHAS_119 2"
+        },
+        {
+          "line": 569,
+          "text": "61750 HERAPDF20_NNLO_ALPHAS_120 2"
+        },
+        {
+          "line": 570,
+          "text": "61751 HERAPDF20_NNLO_ALPHAS_121 2"
+        },
+        {
+          "line": 571,
+          "text": "61752 HERAPDF20_NNLO_ALPHAS_122 2"
+        },
+        {
+          "line": 572,
+          "text": "61753 HERAPDF20_NNLO_ALPHAS_123 2"
+        },
+        {
+          "line": 573,
+          "text": "61754 HERAPDF20_NNLO_ALPHAS_124 2"
+        },
+        {
+          "line": 574,
+          "text": "61755 HERAPDF20_NNLO_ALPHAS_125 2"
+        },
+        {
+          "line": 575,
+          "text": "61756 HERAPDF20_NNLO_ALPHAS_126 2"
+        },
+        {
+          "line": 576,
+          "text": "61757 HERAPDF20_NNLO_ALPHAS_127 2"
+        },
+        {
+          "line": 577,
+          "text": "61758 HERAPDF20_NNLO_ALPHAS_128 2"
+        },
+        {
+          "line": 578,
+          "text": "61759 HERAPDF20_NNLO_ALPHAS_129 2"
+        },
+        {
+          "line": 579,
+          "text": "61760 HERAPDF20_NNLO_ALPHAS_130 2"
+        },
+        {
+          "line": 580,
+          "text": "62800 HERAPDF20_Jets_NNLO_ALPHAS_118_VAR 1"
+        },
+        {
+          "line": 581,
+          "text": "62850 HERAPDF20_Jets_NNLO_ALPHAS_1155_VAR 1"
+        },
+        {
+          "line": 1061,
+          "text": "263400 NNPDF30_lo_as_0130_nf_4 2"
+        }
+      ]
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Version.h",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Version.h",
+      "bytes": 931,
+      "sha256": "475f1b3376e6300f9fb856bd61204d262265f3b7e78f1f73ee6bd2a4e4422da9",
+      "witnesses": [
+        {
+          "line": 1,
+          "text": "/* include/LHAPDF/Version.h.  Generated from Version.h.in by configure.  */"
+        },
+        {
+          "line": 8,
+          "text": "#ifndef LHAPDF_Version_H"
+        },
+        {
+          "line": 9,
+          "text": "#define LHAPDF_Version_H"
+        },
+        {
+          "line": 13,
+          "text": "/* \"LHAPDF version string\" */"
+        },
+        {
+          "line": 14,
+          "text": "#define LHAPDF_VERSION \"6.5.6\""
+        },
+        {
+          "line": 16,
+          "text": "/* \"LHAPDF version as an int\" */"
+        },
+        {
+          "line": 17,
+          "text": "#define LHAPDF_VERSION_CODE 60506"
+        },
+        {
+          "line": 26,
+          "text": "// Use like \"#if defined LHAPDF_MAJOR_VERSION && LHAPDF_MAJOR_VERSION == 6 ...\""
+        },
+        {
+          "line": 27,
+          "text": "#define LHAPDF_MAJOR_VERSION 6"
+        },
+        {
+          "line": 32,
+          "text": "  /// Get the LHAPDF library version code (as a string)"
+        },
+        {
+          "line": 33,
+          "text": "  inline std::string version() {"
+        },
+        {
+          "line": 34,
+          "text": "    return LHAPDF_VERSION;"
+        }
+      ]
+    }
+  ],
+  "primary_documentation": [
+    {
+      "url": "https://www.lhapdf.org/config.html",
+      "scope": "PDF/member metadata, alpha_s orders and flavour-threshold fallback semantics"
+    },
+    {
+      "url": "https://www.lhapdf.org/pdfsets",
+      "scope": "public availability catalogue is distinct from installed member payloads"
+    }
+  ],
+  "public_source_metadata_reference": {
+    "schema_version": 1,
+    "evidence_class": "PUBLIC_SOURCE_AUDIT",
+    "url": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+    "retrieved_utc": "2026-10-19T08:18:31.8739627Z",
+    "response_bytes": 2345,
+    "response_sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+    "scope": "PUBLIC_METADATA_ONLY_NOT_AN_INSTALLED_OR_SELECTED_PDF_MEMBER",
+    "grid_downloaded": false,
+    "library_loaded": false,
+    "member_evaluated": false,
+    "selected_for_candidate_a": false,
+    "fields": {
+      "SetIndex": 263400,
+      "DataVersion": 2,
+      "NumMembers": 101,
+      "Flavors": [
+        -4,
+        -3,
+        -2,
+        -1,
+        1,
+        2,
+        3,
+        4,
+        21
+      ],
+      "OrderQCD": 0,
+      "FlavorScheme": "variable",
+      "NumFlavors": 4,
+      "MZ": 4.1799998,
+      "MCharm": 1.275,
+      "MBottom": 4.1799998,
+      "AlphaS_MZ": 0.2544023564420006,
+      "AlphaS_OrderQCD": 0,
+      "AlphaS_Type": "ipol",
+      "AlphaS_Qs_repeated_threshold_GeV": 1.275
+    },
+    "interpretation": "An actual public maximum-four-flavour set uses variable flavour metadata, no bottom parton and a non-Z alpha reference scale. Dataset naming is not enough to infer flavour thresholds or alpha_s at physical MZ.",
+    "remaining_requirements": [
+      "Install/member approval not granted",
+      "Member payload absent in explicit installed search roots",
+      "Grid/member SHA256 unknown",
+      "No interpolation or hard-process test performed"
+    ],
+    "network_note": "WSL direct TLS request timed out; exact metadata body fetched via Windows Invoke-WebRequest, SHA256 computed on RawContentStream bytes.",
+    "local_audit_record_sha256": "96f103b7b8012bf33c2d3895040c27c33558cf7ffd0591937ef95be2fec59e39"
+  },
+  "source_hashes_unchanged": true,
+  "new_MG5_parser_calls": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0,
+  "physical_pilot_executed": false,
+  "independent_human_review": false
+}

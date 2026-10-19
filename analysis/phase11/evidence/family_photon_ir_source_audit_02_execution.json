@@ -1,0 +1,32 @@
+{
+  "label": "family_photon_ir_source_audit_02",
+  "command": [
+    "python3",
+    "-B",
+    "analysis/phase11/scripts/audit_family_ir.py",
+    "--repo",
+    "/home/btu/projects/atlas_hh_phase11_v1",
+    "--mg5-root",
+    "/home/btu/opt/mg5amcnlo",
+    "--pythia-root",
+    "/home/btu/opt/pythia8",
+    "--output",
+    "/home/btu/simulations/hh_phase11/run_01/phase11_family_ir_audit_02.json"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.25335509499927866,
+  "cpu_seconds": 0.09385399999999994,
+  "peak_observed_process_group_RSS_bytes": 4587520,
+  "aggregate_observed_disk_bytes": 756909,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

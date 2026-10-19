@@ -1,0 +1,31 @@
+{
+  "label": "phase11_methods_drift_final",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "analysis/phase11/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.25546543000018573,
+  "cpu_seconds": 0.210644,
+  "peak_observed_process_group_RSS_bytes": 6553600,
+  "aggregate_observed_disk_bytes": 2576853,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 14400,
+    "cpu_seconds": 14400,
+    "disk_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

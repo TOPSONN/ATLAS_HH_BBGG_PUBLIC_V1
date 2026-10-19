@@ -1,0 +1,17 @@
+# PHASE11 INACTIVE_SOURCE_REVIEW_ONLY; DO_NOT_EXECUTE
+# Every nonblank line is a comment; no executable generator input.
+# import model sm-no_b_mass
+# define p5 = g u u~ d d~ s s~ c c~ b b~
+# define j5 = g u u~ d d~ s s~ c c~ b b~
+# generate p5 p5 > a a QCD==0 QED==2 @0
+# add process p5 p5 > a a j5 QCD==1 QED==2 @1
+# add process p5 p5 > a a j5 j5 QCD==2 QED==2 @2
+# Exact amplitude order syntax is source interpreted, NOT parser validated.
+# Phase10 single '=' specifies an upper bound; this strict-order proposal avoids
+# silently including lower-order/mixed-coupling amplitudes if present.
+# maxjetflavor=5, JetMatching:nQmatch=5 or Merging:nQuarksMerge=5 are
+# structural flavour-consistency conditions, not activated run settings.
+# PDF/member/LHAID, alpha_s, photon thresholds, shower convention, merging
+# prescription, numerical merging scale, writer and resource approval are null.
+# MLM and CKKW-L are alternative methods. FxFx cannot act on historical LO.
+# No output, launch, integration, shower, install or executable command follows.

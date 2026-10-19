@@ -1,0 +1,44 @@
+{
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "observed_UTC": "2026-10-19T08:58:04.252922+00:00",
+  "path": "/home/btu/opt/mg5amcnlo/input/mg5_configuration.txt",
+  "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt",
+  "variants": [
+    {
+      "bytes": 9212,
+      "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85",
+      "identity_evidence": "IN_MEMORY_RECONSTRUCTION_NOT_BACKUP"
+    },
+    {
+      "bytes": 9239,
+      "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506",
+      "identity_evidence": "IN_MEMORY_RECONSTRUCTION_NOT_BACKUP"
+    },
+    {
+      "bytes": 9266,
+      "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a",
+      "identity_evidence": "LOCAL_OBSERVED_BYTE_COPY"
+    }
+  ],
+  "effective_settings_identical": true,
+  "effective_settings": [
+    "fortran_compiler = x86_64-conda-linux-gnu-gfortran #",
+    "cpp_compiler = x86_64-conda-linux-gnu-g++ #",
+    "auto_update = 0 #",
+    "mg5_path = /home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16"
+  ],
+  "difference": "For each compiler and auto_update setting, trailing comment padding and following space-only lines differ; reverse transformations reproduce both earlier exact SHA256 values.",
+  "possible_serializer_source": "madgraph/interface/extended_cmd.py:1994-2056; madgraph_interface.py:7724-7736",
+  "caller": "UNKNOWN",
+  "original_disk_backup_found": false,
+  "installed_file_modified_or_restored_by_this_audit": false,
+  "normalization_allowed_to_pass_raw_identity": false,
+  "historical_preservation_scope": "2874 historical files are separate; their before/after exact preservation PASS does not establish installed runtime configuration freeze.",
+  "host_execution_attribution": "Registered task source/existing-data jobs have no generator dispatch. This is not a complete historical host process audit.",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0
+}

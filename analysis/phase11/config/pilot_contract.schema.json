@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase11 inactive bounded review contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "selected_component",
+    "execution_authorized",
+    "instantiable",
+    "dispatcher",
+    "physical_approval",
+    "unresolved_fields",
+    "resource_review",
+    "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY",
+    "MATCHED_SIGNAL_NORMALIZATION",
+    "MG5_version",
+    "NEW_DELPHES_EVENTS",
+    "NEW_HARD_EVENTS",
+    "NEW_INTEGRALS",
+    "NEW_ME_CALLS",
+    "NEW_PYTHIA_EVENTS",
+    "PDF_member_flavour_scheme",
+    "PHOTON_FAKE_RATE",
+    "PHYSICAL_CLs",
+    "PHYSICAL_KAPPA_INTERVAL",
+    "PHYSICAL_SIGNIFICANCE",
+    "PHYSICAL_TOTAL_BACKGROUND",
+    "Pythia_version",
+    "aggregate_future_CPU_seconds",
+    "alpha_s_and_thresholds",
+    "approval_override_flag",
+    "base_revision",
+    "calibrated_fake_probability",
+    "evidence_class",
+    "exact_future_execution_source_revision",
+    "existing_output_reuse_allowed",
+    "external_human_review_approval",
+    "fresh_output_required",
+    "generation_cuts",
+    "inclusive_background_total",
+    "independent_validation_protocol",
+    "integration_reporting",
+    "model_review_proposal",
+    "photon_IR_definition",
+    "physical_pilot_executed",
+    "process_review_proposal",
+    "retained_new_physical_events",
+    "review_target_component",
+    "scale_definition",
+    "shower_settings",
+    "source_requirements",
+    "stop_conditions",
+    "task",
+    "unknown_nuisances",
+    "weight_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "const": "INACTIVE_REVIEW_ONLY"
+    },
+    "selected_component": {
+      "const": "NONE_READY"
+    },
+    "execution_authorized": {
+      "const": false
+    },
+    "instantiable": {
+      "const": false
+    },
+    "dispatcher": {
+      "type": "null"
+    },
+    "approval_override_flag": {
+      "type": "null"
+    },
+    "unresolved_fields": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "value",
+          "status",
+          "reason",
+          "evidence_required"
+        ],
+        "properties": {
+          "value": {
+            "type": "null"
+          },
+          "status": {
+            "const": "BLOCKED"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_required": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "aggregate_future_CPU_seconds": {
+      "type": "null"
+    },
+    "exact_future_execution_source_revision": {
+      "type": "null"
+    },
+    "PDF_member_flavour_scheme": {
+      "type": "null"
+    },
+    "alpha_s_and_thresholds": {
+      "type": "null"
+    },
+    "photon_IR_definition": {
+      "type": "null"
+    },
+    "generation_cuts": {
+      "type": "null"
+    },
+    "shower_settings": {
+      "type": "null"
+    },
+    "scale_definition": {
+      "type": "null"
+    },
+    "NEW_ME_CALLS": {
+      "type": "integer",
+      "const": 0
+    },
+    "NEW_INTEGRALS": {
+      "type": "integer",
+      "const": 0
+    },
+    "NEW_HARD_EVENTS": {
+      "type": "integer",
+      "const": 0
+    },
+    "NEW_PYTHIA_EVENTS": {
+      "type": "integer",
+      "const": 0
+    },
+    "NEW_DELPHES_EVENTS": {
+      "type": "integer",
+      "const": 0
+    },
+    "retained_new_physical_events": {
+      "type": "integer",
+      "const": 0
+    },
+    "physical_approval": {
+      "type": "object",
+      "required": [
+        "status",
+        "receipt"
+      ],
+      "properties": {
+        "status": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "receipt": {
+          "type": "null"
+        }
+      }
+    }
+  },
+  "description": "Structural JSON Schema; stricter scientific/null/counter/resource rules are implemented and negatively tested by pilot_policy.validate_contract; no schema package installation or generator dispatch."
+}

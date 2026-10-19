@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/scripts/audit_model_pdf.py", line 28, in <module>
+    main()
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/scripts/audit_model_pdf.py", line 20, in main
+    result = audit(args.mg5, args.pythia, args.env_prefix, json.loads(args.candidate.read_text()))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/source/model_pdf.py", line 241, in audit
+    inventories = [inventory_directory(*item) for item in roots]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/source/model_pdf.py", line 204, in inventory_directory
+    answer["files"].append({"relative_path": str(p.relative_to(path)), "bytes": p.stat().st_size,
+                                                                                ^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 842, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/btu/opt/mg5amcnlo/vendor/SudGen/NNPDFDriver.f'

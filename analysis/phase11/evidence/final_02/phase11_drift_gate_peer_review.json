@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_INDEPENDENT_DRIFT_CHECKER_REVIEW_WITH_ACTUAL_RUNTIME_BLOCKER",
+  "review_time_utc": "2026-10-19T09:03:04.855449+00:00",
+  "reviewer": "Independent Codex subagent phase11_family_ir; not external human signoff",
+  "scope": [
+    "READ_ONLY_SOURCE_REVIEW",
+    "SYNTHETIC_METHOD_ONLY_REJECTION_PROBES",
+    "EXISTING_STATIC_GATE_RECEIPT_BINDING"
+  ],
+  "reviewed_source_and_receipt_identities": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/scripts/audit_pilot_gate.py",
+      "bytes": 10959,
+      "sha256": "cfc991740f8771f9ce90b96f9438a6440c9bf20c6783be944203fa6c43ee2f33"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/source/pilot_policy.py",
+      "bytes": 6436,
+      "sha256": "3ebbfe8746e9d0d7b61481f212662f69dca6c051acc3b2524495d55ebd079101"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/tests/test_gate_evidence.py",
+      "bytes": 6870,
+      "sha256": "9b067e8ca18c7a0ac317270341ffb6668255aba370a5226b8d732ef9da23eee8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/bounded_pilot_contract.json",
+      "bytes": 16280,
+      "sha256": "e6bb7db7e814dcd5d8de50edbd3da395be368fa75e91f05efd4aefbc7c0dacb9"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase11_v1/analysis/phase11/config/pilot_contract.schema.json",
+      "bytes": 4029,
+      "sha256": "12c5d5305f87769570def079a60e2919a912e360fae944b025acaadc31e41518"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/final_02/phase11_pilot_readiness.json",
+      "bytes": 10797,
+      "sha256": "fb8cc6935d50c906515044dc0e831359d4ae964b020410445ba54a64d0bb7043"
+    }
+  ],
+  "checks": [
+    {
+      "name": "all_six_exact_scopes_pass",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Six separately named fixture files, exact SHA256 and bytes."
+    },
+    {
+      "name": "whitespace_only_drift_scope_0",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "whitespace_only_drift_scope_1",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "whitespace_only_drift_scope_2",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "whitespace_only_drift_scope_3",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "whitespace_only_drift_scope_4",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "whitespace_only_drift_scope_5",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No semantic normalization; all six input roles independently rejected."
+    },
+    {
+      "name": "stale_receipt_exact_sha_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Current file unchanged; expected digest deliberately stale."
+    },
+    {
+      "name": "missing_expected_sha_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Missing hash cannot inherit a prior PASS flag."
+    },
+    {
+      "name": "malformed_expected_sha_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Malformed hash rejected."
+    },
+    {
+      "name": "wrong_byte_count_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Equal content hash does not erase explicit byte-count mismatch."
+    },
+    {
+      "name": "missing_scope_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "No empty/missing identity collection can satisfy all required roles."
+    },
+    {
+      "name": "missing_file_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Missing file returns bounded structured blocker."
+    },
+    {
+      "name": "same_content_resolved_path_change_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Symlink redirection rejected despite identical content."
+    },
+    {
+      "name": "known_broken_symlink_is_explicit_missing_payload",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Preserves known missing payload identity only; this is not compatible-PDF evidence."
+    },
+    {
+      "name": "new_payload_cannot_replace_known_missing_identity",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Formerly broken symlink resolving is drift."
+    },
+    {
+      "name": "receipt_objects_not_mutated",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Original receipt dictionaries unchanged by all checker calls."
+    },
+    {
+      "name": "existing_profiles_retain_exact_role_and_zero_counter_scope",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Checks scopes only; does not bless stale raw source identity."
+    },
+    {
+      "name": "synthetic_cannot_impersonate_scope_0",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent role substitution negative probe."
+    },
+    {
+      "name": "synthetic_cannot_impersonate_scope_1",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent role substitution negative probe."
+    },
+    {
+      "name": "synthetic_cannot_impersonate_scope_2",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent role substitution negative probe."
+    },
+    {
+      "name": "synthetic_cannot_impersonate_scope_3",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent role substitution negative probe."
+    },
+    {
+      "name": "production_counter_rejects_boolean_false",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Counter must be actual integer zero."
+    },
+    {
+      "name": "production_counter_rejects_nonzero",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Counter must be actual integer zero."
+    },
+    {
+      "name": "missing_production_counter_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Missing evidence does not become implicit zero."
+    },
+    {
+      "name": "no_MG5_module_imported",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Imported only the repository static checker and Python standard library."
+    },
+    {
+      "name": "current_contract_valid_but_inactive",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Validation certifies an inactive review record; no executable authorization."
+    },
+    {
+      "name": "runtime_identity_explicit_null_blocked",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Nested unresolved runtime identity requires exact raw bytes, stable preflight and independent review; no normalization."
+    },
+    {
+      "name": "no_component_or_scientific_payload_promoted",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Scientific configuration and future CPU ceiling remain unresolved."
+    },
+    {
+      "name": "runtime_zero_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "runtime_status_promotion_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "physical_execution_flag_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "future_CPU_default_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "generation_cut_default_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "unknown_covariance_zero_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "fake_probability_zero_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "approval_receipt_substitution_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "source_revision_substitution_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "illustrative_resource_as_approved_rejected",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Independent negative contract fixture only; no physical execution."
+    },
+    {
+      "name": "actual_gate_preserves_one_raw_runtime_mismatch",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Root actual read-only gate has one stale installed configuration identity, not a source-freeze PASS."
+    },
+    {
+      "name": "actual_exact_hashes_and_bytes_reported",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "Exact original receipt identity retained; no reconstructed bytes substituted."
+    },
+    {
+      "name": "actual_none_ready_and_historical_physics_gates_remain_blocked",
+      "status": "PASS_METHOD_ONLY",
+      "detail": "The corrected checker does not authorize a physical component."
+    }
+  ],
+  "checks_passed": 42,
+  "initial_method_probe_wall_seconds": 0.023795255001459736,
+  "initial_method_probe_CPU_seconds": 0.02328709300000001,
+  "resource_scope": "Tiny temporary fixtures and standard-library review process; not generator resource certification.",
+  "actual_runtime_configuration_integrity": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "actual_runtime_configuration_caller": "UNKNOWN",
+  "exact_raw_identity_required": true,
+  "semantic_normalization_used": false,
+  "installed_sources_modified_by_reviewer": false,
+  "original_receipts_overwritten": false,
+  "external_human_approval": false,
+  "physical_approval": "NOT_AUTHORIZED",
+  "physical_pilot_executed": false,
+  "NEW_MG5_PARSER_CALLS": 0,
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "limits": [
+    "Review does not establish who modified installed MG5 configuration.",
+    "Known broken symlink identity is missing-payload evidence only.",
+    "Source-integrity result is point-in-time evidence, not a promise of future immutable external configuration.",
+    "No MG5 parser, ME, integral, shower, detector production or physics inference executed."
+  ]
+}

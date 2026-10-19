@@ -1,0 +1,36 @@
+{
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "scope": "Registered source/existing-data/method child jobs; excludes source editing, in-memory peer fixture probes, Git/network, and standalone read-only preservation/hash inventory. RSS is sampled, not a hard memory containment proof. No physics dispatch.",
+  "registered_jobs": 23,
+  "failed_jobs_preserved": [
+    {
+      "label": "detector_existing_data_01",
+      "exit_code": 1
+    },
+    {
+      "label": "family_photon_ir_source_audit_01",
+      "exit_code": 1
+    },
+    {
+      "label": "model_pdf_source_audit_01",
+      "exit_code": 1
+    }
+  ],
+  "aggregate_wall_seconds": 37.89685319800628,
+  "aggregate_CPU_seconds": 33.892152,
+  "maximum_sampled_process_group_RSS_bytes": 199249920,
+  "maximum_observed_result_build_disk_bytes": 2588377,
+  "ceilings": {
+    "CPU_seconds": 14400,
+    "wall_seconds": 14400,
+    "result_build_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "resource_failures": [],
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0
+}

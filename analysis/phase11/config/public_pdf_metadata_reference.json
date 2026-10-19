@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "url": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+  "retrieved_utc": "2026-10-19T08:18:31.8739627Z",
+  "response_bytes": 2345,
+  "response_sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+  "scope": "PUBLIC_METADATA_ONLY_NOT_AN_INSTALLED_OR_SELECTED_PDF_MEMBER",
+  "grid_downloaded": false,
+  "library_loaded": false,
+  "member_evaluated": false,
+  "selected_for_candidate_a": false,
+  "fields": {
+    "SetIndex": 263400,
+    "DataVersion": 2,
+    "NumMembers": 101,
+    "Flavors": [
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      21
+    ],
+    "OrderQCD": 0,
+    "FlavorScheme": "variable",
+    "NumFlavors": 4,
+    "MZ": 4.1799998,
+    "MCharm": 1.275,
+    "MBottom": 4.1799998,
+    "AlphaS_MZ": 0.2544023564420006,
+    "AlphaS_OrderQCD": 0,
+    "AlphaS_Type": "ipol",
+    "AlphaS_Qs_repeated_threshold_GeV": 1.275
+  },
+  "interpretation": "An actual public maximum-four-flavour set uses variable flavour metadata, no bottom parton and a non-Z alpha reference scale. Dataset naming is not enough to infer flavour thresholds or alpha_s at physical MZ.",
+  "remaining_requirements": [
+    "Install/member approval not granted",
+    "Member payload absent in explicit installed search roots",
+    "Grid/member SHA256 unknown",
+    "No interpolation or hard-process test performed"
+  ],
+  "network_note": "WSL direct TLS request timed out; exact metadata body fetched via Windows Invoke-WebRequest, SHA256 computed on RawContentStream bytes."
+}

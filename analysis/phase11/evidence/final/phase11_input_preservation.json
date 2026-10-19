@@ -1,0 +1,60 @@
+{
+  "status": "PASS_EXACT_HISTORICAL_BYTES",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "files": 2874,
+  "bytes": 2611429240,
+  "baseline_manifest_sha256": "02d8c668eff2adca96cefb3319464560d0636d173acceb9a1ebe9de69630a314",
+  "errors": [],
+  "old_source_controls": {
+    "Phase7I": {
+      "path": "/home/btu/projects/atlas_hh_phase7i_b80e1677",
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "index_sha256": "2661d7332a5b50f4626631c9ccce5cfbfaceff9f0384a2e85e523a720ea42d18"
+    },
+    "Phase8": {
+      "path": "/home/btu/projects/atlas_hh_phase8_v1",
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "index_sha256": "67954b682f4401670304c84d9e50cf9c8be0f42668e4ab0cbee5a3da7c91d3e6"
+    },
+    "Phase9": {
+      "path": "/home/btu/projects/atlas_hh_phase9_v1",
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "index_sha256": "16bafc85092721f3dd5c70764c4c9516049be363fb7211c8d8564fa4ced7f3cb"
+    },
+    "Phase10": {
+      "path": "/home/btu/projects/atlas_hh_phase10_v1",
+      "head": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+      "index_sha256": "8552efe241f2b866048e2fce800ab73156562128b5372bd4e6e8a9543001582a"
+    }
+  },
+  "old_PRs": {
+    "24": {
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "25": {
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "26": {
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "27": {
+      "head": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    }
+  },
+  "scope": "All970monitored Phase6-9 historical paths; every Phase10 result/receipt/remote snapshot; every tracked file of old Phase10 checkout. Stopped Phase7I head/index protected; no recursive claim for every stopped workspace file.",
+  "all_historical_figure_versions_preserved": true,
+  "new_figures": 0,
+  "figure_publication_authorized": false
+}

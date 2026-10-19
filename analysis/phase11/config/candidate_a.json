@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "candidate_id": "MASSIVE_4F_BB_COMPONENT",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "execution_enabled": false,
+  "physical_approval": "NOT_AUTHORIZED",
+  "mg5_version": "3.5.16",
+  "model": "sm",
+  "restriction": "restrict_default.dat",
+  "bottom_mass_GeV": 4.7,
+  "charm_mass_GeV": 0,
+  "unrestricted_ufo_charm_default_GeV": 1.27,
+  "model_mass_status": "SOURCE_SUPPORTED_DEFAULT_RESTRICTION_NOT_PARSER_VALIDATED",
+  "initial_pdg_ids": [
+    21,
+    1,
+    -1,
+    2,
+    -2,
+    3,
+    -3,
+    4,
+    -4
+  ],
+  "process": "p4 p4 > b b~ a a QCD=2 QED=2",
+  "orders": {
+    "QCD_amplitude_maximum": 2,
+    "QED_amplitude_maximum": 2,
+    "leading_cross_section_power": "alpha_s^2 alpha_EM^2",
+    "status": "SOURCE_POWER_COUNTING_ONLY_PARSER_NOT_VALIDATED"
+  },
+  "pdf": {
+    "set_name": null,
+    "member": null,
+    "lhaid": null,
+    "grid_sha256": null,
+    "flavour_scheme": null,
+    "num_flavours": null,
+    "order_qcd": null,
+    "alpha_s_mz": null,
+    "alpha_s_order_qcd": null,
+    "alpha_s_flavour_scheme": null,
+    "alpha_s_num_flavours": null,
+    "alpha_s_thresholds_GeV": null,
+    "info_sha256": null,
+    "flavour_pdg_ids": null,
+    "alpha_s_reference_scale_GeV": null,
+    "alpha_s_type": null
+  },
+  "pdf_requirement": {
+    "flavour_scheme": null,
+    "num_flavours": 4,
+    "order_qcd": 0,
+    "alpha_s_order_qcd": 0,
+    "bottom_pdf_activation": false,
+    "alpha_s_flavour_scheme": null,
+    "alpha_s_num_flavours": 4,
+    "metadata_must_bind_member_payload": true,
+    "allowed_flavour_schemes": [
+      "fixed",
+      "variable"
+    ],
+    "allowed_alpha_s_flavour_schemes": [
+      "fixed",
+      "variable"
+    ],
+    "alpha_reference_scale_must_be_explicit": true,
+    "bottom_alpha_activation": false
+  },
+  "photon_ir": null,
+  "photon_ir_blocker": "PHOTON_IR_A_BOTTOM_COVERAGE_UNRESOLVED",
+  "generation_cuts": null,
+  "shower_settings": null,
+  "scale_definition": null,
+  "matching_scale_GeV": null,
+  "inclusive_background_total": false,
+  "physical_pilot_executed": false,
+  "zero_means_known_zero_only": true,
+  "status": "BLOCKED_PHASE11_PDF_OR_ALPHA_S",
+  "exact_process_validation": "PARSER_NOT_VALIDATED",
+  "null_reasons": {
+    "pdf.*": "No compatible maximum-four-active-flavour/no-bottom LO member payload and metadata found in explicitly bounded installed roots; catalogue entries are not payloads. PDF and alpha flavour schemes plus alpha reference scale require exact member evidence.",
+    "photon_ir": "maxjetflavor=4 makes installed LO Frixione sum omit bottom; finite bottom mass plus separately active drab needs a defined target, not universal isolation equivalence.",
+    "generation_cuts": "Requires candidate-specific all-QCD photon IR definition and reviewed acceptance rationale.",
+    "shower_settings": "Requires PDF/alpha_s threshold binding and reviewed finite-mass g->heavy treatment; no tune defaults are selected.",
+    "scale_definition": "No validated source-bound scale choice has been selected for this candidate.",
+    "matching_scale_GeV": "No matching prescription or numerical merging scale has been validated; isolated component only."
+  },
+  "provenance": {
+    "mg5_version": "MG5/VERSION:1",
+    "restriction": "MG5/models/import_ufo.py:227-228",
+    "bottom_mass_GeV": "MG5/models/sm/restrict_default.dat:18",
+    "charm_mass_GeV": "MG5/models/sm/restrict_default.dat:17",
+    "unrestricted_ufo_charm_default_GeV": "MG5/models/sm/parameters.py:133-139; not effective default restriction",
+    "process": "User Candidate A and Phase10 inactive proposal; not parsed or generated",
+    "pdf": "Phase11 explicit bounded inventory; source hashes emitted by audit_model_pdf.py",
+    "orders": "models/sm/coupling_orders.py and power counting; parser not executed"
+  }
+}
