@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_EXACT_BACKEND_SOURCE_MANIFEST_AND_COPY_CLOSURE",
+  "observed_UTC": "2026-10-19T10:38:35.976774+00:00",
+  "review_method": "Independent raw SHA256/size/resolved-path comparison of actual B02 source records against runtime original manifest and current isolated copy; external headers/tool against actual B02; historical native04 dependencies freshly rehashed. No package import, config invocation or native execution.",
+  "reviewed_source_identities": {
+    "analysis/phase13/source/pdf_backend.py": {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/pdf_backend.py",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/pdf_backend.py",
+      "bytes": 20416,
+      "sha256": "c067bcac44ade78380f5fe462fb1a4c35941887b1cb917aa914cfea3f248fc9d"
+    },
+    "analysis/phase13/scripts/audit_pdf_backend.py": {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/audit_pdf_backend.py",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/audit_pdf_backend.py",
+      "bytes": 2383,
+      "sha256": "48276a543354b0b291979eea959b54aecc1a05e34c87c030d1fa317c6c06f2a1"
+    },
+    "analysis/phase13/tests/test_pdf_backend.py": {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_pdf_backend.py",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_pdf_backend.py",
+      "bytes": 9962,
+      "sha256": "e386f1d1790ff13addd9f25193ea097e2caad45b8f10ad6b7ee7eeae551c5736"
+    }
+  },
+  "backend_receipt": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/pdf_backend_review.json",
+    "resolved_path": "/home/btu/simulations/hh_phase13/run_01/pdf_backend_review.json",
+    "bytes": 27639,
+    "sha256": "ed6c565ed9ef12c4dd14ea5b7f90242204406ba96605d2bde2eaee385f8cef9a"
+  },
+  "runtime_receipt": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/isolated_runtime_identity.json",
+    "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/isolated_runtime_identity.json",
+    "bytes": 4964,
+    "sha256": "ae02b9c46b49a930c9fbcddb71649ddc335d635438b4369e01132917c74b7997"
+  },
+  "original_manifest_file": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/original_source_manifest.json",
+    "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/original_source_manifest.json",
+    "bytes": 2201218,
+    "sha256": "6221aa8210bd85ce66cc5d29d7110123b73420e47357def1f7a08ffef611a2d8"
+  },
+  "runtime_content_manifest_sha256": "d1d4976a39c5fbd08e3a7fa4db7e42c525c40c84f7be701c1dead3f81afb9e61",
+  "MG5_source_records_checked": 11,
+  "external_source_records_checked": 5,
+  "historical_native_dependencies_checked": 10,
+  "MG5_source_closure": [
+    {
+      "key": "pdf_makefile",
+      "relative_path": "Template/LO/Source/PDF/makefile",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/PDF/makefile",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/PDF/makefile",
+        "bytes": 2448,
+        "sha256": "de4eef231102f8fa308769197e53b8c13717ef8810150385700a867300601c51"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/PDF/makefile",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/PDF/makefile",
+        "bytes": 2448,
+        "sha256": "de4eef231102f8fa308769197e53b8c13717ef8810150385700a867300601c51"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 2448,
+        "sha256": "de4eef231102f8fa308769197e53b8c13717ef8810150385700a867300601c51"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "make_opts",
+      "relative_path": "Template/LO/Source/make_opts",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/make_opts",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/make_opts",
+        "bytes": 2842,
+        "sha256": "533b93102eba28d4ea6f6fd32128f0c2c9c0f1b70330e5dbcc687efb562d1a2a"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/make_opts",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/make_opts",
+        "bytes": 2842,
+        "sha256": "533b93102eba28d4ea6f6fd32128f0c2c9c0f1b70330e5dbcc687efb562d1a2a"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 2842,
+        "sha256": "533b93102eba28d4ea6f6fd32128f0c2c9c0f1b70330e5dbcc687efb562d1a2a"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "backend62",
+      "relative_path": "Template/Common/Source/PDF/pdf_lhapdf62.cc",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/Common/Source/PDF/pdf_lhapdf62.cc",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/Common/Source/PDF/pdf_lhapdf62.cc",
+        "bytes": 58334,
+        "sha256": "e6755785adc9958089902500cea13610766425d7279ed5fad3aa6950876f122b"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/Common/Source/PDF/pdf_lhapdf62.cc",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/Common/Source/PDF/pdf_lhapdf62.cc",
+        "bytes": 58334,
+        "sha256": "e6755785adc9958089902500cea13610766425d7279ed5fad3aa6950876f122b"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 58334,
+        "sha256": "e6755785adc9958089902500cea13610766425d7279ed5fad3aa6950876f122b"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "interface",
+      "relative_path": "madgraph/interface/common_run_interface.py",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/madgraph/interface/common_run_interface.py",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/interface/common_run_interface.py",
+        "bytes": 372757,
+        "sha256": "5745d31d6172182723bf761d7203dbb8bf6fbbee43bbdbab7b4d2c33df459752"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/interface/common_run_interface.py",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/interface/common_run_interface.py",
+        "bytes": 372757,
+        "sha256": "5745d31d6172182723bf761d7203dbb8bf6fbbee43bbdbab7b4d2c33df459752"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 372757,
+        "sha256": "5745d31d6172182723bf761d7203dbb8bf6fbbee43bbdbab7b4d2c33df459752"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "exporter",
+      "relative_path": "madgraph/iolibs/export_v4.py",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/madgraph/iolibs/export_v4.py",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/iolibs/export_v4.py",
+        "bytes": 413949,
+        "sha256": "c67c75c507f08f9984c4ec99cc088b2df19d0abfa557ae91108576983aac8c0b"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/iolibs/export_v4.py",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/iolibs/export_v4.py",
+        "bytes": 413949,
+        "sha256": "c67c75c507f08f9984c4ec99cc088b2df19d0abfa557ae91108576983aac8c0b"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 413949,
+        "sha256": "c67c75c507f08f9984c4ec99cc088b2df19d0abfa557ae91108576983aac8c0b"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "pdf_wrapper",
+      "relative_path": "madgraph/iolibs/template_files/pdf_wrap_lhapdf.f",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/madgraph/iolibs/template_files/pdf_wrap_lhapdf.f",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/iolibs/template_files/pdf_wrap_lhapdf.f",
+        "bytes": 2401,
+        "sha256": "b8870b70416a67724ca89a35d874d97907aa4f44f4f24365b0122a35ecb3ab86"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/iolibs/template_files/pdf_wrap_lhapdf.f",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/iolibs/template_files/pdf_wrap_lhapdf.f",
+        "bytes": 2401,
+        "sha256": "b8870b70416a67724ca89a35d874d97907aa4f44f4f24365b0122a35ecb3ab86"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 2401,
+        "sha256": "b8870b70416a67724ca89a35d874d97907aa4f44f4f24365b0122a35ecb3ab86"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "alpha_wrapper",
+      "relative_path": "Template/LO/Source/alfas_functions_lhapdf.f",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/alfas_functions_lhapdf.f",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/alfas_functions_lhapdf.f",
+        "bytes": 3944,
+        "sha256": "7b9439bb225674fa3126daa993a62b5b32b6201ed2a6875003be2ad820deb7c2"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/alfas_functions_lhapdf.f",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/alfas_functions_lhapdf.f",
+        "bytes": 3944,
+        "sha256": "7b9439bb225674fa3126daa993a62b5b32b6201ed2a6875003be2ad820deb7c2"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 3944,
+        "sha256": "7b9439bb225674fa3126daa993a62b5b32b6201ed2a6875003be2ad820deb7c2"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "density_wrapper",
+      "relative_path": "Template/LO/Source/PDF/pdg2pdf_lhapdf6.f",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/LO/Source/PDF/pdg2pdf_lhapdf6.f",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Source/PDF/pdg2pdf_lhapdf6.f",
+        "bytes": 9350,
+        "sha256": "55c2e838f18f3657a048a74d3b2cb608e4932dba9914d6085f45eaf1fe7006fa"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/PDF/pdg2pdf_lhapdf6.f",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/LO/Source/PDF/pdg2pdf_lhapdf6.f",
+        "bytes": 9350,
+        "sha256": "55c2e838f18f3657a048a74d3b2cb608e4932dba9914d6085f45eaf1fe7006fa"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 9350,
+        "sha256": "55c2e838f18f3657a048a74d3b2cb608e4932dba9914d6085f45eaf1fe7006fa"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "run_card",
+      "relative_path": "madgraph/various/banner.py",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/madgraph/various/banner.py",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/various/banner.py",
+        "bytes": 279713,
+        "sha256": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/various/banner.py",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/madgraph/various/banner.py",
+        "bytes": 279713,
+        "sha256": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 279713,
+        "sha256": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "legacy_6_1_backend_not_selected_for_6_5_6",
+      "relative_path": "Template/Common/Source/PDF/pdf_lhapdf6.cc",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+        "bytes": 41276,
+        "sha256": "ced11dfb36e8ca939029ce2aef0bd0173ed2da6822f9ec9cda341b75ae7c880a"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/Template/Common/Source/PDF/pdf_lhapdf6.cc",
+        "bytes": 41276,
+        "sha256": "ced11dfb36e8ca939029ce2aef0bd0173ed2da6822f9ec9cda341b75ae7c880a"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 41276,
+        "sha256": "ced11dfb36e8ca939029ce2aef0bd0173ed2da6822f9ec9cda341b75ae7c880a"
+      },
+      "all_three_match": true
+    },
+    {
+      "key": "mg5_version",
+      "relative_path": "VERSION",
+      "original_current": {
+        "path": "/home/btu/opt/mg5amcnlo/VERSION",
+        "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/VERSION",
+        "bytes": 35,
+        "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+      },
+      "copied_current": {
+        "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/VERSION",
+        "resolved_path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/VERSION",
+        "bytes": 35,
+        "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+      },
+      "manifest_identity": {
+        "type": "FILE",
+        "bytes": 35,
+        "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c"
+      },
+      "all_three_match": true
+    }
+  ],
+  "external_current_closure": [
+    {
+      "key": "lhapdf_version_header",
+      "current": {
+        "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Version.h",
+        "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Version.h",
+        "bytes": 931,
+        "sha256": "475f1b3376e6300f9fb856bd61204d262265f3b7e78f1f73ee6bd2a4e4422da9"
+      },
+      "matches_actual_backend_receipt": true
+    },
+    {
+      "key": "lhapdf_alpha_header",
+      "current": {
+        "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/AlphaS.h",
+        "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/AlphaS.h",
+        "bytes": 10202,
+        "sha256": "5cb6ef49a769df21f34789b6d849215e1cdbd264fc925d54afa5192931f55897"
+      },
+      "matches_actual_backend_receipt": true
+    },
+    {
+      "key": "lhapdf_pdf_header",
+      "current": {
+        "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/PDF.h",
+        "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/PDF.h",
+        "bytes": 18178,
+        "sha256": "38f653f77c8460de48dc026043c197133362b34bebf19a7a4775284f19b5f14f"
+      },
+      "matches_actual_backend_receipt": true
+    },
+    {
+      "key": "lhapdf_factory_header",
+      "current": {
+        "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Factories.h",
+        "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/Factories.h",
+        "bytes": 7810,
+        "sha256": "0b160b00e71b7b1692363d647bc780e5d07d630fc238d946516ee779496aa3cb"
+      },
+      "matches_actual_backend_receipt": true
+    },
+    {
+      "key": "lhapdf_config_tool",
+      "current": {
+        "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/lhapdf-config",
+        "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/lhapdf-config",
+        "bytes": 4435,
+        "sha256": "b3f784077d27241b198a6cf8aef710f1b73e2eb74824d9a1e67845041eac016e"
+      },
+      "matches_actual_backend_receipt": true
+    }
+  ],
+  "historical_native_dependencies_current": [
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python3.12",
+      "bytes": 31903952,
+      "sha256": "f52b9d2958ce4abad3e17026c8f844b2d1108b0e7e139d0a1879fe46c1de91a5"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "bytes": 952752,
+      "sha256": "dfca1050d6a9c155c2dba963a24e15e0c8c1460bd838a9a019151458995041d1"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "bytes": 46,
+      "sha256": "b1db78e1cf2f99f4ed19ce450f8f183aa5997685f129ef7876342a9105dd0f50"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "bytes": 472000,
+      "sha256": "cd0502b27c77766f5aae66380250e861ee75133fc3fb7447138486a567b33aa0"
+    }
+  ],
+  "standalone_native_evidence": "PHASE12_NATIVE04_REUSED_CURRENT_IDENTITY_CLOSURE; NO_NEW_NATIVE_MEASUREMENT",
+  "actual_MG5_binding": "UNVERIFIED_NOT_EXECUTED",
+  "native_PDF_calls_this_review": 0,
+  "MG5_parser_executed": false,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "installed_directory_writes": false,
+  "parser_approval_granted": false
+}

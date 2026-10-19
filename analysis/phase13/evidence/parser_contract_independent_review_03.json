@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_FINAL_STATIC_PACKAGE_IDENTITY_APPEND_REVIEW; FULL_LAUNCH_RESOURCE_ENVELOPE_BLOCKED",
+  "observed_UTC": "2026-10-19T10:47:37.058171+00:00",
+  "previous_review_preserved": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/parser_contract_independent_review_02.json",
+    "bytes": 4209,
+    "sha256": "3e731d5bcb677ea796bca4a0998506bf83b248a708d608f752ecfeee7c2ef78b"
+  },
+  "reviewed_source_files": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 11370,
+      "sha256": "5549d5c496d10d9d6e1eab3f41f0af82ed4aff4fa2e24437ef5b518856b01d30"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    }
+  ],
+  "minimal_diff_proof": {
+    "method": "Remove only the appended model_restriction/process_text/PDF_dependency fields and restore previous dictionary terminator; full raw module SHA equals receipt02; other five reviewed files unchanged.",
+    "reconstructed_previous_module_sha256": "13ec01de21ed67f6d5c60f7f02b096ba73d3b519194a3eea939e231ee9bac5f5",
+    "previous_module_sha256": "13ec01de21ed67f6d5c60f7f02b096ba73d3b519194a3eea939e231ee9bac5f5",
+    "other_five_reviewed_sources_unchanged": true,
+    "authorization_prepare_resource_gate_and_child_dispatch_unchanged": true
+  },
+  "new_data_fields_review": {
+    "model_restriction": {
+      "model": "sm",
+      "restriction": "default",
+      "MB_GeV": 4.7,
+      "MC_GeV": 0.0,
+      "evidence_level": "STATIC_SOURCE_ONLY_NOT_MODEL_IMPORT",
+      "current_isolated_model_file_identities": [
+        {
+          "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/models/sm/restrict_default.dat",
+          "bytes": 1437,
+          "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53"
+        },
+        {
+          "path": "/home/btu/simulations/hh_phase13/run_01/runtime_01/private/mg5/models/sm/parameters.py",
+          "bytes": 15693,
+          "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc"
+        }
+      ]
+    },
+    "process_text": "Exactly COMMANDS[:3]; no command executed",
+    "PDF_dependency": {
+      "classification": "NOT_REQUIRED_FOR_SYMBOLIC_PARSER",
+      "numeric_MG5_binding": "UNVERIFIED_NOT_EXECUTED",
+      "set": "NNPDF30_lo_as_0130_nf_4",
+      "member": 0,
+      "LHAPDF_ID": 263400,
+      "DataVersion": 2,
+      "info_sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+      "member_sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    "only_callable_nodes_in_added_fields": [
+      "identity",
+      "Path"
+    ],
+    "callable_interpretation": "Identity reads raw file bytes only. No MG5/UFO/model import or numerical evaluation."
+  },
+  "current_source_execution_eligible": false,
+  "current_package_status": "BLOCKED_PHASE13_RESOURCE_ENFORCEMENT",
+  "current_required_resource_blocker": "CURRENT_SOURCE_FULL_LAUNCH_ENVELOPE_NOT_IMPLEMENTED",
+  "prior_hard_gate_checks": "Receipt02 checks remain source-identical by raw reconstruction proof. No additional human approval was created or accepted.",
+  "parser_executed": false,
+  "parser_approved": false,
+  "native_PDF_calls": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0,
+  "installed_directory_writes": false,
+  "human_approval_granted_by_review": false
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_NATIVE_RESOURCE_FIXTURES",
+  "enforcement_verified": true,
+  "enforcement_scope": "GUARDED_SINGLE_CHILD_ONLY; NOT_COMPLETE_LAUNCH_ENVELOPE",
+  "full_launch_envelope_verified": false,
+  "full_launch_blockers": [
+    "SUPERVISOR_CPU_HARD_CAP_NOT_IMPLEMENTED_OR_TESTED",
+    "SUPERVISOR_RAM_HARD_CAP_NOT_IMPLEMENTED_OR_TESTED",
+    "TOTAL_LAUNCH_WALL_WATCHDOG_NOT_PROVEN",
+    "PARENT_RECEIPT_AND_PREFLIGHT_DISK_HARD_BOUND_NOT_PROVEN"
+  ],
+  "limits": {
+    "cpu_seconds": 2,
+    "wall_seconds": 3,
+    "address_space_bytes": 536870912,
+    "output_file_bytes": 65536
+  },
+  "hard_child_output_aggregate_bytes": 131072,
+  "hard_child_address_space_not_cgroup_RSS": true,
+  "hard_child_processes": 1,
+  "allowed_child_descendants": 0,
+  "child_file_creation": false,
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "landlock_ABI": 3,
+  "cgroup_delegated_writable": false,
+  "fixture_count": 13,
+  "fixture_summary_identity": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/resource_01/resource_fixture_summary.json",
+    "bytes": 4224,
+    "sha256": "fda1d70a6441d312179805b7bc32aff55dcc76c32184cd5ab9d4272a50e3578f"
+  },
+  "results": [
+    {
+      "fixture": "read_approved",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.0037679999999999996,
+      "wall_seconds": 0.011119667000457412
+    },
+    {
+      "fixture": "write_installed_config",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.055117,
+      "wall_seconds": 0.3646235300002445
+    },
+    {
+      "fixture": "write_runtime_config",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.048535999999999996,
+      "wall_seconds": 0.3759032020025188
+    },
+    {
+      "fixture": "write_escape_symlink",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.043768999999999995,
+      "wall_seconds": 0.13885096800004249
+    },
+    {
+      "fixture": "fork",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.05655,
+      "wall_seconds": 0.3560541729966644
+    },
+    {
+      "fixture": "exec",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.034606,
+      "wall_seconds": 0.28902858199944603
+    },
+    {
+      "fixture": "network",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 31,
+      "CPU_seconds": 0.042564,
+      "wall_seconds": 0.2547976440000639
+    },
+    {
+      "fixture": "cpu_spin",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 9,
+      "CPU_seconds": 2.02432,
+      "wall_seconds": 2.0259695499989903
+    },
+    {
+      "fixture": "wall_sleep",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 9,
+      "CPU_seconds": 0.001893,
+      "wall_seconds": 3.009862939001323
+    },
+    {
+      "fixture": "memory_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.002276,
+      "wall_seconds": 0.010506008999072947
+    },
+    {
+      "fixture": "stdout_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 25,
+      "CPU_seconds": 0.015688,
+      "wall_seconds": 0.07126563000201713
+    },
+    {
+      "fixture": "stderr_overflow",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": 25,
+      "CPU_seconds": 0.022434,
+      "wall_seconds": 0.09226086100170505
+    },
+    {
+      "fixture": "orphan_cleanup",
+      "status": "PASS_EXPECTED_CONTAINMENT",
+      "signal": null,
+      "CPU_seconds": 0.004384,
+      "wall_seconds": 0.023434568000084255
+    }
+  ],
+  "raw_configuration_preserved": true,
+  "parser_execution_authorized": false,
+  "parser_execution_blocked": true,
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0,
+  "limit_profile_status": "PROPOSED_UNAPPROVED_FOR_FUTURE_PARSER",
+  "startup_success": "UNVERIFIED_NOT_EXECUTED",
+  "resource_statement": "13 harmless fixed kernel fixtures passed. This does not prove limits for the future supervisor or whole launch; the parser dispatch remains blocked even if a human approval file is later supplied."
+}

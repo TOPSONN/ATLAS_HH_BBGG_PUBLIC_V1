@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "model": "sm",
+  "restriction": "models/sm/restrict_default.dat",
+  "restricted_masses_GeV": {
+    "MB": 4.7,
+    "MC": 0.0
+  },
+  "source_identities": {
+    "models/sm/restrict_default.dat": {
+      "bytes": 1437,
+      "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53"
+    },
+    "models/sm/parameters.py": {
+      "bytes": 15693,
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc"
+    },
+    "models/sm/particles.py": {
+      "bytes": 10444,
+      "sha256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414"
+    },
+    "models/sm/coupling_orders.py": {
+      "bytes": 443,
+      "sha256": "c89fc6f38d118a50a1e562da8653a2ccc96a9e00be22696bf5fb771a4df313b4"
+    },
+    "models/import_ufo.py": {
+      "bytes": 127324,
+      "sha256": "d030835ea14a700ab40c29e4e2fb73df4d7f4fd846cf4ba22db3589a14549a38"
+    },
+    "madgraph/interface/madgraph_interface.py": {
+      "bytes": 458046,
+      "sha256": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3"
+    },
+    "Template/LO/SubProcesses/cuts.f": {
+      "bytes": 55278,
+      "sha256": "c077cc390dc052a8526ddb187c98005e08bab7e5d999c8c879b66a1500b65c2c"
+    },
+    "Template/LO/SubProcesses/setcuts.f": {
+      "bytes": 35393,
+      "sha256": "f0e3e5e3ad3f5599fa56aa7baef614112e383ee51701caa38d16c977185cab18"
+    },
+    "madgraph/various/banner.py": {
+      "bytes": 279713,
+      "sha256": "9877e00f80da4ef8a23d6a11377238e5b31c91c346b2aa73307ab52f64d9cc2a"
+    }
+  },
+  "process_commands": [
+    "import model sm",
+    "define p4 = g u u~ d d~ s s~ c c~",
+    "generate p4 p4 > b b~ a a QCD=2 QED=2"
+  ],
+  "amplitude_order_interpretation": "QCD<=2; QED<=2; NOT_VERIFIED_DIAGRAM_SET",
+  "future_symbolic_diagram_enumeration_in_scope": true,
+  "MG5_parser_executed": false,
+  "parser_authorized": false,
+  "code_generation_authorized": false,
+  "numerical_ME_authorized": false,
+  "physical_configuration_validated": false,
+  "ATLAS_detector_isolation_equivalence_claimed": false,
+  "candidate_generation_cuts": {
+    "maxjetflavor": {
+      "value": 4,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "只把 u,d,s,c／gluon 分為 light-jet cut category；使 massive b 明列 is_a_b。此值不是 PDF 或 ME flavour scheme 本身。",
+      "required_acceptance_evidence": "未來 generated setcuts 分類與 model/PDF/ME 方案須逐一核對；不得以 4 這個值推論物理 4F prediction。"
+    },
+    "ptgmin": {
+      "value": 20.0,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "20 GeV 是有限正 photon soft 門檻的探索候選，觸發 inspected smooth-cone branch；不是歷史 5F card 複製或 ATLAS 正式門檻。",
+      "required_acceptance_evidence": "另行審查較低／較高門檻的 fiducial acceptance 穩定性、soft 邊界與 generation efficiency；本階段沒有積分。"
+    },
+    "r0gamma": {
+      "value": 0.4,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "0.4 是 parton-level smooth-cone 半徑探索候選，與 drab／draa 各自明列；不等同 detector fixed cone。",
+      "required_acceptance_evidence": "需在授權的未來方案中檢查 cone 變動、finite generation region 與 detector selection migration。"
+    },
+    "xn": {
+      "value": 1.0,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "正 exponent=1 使 source chi profile 隨 r→0 消失；只對 is_a_j sum 有作用。",
+      "required_acceptance_evidence": "須確認 generated source 仍使用 abs(xn) profile，並分開檢查 massive b 未納入該 sum 的覆蓋限制。"
+    },
+    "epsgamma": {
+      "value": 1.0,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "1 是探索用的 cone-edge pT fraction，source profile 上界為 epsgamma*pTgamma；不表示已校準 photon isolation。",
+      "required_acceptance_evidence": "需對 isolation fraction 做獨立 acceptance／perturbative sensitivity 審查，不得稱 ATLAS systematic。"
+    },
+    "isoem": {
+      "value": false,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "False 明確停用另外的 EM smooth-cone sum；以獨立 draa separation 定義 photon-pair 幾何候選。目標 Born process 無 final-state leptons。",
+      "required_acceptance_evidence": "需確認 EM isolation 開關對 photon-pair acceptance 的影響，不能默認與 detector 或歷史 isoem=True 等價。"
+    },
+    "pta": {
+      "value": 0.0,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "0 與 inspected positive-ptgmin normalization 一致；photon soft 門檻由 ptgmin 明列。",
+      "required_acceptance_evidence": "未來 effective run card 必須核對 pta 被正 ptgmin 規則置零，不能聲稱同時施加另一個 pta 門檻。"
+    },
+    "draj": {
+      "value": 0.0,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "0 與 inspected positive-ptgmin normalization 一致；此欄不能用來隔離分類為 is_a_b 的 bottom。",
+      "required_acceptance_evidence": "未來 effective card／generated cuts 必須核對 light-parton smooth-cone 與 drab 的各自覆蓋，不能混用 draj。"
+    },
+    "drab": {
+      "value": 0.4,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "0.4 明確限制 b-photon separation，補足 maxjetflavor4 下 massive b 不進入 Frixione hadronic sum 的來源事實；不是自動 smooth-cone b isolation。",
+      "required_acceptance_evidence": "需獨立審查正 separation 對 massive-b photon radiation、analysis acceptance 與所需 phase space 的敏感性；本候選未做 physical validation。"
+    },
+    "draa": {
+      "value": 0.4,
+      "evidence_level": "PROPOSED_NOT_PHYSICALLY_VALIDATED",
+      "rationale": "0.4 是 photon-pair geometric separation 的探索候選，與 isoem=False 一起明列而非依賴隱藏 default。",
+      "required_acceptance_evidence": "需核對 analysis photon overlap/separation 定義與 generation acceptance；不能把此 parton cut 當 detector isolation。"
+    },
+    "mmaa": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "rationale": "尚未選定；此欄是獨立 diphoton invariant-mass cut，不因 Frixione branch 自動消失。",
+      "required_acceptance_evidence": "需先確定要保留的 signal／control mgg 區間、resolution migration 與 sideband 邊界，再審查正值或停用值並凍結。"
+    },
+    "ptb": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "rationale": "尚未選定 massive-b generation pT acceptance，禁止從歷史 5F ptj/ptb default 補值。",
+      "required_acceptance_evidence": "需明確目標 b-jet fiducial region、b-quark→jet migration 與低 pT acceptance 穩定性，再凍結 generation threshold。"
+    },
+    "etab": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "rationale": "尚未選定 massive-b generation pseudorapidity acceptance。",
+      "required_acceptance_evidence": "需核對 analysis jet eta 邊界、forward migration 與足夠外延 generation phase space，不能默用 default。"
+    },
+    "etaa": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "rationale": "尚未選定 photon generation pseudorapidity acceptance。",
+      "required_acceptance_evidence": "需核對 detector photon acceptance、crack／overlap 處理與 migration；generation cut 不等於 detector fiducial cut。"
+    }
+  },
+  "unresolved_generator_conventions": {
+    "ickkw": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 ickkw 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    },
+    "xqcut": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 xqcut 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    },
+    "kt_durham": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 kt_durham 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    },
+    "dynamical_scale_choice": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 dynamical_scale_choice 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    },
+    "mu_R_definition": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 mu_R_definition 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    },
+    "mu_F_definition": {
+      "value": null,
+      "evidence_level": "UNRESOLVED_BLOCKS_PHYSICAL_EVALUATION",
+      "required_acceptance_evidence": "另行審查並明列 mu_F_definition 的方案、source 定義、適用的 LO/matching scope 與接受測試；本階段不得採用任何隱含 default 或執行。"
+    }
+  },
+  "primary_theory_source": "https://arxiv.org/abs/hep-ph/9801442",
+  "candidate_scope": "未使用的 source-engineering proposal；不是可 launch 的完整 run card。所有數值均未經 physical validation。"
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_FINAL_MINIMAL_DIFF_AND_FAIL_CLOSED_GATE_REVIEW; FULL_LAUNCH_RESOURCE_ENVELOPE_BLOCKED",
+  "observed_UTC": "2026-10-19T10:45:33.074085+00:00",
+  "previous_review_preserved": {
+    "path": "/home/btu/simulations/hh_phase13/run_01/parser_contract_independent_review.json",
+    "bytes": 5701,
+    "sha256": "1b86f3fa484b62990beb7735a843e1b0ad39fdd6f6761c1d68207ba2b8706954"
+  },
+  "reviewed_source_files": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 10648,
+      "sha256": "13ec01de21ed67f6d5c60f7f02b096ba73d3b519194a3eea939e231ee9bac5f5"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    }
+  ],
+  "only_changed_reviewed_file": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+  "minimal_diff_proof": {
+    "method": "Reverse exactly the three reviewed prepare-field expressions, then raw SHA256 equals previous reviewed full module; five other source files match previous review exactly.",
+    "reconstructed_previous_module_sha256": "ac5f7c72ffe6de6fd0766e3b71cde006a1ea991e923946cc03216dcecc2709ed",
+    "previous_module_sha256": "ac5f7c72ffe6de6fd0766e3b71cde006a1ea991e923946cc03216dcecc2709ed",
+    "other_five_reviewed_sources_unchanged": true
+  },
+  "current_expression_checks": [
+    {
+      "check": "exact_prepare_execution_eligible_binds_source_constant",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "exact_prepare_package_status_binds_source_constant",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "exact_prepare_resource_blockers_binds_source_constant",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "current_source_still_rejects_eligible_json_False_before_approval_read_or_challenge",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "current_source_still_rejects_eligible_json_True_before_approval_read_or_challenge",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    }
+  ],
+  "prior_18_checks_scope": "Preserved in prior receipt; authorization/child/guard implementations unchanged by strict reconstructed-source proof. Two current hard-gate negative probes repeated here; no approval challenge accepted.",
+  "current_FULL_LAUNCH_ENVELOPE_IMPLEMENTED": false,
+  "prepare_current_execution_eligible": false,
+  "prepare_current_package_status": "BLOCKED_PHASE13_RESOURCE_ENFORCEMENT",
+  "prepare_required_blocker": "CURRENT_SOURCE_FULL_LAUNCH_ENVELOPE_NOT_IMPLEMENTED",
+  "open_blockers": [
+    "FULL_SUPERVISOR_RAM_CPU_WALL_DISK_ENVELOPE_NOT_PROVEN",
+    "NEW_IMPLEMENTATION_REVIEW_AND_NEW_EXPLICIT_PARSER_APPROVAL_REQUIRED"
+  ],
+  "parser_executed": false,
+  "parser_approved": false,
+  "native_PDF_calls": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0,
+  "installed_directory_writes": false,
+  "human_approval_granted_by_review": false
+}

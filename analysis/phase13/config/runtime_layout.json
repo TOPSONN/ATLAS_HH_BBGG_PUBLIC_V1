@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+  "MG5_version": "3.5.16",
+  "source_root": "/home/btu/opt/mg5amcnlo",
+  "source_resolved_root": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16",
+  "allowed_output_parent": "/home/btu/simulations/hh_phase13/run_01",
+  "expected_config": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "limits": {
+    "max_entries": 8192,
+    "max_single_file_bytes": 33554432,
+    "max_total_regular_bytes": 268435456
+  },
+  "symlink_policy": "PRESERVE_EXACT_RELATIVE_INTERNAL_LINK_TEXT; REJECT_ABSOLUTE_EXTERNAL_OR_LOOPS; RECORD_BROKEN_INTERNAL_LINKS",
+  "hardlink_policy": "COPY_BYTES_TO_NEW_INODES; NO_SHARED_ORIGINAL_OR_DUPLICATE_DESTINATION_INODES",
+  "config_proposal": "SEPARATE_UNAPPROVED_UNACTIVATED_MG5_PATH_ONLY_CHANGE; COPIED_RAW_CONFIG_UNCHANGED",
+  "historical_writer": "UNKNOWN",
+  "old_phase11_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "parser_executed": false,
+  "physical_authorization": false,
+  "dispatcher": null,
+  "new_baseline_approved": false
+}

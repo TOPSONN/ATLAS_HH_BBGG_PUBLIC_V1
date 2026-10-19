@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_INDEPENDENT_FAIL_CLOSED_PARSER_REVIEW; FULL_LAUNCH_RESOURCE_ENVELOPE_BLOCKED",
+  "observed_UTC": "2026-10-19T10:43:15.256224+00:00",
+  "reviewed_source_files": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 10466,
+      "sha256": "ac5f7c72ffe6de6fd0766e3b71cde006a1ea991e923946cc03216dcecc2709ed"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/prepare_parser_package.py",
+      "bytes": 906,
+      "sha256": "df4899235f1b3f1f2c3b4d7ee0b598c27efbb5b48645299d63e3a6c1b0acaef8"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13_v1/analysis/phase13/tests/test_parser_contract.py",
+      "bytes": 4623,
+      "sha256": "8b78afdff1a0bfd00e8e170278f618676e98f24687a454cf4fd3456b7f8352fe"
+    }
+  ],
+  "method": "Read source and AST; execute only mechanical missing/invalid authorization fixture paths using fresh synthetic JSON. Current false implementation constant tested directly against both blocked and eligible-looking JSON. Memory-only true mock used solely for downstream wrong challenge/old-scope negative tests; restored afterward. No positive future parser path or native guard invocation.",
+  "checks": [
+    {
+      "check": "frozen_complete_launch_implementation_flag_false",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "missing_approval_rejected_before_package_read_True",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "missing_approval_rejected_before_package_read_False",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "full_launch_constant_blocks_json_eligible_False",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "full_launch_constant_blocks_json_eligible_True",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "historical_BUILD_ONLY_not_reused_after_memory_only_gate_mock",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "nonTTY_rejected_after_memory_only_gate_mock",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "wrong_challenge_rejected_after_memory_only_gate_mock",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "challenge_with_trailing_space_rejected_after_memory_only_gate_mock",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "no_output_created_after_all_invalid_confirmations",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "memory_only_mock_restored_frozen_false_flag",
+      "status": "PASS",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "check": "authorization_lexically_before_every_mutation_or_Popen",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "direct_child_first_statement_rejects_current_source",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "native_guard_installed_before_runpy_dispatch",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "exact_symbolic_commands_only",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "numerical_and_old_authorization_scopes_all_false",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "future_schema_counters_not_claimed_instrumented",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    },
+    {
+      "check": "resource_summary_preserves_unproven_full_envelope",
+      "status": "PASS",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT"
+    }
+  ],
+  "material_open_blockers": [
+    "FULL_LAUNCH_SUPERVISOR_RESOURCE_ENVELOPE_NOT_PROVEN; CURRENT_SOURCE_CONSTANT_FALSE_AND_DIRECT_CHILD_GATE_PREVENT_DISPATCH"
+  ],
+  "limitations": [
+    "No MG5 import/parser/diagram enumeration or native ME was executed.",
+    "Mechanical approval file plus TTY comparison cannot authenticate a human; new explicit user approval remains required.",
+    "13 child containment fixtures do not prove full supervisor CPU/RAM/wall/disk enforcement.",
+    "Scope-derived zero numerical counters are not a runtime numerical-ME instrumentation proof.",
+    "A source correction and new review are required before separate explicit parser approval can become actionable."
+  ],
+  "parser_executed": false,
+  "parser_approved": false,
+  "native_PDF_calls": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0,
+  "installed_directory_writes": false,
+  "human_approval_granted_by_review": false
+}

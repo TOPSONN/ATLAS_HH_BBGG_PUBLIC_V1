@@ -1,0 +1,33 @@
+name: Phase13 isolated runtime source and parser approval boundary
+on:
+  push:
+    branches: [codex/phase13-isolated-mg5-parser-readiness]
+  pull_request:
+    paths: ['analysis/phase13/**','metadata/phase13*','reports/phase13*','.github/workflows/phase13-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_methods_bounded_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Phase13 offline source methods and negative boundary fixtures
+        run: python3 -B -m unittest discover -s analysis/phase13/tests -p 'test_*.py' -v
+      - name: Preserve Phase12 and Phase11 offline unit methods
+        run: |
+          python3 -B -m unittest discover -s analysis/phase12/tests -p 'test_*.py' -v
+          python3 -B -m unittest discover -s analysis/phase11/tests -p 'test_*.py' -v
+      - name: Exact source, bounded evidence, index and every outgoing commit payload
+        run: python3 -B analysis/phase13/scripts/check_publication.py --repo .
+      - name: Evidence scope
+        run: |
+          echo '### Phase13 evidence scope' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Offline source/method fixtures and bounded exact published evidence; synthetic containment tests are not actual MG5 parser validation.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No downloads, native PDF calls, MG5 invocation, parser/process enumeration, numerical ME, code generation, integration, events, shower, detector, Route-A build, Stage A, physical inference or figure publication in this CI.' >> "$GITHUB_STEP_SUMMARY"
