@@ -16,6 +16,9 @@
 | SOURCE_REVISION_SCOPE | 此commit完整捕捉最終executable source；之後僅加入bounded evidence與delivery reports。個別最終ancestry／statistics run另外有前後source SHA閉合。 |
 | DRAFT_PR_URL | PENDING_DRAFT_PR_URL |
 | BRANCH | `codex/phase9-background-model-review`，疊在PR25分支上 |
+| NEW_ME_CALLS | 0 |
+| NEW_INTEGRALS | 0 |
+| NEW_HARD_EVENTS | 0 |
 | 新物理產生 | ME=0、積分=0、hard events=0、Pythia=0、Delphes=0 |
 
 本機source為`/home/btu/projects/atlas_hh_phase9_v1`；結果為`/home/btu/simulations/hh_phase9/run_01`。舊Phase8／Phase7I checkout與PR24／25不變；沒有merge或force-push。
@@ -85,7 +88,7 @@ B03／B06另報單側95% acceptance上限**0.0029912495**；這是相同proposal
 
 `MC_STATISTICAL_PRECISION`：40個stage precision rows、4560個bin-quality rows、原始N weighted sampling variance、stage/bin ESS、dominant sources與tails均已輸出。沒有把integration error、tag variance或未校準systematics塞入source MC誤差。
 
-`RARE_BACKGROUND_SAMPLE_REQUIREMENTS`：42個planning/scenario rows，使用相同IID proposal與固定selection下的漸近relative-SE公式及pilot CP acceptance envelope。B02若假設p=0.001，20%／30%／50%目標約需24975／11100／3996筆新的獨立campaign總N；CP範圍使需求非常寬，不能當保證。零存活類別只提供p=10⁻³、3×10⁻⁴、10⁻⁴的顯式假設情境，不給有限的實測保證。
+`RARE_BACKGROUND_SAMPLE_REQUIREMENTS`：42個planning/scenario rows，使用相同IID proposal與固定selection下的漸近relative-SE公式及pilot CP acceptance envelope。B02若假設p=0.001，20%／30%／50%目標約需24975／11100／3996筆新的獨立campaign總N；CP範圍使需求非常寬，不能當保證。零存活類別只提供p=p95、p95/10、p95/100（p95=0.002991249545095296）的顯式假設情境，不給有限的實測保證。
 
 `REGION_CLOSURE`：120 rows count／raw sumw／own BR-once sumw閉合；0／1／≥2 tags與low／Higgs／high／outside／undefined mgg互斥。1080個observable summaries保留missing/null；0／1tag沒有tagged bb或HH candidate。
 
@@ -105,18 +108,19 @@ B03／B06另報單側95% acceptance上限**0.0029912495**；這是相同proposal
 
 ## 驗證、保存與交付
 
-- `METHOD_TESTS`：Phase9 **163/163**；包含synthetic guards與bounded historical graph regression。Phase8 Python **92/92**、C++／ROOT CTest **9/9**、native synthetic likelihood **26/26**。
+- `EXISTING_REGRESSIONS`：Phase8 Python92／C++ ROOT9／native synthetic26，全部PASS。
+- `METHOD_TESTS`：Phase9 **165/165**；包含synthetic guards與bounded historical graph regression。Phase8 Python **92/92**、C++／ROOT CTest **9/9**、native synthetic likelihood **26/26**。
 - 獨立HF：3000筆、980 CSV rows、7190 numerical checks；photon：6000筆、750 rows、6300 Decimal70 checks與120 object aggregate checks。
 - 獨立statistics：7100筆persisted source、144 histograms／1824 flow-inclusive bins、120 regions、40 stages，共**12904** comparisons。ROOT exact-binomial為33 cases／66 endpoints，最大差1.19904×10⁻¹⁴。
 - `SOURCE_HASH_CLOSURE`：source manifest、final ancestry／statistics source前後SHA與三個actual native binaries／resolved dependencies均已記錄。歷史Phase8 source不變。
 - `HISTORICAL_PRESERVATION`：**411 files、2312498346 bytes**全部重新hash相同；舊Phase8／Phase7I HEAD及index不變。所有既有physical reference validators PASS。
-- `ACTUAL_ANALYSIS_CPU`、`ACTUAL_ANALYSIS_WALL`、`PEAK_MEMORY`、`DISK_USAGE`：已記錄92個science／artifact jobs：CPU 457.673 s、job wall 484.718 s，抽樣peak RSS 818286592 bytes（約780.4 MiB），當時results 120854721 bytes及build 13888677 bytes，合計約128.5 MiB；delivery bookkeeping另列於最後本機receipt。這是contained jobs的實測加總，包含失敗與superseded attempts；不冒充source editing／clone準備／零碎bookkeeping的完整端到端CPU。RSS明示為抽樣process-group值。
+- `ACTUAL_ANALYSIS_CPU`、`ACTUAL_ANALYSIS_WALL`、`PEAK_MEMORY`、`DISK_USAGE`：已記錄93個science／artifact jobs：CPU 457.862 s、job wall 484.978 s，抽樣peak RSS 818286592 bytes（約780.4 MiB），當時results 122200073 bytes及build 13888677 bytes（以receipt精確值為準）；delivery bookkeeping另列於最後本機receipt。這是contained jobs的實測加總，包含失敗與superseded attempts；不冒充source editing／clone準備／零碎bookkeeping的完整端到端CPU。RSS明示為抽樣process-group值。
 - `GITHUB_CI`：最終head的source/method與bounded-evidence check由GitHub Actions外部狀態驗證；不是本機full-ROOT loop。
 - `REMOTE_BLOB_VERIFICATION`：publication後逐檔下載並核對source/evidence SHA與bytes，最後結論寫入本機`FINAL_REPORT.json`與delivery receipt。commit無法自我包含其未來CI結果；此報告不以placeholder PASS代替外部驗收。
 
 `GATES_PASS`：source/input identity、native readback、ancestry／unknown保留、independent numerics、ROOT區間、region閉合、shape誤差、regressions、historical preservation、local figure QA與0 production。
 
-`GATES_FAIL`：最終科學診斷無未解決fail。曾失敗的CSV validator row-cardinality與PDF backend由獨立檢查攔下，修正後重跑PASS；所有attempt logs／receipts保留。
+`GATES_FAIL`：最終科學診斷無未解決fail。曾失敗的CSV validator row-cardinality與PDF backend由獨立檢查攔下，修正後重跑PASS；所有attempt logs／receipts保留。另修正Phase9 CSV publication的Git換行轉換：新增局部`.gitattributes`保留原始CSV bytes，加入index對working-tree精確byte guard及負例測試；原始分析數據不變，歷史commits保留。
 
 `GATES_BLOCKED`：物理matched signal norm、HF排他定義、fake calibration、single-H／detector物理校準、nuisance值與correlation、充分MC支撐，以及未經使用者核准的PDF／PNG publication。
 

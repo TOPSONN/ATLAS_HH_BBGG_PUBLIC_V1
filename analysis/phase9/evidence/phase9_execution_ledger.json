@@ -2,11 +2,11 @@
   "evidence_class": "LOCAL_ACTUAL_COMPUTATIONAL_EXECUTION_RECEIPTS",
   "resources": {
     "status": "PASS_CONTAINED_PHASE9_ANALYSIS_BUDGET",
-    "recorded_jobs": 92,
-    "recorded_job_CPU_seconds": 457.672734,
-    "recorded_job_wall_seconds": 484.71795252398806,
+    "recorded_jobs": 93,
+    "recorded_job_CPU_seconds": 457.86175199999997,
+    "recorded_job_wall_seconds": 484.9775445439882,
     "peak_observed_process_group_RSS_bytes": 818286592,
-    "disk_bytes_current_results": 120854721,
+    "disk_bytes_current_results": 122200073,
     "disk_bytes_current_build": 13888677,
     "ceilings": {
       "CPU_seconds": 14400,
@@ -983,6 +983,37 @@
       "cpu_seconds": 0.185078,
       "peak_observed_process_group_RSS_bytes": 4456448,
       "aggregate_observed_disk_bytes": 134662504,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase9_methods_publication_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase9/tests",
+        "-p",
+        "test_phase9_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2595920200001274,
+      "cpu_seconds": 0.189018,
+      "peak_observed_process_group_RSS_bytes": 6553600,
+      "aggregate_observed_disk_bytes": 136088106,
       "resource_failure": null,
       "ceilings": {
         "wall_seconds": 14400,

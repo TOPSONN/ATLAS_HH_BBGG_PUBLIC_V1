@@ -51,6 +51,16 @@ class PublicationPayloadTests(unittest.TestCase):
             self.payload('analysis/phase9/evidence/raw.bin',b'data')
         with self.assertRaisesRegex(ValueError,'UNLISTED_OR_DISALLOWED_PAYLOAD'):
             self.payload('reference_samples/unreviewed.csv',b'a,b\n')
+    def test_lf_crlf_normalization_rejected(self):
+        with self.assertRaisesRegex(ValueError,'GIT_INDEX_OR_REMOTE_BYTE_NORMALIZATION'):
+            v.ensure_exact_bytes(b'a,b\n1,2\n',b'a,b\r\n1,2\r\n','analysis/phase9/evidence/proof.csv')
+        # Equal decoded CSV values do not establish exact byte preservation.
+    def test_exact_bytes_preserved_and_attributes_path_scoped(self):
+        raw='欄位,value\r\n1,2\r\n'.encode('utf-8')
+        v.ensure_exact_bytes(raw,raw,'analysis/phase9/evidence/proof.csv')
+        self.assertTrue(v.allowed('analysis/phase9/.gitattributes'))
+        self.assertFalse(v.allowed('.gitattributes'))
+        self.assertFalse(v.allowed('analysis/phase8/.gitattributes'))
     def virtual_unlisted(self,location):
         with tempfile.TemporaryDirectory(prefix='phase9_publication_synthetic_') as td:
             repo=Path(td)

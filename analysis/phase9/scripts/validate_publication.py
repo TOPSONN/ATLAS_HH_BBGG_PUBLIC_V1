@@ -17,10 +17,13 @@ def sha(path):
         for block in iter(lambda:f.read(1024**2),b''):h.update(block)
     return h.hexdigest()
 def allowed(path):return path in ALLOWED_EXACT or path.startswith(ALLOWED_PREFIXES)
+def ensure_exact_bytes(actual,expected,name):
+    demand(actual==expected,'GIT_INDEX_OR_REMOTE_BYTE_NORMALIZATION:'+name)
+
 def validate_payload(name,payload,covered):
     demand(allowed(name) and name in covered,'UNLISTED_OR_DISALLOWED_PAYLOAD:'+name)
     demand(not name.lower().endswith(FORBIDDEN_SUFFIXES),'FORBIDDEN_PAYLOAD_TYPE:'+name)
-    demand(Path(name).suffix.lower() in ('.py','.cxx','.hxx','.md','.json','.csv','.yml','.txt'),'UNSUPPORTED_PAYLOAD_TYPE:'+name)
+    demand(name=='analysis/phase9/.gitattributes' or Path(name).suffix.lower() in ('.py','.cxx','.hxx','.md','.json','.csv','.yml','.txt'),'UNSUPPORTED_PAYLOAD_TYPE:'+name)
     demand(len(payload)<2*1024**2,'UNBOUNDED_PAYLOAD:'+name)
     demand(not payload.startswith((b'%PDF-',b'\x89PNG',b'root',b'\x7fELF',b'MZ')),'BINARY_OR_FIGURE_MAGIC:'+name)
     payload.decode('utf-8')
@@ -43,6 +46,10 @@ def validate(repo):
     demand(total<10*1024**2,'UNBOUNDED_AGGREGATE_EVIDENCE')
     def git(*args):return subprocess.check_output(['git','-C',str(repo),*args],text=True).splitlines()
     covered=seen|{'metadata/phase9_source_manifest.json'}
+    tracked=set(git('ls-files'))
+    for name in covered & tracked:
+        indexed=subprocess.check_output(['git','-C',str(repo),'show',':'+name])
+        ensure_exact_bytes(indexed,(repo/name).read_bytes(),name)
     changes=git('diff','--name-only',BASE)+git('diff','--cached','--name-only')+git('ls-files','--others','--exclude-standard')
     for name in set(changes):
         demand((repo/name).is_file() and not (repo/name).is_symlink(),'DELETED_OR_SYMLINK_PAYLOAD:'+name)
