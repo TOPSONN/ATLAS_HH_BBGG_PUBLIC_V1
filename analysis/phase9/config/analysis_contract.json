@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task": "PHASE9_BACKGROUND_MODEL_AND_PHYSICS_REVIEW_V1",
+  "mode": "EXISTING_DATA_PHYSICS_ANALYSIS",
+  "base_revision": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+  "native_readback_scope": "B01-B06 full6000 ROOT events for new ancestry/electron/photon questions; no repeat signal production/Phase8pipeline",
+  "historical_signal_scope": "S01_B100/C1000 validated Phase8 events+histograms, frozen sourcefiles/hashverified",
+  "resource_ceilings": {
+    "wall_seconds": 14400,
+    "CPU_seconds": 14400,
+    "additional_output_bytes": 2147483648,
+    "jobs": 1,
+    "workers": 1
+  },
+  "limits_origin": "Conservative Phase9 execution ceilings; independent of all Phase7I authorization budgets",
+  "forbidden_dispatches": [
+    "ME",
+    "integration",
+    "MG5generation",
+    "PythiaProduction",
+    "DelphesProduction",
+    "Phase7Ibuild_restart"
+  ],
+  "figure_policy": "CERN_ROOT_LOCAL_ONLY; all PDF/PNG excluded from every outgoing commit until exact final figure approval",
+  "physical_total_background": "BLOCKED",
+  "physical_significance": "NOT_EVALUATED",
+  "physical_CLs": "NOT_EVALUATED",
+  "physical_kappa_interval": "NOT_EVALUATED"
+}
