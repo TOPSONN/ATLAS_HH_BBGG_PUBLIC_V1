@@ -1,0 +1,198 @@
+{
+  "label": "SYNTHETIC_METHOD_ONLY",
+  "physical_inference": "NOT_EVALUATED",
+  "status": "PASS_SYNTHETIC_METHOD_ONLY",
+  "tests": [
+    {
+      "details": {
+        "fit_status": 0,
+        "mu_hat": 1.0000090375758288
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "count_parameter_recovery",
+      "pass": true
+    },
+    {
+      "details": {
+        "analytic_variance": 0.3,
+        "compared_quantity": "external Hessian covariance matrix; bounded RooRealVar symmetric error is a separate Minuit transformed-error diagnostic",
+        "covariance_matrix_variance": 0.30000077658966723,
+        "covariance_quality": 3,
+        "mu_error": 0.540902382797958,
+        "mu_error_squared": 0.2925753877165087
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "count_covariance",
+      "pass": true
+    },
+    {
+      "details": {
+        "RooFit_minus2logLR": 2.739075652893149,
+        "analytic_minus2logLR": 2.739075652893149
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "count_likelihood_ratio",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "expected_log_likelihood",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "zero_count_zero_expectation",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "positive_count_zero_expectation",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "small_positive_expectation",
+      "pass": true
+    },
+    {
+      "details": {
+        "entries": 1
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "RooStats_Asimov",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "RooStats_profile_likelihood_interval",
+      "pass": true
+    },
+    {
+      "details": {
+        "mu_hat_zero_count": 1.3366057934928455e-13
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "signal_strength_boundary",
+      "pass": true
+    },
+    {
+      "details": {
+        "integrated_signal": 20.0
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "template_bin_integration",
+      "pass": true
+    },
+    {
+      "details": {
+        "EDM": 1.7230010474451328e-12,
+        "Gaussian_norm_pull": -1.9116393913144736e-08,
+        "fit_status": 0,
+        "lognormal_rate": 0.9999999418646456,
+        "max_MC_factor_minus_one": 6.982309486147642e-08,
+        "minimizer_strategy": 2,
+        "minimizer_tolerance": 1e-07,
+        "mu_hat": 0.9999998069456099,
+        "shape_pull": -3.038746508414458e-08
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "extended_binned_Asimov_recovery",
+      "pass": true
+    },
+    {
+      "details": {
+        "covariance_quality": 3,
+        "dimension": 11
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "binned_covariance_matrix",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "Gaussian_constraint_normalization",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "lognormal_constraint_normalization",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "Gaussian_analytic_density",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "lognormal_analytic_density",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "extended_binned_likelihood_identity",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "shape_nuisance_normalized_integral",
+      "pass": true
+    },
+    {
+      "details": {
+        "seed": 820019,
+        "toy_count": 39
+      },
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "deterministic_toy_seed",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "negative_expectation_rejected",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "nonfinite_expectation_rejected",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "signed_weight_model_rejected",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "missing_provenance_rejected",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "synthetic_cannot_unlock_physical_fit",
+      "pass": true
+    },
+    {
+      "details": {},
+      "evidence_class": "SYNTHETIC_METHOD_TEST",
+      "name": "unknown_overlap_and_nuisance_rejected",
+      "pass": true
+    }
+  ]
+}

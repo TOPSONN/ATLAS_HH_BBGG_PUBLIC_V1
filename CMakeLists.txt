@@ -89,6 +89,10 @@ file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/step1_cmake_environment.txt"
   "CMAKE_VERSION=${CMAKE_VERSION}\n")
 
 option(ATLAS_BUILD_PHASE8 "Build existing-event Phase8 ROOT analysis" OFF)
-if(ATLAS_BUILD_PHASE8)
+option(ATLAS_BUILD_PHASE9 "Build existing-data Phase9 background diagnostics" OFF)
+if(ATLAS_BUILD_PHASE8 OR ATLAS_BUILD_PHASE9)
   add_subdirectory(analysis/phase8)
+endif()
+if(ATLAS_BUILD_PHASE9)
+  add_subdirectory(analysis/phase9)
 endif()

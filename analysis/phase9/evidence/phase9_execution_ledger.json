@@ -1,0 +1,2752 @@
+{
+  "evidence_class": "LOCAL_ACTUAL_COMPUTATIONAL_EXECUTION_RECEIPTS",
+  "resources": {
+    "status": "PASS_CONTAINED_PHASE9_ANALYSIS_BUDGET",
+    "recorded_jobs": 93,
+    "recorded_job_CPU_seconds": 457.86175199999997,
+    "recorded_job_wall_seconds": 484.9775445439882,
+    "peak_observed_process_group_RSS_bytes": 818286592,
+    "disk_bytes_current_results": 122200073,
+    "disk_bytes_current_build": 13888677,
+    "ceilings": {
+      "CPU_seconds": 14400,
+      "wall_seconds": 14400,
+      "additional_output_bytes": 2147483648,
+      "jobs": 1,
+      "workers": 1
+    },
+    "scope": "Sum of contained computational commands, including failed and superseded attempts. Source editing, clone preparation, small peer fixture runs and initial/final bookkeeping are not full end-to-end CPU accounting. RSS is sampled process-group RSS, not a kernel high-water guarantee.",
+    "resolved_failed_attempts": [
+      {
+        "label": "independent_photon",
+        "exit_code": 1
+      },
+      {
+        "label": "render_v2_phase9_01_signal_mgg",
+        "exit_code": 1
+      }
+    ]
+  },
+  "receipts": [
+    {
+      "label": "ROOT_PDF_trim_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/trim_pdf_pages.py",
+        "--source",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v4_ROOT",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2",
+        "--pypdf-path",
+        "/mnt/c/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/Lib/site-packages"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.110242716000357,
+      "cpu_seconds": 3.2973809999999992,
+      "peak_observed_process_group_RSS_bytes": 47955968,
+      "aggregate_observed_disk_bytes": 132648173,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "ROOT_PDF_whitespace_trim",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/trim_pdf_pages.py",
+        "--source",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final",
+        "--pypdf-path",
+        "/mnt/c/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/Lib/site-packages"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.852187337999567,
+      "cpu_seconds": 3.495926,
+      "peak_observed_process_group_RSS_bytes": 71090176,
+      "aggregate_observed_disk_bytes": 125932540,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "ROOT_figures_v1",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_plots",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.278913709000335,
+      "cpu_seconds": 2.086201,
+      "peak_observed_process_group_RSS_bytes": 449880064,
+      "aggregate_observed_disk_bytes": 116317244,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "ROOT_figures_v2",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_plots",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec_v2.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v2"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.039874203999716,
+      "cpu_seconds": 1.8922889999999994,
+      "peak_observed_process_group_RSS_bytes": 444919808,
+      "aggregate_observed_disk_bytes": 120975878,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "ROOT_figures_v3",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_plots",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec_v2.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.7840618589998485,
+      "cpu_seconds": 1.6963100000000004,
+      "peak_observed_process_group_RSS_bytes": 449343488,
+      "aggregate_observed_disk_bytes": 123017974,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "ROOT_figures_v4",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_plots",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec_final.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v4_ROOT"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.044274800999119,
+      "cpu_seconds": 1.9247990000000001,
+      "peak_observed_process_group_RSS_bytes": 447131648,
+      "aggregate_observed_disk_bytes": 130603503,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_01",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 116.77316122799857,
+      "cpu_seconds": 114.513562,
+      "peak_observed_process_group_RSS_bytes": 156979200,
+      "aggregate_observed_disk_bytes": 13061090,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_02",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 8.60172926299856,
+      "cpu_seconds": 8.286932000000002,
+      "peak_observed_process_group_RSS_bytes": 136163328,
+      "aggregate_observed_disk_bytes": 104788042,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_03",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.571371201000147,
+      "cpu_seconds": 5.443677999999999,
+      "peak_observed_process_group_RSS_bytes": 152735744,
+      "aggregate_observed_disk_bytes": 114254318,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_04",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.847258948000672,
+      "cpu_seconds": 5.589674999999999,
+      "peak_observed_process_group_RSS_bytes": 134836224,
+      "aggregate_observed_disk_bytes": 118797600,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_05",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.076153121000971,
+      "cpu_seconds": 4.854744999999999,
+      "peak_observed_process_group_RSS_bytes": 152596480,
+      "aggregate_observed_disk_bytes": 120981042,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "build_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.093261648999032,
+      "cpu_seconds": 4.789613999999999,
+      "peak_observed_process_group_RSS_bytes": 153001984,
+      "aggregate_observed_disk_bytes": 128569255,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "configure_02",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "-S",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "-B",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "-DATLAS_BUILD_PHASE9=ON",
+        "-DBUILD_TESTING=ON",
+        "-DDELPHES_ROOT=/home/btu/opt/delphes",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.7842099520003103,
+      "cpu_seconds": 1.3999909999999969,
+      "peak_observed_process_group_RSS_bytes": 156979200,
+      "aggregate_observed_disk_bytes": 103814341,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "-S",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "-B",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "-G",
+        "Ninja",
+        "-DATLAS_BUILD_PHASE9=ON",
+        "-DBUILD_TESTING=ON",
+        "-DDELPHES_ROOT=/home/btu/opt/delphes",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 7.800140966000981,
+      "cpu_seconds": 2.012822,
+      "peak_observed_process_group_RSS_bytes": 152866816,
+      "aggregate_observed_disk_bytes": 897009,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "cpp_regression_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "ctest",
+        "--test-dir",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--output-on-failure",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.8127778669986583,
+      "cpu_seconds": 2.725802,
+      "peak_observed_process_group_RSS_bytes": 468791296,
+      "aggregate_observed_disk_bytes": 134664351,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "existing_cpp_regression",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "ctest",
+        "--test-dir",
+        "/home/btu/build/atlas_hh_phase9_v1",
+        "--output-on-failure",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.2869078750009066,
+      "cpu_seconds": 3.1597880000000003,
+      "peak_observed_process_group_RSS_bytes": 440754176,
+      "aggregate_observed_disk_bytes": 104815210,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "existing_python_regression",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase8/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7604647009993641,
+      "cpu_seconds": 0.2544500000000003,
+      "peak_observed_process_group_RSS_bytes": 29462528,
+      "aggregate_observed_disk_bytes": 104827557,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "existing_synthetic_likelihood_methods",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase8/phase8_methods",
+        "methods-test",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/existing_synthetic_methods"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.5325716959996498,
+      "cpu_seconds": 1.391889,
+      "peak_observed_process_group_RSS_bytes": 457527296,
+      "aggregate_observed_disk_bytes": 134676037,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_ROOT_binomial_02",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_binomial_reference",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_binomial_reference.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_ROOT_binomial_02.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.26879648600152,
+      "cpu_seconds": 1.1583809999999999,
+      "peak_observed_process_group_RSS_bytes": 363700224,
+      "aggregate_observed_disk_bytes": 113047300,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_ROOT_binomial",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_binomial_reference",
+        "--input",
+        "/home/btu/simulations/hh_phase9/run_01/statistics/phase9_binomial_reference.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_ROOT_binomial.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.2725748199991358,
+      "cpu_seconds": 1.1831930000000002,
+      "peak_observed_process_group_RSS_bytes": 361185280,
+      "aggregate_observed_disk_bytes": 108937364,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_hf",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/validate_hf_evidence.py",
+        "--origins",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03",
+        "--native-jsonl",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_hf_validation.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.279855200999009,
+      "cpu_seconds": 2.0725689999999997,
+      "peak_observed_process_group_RSS_bytes": 114950144,
+      "aggregate_observed_disk_bytes": 104792709,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase8_review",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/review_phase8.py",
+        "--source",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "--phase8-results",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/science_review_final"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.2876504929990915,
+      "cpu_seconds": 3.0451180000000027,
+      "peak_observed_process_group_RSS_bytes": 95961088,
+      "aggregate_observed_disk_bytes": 103792359,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_photon",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/validate_photon_evidence.py",
+        "--details",
+        "/home/btu/simulations/hh_phase9/run_01/origins_02/phase9_origins_event_details.jsonl",
+        "--summary",
+        "/home/btu/simulations/hh_phase9/run_01/origins_02/phase9_origins_summary.json",
+        "--csv",
+        "/home/btu/simulations/hh_phase9/run_01/origins_02/phase9_photon_origin_study.csv",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_photon_validation.json"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.7603621430007479,
+      "cpu_seconds": 0.6493229999999937,
+      "peak_observed_process_group_RSS_bytes": 145035264,
+      "aggregate_observed_disk_bytes": 79359864,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_photon_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/validate_photon_evidence.py",
+        "--details",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_event_details.jsonl",
+        "--summary",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_summary.json",
+        "--csv",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_photon_origin_study.csv",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_photon_validation_final.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.0251535829993372,
+      "cpu_seconds": 1.791885,
+      "peak_observed_process_group_RSS_bytes": 140300288,
+      "aggregate_observed_disk_bytes": 104790334,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_statistics",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/validate_statistics.py",
+        "--statistics",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02",
+        "--phase8-results",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/independent_statistics_validation.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.762179739000203,
+      "cpu_seconds": 0.5974269999999999,
+      "peak_observed_process_group_RSS_bytes": 81362944,
+      "aggregate_observed_disk_bytes": 117591344,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "native_background_readback",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase9/phase9_readback",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/native"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 21.988385851000203,
+      "cpu_seconds": 21.343361999999985,
+      "peak_observed_process_group_RSS_bytes": 818286592,
+      "aggregate_observed_disk_bytes": 30751767,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "origins_01",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/phase9_origins.py",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--native-jsonl",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/origins_01"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 70.91221227699862,
+      "cpu_seconds": 70.87082600000001,
+      "peak_observed_process_group_RSS_bytes": 121856000,
+      "aggregate_observed_disk_bytes": 55044952,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "origins_02",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/phase9_origins.py",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--native-jsonl",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/origins_02"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 84.17113004000021,
+      "cpu_seconds": 83.99484,
+      "peak_observed_process_group_RSS_bytes": 122355712,
+      "aggregate_observed_disk_bytes": 79358164,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "origins_03",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/phase9_origins.py",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--native-jsonl",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 79.37114807299986,
+      "cpu_seconds": 79.29312,
+      "peak_observed_process_group_RSS_bytes": 121430016,
+      "aggregate_observed_disk_bytes": 103748875,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase8_ROOT_histogram_readback",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase9_v1/analysis/phase8/phase8_analyze",
+        "validate",
+        "--output",
+        "/home/btu/simulations/hh_phase8/run_01/native"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.5389572320000298,
+      "cpu_seconds": 2.6938720000000096,
+      "peak_observed_process_group_RSS_bytes": 457302016,
+      "aggregate_observed_disk_bytes": 13062038,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase9_methods_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase9/tests",
+        "-p",
+        "test_phase9_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25603101999877254,
+      "cpu_seconds": 0.185078,
+      "peak_observed_process_group_RSS_bytes": 4456448,
+      "aggregate_observed_disk_bytes": 134662504,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase9_methods_publication_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase9/tests",
+        "-p",
+        "test_phase9_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2595920200001274,
+      "cpu_seconds": 0.189018,
+      "peak_observed_process_group_RSS_bytes": 6553600,
+      "aggregate_observed_disk_bytes": 136088106,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "photon_source_audit",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/audit_photon_sources.py",
+        "--repo",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "--home",
+        "/home/btu",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/photon_source_audit.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2532952240017039,
+      "cpu_seconds": 0.03354899999999139,
+      "peak_observed_process_group_RSS_bytes": 4456448,
+      "aggregate_observed_disk_bytes": 103814608,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "physical_readiness",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/readiness.py",
+        "--source",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "--phase8-results",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--review",
+        "/home/btu/simulations/hh_phase9/run_01/science_review_final/phase9a_independent_review.json",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_physical_readiness.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2535592690001067,
+      "cpu_seconds": 0.030182999999992965,
+      "peak_observed_process_group_RSS_bytes": 4587520,
+      "aggregate_observed_disk_bytes": 103801732,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "plot_provenance",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/prepare_plots.py",
+        "--data",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_plot_data.json",
+        "--root-csv",
+        "/home/btu/simulations/hh_phase8/run_01/native/phase8_histograms.csv",
+        "--hf-csv",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_heavy_flavour_origins.csv",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7605366129992035,
+      "cpu_seconds": 0.604305,
+      "peak_observed_process_group_RSS_bytes": 194633728,
+      "aggregate_observed_disk_bytes": 114250903,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "plot_provenance_final",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/prepare_plots.py",
+        "--data",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_plot_data.json",
+        "--root-csv",
+        "/home/btu/simulations/hh_phase8/run_01/native/phase8_histograms.csv",
+        "--hf-csv",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_heavy_flavour_origins.csv",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec_final.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5212840140011394,
+      "cpu_seconds": 0.5178119999999999,
+      "peak_observed_process_group_RSS_bytes": 116523008,
+      "aggregate_observed_disk_bytes": 128560461,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "plot_provenance_v2",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/prepare_plots.py",
+        "--data",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_plot_data.json",
+        "--root-csv",
+        "/home/btu/simulations/hh_phase8/run_01/native/phase8_histograms.csv",
+        "--hf-csv",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_heavy_flavour_origins.csv",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/phase9_plot_spec_v2.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7720704120001756,
+      "cpu_seconds": 0.525366,
+      "peak_observed_process_group_RSS_bytes": 139976704,
+      "aggregate_observed_disk_bytes": 118794899,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "preserve_detector_references",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "simulation/delphes/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.8327884000009362,
+      "cpu_seconds": 3.727193,
+      "peak_observed_process_group_RSS_bytes": 24772608,
+      "aggregate_observed_disk_bytes": 134707916,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "preserve_mg5_references",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "simulation/mg5/scripts/validate_lhe.py",
+        "--background-library",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5214870709987736,
+      "cpu_seconds": 0.37785500000000083,
+      "peak_observed_process_group_RSS_bytes": 26714112,
+      "aggregate_observed_disk_bytes": 134693012,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "preserve_new_background_references",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "simulation/new_backgrounds/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.8343632010000874,
+      "cpu_seconds": 3.6772249999999995,
+      "peak_observed_process_group_RSS_bytes": 180322304,
+      "aggregate_observed_disk_bytes": 134685033,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "preserve_shower_references",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "simulation/pythia8/scripts/validate_hepmc3.py",
+        "--repository",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.793762130999312,
+      "cpu_seconds": 1.717681,
+      "peak_observed_process_group_RSS_bytes": 24948736,
+      "aggregate_observed_disk_bytes": 134705825,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "preserve_signal_references",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.campaign.validate_references"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.0232665200001065,
+      "cpu_seconds": 1.0159190000000002,
+      "peak_observed_process_group_RSS_bytes": 74756096,
+      "aggregate_observed_disk_bytes": 134677511,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_01_signal_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_01_signal_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_01_signal_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26715473200056294,
+      "cpu_seconds": 0.12718500000000033,
+      "peak_observed_process_group_RSS_bytes": 19529728,
+      "aggregate_observed_disk_bytes": 132742061,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_02_signal_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_02_signal_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_02_signal_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2683597600007488,
+      "cpu_seconds": 0.1441529999999993,
+      "peak_observed_process_group_RSS_bytes": 6160384,
+      "aggregate_observed_disk_bytes": 132837626,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_03_signal_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_03_signal_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_03_signal_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2615156960000604,
+      "cpu_seconds": 0.1272470000000001,
+      "peak_observed_process_group_RSS_bytes": 17825792,
+      "aggregate_observed_disk_bytes": 132934996,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_04_signal_b01_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_04_signal_b01_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_04_signal_b01_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2619359509990318,
+      "cpu_seconds": 0.14787600000000034,
+      "peak_observed_process_group_RSS_bytes": 4980736,
+      "aggregate_observed_disk_bytes": 133035221,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_05_signal_b04_b05_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_05_signal_b04_b05_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_05_signal_b04_b05_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25526405699929455,
+      "cpu_seconds": 0.1285760000000007,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 133139058,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_06_signal_backgrounds_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_06_signal_backgrounds_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_06_signal_backgrounds_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2559725070004788,
+      "cpu_seconds": 0.16412899999999997,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 133287430,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_07_signal_backgrounds_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_07_signal_backgrounds_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_07_signal_backgrounds_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.256636375999733,
+      "cpu_seconds": 0.1727640000000008,
+      "peak_observed_process_group_RSS_bytes": 1966080,
+      "aggregate_observed_disk_bytes": 133435794,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_08_heavy_flavour_tags",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_08_heavy_flavour_tags.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_08_heavy_flavour_tags"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2630142239995621,
+      "cpu_seconds": 0.09918600000000022,
+      "peak_observed_process_group_RSS_bytes": 5373952,
+      "aggregate_observed_disk_bytes": 133515046,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_09_cutflow_efficiency",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_09_cutflow_efficiency.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_09_cutflow_efficiency"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26328106400069373,
+      "cpu_seconds": 0.15344400000000125,
+      "peak_observed_process_group_RSS_bytes": 22020096,
+      "aggregate_observed_disk_bytes": 133657960,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_10_kappa_weight_concentration",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_10_kappa_weight_concentration.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_10_kappa_weight_concentration"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25843760300085705,
+      "cpu_seconds": 0.17812699999999992,
+      "peak_observed_process_group_RSS_bytes": 5767168,
+      "aggregate_observed_disk_bytes": 133823987,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_11_kappa_final_ess",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_11_kappa_final_ess.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_11_kappa_final_ess"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26299296999968647,
+      "cpu_seconds": 0.18932599999999966,
+      "peak_observed_process_group_RSS_bytes": 2097152,
+      "aggregate_observed_disk_bytes": 133934872,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_QA_phase9_12_background_regions",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/phase9_12_background_regions.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final_v2/pdf_render/phase9_12_background_regions"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2562859440004104,
+      "cpu_seconds": 0.1570869999999993,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 134074951,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_01_signal_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_01_signal_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_01_signal_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26171237400012615,
+      "cpu_seconds": 0.12419800000000014,
+      "peak_observed_process_group_RSS_bytes": 14680064,
+      "aggregate_observed_disk_bytes": 126026415,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_02_signal_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_02_signal_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_02_signal_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25636889499946847,
+      "cpu_seconds": 0.12940399999999963,
+      "peak_observed_process_group_RSS_bytes": 3145728,
+      "aggregate_observed_disk_bytes": 126121977,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_03_signal_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_03_signal_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_03_signal_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25941303800027526,
+      "cpu_seconds": 0.13394800000000007,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 126219346,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_04_signal_b01_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_04_signal_b01_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_04_signal_b01_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25890307600093365,
+      "cpu_seconds": 0.12742900000000018,
+      "peak_observed_process_group_RSS_bytes": 1966080,
+      "aggregate_observed_disk_bytes": 126319569,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_05_signal_b04_b05_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_05_signal_b04_b05_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_05_signal_b04_b05_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25484192700059793,
+      "cpu_seconds": 0.13028600000000007,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 126423404,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_06_signal_backgrounds_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_06_signal_backgrounds_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_06_signal_backgrounds_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2558034680005221,
+      "cpu_seconds": 0.1852519999999993,
+      "peak_observed_process_group_RSS_bytes": 2097152,
+      "aggregate_observed_disk_bytes": 126571774,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_07_signal_backgrounds_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_07_signal_backgrounds_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_07_signal_backgrounds_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26247200699981477,
+      "cpu_seconds": 0.16493600000000042,
+      "peak_observed_process_group_RSS_bytes": 17039360,
+      "aggregate_observed_disk_bytes": 126720134,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_08_heavy_flavour_tags",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_08_heavy_flavour_tags.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_08_heavy_flavour_tags"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2637387459999445,
+      "cpu_seconds": 0.10712899999999981,
+      "peak_observed_process_group_RSS_bytes": 20185088,
+      "aggregate_observed_disk_bytes": 126803181,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_09_cutflow_efficiency",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_09_cutflow_efficiency.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_09_cutflow_efficiency"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2622459340000205,
+      "cpu_seconds": 0.191741,
+      "peak_observed_process_group_RSS_bytes": 5111808,
+      "aggregate_observed_disk_bytes": 126947446,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_10_kappa_weight_concentration",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_10_kappa_weight_concentration.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_10_kappa_weight_concentration"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2610919409999042,
+      "cpu_seconds": 0.2030709999999994,
+      "peak_observed_process_group_RSS_bytes": 13238272,
+      "aggregate_observed_disk_bytes": 127105898,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_11_kappa_final_ess",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_11_kappa_final_ess.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_11_kappa_final_ess"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2562458489992423,
+      "cpu_seconds": 0.1621830000000003,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 127216779,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_final_phase9_12_background_regions",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/phase9_12_background_regions.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_final/pdf_render/phase9_12_background_regions"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25553823999871383,
+      "cpu_seconds": 0.21930099999999908,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 127356853,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_01_signal_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_01_signal_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_01_signal_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2584773629987467,
+      "cpu_seconds": 0.126707,
+      "peak_observed_process_group_RSS_bytes": 262144,
+      "aggregate_observed_disk_bytes": 116376351,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_02_signal_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_02_signal_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_02_signal_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2545499660009227,
+      "cpu_seconds": 0.09322499999999997,
+      "peak_observed_process_group_RSS_bytes": 2097152,
+      "aggregate_observed_disk_bytes": 116437568,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_03_signal_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_03_signal_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_03_signal_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2543400889990153,
+      "cpu_seconds": 0.08980600000000002,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 116499593,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_04_signal_b01_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_04_signal_b01_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_04_signal_b01_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25447554100173875,
+      "cpu_seconds": 0.08387299999999999,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 116561814,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_05_signal_b04_b05_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_05_signal_b04_b05_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_05_signal_b04_b05_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2552186699995218,
+      "cpu_seconds": 0.09626799999999996,
+      "peak_observed_process_group_RSS_bytes": 3145728,
+      "aggregate_observed_disk_bytes": 116627382,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_06_signal_backgrounds_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_06_signal_backgrounds_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_06_signal_backgrounds_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25988374299959105,
+      "cpu_seconds": 0.11345399999999992,
+      "peak_observed_process_group_RSS_bytes": 17432576,
+      "aggregate_observed_disk_bytes": 116726737,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_07_signal_backgrounds_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_07_signal_backgrounds_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_07_signal_backgrounds_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25511531099982676,
+      "cpu_seconds": 0.13065400000000013,
+      "peak_observed_process_group_RSS_bytes": 1572864,
+      "aggregate_observed_disk_bytes": 116828056,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_08_heavy_flavour_tags",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_08_heavy_flavour_tags.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_08_heavy_flavour_tags"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26473168499978783,
+      "cpu_seconds": 0.08102299999999998,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 116887587,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_09_cutflow_efficiency",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_09_cutflow_efficiency.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_09_cutflow_efficiency"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2605320539987588,
+      "cpu_seconds": 0.10826399999999992,
+      "peak_observed_process_group_RSS_bytes": 16121856,
+      "aggregate_observed_disk_bytes": 116975253,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_10_kappa_weight_concentration",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_10_kappa_weight_concentration.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_10_kappa_weight_concentration"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2623911249993398,
+      "cpu_seconds": 0.14933799999999997,
+      "peak_observed_process_group_RSS_bytes": 18612224,
+      "aggregate_observed_disk_bytes": 117072250,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_11_kappa_final_ess",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_11_kappa_final_ess.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_11_kappa_final_ess"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2576610090000031,
+      "cpu_seconds": 0.1259300000000001,
+      "peak_observed_process_group_RSS_bytes": 1835008,
+      "aggregate_observed_disk_bytes": 117138880,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_phase9_12_background_regions",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/phase9_12_background_regions.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v1/pdf_render/phase9_12_background_regions"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25510835600107384,
+      "cpu_seconds": 0.13135999999999987,
+      "peak_observed_process_group_RSS_bytes": 1966080,
+      "aggregate_observed_disk_bytes": 117238099,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v2_phase9_01_signal_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v2/phase9_01_signal_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v2/pdf_render/phase9_01_signal_mgg"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.2549284050001006,
+      "cpu_seconds": 0.008971,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 120976995,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_01_signal_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_01_signal_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_01_signal_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25553228899843816,
+      "cpu_seconds": 0.08155300000000065,
+      "peak_observed_process_group_RSS_bytes": 1572864,
+      "aggregate_observed_disk_bytes": 123074224,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_02_signal_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_02_signal_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_02_signal_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26574767800047994,
+      "cpu_seconds": 0.0880679999999997,
+      "peak_observed_process_group_RSS_bytes": 21495808,
+      "aggregate_observed_disk_bytes": 123132354,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_03_signal_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_03_signal_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_03_signal_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2643149750001612,
+      "cpu_seconds": 0.08217200000000002,
+      "peak_observed_process_group_RSS_bytes": 21364736,
+      "aggregate_observed_disk_bytes": 123191164,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_04_signal_b01_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_04_signal_b01_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_04_signal_b01_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2547448839995923,
+      "cpu_seconds": 0.1278659999999998,
+      "peak_observed_process_group_RSS_bytes": 1966080,
+      "aggregate_observed_disk_bytes": 123250451,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_05_signal_b04_b05_mgg",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_05_signal_b04_b05_mgg.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_05_signal_b04_b05_mgg"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25479239900050743,
+      "cpu_seconds": 0.1517130000000001,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 123313016,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_06_signal_backgrounds_mbb",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_06_signal_backgrounds_mbb.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_06_signal_backgrounds_mbb"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26052761000028113,
+      "cpu_seconds": 0.1612490000000001,
+      "peak_observed_process_group_RSS_bytes": 16777216,
+      "aggregate_observed_disk_bytes": 123404739,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_07_signal_backgrounds_mhh",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_07_signal_backgrounds_mhh.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_07_signal_backgrounds_mhh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2550934189985128,
+      "cpu_seconds": 0.10409800000000058,
+      "peak_observed_process_group_RSS_bytes": 1966080,
+      "aggregate_observed_disk_bytes": 123496718,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_08_heavy_flavour_tags",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_08_heavy_flavour_tags.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_08_heavy_flavour_tags"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2557010420005099,
+      "cpu_seconds": 0.0739409999999997,
+      "peak_observed_process_group_RSS_bytes": 3670016,
+      "aggregate_observed_disk_bytes": 123548844,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_09_cutflow_efficiency",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_09_cutflow_efficiency.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_09_cutflow_efficiency"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25673511299828533,
+      "cpu_seconds": 0.10853800000000036,
+      "peak_observed_process_group_RSS_bytes": 5767168,
+      "aggregate_observed_disk_bytes": 123634078,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_10_kappa_weight_concentration",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_10_kappa_weight_concentration.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_10_kappa_weight_concentration"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2616216529986559,
+      "cpu_seconds": 0.10709599999999941,
+      "peak_observed_process_group_RSS_bytes": 18612224,
+      "aggregate_observed_disk_bytes": 123729028,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_11_kappa_final_ess",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_11_kappa_final_ess.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_11_kappa_final_ess"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2548444339990965,
+      "cpu_seconds": 0.08398900000000054,
+      "peak_observed_process_group_RSS_bytes": 1441792,
+      "aggregate_observed_disk_bytes": 123794122,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "render_v3_phase9_12_background_regions",
+      "command": [
+        "/usr/bin/pdftoppm",
+        "-scale-to",
+        "1400",
+        "-singlefile",
+        "-png",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/phase9_12_background_regions.pdf",
+        "/home/btu/simulations/hh_phase9/run_01/figures_v3/pdf_render/phase9_12_background_regions"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2545296230000531,
+      "cpu_seconds": 0.10826300000000033,
+      "peak_observed_process_group_RSS_bytes": 1703936,
+      "aggregate_observed_disk_bytes": 123885355,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "statistics_01",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/phase9_statistics.py",
+        "--source",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "--phase8-results",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/statistics"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7658769270001358,
+      "cpu_seconds": 0.755586,
+      "peak_observed_process_group_RSS_bytes": 84410368,
+      "aggregate_observed_disk_bytes": 108927198,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "statistics_02",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase9/scripts/phase9_statistics.py",
+        "--source",
+        "/home/btu/projects/atlas_hh_phase9_v1",
+        "--phase8-results",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase9/run_01/statistics_02"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7608378749991971,
+      "cpu_seconds": 0.7098149999999999,
+      "peak_observed_process_group_RSS_bytes": 84803584,
+      "aggregate_observed_disk_bytes": 113037121,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    }
+  ],
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0
+}

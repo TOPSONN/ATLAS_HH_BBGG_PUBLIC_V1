@@ -1,0 +1,29 @@
+Test project /home/btu/build/atlas_hh_phase9_v1
+    Start 1: root_io
+1/9 Test #1: root_io ..........................   Passed    0.31 sec
+    Start 2: rdataframe
+2/9 Test #2: rdataframe .......................   Passed    0.14 sec
+    Start 3: roofit_roostats
+3/9 Test #3: roofit_roostats ..................   Passed    0.16 sec
+    Start 4: phase8_physics
+4/9 Test #4: phase8_physics ...................   Passed    0.14 sec
+    Start 5: phase8_selection
+5/9 Test #5: phase8_selection .................   Passed    0.13 sec
+    Start 6: phase8_histograms
+6/9 Test #6: phase8_histograms ................   Passed    0.13 sec
+    Start 7: phase8_statistics
+7/9 Test #7: phase8_statistics ................   Passed    0.13 sec
+    Start 8: phase8_likelihood
+8/9 Test #8: phase8_likelihood ................   Passed    0.36 sec
+    Start 9: phase8_native_methods
+9/9 Test #9: phase8_native_methods ............   Passed    0.13 sec
+
+100% tests passed out of 9
+
+Label Time Summary:
+phase8              =   1.02 sec*proc (6 tests)
+step1               =   0.62 sec*proc (3 tests)
+synthetic           =   0.62 sec*proc (3 tests)
+synthetic_method    =   1.02 sec*proc (6 tests)
+
+Total Test time (real) =   1.65 sec
