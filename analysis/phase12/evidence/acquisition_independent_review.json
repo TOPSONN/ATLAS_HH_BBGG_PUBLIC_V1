@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_INDEPENDENT_ACQUISITION_REVIEW_WITH_LIMITS",
+  "review_time_utc": "2026-10-19T09:40:49.708145+00:00",
+  "reviewer": "Independent Codex subagent phase11_family_ir; not external human approval",
+  "scope": [
+    "READ_ONLY_SOURCE_AND_CONTRACT_REVIEW",
+    "ACTUAL_EXISTING_PAYLOAD_BYTE_HASH_READBACK",
+    "SYNTHETIC_METHOD_ONLY_NEGATIVE_TESTS"
+  ],
+  "source_config_test_and_actual_receipt_identities": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_acquisition.py",
+      "bytes": 5839,
+      "sha256": "c45ef8d6ba8aa6e3950dde9d6ef6fd798229d7458c69d0f6442724bc4e16476f"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/config/acquisition_contract.json",
+      "bytes": 1291,
+      "sha256": "09efd8bad0ffa030b0f521360c94f4828acbf8e074cae7b9cda79bc053314d18"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/tests/test_acquisition.py",
+      "bytes": 3942,
+      "sha256": "758e084ffe206ccbd5aca2cdab51855cc2d2be2970cc4f9cbf5c89a62394103f"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/acquisition_receipt.json",
+      "bytes": 1603,
+      "sha256": "08881615f7f2b099cf648363b23157ed61bb66086edb17d487fd14f2998d4cc0"
+    }
+  ],
+  "actual_acquisition_source_sha256_before_guard": "9380cdb43261c0e3873f5d995ada15c00865708b46ac9b3784b2155bc40a37a9",
+  "final_hardened_source_sha256": "c45ef8d6ba8aa6e3950dde9d6ef6fd798229d7458c69d0f6442724bc4e16476f",
+  "actual_download_predated_parent_guard_hardening": true,
+  "new_hardened_network_end_to_end_execution_claimed": false,
+  "actual_download_reexecuted": false,
+  "actual_completed_acquisition": {
+    "candidate": "NNPDF30_lo_as_0130_nf_4",
+    "member": 0,
+    "roles": [
+      "info",
+      "member"
+    ],
+    "body_bytes": 685937,
+    "aggregate_body_budget": 134217728,
+    "single_payload_budget": 83886080,
+    "one_selected_distribution": true,
+    "source_URLs": [
+      "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat"
+    ],
+    "TLS_certificate_verification_reported": true,
+    "unknown_redirects_allowed": false,
+    "publisher_checksum": null,
+    "publisher_authenticity": "NOT_CRYPTOGRAPHICALLY_ESTABLISHED_WITHOUT_PUBLISHER_CHECKSUM_OR_SIGNATURE",
+    "actual_saved_payload_hashes_rechecked": [
+      {
+        "role": "info",
+        "bytes": 2345,
+        "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+        "exact_receipt_match": true
+      },
+      {
+        "role": "member",
+        "bytes": 683592,
+        "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e",
+        "exact_receipt_match": true
+      }
+    ]
+  },
+  "material_findings": [
+    {
+      "id": "PARENT_SYMLINK_REDIRECTION_GUARD",
+      "initial_gap": "String destination check alone did not reject a redirected output parent before mkdir.",
+      "correction": "Before mkdir require absolute existing directory, no parent or ancestor symlink, exact resolved/lexical identity; preserve fresh-output refusal.",
+      "status": "CORRECTED_SOURCE_AND_OFFLINE_METHOD_TESTED",
+      "actual_previous_acquisition_impact": "No redirected path observed: actual Linux output parent and every ancestor are regular directories and resolve identically."
+    }
+  ],
+  "additional_minimal_schema_hardening": "Exactly reviewed integer request timeout20s and total-wall setting120s; no unreviewed timeout values accepted.",
+  "no_scientific_default_inference": true,
+  "native_PDF_interface_validation_by_this_peer": false,
+  "native_validation_scope": "Peer checks existing bytes/length/SHA only; separate isolated LHAPDF result is required for native interpolation compatibility.",
+  "tests_and_readonly_probes": {
+    "tests_run": 15,
+    "tests_passed": true,
+    "test_output": "test_broken_download (test_acquisition.Acquisition.test_broken_download) ... ok\ntest_current_contract (test_acquisition.Acquisition.test_current_contract) ... ok\ntest_file_parent_is_rejected (test_acquisition.Acquisition.test_file_parent_is_rejected) ... ok\ntest_missing_parent_is_rejected (test_acquisition.Acquisition.test_missing_parent_is_rejected) ... ok\ntest_no_unreviewed_execution (test_acquisition.Acquisition.test_no_unreviewed_execution) ... ok\ntest_one_distribution_only (test_acquisition.Acquisition.test_one_distribution_only) ... ok\ntest_real_temporary_parent_is_accepted_read_only (test_acquisition.Acquisition.test_real_temporary_parent_is_accepted_read_only) ... ok\ntest_relative_or_parent_escape_is_rejected (test_acquisition.Acquisition.test_relative_or_parent_escape_is_rejected) ... ok\ntest_sizes_and_encodings (test_acquisition.Acquisition.test_sizes_and_encodings) ... ok\ntest_symlink_ancestor_is_rejected (test_acquisition.Acquisition.test_symlink_ancestor_is_rejected) ... ok\ntest_symlink_parent_cannot_redirect_to_installed_fixture (test_acquisition.Acquisition.test_symlink_parent_cannot_redirect_to_installed_fixture) ... ok\ntest_terms_required (test_acquisition.Acquisition.test_terms_required) ... ok\ntest_timeouts_are_reviewed_integers (test_acquisition.Acquisition.test_timeouts_are_reviewed_integers) ... ok\ntest_unknown_redirect (test_acquisition.Acquisition.test_unknown_redirect) ... ok\ntest_wrong_or_installed_destinations (test_acquisition.Acquisition.test_wrong_or_installed_destinations) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.008s\n\nOK\n",
+    "review_network_calls": 0,
+    "actual_parent_guard_executed_read_only": true,
+    "actual_parent_chain": [
+      [
+        "/home/btu/simulations/hh_phase12/run_01",
+        false,
+        "/home/btu/simulations/hh_phase12/run_01"
+      ],
+      [
+        "/home/btu/simulations/hh_phase12",
+        false,
+        "/home/btu/simulations/hh_phase12"
+      ],
+      [
+        "/home/btu/simulations",
+        false,
+        "/home/btu/simulations"
+      ],
+      [
+        "/home/btu",
+        false,
+        "/home/btu"
+      ],
+      [
+        "/home",
+        false,
+        "/home"
+      ],
+      [
+        "/",
+        false,
+        "/"
+      ]
+    ],
+    "actual_download_receipt_SHA256": "08881615f7f2b099cf648363b23157ed61bb66086edb17d487fd14f2998d4cc0",
+    "actual_payload_readback_scope": "EXACT_BYTES_LENGTH_SHA256_ONLY_NOT_NATIVE_PDF_INTERPOLATION",
+    "actual_payloads": [
+      {
+        "role": "info",
+        "bytes": 2345,
+        "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+        "exact_receipt_match": true
+      },
+      {
+        "role": "member",
+        "bytes": 683592,
+        "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e",
+        "exact_receipt_match": true
+      }
+    ],
+    "actual_total_body_bytes": 685937,
+    "actual_download_rerun": false,
+    "installed_file_writes": false,
+    "current_source_sha256": "c45ef8d6ba8aa6e3950dde9d6ef6fd798229d7458c69d0f6442724bc4e16476f",
+    "MG5_imported": false
+  },
+  "installed_sources_modified_by_reviewer": false,
+  "downloaded_grids_or_private_config_published_by_reviewer": false,
+  "original_acquisition_receipt_overwritten": false,
+  "human_approval_claimed": false,
+  "physical_authorization": false,
+  "NEW_MG5_PARSER_CALLS": 0,
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "limits": [
+    "No additional networking performed in review.",
+    "Final guard was exercised with temporary symlink fixtures and actual-parent read-only invocation, not a new acquisition.",
+    "Acquisition completes transport/elementary format checks; it does not itself establish complete scientific PDF metadata or native interpolation validity.",
+    "Wall-time loop checks and per-request timeouts are not a kernel-enforced hard wall-time guarantee.",
+    "Publisher checksum unavailable; local SHA256 is reproducible identity rather than independent publisher cryptographic authenticity.",
+    "No MG5 process, ME, integration, matching or physical pilot permission follows."
+  ]
+}

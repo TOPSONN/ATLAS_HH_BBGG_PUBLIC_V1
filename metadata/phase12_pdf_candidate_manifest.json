@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "evidence_class": "ACTUAL_ISOLATED_PDF_READBACK",
+  "status": "ISOLATED_NATIVE_MEMBER_VALIDATED_WITH_LIMITS_NOT_MG5_BOUND",
+  "candidate": "NNPDF30_lo_as_0130_nf_4",
+  "member": 0,
+  "LHAPDF_ID": 263400,
+  "DataVersion": 2,
+  "official_payloads": [
+    {
+      "role": "info",
+      "relative_path": "NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "source_URL": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "advertised_bytes": 2345,
+      "received_bytes": 2345,
+      "status": "PASS_COMPLETE_PAYLOAD",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    {
+      "role": "member",
+      "relative_path": "NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "source_URL": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "advertised_bytes": 683592,
+      "received_bytes": 683592,
+      "status": "PASS_COMPLETE_PAYLOAD",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    }
+  ],
+  "measured_acquisition_body_bytes": 685937,
+  "HTTP_body_scope": "Selected .info/member acquisition only; source-research web-tool responses not counted as measured rawHTTPbodies.",
+  "budget_bytes": 134217728,
+  "single_payload_budget_bytes": 83886080,
+  "selected_distributions": 1,
+  "all101_members_acquired": false,
+  "publisher_terms": {
+    "checked": true,
+    "publisher": "NNPDF Collaboration; official LHAPDF CERN data distribution",
+    "public_download_and_scientific_use_documented": true,
+    "license_identifier": "UNSPECIFIED_IN_INSPECTED_DATASET_SOURCES",
+    "redistribution_permission_claimed": false,
+    "publisher_checksum": null,
+    "payload_publisher_cryptographic_authenticity": "NOT_ESTABLISHED_WITHOUT_PUBLISHER_CHECKSUM_OR_SIGNATURE",
+    "sources": [
+      "https://nnpdf.mi.infn.it/for-users/tutorials-and-drivers/",
+      "https://nnpdf.mi.infn.it/nnpdf3-0/",
+      "https://www.lhapdf.org/pdfsets"
+    ]
+  },
+  "metadata": {
+    "schema_version": 1,
+    "status": "LOCAL_PAYLOAD_METADATA_AND_HEADER_CHECKED",
+    "evidence_class": "LOCAL_PAYLOAD_METADATA_AUDIT",
+    "set_name": "NNPDF30_lo_as_0130_nf_4",
+    "data_version": 2,
+    "set_index": 263400,
+    "member": 0,
+    "member_lhaid": 263400,
+    "declared_released_members": 101,
+    "parent_pdg_id": 2212,
+    "flavours": [
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      21
+    ],
+    "bottom_pdf_activation": false,
+    "PDF_order_QCD": 0,
+    "PDF_flavour_scheme": "variable",
+    "PDF_maximum_flavours": 4,
+    "alpha_order_QCD": 0,
+    "alpha_type": "ipol",
+    "alpha_flavour_scheme": "variable",
+    "alpha_flavour_scheme_source_key": "FlavorScheme_DOCUMENTED_FALLBACK",
+    "alpha_maximum_flavours": 4,
+    "alpha_maximum_flavours_source_key": "NumFlavors_DOCUMENTED_FALLBACK",
+    "alpha_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "thresholds": {
+      "Charm": {
+        "pdg_id": 4,
+        "declared_evolution_mass_GeV": 1.275,
+        "pdf_threshold_GeV": 1.275,
+        "pdf_threshold_source_key": "MCharm",
+        "alpha_threshold_GeV": 1.275,
+        "alpha_threshold_source_key": "MCharm",
+        "activation_permitted_by_maximum_flavours": true,
+        "not_ME_pole_mass": true
+      },
+      "Bottom": {
+        "pdg_id": 5,
+        "declared_evolution_mass_GeV": 4.1799998,
+        "pdf_threshold_GeV": 4.1799998,
+        "pdf_threshold_source_key": "MBottom",
+        "alpha_threshold_GeV": 4.1799998,
+        "alpha_threshold_source_key": "MBottom",
+        "activation_permitted_by_maximum_flavours": false,
+        "not_ME_pole_mass": true
+      },
+      "Top": {
+        "pdg_id": 6,
+        "declared_evolution_mass_GeV": 173.07001,
+        "pdf_threshold_GeV": 173.07001,
+        "pdf_threshold_source_key": "MTop",
+        "alpha_threshold_GeV": 173.07001,
+        "alpha_threshold_source_key": "MTop",
+        "activation_permitted_by_maximum_flavours": false,
+        "not_ME_pole_mass": true
+      }
+    },
+    "alpha_table_nodes": 50,
+    "duplicate_alpha_Q_nodes_GeV": [
+      1.275
+    ],
+    "duplicate_nodes_not_proof_of_all_physical_thresholds": true,
+    "declared_domain": {
+      "xmin": 9.9999997e-10,
+      "xmax": 1.0,
+      "Qmin_GeV": 1.0,
+      "Qmax_GeV": 100000.0
+    },
+    "ForcePositive": 2,
+    "reference": "arXiv:1410.8849",
+    "source_semantics_document": "https://www.lhapdf.org/config.html",
+    "catalogue_does_not_prove_payload_present": true,
+    "native_member_readability": "NOT_TESTED_BY_METADATA_VALIDATION",
+    "MG5_parser_validated": false,
+    "physical_component_validated": false,
+    "member_header": {
+      "PdfType": "central",
+      "Format": "lhagrid1"
+    },
+    "member_override_keys": [],
+    "info_identity": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    "member_identity": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    }
+  },
+  "native_interface": {
+    "reader_version": "6.5.6",
+    "finite_xfx_values": 36,
+    "alpha_points": 5,
+    "out_of_domain_wrapper_rejections": 5,
+    "nonfinite_errors": 0,
+    "interpolation_errors": 0,
+    "selected_member_resolution": "EXCLUSIVE_EXTERNAL_MEMBER; BUILTIN_METADATA_FALLBACK_OBSERVED_AND_NO_SAME_NAME_INSTALLED_SET",
+    "actual_readback_receipt": "analysis/phase12/evidence/pdf_readback_04/pdf_member_readback.json"
+  },
+  "alpha_reference_diagnostic": {
+    "declared_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "native_alpha_at_declared_Q": 0.254403024565842,
+    "absolute_difference": 6.681238414185664e-07,
+    "relative_difference": 2.626248635282933e-06,
+    "within_strict_diagnostic_tolerance": false,
+    "strict_diagnostic_relative_tolerance": 1e-06,
+    "comparison_role": "DIAGNOSTIC_NOT_OFFICIAL_ACCURACY_TEST",
+    "reference_is_exact_alpha_table_knot": false,
+    "alpha_table_bracket": [
+      {
+        "Q_GeV": 3.7262747,
+        "alpha_s": 0.26466316
+      },
+      {
+        "Q_GeV": 4.23139,
+        "alpha_s": 0.25335777
+      }
+    ],
+    "publisher_interpolation_accuracy_bound": null,
+    "physical_ME_or_shower_alpha_binding": "UNVERIFIED_NOT_EXECUTED"
+  },
+  "MG5_parser_executed": false,
+  "matching_validated": false,
+  "physical_component_validated": false,
+  "installed_data_directories_modified": false,
+  "publication_policy": "Do not publish rawgrid,.info,backendconfigsor binaries; boundedhashes/metadata/results only."
+}

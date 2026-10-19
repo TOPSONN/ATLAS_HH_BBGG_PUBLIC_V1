@@ -1,0 +1,30 @@
+{
+  "label": "native_PDF_isolated_readback_03",
+  "command": [
+    "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+    "-B",
+    "analysis/phase12/scripts/read_pdf_member.py",
+    "--payload-root",
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01",
+    "--policy",
+    "analysis/phase12/config/readback_points.json",
+    "--output-dir",
+    "/home/btu/simulations/hh_phase12/run_01/pdf_readback_03"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.5091575129990815,
+  "cpu_seconds": 0.270383,
+  "peak_observed_process_group_RSS_bytes": 58949632,
+  "aggregate_observed_disk_bytes": 2026985,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 900,
+    "cpu_seconds": 900,
+    "disk_bytes": 536870912,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

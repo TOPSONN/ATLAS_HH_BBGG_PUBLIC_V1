@@ -1,0 +1,40 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "PASS_COMPLETE_SELECTED_MEMBER_ACQUISITION",
+  "candidate": "NNPDF30_lo_as_0130_nf_4",
+  "member": 0,
+  "maximum_selected_distributions": 1,
+  "aggregate_body_bytes": 685937,
+  "aggregate_body_budget": 134217728,
+  "single_payload_budget": 83886080,
+  "TLS_certificate_verification": true,
+  "unknown_redirects_allowed": false,
+  "publisher_checksum": null,
+  "publisher_payload_signature_or_checksum_authenticity": "NOT_CRYPTOGRAPHICALLY_ESTABLISHED",
+  "files": [
+    {
+      "role": "info",
+      "relative_path": "NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "source_URL": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "advertised_bytes": 2345,
+      "received_bytes": 2345,
+      "status": "PASS_COMPLETE_PAYLOAD",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    {
+      "role": "member",
+      "relative_path": "NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "source_URL": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "advertised_bytes": 683592,
+      "received_bytes": 683592,
+      "status": "PASS_COMPLETE_PAYLOAD",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    }
+  ],
+  "installed_path_writes": false,
+  "physical_generation": false,
+  "wall_seconds": 7.0835026999993715,
+  "selected_member_only_not_all101": true
+}

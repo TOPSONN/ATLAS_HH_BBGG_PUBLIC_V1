@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "task": "PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1",
+  "selected_candidate_distribution": "NNPDF30_lo_as_0130_nf_4",
+  "selected_member": 0,
+  "selected_member_role": "average on replicas; central member",
+  "set_index": 263400,
+  "member_lhaid": 263400,
+  "data_version": 2,
+  "published_total_members": 101,
+  "publisher": "NNPDF Collaboration",
+  "distributor": "official LHAPDF set distribution at CERN",
+  "official_source_urls": {
+    "publisher_release": "https://nnpdf.mi.infn.it/nnpdf3-0/",
+    "publisher_download_terms": "https://nnpdf.mi.infn.it/for-users/",
+    "publisher_download_use_instructions": "https://nnpdf.mi.infn.it/for-users/tutorials-and-drivers/",
+    "official_distribution_instructions": "https://www.lhapdf.org/",
+    "official_catalogue": "https://www.lhapdf.org/pdfsets",
+    "member_naming": "https://www.lhapdf.org/design.html",
+    "metadata_semantics": "https://www.lhapdf.org/config.html",
+    "info": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+    "member": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat"
+  },
+  "public_source_observation": {
+    "method": "Primary official web source inspection; not archive/grid-body acquisition",
+    "official_member_url_basis": "LHAPDF documented SET/SET_0000.dat convention; actual HTTPS endpoint must be checked by bounded acquisition",
+    "catalogue_is_not_actual_payload": true,
+    "mutable_current_url_requires_measured_hashes": true
+  },
+  "terms_review": {
+    "status": "PUBLIC_DOWNLOAD_AND_SCIENTIFIC_USE_DOCUMENTED_LICENCE_UNSPECIFIED",
+    "formal_grid_licence_identifier": null,
+    "formal_grid_licence_found_on_inspected_pages": false,
+    "permitted_scope_evidence": "Publisher offers NNPDF sets for download and directs users to download/use them through LHAPDF. LHAPDF official instructions describe data download and scientific interface use.",
+    "local_bounded_scientific_interface_validation_only": true,
+    "grid_redistribution_claim": false,
+    "GPL_code_licence_must_not_be_assigned_to_grid": true,
+    "downloaded_grid_publication_allowed": false,
+    "references": ["arXiv:1410.8849", "arXiv:1412.7420"]
+  },
+  "integrity": {
+    "publisher_provided_checksum": null,
+    "publisher_signed_manifest": null,
+    "publisher_checksum_found_on_inspected_sources": false,
+    "measured_SHA256_is_not_publisher_cryptographic_authentication": true
+  },
+  "expected_scientific_identity_from_public_metadata": {
+    "Format": "lhagrid1",
+    "Particle": 2212,
+    "Flavors": [-4, -3, -2, -1, 1, 2, 3, 4, 21],
+    "NumFlavors": 4,
+    "FlavorScheme": "variable",
+    "OrderQCD": 0,
+    "AlphaS_OrderQCD": 0,
+    "AlphaS_Type": "ipol",
+    "MZ_reference_scale_GeV": 4.1799998,
+    "AlphaS_MZ_at_that_reference": 0.2544023564420006,
+    "MCharm_GeV": 1.275,
+    "MBottom_GeV": 4.1799998,
+    "MTop_GeV": 173.07001,
+    "XMin": 9.9999997e-10,
+    "XMax": 1.0,
+    "QMin_GeV": 1.0,
+    "QMax_GeV": 100000.0,
+    "ForcePositive": 2,
+    "bottom_pdf_activation": false,
+    "name_as_0130_is_not_alpha_at_declared_reference": true,
+    "physical_electroweak_Z_mass_inference_forbidden": true,
+    "evolution_masses_are_not_ME_pole_masses": true
+  },
+  "acquisition_constraints": {
+    "maximum_candidate_distributions": 1,
+    "network_body_budget_bytes": 134217728,
+    "single_payload_budget_bytes": 83886080,
+    "allowed_payload_host": "lhapdfsets.web.cern.ch",
+    "HTTPS_required": true,
+    "unknown_redirect_rejected": true,
+    "partial_or_oversize_payload_rejected": true,
+    "fresh_isolated_local_directory_required": true,
+    "installed_MG5_or_conda_path_writes_allowed": false,
+    "direct_info_and_member_pair_is_one_selected_distribution": true,
+    "archive_or_other_member_download_by_this_module": false
+  },
+  "validation_scope": {
+    "metadata_and_member_header": "STATIC_CONSISTENCY_ONLY",
+    "actual_native_LHAPDF_member_readback_required": true,
+    "out_of_domain_wrapper_rejection_distinct_from_native_extrapolator": true,
+    "MG5_parser_executed": false,
+    "physical_generator_execution_authorized": false,
+    "physical_component_compatibility_proven": false
+  }
+}

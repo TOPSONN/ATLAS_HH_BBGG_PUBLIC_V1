@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "evidence_class": "ACTUAL_ISOLATED_PDF_READBACK",
+  "status": "PASS_ISOLATED_NATIVE_PDF_INTERFACE_WITH_LIMITS",
+  "observed_UTC": "2026-10-19T09:46:30.045777+00:00",
+  "PID": 129957,
+  "reader_version": "6.5.6",
+  "observed_data_paths": [
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01",
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF"
+  ],
+  "selected_member_resolution": "EXCLUSIVE_EXTERNAL_MEMBER; BUILTIN_METADATA_FALLBACK_OBSERVED_AND_NO_SAME_NAME_INSTALLED_SET",
+  "native_file_resolution_checked": true,
+  "raw_inputs_and_dependencies_before": {
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/bin/python": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python3.12",
+      "bytes": 31903952,
+      "sha256": "f52b9d2958ce4abad3e17026c8f844b2d1108b0e7e139d0a1879fe46c1de91a5"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "bytes": 952752,
+      "sha256": "dfca1050d6a9c155c2dba963a24e15e0c8c1460bd838a9a019151458995041d1"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "bytes": 46,
+      "sha256": "b1db78e1cf2f99f4ed19ce450f8f183aa5997685f129ef7876342a9105dd0f50"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "bytes": 472000,
+      "sha256": "cd0502b27c77766f5aae66380250e861ee75133fc3fb7447138486a567b33aa0"
+    }
+  },
+  "raw_inputs_and_dependencies_after": {
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/bin/python": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python3.12",
+      "bytes": 31903952,
+      "sha256": "f52b9d2958ce4abad3e17026c8f844b2d1108b0e7e139d0a1879fe46c1de91a5"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "bytes": 952752,
+      "sha256": "dfca1050d6a9c155c2dba963a24e15e0c8c1460bd838a9a019151458995041d1"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "bytes": 46,
+      "sha256": "b1db78e1cf2f99f4ed19ce450f8f183aa5997685f129ef7876342a9105dd0f50"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "bytes": 472000,
+      "sha256": "cd0502b27c77766f5aae66380250e861ee75133fc3fb7447138486a567b33aa0"
+    }
+  },
+  "metadata": {
+    "schema_version": 1,
+    "status": "LOCAL_PAYLOAD_METADATA_AND_HEADER_CHECKED",
+    "evidence_class": "LOCAL_PAYLOAD_METADATA_AUDIT",
+    "set_name": "NNPDF30_lo_as_0130_nf_4",
+    "data_version": 2,
+    "set_index": 263400,
+    "member": 0,
+    "member_lhaid": 263400,
+    "declared_released_members": 101,
+    "parent_pdg_id": 2212,
+    "flavours": [
+      -4,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      4,
+      21
+    ],
+    "bottom_pdf_activation": false,
+    "PDF_order_QCD": 0,
+    "PDF_flavour_scheme": "variable",
+    "PDF_maximum_flavours": 4,
+    "alpha_order_QCD": 0,
+    "alpha_type": "ipol",
+    "alpha_flavour_scheme": "variable",
+    "alpha_flavour_scheme_source_key": "FlavorScheme_DOCUMENTED_FALLBACK",
+    "alpha_maximum_flavours": 4,
+    "alpha_maximum_flavours_source_key": "NumFlavors_DOCUMENTED_FALLBACK",
+    "alpha_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "thresholds": {
+      "Charm": {
+        "pdg_id": 4,
+        "declared_evolution_mass_GeV": 1.275,
+        "pdf_threshold_GeV": 1.275,
+        "pdf_threshold_source_key": "MCharm",
+        "alpha_threshold_GeV": 1.275,
+        "alpha_threshold_source_key": "MCharm",
+        "activation_permitted_by_maximum_flavours": true,
+        "not_ME_pole_mass": true
+      },
+      "Bottom": {
+        "pdg_id": 5,
+        "declared_evolution_mass_GeV": 4.1799998,
+        "pdf_threshold_GeV": 4.1799998,
+        "pdf_threshold_source_key": "MBottom",
+        "alpha_threshold_GeV": 4.1799998,
+        "alpha_threshold_source_key": "MBottom",
+        "activation_permitted_by_maximum_flavours": false,
+        "not_ME_pole_mass": true
+      },
+      "Top": {
+        "pdg_id": 6,
+        "declared_evolution_mass_GeV": 173.07001,
+        "pdf_threshold_GeV": 173.07001,
+        "pdf_threshold_source_key": "MTop",
+        "alpha_threshold_GeV": 173.07001,
+        "alpha_threshold_source_key": "MTop",
+        "activation_permitted_by_maximum_flavours": false,
+        "not_ME_pole_mass": true
+      }
+    },
+    "alpha_table_nodes": 50,
+    "duplicate_alpha_Q_nodes_GeV": [
+      1.275
+    ],
+    "duplicate_nodes_not_proof_of_all_physical_thresholds": true,
+    "declared_domain": {
+      "xmin": 9.9999997e-10,
+      "xmax": 1.0,
+      "Qmin_GeV": 1.0,
+      "Qmax_GeV": 100000.0
+    },
+    "ForcePositive": 2,
+    "reference": "arXiv:1410.8849",
+    "source_semantics_document": "https://www.lhapdf.org/config.html",
+    "catalogue_does_not_prove_payload_present": true,
+    "native_member_readability": "NOT_TESTED_BY_METADATA_VALIDATION",
+    "MG5_parser_validated": false,
+    "physical_component_validated": false,
+    "member_header": {
+      "PdfType": "central",
+      "Format": "lhagrid1"
+    },
+    "member_override_keys": [],
+    "info_identity": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    "member_identity": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    }
+  },
+  "native_flavours": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4,
+    21
+  ],
+  "native_LHAPDF_ID": 263400,
+  "bottom_active": false,
+  "domain": {
+    "xmin": 9.9999997e-10,
+    "xmax": 1.0,
+    "Qmin_GeV": 1.0,
+    "Qmax_GeV": 100000.0
+  },
+  "finite_pdf_points": [
+    {
+      "x": 0.0001,
+      "Q_GeV": 10.0,
+      "xfxQ": {
+        "-4": 1.1109467583172776,
+        "-3": 1.5232147223251693,
+        "-2": 1.6976315483758955,
+        "-1": 1.668314951119803,
+        "1": 1.6881816775340692,
+        "2": 1.729203628706145,
+        "3": 1.5213361533767946,
+        "4": 1.1109467581055117,
+        "21": 57.21039909515906
+      }
+    },
+    {
+      "x": 0.01,
+      "Q_GeV": 91.1876,
+      "xfxQ": {
+        "-4": 0.31299173991235646,
+        "-3": 0.40521301880016525,
+        "-2": 0.5351948040265334,
+        "-1": 0.5681471298721014,
+        "1": 0.6761981860160987,
+        "2": 0.7498147562761639,
+        "3": 0.4037421917018806,
+        "4": 0.31299173877091674,
+        "21": 8.584159919491075
+      }
+    },
+    {
+      "x": 0.1,
+      "Q_GeV": 1000.0,
+      "xfxQ": {
+        "-4": 0.0342917528816715,
+        "-3": 0.04135299135130704,
+        "-2": 0.08779484623006636,
+        "-1": 0.10908160187545075,
+        "1": 0.32981504329391415,
+        "2": 0.5479321466125879,
+        "3": 0.05347300707722136,
+        "4": 0.03429175194653367,
+        "21": 0.7022359993491929
+      }
+    },
+    {
+      "x": 0.5,
+      "Q_GeV": 100.0,
+      "xfxQ": {
+        "-4": 0.00012437148691618111,
+        "-3": 0.0002081066843696252,
+        "-2": 0.0016517743959468785,
+        "-1": 0.0008453426081947241,
+        "1": 0.03019563502842519,
+        "2": 0.12201882447509031,
+        "3": 0.0049240054336764675,
+        "4": 0.00012437147518792386,
+        "21": 0.004671727713809096
+      }
+    }
+  ],
+  "finite_xfx_values": 36,
+  "alpha_values": [
+    {
+      "Q_GeV": 4.1799998,
+      "alpha_s": 0.254403024565842
+    },
+    {
+      "Q_GeV": 10.0,
+      "alpha_s": 0.1965543155814504
+    },
+    {
+      "Q_GeV": 91.1876,
+      "alpha_s": 0.12470053368074485
+    },
+    {
+      "Q_GeV": 100.0,
+      "alpha_s": 0.12282594881647993
+    },
+    {
+      "Q_GeV": 1000.0,
+      "alpha_s": 0.08932158963547387
+    }
+  ],
+  "alpha_reference_diagnostic": {
+    "declared_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "native_alpha_at_declared_Q": 0.254403024565842,
+    "absolute_difference": 6.681238414185664e-07,
+    "relative_difference": 2.626248635282933e-06,
+    "within_strict_diagnostic_tolerance": false,
+    "strict_diagnostic_relative_tolerance": 1e-06,
+    "comparison_role": "DIAGNOSTIC_NOT_OFFICIAL_ACCURACY_TEST",
+    "reference_is_exact_alpha_table_knot": false,
+    "alpha_table_bracket": [
+      {
+        "Q_GeV": 3.7262747,
+        "alpha_s": 0.26466316
+      },
+      {
+        "Q_GeV": 4.23139,
+        "alpha_s": 0.25335777
+      }
+    ],
+    "publisher_interpolation_accuracy_bound": null,
+    "physical_ME_or_shower_alpha_binding": "UNVERIFIED_NOT_EXECUTED"
+  },
+  "nonfinite_errors": 0,
+  "interpolation_errors": 0,
+  "out_of_domain_guard_rejections": [
+    {
+      "x": "0.0",
+      "Q_GeV": 10.0,
+      "rejection": "OUT_OF_DOMAIN_REJECTED_BEFORE_NATIVE_CALL",
+      "native_xfxQ_called": false
+    },
+    {
+      "x": "1.1",
+      "Q_GeV": 10.0,
+      "rejection": "OUT_OF_DOMAIN_REJECTED_BEFORE_NATIVE_CALL",
+      "native_xfxQ_called": false
+    },
+    {
+      "x": "0.1",
+      "Q_GeV": 0.5,
+      "rejection": "OUT_OF_DOMAIN_REJECTED_BEFORE_NATIVE_CALL",
+      "native_xfxQ_called": false
+    },
+    {
+      "x": "0.1",
+      "Q_GeV": 200000.0,
+      "rejection": "OUT_OF_DOMAIN_REJECTED_BEFORE_NATIVE_CALL",
+      "native_xfxQ_called": false
+    },
+    {
+      "x": "nan",
+      "Q_GeV": 10.0,
+      "rejection": "OUT_OF_DOMAIN_REJECTED_BEFORE_NATIVE_CALL",
+      "native_xfxQ_called": false
+    }
+  ],
+  "native_default_extrapolation_tested": false,
+  "domain_guard_interpretation": "WRAPPER_REJECT_BEFORE_NATIVE_INTERPOLATION; default native extrapolation behavior not claimed to reject",
+  "backend_dependencies": [
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python3.12",
+      "bytes": 31903952,
+      "sha256": "f52b9d2958ce4abad3e17026c8f844b2d1108b0e7e139d0a1879fe46c1de91a5"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "bytes": 952752,
+      "sha256": "dfca1050d6a9c155c2dba963a24e15e0c8c1460bd838a9a019151458995041d1"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "bytes": 46,
+      "sha256": "b1db78e1cf2f99f4ed19ce450f8f183aa5997685f129ef7876342a9105dd0f50"
+    },
+    {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "bytes": 472000,
+      "sha256": "cd0502b27c77766f5aae66380250e861ee75133fc3fb7447138486a567b33aa0"
+    }
+  ],
+  "source_sha256": {
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/scripts/read_pdf_member.py": "b66559e09d94873e4a9e633e41206e927a563ce58f51ef01f8aeed9811780bcf",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_interface.py": "3bdc2a166fa480a1d17127f1d01cf5b3bebe3bf545f672948895fe499204c387",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_metadata.py": "70de57fd7e91f62e604e26d2e32bff5a56f1adada1d77dcf8fc2e1668f714406",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_acquisition.py": "c45ef8d6ba8aa6e3950dde9d6ef6fd798229d7458c69d0f6442724bc4e16476f",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/config/readback_points.json": "a303682dceadbbd88e19a81f6f5e493ebea2a3d1d1dad9d0644ead4e696f0a63"
+  },
+  "MG5_parser_executed": false,
+  "matching_validated": false,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "physical_component_validated": false,
+  "installed_directory_writes": false
+}

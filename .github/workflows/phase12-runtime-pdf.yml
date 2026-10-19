@@ -1,0 +1,31 @@
+name: Phase12 runtime provenance and isolated PDF source boundary
+on:
+  push:
+    branches: [codex/phase12-runtime-pdf-recovery]
+  pull_request:
+    paths: ['analysis/phase12/**','metadata/phase12*','reports/phase12*','.github/workflows/phase12-runtime-pdf.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_methods_bounded_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Phase12 source, isolated method fixtures and negative boundaries
+        run: python3 -B -m unittest discover -s analysis/phase12/tests -p 'test_*.py' -v
+      - name: Preserve Phase11 scientific source and inactive pilot unit methods
+        run: python3 -B -m unittest discover -s analysis/phase11/tests -p 'test_*.py' -v
+      - name: Exact source, bounded evidence, index and every outgoing commit payload
+        run: python3 -B analysis/phase12/scripts/validate_publication.py --repo .
+      - name: Evidence scope
+        run: |
+          echo '### Phase12 evidence scope' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Source/method fixtures and exact bounded published evidence. Actual local runtime observations and isolated LHAPDF readback are separately recorded receipts.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No downloads, native PDF probe, full Phase8-11 analysis, MG5 parser/process, ME, integral, events, shower, detector, Route-A build, Stage A, physical inference or figure publication in this CI.' >> "$GITHUB_STEP_SUMMARY"

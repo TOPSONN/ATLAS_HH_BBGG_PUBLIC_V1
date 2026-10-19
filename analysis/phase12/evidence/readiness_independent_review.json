@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_INDEPENDENT_READINESS_POLICY_REVIEW_WITH_LIMITS",
+  "review_time_utc": "2026-10-19T09:54:19.471828+00:00",
+  "reviewer": "Independent Codex subagent phase11_model_pdf; automated source/method review, not external human approval",
+  "scope": [
+    "READ_ONLY_SCIENTIFIC_POLICY_AND_CONTRACT_REVIEW",
+    "PORTABLE_SYNTHETIC_METHOD_NEGATIVE_FIXTURES",
+    "TEMPORARY_FILE_EXACT_RAW_IDENTITY_METHOD"
+  ],
+  "files_reviewed": {
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/readiness_policy.py": "73e3bc5fb64be339023e54e2557b6a8edf622381f1c855f5464252527003155e",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/config/scientific_contract.json": "9faa7790d875d70f3b065d16530891b9b1bd38b88027b478e3ba365899acc6d8",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/tests/test_readiness.py": "23d5be2176268addb9dfa7703cd5d4842cd63ac6fad7838626d31b1b1decdc4b"
+  },
+  "reviewed_sources_unchanged_during_final_test_run": true,
+  "authorized_minimal_policy_correction": "validate_runtime now requires all five aggregate production counters as strict integer zero, in addition to each snapshot row counters.",
+  "findings_addressed_by_root": [
+    "Required exact ten unresolved setting keys; absence cannot be hidden by other unknown rows.",
+    "Exact alpha reference scale/value and source keys; set name or MZ label cannot replace measured definitions.",
+    "Preserve measured false strict reference diagnostic; do not promote diagnostic or finite interface points into physical alpha binding.",
+    "Per-snapshot evidence class and strict counters; aggregate contradictory production counters also fail.",
+    "Native 4F flavour/alpha metadata matches native scope; every listed finite point value checked independently of error counters."
+  ],
+  "method_tests": {
+    "tests_run": 34,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "wall_seconds": 0.017647927001235075,
+    "output": "test_cold_cache_claim_or_installed_write_rejected (test_readiness.ReadinessEvidence.test_cold_cache_claim_or_installed_write_rejected) ... ok\ntest_complete_synthetic_native_profile_with_false_diagnostic (test_readiness.ReadinessEvidence.test_complete_synthetic_native_profile_with_false_diagnostic) ... ok\ntest_complete_synthetic_runtime_profile (test_readiness.ReadinessEvidence.test_complete_synthetic_runtime_profile) ... ok\ntest_current_source_contract_remains_inactive (test_readiness.ReadinessEvidence.test_current_source_contract_remains_inactive) ... ok\ntest_diagnostic_does_not_establish_physical_alpha_binding (test_readiness.ReadinessEvidence.test_diagnostic_does_not_establish_physical_alpha_binding) ... ok\ntest_domain_guard_cannot_call_native (test_readiness.ReadinessEvidence.test_domain_guard_cannot_call_native) ... ok\ntest_download_partial_or_missing_pair_rejected (test_readiness.ReadinessEvidence.test_download_partial_or_missing_pair_rejected) ... ok\ntest_each_runtime_row_counter_is_mandatory_integer_zero (test_readiness.ReadinessEvidence.test_each_runtime_row_counter_is_mandatory_integer_zero) ... ok\ntest_each_snapshot_requires_actual_observation_role (test_readiness.ReadinessEvidence.test_each_snapshot_requires_actual_observation_role) ... ok\ntest_every_production_counter_strictly_integer_zero (test_readiness.ReadinessEvidence.test_every_production_counter_strictly_integer_zero) ... ok\ntest_inactive_cards_cannot_execute_commands (test_readiness.ReadinessEvidence.test_inactive_cards_cannot_execute_commands) ... ok\ntest_missing_actual_member_is_not_a_metadata_pass (test_readiness.ReadinessEvidence.test_missing_actual_member_is_not_a_metadata_pass) ... ok\ntest_missing_mandatory_unknown_setting_rejected (test_readiness.ReadinessEvidence.test_missing_mandatory_unknown_setting_rejected) ... ok\ntest_missing_scientific_reference_metadata_rejected (test_readiness.ReadinessEvidence.test_missing_scientific_reference_metadata_rejected) ... ok\ntest_native_counters_and_physical_claims_rejected (test_readiness.ReadinessEvidence.test_native_counters_and_physical_claims_rejected) ... ok\ntest_native_reference_diagnostic_not_official_accuracy (test_readiness.ReadinessEvidence.test_native_reference_diagnostic_not_official_accuracy) ... ok\ntest_new_baseline_cannot_be_silently_approved (test_readiness.ReadinessEvidence.test_new_baseline_cannot_be_silently_approved) ... ok\ntest_no_dispatch_or_approval_override (test_readiness.ReadinessEvidence.test_no_dispatch_or_approval_override) ... ok\ntest_nonfinite_native_value_cannot_hide_behind_zero_errors (test_readiness.ReadinessEvidence.test_nonfinite_native_value_cannot_hide_behind_zero_errors) ... ok\ntest_pair_sha_mismatch_rejected (test_readiness.ReadinessEvidence.test_pair_sha_mismatch_rejected) ... ok\ntest_physical_gate_promotion_rejected (test_readiness.ReadinessEvidence.test_physical_gate_promotion_rejected) ... ok\ntest_reference_scale_not_inferred_as_physical_MZ (test_readiness.ReadinessEvidence.test_reference_scale_not_inferred_as_physical_MZ) ... ok\ntest_reference_value_not_inferred_from_set_name (test_readiness.ReadinessEvidence.test_reference_value_not_inferred_from_set_name) ... ok\ntest_runtime_aggregate_counters_cannot_hide_nonzero_or_unknown (test_readiness.ReadinessEvidence.test_runtime_aggregate_counters_cannot_hide_nonzero_or_unknown) ... ok\ntest_semantic_equality_cannot_promote_old_raw_gate (test_readiness.ReadinessEvidence.test_semantic_equality_cannot_promote_old_raw_gate) ... ok\ntest_stale_native_source_whitespace_hash_is_rejected (test_readiness.ReadinessEvidence.test_stale_native_source_whitespace_hash_is_rejected) ... ok\ntest_stale_raw_hash_rejected_even_with_semantic_equality (test_readiness.ReadinessEvidence.test_stale_raw_hash_rejected_even_with_semantic_equality) ... ok\ntest_strict_diagnostic_false_cannot_be_erased (test_readiness.ReadinessEvidence.test_strict_diagnostic_false_cannot_be_erased) ... ok\ntest_synthetic_aggregate_cannot_impersonate_observation (test_readiness.ReadinessEvidence.test_synthetic_aggregate_cannot_impersonate_observation) ... ok\ntest_unknown_native_alpha_type_not_silently_accepted (test_readiness.ReadinessEvidence.test_unknown_native_alpha_type_not_silently_accepted) ... ok\ntest_unknown_setting_cannot_be_zero_false_or_default (test_readiness.ReadinessEvidence.test_unknown_setting_cannot_be_zero_false_or_default) ... ok\ntest_wrong_native_or_metadata_flavour_scope_rejected (test_readiness.ReadinessEvidence.test_wrong_native_or_metadata_flavour_scope_rejected) ... ok\ntest_wrong_process_count_duplicate_and_boolean_ids (test_readiness.ReadinessEvidence.test_wrong_process_count_duplicate_and_boolean_ids) ... ok\ntest_zero_member_is_known_identity_false_is_not_zero (test_readiness.ReadinessEvidence.test_zero_member_is_known_identity_false_is_not_zero) ... ok\n\n----------------------------------------------------------------------\nRan 34 tests in 0.009s\n\nOK\n",
+    "portable_without_external_payloads": true,
+    "runtime_or_native_observation_claimed_by_fixtures": false
+  },
+  "negative_scope": [
+    "stale raw hash and whitespace drift",
+    "semantic-only normalization bypass",
+    "new baseline/component approval",
+    "three positive distinct process IDs and actual observation roles",
+    "missing PDF member",
+    "wrong 4F flavour/alpha scope",
+    "wrong alpha reference inference",
+    "unknown null versus zero/false/default",
+    "nonzero/missing/bool production counters",
+    "nonfinite values hidden behind zero error counts",
+    "incomplete download/hash identity",
+    "unreviewed physical dispatcher or active card"
+  ],
+  "limitations": [
+    "Review is an automated independent source/method check, not human approval.",
+    "No new native PDF evaluations, network requests, runtime snapshots or physical execution performed by this review.",
+    "Actual readiness CLI and final preservation/source/CI/remote delivery require root execution and receipts."
+  ],
+  "installed_inputs_read_or_written_by_this_review": false,
+  "network_calls": 0,
+  "new_native_PDF_evaluations": 0,
+  "human_approval_claimed": false,
+  "new_MG5_processes": 0,
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0
+}

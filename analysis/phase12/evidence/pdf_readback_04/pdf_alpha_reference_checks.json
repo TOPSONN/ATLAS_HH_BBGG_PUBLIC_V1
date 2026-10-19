@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "evidence_class": "ACTUAL_ISOLATED_PDF_READBACK",
+  "status": "MEASURED_DECLARED_REFERENCE_AND_NATIVE_IPOL_DIAGNOSTIC",
+  "declared": {
+    "scale_GeV": 4.1799998,
+    "value": 0.2544023564420006,
+    "scale_source_key": "MZ",
+    "value_source_key": "AlphaS_MZ",
+    "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+    "name_0130_does_not_define_value_at_reference": true
+  },
+  "actual_alpha_at_declared_reference": 0.254403024565842,
+  "reference_diagnostic": {
+    "declared_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "native_alpha_at_declared_Q": 0.254403024565842,
+    "absolute_difference": 6.681238414185664e-07,
+    "relative_difference": 2.626248635282933e-06,
+    "within_strict_diagnostic_tolerance": false,
+    "strict_diagnostic_relative_tolerance": 1e-06,
+    "comparison_role": "DIAGNOSTIC_NOT_OFFICIAL_ACCURACY_TEST",
+    "reference_is_exact_alpha_table_knot": false,
+    "alpha_table_bracket": [
+      {
+        "Q_GeV": 3.7262747,
+        "alpha_s": 0.26466316
+      },
+      {
+        "Q_GeV": 4.23139,
+        "alpha_s": 0.25335777
+      }
+    ],
+    "publisher_interpolation_accuracy_bound": null,
+    "physical_ME_or_shower_alpha_binding": "UNVERIFIED_NOT_EXECUTED"
+  },
+  "strict_diagnostic_tolerance_not_official_accuracy_bound": true,
+  "finite_alpha_values": [
+    {
+      "Q_GeV": 4.1799998,
+      "alpha_s": 0.254403024565842
+    },
+    {
+      "Q_GeV": 10.0,
+      "alpha_s": 0.1965543155814504
+    },
+    {
+      "Q_GeV": 91.1876,
+      "alpha_s": 0.12470053368074485
+    },
+    {
+      "Q_GeV": 100.0,
+      "alpha_s": 0.12282594881647993
+    },
+    {
+      "Q_GeV": 1000.0,
+      "alpha_s": 0.08932158963547387
+    }
+  ],
+  "reference_scale_not_assumed_91_1876": true,
+  "set_name_not_used_to_define_reference": true,
+  "alpha_type": "ipol",
+  "thresholds": {
+    "Charm": {
+      "pdg_id": 4,
+      "declared_evolution_mass_GeV": 1.275,
+      "pdf_threshold_GeV": 1.275,
+      "pdf_threshold_source_key": "MCharm",
+      "alpha_threshold_GeV": 1.275,
+      "alpha_threshold_source_key": "MCharm",
+      "activation_permitted_by_maximum_flavours": true,
+      "not_ME_pole_mass": true
+    },
+    "Bottom": {
+      "pdg_id": 5,
+      "declared_evolution_mass_GeV": 4.1799998,
+      "pdf_threshold_GeV": 4.1799998,
+      "pdf_threshold_source_key": "MBottom",
+      "alpha_threshold_GeV": 4.1799998,
+      "alpha_threshold_source_key": "MBottom",
+      "activation_permitted_by_maximum_flavours": false,
+      "not_ME_pole_mass": true
+    },
+    "Top": {
+      "pdg_id": 6,
+      "declared_evolution_mass_GeV": 173.07001,
+      "pdf_threshold_GeV": 173.07001,
+      "pdf_threshold_source_key": "MTop",
+      "alpha_threshold_GeV": 173.07001,
+      "alpha_threshold_source_key": "MTop",
+      "activation_permitted_by_maximum_flavours": false,
+      "not_ME_pole_mass": true
+    }
+  },
+  "native_alpha_scheme_from_metadata_fallback_not_ME_or_shower_binding": true,
+  "MG5_binding": "UNVERIFIED_NOT_EXECUTED"
+}

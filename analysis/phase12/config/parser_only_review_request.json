@@ -1,0 +1,47 @@
+{
+  "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+  "status": "NOT_AUTHORIZED",
+  "exact_future_execution_source_revision": null,
+  "exact_revision_binding": "Review source_payload_commit from phase12_scientific_source_identity.json; no executable approval implied.",
+  "card_sha256": "4d1e0defa70e34e4119c746607cd0e6970c339651c77a2b6d3d7a9bddd3d82c5",
+  "MG5_version": "3.5.16",
+  "model": "sm/restrict_default.dat",
+  "permitted_future_scope_if_separately_approved": [
+    "import model sm",
+    "define p4 = g u u~ d d~ s s~ c c~",
+    "generate p4 p4 > b b~ a a QCD=2 QED=2"
+  ],
+  "forbidden": [
+    "output",
+    "launch",
+    "check",
+    "ME",
+    "integration",
+    "events",
+    "Pythia",
+    "Delphes"
+  ],
+  "runtime_proposed_raw_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "runtime_baseline_approved": false,
+  "physical_execution_authorized": false,
+  "execution_authorized": false,
+  "dispatcher": null,
+  "approved_limits": null,
+  "fresh_output_required": true,
+  "illustrative_unapproved_limits": {
+    "CPU_seconds": 300,
+    "wall_seconds": 300,
+    "jobs": 1,
+    "workers": 1,
+    "RAM_bytes": 1073741824,
+    "disk_bytes": 268435456
+  },
+  "PDF_payload_identity": {
+    "member_sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e",
+    "info_sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+    "MG5_binding": "UNVERIFIED_NOT_NEEDED_FOR_STATIC_PARSER_PROPOSAL"
+  }
+}

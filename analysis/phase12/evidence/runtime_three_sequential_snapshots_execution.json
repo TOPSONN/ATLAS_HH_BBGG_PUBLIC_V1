@@ -1,0 +1,26 @@
+{
+  "label": "runtime_three_sequential_snapshots",
+  "command": [
+    "python3",
+    "-B",
+    "analysis/phase12/scripts/audit_runtime.py",
+    "--output-dir",
+    "/home/btu/simulations/hh_phase12/run_01/runtime_01"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 2.018595853001898,
+  "cpu_seconds": 1.8191659999999998,
+  "peak_observed_process_group_RSS_bytes": 19529728,
+  "aggregate_observed_disk_bytes": 1900928,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 900,
+    "cpu_seconds": 900,
+    "disk_bytes": 536870912,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

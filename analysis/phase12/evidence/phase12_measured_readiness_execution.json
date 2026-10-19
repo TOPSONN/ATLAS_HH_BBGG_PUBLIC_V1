@@ -1,0 +1,32 @@
+{
+  "label": "phase12_measured_readiness",
+  "command": [
+    "python3",
+    "-B",
+    "analysis/phase12/scripts/audit_readiness.py",
+    "--repo",
+    "/home/btu/projects/atlas_hh_phase12_v1",
+    "--result-root",
+    "/home/btu/simulations/hh_phase12/run_01",
+    "--output",
+    "/home/btu/simulations/hh_phase12/run_01/phase12_readiness.json",
+    "--matrix-output",
+    "/home/btu/simulations/hh_phase12/run_01/candidate_scientific_matrix.json"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.25356776999979047,
+  "cpu_seconds": 0.063338,
+  "peak_observed_process_group_RSS_bytes": 4456448,
+  "aggregate_observed_disk_bytes": 2142439,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 900,
+    "cpu_seconds": 900,
+    "disk_bytes": 536870912,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}
