@@ -1,0 +1,8 @@
+#include "Phase8Reconstruction.hxx"
+#include "Phase8TruthMatching.hxx"
+#include <iostream>
+using namespace atlas_hh::phase8;
+int main(){try{using atlas_hh::delphes::polar;auto near=[](long double a,long double b){demand(std::abs(a-b)<1e-10L,"physics numerical mismatch");};auto a=polar(60,0,0,0),b=polar(60,0,std::acos(-1.),0);near((a+b).mass(),120);near(delta_phi(a,b),std::acos(-1.));near(atlas_hh::delphes::dr(a,b),std::acos(-1.));auto x=polar(10,.5,3.13,0),y=polar(10,.5,-3.13,0);demand(delta_phi(x,y)<.03,"DeltaPhi wrap");
+ auto tiny=polar(108.878387451171875,.1113665848970413208,2.0700531005859375,-1.348699129266606178e-6);demand(std::isfinite(tiny.e),"reviewed signed native mass rejected");bool rejected=false;try{polar(100,.1,2,-1);}catch(...){rejected=true;}demand(rejected,"material signed mass accepted");rejected=false;try{P4{1,0,0,0}.mass();}catch(...){rejected=true;}demand(rejected,"spacelike summed mass accepted");
+ atlas_hh::phase8::Event e;reconstruct(e,std::nullopt);demand(!e.observables.at("m_bb")&&!e.observables.at("m_HH")&&e.observables.at("native_btag_multiplicity")==0,"null versus physical zero");e.selected={{0,60,0,0,0,a,0,0},{1,60,0,std::acos(-1.),0,b,0,0}};e.tagged={{0,50,0,.5,5,polar(50,0,.5,5),5,1},{1,50,0,2.5,5,polar(50,0,2.5,5),5,1}};reconstruct(e,100);near(*e.observables.at("m_gamma_gamma"),120);demand(e.observables.at("m_bb")&&e.observables.at("m_HH"),"missing candidate reconstruction");auto m=atlas_hh::delphes::unique_match({a,b},{b,a},.2);demand(m.pairs.size()==2,"unique matching permutation");
+ std::cout<<"PASS SYNTHETIC_METHOD_TEST physics: four-vectors, nulls, signed masses, angles, matching\n";return 0;}catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}

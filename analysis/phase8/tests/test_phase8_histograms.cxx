@@ -1,0 +1,7 @@
+#include "Phase8Histogram.hxx"
+#include "Phase8Statistics.hxx"
+#include <iostream>
+using namespace atlas_hh::phase8;
+int main(){try{TH1D h("phase8_method_bin_test","",2,0.,2.);h.SetDirectory(nullptr);h.Sumw2();h.Fill(-1.,2.);h.Fill(0.,-1.);h.Fill(1.,3.);h.Fill(2.,4.);demand(h.GetBinContent(0)==2&&h.GetBinContent(1)==-1&&h.GetBinContent(2)==3&&h.GetBinContent(3)==4,"ROOT edge/flow convention mismatch");demand(h.GetSumw2()->At(0)==4&&h.GetSumw2()->At(1)==1&&h.GetSumw2()->At(2)==9&&h.GetSumw2()->At(3)==16,"signed sumw2 mismatch");Json j{{"schema_version",1},{"observables",Json::object()}};for(const auto&n:observable_names())j["observables"][n]={{"edges",{0.,1.,2.}},{"unit","method"}};demand(histogram_definitions(j).size()==26,"observable completeness");j["observables"]["m_bb"]["edges"]={0,1,1};bool rejected=false;try{histogram_definitions(j);}catch(...){rejected=true;}demand(rejected,"nonincreasing edges accepted");
+ const std::vector<double> signedWeights{-1,1,0,0},tinyConstant(4,1e-30);demand(std::abs(::phase8::summarizeWeights(signedWeights,4).fixedNVariance-8./3)<1e-14,"fixed-N signed centered variance");demand(::phase8::summarizeWeights(tinyConstant,4).fixedNVariance==0,"constant tiny weights must have zero centered variance");
+ std::cout<<"PASS SYNTHETIC_METHOD_TEST histogram: ROOT bins, signed weights, sumw2, flows, config validation\n";return 0;}catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}

@@ -1,0 +1,8 @@
+#include "Phase8Selection.hxx"
+#include <iostream>
+using namespace atlas_hh::phase8;
+int main(){try{using atlas_hh::delphes::photon_fiducial;using atlas_hh::delphes::jet_fiducial;using atlas_hh::delphes::polar;
+ demand(!photon_fiducial(25,0)&&photon_fiducial(25.0001,0),"photon strict pT boundary");demand(!photon_fiducial(40,2.37)&&photon_fiducial(40,2.36999),"photon eta boundary");demand(photon_fiducial(40,1.37)&&photon_fiducial(40,1.52)&&!photon_fiducial(40,1.4),"open crack boundaries");demand(!photon_fiducial(40,double(float(1.37)))&&!photon_fiducial(40,double(float(1.52)))&&photon_fiducial(40,double(float(2.37))),"native Float_t boundary serialization policy");demand(!jet_fiducial(25,0)&&!jet_fiducial(40,2.5)&&jet_fiducial(25.001,2.499),"jet boundaries");
+ std::vector<Object> v{{9,50,0,0,0,polar(50,0,0,0),0,0},{2,50,0,1,0,polar(50,0,1,0),0,0},{1,60,0,2,0,polar(60,0,2,0),0,0}};rank_objects(v);demand(v[0].index==1&&v[1].index==2&&v[2].index==9,"deterministic original-index ties");
+ atlas_hh::phase8::Event e;e.photons={{0,35,0,0,0,polar(35,0,0,0),0,0},{1,30,0,3,0,polar(30,0,3,0),0,0}};e.jets={{0,50,0,0,5,polar(50,0,0,5),5,3},{1,40,0,2,5,polar(40,0,2,5),5,1},{2,30,0,1,0,polar(30,0,1,0),0,2}};select(e);demand(!e.stages[1]&&e.tagged.size()==2,"leading strict threshold or native bit0 interpretation");e.photons[0].pt=36;e.photons[0].p=polar(36,0,0,0);select(e);demand(e.stages[3],"baseline tag selection");demand(e.eligible.size()==3&&e.tagged[0].btag==3,"other native tag bits incorrectly rejected");
+ std::cout<<"PASS SYNTHETIC_METHOD_TEST selection: boundaries, ties, bit0, no BTagAlgo/BTagPhys substitution\n";return 0;}catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}

@@ -1,0 +1,47 @@
+{
+  "illustrative_luminosity_fb_inverse": 100,
+  "label": "ILLUSTRATIVE_MODEL_YIELD",
+  "names": [
+    "m_gamma_gamma",
+    "m_bb",
+    "m_HH",
+    "photon1_pT",
+    "photon2_pT",
+    "photon1_eta",
+    "photon2_eta",
+    "diphoton_pT",
+    "tagged_jet1_pT",
+    "tagged_jet2_pT",
+    "tagged_jet1_eta",
+    "tagged_jet2_eta",
+    "dijet_pT",
+    "HH_pT",
+    "HH_eta",
+    "DeltaR_gamma_gamma",
+    "DeltaR_bb",
+    "DeltaPhi_gamma_gamma",
+    "DeltaPhi_bb",
+    "DeltaR_Hgg_Hbb",
+    "DeltaPhi_Hgg_Hbb",
+    "DeltaEta_Hgg_Hbb",
+    "photon_jet_min_DeltaR",
+    "reconstructed_jet_multiplicity",
+    "native_btag_multiplicity",
+    "scalar_H_T"
+  ],
+  "normalization_modes": [
+    "RAW_EVENT_COUNTS",
+    "SOURCE_WEIGHTED",
+    "UNIT_AREA_SHAPE",
+    "EXPLORATORY_LUMINOSITY_YIELD"
+  ],
+  "schema_version": 1,
+  "stages": [
+    "INPUT",
+    "PHOTONS",
+    "JETS",
+    "TWO_BTAGS",
+    "FINAL_MGG"
+  ],
+  "undefined_is_null_not_zero": true
+}

@@ -1,0 +1,3475 @@
+{
+  "schema_version": 1,
+  "sample_version": "PHASE8_HISTORICAL_FROZEN_B80_V1",
+  "base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
+  "status": "PASS_ALL_EIGHT_ACTUAL_FULL_DATA_READBACK",
+  "evidence_class": "ACTUAL_FULL_DATA_READBACK",
+  "units": {
+    "energy": "GeV",
+    "source_position": "mm",
+    "native_time": "s",
+    "cross_section": "pb"
+  },
+  "dataset_ids": [
+    "S01_B100",
+    "S01_C1000",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ],
+  "datasets": [
+    {
+      "dataset_id": "S01_B100",
+      "process": "ggf_hh_sm",
+      "production_phase": "7b",
+      "source_sample_type": "ACTUAL_INDEPENDENT_FULL_LOOP",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 21,
+      "expected_entries": 100,
+      "N_original": 100,
+      "truth_format": "signal",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_PRODUCTION_ONLY",
+      "model_br_factor": 0.002653445906720871,
+      "BR_factor_applications": 1,
+      "branching_ratio_scope": "MODEL_BR_ONLY_HH_2BRBBBRGG_ONCE",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": 0.017276,
+      "integration_uncertainty_pb": 0.00018503,
+      "cross_section_source": "metadata/phase7b_run_manifest.json:/source",
+      "historical_cutflow_reference": "metadata/phase7b_run_manifest.json:/stages/full100/independent_cutflow/cutflow",
+      "expected_cutflow": [
+        100,
+        45,
+        38,
+        18,
+        18
+      ],
+      "effective_configuration_evidence": "metadata/phase7e_audit.json",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY",
+        "INTEGRATION_NORMALIZATION_UNCERTAINTY_NOT_CONVERGENCE_PROOF",
+        "DISTINCT_B100_CONFIG_NOT_POOLABLE_WITH_C1000"
+      ],
+      "root_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/delphes/detector.root",
+      "root_sha256": "39d0a544febdbdcd9711593f613e2f81ba89e396fa5db0e3f76e64c90e107dc8",
+      "input_index_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/readback/input_event_index.dat",
+      "input_index_sha256": "1ab21fa10038b0081a2d5cbc79f01a38bdab0cf84b7a493e92d5b5ee5808c6f3",
+      "truth_index_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/readback/signal_truth.dat",
+      "truth_index_sha256": "b6c6ac5f3e4672664c6e90cff3f02c425aa14a358fb855d44abddf476308f3bb",
+      "hepmc_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/shower/shower.hepmc3",
+      "hepmc_sha256": "798a78ac201485bdec344339ba895165d9a56eddaeafe29b36e1c4da44bfaddb",
+      "historical_reco_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/root_validation/reco_events.jsonl",
+      "historical_reco_sha256": "a12bce9a0acf75aa265bd01b8e1a58f3fc35b25c9db1d68c717aa30ac53d33a3",
+      "ancestry_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/readback/hepmc_ancestry.jsonl",
+      "ancestry_sha256": "93c9ce714f6599b9bb59cf1f5891c83a2fab7d9636963f928664652ae23bfc86",
+      "card_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/delphes/detector_card.tcl",
+      "card_sha256": "949b199f9ad16ec8d0543eb545bce0ab37a4d8968fd73f65b96a9302afddf772",
+      "lhe_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/source/process/Events/hh_7b/unweighted_events.lhe.gz",
+      "lhe_sha256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+      "generator_cards": [
+        {
+          "role": "cards/MadLoopParams.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/MadLoopParams.dat",
+          "sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54"
+        },
+        {
+          "role": "cards/baseline_shower.cmnd",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/baseline_shower.cmnd",
+          "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+        },
+        {
+          "role": "cards/continuation_launch.mg5",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/continuation_launch.mg5",
+          "sha256": "a71e10f4641f7c76c7a3e1532213f1f93c0d9795f553d351d96621701d23fc0f"
+        },
+        {
+          "role": "cards/detector_card.tcl",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/detector_card.tcl",
+          "sha256": "949b199f9ad16ec8d0543eb545bce0ab37a4d8968fd73f65b96a9302afddf772"
+        },
+        {
+          "role": "cards/effective_shower_hostpath_projection.json",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/effective_shower_hostpath_projection.json",
+          "sha256": "18c01b9cd6279a6ee0e2d191da6cb82095eb03f714beabfe8fc637a00b9c3838"
+        },
+        {
+          "role": "cards/launch.mg5",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/launch.mg5",
+          "sha256": "f584e1f32faa2de8e93660b568e279931e6dc06b2d7c281489f8a33676200521"
+        },
+        {
+          "role": "cards/param_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/param_card.dat",
+          "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0"
+        },
+        {
+          "role": "cards/process_card.mg5",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/process_card.mg5",
+          "sha256": "5ff61462a25e4eb60bf204d896b167137126cf0aa7d57a7b807f0902c3526206"
+        },
+        {
+          "role": "cards/reviewed_param_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/reviewed_param_card.dat",
+          "sha256": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c"
+        },
+        {
+          "role": "cards/reviewed_run_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/reviewed_run_card.dat",
+          "sha256": "5ff73ea8d756cc9b741534eb7d008fe7179b0e76d023e89090b0468012fa032f"
+        },
+        {
+          "role": "cards/run_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/cards/run_card.dat",
+          "sha256": "568b294e820369b90fdf42d57b458f65f83d8fc721c668a0d57063101f1fc08f"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7b_100/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "29f025bd9b08a494b744b1d1927ab6e787b8af9c239656fa740885a1d373d16b",
+      "input_HEPMC_SHA256": "798a78ac201485bdec344339ba895165d9a56eddaeafe29b36e1c4da44bfaddb",
+      "detector_ROOT_SHA256": "39d0a544febdbdcd9711593f613e2f81ba89e396fa5db0e3f76e64c90e107dc8",
+      "detector_card_SHA256": "949b199f9ad16ec8d0543eb545bce0ab37a4d8968fd73f65b96a9302afddf772",
+      "source_event_index_SHA256": "1ab21fa10038b0081a2d5cbc79f01a38bdab0cf84b7a493e92d5b5ee5808c6f3",
+      "actual_TTree_entries": 100,
+      "independent_source_event_count": 100,
+      "actual_index_events": 100,
+      "source_index_identity_digest": "4664de3e6abd496272f6c7da139209ba34e99beef599f932085472581e974dab",
+      "available_local_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7b/stages/full100/delphes/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_PRODUCTION_ONLY",
+      "source_index_ordinal_bounds": [
+        1,
+        100
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 100,
+        "dataset_id": "S01_B100",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 100,
+        "events_validated": 100,
+        "expected_entries": 100,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 51606,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 12,
+        "ordered_event_identity_sha256": "eb6fe4cf32b4709190dd296d3e2fc0e5a225e10e045274e6facc3b0c6c0ec301",
+        "skipped_events": 0,
+        "source_denominator": 100,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        100,
+        45,
+        38,
+        18,
+        18
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 100,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "eb6fe4cf32b4709190dd296d3e2fc0e5a225e10e045274e6facc3b0c6c0ec301"
+      }
+    },
+    {
+      "dataset_id": "S01_C1000",
+      "process": "ggf_hh_sm",
+      "production_phase": "7c",
+      "source_sample_type": "ACTUAL_INDEPENDENT_FULL_LOOP",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "NNPDF23_lo_as_0130_qed_mem0",
+      "actual_alpha_running": "TWO_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261122,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "signal",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_PRODUCTION_ONLY",
+      "model_br_factor": 0.002653445906720871,
+      "BR_factor_applications": 1,
+      "branching_ratio_scope": "MODEL_BR_ONLY_HH_2BRBBBRGG_ONCE",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": 0.019069,
+      "integration_uncertainty_pb": 0.00011745,
+      "cross_section_source": "metadata/phase7c_run_manifest.json:/source",
+      "historical_cutflow_reference": "metadata/phase7c_run_manifest.json:/stages/full1000/independent_cutflow/cutflow",
+      "expected_cutflow": [
+        1000,
+        484,
+        403,
+        143,
+        143
+      ],
+      "effective_configuration_evidence": "metadata/phase7e_audit.json",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY",
+        "INTEGRATION_NORMALIZATION_UNCERTAINTY_NOT_CONVERGENCE_PROOF",
+        "EFFECTIVE_PDF_ALPHA_RUNNING_MISMATCH_WITH_FUTURE_TARGET",
+        "KAPPA2_5_5_INCONCLUSIVE_REWEIGHTING"
+      ],
+      "root_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/delphes/detector.root",
+      "root_sha256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+      "input_index_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/input_event_index.dat",
+      "input_index_sha256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+      "truth_index_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/signal_truth.dat",
+      "truth_index_sha256": "8633893a909fa8d7d30a532e935389b8dd0ba732d471f6d7278ea8b656314d1d",
+      "hepmc_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/shower/shower.hepmc3",
+      "hepmc_sha256": "c3637940bb715e907d4066e6143617cc84f2700217bd5fa6b88a33067c7abe3f",
+      "historical_reco_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/root_validation/reco_events.jsonl",
+      "historical_reco_sha256": "cdb303e61318e32069069857e983573a1f528fd6c97e4f93ce71227632b32ccc",
+      "ancestry_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/readback/hepmc_ancestry.jsonl",
+      "ancestry_sha256": "c099eff1b8e7c1ea1b0e420108979d8d46504b3b37d6a5e913636e88bf55797c",
+      "card_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/delphes/detector_card.tcl",
+      "card_sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+      "lhe_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/source/process/Events/hh_7c/unweighted_events.lhe.gz",
+      "lhe_sha256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "generator_cards": [
+        {
+          "role": "cards/MadLoopParams.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/MadLoopParams.dat",
+          "sha256": "7dd059a3a15138f09cdc54f927b787046d75c6952b32b7544d3959bb3682dc54"
+        },
+        {
+          "role": "cards/baseline_shower.cmnd",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/baseline_shower.cmnd",
+          "sha256": "53ab239a091b179abce8db5d6905a279884c47a0286a422c059265460ec33389"
+        },
+        {
+          "role": "cards/detector_card.tcl",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/detector_card.tcl",
+          "sha256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b"
+        },
+        {
+          "role": "cards/effective_shower_hostpath_projection.json",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/effective_shower_hostpath_projection.json",
+          "sha256": "23eeaf9046f9eff10c1eaf78ba76e0a5f1573081c30f2516ea10921d7ca96a12"
+        },
+        {
+          "role": "cards/launch.mg5",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/launch.mg5",
+          "sha256": "04e3339e21bbe4a00478937dfdd5fb60e2ccfe11e5983cfa9cb833c207e345a9"
+        },
+        {
+          "role": "cards/param_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/param_card.dat",
+          "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0"
+        },
+        {
+          "role": "cards/process_card.mg5",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/process_card.mg5",
+          "sha256": "5ff61462a25e4eb60bf204d896b167137126cf0aa7d57a7b807f0902c3526206"
+        },
+        {
+          "role": "cards/reviewed_param_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/reviewed_param_card.dat",
+          "sha256": "d9c8ed67923950898f682515718d01ead0117eb0f2a0599b85dcadcf620a800c"
+        },
+        {
+          "role": "cards/reviewed_run_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/reviewed_run_card.dat",
+          "sha256": "a9e4ea61973f035c273fac1dc333401f485fb2721af9e86daa1713a0f536c904"
+        },
+        {
+          "role": "cards/run_card.dat",
+          "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/cards/run_card.dat",
+          "sha256": "ae877745b195e936c16c348f8b30d82b44f32d504f22eeb891ee310c0f165521"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7c_1000/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "b13e5010f80b734495598492c97f5a7f73da72568c296134b2fb15b302a69eac",
+      "input_HEPMC_SHA256": "c3637940bb715e907d4066e6143617cc84f2700217bd5fa6b88a33067c7abe3f",
+      "detector_ROOT_SHA256": "877b997837565c23c8f54bdb3420048eb53e08556b4d3fb7e3d576f8d78c1d02",
+      "detector_card_SHA256": "3c9e2cfcebdc1048390cab0dcbc8214f67f880eed8035e507f1444c0a349783b",
+      "source_event_index_SHA256": "c39f29efb9b6041ab2650983f0526f02f08f7fbce20012613909a915c25c720a",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "cd53485ad724e778d957ee5e29a7d1993bd7327659f4c1c5655020d339343c0c",
+      "available_local_path": "LOCAL_HOME/simulations/hh_signal_runs/campaign_01/7c/stages/full1000/delphes/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_PRODUCTION_ONLY",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "S01_C1000",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 539836,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 62,
+        "ordered_event_identity_sha256": "afe1419b391af0ef4ab347f4236cca6d377ff0a685b629493bdd1ce46e0cec8b",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        484,
+        403,
+        143,
+        143
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "42aafef1b95bf987874eb30800b5d520def57b772b9a7fdda1dbedb19686de0d"
+      }
+    },
+    {
+      "dataset_id": "B01",
+      "process": "bbgg",
+      "production_phase": "6c",
+      "source_sample_type": "ACTUAL_INDEPENDENT_CONTINUUM_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261013,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "continuum",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 1.0,
+      "BR_factor_applications": 0,
+      "branching_ratio_scope": "NO_HIGGS_BR",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": 0.06624666,
+      "integration_uncertainty_pb": 0.0005940933,
+      "cross_section_source": "historical_closed_Pythia_run_manifest_source_LHE_init",
+      "historical_cutflow_reference": "metadata/phase7d_signal_background_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "effective_configuration_evidence": "frozen_original_LHE_embedded_run_and_param_cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ],
+      "root_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/detector.root",
+      "root_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "input_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/input_event_index.dat",
+      "input_index_sha256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "truth_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/truth_analysis_index.dat",
+      "truth_index_sha256": "fe0bd96df52528c4bd6dfd36f47bcc19f6d69596658cca1a6fb916358ab9e87b",
+      "card_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/detector_card.tcl",
+      "card_sha256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "historical_reco_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/reco_events.jsonl",
+      "historical_reco_sha256": "8e2bcda669213e75a4aa84223c267a7f49f9105650b7edc1100f956e56a05fa0",
+      "hepmc_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/input.hepmc3",
+      "hepmc_sha256": "97ebc8dcbdd7ff249581a584f23e42e4d722961f65e8a370f6ca052d85c98db0",
+      "lhe_path": "REPOSITORY/reference_samples/mg5/pp_bbgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "lhe_sha256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "source_hepmc_gz_path": "LOCAL_HOME/simulations/pythia8_runs/bbgg_1k/shower.hepmc3.gz",
+      "source_hepmc_gz_sha256": "a35e15942ac5442b3141960f0c0602f5a4cb63ea853f1090fa9e46f304209536",
+      "generator_cards": [
+        {
+          "role": "run_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/bbgg_1k/source_cards/run_card.dat",
+          "sha256": "00b17883baedf6e2b621099c4bc33f9058501548bdf4b1c41c9d682015ab1b7d"
+        },
+        {
+          "role": "proc_card_mg5.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/bbgg_1k/source_cards/proc_card_mg5.dat",
+          "sha256": "8d57622a06aa06b2cfcfed7cfec128b733552344c2be1d920e31f335f8a0fb81"
+        },
+        {
+          "role": "param_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/bbgg_1k/source_cards/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/delphes/pp_bbgg_atlas_like/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "bc8f0c4a48a1db512013552afe3ec8091dddaae8b47daf7aae808d7cb767a343",
+      "input_HEPMC_SHA256": "97ebc8dcbdd7ff249581a584f23e42e4d722961f65e8a370f6ca052d85c98db0",
+      "detector_ROOT_SHA256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "detector_card_SHA256": "cd91fc7982365af23e4002c6295418fbbc0077ffe381e992e7e6070052eb1f47",
+      "source_event_index_SHA256": "36855f1d098c845a3d79927402ec3f5a13f05c29d1822f9d3d4e42ff086a5a8f",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "29f9fb02780e93fd2371f2fb79eb9afc89b3c0df69828dc46ae71fefee7b6c6f",
+      "available_local_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_bbgg_1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B01",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 426370,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 64,
+        "ordered_event_identity_sha256": "5dfae169e4d2c51ea720718db559523df7f5154cad22cca5f068785b0fa54982",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "e5dadf920ee7e48ebfdfdfca850906cc82b5e927348a62a8ebeaf8a28c543052"
+      }
+    },
+    {
+      "dataset_id": "B02",
+      "process": "ccgg",
+      "production_phase": "6c",
+      "source_sample_type": "ACTUAL_INDEPENDENT_CONTINUUM_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261021,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "continuum",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 1.0,
+      "BR_factor_applications": 0,
+      "branching_ratio_scope": "NO_HIGGS_BR",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": 0.6274417,
+      "integration_uncertainty_pb": 0.005190692,
+      "cross_section_source": "historical_closed_Pythia_run_manifest_source_LHE_init",
+      "historical_cutflow_reference": "metadata/phase7d_signal_background_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "effective_configuration_evidence": "frozen_original_LHE_embedded_run_and_param_cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ],
+      "root_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/detector.root",
+      "root_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "input_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/input_event_index.dat",
+      "input_index_sha256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "truth_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/truth_analysis_index.dat",
+      "truth_index_sha256": "b84a4056adf90dfbd2baa35010f3123fbc9f272a236f38364f1d7b3408886e24",
+      "card_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/detector_card.tcl",
+      "card_sha256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "historical_reco_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/reco_events.jsonl",
+      "historical_reco_sha256": "89d312bcf4134e99a49c5dd7483b9d9f08090154f9af26821306d2c8eb896725",
+      "hepmc_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/input.hepmc3",
+      "hepmc_sha256": "8259af7279df4828249da9e0f68dc9b3bf8ffc54ae8e8a112e2c9c16adba83bc",
+      "lhe_path": "REPOSITORY/reference_samples/mg5/pp_ccgg_sm_lo_13tev/reference_1000.lhe.gz",
+      "lhe_sha256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "source_hepmc_gz_path": "LOCAL_HOME/simulations/pythia8_runs/ccgg_1k/shower.hepmc3.gz",
+      "source_hepmc_gz_sha256": "ad173686a9d9cb342796016bdb2ea6b70f08a5b921233da0d33d9dd8945cf9bb",
+      "generator_cards": [
+        {
+          "role": "run_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/ccgg_1k/source_cards/run_card.dat",
+          "sha256": "e0e232367c0e9d5c591687b3ff53ae9ba4281e86245d35d29da227ac5f0397ce"
+        },
+        {
+          "role": "proc_card_mg5.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/ccgg_1k/source_cards/proc_card_mg5.dat",
+          "sha256": "9d8e863a2dca687aaa77d556a6a4220e9c676933d6aa70924d5923a1510ffcd2"
+        },
+        {
+          "role": "param_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/ccgg_1k/source_cards/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/delphes/pp_ccgg_atlas_like/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "3042fb08802e66e1582466a59e6d4dd3deabbd6fd64f91748830a09b76bae7ef",
+      "input_HEPMC_SHA256": "8259af7279df4828249da9e0f68dc9b3bf8ffc54ae8e8a112e2c9c16adba83bc",
+      "detector_ROOT_SHA256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "detector_card_SHA256": "5507d5a49492512aa454193c3b1de007933050bf91d50c11caf751618b8a3522",
+      "source_event_index_SHA256": "09470742b6db0c4b7b718ca4509c0f3c081c97960899ec8d0fdb098dd3f93c77",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "692e8ffba7539381e95472cb31158987665c10f8fb32b27a556379640e7e1921",
+      "available_local_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_ccgg_1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B02",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 468551,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 83,
+        "ordered_event_identity_sha256": "2bfa8cfcce5bfd9f1e700e64df6ed039d4becffabaf0a8112e8f680ff4fc4bce",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "ab906b49facb339364f86d409c14f08cebaa173a3a15d0128be842bd8106c286"
+      }
+    },
+    {
+      "dataset_id": "B03",
+      "process": "jjgg",
+      "production_phase": "6c",
+      "source_sample_type": "ACTUAL_INDEPENDENT_CONTINUUM_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261022,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "continuum",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 1.0,
+      "BR_factor_applications": 0,
+      "branching_ratio_scope": "NO_HIGGS_BR",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": 9.436556,
+      "integration_uncertainty_pb": 0.0547472,
+      "cross_section_source": "historical_closed_Pythia_run_manifest_source_LHE_init",
+      "historical_cutflow_reference": "metadata/phase7d_signal_background_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "effective_configuration_evidence": "frozen_original_LHE_embedded_run_and_param_cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ],
+      "root_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/detector.root",
+      "root_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "input_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/input_event_index.dat",
+      "input_index_sha256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "truth_index_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/truth_analysis_index.dat",
+      "truth_index_sha256": "8aafa9966f87ad77246533d69d6319af72b2b311a74d2ffa6b1bb560cf515a57",
+      "card_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/detector_card.tcl",
+      "card_sha256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "historical_reco_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/reco_events.jsonl",
+      "historical_reco_sha256": "0debed16185a97e9ccc97b816a21a3dc95ca6182a5e51ed1f41c28333b05abbf",
+      "hepmc_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/input.hepmc3",
+      "hepmc_sha256": "c62ba365bba6ddc4d4d1e613288af3215b89dce02d837f548f137b258d84ec5f",
+      "lhe_path": "REPOSITORY/reference_samples/mg5/pp_jjgg_light_sm_lo_13tev/reference_1000.lhe.gz",
+      "lhe_sha256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "source_hepmc_gz_path": "LOCAL_HOME/simulations/pythia8_runs/jjgg_1k/shower.hepmc3.gz",
+      "source_hepmc_gz_sha256": "2643f0c14440b25267a153b72a7d676c337fd182a39e62fdcbe2191361a91365",
+      "generator_cards": [
+        {
+          "role": "run_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/jjgg_1k/source_cards/run_card.dat",
+          "sha256": "5c388bb0fe5c11130ee79d327858b6b1a2982b76cf9e257bac572b529fd3b00f"
+        },
+        {
+          "role": "proc_card_mg5.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/jjgg_1k/source_cards/proc_card_mg5.dat",
+          "sha256": "6724ed8d59c4f04cd1651986fbec5e5ba3f6ab6d90d3a83599e18187383ae73f"
+        },
+        {
+          "role": "param_card.dat",
+          "path": "LOCAL_HOME/simulations/pythia8_runs/jjgg_1k/source_cards/param_card.dat",
+          "sha256": "ca07f2ea66e613479a6d83d65d98e31b33f91e7cf1c2441013414c13c191b125"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/delphes/pp_jjgg_light_atlas_like/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "606b092b3c3751bfe7a900e52a3928580a7ee015a1884f7ca6e03ac260260030",
+      "input_HEPMC_SHA256": "c62ba365bba6ddc4d4d1e613288af3215b89dce02d837f548f137b258d84ec5f",
+      "detector_ROOT_SHA256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "detector_card_SHA256": "762d5ff5f44b3f41783b086636df53c3c563e9ad673afd867d64926ae0b6f134",
+      "source_event_index_SHA256": "836434c1fd64ef025959905c6e3920249bf6d6a2dc00c112c1cbc02cfd944d95",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "f5c00abdd88f8eb74aa138fde81f3f892a1b4dafc9a91791fde16af6fbea6458",
+      "available_local_path": "LOCAL_HOME/simulations/delphes_runs/stage_c_jjgg_1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B03",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 470232,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 80,
+        "ordered_event_identity_sha256": "70c3ecb1fade1718ab8b4601efd46b9e600e4de7dc7682b2d2d0696889410608",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "5b848eab5542c60da09d973848979bbafed62b3f2ee76d9f17c87fcfa78a3816"
+      }
+    },
+    {
+      "dataset_id": "B04",
+      "process": "zh",
+      "production_phase": "6g",
+      "source_sample_type": "ACTUAL_INDEPENDENT_HIGGS_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261104,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "new_background",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 0.0022965313147512443,
+      "BR_factor_applications": 1,
+      "branching_ratio_scope": "MODEL_BR_ONLY",
+      "source_included_decay_factors": [
+        "Z_to_b_bbar"
+      ],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": "0.08953800",
+      "integration_uncertainty_pb": "0.0003975100",
+      "cross_section_source": "metadata/phase6g_run_manifest.json:/samples/B04",
+      "historical_cutflow_reference": "metadata/phase6g_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "effective_configuration_evidence": "metadata/phase6g_run_manifest.json effective_run_values,source_validation,and frozen LHE cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY"
+      ],
+      "root_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/detector.root",
+      "root_sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "input_index_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_chain_v2/pythia/full1000/input_event_index.dat",
+      "input_index_sha256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+      "truth_index_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_chain_v2/pythia/full1000/background_truth_index.dat",
+      "truth_index_sha256": "fec43e8fd83cc3fed28150ed2a397e880aa15b787c4455be80ca59b6bf510f04",
+      "hepmc_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_chain_v2/pythia/full1000/shower.hepmc3",
+      "hepmc_sha256": "ae2055e5738ea228b38927c4b4008b6cd2e3ba7acecb28276dd0acd4c38cd0f5",
+      "lhe_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/process/Events/zh1000/unweighted_events.lhe.gz",
+      "lhe_sha256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "card_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/detector_card.tcl",
+      "card_sha256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+      "historical_reco_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/reco_events.jsonl",
+      "historical_reco_sha256": "13a1e6e91e8eb2781ef6b46c7043a6918823fe185f1ed95c7af0c4d922f6edd8",
+      "generator_cards": [
+        {
+          "role": "process_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/inputs/process.mg5",
+          "sha256": "411bcfdc0320d9f969b53ef4a723e98ccb26710800687ea0049cc09e32ebc2ad"
+        },
+        {
+          "role": "run_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/inputs/run_card.dat",
+          "sha256": "d4ac3fd4f5dd2f946d022dba9c64b2a2437350a6d93289b0b989d46abf291c4f"
+        },
+        {
+          "role": "param_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "post_run_process",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/process/Cards/proc_card_mg5.dat",
+          "sha256": "8bf0001e09c55527557e30bc8e77c4eca231cd6592278f91ebd2329782eee5ef"
+        },
+        {
+          "role": "post_run_run",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/process/Cards/run_card.dat",
+          "sha256": "ac105eb4e5fa7db8f0d59a4c31a45f1bbd6cd6bfcf2f3e251138fd20fba4be49"
+        },
+        {
+          "role": "post_run_param",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/process/Cards/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "configuration",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_v2/mg5/process/Cards/me5_configuration.txt",
+          "sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/new_backgrounds/B04_ZH/delphes/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "526ac2896b4f8951a4514be2e97846cfbbee3d42ef4db047bf180c0ede7a82c6",
+      "input_HEPMC_SHA256": "ae2055e5738ea228b38927c4b4008b6cd2e3ba7acecb28276dd0acd4c38cd0f5",
+      "detector_ROOT_SHA256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "detector_card_SHA256": "b0fc2343cc1be0ef6a4bde214c8c818c1192c86a80b231909e6c1a3a6ab9e82d",
+      "source_event_index_SHA256": "e4d19bb08a698bca40af6aff88763b7ac4c848890865335a340e19acd0c7ff31",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "c5a118ae8c78302b46acc231c82f747710fe43a8f0556dec3d10b9058a59cbee",
+      "available_local_path": "LOCAL_HOME/simulations/phase6g_runs/zh_1k_detector_v3/delphes/full1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B04",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 353821,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 107,
+        "ordered_event_identity_sha256": "94d61189c799634199dc6c71eb0cf1997de407a6600b7022ffdf15bc5a2e7fd1",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "b52963bcd698ff264bb36ffb9f794a09bda439e7b3452a66388ae656287c55f6"
+      }
+    },
+    {
+      "dataset_id": "B05",
+      "process": "tth",
+      "production_phase": "6g",
+      "source_sample_type": "ACTUAL_INDEPENDENT_HIGGS_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261105,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "new_background",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 0.002297546784308979,
+      "BR_factor_applications": 1,
+      "branching_ratio_scope": "MODEL_BR_ONLY",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": "0.3991820",
+      "integration_uncertainty_pb": "0.001975393",
+      "cross_section_source": "metadata/phase6g_run_manifest.json:/samples/B05",
+      "historical_cutflow_reference": "metadata/phase6g_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "effective_configuration_evidence": "metadata/phase6g_run_manifest.json effective_run_values,source_validation,and frozen LHE cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY",
+        "TOP_DECAY_SPIN_CORRELATIONS_NOT_FULLY_VALIDATED"
+      ],
+      "root_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/delphes/full1000/detector.root",
+      "root_sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "input_index_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/pythia/full1000/input_event_index.dat",
+      "input_index_sha256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+      "truth_index_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/pythia/full1000/background_truth_index.dat",
+      "truth_index_sha256": "5ce457f2d210ae3ba5ffcd40744363323fb59f2796fff53c258b8645fbcfac8b",
+      "hepmc_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/pythia/full1000/shower.hepmc3",
+      "hepmc_sha256": "524a47c8a87516c30ff01cf03e9097e68d0eff9aa74b39a3a1d502a9ec6f90e4",
+      "lhe_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/process/Events/tth1000/unweighted_events.lhe.gz",
+      "lhe_sha256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+      "card_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/delphes/full1000/detector_card.tcl",
+      "card_sha256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+      "historical_reco_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/delphes/full1000/reco_events.jsonl",
+      "historical_reco_sha256": "f20484e45630450bb020fb118e3a96241f2ff7e80694046f9078e50e37e7b6e0",
+      "generator_cards": [
+        {
+          "role": "process_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/inputs/process.mg5",
+          "sha256": "5dbb8ab17cc7944d62763c35ec9d9676cf75c018a328c767782210a52c304676"
+        },
+        {
+          "role": "run_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/inputs/run_card.dat",
+          "sha256": "b056d4d0c6cd35571d95cb377c6ec0de276f5cde46930ff9f1af834a2e5130d3"
+        },
+        {
+          "role": "param_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "post_run_process",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/process/Cards/proc_card_mg5.dat",
+          "sha256": "46b26126acb30df94afe7073f9f7fce5002d3d06fbca91f1db9eccd2edf45967"
+        },
+        {
+          "role": "post_run_run",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/process/Cards/run_card.dat",
+          "sha256": "904fa101d3a71ae328a27295b5dcb18921cbc9dfdcafc05f39c1469d64008793"
+        },
+        {
+          "role": "post_run_param",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/process/Cards/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "configuration",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/mg5/process/Cards/me5_configuration.txt",
+          "sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/new_backgrounds/B05_TTH/delphes/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "b4344e7ad8bd923460e936f728d3e3dd3a919d3ee0a3752b7b6ad6a7ed27aaa6",
+      "input_HEPMC_SHA256": "524a47c8a87516c30ff01cf03e9097e68d0eff9aa74b39a3a1d502a9ec6f90e4",
+      "detector_ROOT_SHA256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "detector_card_SHA256": "c70c5f835b5c2027350c53be4f53cc64cd1fc2bd7a0fce5a812bd7fb0e6c9742",
+      "source_event_index_SHA256": "e26190118105cb664aa2f91279e997a9b1f939b56bf47d2cd2d4884b297922c0",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "be458ba239b41e2efaf9989622473ba4585eceb9aad3dddc5b4462ffda01fc2e",
+      "available_local_path": "LOCAL_HOME/simulations/phase6g_runs/tth_1k/delphes/full1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B05",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 644591,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 96,
+        "ordered_event_identity_sha256": "aa876e6edc351154065fd9f1a6e0fc4474085ef1d4e127250ad6ea844f4df2e1",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "85624708d406c30a36cfc7221bbe3c5224b1d4331e0e9d26470858468dcf355b"
+      }
+    },
+    {
+      "dataset_id": "B06",
+      "process": "bbgj",
+      "production_phase": "6g",
+      "source_sample_type": "ACTUAL_INDEPENDENT_ONE_BORN_PHOTON_LO",
+      "generator_version": "3.5.16",
+      "shower_version": "8.317",
+      "detector_version": "3.5.1",
+      "actual_effective_PDF": "cteq6l1",
+      "actual_alpha_running": "ONE_LOOP",
+      "actual_alpha_s_MZ": 0.13,
+      "actual_effective_seed": 20261106,
+      "expected_entries": 1000,
+      "N_original": 1000,
+      "truth_format": "new_background",
+      "source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "model_br_factor": 1.0,
+      "BR_factor_applications": 0,
+      "branching_ratio_scope": "NO_HIGGS_BR",
+      "source_included_decay_factors": [],
+      "is_full": true,
+      "reference_prefix_status": "PASS_REFERENCE_PREFIX_NATIVE_READBACK_NO_ADDITIONAL_SOURCES",
+      "cross_section_pb": "65.88309",
+      "integration_uncertainty_pb": "0.3918004",
+      "cross_section_source": "metadata/phase6g_run_manifest.json:/samples/B06",
+      "historical_cutflow_reference": "metadata/phase6g_cutflow.csv",
+      "expected_cutflow": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "effective_configuration_evidence": "metadata/phase6g_run_manifest.json effective_run_values,source_validation,and frozen LHE cards",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "NO_VALIDATED_PHOTON_FAKE_MODEL"
+      ],
+      "root_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/delphes/full1000/detector.root",
+      "root_sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "input_index_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/pythia/full1000/input_event_index.dat",
+      "input_index_sha256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+      "truth_index_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/pythia/full1000/background_truth_index.dat",
+      "truth_index_sha256": "0963ac1a6d22a523773940d8c425b6e7683af08981f7147de09581e83a118090",
+      "hepmc_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/pythia/full1000/shower.hepmc3",
+      "hepmc_sha256": "511eb6ea2bbdd053024b900b716cd433144d9e8f9f2d4677712cba88728d562a",
+      "lhe_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/process/Events/bbgj1000/unweighted_events.lhe.gz",
+      "lhe_sha256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+      "card_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/delphes/full1000/detector_card.tcl",
+      "card_sha256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+      "historical_reco_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/delphes/full1000/reco_events.jsonl",
+      "historical_reco_sha256": "b894f1a5ff2c6e2e6424f8db232e936fdf8b72b598df69bc5adfe1b94f0ab410",
+      "generator_cards": [
+        {
+          "role": "process_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/inputs/process.mg5",
+          "sha256": "ea5efaa0478e54e609c072b421f83a0f0370a1129a63a186106d23976755f92c"
+        },
+        {
+          "role": "run_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/inputs/run_card.dat",
+          "sha256": "27d57bce001083b746db85528598451eab81e8ca0f5b83b8a9dbbe810ed75c27"
+        },
+        {
+          "role": "param_card",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/inputs/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "post_run_process",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/process/Cards/proc_card_mg5.dat",
+          "sha256": "fd4eaea96591eb7d259dea18d897405abda9c140c083d557fa31834d8a4b1866"
+        },
+        {
+          "role": "post_run_run",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/process/Cards/run_card.dat",
+          "sha256": "7af800917297748747c27394e84f5efce4bda4a2494bc644d38e15feb84b7a63"
+        },
+        {
+          "role": "post_run_param",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/process/Cards/param_card.dat",
+          "sha256": "17ad8b7b95f1918b30771c3403c0e2961fa018ab3db97b10f7dc02ec992074d6"
+        },
+        {
+          "role": "configuration",
+          "path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/mg5/process/Cards/me5_configuration.txt",
+          "sha256": "450caff63c30671511fa924c7c767ecc824bead0677c951455ac36977611e291"
+        }
+      ],
+      "reference_prefix": {
+        "path": "REPOSITORY/reference_samples/new_backgrounds/B06_BBGJ/delphes/detector_100.root",
+        "expected_entries": 100,
+        "status": "NATIVE_PREFIX_READBACK_PENDING"
+      },
+      "input_LHE_SHA256": "4203eb46258973ffc3870802b4d58c27d3275845309b28c7cda600ea343e52f5",
+      "input_HEPMC_SHA256": "511eb6ea2bbdd053024b900b716cd433144d9e8f9f2d4677712cba88728d562a",
+      "detector_ROOT_SHA256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "detector_card_SHA256": "380aa1180a99b92638feac35b6e5ead35538eec1cdab31a59bb0885ced4c599a",
+      "source_event_index_SHA256": "07561c639b9328df58c1c2efe54d848c14b16444f14a8d0b8f1278690a2f7056",
+      "actual_TTree_entries": 1000,
+      "independent_source_event_count": 1000,
+      "actual_index_events": 1000,
+      "source_index_identity_digest": "ec4f1bbd4fde17f0acf58454d26cbf597dcca3579e00a4a1380ebf7f5b450e7e",
+      "available_local_path": "LOCAL_HOME/simulations/phase6g_runs/bbgj_1k/delphes/full1000/detector.root",
+      "verification_status": "PASS_FULL_DATA",
+      "native_root_readback_evidence_class": "ACTUAL_FULL_DATA_READBACK",
+      "weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "source_index_ordinal_bounds": [
+        1,
+        1000
+      ],
+      "native_event_readback": {
+        "ROOT_version": "6.40.04",
+        "actual_TTree_entries": 1000,
+        "dataset_id": "B06",
+        "detector_card_efficiency_formulas": "VERIFIED_NORMALIZED_HISTORICAL_CARD",
+        "duplicate_event_keys": 0,
+        "event_key_scope": "dataset_id + source_event_ordinal + native_event_number",
+        "events_read": 1000,
+        "events_validated": 1000,
+        "expected_entries": 1000,
+        "invalid_events": 0,
+        "momentum_units": "GeV",
+        "native_particle_tuples_compared": 547708,
+        "native_position_units": "mm",
+        "native_time_units": "s; upstream mm/c converted by reviewed tuple utility",
+        "negative_native_jet_masses": 54,
+        "ordered_event_identity_sha256": "bddc67f9b987343d1d22580eaec21838c54cbaaab0d467b8991719f023dbd586",
+        "skipped_events": 0,
+        "source_denominator": 1000,
+        "source_hashes_unchanged_after_loop": true,
+        "status": "PASS_FULL_DATA",
+        "tree_name": "Delphes"
+      },
+      "native_schema": {
+        "tree_name": "Delphes",
+        "branches": [
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowNeutralHadron",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "EFlowPhoton",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "EFlowTrack",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3973934735,
+            "dictionary_version": 4,
+            "name": "Electron",
+            "native_class": "Electron",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 2026647734,
+            "dictionary_version": 3,
+            "name": "Event",
+            "native_class": "HepMCEvent",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "GenJet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "GenMissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 527275606,
+            "dictionary_version": 5,
+            "name": "Jet",
+            "native_class": "Jet",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 1034148504,
+            "dictionary_version": 1,
+            "name": "MissingET",
+            "native_class": "MissingET",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 264472101,
+            "dictionary_version": 4,
+            "name": "Muon",
+            "native_class": "Muon",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 3403479520,
+            "dictionary_version": 2,
+            "name": "Particle",
+            "native_class": "GenParticle",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4175710330,
+            "dictionary_version": 4,
+            "name": "Photon",
+            "native_class": "Photon",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 4118442578,
+            "dictionary_version": 1,
+            "name": "ScalarHT",
+            "native_class": "ScalarHT",
+            "present": true,
+            "required": true
+          },
+          {
+            "dictionary_checksum": 2195636175,
+            "dictionary_version": 5,
+            "name": "Tower",
+            "native_class": "Tower",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 968497457,
+            "dictionary_version": 4,
+            "name": "Track",
+            "native_class": "Track",
+            "present": true,
+            "required": false
+          },
+          {
+            "dictionary_checksum": 1453428690,
+            "dictionary_version": 1,
+            "name": "Weight",
+            "native_class": "Weight",
+            "present": true,
+            "required": true
+          }
+        ],
+        "actual_branch_inventory": [
+          {
+            "branch_class": "TClonesArray",
+            "name": "Event"
+          },
+          {
+            "branch_class": "",
+            "name": "Event_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Weight"
+          },
+          {
+            "branch_class": "",
+            "name": "Weight_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Particle"
+          },
+          {
+            "branch_class": "",
+            "name": "Particle_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Track"
+          },
+          {
+            "branch_class": "",
+            "name": "Track_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Tower"
+          },
+          {
+            "branch_class": "",
+            "name": "Tower_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowTrack"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowTrack_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowPhoton"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowPhoton_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "EFlowNeutralHadron"
+          },
+          {
+            "branch_class": "",
+            "name": "EFlowNeutralHadron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenJet"
+          },
+          {
+            "branch_class": "",
+            "name": "GenJet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "GenMissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "GenMissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Jet"
+          },
+          {
+            "branch_class": "",
+            "name": "Jet_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Electron"
+          },
+          {
+            "branch_class": "",
+            "name": "Electron_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Photon"
+          },
+          {
+            "branch_class": "",
+            "name": "Photon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "Muon"
+          },
+          {
+            "branch_class": "",
+            "name": "Muon_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "MissingET"
+          },
+          {
+            "branch_class": "",
+            "name": "MissingET_size"
+          },
+          {
+            "branch_class": "TClonesArray",
+            "name": "ScalarHT"
+          },
+          {
+            "branch_class": "",
+            "name": "ScalarHT_size"
+          }
+        ]
+      },
+      "actual_full_cutflow": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "cutflow_closure": "FULL_CUTFLOW_PASS",
+      "cutflow_difference": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selection_config_sha256": "4273803c4061302d0aa8f93201a05877bc926a92afbcea1439407a12a3f3c022",
+      "reference_prefix_validation": {
+        "evidence_class": "REFERENCE_PREFIX_TEST",
+        "actual_TTree_entries": 100,
+        "N_original": 1000,
+        "source_event_ordinals": [
+          1,
+          100
+        ],
+        "exact_event_summary_matches_full_rows": true,
+        "additional_independent_sources": 0,
+        "source_hashes_unchanged_after_loop": true,
+        "ordered_event_identity_sha256": "ebd60ed2770657d1290a985b56fd390b5605c6ec77df89c7dc394011a1847af2"
+      }
+    }
+  ],
+  "kappa_rows": {
+    "path": "REPOSITORY/reference_samples/hh_signal/S01_ggf_hh_sm/phase7d_klambda/event_reweights.csv",
+    "sha256": "c76dd54b9236ee8110385fe746eb465125c70f1f30e0d580ac95acacc03a9e0f",
+    "source_events": 1000,
+    "rows": 6000
+  },
+  "btag_model": {
+    "BitNumber": 0,
+    "module_sha256": "633c524097f4eb51634ddfbc769f15bc70b212d1b6812cf8b73288d0e0aea9ad",
+    "formulas": {
+      "0": "0.002+7.3e-06*pt",
+      "4": "0.20*tanh(0.02*pt)*(1/(1+0.0034*pt))",
+      "5": "0.80*tanh(0.003*pt)*(30/(1+0.086*pt))"
+    },
+    "scope": "CONDITIONAL_MODEL_ONLY_NOT_OFFICIAL_ATLAS",
+    "availability": "ALL_EIGHT_FROZEN_CARDS_IDENTICAL"
+  },
+  "file_hash_audit": {
+    "files_verified": 113,
+    "total_bound_bytes": 1658781807,
+    "status": "PASS_EXACT_FROZEN_BYTES",
+    "native_readback_status": "PASS_ACTUAL_EXISTING_DATA_NATIVE_ANALYSIS"
+  },
+  "source_hash_evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+  "native_readback_summary": {
+    "actual_original_events_read": 7100,
+    "independent_source_events": 7100,
+    "all_full_cutflows_pass": true,
+    "TH1D_count": 4052,
+    "TH2D_count": 616,
+    "numerical_histogram_content_sha256": "4a8899dfde5b484d49e30438b704f81e77b648cb07d643e7360b0c181a2a9ed2",
+    "schema_audit_sha256": "b4282077f536e5a55baf9c8bb0188d297ed0dc06f5632f095c8a5e2e097a9bc9",
+    "native_summary_sha256": "90f38073e4eadf894a04a62f38e40524a079829d3258caab342b8fa83a4ee3c1",
+    "prefix_readback_status": "PASS_EIGHT_NATIVE_PREFIX_100_READBACKS",
+    "actual_prefix_events_read": 800,
+    "prefix_additional_independent_sources": 0,
+    "independent_native_validation_sha256": "806dd6e2a149f70fc2f23c3156e5b466ff670196127c7bb4f95a1cbc707566fd"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "status": "PASS_INDEPENDENT_ACTUAL_NATIVE_READBACK",
+  "evidence_class": "ACTUAL_FULL_DATA_READBACK",
+  "independent_source_events": 7100,
+  "cutflow": [
+    {
+      "dataset_id": "S01_B100",
+      "actual": [
+        100,
+        45,
+        38,
+        18,
+        18
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "S01_C1000",
+      "actual": [
+        1000,
+        484,
+        403,
+        143,
+        143
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B01",
+      "actual": [
+        1000,
+        446,
+        266,
+        91,
+        28
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B02",
+      "actual": [
+        1000,
+        378,
+        241,
+        7,
+        1
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B03",
+      "actual": [
+        1000,
+        445,
+        277,
+        0,
+        0
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B04",
+      "actual": [
+        1000,
+        370,
+        220,
+        77,
+        75
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B05",
+      "actual": [
+        1000,
+        327,
+        322,
+        131,
+        131
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    },
+    {
+      "dataset_id": "B06",
+      "actual": [
+        1000,
+        2,
+        2,
+        2,
+        0
+      ],
+      "status": "FULL_CUTFLOW_PASS"
+    }
+  ],
+  "histograms": {
+    "status": "PASS_INDEPENDENT_ALL_NATIVE_HISTOGRAM_CELLS",
+    "csv_rows_checked": 180989,
+    "content_and_sumw2_pairs_checked": 180989,
+    "histogram_manifest_entries": 4800,
+    "tolerance": "128*double_epsilon*N_original*max(abs(observed),abs(expected),1e-30); independent math.fsum versus ROOT serial double accumulation"
+  },
+  "historical_regression": [
+    {
+      "dataset_id": "S01_B100",
+      "events_checked": 100,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 170,
+      "largest_absolute_value_difference": 2.842170943040401e-14,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "S01_C1000",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 1721,
+      "largest_absolute_value_difference": 1.1368683772161603e-13,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B01",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 1496,
+      "largest_absolute_value_difference": 0.0,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B02",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 867,
+      "largest_absolute_value_difference": 0.0,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B03",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 954,
+      "largest_absolute_value_difference": 0.0,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B04",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 1183,
+      "largest_absolute_value_difference": 5.684341886080802e-14,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B05",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 1559,
+      "largest_absolute_value_difference": 5.684341886080802e-14,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    },
+    {
+      "dataset_id": "B06",
+      "events_checked": 1000,
+      "source_hash_and_four_event_stage_checks": "PASS",
+      "historical_mass_and_angular_pairs_checked": 676,
+      "largest_absolute_value_difference": 5.684341886080802e-14,
+      "comparison_tolerance": "1e-8 absolute + 1e-10 relative (historical Cartesian precision)",
+      "evidence_class": "ACTUAL_FULL_DATA_READBACK"
+    }
+  ],
+  "reference_prefix": {
+    "status": "PASS_EXACT_PREFIX_FULL_EVENT_SUMMARY_IDENTITY",
+    "actual_prefix_entries_read": 800,
+    "additional_independent_sources": 0,
+    "evidence_class": "REFERENCE_PREFIX_TEST"
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_independent_events": 0
+}

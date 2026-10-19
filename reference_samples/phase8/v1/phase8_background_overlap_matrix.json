@@ -1,0 +1,472 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_EVIDENCE_AUDIT",
+  "status": "BLOCKED_OVERLAP_AND_CALIBRATION",
+  "scope": "ATLAS_LIKE_EXPLORATORY_COMPONENTS_ONLY",
+  "pairs": [
+    {
+      "dataset_left": "B01",
+      "dataset_right": "B02",
+      "process_definitions": [
+        "pp -> b b~ gamma gamma",
+        "pp -> c c~ gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit bb",
+        "explicit cc"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Exclusive ME flavour labels do not define exclusive shower/reconstructed-heavy-flavour samples; shower g->bb/cc may populate the same selected final-state region.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6e_source997_manifest.json",
+        "metadata/phase6e_flavour_decomposition.csv",
+        "reports/phase6e_background_overlap.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "POTENTIAL_DOUBLE_COUNTING",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2"
+      ]
+    },
+    {
+      "dataset_left": "B01",
+      "dataset_right": "B03",
+      "process_definitions": [
+        "pp -> b b~ gamma gamma",
+        "pp -> light-j j gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit bb",
+        "light-parton source"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Exclusive ME flavour labels do not define exclusive shower/reconstructed-heavy-flavour samples; shower g->bb/cc may populate the same selected final-state region.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6e_source997_manifest.json",
+        "metadata/phase6e_flavour_decomposition.csv",
+        "reports/phase6e_background_overlap.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "POTENTIAL_DOUBLE_COUNTING",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e"
+      ]
+    },
+    {
+      "dataset_left": "B01",
+      "dataset_right": "B04",
+      "process_definitions": [
+        "pp -> b b~ gamma gamma",
+        "ZH, Z -> b b~, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit bb",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c"
+      ]
+    },
+    {
+      "dataset_left": "B01",
+      "dataset_right": "B05",
+      "process_definitions": [
+        "pp -> b b~ gamma gamma",
+        "ttH, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit bb",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e"
+      ]
+    },
+    {
+      "dataset_left": "B01",
+      "dataset_right": "B06",
+      "process_definitions": [
+        "pp -> b b~ gamma gamma",
+        "pp -> b b~ gamma j (one Born photon)"
+      ],
+      "ME_flavour_content": [
+        "explicit bb",
+        "explicit bb"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "One-Born-photon source cannot be compared as a calibrated two-photon fake prediction; prompt/shower/fake double-counting control and fake calibration are unavailable.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "reports/phase6g_background_cutflow.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "NOT_COMPARABLE",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+        "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+      ]
+    },
+    {
+      "dataset_left": "B02",
+      "dataset_right": "B03",
+      "process_definitions": [
+        "pp -> c c~ gamma gamma",
+        "pp -> light-j j gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit cc",
+        "light-parton source"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Exclusive ME flavour labels do not define exclusive shower/reconstructed-heavy-flavour samples; shower g->bb/cc may populate the same selected final-state region.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6e_source997_manifest.json",
+        "metadata/phase6e_flavour_decomposition.csv",
+        "reports/phase6e_background_overlap.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "POTENTIAL_DOUBLE_COUNTING",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e"
+      ]
+    },
+    {
+      "dataset_left": "B02",
+      "dataset_right": "B04",
+      "process_definitions": [
+        "pp -> c c~ gamma gamma",
+        "ZH, Z -> b b~, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit cc",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c"
+      ]
+    },
+    {
+      "dataset_left": "B02",
+      "dataset_right": "B05",
+      "process_definitions": [
+        "pp -> c c~ gamma gamma",
+        "ttH, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "explicit cc",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e"
+      ]
+    },
+    {
+      "dataset_left": "B02",
+      "dataset_right": "B06",
+      "process_definitions": [
+        "pp -> c c~ gamma gamma",
+        "pp -> b b~ gamma j (one Born photon)"
+      ],
+      "ME_flavour_content": [
+        "explicit cc",
+        "explicit bb"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "One-Born-photon source cannot be compared as a calibrated two-photon fake prediction; prompt/shower/fake double-counting control and fake calibration are unavailable.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "reports/phase6g_background_cutflow.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "NOT_COMPARABLE",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+        "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+      ]
+    },
+    {
+      "dataset_left": "B03",
+      "dataset_right": "B04",
+      "process_definitions": [
+        "pp -> light-j j gamma gamma",
+        "ZH, Z -> b b~, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "light-parton source",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c"
+      ]
+    },
+    {
+      "dataset_left": "B03",
+      "dataset_right": "B05",
+      "process_definitions": [
+        "pp -> light-j j gamma gamma",
+        "ttH, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "light-parton source",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e"
+      ]
+    },
+    {
+      "dataset_left": "B03",
+      "dataset_right": "B06",
+      "process_definitions": [
+        "pp -> light-j j gamma gamma",
+        "pp -> b b~ gamma j (one Born photon)"
+      ],
+      "ME_flavour_content": [
+        "light-parton source",
+        "explicit bb"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "One-Born-photon source cannot be compared as a calibrated two-photon fake prediction; prompt/shower/fake double-counting control and fake calibration are unavailable.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "reports/phase6g_background_cutflow.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "NOT_COMPARABLE",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+        "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+      ]
+    },
+    {
+      "dataset_left": "B04",
+      "dataset_right": "B05",
+      "process_definitions": [
+        "ZH, Z -> b b~, H -> gamma gamma",
+        "ttH, H -> gamma gamma"
+      ],
+      "ME_flavour_content": [
+        "resonant source; decay scope retained",
+        "resonant source; decay scope retained"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "Resonant and continuum source components are separately identified, but no complete common final-state overlap/interference, matching or calibrated normalization prescription has been validated.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "metadata/phase6g_weight_accounting.json"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "OVERLAP_UNKNOWN",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+        "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e"
+      ]
+    },
+    {
+      "dataset_left": "B04",
+      "dataset_right": "B06",
+      "process_definitions": [
+        "ZH, Z -> b b~, H -> gamma gamma",
+        "pp -> b b~ gamma j (one Born photon)"
+      ],
+      "ME_flavour_content": [
+        "resonant source; decay scope retained",
+        "explicit bb"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "One-Born-photon source cannot be compared as a calibrated two-photon fake prediction; prompt/shower/fake double-counting control and fake calibration are unavailable.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "reports/phase6g_background_cutflow.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "NOT_COMPARABLE",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+        "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+      ]
+    },
+    {
+      "dataset_left": "B05",
+      "dataset_right": "B06",
+      "process_definitions": [
+        "ttH, H -> gamma gamma",
+        "pp -> b b~ gamma j (one Born photon)"
+      ],
+      "ME_flavour_content": [
+        "resonant source; decay scope retained",
+        "explicit bb"
+      ],
+      "shower_flavour_content": "Flavour-changing shower/decay content retained; process name is not reconstructed jet flavour.",
+      "possible_overlap_mechanism": "One-Born-photon source cannot be compared as a calibrated two-photon fake prediction; prompt/shower/fake double-counting control and fake calibration are unavailable.",
+      "existing_ancestry_evidence": [
+        "metadata/phase6g_run_manifest.json",
+        "reports/phase6g_background_cutflow.md"
+      ],
+      "matching_merging_information": "No validated common ME/PS exclusivity scheme for physical addition",
+      "status": "NOT_COMPARABLE",
+      "validated_exclusive": false,
+      "safe_for_physical_addition": false,
+      "source_ROOT_sha256": [
+        "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+        "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de"
+      ]
+    }
+  ],
+  "processes": {
+    "B01": {
+      "process": "pp -> b b~ gamma gamma",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "NO_HIGGS_BR",
+      "source_ROOT_sha256": "5fdbd45889767cb46672c92cf7e858bf3483d68c39fc2c43e4d07e8ddeb1d111",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ]
+    },
+    "B02": {
+      "process": "pp -> c c~ gamma gamma",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "NO_HIGGS_BR",
+      "source_ROOT_sha256": "2c649ea219e0c83b949bb22eba11d63c31be60aa46171dc63b45c564a8d893c2",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ]
+    },
+    "B03": {
+      "process": "pp -> light-j j gamma gamma",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "NO_HIGGS_BR",
+      "source_ROOT_sha256": "06724b4803753e002c084b9ea81596bafcb1d6b5032d82dbd57df0bee0694e0e",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "ME_PS_HEAVY_FLAVOUR_OVERLAP_UNRESOLVED",
+        "NOT_SAFE_FOR_PHYSICAL_BACKGROUND_ADDITION"
+      ]
+    },
+    "B04": {
+      "process": "ZH, Z -> b b~, H -> gamma gamma",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "MODEL_BR_ONLY",
+      "source_ROOT_sha256": "eb719ff179918d2be1ac540a1ef617c815241c872e4276e5b2408a7d13c1692c",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY"
+      ]
+    },
+    "B05": {
+      "process": "ttH, H -> gamma gamma",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "MODEL_BR_ONLY",
+      "source_ROOT_sha256": "388680cfd9901ae4c219654a47c4a720a988963ded8c3896b066d74a089b1f6e",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "MODEL_BR_ONLY",
+        "TOP_DECAY_SPIN_CORRELATIONS_NOT_FULLY_VALIDATED"
+      ]
+    },
+    "B06": {
+      "process": "pp -> b b~ gamma j (one Born photon)",
+      "raw_source_weight_scope": "XWGTUP_pb_average_original_N_RAW_SOURCE",
+      "BR_scope": "NO_HIGGS_BR",
+      "source_ROOT_sha256": "eb989481afb06c500b8c0144e2a32fe68aa39f14c1000edd347d4d6897e1e6de",
+      "scientific_limitations": [
+        "FAST_SIM_ATLAS_LIKE_NOT_OFFICIAL_ATLAS",
+        "NO_VALIDATED_PHOTON_FAKE_MODEL"
+      ]
+    }
+  },
+  "combined_physical_background": "BLOCKED",
+  "physical_significance": "NOT_EVALUATED",
+  "physical_CLs_limit": "NOT_EVALUATED",
+  "sample_files_or_seed_differences_establish_physics_exclusivity": false,
+  "new_generation_events": 0
+}

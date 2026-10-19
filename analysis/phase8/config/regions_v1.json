@@ -1,0 +1,58 @@
+{
+  "baseline_unchanged": true,
+  "eligible_stage": "02_TWO_JETS",
+  "mass_regions": [
+    {
+      "id": "LOW_SIDEBAND",
+      "max": 120,
+      "max_inclusive": false,
+      "min": 105,
+      "min_inclusive": true
+    },
+    {
+      "id": "HIGGS_LIKE",
+      "max": 130,
+      "max_inclusive": true,
+      "min": 120,
+      "min_inclusive": true
+    },
+    {
+      "id": "HIGH_SIDEBAND",
+      "max": 160,
+      "max_inclusive": true,
+      "min": 130,
+      "min_inclusive": false
+    }
+  ],
+  "outside_region": "OUTSIDE_MGG",
+  "predeclared_variants": {
+    "DeltaR_bb_threshold": 1.5,
+    "diphoton_pT_threshold_GeV": 100,
+    "mHH_categories_GeV": [
+      350,
+      500
+    ],
+    "mbb_window_GeV": [
+      100,
+      150
+    ]
+  },
+  "schema_version": 1,
+  "scope": "EXPLORATORY_DIAGNOSTIC_NOT_OFFICIAL_ATLAS",
+  "tag_categories": {
+    "TAG_0": [
+      0,
+      0
+    ],
+    "TAG_1": [
+      1,
+      1
+    ],
+    "TAG_GE2": [
+      2,
+      null
+    ]
+  },
+  "threshold_interpretation": "PREDECLARED_DESCRIPTIVE_IN_SAMPLE_NO_INDEPENDENT_OPTIMIZATION_CLAIM",
+  "undefined_region": "UNDEFINED_MGG"
+}

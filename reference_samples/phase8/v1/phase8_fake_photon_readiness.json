@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "dataset_id": "B06",
+  "status": "BLOCKED_NO_CALIBRATED_FAKE_PHOTON_MODEL",
+  "numerical_fake_rate": null,
+  "zero_selected_events_implies_zero_background": false,
+  "missing_inputs": [
+    "jet->photon fake probability",
+    "photon identification definition",
+    "fake-enriched control data",
+    "isolation treatment",
+    "pT/eta dependence",
+    "process normalization",
+    "uncertainties and correlations",
+    "prompt/shower/fake double-counting control"
+  ],
+  "scope": "The actual one-Born-photon source can be studied descriptively; no calibrated two-photon fake yield is defined."
+}
