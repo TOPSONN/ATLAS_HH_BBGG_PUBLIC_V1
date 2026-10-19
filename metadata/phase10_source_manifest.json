@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
+  "base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+  "source_payload_commit": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
+  "source_capture_semantics": "Final executable sources bound by per-module before/after hashes and reviewed source commit. Only quality gates, source manifest and final report may change in delivery commit; published numerical evidence immutable.",
+  "source_files": [
+    {
+      "path": ".github/workflows/phase10-feasibility.yml",
+      "bytes": 2124,
+      "sha256": "62b58a2aea394c7c7c78ec034aab7b4142dd555f0a526dffc3d55c645bc926a0"
+    },
+    {
+      "path": "analysis/phase10/.gitattributes",
+      "bytes": 86,
+      "sha256": "b887e77e5612a572ef5669ed1979c593b4f81a6164fd46e977227b5badb966c0"
+    },
+    {
+      "path": "analysis/phase10/CMakeLists.txt",
+      "bytes": 1219,
+      "sha256": "83b92395ad36beb2c63c3c66ff653f5d6528e5da7e8788eba4b9a12d4b655f9a"
+    },
+    {
+      "path": "analysis/phase10/README_ZH_TW.md",
+      "bytes": 7667,
+      "sha256": "e486f6c4c68e386ba8958e5d4453312694bdab31dd85b0b8dcbe4544a0280d81"
+    },
+    {
+      "path": "analysis/phase10/config/analysis_contract.json",
+      "bytes": 968,
+      "sha256": "339baec378b8202f764c1321fca90af31c323dc232afaa94cfb6539ba7f05638"
+    },
+    {
+      "path": "analysis/phase10/config/cards/gamma_gamma_hf_processes.inactive.txt",
+      "bytes": 1411,
+      "sha256": "450d6e0d87a951472f58a9729c6561d899ae155036ddf052a35663b3437a82ab"
+    },
+    {
+      "path": "analysis/phase10/config/cards/gamma_gamma_matching_scan.inactive.txt",
+      "bytes": 1470,
+      "sha256": "dddc95694371dea8565f5a48d78629a410f8098b60704f9e0ea87f0f8c0feb86"
+    },
+    {
+      "path": "analysis/phase10/config/generator_pilot_contract.json",
+      "bytes": 12449,
+      "sha256": "5548fb18ed2a510bf2d1af7b1453df531affe2a9c0699f0fe0003effdd188818"
+    },
+    {
+      "path": "analysis/phase10/config/photon_public_calibration.json",
+      "bytes": 5913,
+      "sha256": "2759156aad2671aad9db62eb8009f4070e12a3a8c355816456960e9cf1eac058"
+    },
+    {
+      "path": "analysis/phase10/scripts/build_gate_matrix.py",
+      "bytes": 3221,
+      "sha256": "6b2e7b4d7b5250a5db498c89e4288572f7d8d2b4776362ba6453863e4e277fdc"
+    },
+    {
+      "path": "analysis/phase10/scripts/photon_feasibility.py",
+      "bytes": 11423,
+      "sha256": "f45692aa700ca10626edcfc5d1be2af378386561e8596f14c5927d2b420ca837"
+    },
+    {
+      "path": "analysis/phase10/scripts/precision_plan.py",
+      "bytes": 9408,
+      "sha256": "e3f22362b365651a3b47e68cab414b7920915254d4b46ea4753dc1e520a2ee9d"
+    },
+    {
+      "path": "analysis/phase10/scripts/review_phase9.py",
+      "bytes": 26224,
+      "sha256": "ba997cedd78df2fbe43235fc8d53e8614e814b3fbad49a89b0bdc5e144059cc0"
+    },
+    {
+      "path": "analysis/phase10/scripts/stratify_existing.py",
+      "bytes": 2776,
+      "sha256": "deb948285435a30f7fea7557b39967e6966f6be5ebf28494425201046fee3eea"
+    },
+    {
+      "path": "analysis/phase10/scripts/validate_hf_statistics.py",
+      "bytes": 15385,
+      "sha256": "97fa0c5157f430f1d13489a28906a7f8192d24bde41538fcf2b42c6179fa03a9"
+    },
+    {
+      "path": "analysis/phase10/scripts/validate_pilot_contract.py",
+      "bytes": 1467,
+      "sha256": "3253c655ef9a20b03d1ec305aced4e5b8c626c9915d047c39de7c57a0a800517"
+    },
+    {
+      "path": "analysis/phase10/scripts/validate_precision.py",
+      "bytes": 16538,
+      "sha256": "ac8a22172565fca09a4813dbca92b2edf8855e0862361dbbd924d01ded0eebc8"
+    },
+    {
+      "path": "analysis/phase10/scripts/validate_publication.py",
+      "bytes": 4686,
+      "sha256": "a4981f5101a63280ed7a95aaff137eb3e32e177d5cd31793458d46f0322dc5e1"
+    },
+    {
+      "path": "analysis/phase10/source/generator_schemes.py",
+      "bytes": 9016,
+      "sha256": "c1d00799be29aef78b000305bdf4d237ba29a9b176fceb85d7beb31b09807063"
+    },
+    {
+      "path": "analysis/phase10/source/hf_stratification.py",
+      "bytes": 14215,
+      "sha256": "87a7d319a65e9fe821122e61cea2bd7c34e69f45f6bd8eecfab1db8c693a3d11"
+    },
+    {
+      "path": "analysis/phase10/source/photon_observability.cxx",
+      "bytes": 5726,
+      "sha256": "d13796147ad26486119920c5050f5b8001bf24b4526df8c8457d9f8c21698d1c"
+    },
+    {
+      "path": "analysis/phase10/source/physical_gates.py",
+      "bytes": 3085,
+      "sha256": "c86761adcb94a2f901599e9eab7e97530935da30461e1849260dc62f67d74dec"
+    },
+    {
+      "path": "analysis/phase10/source/precision.py",
+      "bytes": 3768,
+      "sha256": "eea8c2b57012e1f0fe5b951802cb904b0e13afa879d61066bac2fefa532b5915"
+    },
+    {
+      "path": "analysis/phase10/source/sideband.py",
+      "bytes": 10884,
+      "sha256": "1c5933bc7a14e3ba9c61abea3b17f8025e0f63575357f3690f1df135e13c5ae1"
+    },
+    {
+      "path": "analysis/phase10/tests/test_gate_evidence.py",
+      "bytes": 2930,
+      "sha256": "20f280653d77ab52148de75b6250b9c0a4d3a8b80ce5a2b19814cb85552d260e"
+    },
+    {
+      "path": "analysis/phase10/tests/test_hf_statistics_independent.py",
+      "bytes": 3400,
+      "sha256": "22a019a4b0def4cd08f7046d877cf54d1b983f3f2c5dda8e34bfa13d245ca89c"
+    },
+    {
+      "path": "analysis/phase10/tests/test_phase10_generator_schemes.py",
+      "bytes": 5587,
+      "sha256": "6db75e62d2311eeff71b3c699055a02fa8699cd4d21050e59eb43b321f836e6b"
+    },
+    {
+      "path": "analysis/phase10/tests/test_phase10_hf_review.py",
+      "bytes": 11027,
+      "sha256": "3f6d61832adbd4f6c3560c9527693debaec56d879d4d98cf1d2fb8c40cbb9e35"
+    },
+    {
+      "path": "analysis/phase10/tests/test_photon_sideband.py",
+      "bytes": 8797,
+      "sha256": "720db862c882873b97bb94ee8cde854a166b8c5e9af6cbf68e4e4d50401fff8c"
+    },
+    {
+      "path": "analysis/phase10/tests/test_physical_gates.py",
+      "bytes": 2849,
+      "sha256": "94ca6bd9f16d820f3500854b4aa1b64ec95ec69a89c82fa522498e8e38a14ac3"
+    },
+    {
+      "path": "analysis/phase10/tests/test_precision_independent.py",
+      "bytes": 2292,
+      "sha256": "a598167fdcbfb6f63f679100ec253a0670ab9078c270f6f7677472105a306186"
+    },
+    {
+      "path": "analysis/phase10/tests/test_precision_plan.py",
+      "bytes": 3525,
+      "sha256": "6b105699d39e22f3998e2e65e18e5fd9fbc8a011a635c5f2ff774b7f1e40da02"
+    },
+    {
+      "path": "analysis/phase10/tests/test_publication.py",
+      "bytes": 1882,
+      "sha256": "29ec4a939f764d04ab5610b40fcb7ffa6caf09876830bb4c1ee1674798100b67"
+    },
+    {
+      "path": "metadata/phase10_generator_scheme_review.json",
+      "bytes": 37475,
+      "sha256": "814da963d4300ff6c47c511da8e97b37868e47117587574774442cd73a810de0"
+    },
+    {
+      "path": "metadata/phase10_quality_gates.json",
+      "bytes": 4485,
+      "sha256": "eeace589ff330556658702abfea5bcafe966e164aee3665c8e86fc21dc11a50e"
+    },
+    {
+      "path": "reports/phase10_final_report.md",
+      "bytes": 10289,
+      "sha256": "7f2a70ba851d0bdbe8ce693130906a9e5c8531920d9a85722b5bb690c972a856"
+    },
+    {
+      "path": "reports/phase10a_independent_review.md",
+      "bytes": 13616,
+      "sha256": "82bca28f36e61ddee1778d30a11cfa369030c96c4d78df725eda43d00b4cda76"
+    },
+    {
+      "path": "reports/phase10b_hf_stratification.md",
+      "bytes": 12226,
+      "sha256": "cf0c4711cc8b82a77a400591391ba1dd5c0297215a88cc06167a0ac91c817084"
+    },
+    {
+      "path": "reports/phase10c_generator_strategy.md",
+      "bytes": 10489,
+      "sha256": "a566f5dd4fdb8ee80bbb7a824f67235c216c4828d46b9e38cde4a956cd67698e"
+    },
+    {
+      "path": "reports/phase10d_pilot_contract.md",
+      "bytes": 8823,
+      "sha256": "9510c302b07e72c1cbea421b3ecd4e0ce3c3302b6d1259a41779dcb378d402ce"
+    },
+    {
+      "path": "reports/phase10e_photon_fake_feasibility.md",
+      "bytes": 12223,
+      "sha256": "8e9faa88debe8d859a99bcc524847c9798aa12fdbba613b87a6502613971bc18"
+    },
+    {
+      "path": "reports/phase10f_precision_plan.md",
+      "bytes": 14203,
+      "sha256": "7c54d160e1b270d2f99d6425560942298393d70d6cb57494817c720118bf714e"
+    },
+    {
+      "path": "reports/phase10g_analysis_note.md",
+      "bytes": 27968,
+      "sha256": "59dc2be433843ef47bb522d73b938a5b88f7ec980d219e17873c156d99964396"
+    }
+  ],
+  "published_evidence": [
+    {
+      "path": "analysis/phase10/evidence/final_regression_source_after.json",
+      "bytes": 3849,
+      "sha256": "cf65e6c94ef4a4f34fb8f93d30bbeff4850980085c0b7ed2ed8b28a57300d5d0",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/final_regression_source_before.json",
+      "bytes": 3849,
+      "sha256": "cf65e6c94ef4a4f34fb8f93d30bbeff4850980085c0b7ed2ed8b28a57300d5d0",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/hf02_photon01_precision02_source_after.json",
+      "bytes": 717,
+      "sha256": "22353866d9f31d32cc48824bc1ed529e4e3b47796f9467ab5fe2d620b2c3e0a4",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/hf02_photon01_precision02_source_before.json",
+      "bytes": 717,
+      "sha256": "22353866d9f31d32cc48824bc1ed529e4e3b47796f9467ab5fe2d620b2c3e0a4",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_cpp_regression_final.txt",
+      "bytes": 498,
+      "sha256": "82b94f1f813cef202878dce0c8c5d62dec6c99db785ce6dd764cbccb97a7730f",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_preservation_after.json",
+      "bytes": 1887,
+      "sha256": "3119970d3350a7e49d3fc0b1eff8622ea389cea95b175fd919986f88ba81ca36",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_preservation_before.json",
+      "bytes": 285831,
+      "sha256": "f37be9c716b09cddd791aae83c151cf4ad6b8d2e072b508c7bb5e6f4ee9adf24",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_reference_delphes.txt",
+      "bytes": 1496,
+      "sha256": "d825e765c062677951e9b31da5c1c02a97f6205ebdb5b4404ba7ec3a0074d79b",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_reference_mg5.txt",
+      "bytes": 7358,
+      "sha256": "aea04496d9e84fc3f6e936c0be83d25fcba908b0316f8b6cb4f498ca2c62def6",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_reference_new_backgrounds.txt",
+      "bytes": 6931,
+      "sha256": "39e014b2b8b0bfae92558b65621f402336e5a8625f3389b4d456199acb34e50c",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_reference_pythia8.txt",
+      "bytes": 12208,
+      "sha256": "44af169632faedf09d3926540dccedcd3fdaebd6e5dc39ebd7e4dd0e7342f6b3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/historical_reference_signal.txt",
+      "bytes": 667,
+      "sha256": "3a99c7be09c4f0d9e1ff2306fcd59de8bd509b29378161f09e78edbe2bbb01b0",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_bin_support_plan.csv",
+      "bytes": 747272,
+      "sha256": "da07359b15a140afc73aec2c222283597428648a323c6ed2c27bcdc1803f3038",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_execution_ledger.json",
+      "bytes": 30376,
+      "sha256": "59131b0ac45cf474cbb625cd3f9a3263a5a0edb10291c04daa68af3dc0aa86dd",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_existing_figure_review.json",
+      "bytes": 63042,
+      "sha256": "8a642cb5cba47ebfdd6150e45d8050f23d142ff690a8676418bd362408cbf256",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_future_pilot_contract.json",
+      "bytes": 13167,
+      "sha256": "e9a5ba109b3c3f0f8c79130ce9fd5314a295db7911f2be4606149b37ff2f0a11",
+      "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_hf_covariance.csv",
+      "bytes": 761375,
+      "sha256": "0b3f567a279aedf56d968c69afe87031d474c4a5115ae752d20ea7064fa59c3e",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_hf_independent_statistics.json",
+      "bytes": 2688,
+      "sha256": "143e45c08fc92b721b019506f2667adf5ad5d8d26196fae9cfb90903f47c5385",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_hf_strata.csv",
+      "bytes": 1280631,
+      "sha256": "3f5820028170a11666008aa15493be0d1b53f0a77f07fe8c3fed4d75e9f11be2",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_hf_summary.json",
+      "bytes": 13507,
+      "sha256": "b025b32b8311302948c0cf88ab417935cf9c262981c77a070f6342fa92b2b2f9",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_importance_sampling_contract.json",
+      "bytes": 1315,
+      "sha256": "8685b143a9d5a7effe2526f54381e0281fb4d389fe20f1fe7dc922877c158ee1",
+      "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_kappa_support_plan.csv",
+      "bytes": 4702,
+      "sha256": "7d570dd25c1e67a723c34102af168603d6d1640a4bf9fc9e8db4d147ce444e35",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_methods_final.txt",
+      "bytes": 19004,
+      "sha256": "1368daed5f3fc00983dc0ca3645d7426b7262aefbd0d5197405587c74bf24ad9",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_photon_observability.json",
+      "bytes": 655702,
+      "sha256": "fdf576389f5f05a0b8a7ce42af99a7e9f336dd68b4d69b137d40a06479274fe5",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_physics_gate_matrix.json",
+      "bytes": 3128,
+      "sha256": "23e4c4768344236bbc1d4a94f220453d1fb62983cc48ff3112ed0e286e73a098",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_precision_independent_checks.json",
+      "bytes": 3912,
+      "sha256": "218747be822895949826139594ef3596a8ce8ef43198099e514a791a36ee9a09",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_precision_independent_review.json",
+      "bytes": 2660,
+      "sha256": "930a49363b3bb24cfa69cca2f368ea84e661babb83845b6b657ace107097303d",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_precision_scenarios.csv",
+      "bytes": 33835,
+      "sha256": "3f1e976c5765e49c0b559d13636edfcd5cac45e8f4ebe57f0f757d922c3d0a49",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_precision_summary.json",
+      "bytes": 2279,
+      "sha256": "a1a9838b8cce4ed1f04e8cbcdde57c6a94e83ee89d3dca8512055ab333cce78e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_process_overlap_diagnostics.csv",
+      "bytes": 21948,
+      "sha256": "bec5fcb52f1c0ea95a8bb26ae020245415d189523e487dc94e2d2fff149367b9",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_resolved_checker_attempts.json",
+      "bytes": 5150,
+      "sha256": "3d4de1f3da6411ed741dc9a7638949beda391580367024911c2ed29b86ba37a3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_resource_summary.json",
+      "bytes": 637,
+      "sha256": "1906a52ac3bca1bc73e63a25ec083861955b7ff3424db6a353d21f0ca7f05888",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_runtime_identity.json",
+      "bytes": 20483,
+      "sha256": "54cc99ad0073919a841c5a45a8d9da331ead8574221b1d58b41e1a6f3c68de65",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_synthetic_sideband_tests.json",
+      "bytes": 8493,
+      "sha256": "deebc538ebf2f5c643287029e1ca41216b3aa42e9657097d24d100ea93651792",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10a_review_receipt.json",
+      "bytes": 19917,
+      "sha256": "49ced2895e4b2a6a9e7745f337c282df86d085d23db59d45bfd5fd3a67a5d4e5",
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase8_python_regression_final.txt",
+      "bytes": 11599,
+      "sha256": "b56de70361b93b4851523b796f84940358ae7e84d96bb4e59cfa8c0e6f6160cc",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase9_python_regression_final.txt",
+      "bytes": 22563,
+      "sha256": "c75c96c87ecf8e875f4bb7d741a99bce3639bd956e23e3fb48a6715949077679",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/photon_native_source_after.json",
+      "bytes": 139,
+      "sha256": "45842ea9b0e7669ab9efa6b0c2f2a65d062c6c90ca8cb0b29bc7433ab07807d1",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/photon_native_source_before.json",
+      "bytes": 139,
+      "sha256": "45842ea9b0e7669ab9efa6b0c2f2a65d062c6c90ca8cb0b29bc7433ab07807d1",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/resource_contract.json",
+      "bytes": 968,
+      "sha256": "339baec378b8202f764c1321fca90af31c323dc232afaa94cfb6539ba7f05638",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/review05_source_after.json",
+      "bytes": 236,
+      "sha256": "73155cc2f9a143a867598bb011fd30f037a696c55365e06f2bf751149f4c6c97",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/review05_source_before.json",
+      "bytes": 236,
+      "sha256": "73155cc2f9a143a867598bb011fd30f037a696c55365e06f2bf751149f4c6c97",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/standalone_cpp_python_regression_final.txt",
+      "bytes": 1047,
+      "sha256": "060ea33b2f92ab7f810e5e47d0587f5923ad70d0a0e6b979f0e1b480e8c6a8e2",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/standalone_native_source_after.json",
+      "bytes": 334,
+      "sha256": "3f21f259350b30b7fdd94497450392bde139d5db0772cc99be43651619a50e50",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/standalone_native_source_before.json",
+      "bytes": 334,
+      "sha256": "3f21f259350b30b7fdd94497450392bde139d5db0772cc99be43651619a50e50",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/workspace_initial_audit.json",
+      "bytes": 486,
+      "sha256": "97e2f03f463658880ecb5f396dd095f2786d41be497bdfceb7842ab77febe621",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/classification_final_source_after.json",
+      "bytes": 3849,
+      "sha256": "b5f3e4e161c4ce6bb6b6d595f49efe72be7e3f2c463e1c669d2b28d0104726f3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/classification_final_source_before.json",
+      "bytes": 3849,
+      "sha256": "b5f3e4e161c4ce6bb6b6d595f49efe72be7e3f2c463e1c669d2b28d0104726f3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_classification_closure.json",
+      "bytes": 676,
+      "sha256": "91008777d42b96648085a8fc3a0e07b1c8d8af9f8ce80ea05e9ffd8ee812a348",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_methods_final_02.txt",
+      "bytes": 19004,
+      "sha256": "69c985cb295c636090afc90dffe878f7624dba668ac68043f38d19246915bc45",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    },
+    {
+      "path": "analysis/phase10/evidence/phase10_precision_independent_review_02.json",
+      "bytes": 2660,
+      "sha256": "332b4196712cf498a9243933864f1fc7ffd04a91ae9630cf8af3b6d50eec8a7c",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT"
+    }
+  ],
+  "historical_core": "Unchanged Phase8/9 source at exact BASE; Phase9 executed source2584e342b80b20c314392d20d77d92a6ccb850c4, with exact 3 delivery-only paths checked by A05.",
+  "figure_publication_authorized": false,
+  "delivery_only_paths": [
+    "metadata/phase10_quality_gates.json",
+    "metadata/phase10_source_manifest.json",
+    "reports/phase10_final_report.md"
+  ]
+}

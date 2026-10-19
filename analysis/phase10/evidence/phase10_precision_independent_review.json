@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_PRECISION_ARITHMETIC_WITH_LIMITS",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "independent_implementation": "Fraction ceilings and Decimal80 zero-bound/sqrt; no production planner imports",
+  "metrics": {
+    "checks": 42078,
+    "scenario_rows": 88,
+    "zero_scenario_rows": 24,
+    "bin_rows": 3648,
+    "bin_status_NO_FINITE_MEASURED_PLAN_EMPTY_BIN": 2412,
+    "bin_status_CONDITIONAL_MOMENT_EXTRAPOLATION": 1032,
+    "bin_status_UNSUPPORTED_SINGLETON_SHAPE": 204,
+    "kappa_ESS_identity_checks": 4,
+    "kappa_rows": 16
+  },
+  "errors": [],
+  "error_count": 0,
+  "source_files": {
+    "/home/btu/simulations/hh_phase10/run_01/precision_01/phase10_precision_summary.json": {
+      "bytes": 2279,
+      "sha256": "a1a9838b8cce4ed1f04e8cbcdde57c6a94e83ee89d3dca8512055ab333cce78e"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/precision_01/phase10_precision_scenarios.csv": {
+      "bytes": 33835,
+      "sha256": "3f1e976c5765e49c0b559d13636edfcd5cac45e8f4ebe57f0f757d922c3d0a49"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/precision_01/phase10_bin_support_plan.csv": {
+      "bytes": 747272,
+      "sha256": "da07359b15a140afc73aec2c222283597428648a323c6ed2c27bcdc1803f3038"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/precision_01/phase10_kappa_support_plan.csv": {
+      "bytes": 4702,
+      "sha256": "7d570dd25c1e67a723c34102af168603d6d1640a4bf9fc9e8db4d147ce444e35"
+    },
+    "/home/btu/simulations/hh_phase10/run_01/precision_01/phase10_importance_sampling_contract.json": {
+      "bytes": 1315,
+      "sha256": "8685b143a9d5a7effe2526f54381e0281fb4d389fe20f1fe7dc922877c158ee1"
+    },
+    "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_rare_event_precision.csv": {
+      "bytes": 18223,
+      "sha256": "16dab8fd42b0ab9f70eaeae877a94be09a0a41f4368a0dff4614dc17d2372c87"
+    },
+    "/home/btu/simulations/hh_phase9/run_01/statistics_02/phase9_plot_data.json": {
+      "bytes": 2848328,
+      "sha256": "4ec74e50dcd66c94f7a314ec82316b51cf47a08208ecc68fa966f9439f093bd5"
+    }
+  },
+  "limits": [
+    "Uses frozen Phase9 CP endpoints and histogram summaries; no new raw event readback.",
+    "Recomputes finite-pilot planning arithmetic, not future achieved-precision coverage.",
+    "Empty/singleton normalized shapes have no finite empirical variance plan.",
+    "ESS proxies are conditional diagnostics, not new independent hard counts.",
+    "No physical normalization, matching validation, new ME weights or new events."
+  ],
+  "physical_total_background": "BLOCKED",
+  "physical_significance": "NOT_EVALUATED",
+  "new_independent_hard_events": 0
+}

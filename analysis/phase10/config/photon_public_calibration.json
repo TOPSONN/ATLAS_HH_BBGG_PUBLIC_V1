@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "audit_date": "2026-10-19",
+  "historical_catalog": "analysis/phase9/config/photon_calibration_audit.json",
+  "scope": "Targeted official public papers rechecked; no claim of exhaustive global calibration unavailability",
+  "physical_fake_rate": "UNKNOWN",
+  "compatible_calibration_imported": false,
+  "restricted_material_imported": false,
+  "sources": [
+    {
+      "source_id": "ATLAS_HDBS_2018_34",
+      "official_source": "ATLAS Collaboration",
+      "version": "arXiv:2112.11876v2, 12 September 2022; Phys. Rev. D 106 (2022) 052001",
+      "url": "https://arxiv.org/abs/2112.11876v2",
+      "full_text_url": "https://arxiv.org/pdf/2112.11876v2",
+      "doi": "10.1103/PhysRevD.106.052001",
+      "sections": [
+        "4.1",
+        "4.3",
+        "5.2"
+      ],
+      "data_period": "2015-2018 Run 2",
+      "energy_tev": 13,
+      "luminosity_fb_inverse": 139,
+      "object_definition": "ATLAS tight converted/unconverted electromagnetic shower identification; calorimeter and track isolation; calibrated energy and DL1r jets; not the local Delphes photon model.",
+      "transfer_factor_semantics": "ID/isolation sideband composition fractions and sideband-normalized continuum mass model, not per-jet fake probabilities.",
+      "published_summary": {
+        "genuine_diphoton_sideband_fraction": 0.85,
+        "genuine_diphoton_uncertainty": 0.03,
+        "gamma_jet_sideband_fraction": 0.15,
+        "gamma_jet_uncertainty": 0.04,
+        "scope": "common preselection sideband composition, statistical and systematic components included"
+      },
+      "applicability": "Method reference only; local detector model, selection and control-data composition are not validated transfers. Fractions are not imported.",
+      "uncertainties": "Published composition errors include statistics and alternative photon-identification systematic; local correlated covariance/transfer validation unavailable.",
+      "license": "CC BY 4.0; public full text verified",
+      "access_status": "PUBLIC_FULL_TEXT_READ",
+      "compatible": false,
+      "not_imported_reason": "No compatible target-object jet fake transfer calibration and no local data control sample.",
+      "denominator": "Data sideband events after the paper common preselection and tight photon selection; composition fractions, not all jets",
+      "correlations": "Published summary fractions share a fit/control sample; no full target-Delphes covariance imported; do not treat quoted errors as independent calibration bins",
+      "phase10_reverification": "Official Collaboration arXiv:2112.11876v2 PDF sections 4.3 and 5.2 inspected on 2026-10-19; public CC BY 4.0 article",
+      "application_to_Phase10": "METHOD_ONLY: no validated local tight/anti-tight, nonisolated denominator, conversion classes or compatible control data",
+      "physical_value_imported": false
+    },
+    {
+      "source_id": "ATLAS_CERN_EP_2018_216",
+      "official_source": "ATLAS Collaboration",
+      "version": "arXiv:1810.05087v2, 29 March 2019; Eur. Phys. J. C 79 (2019) 205",
+      "url": "https://arxiv.org/abs/1810.05087v2",
+      "full_text_url": "https://arxiv.org/pdf/1810.05087v2",
+      "doi": "10.1140/epjc/s10052-019-6650-6",
+      "sections": [
+        "3",
+        "5",
+        "6"
+      ],
+      "data_period": "2015-2016 Run 2",
+      "energy_tev": 13,
+      "luminosity_fb_inverse_range": [
+        36.1,
+        36.7
+      ],
+      "object_definition": "ATLAS isolated converted/unconverted tight photons; electron-control transfer uses tight identified and isolated electrons, pT>25 GeV, |eta|<2.37, transition excluded.",
+      "transfer_factor_semantics": "Prompt ID data/MC efficiency ratio; separate electron-to-photon transfer F=P(reco gamma and gamma ID|truth electron)/P(reco electron and electron ID|truth electron), applied to matching electron control yield. Neither is a jet-to-photon probability.",
+      "applicability": "No compatible Delphes shower shapes, conversion status, tracking, tight-ID control denominator or validated transfer closure; no rate imported.",
+      "uncertainties": "Prompt ID factors depend on pT and eta; electron transfer includes Z mass-window, energy-calibration and background-subtraction systematics. Target local covariance unavailable.",
+      "license": "CC BY 4.0; public full text verified",
+      "access_status": "PUBLIC_FULL_TEXT_READ",
+      "auxiliary_access_status": "ACCESS_UNVERIFIED_TOOL_FETCH_FAILURE",
+      "compatible": false,
+      "not_imported_reason": "Electron transfer and prompt efficiency differ in species and denominator from bb gamma jet fake model; local ATLAS object correspondence not established.",
+      "denominator": "Prompt ID: isolated true photons; electron transfer: correctly reconstructed and identified electrons from matching Z control selection, not jets",
+      "correlations": "ID/isolation dependence discussed in section 5.6; electron transfer section 6 has Z/background and shared-control systematics; no local full covariance or conversion mapping",
+      "phase10_reverification": "Official Collaboration arXiv:1810.05087v2 PDF sections 3 and 6 inspected on 2026-10-19; CC BY 4.0",
+      "public_mirror": "https://cds.cern.ch/record/2643391/files/1810.05087.pdf",
+      "application_to_Phase10": "METHOD_ONLY: no validated local tight/anti-tight, nonisolated denominator, conversion classes or compatible control data",
+      "physical_value_imported": false
+    }
+  ],
+  "compatibility_contract": [
+    "same reconstructed object and tight/anti-tight definitions",
+    "same isolation and anti-isolation denominators",
+    "conversion classes and electron-control selection",
+    "pT eta event activity and jet-flavour/btag composition",
+    "prompt leakage and subtraction with full covariance",
+    "control-to-target closure and licence/version provenance"
+  ]
+}

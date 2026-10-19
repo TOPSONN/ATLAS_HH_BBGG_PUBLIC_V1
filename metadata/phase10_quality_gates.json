@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "HEAVY_FLAVOUR_ORIGIN": "VALIDATED_WITH_LIMITS",
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "PHYSICAL_PILOT_EXECUTED": false,
+  "FIGURE_PUBLICATION_AUTHORIZED": false,
+  "physical_background_sum_pb": null,
+  "physical_fake_probability": null,
+  "physical_nuisances": {
+    "status": "UNKNOWN_NOT_ZERO",
+    "values": null,
+    "covariance": null
+  },
+  "external_human_approval": false,
+  "synthetic_used_in_physical_results": false,
+  "evidence": {
+    "source_review": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/review_05/phase10a_review_receipt.json",
+      "sha256": "49ced2895e4b2a6a9e7745f337c282df86d085d23db59d45bfd5fd3a67a5d4e5",
+      "bytes": 19917,
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "PASS_INDEPENDENT_PHASE9_REVIEW_WITH_LIMITS"
+    },
+    "heavy_flavour": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_summary.json",
+      "sha256": "b025b32b8311302948c0cf88ab417935cf9c262981c77a070f6342fa92b2b2f9",
+      "bytes": 13507,
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "VALIDATED_WITH_LIMITS"
+    },
+    "photon": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/phase10_photon_observability.json",
+      "sha256": "fdf576389f5f05a0b8a7ce42af99a7e9f336dd68b4d69b137d40a06479274fe5",
+      "bytes": 655702,
+      "evidence_class": "ACTUAL_EXISTING_DATA_READBACK",
+      "status": "BLOCKED_MISSING_COMPATIBLE_OBSERVABLES"
+    },
+    "sideband": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/phase10_synthetic_sideband_tests.json",
+      "sha256": "deebc538ebf2f5c643287029e1ca41216b3aa42e9657097d24d100ea93651792",
+      "bytes": 8493,
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "status": "PASS_SYNTHETIC_METHOD_ONLY"
+    },
+    "precision": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/phase10_precision_independent_review.json",
+      "sha256": "930a49363b3bb24cfa69cca2f368ea84e661babb83845b6b657ace107097303d",
+      "bytes": 2660,
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "status": "PASS_INDEPENDENT_PRECISION_ARITHMETIC_WITH_LIMITS"
+    },
+    "pilot": {
+      "path": "/home/btu/simulations/hh_phase10/run_01/phase10_future_pilot_contract_02.json",
+      "sha256": "e9a5ba109b3c3f0f8c79130ce9fd5314a295db7911f2be4606149b37ff2f0a11",
+      "bytes": 13167,
+      "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+      "status": "PREPARED_INACTIVE_BLOCKED"
+    }
+  },
+  "reason": "Existing-event diagnostics and synthetic closure do not validate generator exclusivity, fake calibration, signal normalization or physical inference.",
+  "source_payload_commit": "82bb66821c5bbf2bac58e9945fe7c0e9239220dd",
+  "figure_status": "AWAITING_USER_APPROVAL",
+  "gates_pass": [
+    "INDEPENDENT_A05_6000_SOURCE_JOINS",
+    "HF_3000_ORIGINAL_EVENT_STRATIFICATION",
+    "INDEPENDENT_HF_EVENT_UNIT_COVARIANCE",
+    "ACTUAL_6000_ROOT_PHOTON_SCALARS",
+    "INDEPENDENT_PRECISION_ARITHMETIC",
+    "143_PHASE10_TESTS",
+    "165_PHASE9_TESTS",
+    "92_PHASE8_TESTS",
+    "9_CPP_ROOT_TESTS",
+    "5_HISTORICAL_REFERENCE_VALIDATORS",
+    "970_HISTORICAL_FILE_HASHES",
+    "INACTIVE_PILOT_AND_NO_PHYSICAL_PRODUCTION",
+    "RESOURCE_CONTAINMENT"
+  ],
+  "gates_fail": [],
+  "gates_blocked": [
+    "PHYSICAL_TOTAL_BACKGROUND",
+    "MATCHED_SIGNAL_NORMALIZATION_PHASE7I",
+    "HF_GENERATOR_EXCLUSIVITY",
+    "ACTUAL_FAKE_TRANSFER_MEASUREMENT",
+    "UNVALIDATED_NUISANCE_MODEL",
+    "PHYSICAL_PILOT_PENDING_SEPARATE_APPROVAL",
+    "PDF_PNG_PUBLICATION_PENDING_USER_APPROVAL"
+  ],
+  "gates_unknown": [
+    "PHOTON_FAKE_RATE",
+    "UNVALIDATED_NUISANCE_VALUES_AND_CORRELATIONS",
+    "EXACT_MATCHING_PRESCRIPTION",
+    "FUTURE_PHYSICAL_NORMALIZATION"
+  ],
+  "delivery_gates": {
+    "github_ci": "VERIFY_EXACT_FINAL_HEAD_EXTERNALLY_AFTER_DELIVERY_COMMIT",
+    "remote_blob_verification": "VERIFY_FINAL_HEAD_BYTES_EXTERNALLY_AFTER_PUSH"
+  },
+  "draft_PR_url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/27"
+}

@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "task": "PHASE10_BACKGROUND_MODEL_FEASIBILITY_V1",
+  "base_revision": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "matching_prescription_status": "NO_VALIDATED_MATCHING_PRESCRIPTION_YET",
+  "recommended_matching_candidate": null,
+  "review_date_utc": "2026-10-19",
+  "external_independent_human_approval": null,
+  "exact_process_generation_executed": false,
+  "software_versions": {
+    "mg5_aMC": "3.5.16",
+    "mg5_version_file_date": "2026-06-03",
+    "pythia": "8.317",
+    "pythia_version_date": "20260120"
+  },
+  "historical_source_context": {
+    "model": "sm-no_b_mass",
+    "proton_flavours": "g,u,d,s,c,b and antiquarks",
+    "B01": "explicit b b~ a a",
+    "B02": "explicit c c~ a a",
+    "B03": "a a jl jl; jl=g,u,d,s and antiquarks; incoming c/b allowed",
+    "scheme_interpretation": "5F massless diagnostic sources; no validated matching prescription or physical total"
+  },
+  "references": [
+    {
+      "id": "MG_LO",
+      "title": "MG5 official LO Pythia8 merging interface",
+      "url": "https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/LOPY8Merging",
+      "version_scope": "Wiki last modified 2016-08-18; generic interface since MG5 v2.5.0, cross-checked against installed 3.5.16 template",
+      "supports": "MLM/CKKW-L interface availability only; no diphoton-HF validation",
+      "access": "PUBLIC",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "MG_FXFX",
+      "title": "MG5_aMC official FxFx prescription and limitations",
+      "url": "https://amcatnlo.web.cern.ch/FxFx_merging.htm",
+      "version_scope": "Page explicitly discusses MG5 >=3.3.0 / Pythia >=8.308; installed 3.5.16/8.317 source checked",
+      "supports": "Lowest-multiplicity core excludes light QCD partons and b quarks; NLO-specific samples/scales required",
+      "access": "PUBLIC",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "PY_MATCH",
+      "title": "Pythia Jet Matching manual and installed implementation",
+      "url": "https://pythia.org/latest-manual/JetMatching.html",
+      "version_scope": "Live URL fetched by web returned 403; search index available. Authoritative local 8.317 htmldoc + JetMatching.h audited with hashes",
+      "supports": "nQmatch flavour boundary, heavy ancestry omission from light jet clustering, distinct FxFx inputs",
+      "access": "PUBLIC_WEB_INDEX_AND_INSTALLED_RELEASE_SOURCE",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "PY_CKKWL",
+      "title": "Pythia CKKW-L manual and installed implementation",
+      "url": "https://pythia.org/latest-manual/CKKWLMerging.html",
+      "version_scope": "Live page search index plus exact local 8.317 htmldoc; local release governs settings",
+      "supports": "Process definition, additional jet multiplicities, nQuarksMerge caution, event and merging weights",
+      "access": "PUBLIC_WEB_INDEX_AND_INSTALLED_RELEASE_SOURCE",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "FXFX_PAPER",
+      "title": "Frederix and Frixione, Merging meets matching in MC@NLO",
+      "url": "https://arxiv.org/abs/1209.6215",
+      "version_scope": "arXiv:1209.6215v1, 2012; JHEP 12 (2012) 061",
+      "supports": "NLO multijet merging method; examples do not validate requested diphoton-HF setup",
+      "access": "PUBLIC_PRIMARY_PAPER",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "FLAVOUR_IR",
+      "title": "Banfi, Salam and Zanderighi, Infrared safe definition of jet flavour",
+      "url": "https://arxiv.org/abs/hep-ph/0601139",
+      "version_scope": "hep-ph/0601139v1, 2006; EPJC 47 (2006) 113",
+      "supports": "Ordinary jet flavour labels can be IR unsafe; flavour-aware clustering method",
+      "access": "PUBLIC_PRIMARY_PAPER",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "PHOTON_IR",
+      "title": "Frixione, Isolated photons in perturbative QCD",
+      "url": "https://arxiv.org/abs/hep-ph/9801442",
+      "version_scope": "hep-ph/9801442v1, 1998; PLB 429 (1998) 369",
+      "supports": "Smooth-cone direct-photon observable removes need for fragmentation contribution in its defined cross section",
+      "access": "PUBLIC_PRIMARY_PAPER",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "HF_SCHEME_PAPER",
+      "title": "Napoletano, Krauss and Schumann, Bottom-quark mass effects in associated production with Z and H bosons",
+      "url": "https://arxiv.org/abs/1706.10072",
+      "version_scope": "arXiv:1706.10072; processes Z/H plus bottom, not diphoton",
+      "supports": "Massive 4F versus merged 5F comparison is process dependent; cannot import numerical prescription to gamma gamma",
+      "access": "PUBLIC_PRIMARY_PAPER",
+      "accessed_utc_date": "2026-10-19"
+    },
+    {
+      "id": "LOCAL_MODELS",
+      "title": "Installed MG5 3.5.16 SM UFO and restriction files",
+      "url": null,
+      "version_scope": "/home/btu/opt/mg5amcnlo -> mg5-release-v3.5.16; exact hash audit below",
+      "supports": "Mass restriction values and particle/model existence only; no new parser/amplitude execution",
+      "access": "LOCAL_INSTALLED_SOURCE_READ_ONLY"
+    },
+    {
+      "id": "HIST_CARDS",
+      "title": "Frozen historical 5F LO background source cards and Phase6B input manifest",
+      "url": null,
+      "version_scope": "Repository base ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "supports": "Historical B01/B02 explicit massless HF, B03 final jl excludes c/b but proton includes c/b; no matching validation",
+      "access": "HISTORICAL_SOURCE_AUDIT"
+    }
+  ],
+  "local_source_audit": [
+    {
+      "path": "/home/btu/opt/mg5amcnlo/VERSION",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/VERSION",
+      "bytes": 35,
+      "sha256": "f55f716b03d4216cf3c1bb7f21f1004a59ea8e92877985e18efb3e2faa17689c",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/particles.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/particles.py",
+      "bytes": 10444,
+      "sha256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/parameters.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/parameters.py",
+      "bytes": 15693,
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_default.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_default.dat",
+      "bytes": 1437,
+      "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_no_b_mass.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_no_b_mass.dat",
+      "bytes": 1438,
+      "sha256": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_c_mass.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_c_mass.dat",
+      "bytes": 1437,
+      "sha256": "69618093a3ab854b954dd7ceb4df4e0775324be736b581ef0694bc19c1077ee6",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Cards/run_card.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Cards/run_card.dat",
+      "bytes": 16879,
+      "sha256": "24611f33c2e2cef72c447f0c5380c92e030b31c4b14c5b34d0fde0f60aa4de36",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/LO/Cards/pythia8_card_default.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/LO/Cards/pythia8_card_default.dat",
+      "bytes": 4434,
+      "sha256": "eae9ab88aed291ccfa93aad879abb00c479fe5e852b50a14f48ee2c4ee25a255",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/NLO/Cards/run_card.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/NLO/Cards/run_card.dat",
+      "bytes": 14951,
+      "sha256": "759b832cfc7c3a1130472896c512c9f737c7134b835911d1c896b969aaa4e044",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/Template/NLO/Cards/shower_card.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/Template/NLO/Cards/shower_card.dat",
+      "bytes": 9348,
+      "sha256": "9a808b07830f2afb673feeed28a6a08241f379c688607da24fe2ee9b14e74d71",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/madgraph/interface/madgraph_interface.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/interface/madgraph_interface.py",
+      "bytes": 458046,
+      "sha256": "be96f305974bfee0108089af04d12dac55fccbdcd7791787fc8976ce8f930bc3",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "mg5",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/xmldoc/Version.xml",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/xmldoc/Version.xml",
+      "bytes": 584,
+      "sha256": "0ba06616a064d6bebe412a6306fd0237c874db7592fede8e14f7de30d562153e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/include/Pythia8Plugins/JetMatching.h",
+      "resolved_path": "/home/btu/opt/pythia8/include/Pythia8Plugins/JetMatching.h",
+      "bytes": 70595,
+      "sha256": "4c19c43a0a0a320bcf9c6a2b9c6a346ff52ec9eaa5374c0055e3078b5b93f953",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/include/Pythia8Plugins/aMCatNLOHooks.h",
+      "resolved_path": "/home/btu/opt/pythia8/include/Pythia8Plugins/aMCatNLOHooks.h",
+      "bytes": 9180,
+      "sha256": "44284e8ebc91718e1e13bc01fcfd619f9513a26647ce15dd4177c877332eff5e",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/JetMatching.html",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/JetMatching.html",
+      "bytes": 35900,
+      "sha256": "e4fabc0759a841f4487813f121a09d9dde67ad5fe4bd4f9e2add9b95cba399fa",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/CKKWLMerging.html",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/CKKWLMerging.html",
+      "bytes": 75715,
+      "sha256": "7b5e0efcc746212f83ab8de81e4bcbff19384985f8ddaf6e2fcc3b40fa079386",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/aMCatNLOMatching.html",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/aMCatNLOMatching.html",
+      "bytes": 4179,
+      "sha256": "05a7b17279c3827a00cd05e1ada42f44d971df3bb10d08ff4243441cfffd9dad",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/TimelikeShowers.html",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/TimelikeShowers.html",
+      "bytes": 65747,
+      "sha256": "6c8d39df5afca99b9bcdad7d2f78d40fee5fa771edca831af4b8637ae3a5009b",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/SpacelikeShowers.html",
+      "resolved_path": "/home/btu/opt/pythia8/share/Pythia8/htmldoc/SpacelikeShowers.html",
+      "bytes": 31033,
+      "sha256": "43b6e8cde37bbf7544047cf4180d05de853e11fe6d6e69d0574d184bff8ae1cc",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "pythia",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "simulation/mg5/cards/bbgg.mg5",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase10_v1/simulation/mg5/cards/bbgg.mg5",
+      "bytes": 193,
+      "sha256": "c2386f3be89eca2d999e6a6db99e8c1f9429c272cb13eb34b213f291c6b17b31",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "repo",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "simulation/mg5/cards/ccgg.mg5",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase10_v1/simulation/mg5/cards/ccgg.mg5",
+      "bytes": 206,
+      "sha256": "1ac1ab36e6838894e5ea7ba32926881dab90ea2cb0e950ce6e5de3076a509360",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "repo",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "simulation/mg5/cards/jjgg_light.mg5",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase10_v1/simulation/mg5/cards/jjgg_light.mg5",
+      "bytes": 231,
+      "sha256": "31095eb9d6fe8dd916ef9ea90f237ed759de12946b771ede913c844a7b7d52e2",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "repo",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "metadata/phase6b_input_manifest.json",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase10_v1/metadata/phase6b_input_manifest.json",
+      "bytes": 4354,
+      "sha256": "be0e826af3a2c329a1742e1999cd0ac36c8837072394edc1d5527660cef2e51a",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "repo",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    },
+    {
+      "path": "metadata/phase6b_event_summary.csv",
+      "resolved_path": "/home/btu/projects/atlas_hh_phase10_v1/metadata/phase6b_event_summary.csv",
+      "bytes": 1234,
+      "sha256": "51e7940b4b7e0d2c0507cb5cafc2c9015d117b14e5baf2f6809c561878abbbe8",
+      "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+      "audit_scope": "repo",
+      "execution": "READ_ONLY_NOT_EXECUTED"
+    }
+  ],
+  "schemes": [
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "A_4F_BB_LOPS",
+      "scheme": "A: explicit massive-bottom 4F bb gamma gamma LO+PS component",
+      "scientific_verdict": "METHOD_ONLY",
+      "physics_definition": "4F incoming g,u,d,s,c; bottom absent from proton partons and massive in final ME. Standalone resolved-bb direct-photon component, not an inclusive background sum.",
+      "software_support": "Installed sm default restriction has MB=4.7 GeV, MC=0; proposed p4 syntax not executed. Appropriate 4F PDF and shower convention unselected.",
+      "source_evidence": [
+        "LOCAL_MODELS",
+        "HF_SCHEME_PAPER",
+        "HIST_CARDS"
+      ],
+      "expected_advantages": [
+        "Retains bottom mass and explicit resolved hard bb kinematics.",
+        "A restricted component can be reviewed before any inclusive combination."
+      ],
+      "known_weaknesses": [
+        "No initial-b resummation; large hard-scale/mass logarithms remain scheme dependent.",
+        "A 4F bb component plus shower-HF light samples is not automatically exclusive."
+      ],
+      "required_validation": [
+        "Exact model/PDF mass consistency; component cross-section and photon-cut coverage.",
+        "LO+PS boundary, gsplit treatment, flavour-safe jet closure and scale/seed checks."
+      ],
+      "unresolved_assumptions": [
+        "4F PDF identity and alpha_s flavour evolution.",
+        "No proven prescription for complementing B02/B03 without overlap/gaps."
+      ],
+      "flavour_scheme": "Four-flavour for bottom; charm active and massless in this specific source restriction.",
+      "initial_heavy_flavour": "c/cbar allowed, b/bbar excluded explicitly from p4 and must also be excluded by the selected PDF scheme.",
+      "final_heavy_flavour": "Explicit massive b/bbar; charm may appear through active-flavour radiation.",
+      "shower_gsplit": "g->bb/cc remains a physical shower channel; shower-origin labels alone cannot define a perturbative subtraction.",
+      "weight_conventions": "Future LO LHE IDWTUP/event_norm/XWGTUP and sigma/N must be read explicitly; matching acceptance must not be applied twice.",
+      "matching_jet_multiplicities": "One bb gamma gamma core with PS only at first; adding 0..N extra jets is a separate merging review, not implicit."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "A_3F_CC_LOPS",
+      "scheme": "A: explicit massive-charm 3F cc gamma gamma LO+PS component",
+      "scientific_verdict": "UNVERIFIED",
+      "physics_definition": "Massive-charm component with no incoming charm/bottom; cannot call an active massless-c 4F treatment a massive 3F charm prediction.",
+      "software_support": "sm-c_mass restriction exists (MC=1.55, MB=4.7 GeV); compatible 3F PDF, scheme and interface not established.",
+      "source_evidence": [
+        "LOCAL_MODELS",
+        "HF_SCHEME_PAPER"
+      ],
+      "expected_advantages": [
+        "Explicit charm mass can regularize heavy-pair collinear limits within a consistent scheme."
+      ],
+      "known_weaknesses": [
+        "Charm threshold and shower/PDF conventions are unreviewed.",
+        "A naive massive-c plus active charm PDF choice mixes incompatible assumptions."
+      ],
+      "required_validation": [
+        "Identify available 3F PDF, alpha_s matching, massive shower and exact process support.",
+        "Charm fragmentation and flavour-jet mapping; mutually exclusive complement or subtraction."
+      ],
+      "unresolved_assumptions": [
+        "3F PDF support and exact physical normalization.",
+        "No validated interpolation between 3F charm and 5F inclusive samples."
+      ],
+      "flavour_scheme": "Three-flavour conceptual alternative; not instantiated.",
+      "initial_heavy_flavour": "No c or b in incoming parton definition/PDF under the proposed 3F interpretation.",
+      "final_heavy_flavour": "Massive explicit cc; bottom remains outside declared component unless separately included.",
+      "shower_gsplit": "Both g->cc and g->bb would need an explicit review; cannot infer support from mass card existence.",
+      "weight_conventions": "Future source and accepted-event weights must be audited anew; historical B02 average-normalized weights do not transfer.",
+      "matching_jet_multiplicities": "Unfixed; no Nmax or matching scale chosen."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "B_5F_MLM",
+      "scheme": "B: inclusive 5F gamma gamma + 0,1,2 QCD partons with LO MLM",
+      "scientific_verdict": "UNVERIFIED",
+      "physics_definition": "One common massless 5F tree diphoton family, including b/c as additional partons, rather than separate B01+B02+B03 sums.",
+      "software_support": "MG5 3.5.16 LO template and Pythia 8.317 JetMatchingMadgraph support generic MLM; nQmatch/maxjetflavor must agree with j5.",
+      "source_evidence": [
+        "MG_LO",
+        "PY_MATCH",
+        "LOCAL_MODELS"
+      ],
+      "expected_advantages": [
+        "A single QCD multiplicity family could avoid manually adding explicit HF samples.",
+        "Resolved ME emissions and shower emissions are partitioned by a jet-merging prescription."
+      ],
+      "known_weaknesses": [
+        "nQmatch=4 explicitly leaves b unmatched in local 8.317 documentation.",
+        "QCD merging does not establish QED photon-fragmentation or detector-fake completeness."
+      ],
+      "required_validation": [
+        "Exact diphoton histories, nQmatch=5 massless ME consistency, 0..N jet coverage and highest multiplicity.",
+        "Differential jet rates, matching efficiency, inclusive/flavour-resolved scale stability, normalization and photon safety."
+      ],
+      "unresolved_assumptions": [
+        "No physical matching scale, Nmax adequacy or exact-process cross-section closure.",
+        "Tree family omits loop-induced gg->gamma gamma and other orders outside its scope."
+      ],
+      "flavour_scheme": "Massless five-flavour ME/PDF candidate; final hadron/shower masses remain separately defined.",
+      "initial_heavy_flavour": "b/c allowed in p5 and 5F PDFs; incoming-HF histories must be retained.",
+      "final_heavy_flavour": "b/c included in j5; do not add external explicit-HF rates again.",
+      "shower_gsplit": "QCD matching must cover relevant heavy-pair histories; no proof here that exact setup partitions all heavy channels.",
+      "weight_conventions": "Retain full signed source sumW, accepted/rejected counts and per-multiplicity sigma; generic event count scaling insufficient.",
+      "matching_jet_multiplicities": "Illustrative common core aa plus 0,1,2 QCD partons; 2 is a proposal scope, not validated sufficient coverage."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "B_5F_CKKWL",
+      "scheme": "B: inclusive 5F gamma gamma + QCD jets with LO CKKW-L",
+      "scientific_verdict": "UNVERIFIED",
+      "physics_definition": "A common diphoton hard core with all allowed additional QCD flavours and reviewed shower histories; alternative to MLM.",
+      "software_support": "Installed MG5 template exposes ktdurham/ptlund and Merging:TMS/Process/nJetMax; local Pythia exposes nQuarksMerge and photon process tokens.",
+      "source_evidence": [
+        "MG_LO",
+        "PY_CKKWL",
+        "LOCAL_MODELS"
+      ],
+      "expected_advantages": [
+        "Explicit no-emission/PDF/coupling merging weights and alternative source-systematic comparison."
+      ],
+      "known_weaknesses": [
+        "Hard-process string being recognized does not validate all gamma gamma HF histories.",
+        "Pythia warns input additional flavours above nQuarksMerge can double count; guess process is unsafe without inspection."
+      ],
+      "required_validation": [
+        "Exact core aa and complete finite Nmax family, shower history reconstruction and rejected cut coverage.",
+        "Merging weight x event weight x accepted cross-section normalization and HepMC propagation closure."
+      ],
+      "unresolved_assumptions": [
+        "No TMS, hard-scale/PDF choice or exact diphoton closure.",
+        "No evidence of equivalent generation-cut/isolation support in every multiplicity."
+      ],
+      "flavour_scheme": "Massless five-flavour candidate; nQuarksMerge=5 is conceptual consistency requirement, not an adopted production card.",
+      "initial_heavy_flavour": "c/b included under a consistently selected 5F PDF.",
+      "final_heavy_flavour": "c/b as additional partons; no standalone explicit-HF sample may be added without subtraction.",
+      "shower_gsplit": "Massive splitting kernels/history options exist, but their exact relation to massless ME HF histories is unvalidated.",
+      "weight_conventions": "Local manual requires Info::weight()*Info::mergingWeight() with accepted cross-section normalization; exact HepMC writer convention untested.",
+      "matching_jet_multiplicities": "0..N additional jets must share cuts; Nmax and highest-multiplicity shower treatment are unresolved."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "B_FXFX_AA_CORE",
+      "scheme": "B: NLO FxFx with gamma gamma Born core",
+      "scientific_verdict": "UNVERIFIED",
+      "physics_definition": "NLO QCD diphoton colourless core plus increasing light-parton Born multiplicities, with exact NLO model/IR treatment.",
+      "software_support": "Official prescription permits a core without light QCD partons/b; installed Pythia has FxFx hook, but no NLO diphoton model/loop/IR compatibility was validated.",
+      "source_evidence": [
+        "MG_FXFX",
+        "FXFX_PAPER",
+        "PY_MATCH"
+      ],
+      "expected_advantages": [
+        "Potential NLO QCD multijet accuracy after exact-process validation."
+      ],
+      "known_weaknesses": [
+        "Historical LO LHE cannot be converted to FxFx by toggling a flag.",
+        "Negative weights, virtual amplitudes and diphoton isolation require a new physical source campaign."
+      ],
+      "required_validation": [
+        "Exact supported NLO UFO, loop amplitudes, photon-safe cuts and FxFx shower recoil/production scales.",
+        "qCutME vs qCut relation, NLO normalization/negative-weight closure, jet multiplicity and HF coverage."
+      ],
+      "unresolved_assumptions": [
+        "Exact NLO diphoton process support, resources and loop-induced channel treatment.",
+        "No validated numerical merging scale or independent cross section."
+      ],
+      "flavour_scheme": "Requires a separately frozen NLO flavour/PDF/mass scheme.",
+      "initial_heavy_flavour": "Depends on chosen NLO 4F/5F setup; not inherited.",
+      "final_heavy_flavour": "HF permitted only within a specifically supported multiplicity/flavour definition; bb is not the core here.",
+      "shower_gsplit": "NLO merge interface availability is not a separate heavy-flavour matching theorem.",
+      "weight_conventions": "Preserve negative weights, sumW and sumW2 plus source/integration covariance; nominal/sign conventions require direct closure.",
+      "matching_jet_multiplicities": "aa core (0 jets) plus NLO multiplicities; exact amplitudes, Nmax and cutoff relation unresolved."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "B_FXFX_BB_CORE",
+      "scheme": "B: FxFx with bb gamma gamma as lowest-multiplicity core",
+      "scientific_verdict": "INAPPLICABLE",
+      "physics_definition": "Attempt to FxFx-merge explicit bb gamma gamma plus extra jets using generic documented FxFx.",
+      "software_support": "Official MG5 FxFx limitations exclude b quarks or jets at lowest multiplicity; version-compatible generic interface does not override this.",
+      "source_evidence": [
+        "MG_FXFX",
+        "FXFX_PAPER"
+      ],
+      "expected_advantages": [
+        "Would retain resolved hard bb if an independently supported specialized extension existed."
+      ],
+      "known_weaknesses": [
+        "Violates the reviewed prescription's stated Born-core limitation."
+      ],
+      "required_validation": [
+        "A distinct documented, process-valid extension would be required before reconsideration."
+      ],
+      "unresolved_assumptions": [
+        "No such extension established in installed source/doc audit."
+      ],
+      "flavour_scheme": "Neither selecting 4F nor 5F by itself removes documented core restriction.",
+      "initial_heavy_flavour": "Unresolved and insufficient to cure the restriction.",
+      "final_heavy_flavour": "Explicit bb in the core triggers the reviewed limitation.",
+      "shower_gsplit": "Not a cure for an unsupported hard core.",
+      "weight_conventions": "No valid merged normalization is asserted.",
+      "matching_jet_multiplicities": "bb aa core plus extra QCD jets is outside reviewed FxFx prescription."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "C_EXCLUSIVE_FLAVOUR",
+      "scheme": "C: generator-level exclusive flavour partition",
+      "scientific_verdict": "METHOD_ONLY",
+      "physics_definition": "Partition a common target event space using an explicit IR-safe flavour/jet definition and a proven exhaustive nonoverlapping measure.",
+      "software_support": "No reviewed installed native switch implements the desired combined B01/B02/B03 physical partition; an external veto alone is not proof.",
+      "source_evidence": [
+        "FLAVOUR_IR",
+        "PY_MATCH",
+        "HIST_CARDS"
+      ],
+      "expected_advantages": [
+        "A properly proven partition could make components and provenance transparent."
+      ],
+      "known_weaknesses": [
+        "Hard-parton/heavy-hadron/Delphes labels are not interchangeable.",
+        "Vetoing any shower heavy quark can introduce cutoff dependence, gaps and biased weights."
+      ],
+      "required_validation": [
+        "Coverage/orthogonality at a common measure, soft/collinear limits and accepted normalization.",
+        "A flavour-safe jet prescription and migration/threshold/systematic checks across ME and PS."
+      ],
+      "unresolved_assumptions": [
+        "Partition definition, common parent density and subtraction/normalization unestablished."
+      ],
+      "flavour_scheme": "Must be common across all components or explicitly matched with subtraction.",
+      "initial_heavy_flavour": "Initial heavy quarks and beam-collinear histories require a consistent PDF factorization treatment.",
+      "final_heavy_flavour": "A veto on ME PDG labels alone is not exclusive after PS.",
+      "shower_gsplit": "The same resolved HF state may have multiple histories; ancestry flags cannot provide a perturbative veto prescription.",
+      "weight_conventions": "Each rejected or assigned region must use its original source denominator and any justified transfer/subtraction; no resampling as hard statistics.",
+      "matching_jet_multiplicities": "Exhaustive partition across multiplicities must be demonstrated; no fixed Nmax assumed."
+    },
+    {
+      "exact_process_validated": false,
+      "photon_ir_isolation": "Direct photons require a declared IR/collinear-safe observable or a validated fragmentation treatment. MG5 smooth-cone fields exist; values and mapping to Delphes isolation are not frozen.",
+      "scale_pdf_alpha_s": "PDF flavour number, threshold/mass convention and ME/shower alpha_s order/value must be frozen jointly; no inheritance of historical CTEQ6L1/fixed125 as validated new default.",
+      "flavour_jet_ir_definition": "ME species, shower ancestry, heavy hadrons, reconstructed Delphes labels and bit0 are different observables. A flavour-safe truth jet definition and its detector mapping remain to be reviewed.",
+      "id": "C_RECO_VETO_SHORTCUT",
+      "scheme": "C: subtract or veto overlap using reconstructed flavour/bit0",
+      "scientific_verdict": "INAPPLICABLE",
+      "physics_definition": "Use reconstructed heavy-flavour overlap, tags or truth labels to declare the historical components perturbatively exclusive.",
+      "software_support": "Existing labels provide diagnostics; no factorization/subtraction prescription is defined by them.",
+      "source_evidence": [
+        "HIST_CARDS",
+        "FLAVOUR_IR"
+      ],
+      "expected_advantages": [
+        "Useful descriptive cross-tabulation only."
+      ],
+      "known_weaknesses": [
+        "Reco phase-space overlap is not proof of perturbative double counting.",
+        "Tag stochasticity and detector migration cannot determine a generator subtraction."
+      ],
+      "required_validation": [
+        "Replace shortcut with a generator-level, IR-valid physical prescription and new approved validation."
+      ],
+      "unresolved_assumptions": [
+        "Underlying common physical target measure is absent."
+      ],
+      "flavour_scheme": "Historical massless 5F sources remain separate diagnostic components.",
+      "initial_heavy_flavour": "Incoming c/b in historical proton definitions persist even for B03 light final jl.",
+      "final_heavy_flavour": "ME label is distinct from hadron/reco/tag flavour.",
+      "shower_gsplit": "Observed shower births/proven gsplit remain nonexclusive origin evidence.",
+      "weight_conventions": "No physical sum or overlap subtraction is authorized.",
+      "matching_jet_multiplicities": "Historical two-parton source definitions are not an inclusive merged multiplicity family."
+    }
+  ]
+}

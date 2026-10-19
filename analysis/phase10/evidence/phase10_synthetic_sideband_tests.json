@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_SYNTHETIC_METHOD_ONLY",
+  "checks": {
+    "region_exclusivity": true,
+    "target_closure": true,
+    "prompt_contamination_subtracted": true,
+    "correlation_kappa_corrects_closure": true,
+    "zero_D_rejected": true,
+    "zero_C_no_rate_claim": true,
+    "negative_subtraction_rejected": true,
+    "negative_diagnostic_never_valid": true,
+    "shared_subtraction_covariance_matters": true,
+    "independent_influence_variance": true,
+    "ill_conditioned_rejected": true,
+    "physical_result_never_enabled": true
+  },
+  "cases": {
+    "independent_closure": {
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "physical_usable": false,
+      "input_order": [
+        "observed_A",
+        "observed_B",
+        "observed_C",
+        "observed_D",
+        "prompt_A",
+        "prompt_B",
+        "prompt_C",
+        "prompt_D",
+        "kappa"
+      ],
+      "observed": [
+        120.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "prompt_subtraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fake_only_subtracted": [
+        120.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "kappa": 1.0,
+      "definition": "kappa=F_A*F_D/(F_B*F_C); A_prediction=kappa*F_B*F_C/F_D",
+      "transfer_semantics": "C/D isolated-to-nonisolated anti-tight yield ratio; not a per-jet fake probability",
+      "uncertainty_method": "joint-Jacobian delta covariance; shared-event and subtraction cross-covariance retained",
+      "status": "VALID_SYNTHETIC_ESTIMATE",
+      "valid": true,
+      "predicted_target": 120.0,
+      "transfer_factor": 1.5,
+      "prediction_gradient": [
+        0,
+        1.5,
+        2.0,
+        -3.0,
+        0,
+        -1.5,
+        -2.0,
+        3.0,
+        120.0
+      ],
+      "transfer_gradient": [
+        0,
+        0,
+        0.025,
+        -0.0375,
+        0,
+        0,
+        -0.025,
+        0.0375,
+        0
+      ],
+      "closure_gradient": [
+        1,
+        -1.5,
+        -2.0,
+        3.0,
+        -1,
+        1.5,
+        2.0,
+        -3.0,
+        -120.0
+      ],
+      "prediction_variance": 780.0,
+      "prediction_se": 27.92848008753788,
+      "transfer_variance": 0.09375,
+      "denominator_se": 6.324555320336759,
+      "denominator_stability_z": 3.0,
+      "target_closure_residual": 0.0,
+      "target_closure_variance": 900.0,
+      "target_closure_pull": 0.0,
+      "relative_precision": 0.2327373340628157
+    },
+    "prompt_subtraction": {
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "physical_usable": false,
+      "input_order": [
+        "observed_A",
+        "observed_B",
+        "observed_C",
+        "observed_D",
+        "prompt_A",
+        "prompt_B",
+        "prompt_C",
+        "prompt_D",
+        "kappa"
+      ],
+      "observed": [
+        150.0,
+        90.0,
+        80.0,
+        45.0
+      ],
+      "prompt_subtraction": [
+        30.0,
+        10.0,
+        20.0,
+        5.0
+      ],
+      "fake_only_subtracted": [
+        120.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "kappa": 1.0,
+      "definition": "kappa=F_A*F_D/(F_B*F_C); A_prediction=kappa*F_B*F_C/F_D",
+      "transfer_semantics": "C/D isolated-to-nonisolated anti-tight yield ratio; not a per-jet fake probability",
+      "uncertainty_method": "joint-Jacobian delta covariance; shared-event and subtraction cross-covariance retained",
+      "status": "VALID_SYNTHETIC_ESTIMATE",
+      "valid": true,
+      "predicted_target": 120.0,
+      "transfer_factor": 1.5,
+      "prediction_gradient": [
+        0,
+        1.5,
+        2.0,
+        -3.0,
+        0,
+        -1.5,
+        -2.0,
+        3.0,
+        120.0
+      ],
+      "transfer_gradient": [
+        0,
+        0,
+        0.025,
+        -0.0375,
+        0,
+        0,
+        -0.025,
+        0.0375,
+        0
+      ],
+      "closure_gradient": [
+        1,
+        -1.5,
+        -2.0,
+        3.0,
+        -1,
+        1.5,
+        2.0,
+        -3.0,
+        -120.0
+      ],
+      "prediction_variance": 1075.0,
+      "prediction_se": 32.78719262151,
+      "transfer_variance": 0.1328125,
+      "denominator_se": 7.0710678118654755,
+      "denominator_stability_z": 3.0,
+      "target_closure_residual": 0.0,
+      "target_closure_variance": 1255.0,
+      "target_closure_pull": 0.0,
+      "relative_precision": 0.27322660517925
+    },
+    "correlated_kappa": {
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "physical_usable": false,
+      "input_order": [
+        "observed_A",
+        "observed_B",
+        "observed_C",
+        "observed_D",
+        "prompt_A",
+        "prompt_B",
+        "prompt_C",
+        "prompt_D",
+        "kappa"
+      ],
+      "observed": [
+        180.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "prompt_subtraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fake_only_subtracted": [
+        180.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "kappa": 1.5,
+      "definition": "kappa=F_A*F_D/(F_B*F_C); A_prediction=kappa*F_B*F_C/F_D",
+      "transfer_semantics": "C/D isolated-to-nonisolated anti-tight yield ratio; not a per-jet fake probability",
+      "uncertainty_method": "joint-Jacobian delta covariance; shared-event and subtraction cross-covariance retained",
+      "status": "VALID_SYNTHETIC_ESTIMATE",
+      "valid": true,
+      "predicted_target": 180.0,
+      "transfer_factor": 1.5,
+      "prediction_gradient": [
+        0,
+        2.25,
+        3.0,
+        -4.5,
+        0,
+        -2.25,
+        -3.0,
+        4.5,
+        120.0
+      ],
+      "transfer_gradient": [
+        0,
+        0,
+        0.025,
+        -0.0375,
+        0,
+        0,
+        -0.025,
+        0.0375,
+        0
+      ],
+      "closure_gradient": [
+        1,
+        -2.25,
+        -3.0,
+        4.5,
+        -1,
+        2.25,
+        3.0,
+        -4.5,
+        -120.0
+      ],
+      "prediction_variance": 0.0,
+      "prediction_se": 0.0,
+      "transfer_variance": 0.0,
+      "denominator_se": 0.0,
+      "denominator_stability_z": 3.0,
+      "target_closure_residual": 0.0,
+      "target_closure_variance": 0.0,
+      "target_closure_pull": null,
+      "relative_precision": 0.0
+    },
+    "shared_event_subtraction": {
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "physical_usable": false,
+      "input_order": [
+        "observed_A",
+        "observed_B",
+        "observed_C",
+        "observed_D",
+        "prompt_A",
+        "prompt_B",
+        "prompt_C",
+        "prompt_D",
+        "kappa"
+      ],
+      "observed": [
+        120.0,
+        80.0,
+        60.0,
+        40.0
+      ],
+      "prompt_subtraction": [
+        30.0,
+        20.0,
+        15.0,
+        10.0
+      ],
+      "fake_only_subtracted": [
+        90.0,
+        60.0,
+        45.0,
+        30.0
+      ],
+      "kappa": 1.0,
+      "definition": "kappa=F_A*F_D/(F_B*F_C); A_prediction=kappa*F_B*F_C/F_D",
+      "transfer_semantics": "C/D isolated-to-nonisolated anti-tight yield ratio; not a per-jet fake probability",
+      "uncertainty_method": "joint-Jacobian delta covariance; shared-event and subtraction cross-covariance retained",
+      "status": "VALID_SYNTHETIC_ESTIMATE",
+      "valid": true,
+      "predicted_target": 90.0,
+      "transfer_factor": 1.5,
+      "prediction_gradient": [
+        0,
+        1.5,
+        2.0,
+        -3.0,
+        0,
+        -1.5,
+        -2.0,
+        3.0,
+        90.0
+      ],
+      "transfer_gradient": [
+        0,
+        0,
+        0.03333333333333333,
+        -0.05,
+        0,
+        0,
+        -0.03333333333333333,
+        0.05,
+        0
+      ],
+      "closure_gradient": [
+        1,
+        -1.5,
+        -2.0,
+        3.0,
+        -1,
+        1.5,
+        2.0,
+        -3.0,
+        -90.0
+      ],
+      "prediction_variance": 413.1270903010034,
+      "prediction_se": 20.32552804482588,
+      "transfer_variance": 0.09406354515050169,
+      "denominator_se": 4.423258684646914,
+      "denominator_stability_z": 3.0,
+      "target_closure_residual": 0.0,
+      "target_closure_variance": 507.94314381270914,
+      "target_closure_pull": 0.0,
+      "relative_precision": 0.22583920049806533
+    },
+    "incorrect_independence_variance": 780.351170568562,
+    "independent_influence_variance": 413.1270903010033
+  },
+  "physical_fake_rate": "UNKNOWN",
+  "actual_transfer_measurement": "BLOCKED_MISSING_COMPATIBLE_OBSERVABLES",
+  "import_into_physical_results": false,
+  "new_physical_events": 0
+}

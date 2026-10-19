@@ -1,0 +1,1035 @@
+{
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_COMPLETED_COMPUTATIONAL_LEDGER_WITH_RESOLVED_CHECKER_FAILURES",
+  "receipt_count": 34,
+  "receipts": [
+    {
+      "label": "build_01",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase10_v1",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 95.066629697998,
+      "cpu_seconds": 93.39643400000001,
+      "peak_observed_process_group_RSS_bytes": 933421056,
+      "aggregate_observed_disk_bytes": 14314746,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "-S",
+        "/home/btu/projects/atlas_hh_phase10_v1",
+        "-B",
+        "/home/btu/build/atlas_hh_phase10_v1",
+        "-DATLAS_BUILD_PHASE10=ON",
+        "-DBUILD_TESTING=ON",
+        "-DDELPHES_ROOT=/home/btu/opt/delphes",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 7.572622263000085,
+      "cpu_seconds": 2.6243169999999996,
+      "peak_observed_process_group_RSS_bytes": 165490688,
+      "aggregate_observed_disk_bytes": 1345777,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "hf_stratification_02",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/stratify_existing.py",
+        "--origins",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_event_details.jsonl",
+        "--native",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/hf_02"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.080317091000325,
+      "cpu_seconds": 4.056099,
+      "peak_observed_process_group_RSS_bytes": 194379776,
+      "aggregate_observed_disk_bytes": 17824805,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_cpp_regression_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "ctest",
+        "--test-dir",
+        "/home/btu/build/atlas_hh_phase10_v1",
+        "--output-on-failure",
+        "-j",
+        "1",
+        "-E",
+        "phase8|phase10"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.8035761800019827,
+      "cpu_seconds": 1.7118060000000006,
+      "peak_observed_process_group_RSS_bytes": 370098176,
+      "aggregate_observed_disk_bytes": 31779507,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_reference_delphes",
+      "command": [
+        "python3",
+        "-B",
+        "simulation/delphes/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.8786438729985093,
+      "cpu_seconds": 3.6857290000000007,
+      "peak_observed_process_group_RSS_bytes": 23793664,
+      "aggregate_observed_disk_bytes": 31811335,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_reference_mg5",
+      "command": [
+        "python3",
+        "-B",
+        "simulation/mg5/scripts/validate_lhe.py",
+        "--background-library",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5162620129995048,
+      "cpu_seconds": 0.29880799999999974,
+      "peak_observed_process_group_RSS_bytes": 26996736,
+      "aggregate_observed_disk_bytes": 31796438,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_reference_new_backgrounds",
+      "command": [
+        "python3",
+        "-B",
+        "simulation/new_backgrounds/scripts/validate_references.py",
+        "--repo",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.8931328269973164,
+      "cpu_seconds": 3.8846760000000002,
+      "peak_observed_process_group_RSS_bytes": 180572160,
+      "aggregate_observed_disk_bytes": 31788467,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_reference_pythia8",
+      "command": [
+        "python3",
+        "-B",
+        "simulation/pythia8/scripts/validate_hepmc3.py",
+        "--repository",
+        "."
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.8178790730016772,
+      "cpu_seconds": 1.594192000000001,
+      "peak_observed_process_group_RSS_bytes": 24649728,
+      "aggregate_observed_disk_bytes": 31809242,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "historical_reference_signal",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "simulation.hh_signal.campaign.validate_references"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.2926181030015869,
+      "cpu_seconds": 1.0396649999999994,
+      "peak_observed_process_group_RSS_bytes": 74883072,
+      "aggregate_observed_disk_bytes": 31780954,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "inactive_generator_contract_02",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/validate_pilot_contract.py",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_future_pilot_contract_02.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26732052299848874,
+      "cpu_seconds": 0.03500299999999079,
+      "peak_observed_process_group_RSS_bytes": 9306112,
+      "aggregate_observed_disk_bytes": 31643058,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "inactive_generator_contract",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase10/scripts/validate_pilot_contract.py",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_future_pilot_contract.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26487733499743626,
+      "cpu_seconds": 0.06982599999999999,
+      "peak_observed_process_group_RSS_bytes": 4325376,
+      "aggregate_observed_disk_bytes": 15738762,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_hf_statistics",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/validate_hf_statistics.py",
+        "--origins",
+        "/home/btu/simulations/hh_phase9/run_01/origins_03/phase9_origins_event_details.jsonl",
+        "--native",
+        "/home/btu/simulations/hh_phase9/run_01/native/phase9_native_events.jsonl",
+        "--hf",
+        "/home/btu/simulations/hh_phase10/run_01/hf_02",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_hf_independent_statistics.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7812526970010367,
+      "cpu_seconds": 0.626945,
+      "peak_observed_process_group_RSS_bytes": 34324480,
+      "aggregate_observed_disk_bytes": 31680739,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase9_review_01",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase10/scripts/review_phase9.py",
+        "--phase9-local",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--phase8-local",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/review_01"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 17.863902044002316,
+      "cpu_seconds": 17.644215,
+      "peak_observed_process_group_RSS_bytes": 192692224,
+      "aggregate_observed_disk_bytes": 14922954,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase9_review_02",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase10/scripts/review_phase9.py",
+        "--phase9-local",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--phase8-local",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/review_02"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 17.33413991600173,
+      "cpu_seconds": 16.700518000000002,
+      "peak_observed_process_group_RSS_bytes": 224473088,
+      "aggregate_observed_disk_bytes": 14925860,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase9_review_03",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase10/scripts/review_phase9.py",
+        "--phase9-local",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--phase8-local",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/review_03"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 17.866442967002513,
+      "cpu_seconds": 17.692145,
+      "peak_observed_process_group_RSS_bytes": 387981312,
+      "aggregate_observed_disk_bytes": 15741056,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase9_review_04",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/review_phase9.py",
+        "--phase9-local",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--phase8-local",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/review_04"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 17.33395567200205,
+      "cpu_seconds": 17.292889000000002,
+      "peak_observed_process_group_RSS_bytes": 200908800,
+      "aggregate_observed_disk_bytes": 15745741,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_phase9_review_05",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/review_phase9.py",
+        "--phase9-local",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--phase8-local",
+        "/home/btu/simulations/hh_phase8/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/review_05"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 18.62800319500093,
+      "cpu_seconds": 18.401232,
+      "peak_observed_process_group_RSS_bytes": 194502656,
+      "aggregate_observed_disk_bytes": 18515731,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_precision_review_02",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/validate_precision.py",
+        "--plans",
+        "/home/btu/simulations/hh_phase10/run_01/precision_02",
+        "--phase9",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_precision_independent_review_02.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5736959149980976,
+      "cpu_seconds": 0.41667,
+      "peak_observed_process_group_RSS_bytes": 31956992,
+      "aggregate_observed_disk_bytes": 34055316,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "independent_precision_review",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/validate_precision.py",
+        "--plans",
+        "/home/btu/simulations/hh_phase10/run_01/precision_01",
+        "--phase9",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_precision_independent_review.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5129478070011828,
+      "cpu_seconds": 0.316752,
+      "peak_observed_process_group_RSS_bytes": 32219136,
+      "aggregate_observed_disk_bytes": 18493944,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "native_photon_observability",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase10_v1/analysis/phase10/phase10_photon_observability",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_native_photon_observability.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 12.744139583002834,
+      "cpu_seconds": 12.512067999999985,
+      "peak_observed_process_group_RSS_bytes": 819847168,
+      "aggregate_observed_disk_bytes": 14919856,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "native_photon_observability_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "/home/btu/build/atlas_hh_phase10_v1/standalone_final/phase10_photon_observability",
+        "--manifest",
+        "/home/btu/simulations/hh_phase8/run_01/phase8_local_manifest.json",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_native_photon_observability_final.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 9.265564512003039,
+      "cpu_seconds": 9.178062999999996,
+      "peak_observed_process_group_RSS_bytes": 819896320,
+      "aggregate_observed_disk_bytes": 31628376,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase10_methods_final_02",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase10/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5872119870000461,
+      "cpu_seconds": 0.29712199999999994,
+      "peak_observed_process_group_RSS_bytes": 28454912,
+      "aggregate_observed_disk_bytes": 34075127,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase10_methods_final",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase10/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2645176719997835,
+      "cpu_seconds": 0.12311300000000001,
+      "peak_observed_process_group_RSS_bytes": 4718592,
+      "aggregate_observed_disk_bytes": 31700676,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase8_python_regression_final",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase8/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7856916630007618,
+      "cpu_seconds": 0.28433699999999995,
+      "peak_observed_process_group_RSS_bytes": 29523968,
+      "aggregate_observed_disk_bytes": 31736110,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "phase9_python_regression_final",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase9/tests",
+        "-p",
+        "test_phase9_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.26970340499974554,
+      "cpu_seconds": 0.15166999999999997,
+      "peak_observed_process_group_RSS_bytes": 4718592,
+      "aggregate_observed_disk_bytes": 31723867,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "photon_feasibility_01",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/photon_feasibility.py",
+        "--repo",
+        "/home/btu/projects/atlas_hh_phase10_v1",
+        "--phase9",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--native-observability",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_native_photon_observability.json",
+        "--output-dir",
+        "/home/btu/simulations/hh_phase10/run_01"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.775633833000029,
+      "cpu_seconds": 0.5706589999999998,
+      "peak_observed_process_group_RSS_bytes": 188915712,
+      "aggregate_observed_disk_bytes": 18490038,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "physical_gate_matrix",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/build_gate_matrix.py",
+        "--source-review",
+        "/home/btu/simulations/hh_phase10/run_01/review_05/phase10a_review_receipt.json",
+        "--heavy-flavour",
+        "/home/btu/simulations/hh_phase10/run_01/hf_02/phase10_hf_summary.json",
+        "--photon",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_photon_observability.json",
+        "--sideband",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_synthetic_sideband_tests.json",
+        "--precision",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_precision_independent_review.json",
+        "--pilot",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_future_pilot_contract_02.json",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/phase10_physics_gate_matrix.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25954035999893676,
+      "cpu_seconds": 0.050822,
+      "peak_observed_process_group_RSS_bytes": 4587520,
+      "aggregate_observed_disk_bytes": 31647354,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "physical_policy_negative_tests",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase10/tests",
+        "-p",
+        "test_*gate*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2596333740002592,
+      "cpu_seconds": 0.08418299999999998,
+      "peak_observed_process_group_RSS_bytes": 0,
+      "aggregate_observed_disk_bytes": 31650850,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "precision_classification_final",
+      "command": [
+        "python3",
+        "-B",
+        "analysis/phase10/scripts/precision_plan.py",
+        "--phase9",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/precision_02"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.606123583002045,
+      "cpu_seconds": 0.22165599999999996,
+      "peak_observed_process_group_RSS_bytes": 25812992,
+      "aggregate_observed_disk_bytes": 34051574,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "precision_methods_01",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "analysis/phase10/tests",
+        "-p",
+        "test_precision_plan.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25793749099830166,
+      "cpu_seconds": 0.045672,
+      "peak_observed_process_group_RSS_bytes": 5242880,
+      "aggregate_observed_disk_bytes": 14930251,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "precision_planning_01",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "analysis/phase10/scripts/precision_plan.py",
+        "--phase9",
+        "/home/btu/simulations/hh_phase9/run_01",
+        "--output",
+        "/home/btu/simulations/hh_phase10/run_01/precision_01"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25563444899671595,
+      "cpu_seconds": 0.09537300000000001,
+      "peak_observed_process_group_RSS_bytes": 4456448,
+      "aggregate_observed_disk_bytes": 15724291,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "standalone_build_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "--build",
+        "/home/btu/build/atlas_hh_phase10_v1/standalone_final",
+        "--parallel",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 103.10710508200282,
+      "cpu_seconds": 101.87106100000001,
+      "peak_observed_process_group_RSS_bytes": 941699072,
+      "aggregate_observed_disk_bytes": 31023225,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "standalone_configure_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "cmake",
+        "-S",
+        "/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10",
+        "-B",
+        "/home/btu/build/atlas_hh_phase10_v1/standalone_final",
+        "-DBUILD_TESTING=ON",
+        "-DDELPHES_ROOT=/home/btu/opt/delphes",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=/home/btu/miniforge3/envs/atlas-hh-root/bin/x86_64-conda-linux-gnu-c++"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 12.570388356998592,
+      "cpu_seconds": 3.435092,
+      "peak_observed_process_group_RSS_bytes": 165761024,
+      "aggregate_observed_disk_bytes": 19506675,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    },
+    {
+      "label": "standalone_cpp_python_regression_final",
+      "command": [
+        "/home/btu/miniforge3/bin/conda",
+        "run",
+        "--no-capture-output",
+        "-p",
+        "/home/btu/miniforge3/envs/atlas-hh-root",
+        "ctest",
+        "--test-dir",
+        "/home/btu/build/atlas_hh_phase10_v1/standalone_final",
+        "--output-on-failure",
+        "-j",
+        "1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.573352679999516,
+      "cpu_seconds": 2.34042,
+      "peak_observed_process_group_RSS_bytes": 457666560,
+      "aggregate_observed_disk_bytes": 31767691,
+      "resource_failure": null,
+      "ceilings": {
+        "wall_seconds": 14400,
+        "cpu_seconds": 14400,
+        "disk_bytes": 2147483648,
+        "jobs": 1,
+        "workers": 1
+      },
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_physical_events": 0
+    }
+  ],
+  "failure_policy": "Four independent-review checker attempts failed and are retained; repaired schema/binding bugs have focused negative tests; finalA05 only is the accepted audit. No physical/generator execution occurred.",
+  "scope": "Registered computational jobs only; excludes source editing, small agent fixtures, Git/network delivery and standalone read-only hash auditing."
+}

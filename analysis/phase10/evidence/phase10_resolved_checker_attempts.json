@@ -1,0 +1,67 @@
+{
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "RESOLVED_FINAL_A05_PASS",
+  "attempts": [
+    {
+      "label": "independent_phase9_review_01",
+      "exit_code": 1,
+      "log_sha256": "2f588854492f095b3485a255af2caaa3e268858c5480f3ef3a19d08b3879cb32",
+      "last_lines": [
+        "    lo,hi=wilson(count,1000);close(r['wilson_lower'],lo,'WILSON_LOW');close(r['wilson_upper'],hi,'WILSON_HIGH');el,eh,one=rare_exact(count,1000)",
+        "                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/scripts/review_phase9.py\", line 33, in close",
+        "    demand(a.is_finite() and abs(a-e)<=max(Decimal('2e-23'),abs(e)*Decimal('5e-11')),'NUMERIC_MISMATCH_'+reason)",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/source/hf_stratification.py\", line 18, in demand",
+        "    if not ok: raise ValueError(reason)",
+        "               ^^^^^^^^^^^^^^^^^^^^^^^^",
+        "ValueError: NUMERIC_MISMATCH_WILSON_LOW"
+      ]
+    },
+    {
+      "label": "independent_phase9_review_02",
+      "exit_code": 1,
+      "log_sha256": "cfe2c8df07b556f7f6026719c45926ba3b3cd7c3aaf50e28db393f356aef5b1c",
+      "last_lines": [
+        "                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/scripts/review_phase9.py\", line 212, in exact_publication",
+        "    raw=subprocess.check_output(['git','show',EXECUTED+':'+row['path']],cwd=REPO);demand(hashlib.sha256(raw).hexdigest()==row['sha256'] and len(raw)==row['bytes'],'EXECUTED_SOURCE_BLOB_IDENTITY_'+row['path']);source_count+=1",
+        "                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/source/hf_stratification.py\", line 19, in demand",
+        "    if not ok: raise ValueError(reason)",
+        "               ^^^^^^^^^^^^^^^^^^^^^^^^",
+        "ValueError: EXECUTED_SOURCE_BLOB_IDENTITY_metadata/phase9_quality_gates.json"
+      ]
+    },
+    {
+      "label": "independent_phase9_review_03",
+      "exit_code": 1,
+      "log_sha256": "8e14a4c1ad9fc0e74d9967a5b88d42d36c43d83ba022edd82ebd170c46a7c804",
+      "last_lines": [
+        "                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/scripts/review_phase9.py\", line 228, in exact_publication",
+        "    raw=subprocess.check_output(['git','show',BASE+':'+row['path']],cwd=REPO);local=(REPO/row['path']).read_bytes();demand(raw==local and hashlib.sha256(raw).hexdigest()==row['sha256'] and len(raw)==row['bytes'],'BASE_LOCAL_REMOTE_RECEIPT_BLOB_'+row['path'])",
+        "                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/source/hf_stratification.py\", line 19, in demand",
+        "    if not ok: raise ValueError(reason)",
+        "               ^^^^^^^^^^^^^^^^^^^^^^^^",
+        "ValueError: BASE_LOCAL_REMOTE_RECEIPT_BLOB_CMakeLists.txt"
+      ]
+    },
+    {
+      "label": "independent_phase9_review_04",
+      "exit_code": 1,
+      "log_sha256": "b7101f63c784178f11d42878aec2751ea3b0d8cdd13d646ce250144fe36f696d",
+      "last_lines": [
+        "                            ^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/scripts/review_phase9.py\", line 255, in main",
+        "    hm=json.loads((a.phase8_local/'phase8_histogram_manifest.json').read_text());hv=json.loads((a.phase8_local/'native/phase8_native_histogram_validation.json').read_text());demand(hm['numerical_histogram_content_sha256']==hv['numerical_histogram_content_sha256'] and len(hm['histograms'])==4668,'HISTORICAL_ROOT_CANONICAL_IDENTITY')",
+        "                                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/home/btu/projects/atlas_hh_phase10_v1/analysis/phase10/source/hf_stratification.py\", line 19, in demand",
+        "    if not ok: raise ValueError(reason)",
+        "               ^^^^^^^^^^^^^^^^^^^^^^^^",
+        "ValueError: HISTORICAL_ROOT_CANONICAL_IDENTITY"
+      ]
+    }
+  ],
+  "not_independent_physics_replicas": true
+}

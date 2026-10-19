@@ -1,0 +1,16 @@
+{
+  "status": "PASS_METADATA_CLASSIFICATION_ONLY_CHANGE",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "old_output": "/home/btu/simulations/hh_phase10/run_01/precision_01",
+  "new_output": "/home/btu/simulations/hh_phase10/run_01/precision_02",
+  "all_other_output_files_byte_identical": true,
+  "only_change": {
+    "file": "phase10_precision_independent_checks.json",
+    "field": "evidence_class",
+    "old": "HISTORICAL_SOURCE_AUDIT_AND_NUMERICAL_METHOD_CROSSCHECK",
+    "new": "HISTORICAL_SOURCE_AUDIT"
+  },
+  "new_numerical_values": false,
+  "accepted_independent_review": "phase10_precision_independent_review_02.json",
+  "earlier_review_receipt_preserved": true
+}
