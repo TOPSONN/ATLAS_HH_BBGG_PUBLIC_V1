@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_PHASE12_PARTIAL_RECOVERY",
+  "observed_UTC": "2026-10-19T09:55:41.349227+00:00",
+  "runtime_current_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "runtime_recheck_error": null,
+  "runtime_snapshot_status": "THREE_SEQUENTIAL_SNAPSHOTS_STABLE_WITH_LIMITS",
+  "new_baseline_approved": false,
+  "old_phase11_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "actual_writer_identified": false,
+  "phase7i_dependency_impact": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+  "PDF_interface_status": "PASS_ISOLATED_NATIVE_PDF_INTERFACE_WITH_LIMITS",
+  "PDF_MG5_alpha_binding": "UNVERIFIED",
+  "reference_diagnostic": {
+    "declared_reference": {
+      "scale_GeV": 4.1799998,
+      "value": 0.2544023564420006,
+      "scale_source_key": "MZ",
+      "value_source_key": "AlphaS_MZ",
+      "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+      "name_0130_does_not_define_value_at_reference": true
+    },
+    "native_alpha_at_declared_Q": 0.254403024565842,
+    "absolute_difference": 6.681238414185664e-07,
+    "relative_difference": 2.626248635282933e-06,
+    "within_strict_diagnostic_tolerance": false,
+    "strict_diagnostic_relative_tolerance": 1e-06,
+    "comparison_role": "DIAGNOSTIC_NOT_OFFICIAL_ACCURACY_TEST",
+    "reference_is_exact_alpha_table_knot": false,
+    "alpha_table_bracket": [
+      {
+        "Q_GeV": 3.7262747,
+        "alpha_s": 0.26466316
+      },
+      {
+        "Q_GeV": 4.23139,
+        "alpha_s": 0.25335777
+      }
+    ],
+    "publisher_interpolation_accuracy_bound": null,
+    "physical_ME_or_shower_alpha_binding": "UNVERIFIED_NOT_EXECUTED"
+  },
+  "selected_pilot_component": "NONE_READY",
+  "MG5_PARSER_EXECUTED": false,
+  "MATCHING_VALIDATED": false,
+  "physical_execution_authorized": false,
+  "dispatcher": null,
+  "independent_human_review": false,
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "receipt_identities": {
+    "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_raw_snapshots.json": {
+      "bytes": 8652,
+      "sha256": "ddd8d30cb4d8dbfcf7bfb7a7e4dab5248ba299a8ad5d2efa55ecc49fa7525638"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_baseline_proposal.json": {
+      "bytes": 2293,
+      "sha256": "6e820012db66c55d36af3d685b0d293e1fd03b79897eb96ea9761c16f7aa069e"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_writer_attribution.json": {
+      "bytes": 11342,
+      "sha256": "a3ee496fdfe10476c74919e81589f073488b7d5f0523131f30a9fcd4fc3c3f8b"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/pdf_readback_04/pdf_member_readback.json": {
+      "bytes": 20635,
+      "sha256": "13b49445a86537ec68e31d48c1438276b8d8d05f233df91f79ae166d72cb7b55"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/pdf_readback_04/pdf_alpha_reference_checks.json": {
+      "bytes": 3266,
+      "sha256": "c800618d3f03a0e03b0c8560875715306b4a15f2bef2607796dc759375c4a671"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/acquisition_receipt.json": {
+      "bytes": 1603,
+      "sha256": "08881615f7f2b099cf648363b23157ed61bb66086edb17d487fd14f2998d4cc0"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/phase7i_dependency_impact.json": {
+      "bytes": 34196,
+      "sha256": "d3f7062b0480d771742df576ca693d557ae3481107f2214abe34cd8c2cf30ce2"
+    }
+  },
+  "contract_identity": {
+    "bytes": 3746,
+    "sha256": "9faa7790d875d70f3b065d16530891b9b1bd38b88027b478e3ba365899acc6d8"
+  }
+}

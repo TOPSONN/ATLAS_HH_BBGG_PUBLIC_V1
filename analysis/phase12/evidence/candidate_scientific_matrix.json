@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "selected_pilot_component": "NONE_READY",
+  "rows": [
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Model",
+      "status": "VALIDATED_EXACT_SOURCE",
+      "detail": "P11 static source semantics retained; current raw model witnesses bound. sm/default MB4.7 MC0; incoming p4 excludes b and includes c."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Restriction",
+      "status": "VALIDATED_EXACT_SOURCE",
+      "detail": "P11 static source semantics retained; current raw model witnesses bound. sm/default MB4.7 MC0; incoming p4 excludes b and includes c."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "PDF_member",
+      "status": "PROPOSED_WITH_EVIDENCE",
+      "detail": "Actual external member0/263400 DataVersion2, nine native flavours/max4/no bottom, standalone LHAPDF6.5.6 validated; NOT MG5 binding."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "AlphaS",
+      "status": "PROPOSED_WITH_EVIDENCE",
+      "detail": "ipol; declared referenceQ4.1799998/value.2544023564420006; native .254403024565842, strict1e-6 diagnosticfalse; nativeat91.1876=.12470053368074485. ME/shower binding UNVERIFIED."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Threshold",
+      "status": "PROPOSED_WITH_EVIDENCE",
+      "detail": "PDFmax4 variable; charm1.275/bottom4.1799998 evolution metadata, bottomnotactivated. Metadata thresholds are not ME pole masses or proof of ipol breakpoint behavior."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Photon_IR",
+      "status": "BLOCKED",
+      "detail": "P11 LO smoothcone is_a_j bottomcoverage/physicaltarget closure remains blocked; no new threshold."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Cuts",
+      "status": "BLOCKED",
+      "detail": "Null generation cuts; no sensitivity measurements authorized."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Scale",
+      "status": "BLOCKED",
+      "detail": "Null central scale; no historical default substituted."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Shower",
+      "status": "UNVERIFIED",
+      "detail": "No Pythia execution; QCD/QED/g->bb/cc effective settings unbound."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Matching",
+      "status": "NOT_APPLICABLE",
+      "detail": "No merged multiplicity is introduced for isolated LO review target; generator exclusivity and shower overlap remain UNVERIFIED."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Weights",
+      "status": "UNVERIFIED",
+      "detail": "No hard events; generator/merging signed weight and acceptance normalization unvalidated."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Runtime_identity",
+      "status": "BLOCKED",
+      "detail": "Three sequential current raw observations and proposed copy only; baseline NOT_APPROVED, writer UNKNOWN, old P11 raw gate BLOCKED."
+    },
+    {
+      "candidate": "MASSIVE_4F_BB_COMPONENT",
+      "field": "Exact_process_parser",
+      "status": "BLOCKED",
+      "detail": "NOT_VALIDATED; future request is comment-only and NOT_AUTHORIZED."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Model",
+      "status": "VALIDATED_EXACT_SOURCE",
+      "detail": "P11 static source semantics retained; current raw model witnesses bound. sm-no_b_mass MB=MC=0; proposed p5/j5 includes b/c."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Restriction",
+      "status": "VALIDATED_EXACT_SOURCE",
+      "detail": "P11 static source semantics retained; current raw model witnesses bound. sm-no_b_mass MB=MC=0; proposed p5/j5 includes b/c."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "PDF_member",
+      "status": "BLOCKED",
+      "detail": "New nf4 evidence does not select a compatible common5F PDF member."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "AlphaS",
+      "status": "UNVERIFIED",
+      "detail": "No new 5F ME/PDF/ISR/FSR alpha binding."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Threshold",
+      "status": "UNVERIFIED",
+      "detail": "5F thresholds and matching flavour boundary remain unreviewed."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Photon_IR",
+      "status": "BLOCKED",
+      "detail": "P11 LO smoothcone is_a_j bottomcoverage/physicaltarget closure remains blocked; no new threshold."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Cuts",
+      "status": "BLOCKED",
+      "detail": "Null generation cuts; no sensitivity measurements authorized."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Scale",
+      "status": "BLOCKED",
+      "detail": "Null central scale; no historical default substituted."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Shower",
+      "status": "UNVERIFIED",
+      "detail": "No Pythia execution; QCD/QED/g->bb/cc effective settings unbound."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Matching",
+      "status": "BLOCKED",
+      "detail": "Generic MLM/CKKW-L source is not exact 0/1/2 family validation; merging scale null."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Weights",
+      "status": "UNVERIFIED",
+      "detail": "No hard events; generator/merging signed weight and acceptance normalization unvalidated."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Runtime_identity",
+      "status": "BLOCKED",
+      "detail": "Three sequential current raw observations and proposed copy only; baseline NOT_APPROVED, writer UNKNOWN, old P11 raw gate BLOCKED."
+    },
+    {
+      "candidate": "COMMON_5F_AA_JETS_COMPONENT",
+      "field": "Exact_process_parser",
+      "status": "BLOCKED",
+      "detail": "NOT_VALIDATED; future request is comment-only and NOT_AUTHORIZED."
+    }
+  ],
+  "model_current_raw_witnesses": [
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_default.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_default.dat",
+      "bytes": 1437,
+      "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53",
+      "exact_Phase11_source_identity_match": true
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/restrict_no_b_mass.dat",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/restrict_no_b_mass.dat",
+      "bytes": 1438,
+      "sha256": "b148870e061caf19704fc9557a00f05aa2e4d0c9c311291cd199ca0a057f4c8f",
+      "exact_Phase11_source_identity_match": true
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/parameters.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/parameters.py",
+      "bytes": 15693,
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+      "exact_Phase11_source_identity_match": true
+    },
+    {
+      "path": "/home/btu/opt/mg5amcnlo/models/sm/particles.py",
+      "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/models/sm/particles.py",
+      "bytes": 10444,
+      "sha256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414",
+      "exact_Phase11_source_identity_match": true
+    }
+  ],
+  "new_evidence_scope": "Only exact runtime/PDF dependencies changed; no full event analysis repeated.",
+  "physical_authorization": false
+}

@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "evidence_class": "INDEPENDENT_ALGEBRA_METHOD_TEST",
+  "historical_identities": {
+    "A": {
+      "bytes": 9212,
+      "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85"
+    },
+    "B": {
+      "bytes": 9239,
+      "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506"
+    },
+    "C": {
+      "bytes": 9266,
+      "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a"
+    }
+  },
+  "current_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "historical_comparisons": [
+    {
+      "historical_name": "C",
+      "historical_identity": {
+        "bytes": 9266,
+        "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a"
+      },
+      "current_identity": {
+        "bytes": 9302,
+        "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+      },
+      "historical_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 4,
+      "raw_equal": false,
+      "semantic_equal": true,
+      "old_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "current_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "semantic_changed_setting_count": 0,
+      "raw_operations": [
+        {
+          "operation": "insert",
+          "old_range": [
+            1515,
+            1515
+          ],
+          "new_range": [
+            1515,
+            1527
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "87d1ac70d472eb8312a728c59fa4f66a7fadb1d32f18caa33a10ec6dd8cd6236",
+          "old_bytes": 0,
+          "new_bytes": 12,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            1774,
+            1774
+          ],
+          "new_range": [
+            1786,
+            1798
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "26c4bee39d52feca9ac702b55c1677736a51d1ccee1c07d435dfb3df5a3e2ddc",
+          "old_bytes": 0,
+          "new_bytes": 12,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            3491,
+            3491
+          ],
+          "new_range": [
+            3515,
+            3527
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "26c4bee39d52feca9ac702b55c1677736a51d1ccee1c07d435dfb3df5a3e2ddc",
+          "old_bytes": 0,
+          "new_bytes": 12,
+          "changed_bytes_whitespace_only": true
+        }
+      ]
+    },
+    {
+      "historical_name": "B",
+      "historical_identity": {
+        "bytes": 9239,
+        "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506"
+      },
+      "current_identity": {
+        "bytes": 9302,
+        "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+      },
+      "historical_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 7,
+      "raw_equal": false,
+      "semantic_equal": true,
+      "old_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "current_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "semantic_changed_setting_count": 0,
+      "raw_operations": [
+        {
+          "operation": "insert",
+          "old_range": [
+            1512,
+            1512
+          ],
+          "new_range": [
+            1512,
+            1533
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "e397812043a6183a6468781feac8410bd268a8a5aa06aad2c253782077fb87be",
+          "old_bytes": 0,
+          "new_bytes": 21,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            1762,
+            1762
+          ],
+          "new_range": [
+            1783,
+            1804
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "1208d39f730be7505ea8640b17d84bfdfb8ce88aea92bee2fdc10195e43f64f6",
+          "old_bytes": 0,
+          "new_bytes": 21,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            3470,
+            3470
+          ],
+          "new_range": [
+            3512,
+            3533
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "1208d39f730be7505ea8640b17d84bfdfb8ce88aea92bee2fdc10195e43f64f6",
+          "old_bytes": 0,
+          "new_bytes": 21,
+          "changed_bytes_whitespace_only": true
+        }
+      ]
+    },
+    {
+      "historical_name": "A",
+      "historical_identity": {
+        "bytes": 9212,
+        "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85"
+      },
+      "current_identity": {
+        "bytes": 9302,
+        "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+      },
+      "historical_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 10,
+      "raw_equal": false,
+      "semantic_equal": true,
+      "old_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "current_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+      "semantic_changed_setting_count": 0,
+      "raw_operations": [
+        {
+          "operation": "insert",
+          "old_range": [
+            1509,
+            1509
+          ],
+          "new_range": [
+            1509,
+            1539
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "4ba60ffaca94d501c878a4d5dafeea14d69fdfbd80fae780bb1da23de8fb595c",
+          "old_bytes": 0,
+          "new_bytes": 30,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            1750,
+            1750
+          ],
+          "new_range": [
+            1780,
+            1810
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "03073a894ff6ca2dc1730b57d981d2853d87528def1ce3e2022033625f9a8661",
+          "old_bytes": 0,
+          "new_bytes": 30,
+          "changed_bytes_whitespace_only": true
+        },
+        {
+          "operation": "insert",
+          "old_range": [
+            3449,
+            3449
+          ],
+          "new_range": [
+            3509,
+            3539
+          ],
+          "old_chunk_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "new_chunk_sha256": "03073a894ff6ca2dc1730b57d981d2853d87528def1ce3e2022033625f9a8661",
+          "old_bytes": 0,
+          "new_bytes": 30,
+          "changed_bytes_whitespace_only": true
+        }
+      ]
+    }
+  ],
+  "serialization_chain": [
+    {
+      "rounds_all_three_keys": 0,
+      "bytes": 9212,
+      "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85",
+      "matches_known_historical": [
+        "A"
+      ],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 1,
+      "bytes": 9221,
+      "sha256": "090a2bafc86bf80f270f8959c25797eb5728c9d5eaae04f6ac1e16481aad064d",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 2,
+      "bytes": 9230,
+      "sha256": "a7dc660160abdf155abce6fbaa1c39f63ca358d4cecc43c5d2df59f79d67410b",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 3,
+      "bytes": 9239,
+      "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506",
+      "matches_known_historical": [
+        "B"
+      ],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 4,
+      "bytes": 9248,
+      "sha256": "e050ea7dddc6599469af7e5d6e21eb3d27485cc0f733f9f75ed4d01022ddf38d",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 5,
+      "bytes": 9257,
+      "sha256": "755f0ad1a97f0bb71b9c394e893bead1189646f26b47789789705f63c825ee6d",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 6,
+      "bytes": 9266,
+      "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a",
+      "matches_known_historical": [
+        "C"
+      ],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 7,
+      "bytes": 9275,
+      "sha256": "d8edc20bdbb7a46098d1f62b27830e4d3634fa4dda31b652d7e405b2c7d6839e",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 8,
+      "bytes": 9284,
+      "sha256": "19ac86ef38f32e3f987eb210a6e7ec560686028fa2b9985c38957f3469dc2037",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 9,
+      "bytes": 9293,
+      "sha256": "9460d5e76529339b1547e22feb2586751c44ba8de9af18f97b8d26ba441e845e",
+      "matches_known_historical": [],
+      "matches_current": false
+    },
+    {
+      "rounds_all_three_keys": 10,
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1",
+      "matches_known_historical": [],
+      "matches_current": true
+    }
+  ],
+  "serializer_source_identity": {
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "path": "/home/btu/opt/mg5amcnlo/madgraph/interface/extended_cmd.py",
+    "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/interface/extended_cmd.py",
+    "bytes": 129870,
+    "sha256": "6a4f1616ffd7910850e6776ae3f922965a757a7dee9130990e0a579b3ad70c56",
+    "witnesses": [
+      {
+        "line": 2006,
+        "text": "for line in open(basefile):"
+      },
+      {
+        "line": 2018,
+        "text": "value, comment = value.split('#',1)"
+      },
+      {
+        "line": 2040,
+        "text": "new_line = '%s = %s # %s \\n' % (key, value, comment)"
+      },
+      {
+        "line": 2055,
+        "text": "writer = open(filepath,'w')"
+      }
+    ],
+    "imported_or_executed": false
+  },
+  "serializer_behavior": "SERIALIZER_BEHAVIOR_REPRODUCED",
+  "actual_writer": "UNKNOWN",
+  "actual_writer_identified": false,
+  "private_config_bytes_published": false,
+  "limits": "An exact transformation match does not identify its historical caller",
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}

@@ -1,0 +1,31 @@
+{
+  "label": "acquisition_negative_methods",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "analysis/phase12/tests",
+    "-p",
+    "test_acquisition.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.27451299500171444,
+  "cpu_seconds": 0.07792299999999999,
+  "peak_observed_process_group_RSS_bytes": 10092544,
+  "aggregate_observed_disk_bytes": 1091264,
+  "resource_failure": null,
+  "ceilings": {
+    "wall_seconds": 900,
+    "cpu_seconds": 900,
+    "disk_bytes": 536870912,
+    "jobs": 1,
+    "workers": 1
+  },
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_physical_events": 0
+}

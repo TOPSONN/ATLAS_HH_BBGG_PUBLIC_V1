@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "candidate": "NNPDF30_lo_as_0130_nf_4",
+  "member": 0,
+  "expected_LHAPDF_version": "6.5.6",
+  "LHAPDF_ID": 263400,
+  "finite_xQ_points": [
+    [
+      0.0001,
+      10.0
+    ],
+    [
+      0.01,
+      91.1876
+    ],
+    [
+      0.1,
+      1000.0
+    ],
+    [
+      0.5,
+      100.0
+    ]
+  ],
+  "alpha_reference_relative_tolerance": 1e-06,
+  "domain_policy": "WRAPPER_REJECT_BEFORE_NATIVE_INTERPOLATION; default native extrapolation behavior not claimed to reject",
+  "MG5_parser_executed": false,
+  "matching_validated": false,
+  "physical_generation_authorized": false,
+  "alpha_reference_comparison_role": "DIAGNOSTIC_NOT_OFFICIAL_ACCURACY_TEST"
+}

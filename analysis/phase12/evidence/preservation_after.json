@@ -1,0 +1,71 @@
+{
+  "status": "PASS_EXACT_MONITORED_HISTORICAL_AND_INSTALLED_BYTES",
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "observed_UTC": "2026-10-19T09:57:21.295986+00:00",
+  "historical_file_count": 4764,
+  "historical_bytes": 2778583870,
+  "before_manifest_sha256": "2d4b679c48d35d7248c39f9ed1c47c79dd0924dc3919628f4b3c31d5c5eb8d6a",
+  "historical_errors": [],
+  "installed_read_only_files": 24,
+  "installed_byte_errors": [],
+  "scope": "Prior2874monitoredhistoricalfiles plus everyPhase11result/receipt/export-independentlocalartifact and everyPhase11trackedsourcefile. Existinginput/Pdfdata/envLHAPDFfiles separately monitored; nohost-all-filesclaim.",
+  "old_source_controls": {
+    "Phase7I": {
+      "path": "/home/btu/projects/atlas_hh_phase7i_b80e1677",
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "index_sha256": "2661d7332a5b50f4626631c9ccce5cfbfaceff9f0384a2e85e523a720ea42d18"
+    },
+    "Phase8": {
+      "path": "/home/btu/projects/atlas_hh_phase8_v1",
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "index_sha256": "67954b682f4401670304c84d9e50cf9c8be0f42668e4ab0cbee5a3da7c91d3e6"
+    },
+    "Phase9": {
+      "path": "/home/btu/projects/atlas_hh_phase9_v1",
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "index_sha256": "16bafc85092721f3dd5c70764c4c9516049be363fb7211c8d8564fa4ced7f3cb"
+    },
+    "Phase10": {
+      "path": "/home/btu/projects/atlas_hh_phase10_v1",
+      "head": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+      "index_sha256": "8552efe241f2b866048e2fce800ab73156562128b5372bd4e6e8a9543001582a"
+    }
+  },
+  "old_Phase11_source_HEAD": "988c5a8b23f0ae3edf536bbabd17eef291717335",
+  "old_Phase11_tracked_worktree_and_index_clean": true,
+  "PR24_to_28": {
+    "24": {
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "25": {
+      "head": "8ecd91106acb1dae065cde14f1d62867d10b073f",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "26": {
+      "head": "ebae34fdaf9ccb09c77bd47cb1c7827fa560de0a",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "27": {
+      "head": "7b65428648bd3b1040721cf569604e6d8ad1625c",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    },
+    "28": {
+      "head": "988c5a8b23f0ae3edf536bbabd17eef291717335",
+      "draft": true,
+      "state": "open",
+      "merged": false
+    }
+  },
+  "historical_plots_untouched": true,
+  "new_PDF_or_PNG_figures": 0,
+  "runtime_scope_note": "Installed config matches Phase12 before/after9302bytes. OldPhase11A/B/Crawmismatch remains historical; no newbaseline approval."
+}

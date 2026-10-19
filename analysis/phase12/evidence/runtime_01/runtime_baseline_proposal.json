@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+  "version": "phase12-proposed-runtime-v1",
+  "status": "PROPOSED_UNAPPROVED",
+  "new_baseline_approved": false,
+  "physical_execution_authorized": false,
+  "dispatcher": null,
+  "old_raw_identities": {
+    "A": {
+      "bytes": 9212,
+      "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85"
+    },
+    "B": {
+      "bytes": 9239,
+      "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506"
+    },
+    "C": {
+      "bytes": 9266,
+      "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a"
+    }
+  },
+  "new_observed_raw_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "versioned_private_byte_copy": "/home/btu/simulations/hh_phase12/run_01/runtime_01/private/phase12-proposed-runtime-v1.raw.txt",
+  "private_copy_sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1",
+  "observed_effective_settings_allowlisted": {
+    "fortran_compiler": "x86_64-conda-linux-gnu-gfortran",
+    "cpp_compiler": "x86_64-conda-linux-gnu-g++",
+    "auto_update": "0"
+  },
+  "observed_full_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+  "reason_for_proposed_rebinding": "Preserve original Phase11 hash failure while proposing an independently reviewed current exact-byte binding",
+  "historical_writer": "UNKNOWN",
+  "old_phase11_raw_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "independent_review_requirements": [
+    "Compare historical A/B/C raw identities and exact current private versioned-copy SHA256.",
+    "Review raw-byte differences separately from effective configuration semantics.",
+    "Preserve UNKNOWN actual writer unless direct authorized records identify it.",
+    "Review exact new source revision, filesystem identity and current external dependency closure.",
+    "Do not reinterpret three stable observations as future immutability or independent cold-cache evidence.",
+    "Separate explicit exact-source authorization is required for any parser or physical execution."
+  ],
+  "approval_scope": "No current or future physical authorization; no modification of historical receipt identities"
+}

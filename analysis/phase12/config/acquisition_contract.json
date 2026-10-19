@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "candidate": "NNPDF30_lo_as_0130_nf_4",
+  "member": 0,
+  "LHAPDF_ID": 263400,
+  "distribution_data_version": 2,
+  "allowed_output_parent": "/home/btu/simulations/hh_phase12/run_01",
+  "output_leaf": "public_pdf_01",
+  "aggregate_HTTP_body_budget": 134217728,
+  "single_payload_budget": 83886080,
+  "maximum_selected_distributions": 1,
+  "timeout_seconds": 20,
+  "total_wall_seconds": 120,
+  "expected_roles": [
+    "info",
+    "member"
+  ],
+  "official_base": "https://lhapdfsets.web.cern.ch/current/NNPDF30_lo_as_0130_nf_4/",
+  "terms_review": {
+    "checked": true,
+    "publisher": "NNPDF Collaboration; official LHAPDF CERN data distribution",
+    "public_download_and_scientific_use_documented": true,
+    "license_identifier": "UNSPECIFIED_IN_INSPECTED_DATASET_SOURCES",
+    "redistribution_permission_claimed": false,
+    "publisher_checksum": null,
+    "payload_publisher_cryptographic_authenticity": "NOT_ESTABLISHED_WITHOUT_PUBLISHER_CHECKSUM_OR_SIGNATURE",
+    "sources": [
+      "https://nnpdf.mi.infn.it/for-users/tutorials-and-drivers/",
+      "https://nnpdf.mi.infn.it/nnpdf3-0/",
+      "https://www.lhapdf.org/pdfsets"
+    ]
+  },
+  "install_into_existing_directories": false,
+  "MG5_import_or_execution": false,
+  "physical_authorization": false
+}

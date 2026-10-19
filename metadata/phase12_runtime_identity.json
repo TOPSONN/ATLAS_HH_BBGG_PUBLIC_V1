@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "evidence_class": "ACTUAL_RAW_RUNTIME_OBSERVATION",
+  "status": "RUNTIME_SNAPSHOT_PROPOSED_WITH_LIMITS",
+  "base_revision": "988c5a8b23f0ae3edf536bbabd17eef291717335",
+  "current_raw_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "path": "/home/btu/opt/mg5amcnlo/input/mg5_configuration.txt",
+  "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt",
+  "filesystem_identity": {
+    "filesystem_id": 4468005691283509779,
+    "block_size": 4096,
+    "fragment_size": 4096,
+    "flags": 4096,
+    "mount_id": "80",
+    "mount_device": "8:48",
+    "mount_point": "/",
+    "filesystem_type": "ext4",
+    "mount_source": "/dev/sdd"
+  },
+  "file_metadata_at_observation": {
+    "device": 2096,
+    "device_major": 8,
+    "device_minor": 48,
+    "inode": 243763,
+    "mode_octal": "0o644",
+    "uid": 1000,
+    "gid": 1000,
+    "links": 1,
+    "bytes": 9302,
+    "atime_ns": 1792401401468967382,
+    "mtime_ns": 1792401400044969536,
+    "ctime_ns": 1792401400044969536
+  },
+  "observation_started_utc": "2026-10-19T09:37:28.868331+00:00",
+  "observation_finished_utc": "2026-10-19T09:37:28.976165+00:00",
+  "snapshot_count": 3,
+  "distinct_snapshot_pids": [
+    129230,
+    129231,
+    129232
+  ],
+  "controller_pid": 129229,
+  "raw_bytes_stable_during_three_observations": true,
+  "file_identity_stable_during_three_observations": true,
+  "cold_cache_independence_claimed": false,
+  "future_immutability_established": false,
+  "effective_settings_allowlisted": {
+    "fortran_compiler": "x86_64-conda-linux-gnu-gfortran",
+    "cpp_compiler": "x86_64-conda-linux-gnu-g++",
+    "auto_update": "0"
+  },
+  "other_unpublished_active_setting_count": 1,
+  "full_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+  "historical_comparisons": [
+    {
+      "name": "C",
+      "historical_identity": {
+        "bytes": 9266,
+        "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a"
+      },
+      "raw_byte_delta": 36,
+      "semantic_equal": true,
+      "semantic_changed_setting_count": 0,
+      "whitespace_only_raw_operations": true,
+      "original_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 4
+    },
+    {
+      "name": "B",
+      "historical_identity": {
+        "bytes": 9239,
+        "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506"
+      },
+      "raw_byte_delta": 63,
+      "semantic_equal": true,
+      "semantic_changed_setting_count": 0,
+      "whitespace_only_raw_operations": true,
+      "original_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 7
+    },
+    {
+      "name": "A",
+      "historical_identity": {
+        "bytes": 9212,
+        "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85"
+      },
+      "raw_byte_delta": 90,
+      "semantic_equal": true,
+      "semantic_changed_setting_count": 0,
+      "whitespace_only_raw_operations": true,
+      "original_payload_evidence": "EXACT_KNOWN_HASH_RECONSTRUCTION_NOT_A_LIVE_OR_BACKUP_READ",
+      "inverse_rounds_per_key": 10
+    }
+  ],
+  "serializer_behavior": "SERIALIZER_BEHAVIOR_REPRODUCED",
+  "serializer_source_identity": {
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "path": "/home/btu/opt/mg5amcnlo/madgraph/interface/extended_cmd.py",
+    "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/interface/extended_cmd.py",
+    "bytes": 129870,
+    "sha256": "6a4f1616ffd7910850e6776ae3f922965a757a7dee9130990e0a579b3ad70c56",
+    "witnesses": [
+      {
+        "line": 2006,
+        "text": "for line in open(basefile):"
+      },
+      {
+        "line": 2018,
+        "text": "value, comment = value.split('#',1)"
+      },
+      {
+        "line": 2040,
+        "text": "new_line = '%s = %s # %s \\n' % (key, value, comment)"
+      },
+      {
+        "line": 2055,
+        "text": "writer = open(filepath,'w')"
+      }
+    ],
+    "imported_or_executed": false
+  },
+  "actual_writer": "UNKNOWN",
+  "actual_writer_identified": false,
+  "authorized_task_execution_records_reviewed": 23,
+  "private_histories_credentials_unrelated_processes_read": false,
+  "invasive_tracing_performed": false,
+  "old_phase11_raw_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "proposed_baseline": {
+    "schema_version": 1,
+    "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+    "version": "phase12-proposed-runtime-v1",
+    "status": "PROPOSED_UNAPPROVED",
+    "new_baseline_approved": false,
+    "physical_execution_authorized": false,
+    "dispatcher": null,
+    "old_raw_identities": {
+      "A": {
+        "bytes": 9212,
+        "sha256": "83d48923f215d20565931e8e0eb6ee986b34658d0bbe6f2e7a75e0400b4d7f85"
+      },
+      "B": {
+        "bytes": 9239,
+        "sha256": "9132f5ddcab8eb45ee00830d3ed9b7582bda67058180288d3f93222a96f74506"
+      },
+      "C": {
+        "bytes": 9266,
+        "sha256": "82a6d1943d0acd139704910dfd0510ee2bd86d06f94a410b5f28e68a45bc3f5a"
+      }
+    },
+    "new_observed_raw_identity": {
+      "bytes": 9302,
+      "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+    },
+    "versioned_private_byte_copy": "/home/btu/simulations/hh_phase12/run_01/runtime_01/private/phase12-proposed-runtime-v1.raw.txt",
+    "private_copy_sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1",
+    "observed_effective_settings_allowlisted": {
+      "fortran_compiler": "x86_64-conda-linux-gnu-gfortran",
+      "cpp_compiler": "x86_64-conda-linux-gnu-g++",
+      "auto_update": "0"
+    },
+    "observed_full_semantic_sha256": "63ffabb654213dac4909bb3c9b6d64780976629620a83970f06c17658b927004",
+    "reason_for_proposed_rebinding": "Preserve original Phase11 hash failure while proposing an independently reviewed current exact-byte binding",
+    "historical_writer": "UNKNOWN",
+    "old_phase11_raw_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+    "independent_review_requirements": [
+      "Compare historical A/B/C raw identities and exact current private versioned-copy SHA256.",
+      "Review raw-byte differences separately from effective configuration semantics.",
+      "Preserve UNKNOWN actual writer unless direct authorized records identify it.",
+      "Review exact new source revision, filesystem identity and current external dependency closure.",
+      "Do not reinterpret three stable observations as future immutability or independent cold-cache evidence.",
+      "Separate explicit exact-source authorization is required for any parser or physical execution."
+    ],
+    "approval_scope": "No current or future physical authorization; no modification of historical receipt identities"
+  },
+  "new_baseline_approved": false,
+  "physical_execution_authorized": false,
+  "private_config_bytes_published": false,
+  "public_evidence": {
+    "runtime_raw_snapshots.json": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_raw_snapshots.json",
+      "bytes": 8652,
+      "sha256": "ddd8d30cb4d8dbfcf7bfb7a7e4dab5248ba299a8ad5d2efa55ecc49fa7525638"
+    },
+    "runtime_exact_diff.json": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_exact_diff.json",
+      "bytes": 11224,
+      "sha256": "44fdd74fd0ababc45533477f8b5bb97dca491a3dc400915f1288d8e561578436"
+    },
+    "runtime_writer_attribution.json": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_writer_attribution.json",
+      "bytes": 11342,
+      "sha256": "a3ee496fdfe10476c74919e81589f073488b7d5f0523131f30a9fcd4fc3c3f8b"
+    },
+    "runtime_baseline_proposal.json": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_baseline_proposal.json",
+      "bytes": 2293,
+      "sha256": "6e820012db66c55d36af3d685b0d293e1fd03b79897eb96ea9761c16f7aa069e"
+    },
+    "runtime_policy_identity.json": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/runtime_01/runtime_policy_identity.json",
+      "bytes": 198,
+      "sha256": "7c3758d884cca4a8038d14a3fbd86c41df08f8a5b751f35193abb63fdc21a89a"
+    }
+  },
+  "worktree_source_sha256": {
+    "analysis/phase12/source/runtime_provenance.py": "fbb3181115ae196037fa36c4530db4d7ae5b1434ddbe9db788cdeab4ce4dad55",
+    "analysis/phase12/scripts/audit_runtime.py": "f9d5b9269aca289f91275f2f642b83526f3cc05b1f6dad1964c145befb56ddaf",
+    "analysis/phase12/config/runtime_proposal.json": "063709516f75051d1b0324ef88eb15d62edb432245efb9b00db5593461f9b86a",
+    "analysis/phase12/tests/test_runtime.py": "581711eead054f822556886819b0924f642209615830accf01b0425972df1f15"
+  },
+  "method_fixture_tests": {
+    "status": "PASS",
+    "count": 26,
+    "scope": "Synthetic runtime and serializer fixtures; no installed target read by fixture tests"
+  },
+  "external_human_approval": false,
+  "new_MG5_processes": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}

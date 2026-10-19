@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "task": "PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1",
+  "base_revision": "988c5a8b23f0ae3edf536bbabd17eef291717335",
+  "selected_pilot_component": "NONE_READY",
+  "new_baseline_approved": false,
+  "old_phase11_raw_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "runtime_proposed_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "runtime_historical_writer": "UNKNOWN",
+  "PDF_candidate": "NNPDF30_lo_as_0130_nf_4",
+  "PDF_member": 0,
+  "PDF_LHAPDF_ID": 263400,
+  "PDF_info_sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162",
+  "PDF_member_sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e",
+  "PDF_native_alpha_type": "ipol",
+  "PDF_declared_alpha_reference": {
+    "scale_GeV": 4.1799998,
+    "value": 0.2544023564420006,
+    "scale_source_key": "MZ",
+    "value_source_key": "AlphaS_MZ",
+    "interpretation": "SET_SPECIFIC_REFERENCE_SCALE; NOT_ASSUMED_ELECTROWEAK_Z_MASS",
+    "name_0130_does_not_define_value_at_reference": true
+  },
+  "native_reference_relative_difference": 2.626248635282933e-06,
+  "reference_field_vs_native_strict_diagnostic_pass": false,
+  "reference_diagnostic_not_official_accuracy_bound": true,
+  "PDF_ME_alpha_binding": "UNVERIFIED",
+  "exact_MG5_parser_status": "NOT_VALIDATED",
+  "MG5_PARSER_EXECUTED": false,
+  "MATCHING_VALIDATED": false,
+  "physical_authorization": false,
+  "dispatcher": null,
+  "approval_override_flag": null,
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "unresolved_settings": {
+    "runtime_baseline_approval": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Separate exact-byte baseline review; priorwriter UNKNOWN cannotbe erased."
+    },
+    "PDF_MG5_backend_binding": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Separately authorized exactparser/backend readback; this tasknativeLHAPDFonly."
+    },
+    "ME_ISR_FSR_alpha_threshold_conventions": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Freeze actual effective native alpha running/threshold and shower interfaces; membername doesnotdefinealpha(MZ)."
+    },
+    "photon_IR": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Massivebottom coverage and directphoton target, allnumbersunvalidated."
+    },
+    "generation_cuts": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Target-derived finite cuts and later separatelyauthorizedsensitivity."
+    },
+    "central_scale": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Exactscaleexpression and physicsrationale."
+    },
+    "shower_settings": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "QCD/QED/flavoursettings and sourceverifiedweightinterface."
+    },
+    "matching": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "NoMLM/CKKW-Lscale or exactprocessmatchingvalidated."
+    },
+    "weights": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "Noeventgeneration; preservefuture IDWTUP/XWGTUP/mergingWeight/counters."
+    },
+    "approved_future_resources": {
+      "value": null,
+      "status": "BLOCKED",
+      "evidence_required": "No futureparseror physicalresourcecontract approved."
+    }
+  },
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0
+}

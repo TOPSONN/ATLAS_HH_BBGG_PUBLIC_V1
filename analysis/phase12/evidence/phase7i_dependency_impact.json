@@ -1,0 +1,1010 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "scope": "EXACT_PHASE7I_ROUTE_A_STATIC_CONTRACT_AND_CALLCHAIN_REVIEW_ONLY",
+  "status": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+  "phase7i_source_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
+  "target": {
+    "path": "/home/btu/opt/mg5amcnlo/input/mg5_configuration.txt",
+    "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt",
+    "target_raw_bytes_read_by_this_audit": false
+  },
+  "inventory_scopes": [
+    {
+      "name": "frozen_runtime_sources",
+      "member_count": 682,
+      "declared_path_base": "/home/btu/simulations/hh_signal_runs/campaign_01/7b/source/process",
+      "canonical_members_sha256": "e27e54c4c8ed6701f00b297ce65206d8bd9b54546fd87568b2bb3078e65a50b9",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "runtime_build_auxiliary",
+      "member_count": 149,
+      "declared_path_base": "/home/btu/simulations/hh_signal_runs/campaign_01/7b/source/process",
+      "canonical_members_sha256": "8e4a1b66403243e40f6399d10505010a32e400e20dda65feeccff999000da722",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "frozen_process_dependencies",
+      "member_count": 71,
+      "declared_path_base": "/home/btu/simulations/hh_signal_runs/campaign_01/7b/source/process",
+      "canonical_members_sha256": "55e502e9fe51de96a434536923ba582749fdf2484766d13075fe421810bdf2ea",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "frozen_card_identities",
+      "member_count": 24,
+      "declared_path_base": "/home/btu/projects/atlas_hh_phase7i_b80e1677",
+      "canonical_members_sha256": "fa42d28c0157cc9dadff5c10c126db20df8f7c669e0a33ce6c6ed3364ade0443",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "installed_model_files",
+      "member_count": 28,
+      "declared_path_base": "/home/btu/opt/mg5amcnlo",
+      "canonical_members_sha256": "673b19a0552b9cf07a6d7f44a1817545a9a595a0345f2ce60ef11f6b158e14ba",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "toolchain_complete_inventory",
+      "member_count": 8166,
+      "declared_path_base": "/home/btu/.local/share/atlas-hh-phase6a/toolchain",
+      "canonical_members_sha256": "ecfbf6ad24584259f97ddb11d33dbabf45685fcb9defad0bc572f7c7149981cc",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    },
+    {
+      "name": "route_a_full_repository_source_binding",
+      "member_count": 276,
+      "declared_path_base": "/home/btu/projects/atlas_hh_phase7i_b80e1677",
+      "canonical_members_sha256": "ad48f3f5a79227faf3a9444b599d31ee83340874eddcc4cc4d2e36632a2fa038",
+      "target_matches": [],
+      "classification": "NOT_BOUND_BY_REVIEWED_CONTRACT",
+      "payloads_rehashed": false,
+      "scope": "Complete declared path/hash descriptor membership; not a fresh build or payload-validation certificate."
+    }
+  ],
+  "source_records": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "bytes": 13101,
+      "sha256": "4da8b8a4332740ffb872728b111134d0539c9c5e488c6a74276627d3d2b12e18",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "bytes": 10102,
+      "sha256": "1cdb81e25d0544b5d7b630d8a34bdb1dd92d36083b00925017d900ab032a0736",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+      "bytes": 1605,
+      "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "bytes": 12390,
+      "sha256": "c45924ca813b58c738364fefa893535586a681da977c820e03cf1a2cc5fa05f1",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "bytes": 5486,
+      "sha256": "20bb89ab3dcafc147c23b96f4b608406c9062839e88845388d2c8ae15f192c07",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+      "bytes": 3092,
+      "sha256": "d00a19f203594461b03b3331849647b368e114a02d152812daa6764a66e7b9ee",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "bytes": 7963,
+      "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "bytes": 9147,
+      "sha256": "de50894a2aea393666cd0f1ee42bfe23749f1276dd3c15aa078e32c1552ff110",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "bytes": 13319,
+      "sha256": "8576bece122a8a30027368acf5f955bc30369429124c506bbc7d331fb8eadf39",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+      "bytes": 2634,
+      "sha256": "034ffe05503126946a33bd7512481c4f7e57fa00dea64471bb7768601cd26bcb",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/review_contract.py",
+      "bytes": 5860,
+      "sha256": "805bdba7b6c42bf388a79d477a9b9d6bfab5750e06b5261b3c69118efa53b993",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "bytes": 5436,
+      "sha256": "b1a18c8e29d47c85afea2425f1a3c04c007bcf71fac37139b5f0cf8e01ad2709",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/contracts.py",
+      "bytes": 2852,
+      "sha256": "e73810186926cad27d28e54e5c2b3ae0623e97f32f86e7aec4f56130f1da21b0",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/contract.py",
+      "bytes": 4359,
+      "sha256": "38494fcd0c4775843217d1b2d55e2ad3bd0e2712f4d1ea7cb99d6be2eb404c19",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/configuration_lock.json",
+      "bytes": 144418,
+      "sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/campaign/common.py",
+      "bytes": 4159,
+      "sha256": "23c28f05d9211a925eca37759e806fdd99a8b904972d1df2926f6cfef5f37a97",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "metadata/phase7a_model_manifest.json",
+      "bytes": 7974,
+      "sha256": "18e239fa878a30c809be461e62ca326e4b423a97f71029111f873aea88819fc3",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "metadata/phase7i_builder_review_contract.json",
+      "bytes": 19163,
+      "sha256": "c22eafdbcabb07550c5ffa9eddb39fd8100993fd3bf70d09ad5b1c60a1d57452",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "metadata/phase7_final_route_a_build_contract.json",
+      "bytes": 2430,
+      "sha256": "cc22b85ea24602496fe661b85306cda6b874a5dd6210603d06a840c4c9edae4b",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "metadata/phase7_final_route_a_toolchain.json",
+      "bytes": 886809,
+      "sha256": "2ae687df6eb9269681d11e60dbb60333a5c896c16ac13e567544599a11ba3c7d",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "metadata/phase7i_guard_correction_status.json",
+      "bytes": 13474,
+      "sha256": "f42ada9d3ea1ffb5c0f70afe3a36eafa50c3869581ca16598be9d63b4ac76ced",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "bytes": 637,
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/anonymous_io.c",
+      "bytes": 1808,
+      "sha256": "b3f26af0d2f45663bceaec414a20128d211ebe4758dbd718c3674a0861b05242",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/io_and_rng.f90",
+      "bytes": 4670,
+      "sha256": "464d64c0d1cdb6716ab058e52e9e6fad8783bef811b34af304bde0e4fc1c863c",
+      "matches_exact_git_revision": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "bytes": 4681,
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "matches_exact_git_revision": true
+    }
+  ],
+  "source_witnesses": [
+    {
+      "id": "full_repository_binding",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "sha256": "4da8b8a4332740ffb872728b111134d0539c9c5e488c6a74276627d3d2b12e18",
+      "witnesses": [
+        {
+          "anchor": "def full_sources():",
+          "matches": [
+            {
+              "line": 16,
+              "text": "def full_sources():"
+            }
+          ]
+        },
+        {
+          "anchor": "REPO/'simulation/hh_signal',REPO/'simulation/mg5/scripts'",
+          "matches": [
+            {
+              "line": 20,
+              "text": "for root in [REPO/'simulation/hh_signal',REPO/'simulation/mg5/scripts']:"
+            }
+          ]
+        },
+        {
+          "anchor": "p.suffix in ['.py','.f','.f90','.c','.sh','.inc','.dat','.patch']",
+          "matches": [
+            {
+              "line": 22,
+              "text": "p.suffix in ['.py','.f','.f90','.c','.sh','.inc','.dat','.patch'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frozen_binding",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "sha256": "4da8b8a4332740ffb872728b111134d0539c9c5e488c6a74276627d3d2b12e18",
+      "witnesses": [
+        {
+          "anchor": "lock()['frozen_runtime_sources']+lock()['runtime_build_auxiliary']",
+          "matches": [
+            {
+              "line": 70,
+              "text": "return {'native':lock()['frozen_runtime_sources']+lock()['runtime_build_auxiliary'],"
+            }
+          ]
+        },
+        {
+          "anchor": "'cards':build_contract()['frozen_card_identities']",
+          "matches": [
+            {
+              "line": 71,
+              "text": "'cards':build_contract()['frozen_card_identities']}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "toolchain_binding",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "sha256": "4da8b8a4332740ffb872728b111134d0539c9c5e488c6a74276627d3d2b12e18",
+      "witnesses": [
+        {
+          "anchor": "m['groups'].items()",
+          "matches": [
+            {
+              "line": 77,
+              "text": "for parent,items in m['groups'].items() for name,h in items],key=lambda row:row['path'])"
+            }
+          ]
+        },
+        {
+          "anchor": "len(rows)==m['file_count']==8166",
+          "matches": [
+            {
+              "line": 78,
+              "text": "require(len(rows)==m['file_count']==8166 and len({r['path'] for r in rows})==len(rows) and"
+            }
+          ]
+        },
+        {
+          "anchor": "sha(root/item['path'])==item['sha256']",
+          "matches": [
+            {
+              "line": 87,
+              "text": "for item in rows:require(sha(root/item['path'])==item['sha256'],'TOOLCHAIN_INPUT_DRIFT:'+item['path'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "builder_dependencies",
+      "path": "simulation/hh_signal/final_closure/guard_correction/review_contract.py",
+      "sha256": "805bdba7b6c42bf388a79d477a9b9d6bfab5750e06b5261b3c69118efa53b993",
+      "witnesses": [
+        {
+          "anchor": "contract['frozen_process_dependencies']",
+          "matches": [
+            {
+              "line": 28,
+              "text": "for row in contract['frozen_process_dependencies']:"
+            }
+          ]
+        },
+        {
+          "anchor": "p=Path(process)/row['path']",
+          "matches": [
+            {
+              "line": 29,
+              "text": "p=Path(process)/row['path']"
+            }
+          ]
+        },
+        {
+          "anchor": "sha(p)==row['sha256']",
+          "matches": [
+            {
+              "line": 30,
+              "text": "require(p.is_file() and not p.is_symlink() and sha(p)==row['sha256'],'FINITE_LO_DEPENDENCY_DRIFT:'+row['path'])"
+            },
+            {
+              "line": 35,
+              "text": "require(p.is_file() and sha(p)==row['sha256'],'COMPILER_LINKER_DRIFT:'+row['name'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build_configuration_read",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "sha256": "1cdb81e25d0544b5d7b630d8a34bdb1dd92d36083b00925017d900ab032a0736",
+      "witnesses": [
+        {
+          "anchor": "cfg=read_json(REPO/'.local/mg5_installation.json')",
+          "matches": [
+            {
+              "line": 31,
+              "text": "cfg=read_json(REPO/'.local/mg5_installation.json');env={k:v for k,v in mg_environment(cfg).items() if not k.startswith('HH_')}"
+            }
+          ]
+        },
+        {
+          "anchor": "mg_environment(cfg)",
+          "matches": [
+            {
+              "line": 31,
+              "text": "cfg=read_json(REPO/'.local/mg5_installation.json');env={k:v for k,v in mg_environment(cfg).items() if not k.startswith('HH_')}"
+            }
+          ]
+        },
+        {
+          "anchor": "native=Path.home()/'simulations/hh_signal_runs/campaign_01/7b/source/process'",
+          "matches": [
+            {
+              "line": 33,
+              "text": "native=Path.home()/'simulations/hh_signal_runs/campaign_01/7b/source/process'"
+            }
+          ]
+        },
+        {
+          "anchor": "verify_model_sources(cfg['mg5_path']",
+          "matches": [
+            {
+              "line": 38,
+              "text": "verify_model_sources(cfg['mg5_path'],read_json(REPO/'metadata/phase7a_model_manifest.json')['installed_model_files'])"
+            }
+          ]
+        },
+        {
+          "anchor": "compiler=Path(cfg['toolchain_prefix'])",
+          "matches": [
+            {
+              "line": 56,
+              "text": "compiler=Path(cfg['toolchain_prefix'])/'bin/x86_64-conda-linux-gnu-gfortran'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frozen_copy_and_compile",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "sha256": "1cdb81e25d0544b5d7b630d8a34bdb1dd92d36083b00925017d900ab032a0736",
+      "witnesses": [
+        {
+          "anchor": "target.write_bytes((native/r['path']).read_bytes())",
+          "matches": [
+            {
+              "line": 64,
+              "text": "target=process/r['path'];target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((native/r['path']).read_bytes())"
+            }
+          ]
+        },
+        {
+          "anchor": "jobs=plan(process,folder,compiler)",
+          "matches": [
+            {
+              "line": 87,
+              "text": "jobs=plan(process,folder,compiler);plans.append({'seed':seed,'commands':jobs})"
+            }
+          ]
+        },
+        {
+          "anchor": "invoke(argv,sub,env)",
+          "matches": [
+            {
+              "line": 90,
+              "text": "invoke(argv,sub,env)"
+            }
+          ]
+        },
+        {
+          "anchor": "supervise([exe],work",
+          "matches": [
+            {
+              "line": 98,
+              "text": "try:r=supervise([exe],work,{**env,'HH_PREFLIGHT_ONLY':'1'},stage_input(stage),budget)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explicit_compile_plan",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+      "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f",
+      "witnesses": [
+        {
+          "anchor": "flags=[compiler,'-O0'",
+          "matches": [
+            {
+              "line": 8,
+              "text": "flags=[compiler,'-O0','-w','-std=legacy','-ffixed-line-length-none','-ffree-line-length-none','-I'+str(sub),"
+            }
+          ]
+        },
+        {
+          "anchor": "'-c',p,'-o',obj",
+          "matches": [
+            {
+              "line": 16,
+              "text": "obj=sub/f'hi_{i}.o';jobs.append([*flags,'-c',p,'-o',obj]);objects.append(obj)"
+            },
+            {
+              "line": 18,
+              "text": "obj=sub/f'hi_c_{i}.o';jobs.append([str(compiler).replace('gfortran','gcc'),'-O0','-c',p,'-o',obj]);objects.append(obj)"
+            }
+          ]
+        },
+        {
+          "anchor": "'-L'+str(process/'lib')",
+          "matches": [
+            {
+              "line": 19,
+              "text": "jobs.append([compiler,'-o',folder/'hh_final_integral_reviewed',*objects,'-L'+str(process/'lib'),*['-l'+n for n in LIBS],'-lstdc++'])"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "model_verification",
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "sha256": "b1a18c8e29d47c85afea2425f1a3c04c007bcf71fac37139b5f0cf8e01ad2709",
+      "witnesses": [
+        {
+          "anchor": "def verify_model_sources(root,rows):",
+          "matches": [
+            {
+              "line": 6,
+              "text": "def verify_model_sources(root,rows):"
+            }
+          ]
+        },
+        {
+          "anchor": "sha(Path(root)/name)==value",
+          "matches": [
+            {
+              "line": 8,
+              "text": "for name,value in rows.items():require(sha(Path(root)/name)==value,'WRONG_MODEL_HASH:'+name)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment_construction",
+      "path": "simulation/hh_signal/campaign/common.py",
+      "sha256": "23c28f05d9211a925eca37759e806fdd99a8b904972d1df2926f6cfef5f37a97",
+      "witnesses": [
+        {
+          "anchor": "def mg_environment(config):",
+          "matches": [
+            {
+              "line": 54,
+              "text": "def mg_environment(config):"
+            }
+          ]
+        },
+        {
+          "anchor": "p=Path(config['toolchain_prefix'])",
+          "matches": [
+            {
+              "line": 55,
+              "text": "env=dict(os.environ);p=Path(config['toolchain_prefix'])"
+            }
+          ]
+        },
+        {
+          "anchor": "env['PATH']",
+          "matches": [
+            {
+              "line": 56,
+              "text": "env['PATH']=str(p/'bin')+os.pathsep+env['PATH'];env['LD_LIBRARY_PATH']=str(p/'lib')"
+            }
+          ]
+        },
+        {
+          "anchor": "env['LD_LIBRARY_PATH']",
+          "matches": [
+            {
+              "line": 56,
+              "text": "env['PATH']=str(p/'bin')+os.pathsep+env['PATH'];env['LD_LIBRARY_PATH']=str(p/'lib')"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "receipt_runtime_validation",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "sha256": "c45924ca813b58c738364fefa893535586a681da977c820e03cf1a2cc5fa05f1",
+      "witnesses": [
+        {
+          "anchor": "def check_build(root,revision=None",
+          "matches": [
+            {
+              "line": 31,
+              "text": "def check_build(root,revision=None,*,binary_review=None):"
+            }
+          ]
+        },
+        {
+          "anchor": "validate_receipt(review,root,revision,full_sources(),check_linkage=True)",
+          "matches": [
+            {
+              "line": 38,
+              "text": "validate_receipt(review,root,revision,full_sources(),check_linkage=True)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native_preflight_fields",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5",
+      "witnesses": [
+        {
+          "anchor": "def validate_preflight(r,seed):",
+          "matches": [
+            {
+              "line": 18,
+              "text": "def validate_preflight(r,seed):"
+            }
+          ]
+        },
+        {
+          "anchor": "one(records,'HI_PDF')",
+          "matches": [
+            {
+              "line": 31,
+              "text": "require(one(records,'HI_PDF')==['cteq6l1']*3,'PREFLIGHT_PDF_DRIFT')"
+            },
+            {
+              "line": 50,
+              "text": "require(one(records,'HI_PDF')==['cteq6l1']*3,'ACTUAL_NATIVE_PDF_MISMATCH')"
+            }
+          ]
+        },
+        {
+          "anchor": "one(records,'HI_ALPHA')",
+          "matches": [
+            {
+              "line": 32,
+              "text": "a=one(records,'HI_ALPHA');require(number(a[0])==.13 and a[1]=='1','PREFLIGHT_ALPHA_DRIFT')"
+            },
+            {
+              "line": 51,
+              "text": "a=one(records,'HI_ALPHA');require(number(a[0])==.13 and a[1]=='1','ACTUAL_NATIVE_ALPHA_MISMATCH')"
+            }
+          ]
+        },
+        {
+          "anchor": "one(records,'HI_SCALE')",
+          "matches": [
+            {
+              "line": 34,
+              "text": "s=one(records,'HI_SCALE');require(s[0]=='4' and number(s[1])==.5 and s[2:]==['F','F','F'],'PREFLIGHT_SCALE_DRIFT')"
+            },
+            {
+              "line": 53,
+              "text": "scale=one(records,'HI_SCALE');require(scale[0]=='4' and number(scale[1])==.5 and scale[2:]==['F','F','F'],'NATIVE_SCALE_MISMATCH')"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legacy_approval_consumed",
+      "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+      "sha256": "d00a19f203594461b03b3331849647b368e114a02d152812daa6764a66e7b9ee",
+      "witnesses": [
+        {
+          "anchor": "CONSUMED=",
+          "matches": [
+            {
+              "line": 12,
+              "text": "CONSUMED={'58d39888a024028e32f3071db9215c0db6fe0a89',"
+            }
+          ]
+        },
+        {
+          "anchor": "class HumanReview",
+          "matches": [
+            {
+              "line": 16,
+              "text": "class HumanReview:"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reviewed_function_call_sites": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "function": "prepare",
+      "line_start": 21,
+      "line_end": 134,
+      "calls": [
+        "''.join",
+        "'\\n'.join",
+        "(REPO / 'simulation/hh_signal/config_lock/src/pre_sampling_guard.f').read_bytes",
+        "(cards / 'param_card.dat').write_bytes",
+        "(cards / 'run_card.dat').write_text",
+        "(denied / 'temporary').mkdir",
+        "(denied / name).write_text",
+        "(h / 'io_and_rng.f90').read_text",
+        "(h / 'io_and_rng.f90').read_text().split",
+        "(native / r['path']).read_bytes",
+        "(native / rel).read_text",
+        "(old / 'param_card.dat').read_bytes",
+        "(old / 'reviewed_run_card.dat').read_text",
+        "(old / 'run_card.inc').read_text",
+        "(patches / (Path(rel).name + '.patch')).write_text",
+        "(process / 'Source/run_card.inc').write_text",
+        "(process / rel).write_text",
+        "(sub / 'hh_pre_sampling_guard.f').write_bytes",
+        "(sub / 'native_io_only.f90').write_text",
+        "(work / 'temporary').mkdir",
+        "(work / name).touch",
+        "(work / name).write_text",
+        "Budget",
+        "Path",
+        "Path(argv[argv.index('-o') + 1]).exists",
+        "Path.home",
+        "any",
+        "apply",
+        "argv.index",
+        "binary_identity",
+        "bounded_invoke",
+        "budget.check",
+        "budget.used_cpu",
+        "cards.mkdir",
+        "check_revision",
+        "checkpoint",
+        "command_receipts.append",
+        "command_receipts[-1].get",
+        "corrected_guard.write_text",
+        "corrected_guard_source",
+        "datetime.datetime.now",
+        "datetime.datetime.now(datetime.timezone.utc).isoformat",
+        "denied.mkdir",
+        "dependencies",
+        "difflib.unified_diff",
+        "env.update",
+        "frozen_inputs",
+        "full_source_identity",
+        "guard_descriptor",
+        "hasattr",
+        "immutable",
+        "include.splitlines",
+        "initializations.append",
+        "invoke",
+        "k.startswith",
+        "lock",
+        "mg_environment",
+        "mg_environment(cfg).items",
+        "no_events",
+        "original[rel].splitlines",
+        "os.getpid",
+        "overrides.intersection",
+        "p.is_symlink",
+        "patches.mkdir",
+        "plan",
+        "plans.append",
+        "preflights.append",
+        "process.mkdir",
+        "process.rglob",
+        "r.update",
+        "read_json",
+        "replicas.append",
+        "require",
+        "resource.getrusage",
+        "review_scope",
+        "root.exists",
+        "root.mkdir",
+        "s.startswith",
+        "s.strip",
+        "safe_root",
+        "save",
+        "sha",
+        "stage_input",
+        "str",
+        "supervise",
+        "target.parent.mkdir",
+        "target.write_bytes",
+        "text.splitlines",
+        "time.monotonic",
+        "toolchain",
+        "transformed.items",
+        "validate_preflight",
+        "validate_receipt",
+        "verify_cards",
+        "verify_compiler",
+        "verify_dependency_sources",
+        "verify_human_review",
+        "verify_model_sources",
+        "work.mkdir"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "function": "full_sources",
+      "line_start": 16,
+      "line_end": 29,
+      "calls": [
+        "(REPO / 'simulation/hh_signal').rglob",
+        "build_contract",
+        "p.is_file",
+        "p.relative_to",
+        "p.relative_to(REPO).as_posix",
+        "paths.update",
+        "root.rglob",
+        "set",
+        "sha",
+        "sorted"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "function": "frozen_inputs",
+      "line_start": 68,
+      "line_end": 71,
+      "calls": [
+        "build_contract",
+        "lock"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "function": "toolchain_rows",
+      "line_start": 73,
+      "line_end": 82,
+      "calls": [
+        "(PurePosixPath(parent) / name).as_posix",
+        "PurePosixPath",
+        "PurePosixPath(r['path']).is_absolute",
+        "all",
+        "identity",
+        "len",
+        "m.get",
+        "m['groups'].items",
+        "re.fullmatch",
+        "read_json",
+        "require",
+        "sorted"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "function": "validate_receipt",
+      "line_start": 114,
+      "line_end": 185,
+      "calls": [
+        "Path",
+        "Path(root).rglob",
+        "any",
+        "binary_identity",
+        "denial.get",
+        "dependencies",
+        "descriptor",
+        "enumerate",
+        "expected.extend",
+        "expected_exits.extend",
+        "folder.is_symlink",
+        "frozen_inputs",
+        "git_binding.get",
+        "identities",
+        "identity",
+        "immutable",
+        "isinstance",
+        "len",
+        "list",
+        "math.isfinite",
+        "no_events",
+        "p.get",
+        "p.is_absolute",
+        "p.is_symlink",
+        "plan",
+        "preflight.get",
+        "r.get",
+        "r.get('preparation', {}).get",
+        "r['preparation'].get",
+        "re.fullmatch",
+        "read_json",
+        "regular",
+        "require",
+        "row.get",
+        "scope",
+        "sha",
+        "str",
+        "toolchain",
+        "validate_preflight",
+        "verify_copies",
+        "x.get"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+      "function": "plan",
+      "line_start": 5,
+      "line_end": 20,
+      "calls": [
+        "Path",
+        "enumerate",
+        "jobs.append",
+        "objects.append",
+        "str",
+        "str(compiler).replace"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "function": "check_build",
+      "line_start": 31,
+      "line_end": 39,
+      "calls": [
+        "check_revision",
+        "full_sources",
+        "identities",
+        "read_json",
+        "safe_root",
+        "scope",
+        "validate_receipt",
+        "verify"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/campaign/common.py",
+      "function": "mg_environment",
+      "line_start": 54,
+      "line_end": 57,
+      "calls": [
+        "Path",
+        "dict",
+        "str"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "function": "verify_model_sources",
+      "line_start": 6,
+      "line_end": 9,
+      "calls": [
+        "Path",
+        "len",
+        "require",
+        "rows.items",
+        "sha"
+      ],
+      "literal_mg5_configuration_target_present": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "function": "validate_preflight",
+      "line_start": 18,
+      "line_end": 43,
+      "calls": [
+        "all",
+        "isinstance",
+        "list",
+        "map",
+        "math.isfinite",
+        "number",
+        "one",
+        "r.get",
+        "r.get('postcondition', {}).get",
+        "r['raw_stream_SHA256'].values",
+        "r['raw_stream_bytes'].values",
+        "re.fullmatch",
+        "require",
+        "s.split",
+        "set",
+        "str"
+      ],
+      "literal_mg5_configuration_target_present": false
+    }
+  ],
+  "local_installation_selector": {
+    "path": "/home/btu/projects/atlas_hh_phase7i_b80e1677/.local/mg5_installation.json",
+    "bytes": 339,
+    "sha256": "bdd63c90f87358c6f2818ba1367df4d76f1782336f7590ef50b811b381890f76",
+    "source_commit": "3ea6e242a6021cc909c1016dd1a4f0ab1c398ac7",
+    "review_scope": "Distinct .local/mg5_installation.json selector is read by builder/runtime; installed input/mg5_configuration.txt is not this file. Raw selector not published."
+  },
+  "positive_dataflow": [
+    "build.prepare reads distinct local installation selector and constructs environment via campaign.common.mg_environment.",
+    "build.prepare verifies explicit installed model files and copies frozen B100 process rows; does not regenerate a process.",
+    "build_plan.plan explicitly lists compiler arguments, Fortran/C files and frozen libraries; no MG5 interface invocation.",
+    "route_a.validate_receipt binds repo/cards/toolchain/copied files/executable/dependencies and validates saved native preflight protocol.",
+    "run.check_build delegates exact source/Git/receipt/linkage checks; native preflight checks parsed cards/PDF/alpha/masses/scales."
+  ],
+  "not_a_grep_absence_claim": true,
+  "implicit_unreviewed_external_runtime_reads": "UNKNOWN",
+  "actual_current_build_or_runtime_validation": "NOT_EXECUTED",
+  "phase11_drift_automatically_invalidates_phase7i": false,
+  "phase7i_build_receipt_currently_validated": false,
+  "historical_frozen_receipt_identity": "98aa0054eff5ffd351928bb2adb88e336e5d9fc8372dae53831ca7472d9f4281",
+  "legacy_BUILD_ONLY_authorization_reusable": false,
+  "physical_restart_authorized": false,
+  "source_descriptor_bytes_unchanged": true,
+  "installed_payloads_rehashed": false,
+  "old_sources_modified": false,
+  "limits": [
+    "Contract membership and statically traced selected callchain only.",
+    "No compiler, loader, actual zero-ME preflight, prepare-review, HumanReview or Stage A executed.",
+    "External runtime/compiler implicit behaviour remains UNKNOWN; no current Phase7I PASS certificate.",
+    "Existing frozen process generation may have historical MG5 provenance; frozen bytes are not regenerated here."
+  ],
+  "new_MG5_parser_calls": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "new_Route_A_builds": 0,
+  "new_Stage_A_runs": 0,
+  "auditor_source_sha256": "bc00ef5330e3130833d49d1bd52231f0eb04490014427976e23ae0a4906f1c0d",
+  "auditor_cli_sha256": "6fcd331b35d2c25433c0f0063e4ae454208574aefb379de64512dea9cfce4254"
+}

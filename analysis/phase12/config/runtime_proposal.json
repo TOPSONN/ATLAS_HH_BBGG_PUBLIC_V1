@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "proposal_version": "phase12-proposed-runtime-v1",
+  "evidence_class": "FUTURE_UNEXECUTED_PROPOSAL",
+  "target": "/home/btu/opt/mg5amcnlo/input/mg5_configuration.txt",
+  "expected_resolved": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/input/mg5_configuration.txt",
+  "allowed_output_root": "/home/btu/simulations/hh_phase12",
+  "forbidden_write_roots": [
+    "/home/btu/opt",
+    "/home/btu/.local/share/atlas-hh-phase6a",
+    "/home/btu/miniforge3"
+  ],
+  "max_config_bytes": 65536,
+  "snapshot_count": 3,
+  "worker_timeout_seconds": 30,
+  "new_baseline_approved": false,
+  "physical_execution_authorized": false,
+  "dispatcher": null,
+  "old_phase11_raw_gate": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "independent_review_requirements": [
+    "Compare historical A/B/C raw identities and exact current private versioned-copy SHA256.",
+    "Review raw-byte differences separately from effective configuration semantics.",
+    "Preserve UNKNOWN actual writer unless direct authorized records identify it.",
+    "Review exact new source revision, filesystem identity and current external dependency closure.",
+    "Do not reinterpret three stable observations as future immutability or independent cold-cache evidence.",
+    "Separate explicit exact-source authorization is required for any parser or physical execution."
+  ],
+  "serializer_source": "/home/btu/opt/mg5amcnlo/madgraph/interface/extended_cmd.py"
+}

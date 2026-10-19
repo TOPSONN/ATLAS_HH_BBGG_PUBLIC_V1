@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "actual_writer": "UNKNOWN",
+  "actual_writer_identified": false,
+  "serializer_behavior": "SERIALIZER_BEHAVIOR_REPRODUCED",
+  "serializer_source_identity": {
+    "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+    "path": "/home/btu/opt/mg5amcnlo/madgraph/interface/extended_cmd.py",
+    "resolved_path": "/home/btu/.local/share/atlas-hh-phase6a/mg5-release-v3.5.16/madgraph/interface/extended_cmd.py",
+    "bytes": 129870,
+    "sha256": "6a4f1616ffd7910850e6776ae3f922965a757a7dee9130990e0a579b3ad70c56",
+    "witnesses": [
+      {
+        "line": 2006,
+        "text": "for line in open(basefile):"
+      },
+      {
+        "line": 2018,
+        "text": "value, comment = value.split('#',1)"
+      },
+      {
+        "line": 2040,
+        "text": "new_line = '%s = %s # %s \\n' % (key, value, comment)"
+      },
+      {
+        "line": 2055,
+        "text": "writer = open(filepath,'w')"
+      }
+    ],
+    "imported_or_executed": false
+  },
+  "authorized_task_records": [
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/detector_existing_data_01_execution.json",
+      "bytes": 960,
+      "sha256": "3ab108ed456125ba5274b63cb3f5420817667bef4db82bfad4793d99a6caf22a",
+      "label": "detector_existing_data_01",
+      "exit_code": 1,
+      "wall_seconds": 3.5326347760019416,
+      "cpu_seconds": 3.3978840000000003,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/detector_existing_data_02_execution.json",
+      "bytes": 950,
+      "sha256": "d871628892905bd33575dea565cd126d0dd9ebea0ea48226415722035f9a89cc",
+      "label": "detector_existing_data_02",
+      "exit_code": 0,
+      "wall_seconds": 4.027814494002087,
+      "cpu_seconds": 3.956245,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/family_photon_ir_source_audit_01_execution.json",
+      "bytes": 821,
+      "sha256": "42fdb25cf6d8f50512efabe4bea95d0a07be2c081b2bbd3c68606019abea61a3",
+      "label": "family_photon_ir_source_audit_01",
+      "exit_code": 1,
+      "wall_seconds": 0.25410837800154695,
+      "cpu_seconds": 0.14503899999999997,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/family_photon_ir_source_audit_02_execution.json",
+      "bytes": 824,
+      "sha256": "26e52b9aaeb4f0152fa97629cc2f6c5388da80d03561c0990d63adf6300b205e",
+      "label": "family_photon_ir_source_audit_02",
+      "exit_code": 0,
+      "wall_seconds": 0.25335509499927866,
+      "cpu_seconds": 0.09385399999999994,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/family_photon_ir_source_audit_03_execution.json",
+      "bytes": 815,
+      "sha256": "6ae66d87188d31ab5d262cff6790170999baff3bdcf3bb87ac936d3205885665",
+      "label": "family_photon_ir_source_audit_03",
+      "exit_code": 0,
+      "wall_seconds": 0.27414162900095107,
+      "cpu_seconds": 0.064058,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/historical_reference_delphes_execution.json",
+      "bytes": 584,
+      "sha256": "48142c94e86e7cab267677098261a7447b1f0e3d0dad218f26c337120484839e",
+      "label": "historical_reference_delphes",
+      "exit_code": 0,
+      "wall_seconds": 4.790399730998615,
+      "cpu_seconds": 4.709109,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/historical_reference_mg5_execution.json",
+      "bytes": 593,
+      "sha256": "03518122bd3d5ff85d17c9c47fbdb511117f3c47a1379db7a05ea1b3692982c4",
+      "label": "historical_reference_mg5",
+      "exit_code": 0,
+      "wall_seconds": 0.5051366229999985,
+      "cpu_seconds": 0.328730999999999,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/historical_reference_new_backgrounds_execution.json",
+      "bytes": 601,
+      "sha256": "3edc947bea5f43c2d4c7414130760454d295746bf69f4f7d6679ed65295c4ed1",
+      "label": "historical_reference_new_backgrounds",
+      "exit_code": 0,
+      "wall_seconds": 6.047421924002265,
+      "cpu_seconds": 5.830237,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/historical_reference_pythia8_execution.json",
+      "bytes": 597,
+      "sha256": "77af49283b4ae911e2b4e4256068a180fe071487f286ba6cc35d257ba2e33e05",
+      "label": "historical_reference_pythia8",
+      "exit_code": 0,
+      "wall_seconds": 2.0222226820005744,
+      "cpu_seconds": 1.8801690000000009,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/historical_reference_signal_execution.json",
+      "bytes": 581,
+      "sha256": "ee4d57a638c8cb3338f6f8a75c6fc1451d64e05c2f93de4e413fb60a7987ef0b",
+      "label": "historical_reference_signal",
+      "exit_code": 0,
+      "wall_seconds": 1.0089177440022468,
+      "cpu_seconds": 0.9216700000000012,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/inactive_pilot_gate_drift_final_execution.json",
+      "bytes": 1176,
+      "sha256": "021f01cc773a9278aa857e2e832d23ff38e2bba2f8f097457a056db40a7f7b08",
+      "label": "inactive_pilot_gate_drift_final",
+      "exit_code": 0,
+      "wall_seconds": 0.2529801340024278,
+      "cpu_seconds": 0.196571,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/inactive_pilot_gate_execution.json",
+      "bytes": 1167,
+      "sha256": "e821c4348391b5c371827810e37670d5791300339e0e57c4a1c68f7d67855c13",
+      "label": "inactive_pilot_gate",
+      "exit_code": 0,
+      "wall_seconds": 0.25238433000049554,
+      "cpu_seconds": 0.03986700000000004,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/inactive_pilot_gate_final_execution.json",
+      "bytes": 1178,
+      "sha256": "1e4c390834d159eba52d6f4ae07de5e200c6018262a809117101b8954eaf5a8c",
+      "label": "inactive_pilot_gate_final",
+      "exit_code": 0,
+      "wall_seconds": 0.26035684599992237,
+      "cpu_seconds": 0.07425099999999918,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/independent_event_covariance_execution.json",
+      "bytes": 933,
+      "sha256": "b839c425e6c1872fd739a60ef5ee1f93e92c2a41765ab96033e00702f8819730",
+      "label": "independent_event_covariance",
+      "exit_code": 0,
+      "wall_seconds": 0.7557824759969662,
+      "cpu_seconds": 0.7421709999999998,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/initial_flavour_existing_LHE_execution.json",
+      "bytes": 808,
+      "sha256": "f99720093f2c9025e8290101a55dfb2db5d7228e9826107f6ca52ab800ee619c",
+      "label": "initial_flavour_existing_LHE",
+      "exit_code": 0,
+      "wall_seconds": 9.821345265998389,
+      "cpu_seconds": 9.553723000000002,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/model_pdf_source_audit_01_execution.json",
+      "bytes": 656,
+      "sha256": "ae2db4a4f09131b621047aacf80d0a554ccaca18592fff2f1d11af7e7d9f82c4",
+      "label": "model_pdf_source_audit_01",
+      "exit_code": 1,
+      "wall_seconds": 0.29947237899978063,
+      "cpu_seconds": 0.20078999999999997,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/model_pdf_source_audit_02_execution.json",
+      "bytes": 658,
+      "sha256": "0a9bb422f17da6cdc5936eaada075617fc01c0dcb353afa2891973cddd0bea2e",
+      "label": "model_pdf_source_audit_02",
+      "exit_code": 0,
+      "wall_seconds": 0.7567444609994709,
+      "cpu_seconds": 0.47191299999999997,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase10_methods_final_execution.json",
+      "bytes": 627,
+      "sha256": "3c918f5a296eeff601d0750a677ae75ca739ecfa9a2b84c11377f78498c2fed9",
+      "label": "phase10_methods_final",
+      "exit_code": 0,
+      "wall_seconds": 0.5049664510006551,
+      "cpu_seconds": 0.23090299999999964,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_methods_01_execution.json",
+      "bytes": 623,
+      "sha256": "0987f10c09190459a8248e282e56979c8a262f6e2c261784c137bc338bba478c",
+      "label": "phase11_methods_01",
+      "exit_code": 0,
+      "wall_seconds": 0.252647438999702,
+      "cpu_seconds": 0.14960800000000005,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_methods_drift_final_execution.json",
+      "bytes": 623,
+      "sha256": "684280a300acabdb9e978e9fe1a032398b0a626ff2a3cb924eab9f88566645c2",
+      "label": "phase11_methods_drift_final",
+      "exit_code": 0,
+      "wall_seconds": 0.25546543000018573,
+      "cpu_seconds": 0.210644,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase11_methods_final_execution.json",
+      "bytes": 628,
+      "sha256": "e55ed28fffd4f5d45dd0b82adfe7d4159bfffc8cb377fa9a7c2332355ddccfea",
+      "label": "phase11_methods_final",
+      "exit_code": 0,
+      "wall_seconds": 0.25406006000048365,
+      "cpu_seconds": 0.15818100000000002,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase8_methods_final_execution.json",
+      "bytes": 625,
+      "sha256": "9752c931fedaa7162106918a7909d18e2c0a279ffcb48cf70c13deb80a0c3334",
+      "label": "phase8_methods_final",
+      "exit_code": 0,
+      "wall_seconds": 1.0089108749998559,
+      "cpu_seconds": 0.2901979999999995,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase11/run_01/phase9_methods_final_execution.json",
+      "bytes": 632,
+      "sha256": "61c9996bb8c44f2a57a60939229c338920ee36821cbb03f225939ff29b01ec88",
+      "label": "phase9_methods_final",
+      "exit_code": 0,
+      "wall_seconds": 0.5055839749984443,
+      "cpu_seconds": 0.2463360000000001,
+      "direct_writer_attribution_from_summary": "NOT_ESTABLISHED"
+    }
+  ],
+  "records_are_direct_writer_proof": false,
+  "reason": "Source transformation matching and task execution receipts do not identify the historical process that wrote the file.",
+  "private_histories_credentials_unrelated_processes_read": false,
+  "invasive_tracing_performed": false,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_pythia_events": 0,
+  "new_delphes_events": 0
+}

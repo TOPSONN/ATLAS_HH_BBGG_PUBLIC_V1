@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1",
+  "BASE_REVISION": "988c5a8b23f0ae3edf536bbabd17eef291717335",
+  "NEW_SOURCE_REVISION": null,
+  "DRAFT_PR_URL": null,
+  "FINAL_VERDICT": "PASS_PHASE12_PARTIAL_RECOVERY",
+  "SELECTED_PILOT_COMPONENT": "NONE_READY",
+  "BASELINE_APPROVED": false,
+  "NEW_BASELINE_APPROVED": false,
+  "OLD_PHASE11_RAW_GATE_RECLASSIFIED": false,
+  "OLD_PHASE11_RAW_GATE": "BLOCKED_EXTERNAL_RUNTIME_CONFIGURATION_DRIFT",
+  "MG5_PARSER_EXECUTED": false,
+  "MATCHING_VALIDATED": false,
+  "PILOT_EXECUTED": false,
+  "PILOT_APPROVAL": "NOT_AUTHORIZED",
+  "figure_publication_authorized": false,
+  "PHYSICAL_TOTAL_BACKGROUND": "BLOCKED",
+  "PHYSICAL_SIGNIFICANCE": "NOT_EVALUATED",
+  "PHYSICAL_CLs": "NOT_EVALUATED",
+  "PHYSICAL_KAPPA_INTERVAL": "NOT_EVALUATED",
+  "PHOTON_FAKE_RATE": "UNKNOWN",
+  "MATCHED_SIGNAL_NORMALIZATION": "BLOCKED_PHASE7I",
+  "HEAVY_FLAVOUR_GENERATOR_EXCLUSIVITY": "UNVERIFIED",
+  "runtime_current_identity": {
+    "bytes": 9302,
+    "sha256": "e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1"
+  },
+  "runtime_writer": "UNKNOWN",
+  "runtime_snapshot_claim": "Three sequential distinctPIDs samehost sharedcaches, notindependentcoldcache orfutureimmutability",
+  "PDF_native_interface": "PASS_ISOLATED_NATIVE_PDF_INTERFACE_WITH_LIMITS",
+  "PDF_MG5_alpha_binding": "UNVERIFIED",
+  "strict_reference_relative_tolerance": 1e-06,
+  "strict_reference_diagnostic_pass": false,
+  "strict_reference_relative_difference": 2.626248635282933e-06,
+  "formal_publisher_accuracy_bound": null,
+  "GATES_PASS": [
+    "three separate-PID read-only raw/filesystem snapshots",
+    "exact serializer algebra reproduced withoutMG5imports; UNKNOWNwriter retained",
+    "Phase7I exactb80 staticcontract review NOT_BOUND_BY_REVIEWED_CONTRACT",
+    "oneofficialcentralmember/info completeHTTPSacquisition685937bytes",
+    "nativeLHAPDF6.5.6 externalmember with10before/afterinput/backend identities",
+    "36finitexfx/5finitealphas/5domainwrapperrejections; same03/04points",
+    "inactiveparserrequest,no productiondispatcher,noinstalleddirectorywrite"
+  ],
+  "GATES_FAIL": [
+    "strict1e-6declared-reference versusipol diagnostic remainsfalse (notanofficialaccuracyclaim)",
+    "oldPhase11rawsourcegate remainsblocked/hashmismatch preserved"
+  ],
+  "GATES_BLOCKED": [
+    "newbaseline independentreview/approval",
+    "MG5parser/exactprocess and ME/PDF/showeralpha binding",
+    "photonIR/cuts/scales/shower/weights/matching closure",
+    "physicaltotalbackground and matchedsignal normalization",
+    "future parser/physical resource approval"
+  ],
+  "GATES_UNKNOWN": [
+    "historicalruntimewriter",
+    "formal dataset licence identifier/redistributionpermission",
+    "publisher-signed payload authenticity/checksum unavailable",
+    "publisher ipol interpolationaccuracy bound",
+    "photonfakecalibration and physicalbackground exclusivity"
+  ],
+  "TESTS": {
+    "Phase12": 167,
+    "Phase11_relevant_unit_regression": 172,
+    "all_pass": true,
+    "full_Phase8_to_11_analysis_repeated": false
+  },
+  "HISTORICAL_PRESERVATION": {
+    "status": "PASS_EXACT_MONITORED_HISTORICAL_AND_INSTALLED_BYTES",
+    "historical_files": 4764,
+    "historical_bytes": 2778583870,
+    "installed_read_only_files": 24,
+    "PR24_to_28_unchanged": true
+  },
+  "GITHUB_CI": "PENDING_DELIVERY",
+  "REMOTE_BLOB_VERIFICATION": "PENDING_DELIVERY",
+  "independent_human_review_approval": false,
+  "NEXT_RECOMMENDED_STEP": "Review the exact proposed runtime baseline and isolated member/alpha/threshold evidence; resolve photonIR/cuts/scales/shower/weights before a separately authorized narrow parser test. No automatic pilot.",
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "AUTOMATED_INDEPENDENT_REVIEWS": {
+    "acquisition": "offline15tests/actualparentproof; downloadpredateshardening",
+    "PDF": 65,
+    "readiness_policy": 34,
+    "external_human_review": false
+  }
+}

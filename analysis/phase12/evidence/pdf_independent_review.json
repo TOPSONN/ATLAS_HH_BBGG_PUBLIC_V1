@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_INDEPENDENT_INTERFACE_RECEIPT_REVIEW_WITH_REFERENCE_CLOSURE_LIMIT",
+  "observed_UTC": "2026-10-19T09:49:36.466419+00:00",
+  "review_method": "Independent stdlib receipt/source identity checks; Decimal recomputation; table bracketing; installed header witnesses; no import or call to native LHAPDF",
+  "canonical_readback": "pdf_readback_04",
+  "checks_passed": 65,
+  "checks": [
+    {
+      "check": "actual_native_evidence_class",
+      "result": "PASS"
+    },
+    {
+      "check": "interface_status_with_limits",
+      "result": "PASS"
+    },
+    {
+      "check": "exact_existing_reader_6_5_6",
+      "result": "PASS"
+    },
+    {
+      "check": "exact_member_zero_lhaid",
+      "result": "PASS"
+    },
+    {
+      "check": "nine_native_flavours_and_no_bottom",
+      "result": "PASS"
+    },
+    {
+      "check": "LO_variable_maximum_four_metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "exact_four_documented_xQ_points",
+      "result": "PASS"
+    },
+    {
+      "check": "exact_nine_pdg_values_each_point",
+      "result": "PASS"
+    },
+    {
+      "check": "all_thirty_six_actual_xfx_values_finite",
+      "result": "PASS"
+    },
+    {
+      "check": "declared_and_native_domain_identical",
+      "result": "PASS"
+    },
+    {
+      "check": "all_documented_points_inside_domain",
+      "result": "PASS"
+    },
+    {
+      "check": "exact_five_alpha_points",
+      "result": "PASS"
+    },
+    {
+      "check": "all_five_alpha_values_positive_finite",
+      "result": "PASS"
+    },
+    {
+      "check": "two_receipts_alpha_values_identical",
+      "result": "PASS"
+    },
+    {
+      "check": "five_wrapper_guard_rejections_only",
+      "result": "PASS"
+    },
+    {
+      "check": "native_default_extrapolation_not_claimed",
+      "result": "PASS"
+    },
+    {
+      "check": "no_recorded_nonfinite_or_interpolation_errors",
+      "result": "PASS"
+    },
+    {
+      "check": "exactly_ten_bound_raw_inputs_dependencies",
+      "result": "PASS"
+    },
+    {
+      "check": "all_ten_native_before_after_identities_equal",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_NNPDF30_lo_as_0130_nf_4.info_19",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_NNPDF30_lo_as_0130_nf_4_0000.dat_20",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_lhapdf.conf_21",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_lhapdf.conf_22",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_pdfsets.index_23",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_pdfsets.index_24",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_python_25",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_libLHAPDF.so_26",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity___init__.py_27",
+      "result": "PASS"
+    },
+    {
+      "check": "live_dependency_identity_lhapdf.so_28",
+      "result": "PASS"
+    },
+    {
+      "check": "native_dependency_list_matches_bound_identities",
+      "result": "PASS"
+    },
+    {
+      "check": "bounded_two_observed_search_paths",
+      "result": "PASS"
+    },
+    {
+      "check": "external_member_with_explicit_builtin_metadata_fallback",
+      "result": "PASS"
+    },
+    {
+      "check": "no_same_named_installed_candidate",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_defaults_and_external_copies_equal",
+      "result": "PASS"
+    },
+    {
+      "check": "five_executed_source_identities_present",
+      "result": "PASS"
+    },
+    {
+      "check": "executed_source_read_pdf_member.py",
+      "result": "PASS"
+    },
+    {
+      "check": "executed_source_pdf_interface.py",
+      "result": "PASS"
+    },
+    {
+      "check": "executed_source_pdf_metadata.py",
+      "result": "PASS"
+    },
+    {
+      "check": "executed_source_pdf_acquisition.py",
+      "result": "PASS"
+    },
+    {
+      "check": "executed_source_readback_points.json",
+      "result": "PASS"
+    },
+    {
+      "check": "generator_and_physical_validation_remain_false",
+      "result": "PASS"
+    },
+    {
+      "check": "five_production_counters_integer_zero",
+      "result": "PASS"
+    },
+    {
+      "check": "same_reference_diagnostic_in_both_receipts",
+      "result": "PASS"
+    },
+    {
+      "check": "strict_tolerance_unchanged_and_not_official_accuracy",
+      "result": "PASS"
+    },
+    {
+      "check": "strict_reference_diagnostic_false_retained",
+      "result": "PASS"
+    },
+    {
+      "check": "no_publisher_accuracy_bound_invented",
+      "result": "PASS"
+    },
+    {
+      "check": "physical_alpha_binding_unverified",
+      "result": "PASS"
+    },
+    {
+      "check": "independent_decimal_reference_difference",
+      "result": "PASS"
+    },
+    {
+      "check": "independent_strict_reference_threshold_exceeded",
+      "result": "PASS"
+    },
+    {
+      "check": "reference_metadata_exact_scale_and_value",
+      "result": "PASS"
+    },
+    {
+      "check": "reference_not_alpha_table_knot",
+      "result": "PASS"
+    },
+    {
+      "check": "independent_table_bracket_matches_actual_diagnostic",
+      "result": "PASS"
+    },
+    {
+      "check": "native_alpha_at_91_not_name_0130",
+      "result": "PASS"
+    },
+    {
+      "check": "reference_not_assumed_electroweak_Z_mass",
+      "result": "PASS"
+    },
+    {
+      "check": "03_04_same_thirty_six_xfx_and_five_alpha",
+      "result": "PASS"
+    },
+    {
+      "check": "03_04_same_raw_input_identities",
+      "result": "PASS"
+    },
+    {
+      "check": "actual_same_point_regression_zero_expansion",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_void_setMZ",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_void_setAlphaSMZ",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_class_AlphaS_Ipol",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_void_setQValues",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_void_setAlphaSValues",
+      "result": "PASS"
+    },
+    {
+      "check": "installed_header_witness_double__interpolateCubic",
+      "result": "PASS"
+    },
+    {
+      "check": "setMZ_and_setAlphaSMZ_comments_specify_ODE",
+      "result": "PASS"
+    },
+    {
+      "check": "ipol_header_declares_tabulated_Q2_interpolation",
+      "result": "PASS"
+    }
+  ],
+  "input_identities": [
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/pdf_readback_04/pdf_member_readback.json",
+      "bytes": 20635,
+      "sha256": "13b49445a86537ec68e31d48c1438276b8d8d05f233df91f79ae166d72cb7b55"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/pdf_readback_04/pdf_alpha_reference_checks.json",
+      "bytes": 3266,
+      "sha256": "c800618d3f03a0e03b0c8560875715306b4a15f2bef2607796dc759375c4a671"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/config/readback_points.json",
+      "bytes": 679,
+      "sha256": "a303682dceadbbd88e19a81f6f5e493ebea2a3d1d1dad9d0644ead4e696f0a63"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/native_PDF_same_points_regression.json",
+      "bytes": 267,
+      "sha256": "269ac03bd6b2731ee6e71af63ce30aaf3113c779be3c9c43d83b266e9a58d0e7"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    {
+      "path": "/home/btu/simulations/hh_phase12/run_01/pdf_readback_03/pdf_member_readback.json",
+      "bytes": 20478,
+      "sha256": "aacd23a15655ea4aa69041aef6cec17e9236442c678fa9f73539681a84ac071e"
+    }
+  ],
+  "executed_sources_current_sha256": {
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/scripts/read_pdf_member.py": "b66559e09d94873e4a9e633e41206e927a563ce58f51ef01f8aeed9811780bcf",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_interface.py": "3bdc2a166fa480a1d17127f1d01cf5b3bebe3bf545f672948895fe499204c387",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_metadata.py": "70de57fd7e91f62e604e26d2e32bff5a56f1adada1d77dcf8fc2e1668f714406",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/source/pdf_acquisition.py": "c45ef8d6ba8aa6e3950dde9d6ef6fd798229d7458c69d0f6442724bc4e16476f",
+    "/home/btu/projects/atlas_hh_phase12_v1/analysis/phase12/config/readback_points.json": "a303682dceadbbd88e19a81f6f5e493ebea2a3d1d1dad9d0644ead4e696f0a63"
+  },
+  "native_input_dependency_identities": {
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4.info",
+      "bytes": 2345,
+      "sha256": "85f3b2626de0896f45f5cfef53d90abd8d7b5ae784800b18d652e3f817431162"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/NNPDF30_lo_as_0130_nf_4/NNPDF30_lo_as_0130_nf_4_0000.dat",
+      "bytes": 683592,
+      "sha256": "e3055763f3a3154c2a2c6811d35e1f319a0bb38ff1c645c8db5cdc8bd210005e"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/lhapdf.conf",
+      "bytes": 220,
+      "sha256": "e228710d0750a3e916efa791c8a2f4dd8ea05abd6ef3c2bb16d678836b81d048"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/share/LHAPDF/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index": {
+      "path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "resolved_path": "/home/btu/simulations/hh_phase12/run_01/public_pdf_01/pdfsets.index",
+      "bytes": 46870,
+      "sha256": "00b46f8c134286079e7e8aad2d7148be39d8b0d8a051dce2c1496c74b4fc5695"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/bin/python": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/bin/python3.12",
+      "bytes": 31903952,
+      "sha256": "f52b9d2958ce4abad3e17026c8f844b2d1108b0e7e139d0a1879fe46c1de91a5"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/libLHAPDF.so",
+      "bytes": 952752,
+      "sha256": "dfca1050d6a9c155c2dba963a24e15e0c8c1460bd838a9a019151458995041d1"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/__init__.py",
+      "bytes": 46,
+      "sha256": "b1db78e1cf2f99f4ed19ce450f8f183aa5997685f129ef7876342a9105dd0f50"
+    },
+    "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so": {
+      "path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "resolved_path": "/home/btu/miniforge3/envs/atlas-hh-root/lib/python3.12/site-packages/lhapdf/lhapdf.so",
+      "bytes": 472000,
+      "sha256": "cd0502b27c77766f5aae66380250e861ee75133fc3fb7447138486a567b33aa0"
+    }
+  },
+  "independent_decimal_reference": {
+    "native_from_receipt": "0.254403024565842",
+    "declared_from_metadata": "0.2544023564420006",
+    "difference": "6.681238414E-7",
+    "relative_difference": "0.00000262624863520995272342532775236708530426147812587570577167164",
+    "strict_relative_tolerance": "0.000001",
+    "within_strict_diagnostic_tolerance": false,
+    "rounding_note": "Decimal reconstruction from serialized numbers, not a fresh native alpha evaluation"
+  },
+  "reference_table_bracket": [
+    {
+      "Q_GeV": 3.7262747,
+      "alpha_s": 0.26466316
+    },
+    {
+      "Q_GeV": 4.23139,
+      "alpha_s": 0.25335777
+    }
+  ],
+  "installed_AlphaS_h": {
+    "path": "/home/btu/miniforge3/envs/atlas-hh-root/include/LHAPDF/AlphaS.h",
+    "bytes": 10202,
+    "sha256": "5cb6ef49a769df21f34789b6d849215e1cdbd264fc925d54afa5192931f55897",
+    "witnesses": [
+      {
+        "line_1_based": 86,
+        "token": "void setMZ(double mz)",
+        "context": [
+          {
+            "line_1_based": 80,
+            "text": "    /// Used in the analytic and ODE solvers."
+          },
+          {
+            "line_1_based": 81,
+            "text": "    void setOrderQCD(int order) { _qcdorder = order; }"
+          },
+          {
+            "line_1_based": 82,
+            "text": ""
+          },
+          {
+            "line_1_based": 83,
+            "text": "    /// @brief Set the Z mass used in this alpha_s"
+          },
+          {
+            "line_1_based": 84,
+            "text": "    ///"
+          },
+          {
+            "line_1_based": 85,
+            "text": "    /// Used in the ODE solver."
+          },
+          {
+            "line_1_based": 86,
+            "text": "    void setMZ(double mz) { _mz = mz; }"
+          },
+          {
+            "line_1_based": 87,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "line_1_based": 91,
+        "token": "void setAlphaSMZ(double alphas)",
+        "context": [
+          {
+            "line_1_based": 85,
+            "text": "    /// Used in the ODE solver."
+          },
+          {
+            "line_1_based": 86,
+            "text": "    void setMZ(double mz) { _mz = mz; }"
+          },
+          {
+            "line_1_based": 87,
+            "text": ""
+          },
+          {
+            "line_1_based": 88,
+            "text": "    /// @brief Set the alpha_s(MZ) used in this alpha_s"
+          },
+          {
+            "line_1_based": 89,
+            "text": "    ///"
+          },
+          {
+            "line_1_based": 90,
+            "text": "    /// Used in the ODE solver."
+          },
+          {
+            "line_1_based": 91,
+            "text": "    void setAlphaSMZ(double alphas) { _alphas_mz = alphas; }"
+          },
+          {
+            "line_1_based": 92,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "line_1_based": 216,
+        "token": "class AlphaS_Ipol",
+        "context": [
+          {
+            "line_1_based": 210,
+            "text": ""
+          },
+          {
+            "line_1_based": 211,
+            "text": ""
+          },
+          {
+            "line_1_based": 212,
+            "text": ""
+          },
+          {
+            "line_1_based": 213,
+            "text": "  /// Interpolate alpha_s from tabulated points in Q2 via metadata"
+          },
+          {
+            "line_1_based": 214,
+            "text": "  ///"
+          },
+          {
+            "line_1_based": 215,
+            "text": "  /// @todo Extrapolation: log-gradient xpol at low Q, const at high Q?"
+          },
+          {
+            "line_1_based": 216,
+            "text": "  class AlphaS_Ipol : public AlphaS {"
+          },
+          {
+            "line_1_based": 217,
+            "text": "  public:"
+          }
+        ]
+      },
+      {
+        "line_1_based": 228,
+        "token": "void setQValues(const std::vector<double>& qs);",
+        "context": [
+          {
+            "line_1_based": 222,
+            "text": "    /// Calculate alphaS(Q2)"
+          },
+          {
+            "line_1_based": 223,
+            "text": "    double alphasQ2(double q2) const;"
+          },
+          {
+            "line_1_based": 224,
+            "text": ""
+          },
+          {
+            "line_1_based": 225,
+            "text": "    /// Set the array of Q values for interpolation"
+          },
+          {
+            "line_1_based": 226,
+            "text": "    ///"
+          },
+          {
+            "line_1_based": 227,
+            "text": "    /// Writes to the same internal arrays as setQ2Values, appropriately transformed."
+          },
+          {
+            "line_1_based": 228,
+            "text": "    void setQValues(const std::vector<double>& qs);"
+          },
+          {
+            "line_1_based": 229,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "line_1_based": 242,
+        "token": "void setAlphaSValues(const std::vector<double>& as)",
+        "context": [
+          {
+            "line_1_based": 236,
+            "text": ""
+          },
+          {
+            "line_1_based": 237,
+            "text": "    /// Set the array of alpha_s(Q2) values for interpolation"
+          },
+          {
+            "line_1_based": 238,
+            "text": "    ///"
+          },
+          {
+            "line_1_based": 239,
+            "text": "    /// The supplied vector must match the layout of Q2 knots.  Subgrids may"
+          },
+          {
+            "line_1_based": 240,
+            "text": "    /// have discontinuities, i.e. different alpha_s values on either side of a"
+          },
+          {
+            "line_1_based": 241,
+            "text": "    /// subgrid boundary (for the same Q values)."
+          },
+          {
+            "line_1_based": 242,
+            "text": "    void setAlphaSValues(const std::vector<double>& as) { _as = as; }"
+          },
+          {
+            "line_1_based": 243,
+            "text": ""
+          }
+        ]
+      },
+      {
+        "line_1_based": 248,
+        "token": "double _interpolateCubic",
+        "context": [
+          {
+            "line_1_based": 242,
+            "text": "    void setAlphaSValues(const std::vector<double>& as) { _as = as; }"
+          },
+          {
+            "line_1_based": 243,
+            "text": ""
+          },
+          {
+            "line_1_based": 244,
+            "text": ""
+          },
+          {
+            "line_1_based": 245,
+            "text": "  private:"
+          },
+          {
+            "line_1_based": 246,
+            "text": ""
+          },
+          {
+            "line_1_based": 247,
+            "text": "    /// Standard cubic interpolation formula"
+          },
+          {
+            "line_1_based": 248,
+            "text": "    double _interpolateCubic(double T, double VL, double VDL, double VH, double VDH) const;"
+          },
+          {
+            "line_1_based": 249,
+            "text": "    /// Get the gradient for a patch in the middle of the grid"
+          }
+        ]
+      }
+    ]
+  },
+  "source_semantic_conclusion": "Installed AlphaS.h documents MZ/AlphaSMZ setters for ODE; AlphaS_Ipol separately interpolates tabulated Q2/alpha values. No exact non-knot anchoring promise or publisher 1e-6 accuracy bound established. Strict discrepancy remains recorded.",
+  "official_source_urls": [
+    "https://www.lhapdf.org/config.html",
+    "https://www.lhapdf.org/classLHAPDF_1_1AlphaS__Ipol.html"
+  ],
+  "compiled_ipol_algorithm_independently_reimplemented": false,
+  "external_human_approval": false,
+  "new_native_PDF_calls_by_this_review": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "physical_ME_or_shower_alpha_binding": "UNVERIFIED_NOT_EXECUTED",
+  "physical_component_validated": false
+}
