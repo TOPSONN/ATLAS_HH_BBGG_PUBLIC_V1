@@ -1,6 +1,6 @@
 # Phase12 完整驗收報告：runtime provenance 與隔離 4F PDF recovery
 
-本報告綁定已完成的 canonical readback_04、167項Phase12方法／負測試、172項Phase11單元回歸，以及4764歷史檔案／24 installed files的after-preservation。來源commit、Draft PR、GitHub CI與遠端逐byte驗證將在交付步驟填入實際身份；不以本機成功替代GitHub證據。
+本報告綁定已完成的 canonical readback_04、167項Phase12方法／負測試、172項Phase11單元回歸，以及4764歷史檔案／24 installed files的after-preservation。來源commit `3a5c6bca87448ca6314d7b5929547083dcef5665` 與 [Draft PR29](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/29) 已建立；該exact source payload的push/PR CI均成功，105個remote blobs共1647186bytes與Git逐byte相同。後續僅三份交付文件更新，最終report-only HEAD的CI/remote closure另記本機FINAL_REPORT.json。
 
 最終科學結論為 **PASS_PHASE12_PARTIAL_RECOVERY**。本次實際補齊了唯一選定 4F central member 的外部 payload 與有限 native interface 讀回，也建立三個 PID 的 exact runtime observations；沒有批准新 runtime baseline、辨識歷史 writer，或選出已驗證的 generator component。`NONE_READY`、MG5 parser 未執行、physical pilot 未授權均保留。
 
@@ -10,8 +10,8 @@
 PROJECT: ATLAS_HH_BBGG_PUBLIC_V1
 TASK: PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1
 BASE_REVISION: 988c5a8b23f0ae3edf536bbabd17eef291717335
-NEW_SOURCE_REVISION: PENDING_DELIVERY
-DRAFT_PR_URL: PENDING_DELIVERY
+NEW_SOURCE_REVISION: 3a5c6bca87448ca6314d7b5929547083dcef5665
+DRAFT_PR_URL: https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/29
 
 RUNTIME_CURRENT_SHA256: e4567fd50d47a317407eb10cca76387053cdf06631949773296314702f77dca1
 RUNTIME_CURRENT_BYTES: 9302
@@ -41,8 +41,8 @@ NEW_DELPHES_EVENTS: 0
 
 HISTORICAL_PRESERVATION: PASS — 4764 historical files/2778583870bytes and24 installed files exact before/after; PR24–28 HEAD/Draft unchanged
 TESTS: PASS — 167 Phase12 +172 Phase11 unit regression; no full historical analysis rerun
-GITHUB_CI: PENDING_DELIVERY
-REMOTE_BLOB_VERIFICATION: PENDING_DELIVERY
+GITHUB_CI: PASS_EXACT_SOURCE_PUSH_AND_PR — 3a5c6bca87448ca6314d7b5929547083dcef5665; final delivery HEAD closure recorded separately
+REMOTE_BLOB_VERIFICATION: PASS — immutable source payload105files/1647186bytes exactGit match; final delivery HEAD closure recorded separately
 
 GATES_PASS: actual runtime snapshots; exact serializer transformation reproduction; official isolated info/member acquisition; 4F metadata/native flavour readback; finite interface points; explicit domain rejection guards; Phase7I contract dependency audit
 GATES_FAIL: alpha reference strict1e-6 diagnostic=false; relative difference2.626248635282933e-6; this is not a publisher accuracy bound
@@ -119,6 +119,9 @@ Candidate B 的 common 5F aa+0/1/2 family 不會拿這個 4F member 靜默替代
 
 本報告目前可以確認的 focused method evidence 包括 runtime 26、Phase7I dependency 22、PDF metadata 30，以及 acquisition 獨立負向檢查 15 項。這些 scope 分開，不相加冒稱正式物理驗證；最終 Phase12 suite 與相關 Phase11 method regression 的實際總數／結果待 root 封帳，未重跑完整 Phase8–11 分析。
 
-起始保存manifest的 **4764個歷史檔案、2778583870bytes** 與 **24個installed input/PDF/LHAPDF files** 已完成after逐檔SHA／bytes比對，全部相同。PR24–28仍OPEN/DRAFT、HEAD不變，舊source HEAD/index控制符合原記錄；Phase11 tracked工作區與index乾淨。這個有界保存範圍不等於整台host任意檔案或每個stopped workspace所有內容的完整稽核。source commit、Draft PR、CI與immutable remote blobs在交付時另填實際結果。
+起始保存manifest的 **4764個歷史檔案、2778583870bytes** 與 **24個installed input/PDF/LHAPDF files** 已完成after逐檔SHA／bytes比對，全部相同。PR24–28仍OPEN/DRAFT、HEAD不變，舊source HEAD/index控制符合原記錄；Phase11 tracked工作區與index乾淨。這個有界保存範圍不等於整台host任意檔案或每個stopped workspace所有內容的完整稽核。source payload commit／Draft PR／CI／immutable remote blobs 已完成實際核對；report-only HEAD另於本機FINAL_REPORT.json封帳。
 
 GitHub 僅發布 source、tests、bounded JSON metadata／reports。下載 grid、private configuration bytes、原生 binaries 不進 Git；沒有未核准 PDF／PNG 出版。原始失敗收據、各次版本、A02 與 Phase7I stopped workspace 不覆寫。自動 method tests／子代理 review 不冒稱外部人類 approval。
+## 精確來源交付
+
+Source payload：`3a5c6bca87448ca6314d7b5929547083dcef5665`。本報告與quality/identity metadata為後續三檔report-only交付，其餘source/config/test/evidence完全相同。新PR為 [Draft PR29](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/29)，base為PR28 branch。GitHub [push CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234273936) 與 [PR CI](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234357984) 均成功；105個選定檔案、1647186bytes已從immutable source revision下載並逐byte/SHA核對。final delivery HEAD的實際CI與全部remote blobs驗證由本機FINAL_REPORT.json閉合，不能把source revision與report-onlyHEAD混成同一身份。

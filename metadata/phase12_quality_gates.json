@@ -3,8 +3,8 @@
   "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
   "TASK": "PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1",
   "BASE_REVISION": "988c5a8b23f0ae3edf536bbabd17eef291717335",
-  "NEW_SOURCE_REVISION": null,
-  "DRAFT_PR_URL": null,
+  "NEW_SOURCE_REVISION": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+  "DRAFT_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/29",
   "FINAL_VERDICT": "PASS_PHASE12_PARTIAL_RECOVERY",
   "SELECTED_PILOT_COMPONENT": "NONE_READY",
   "BASELINE_APPROVED": false,
@@ -42,7 +42,9 @@
     "oneofficialcentralmember/info completeHTTPSacquisition685937bytes",
     "nativeLHAPDF6.5.6 externalmember with10before/afterinput/backend identities",
     "36finitexfx/5finitealphas/5domainwrapperrejections; same03/04points",
-    "inactiveparserrequest,no productiondispatcher,noinstalleddirectorywrite"
+    "inactiveparserrequest,no productiondispatcher,noinstalleddirectorywrite",
+    "exactsourcepayload push/PR GitHubCI successful",
+    "all105immutable source-payload blobs byte-equal Git"
   ],
   "GATES_FAIL": [
     "strict1e-6declared-reference versusipol diagnostic remainsfalse (notanofficialaccuracyclaim)",
@@ -75,8 +77,38 @@
     "installed_read_only_files": 24,
     "PR24_to_28_unchanged": true
   },
-  "GITHUB_CI": "PENDING_DELIVERY",
-  "REMOTE_BLOB_VERIFICATION": "PENDING_DELIVERY",
+  "GITHUB_CI": {
+    "status": "PASS_EXACT_SOURCE_PUSH_AND_PR",
+    "revision": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 39234357984,
+        "event": "pull_request",
+        "headSha": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+        "name": "Phase12 runtime provenance and isolated PDF source boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234357984"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 39234273936,
+        "event": "push",
+        "headSha": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+        "name": "Phase12 runtime provenance and isolated PDF source boundary",
+        "status": "completed",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234273936"
+      }
+    ],
+    "scope": "P12methods/P11unitregression/publication; no acquisition/nativePDF/live-runtime/fullanalysis/generator"
+  },
+  "REMOTE_BLOB_VERIFICATION": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+    "files": 105,
+    "bytes": 1647186,
+    "all_bytes_equal_Git": true
+  },
   "independent_human_review_approval": false,
   "NEXT_RECOMMENDED_STEP": "Review the exact proposed runtime baseline and isolated member/alpha/threshold evidence; resolve photonIR/cuts/scales/shower/weights before a separately authorized narrow parser test. No automatic pilot.",
   "NEW_ME_CALLS": 0,
@@ -89,5 +121,6 @@
     "PDF": 65,
     "readiness_policy": 34,
     "external_human_review": false
-  }
+  },
+  "DELIVERY_CLOSURE": "Onlyqualitygates/sourceidentitymanifest/finalreport change after frozen source/evidence commit. Final report-onlyHEAD CI/remote closure in local FINAL_REPORT.json."
 }

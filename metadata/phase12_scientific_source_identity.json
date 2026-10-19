@@ -3,8 +3,8 @@
   "task": "PHASE12_RUNTIME_PROVENANCE_AND_4F_PDF_RECOVERY_V1",
   "base_revision": "988c5a8b23f0ae3edf536bbabd17eef291717335",
   "branch": "codex/phase12-runtime-pdf-recovery",
-  "source_payload_commit": null,
-  "Draft_PR_URL": null,
+  "source_payload_commit": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+  "Draft_PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/29",
   "source_files": [
     {
       "path": ".github/workflows/phase12-runtime-pdf.yml",
@@ -158,8 +158,8 @@
     },
     {
       "path": "metadata/phase12_quality_gates.json",
-      "bytes": 4053,
-      "sha256": "125986cafa249f348a5cf6464af1b88d0fc9d7782c3b16899e1f470b48692f75"
+      "bytes": 5611,
+      "sha256": "20592ae21ba9453798f8d503070535c9a6d07fba3541b890245b84bbee2bfc8f"
     },
     {
       "path": "metadata/phase12_runtime_identity.json",
@@ -168,8 +168,8 @@
     },
     {
       "path": "reports/phase12_final_report.md",
-      "bytes": 12930,
-      "sha256": "bd1da62337095a90227d5a24fdf1525de6f5ca1e47ee96a0e9a0ab890356af14"
+      "bytes": 14237,
+      "sha256": "43e766b094e64054075f224e0bf59d190e063133b800497573899a313da5cdb6"
     },
     {
       "path": "reports/phase12a_runtime_drift.md",
@@ -609,5 +609,32 @@
     "PDF/PNGfigures"
   ],
   "evidence_scope": "Actual raw runtime observations,public-source metadata,actual isolated PDFreadback,syntheticmethods,unexecutedproposals remain distinct. Automated peer review is nothumanapproval.",
-  "delivery_note": "Manifest selfidentity bound byGit; source_payload_commit later recorded byexact3deliveryfilecommit."
+  "delivery_note": "Onlyqualitygates/sourceidentitymanifest/finalreport change after exact source/evidence commit. Actual final report-onlyHEAD CI and allremote blobs closed in localFINAL_REPORT.json.",
+  "source_payload_CI": [
+    {
+      "conclusion": "success",
+      "databaseId": 39234357984,
+      "event": "pull_request",
+      "headSha": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+      "name": "Phase12 runtime provenance and isolated PDF source boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234357984"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39234273936,
+      "event": "push",
+      "headSha": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+      "name": "Phase12 runtime provenance and isolated PDF source boundary",
+      "status": "completed",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39234273936"
+    }
+  ],
+  "source_payload_remote_verification": {
+    "status": "PASS_EXACT_IMMUTABLE_REMOTE_BLOBS",
+    "revision": "3a5c6bca87448ca6314d7b5929547083dcef5665",
+    "files": 105,
+    "bytes": 1647186,
+    "all_bytes_equal_Git": true
+  }
 }
