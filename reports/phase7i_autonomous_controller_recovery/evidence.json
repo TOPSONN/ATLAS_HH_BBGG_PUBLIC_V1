@@ -1,0 +1,499 @@
+{
+  "schema": "PHASE7I_AUTONOMOUS_ENGINEERING_EVIDENCE_V1",
+  "final_report": {
+    "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+    "TASK": "PHASE7I_AUTONOMOUS_CONTROLLER_RECOVERY",
+    "BASE_PR": 34,
+    "REQUESTED_STARTING_PR": 33,
+    "BASE_REVISION": "5431e0b2efba20863cddaccc37679af32e13a7f4",
+    "EXECUTED_SOURCE_REVISION": "114b5c00341be22982244d3d9548e80adf2d00e5",
+    "EXECUTED_SCOPE": "OFFLINE_TESTS_AND_READONLY_FULL_GIT_ONLY",
+    "DELIVERY_REVISION": null,
+    "ROOT_CAUSE_MOUNT": "Historical rw inventory missing; old all-rw comparison insufficient. Classified bounded policy implemented; actual false-positive not established.",
+    "ROOT_CAUSE_NAMESPACE": "StopPost226/mqueueEPERM observed; sibling-userns cached net/IPC ownership is inference.",
+    "CONTROLLER_ARCHITECTURE_SELECTED": "B_SINGLE_EXECSTART_SAME_AGGREGATE_CONTROLLER_AND_BOUNDED_CHILD",
+    "CONTROLLER_IMPLEMENTATION_STATUS": "SOURCE_AND_OFFLINE_VALIDATED_RUNTIME_UNVERIFIED",
+    "PERSISTENT_STORAGE_STRATEGY": "S3_FIXED_SLOT_LOGICAL_TRANSPORT_PLUS_S4_VOLATILE_DIAGNOSTIC; S1/S2_BACKEND_UNVERIFIED",
+    "PERSISTENT_HARD_CAPACITY_STATUS": "BLOCKED",
+    "REAL_MAIN_EXECUTED": false,
+    "REAL_EIGHT_PHASE_WORKFLOW_COMPLETED": false,
+    "ACTUAL_KERNEL_TESTS": 0,
+    "RESOURCE_MATRIX_STATUS": "47_REQUIRED_CASES_0_EXECUTED",
+    "AGGREGATE_CPU_SECONDS": null,
+    "AGGREGATE_WALL_SECONDS": null,
+    "PEAK_RAM_BYTES": null,
+    "SWAP_BYTES": null,
+    "ALLOCATED_DISK_BYTES": null,
+    "KERNEL_CGROUP_IDENTITY": null,
+    "ORPHAN_CLEANUP_STATUS": "UNKNOWN_NO_NEW_KERNEL_POSTMORTEM",
+    "OFFLINE_TEST_RESULTS": {
+      "status": "PASS_SOURCE_OFFLINE_ONLY",
+      "tests": 449,
+      "unique_ids": 449,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "SAFE_LEGACY_RESULTS": {
+      "status": "PASS_SELECTED_SAFE_LEGACY",
+      "tests": 81,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "INDEPENDENT_SOURCE_REVIEW": "PASS_SOURCE_OFFLINE_ONLY",
+    "INDEPENDENT_NUMERICAL_REVIEW": "PASS_PURE_VERIFIER_21_TESTS_AND_INDEPENDENT_ARITHMETIC_ONLY",
+    "HISTORICAL_SHA256_PRESERVATION": "PASS_SCOPED_EXISTING_INVENTORY",
+    "REAL_HH_BUILDS": 0,
+    "REAL_ME_CALLS": 0,
+    "REAL_INTEGRALS": 0,
+    "NEW_EVENTS": 0,
+    "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+    "GATES_PASS": [
+      "449 unique fixed offline tests, 0 failures/errors/skips",
+      "81 selected safe legacy tests, 0 failures/errors/skips",
+      "Source identity and independent source/numerical review",
+      "Scoped historical SHA256 inventory, 0 changes",
+      "Old292 test IDs and old45 controller methods retained",
+      "Fresh exact checkout and2 real full tracked Git preflights",
+      "S3 logical transport independent decoder negatives",
+      "Index and every outgoing intermediate payload publication audit"
+    ],
+    "GATES_FAIL": [],
+    "GATES_BLOCKED": [
+      "Persistent allocated-block/inode/metadata/control-plane capacity lacks verified backend",
+      "New live kernel/service needs separate exact-source human authorization",
+      "Aggregate cumulative CPU kill and activation-to-cleanup wall enforcement not closed",
+      "Formal BUILD_ONLY and physical restart gates remain closed"
+    ],
+    "GATES_UNKNOWN": [
+      "Actual namespace/private tmpfs readback",
+      "Actual aggregate CPU/wall/RAM/swap/disk and cgroup",
+      "Manager postmortem cleanup/controller-loss receipt retention",
+      "Active quota state and bounded filesystem driver",
+      "Future Git/compiler compatibility under all-ioctl/clone3/network denial"
+    ],
+    "FINAL_VERDICT": "LEVEL_A_SOURCE_ENGINEERING_VALIDATED_LEVEL_B_C_NOT_VERIFIED",
+    "COMMIT_HASH": "114b5c00341be22982244d3d9548e80adf2d00e5",
+    "PULL_REQUEST_URL": null,
+    "MINIMUM_EXTERNAL_ACTION_IF_BLOCKED": "Review exact S4 and separately authorize one limited diagnostic; FULL/formal additionally need one verified non-growing block+inode backend including metadata/control-plane/failure reserve.",
+    "NEXT_RECOMMENDED_STEP": "Review limited exact-source package and close capacity/whole-job enforcement prerequisites; no automatic dispatch.",
+    "revision_note": "Delivery head and PR URL are in final local DELIVERY.json and GitHub metadata; report cannot contain its own future commit hash."
+  },
+  "source_manifest": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+      "bytes": 2416
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+      "bytes": 3099
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+      "bytes": 2858
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+      "bytes": 4782
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "bytes": 2024
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "bytes": 6783
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "bytes": 1236
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "bytes": 16118
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "bytes": 13664
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+      "bytes": 32396
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "bytes": 19196
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+      "bytes": 5613
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "bytes": 11414
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "bytes": 8770
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "bytes": 17139
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "bytes": 25617
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+      "bytes": 33077
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "bytes": 20626
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "bytes": 15631
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "bytes": 17146
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "bytes": 17807
+    }
+  ],
+  "module_test_counts": {
+    "test_allocation_guard": 13,
+    "test_archive_io": 39,
+    "test_autonomous_publication": 16,
+    "test_backend": 26,
+    "test_controller_guard": 26,
+    "test_controller_io": 42,
+    "test_controller_recovery": 19,
+    "test_fixtures": 38,
+    "test_full_controller": 45,
+    "test_full_publication": 6,
+    "test_mount_attestation": 26,
+    "test_mount_policy": 29,
+    "test_namespace_attestation": 25,
+    "test_publication": 15,
+    "test_recovery_publication": 15,
+    "test_service_probe": 10,
+    "test_storage_transport": 23,
+    "test_worker_adapters": 15,
+    "test_workflow_evidence": 21
+  },
+  "offline": {
+    "schema": "PHASE7I_AUTONOMOUS_OFFLINE_V1",
+    "status": "PASS_SOURCE_OFFLINE_ONLY",
+    "tests_run": 449,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unique_test_ids": 449,
+    "source_unchanged": true,
+    "wall_seconds": 1.117706959999964,
+    "audit": {
+      "git_processes": 157,
+      "forbidden_attempts": [],
+      "unresolved_directory_fd_events": 709
+    },
+    "audit_scope": "REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX",
+    "audit_limitations": [
+      "stat/readlink and symlink aliases require source review",
+      "directory-FD targets are not disclosed by Python audit events"
+    ],
+    "kernel_services_executed": 0,
+    "actual_namespace_ioctls": 0,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+  },
+  "safe_legacy": {
+    "status": "PASS_SELECTED_SAFE_LEGACY",
+    "tests_run": 81,
+    "passes": 81,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped": 0,
+    "wall_seconds": 9.828205205000017,
+    "implementation_sources_unchanged": true,
+    "subprocess_audit": {
+      "counts": {
+        "fixed_python_fixture": 5,
+        "fixed_sleep20": 1,
+        "git": 551
+      },
+      "forbidden_imports": [],
+      "human_review_attempts": 0,
+      "python_fixture_code_sha256": [
+        "82e89f061a56ec484ed30553d4c480904ee9f56cc86d6e6c35e6ca7229932982",
+        "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+        "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+        "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+        "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+      ],
+      "rejected": []
+    },
+    "native_executions": 0,
+    "new_builds": 0,
+    "HUMAN_AUTHORIZATION_CREATED": false
+  },
+  "independent_tests": {
+    "targeted_controller_IO_and_transport_tests": 129,
+    "relation": "SUBSET_OF_FINAL_SUITE_NOT_ADDITIVE",
+    "pure_numerical_verifier_tests": 21
+  },
+  "real_full_git_preflight": {
+    "scope": "READONLY_FULL_TRACKED_WORKTREE_NOT_KERNEL_NOT_ZERO_ME",
+    "checkout_revision": "114b5c00341be22982244d3d9548e80adf2d00e5",
+    "git_layout": "NORMAL_GIT_DIRECTORY",
+    "rows": [
+      {
+        "ordinal": 1,
+        "status": "PASS_FULL_TRACKED_PREFLIGHT",
+        "tracked_files": 1495,
+        "critical_files": 322,
+        "host_outer_wall_seconds": 0.49224377600000935,
+        "host_parent_CPU_seconds": 0.171655353,
+        "host_children_CPU_seconds": 0.068118,
+        "full_receipt_sha256": "c517e1407f977cb93c9919e85ba953e24dcb1fd92c8cc124cb9476a56fe66c9f"
+      },
+      {
+        "ordinal": 2,
+        "status": "PASS_FULL_TRACKED_PREFLIGHT",
+        "tracked_files": 1495,
+        "critical_files": 322,
+        "host_outer_wall_seconds": 0.4701401850001048,
+        "host_parent_CPU_seconds": 0.153128068,
+        "host_children_CPU_seconds": 0.06069100000000001,
+        "full_receipt_sha256": "d32939e63e5237b140af6bc5494b8fec3eb3ca9631bc25c720241a427f440291"
+      }
+    ],
+    "combined_host_wall_seconds": 0.9623839610001141,
+    "combined_host_CPU_seconds": 0.453592421,
+    "not_a_contained_service_or_runtime_budget_proof": true,
+    "startup_and_import_cost_not_in_function_timer": true
+  },
+  "historical": {
+    "before": {
+      "local_basename": "historical_before_01.json",
+      "sha256": "d03440d4676fa7230e028caf2307e03b6dfdd3c23e17a19a5cd43781a5b1a6c7",
+      "bytes": 817
+    },
+    "after": {
+      "local_basename": "historical_after_01.json",
+      "sha256": "4da17e3db1749e181498ebd9f38feced7943338111d9c7f0fefc5276de230c33",
+      "bytes": 834
+    },
+    "content_observations": 50169,
+    "symlink_targets": 122,
+    "observed_bytes_including_repeated_observations": 3588706711,
+    "mismatches": 0,
+    "read_errors": 0,
+    "read_races": 0,
+    "symlink_changes": 0,
+    "scope": "HH protected campaign inventory plus prior hh_final_closure regular outputs/receipts/sources and listed diagnostic/source-control files; not all-host preservation",
+    "not_a_new_all_host_scan": true
+  },
+  "scientific_contract": {
+    "guard_actual_64hex": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+    "attachment_typo_63hex": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4ba123",
+    "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+    "silent_rebinding_or_authorization_created": false,
+    "source_physics_modified": false
+  },
+  "limits_unchanged": {
+    "aggregate_CPU_seconds": 4,
+    "aggregate_wall_seconds": 13,
+    "RAM_bytes": 536870912,
+    "swap_bytes": 0,
+    "work_tmpfs_bytes": 8388608,
+    "private_tmpfs_bytes": 1048576,
+    "aggregate_disk_bytes": 16777216,
+    "jobs": 1,
+    "workers": 1
+  },
+  "future_formal_limits_not_authorized": {
+    "CPU_seconds": 14400,
+    "wall_seconds": 14400,
+    "RAM_bytes": 2147483648,
+    "swap_bytes": 0,
+    "disk_bytes": 5368709120,
+    "jobs": 1,
+    "workers": 1,
+    "retained_physical_LHE_events": 0
+  },
+  "primary_refs": [
+    {
+      "local_basename": "offline_final_06.json",
+      "sha256": "5a75ad96f1bb678967899aadb61bf8b8079a1cbc25e84e353cb9692dfb1520ff",
+      "bytes": 6880
+    },
+    {
+      "local_basename": "safe_legacy_final_02.json",
+      "sha256": "c2a6a7d6194eb4df7644756264d6fbb4a5cadfea51deb6005926e32953726d70",
+      "bytes": 29609
+    },
+    {
+      "local_basename": "historical_before_01.json",
+      "sha256": "d03440d4676fa7230e028caf2307e03b6dfdd3c23e17a19a5cd43781a5b1a6c7",
+      "bytes": 817
+    },
+    {
+      "local_basename": "historical_after_01.json",
+      "sha256": "4da17e3db1749e181498ebd9f38feced7943338111d9c7f0fefc5276de230c33",
+      "bytes": 834
+    },
+    {
+      "local_basename": "independent_preservation_final_02.json",
+      "sha256": "9eb87c2003169fce9e81c33d558f18ac721d331a42f2268cc48c9f5a4c65067f",
+      "bytes": 26141
+    },
+    {
+      "local_basename": "candidate_source_preservation_binding_02.json",
+      "sha256": "635c6c5bce62b69c4561d44862f703f53746407a9bfa390149c3a6c90e3dee7b",
+      "bytes": 23232
+    },
+    {
+      "local_basename": "independent_controller_final_review_02.json",
+      "sha256": "dbe7ccfe9852211cae3dbd6b5bab336d9df900f45e3ee34610d477c7c409a15e",
+      "bytes": 6917
+    },
+    {
+      "local_basename": "controller_independent_source_review_03.json",
+      "sha256": "458b348ec9c9fc58f4b4e0376dd61551bf337d14f2092283015ff07edf770d33",
+      "bytes": 9492
+    },
+    {
+      "local_basename": "controller_independent_final_04.json",
+      "sha256": "cb265ff64fa6e444d182bd4b437ed6107692f4ddeae52fb4928cdaae4e1ccf34",
+      "bytes": 8078
+    },
+    {
+      "local_basename": "independent_publication_ci_runner_review_01.json",
+      "sha256": "1f1cf13848f9a1b7e193f70a061ba561b0590195df21cad17a825c0f7e221e06",
+      "bytes": 5890
+    },
+    {
+      "local_basename": "independent_ci_condition_matrix_01.json",
+      "sha256": "b0da42562dc1156f9153eaad0609d5ecf703c4bf18631ada64139c456dc39276",
+      "bytes": 8248
+    },
+    {
+      "local_basename": "independent_workflow_evidence_review_01.json",
+      "sha256": "6d2342feed5e4493a3063de9cf4a19e47b792c72133553ce8ab9d65fc9ee1558",
+      "bytes": 8892
+    },
+    {
+      "local_basename": "workflow_independent_review_final_01.json",
+      "sha256": "ed225b5ef0accbcac887d6d7a1654688571a65b1d607d4dad817d45423ef7ff5",
+      "bytes": 1872
+    },
+    {
+      "local_basename": "storage_routes_implementation_review_01.json",
+      "sha256": "9a70ab412d094e15dcc57aff01c93cfadd84a4505c725b6d6d07fa1914e6b90b",
+      "bytes": 9726
+    },
+    {
+      "local_basename": "controller_guard_design_review_02.json",
+      "sha256": "fd7aa8d00767bb6f8412b4f24b86e26e49d499775b07edbf2c5c85bab9d22c67",
+      "bytes": 3354
+    },
+    {
+      "local_basename": "exact_candidate_full_git_preflight_01.json",
+      "sha256": "a7d09f2a33f30215f65553fe792f4f29e974faf33014d37e87f4623b35b2e5e5",
+      "bytes": 118759
+    },
+    {
+      "local_basename": "line_endings_normalization_01.json",
+      "sha256": "2e99b5b5c3a140d4270e4d74969691c8daefce43911292cf51d7988496273363",
+      "bytes": 1068
+    },
+    {
+      "local_basename": "independent_cpu_wall_proposal_review_02.json",
+      "sha256": "2cfb98649720421ed37bec7a982d10166f7416a32333be4cd81b52059cd18f2c",
+      "bytes": 13115
+    }
+  ],
+  "preserved_failures": [
+    {
+      "local_basename": "engineering_failure_01.json",
+      "sha256": "fc24b3a81afbfd53e24cd6b75445d117451e9d86d4876febe2a2c36a0c62c908",
+      "bytes": 273
+    },
+    {
+      "local_basename": "workflow_runner_error_02.json",
+      "sha256": "802322544a3eaaf5a7b03248e42ddfc79cb0dba2101223efe09a16f40e3317b9",
+      "bytes": 380
+    },
+    {
+      "local_basename": "controller_io_independent_first_failure_01.json",
+      "sha256": "8db284d33e80e93b0f68e5a28fc403cfa17ed149f7e8c3f2613d1901fa98c10e",
+      "bytes": 419
+    },
+    {
+      "local_basename": "offline_attempt_01.json",
+      "sha256": "a35985547143be369a9d6953f44d2b6b7bb74f5de514056294a901beb4fc954b",
+      "bytes": 6869
+    },
+    {
+      "local_basename": "offline_attempt_03.json",
+      "sha256": "912d43bc7b42179fa62a82fc411f8dd1f37e4b051271e74a054e96dbf9b7c699",
+      "bytes": 6869
+    },
+    {
+      "local_basename": "offline_final_05.json",
+      "sha256": "dde20f08c5fb1ce583ecbe46923824b898b80eaa40b2c3b99822d85a4df215d9",
+      "bytes": 6869
+    },
+    {
+      "local_basename": "controller_capture_first_failure_01.json",
+      "sha256": "697e3ebd43d903d95901fc33b099addd4f7f680728c1ca63e512cb1a09c47436",
+      "bytes": 518
+    },
+    {
+      "local_basename": "controller_capture_first_failure_02.json",
+      "sha256": "ae7a7bc7123f1dad67fbedb131e1e7ead9dccb78a90a4cdf898862afae2b761c",
+      "bytes": 652
+    },
+    {
+      "local_basename": "independent_ci_condition_matrix_attempt_01.json",
+      "sha256": "b492a0d1aebf1060aaef05bbd8e96762f4d2671b74850315eba208f376edce12",
+      "bytes": 344
+    },
+    {
+      "local_basename": "delivery_builder_error_01.json",
+      "sha256": "23294d046592cd9398dd9096e9fb1fce47f25ca64fadb299763454c38139c313",
+      "bytes": 250
+    }
+  ],
+  "failure_history_note": "Actual failures and incorrect harness expectations preserved locally; final449/81 PASS cover corrected exact bytes.",
+  "limits_of_audit": "Fixed reviewed tests only; directory-FD targets and stat/readlink/symlink alias coverage are not a general sandbox.",
+  "publication": "Bounded safe summaries/hashes only; original raw/private evidence stays local."
+}
