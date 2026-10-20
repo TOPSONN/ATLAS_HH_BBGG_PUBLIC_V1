@@ -54,8 +54,29 @@
   "NEW_HARD_EVENTS": 0,
   "NEW_PYTHIA_EVENTS": 0,
   "NEW_DELPHES_EVENTS": 0,
-  "GITHUB_CI": "PENDING_EXACT_FINAL_SOURCE_PUSH; initial failure and routing correction preserved",
-  "source_payload_commit": null,
+  "GITHUB_CI": {
+    "status": "PASS_EXACT_SOURCE_EVIDENCE_COMMIT",
+    "commit": "b6c6c67c9149f78017b57d9817e2d79f67d17298",
+    "checks": [
+      {
+        "workflow": "Phase13 isolated runtime source and parser approval boundary",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580094/job/118438361511"
+      },
+      {
+        "workflow": "Phase13F full job resource source closure",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580079/job/118438361721"
+      },
+      {
+        "workflow": "Phase13F full job resource source closure",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364576812/job/118438349066"
+      }
+    ],
+    "scope": "Offline regressions and frozen native data only; no MG5 or physics execution"
+  },
+  "source_payload_commit": "b6c6c67c9149f78017b57d9817e2d79f67d17298",
   "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31",
   "executed_source_commit": "accc7cb4cb4da6f87abc204b9a986dbcc99c020a"
 }

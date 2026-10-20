@@ -2,7 +2,7 @@
 
 **FINAL_VERDICT：FULL_LAUNCH_ENVELOPE_VERIFIED（限本機宣告的無害完整流程）**
 
-Base：PR30，`aa6eb8c9abdcc4d177af2e84296180624faf835a`；新分支：`codex/phase13f-full-job-resource-closure`。本報告的第一個 source/evidence commit 與新 stacked Draft PR 在 delivery commit 補入；舊 PR24–30 保持 OPEN/DRAFT、head 不變。
+Base：PR30，`aa6eb8c9abdcc4d177af2e84296180624faf835a`；新分支：`codex/phase13f-full-job-resource-closure`。來源與數值證據commit為 `b6c6c67c9149f78017b57d9817e2d79f67d17298`，新 stacked Draft PR為 [PR31](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31)；舊 PR24–30 保持 OPEN/DRAFT、head 不變。
 
 ## PASS：實際完整工作流程
 
@@ -53,10 +53,10 @@ MG5_INVOCATIONS=0；NEW_ME_CALLS=0；NEW_INTEGRALS=0；NEW_HARD_EVENTS=0；NEW_P
 
 只發布來源、tests、Markdown與有界數值收據；無PDF/PNG、私有設定原文、PDFgrid、binary、event dump。每次push前檢查index及所有outgoing commit的中間payload。新PR保持Draft、stack在PR30；不merge、不forcepush。
 
-SOURCE_PAYLOAD_COMMIT：PENDING_SOURCE_COMMIT
+SOURCE_PAYLOAD_COMMIT：b6c6c67c9149f78017b57d9817e2d79f67d17298
 DELIVERY_COMMIT：見此報告所在的最後delivery commit；完整40位SHA於本機FINAL_REPORT.json記錄。
 PR_URL：https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31
-GITHUB_CI：待exact最終source/evidence commit push後驗證；workflow只跑offline source/method與frozen native evidence，不在CI重跑MG5或native服務。
+GITHUB_CI：PASS，exact source/evidence commit `b6c6c67c9149f78017b57d9817e2d79f67d17298` 的三個checks全部SUCCESS：[Phase13F PR](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580079)、[Phase13既有回歸與stacked發布](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580094)、[Phase13F push](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364576812)。CI只驗offline source/method及frozen native evidence，不重跑MG5或native服務；最後report-only delivery head檢查結果另存本機FINAL_REPORT.json。
 
 完整本機結果與各次未刪除執行目錄：`/home/btu/simulations/hh_phase13f/run_01`；新ext4 checkout：`/home/btu/projects/atlas_hh_phase13f_v1`。
 
