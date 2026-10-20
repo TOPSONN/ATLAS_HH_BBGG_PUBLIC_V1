@@ -32,6 +32,7 @@ jobs:
           simulation.hh_signal.final_closure.resource_closure.tests.test_worker_adapters
           simulation.hh_signal.final_closure.resource_closure.tests.test_allocation_guard
           simulation.hh_signal.final_closure.resource_closure.tests.test_publication
+          simulation.hh_signal.final_closure.resource_closure.tests.test_service_probe
       - name: Exact nonphysical legacy regression with forbidden dispatch audit
         run: >-
           python3 -B -m simulation.hh_signal.final_closure.resource_closure.legacy_regression

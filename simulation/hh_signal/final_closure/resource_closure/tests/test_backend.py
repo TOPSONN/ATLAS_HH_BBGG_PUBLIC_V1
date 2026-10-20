@@ -174,7 +174,20 @@ class BackendPolicyTests(unittest.TestCase):
             b.properties('/tmp/PLAN_ONLY', human_tty={'path': '/dev/pts/0', 'rdev': 1, 'inode': 2})
         self.assertFalse(b.PROFILE_BUILD['formal_build_execution_authorized'])
         self.assertTrue(b.PROFILE_BUILD['formal_build_entrypoint_requires_new_explicit_authorization'])
-        self.assertEqual(b.PROFILE_BUILD['RAM_profile_review_status'], 'PENDING_HUMAN_REVIEW_BEFORE_SERVICE_EXECUTION')
+        self.assertEqual(b.PROFILE_BUILD['RAM_profile_review_status'], 'EXPLICIT_HUMAN_APPROVED_RAM_ONLY')
+
+    def test_explicit_RAM_review_preserves_limits_and_blocks_formal_execution(self):
+        for profile, memory in ((b.load_profile('fixture'), 536870912),
+                                (b.load_profile('BUILD_ONLY'), 2147483648)):
+            self.assertEqual(profile['RAM_profile_review_status'], 'EXPLICIT_HUMAN_APPROVED_RAM_ONLY')
+            self.assertEqual(profile['RAM_profile_review_source'],
+                             'CURRENT_CHAT_EXPLICIT_USER_RAM_REVIEW_RELAYED_BY_ROOT')
+            self.assertEqual(profile['aggregate_memory_bytes'], memory)
+            self.assertEqual(profile['per_process_address_space_bytes'], memory)
+            self.assertEqual(profile['swap_bytes'], 0)
+            self.assertFalse(profile['formal_build_execution_authorized'])
+            self.assertIn('FORMAL_BUILD_NOT_AUTHORIZED', profile['RAM_profile_review_execution_limit'])
+            self.assertIn('COMPLETE_CONTROLLER_REMAINS_BLOCKED', profile['RAM_profile_review_execution_limit'])
 
     def test_manual_build_entry_order_and_no_review_creation(self):
         import ast

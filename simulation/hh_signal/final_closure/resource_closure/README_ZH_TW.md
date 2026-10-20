@@ -4,7 +4,7 @@
 
 ## 目前狀態
 
-實際 systemd resource matrix 尚未執行，RAM profile 的明確審核仍待回覆。不得把離線單元測試、純 BPF 解譯測試或舊 Phase13F 的成功當作本分支完整資源服務實測。Host provisioning、prestart source binding、observer CPU／RAM、post-unit hash及result receipt writing尚未納入完整controller硬限制；這是程式未完成，不是已證實環境不支援。即使47案全過，也只能設定 `PAYLOAD_BUSINESS_ENVELOPE_VERIFIED`；本版 `FULL_LAUNCH_ENVELOPE_VERIFIED` 永遠為false。
+實際 systemd resource matrix 尚未執行。本次使用者已明確核准 fixture RAM512MiB／swap0，以及未來正式提案 RAM2GiB／swap0；這是本次聊天的 RAM profile 審核，未授權正式 build、物理重啟或完整 controller 通過判定。不得把離線單元測試、純 BPF 解譯測試或舊 Phase13F 的成功當作本分支完整資源服務實測。Host provisioning、prestart source binding、observer CPU／RAM、post-unit hash及result receipt writing尚未納入完整controller硬限制；這是程式未完成，不是已證實環境不支援。即使47案全過，也只能設定 `PAYLOAD_BUSINESS_ENVELOPE_VERIFIED`；本版 `FULL_LAUNCH_ENVELOPE_VERIFIED` 永遠為false。
 
 固定 matrix 有47案：正常流程、六階段各五種超限／終止，以及 aggregate CPU、controller消失、setsid殘留、PID限制、唯讀來源、cgroup改寫、namespace、stdout、tmpfs容量／inode、固定exportFD、缺少人類審核、archive容量、allocation-bypass與單一工作mutex反例。任一案失敗就停止並保留新 workspace，不補做替代案。
 
@@ -12,7 +12,7 @@
 
 受限制的 service 包含 Python business imports、完整 Git preflight、來源／toolchain hashing、copy、compiler child、loader、receipt、postflight與archive export。Host的小型啟動／監測控制程式與systemd manager不納入payload CPU／RAM計數，另記錄其wall與固定metadata範圍；不宣稱整個作業系統受限。
 
-- fixture提案：aggregate CPU4s、wall13s、RAM512MiB、swap0、work8MiB、獨立 `/tmp`1MiB、固定host輸出、aggregate data disk16MiB。這些是待審核的無害測試上限。
+- fixture提案：aggregate CPU4s、wall13s、RAM512MiB、swap0、work8MiB、獨立 `/tmp`1MiB、固定host輸出、aggregate data disk16MiB。RAM／swap 已獲本次使用者明確核准；實際服務測試與完整 controller 驗收尚未通過。
 - 未執行的正式 BUILD_ONLY提案：aggregate CPU／wall各14400s、RAM2GiB、swap0、1job／1worker、CPU affinity一核心、總data disk≤5GiB。work2GiB、獨立 `/tmp`256MiB、32個64MiB archive chunks、固定index與日誌。2GiB work取代初步1GiB設計，原因是舊build用量約1.13GB；原5GiB總上限未提高。
 - TasksMax16允許compiler driver與helper；它不是16個物理workers。編譯工作仍逐一執行。
 - namespace保持host唯讀，work與 `/tmp`各有tmpfs byte及inode上限。實際mount readback不符合就拒絕。
@@ -39,9 +39,9 @@ python3 -B -m simulation.hh_signal.final_closure.resource_closure.publication
 
 legacy runner使用固定81項清單，不使用full discovery；會阻擋HumanReview建立、MG5／model import與未列入的subprocess。輸出必須全新，不覆寫前次結果。
 
-## 等待RAM明確審核後的無害matrix
+## RAM已核准、尚未執行的無害matrix
 
-以下不是目前已執行的命令，也不授權正式build。必須先完成RAM profile審核、來源獨立審查、commit乾淨checkout，然後由本次已授權的非物理測試範圍執行。output必須全新：
+以下不是目前已執行的命令，也不授權正式build。RAM profile 審核已完成；執行前仍須來源獨立審查與 commit 乾淨 checkout，再依本次已授權的非物理測試範圍執行。RAM 核准不會解除完整 controller 實作或正式 build 封鎖。output必須全新：
 
 ```bash
 python3 -B -m simulation.hh_signal.final_closure.resource_closure.run_fixtures \
