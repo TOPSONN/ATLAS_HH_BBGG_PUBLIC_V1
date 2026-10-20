@@ -4,6 +4,8 @@
 
 ## 目前狀態
 
+RAM 審核與一次非壓力 true 探測的最新結果見 [執行補件](../../../../reports/phase7i_resource_closure/RAM_REVIEW_EXECUTION_REPORT_ZH_TW.md) 及 ram_followup_status.json。設定已接受、true exit0；kernel cgroup／peak RAM 證據不足，完整流程仍 BLOCKED。舊 acceptance_status.json 是 b45 報告快照，RAM pending 狀態由本補件接續。
+
 實際 systemd resource matrix 尚未執行。本次使用者已明確核准 fixture RAM512MiB／swap0，以及未來正式提案 RAM2GiB／swap0；這是本次聊天的 RAM profile 審核，未授權正式 build、物理重啟或完整 controller 通過判定。不得把離線單元測試、純 BPF 解譯測試或舊 Phase13F 的成功當作本分支完整資源服務實測。Host provisioning、prestart source binding、observer CPU／RAM、post-unit hash及result receipt writing尚未納入完整controller硬限制；這是程式未完成，不是已證實環境不支援。即使47案全過，也只能設定 `PAYLOAD_BUSINESS_ENVELOPE_VERIFIED`；本版 `FULL_LAUNCH_ENVELOPE_VERIFIED` 永遠為false。
 
 固定 matrix 有47案：正常流程、六階段各五種超限／終止，以及 aggregate CPU、controller消失、setsid殘留、PID限制、唯讀來源、cgroup改寫、namespace、stdout、tmpfs容量／inode、固定exportFD、缺少人類審核、archive容量、allocation-bypass與單一工作mutex反例。任一案失敗就停止並保留新 workspace，不補做替代案。

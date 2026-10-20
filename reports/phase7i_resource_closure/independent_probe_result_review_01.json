@@ -1,0 +1,230 @@
+{
+  "schema": "phase7i_independent_nonstress_probe_result_review_v1",
+  "status": "MANAGER_EXECUTION_CONFIRMED_RUNTIME_ENFORCEMENT_INCONCLUSIVE",
+  "reviewed_at_utc": "2026-10-20T06:01:00.976643+00:00",
+  "reviewer": "hh_historical_gate_review",
+  "scope": "Read-only independent interpretation of the one completed true probe. No source/receipt edits, replacement service, stress, filter installation or physics execution.",
+  "receipt": {
+    "path": "/home/btu/simulations/hh_phase7i_resource_closure/ram_review_01/nonstress_true_probe_01/probe.json",
+    "bytes": 15233,
+    "sha256": "202ce0d350d341dd3e8cd67fa8876914b93f617fb4e636a151cc8fe9c9996f93",
+    "preserved_unchanged": true,
+    "raw_status": "BLOCKED_EXACT_USER_SERVICE_CONFIGURATION"
+  },
+  "source_binding": {
+    "exact_execution_commit": "28b967d38f88356a1b50679ff63e0facc247c2c0",
+    "HEAD_at_review": "28b967d38f88356a1b50679ff63e0facc247c2c0",
+    "clean_at_execution": "Parent reports clean exact commit at execution; this review independently verifies all31 receipt source bytes against that commit and current worktree.",
+    "worktree_clean_at_review": false,
+    "review_time_worktree_status": [
+      " M simulation/hh_signal/final_closure/resource_closure/README_ZH_TW.md",
+      "?? reports/phase7i_resource_closure/RAM_REVIEW_EXECUTION_REPORT_ZH_TW.md",
+      "?? reports/phase7i_resource_closure/full_controller_design_review_01.json",
+      "?? reports/phase7i_resource_closure/independent_probe_review_01.json",
+      "?? reports/phase7i_resource_closure/ram_followup_exact_source_preflight.json",
+      "?? reports/phase7i_resource_closure/ram_followup_historical_preservation.json",
+      "?? reports/phase7i_resource_closure/ram_followup_status.json",
+      "?? reports/phase7i_resource_closure/service_probe_execution_01.json"
+    ],
+    "review_time_dirty_note": "README/report publication edits are concurrent with this review. They do not alter any of the31 recorded production source/config paths.",
+    "source_snapshot_identity": "351f7e39617a75caacd6621bc9f8f99f871d46bd58b8cb61597712107d64d530",
+    "source_manifest_paths": 31,
+    "all31_worktree_and_exact_commit_hashes_and_sizes_match": true,
+    "true_sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28",
+    "prior_source_review": {
+      "path": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/independent_probe_review_01.json",
+      "sha256": "e540c1cf333bbbd7ae813020c7121fd92806c86f59c55f63e88aae3a954e1c6f",
+      "preserved": true
+    }
+  },
+  "actual_dispatch": {
+    "unit": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+    "service_executable": "/usr/bin/true",
+    "service_attempts": 1,
+    "stdout_and_stderr_null": true,
+    "OpenFile_present": false,
+    "stress_attempts": 0,
+    "filter_install_attempts": 0,
+    "resource_matrix_cases_executed": 0,
+    "formal_build_executed": false,
+    "human_authorizations_created": 0,
+    "MG5_invocations": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_hard_events": 0,
+    "new_Pythia_events": 0,
+    "new_Delphes_events": 0
+  },
+  "findings": [
+    {
+      "gate": "EXACT_SERVICE_CONFIGURATION_ACCEPTED",
+      "status": "PASS_OBSERVED",
+      "launch_returncode": 0,
+      "launch_stdout": "",
+      "launch_stderr": "",
+      "interpretation": "The manager accepted this exact user-service command. No namespace configuration rejection was observed."
+    },
+    {
+      "gate": "TRUE_EXECUTION",
+      "status": "PASS_OBSERVED",
+      "initial_query_returncode": 0,
+      "manager_before_cleanup": {
+        "Id": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+        "LoadState": "loaded",
+        "ActiveState": "active",
+        "SubState": "exited",
+        "Result": "success",
+        "ExecMainCode": "1",
+        "ExecMainStatus": "0",
+        "MainPID": "0"
+      },
+      "interpretation": "The loaded retained service reports a main process that executed and exited successfully. Its active/exited state is consistent with RemainAfterExit=yes."
+    },
+    {
+      "gate": "REQUESTED_MANAGER_CONFIGURATION_READBACK",
+      "status": "PASS_MANAGER_READBACK_ONLY",
+      "values": {
+        "MemoryMax": "536870912",
+        "MemorySwapMax": "0",
+        "CPUQuotaPerSecUSec": "300ms",
+        "CPUQuotaPeriodUSec": "10ms",
+        "RuntimeMaxUSec": "10s",
+        "TimeoutStartUSec": "2s",
+        "TimeoutStopUSec": "100ms",
+        "TasksMax": "16",
+        "PrivateUsers": "yes",
+        "PrivateNetwork": "yes",
+        "ProtectSystem": "strict",
+        "ProtectControlGroups": "yes"
+      },
+      "interpretation": "These are manager configuration fields, not inside-worker effective mount/cgroup or pressure-test proof."
+    },
+    {
+      "gate": "CPU_OBSERVATION",
+      "status": "OBSERVED_MANAGER_ACCOUNTING_ONLY",
+      "CPU_usage_ns": 6637000,
+      "CPU_usage_ms": 6.637,
+      "interpretation": "Reported6.637ms unit CPU is neither full-controller total CPU nor proof of enforced CPU cap under stress."
+    },
+    {
+      "gate": "MEMORY_PEAK",
+      "status": "UNKNOWN",
+      "raw_manager_value": "[not set]",
+      "numeric_bytes": null,
+      "interpretation": "[not set] remains null; it is not zero and does not validate the RAM limit."
+    },
+    {
+      "gate": "EFFECTIVE_KERNEL_RESOURCE_ENFORCEMENT",
+      "status": "UNKNOWN_NOT_TESTED",
+      "ControlGroup": "",
+      "kernel_snapshot_before_cleanup_present": false,
+      "interpretation": "No effective cgroup path/counter/mount evidence was captured. Missing observation is not proof that WSL lacks the feature or that an actual resource limit failed."
+    },
+    {
+      "gate": "MANAGER_CLEANUP",
+      "status": "PASS_OBSERVED_EXACT_UNIT_STOPPED_UNLOADED",
+      "kill_returncode": 0,
+      "stop_returncode": 0,
+      "post_stop_query_returncode": 0,
+      "manager_stopped_verified": true,
+      "manager_after_cleanup": {
+        "Id": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "MainPID": "0"
+      },
+      "interpretation": "Post-stop query exists and succeeded for the exact same unit; it reports not-found/inactive/dead and MainPID0. Do not describe it as missing."
+    },
+    {
+      "gate": "KERNEL_CLEANUP",
+      "status": "UNKNOWN_NOT_VERIFIED",
+      "kernel_cleanup": "NOT_OBSERVED",
+      "cleanup_verified": false,
+      "interpretation": "No cgroup path was observed, so empty/unpopulated/removal proof was not obtained. This is not positive evidence of residual processes."
+    },
+    {
+      "gate": "POST_STOP_DEFAULT_FIELDS",
+      "status": "NOT_RUNTIME_CONFIGURATION_DRIFT",
+      "LoadState": "not-found",
+      "examples": {
+        "MemoryMax": "infinity",
+        "MemorySwapMax": "infinity",
+        "CPUQuotaPerSecUSec": "infinity",
+        "ProtectSystem": "no",
+        "PrivateUsers": "no",
+        "ExecMainCode": "0"
+      },
+      "interpretation": "These values belong to a not-found unit response after successful stop/unload. They cannot be treated as the settings under which true ran or as evidence that live namespace/limit flags were relaxed."
+    }
+  ],
+  "coarse_status_interpretation": {
+    "raw_status_preserved": "BLOCKED_EXACT_USER_SERVICE_CONFIGURATION",
+    "original_receipt_rewritten": false,
+    "why_blocked": "The source conservatively replaces its launch-success classification with this coarse blocked status because cleanup_verified is false; kernel cleanup was not observed.",
+    "precise_result": "CONFIGURATION_ACCEPTED_AND_TRUE_EXECUTED; EFFECTIVE_LIMITS_UNKNOWN; MANAGER_STOPPED; KERNEL_CLEANUP_NOT_VERIFIED.",
+    "namespace_configuration_failure_observed": false,
+    "resource_limit_violation_observed": false,
+    "residual_processes_observed": false,
+    "global_environment_unsupported_established": false,
+    "cause_of_empty_ControlGroup_or_MemoryPeak_missing": "UNKNOWN; this receipt does not diagnose the lifetime/accounting/collection reason."
+  },
+  "measurement_scope": {
+    "host_diagnostic_elapsed_seconds": 0.11674767399999997,
+    "effective_resource_enforcement": "NOT_TESTED_BY_TRUE_PROBE",
+    "host_controller_fully_enclosed": false,
+    "interpretation": "Short observed host duration is not full-workflow wall-time enforcement proof."
+  },
+  "current_gates": {
+    "fixture_RAM512MiB_swap0": "EXPLICIT_HUMAN_APPROVED_RAM_ONLY",
+    "future_RAM2GiB_swap0": "EXPLICIT_HUMAN_APPROVED_RAM_ONLY",
+    "actual47_payload_resource_matrix": "NOT_EXECUTED",
+    "PAYLOAD_BUSINESS_ENVELOPE_VERIFIED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+    "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
+    "complete_controller_cpu_ram_wall_disk_closure": "OPEN_IMPLEMENTATION_AND_EVIDENCE_GAPS",
+    "formal_build_authorized": false,
+    "binary_review_authorized": false,
+    "physical_restart_authorized": false,
+    "event_generation_authorized": false,
+    "new_physics_results": null
+  },
+  "PASS": [
+    "Receipt SHA and exact31-path execution source binding.",
+    "One fixed true service accepted and main process successfully exited.",
+    "Requested manager limit/namespace configuration read back before cleanup.",
+    "Exact-unit kill/stop and successful post-stop manager query."
+  ],
+  "FAIL": [],
+  "BLOCKED": [
+    "Overall probe acceptance cannot pass its kernel cleanup evidence predicate.",
+    "Dependent runtime pressure/matrix tests and formal build remain stopped.",
+    "Full-controller and physical allocated-disk hard-limit implementation remains incomplete."
+  ],
+  "UNKNOWN": [
+    "Effective kernel cgroup/mount/CPU/RAM/wall/disk enforcement.",
+    "Numeric memory peak.",
+    "Kernel cgroup empty/unpopulated/removal proof.",
+    "Reason ControlGroup and memory-peak observations are unavailable."
+  ],
+  "preservation_and_next_step": {
+    "preserve_original_receipt_and_commit": true,
+    "rewrite_original_to_PASS": false,
+    "retry_or_weaken_settings": false,
+    "immediate_action": "Keep dependent tests stopped, as parent has done; do not repeat the completed one-shot probe or infer a formal/native/physics authorization.",
+    "future_design_only": "A separately reviewed nonstress observation design may retain its cgroup long enough for bounded inside attestation and explicit cleanup evidence. It is outside this completed one-shot scope and must not be executed as an automatic replacement."
+  },
+  "reviewer_counters": {
+    "service_launches": 0,
+    "tests_run": 0,
+    "stress_runs": 0,
+    "filter_installations": 0,
+    "native_scientific_programs": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "source_or_original_receipt_edits": 0
+  },
+  "FINAL_VERDICT": "INCONCLUSIVE_RUNTIME_RESOURCE_PROOF_CONFIGURATION_ACCEPTED_TRUE_SUCCESS_KERNEL_CLEANUP_UNKNOWN"
+}
