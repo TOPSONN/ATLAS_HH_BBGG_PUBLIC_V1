@@ -26,7 +26,7 @@
 | FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED | false |
 | FULL_LAUNCH_ENVELOPE_VERIFIED | false |
 | COMMIT_HASH | executable source 為 3c89de1…；交付 report commit 另見 PR head／本機 DELIVERY |
-| PULL_REQUEST_URL | 建立後記錄於 PR 與本機 DELIVERY；本報告初版建立於 publication 前 |
+| PULL_REQUEST_URL | https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/33 （Draft，stacked on PR32） |
 
 ## 實際工程範圍
 
@@ -65,7 +65,7 @@ FSIZE、固定 FDs、allocation filter、事後 st_blocks 或 IO rate 都未被�
 
 ## 驗證分類
 
-**PASS**：新 controller source 工程、獨立 source／storage review、最終 207 offline、81 safe legacy、來源 hash、前後歷史保存、guard `404dfd1f…4fba123`、physics contract `a8a093e2…1c937cb`、停止失敗測試並保留原始證據。Safe legacy audit：551 Git、5 fixed Python、1 fixed sleep，0 forbidden imports／HumanReview attempts。
+**PASS**：新 controller source 工程、獨立 source／storage review、最終 207 offline、81 safe legacy、來源 hash、前後歷史保存、guard `404dfd1f…4fba123`、physics contract `a8a093e2…1c937cb`、停止失敗測試並保留原始證據。Safe legacy audit：551 Git、5 fixed Python、1 fixed sleep，0 forbidden imports／HumanReview attempts；獨立結果審查另外實際完成 92 項收據／投影比對，全部通過。
 
 **FAIL**：唯一 positive kernel diagnostic；Pre 可寫 mount guard；StopPost namespace setup。
 
@@ -88,7 +88,7 @@ FSIZE、固定 FDs、allocation filter、事後 st_blocks 或 IO rate 都未被�
 
 新的 full_publication 固定以 PR32 SHA 為 base，檢查 staged index 與每個 outgoing intermediate payload，保留原 131072 bytes/blob、2MiB aggregate cap。僅推 source、tests、bounded JSON/Markdown；未推 PDF／PNG、raw events、ROOT/LHE/HepMC、binary、cache 或 private configuration。PR24、PR32 的原 HEAD 與 Draft 狀態保留，沒有 merge／force push。
 
-GitHub CI 在 publication 後另行記錄。新分支只執行固定安全 offline／legacy／publication；三個歷史 workflow 對 PR 與 manual dispatch 都排除此新分支，避免未授權 native／正向授權測試。CI 成功不能當 kernel 或物理驗收。
+GitHub CI 已核對 source/evidence head d313f1d42a44dbd8841d8d01fa09935a14f93ccf：PR resource job 39386496525／118507475129 SUCCESS，push resource job 39386440153 SUCCESS；三個歷史 PR jobs 明確 SKIPPED。Job log 實際包含 207 offline、81 safe legacy 與 publication PASS；完整 receipt 見 full_controller_github_ci_01.json。最後 report-only head 的狀態另見 PR／本機 DELIVERY。新分支只執行固定安全 offline／legacy／publication；三個歷史 workflow 對 PR 與 manual dispatch 都排除此新分支，避免未授權 native／正向授權測試。CI 成功不能當 kernel 或物理驗收。
 
 ## NEXT_RECOMMENDED_STEP
 

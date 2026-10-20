@@ -1,0 +1,58 @@
+{
+  "status": "PASS_OFFLINE_CI_WITH_THREE_INTENTIONAL_SKIPS",
+  "checked_head": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+  "runs": [
+    {
+      "id": 39386496516,
+      "name": "HH signal campaign source and physical evidence",
+      "event": "pull_request",
+      "head_sha": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39386496516"
+    },
+    {
+      "id": 39386496482,
+      "name": "Phase7 coordinated closure and preserved science",
+      "event": "pull_request",
+      "head_sha": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39386496482"
+    },
+    {
+      "id": 39386496512,
+      "name": "HH full-loop signal readiness",
+      "event": "pull_request",
+      "head_sha": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39386496512"
+    },
+    {
+      "id": 39386496525,
+      "name": "Phase7I resource source and harmless offline methods",
+      "event": "pull_request",
+      "head_sha": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39386496525"
+    },
+    {
+      "id": 39386440153,
+      "name": "Phase7I resource source and harmless offline methods",
+      "event": "push",
+      "head_sha": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39386440153"
+    }
+  ],
+  "resource_job_id": 118507475129,
+  "offline_tests_passed": 207,
+  "safe_legacy_passed": 81,
+  "publication_gate": "PASS",
+  "native_or_resource_stress_dispatched": false,
+  "kernel_enforcement_certified": false,
+  "scope": "GitHub source tests; not kernel or physical acceptance."
+}

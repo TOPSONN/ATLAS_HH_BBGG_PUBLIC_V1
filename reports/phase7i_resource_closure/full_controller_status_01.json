@@ -73,7 +73,17 @@
   "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
   "FINAL_VERDICT": "BLOCKED_FULL_CONTROLLER_KERNEL_AND_STORAGE_ENFORCEMENT",
   "COMMIT_HASH": "Exact executable 3c89de1e67def831e5aa69ce56bab427bfc28cbf; evidence delivery head recorded in PR.",
-  "PULL_REQUEST_URL": null,
-  "GITHUB_CI": "PENDING_PUBLICATION",
+  "PULL_REQUEST_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/33",
+  "GITHUB_CI": {
+    "head": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+    "PR_resource": "SUCCESS",
+    "push_resource": "SUCCESS",
+    "historical_PR_jobs": "3_SKIPPED",
+    "tests": {
+      "offline": 207,
+      "safe_legacy": 81
+    },
+    "kernel_proof": false
+  },
   "NEXT_RECOMMENDED_STEP": "Review preserved namespace/writable-mount failures and a real capacity backend before any newly reviewed diagnostic; formal and physical entries remain separately unauthorized."
 }

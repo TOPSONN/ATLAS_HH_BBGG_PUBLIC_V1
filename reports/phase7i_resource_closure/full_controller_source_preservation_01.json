@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "base": "66663557984fcc069de600e2af07e778a4ac30ff",
+  "head": "d313f1d42a44dbd8841d8d01fa09935a14f93ccf",
+  "historical_source_files_verified": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "base_sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+      "current_sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "base_sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+      "current_sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "base_sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+      "current_sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "base_sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+      "current_sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "base_sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+      "current_sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "base_sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+      "current_sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "base_sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+      "current_sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "base_sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+      "current_sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "base_sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+      "current_sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "base_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "current_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "base_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "current_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "base_sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727",
+      "current_sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "base_sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c",
+      "current_sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+      "base_sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5",
+      "current_sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "base_sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403",
+      "current_sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "base_sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae",
+      "current_sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+      "base_sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49",
+      "current_sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49",
+      "unchanged": true
+    }
+  ],
+  "modified_baseline_paths": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    ".github/workflows/hh_signal_resource_closure.yml"
+  ],
+  "all_original_base_files_except_four_CI_settings_unchanged": true,
+  "new_47_fixture_cases_or_semantic_changes": 0
+}
