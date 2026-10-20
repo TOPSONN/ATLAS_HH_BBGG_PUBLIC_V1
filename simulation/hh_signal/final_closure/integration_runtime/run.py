@@ -136,24 +136,39 @@ def execute_reviewed(root,revision,*,binary_review=None,physical_review=None):
         save(root/'execution_receipt.json',receipt);fcntl.flock(lockfile,fcntl.LOCK_UN);lockfile.close()
     return receipt
 
+def enclosed_build_complete(result):
+    """A finished process alone is not successful BUILD_ONLY evidence."""
+    last=result.get('last_unit_properties',{})
+    return (last.get('Result')=='success' and last.get('ExecMainStatus')=='0' and
+        result.get('resource_stop') is None and
+        result.get('formal_build_mode_launched') is True and
+        result.get('formal_build_executed') is True and
+        result.get('zero_ME_evidence_verified') is True and
+        result.get('cgroup_empty_and_unpopulated_verified') is True and
+        result.get('residual_processes_after_cleanup')==[] and
+        all(type(result.get(key)) is int and result[key]==0 for key in
+            ('new_ME_calls','new_integrals','new_hard_events')))
+
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['prepare-review','verify-build','audit-historical','execute-reviewed'])
     p.add_argument('--output',required=True);p.add_argument('--reviewed-revision');a=p.parse_args(argv)
+    formal_launch_attempted=False
     try:
         if a.mode=='prepare-review':
-            from .build import prepare
-            from .approval import confirm,scope
-            from .route_a import full_sources
-            root=safe_root(a.output);check_revision(a.reviewed_revision,full=True)
-            require(not root.exists(),'EXISTING_REVIEW_WORKSPACE_PRESERVED')
-            approval=confirm(scope('BUILD_ONLY',a.reviewed_revision,root,full_sources()))
-            r=prepare(root,revision=a.reviewed_revision,build_review=approval)
+            from ..resource_closure.backend import start_build,monitor_job
+            # No source hashing, copying, loader or receipt business logic on
+            # the host. Future real manual approval occurs inside the unit.
+            formal_launch_attempted=True
+            r=monitor_job(start_build(a.output,a.reviewed_revision))
+            require(enclosed_build_complete(r),'ENCLOSED_BUILD_INCOMPLETE_PRESERVED_NO_RETRY')
+            r['status']='BUILD_ONLY_ARCHIVED_SEPARATE_BINARY_REVIEW_REQUIRED'
         elif a.mode=='verify-build':
             _,r=inspect_build(a.output,a.reviewed_revision)
             print(json.dumps(r));return 0
         elif a.mode=='audit-historical':
             r=audit_historical_build(a.output);print(json.dumps({'status':'HISTORICAL_AUDIT_ONLY','identity':identity(r),'restart_authorized':False}));return 0
         else:
+            require(False,'PHYSICAL_ENCLOSURE_REQUIRES_SEPARATE_SOURCE_AND_BINARY_REVIEW')
             from .approval import confirm,scope
             from .route_a import full_sources,identities
             root=safe_root(a.output);require_fresh_attempt(root)
@@ -166,12 +181,9 @@ def main(argv=None):
         print(json.dumps({k:r.get(k) for k in ['status','final_verdict','reason','new_ME_calls','new_integrals','retained_physical_events']}))
         return 0 if r.get('status') not in ['PARTIAL_NO_REPLACEMENT'] else 2
     except Exception as exc:
-        out=safe_root(a.output)
-        if a.mode in ['prepare-review','execute-reviewed'] and out.exists() and not (out/'execution_receipt.json').exists() and not (out/'review_failure.json').exists():
-            failure={'status':'FAILED_REVIEW_NO_PHYSICAL_DISPATCH','reason':str(exc),'new_ME_calls':0,'new_integrals':0}
-            if hasattr(exc,'diagnostics'):failure['bounded_git_preflight_diagnostics']=exc.diagnostics
-            save(out/'review_failure.json',failure)
-        zero=None if (out/'execution_receipt.json').exists() else 0
+        # Denied physical commands never modify historical workspaces.
+        # A launched formal worker without complete proof has unknown counters.
+        zero=None if formal_launch_attempted else 0
         print(json.dumps({'status':'BLOCKED_NATIVE_RUNTIME','reason':str(exc),'new_ME_calls':zero,'new_integrals':zero}));return 2
 
 if __name__=='__main__':raise SystemExit(main())

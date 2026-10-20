@@ -1,0 +1,36 @@
+{
+  "status": "CORRECTED_HARNESS_AND_SOURCE_FINDINGS_PRESERVED",
+  "unit_attempt_01": {
+    "evidence_class": "OFFLINE_INERT_UNIT_ONLY",
+    "tests": 50,
+    "failures": 0,
+    "errors": 2,
+    "skipped": 0,
+    "seconds": 0.3390129370000068,
+    "systemd_services": 0,
+    "human_authorizations_created": 0,
+    "formal_HH_builds": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0
+  },
+  "historical_attempt_01": {
+    "status": "FAIL_CHANGED_PROTECTED_INPUT",
+    "baseline_sha256": "d5ce569f9e3f98c7e4d5d813b91b68968f23cf202c1d87bc47d8f52fb1a96834",
+    "baseline_scope": "HH protected campaign inventory plus prior hh_final_closure regular outputs/receipts/sources and listed diagnostic/source-control files; not all-host preservation",
+    "regular_path_observations": 50169,
+    "symlink_observations": 122,
+    "bytes_rehashed": 3588706711,
+    "changed_count": 122,
+    "preexisting_inventory_mismatches": [],
+    "wall_seconds": 18.961558736999905,
+    "qualification": "Existing read-only review baseline reused and actual protected paths rehashed now; not a fabricated new before-snapshot. Local new source/results excluded."
+  },
+  "resolution": [
+    "Unit discovery lacked package context: corrected to explicit module names, final138/138PASS.",
+    "Initial preservation check treated122predeclared symlinks asnew; final actual rehash validates content,size,target and0changes.",
+    "Independent source findings about CLI false success/history mutation corrected and negative-tested."
+  ],
+  "all_raw_attempts_retained_locally": true,
+  "no_scientific_history_modified": true
+}

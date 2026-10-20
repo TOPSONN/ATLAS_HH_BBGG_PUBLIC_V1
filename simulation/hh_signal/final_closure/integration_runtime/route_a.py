@@ -51,9 +51,10 @@ def regular(root,name):
     require(not any(q.is_symlink() for q in [p,*p.parents]) and p.is_file(),'MISSING_OR_SYMLINK_BUILD_INPUT:'+name)
     return p
 
-def dependencies(exe):
+def dependencies(exe,*,runner=None):
     # ldd is restricted to locally built, independently reviewed executables.
-    text=subprocess.check_output(['ldd',str(exe)],text=True,timeout=30)
+    require(callable(runner),'ENCLOSED_LOADER_RUNNER_REQUIRED')
+    text=runner(['/usr/bin/ldd',str(exe)]).stdout
     require('not found' not in text,'UNRESOLVED_SHARED_LIBRARY')
     paths=sorted(set(re.findall(r'(?:=>\s+|^\s*)(/[^\s()]+)',text,re.M)))
     require(paths,'MISSING_DYNAMIC_DEPENDENCIES')
@@ -111,7 +112,7 @@ def verify_copies(folder,seed):
         'process/SubProcesses/P0_gg_hh/native_io_only.f90':((REPO/'simulation/hh_signal/semantics_recovery/src/io_and_rng.f90').read_text().split('\nsubroutine hh_trace_stream')[0]+'\n').encode()}
     for name,data in extra.items():require(regular(folder,name).read_bytes()==data,'GENERATED_HELPER_SOURCE_DRIFT')
 
-def validate_receipt(r,root,revision,bindings,*,check_linkage=False):
+def validate_receipt(r,root,revision,bindings,*,check_linkage=False,linkage_runner=None):
     require(not any(p.is_symlink() for p in Path(root).rglob('*')),'BUILD_TREE_SYMLINK')
     require(r.get('schema')==SCHEMA,'WRONG_ROUTE_A_RECEIPT_SCHEMA')
     require(re.fullmatch('[0-9a-f]{40}',revision or '') and revision not in CONSUMED and
@@ -157,7 +158,7 @@ def validate_receipt(r,root,revision,bindings,*,check_linkage=False):
             # confusing the SONAME with the resolved filename.
             p=Path(d['path']);require(p.is_absolute() and re.fullmatch(r'[A-Za-z0-9_.+\-]+',d['name']) and
                 sha(p)==d['sha256'],'SHARED_LIBRARY_DRIFT')
-        if check_linkage:require(dependencies(exe)==dep,'ACTUAL_DYNAMIC_LINKAGE_DRIFT')
+        if check_linkage:require(dependencies(exe,runner=linkage_runner)==dep,'ACTUAL_DYNAMIC_LINKAGE_DRIFT')
         require(row.get('new_ME_calls')==row.get('new_integrals')==row.get('retained_physical_events')==0,'REPLICA_SCOPE_OVERCLAIM')
         require([p.get('stage') for p in row.get('preflights',[])]==['adaptation','measurement'],'MISSING_ZERO_ME_PREFLIGHT')
         for p in row['preflights']:

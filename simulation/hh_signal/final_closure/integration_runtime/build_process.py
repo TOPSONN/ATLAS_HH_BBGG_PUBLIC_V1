@@ -1,5 +1,5 @@
 """Bounded sequential compile/link/entry-denial children, never physical launch."""
-import ctypes,hashlib,os,resource,signal,subprocess,time
+import ctypes,hashlib,json,os,resource,signal,subprocess,time
 from .contract import require
 
 def invoke(argv,cwd,env,budget,expected=0):
@@ -8,7 +8,10 @@ def invoke(argv,cwd,env,budget,expected=0):
         require(ctypes.CDLL(None).prctl(1,signal.SIGKILL,0,0,0)==0,'BUILD_PARENT_DEATH_GUARD')
         if os.getppid()!=parent:os._exit(99)
         os.sched_setaffinity(0,{min(os.sched_getaffinity(0))})
-        resource.setrlimit(resource.RLIMIT_CPU,(60,60));resource.setrlimit(resource.RLIMIT_FSIZE,(64*1024**2,64*1024**2))
+        # Never raise a stricter enclosing hard limit (fixture and production).
+        for kind,target in ((resource.RLIMIT_CPU,60),(resource.RLIMIT_FSIZE,64*1024**2)):
+            hard=resource.getrlimit(kind)[1];limit=target if hard==resource.RLIM_INFINITY else min(target,hard)
+            resource.setrlimit(kind,(limit,limit))
         resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     p=subprocess.Popen(list(map(str,argv)),cwd=cwd,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,
         text=True,start_new_session=True,preexec_fn=setup)
@@ -35,6 +38,14 @@ def invoke(argv,cwd,env,budget,expected=0):
         'child_CPU_seconds':after.ru_utime+after.ru_stime-usage.ru_utime-usage.ru_stime,'process_group_kill_cleanup':True,
         'stdout_sha256':hashlib.sha256(out.encode()).hexdigest(),'stderr_sha256':hashlib.sha256(err.encode()).hexdigest(),
         'failure':None if failure is None else str(failure)}
+    # Retain bounded scalar diagnostics even when a full tmpfs cannot create logs.
+    details=[]
+    for line in out.splitlines():
+        if len(line)>4096:continue
+        try:row=json.loads(line)
+        except ValueError:continue
+        if isinstance(row,dict) and len(details)<16:details.append(row)
+    measurement['details']=details
     try:
         if failure:raise failure
         budget.check();require(len(out.encode())+len(err.encode())<=64*1024**2,'BUILD_LOG_CAP')

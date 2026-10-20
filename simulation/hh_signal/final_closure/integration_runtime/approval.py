@@ -22,7 +22,11 @@ class HumanReview:
 def scope(action,revision,root,source_identity,*,full_receipt=None,binary_identity=None):
     require(action in ['BUILD_ONLY','BINARY_REVIEW','PHYSICAL_RESTART'],'UNKNOWN_REVIEW_ACTION')
     require(re.fullmatch('[0-9a-f]{40}',revision or '') and revision not in CONSUMED,'CONSUMED_OR_UNCORRECTED_REVISION')
-    return {'action':action,'revision':revision,'output':str(root),'source_binding_identity':identity(source_identity),
+    profile={}
+    if action=='BUILD_ONLY':
+        from ..resource_closure.backend import load_profile
+        profile={'full_build_resource_profile':load_profile('BUILD_ONLY')}
+    return {**profile,'action':action,'revision':revision,'output':str(root),'source_binding_identity':identity(source_identity),
         'physics_contract_sha256':PHYSICS_SHA,'seeds':list(SEEDS),'ceilings':CAPS,
         'FULL_BUILD_RECEIPT_IDENTITY':full_receipt,'IMMUTABLE_BINARY_SOURCE_IDENTITY':binary_identity}
 
@@ -47,3 +51,25 @@ def verify(review,expected):
         'SEPARATE_HUMAN_REVIEW_REQUIRED_NOT_EDITABLE_DATA')
     require(review.digest==identity(review.scope)==identity(expected),'STALE_OR_WRONG_HUMAN_REVIEW_SCOPE')
     return {'status':'EXTERNAL_OPERATOR_REVIEW_SCOPE_BOUND','scope':expected,'scope_sha256':review.digest}
+
+
+def confirm_fd(expected,fd):
+    """Future isolated worker: the actual caller's pinned human TTY descriptor.
+
+    This reads a manual challenge in this PID. It accepts no answer argument,
+    approval file, flag or environment variable. Never invoke in automated tests.
+    """
+    import stat
+    require(type(fd) is int and fd>=3 and os.isatty(fd),'PINNED_HUMAN_TERMINAL_REQUIRED')
+    info=os.fstat(fd)
+    require(stat.S_ISCHR(info.st_mode) and info.st_rdev!=0,'HUMAN_TERMINAL_DEVICE_REQUIRED')
+    challenge='APPROVE '+expected['action']+' '+identity(expected)
+    message='\nEXTERNAL HUMAN APPROVAL OF THIS EXACT SCOPE IS REQUIRED:\n'+json.dumps(expected,indent=2)+'\n'+challenge+'\n> '
+    os.write(fd,message.encode('utf-8'))
+    raw=bytearray()
+    while len(raw)<256:
+        byte=os.read(fd,1)
+        if not byte or byte==b'\n':break
+        raw.extend(byte)
+    require(bytes(raw)==challenge.encode('ascii'),'EXPLICIT_HUMAN_SCOPE_CONFIRMATION_REQUIRED')
+    return HumanReview(_SEAL,expected)

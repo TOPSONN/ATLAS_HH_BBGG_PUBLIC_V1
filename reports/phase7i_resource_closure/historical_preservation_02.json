@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SAME_AS_PREEXISTING_REVIEW_BASELINE",
+  "baseline_sha256": "d5ce569f9e3f98c7e4d5d813b91b68968f23cf202c1d87bc47d8f52fb1a96834",
+  "baseline_scope": "HH protected campaign inventory plus prior hh_final_closure regular outputs/receipts/sources and listed diagnostic/source-control files; not all-host preservation",
+  "regular_path_observations": 50169,
+  "symlink_observations": 122,
+  "bytes_rehashed": 3588706711,
+  "changed_count": 0,
+  "preexisting_inventory_mismatches": [],
+  "wall_seconds": 14.399740595999901,
+  "qualification": "Existing review baseline reused; resolved regular content hashes and exact declared symlink targets both actually checked. Not all-host preservation. New source/results excluded.",
+  "harness_correction": "Initial historical_preservation.json incorrectly classified 122 predeclared symlinks as new links; that failure is preserved. Corrected policy accepts only the exact declared links, while retaining content/size/target checks."
+}
