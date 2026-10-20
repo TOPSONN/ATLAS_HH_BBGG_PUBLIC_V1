@@ -1,0 +1,878 @@
+{
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE7I_KERNEL_NAMESPACE_AND_STORAGE_RECOVERY_V1",
+  "BASE_REVISION": "b8ae4cc03c0ac408577909847e56f417fc28eba8",
+  "FROZEN_SOURCE": "133f14e6f3f05189c706e183eb5dc86bde339376",
+  "new_kernel_services": 0,
+  "actual_namespace_ioctls": 0,
+  "stress_runs": 0,
+  "retry": 0,
+  "REAL_ME_CALLS": 0,
+  "REAL_INTEGRALS": 0,
+  "NEW_EVENTS": 0,
+  "offline": {
+    "schema": "PHASE7I_NAMESPACE_STORAGE_OFFLINE_REGRESSION_V1",
+    "evidence_kind": "OFFLINE_SYNTHETIC_KERNEL_OBSERVATIONS_WITH_AUDIT_DENIALS",
+    "status": "PASS",
+    "test_modules": [
+      "test_allocation_guard",
+      "test_archive_io",
+      "test_backend",
+      "test_controller_recovery",
+      "test_fixtures",
+      "test_full_controller",
+      "test_full_publication",
+      "test_mount_attestation",
+      "test_namespace_attestation",
+      "test_publication",
+      "test_recovery_publication",
+      "test_service_probe",
+      "test_worker_adapters"
+    ],
+    "module_test_counts": {
+      "test_allocation_guard": 13,
+      "test_archive_io": 39,
+      "test_backend": 26,
+      "test_controller_recovery": 19,
+      "test_fixtures": 38,
+      "test_full_controller": 45,
+      "test_full_publication": 6,
+      "test_mount_attestation": 26,
+      "test_namespace_attestation": 25,
+      "test_publication": 15,
+      "test_recovery_publication": 15,
+      "test_service_probe": 10,
+      "test_worker_adapters": 15
+    },
+    "tests": 292,
+    "unique_test_ids": 292,
+    "actual_test_ids_sha256": "4f6426b1494eb13ae24161252b4854dc12dd91fd7765f9c7ca38efcf48d99a6e",
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_seconds": 1.173502224999993,
+    "focused_tests": {
+      "status": "PASS",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "test_ids": [
+        "simulation.hh_signal.final_closure.resource_closure.tests.test_controller_recovery.ControllerRecoveryTests.test_forged_child_lifecycle_or_full_envelope_prefix_rejected",
+        "simulation.hh_signal.final_closure.resource_closure.tests.test_namespace_attestation.NamespaceValidationTests.test_invalid_id_maps_rejected",
+        "simulation.hh_signal.final_closure.resource_closure.tests.test_full_controller.FullControllerMockWorkflow.test_cleanup_failure_preserves_original_child_error"
+      ],
+      "wall_seconds": 0.1255241210000122,
+      "kernel_execution": false,
+      "scientific_execution": false
+    },
+    "audit": {
+      "real_namespace_open_attempts": 0,
+      "real_mountinfo_open_attempts": 0,
+      "real_cgroup_open_attempts": 0,
+      "real_ioctl_attempts": 0,
+      "non_git_process_attempts": 0,
+      "forbidden_import_attempts": 0,
+      "allowed_git_processes": 157,
+      "denials": []
+    },
+    "prior_45_test_ids_preserved": true,
+    "prior_test_ids_count": 45,
+    "new_test_ids_count": 45,
+    "activation_behavior": "STRONGER_UNCONDITIONAL_SEPARATE_KERNEL_AUTHORIZATION_DENIAL",
+    "source_rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+        "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+        "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+        "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+        "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+        "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+        "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+        "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+        "sha256": "fb7ace1034f396f32107fffc2dabea91e24013d538efa7debf68ea3eb53e8656"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+        "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+        "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+        "sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+        "sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+        "sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+        "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+        "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+        "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+        "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+        "sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+        "sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+        "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+        "sha256": "5410d2930956d68f9ab0a138080d849a364c423fbea4541924668a33159f3239"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+        "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+        "sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+        "sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+        "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+        "sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+        "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+        "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+        "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+      }
+    ],
+    "source_rows_stable_during_test": true,
+    "raw_log_sha256": "cbac8a6f5119ef5eef71d4fced43ec1066dd6988fd03b33845fcd2b344ddf11a",
+    "raw_log_bytes": 60804,
+    "kernel_services_executed": 0,
+    "namespace_operations_executed": 0,
+    "native_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+  },
+  "safe_legacy": {
+    "status": "PASS_SELECTED_SAFE_LEGACY",
+    "tests_run": 81,
+    "passes": 81,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped": 0,
+    "selected_test_sources_unchanged": true,
+    "subprocess_audit": {
+      "counts": {
+        "fixed_python_fixture": 5,
+        "fixed_sleep20": 1,
+        "git": 551
+      },
+      "forbidden_imports": [],
+      "human_review_attempts": 0,
+      "python_fixture_code_sha256": [
+        "74b7dbb247c5a7b88137026c99afc8c21bd28e0493d0aa028cedd981cdf2959d",
+        "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+        "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+        "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+        "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+      ],
+      "rejected": []
+    }
+  },
+  "safe_legacy_full_local_receipt_sha256": "a7ef70fc42aebfbcce3829bf4be03f01d92d141a3def202dc9985faefa4666c3",
+  "test_bytes_match_frozen_commit": {
+    "status": "PASS",
+    "source_files": 30,
+    "rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+        "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+        "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+        "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+        "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+        "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+        "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+        "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+        "sha256": "fb7ace1034f396f32107fffc2dabea91e24013d538efa7debf68ea3eb53e8656"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+        "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+        "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+        "sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+        "sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+        "sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+        "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+        "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+        "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+        "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+        "sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+        "sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+        "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+        "sha256": "5410d2930956d68f9ab0a138080d849a364c423fbea4541924668a33159f3239"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+        "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+        "sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+        "sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+        "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+        "sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+        "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+        "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+        "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+      }
+    ]
+  },
+  "prior_45_ids_preserved": {
+    "schema": "PHASE7I_PRESERVED_45_OFFLINE_TEST_IDS_V1",
+    "status": "PASS",
+    "original_test_ids": 45,
+    "current_test_ids": 45,
+    "test_id_sets_identical": true,
+    "changed_test_bodies": [
+      "FullControllerCommandAndLifecycle.test_activation_performs_only_fixed_exec_without_business_work",
+      "FullControllerCommandAndLifecycle.test_fixed_command_has_no_host_output_or_privileged_transport",
+      "FullControllerCommandAndLifecycle.test_fixed_limits_same_cgroup_kill_and_no_restart",
+      "FullControllerMockWorkflow.test_cleanup_failure_preserves_original_child_error"
+    ],
+    "activation_assertion": "STRONGER_UNCONDITIONAL_SEPARATE_KERNEL_AUTHORIZATION_DENIAL",
+    "other_assertion_changes": "single-Main proposal and diagnostic ordering; original resource/isolation/failure assertions preserved",
+    "original_source_sha256": "a79d4ab4c99ce9f3f59d3e0b4654af1461ebe0c64c2f02ff29f6d0e47dc73104",
+    "current_source_sha256": "5410d2930956d68f9ab0a138080d849a364c423fbea4541924668a33159f3239",
+    "kernel_execution": false,
+    "scientific_execution": false
+  },
+  "historical_preservation": {
+    "before": {
+      "schema": "PHASE7I_NAMESPACE_STORAGE_HISTORICAL_PRESERVATION_V1",
+      "status": "PASS",
+      "measurement": "READ_ONLY_CONTENT_HASH_REVALIDATION",
+      "baseline_sha256": "d5ce569f9e3f98c7e4d5d813b91b68968f23cf202c1d87bc47d8f52fb1a96834",
+      "declared_content_observations": 50169,
+      "content_observations_checked": 50169,
+      "declared_symlink_targets": 122,
+      "symlink_targets_checked": 122,
+      "declared_inventory_entries": 8420,
+      "observed_bytes_including_repeated_content_observations": 3588706711,
+      "mismatch_count": 0,
+      "read_error_count": 0,
+      "read_race_count": 0,
+      "symlink_target_change_count": 0,
+      "bounded_failure_projection": [],
+      "wall_seconds": 27.974509045,
+      "scope": "HH protected campaign inventory plus prior hh_final_closure regular outputs/receipts/sources and listed diagnostic/source-control files; not all-host preservation",
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_events": 0,
+      "kernel_services_executed": 0
+    },
+    "after": {
+      "schema": "PHASE7I_NAMESPACE_STORAGE_HISTORICAL_PRESERVATION_V1",
+      "status": "PASS",
+      "measurement": "READ_ONLY_CONTENT_HASH_REVALIDATION_AFTER_SOURCE_AND_OFFLINE_TESTS",
+      "baseline_sha256": "d5ce569f9e3f98c7e4d5d813b91b68968f23cf202c1d87bc47d8f52fb1a96834",
+      "declared_content_observations": 50169,
+      "content_observations_checked": 50169,
+      "declared_symlink_targets": 122,
+      "symlink_targets_checked": 122,
+      "declared_inventory_entries": 8420,
+      "observed_bytes_including_repeated_content_observations": 3588706711,
+      "mismatch_count": 0,
+      "read_error_count": 0,
+      "read_race_count": 0,
+      "symlink_target_change_count": 0,
+      "bounded_failure_projection": [],
+      "wall_seconds": 22.605253750000003,
+      "scope": "HH protected campaign inventory plus prior hh_final_closure regular outputs/receipts/sources and listed diagnostic/source-control files; not all-host preservation",
+      "new_ME_calls": 0,
+      "new_integrals": 0,
+      "new_events": 0,
+      "kernel_services_executed": 0
+    }
+  },
+  "scientific_input_identity": {
+    "schema": "PHASE7I_NAMESPACE_STORAGE_INPUT_IDENTITY_REVIEW_V1",
+    "evidence_kind": "READ_ONLY_SOURCE_BYTES_AND_PURE_TEXT_OVERLAY",
+    "source_revision": "b8ae4cc03c0ac408577909847e56f417fc28eba8",
+    "attachment_scientific_guard_literal": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4ba123",
+    "attachment_scientific_guard_literal_hex_characters": 63,
+    "attachment_guard_literal_valid_sha256": false,
+    "computed_corrected_guard_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+    "historical_frozen_corrected_guard_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+    "computed_guard_matches_unchanged_historical_contract": true,
+    "guard_literal_discrepancy_status": "ATTACHMENT_63_HEX_CHARACTERS_MISSING_F_NEAR_SUFFIX_NOT_SILENTLY_CORRECTED",
+    "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+    "physics_contract_matches_expected": true,
+    "source_bytes_modified": false,
+    "model_imports": 0,
+    "native_dispatches": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "authorization_generated_or_reused": false
+  },
+  "original_47_source_and_profiles_unchanged": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c"
+    }
+  ],
+  "real_Git_preflight_cost": {
+    "status": "PASS_REAL_READ_ONLY_FULL_TRACKED_GIT_CHECKS",
+    "source_revision": "133f14e6f3f05189c706e183eb5dc86bde339376",
+    "source_checkout": "/home/btu/projects/atlas_hh_phase7i_ns_inspection_133f14e",
+    "checks": [
+      {
+        "check": 1,
+        "status": "PASS_FULL_TRACKED_PREFLIGHT",
+        "tracked_files": 1474,
+        "critical_files": 307,
+        "wall_seconds": 0.4808850680000205,
+        "CPU_seconds": 0.22774809699999998,
+        "commands": 15,
+        "index_sha256": "cb4c9fdd2159494b8287481bbca390e923ec4b8098a4299c00129aa4852fa163",
+        "raw_receipt_sha256": "a4077a3036c8359a8b070da772bbb7c73bfd6164e184b54fff3ffccc352cec30"
+      },
+      {
+        "check": 2,
+        "status": "PASS_FULL_TRACKED_PREFLIGHT",
+        "tracked_files": 1474,
+        "critical_files": 307,
+        "wall_seconds": 0.44563111699994806,
+        "CPU_seconds": 0.19235737199999997,
+        "commands": 15,
+        "index_sha256": "cb4c9fdd2159494b8287481bbca390e923ec4b8098a4299c00129aa4852fa163",
+        "raw_receipt_sha256": "172ec740287e35fe379b92418c3f41fb9533bbe094eefd85401caa527fda8951"
+      }
+    ],
+    "combined_host_wall_seconds": 0.954800199000033,
+    "combined_guard_CPU_seconds": 0.42010546899999995,
+    "quotient_CPU_over_30_percent_seconds": 1.4003515633333332,
+    "enclosed_runtime_cost": "UNKNOWN_NOT_EXECUTED_IN_SERVICE",
+    "full_resource_compatibility": "NOT_ESTABLISHED_BY_HOST_TIMING",
+    "new_service_invocations": 0,
+    "namespace_ioctls": 0,
+    "REAL_ME_CALLS": 0,
+    "REAL_INTEGRALS": 0,
+    "NEW_EVENTS": 0
+  },
+  "independent_reviews": [
+    {
+      "local_file": "independent_namespace_review_01.json",
+      "sha256": "5936d516eff3ad91180a786e2fdb4b4b4d619e69ed7cce4581bf267536b6cca6",
+      "evidence_class": "INDEPENDENT_SOURCE_OR_PROPOSAL_REVIEW_ONLY",
+      "runtime_proof": false
+    },
+    {
+      "local_file": "independent_namespace_implementation_review_02.json",
+      "sha256": "85c39f4f9a4129feb582bff605141dc96ff242a4b5c8b569ff3b93c774bd4a8d",
+      "evidence_class": "INDEPENDENT_SOURCE_OR_PROPOSAL_REVIEW_ONLY",
+      "runtime_proof": false
+    },
+    {
+      "local_file": "independent_mount_publication_review_01.json",
+      "sha256": "7c6a5ea7f0f4b7dd50f2508d1cd803eac71d4e69b0813aa44ac6434079d45723",
+      "evidence_class": "INDEPENDENT_SOURCE_OR_PROPOSAL_REVIEW_ONLY",
+      "runtime_proof": false
+    },
+    {
+      "local_file": "final_independent_source_review_04.json",
+      "sha256": "37c37800f62b42f275b8ab32f1d4d11bc736b28f3a411cc581dc22550e549adc",
+      "evidence_class": "INDEPENDENT_SOURCE_OR_PROPOSAL_REVIEW_ONLY",
+      "runtime_proof": false
+    },
+    {
+      "local_file": "final_proposal_review_01.json",
+      "sha256": "1d380d1544810d062e31bacb1a1276292215be836bf7ba454a28ef325177ae55",
+      "evidence_class": "INDEPENDENT_SOURCE_OR_PROPOSAL_REVIEW_ONLY",
+      "runtime_proof": false
+    }
+  ],
+  "final14manifest": {
+    "schema": "PHASE7I_INDEPENDENT_FINAL_SOURCE_MANIFEST_V1",
+    "base": "b8ae4cc03c0ac408577909847e56f417fc28eba8",
+    "source_files": [
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "bytes": 2278,
+        "sha256": "1526fd676f5206b5ef04e4d1edf1b5e982e070293a38980570b1cd7c51de4b67"
+      },
+      {
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "bytes": 2961,
+        "sha256": "1defb5c83b556c22c80db69e313ab0a10efdb2830922a9de0e53977a769a7243"
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "bytes": 2720,
+        "sha256": "61b306ffec4ec74400e986e3a187f86495efe13a5552d4a302c11dc1e1639b0c"
+      },
+      {
+        "path": ".github/workflows/hh_signal_resource_closure.yml",
+        "bytes": 3604,
+        "sha256": "bc2b78754a49722be319cb7675f7b5fc6fcc291e09736cd6ba9000cf77457651"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/NAMESPACE_STORAGE_RECOVERY_ZH_TW.md",
+        "bytes": 5651,
+        "sha256": "dbb20780f12ac3ecc14d404b17dca7897eb70aa4bf0f11326e204f8a3a3e29a4"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+        "bytes": 19558,
+        "sha256": "fb7ace1034f396f32107fffc2dabea91e24013d538efa7debf68ea3eb53e8656"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+        "bytes": 11810,
+        "sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+        "bytes": 5964,
+        "sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+        "bytes": 4142,
+        "sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+        "bytes": 15206,
+        "sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+        "bytes": 29834,
+        "sha256": "5410d2930956d68f9ab0a138080d849a364c423fbea4541924668a33159f3239"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+        "bytes": 12597,
+        "sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+        "bytes": 12668,
+        "sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+        "bytes": 6526,
+        "sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9"
+      }
+    ],
+    "source_files_count": 14,
+    "manifest_identity_sha256": "52fdbddb97108aa1c89a0f7f022bf736b485974d20d9e0ff48bd3f62ab0d0dcb",
+    "supersedes": "final_independent_source_manifest_04.json; pre-final-ID-map correction working-copy observation retained unchanged",
+    "scope": "Final working-copy byte readback and AST parsing only; root must verify frozen commit bytes match these 14 source rows. No imports or production execution.",
+    "actual_service_invocations": 0,
+    "actual_namespace_operations": 0
+  },
+  "proposal_readback": {
+    "schema": "PHASE7I_FROZEN_SOURCE_PROPOSAL_READBACK_V1",
+    "status": "PASS_READ_ONLY_PROPOSAL_VALIDATION",
+    "revision": "133f14e6f3f05189c706e183eb5dc86bde339376",
+    "origin": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1.git",
+    "git_layout": "CLEAN_REGULAR_GIT_DIRECTORY_DETACHED_HEAD",
+    "source_manifest_rows_match": 14,
+    "manifest_identity_sha256": "52fdbddb97108aa1c89a0f7f022bf736b485974d20d9e0ff48bd3f62ab0d0dcb",
+    "argv_tokens": 104,
+    "properties": 46,
+    "namespace_security_flags_retained": true,
+    "actual_service_invocations": 0,
+    "actual_namespace_ioctls": 0,
+    "collector_output_absent": true,
+    "proposal_sha256": "8f27a936ba9f3df0b9c212de5f323b1cf7ef542eff4b0a48802d7bfc6c52d004",
+    "preflight_cost_receipt_sha256": "31b6eab912f4cd3d198f8212898d6b5d8f5af33dda8648bed37cff6a1d59a13a",
+    "authorization": "NOT_AUTHORIZED",
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "enclosed_runtime_cost": "UNKNOWN_NOT_EXECUTED_IN_SERVICE",
+    "host_full_preflight_cost_does_not_prove_kernel_compatibility": true
+  },
+  "storage_candidates": {
+    "schema_version": 1,
+    "review": "PHASE7I_PERSISTENT_STORAGE_CANDIDATE_INDEPENDENT_SOURCE_REVIEW_V1",
+    "base_revision": "b8ae4cc03c0ac408577909847e56f417fc28eba8",
+    "evidence_classification": {
+      "current_environment": "ACTUAL_READ_ONLY_OBSERVATION",
+      "kernel_driver_semantics": "STATIC_PRIMARY_SOURCE_REVIEW_AND_EXPLICIT_INFERENCE",
+      "capacity_and_failure_tests": "NOT_EXECUTED_NOT_AUTHORIZED",
+      "full_launch_envelope": "NOT_VERIFIED"
+    },
+    "current_gate": {
+      "function": "full_controller.persistent_storage_gate",
+      "observed_behavior": "Unconditionally raises PERSISTENT_ALLOCATED_DISK_HARD_BOUND_NOT_IMPLEMENTED",
+      "source_review": "Gate remains scientifically and operationally correct until a real backend is proven; receipt booleans cannot grant OS capacity."
+    },
+    "accounting_contract": {
+      "fixture_total_bytes": 16777216,
+      "work_tmpfs_bytes": 8388608,
+      "private_tmpfs_bytes": 1048576,
+      "fixture_arithmetic_remainder_before_persistent_metadata_and_receipts_bytes": 7340032,
+      "future_formal_total_bytes": 5368709120,
+      "requirements": [
+        "Include provisioning, persistent data, fixed receipts, allocation granularity, filesystem metadata and internal journal scope; separately state host shared-filesystem and VHDX scope.",
+        "Do not count tmpfs pages as persistent allocation or claim virtual-memory backing survives unmount.",
+        "An existing preallocated infrastructure volume cannot silently be subtracted from job disk accounting or reused as an unrecorded authorization.",
+        "Reserve finite failure bookkeeping before writers can exhaust their own data budget; missing/incomplete terminal receipt is UNKNOWN or FAIL, never implicit PASS."
+      ]
+    },
+    "candidates": [
+      {
+        "id": "A",
+        "name": "Verified dedicated filesystem or project block/inode quota",
+        "current_unprivileged_feasibility": "NOT_ESTABLISHED. An already provisioned verified quota/volume may be usable without job privilege; this user's current identity cannot inspect /dev/sdd directly, no project limit receipt or live hard-limit proof exists.",
+        "administrator_requirement": "Enabling/assigning filesystem project quotas or preparing a dedicated block volume generally needs a separately authorized administrator. Existing effective limits must be inspected rather than assuming preparation is needed.",
+        "additional_software": "Quota inspection tools are absent from PATH; an exact reviewed direct read-only quota implementation could avoid a package install. No installation or quota query was attempted.",
+        "hard_bounds": {
+          "allocated_blocks": "Conditional kernel hard bound only for the filesystem's quota-charged block accounting; requires live enforcement and allocation-path proof.",
+          "inodes": "Conditional independent inode hard limit; a byte quota alone does not constrain inode exhaustion.",
+          "dedicated_volume": "A genuinely fixed block device/filesystem can also bound its internal total blocks; still include the volume and receipt reservation in the aggregate contract."
+        },
+        "metadata_journal_extents_tmpfs": "Project quota scope is not identical to total host physical disk growth. Shared superblock, quota records, inode tables, journal and VHDX effects require explicit accounting; extent/directory/xattr allocation paths require kernel-specific proof. Separate size/nr_inodes-capped tmpfs remains RAM accounting.",
+        "bypass_controls": [
+          "Writer lacks CAP_SYS_RESOURCE and quota-administration capabilities.",
+          "Project inheritance and all persistent write paths are verified; writer cannot change project IDs or access an unrelated quota domain.",
+          "Sparse logical holes do not consume charged data blocks until allocated, but all allocation APIs including fallocate/ioctl/xattr must be covered.",
+          "Existing open descriptors, hardlinks, bind mounts and /proc reopen paths cannot reach unbounded persistent inodes."
+        ],
+        "controller_loss_and_exhaustion": "Quota remains enforced after controller death. Preallocated finite receipt slots must survive EDQUOT/inode exhaustion; reserve must be inaccessible to payload or separately hard limited. fsync and partial-write evidence required. Lack of final receipt remains failure/unknown.",
+        "formal_build_applicability": "Plausible POSIX backend, conditional on exact filesystem/limits, total capacity math and tested compiler temporary/output paths. Current shared root ext4 is not verified.",
+        "independent_proof": [
+          "Kernel quota state/type/project ID/hard block and inode limits readback, filesystem/device identity and writer capabilities.",
+          "Independently observe EDQUOT/ENOSPC for byte and inode exhaustion without crossing aggregate caps, including sparse/fallocate/ioctl/xattr negatives.",
+          "Kill controller, preserve partial records, verify no uncharged writer or residue; audit all lifecycle provisioning."
+        ],
+        "status": "BLOCKED_UNVERIFIED_QUOTA_OR_DEDICATED_VOLUME"
+      },
+      {
+        "id": "B",
+        "name": "Fixed-capacity isolated backing filesystem",
+        "current_unprivileged_feasibility": "POSSIBLE_IN_PRINCIPLE_VIA_FUSE_NOT_PROVEN_HERE. /dev/fuse and fusermount exist, but no ready reviewed writable bounded-image driver was found in PATH. This is not proof of WSL incompatibility.",
+        "administrator_requirement": "Kernel loop/block mount normally requires an already provisioned privileged infrastructure path; that path is not authorized here. A reviewed FUSE path could avoid a job CAP_SYS_ADMIN grant, but may rely on the already installed helper and exact namespace policy.",
+        "additional_software": "mkfs.ext4/e2fsck and libraries exist. fuse2fs/guestmount absent from PATH. Installing or building a filesystem driver is a new implementation/dependency review, not implicitly authorized execution.",
+        "hard_bounds": {
+          "inner_blocks": "A non-growing block address space constrains internal data and metadata block allocations only when every I/O stays inside that address space.",
+          "inner_inodes": "Filesystem superblock/format imposes an inode count for ext filesystems; actual driver handling and corruption behavior must be tested.",
+          "outer_host": "A sparse image's fixed EOF alone is insufficient. Backing storage physical allocation, extents, host metadata, preallocation and receipt objects require a separate hard bound or a fixed dedicated volume."
+        },
+        "metadata_journal_extents_tmpfs": "A fixed volume includes its internal metadata, inode tables and journal; an image file does not automatically include host ext4 journal/extent overhead. Upstream fuse2fs v1.47.0 explicitly reports journal writing unsupported, so crash consistency cannot be assumed. tmpfs remains separate volatile and RAM charged.",
+        "bypass_controls": [
+          "No resizing, discard/hole-punch or cloned/reflink backing mutation exposed to untrusted descendants.",
+          "Backing FD is not passed directly to arbitrary payload; all reads/writes bounded to fixed block range.",
+          "Deny path escape, raw-device access, second backing store and unbounded daemon logs; include FUSE daemon in the same aggregate ancestor.",
+          "Driver must remain within CPU/RAM/tasks, no detached helper or manager-external custom writer."
+        ],
+        "controller_loss_and_exhaustion": "Driver death, controller SIGKILL, pending writeback, full blocks and full inodes can leave an unclean image. Maintain independent bounded completion records and fsync ordering; postmortem read-only checking must not repair old evidence. Old e2fsprogs fuse2fs journal limitation is material.",
+        "formal_build_applicability": "Potentially supports arbitrary compiler POSIX I/O; unverified for exact driver, mmap/rename/link/exec policies, finite RAM, workload capacity and crash recovery. Not ready for the formal build.",
+        "independent_proof": [
+          "Pin driver binary/source/dependencies plus backing filesystem identity, fixed volume length and actual outer capacity contract.",
+          "Observe superblock block/inode counts and all mount paths; verify no resize or out-of-range backing I/O.",
+          "Separate authorized byte/inode exhaustion and sparse/fallocate/ioctl/xattr/escape/controller-loss tests with reserved receipts.",
+          "Attest daemon and helpers under same aggregate CPU/RAM/wall accounting; keep exact namespace/network/IPC policy."
+        ],
+        "status": "BLOCKED_NO_REVIEWED_READY_DRIVER_OR_COMPLETE_OUTER_CAPACITY_BOUND"
+      },
+      {
+        "id": "C",
+        "name": "Fixed count and fixed size file descriptors",
+        "current_unprivileged_feasibility": "Finite FD transport can be implemented without privilege; a complete persistent capacity hard limit has NOT been established for the current shared ext4.",
+        "administrator_requirement": "No administrator needed for regular files or memfds. Obtaining immutable allocated persistent capacity may still require A or B infrastructure; regular file ownership/permissions are not a block quota.",
+        "additional_software": "No package needed for basic FD transport; a narrow broker/driver would be new reviewed source and must itself be inside the envelope.",
+        "hard_bounds": {
+          "descriptor_count": "RLIMIT_NOFILE bounds descriptors per process, not aggregate distinct persistent inodes or filesystem blocks. A separately enforced fixed writer/FD inventory can constrain transport shape.",
+          "logical_size": "FSIZE restricts specific logical EOF-growth paths; it is not allocated-block enforcement. Ordinary ext4 FDs cannot gain memfd GROW/SHRINK seals.",
+          "allocated_blocks_and_inodes": "Not proven by fixed logical lengths, fixed paths, preallocated regular files, default-allow seccomp plus post-hoc st_blocks. Transient and metadata allocation remains outside that argument."
+        },
+        "metadata_journal_extents_tmpfs": "Inode/directory provisioning, extents and shared journal writes are outside a sum of N logical file sizes. Sealed memfds bound volatile inode size but do not persist to ext4; output export creates a separate writer/capacity problem.",
+        "bypass_controls": [
+          "FSIZE alone does not reject KEEP_SIZE allocation; exact kernel vfs_fallocate path delegates allocation to filesystem.",
+          "Must cover ftruncate, mmap/shared writeback, copy_file_range/sendfile/splice, fallocate, allocation/mutation ioctls, xattrs, /proc reopen, descriptor transfer and asynchronous I/O.",
+          "A deny filter may prevent known payload allocation escapes but does not prove all trusted controller/provisioning metadata charged or fixed.",
+          "Use fixed FDs only as transport within a proven A/B hard backend; no receipt edit or flag enables it."
+        ],
+        "controller_loss_and_exhaustion": "Fixed preallocated slots reduce failure-log creation pressure, but arbitrary overwrite and crash durability still require integrity/commit protocol and hard backing boundary. FD close does not undo or prove peak historical allocation; no terminal success after lost controller.",
+        "formal_build_applicability": "Useful for bounded archive/receipt export; compiler filesystem scratch still needs reviewed bounded storage. Not an independent persistent backend for the current full controller.",
+        "independent_proof": [
+          "Offline exact syscall/FD-policy tests and fixed inventory checks are necessary, not sufficient.",
+          "A future authorized test must verify allocation bypass rejection plus hard backing accounting before/during/after failure.",
+          "Test short writes/ENOSPC/EDQUOT, data corruption, controller loss and postflight finite evidence; prove all persistence under A/B boundary."
+        ],
+        "status": "BLOCKED_NOT_A_STANDALONE_PERSISTENT_CAPACITY_PROOF"
+      }
+    ],
+    "minimum_missing_components": [
+      "Select and review one real storage backend and exact accounting scope before any new kernel diagnostic is approved.",
+      "Smallest infrastructure option: separately approved pre-provisioned non-growing dedicated capacity volume, with included overhead/receipt reservation, or active verified block+inode project limits plus reviewed host-overhead accounting.",
+      "Unprivileged software alternative: separately reviewed bounded-image driver and backing hard-capacity mechanism, exact namespace integration and same-cgroup daemon lifecycle. Existing FUSE libraries alone are insufficient.",
+      "Reserve evidence capacity and define disk-exhaustion/controller-loss protocol; integrate pre-provision and cleanup into full controller.",
+      "Obtain explicit authorization for exact-source service validation and fixed negative tests; current request authorizes zero new attempts."
+    ],
+    "verdict": "BLOCKED_PERSISTENT_HARD_CAPACITY_BACKEND_NOT_ESTABLISHED",
+    "execution": {
+      "services_started": 0,
+      "kernel_attempts": 0,
+      "mounts": 0,
+      "stress_runs": 0,
+      "physics_calls": 0,
+      "source_edits": 0
+    },
+    "primary_sources": [
+      {
+        "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/ext4/super.c",
+        "supports": "Pinned ext4 quota accounting/enforcement activation and project-statfs conditions; absent display options alone are not a proof.",
+        "locations": "ext4_enable_quotas; ext4_statfs"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/ext4/mballoc.c",
+        "supports": "Kernel-specific data-block quota charging and EDQUOT; allocation path review is required.",
+        "locations": "ext4_mb_new_blocks"
+      },
+      {
+        "url": "https://www.kernel.org/doc/html/latest/filesystems/quota.html",
+        "supports": "Per-filesystem block and inode hard limits, and CAP_SYS_RESOURCE exception."
+      },
+      {
+        "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/open.c",
+        "supports": "vfs_fallocate delegates after checking supported allocation mode and permissions; logical EOF is not an allocated-byte budget.",
+        "locations": "vfs_fallocate"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/ext4/extents.c",
+        "supports": "Extent allocation reaches ext4 allocator with separate metadata/preallocation semantics.",
+        "locations": "ext4_ext_map_blocks"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/tytso/e2fsprogs/v1.47.0/misc/fuse2fs.c",
+        "supports": "Illustrative upstream image driver: writable mode, block/inode counts, reserve handling and journal-writing limitation. Not installed or executed here.",
+        "locations": "fs_can_allocate; op_statfs; main lines3599-3602"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/tytso/e2fsprogs/v1.47.0/misc/fuse2fs.1.in",
+        "supports": "Upstream documents support for image/device ext filesystems and foreground/single-thread operation; no assertion of validated current deployment."
+      },
+      {
+        "url": "https://www.kernel.org/doc/html/v6.1/filesystems/tmpfs.html",
+        "supports": "Volatile size/nr_blocks and nr_inodes bounds; does not constitute persistent storage."
+      }
+    ]
+  },
+  "readonly_environment_projection": {
+    "systemd_version": {
+      "rc": 0,
+      "stderr": "",
+      "stdout": "systemd 255 (255.4-1ubuntu8.17)\n+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified\n"
+    },
+    "kernel_release": "6.6.87.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "binaries": [
+      {
+        "bytes": 100816,
+        "path": "/usr/lib/systemd/systemd",
+        "sha256": "b472aadf808bef87c0eb203056a77cb64bd268b71b756306013a53de68a94173"
+      },
+      {
+        "bytes": 137792,
+        "path": "/usr/lib/systemd/systemd-executor",
+        "sha256": "b8424efa6f861031c04310fd7bfe485330bb74f53edae341803ffe3f487fd044"
+      }
+    ],
+    "caller_CapEff": "\t0000000000000000",
+    "scope": "Readonly host facts, never active service kernel enforcement",
+    "raw_local_receipt_sha256": "4d6ab6dffe39a2c7224794f0dcd6a30439d9240fc5995154b938277a904eabb5"
+  },
+  "failure_history": {
+    "first_offline_attempt": {
+      "tests": 280,
+      "failures": 2,
+      "errors": 0,
+      "source_kernel_tests": 0,
+      "reasons": [
+        "stale16recordlimit assertion; revised to24/25 bounded protocol",
+        "cleanup record lookup assumed first record; preserved prior child rejection now searched by kind"
+      ],
+      "raw_receipt_sha256": "b195319d54ee6e5c55bb6685d20cf053773cb18db1d60395e1e3157e420005c0",
+      "raw_log_sha256": "5012549c70feb958cac13a2d38f7edb7e4228c3f884db23aca32c3d744de5725"
+    },
+    "historical_kernel_attempt": "PR33 receipts retained unchanged; no new attempt in this task"
+  },
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "verdict": "SOURCE_RECOVERY_VALIDATED_RUNTIME_AND_STORAGE_BLOCKED",
+  "GITHUB_CI": "PENDING_PUBLICATION"
+}
