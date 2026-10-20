@@ -15,13 +15,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          # Current resource audit inspects actual source commits, not a synthetic merge.
+          ref: ${{ github.head_ref == 'codex/phase7i-resource-closure' && github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Campaign mathematical and CLI tests (no event generation)
         run: python3 -B -m unittest simulation.hh_signal.campaign.test_campaign -v
       - name: All outgoing commit payloads including index
+        if: github.head_ref != 'codex/phase7i-resource-closure'
         run: python3 -B -m simulation.hh_signal.campaign.audit_payload
+      - name: Current strict resource source publication audit including every intermediate commit
+        if: github.head_ref == 'codex/phase7i-resource-closure'
+        run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.publication
       - name: Verify genuine published signal evidence
         run: python3 -B -m simulation.hh_signal.campaign.validate_references
       - name: Preserve existing six background reference libraries

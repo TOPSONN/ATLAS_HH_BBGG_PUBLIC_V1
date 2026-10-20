@@ -1,0 +1,287 @@
+{
+  "schema": "PHASE7I_INDEPENDENT_SOURCE_REVIEW_V2",
+  "status": "PASS_STATIC_SOURCE_REVIEW_RUNTIME_RESOURCE_GATES_BLOCKED",
+  "reviewed_at_UTC": "2026-10-20T04:34:55.245232+00:00",
+  "base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
+  "checkout_head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+  "scope": "Read-only independent review of root-owned worker/runtime adapters/backend/assessor, plus explicitly attributed author self-review of archive/allocation guard. No live enforcement acceptance.",
+  "independence": {
+    "root_owned_sources": "Independent agent source/data-flow review",
+    "archive_and_allocation_sources": "This agent authored these modules; self-review and pure unit fixtures, not an external independent certification",
+    "external_human_review": "NOT_PERFORMED"
+  },
+  "source_rows": [
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "bytes": 637,
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "bytes": 4681,
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+      "bytes": 4289,
+      "sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "bytes": 11767,
+      "sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+      "bytes": 3192,
+      "sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "bytes": 9526,
+      "sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "bytes": 13199,
+      "sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "bytes": 12959,
+      "sha256": "5eb3e5eb81f37048e939073e259b4ce397f7a117f6374499b9658717f5cf78af"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+      "bytes": 68,
+      "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "bytes": 9314,
+      "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "bytes": 21538,
+      "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "bytes": 36020,
+      "sha256": "573035874f782e431bcd23905fa6deb0d6905fdd91b9728057912f5b70cbdb2e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "bytes": 1521,
+      "sha256": "5a29940a7aaefd0da9993cb5602fadd67c8f1a97fe60f804ce2ef03eb27b5ae8"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "bytes": 1315,
+      "sha256": "ef506cf76aaf53a5a0927b5506e11e203292dcc9b2ad29419cd3cf1986190050"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "bytes": 10600,
+      "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+      "bytes": 19031,
+      "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "bytes": 9724,
+      "sha256": "3f1d7bec045e75158c4d5f1397a7fcc507eb7578fe26ba3992608bd447a497bd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "bytes": 18199,
+      "sha256": "0801dca58ee42e624cc9e2b2cf4b52df87b4e6dd5d771363089357d7ebe74663"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+      "bytes": 7095,
+      "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+      "bytes": 16400,
+      "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "bytes": 18807,
+      "sha256": "9f98e7990d7c93f17897f444bfeb3b77c2d33a2bd4a45fc3c25f4138723eeb68"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "bytes": 20725,
+      "sha256": "c88149b0b71fd962b1edd4935bb40ca6c30d47d0b09d85e7285c6096de2ad3aa"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "bytes": 7679,
+      "sha256": "72e5c67fc863880b570b41ebadf19a7cb56ce021e751e3c157248771ef1b5e98"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "bytes": 5670,
+      "sha256": "406ab5a1caabd8cb270c8d2ab7b07dcb76c0cd132760e5c39b9d8ca2f640ddc2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "bytes": 17546,
+      "sha256": "a9a1978def1cfc0b56b8ae8b97a66d0643e347a045ee47ced6e6a66981c99b1d"
+    }
+  ],
+  "source_snapshot_sha256": "71577937ace353428881d62a852e074b841e0b11ebfb2902a319e58c0b51cb9e",
+  "unchanged_scientific_bytes": [
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "matches_base_bytes": true,
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "matches_base_bytes": true,
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+    }
+  ],
+  "closed_in_source": [
+    {
+      "id": "HOME_BINDING",
+      "finding": "Private HOME broke frozen source lookup and work validation",
+      "resolution": "Backend retains actual readonly HOME; all mutable temporary files use private work/tmp mounts"
+    },
+    {
+      "id": "INHERITED_RLIMIT",
+      "finding": "Native preflight attempted to raise stricter CPU/AS/FSIZE hard limits",
+      "resolution": "CPU/AS/FSIZE clamp to inherited hard limits; no increase"
+    },
+    {
+      "id": "MODULE_IDENTITY",
+      "finding": "__main__ worker enclosure was invisible to qualified build import",
+      "resolution": "Canonical module alias uses the same live PID/module state"
+    },
+    {
+      "id": "ARCHIVE_API_AND_IDENTITY",
+      "finding": "Wrong limits constant and missing final archive readback",
+      "resolution": "BUILD_ONLY_LIMITS and in-envelope hash/USTAR validation before completion; no extraction"
+    },
+    {
+      "id": "JOURNAL_RETENTION",
+      "finding": "Fatal resource stops could lose ephemeral partial bookkeeping",
+      "resolution": "Bounded lossless JSONL JOURNAL_PART records retain command/loader/initialization observations on fixed stdout; transient binaries/tmpfs are not claimed preserved"
+    },
+    {
+      "id": "HOST_METADATA_SIZE",
+      "finding": "Full build journal could overflow fixed64KiB result metadata",
+      "resolution": "Bounded selected rows<=2048B per record, full capped journal retained/hash-bound; zeroME proof checks full unprojected exact typed counters"
+    },
+    {
+      "id": "ALLOCATION_BYPASS",
+      "finding": "RLIMIT_FSIZE alone does not bound KEEP_SIZE allocated extents; mutating ioctls/xattrs/AIO require separate control",
+      "resolution": "95-instruction x86_64 BPF proposal denies39 syscall names and all ioctls except3 readonly tty requests; bootstrap precedes business imports; live proof still pending"
+    },
+    {
+      "id": "WRITABLE_MOUNT_SURFACE",
+      "finding": "Additional writable/dev/shm or other mounts would invalidate aggregate disk namespace claim",
+      "resolution": "Worker requires exact writable mount set work and/tmp; strict assessor checks mount and filter proof; actual namespace not executed"
+    },
+    {
+      "id": "SINGLE_JOB_LOCK",
+      "finding": "Concurrent units could violate one-job aggregate assumptions",
+      "resolution": "Readonly canonical global lock FD checked against inode and actual worker EXNB flock; separate-open negative fixture prepared, not executed"
+    },
+    {
+      "id": "FUTURE_CLI_FAILURE_EXIT",
+      "finding": "Future monitor data had no success status and could yieldCLI0 after worker failure; legacy error path incorrectly inferredzero counters",
+      "resolution": "Freshly reread run.enclosed_build_complete requires successfulunit exit0, noresource stop, actualformalentered+completedzeroMEproof, emptycgroup andexactintzero counters beforeCLI0; formalattempt errors retainNone."
+    },
+    {
+      "id": "BLOCKED_PHYSICAL_OUTPUT_MUTATION",
+      "finding": "Unconditionalphysicalblock enteredlegacyexceptionreceiptwriter",
+      "resolution": "Legacyexceptionfilewritesremoved. execute-reviewed denial returns2 withouttouchingprovidedoutput; corresponding new negativeunit test prepared."
+    }
+  ],
+  "open_source_findings": [],
+  "actual_tests_by_this_agent": [
+    {
+      "command": "python3 -B -m unittest simulation.hh_signal.final_closure.resource_closure.tests.test_archive_io -v",
+      "cases": 39,
+      "PASS": 39,
+      "FAIL": 0,
+      "wall_reported_seconds": 0.145,
+      "scope": "Ordinary inert temp bytes only; no archive of real HH binaries/events"
+    },
+    {
+      "command": "python3 -B -m unittest simulation.hh_signal.final_closure.resource_closure.tests.test_allocation_guard -v",
+      "cases": 13,
+      "PASS": 13,
+      "FAIL": 0,
+      "wall_reported_seconds": 0.032,
+      "scope": "Pure BPF interpreter and readonly syscall-header comparison. No install or live allocation probe."
+    }
+  ],
+  "remaining_gates": {
+    "RAM_profile_review": "PENDING_HUMAN_REVIEW_BEFORE_SERVICE_EXECUTION",
+    "actual_full_job_resource_cases": "NOT_EXECUTED",
+    "live_allocation_filter_install": "NOT_EXECUTED",
+    "live_KEEP_SIZE_clone_xattr_negative": "NOT_EXECUTED",
+    "live_job_mutex_and_writable_mounts": "NOT_EXECUTED",
+    "filesystem_allocated_overhead": "Physical allocated extents/metadata and filesystem assumptions require actual bounded evidence/conservative reserve or quota; logical EOF algebra is not standalone physical-block proof.",
+    "future_native_build_compatibility": "UNKNOWN_NOT_EXECUTED",
+    "transient_build_artifacts_after_OOM": "May be lost with tmpfs; only completed archive and capped progress journal can be claimed preserved.",
+    "binary_archive_review": "Separate exact artifact/source review not implemented as physical approval; archive verification never grants binary review.",
+    "physical_restart_migration": "BLOCKED_REQUIRES_SEPARATE_SOURCE_BINARY_AND_HUMAN_REVIEW"
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
+  "actual_services_started": 0,
+  "actual_filter_installs": 0,
+  "actual_allocation_probes": 0,
+  "formal_HH_builds": 0,
+  "native_zero_ME_preflights": 0,
+  "REAL_ME_CALLS": 0,
+  "REAL_INTEGRALS": 0,
+  "INDEPENDENT_EVENTS": 0,
+  "HumanReview_created_or_reused": false,
+  "primary_references": [
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/open.c",
+      "locator": "vfs_fallocate lines230-320",
+      "use": "Generic fallocate checks do not supply RLIMIT_FSIZE EOF growth validation for KEEP_SIZE."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/ext4/extents.c",
+      "locator": "ext4_fallocate4506-4521;zero_range4329-4334",
+      "use": "inode_newsize_ok is conditional on KEEP_SIZE being absent, followed by block allocation."
+    },
+    {
+      "url": "https://www.kernel.org/doc/html/v6.6/userspace-api/seccomp_filter.html",
+      "use": "Kernel filter inheritance, architecture checks, ERRNO and KILL_PROCESS semantics; seccomp is one component, not a complete sandbox."
+    }
+  ],
+  "supersedes_source_findings_only": {
+    "path": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/independent_source_review.json",
+    "sha256": "e56628b90361b52b1e8690bdc118cbf9dacc075a80f282064da5357c00e946b4",
+    "prior_report_preserved": true
+  },
+  "validation_of_last_two_source_fixes": "Fresh source and new data-only/denied-CLI test review. Final aggregate rerun belongs to root evidence; not fabricated here.",
+  "additional_independent_source_checks": {
+    "guard_bootstrap_precedes_business_imports": true,
+    "canonical_readonly_exclusive_worker_lock_checked": true,
+    "exact_rw_mount_set_required": true,
+    "last_initialization_lossless_journal_present": true,
+    "future_archive_verified_before_completion": true,
+    "no_legacy_exception_output_write": true,
+    "bounded_projected_host_journal_not_full_log_in_metadata": true,
+    "strict_assessor_requires_filter_hash_pid_and_lock": true,
+    "current_scientific_guard_sha256_unchanged": true
+  },
+  "case_matrix_prepared_only": 47,
+  "publication_review": "Fixed-base guard inspects staged and every outgoing intermediatecommit with binary/archive/event/secret/path/caps checks. Exact outgoingpayload review still required; no publication authorization for raw archives or PDF/PNG."
+}

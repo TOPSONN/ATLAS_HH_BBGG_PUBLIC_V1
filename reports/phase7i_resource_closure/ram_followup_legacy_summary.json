@@ -1,0 +1,43 @@
+{
+  "status": "PASS_SELECTED_SAFE_LEGACY",
+  "tests_run": 81,
+  "passes": 81,
+  "failure_count": 0,
+  "error_count": 0,
+  "skipped": 0,
+  "selected_test_sources_unchanged": true,
+  "implementation_sources_unchanged": true,
+  "implementation_snapshot_before": "351f7e39617a75caacd6621bc9f8f99f871d46bd58b8cb61597712107d64d530",
+  "implementation_snapshot_after": "351f7e39617a75caacd6621bc9f8f99f871d46bd58b8cb61597712107d64d530",
+  "implementation_snapshot_file_count": 31,
+  "wall_seconds": 8.071508639000058,
+  "parent_CPU_seconds": 0.9502818650000001,
+  "child_CPU_seconds": 1.2024099999999998,
+  "subprocess_audit": {
+    "counts": {
+      "fixed_python_fixture": 5,
+      "fixed_sleep20": 1,
+      "git": 551
+    },
+    "forbidden_imports": [],
+    "human_review_attempts": 0,
+    "python_fixture_code_sha256": [
+      "3a3dd0ba2c3031970c6c45c0dcaea07345ba7fc8051d636cb7bcf127e2a0b317",
+      "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+      "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+      "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+      "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+    ],
+    "rejected": []
+  },
+  "HUMAN_AUTHORIZATION_CREATED": false,
+  "REAL_INTEGRALS": 0,
+  "REAL_ME_CALLS": 0,
+  "INDEPENDENT_EVENTS": 0,
+  "native_executions": 0,
+  "new_builds": 0,
+  "full_resource_service_executed": false,
+  "full_local_receipt_sha256": "0341d13b82337920951099aec6907f083f93818984e5601bf6253405cf18b8ef",
+  "full_local_receipt_bytes": 29627,
+  "published_selection_is_fixed_in_source": "resource_closure/legacy_regression.py:SELECTED_TESTS"
+}

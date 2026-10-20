@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSAL_NOT_IMPLEMENTED",
+  "review_type": "READ_ONLY_SOURCE_AND_PRIMARY_DOCUMENTATION_DESIGN_REVIEW",
+  "project": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "baseline_revision": "28b967d38f88356a1b50679ff63e0facc247c2c0",
+  "baseline_expected": "b45f0c31c2d434c6540aeaa259303bc16076e124",
+  "working_tree_note": "Parent coordinated RAM-only provenance/profile metadata and a harmless service_probe source after this baseline; this report does not approve a new executable revision.",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
+  "review_execution": {
+    "files_modified_in_repository": 0,
+    "services_started": 0,
+    "stress_tests": 0,
+    "formal_builds": 0,
+    "native_zero_ME_preflights": 0,
+    "genuine_ME_calls": 0,
+    "integrals": 0,
+    "events": 0,
+    "human_approval_objects_created": 0,
+    "TTY_characters_read_or_written": 0
+  },
+  "reviewed_source_hashes": [
+    {
+      "path": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1/simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1/simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1/simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+    }
+  ],
+  "environment": {
+    "evidence_level": "READ_ONLY_FACTS_RELAYED_BY_PARENT_NOT_REPROBED_HERE",
+    "systemd": "255.4 user manager",
+    "cgroup": "v2 cpu/memory/pids/cpuset advertised",
+    "kernel": "WSL2 Linux6.6",
+    "ext4_allocation_granule_bytes": 4096,
+    "unprivileged_user_namespaces": "advertised enabled",
+    "bwrap": "not installed; not required by this proposal",
+    "actual_namespace_and_OpenFile_sequence": "PENDING_NOSTRESS_FEATURE_PROBE"
+  },
+  "existing_gaps": [
+    {
+      "source": "resource_closure/backend.py:380-408",
+      "finding": "profile/path checks, global-lock preparation, source hashing, output/file/canary provisioning and launch.json writing currently run outside the unit; the recorded start time follows provisioning."
+    },
+    {
+      "source": "resource_closure/backend.py:498-595",
+      "finding": "observer, final source/canary/archive hashes, allocation checks, log parsing and result.json writing run outside payload CPU/RAM accounting; elapsed is sampled before final work."
+    },
+    {
+      "source": "resource_closure/backend.py:457-460; worker.py formal entry guards",
+      "finding": "Formal BUILD_ONLY is correctly fail-closed. RAM approval alone must not remove these guards."
+    }
+  ],
+  "preferred_design": {
+    "topology": "One outer systemd user service, not a second sibling transient service. ExecStartPre provisioner, ExecStart controller and ordinary fork/exec worker descendants share the same aggregate parent cgroup. No user business controller or observer remains in the host.",
+    "host_launcher": {
+      "allowed": "Fixed exec-only systemd activation request with bounded literal arguments; no package imports, source hashing, UUID/file provisioning, archive readback, protocol parsing, scientific checks, resource decisions or result writing.",
+      "boundary": "The generic activation client and systemd/kernel control plane remain an explicit infrastructure boundary. Their existence must be disclosed; this is not a claim about whole-machine CPU/RAM. If the requested contract includes that client itself, independently hard-bound/account it in the same total budget or keep FULL false; do not silently exempt a user controller.",
+      "observer": "Move the functional observer inside. An outside terminal/status display may not enforce limits or compute acceptance/results. A custom external Python postprocessor is not a replacement for enclosed finalization."
+    },
+    "preprovision": {
+      "method": "Exactly one reviewed ExecStartPre helper runs after the service cgroup resource limits are active. It creates only fresh fixed-count empty transport/metadata files and the fixed canary/lock records; refuses existing outputs, symlinks, hardlinks and unexpected ownership. It performs any source/config preparation hashes inside this same envelope.",
+      "manager_handoff": "Upstream v255 gives OpenFile descriptors to ExecStart (EXEC_PASS_FDS), not ExecStartPre. Therefore create fixed files inside ExecStartPre, then have the manager open them for the main controller. Use no graceful opening and require exact FD count/names/dev/inode/access in the controller.",
+      "stdio": "Use StandardOutput/StandardError=null for preparation, or another explicitly bounded manager-native transport. Do not reference not-yet-created output parents for preparation stdio. The main controller duplicates verified named protocol/log FDs to1/2.",
+      "mount_lifetime": "ExecStartPre and ExecStart receive separate mount namespaces; a private tmpfs created for Pre does not carry its contents into Main. Only fixed host transport files may carry preparation state. Main must independently attest its work/tmp tmpfs quotas and readonly source.",
+      "disk_gate": "BLOCKED_NOT_IMPLEMENTED: do not grant a general writable host output directory and call it an aggregate disk limit. Before the first creation, require an actually enforced quota/bounded backing filesystem OR a separately reviewed finite inode/FD factory that cannot create an unbounded number of files/directories or allocate data/extents. RLIMIT_FSIZE and a later allocated-byte check alone are insufficient. The existing seccomp allocation guard, fixed FD count and read-only post-factory host view must cover the actual early preparation window, not only later business callbacks."
+    },
+    "main_controller": {
+      "scope": "Profile/source/Git preflight, worker launch, monitoring, source preservation checks, archive streaming/readback/hashes, receipt writing, postflight and normal cleanup all execute under the outer cgroup/namespace; source is readonly; host writes use only verified fixed descriptors.",
+      "worker_launch": "Ordinary Popen/fork/exec within the same service. Calling the old backend.run_job/systemd-run here would launch a sibling cgroup and would NOT close the gap.",
+      "counters": "Read the aggregate parent cpu.stat/memory.peak/events/pids files locally; remove dependence on the hidden user D-Bus socket. Check every helper belongs to the same accounting ancestor.",
+      "job_count": "Single-job protection must precede Pre provisioning and persist through final receipt/cleanup. A flock first acquired in Main does not cover Pre. Prefer one fixed fail-if-existing transient unit identity, or independently verified retained-lock FD handoff; do not assume a Pre lock survives process exit."
+    },
+    "termination_and_receipts": {
+      "normal": "Controller reaps/kills worker descendants using stable PID identities/process groups and checks no non-controller workload PIDs remain. Do not write cgroup.kill for the controller own group and then expect it to produce a receipt.",
+      "controller_loss": "Manager RuntimeMax/OOMPolicy/KillMode enforce termination even if controller dies. Preserve partial evidence. Missing complete finalization is FAIL/BLOCKED, never an automatic PASS.",
+      "stop_post": "If used, one bounded ExecStopPost helper executes inside the same accounting ancestor. Count every start/control/stop phase in the wall and CPU upper bound. Its namespace is fresh: read only persistent fixed transports, not vanished Main tmpfs data. It may record failure, not resume work/retry or transform a failure into success.",
+      "final_accounting": "Do not call a pre-final-write cpu.stat measurement the final whole-job count. Record its phase explicitly and use authoritative cached manager final counters for later independent status readback. Do not run an unenclosed custom archive/hash/result workflow after the unit; if that observer is required for acceptance, it must itself be enclosed/accounted. Whole-cgroup empty is checked after the final controller/collector exits, rather than pretending the still-running collector makes populated=0."
+    },
+    "budgets": {
+      "RAM": "User approved aggregate512MiB/swap0 for harmless tests, future proposed aggregate2GiB/swap0. Limits cover controller+workers+all helpers+charged tmpfs/page cache together; not512MiB per process or unit.",
+      "CPU": "Keep aggregate4s fixture /14400s future. Require actual zero burst and fixed single CPU affinity. CPU quota times a fully enumerated worst-case lifecycle duration plus one-period allowance must fit the aggregate cap; cumulative watchdog is extra protection.",
+      "wall": "Keep13s fixture /14400s future. RuntimeMax alone excludes preparation and stop-post. TimeoutStart may apply to each Pre/Main phase and TimeoutStop to multiple stop transitions. Adding Pre while retaining a naive start+run+stop formula is not valid; repartition internal phase budgets or remain BLOCKED without increasing aggregate ceilings.",
+      "disk": "Keep16MiB fixture /5GiB future and all per-file limits. Include both actual tmpfs quotas, rounded allocated host blocks, all preprovisioned files/directories, metadata/canary/global mutex and fixed source/control reserve. No sparse/fallocate/xattr/io_uring escape; no quota assumption from a filesystem name alone."
+    }
+  },
+  "required_environment_feature_probe": {
+    "status": "NOT_EXECUTED_BY_THIS_REVIEW",
+    "scope": "One fixed harmless non-stress service only, no MG5/model/HH native executable. Parent coordinates exact source/command and preserves actual failure.",
+    "features": [
+      "User-service cgroup limits are effective before Pre and Main code.",
+      "PrivateUsers plus readonly source and two independent quota-sized tmpfs mounts are supported.",
+      "ExecStartPre fixed empty file -> ExecStart strict OpenFile named FD sequence works on installed255.4.",
+      "Pre and Main share the expected aggregate accounting ancestor while private mount contents are not incorrectly assumed shared.",
+      "Output provisioning/fixed inode bounds or actual quota are established before stress acceptance, not inferred from a /usr/bin/true probe."
+    ],
+    "stop_rule": "On any compatibility failure stop and preserve it. Do not install tools, expand privileges, remove protections, enlarge limits, or claim the environment is inherently incapable from a single setup failure."
+  },
+  "validation_before_any_FULL_claim": [
+    "Actual positive normal whole-controller workflow, including final receipt/archive readback and final cleanup.",
+    "CPU/RAM/wall/disk/abnormal injection in actual Pre provisioning, controller preflight, child, observer, hashing/readback, receipt, postflight and failure-finalization phases.",
+    "Aggregate controller+child memory/CPU cases; controller death; orphan/setsid descendants; final collector failure; sparse extent/xattr/io_uring bypass rejection; simultaneous-job refusal before provisioning.",
+    "Independent final numerical/data review must reject missing counters, wrong membership, partial receipts and residual processes.",
+    "Current47 payload fixtures may remain useful regression evidence but cannot alone certify the newly defined complete controller."
+  ],
+  "primary_references": [
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L1484-L1508",
+      "used_for": "Cgroup realization and conditional descriptor passing in service spawning."
+    },
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L2174-L2178",
+      "used_for": "Main start uses EXEC_PASS_FDS."
+    },
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L2229-L2233",
+      "used_for": "Start-pre uses sandbox/control flags without EXEC_PASS_FDS."
+    },
+    {
+      "local_man_pages": [
+        "systemd.service(5)",
+        "systemd.exec(5)",
+        "systemd.resource-control(5)"
+      ],
+      "used_for": "OpenFile access modes; separate command mount namespaces; RuntimeMax/start/stop semantics; memory/swap and CPU quota policy."
+    }
+  ],
+  "final_verdict": "PROPOSAL_NOT_IMPLEMENTED_FULL_CONTROLLER_AND_PREPROVISION_DISK_GATES_REMAIN_BLOCKED",
+  "next_step": "Parent may execute only the separately reviewed fixed non-stress compatibility probe under the user RAM approval. A successful /usr/bin/true or namespace probe is not full resource validation. Review a concrete implementation and new exact source before new complete-controller stress tests. Formal BUILD/native/ME/integrals/events stay forbidden."
+}

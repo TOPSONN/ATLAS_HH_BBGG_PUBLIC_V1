@@ -1,0 +1,299 @@
+{
+  "schema": "phase7i_independent_source_review_supplement_v1",
+  "status": "PASS_STATIC_BRANCH_SPECIFIC_CI_INTEGRATION_REVIEW_LIVE_GATES_BLOCKED",
+  "review_scope": "Read-only review of exactly three final branch-specific CI/publication integration diffs; no test, service, approval, build or physics execution by this supplement.",
+  "reviewed_at_utc": "2026-10-20T04:51:08.557065+00:00",
+  "reviewer": "hh_historical_gate_review",
+  "reviewer_independence": "Reviewer did not author these three changes; reviewer previously authored archive_io.py and allocation_guard.py and does not claim independent external human approval.",
+  "repository": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1",
+  "preedit_head_revision": "092cd24cbd0f8b3499fc6c9571332a5b8165b12b",
+  "head_at_review": "092cd24cbd0f8b3499fc6c9571332a5b8165b12b",
+  "exact_postedit_commit_revision": null,
+  "postedit_revision_requirement": "Parent must record exact committed source revision. The publication.py change alters the 30-file production identity, so previous source identity/review is not an executable authorization.",
+  "prior_review": {
+    "path": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/independent_source_review_03.json",
+    "sha256": "fce81bfcb887581fb1de9f557ffadce64e247e56868495304be4221cc6a0533b",
+    "preserved": true
+  },
+  "changed_paths": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "bytes": 1951,
+      "sha256": "04393d6e8a400e4ccb82c107ade91820a5dbd349eb046cc1c9c280b6155e7cb4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "bytes": 9746,
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "bytes": 8378,
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+    }
+  ],
+  "ci_failure_context": {
+    "parent_reported_real_ci": "Resource closure source tests, legacy regression and strict publication audit succeeded; legacy campaign audit failed because its historical exact workflow whitelist does not include the new resource closure workflow.",
+    "independently_reexecuted_ci": false,
+    "new_ci_status": "PENDING_PARENT_RERUN_AND_GITHUB_EXECUTION",
+    "scope": "Source CI integration only; no relation to scientific convergence or runtime-resource enforcement."
+  },
+  "branch_specific_ci_review": {
+    "resource_branch": "codex/phase7i-resource-closure",
+    "pr_resource_checkout": "github.head_ref equals the exact resource branch selects github.event.pull_request.head.sha; otherwise github.sha remains selected.",
+    "old_publication_audit_if": "github.head_ref != 'codex/phase7i-resource-closure'",
+    "new_strict_publication_audit_if": "github.head_ref == 'codex/phase7i-resource-closure'",
+    "exactly_one_publication_audit_for_resource_pr": true,
+    "legacy_audit_still_runs_for_other_refs": true,
+    "historical_scientific_and_reference_tests_retained": true,
+    "push_trigger_unchanged": "Only historical codex/phase7b7c7d-ggf-hh-signal branch push trigger remains.",
+    "manual_workflow_dispatch": "With empty github.head_ref the old checkout/audit route is preserved. This supplement does not claim resource publication dispatch activation.",
+    "finding": "PASS: replaces an incompatible historical publication scope gate with the reviewed stricter resource-source gate only on the exact resource PR branch; it does not remove publication checking."
+  },
+  "strict_publication_review": {
+    "old_campaign_audit": {
+      "path": "simulation/hh_signal/campaign/audit_payload.py",
+      "sha256": "d52556c93419301e635739f8212149faff7c309255b1f24b759dcf8dca3533bf",
+      "bytes": 5784,
+      "unchanged_vs_preedit": true,
+      "unchanged_vs_frozen_b80": true
+    },
+    "fixed_cli_base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
+    "base_cli_override_allowed": false,
+    "exact_workflow_addition": ".github/workflows/hh_signal_campaign.yml",
+    "workflow_allowlist_count": 4,
+    "workflow_prefix_relaxation": false,
+    "file_cap_bytes": 131072,
+    "aggregate_cap_bytes": 2097152,
+    "all_outgoing_intermediate_commits_inspected": true,
+    "entire_changed_index_against_fixed_base_inspected": true,
+    "index_worktree_byte_match_required": true,
+    "outgoing_merges_deletions_renames_type_changes_rejected": true,
+    "regular_nonexecutable_mode_required": "100644",
+    "unapproved_figures_events_binaries_archives_private_payloads_allowed": false,
+    "private_known_raw_hash_and_secret_checks_unchanged": true,
+    "new_test_static_review": "One test accepts only the exact fourth workflow and rejects unrelated, suffix-added, .yaml and private workflow paths. This reviewer did not execute that test.",
+    "legacy_guard_source_not_relaxed": true
+  },
+  "production_identity_review": {
+    "scope": "30 production/controller/config paths assembled from resource_closure root Python/config JSON, integration_runtime non-test source, corrected native guard and physics contract; distinct from wider full tracked-source preflight.",
+    "production_paths": 30,
+    "preedit_identity": "231c30aeaa4da3a53a0fe9d3ab7c2b468db0120512584ddbdd78b6a739ec0c3b",
+    "current_worktree_identity": "bc96a8d11017c8ce34020176e17d0c64c0ac1203c5a42dcf2807ed7180549a35",
+    "changed_production_paths": [
+      "simulation/hh_signal/final_closure/resource_closure/publication.py"
+    ],
+    "unchanged_nonpublication_production_paths": 29,
+    "unchanged_nonpublication_manifest_sha256": "756f3888535f4f14f55196b97c9037a63c54d5240b455f8798038554ee812f35",
+    "rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+        "bytes": 637,
+        "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+        "bytes": 4681,
+        "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+        "bytes": 87,
+        "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+        "bytes": 4289,
+        "sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+        "bytes": 11767,
+        "sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+        "bytes": 1605,
+        "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+        "bytes": 3192,
+        "sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+        "bytes": 9526,
+        "sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+        "bytes": 5486,
+        "sha256": "20bb89ab3dcafc147c23b96f4b608406c9062839e88845388d2c8ae15f192c07"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+        "bytes": 1211,
+        "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+        "bytes": 13319,
+        "sha256": "8576bece122a8a30027368acf5f955bc30369429124c506bbc7d331fb8eadf39"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+        "bytes": 3012,
+        "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+        "bytes": 5800,
+        "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+        "bytes": 3180,
+        "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+        "bytes": 4584,
+        "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+        "bytes": 2109,
+        "sha256": "b30d646d0e6127cfc37be8ecac284ec1386338bee83b1995e72bfe67973d6dd3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+        "bytes": 13199,
+        "sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+        "bytes": 12959,
+        "sha256": "5eb3e5eb81f37048e939073e259b4ce397f7a117f6374499b9658717f5cf78af"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+        "bytes": 7963,
+        "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+        "bytes": 68,
+        "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+        "bytes": 9314,
+        "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+        "bytes": 21538,
+        "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+        "bytes": 36020,
+        "sha256": "573035874f782e431bcd23905fa6deb0d6905fdd91b9728057912f5b70cbdb2e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+        "bytes": 1521,
+        "sha256": "5a29940a7aaefd0da9993cb5602fadd67c8f1a97fe60f804ce2ef03eb27b5ae8"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+        "bytes": 1315,
+        "sha256": "ef506cf76aaf53a5a0927b5506e11e203292dcc9b2ad29419cd3cf1986190050"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+        "bytes": 10600,
+        "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+        "bytes": 19031,
+        "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+        "bytes": 9746,
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+        "bytes": 18199,
+        "sha256": "0801dca58ee42e624cc9e2b2cf4b52df87b4e6dd5d771363089357d7ebe74663"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+        "bytes": 17546,
+        "sha256": "a9a1978def1cfc0b56b8ae8b97a66d0643e347a045ee47ced6e6a66981c99b1d"
+      }
+    ],
+    "claim": "Only publication.py changed among the 30 production snapshot paths; no claim that the complete 30-file identity remains unchanged."
+  },
+  "immutable_scientific_sources": [
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "unchanged_vs_frozen_b80": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "unchanged_vs_frozen_b80": true
+    }
+  ],
+  "current_supplement_execution": {
+    "read_only_git_and_hash_comparisons": true,
+    "tests_executed": 0,
+    "resource_service_cases": 0,
+    "seccomp_filter_installations": 0,
+    "live_allocation_probes": 0,
+    "global_mutex_fixture_runs": 0,
+    "human_confirmation_inputs": 0,
+    "formal_BUILD_ONLY_dispatches": 0,
+    "native_zero_ME_executions": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "physical_results": null,
+    "authorization_created_or_reused": false
+  },
+  "current_campaign_live_gate_status": {
+    "basis": "Parent reports all source-only campaign live service/filter/probe/formal native/physics counts remain zero; this supplement itself also executed none. Source inspection cannot establish kernel enforcement.",
+    "RAM_profile_review": "PENDING_HUMAN_REVIEW_BEFORE_SERVICE_EXECUTION",
+    "actual_47_case_resource_matrix": "NOT_EXECUTED",
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "formal_BUILD_ONLY_authorized": false,
+    "BINARY_REVIEW_authorized": false,
+    "PHYSICAL_RESTART_authorized": false,
+    "EVENT_GENERATION_authorized": false,
+    "physical_filesystem_allocated_blocks_and_metadata_overhead": "BLOCKED_PENDING_ACTUAL_EVIDENCE_AND_FILESYSTEM_ASSUMPTION_REVIEW",
+    "future_binary_archive_reader_and_physical_migration": "BLOCKED_NOT_IMPLEMENTED_OR_AUTHORIZED"
+  },
+  "pass": [
+    "Exact branch-scoped audit replacement keeps one publication audit active.",
+    "Only the one reviewed workflow path is newly allowed.",
+    "Old campaign audit source and other 29 production/controller paths remain byte-identical.",
+    "Scientific native guard and physics contract remain byte-identical to frozen b80."
+  ],
+  "fail": [],
+  "blocked": [
+    "Actual resource enforcement matrix and RAM-profile human review.",
+    "Any formal native build, binary review, physical restart or event production.",
+    "Treating this source-only CI repair as physics/runtime enforcement acceptance."
+  ],
+  "unknown": [
+    "Outcome of the newly modified GitHub workflow until its actual run completes.",
+    "Actual allocated-block/metadata resource behavior without the separately authorized bounded service cases."
+  ],
+  "final_verdict": "PASS_STATIC_CI_SCOPE_REVIEW_WITH_LIVE_RESOURCE_AND_PHYSICS_GATES_BLOCKED"
+}

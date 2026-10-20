@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_class": "EXPLICIT_USER_RAM_PARAMETER_REVIEW_ONLY",
+  "source_revision_before_changes": "b45f0c31c2d434c6540aeaa259303bc16076e124",
+  "origin": "CURRENT_CHAT_USER_REPLY_TO_EXISTING_RAM_PROFILE_QUESTION",
+  "reviewed_fixture": {
+    "aggregate_memory_bytes": 536870912,
+    "swap_bytes": 0
+  },
+  "reviewed_future_BUILD_ONLY_proposal": {
+    "aggregate_memory_bytes": 2147483648,
+    "swap_bytes": 0
+  },
+  "formal_BUILD_ONLY_execution_authorized": false,
+  "PHYSICAL_RESTART_authorized": false,
+  "HumanReview_object_created": false,
+  "exact_source_execution_authorization_created": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "pending_nonstress_probe": "ONE_SHOT_TRUE_SERVICE_COMPATIBILITY_ONLY",
+  "resource_matrix_cases_executed": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_events": 0,
+  "remaining_gates": [
+    "FULL_CONTROLLER_IMPLEMENTATION",
+    "ALLOCATED_DISK_HARD_ENVELOPE",
+    "REAL_PAYLOAD_AND_CONTROLLER_RESOURCE_TESTS",
+    "NEW_EXACT_SOURCE_REVIEW",
+    "SEPARATE_FORMAL_BUILD_AUTHORIZATION"
+  ]
+}

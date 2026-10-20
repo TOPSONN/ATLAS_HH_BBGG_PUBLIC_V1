@@ -1,0 +1,166 @@
+{
+  "schema": "phase7i_independent_nonstress_probe_source_review_v1",
+  "status": "PASS_SOURCE_SAFETY_FOR_EXACT_ONE_SHOT_TRUE_DIAGNOSTIC_ONLY",
+  "reviewed_at_utc": "2026-10-20T05:55:33.404800+00:00",
+  "reviewer": "hh_historical_gate_review",
+  "review_scope": "Independent static read-only review of frozen service_probe.py, its mock-only tests and exact backend/profile dependencies. This report is source review, not a human authorization receipt or an execution result.",
+  "repository": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1",
+  "precommit_HEAD": "b45f0c31c2d434c6540aeaa259303bc16076e124",
+  "exact_execution_commit": "PENDING_PARENT_CLEAN_COMMIT_AND_HASH_VERIFICATION",
+  "source_snapshot_identity": "351f7e39617a75caacd6621bc9f8f99f871d46bd58b8cb61597712107d64d530",
+  "source_snapshot_paths": 31,
+  "reviewed_files": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "bytes": 8924,
+      "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+      "bytes": 6398,
+      "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "bytes": 37116,
+      "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "bytes": 1669,
+      "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "bytes": 1905,
+      "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c"
+    }
+  ],
+  "safe_scope": {
+    "maximum_service_launches": 1,
+    "service_executable": "/usr/bin/true",
+    "service_executable_sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28",
+    "service_argv": [
+      "/usr/bin/true"
+    ],
+    "unit_name_pattern": "atlas-hh-phase7i-resource-[0-9a-f]{32}.service",
+    "mode": "One fixed nonstress configuration/namespace compatibility diagnostic only.",
+    "properties": "Same exact reviewed fixture namespace/CPU/RAM/swap/wall/tmpfs properties; remove every OpenFile and replace stdout/stderr with null. No weaker limit/namespace retry.",
+    "fixture_caps": {
+      "aggregate_CPU_seconds": 4,
+      "aggregate_wall_seconds": 13,
+      "aggregate_memory_bytes": 536870912,
+      "swap_bytes": 0,
+      "aggregate_disk_bytes": 16777216
+    },
+    "fresh_output_rule": "backend.fresh requires absent real non-symlink output below /home/btu/simulations/hh_phase7i_resource_closure, with existing parent. Preserve new output and probe.json; never reuse historical build/sample directories.",
+    "suggested_output_candidate": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/nonstress_true_probe_01",
+    "candidate_absent_at_review": true,
+    "candidate_created_by_reviewer": false,
+    "service_business_imports": false,
+    "allocation_filter_install": false,
+    "artifact_or_TTY_or_mutex_OpenFile": false,
+    "stress": false,
+    "MG5_parser_or_model_import": false,
+    "formal_BUILD_ONLY": false,
+    "native_scientific_programs": false,
+    "ME_calls": false,
+    "integrals": false,
+    "event_generation": false,
+    "new_human_authorization_creation_or_reuse": false,
+    "stop_rule": "On any configuration/readback/cleanup failure stop this task path, preserve evidence, do not weaken settings, change privilege/user, reset-failed or launch replacement probe."
+  },
+  "closed_review_findings": [
+    {
+      "id": "KILL_ERROR_SKIPS_STOP",
+      "status": "CLOSED",
+      "source": "cleanup_unit independently catches each kill/stop error and always attempts the same exact-unit status query."
+    },
+    {
+      "id": "UNKNOWN_CLEANUP_DEFAULTS_TO_EMPTY",
+      "status": "CLOSED",
+      "source": "Requires successful exact-Id query and explicit MainPID=0. Kernel proof requires known cgroup removed or present cgroup.procs explicitly empty plus cgroup.events populated=0; never-observed/missing reads remain unknown and block overall success."
+    },
+    {
+      "id": "NONZERO_INITIAL_QUERY_MAY_CLASSIFY_SUCCESS",
+      "status": "CLOSED",
+      "source": "show() rejects nonzero returncode before parsing and requires exact unit Id; mock negative test covers this."
+    }
+  ],
+  "cleanup_and_receipt_review": {
+    "foreign_units_forbidden": true,
+    "kill_and_stop_only_fresh_exact_unit": true,
+    "cleanup_attempts_independent_on_timeout": true,
+    "no_reset_failed_no_retry_no_failed_workspace_deletion": true,
+    "kernel_readback_not_observed_is_not_empty": true,
+    "optional_unknown_manager_CPU_and_memory_measurements": "null",
+    "result_success_requires": "Launch return0, loaded active/exited Result=success ExecMainCode1 ExecMainStatus0 MainPID0, then positive exact-unit manager+kernel cleanup proof.",
+    "receipt_path": "<fresh_output>/probe.json",
+    "receipt_max_bytes": 65536,
+    "receipt_exclusive_create": true,
+    "host_diagnostic_full_resource_enclosure_claimed": false,
+    "bounded_diagnostic_caveat": "Host scaffolding/manager calls are outside a complete enforced controller envelope; subprocess capture caps are checked after each fixed diagnostic command returns. This is acceptable only for this fixed nonstress diagnostic and is not full-job resource proof."
+  },
+  "acceptance_interpretation": {
+    "possible_success_status": "SERVICE_CONFIGURATION_ACCEPTED_EXEC_TRUE_SUCCESS",
+    "possible_blocked_status": "BLOCKED_EXACT_USER_SERVICE_CONFIGURATION",
+    "success_does_not_prove": "No inside mount/cgroup pressure attestation is performed by true. Manager properties describe accepted configuration; they are not effective enforcement proof.",
+    "failure_does_not_prove": "Failure of this exact unprivileged user-service configuration does not establish that all WSL, privileged services or alternate reviewed implementations are unsupported.",
+    "resource_matrix_cases_executed_by_probe": 0,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
+    "complete_controller_implementation_status": "OPEN_NOT_IMPLEMENTED",
+    "physical_results": null
+  },
+  "authorization_and_RAM_status": {
+    "current_user_RAM_decision": "Parent relayed explicit human approval for fixture512MiB/swap0 and future proposal2GiB/swap0. Numeric caps remain unchanged.",
+    "fixture_RAM_source_status": "EXPLICIT_HUMAN_APPROVED_RAM_ONLY",
+    "future_RAM_source_status": "EXPLICIT_HUMAN_APPROVED_RAM_ONLY",
+    "formal_build_execution_authorized": false,
+    "RAM_approval_enables_build_or_FULL": false,
+    "this_review_creates_or_reuses_human_authorization": false,
+    "prior_review": {
+      "path": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/independent_source_review_05.json",
+      "sha256": "bb1dbeff35b856078be96f3ddbc69f9dcab4c74c78ea4b30191c45dbb087521d",
+      "preserved": true,
+      "current_context": "05 historical RAM-pending status is superseded by the current RAM-only human decision, but its complete-controller implementation gap remains open."
+    }
+  },
+  "preexecution_conditions": [
+    "Parent commits the exact reviewed source cleanly and records the exact revision; independently verify source_snapshot identity and reviewed file hashes remain unchanged before this one diagnostic.",
+    "Only one fresh exact unit is dispatched, with the reviewed command/profile and no fallback flags, alternate user/privilege or replacement run.",
+    "Preserve actual launch/error/manager/kernel cleanup observations, including null/unknown values; inspect cleanup_verified and do not claim physics/resource-matrix/full-envelope success."
+  ],
+  "test_evidence": {
+    "reviewer_executed_tests": 0,
+    "static_reviewed_mock_cases": "Exact true/namespace/limit command; foreign unit; pendingRAM; complete manager state; null unknown counters; formal build block; kill timeout still stop; missing PID/kernel evidence; explicit empty/unpopulated kernel; nonzero status query rejection.",
+    "parent_reported_after_freeze": "156 offline and81 safe legacy tests PASS; this reviewer did not rerun or independently observe those executions.",
+    "actual_service_or_stress_tests_by_reviewer": 0
+  },
+  "readonly_environment_feasibility_notes": {
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "observed_capabilities": "cgroup2 root controllers include cpu/memory/pids; compiled MEMCG,CFS_BANDWIDTH,USER_NS,SECCOMP,EXT4,QUOTA,LOOP support. These facts are availability, not effective user-service enforcement proof.",
+    "host_filesystem": "/home and /tmp on same ext4 /dev/sdd,4096-byte allocation granule; current mount listing does not advertise quotas; no per-job hard quota is established by this review.",
+    "minimum_full_controller_direction": "Start the whole business controller and its payload within one aggregate service/cgroup before source binding/provisioning, and keep all hashing/export verification/final receipt inside it. Reserve only fixed OS launch/postmortem bookkeeping outside a clearly accepted trust boundary.",
+    "disk_limit_gap": "cgroup io.max limits IO rates, not storage capacity. Existing fixed descriptors/FSIZE/seccomp and post-hoc st_blocks checks are useful defenses, not a whole-filesystem never-exceeded allocated-byte quota.",
+    "disk_future_direction": "Use separately reviewed hard project block+inode quotas for job-accounted storage or a dedicated fully allocated fixed-capacity filesystem/volume if shared filesystem metadata/journal growth must be included. Any privileged provisioning/remount/install requires separate environment-change authorization.",
+    "scope": "These are source feasibility recommendations only; no quota/mount/loop/environment change or live filter/probe was executed."
+  },
+  "primary_references": [
+    "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+    "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/Documentation/filesystems/tmpfs.rst",
+    "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/fs/ext4/extents.c",
+    "https://www.freedesktop.org/software/systemd/man/latest/systemd.resource-control.html"
+  ],
+  "reviewer_counters": {
+    "service_launches": 0,
+    "stress_runs": 0,
+    "filter_installations": 0,
+    "allocation_probe_calls": 0,
+    "formal_native_builds": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0
+  },
+  "FINAL_VERDICT": "SAFE_FOR_ONE_EXACT_NONSTRESS_TRUE_COMPATIBILITY_DIAGNOSTIC_ONLY_NOT_FULL_CLOSURE"
+}

@@ -91,11 +91,15 @@ def supervise(argv,work,env,stdin,budget,*,control_fd=None,method_only=False):
         if os.getppid()!=parent_pid:os._exit(99)
         os.sched_setaffinity(0,{min(os.sched_getaffinity(0))})
         limit=max(1,math.floor(cpu-2))
+        hard=resource.getrlimit(resource.RLIMIT_CPU)[1]
+        if hard!=resource.RLIM_INFINITY:limit=min(limit,hard)
         resource.setrlimit(resource.RLIMIT_CPU,(limit,limit))
-        resource.setrlimit(resource.RLIMIT_FSIZE,(FILE_CAP,FILE_CAP))
+        hard=resource.getrlimit(resource.RLIMIT_FSIZE)[1];filecap=FILE_CAP if hard==resource.RLIM_INFINITY else min(FILE_CAP,hard)
+        resource.setrlimit(resource.RLIMIT_FSIZE,(filecap,filecap))
         resource.setrlimit(resource.RLIMIT_NOFILE,(32,32))
         resource.setrlimit(resource.RLIMIT_CORE,(0,0))
-        resource.setrlimit(resource.RLIMIT_AS,(2*1024**3,2*1024**3))
+        hard=resource.getrlimit(resource.RLIMIT_AS)[1];memorycap=2*1024**3 if hard==resource.RLIM_INFINITY else min(2*1024**3,hard)
+        resource.setrlimit(resource.RLIMIT_AS,(memorycap,memorycap))
         if not method_only:resource.setrlimit(resource.RLIMIT_NPROC,(0,0))
         landlock(allowed,scratch)
     child=subprocess.Popen(list(map(str,argv)),cwd=work,env={**env,'TMPDIR':str(scratch),

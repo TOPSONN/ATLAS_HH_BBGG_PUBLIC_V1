@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "diagnostic": "ONE_SHOT_TRUE_SERVICE_COMPATIBILITY_ONLY",
+  "output": "/home/btu/simulations/hh_phase7i_resource_closure/ram_review_01/nonstress_true_probe_01",
+  "unit": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+  "command": [
+    "/usr/bin/systemd-run",
+    "--user",
+    "--quiet",
+    "--unit",
+    "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+    "--property",
+    "Type=exec",
+    "--property",
+    "RemainAfterExit=yes",
+    "--property",
+    "CPUAccounting=yes",
+    "--property",
+    "MemoryAccounting=yes",
+    "--property",
+    "TasksAccounting=yes",
+    "--property",
+    "MemoryMax=536870912",
+    "--property",
+    "MemorySwapMax=0",
+    "--property",
+    "OOMPolicy=kill",
+    "--property",
+    "CPUQuota=30%",
+    "--property",
+    "CPUQuotaPeriodSec=10000us",
+    "--property",
+    "RuntimeMaxSec=10s",
+    "--property",
+    "TimeoutStartSec=2s",
+    "--property",
+    "TimeoutStopSec=0.1s",
+    "--property",
+    "KillMode=control-group",
+    "--property",
+    "KillSignal=SIGKILL",
+    "--property",
+    "FinalKillSignal=SIGKILL",
+    "--property",
+    "SendSIGKILL=yes",
+    "--property",
+    "TasksMax=16",
+    "--property",
+    "CPUAffinity=0",
+    "--property",
+    "LimitCPU=2",
+    "--property",
+    "LimitAS=536870912",
+    "--property",
+    "LimitFSIZE=65536",
+    "--property",
+    "LimitNOFILE=128",
+    "--property",
+    "LimitCORE=0",
+    "--property",
+    "PrivateUsers=yes",
+    "--property",
+    "PrivateNetwork=yes",
+    "--property",
+    "PrivateIPC=yes",
+    "--property",
+    "ProtectSystem=strict",
+    "--property",
+    "ProtectHome=read-only",
+    "--property",
+    "ProtectControlGroups=yes",
+    "--property",
+    "NoNewPrivileges=yes",
+    "--property",
+    "RestrictNamespaces=yes",
+    "--property",
+    "CapabilityBoundingSet=",
+    "--property",
+    "ReadOnlyPaths=/dev /proc /sys",
+    "--property",
+    "InaccessiblePaths=/run/user/1000 /var/tmp",
+    "--property",
+    "TemporaryFileSystem=/home/btu/simulations/hh_phase7i_resource_closure/ram_review_01/nonstress_true_probe_01/work:rw,size=8388608,nr_inodes=1024,nodev,nosuid,noexec",
+    "--property",
+    "TemporaryFileSystem=/tmp:rw,size=1048576,nr_inodes=256,nodev,nosuid,noexec",
+    "--property",
+    "WorkingDirectory=/home/btu/simulations/hh_phase7i_resource_closure/ram_review_01/nonstress_true_probe_01/work",
+    "--property",
+    "StandardInput=null",
+    "--property",
+    "Environment=PATH=/usr/bin:/bin LANG=C.UTF-8 PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 GIT_OPTIONAL_LOCKS=0 TMPDIR=/tmp TMP=/tmp TEMP=/tmp HOME=/home/btu",
+    "--property",
+    "StandardOutput=null",
+    "--property",
+    "StandardError=null",
+    "/usr/bin/true"
+  ],
+  "source_snapshot": {
+    "identity": "351f7e39617a75caacd6621bc9f8f99f871d46bd58b8cb61597712107d64d530",
+    "paths": [
+      {
+        "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+        "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+        "bytes": 637
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+        "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+        "bytes": 4681
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+        "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+        "bytes": 87
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+        "sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49",
+        "bytes": 4289
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+        "sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c",
+        "bytes": 11767
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+        "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f",
+        "bytes": 1605
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+        "sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5",
+        "bytes": 3192
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+        "sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403",
+        "bytes": 9526
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+        "sha256": "20bb89ab3dcafc147c23b96f4b608406c9062839e88845388d2c8ae15f192c07",
+        "bytes": 5486
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+        "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+        "bytes": 1211
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+        "sha256": "8576bece122a8a30027368acf5f955bc30369429124c506bbc7d331fb8eadf39",
+        "bytes": 13319
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+        "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+        "bytes": 3012
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+        "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+        "bytes": 5800
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+        "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+        "bytes": 3180
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+        "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+        "bytes": 4584
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+        "sha256": "b30d646d0e6127cfc37be8ecac284ec1386338bee83b1995e72bfe67973d6dd3",
+        "bytes": 2109
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+        "sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae",
+        "bytes": 13199
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+        "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727",
+        "bytes": 13037
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+        "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5",
+        "bytes": 7963
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+        "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7",
+        "bytes": 68
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+        "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+        "bytes": 9314
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+        "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+        "bytes": 21538
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+        "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+        "bytes": 37116
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+        "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+        "bytes": 1905
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+        "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+        "bytes": 1669
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+        "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+        "bytes": 10600
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+        "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec",
+        "bytes": 19031
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+        "bytes": 9746
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+        "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+        "bytes": 19025
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+        "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+        "bytes": 8924
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+        "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+        "bytes": 18262
+      }
+    ]
+  },
+  "profile": {
+    "schema_version": 1,
+    "profile_id": "PHASE7I_RESOURCE_FIXTURE_V1",
+    "execution_scope": "HARMLESS_FIXED_FIXTURES_ONLY",
+    "aggregate_CPU_seconds": 4,
+    "aggregate_wall_seconds": 13,
+    "unit_start_seconds": 2,
+    "unit_run_seconds": 10,
+    "unit_stop_seconds": 0.1,
+    "cpu_quota_percent": 30,
+    "cpu_quota_period_usec": 10000,
+    "cpu_burst_usec": 0,
+    "CPU_watchdog_stop_usec": 2500000,
+    "aggregate_memory_bytes": 536870912,
+    "swap_bytes": 0,
+    "per_process_address_space_bytes": 536870912,
+    "per_process_CPU_seconds": 2,
+    "work_tmpfs_bytes": 8388608,
+    "tmp_tmpfs_bytes": 1048576,
+    "work_tmpfs_inodes": 1024,
+    "tmp_tmpfs_inodes": 256,
+    "work_executable": false,
+    "per_regular_file_bytes": 65536,
+    "artifact_chunks": 2,
+    "host_stream_files": 2,
+    "host_metadata_files": 4,
+    "host_metadata_bytes": 65536,
+    "source_control_reserve_bytes": 0,
+    "canary_bytes": 64,
+    "aggregate_disk_bytes": 16777216,
+    "max_tasks": 16,
+    "poll_seconds": 0.02,
+    "RAM_profile_review_status": "EXPLICIT_HUMAN_APPROVED_RAM_ONLY",
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "artifact_index_files": 1,
+    "formal_build_execution_authorized": false,
+    "host_allocation_granule_bytes": 4096,
+    "campaign_lock_allocated_reserve_bytes": 4096,
+    "campaign_lock_reserve_in_source_control": false,
+    "RAM_profile_review_source": "CURRENT_CHAT_EXPLICIT_USER_RAM_REVIEW_RELAYED_BY_ROOT",
+    "RAM_profile_review_scope": "User explicitly approved fixture aggregate RAM 512 MiB and swap 0 in the current chat; harmless fixture RAM review only.",
+    "RAM_profile_review_execution_limit": "RAM_REVIEW_ONLY; FORMAL_BUILD_NOT_AUTHORIZED; COMPLETE_CONTROLLER_REMAINS_BLOCKED"
+  },
+  "service_executable": "/usr/bin/true",
+  "service_executable_sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28",
+  "service_attempts": 1,
+  "stress_attempts": 0,
+  "filter_install_attempts": 0,
+  "resource_matrix_cases_executed": 0,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "formal_build_executed": false,
+  "human_authorizations_created": 0,
+  "MG5_invocations": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0,
+  "launch": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "last_query": {
+    "returncode": 0,
+    "stdout": "TimeoutStartUSec=2s\nTimeoutStopUSec=100ms\nRuntimeMaxUSec=10s\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=6637000\nCPUQuotaPerSecUSec=300ms\nCPUQuotaPeriodUSec=10ms\nMemoryMax=536870912\nMemorySwapMax=0\nTasksMax=16\nProtectControlGroups=yes\nPrivateNetwork=yes\nPrivateUsers=yes\nProtectSystem=strict\nId=atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service\nLoadState=loaded\nActiveState=active\nSubState=exited\n",
+    "stderr": ""
+  },
+  "manager_properties": {
+    "TimeoutStartUSec": "2s",
+    "TimeoutStopUSec": "100ms",
+    "RuntimeMaxUSec": "10s",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainCode": "1",
+    "ExecMainStatus": "0",
+    "ControlGroup": "",
+    "MemoryPeak": "[not set]",
+    "CPUUsageNSec": "6637000",
+    "CPUQuotaPerSecUSec": "300ms",
+    "CPUQuotaPeriodUSec": "10ms",
+    "MemoryMax": "536870912",
+    "MemorySwapMax": "0",
+    "TasksMax": "16",
+    "ProtectControlGroups": "yes",
+    "PrivateNetwork": "yes",
+    "PrivateUsers": "yes",
+    "ProtectSystem": "strict",
+    "Id": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "exited"
+  },
+  "status": "BLOCKED_EXACT_USER_SERVICE_CONFIGURATION",
+  "CPU_usage_ns_manager": 6637000,
+  "memory_peak_bytes_manager": null,
+  "cleanup": {
+    "kill": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "stop": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "query": {
+      "returncode": 0,
+      "stdout": "TimeoutStartUSec=1min 30s\nTimeoutStopUSec=1min 30s\nRuntimeMaxUSec=infinity\nMainPID=0\nResult=success\nExecMainCode=0\nExecMainStatus=0\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=[not set]\nCPUQuotaPerSecUSec=infinity\nCPUQuotaPeriodUSec=infinity\nMemoryMax=infinity\nMemorySwapMax=infinity\nTasksMax=9201\nProtectControlGroups=no\nPrivateNetwork=no\nPrivateUsers=no\nProtectSystem=no\nId=atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\n",
+      "stderr": ""
+    },
+    "manager_properties": {
+      "TimeoutStartUSec": "1min 30s",
+      "TimeoutStopUSec": "1min 30s",
+      "RuntimeMaxUSec": "infinity",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "0",
+      "ExecMainStatus": "0",
+      "ControlGroup": "",
+      "MemoryPeak": "[not set]",
+      "CPUUsageNSec": "[not set]",
+      "CPUQuotaPerSecUSec": "infinity",
+      "CPUQuotaPeriodUSec": "infinity",
+      "MemoryMax": "infinity",
+      "MemorySwapMax": "infinity",
+      "TasksMax": "9201",
+      "ProtectControlGroups": "no",
+      "PrivateNetwork": "no",
+      "PrivateUsers": "no",
+      "ProtectSystem": "no",
+      "Id": "atlas-hh-phase7i-resource-a702e8db8cf348c48c672f0b31f854ab.service",
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead"
+    },
+    "manager_stopped_verified": true,
+    "kernel_cleanup": "NOT_OBSERVED",
+    "cleanup_verified": false
+  },
+  "cleanup_verified": false,
+  "host_diagnostic_elapsed_seconds": 0.11674767399999997,
+  "effective_resource_enforcement": "NOT_TESTED_BY_TRUE_PROBE",
+  "scope_limit": "Host diagnostic is not fully enclosed; no stress or full workflow was dispatched."
+}

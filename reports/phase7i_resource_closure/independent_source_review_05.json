@@ -1,0 +1,377 @@
+{
+  "schema": "phase7i_independent_source_review_supplement_v1",
+  "status": "SOURCE_PARTIAL_BLOCKED_FULL_CONTROLLER_AND_RAM_REVIEW",
+  "reviewed_at_utc": "2026-10-20T04:57:17.389552+00:00",
+  "reviewer": "hh_historical_gate_review",
+  "review_scope": "Final static read-only source review of controller scope, closed false-FULL semantics and formal-entry guards, following the branch-specific CI review. No test/service/native/approval/physics execution by this supplement.",
+  "reviewer_independence": "Reviewer did not author the backend/suite/worker/runtime guard changes. Reviewer previously authored archive_io.py and allocation_guard.py; this is not external human approval.",
+  "repository": "/home/btu/projects/atlas_hh_phase7i_resource_closure_v1",
+  "preedit_head_revision": "092cd24cbd0f8b3499fc6c9571332a5b8165b12b",
+  "head_at_review": "092cd24cbd0f8b3499fc6c9571332a5b8165b12b",
+  "exact_postedit_commit_revision": null,
+  "source_revision_note": "A new exact committed revision is required after these edits. Neither prior source identity nor this report authorizes any native execution.",
+  "prior_review": {
+    "path": "/home/btu/simulations/hh_phase7i_resource_closure/run_01/independent_source_review_04.json",
+    "sha256": "10742fc7dc90bb1f6d29966c248f1a0df5cc65a9373ddef1873ee229ca1385b9",
+    "preserved": true,
+    "scope_note": "04 correctly reviewed the then-current three CI changes. Its 29-unchanged-production-path count and bc96 source identity are a preserved point-in-time snapshot, superseded here for final source state."
+  },
+  "closed_findings": [
+    {
+      "id": "FALSE_FULL_FROM_PAYLOAD_CASES",
+      "status": "CLOSED_SOURCE_SEMANTICS_ONLY",
+      "before": "A future all47 payload-case success would set FULL_LAUNCH_ENVELOPE_VERIFIED true despite the host controller being outside payload limits.",
+      "after": "campaign_outcome() unconditionally returns FULL_LAUNCH_ENVELOPE_VERIFIED=False, FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED=False and FORMAL_BUILD_ENVELOPE_VERIFIED=False. PAYLOAD_BUSINESS_ENVELOPE_VERIFIED requires exact ordered all47 PASS rows and no failure.",
+      "not_claimed": "No actual47-case campaign or complete resource-enforcement validation."
+    },
+    {
+      "id": "FORMAL_ENTRY_WITH_INCOMPLETE_CONTROLLER",
+      "status": "CLOSED_DISPATCH_GUARD_SOURCE",
+      "after": "backend.start_build immediately raises COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED before revision/profile/TTY/output/service work; worker.run_build and require_build_enclosure also fail unconditionally before formal imports/confirmation/prepare.",
+      "private_proposal": "Original transport remains named _start_build_transport_proposal, explicitly a non-executed design helper; public start_build has no active transport call. Raw fixed worker BUILD_ONLY is also denied before filter installation or backend/archive/fixture imports.",
+      "cli_receipt": "integration_runtime.run prints exit2/blocked and truthful zero new counters for this known prelaunch refusal; it does not create review_failure or modify historical workspaces.",
+      "not_claimed": "Approval alone cannot enable the incomplete full-controller implementation."
+    },
+    {
+      "id": "BOOTSTRAP_BUILD_ARGV_FORMS",
+      "status": "CLOSED_SOURCE",
+      "after": "_requests_build scans all raw argv positions for both --mode BUILD_ONLY and --mode=BUILD_ONLY, including repeats; argparse allow_abbrev=False prevents abbreviation from selecting an otherwise unmatched mode. This blocks accepted formal CLI forms before allocation_guard.install().",
+      "validation_limit": "Static source/pure-helper unit test review only; this reviewer did not invoke the worker, install a filter or create a human confirmation."
+    }
+  ],
+  "open_implementation_gap": {
+    "id": "COMPLETE_SUPERVISOR_CPU_RAM_TOTAL_WALL",
+    "status": "OPEN_NOT_IMPLEMENTED",
+    "environment_unavailability_established": false,
+    "evidence": [
+      {
+        "source": "backend.py:_start",
+        "facts": "Profile/fresh-path checks, campaign lock preparation, source_snapshot, fresh host output/file provisioning and fixed command construction occur before start=time.monotonic(). They are not inside the payload cgroup CPU/RAM accounting."
+      },
+      {
+        "source": "backend.py:monitor_job",
+        "facts": "Host observer appends polling snapshots to observed outside payload memory accounting. Its CPU and RAM are excluded by backend module documentation."
+      },
+      {
+        "source": "backend.py:monitor_job elapsed capture",
+        "facts": "elapsed is captured after unit cleanup but before journal processing, source_snapshot rehash, canary/transport inode validation, _payload_observations and result.json serialization/write."
+      },
+      {
+        "source": "backend.py:_payload_observations",
+        "facts": "Host reads/hashes every fixed chunk plus index/stdout/stderr after that elapsed capture. Future BUILD_ONLY transport permits32 chunks+3 additional files, each up to64MiB (35 files total), outside the payload CPU/RAM/total-wall enforcement."
+      },
+      {
+        "source": "backend.py:new_json(result.json)",
+        "facts": "Final host result writing is outside payload CPU/RAM accounting and not included in elapsed captured earlier."
+      }
+    ],
+    "preserved_payload_strength": "Worker performs business preflight, compile-like fixture, loader, receipt, postflight, tar/index export and complete archive/member/receipt verification inside the proposed payload boundary. The host independent transport readback is an additional external step; the in-cgroup archive verification is not being denied or discarded.",
+    "contract_interpretation": "A host independent audit may be explicitly scoped separately, but that narrower payload contract cannot establish the original complete supervisor-workflow CPU/RAM/total-wall acceptance without separate contract review. Passing47 payload cases would not close this implementation gap.",
+    "required_future_work": "Implement and independently review one enforced boundary covering complete controller setup/monitor/postprocessing/receipt writing, or obtain explicit acceptance of a narrower separately named contract. Keep FULL false and formal build blocked until then.",
+    "resource_limit_changes_or_bypass": "None: no cap relaxation, receipt edit, environment flag or recycled approval used."
+  },
+  "remaining_other_gates": {
+    "RAM_profile": "PENDING_HUMAN_REVIEW_BEFORE_SERVICE_EXECUTION",
+    "actual_47_case_payload_resource_matrix": "NOT_EXECUTED",
+    "physical_allocated_blocks_metadata_and_extent_overhead": "NOT_CLOSED_BY_SOURCE_ALGEBRA; requires actual bounded evidence and filesystem assumptions/review.",
+    "future_binary_archive_review_and_physical_migration": "NOT_IMPLEMENTED_OR_AUTHORIZED",
+    "new_exact_executable_source_review": "REQUIRED_AFTER_FUTURE_IMPLEMENTATION_CORRECTION",
+    "formal_BUILD_ONLY": "BLOCKED_IMPLEMENTATION_AND_NOT_AUTHORIZED",
+    "BINARY_REVIEW": "NOT_AUTHORIZED",
+    "PHYSICAL_RESTART": "NOT_AUTHORIZED",
+    "EVENT_GENERATION": "NOT_AUTHORIZED"
+  },
+  "current_flags": {
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+    "PAYLOAD_BUSINESS_ENVELOPE_VERIFIED": false,
+    "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
+    "parser_or_physics_authorized": false
+  },
+  "current_supplement_execution": {
+    "source_git_and_hash_read_only_comparisons": true,
+    "tests_executed": 0,
+    "resource_service_cases": 0,
+    "seccomp_filter_installations": 0,
+    "live_allocation_probes": 0,
+    "global_mutex_fixture_runs": 0,
+    "human_confirmation_inputs": 0,
+    "formal_BUILD_ONLY_dispatches": 0,
+    "native_zero_ME_executions": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0,
+    "physical_results": null,
+    "authorization_created_or_reused": false
+  },
+  "campaign_execution_evidence_basis": "Parent and peer agents report source-only offline tests, with no live service/filter/probe/formal native/physics execution. This independent supplement itself executes none of those. Final root regression/CI rerun is pending and is not asserted here.",
+  "ci_publication_scope_preserved": {
+    "review": "04 exact branch-scoped old/new publication audit replacement remains unchanged.",
+    "fixed_base": "b80e16775bf141e45f4048c7197a8a99befaed51",
+    "blob_cap_bytes": 131072,
+    "aggregate_cap_bytes": 2097152,
+    "all_intermediate_outgoing_commits_and_changed_index": true,
+    "exact_workflow_allowlist_count": 4,
+    "workflow_prefix_relaxation": false,
+    "old_campaign_audit_path": "simulation/hh_signal/campaign/audit_payload.py",
+    "old_campaign_audit_sha256": "d52556c93419301e635739f8212149faff7c309255b1f24b759dcf8dca3533bf",
+    "old_campaign_audit_unchanged_vs_preedit_and_b80": true,
+    "unapproved_figures_events_binaries_or_private_payloads_allowed": false
+  },
+  "production_identity_review": {
+    "scope": "Same30-path production/controller/config snapshot as prior reviews, distinct from complete tracked-source preflight.",
+    "production_path_count": 30,
+    "preedit_identity": "231c30aeaa4da3a53a0fe9d3ab7c2b468db0120512584ddbdd78b6a739ec0c3b",
+    "current_worktree_identity": "3a7db87f6822137dae5270c96ae69001b4fe009ebf760722a8197d2794d541e1",
+    "changed_paths_vs_preedit": [
+      "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "simulation/hh_signal/final_closure/resource_closure/worker.py"
+    ],
+    "unchanged_production_paths_vs_preedit": 25,
+    "claim": "Production snapshot changed for guard semantics and dispatch closure as well as publication.py. Do not reuse04 production identity or claim all29 other production paths remain unchanged in final state.",
+    "rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+        "bytes": 637,
+        "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+        "bytes": 4681,
+        "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+        "bytes": 87,
+        "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+        "bytes": 4289,
+        "sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+        "bytes": 11767,
+        "sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+        "bytes": 1605,
+        "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+        "bytes": 3192,
+        "sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+        "bytes": 9526,
+        "sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+        "bytes": 5486,
+        "sha256": "20bb89ab3dcafc147c23b96f4b608406c9062839e88845388d2c8ae15f192c07"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+        "bytes": 1211,
+        "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+        "bytes": 13319,
+        "sha256": "8576bece122a8a30027368acf5f955bc30369429124c506bbc7d331fb8eadf39"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+        "bytes": 3012,
+        "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+        "bytes": 5800,
+        "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+        "bytes": 3180,
+        "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+        "bytes": 4584,
+        "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+        "bytes": 2109,
+        "sha256": "b30d646d0e6127cfc37be8ecac284ec1386338bee83b1995e72bfe67973d6dd3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+        "bytes": 13199,
+        "sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+        "bytes": 13037,
+        "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+        "bytes": 7963,
+        "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+        "bytes": 68,
+        "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+        "bytes": 9314,
+        "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+        "bytes": 21538,
+        "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+        "bytes": 36390,
+        "sha256": "a7b8f68d915947f7ac094bc4697cb230350ab0abab6abd6e78d361cd58c92c2a"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+        "bytes": 1521,
+        "sha256": "5a29940a7aaefd0da9993cb5602fadd67c8f1a97fe60f804ce2ef03eb27b5ae8"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+        "bytes": 1315,
+        "sha256": "ef506cf76aaf53a5a0927b5506e11e203292dcc9b2ad29419cd3cf1986190050"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+        "bytes": 10600,
+        "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+        "bytes": 19031,
+        "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+        "bytes": 9746,
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+        "bytes": 19025,
+        "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+        "bytes": 18262,
+        "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+      }
+    ]
+  },
+  "all_current_diff_paths_vs_preedit": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "bytes": 1951,
+      "sha256": "04393d6e8a400e4ccb82c107ade91820a5dbd349eb046cc1c9c280b6155e7cb4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "bytes": 13037,
+      "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/README_ZH_TW.md",
+      "bytes": 6759,
+      "sha256": "e4cefeb3cb75211f420f3f9e32495e27427fbf00dd66406ca41cd75c944f85c2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "bytes": 36390,
+      "sha256": "a7b8f68d915947f7ac094bc4697cb230350ab0abab6abd6e78d361cd58c92c2a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "bytes": 9746,
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "bytes": 19025,
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "bytes": 19509,
+      "sha256": "6270be7209b9f8bd1795003fe96d33eada9c03425416757be9a6848ac9c0ae45"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "bytes": 22691,
+      "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "bytes": 8378,
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "bytes": 6945,
+      "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "bytes": 18262,
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+    }
+  ],
+  "immutable_scientific_sources": [
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "unchanged_vs_frozen_b80": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "unchanged_vs_frozen_b80": true
+    }
+  ],
+  "PASS": [
+    "Branch-specific strict publication CI integration remains scoped.",
+    "Future false FULL flag is corrected.",
+    "Formal native entry is fail-closed while full controller is incomplete.",
+    "Accepted raw BUILD_ONLY mode forms cannot install the allocation filter before denial.",
+    "Frozen scientific guard/physics contract and old campaign audit remain unchanged."
+  ],
+  "FAIL": [],
+  "BLOCKED": [
+    "Complete supervisor CPU/RAM/total-wall implementation.",
+    "RAM review and actual47-case payload resource tests.",
+    "Physical allocated-block/metadata proof.",
+    "Formal native build, binary review, matched integral restart and event production."
+  ],
+  "UNKNOWN": [
+    "Actual kernel/resource-case outcomes without approved service execution.",
+    "Final GitHub outcome until new exact committed source is pushed and CI completes."
+  ],
+  "FINAL_VERDICT": "SOURCE_PARTIAL_BLOCKED_FULL_CONTROLLER_AND_RAM_REVIEW",
+  "next_gate": "Review and implement complete controller enforcement before considering bounded harmless resource cases. A new exact revision and separate explicit scope approval are required before any future formal build; no physics authorization is implied."
+}

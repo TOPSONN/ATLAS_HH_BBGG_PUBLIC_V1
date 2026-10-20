@@ -22,30 +22,42 @@ def prepare(root, *, build_review=None, revision=None):
     # No work, clone, compiler or native executable before both gates.
     root=safe_root(root)
     approval=verify_human_review(build_review,review_scope('BUILD_ONLY',revision,root,full_source_identity()))
+    from ..resource_closure.worker import require_build_enclosure
+    enclosure=require_build_enclosure(root)
     binding_sources=full_source_identity()
     binding=check_revision(revision,full=True)
+    from ..resource_closure.worker import emit as resource_emit,journal
+    resource_emit('BUILD_SOURCE_PREFLIGHT_VERIFIED',revision=revision,binding_sha256=identity(binding))
     require(not root.exists(),'EXISTING_REVIEW_WORKSPACE_PRESERVED')
     require(sha(REPO/'simulation/hh_signal/final_closure/config/physics_contract.json')==PHYSICS_SHA,'PHYSICS_CONTRACT_DRIFT')
     overrides={'LD_PRELOAD','LD_AUDIT','GCC_EXEC_PREFIX','COMPILER_PATH','LIBRARY_PATH','CPATH','C_INCLUDE_PATH','CPLUS_INCLUDE_PATH','GFORTRAN_CONVERT_UNIT','GFORTRAN_OPTIONAL_PLUS'}
     require(not overrides.intersection(os.environ),'UNREVIEWED_COMPILER_OR_RUNTIME_ENVIRONMENT')
     cfg=read_json(REPO/'.local/mg5_installation.json');env={k:v for k,v in mg_environment(cfg).items() if not k.startswith('HH_')}
-    env.update(OMP_NUM_THREADS='1',OMP_THREAD_LIMIT='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1')
+    env.update(OMP_NUM_THREADS='1',OMP_THREAD_LIMIT='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',
+        TMPDIR='/tmp',TMP='/tmp',TEMP='/tmp')
     native=Path.home()/'simulations/hh_signal_runs/campaign_01/7b/source/process'
     rows=lock()['frozen_runtime_sources']+lock()['runtime_build_auxiliary']
     require(cfg['source_commit']==read_json(REPO/'simulation/hh_signal/final_closure/config/physics_contract.json')['MG5_commit'],'MG5_COMMIT_DRIFT')
     for r in rows:require(sha(native/r['path'])==r['sha256'],'PINNED_NATIVE_SOURCE_DRIFT:'+r['path'])
     from simulation.hh_signal.final_closure.src.plans import verify_model_sources
     verify_model_sources(cfg['mg5_path'],read_json(REPO/'metadata/phase7a_model_manifest.json')['installed_model_files'])
-    root.mkdir(parents=True);replicas=[];plans=[];command_receipts=[];initializations=[];start=time.monotonic();cpu=resource.getrusage(resource.RUSAGE_CHILDREN)
+    root.mkdir(parents=True);replicas=[];plans=[];command_receipts=[];loader_receipts=[];initializations=[];start=time.monotonic();cpu=resource.getrusage(resource.RUSAGE_CHILDREN)
     budget=Budget(root)
     prepared_at=datetime.datetime.now(datetime.timezone.utc).isoformat()
     def checkpoint():
+        resource_emit('BUILD_CHECKPOINT',commands=len(command_receipts),completed_replicas=len(replicas),
+            initializations=len(initializations),loader_commands=len(loader_receipts),
+            aggregate_wall_seconds=time.monotonic()-start,aggregate_CPU_seconds=budget.used_cpu())
+        if command_receipts:journal('BUILD_LAST_COMMAND',command_receipts[-1])
+        if loader_receipts:journal('BUILD_LAST_LOADER',loader_receipts[-1])
+        if initializations:journal('BUILD_LAST_INITIALIZATION',initializations[-1])
         save(root/'partial_build.json',{'status':'BUILD_ONLY_BOOKKEEPING_NO_RETRY','preparation_pid':os.getpid(),
             'prepared_at_UTC':prepared_at,'commands':command_receipts,'completed_replicas':replicas,
-            'initializations':initializations,
+            'initializations':initializations,'loader_commands':loader_receipts,
             'aggregate_wall_seconds':time.monotonic()-start,'aggregate_CPU_seconds':budget.used_cpu(),
             'peak_disk_bytes':budget.peak_disk,'new_ME_calls':0,'new_integrals':0})
     def invoke(argv,cwd,env,expected=0):
+        resource_emit('BUILD_CHILD_ENTER',argv=list(map(str,argv)),expected_exit=expected)
         try:result,measurement=bounded_invoke(argv,cwd,env,budget,expected)
         except BaseException as exc:
             if hasattr(exc,'build_measurement'):command_receipts.append(exc.build_measurement)
@@ -53,6 +65,14 @@ def prepare(root, *, build_review=None, revision=None):
         command_receipts.append(measurement)
         checkpoint()
         return result,measurement['wall_seconds']
+    def enclosed_loader(argv):
+        resource_emit('BUILD_LOADER_ENTER',argv=list(map(str,argv)))
+        try:result,measurement=bounded_invoke(argv,root,env,budget)
+        except BaseException as exc:
+            if hasattr(exc,'build_measurement'):loader_receipts.append(exc.build_measurement)
+            checkpoint();raise
+        loader_receipts.append(measurement);checkpoint()
+        return result
     compiler=Path(cfg['toolchain_prefix'])/'bin/x86_64-conda-linux-gnu-gfortran'
     verify_compiler(compiler)
     from .route_a import toolchain
@@ -89,12 +109,13 @@ def prepare(root, *, build_review=None, revision=None):
             require(not Path(argv[argv.index('-o')+1]).exists(),'STALE_BUILD_OBJECT_OR_EXECUTABLE')
             invoke(argv,sub,env)
         exe=folder/'hh_final_integral_reviewed'
-        linked_dependencies=dependencies(exe)
+        linked_dependencies=dependencies(exe,runner=enclosed_loader)
         preflights=[]
         for stage,mo in [('adaptation',0),('measurement',1)]:
             work=sub/(stage+'_preflight');work.mkdir();(work/'temporary').mkdir()
             for name,value in [('randinit',f'r={seed}'),('iproc.dat','0'),('moffset.dat',str(mo))]:(work/name).write_text(value+'\n')
             for name in NAMED:(work/name).touch()
+            resource_emit('BUILD_NATIVE_ZERO_ME_ENTER',seed=seed,stage=stage)
             try:r=supervise([exe],work,{**env,'HH_PREFLIGHT_ONLY':'1'},stage_input(stage),budget)
             except BaseException as exc:
                 if hasattr(exc,'receipt'):initializations.append({'seed':seed,'stage':stage,'failed_receipt':exc.receipt})
@@ -121,6 +142,7 @@ def prepare(root, *, build_review=None, revision=None):
         'schema':SCHEMA,'approved_build_source_revision':revision,
         'build_review':approval,'git_preflight':binding,'frozen_source_cards':frozen_inputs(),
         'toolchain_identity':tools,'compile_plans':plans,'build_commands':command_receipts,
+        'resource_envelope':enclosure,'loader_commands':loader_receipts,
         'preparation':{'pid':os.getpid(),'prepared_at_UTC':prepared_at},
         'guard_correction':guard_descriptor(),
         'physics_contract_sha256':PHYSICS_SHA,'source_identity':full_source_identity(),'replicas':replicas,'ceilings':CAPS,
@@ -130,5 +152,6 @@ def prepare(root, *, build_review=None, revision=None):
     manifest['immutable_binary_identity']=binary_identity(manifest)
     save(root/'review_build.json',manifest)
     from .route_a import validate_receipt
-    validate_receipt(manifest,root,revision,full_source_identity(),check_linkage=True)
+    validate_receipt(manifest,root,revision,full_source_identity(),check_linkage=True,linkage_runner=enclosed_loader)
+    save(root/'review_build.json',manifest)
     return manifest

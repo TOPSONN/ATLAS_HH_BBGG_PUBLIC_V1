@@ -1,0 +1,32 @@
+{
+  "head": "092cd24cbd0f8b3499fc6c9571332a5b8165b12b",
+  "phase7i_resource": {
+    "run_id": 39371223400,
+    "job_id": 118459303793,
+    "conclusion": "success",
+    "unit_tests": 138,
+    "safe_legacy": 81,
+    "publication": "PASS"
+  },
+  "readiness": {
+    "run_id": 39371223547,
+    "conclusion": "success",
+    "scope": "historical pinned snapshot"
+  },
+  "historical_closure": {
+    "run_id": 39371223434,
+    "conclusion": "skipped"
+  },
+  "campaign": {
+    "run_id": 39371223382,
+    "job_id": 118459303660,
+    "conclusion": "failure",
+    "mathematical_tests": 13,
+    "mathematical_tests_conclusion": "success",
+    "failed_step": "All outgoing commit payloads including index",
+    "reason": "OUT_OF_SCOPE_PAYLOAD:.github/workflows/hh_signal_resource_closure.yml",
+    "subsequent_validators": "skipped"
+  },
+  "repair": "Only this resource PR delegates to current strict publication guard; original legacy audit module/caps/exclusions remain unchanged; exactly fourth reviewed workflow path accepted with unrelated-workflow negative test.",
+  "physical_or_resource_service_execution": false
+}
