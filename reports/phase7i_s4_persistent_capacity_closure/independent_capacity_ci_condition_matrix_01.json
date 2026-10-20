@@ -1,0 +1,234 @@
+{
+  "schema": "INDEPENDENT_CAPACITY_CI_MATRIX_V1",
+  "status": "PASS_STATIC_BRANCH_SAFETY",
+  "source_hashes": {
+    ".github/workflows/hh_signal_campaign.yml": "858e6ae01e9147dc2fffb6c52b75d97a635d8af3291080b92d56d762dc1b3e9c",
+    ".github/workflows/hh_signal_final_closure.yml": "3a886de3ffc8e45e25ba480944c78f12a355d383414c0a9828f5759662589008",
+    ".github/workflows/hh_signal_readiness.yml": "739dae29d49015938f1c3c6c028f822c9352c4193d2b41da7d62bf34b8a04387",
+    ".github/workflows/hh_signal_resource_closure.yml": "0469894011420c3b4d0cb46eec230f0c8554cb21fb0fa16657fc70454bfa0012"
+  },
+  "cases": [
+    {
+      "event": "pull_request",
+      "context": {
+        "head_ref": "codex/phase7i-s4-persistent-capacity-closure",
+        "ref_name": "NN/merge"
+      },
+      "historical_jobs": [
+        {
+          "workflow": ".github/workflows/hh_signal_campaign.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_final_closure.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_readiness.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        }
+      ],
+      "resource_workflow": {
+        "trigger_supported_for_branch": true,
+        "step_conditions": [
+          {
+            "name": "Offline inert byte and API tests; no service or approval creation",
+            "condition": false
+          },
+          {
+            "name": "Audited autonomous pure and mock regression; forbid live dispatch",
+            "condition": true
+          },
+          {
+            "name": "Exact nonphysical legacy regression with forbidden dispatch audit",
+            "condition": true
+          },
+          {
+            "name": "Every outgoing commit payload and index; no figures or private artifacts",
+            "condition": false
+          },
+          {
+            "name": "Strict PR32 stacked delta publication gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR33 namespace recovery delta and private mount evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR34 autonomous recovery delta and private-evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR35 capacity closure source and bounded evidence gate",
+            "condition": true
+          }
+        ],
+        "selected_if_triggered": [
+          "Audited autonomous pure and mock regression; forbid live dispatch",
+          "Exact nonphysical legacy regression with forbidden dispatch audit",
+          "Strict PR35 capacity closure source and bounded evidence gate"
+        ],
+        "actually_eligible_steps": [
+          "Audited autonomous pure and mock regression; forbid live dispatch",
+          "Exact nonphysical legacy regression with forbidden dispatch audit",
+          "Strict PR35 capacity closure source and bounded evidence gate"
+        ]
+      }
+    },
+    {
+      "event": "push",
+      "context": {
+        "head_ref": "",
+        "ref_name": "codex/phase7i-s4-persistent-capacity-closure"
+      },
+      "historical_jobs": [
+        {
+          "workflow": ".github/workflows/hh_signal_campaign.yml",
+          "trigger_supported_for_branch": false,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_final_closure.yml",
+          "trigger_supported_for_branch": false,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_readiness.yml",
+          "trigger_supported_for_branch": false,
+          "job_condition": false,
+          "actual_job_runs": false
+        }
+      ],
+      "resource_workflow": {
+        "trigger_supported_for_branch": true,
+        "step_conditions": [
+          {
+            "name": "Offline inert byte and API tests; no service or approval creation",
+            "condition": false
+          },
+          {
+            "name": "Audited autonomous pure and mock regression; forbid live dispatch",
+            "condition": true
+          },
+          {
+            "name": "Exact nonphysical legacy regression with forbidden dispatch audit",
+            "condition": true
+          },
+          {
+            "name": "Every outgoing commit payload and index; no figures or private artifacts",
+            "condition": false
+          },
+          {
+            "name": "Strict PR32 stacked delta publication gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR33 namespace recovery delta and private mount evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR34 autonomous recovery delta and private-evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR35 capacity closure source and bounded evidence gate",
+            "condition": true
+          }
+        ],
+        "selected_if_triggered": [
+          "Audited autonomous pure and mock regression; forbid live dispatch",
+          "Exact nonphysical legacy regression with forbidden dispatch audit",
+          "Strict PR35 capacity closure source and bounded evidence gate"
+        ],
+        "actually_eligible_steps": [
+          "Audited autonomous pure and mock regression; forbid live dispatch",
+          "Exact nonphysical legacy regression with forbidden dispatch audit",
+          "Strict PR35 capacity closure source and bounded evidence gate"
+        ]
+      }
+    },
+    {
+      "event": "workflow_dispatch",
+      "context": {
+        "head_ref": "",
+        "ref_name": "codex/phase7i-s4-persistent-capacity-closure"
+      },
+      "historical_jobs": [
+        {
+          "workflow": ".github/workflows/hh_signal_campaign.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_final_closure.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        },
+        {
+          "workflow": ".github/workflows/hh_signal_readiness.yml",
+          "trigger_supported_for_branch": true,
+          "job_condition": false,
+          "actual_job_runs": false
+        }
+      ],
+      "resource_workflow": {
+        "trigger_supported_for_branch": false,
+        "step_conditions": [
+          {
+            "name": "Offline inert byte and API tests; no service or approval creation",
+            "condition": false
+          },
+          {
+            "name": "Audited autonomous pure and mock regression; forbid live dispatch",
+            "condition": true
+          },
+          {
+            "name": "Exact nonphysical legacy regression with forbidden dispatch audit",
+            "condition": true
+          },
+          {
+            "name": "Every outgoing commit payload and index; no figures or private artifacts",
+            "condition": false
+          },
+          {
+            "name": "Strict PR32 stacked delta publication gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR33 namespace recovery delta and private mount evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR34 autonomous recovery delta and private-evidence gate",
+            "condition": false
+          },
+          {
+            "name": "Strict PR35 capacity closure source and bounded evidence gate",
+            "condition": true
+          }
+        ],
+        "selected_if_triggered": [
+          "Audited autonomous pure and mock regression; forbid live dispatch",
+          "Exact nonphysical legacy regression with forbidden dispatch audit",
+          "Strict PR35 capacity closure source and bounded evidence gate"
+        ],
+        "actually_eligible_steps": []
+      }
+    }
+  ],
+  "actual_CI_dispatches": 0,
+  "source_checkout": "pull_request.head.sha || github.sha with fetch-depth0",
+  "manual_trigger_caveat": "Resource workflow currently has no workflow_dispatch trigger; historical manual jobs skip this branch. Static hypothetical selection must not be represented as an actual runnable manual resource job.",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

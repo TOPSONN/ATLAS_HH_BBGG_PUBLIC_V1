@@ -1,0 +1,1679 @@
+{
+  "schema": "PHASE7I_EXACT_CAPACITY_CANDIDATE_SOURCE_V1",
+  "revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+  "files": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "858e6ae01e9147dc2fffb6c52b75d97a635d8af3291080b92d56d762dc1b3e9c",
+      "bytes": 2554
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "3a886de3ffc8e45e25ba480944c78f12a355d383414c0a9828f5759662589008",
+      "bytes": 3237
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "739dae29d49015938f1c3c6c028f822c9352c4193d2b41da7d62bf34b8a04387",
+      "bytes": 2996
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "sha256": "0469894011420c3b4d0cb46eec230f0c8554cb21fb0fa16657fc70454bfa0012",
+      "bytes": 5907
+    },
+    {
+      "path": "metadata/phase7_final_route_a_build_contract.json",
+      "sha256": "cc22b85ea24602496fe661b85306cda6b874a5dd6210603d06a840c4c9edae4b",
+      "bytes": 2430
+    },
+    {
+      "path": "metadata/phase7_final_route_a_toolchain.json",
+      "sha256": "2ae687df6eb9269681d11e60dbb60333a5c896c16ac13e567544599a11ba3c7d",
+      "bytes": 886809
+    },
+    {
+      "path": "metadata/phase7a_model_manifest.json",
+      "sha256": "18e239fa878a30c809be461e62ca326e4b423a97f71029111f873aea88819fc3",
+      "bytes": 7974
+    },
+    {
+      "path": "metadata/phase7i_builder_review_contract.json",
+      "sha256": "c22eafdbcabb07550c5ffa9eddb39fd8100993fd3bf70d09ad5b1c60a1d57452",
+      "bytes": 19163
+    },
+    {
+      "path": "metadata/phase7i_git_precheck_recovery.json",
+      "sha256": "5a1d600d659d2309031ddab27307ed5516e5f4ed40e6298cdfc5a3dc3c830632",
+      "bytes": 9132
+    },
+    {
+      "path": "metadata/phase7i_guard_correction_status.json",
+      "sha256": "f42ada9d3ea1ffb5c0f70afe3a36eafa50c3869581ca16598be9d63b4ac76ced",
+      "bytes": 13474
+    },
+    {
+      "path": "simulation/hh_signal/__init__.py",
+      "sha256": "e99fbe7ffc6eb425a2445eb633330e5efc462ff7d8a3ec23ebf8df0fcaeaabc6",
+      "bytes": 73
+    },
+    {
+      "path": "simulation/hh_signal/campaign/__init__.py",
+      "sha256": "95d6e797b8bccfba9fbca75f570df46dc9d6344aedfbea4e235bba94c447f267",
+      "bytes": 84
+    },
+    {
+      "path": "simulation/hh_signal/campaign/analysis.py",
+      "sha256": "02b9429a42b9bdf7241756f2750967969e1b91ed4a6f0ec1a460fd89c113c843",
+      "bytes": 17111
+    },
+    {
+      "path": "simulation/hh_signal/campaign/audit_payload.py",
+      "sha256": "d52556c93419301e635739f8212149faff7c309255b1f24b759dcf8dca3533bf",
+      "bytes": 5784
+    },
+    {
+      "path": "simulation/hh_signal/campaign/batch_evaluator.py",
+      "sha256": "a4d12916eb836d1950f9b07604746cc288640eb060625297f6defdddee5e573f",
+      "bytes": 2843
+    },
+    {
+      "path": "simulation/hh_signal/campaign/chain.py",
+      "sha256": "04804e0f8eb5db49c463637a037877187de9da10086b758a57ef0c2e813d2798",
+      "bytes": 8252
+    },
+    {
+      "path": "simulation/hh_signal/campaign/common.py",
+      "sha256": "23c28f05d9211a925eca37759e806fdd99a8b904972d1df2926f6cfef5f37a97",
+      "bytes": 4159
+    },
+    {
+      "path": "simulation/hh_signal/campaign/config/kappa_scan.json",
+      "sha256": "3e8066b7788567199d77f1a911f6f1b2ca3a484a9a6b4ef0333960e448d354e9",
+      "bytes": 574
+    },
+    {
+      "path": "simulation/hh_signal/campaign/config/production.json",
+      "sha256": "0cc5d7da0a2e01eaf1f120af4e38b70f84a6bb04c89715dbddb336f86c984822",
+      "bytes": 1803
+    },
+    {
+      "path": "simulation/hh_signal/campaign/controller.py",
+      "sha256": "af09e5a181fcb7f3d0c6849d287dbda5347758368b378670d484dce18fbcbe80",
+      "bytes": 11883
+    },
+    {
+      "path": "simulation/hh_signal/campaign/decay.py",
+      "sha256": "b4899325e4024a2ccfd3d92a88fd2c46d5c512a4818b11b1ee97fa4864d4b7c5",
+      "bytes": 6178
+    },
+    {
+      "path": "simulation/hh_signal/campaign/independent_regression.py",
+      "sha256": "df5d137d777cbd8a5095548e9f8ca36adc5739e37bb361bf307128f09a928f82",
+      "bytes": 4947
+    },
+    {
+      "path": "simulation/hh_signal/campaign/launch_adapter.py",
+      "sha256": "ae3d59fd9643be6ad1d44a79999aee1a1f5fbe49c07d41ecc632ea0ad0cfa971",
+      "bytes": 1638
+    },
+    {
+      "path": "simulation/hh_signal/campaign/lhe.py",
+      "sha256": "8de83e883cbaa5592e5657188952fe60577b4cd3e7802c411b0cc273cbf6cf6e",
+      "bytes": 6605
+    },
+    {
+      "path": "simulation/hh_signal/campaign/mg5_adapter.py",
+      "sha256": "b646346317e18815cfac90880efbbf9032e48376153d6145b138fe32db522b91",
+      "bytes": 1743
+    },
+    {
+      "path": "simulation/hh_signal/campaign/prerequisites.py",
+      "sha256": "b1e3f9e174443b055645b6e016345aedcb793aad6ae5281f6010492a9e139bac",
+      "bytes": 3187
+    },
+    {
+      "path": "simulation/hh_signal/campaign/production.py",
+      "sha256": "4701048a567afd2a038f10a3c113cdd1245b516e92c9fca5e68d373a81d93a68",
+      "bytes": 12590
+    },
+    {
+      "path": "simulation/hh_signal/campaign/publication.py",
+      "sha256": "5b372517d83d129c9ff6d572c7526c6d69d642ef3e2d17072bc76dc1e1509c46",
+      "bytes": 7595
+    },
+    {
+      "path": "simulation/hh_signal/campaign/reweight.py",
+      "sha256": "54ca9bf8e433122173763d686493b67792eb9f79b3dd313fa969c8c73eadee91",
+      "bytes": 14198
+    },
+    {
+      "path": "simulation/hh_signal/campaign/setup.py",
+      "sha256": "1e0ff531a0175628b5048aed2320c3b2e323dfd4009a978c5fe299909c1e6604",
+      "bytes": 8249
+    },
+    {
+      "path": "simulation/hh_signal/campaign/src/check_reweight.f",
+      "sha256": "cd374ba6af4dca3d69ba8ff1830d8ff2951586d746bf7195ea04a38d5a961002",
+      "bytes": 1134
+    },
+    {
+      "path": "simulation/hh_signal/campaign/src/check_reweight_batch.f",
+      "sha256": "35f0866b632466c1ecedaef1270d6d1f11eab118aada2dcea8f026c6da8c0dca",
+      "bytes": 1339
+    },
+    {
+      "path": "simulation/hh_signal/campaign/src/check_reweight_batch_fast.f",
+      "sha256": "ff216721e9e845c414e46cb1df57282ef5386374d320e282dc7af298bc842525",
+      "bytes": 1513
+    },
+    {
+      "path": "simulation/hh_signal/campaign/statistics.py",
+      "sha256": "041eccbc506c9b50ab36a609f531e6ce023fbe20c00fe3d0e8693d6721c8aed5",
+      "bytes": 3960
+    },
+    {
+      "path": "simulation/hh_signal/campaign/test_campaign.py",
+      "sha256": "2d69529e6de4f1e4dc59b6cc9a5492cf0e3a66731a3151e31c576ec918c1b66d",
+      "bytes": 8861
+    },
+    {
+      "path": "simulation/hh_signal/campaign/validate_references.py",
+      "sha256": "dff4ee61fbd6d72ed30bd0cb94fd49f3f8b436d7b2d94ad16e09c6bf59d79af5",
+      "bytes": 6995
+    },
+    {
+      "path": "simulation/hh_signal/campaign/write_root_histograms.py",
+      "sha256": "21254b948975752b5640937d74b25947f54093d18a904b214490ca8fa4a6036b",
+      "bytes": 3011
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_decay_contract.json",
+      "sha256": "745ca0adbfe40b2c63db3ed0e5343e69e29d7af365d922361ece219ae1207609",
+      "bytes": 1481
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_param_card.dat",
+      "sha256": "a14a9b1523003a8a8ff80007d75e905f8098deff90a2821f4a225fb6f7a0f409",
+      "bytes": 3464
+    },
+    {
+      "path": "simulation/hh_signal/cards/proposed_run_card.dat",
+      "sha256": "e1fa2ea88d2439574e7aae1ed509c66844a39f253942bffefc450f83a12c46c9",
+      "bytes": 427
+    },
+    {
+      "path": "simulation/hh_signal/config/coupling_contract.json",
+      "sha256": "76b7ed193648c90027f8cad6eb45cc283dd967c7a88bc49a24b035f893963dec",
+      "bytes": 801
+    },
+    {
+      "path": "simulation/hh_signal/config/future_interfaces.json",
+      "sha256": "843fa58e8d737d8e376706aed756dd54b7f2f9fb770ec70baca498147988ac8e",
+      "bytes": 1906
+    },
+    {
+      "path": "simulation/hh_signal/config/resource_policy.json",
+      "sha256": "f34a1dd7507da5fe3ca0bc347815dea2281a9efd07ce8089cf78afff7f09baea",
+      "bytes": 800
+    },
+    {
+      "path": "simulation/hh_signal/config/signal_model_contract.json",
+      "sha256": "eff1f53cc72f798ef0f9a0f0a09ad6d0cefbca518a1e88ee86a4d5d5dccb137c",
+      "bytes": 1555
+    },
+    {
+      "path": "simulation/hh_signal/config/weight_contract.json",
+      "sha256": "cb0b558350b41f86d8c98d459e375a9cc05e24effb2ffc9bad40c95d1f93d8c2",
+      "bytes": 1296
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/__init__.py",
+      "sha256": "d2031b5a1b459355d04c4fe5aea1079503596f2f0b2f0c25168862858e0ced22",
+      "bytes": 79
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/audit_payload.py",
+      "sha256": "7a253541351914344b284d3080e64849f710a78856296f19b3e02d8ba8bd521f",
+      "bytes": 4594
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/authorization_contract.json",
+      "sha256": "41441f3b367a5afbe6ce60c91b0f6e4562abe8c93ac18d64075043b25c459aea",
+      "bytes": 1615
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/build_bridge.py",
+      "sha256": "fe284facb67d23f37c502a982e2a362650a7fea916e400df16e19d5232d32f69",
+      "bytes": 5024
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/configuration_lock.json",
+      "sha256": "e58ab70af11827b7f7b206cbfbb3e7c7dff24cd5ab78a23a9f626b8c7db128dd",
+      "bytes": 144418
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/contract.py",
+      "sha256": "38494fcd0c4775843217d1b2d55e2ad3bd0e2712f4d1ea7cb99d6be2eb404c19",
+      "bytes": 4359
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/controller.py",
+      "sha256": "9c68dab1e38302fc3f1f0c6da1f8f6dc19cdcddb2b64a9de193df81ec499ad02",
+      "bytes": 13363
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/MG5_banner.json",
+      "sha256": "4976e842ebf93902c5d3c81af913d6e5cc1f3274f8114781a38a11e015e10997",
+      "bytes": 19224
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/embedded_run_card.dat",
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/reviewed_run_card.dat",
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/run_card.inc",
+      "sha256": "25694156d527210464b1549e03ffea6ca0b84a2d7b16ef3d64d363f0aeae8830",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910001/cards/working_run_card.dat",
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/MG5_banner.json",
+      "sha256": "d387bf6e319083212720c8c374c97e8225fabe23f52c210ef8b02989cb5c5d65",
+      "bytes": 19224
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/embedded_run_card.dat",
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/reviewed_run_card.dat",
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/run_card.inc",
+      "sha256": "bc87d36da307391a68ac46cb50c7548f48a0aca8b2c1c1c7527583b67279f0f4",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910019/cards/working_run_card.dat",
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/MG5_banner.json",
+      "sha256": "7b294afd2f6cc4ccb8ebbc0d262582a743d64284ffc1841d3d7bfbc7184c6d4f",
+      "bytes": 19224
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/embedded_run_card.dat",
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/reviewed_run_card.dat",
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/run_card.inc",
+      "sha256": "9bc3ba685995d272d1dce201d24bbed97892762542bb6c5a5aa84b54075603b5",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910037/cards/working_run_card.dat",
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/MG5_banner.json",
+      "sha256": "5bf9dda22dbcddb1a0e929d3f087d6d560d7e2afd219bb0d02ad00590aee4c65",
+      "bytes": 19224
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/embedded_run_card.dat",
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/reviewed_run_card.dat",
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/run_card.inc",
+      "sha256": "96f890eff2b461f633aaf278ad0658e19bea5a93b82403553329bd1892a1db6c",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/evidence/seed_910061/cards/working_run_card.dat",
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/integration_only.sh",
+      "sha256": "c177b1c756fd700294e512a57a87f0f79d7f7acc7fc16b69111594b24592d03f",
+      "bytes": 185
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/native.py",
+      "sha256": "4c48b526c5352974d67c39eb0bc32b79d0437754560d89beb1cacddda6609a3a",
+      "bytes": 8841
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/runtime_bridge.py",
+      "sha256": "8f47c0476271b1a6dbddf866a9e1f899b9e69f6655b6a2449ef77038ee02b6ac",
+      "bytes": 2283
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/src/gate_probe.f",
+      "sha256": "c7bce9f369abd9807d6de42fe937d6c54ac95be16b041c44bc3e13be149ee8f0",
+      "bytes": 1258
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/src/initialization_probe.f",
+      "sha256": "9644adc2a4d3cf22d59e70fb6b1e91df680acb866c3249d9a12a7518ff0a6fa4",
+      "bytes": 1114
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/src/pre_sampling_guard.f",
+      "sha256": "ac202b1eb83d4c18c5906b0655a64b06b2565c4c6fdc61faaa381d8157bf0efd",
+      "bytes": 1516
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/src/writer_counters.f",
+      "sha256": "389ac6547d5ca94267979eb135e88b98ce82268cf9b1c1ef8b2dabf4d38391f8",
+      "bytes": 552
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/src/writer_probe.f",
+      "sha256": "68c347aa3fd497cc46b5fdec9cfe90ba2a314dfd6c519bfce56158dff416338b",
+      "bytes": 359
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/templates/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/templates/run_card.dat",
+      "sha256": "218ee660331424a83f4640c0504712c219d55b027740f9d1e9c7ffd810b821ec",
+      "bytes": 16429
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/test_guards.py",
+      "sha256": "d1ef54a00fde3066c8b674ab3b622717784ca217aeb4dda9f7fa2cf2928afbe0",
+      "bytes": 8774
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/validate.py",
+      "sha256": "3b94044088e4791c43c27ab55d19c8f42bef1d559433eb66e0c0805f1d0cdd74",
+      "bytes": 3466
+    },
+    {
+      "path": "simulation/hh_signal/config_lock/writers.py",
+      "sha256": "78c2d1e3005e89a080be00e43f06eb37d110a8b3a2c37af9bd4deced7f00f073",
+      "bytes": 5543
+    },
+    {
+      "path": "simulation/hh_signal/contracts.py",
+      "sha256": "93a1f790007b62b507d11e7a2b3cd51433c9acd3b75a64319ef080a0a2244a2f",
+      "bytes": 5274
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/__init__.py",
+      "sha256": "3168d1ecb5886e0924722493ccafa3c7cf1a9aeae431d032f0a3cde7c05e4a0c",
+      "bytes": 79
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+      "sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+      "bytes": 637
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/config/source_inputs.json",
+      "sha256": "f8db658d034f4b2ea4a99583f91e0f058c13f8cd586c3896dd3ac8cc414777ad",
+      "bytes": 276006
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/corrected_signal_cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/corrected_signal_cards/reviewed_run_card.dat",
+      "sha256": "fe1ebaeb9a6d3b3a8c93ca7aa330b75d43439f7a880efebc33e50b3283277447",
+      "bytes": 16430
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/corrected_signal_cards/run_card.inc",
+      "sha256": "89f4ed6c59d63f2e53ec7adaf5f8d8f4be7aff8ed6f15809377975dc532acdba",
+      "bytes": 5447
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/A_dsample.f.patch",
+      "sha256": "18ffd06775fcaf3af4f4b1ae35cc2ccb49bec6e5296e8b4549810f4d92634b02",
+      "bytes": 2726
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/A_ran1.f.patch",
+      "sha256": "90db0ec1c543630a86daa323a57cb11f51356cb31628ff27cea1fbaff9107f1c",
+      "bytes": 502
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/A_ranmar.f.patch",
+      "sha256": "269ec19b330c24ca27ec73f9a842e0269e826a8ca026701de4244891dfa76ed5",
+      "bytes": 295
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/A_rw_events.f.patch",
+      "sha256": "e1772ae18252dc68b120d3901105001c250134b4c3723fd1bd5ccbfa0e7e27cf",
+      "bytes": 801
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/A_unwgt.f.patch",
+      "sha256": "ce69bfe255833ade150dfec4bb128748c39116756e43d9766ff0eee73c895614",
+      "bytes": 1515
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/B_dsample.f.patch",
+      "sha256": "276545b52f3d025e4c34b7783c89b048b10a2d425587422b792abc2a1fb742d9",
+      "bytes": 2721
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/B_ran1.f.patch",
+      "sha256": "ae0a89f3bbddf63bd9c4e23be085e3dbc82eeeb3d5d5057dc01504debe6bcdde",
+      "bytes": 502
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/B_ranmar.f.patch",
+      "sha256": "4b64c15cf2d35502dd4160c2dea7d259c12baf8bb8374a472afc799e78b0b952",
+      "bytes": 295
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/B_rw_events.f.patch",
+      "sha256": "02d01e1a2a654a282e43605f71a116725b06cde23c17e7bb9a6516eb45af85de",
+      "bytes": 796
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/evidence/reviewed_overlays/B_unwgt.f.patch",
+      "sha256": "bc0ff02e033f7c9867ff6a6bc006151fe938352af82d21f210014a205fe7ebf5",
+      "bytes": 1510
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/__init__.py",
+      "sha256": "6d1656e18f33126acc25c342ff17870f5802673692eb66d9b85e77f9b52d411e",
+      "bytes": 83
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/build_corrected_proposal.patch",
+      "sha256": "793b222d7ebe5d83a0cd7af70e6e3036e10ebf8e6351d2dc224d7407144a5ede",
+      "bytes": 4926
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/build_corrected_proposal.py",
+      "sha256": "e74ee57c747e1a7d744a143789e7ee1fc15d5dde10ff41880ce1c454b32241c2",
+      "bytes": 8736
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/builder_proposal.py",
+      "sha256": "2ac4d7bd2e654a7982befa95d7217c9708533ec2d89b805ef91ed141dd692f1f",
+      "bytes": 3111
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/diagnostics.py",
+      "sha256": "df7fdad2aa22413dd823f8922b3936ae45f0e5e4e5f67a35dde6c09bc588d7d9",
+      "bytes": 1281
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/manifest.json",
+      "sha256": "50418da7cd741dc4ae3cc54d7f1eadbeab6a2a36af4913243e5c317d29f0ad1b",
+      "bytes": 1388
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/ran1.f",
+      "sha256": "9aafbd7bd6988231e6b8447fcada897a1d195bb061d4c7cbaca36beb2ee3758e",
+      "bytes": 870
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/ranmar.f",
+      "sha256": "e4749cde6c7e13fe496484d3e961e718cd9855fb3a2f35e70e1ce49126902012",
+      "bytes": 737
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/rmarin.f",
+      "sha256": "09e7bfdeed19632a02c1547f337837b420b61b2586c9df226ca9282c14bdb736",
+      "bytes": 2125
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/fixtures/xran1.f",
+      "sha256": "6946801bbcfd9a5fcf3184d1d7b73ca6deaf55ca0e0f0660d3db2c42479175af",
+      "bytes": 951
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/methods.py",
+      "sha256": "ddd367965b425091ad8b8dc84f62180950d8834b47280b94e0a0c65490d3fd17",
+      "bytes": 11842
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.f",
+      "sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+      "bytes": 4681
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/native_checks_corrected.patch",
+      "sha256": "53f5f8adcb095ce8cecea1076c51ecc9740aea456a4a91a9218674715e8ad03c",
+      "bytes": 2745
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/overlay.py",
+      "sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071",
+      "bytes": 2223
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/probe.f",
+      "sha256": "ea9bad773e14dc0ea23789e89731c1fb2a0edb9d70d629ed73016d42da1e139b",
+      "bytes": 5317
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/review_contract.py",
+      "sha256": "805bdba7b6c42bf388a79d477a9b9d6bfab5750e06b5261b3c69118efa53b993",
+      "bytes": 5860
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/test_correction.py",
+      "sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d",
+      "bytes": 10278
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/__init__.py",
+      "sha256": "0ddcc48088901dbd1c7dce2fad7467186ec9d9bd3b4fbaff3450db26c176f339",
+      "bytes": 87
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/approval.py",
+      "sha256": "c11b06d8fbd027b8989e76e6bcd284716e518538f1abdb9fd48ebcd70a0dce49",
+      "bytes": 4289
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build.py",
+      "sha256": "7c0b15c45251680441d30d6707f2390a298aec56c481ab998e4ab6711ad1158c",
+      "bytes": 11767
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_plan.py",
+      "sha256": "243a45eb8542aea66cbf855b061e5d7a2fb644d9f93046c6ab27dcebd276936f",
+      "bytes": 1605
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/build_process.py",
+      "sha256": "5f2cc99a3a349dd48ec2cf21d0c6769ad47eb1ea5cb650c06440298475b876c5",
+      "bytes": 3192
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/containment.py",
+      "sha256": "64b2a68ac8cb1a934024e326704070ab9b823bcb5a7488be4c41ce7fb0dd9403",
+      "bytes": 9526
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "sha256": "ad7c26062edb857ad3e911e8920a72dcba6abebed68573fb2ccaa84781fa3e68",
+      "bytes": 5618
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/control.c",
+      "sha256": "2eadde5c1a85fbddb541246575ad4c4e609cc88113efff673fe52866aac6a020",
+      "bytes": 1211
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/cards/run_card_910001.dat",
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/cards/run_card_910019.dat",
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/cards/run_card_910037.dat",
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/cards/run_card_910061.dat",
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_auto_dsig1.f.patch",
+      "sha256": "408b288884601e31754023e72c39e3f46bf91c34b03f38a697af33bdc86f380e",
+      "bytes": 282
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_driver.f.patch",
+      "sha256": "fbe3da00b32ce79f9dcff9ce7c15231365840ae21d3b4c9ae34e91456125039b",
+      "bytes": 1635
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_dsample.f.patch",
+      "sha256": "3bf40fdd1941ddc10d9c12d145c06c94ea5f87d86eb4204f793bd5b467eb9044",
+      "bytes": 2171
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_matrix1.f.patch",
+      "sha256": "db97c66fc2680193214918760ba2b608280fc220d505fc1a70eda13e06943491",
+      "bytes": 1176
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_ranmar.f.patch",
+      "sha256": "3ad0a41f40b7724fbc04aba04d75eed357c82293c5d1b0a8b6073a5827b27f41",
+      "bytes": 302
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_rw_events.f.patch",
+      "sha256": "4875e38f5792c1cd909638bfa95cdc43cd7a467e91d425a7ac4f7a5d22c6024a",
+      "bytes": 606
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910001_unwgt.f.patch",
+      "sha256": "8f2d4ba1c426c4d5ae2158325c46677cbbb38fb8c4bffc63b44f27aac9386bcc",
+      "bytes": 597
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910019_driver.f.patch",
+      "sha256": "af0b6d870ecb617c68c87f1f148b5e151b771e771cdf54ddfa98c35a3b891b95",
+      "bytes": 1635
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910037_driver.f.patch",
+      "sha256": "7259b4e9d160a4480259ed0a28534e25321d7f310fb61bbaba1f89c6519a5989",
+      "bytes": 1635
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/evidence/reviewed_overlays/910061_driver.f.patch",
+      "sha256": "481fd7a21f90ac42b61f5a062c278acee7e194a8114b6b846f4c79f0ffa6b31a",
+      "bytes": 1635
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "sha256": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c",
+      "bytes": 21059
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+      "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "bytes": 3012
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_review.py",
+      "sha256": "ba3b34ef29ac6f8268797f4a0dbaae1e499e2f72ff46c2ec4f4beed6f2b4f74b",
+      "bytes": 5800
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/observers.f90",
+      "sha256": "8807352bc7da19f7dbbf236eb603aeebbba7ed85c72ca7b5c78d980a66a13cbd",
+      "bytes": 3180
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/overlay.py",
+      "sha256": "354283ad3553a1a40e6073811aa65186c225efc7b5d2389824f38b33df707a21",
+      "bytes": 4584
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/published.py",
+      "sha256": "b30d646d0e6127cfc37be8ecac284ec1386338bee83b1995e72bfe67973d6dd3",
+      "bytes": 2109
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/route_a.py",
+      "sha256": "2726ca9b96e610824f45ef9c18857b53bc59a295a2065ac93ec83be032d29fae",
+      "bytes": 13199
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
+      "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727",
+      "bytes": 13037
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+      "sha256": "4aaae767a2c992a04d536c5ca9aaf1085b6493312750e213b14a363acb46a72e",
+      "bytes": 16716
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_route_a.py",
+      "sha256": "53dcf678f15d107105a435f3ad9a2fbe18ac2c1ffd82072e28b26635deccf328",
+      "bytes": 19100
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+      "sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+      "bytes": 8118
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
+      "sha256": "604013064f87f19aedf75c645fd20141c794358461aa6fb11e65bb0be53e6eb5",
+      "bytes": 7963
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+      "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7",
+      "bytes": 68
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+      "bytes": 9314
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+      "bytes": 21538
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "bytes": 2024
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+      "bytes": 37116
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/capacity_publication.py",
+      "sha256": "6441c75386b2bc9e461b905cb4107c0a428eb8b7674a161c7db852a97ccdbdd4",
+      "bytes": 2034
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+      "bytes": 1905
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+      "bytes": 1669
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "bytes": 6783
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "bytes": 1236
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "bytes": 16118
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "bytes": 13664
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+      "bytes": 10600
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "bytes": 36857
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+      "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe",
+      "bytes": 1375
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "bytes": 28018
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+      "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec",
+      "bytes": 19031
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+      "sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022",
+      "bytes": 11810
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "bytes": 19196
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+      "sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236",
+      "bytes": 5964
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "sha256": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+      "bytes": 6397
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+      "bytes": 9746
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+      "sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a",
+      "bytes": 4142
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+      "bytes": 19025
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+      "bytes": 8924
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_capacity.py",
+      "sha256": "e5ec865944430ec11e7694912fd07d58ed10d5269b5713092a7e295b5c6d1484",
+      "bytes": 11981
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "bytes": 11414
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+      "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1",
+      "bytes": 7095
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+      "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3",
+      "bytes": 16400
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "bytes": 8770
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356",
+      "bytes": 20486
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_capacity_publication.py",
+      "sha256": "702c2b6f2aafe6123de93a695f154799c124d5ee44ac7bd9e8d46ca146b70ef0",
+      "bytes": 2781
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "bytes": 17139
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "bytes": 25617
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+      "sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb",
+      "bytes": 15206
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d",
+      "bytes": 22691
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "bytes": 33567
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+      "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3",
+      "bytes": 1788
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_git_envelope.py",
+      "sha256": "58793de3bb4d706c86abbe49c845a5ce233a26b6c3b6c7bdb9df0eb8e24e5f65",
+      "bytes": 23231
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4",
+      "bytes": 24812
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+      "sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868",
+      "bytes": 12597
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "bytes": 20626
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+      "sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e",
+      "bytes": 12668
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf",
+      "bytes": 8378
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+      "sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9",
+      "bytes": 6526
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+      "bytes": 7120
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+      "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274",
+      "bytes": 6398
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_capacity.py",
+      "sha256": "674a1df84285326f1b3bab6d8c91a941484b6148cb221822a1cd608336897c8c",
+      "bytes": 10063
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "bytes": 15631
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451",
+      "bytes": 6945
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "bytes": 17146
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+      "bytes": 18262
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "bytes": 17807
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/scripts/run_phase7_final.sh",
+      "sha256": "27703556b6c8d7ed88f1ed4ff112aa0bbc283d7f1d1147112313be48f93da61c",
+      "bytes": 194
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/__init__.py",
+      "sha256": "de88d11f096f03ae500da7be35ca1951ffc79895f02c8994b9b61eae6024c36e",
+      "bytes": 62
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/audit_payload.py",
+      "sha256": "3f03da3dd27dc7544e14c2784a452e1132a06e545d3a1fe80c026dcd2997868b",
+      "bytes": 6253
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/contracts.py",
+      "sha256": "e73810186926cad27d28e54e5c2b3ae0623e97f32f86e7aec4f56130f1da21b0",
+      "bytes": 2852
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/controller.py",
+      "sha256": "b41cc0dd0b20b9897cbe72bc3f1b4fcf511121166aaa00e5a728f30603b3a4ba",
+      "bytes": 4126
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/existing_analysis.py",
+      "sha256": "ad1205f9f0c512d7e215f959522427009071222038046cf42f8c437655df80b2",
+      "bytes": 8756
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/native_preparation.py",
+      "sha256": "949aaed6e5ad4f592535dcdddc1b561f278fc2d9fa1c7d2fafa6171589be39d1",
+      "bytes": 6805
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/object_analysis.py",
+      "sha256": "9dc13491595f5b40fece39545f528c3491701000e559a9955b650fadea4a00eb",
+      "bytes": 5126
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/plans.py",
+      "sha256": "b1a18c8e29d47c85afea2425f1a3c04c007bcf71fac37139b5f0cf8e01ad2709",
+      "bytes": 5436
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/src/validate.py",
+      "sha256": "f35d6b21492908f92828e8a156588eb1c1cbe1cb865d1edbb53b639e6d4fb092",
+      "bytes": 3456
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/__init__.py",
+      "sha256": "10cf4eff506c1c87f876a42b1c127977896ad580a09b3a7c90d9ee914867de9e",
+      "bytes": 84
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/diagnostics.py",
+      "sha256": "32a03eddc7ed9e50784384d42a0107bb2faf0c05659f507b586a69edeedf1d23",
+      "bytes": 1789
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/alfas.inc",
+      "sha256": "d5ae9799ae1067a7a5d8a690654408e4626db1f032091eab30286a3dc06c7a1c",
+      "bytes": 453
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/alfas_functions.f",
+      "sha256": "3e9c1a8eb073de40d531217c349fe6f3f1dfc801fe4c3db527e2e15537f00a0d",
+      "bytes": 7877
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/coupl.inc",
+      "sha256": "a256d749d1a94a92b5b99f46661d9cb426d7690edcac882f911b73aa4ddc6fbf",
+      "bytes": 877
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/dot.f",
+      "sha256": "eed53874c22b48557ef889369528142ffdba11fcb35466f11d91ae06926906a2",
+      "bytes": 566
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/genps.inc",
+      "sha256": "625f1a15b4e76821c187387b9d0bcdb2057a0d374899119847c8beac3afa5880",
+      "bytes": 2295
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/manifest.json",
+      "sha256": "791a1bc45de5d6bb42f6ddbce336eaec82eee1536a78133ebf914b644232f33a",
+      "bytes": 2566
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/maxparticles.inc",
+      "sha256": "f74c474319f9374319e754e43a6e57113420206e069dd21c73578a28399fa202",
+      "bytes": 61
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/nexternal.inc",
+      "sha256": "74fd71600ab057b2329dd63d20970faad5acc6b19819e455d0bbe4cf75680b28",
+      "bytes": 114
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/run.inc",
+      "sha256": "51e0098d5cb17d1c666fbb08c317f14e48f1d03cc4ed55d608546e9ef0c76330",
+      "bytes": 3622
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/fixtures/sumdot.f",
+      "sha256": "33ae9a631039d05e9c78496a1271b542e2a9d751d52f4581281cae0aa762b721",
+      "bytes": 602
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/methods.py",
+      "sha256": "18fd6e27fac6128a5f70ac4289be94f7b9824f0beb72be567311779f6e21ec0b",
+      "bytes": 9672
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/native_checks_diagnostic.f",
+      "sha256": "f235b6030461f4e71f4cb6563ef816201e775ad4c6255d337839ad6584571bc2",
+      "bytes": 4426
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/native_checks_diagnostic.patch",
+      "sha256": "e8a4363ee5b1099f29b1a65a79915760537c80e29fec9e4b26cdd018473d3873",
+      "bytes": 2248
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/overlay.py",
+      "sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733",
+      "bytes": 3118
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/probe.f",
+      "sha256": "73baa4d0870b828b5f16ad517d09090f44771a08118a854334aaa9ce87ff8188",
+      "bytes": 2643
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/scalar_probe.f",
+      "sha256": "8bfd37d6bccf5ff038bb444d684c299e9ea88e39d5580b486863719b72014c87",
+      "bytes": 1370
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/test_diagnostic.py",
+      "sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926",
+      "bytes": 5678
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/__init__.py",
+      "sha256": "423b592872e506214aed47fbd93ed020b5d6dd0aeb502048cf029a7098462966",
+      "bytes": 54
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/tests/test_closure.py",
+      "sha256": "1f41d6d0e39f4cef328cb9a12c6e935da6f279d2bdf570d20e812e3a50099b95",
+      "bytes": 5439
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/__init__.py",
+      "sha256": "bc5de1ef08e9266d2b8abfc2d3c9d49f4c6a2e99a6be17d024dd9b915184c33f",
+      "bytes": 74
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/audit.py",
+      "sha256": "31e5da0620506848b8616e98cd537613f0ddfe6cd2cec9f2a9f9fbf2fcea7b6e",
+      "bytes": 11546
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/audit_payload.py",
+      "sha256": "17f9efb8532985a8e0ac7f3dbd7f0e5798f974af5feddd9f1ceecc3e2df801bf",
+      "bytes": 3886
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7b_native_include.inc",
+      "sha256": "9eec53765923562dc50e6dce2ffe2cc59fb5a23b3edfa1aefcc2feab45c55fd2",
+      "bytes": 6531
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7b_native_run_config.inc",
+      "sha256": "5bac273e4594b307125773ac6d7d7045af1c3fbafcabe0bd0ce201aea4138073",
+      "bytes": 2209
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7b_results.dat",
+      "sha256": "66aaaf748133eff9fe86f533ea26d3b7f832a6305234060086230245ebfd79aa",
+      "bytes": 1365
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7c_native_include.inc",
+      "sha256": "d8b26fc3e23eacd68315fcf6207556a72d3210fe8df0dc15fa716b18945f2ef8",
+      "bytes": 6532
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7c_native_run_config.inc",
+      "sha256": "5bac273e4594b307125773ac6d7d7045af1c3fbafcabe0bd0ce201aea4138073",
+      "bytes": 2209
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/7c_results.dat",
+      "sha256": "a3b4c36e6e86c64a0fa58fbe645fd6ad8687015d96e2736600c4bc5eeb453c3b",
+      "bytes": 99
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/EXECUTION_NOT_AUTHORIZED.sh",
+      "sha256": "b29b55647265a4842d67e759fa500c16b46196a7c00712cfd281d766211bc2df",
+      "bytes": 106
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/param_card.dat",
+      "sha256": "7202496aa723bbaba468993245343e82819c233a1c69f9bf684bdce7aa5c08e0",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/run_910001.dat",
+      "sha256": "7495f308b6c2f840d73287515d209aad3898910d4de3e747788770900cfb029e",
+      "bytes": 16368
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/run_910019.dat",
+      "sha256": "5dbe153dc3a97e2f3cbdbad3ff299d6043be94399cc8a80ab7799a62e2e8f962",
+      "bytes": 16368
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/run_910037.dat",
+      "sha256": "2b4c44e09e9a18e478941b1807acce7f1f87e556cd11816614b50fc323c0686d",
+      "bytes": 16368
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/evidence/prepared_plan/run_910061.dat",
+      "sha256": "0506a2d7a51fa167875e6a383eabc6d915aaff5be598832a5d89b6159c6e6045",
+      "bytes": 16368
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/native_checks.py",
+      "sha256": "ce2e12bdd4c7c3d3150f6071a78a15656e026b8d0405cb3668d10dd7eaffa134",
+      "bytes": 4799
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/prepare.py",
+      "sha256": "16b97cfd4add1f49ddf8d45c1f3f6a6320db72694cd45b56fbe8788031f27936",
+      "bytes": 9282
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/prepare_integration_only.sh",
+      "sha256": "9d98b1ed05643fae2f24e3d16990728e0034a1a21a8d7ee8470126dbef4bbfbd",
+      "bytes": 238
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/src/retained_alpha_probe.f90",
+      "sha256": "06a01536ae1783003938a05a9bc8ae16d4b4139652d258c1080ec3a73f09396a",
+      "bytes": 417
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/test_audit.py",
+      "sha256": "535575641bf775224fe6fbd6baf4f2a6c3a9810ae188978ec89599bfbab64e44",
+      "bytes": 4457
+    },
+    {
+      "path": "simulation/hh_signal/integration_audit/validate.py",
+      "sha256": "f87f5132f3cf41f9802f025488f8d221813fdd703978b394911eff684b27d51b",
+      "bytes": 4821
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/__init__.py",
+      "sha256": "f411d7af735c3da1acec4b3ea326403eb9baa187213d37d0d6d855965f1aa633",
+      "bytes": 78
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/audit_payload.py",
+      "sha256": "64a4cee4c8303ff9e64ddd9130c57eb874bad323ff70bbbf943e018cb67ed187",
+      "bytes": 4180
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/contracts.py",
+      "sha256": "5b442d9d830ad3f5f2db713a7456ceb1dadde2026e73871dec0f1bbe03233bde",
+      "bytes": 5084
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/controller.py",
+      "sha256": "cbb984e2d6185dfe89d1d1523c1ab6a69135604fab07bcd3922b505e1a750dc1",
+      "bytes": 4527
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/adaptation/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/adaptation/moffset.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/cards/reviewed_run_card.dat",
+      "sha256": "257d3dc5e80d893e810d8dffc33882430f72ddb4806fd2e12fd232eaed1498f4",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/cards/run_card.inc",
+      "sha256": "25694156d527210464b1549e03ffea6ca0b84a2d7b16ef3d64d363f0aeae8830",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/measurement/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910001/measurement/moffset.dat",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/adaptation/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/adaptation/moffset.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/cards/reviewed_run_card.dat",
+      "sha256": "f8c6f4ef9b2150300f21083c25f62d8c7b9173a631bfd92c92a4e1f2bb89eb0e",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/cards/run_card.inc",
+      "sha256": "bc87d36da307391a68ac46cb50c7548f48a0aca8b2c1c1c7527583b67279f0f4",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/measurement/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910019/measurement/moffset.dat",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/adaptation/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/adaptation/moffset.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/cards/reviewed_run_card.dat",
+      "sha256": "742a07874aeb25e769435fd80ae1700a3b304196ab3e413849bde5d15952e809",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/cards/run_card.inc",
+      "sha256": "9bc3ba685995d272d1dce201d24bbed97892762542bb6c5a5aa84b54075603b5",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/measurement/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910037/measurement/moffset.dat",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/adaptation/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/adaptation/moffset.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/cards/param_card.dat",
+      "sha256": "6335d1d6972700244b18850c5c0ec936fbe1a584b893e7045ac0999e397b6506",
+      "bytes": 2328
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/cards/reviewed_run_card.dat",
+      "sha256": "3a532b5b377df54695d1c2493b084b56d24e2ebd48dc3d68d18c1fbdc37f2fff",
+      "bytes": 16425
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/cards/run_card.inc",
+      "sha256": "96f890eff2b461f633aaf278ad0658e19bea5a93b82403553329bd1892a1db6c",
+      "bytes": 5442
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/measurement/iproc.dat",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/evidence/replica_910061/measurement/moffset.dat",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/integration_only.sh",
+      "sha256": "c629101225c96066efaf39e72a41c46aeb528df4469ebae5f1f08f4affae5585",
+      "bytes": 193
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/runtime_contract.py",
+      "sha256": "4438dd6f1f484dd5f644527a4ec2e7cda0dc8fc2d64bbffeeaaedcfff24f6d4b",
+      "bytes": 2886
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/semantics.py",
+      "sha256": "d533a1f1afa8aec48d246baad3cc8959d6cde105d861738e12bf7407662bd103",
+      "bytes": 6995
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/fixed_weight_kernel_probe.f90",
+      "sha256": "7b0589d7f8b039facfc4d1b67815db49c0405793993988203721deff0582c3be",
+      "bytes": 842
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/src/rng_noninterference_probe.f90",
+      "sha256": "516fd2efd2343ef7d02c65e3c00cfd0c99b8b750ada9a3cc103728835db094b6",
+      "bytes": 861
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/test_matched.py",
+      "sha256": "0a1bbce0d061bb1b0099a32a0768c5cd7bfa27f54290fa6997feacd2c19842cf",
+      "bytes": 5858
+    },
+    {
+      "path": "simulation/hh_signal/matched_integration/validate.py",
+      "sha256": "ba2874f9a78476056bff3b8acefc92b5fd745d84ba503ef4d49a42a909ca19f9",
+      "bytes": 2777
+    },
+    {
+      "path": "simulation/hh_signal/methods.py",
+      "sha256": "684ae2f966241bb13b074aa090298ca258b065a96b63daa5f36f857458800a62",
+      "bytes": 3886
+    },
+    {
+      "path": "simulation/hh_signal/scripts/audit_payload.py",
+      "sha256": "84e02f8cff5a51ab07ff2a9100fbc14a64927b73d3440cb450e09b1a33cd86ef",
+      "bytes": 3497
+    },
+    {
+      "path": "simulation/hh_signal/scripts/generate_signal.py",
+      "sha256": "070f6b43b2a6eecb2cb1074d9bbe1bb9f283c3be7783a9478a0d45913794b6ae",
+      "bytes": 4732
+    },
+    {
+      "path": "simulation/hh_signal/scripts/generate_signal.sh",
+      "sha256": "b4cc727b1ba82a91054b13f4b915d399df513ebc47f7b7148ccb09483a8a06e3",
+      "bytes": 145
+    },
+    {
+      "path": "simulation/hh_signal/scripts/mg5_model_adapter.py",
+      "sha256": "60f7aac990437ecb40dbeced8fbbff3081946fd18f0475ef8afdb0f67c043443",
+      "bytes": 3757
+    },
+    {
+      "path": "simulation/hh_signal/scripts/run_campaign.py",
+      "sha256": "a24f90d7a502a74f786d7e45d3785c1df47d258ffa6bbb4b00683d969550d8f0",
+      "bytes": 273
+    },
+    {
+      "path": "simulation/hh_signal/scripts/run_campaign.sh",
+      "sha256": "ca5eb0c4a30c7716436826a3d082ae76f6aac6d1b90d1ad5a2a9c7e558342172",
+      "bytes": 152
+    },
+    {
+      "path": "simulation/hh_signal/scripts/validate_signal_contract.py",
+      "sha256": "c0c5a490aa8ef324e169b068e21a12d7e44c45fcb29bae7b1b3826b252497d9c",
+      "bytes": 682
+    },
+    {
+      "path": "simulation/hh_signal/scripts/verify_loop_model.py",
+      "sha256": "a097a0b80959b598b609e82bcad3297d4faa10c532a794689351a6694d2460d4",
+      "bytes": 13248
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/__init__.py",
+      "sha256": "40be8756bd126e0c7dcb5fea427014553e337052beb2abfad352aca665b881e5",
+      "bytes": 84
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/contract.py",
+      "sha256": "4803ac8bbbfa45785701e65de70ba7da56016dbbac6d7c502e4849331b10e99b",
+      "bytes": 2993
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/overlay.py",
+      "sha256": "3f2ff46d21e0f061c0aad73146d06253b5d3fec1a3f69bb262eec8d0a035cf85",
+      "bytes": 5165
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/review.py",
+      "sha256": "65bf9391fca6708ed716b61f2f3e513de3afaf57cbca86c9a9ceb8ec9e4ad2f1",
+      "bytes": 5168
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/runner.py",
+      "sha256": "0091c480979428555abea8dbfdc8a739d6bd932bb76e2b3b950150c2abdb390f",
+      "bytes": 13866
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/anonymous_io.c",
+      "sha256": "b3f26af0d2f45663bceaec414a20128d211ebe4758dbd718c3674a0861b05242",
+      "bytes": 1808
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/io_and_rng.f90",
+      "sha256": "464d64c0d1cdb6716ab058e52e9e6fad8783bef811b34af304bde0e4fc1c863c",
+      "bytes": 4670
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/src/method_driver.f",
+      "sha256": "ed0bed151d9f24e6f0487bd5ea89c39f34bb1a75f179b32e467709cfefa55e2c",
+      "bytes": 7309
+    },
+    {
+      "path": "simulation/hh_signal/semantics_recovery/test_semantics.py",
+      "sha256": "c2626c4dd1b32afa802a2f924ff8f7212bc29064a6fde402ec71dc3f4ce529a5",
+      "bytes": 3670
+    },
+    {
+      "path": "simulation/hh_signal/src/check_fixed_point.f",
+      "sha256": "4ebb3b9c8790bc0b3b6e6b4c7f0c534ba829cca7bfc986a07277966a7cbec673",
+      "bytes": 1050
+    },
+    {
+      "path": "simulation/hh_signal/tests/test_signal_methods.py",
+      "sha256": "72c0ac54a87551627fa087dfd32a818f942e7871782ab8292f58bf910c13eff3",
+      "bytes": 11066
+    },
+    {
+      "path": "simulation/mg5/scripts/audit_payload.py",
+      "sha256": "322dbc401fa1f402444e9acb6baf899d48e4b7447db7ab085456bd9885a95196",
+      "bytes": 3133
+    },
+    {
+      "path": "simulation/mg5/scripts/capture_environment.py",
+      "sha256": "f5fd3f414a1ed57f3c14961141b83c333d3d469f5870212d6f06346f97a77f9b",
+      "bytes": 2515
+    },
+    {
+      "path": "simulation/mg5/scripts/configure_local.py",
+      "sha256": "7d955f6e0ef84f58b7d116a4018201ace979f8aee86dd17dec96eeeddff90965",
+      "bytes": 1414
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.py",
+      "sha256": "86a3735ad8787f17a6d085c49e2f3a13dc5e3ecaaddfac0fd8cb9a46722f1752",
+      "bytes": 14100
+    },
+    {
+      "path": "simulation/mg5/scripts/generate_sample.sh",
+      "sha256": "cd4451dfe195f9b68ec8e8b6a467ba835ec2a803d4bfb214165c21f474fc7faa",
+      "bytes": 727
+    },
+    {
+      "path": "simulation/mg5/scripts/installation.py",
+      "sha256": "df56d5f20350b460aa01e239dedb6bb9ba16dd91a0c73d73b1a5023b904b0056",
+      "bytes": 911
+    },
+    {
+      "path": "simulation/mg5/scripts/mg5_cli.sh",
+      "sha256": "2706e40dd6d8d3247278269402cc00709d0f3656afc2be88f6407958dffb76c1",
+      "bytes": 571
+    },
+    {
+      "path": "simulation/mg5/scripts/prepare_release.py",
+      "sha256": "54b04cd5f06253bf356e09de06881a3f1b97d3889c80ce2eafdc86a5d6af3ab7",
+      "bytes": 3052
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_background_references.py",
+      "sha256": "1519f90ab3e6f755d4194ab241e5dd5744a233a02106396aec365fb6d05db91c",
+      "bytes": 14307
+    },
+    {
+      "path": "simulation/mg5/scripts/publish_reference_samples.py",
+      "sha256": "477669279e6cd94230d5168d8b14c5881fd41a111008e57fc2b6a491e70335fb",
+      "bytes": 7656
+    },
+    {
+      "path": "simulation/mg5/scripts/resource_limits.py",
+      "sha256": "3afb3ad000fae1c62fc187bf52e0bd0e514f7144ba9ed28761f018b37b0690ca",
+      "bytes": 6740
+    },
+    {
+      "path": "simulation/mg5/scripts/validate_lhe.py",
+      "sha256": "042c5d235898db08b3decdef7b2930170a33b7e426b9724bab11ec90430360f1",
+      "bytes": 35878
+    }
+  ],
+  "full_Git_critical_files": 330,
+  "ordinary_preflight_only": true,
+  "execution_authorized": false
+}

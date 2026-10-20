@@ -1,0 +1,19 @@
+{
+  "schema": "READ_ONLY_PROPOSED_UNIT_EXISTENCE_V1",
+  "argv": [
+    "/usr/bin/systemctl",
+    "--user",
+    "show",
+    "atlas-hh-phase7i-s4-capacity-01.service",
+    "--no-pager",
+    "--property=Id",
+    "--property=LoadState",
+    "--property=ActiveState",
+    "--property=SubState"
+  ],
+  "exit": 0,
+  "stdout": "Id=atlas-hh-phase7i-s4-capacity-01.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\n",
+  "stderr": "",
+  "proposed_new_mountpoint_exists": false,
+  "service_started": false
+}

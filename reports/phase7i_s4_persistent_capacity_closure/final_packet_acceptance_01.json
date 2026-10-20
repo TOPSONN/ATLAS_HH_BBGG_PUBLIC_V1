@@ -1,0 +1,202 @@
+{
+  "schema": "PHASE7I_FINAL_PACKET_INDEPENDENT_ACCEPTANCE_V1",
+  "status": "PASS_SOURCE_AND_BOUNDED_REPORT_PACKET_WITH_BLOCKED_RUNTIME",
+  "source_revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+  "fresh_candidate": "/home/btu/projects/atlas_hh_phase7i_s4_74f8dc3d_capacity_01",
+  "candidate_detached_normal_git_head_verified_by_read_only_files": true,
+  "origin_matches_authoring_official_origin": true,
+  "files": [
+    {
+      "path": "ADMIN_ACTIONS_ZH_TW.md",
+      "bytes": 15651,
+      "sha256": "f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c"
+    },
+    {
+      "path": "REPORT_ZH_TW.md",
+      "bytes": 10827,
+      "sha256": "2cef29b72a71fa1cb96ad4631ccaa4fa5c9894625fb78620b06c858ab86767a4"
+    },
+    {
+      "path": "evidence.json",
+      "bytes": 5322,
+      "sha256": "5ec037956285d8cf43af8bf600ecc6be26a3d2840c114fd04f4ae9bcef87151b"
+    },
+    {
+      "path": "final_preservation_01.json",
+      "bytes": 35734,
+      "sha256": "e02c46320a206f4994a9f5579841365b437bf1969191bda9b614b169111238f5"
+    },
+    {
+      "path": "independent_capacity_ci_condition_matrix_01.json",
+      "bytes": 8659,
+      "sha256": "68fc3bad35a287580177bd51852d8234b05890709fac4066431791ce29248b1a"
+    },
+    {
+      "path": "independent_controller_integration_final_review_02.json",
+      "bytes": 16010,
+      "sha256": "f535b3722e6e3d82c4e0546460766c029c288f26df52f922d3cc965d5949dfea"
+    },
+    {
+      "path": "independent_controller_integration_final_review_03.json",
+      "bytes": 4310,
+      "sha256": "6ba89f739c32cf40f9c220a6aaab6c67071d9592e5c2d0b128145a7fdebfac3f"
+    },
+    {
+      "path": "independent_git_publication_ci_review_final_02.json",
+      "bytes": 10022,
+      "sha256": "490b10b539b1f9dccf677d311ab96228ed0d985b7791e0bfee07514c31833859"
+    },
+    {
+      "path": "local_evidence_index.json",
+      "bytes": 15469,
+      "sha256": "33c841f497e0c0ef027b0a1bc5bf2b614b89e44ade110067e9485be7e9214465"
+    },
+    {
+      "path": "offline_final_04.json",
+      "bytes": 11118,
+      "sha256": "5d5532a49ab1230bcd0523dd6e2367d81d88f221f00fcff6fc201c66d02cb198"
+    },
+    {
+      "path": "offline_final_04_test_ids.json",
+      "bytes": 85204,
+      "sha256": "e81b7ccf08015936f365f4e1af5e838f3b7129759586f21c94de06502436d53b"
+    },
+    {
+      "path": "output_controlplane_capacity_review_01.json",
+      "bytes": 18217,
+      "sha256": "e8b992d16ef8de987b1f033dbffa14497e0198bb1e94191cb21517d1f5156ff2"
+    },
+    {
+      "path": "proposed_kernel_scope.json",
+      "bytes": 9584,
+      "sha256": "47893c3b4a75997d984e23d586d2603511d683e8cdc4bf73350367e4a8a7b6fc"
+    },
+    {
+      "path": "protected_source_before_01.json",
+      "bytes": 9099,
+      "sha256": "dd913594a06c0f5d22273d4b49177687b8d4bcb6d740ba327e811b553c85e8ab"
+    },
+    {
+      "path": "quota_get_corrective_audit_01.json",
+      "bytes": 2534,
+      "sha256": "755c2db58d256eaee4d3e447fd5d109fc6faefef56cf5bf0c25cd08cdcea190c"
+    },
+    {
+      "path": "quota_get_public_projection_01.json",
+      "bytes": 1170,
+      "sha256": "c079f500885cd790c652ddad80e32e2121628499fa85bf39362d1389983452b4"
+    },
+    {
+      "path": "safe_legacy_final_04.json",
+      "bytes": 29617,
+      "sha256": "a39e2258757ed24bb78aea9eb2bd9c4524ab204598c954a350d49cfe996c3895"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 67388,
+      "sha256": "ddea666a9ebb2ac1540ad5be20e68d8af3762c5a924488402a1f97e29f52a284"
+    },
+    {
+      "path": "storage_capacity_review_01.json",
+      "bytes": 6770,
+      "sha256": "6927630f316062810258c082f353ad13a56c76006b4c531cecf3bd86d5205fcc"
+    }
+  ],
+  "identity_verification": {
+    "source_manifest_files": 334,
+    "all_candidate_and_authoring_file_hashes_match": true,
+    "two_preflights": [
+      {
+        "file": "fresh_git_preflight_01.json",
+        "sha256": "0ff860510f40e14c1415cb106cae2920e8d9abd00f9bc9f36d99a7bd131297aa",
+        "tracked_files": 1509,
+        "critical_files": 330,
+        "wall_seconds": 0.6922323140000799,
+        "CPU_seconds": 0.487346631
+      },
+      {
+        "file": "fresh_git_preflight_02.json",
+        "sha256": "b10629c81f299273e96bfe85774cf42606e612659ba995f4a74d285dac2f5e24",
+        "tracked_files": 1509,
+        "critical_files": 330,
+        "wall_seconds": 0.7136039609999898,
+        "CPU_seconds": 0.469009327
+      }
+    ],
+    "full_Git_critical_files": 330,
+    "old21_not_reused_as_current_identity": true,
+    "proposed_argv_tokens": 104,
+    "argv_matches_exact_candidate_pure_AST_model": true,
+    "argv_model_OS_identities": {
+      "uid": 1000,
+      "affinity": [
+        0
+      ],
+      "home": "/home/btu"
+    },
+    "argv_sha256": "bfca8ae995e42d3dc9201768a014df798e87b19566f6ed4c263719adbaed851c",
+    "scope_sha256": "47893c3b4a75997d984e23d586d2603511d683e8cdc4bf73350367e4a8a7b6fc",
+    "source_manifest_sha256": "ddea666a9ebb2ac1540ad5be20e68d8af3762c5a924488402a1f97e29f52a284"
+  },
+  "regression_evidence": {
+    "offline": {
+      "tests": 542,
+      "unique": 542,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "source_files": 55,
+      "source_hashes_match_frozen_candidate": true
+    },
+    "safe_legacy": {
+      "tests": 81,
+      "passes": 81,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "implementation_files": 48
+    },
+    "this_review_reran_tests": false,
+    "earlier_missing_import_errors_are_preserved_not_reclassified": true
+  },
+  "report_consistency": {
+    "S4_metrics_all_null": true,
+    "no_FULL_or_capacity_ready_claim": true,
+    "no_execution_authority_or_HumanReview_created_by_packet": true,
+    "quota_9_calls_including_potential_write_class_GETQUOTA_disclosed": true,
+    "source_inference_distinguished_from_measured_block_delta": true,
+    "old104_21_historical_vs_new104_334_distinguished": true,
+    "CPU4_wall13_contract_distinguished_from_OS_rate_and_Main_early_stop": true,
+    "admin_commands_explicitly_unexecuted_and_separately_authorized": true,
+    "pre_arm_activation_deferred_handler_cgroup_lifetime_logger_durability_and_controlplane_gaps_stated": true
+  },
+  "resolved_packet_finding": {
+    "issue": "Prior scope_admission_checks[0] incorrectly retained Exact source/21 hashes unchanged despite7 intentional deltas.",
+    "resolution": "Current scope first condition binds all334 exact candidate hashes and names old21 only historical with7 declared deltas.",
+    "prior_scope_draft_preservation": "Retained locally by root; no source or manifest modification required."
+  },
+  "remaining_limits": [
+    "Acceptance is source/report consistency, not kernel/runtime resource containment or durable output capacity.",
+    "Administrator exact new-device and control-plane/failure-capture design remain prerequisites; no provisioning/live authorization follows.",
+    "Fresh ordinary full Git preflights do not validate contained borrowed watchdog or S4 runtime.",
+    "Report-only delivery commit, new Draft PR and final hosted CI are root delivery responsibilities; no success invented here."
+  ],
+  "actual_operations_this_review": {
+    "new_tests": 0,
+    "controller_invocations": 0,
+    "timers_armed": 0,
+    "signals_sent": 0,
+    "services": 0,
+    "namespace_ioctls": 0,
+    "resource_kernel_cases": 0,
+    "stress": 0,
+    "native": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "persistent_capacity_verified": false,
+  "S4_runtime_verified": false,
+  "execution_authorized": false
+}

@@ -1,0 +1,497 @@
+{
+  "HUMAN_AUTHORIZATION_CREATED": false,
+  "INDEPENDENT_EVENTS": 0,
+  "REAL_INTEGRALS": 0,
+  "REAL_ME_CALLS": 0,
+  "child_CPU_seconds": 1.141859,
+  "error_count": 0,
+  "errors": [],
+  "excluded_scope": "Native/Kernel/SyntheticReceipt/PTY authorization positives; no HumanReview constructor",
+  "failure_count": 0,
+  "failures": [],
+  "full_resource_service_executed": false,
+  "implementation_snapshot_after": "4aed1277a3277b1ca8081f44a0f46e860220c7c9918f39c2f3f532475b9a0786",
+  "implementation_snapshot_before": "4aed1277a3277b1ca8081f44a0f46e860220c7c9918f39c2f3f532475b9a0786",
+  "implementation_snapshot_file_count": 48,
+  "implementation_sources_unchanged": true,
+  "native_executions": 0,
+  "new_builds": 0,
+  "parent_CPU_seconds": 0.9504876980000001,
+  "passes": 81,
+  "results": [
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_assume_unchanged_cannot_hide_outside_change"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_batch_parser_rejects_missing_truncated_wrong_hash_and_extra_data"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_bounded_blob_batches_preserve_exact_full_preflight"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_changed_mode_when_git_tracks_modes"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_clean_original_and_new"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_cpu_budget"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_deleted_tracked_file"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_edit_between_status_and_hash"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_git_environment_override"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_git_subprocess_failure"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_gitlink_requires_separate_review"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_inaccessible_tracked_path"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_index_race"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_invalid_git_index"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_missing_required_tracked_path"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_modified_physics_contract"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_modified_reviewed_source"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_observed_diff_refresh_side_effect_in_fixture"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_outside_path_edit_after_status"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_overall_watchdog_covers_python_work"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_plumbing_is_not_accepted_as_status_equivalence"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_repository_identity"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_same_size_same_mtime_race"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_skip_worktree_cannot_hide_outside_change"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_modification"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_rename"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_replacement"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_subprocess_timeout_kills_descendant_group"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_symlink_parent"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_timeout_preserves_bounded_diagnostic"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unexpected_symlink"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unreviewed_fsmonitor_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unstaged_modification"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_untracked_is_same_scope_as_original"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_wrong_head"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_wrong_reviewed_physics_hash"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_changed_recovery_source_identity_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_clean_method_only_build"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_historical_public_native_build_binding"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_missing_immutable_source_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_modified_card_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_modified_executable_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_stopped_attempt_is_not_reused_or_overwritten"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_wrong_dynamic_library_hash_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_full_coherent_amplitude_and_fixed_endpoints"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_exact_revision_not_an_authorization_flag"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_unknown_stage_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_source_fixture_cannot_be_genuine_stage"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_four_replicas_do_not_automatically_pass_convergence"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_replica_replacement_or_duplicate_is_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_eight_RANMAR_stream_pairs_are_distinct"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_scalar_nan_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_approval_token_not_a_CLI_option"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_build_source_uses_fresh_local_copies_and_zero_me_only"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_builder_cannot_create_or_compile_without_human_review"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_compile_and_link_plan_no_old_or_duplicate_guard"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_exact_proposal_and_reversal_with_bounded_activation_delta"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_fake_human_pipe_is_not_a_review"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_lossless_toolchain_inventory_fits_unchanged_git_cap"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_physical_default_denies_before_native_or_output"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_source_binding_has_canonical_posix_order"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_actual_nonphysical_child_measurements_and_failure_retention"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_aggregate_budget_terminates_child"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_live_descendant_cpu_uses_conservative_one_core_bound"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_exact_reversible_intentional_changes"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_frozen_loop_context_and_theory_scope_in_contract"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_no_rng_sampler_weight_grid_or_estimator_calls_in_guard"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_versioned_diagnostic_schema_and_no_vector_payload"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_weakened_or_unreviewed_changes_cannot_reverse"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_binary_identity_does_not_conflate_timestamps_with_full_receipt"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_builder_exact_diff_and_unchanged_active_builder"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_model_dependency_drift_rejected_with_no_compiler"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_only_two_declared_new_metadata_paths"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_stale_binary_receipt_and_consumed_authorization_cannot_migrate"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_additive_metadata_scope_is_exact"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_drift_and_weakened_predicates_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_exact_overlay_projection_and_frozen_files"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_failure_only_exact_statements_flush_and_scalar_schema"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_nonfinite_scalars_are_explicit_not_json_nan"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_parser_is_stateless_under_concurrent_receipt_readers"
+    },
+    {
+      "status": "PASS",
+      "test": "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_strict_parser_bounds_extra_fields_split_records"
+    }
+  ],
+  "scope": "Exact81 selected source/method tests. Excludes Native/Kernel/SyntheticReceipt/PTY authorization positives; no human capability constructed.",
+  "selected": [
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_assume_unchanged_cannot_hide_outside_change",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_batch_parser_rejects_missing_truncated_wrong_hash_and_extra_data",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_bounded_blob_batches_preserve_exact_full_preflight",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_changed_mode_when_git_tracks_modes",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_clean_original_and_new",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_cpu_budget",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_deleted_tracked_file",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_edit_between_status_and_hash",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_git_environment_override",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_git_subprocess_failure",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_gitlink_requires_separate_review",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_inaccessible_tracked_path",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_index_race",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_invalid_git_index",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_missing_required_tracked_path",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_modified_physics_contract",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_modified_reviewed_source",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_observed_diff_refresh_side_effect_in_fixture",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_outside_path_edit_after_status",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_overall_watchdog_covers_python_work",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_plumbing_is_not_accepted_as_status_equivalence",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_repository_identity",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_same_size_same_mtime_race",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_skip_worktree_cannot_hide_outside_change",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_modification",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_rename",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_staged_replacement",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_subprocess_timeout_kills_descendant_group",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_symlink_parent",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_timeout_preserves_bounded_diagnostic",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unexpected_symlink",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unreviewed_fsmonitor_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_unstaged_modification",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_untracked_is_same_scope_as_original",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_wrong_head",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.GitPrecheckTests.test_wrong_reviewed_physics_hash",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_changed_recovery_source_identity_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_clean_method_only_build",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_historical_public_native_build_binding",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_missing_immutable_source_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_modified_card_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_modified_executable_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_stopped_attempt_is_not_reused_or_overwritten",
+    "simulation.hh_signal.final_closure.integration_runtime.test_git_precheck.FrozenInputGuards.test_wrong_dynamic_library_hash_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_full_coherent_amplitude_and_fixed_endpoints",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_exact_revision_not_an_authorization_flag",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_unknown_stage_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_source_fixture_cannot_be_genuine_stage",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_four_replicas_do_not_automatically_pass_convergence",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_replica_replacement_or_duplicate_is_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_eight_RANMAR_stream_pairs_are_distinct",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_scalar_nan_rejected",
+    "simulation.hh_signal.final_closure.integration_runtime.test_runtime.RuntimeMethods.test_approval_token_not_a_CLI_option",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_build_source_uses_fresh_local_copies_and_zero_me_only",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_builder_cannot_create_or_compile_without_human_review",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_compile_and_link_plan_no_old_or_duplicate_guard",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_exact_proposal_and_reversal_with_bounded_activation_delta",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_fake_human_pipe_is_not_a_review",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_lossless_toolchain_inventory_fits_unchanged_git_cap",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_physical_default_denies_before_native_or_output",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.ActivationSourceTests.test_source_binding_has_canonical_posix_order",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_actual_nonphysical_child_measurements_and_failure_retention",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_aggregate_budget_terminates_child",
+    "simulation.hh_signal.final_closure.integration_runtime.test_route_a.BuildProcessMethods.test_live_descendant_cpu_uses_conservative_one_core_bound",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_exact_reversible_intentional_changes",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_frozen_loop_context_and_theory_scope_in_contract",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_no_rng_sampler_weight_grid_or_estimator_calls_in_guard",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_versioned_diagnostic_schema_and_no_vector_payload",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.ScientificSourceTests.test_weakened_or_unreviewed_changes_cannot_reverse",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_binary_identity_does_not_conflate_timestamps_with_full_receipt",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_builder_exact_diff_and_unchanged_active_builder",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_model_dependency_drift_rejected_with_no_compiler",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_only_two_declared_new_metadata_paths",
+    "simulation.hh_signal.final_closure.guard_correction.test_correction.BuilderReviewTests.test_stale_binary_receipt_and_consumed_authorization_cannot_migrate",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_additive_metadata_scope_is_exact",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_drift_and_weakened_predicates_rejected",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_exact_overlay_projection_and_frozen_files",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_failure_only_exact_statements_flush_and_scalar_schema",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_nonfinite_scalars_are_explicit_not_json_nan",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_parser_is_stateless_under_concurrent_receipt_readers",
+    "simulation.hh_signal.final_closure.stop92_diagnostic.test_diagnostic.OverlayTests.test_strict_parser_bounds_extra_fields_split_records"
+  ],
+  "selected_test_sources_unchanged": true,
+  "skipped": 0,
+  "source_files_after": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+      "sha256": "4aaae767a2c992a04d536c5ca9aaf1085b6493312750e213b14a363acb46a72e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+      "sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_route_a.py",
+      "sha256": "53dcf678f15d107105a435f3ad9a2fbe18ac2c1ffd82072e28b26635deccf328"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/test_correction.py",
+      "sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/test_diagnostic.py",
+      "sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926"
+    }
+  ],
+  "source_files_before": [
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+      "sha256": "4aaae767a2c992a04d536c5ca9aaf1085b6493312750e213b14a363acb46a72e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+      "sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/test_route_a.py",
+      "sha256": "53dcf678f15d107105a435f3ad9a2fbe18ac2c1ffd82072e28b26635deccf328"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/test_correction.py",
+      "sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/test_diagnostic.py",
+      "sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926"
+    }
+  ],
+  "status": "PASS_SELECTED_SAFE_LEGACY",
+  "subprocess_audit": {
+    "counts": {
+      "fixed_python_fixture": 5,
+      "fixed_sleep20": 1,
+      "git": 551
+    },
+    "forbidden_imports": [],
+    "human_review_attempts": 0,
+    "python_fixture_code_sha256": [
+      "3f393e7adc82ee9cf4b9f0a056a86ae6925807e8e62d368b3aa42f6d636eddd0",
+      "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+      "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+      "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+      "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+    ],
+    "rejected": []
+  },
+  "tests_run": 81,
+  "wall_seconds": 8.421784368999965
+}
