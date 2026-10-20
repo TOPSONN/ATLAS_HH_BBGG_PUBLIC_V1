@@ -43,3 +43,5 @@ cgroup.kill／KillMode=control-group／SIGKILL涵蓋setsid後代，並實際等�
 本次測試前已有全域config漂移9326/5e846…，writer UNKNOWN；Phase13私有9302/e456…仍匹配。舊baseline不修改。歷史before/after SHA scope含23,221個regular path觀測及225個symlink記錄，並包括原Phases、toolchain、P13結果與之前Phase7I readonly audit；不是全主機掃描。只有新建Phase13F source/results可寫。
 
 舊parser gate的FULL_LAUNCH_ENVELOPE_IMPLEMENTED=False及相關來源bytes不改。通過resource fixtures也不產生human approval、不啟動parser、不許ME/integrals/events。實際MG5在readonly source下的cache/history/implicit writes相容性仍UNKNOWN。外部human source review未由本任務產生或宣稱完成。
+
+最終RAM fixture使用兩process各300MiB anonymous mmap並逐4096-byte頁面觸碰，保持相同resident target與原CPU/RAM限額；原bytearray負例在一次重測先撞到CPU硬限，該輪拒絕並保留。四RAM smoke與完整新suite都需重新通過。CI相容修正只路由發布guard，原tests/fallback保留並以exact diff負例鎖定。

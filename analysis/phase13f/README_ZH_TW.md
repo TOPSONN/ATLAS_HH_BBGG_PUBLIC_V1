@@ -43,7 +43,7 @@ python3 -B analysis/phase13f/scripts/run_full_job_fixtures.py \
 
 ## 科學與核准界線
 
-`normal` child讀取並雜湊既有private config，只回傳bytes/SHA，不import模型。對抗child只用固定CPU loop、bytearray、sleep、檔案填滿等方法驗證外層資源界線；不改舊guard或核准旗標。CPU是cgroup統計口徑，RAM是cgroup charge口徑；記錄實際timer／kill／reap與kernel measurement粒度，不宣稱零延遲的理想即時系統。
+`normal` child讀取並雜湊既有private config，只回傳bytes/SHA，不import模型。對抗child只用固定CPU loop、resident mmap頁面、sleep、檔案填滿等方法驗證外層資源界線；不改舊guard或核准旗標。CPU是cgroup統計口徑，RAM是cgroup charge口徑；記錄實際timer／kill／reap與kernel measurement粒度，不宣稱零延遲的理想即時系統。
 
 全域installed config在本次任何fixture前就已是9326 bytes／SHA256 `5e8460eee42abcf08840b5a9d7666c1d9ae6abf92c4692abbee6428f7945b08e`，與Phase13舊9302/e456…不同，writer UNKNOWN。原Phase13private copy仍9302/e456…。本階段不改setting、不重寫舊baseline、不將9326升格為核准physics config；獨立記錄其before/after保留結果。
 

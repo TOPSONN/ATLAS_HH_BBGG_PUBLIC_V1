@@ -23,6 +23,7 @@ test_receipt_size_and_overwrite_rejected (test_envelope_policy.EnvelopePolicy.te
 test_residual_process_never_passes (test_envelope_policy.EnvelopePolicy.test_residual_process_never_passes) ... ok
 test_resource_bounds_are_conservative (test_envelope_policy.EnvelopePolicy.test_resource_bounds_are_conservative) ... ok
 test_true_normal (test_envelope_policy.EnvelopePolicy.test_true_normal) ... ok
+test_memory_fixture_faults_all_pages_below_original_per_process_limit (test_envelope_policy.ResidentMemoryFixture.test_memory_fixture_faults_all_pages_below_original_per_process_limit) ... ok
 test_aggregate_cpu_and_controller_loss_are_actual_busy_tests (test_final_native_evidence.NativeEvidence.test_aggregate_cpu_and_controller_loss_are_actual_busy_tests) ... ok
 test_all_negative_phases_stop_before_following_work (test_final_native_evidence.NativeEvidence.test_all_negative_phases_stop_before_following_work) ... ok
 test_complete_required_cases (test_final_native_evidence.NativeEvidence.test_complete_required_cases) ... ok
@@ -37,7 +38,9 @@ test_no_residual_or_host_write (test_final_native_evidence.NativeEvidence.test_n
 test_orphan_and_inode_and_log_negative (test_final_native_evidence.NativeEvidence.test_orphan_and_inode_and_log_negative) ... ok
 test_real_four_phase_positive_and_original_guard (test_final_native_evidence.NativeEvidence.test_real_four_phase_positive_and_original_guard) ... ok
 test_binary_and_figure_payloads (test_publication.Publication.test_binary_and_figure_payloads) ... ok
+test_compat_workflow_arbitrary_skip_or_test_change_rejected (test_publication.Publication.test_compat_workflow_arbitrary_skip_or_test_change_rejected) ... ok
 test_event_and_raw_json_rejected (test_publication.Publication.test_event_and_raw_json_rejected) ... ok
+test_exact_compat_workflow_retains_old_tests_and_fallback (test_publication.Publication.test_exact_compat_workflow_retains_old_tests_and_fallback) ... ok
 test_foreign_old_sources_rejected (test_publication.Publication.test_foreign_old_sources_rejected) ... ok
 test_only_exact_workflow_allowed (test_publication.Publication.test_only_exact_workflow_allowed) ... ok
 test_private_config_body_rejected (test_publication.Publication.test_private_config_body_rejected) ... ok
@@ -45,6 +48,6 @@ test_source_allowed (test_publication.Publication.test_source_allowed) ... ok
 test_unlisted_rejected (test_publication.Publication.test_unlisted_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 45 tests in 0.022s
+Ran 48 tests in 0.035s
 
 OK

@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "evidence_class": "PUBLIC_SOURCE_AUDIT",
-  "FINAL_VERDICT": "PENDING_FRESH_CLEAN_SOURCE_RECEIPTS",
+  "FINAL_VERDICT": "FULL_LAUNCH_ENVELOPE_VERIFIED",
   "verification_scope": "Current WSL user-systemd fixed full supervisor workflow with harmless child stand-in; not actual MG5/parser or whole-host control plane",
-  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": true,
   "actual_required_native_cases": 31,
   "actual_native_expected_passes": 31,
   "offline_regression_tests": {
     "phase11": 172,
     "phase12": 167,
     "phase13": 188,
-    "phase13f": 45,
-    "total": 572
+    "phase13f": 48,
+    "total": 575
   },
-  "independent_source_audit_checks": null,
+  "independent_source_audit_checks": 736,
   "historical_regular_path_observations": 23221,
   "historical_symlink_records": 225,
   "historical_within_task_changes": 0,
@@ -26,8 +26,8 @@
     "BUSY_CONTROLLER_LOSS_SYSTEMD_ENFORCEMENT",
     "AGGREGATE_CPU_AND_ORPHAN_CGROUP_CLEANUP",
     "EFFECTIVE_KERNEL_LIMITS",
-    "OFFLINE_572_REGRESSIONS",
-    "INDEPENDENT_IMPLEMENTATION_726_SOURCE_BYTE_CHECKS",
+    "OFFLINE_575_REGRESSIONS",
+    "INDEPENDENT_IMPLEMENTATION_736_SOURCE_BYTE_CHECKS",
     "HISTORICAL_SHA256_WITHIN_TASK_PRESERVATION"
   ],
   "GATES_FAIL": [
@@ -54,7 +54,8 @@
   "NEW_HARD_EVENTS": 0,
   "NEW_PYTHIA_EVENTS": 0,
   "NEW_DELPHES_EVENTS": 0,
-  "GITHUB_CI": "INITIAL_PHASE13F_PASS_LEGACY_PUBLICATION_ROUTING_FAIL_CORRECTED_PENDING_RETEST",
+  "GITHUB_CI": "PENDING_EXACT_FINAL_SOURCE_PUSH; initial failure and routing correction preserved",
   "source_payload_commit": null,
-  "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31"
+  "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31",
+  "executed_source_commit": "accc7cb4cb4da6f87abc204b9a986dbcc99c020a"
 }

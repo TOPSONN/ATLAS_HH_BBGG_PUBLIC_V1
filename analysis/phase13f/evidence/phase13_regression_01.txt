@@ -76,13 +76,13 @@ test_exact_approval_requires_tty_and_challenge (test_parser_contract.ContractTes
     "address_space_bytes": 536870912,
     "output_file_bytes": 65536
   },
-  "output": "/tmp/tmpxumu1c3q/out",
+  "output": "/tmp/tmp2sfyb9iv/out",
   "config_activation": {
     "bytes": 1,
     "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
   }
 }
-AUTHORIZE SYMBOLIC_PARSER f891467c1814591fdd4034c593c97e72b87e6013368a16e0e020c1e08208d21e
+AUTHORIZE SYMBOLIC_PARSER 07f1ac7d2e56e51d47f210cf0c7b90bf4b2deb5c350ac08549092bff4a66c802
 NEW EXPLICIT USER AUTHORIZATION REQUIRED; EXACT SCOPE:
 {
   "source": "0000000000000000000000000000000000000000",
@@ -98,13 +98,13 @@ NEW EXPLICIT USER AUTHORIZATION REQUIRED; EXACT SCOPE:
     "address_space_bytes": 536870912,
     "output_file_bytes": 65536
   },
-  "output": "/tmp/tmpxumu1c3q/out",
+  "output": "/tmp/tmp2sfyb9iv/out",
   "config_activation": {
     "bytes": 1,
     "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
   }
 }
-AUTHORIZE SYMBOLIC_PARSER f891467c1814591fdd4034c593c97e72b87e6013368a16e0e020c1e08208d21e
+AUTHORIZE SYMBOLIC_PARSER 07f1ac7d2e56e51d47f210cf0c7b90bf4b2deb5c350ac08549092bff4a66c802
 ok
 test_exact_contract (test_parser_contract.ContractTests.test_exact_contract) ... ok
 test_missing_approval_before_package_read (test_parser_contract.ContractTests.test_missing_approval_before_package_read) ... ok
@@ -232,6 +232,6 @@ test_write_new_never_overwrites_existing_file (test_runtime_layout.LayoutTests.t
 test_write_new_rejects_destination_symlink (test_runtime_layout.LayoutTests.test_write_new_rejects_destination_symlink) ... ok
 
 ----------------------------------------------------------------------
-Ran 188 tests in 0.634s
+Ran 188 tests in 1.102s
 
 OK
