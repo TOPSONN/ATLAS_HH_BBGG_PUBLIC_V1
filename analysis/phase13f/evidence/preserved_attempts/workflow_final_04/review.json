@@ -1,0 +1,7 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "REJECTED_RAM_EVIDENCE_CPU_LIMIT_FIRED_FIRST",
+  "observed": "Result signal/KILL, CPU1.985032s, memory peak310501376; no actual group OOM proof, so suite stopped and was NOT accepted",
+  "correction": "Use fixed 300 MiB anonymous mmap, touch one byte per 4096-byte page in each of two processes; retain same total resident target and all CPU/RAM/wall/disk limits. Full new suite mandatory.",
+  "limit_relaxation": false
+}

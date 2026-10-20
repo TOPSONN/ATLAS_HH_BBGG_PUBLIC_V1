@@ -3,7 +3,7 @@ Real readonly source preflight, fixed child stand-in, receipt writing and real
 postflight hashing all execute inside the same systemd cgroup/mount namespace.
 """
 from __future__ import annotations
-import argparse,errno,hashlib,json,os,resource,signal,subprocess,sys,time
+import argparse,errno,hashlib,json,mmap,os,resource,signal,subprocess,sys,time
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from envelope import PROFILE,PHASES,CASES,REPO,load_profile,source_snapshot,require
@@ -20,6 +20,14 @@ def attest():
 
 def burn():
  while True:pass
+def resident_block():
+ # Fault one byte per page, so all 300 MiB are resident/charged without a
+ # redundant whole-array memset. Two blocks still exceed memory.max; neither
+ # process approaches its unchanged 512 MiB virtual-address ceiling.
+ data=mmap.mmap(-1,300*1024**2,flags=mmap.MAP_PRIVATE|mmap.MAP_ANONYMOUS)
+ for offset in range(0,len(data),4096):data[offset]=1
+ return data
+
 def action(mode):
  if mode=='cpu':burn()
  elif mode=='wall':time.sleep(60)
@@ -28,9 +36,9 @@ def action(mode):
   # can stop the combined allocation. No host-wide uncontrolled allocation.
   pid=os.fork()
   if pid==0:
-   data=bytearray(300*1024**2)
+   data=resident_block()
    while True:time.sleep(1)
-  data=bytearray(300*1024**2)
+  data=resident_block()
   os.waitpid(pid,0)
  elif mode=='disk':
   for i in range(1024):

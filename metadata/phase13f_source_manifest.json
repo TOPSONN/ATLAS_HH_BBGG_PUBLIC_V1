@@ -62,13 +62,13 @@
     },
     {
       "path": "analysis/phase13f/source/workflow.py",
-      "bytes": 8691,
-      "sha256": "f189e2f8f2116555d7750b5aa024e2a4b29f99fdb9721f710f1ef5e163ee4021"
+      "bytes": 9068,
+      "sha256": "15fc2ecedf8f9d12e0950a5990f01223efb4cc3d69692dbc7f7c63f0d270fe51"
     },
     {
       "path": "analysis/phase13f/tests/test_envelope_policy.py",
-      "bytes": 8522,
-      "sha256": "072c9c80c431fe12ccf76bfbbf22fc2cd53f9a949341c1917373cad385402c6e"
+      "bytes": 9160,
+      "sha256": "3e724fb4b729c7fb166848a2efc7826a33c02ca4f27e2c9ec3a8cce6da208533"
     },
     {
       "path": "analysis/phase13f/tests/test_final_native_evidence.py",
@@ -1092,6 +1092,42 @@
       "bytes": 510,
       "sha256": "de5b5116ac7551fea22ae0e520556680b4d8d5a59eb4c0005cf38450d6e410cd",
       "evidence_class": "SYNTHETIC_METHOD_ONLY"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/suite_summary.json",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "bytes": 4114,
+      "sha256": "020741422130a7922439941d2b4f6b4edd6b62d52bb98bedf0752f558c66a992"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/preflight_ram_journal_observation.txt",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "bytes": 1080,
+      "sha256": "3408aac8b2f43ba4a5496bf5f9f995f2172a2bf1fef991621de69756734805ac"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/review.json",
+      "evidence_class": "PUBLIC_SOURCE_AUDIT",
+      "bytes": 479,
+      "sha256": "bbc2ec3f7bbd734727e777dd87acb8f45e9f7664e4c6a52b7a495f8bf601696e"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/preflight_ram_launch.json",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "bytes": 6309,
+      "sha256": "b8faa732f5e544b83a78fe0dd126289ee3372ab5eefe3c7b4d0e469e7fe0a3e1"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/preflight_ram_readonly_canary.txt",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "bytes": 23,
+      "sha256": "7de497f3b5bb190401449a33d62fdfed437a79cd81652957805060f6667f075d"
+    },
+    {
+      "path": "analysis/phase13f/evidence/preserved_attempts/workflow_final_04/preflight_ram_result.json",
+      "evidence_class": "SYNTHETIC_METHOD_ONLY",
+      "bytes": 4376,
+      "sha256": "b58d558157ac5cc6b5a316642934b9086d5538bf4d015e3b399e9c7ee2fab67f"
     }
   ],
   "scope": "Bounded source and synthetic resource evidence only; private/raw/figure/physics excluded"

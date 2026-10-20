@@ -105,3 +105,13 @@ class ControllerLossEvidence(unittest.TestCase):
   for k,v in [('max_observed_CPU_usec',1),('max_observed_CPU_usec',4000001),('elapsed_including_host_cleanup_seconds',13.1),('cgroup_empty_and_unpopulated_verified',False),('observer_is_separate_process',False)]:
    bad=copy.deepcopy(row);bad[k]=v
    with self.subTest(key=k,value=v),self.assertRaises(ValueError):a.assess(bad)
+
+class ResidentMemoryFixture(unittest.TestCase):
+ def test_memory_fixture_faults_all_pages_below_original_per_process_limit(self):
+  source=(ROOT/'analysis/phase13f/source/workflow.py').read_text()
+  self.assertIn('mmap.mmap(-1,300*1024**2,flags=mmap.MAP_PRIVATE|mmap.MAP_ANONYMOUS)',source)
+  self.assertIn('for offset in range(0,len(data),4096):data[offset]=1',source)
+  self.assertEqual(source.count('data=resident_block()'),2)
+  self.assertLess(300*1024**2,e.PROFILE['per_process_address_space_bytes'])
+  self.assertGreater(2*300*1024**2,e.PROFILE['aggregate_memory_bytes'])
+  self.assertEqual(e.PROFILE['per_process_CPU_seconds'],2)

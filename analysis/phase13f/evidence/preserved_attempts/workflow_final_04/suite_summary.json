@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "BLOCKED_FULL_JOB_FIXTURE_FAILURE",
+  "all_required_cases_executed": true,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "profile": {
+    "schema_version": 1,
+    "profile_id": "PHASE13F_FULL_JOB_SYNTHETIC_V1",
+    "authorization": "SYNTHETIC_RESOURCE_FIXTURES_ONLY; NO_MG5_OR_PHYSICS",
+    "aggregate_CPU_seconds": 4,
+    "aggregate_wall_seconds": 13,
+    "unit_start_seconds": 2,
+    "unit_run_seconds": 10,
+    "unit_stop_seconds": 0.1,
+    "cpu_quota_percent": 30,
+    "cpu_quota_period_usec": 10000,
+    "CPU_watchdog_stop_usec": 2500000,
+    "aggregate_memory_bytes": 536870912,
+    "swap_bytes": 0,
+    "per_process_address_space_bytes": 536870912,
+    "per_process_CPU_seconds": 2,
+    "tmpfs_bytes": 8388608,
+    "tmpfs_inodes": 1024,
+    "per_regular_file_bytes": 65536,
+    "host_log_files": 2,
+    "host_metadata_bytes": 65536,
+    "host_metadata_files": 4,
+    "aggregate_disk_bytes": 9437184,
+    "max_tasks": 8,
+    "child_original_cpu_seconds": 2,
+    "child_original_wall_seconds": 3,
+    "child_original_AS_bytes": 536870912,
+    "poll_seconds": 0.02,
+    "full_parser_execution_authorized": false,
+    "MG5_invocations": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0
+  },
+  "source_snapshot": {
+    "paths": [
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/envelope.py",
+        "sha256": "649b2a432ee6c8e1fe6c47cee4ac97b8c77b5db41e1fd1c304e0239d63b00000",
+        "bytes": 11746
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/fixture_child.py",
+        "sha256": "244b4003fdb4983a393b1c3492aa8757259fd80e283a42d8e7c3194454be09fd",
+        "bytes": 1208
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/publication.py",
+        "sha256": "6d6ffbe1c69c4753731fb6ff3be40fcc80e8207509fa97d35dd99bb86e285581",
+        "bytes": 5954
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/workflow.py",
+        "sha256": "f189e2f8f2116555d7750b5aa024e2a4b29f99fdb9721f710f1ef5e163ee4021",
+        "bytes": 8691
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/check_publication.py",
+        "sha256": "23247d8e93c7edf72c72e273e6464d7998c9f0a6056f5908b43b948da4dc9721",
+        "bytes": 335
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/controller_loss_fixture.py",
+        "sha256": "f5d16235d69ed8d284505b0068994574f26e869f0df8839711f4442818d60b14",
+        "bytes": 478
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/independent_source_audit.py",
+        "sha256": "84e3e8fa88e2339daea81a24f84e7593704c20bb6dc33059efabb4ef8f489a4b",
+        "bytes": 8070
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/run_full_job_fixtures.py",
+        "sha256": "06d8c24a87529bcfc754cc3fea98513aeff1bf52e925a96b2f14137c0167eff9",
+        "bytes": 7051
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/config/full_job_profile.json",
+        "sha256": "17fb43c3602e9a64c9d9d9f1c18dca9f5d906e8fbffb46542828ffb34cd724f8",
+        "bytes": 1016
+      }
+    ],
+    "identity": "30aafb322e3182d08b0ddfb1e6eef9f7088639649204c5027977e095d3efe485"
+  },
+  "results": [
+    {
+      "case": "normal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1179136,
+      "wall_seconds": 3.975052153999968
+    },
+    {
+      "case": "preflight_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1146585,
+      "wall_seconds": 3.8881723149997924
+    }
+  ],
+  "failure": {
+    "case": "preflight_ram",
+    "reason": "AGGREGATE_MEMORY_OOM_NOT_PROVEN",
+    "type": "ValueError"
+  },
+  "parser_or_physics_authorized": false,
+  "MG5_invocations": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0
+}
