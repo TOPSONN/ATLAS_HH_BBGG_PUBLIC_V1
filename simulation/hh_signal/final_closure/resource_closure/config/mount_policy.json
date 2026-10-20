@@ -1,0 +1,296 @@
+{
+  "schema": "PHASE7I_CLASSIFIED_MOUNT_POLICY_V1",
+  "scope": "PURE_SOURCE_PREDICATES_ONLY_NO_RUNTIME_AUTHORITY",
+  "limits": {
+    "raw_bytes": 16384,
+    "rows": 256,
+    "projection_bytes": 16384,
+    "violation_rows": 32,
+    "policy_bytes": 16384
+  },
+  "private_tmpfs": {
+    "/tmp": {
+      "bytes": 1048576,
+      "inodes": 256
+    },
+    "/var/tmp": {
+      "bytes": 8388608,
+      "inodes": 1024
+    }
+  },
+  "private_identity": {
+    "filesystem_type": "tmpfs",
+    "root": "/",
+    "source": "tmpfs",
+    "major_device": 0,
+    "mount_flags": [
+      "rw",
+      "nodev",
+      "nosuid",
+      "noexec"
+    ]
+  },
+  "kernel_api_roots": {
+    "/proc": {
+      "types": [
+        "proc"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "proc"
+      ]
+    },
+    "/proc/sys": {
+      "types": [
+        "proc"
+      ],
+      "roots": [
+        "/sys"
+      ],
+      "sources": [
+        "proc"
+      ]
+    },
+    "/proc/sysrq-trigger": {
+      "types": [
+        "proc"
+      ],
+      "roots": [
+        "/sysrq-trigger"
+      ],
+      "sources": [
+        "proc"
+      ]
+    },
+    "/sys": {
+      "types": [
+        "sysfs"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "sysfs"
+      ]
+    },
+    "/sys/fs/cgroup": {
+      "types": [
+        "cgroup2"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "cgroup2",
+        "cgroup"
+      ]
+    },
+    "/dev": {
+      "types": [
+        "devtmpfs",
+        "tmpfs"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "devtmpfs",
+        "tmpfs",
+        "udev",
+        "none"
+      ]
+    },
+    "/dev/pts": {
+      "types": [
+        "devpts"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "devpts"
+      ]
+    },
+    "/dev/shm": {
+      "types": [
+        "tmpfs"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "tmpfs",
+        "shm"
+      ]
+    },
+    "/dev/mqueue": {
+      "types": [
+        "mqueue"
+      ],
+      "roots": [
+        "/"
+      ],
+      "sources": [
+        "mqueue"
+      ]
+    }
+  },
+  "kernel_api_prefixes": [
+    "/proc",
+    "/sys",
+    "/dev"
+  ],
+  "user_runtime_wsl_prefixes": [
+    "/run/user",
+    "/mnt/wsl",
+    "/mnt/wslg",
+    "/usr/lib/wsl"
+  ],
+  "user_runtime_wsl_exact": [
+    "/init"
+  ],
+  "persistent_types": [
+    "ext2",
+    "ext3",
+    "ext4",
+    "xfs",
+    "btrfs",
+    "fuseblk",
+    "9p",
+    "drvfs",
+    "ntfs",
+    "ntfs3"
+  ],
+  "denial_transcript": {
+    "schema": "PHASE7I_KERNEL_API_DENIAL_TRANSCRIPT_V1",
+    "probe_schema": "PHASE7I_CONTROLLER_GUARD_DENIAL_V1",
+    "collector_implemented": true,
+    "authenticates_runtime": false,
+    "producer_file": "controller_guard.py",
+    "producer_source_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+    "program_sha256": "a5aec3d4bf240f65e8484310c545f591d4c7f66a6aeaa1e0a9c16531a052180f",
+    "cases": {
+      "setns_invalid_fd_denied": {
+        "syscall": "setns",
+        "target": "INVALID_FD",
+        "return_code": -1,
+        "errno": 1
+      },
+      "unshare_invalid_flags_denied": {
+        "syscall": "unshare",
+        "target": "INVALID_FLAGS",
+        "return_code": -1,
+        "errno": 1
+      },
+      "fallocate_invalid_fd_denied": {
+        "syscall": "fallocate",
+        "target": "INVALID_FD",
+        "return_code": -1,
+        "errno": 1
+      },
+      "fsetxattr_invalid_fd_denied": {
+        "syscall": "fsetxattr",
+        "target": "INVALID_FD",
+        "return_code": -1,
+        "errno": 1
+      },
+      "ioctl_clone_invalid_fd_denied": {
+        "syscall": "ioctl",
+        "target": "INVALID_FD",
+        "return_code": -1,
+        "errno": 1
+      },
+      "connect_invalid_fd_denied": {
+        "syscall": "connect",
+        "target": "INVALID_FD",
+        "return_code": -1,
+        "errno": 1
+      }
+    }
+  },
+  "sources": {
+    "MOUNTINFO": "https://man7.org/linux/man-pages/man5/proc_pid_mountinfo.5.html",
+    "PROPAGATION": "https://docs.kernel.org/filesystems/sharedsubtree.html",
+    "NAMESPACES": "https://man7.org/linux/man-pages/man7/namespaces.7.html",
+    "TMPFS": "https://docs.kernel.org/filesystems/tmpfs.html",
+    "PROJECT": "USER_AUTHORIZATION_PHASE7I_AUTONOMOUS_ENGINEERING_FIXED_LIMITS"
+  },
+  "rules": {
+    "P00": {
+      "rule": "Exact reviewed policy byte and semantic identity; no import-time filesystem reads.",
+      "sources": [
+        "PROJECT"
+      ]
+    },
+    "P01": {
+      "rule": "Bounded complete mount capture, final LF, documented escaped fields, no ambiguous IDs or mountpoints.",
+      "sources": [
+        "MOUNTINFO",
+        "PROJECT"
+      ]
+    },
+    "P02": {
+      "rule": "One visible root; only its parent may be outside the namespace. Reject cycles, hidden overlays and invalid ancestry.",
+      "sources": [
+        "MOUNTINFO",
+        "PROJECT"
+      ]
+    },
+    "P03": {
+      "rule": "Only exact dedicated private tmpfs may be rw; exact block/inode readback is bound to snapshot, mount ID and namespace.",
+      "sources": [
+        "TMPFS",
+        "PROJECT"
+      ]
+    },
+    "P04": {
+      "rule": "Source must be covered by ro mount, including a readonly ancestor. Unreviewed source and private subtree overmounts are rejected.",
+      "sources": [
+        "MOUNTINFO",
+        "PROJECT"
+      ]
+    },
+    "P05": {
+      "rule": "Reject shared/slave/unknown propagation; incoming or outgoing mounts are not proven contained. Private or unbindable only.",
+      "sources": [
+        "PROPAGATION",
+        "PROJECT"
+      ]
+    },
+    "P06": {
+      "rule": "Source, runtime/WSL, persistent and unknown non-private mounts must be ro. A rw backing superblock does not make a ro bind writable.",
+      "sources": [
+        "MOUNTINFO",
+        "PROJECT"
+      ]
+    },
+    "P07": {
+      "rule": "Kernel API path grants no access. Exact ro mount identity, namespace proof and source-pinned fixed-target syscall-denial data are prerequisites; host-state access remains unverified.",
+      "sources": [
+        "MOUNTINFO",
+        "NAMESPACES",
+        "PROJECT"
+      ]
+    },
+    "P08": {
+      "rule": "The source-pinned producer tests six invalid syscall targets only. Exact EPERM data and PID/snapshot/source bindings are checked; no proc write or real-device test or live-kernel authenticity is claimed.",
+      "sources": [
+        "PROJECT"
+      ]
+    },
+    "P09": {
+      "rule": "Bounded safe projection; private paths remain hashed. Any evidence overflow fails closed explicitly.",
+      "sources": [
+        "PROJECT"
+      ]
+    },
+    "P10": {
+      "rule": "Passing pure source predicates never grants runtime, capacity, FULL envelope or formal build approval.",
+      "sources": [
+        "PROJECT"
+      ]
+    }
+  }
+}

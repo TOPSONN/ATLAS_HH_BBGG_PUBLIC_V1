@@ -1,0 +1,41 @@
+{
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "completion": "TRAILER_DIGEST_AND_EOF_REQUIRED_ARTIFACT_ONLY",
+  "durability_and_controller_success": "NOT_ASSERTED_BY_TRANSPORT",
+  "formal_build_authorized": false,
+  "json_depth_limit": 16,
+  "maximum_artifacts": 4,
+  "maximum_manifest_bytes": 4096,
+  "maximum_payload_bytes": 73728,
+  "maximum_transport_bytes": 131072,
+  "metadata_journal_extents_control_plane_bound": "UNVERIFIED",
+  "path_opening_or_extraction": false,
+  "persistent_allocated_capacity_verified": false,
+  "persistent_inode_capacity_verified": false,
+  "route": "S3_FIXED_SLOT_LOGICAL_TRANSPORT_WITH_S4_ONLY_PROPOSAL",
+  "schema": "PHASE7I_STORAGE_TRANSPORT_CONTRACT_V1",
+  "scope": "VOLATILE_DIAGNOSTIC_ONLY",
+  "slots": [
+    {
+      "encoding": "json_object",
+      "maximum_bytes": 32768,
+      "name": "controller.json"
+    },
+    {
+      "encoding": "json_object",
+      "maximum_bytes": 8192,
+      "name": "failure.json"
+    },
+    {
+      "encoding": "bytes",
+      "maximum_bytes": 16384,
+      "name": "mountinfo.bin"
+    },
+    {
+      "encoding": "json_object",
+      "maximum_bytes": 16384,
+      "name": "namespace.json"
+    }
+  ],
+  "source_revision": "EXACT_LOWERCASE_40_HEX_REQUIRED_FROM_CALLER"
+}
