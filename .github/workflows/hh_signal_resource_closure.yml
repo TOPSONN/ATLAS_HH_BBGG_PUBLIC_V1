@@ -1,12 +1,14 @@
 name: Phase7I resource source and harmless offline methods
 on:
   push:
-    branches: [codex/phase7i-resource-closure, codex/phase7i-full-controller-storage, codex/phase7i-namespace-storage-recovery]
+    branches: [codex/phase7i-resource-closure, codex/phase7i-full-controller-storage, codex/phase7i-namespace-storage-recovery, codex/phase7i-autonomous-controller-recovery]
   pull_request:
     paths:
       - 'simulation/hh_signal/final_closure/resource_closure/**'
       - 'simulation/hh_signal/final_closure/integration_runtime/**'
       - 'reports/phase7i_resource_closure/**'
+      - 'reports/phase7i_namespace_storage_recovery/**'
+      - 'reports/phase7i_autonomous_controller_recovery/**'
       - '.github/workflows/hh_signal_resource_closure.yml'
 permissions:
   contents: read
@@ -24,6 +26,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Offline inert byte and API tests; no service or approval creation
+        if: github.head_ref != 'codex/phase7i-autonomous-controller-recovery' && github.ref_name != 'codex/phase7i-autonomous-controller-recovery'
         run: >-
           python3 -B -m unittest -v
           simulation.hh_signal.final_closure.resource_closure.tests.test_archive_io
@@ -39,12 +42,17 @@ jobs:
           simulation.hh_signal.final_closure.resource_closure.tests.test_namespace_attestation
           simulation.hh_signal.final_closure.resource_closure.tests.test_controller_recovery
           simulation.hh_signal.final_closure.resource_closure.tests.test_recovery_publication
+      - name: Audited autonomous pure and mock regression; forbid live dispatch
+        if: github.head_ref == 'codex/phase7i-autonomous-controller-recovery' || github.ref_name == 'codex/phase7i-autonomous-controller-recovery'
+        run: >-
+          python3 -B -m simulation.hh_signal.final_closure.resource_closure.offline_regression
+          --output "$RUNNER_TEMP/phase7i-autonomous-offline.json"
       - name: Exact nonphysical legacy regression with forbidden dispatch audit
         run: >-
           python3 -B -m simulation.hh_signal.final_closure.resource_closure.legacy_regression
           --output "$RUNNER_TEMP/phase7i-safe-legacy.json"
       - name: Every outgoing commit payload and index; no figures or private artifacts
-        if: github.head_ref != 'codex/phase7i-full-controller-storage' && github.ref_name != 'codex/phase7i-full-controller-storage' && github.head_ref != 'codex/phase7i-namespace-storage-recovery' && github.ref_name != 'codex/phase7i-namespace-storage-recovery'
+        if: github.head_ref != 'codex/phase7i-full-controller-storage' && github.ref_name != 'codex/phase7i-full-controller-storage' && github.head_ref != 'codex/phase7i-namespace-storage-recovery' && github.ref_name != 'codex/phase7i-namespace-storage-recovery' && github.head_ref != 'codex/phase7i-autonomous-controller-recovery' && github.ref_name != 'codex/phase7i-autonomous-controller-recovery'
         run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.publication
       - name: Strict PR32 stacked delta publication gate
         if: (github.head_ref == 'codex/phase7i-full-controller-storage' || github.ref_name == 'codex/phase7i-full-controller-storage') && github.head_ref != 'codex/phase7i-namespace-storage-recovery' && github.ref_name != 'codex/phase7i-namespace-storage-recovery'
@@ -52,3 +60,6 @@ jobs:
       - name: Strict PR33 namespace recovery delta and private mount evidence gate
         if: github.head_ref == 'codex/phase7i-namespace-storage-recovery' || github.ref_name == 'codex/phase7i-namespace-storage-recovery'
         run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.recovery_publication
+      - name: Strict PR34 autonomous recovery delta and private-evidence gate
+        if: github.head_ref == 'codex/phase7i-autonomous-controller-recovery' || github.ref_name == 'codex/phase7i-autonomous-controller-recovery'
+        run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.autonomous_publication

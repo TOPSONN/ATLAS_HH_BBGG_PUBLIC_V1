@@ -42,9 +42,9 @@ class AttestationFixture:
         self.vfs = {
             str(c.REPO): SimpleNamespace(f_flag=os.ST_RDONLY),
             self.aggregate: SimpleNamespace(f_flag=os.ST_RDONLY),
-            str(c.WORK): SimpleNamespace(f_flag=0, f_blocks=2048, f_frsize=4096,
+            str(c.WORK): SimpleNamespace(f_flag=14, f_blocks=2048, f_frsize=4096,
                                         f_files=1024, f_bfree=1024, f_ffree=1000),
-            '/tmp': SimpleNamespace(f_flag=0, f_blocks=256, f_frsize=4096,
+            '/tmp': SimpleNamespace(f_flag=14, f_blocks=256, f_frsize=4096,
                                     f_files=256, f_bfree=128, f_ffree=250)}
         self.rlimits = {kind: (cap, cap) for kind, cap in c.LIMITS.values()}
         self.affinity = {3}
@@ -77,6 +77,20 @@ class AttestationFixture:
                 side_effect=lambda: ('\n'.join(self.lines) + '\n').encode()))
             stack.enter_context(mock.patch.object(c.namespace_attestation, 'collect',
                 side_effect=good_proof))
+            from simulation.hh_signal.final_closure.resource_closure.tests.test_controller_guard import guard
+            from simulation.hh_signal.final_closure.resource_closure import controller_guard as g
+            stack.enter_context(mock.patch.object(c, '_CONTEXT', None))
+            stack.enter_context(mock.patch.object(c, '_INHERITED_CHILD', False))
+            stack.enter_context(mock.patch.object(g, 'install', side_effect=lambda: guard(pid=222)))
+            stack.enter_context(mock.patch.object(g, 'probe', return_value={
+                'schema':'PHASE7I_CONTROLLER_GUARD_DENIAL_V1','scope':g.SCOPE,
+                'status':'PASS_FIXED_INVALID_TARGET_DENIALS','pid':222,
+                'program_sha256':g.program_identity(),'all_denied':True,
+                'checks':[{'case_id':n,'syscall':syscall,'target':target,'return_code':-1,'errno':1}
+                          for n,syscall,target in g.CASES],
+                'host_write_or_device_access_tested':False,'FULL_LAUNCH_ENVELOPE_VERIFIED':False}))
+            stack.enter_context(mock.patch.object(c.subprocess, 'run',
+                return_value=SimpleNamespace(stdout='a'*40+'\n')))
             stack.enter_context(mock.patch.object(c, 'emit', side_effect=self.emitted.append))
             stack.enter_context(mock.patch.dict(c.os.environ, {}, clear=True))
             yield
@@ -408,9 +422,30 @@ class FullControllerMockWorkflow(unittest.TestCase):
                          child_stderr=b'', extra_maps='', cleanup_failure=False,
                          child_prefix_records=(), child_terminal_kind='CHILD_RECEIPT',
                          child_raw_override=None, child_terminal_fields=None):
+        from simulation.hh_signal.final_closure.resource_closure.tests.test_controller_guard import guard, facts
+        g = c.controller_guard
+        namespace = good_proof()
+        def probe(pid):
+            return {'schema':'PHASE7I_CONTROLLER_GUARD_DENIAL_V1','scope':g.SCOPE,
+                'status':'PASS_FIXED_INVALID_TARGET_DENIALS','pid':pid,
+                'program_sha256':g.program_identity(),'all_denied':True,
+                'checks':[{'case_id':n,'syscall':syscall,'target':target,'return_code':-1,'errno':1}
+                          for n,syscall,target in g.CASES],
+                'host_write_or_device_access_tested':False,'FULL_LAUNCH_ENVELOPE_VERIFIED':False}
         proof = {'aggregate_cgroup': '/INERT_CGROUP', 'mount_namespace_inode': 123,
-                 'namespace': good_proof()}
-        body = {'kind': child_terminal_kind, 'proof': copy.deepcopy(proof), **c.ZERO}
+                 'pid':222, 'source_revision':'a'*40,
+                 'mount_capture':{'raw_sha256':hashlib.sha256(b'INERT_MOUNTINFO\n').hexdigest()},
+                 'classified_mount_policy':{'status':'PASS_SOURCE_POLICY_PREREQUISITES',
+                                            'policy_sha256':c.mount_policy.POLICY_SHA256},
+                 'namespace':namespace, 'guard':guard(pid=222), 'guard_probe':probe(222)}
+        child_proof = copy.deepcopy(proof)
+        child_proof['pid']=9876
+        child_proof['guard']=guard(pid=9876,before=3,after=3,origin='CURRENT_PROCESS_INHERITED_READBACK')
+        child_proof['guard']['parent_pid']=222
+        current=facts();current['pid']=9876
+        child_proof['namespace']=g.inherit_namespace(namespace,current)
+        child_proof['guard_probe']=probe(9876)
+        body = {'kind': child_terminal_kind, 'proof': child_proof, **c.ZERO}
         if child_terminal_fields:
             body.update(child_terminal_fields)
         if child_changes:
@@ -454,7 +489,14 @@ class FullControllerMockWorkflow(unittest.TestCase):
                     raise OSError('INERT_CLEANUP_DENIED')
                 return original_rmdir(path, *args, **kwargs)
             stack.enter_context(mock.patch.object(c, 'WORK', work))
+            stack.enter_context(mock.patch.object(c.os, 'getpid', return_value=222))
+            stack.enter_context(mock.patch.object(c.controller_io, 'mount_capture',
+                                                  return_value=b'INERT_MOUNTINFO\n'))
             stack.enter_context(mock.patch.object(c, 'attestation', return_value=proof))
+            # Offline lifecycle fixture substitutes the bounded collector API;
+            # its real bounded-read implementation is tested independently.
+            stack.enter_context(mock.patch.object(c.controller_io, 'collect_child',
+                side_effect=lambda process, timeout: process.communicate(timeout=timeout)))
             stack.enter_context(mock.patch.object(c, 'sha', side_effect=sha))
             stack.enter_context(mock.patch.object(Path, 'read_text', autospec=True, side_effect=read))
             stack.enter_context(mock.patch.object(Path, 'rmdir', autospec=True, side_effect=rmdir))
@@ -535,11 +577,12 @@ class FullControllerMockWorkflow(unittest.TestCase):
         fixture = self.assert_blocked('INERT_CHILD_FAILED_OR_OUTPUT_BOUND',
                                      child_returncode=2, cleanup_failure=True)
         records = [call.args[0] for call in fixture.emit.call_args_list]
-        cleanups = [row for row in records if row['kind'] == 'CLEANUP_FAILED']
-        self.assertEqual(len(cleanups), 1)
-        self.assertIn('INERT_CHILD_FAILED_OR_OUTPUT_BOUND', cleanups[0]['original_reason'])
-        self.assertIn('INERT_CLEANUP_DENIED', cleanups[0]['cleanup_reason'])
+        self.assertFalse(any(row['kind'] == 'CLEANUP_FAILED' for row in records))
         self.assertEqual(records[-1]['kind'], 'BLOCKED')
+        cleanup=records[-1]['scratch_cleanup']
+        self.assertEqual(cleanup['status'],'UNKNOWN')
+        self.assertIn('INERT_CHILD_FAILED_OR_OUTPUT_BOUND',cleanup['original_reason'])
+        self.assertEqual(cleanup['cleanup_error_type'],'OSError')
 
 
 if __name__ == '__main__':

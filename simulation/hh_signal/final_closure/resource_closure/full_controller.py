@@ -5,15 +5,17 @@ authorization or resource stress. Production and the 47-case campaign require
 an independently verified persistent capacity sink and remain hard blocked.
 """
 from __future__ import annotations
-import argparse, base64, hashlib, json, os, resource, signal, subprocess, sys, time
+import argparse, base64, hashlib, json, os, resource, signal, stat, subprocess, sys, time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
 sys.path.insert(0, str(REPO))
-from simulation.hh_signal.final_closure.resource_closure import mount_attestation, namespace_attestation
+from simulation.hh_signal.final_closure.resource_closure import mount_attestation, namespace_attestation, controller_io, mount_policy, controller_guard, storage_transport
 WORK = Path('/var/tmp')
-UNIT = 'atlas-hh-phase7i-namespace-recovery-01.service'
+UNIT = 'atlas-hh-phase7i-autonomous-volatile-01.service'
+_CONTEXT = None
+_INHERITED_CHILD = False
 PHASES = ('pre_provisioning', 'source_git_preflight', 'dependency_hashing',
           'worker_creation_monitoring', 'inert_build_preparation',
           'receipt_writing', 'postflight_validation', 'failure_cleanup')
@@ -85,6 +87,61 @@ def mount_row(path, lines):
     return value
 
 
+def load_child_context(aggregate):
+    path = WORK / 'controller' / 'namespace_handoff.json'
+    require(Path.cwd() == path.parent, 'CHILD_HANDOFF_FIXED_WORKING_DIRECTORY')
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_CLOEXEC)
+    try:
+        info = os.fstat(fd)
+        require(stat.S_ISREG(info.st_mode) and info.st_nlink == 1 and info.st_uid == os.getuid()
+                and info.st_size <= 8192, 'CHILD_HANDOFF_PRIVATE_REGULAR_BOUND')
+        with os.fdopen(fd, 'rb', closefd=False) as stream:
+            raw = stream.read(8193)
+        require(len(raw) <= 8192 and len(raw) == info.st_size, 'CHILD_HANDOFF_READ_BOUND')
+    finally:
+        os.close(fd)
+    document = controller_io.decode_records(raw)
+    require(len(document) == 1, 'ONE_CHILD_HANDOFF_REQUIRED')
+    value = document[0]
+    require(set(value) == {'schema', 'parent_pid', 'aggregate_cgroup', 'namespace', 'guard'} and
+            value['schema'] == 'PHASE7I_INHERITED_NAMESPACE_HANDOFF_V1' and
+            type(value['parent_pid']) is int and value['parent_pid'] == os.getppid() and
+            value['aggregate_cgroup'] == str(aggregate), 'CHILD_HANDOFF_PARENT_BOUNDARY')
+    namespace_attestation.validate(value['namespace'])
+    controller_guard.validate_guard(value['guard'])
+    require(value['guard']['pid'] == value['parent_pid'], 'CHILD_GUARD_PARENT_PID')
+    return {'namespace': value['namespace'], 'guard': value['guard']}
+
+
+def namespace_and_guard(aggregate, policy, stage):
+    global _CONTEXT
+    producer = Path(controller_guard.__file__)
+    require(sha(producer) == policy['denial_transcript']['producer_source_sha256'] and
+            controller_guard.program_identity() == policy['denial_transcript']['program_sha256'],
+            'EXACT_REVIEWED_CONTROLLER_GUARD_SOURCE_REQUIRED')
+    if _CONTEXT is None and _INHERITED_CHILD:
+        _CONTEXT = load_child_context(aggregate)
+    if _CONTEXT is None:
+        namespace = namespace_attestation.collect()
+        emit({'kind': 'NAMESPACE_READBACK', 'stage': stage, 'proof': namespace})
+        # The only nsfs owner/type ioctls precede the stricter ALL-ioctl filter.
+        namespace_attestation.validate(namespace)
+        guard = controller_guard.install()
+        _CONTEXT = {'namespace': namespace, 'guard': guard}
+    else:
+        namespace = controller_guard.collect_inherited_namespace(_CONTEXT['namespace'])
+        emit({'kind': 'NAMESPACE_READBACK', 'stage': stage, 'proof': namespace})
+        guard = controller_guard.readback(_CONTEXT['guard'])
+    controller_guard.validate_guard(guard)
+    require(guard['pid'] == os.getpid(), 'ACTUAL_CURRENT_PID_GUARD_REQUIRED')
+    probe = controller_guard.probe()
+    emit({'kind': 'GUARD_DENIAL_READBACK', 'stage': stage, 'guard': guard, 'probe': probe})
+    require(probe['status'] == 'PASS_FIXED_INVALID_TARGET_DENIALS' and
+            probe['all_denied'] is True and probe['pid'] == os.getpid(),
+            'FIXED_INVALID_TARGET_SYSCALL_REFUSAL_REQUIRED')
+    return namespace, guard, probe
+
+
 def attestation(stage):
     mount_raw = mount_attestation.read_bounded()
     # Full local raw capture precedes parser/guard failures; never auto-publish.
@@ -117,10 +174,13 @@ def attestation(stage):
     require(os.statvfs(aggregate).f_flag & os.ST_RDONLY, 'CGROUP_READONLY_REQUIRED')
     lines = mount_raw.decode('utf-8', errors='strict').splitlines()
     mounts = []
+    vfs_facts = {}
     for path, size, inodes in ((WORK, 8388608, 1024), (Path('/tmp'), 1048576, 256)):
         mount_row(path, lines)
         v = os.statvfs(path)
         require(v.f_blocks * v.f_frsize == size and v.f_files == inodes, 'TMPFS_CAP_MISMATCH')
+        vfs_facts[str(path)] = {k: getattr(v, k) for k in
+                               ('f_blocks', 'f_frsize', 'f_files', 'f_bfree', 'f_ffree', 'f_flag')}
         mounts.append({'path': str(path), 'capacity_bytes': size, 'inodes': inodes,
                        'free_bytes': v.f_bfree * v.f_frsize, 'free_inodes': v.f_ffree})
     parsed_mounts = mount_attestation.parse_mountinfo(mount_raw)
@@ -133,14 +193,42 @@ def attestation(stage):
             raw[key] = (aggregate / key).read_text().strip()
         except FileNotFoundError:
             raw[key] = None
-    namespace = namespace_attestation.collect()
-    emit({'kind': 'NAMESPACE_READBACK', 'stage': stage, 'proof': namespace})
+    policy = mount_policy.load_policy()
+    # A new live invocation is still separately gated. Every call below is
+    # mocked by the source/offline suite; no import installs a filter.
+    namespace, guard, probe = namespace_and_guard(aggregate, policy, stage)
     namespace_attestation.validate(namespace)
+    raw_sha = hashlib.sha256(mount_raw).hexdigest()
+    ns_identity = {key: namespace['namespaces']['mnt'][key] for key in ('dev', 'inode')}
+    facts = {row['path']: {'schema': 'PHASE7I_PRIVATE_TMPFS_FACTS_V1',
+             'raw_sha256': raw_sha, 'mount_id': row['id'], 'mount_namespace': ns_identity,
+             'statvfs': vfs_facts[row['path']]} for row in parsed_mounts if row['path'] in vfs_facts}
+    revision = subprocess.run(['/usr/bin/git', 'rev-parse', 'HEAD'], cwd=REPO,
+                    capture_output=True, text=True, timeout=1, check=True).stdout.strip()
+    api_ids = sorted(row['id'] for row in parsed_mounts
+                     if mount_policy.classify(row, str(REPO), policy) == 'kernel_api')
+    transcript = {'schema': 'PHASE7I_KERNEL_API_DENIAL_TRANSCRIPT_V1',
+        'raw_sha256': raw_sha, 'source_revision': revision, 'mount_namespace': ns_identity,
+        'namespace_proof_sha256': hashlib.sha256(canonical(namespace)).hexdigest(),
+        'mount_ids': api_ids, 'collector_source_sha256': sha(Path(controller_guard.__file__)),
+        'probe': probe}
+    classified = mount_policy.verify(mount_raw, str(REPO), policy=policy,
+        capture_complete=mount_capture['complete'], namespace_proof=namespace,
+        private_facts=facts, kernel_api_transcript=transcript,
+        source_revision=revision, controller_pid=os.getpid())
+    emit({'kind': 'CLASSIFIED_MOUNT_POLICY_SAFE', 'stage': stage, 'verification': classified})
+    require(classified['status'] == 'PASS_SOURCE_POLICY_PREREQUISITES',
+            'CLASSIFIED_MOUNT_POLICY_REQUIRED:' + classified['status'])
     cpu = dict(x.split() for x in raw['cpu.stat'].splitlines())
     return {'stage': stage, 'pid': os.getpid(), 'membership': str(relative),
             'aggregate_cgroup': str(aggregate), 'leaf_cgroup': str(leaf),
             'mount_namespace_inode': os.stat('/proc/self/ns/mnt').st_ino,
-            'namespace': namespace, 'mount_capture': mount_capture,
+            'namespace': namespace, 'guard': guard, 'guard_probe': probe,
+            'classified_mount_policy': {'status': classified['status'],
+                'policy_sha256': classified['policy_sha256'],
+                'projection_sha256': hashlib.sha256(canonical(classified)).hexdigest()},
+            'source_revision': revision,
+            'mount_capture': mount_capture,
             'mount_inventory_sha256': hashlib.sha256(canonical(inventory)).hexdigest(),
             'effective': values, 'limits': limits, 'mounts': mounts,
             'writable_mounts': writable, 'raw': raw,
@@ -151,12 +239,7 @@ def attestation(stage):
 
 
 def emit(value):
-    raw = canonical(value) + b'\n'
-    require(len(raw) <= 32768, 'BOUNDED_RECORD_REQUIRED')
-    while raw:
-        written = os.write(1, raw)
-        require(written > 0, 'SHORT_RECEIPT_WRITE')
-        raw = raw[written:]
+    controller_io.emit(value)
 
 
 def persistent_storage_gate(receipt=None):
@@ -180,10 +263,29 @@ def child():
     emit({'kind': 'CHILD_RECEIPT', 'proof': proof, **ZERO})
 
 
+class PhaseLog(list):
+    """Contiguous Main phase observations, never manager/activation cleanup."""
+    def __init__(self, aggregate, start_ns):
+        super().__init__()
+        self.aggregate = aggregate
+        self.last_ns = start_ns
+
+    def append(self, value):
+        require(len(self) < len(PHASES) and value.get('phase') == PHASES[len(self)],
+                'EXACT_EIGHT_PHASE_SEQUENCE_REQUIRED')
+        now = time.monotonic_ns()
+        require(now >= self.last_ns, 'MONOTONIC_PHASE_CLOCK_REQUIRED')
+        value = dict(value, name=value['phase'], start_ns=self.last_ns, end_ns=now,
+                     aggregate_cgroup=self.aggregate, completed=True)
+        super().append(value)
+        self.last_ns = now
+
+
 def workflow():
     start = time.monotonic()
+    start_ns = time.monotonic_ns()
     initial = attestation('main_before_preprovision')
-    records = []
+    records = PhaseLog(initial['aggregate_cgroup'], start_ns)
     tree = WORK / 'controller'
     created = False
     failure = None
@@ -214,19 +316,31 @@ def workflow():
         require(len(paths) <= 64, 'DEPENDENCY_INVENTORY_BOUND')
         identities = [{'path': str(p), 'sha256': sha(p)} for p in sorted(paths)]
         records.append({'phase': PHASES[2], 'identities': identities})
+        handoff = {'schema': 'PHASE7I_INHERITED_NAMESPACE_HANDOFF_V1',
+            'parent_pid': os.getpid(), 'aggregate_cgroup': initial['aggregate_cgroup'],
+            'namespace': initial['namespace'], 'guard': initial['guard']}
+        handoff_raw = canonical(handoff) + b'\n'
+        require(len(handoff_raw) <= 8192, 'CHILD_HANDOFF_SIZE_BOUND')
+        with (tree / 'namespace_handoff.json').open('xb') as stream:
+            stream.write(handoff_raw)
         proc = subprocess.Popen(['/usr/bin/python3', '-I', '-B', str(HERE / 'full_controller.py'),
                                  'inert-child'], cwd=tree, stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE, start_new_session=True)
+        child_failure = None
         try:
-            output, errors = proc.communicate(timeout=1)
+            output, errors = controller_io.collect_child(proc, timeout=1)
             require(len(output) <= 65536 and len(errors) <= 8192,
                     'INERT_CHILD_FAILED_OR_OUTPUT_BOUND')
-            child_records = [json.loads(line) for line in output.splitlines() if line.strip()]
+            child_records = controller_io.decode_records(output)
             require(child_records and len(child_records) <= 24, 'CHILD_PROTOCOL_RECORD_BOUND')
+            # Validate even a rejected terminal before it can be re-emitted.
+            for child_record in child_records:
+                diagnostic_claims_safe(child_record)
             for child_record in child_records[:-1]:
                 require(type(child_record) is dict and child_record.get('kind') in (
                     'PRIVATE_MOUNTINFO_RAW', 'MOUNTINFO_CAPTURE_SAFE_METADATA',
-                    'MOUNT_INVENTORY_SAFE', 'NAMESPACE_READBACK'),
+                    'MOUNT_INVENTORY_SAFE', 'NAMESPACE_READBACK', 'LOCAL_PRIVATE_EVIDENCE_BUFFERED',
+                    'CLASSIFIED_MOUNT_POLICY_SAFE', 'GUARD_DENIAL_READBACK'),
                     'UNREVIEWED_CHILD_DIAGNOSTIC_RECORD')
                 diagnostic_claims_safe(child_record)
                 emit({'kind': 'CHILD_DIAGNOSTIC_RECORD', 'record': child_record})
@@ -245,45 +359,123 @@ def workflow():
             require(detail['proof']['mount_namespace_inode'] == initial['mount_namespace_inode'],
                     'CHILD_MOUNT_NAMESPACE_CHANGED')
             namespace_attestation.validate(detail['proof']['namespace'], initial['namespace'])
+            proof = detail['proof']
+            require(type(proof.get('pid')) is int and proof['pid'] == proc.pid,
+                    'CHILD_ACTUAL_PID_REQUIRED')
+            controller_guard.validate_guard(proof.get('guard'))
+            child_guard = proof['guard']
+            require(child_guard['pid'] == proc.pid and
+                    child_guard['origin'] == 'CURRENT_PROCESS_INHERITED_READBACK' and
+                    child_guard.get('parent_pid') == initial['pid'] and
+                    child_guard['filter_count_after'] >= initial['guard']['filter_count_after'],
+                    'CHILD_CURRENT_GUARD_READBACK_REQUIRED')
+            current = proof['namespace'].get('current_identity_facts', {})
+            require(proof['namespace'].get('owner_evidence') ==
+                    'OWNER_INHERITED_BY_SAME_NAMESPACE_IDENTITY' and
+                    proof['namespace'].get('type_evidence') ==
+                    'CACHED_FROM_INITIAL_NSFS_TYPE_READBACK' and
+                    type(current.get('pid')) is int and current['pid'] == proc.pid,
+                    'CHILD_CURRENT_NAMESPACE_FACTS_REQUIRED')
+            rebuilt_namespace = controller_guard.inherit_namespace(initial['namespace'], current)
+            require(canonical(rebuilt_namespace) == canonical(proof['namespace']),
+                    'CHILD_NAMESPACE_CURRENT_AND_CACHED_FIELDS_DISAGREE')
+            require(proof.get('source_revision') == revision, 'CHILD_SOURCE_REVISION_MISMATCH')
+            child_policy = proof.get('classified_mount_policy', {})
+            require(child_policy.get('status') == 'PASS_SOURCE_POLICY_PREREQUISITES' and
+                    child_policy.get('policy_sha256') == mount_policy.POLICY_SHA256,
+                    'CHILD_CLASSIFIED_MOUNT_POLICY_REQUIRED')
+            policy = mount_policy.load_policy()
+            require(mount_policy.validate_guard_probe(proof.get('guard_probe'),
+                    policy=policy, controller_pid=proc.pid),
+                    'CHILD_CURRENT_GUARD_PROBES_REQUIRED')
             records.append({'phase': PHASES[3], 'child': detail})
+        except BaseException as error:
+            child_failure = error
+            raise
         finally:
-            if proc.poll() is None:
-                os.killpg(proc.pid, signal.SIGKILL)
-                proc.wait(timeout=.2)
+            cleanup_errors = []
+            try:
+                needs_stop = proc.poll() is None
+            except BaseException as error:
+                cleanup_errors.append(type(error).__name__)
+                needs_stop = True
+            if needs_stop:
+                try:
+                    os.killpg(proc.pid, signal.SIGKILL)
+                except BaseException as error:
+                    cleanup_errors.append(type(error).__name__)
+                # Attempt wait even if group termination itself failed.
+                try:
+                    proc.wait(timeout=.2)
+                except BaseException as error:
+                    cleanup_errors.append(type(error).__name__)
+            if cleanup_errors:
+                proof = {'status': 'UNKNOWN', 'errors': cleanup_errors,
+                         'manager_cleanup_still_required': True}
+                if child_failure is not None:
+                    child_failure.controller_process_cleanup_status = proof
+                else:
+                    error = ValueError('CHILD_GROUP_CLEANUP_UNVERIFIED')
+                    error.controller_process_cleanup_status = proof
+                    raise error
         (tree / 'inert_preparation.txt').write_text('NO COMPILER OR NATIVE DISPATCH\n')
         records.append({'phase': PHASES[4], 'compiler_invocations': 0})
         receipt = {'kind': 'VOLATILE_WORKFLOW_RECEIPT', 'phases': records, **ZERO}
         data = canonical(receipt)
         require(len(data) <= 24576, 'VOLATILE_RECEIPT_BOUND')
         (tree / 'receipt.json').write_bytes(data)
+        wire = storage_transport.encode_transport({
+            'controller.json': data,
+            'namespace.json': canonical(initial['namespace']),
+            'mountinfo.bin': controller_io.mount_capture(initial['mount_capture']['raw_sha256'],
+                                                         'main_before_preprovision')},
+            source_revision=revision)
+        require(len(wire) <= 65536, 'FIXED_VOLATILE_TRANSPORT_FILE_BOUND')
+        (tree / 'receipt.transport').write_bytes(wire)
+        transport, artifacts = storage_transport.verify_transport(wire, expected_revision=revision)
+        require(artifacts['controller.json'] == data, 'INDEPENDENT_TRANSPORT_READBACK_MISMATCH')
         records.append({'phase': PHASES[5], 'bytes': len(data), 'sha256': sha(tree / 'receipt.json'),
+                        'logical_transport': transport,
                         'storage': 'PRIVATE_SIZE_AND_INODE_CAPPED_TMPFS'})
         after = check_revision(revision, full=True)
         require(after['source_identity'] == checked['source_identity'], 'SOURCE_CHANGED')
         require(sha(tree / 'receipt.json') == hashlib.sha256(data).hexdigest(), 'RECEIPT_CHANGED')
+        with (tree / 'receipt.transport').open('rb') as stream:
+            reread = stream.read(65537)
+        require(len(reread) <= 65536 and reread == wire, 'VOLATILE_TRANSPORT_CHANGED')
+        storage_transport.verify_transport(reread, expected_revision=revision)
         records.append({'phase': PHASES[6], 'source_preserved': True, 'receipt_integrity': True})
     except BaseException as error:
         failure = error
+        error.controller_completed_phases = [row['phase'] for row in records]
         raise
     finally:
         try:
             if created:
                 # Fixed known files only; no recursive deletion/path traversal.
-                for name in ('inert_preparation.txt', 'receipt.json'):
+                for name in ('inert_preparation.txt', 'receipt.json', 'receipt.transport', 'namespace_handoff.json'):
                     (tree / name).unlink(missing_ok=True)
                 tree.rmdir()
         except BaseException as cleanup_error:
             if failure is None:
                 raise
-            emit({'kind': 'CLEANUP_FAILED', 'original_reason': str(failure)[:512],
-                  'cleanup_reason': str(cleanup_error)[:512], **ZERO})
+            # Do not emit a nonterminal record from finally: the output
+            # budget may be the original failure. Reserved BLOCKED emits once.
+            failure.controller_scratch_cleanup_status = {
+                'status': 'UNKNOWN', 'original_reason': str(failure)[:512],
+                'cleanup_error_type': type(cleanup_error).__name__}
+    final = attestation('main_after_cleanup')
     records.append({'phase': PHASES[7], 'fixed_scratch_removed': True})
     emit({'kind': 'MAIN_LIFECYCLE_RECEIPT', 'status': 'PASS_VOLATILE_DIAGNOSTIC',
-          'proof_initial': initial, 'proof_final': attestation('main_after_cleanup'),
+          'proof_initial': initial, 'proof_final': final,
           'records': records, 'main_elapsed_seconds': time.monotonic() - start,
+          'main_entered_ns': start_ns, 'main_receipt_ready_ns': time.monotonic_ns(),
+          'controller_still_alive': True, 'manager_cleanup_verified': False,
           'FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED': False,
           'FULL_LAUNCH_ENVELOPE_VERIFIED': False,
-          'persistent_output_hard_bound': 'BLOCKED', 'resource_matrix_cases_executed': 0, **ZERO})
+          'persistent_output_hard_bound': 'BLOCKED',
+          'io_scope': controller_io.summary(),
+          'resource_matrix_cases_executed': 0, **ZERO})
 
 
 def properties():
@@ -320,16 +512,32 @@ def launch_command():
 
 
 def main(argv=None):
+    global _CONTEXT, _INHERITED_CHILD
+    _CONTEXT = None
+    _INHERITED_CHILD = False
     parser = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
     parser.add_argument('action', choices=('launch-live-diagnostic', 'stage-pre', 'stage-post',
                                          'workflow', 'inert-child', 'full-campaign', 'BUILD_ONLY',
-                                         'namespace-inspection', 'describe-diagnostic'))
+                                         'namespace-inspection', 'describe-diagnostic', 'describe-volatile-workflow'))
     args = parser.parse_args(argv)
+    _INHERITED_CHILD = args.action == 'inert-child'
+    # CLI spelling does not establish a private same-service output channel.
+    controller_io.reset(private_pipe=False)
     try:
+        if args.action == 'describe-volatile-workflow':
+            command = launch_command()
+            command[-1] = 'workflow'
+            emit({'kind': 'PROPOSED_S4_ARGV_ONLY', 'execution_authorized': False,
+                  'argv': command, 'scope': 'S4_VOLATILE_ONLY_NORMAL_ONCE',
+                  'guard_installs': 1, 'maximum_invalid_target_syscalls': 18,
+                  'persistent_capacity': 'BLOCKED', 'controller_loss_durable_receipt': 'UNKNOWN',
+                  'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
+            return 0
         if args.action == 'describe-diagnostic':
             emit({'kind': 'PROPOSED_ARGV_ONLY', 'execution_authorized': False,
                   'argv': launch_command(), 'unit': UNIT, 'bounds': lifecycle_bounds(),
-                  'scope': 'One namespace/mount inspection only; no child or eight-phase workflow.',
+                  'scope': 'One namespace/mount inspection, one S4 guard install and at most six invalid-target syscall probes; no child or eight-phase workflow.',
+                  'guard_installs': 1, 'maximum_invalid_target_syscalls': 6,
                   'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
             return 0
         if args.action == 'launch-live-diagnostic':
@@ -355,6 +563,10 @@ def main(argv=None):
         return 0
     except BaseException as error:
         emit({'kind': 'BLOCKED', 'action': args.action, 'reason': str(error)[:1024],
+              'pipe_cleanup': getattr(error, 'controller_pipe_cleanup_status', None),
+              'completed_main_phases': getattr(error, 'controller_completed_phases', None),
+              'process_cleanup': getattr(error, 'controller_process_cleanup_status', None),
+              'scratch_cleanup': getattr(error, 'controller_scratch_cleanup_status', None),
               'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
         return 2
 
