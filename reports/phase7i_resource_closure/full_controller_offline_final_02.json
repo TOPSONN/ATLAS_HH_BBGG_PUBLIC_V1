@@ -1,0 +1,81 @@
+{
+  "actual_filters_installed": 0,
+  "actual_services": 0,
+  "child_CPU_seconds": 0.24386899999999997,
+  "error_details": [],
+  "errors": 0,
+  "failure_details": [],
+  "failures": 0,
+  "human_authorizations_created": 0,
+  "launcher_failure_preserved": "offline_final_02_launch_failure.txt",
+  "modules": [
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_archive_io",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_backend",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_fixtures",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_worker_adapters",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_allocation_guard",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_publication",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_service_probe",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_full_controller",
+    "simulation.hh_signal.final_closure.resource_closure.tests.test_full_publication"
+  ],
+  "new_ME_calls": 0,
+  "new_events": 0,
+  "new_integrals": 0,
+  "parent_CPU_seconds": 0.6750326170000001,
+  "reviewed_checkout_head": "3c89de1e67def831e5aa69ce56bab427bfc28cbf",
+  "schema": "phase7i.full_controller.offline_regression.v1",
+  "scope": "Nine explicitly selected offline modules only. Kernel/program/service activation mocked, inert temporary files; no native or physical authorization tests discovered.",
+  "skipped": 0,
+  "sources": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+      "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+      "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+      "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "a79d4ab4c99ce9f3f59d3e0b4654af1461ebe0c64c2f02ff29f6d0e47dc73104"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+      "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+      "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe"
+    }
+  ],
+  "sources_unchanged": true,
+  "status": "PASS",
+  "tests_run": 207,
+  "text_sha256": "7a6ca1a7a7d067ba95dfc5be77f7b6483708350d7a01c959aed1267f50847c43",
+  "wall_seconds": 1.0811131389999673
+}

@@ -1,0 +1,150 @@
+{
+  "schema": "phase7i.full_controller.independent_source_review.v1",
+  "reviewer": "Independent Codex sub-agent /root/controller_review",
+  "review_kind": "SOURCE_INSPECTION_BEFORE_EXECUTION; NOT_HUMAN_AUTHORIZATION",
+  "base_revision": "66663557984fcc069de600e2af07e778a4ac30ff",
+  "reviewed_controller_sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f",
+  "deployed_controller_sha256_verified": true,
+  "local_source": "C:/HH/.local/phase7i_full_controller_v1/source/full_controller.py",
+  "deployed_source": "/home/btu/projects/atlas_hh_phase7i_full_controller_v1/simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+  "reviewed_files": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+      "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "a79d4ab4c99ce9f3f59d3e0b4654af1461ebe0c64c2f02ff29f6d0e47dc73104"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+      "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3"
+    },
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "a935d38003925d5fa13e3f040f7be2bc2f0b903b2a07cf85c663ec8443a12d16",
+      "review_snapshot": "BEFORE_SUGGESTED_MANUAL_DISPATCH_GUARD_CORRECTION"
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "da5a4a907d36838fb0d7a1295b169ccf5f60617b7c5c5777141e5dab08fe3031",
+      "review_snapshot": "BEFORE_SUGGESTED_MANUAL_DISPATCH_GUARD_CORRECTION"
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "14586018ac71822275de6ad4002eead0228f7e5f444f8e1282483faed5b86877",
+      "review_snapshot": "BEFORE_SUGGESTED_MANUAL_DISPATCH_GUARD_CORRECTION"
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "sha256": "4d0eabe76bfa0c788d6cd234fe26cb62cc303068161ce0ae47efc03723e9b0ad"
+    }
+  ],
+  "corrected_findings": [
+    "Use existing /var/tmp as the private 8 MiB tmpfs mount anchor, avoiding unprivileged creation under root-owned /run.",
+    "Preserve integer tracked_files schema from git_precheck.py; do not apply len().",
+    "Single Main controller owns all eight business phases. Pre and StopPost only attest their distinct private namespaces.",
+    "Explicit restart, notification, timeout failure, runtime randomization and loader/Python environment controls.",
+    "Bounded partial descriptor writes loop without dropping bytes.",
+    "Hash Python, Git, controller and mapped process dependencies without compiler or native loader dispatch.",
+    "Compare child aggregate cgroup and mount namespace with the controller.",
+    "Preserve the original failure if fixed-file cleanup also fails.",
+    "Production and 47-case campaign hard gates remain closed regardless of supplied receipt or flags."
+  ],
+  "source_assessment": {
+    "single_nonstress_diagnostic": "NO_SOURCE_LEVEL_BLOCKER_FOUND_FOR_REVIEWED_FIXED_SCOPE",
+    "requires_before_actual_attempt": [
+      "Offline tests pass",
+      "Exact deployed executable bytes match reviewed hash",
+      "Clean exact source commit",
+      "One fixed attempt only"
+    ],
+    "actual_acceptance_requires": [
+      "Independent live kernel and manager receipt assessment",
+      "Aggregate CPU and whole lifecycle wall measurements",
+      "Missing MemoryPeak remains UNKNOWN",
+      "Known cgroup cleanup proof",
+      "Stop on first unexpected failure; preserve raw evidence; no replacement retry"
+    ],
+    "actual_measurement_status": "NOT_EXECUTED_BY_REVIEWER",
+    "full_storage": "BLOCKED_PERSISTENT_ALLOCATED_CAPACITY_NOT_IMPLEMENTED",
+    "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "formal_build": "NOT_AUTHORIZED",
+    "resource_matrix_47_cases": "NOT_AUTHORIZED_TO_PROCEED_WITH_UNVERIFIED_STORAGE",
+    "new_kernel_stress": "NOT_REVIEWED_OR_EXECUTED"
+  },
+  "remaining_limitations": [
+    "No OpenFile transport is used. LISTEN_FDS absence does not experimentally prove general OpenFile passage semantics.",
+    "A fixed unit name prevents concurrent activation but does not permanently prevent replacement after unit unload.",
+    "Diagnostic stdout is a bounded protocol transport. Persistent output storage enforcement is not established by it.",
+    "Timer and quota arithmetic is not a hard realtime scheduling guarantee; actual readback remains required.",
+    "Current cgroup prefix check allows intermediate components after app.slice before the fixed UNIT; actual receipt must verify the expected exact path."
+  ],
+  "publication_review": {
+    "status": "PASS_SOURCE_POLICY_WITH_CI_GUARD_FOLLOWUP",
+    "base_pinned": true,
+    "old_policy_unchanged": true,
+    "allowlist_narrowed": true,
+    "inherited_blob_cap_bytes": 131072,
+    "inherited_intermediate_and_index_aggregate_cap_bytes": 2097152,
+    "every_outgoing_intermediate_and_index_required": true,
+    "workflow_delta": "Only safe offline modules, strict stacked publication routing and branch exclusions were added; existing other branches retain their steps.",
+    "finding": "Old workflows have workflow_dispatch. A head_ref-only exclusion does not exclude a manual dispatch on this new branch, because head_ref is empty.",
+    "recommended_correction": "Also exclude github.ref_name == codex/phase7i-full-controller-storage from the three historical job conditions; review exact corrected workflow bytes before publication.",
+    "native_workflow_dispatched_by_reviewer": false
+  },
+  "observed_test_receipts": {
+    "offline": {
+      "path": "offline_attempt_01.json",
+      "tests_run": 207,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "controller_sha256_matched": true,
+      "reviewer_reran": false
+    },
+    "safe_legacy": {
+      "path": "legacy_attempt_01.json",
+      "passes": 81,
+      "failure_count": 0,
+      "error_count": 0,
+      "reviewer_reran": false
+    },
+    "distinction": "These are inspected root-run receipts; they do not constitute actual native kernel enforcement evidence."
+  },
+  "reference_review": {
+    "PR31": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31",
+    "PR31_live_head": "26bde64a7f6d5488fc9368469c0cd1463f150920",
+    "PR31_draft": true,
+    "finding": "Reference explicitly excludes host provision, observer and hashing from payload accounting; its FULL result is not inherited.",
+    "primary_sources": [
+      "https://www.freedesktop.org/software/systemd/man/255/systemd.exec.html",
+      "https://www.freedesktop.org/software/systemd/man/255/systemd.service.html",
+      "https://raw.githubusercontent.com/systemd/systemd/v255/src/core/service.c"
+    ],
+    "semantics": "Exec command mount namespaces are separate. The Main command receives OpenFile through EXEC_PASS_FDS; control commands are not equivalent. Startup, runtime and stop timers must be distinguished."
+  },
+  "reviewer_actions": {
+    "source_reads": true,
+    "services": 0,
+    "filters_installed": 0,
+    "stress_executions": 0,
+    "MG5": 0,
+    "model_imports": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0,
+    "human_authorizations_created": 0,
+    "source_edits": 0
+  }
+}

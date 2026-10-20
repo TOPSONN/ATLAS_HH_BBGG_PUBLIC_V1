@@ -1,0 +1,70 @@
+{
+  "schema": "phase7i.full_controller.independent_source_review.final.v1",
+  "reviewer": "Independent Codex sub-agent /root/controller_review",
+  "source_revision": "3c89de1e67def831e5aa69ce56bab427bfc28cbf",
+  "checkout_clean_verified": true,
+  "reviewed_controller_sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f",
+  "executable_unchanged_from_initial_review": true,
+  "prior_review": {
+    "path": "independent_source_review_01.json",
+    "sha256": "526e5200eb0011eb9739a9b8b94845cdeeed32a1eefae46d2635ce6332a214d2",
+    "preserved": true
+  },
+  "ci_followup": {
+    "status": "CORRECTED_AND_SOURCE_VERIFIED",
+    "finding_resolved": "All three historical jobs now exclude both github.head_ref and github.ref_name for the new branch, covering pull_request and workflow_dispatch.",
+    "current_files": [
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "sha256": "37d49a9545ca66d442ae711d01a8ab81e5989a1fe14daacb16e412293f383d51"
+      },
+      {
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "sha256": "4d8112ed6f97e88698f1ca2f8713201f908a03c6d7582060e61028457a7d9535"
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "sha256": "fef5a07303a7b2042a520a0ea7f31dfb31ac9cef05af775d23a9a84b77ac7b8c"
+      },
+      {
+        "path": ".github/workflows/hh_signal_resource_closure.yml",
+        "sha256": "4d0eabe76bfa0c788d6cd234fe26cb62cc303068161ce0ae47efc03723e9b0ad"
+      }
+    ],
+    "old_branch_regressions_preserved": true,
+    "new_branch_only_fixed_offline_modules_and_safe_legacy": true,
+    "no_workflows_executed_by_reviewer": true
+  },
+  "final_preexecution_disposition": {
+    "status": "NO_SOURCE_LEVEL_BLOCKER_FOR_ONE_FIXED_NONSTRESS_DIAGNOSTIC",
+    "meaning": "Independent source review supports the already-authorized narrow harmless diagnostic; this is not a human approval object and does not grant additional execution scope.",
+    "allowed_reviewed_scope": "Exactly the fixed live diagnostic at the stated revision, Pre/Main/StopPost attestation, eight Main business phases, one inert child, bounded volatile scratch and stdout protocol. No stress, compiler/native loader, MG5/model, physical computation or approval creation.",
+    "unchanged_limits": {
+      "aggregate_CPU_seconds": 4,
+      "aggregate_wall_seconds": 13,
+      "RAM_bytes": 536870912,
+      "swap_bytes": 0,
+      "work_tmpfs_bytes": 8388608,
+      "private_tmpfs_bytes": 1048576,
+      "aggregate_disk_ceiling_bytes": 16777216
+    },
+    "first_failure_action": "Preserve original raw receipts and stop all dependent tests; no alternate settings, retry, replacement seed, privilege escalation or resource increase.",
+    "actual_native_result": "PENDING_ROOT_SINGLE_ATTEMPT",
+    "full_controller_and_storage_verdict": "BLOCKED",
+    "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "formal_build": "NOT_AUTHORIZED",
+    "full47_campaign": "BLOCKED_PERSISTENT_CAPACITY",
+    "output_scope": "Protocol transport is diagnostic evidence, not verified persistent allocated-disk capacity."
+  },
+  "actual_reviewer_execution": {
+    "services": 0,
+    "stress": 0,
+    "MG5": 0,
+    "model_imports": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0,
+    "human_authorizations_created": 0
+  }
+}

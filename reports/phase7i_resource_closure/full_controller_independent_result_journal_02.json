@@ -1,0 +1,90 @@
+{
+  "schema": "phase7i.full_controller.independent_result_review.journal_supplement.v1",
+  "reviewer": "Independent Codex sub-agent /root/controller_review",
+  "original_review": {
+    "path": "independent_result_review_01.json",
+    "sha256": "2336e4f943c916edf7f9c4643905ee8f0e0b8cb50bb8508899a721416572137b",
+    "preserved": true
+  },
+  "evidence": {
+    "path": "live_01_journal.jsonl",
+    "sha256": "b133f8c0d57928a4300c20ad060e2b94336277d6d08138542b13acf654e3b690",
+    "records": 8,
+    "reviewed_read_only": true
+  },
+  "journal_consistency": {
+    "same_unit": true,
+    "same_invocation_identifier": true,
+    "monotonic_timestamps_ordered": true
+  },
+  "independently_observed": {
+    "ExecStartPre": {
+      "EXIT_CODE": "exited",
+      "EXIT_STATUS": 2,
+      "combined_with_stdout_reason": "UNACCOUNTED_WRITABLE_MOUNT"
+    },
+    "ExecStartMain": {
+      "started": false,
+      "basis": "Failed ExecStartPre prevents normal Main dispatch; no Main receipt exists."
+    },
+    "ExecStopPost": {
+      "attempted": true,
+      "EXIT_CODE": "exited",
+      "EXIT_STATUS": 226,
+      "systemd_status": "NAMESPACE",
+      "python_stage_post_entered": false
+    },
+    "StopPost_setup_messages": [
+      "PrivateNetwork=yes namespace setup not permitted; manager reported proceeding without it.",
+      "PrivateIPC=yes namespace setup failed with Operation not permitted; manager reported ignoring it.",
+      "Mount namespacing failed at /dev/mqueue with Operation not permitted."
+    ],
+    "service_result": "exit-code",
+    "job_result": "failed",
+    "journal_first_monotonic_usec": 735568861,
+    "journal_last_monotonic_usec": 735747982,
+    "journal_message_span_usec": 179121,
+    "journal_message_span_seconds": 0.179121,
+    "observed_service_aggregate_cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase7i-full-controller-live-01.service"
+  },
+  "correction_to_original_unknowns": {
+    "StopPost_execution_status": "RESOLVED: manager attempted ExecStopPost and setup failed 226/NAMESPACE before its Python attestation.",
+    "actual_aggregate_cgroup_path": "RESOLVED_FROM_JOURNAL_FOR_STOPPOST_EXECUTOR: exact path recorded above; this is not active cgroup limit/counter readback.",
+    "whole_lifecycle_wall_seconds": "STILL_UNKNOWN_AS_COMPLETE_ENVELOPE_METRIC: journal message span is contextual timing only.",
+    "known_cgroup_cleanup": "Root reports read-only absent-path observation. Pending inspection of a serialized cleanup receipt; reviewer has not independently queried WSL or rerun any service."
+  },
+  "explicit_nonclaims": {
+    "journal_span_is_aggregate_CPU": false,
+    "journal_span_certifies_all_lifecycle_wall": false,
+    "StopPost_namespace_failure_proves_all_WSL_namespaces_unsupported": false,
+    "accepted_configuration_proves_PrivateNetwork_and_PrivateIPC_effective": false,
+    "unloaded_unit_defaults_are_active_kernel_readback": false,
+    "first_failure_can_be_replaced_by_retry": false
+  },
+  "failure_gates": [
+    "Pre writable mount inventory rejected the declared exact boundary.",
+    "StopPost setup did not establish the requested namespace isolation.",
+    "Main eight-phase controller and inert child were never exercised.",
+    "Persistent allocated storage and full 47-case workflow remain unverified."
+  ],
+  "still_unknown": [
+    "Identity of the extra writable mounts",
+    "Active numeric CPU/RAM/swap limits and counters",
+    "Peak memory",
+    "Pre/Main/StopPost namespace inode comparison",
+    "Descriptor inventory",
+    "Full capacity enforcement",
+    "Complete kernel cleanup until preserved known-path receipt is reviewed"
+  ],
+  "disposition": "BLOCKED; preserve both failures, stop all dependent execution, no retry or weaker properties.",
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "reviewer_executions": {
+    "services": 0,
+    "stress": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0,
+    "human_authorizations_created": 0
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "phase7i.full_controller.independent_result_review.v1",
+  "reviewer": "Independent Codex sub-agent /root/controller_review",
+  "review_scope": "Offline read-only review of original diagnostic stdout, stderr, exit and post-attempt manager receipts, plus the independently reviewed exact source. No service, retry, stress or source modification.",
+  "source_revision": "3c89de1e67def831e5aa69ce56bab427bfc28cbf",
+  "controller_sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f",
+  "raw_receipts": [
+    {
+      "path": "live_01_stdout.txt",
+      "bytes": 284,
+      "sha256": "3d9002f5ee3abc568bdeb0f8d874bc1cab7c4b574d423c16d118f8feebea797f"
+    },
+    {
+      "path": "live_01_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live_01_exit.txt",
+      "bytes": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "path": "live_01_manager_after.txt",
+      "bytes": 475,
+      "sha256": "593450f141f6412fc97970d91c155fe3ea69a0958b971777fa8f32c36be5b70b"
+    }
+  ],
+  "observed_facts": {
+    "stdout_json_records": 1,
+    "recorded_action": "stage-pre",
+    "recorded_kind": "BLOCKED",
+    "recorded_reason": "UNACCOUNTED_WRITABLE_MOUNT",
+    "host_exit_status": 1,
+    "stderr_empty": true,
+    "service_ExecStartPre_python_reached": true,
+    "main_lifecycle_receipt_captured": false,
+    "inert_child_receipt_captured": false,
+    "StopPost_receipt_captured": false,
+    "stored_FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "unit_after": {
+      "Id": "atlas-hh-phase7i-full-controller-live-01.service",
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "MainPID": "0",
+      "ControlPID": "0",
+      "ControlGroup": "",
+      "MemoryPeak": "[not set]",
+      "CPUUsageNSec": "[not set]",
+      "MemoryCurrent": "[not set]"
+    },
+    "manager_status_meaning": "The named unit was not loaded or active when queried after the attempt."
+  },
+  "control_flow_inference": {
+    "classification": "CONDITIONAL_SOURCE_PATH_INFERENCE_ONLY; NOT_INDEPENDENT_KERNEL_VALUES",
+    "detail": "In the reviewed source, the writable-mount assertion follows cgroup identity, effective limits, RLIMIT, affinity, readonly-source/cgroup and tmpfs size/inode checks. The recorded failure is consistent with those earlier statements returning, but their actual numeric/raw values were not emitted before this failure.",
+    "no_runtime_limit_PASS_from_ordering": true,
+    "main_not_reached_basis": "ExecStartPre returned a nonzero blocked result. Standard systemd sequencing does not start the main command after that failure; there is also no Main or child receipt.",
+    "StopPost_execution_status": "UNKNOWN_FROM_CAPTURED_STDOUT_ALONE"
+  },
+  "unknowns": {
+    "actual_aggregate_cgroup_path": null,
+    "unexpected_writable_mounts": null,
+    "actual_effective_kernel_limit_values": null,
+    "aggregate_CPU_seconds": null,
+    "whole_lifecycle_wall_seconds": null,
+    "peak_RAM_bytes": null,
+    "swap_bytes_observed": null,
+    "actual_tmpfs_capacity_readback": null,
+    "active_control_main_namespace_inodes": null,
+    "active_descriptor_inventory": null,
+    "known_cgroup_empty_and_unpopulated_proof": null,
+    "StopPost_execution_result": null,
+    "broad_WSL_cgroup_support_verdict": "NOT_ESTABLISHED"
+  },
+  "after_query_interpretation": {
+    "runtime_defaults_or_infinity_are_active_limits": false,
+    "unset_peak_is_zero": false,
+    "empty_ControlGroup_proves_WSL_unsupported": false,
+    "inactive_main_pid_zero_proves_all_descendant_cleanup": false,
+    "manager_unloaded_state_is_kernel_cgroup_empty_proof": false,
+    "disposition": "Retain the after-query receipt as post-attempt state only; do not overwrite requested runtime limits or reconstruct missing metrics from defaults."
+  },
+  "gates": {
+    "PASS": [
+      "Original single-attempt failure and post-attempt state preserved",
+      "Fail-closed mount inventory rejection observed",
+      "No success record or full-envelope flag produced"
+    ],
+    "FAIL": [
+      "First nonstress diagnostic did not reach its requested completion gate",
+      "Writable mount inventory did not match the exact two tmpfs mounts allowed by source"
+    ],
+    "BLOCKED": [
+      "Dependent resource negative tests and 47-case campaign",
+      "Full controller and persistent allocated-storage acceptance",
+      "Formal BUILD_ONLY, native zero-ME preflight, genuine ME, integration and event production"
+    ],
+    "UNKNOWN": [
+      "Identity of the extra writable mount or mounts",
+      "Independent active kernel numeric readback",
+      "CPU/RAM/swap/full lifecycle wall measurements",
+      "Kernel descendant cleanup",
+      "StopPost receipt and namespace/descriptor comparison"
+    ]
+  },
+  "counters": {
+    "MG5_invocations": 0,
+    "model_imports": 0,
+    "real_ME_calls": 0,
+    "real_integrals": 0,
+    "new_events": 0,
+    "counter_basis": "Fixed reviewed harmless source contains no physics dispatcher; the recorded attempt stopped in the initial read-only attestation. These are source/entrypoint facts, not genuine ME instrumentation readings.",
+    "resource_matrix_cases_executed": 0,
+    "source_or_resource_retries_by_reviewer": 0,
+    "services_executed_by_reviewer": 0,
+    "human_authorizations_created": 0
+  },
+  "stop_policy": {
+    "action": "STOP_DEPENDENT_TESTS",
+    "no_replacement_probe": true,
+    "no_flag_or_property_relaxation": true,
+    "no_privilege_escalation": true,
+    "no_new_source_execution_from_this_review": true,
+    "permitted_followup": "Read-only journal and known-cgroup state inspection may add independent diagnostic evidence. Preserve this original coarse failure even if later source is improved."
+  },
+  "FINAL_VERDICT": "BLOCKED_FULL_CONTROLLER_AND_STORAGE_ENFORCEMENT",
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

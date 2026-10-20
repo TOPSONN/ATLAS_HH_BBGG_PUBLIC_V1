@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "task": "PHASE7I_FULL_CONTROLLER_AND_STORAGE_ENFORCEMENT_V1",
+  "status": "BLOCKED_NONSTRESS_POSITIVE_AND_PERSISTENT_STORAGE",
+  "executed_source_revision": "3c89de1e67def831e5aa69ce56bab427bfc28cbf",
+  "controller_sha256": "d32b570213873a8ed5a3765babc2d6b64c6fd6bb3fb50e83ed0e6066cfa9ab2f",
+  "service_attempts": 1,
+  "resource_stress_attempts": 0,
+  "matrix_cases_executed": 0,
+  "replacement_attempts": 0,
+  "unit": "atlas-hh-phase7i-full-controller-live-01.service",
+  "activation_exit": 1,
+  "stdout_records": [
+    {
+      "Delphes_invocations": 0,
+      "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+      "MG5_invocations": 0,
+      "Pythia_invocations": 0,
+      "action": "stage-pre",
+      "human_authorizations_created": 0,
+      "kind": "BLOCKED",
+      "model_imports": 0,
+      "new_ME_calls": 0,
+      "new_events": 0,
+      "new_integrals": 0,
+      "reason": "UNACCOUNTED_WRITABLE_MOUNT"
+    }
+  ],
+  "stderr_bytes": 0,
+  "journal_projection": [
+    {
+      "MESSAGE": "Starting atlas-hh-phase7i-full-controller-live-01.service - /usr/bin/python3 -I -B /home/btu/projects/atlas_hh_phase7i_full_controller_v1/simulation/hh_signal/final_closure/resource_closure/full_controller.py workflow...",
+      "__MONOTONIC_TIMESTAMP": "735568861",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/init.scope"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: Control process exited, code=exited, status=2/INVALIDARGUMENT",
+      "COMMAND": "ExecStartPre",
+      "EXIT_STATUS": "2",
+      "EXIT_CODE": "exited",
+      "__MONOTONIC_TIMESTAMP": "735718157",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/init.scope"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: PrivateNetwork=yes is configured, but network namespace setup not permitted, proceeding without: Operation not permitted",
+      "__MONOTONIC_TIMESTAMP": "735741642",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase7i-full-controller-live-01.service"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: PrivateIPC=yes is configured, but IPC namespace setup failed, ignoring: Operation not permitted",
+      "__MONOTONIC_TIMESTAMP": "735742020",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase7i-full-controller-live-01.service"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: Failed to set up mount namespacing: /dev/mqueue: Operation not permitted",
+      "__MONOTONIC_TIMESTAMP": "735742346",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase7i-full-controller-live-01.service"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: Control process exited, code=exited, status=226/NAMESPACE",
+      "COMMAND": "ExecStopPost",
+      "EXIT_STATUS": "226",
+      "EXIT_CODE": "exited",
+      "__MONOTONIC_TIMESTAMP": "735747641",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/init.scope"
+    },
+    {
+      "MESSAGE": "atlas-hh-phase7i-full-controller-live-01.service: Failed with result 'exit-code'.",
+      "UNIT_RESULT": "exit-code",
+      "__MONOTONIC_TIMESTAMP": "735747759",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/init.scope"
+    },
+    {
+      "MESSAGE": "Failed to start atlas-hh-phase7i-full-controller-live-01.service - /usr/bin/python3 -I -B /home/btu/projects/atlas_hh_phase7i_full_controller_v1/simulation/hh_signal/final_closure/resource_closure/full_controller.py workflow.",
+      "JOB_RESULT": "failed",
+      "__MONOTONIC_TIMESTAMP": "735747982",
+      "USER_UNIT": "atlas-hh-phase7i-full-controller-live-01.service",
+      "_SYSTEMD_CGROUP": "/user.slice/user-1000.slice/user@1000.service/init.scope"
+    }
+  ],
+  "journal_start_to_failed_job_seconds": 0.179121,
+  "journal_interval_scope": "Observed manager start-to-failed-job messages, not a complete resource envelope certificate.",
+  "main_entered": false,
+  "inert_child_entered": false,
+  "full_eight_phase_workflow_executed": false,
+  "ExecStartPre_exit_status": 2,
+  "ExecStopPost_exit_status": 226,
+  "observed_failures": [
+    "UNACCOUNTED_WRITABLE_MOUNT",
+    "EXEC_STOP_POST_NAMESPACE_226",
+    "DEV_MQUEUE_OPERATION_NOT_PERMITTED"
+  ],
+  "network_IPC_setup": [
+    "PrivateNetwork setup not permitted, proceeding without",
+    "PrivateIPC setup failed, ignoring"
+  ],
+  "writable_mount_inventory": "UNKNOWN_NOT_EMITTED_BEFORE_EXCEPTION",
+  "known_unit_cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase7i-full-controller-live-01.service",
+  "known_unit_cgroup_exists_after_failure": false,
+  "manager_after": {
+    "TimeoutStartUSec": "1min 30s",
+    "TimeoutStopUSec": "1min 30s",
+    "RuntimeMaxUSec": "infinity",
+    "MainPID": "0",
+    "ControlPID": "0",
+    "Result": "success",
+    "ExecMainCode": "0",
+    "ExecMainStatus": "0",
+    "ControlGroup": "",
+    "MemoryCurrent": "[not set]",
+    "MemoryPeak": "[not set]",
+    "CPUUsageNSec": "[not set]",
+    "MemoryMax": "infinity",
+    "MemorySwapMax": "infinity",
+    "Id": "atlas-hh-phase7i-full-controller-live-01.service",
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead",
+    "InactiveExitTimestampMonotonic": "0",
+    "ActiveEnterTimestampMonotonic": "0",
+    "InactiveEnterTimestampMonotonic": "0"
+  },
+  "cleanup_scope": "Exact failed service inactive with MainPID/ControlPID0 and journal-identified cgroup removed; no orphan/controller-loss stress proof.",
+  "active_kernel_effective_limits": "UNKNOWN_NO_COMPLETE_ATTESTATION_EMITTED",
+  "conditional_source_inference": "Pre reached writable-mount check after preceding limit guards; conditional inference is not independent raw kernel evidence.",
+  "aggregate_CPU_seconds": null,
+  "aggregate_wall_seconds": null,
+  "peak_RAM_bytes": null,
+  "swap_bytes": null,
+  "allocated_persistent_disk_hard_bound": "BLOCKED_NOT_IMPLEMENTED",
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "formal_build_execution_authorized": false,
+  "raw_local_receipts_sha256": {
+    "live_01_stdout.txt": "3d9002f5ee3abc568bdeb0f8d874bc1cab7c4b574d423c16d118f8feebea797f",
+    "live_01_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "live_01_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "live_01_manager_after.txt": "593450f141f6412fc97970d91c155fe3ea69a0958b971777fa8f32c36be5b70b",
+    "live_01_journal.jsonl": "b133f8c0d57928a4300c20ad060e2b94336277d6d08138542b13acf654e3b690"
+  },
+  "raw_evidence_scope": "Original local files preserved; public projection omits host/machine identifiers. Post-unload default limits never interpreted as runtime values.",
+  "REAL_ME_CALLS": 0,
+  "REAL_INTEGRALS": 0,
+  "NEW_EVENTS": 0,
+  "formal_builds": 0,
+  "native_zero_ME_preflights": 0,
+  "Pythia_invocations": 0,
+  "Delphes_invocations": 0,
+  "human_authorizations_created": 0
+}
