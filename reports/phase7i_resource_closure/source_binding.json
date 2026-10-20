@@ -1,7 +1,7 @@
 {
   "schema": "PHASE7I_RESOURCE_CLOSURE_SOURCE_ONLY_V1",
   "base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
-  "full_source_identity": "c1b38910cdf91c70d5b2e625069a3b26867482112b8f0fa0c946dc3ca82a9365",
+  "full_source_identity": "a06e5264890c7d1bfd7bb7ea66bd38b82c88bc6439648cbb2cf9eb0219e2369b",
   "full_sources": [
     {
       "path": "metadata/phase7_final_route_a_build_contract.json",
@@ -677,7 +677,7 @@
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
-      "sha256": "406ab5a1caabd8cb270c8d2ab7b07dcb76c0cd132760e5c39b9d8ca2f640ddc2"
+      "sha256": "04dfdf0dcb9f9769778bba25e4a14d9a42a1c396004eebc59d1affc78180fac7"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
@@ -1333,5 +1333,7 @@
   },
   "new_ME_calls": 0,
   "new_integrals": 0,
-  "new_events": 0
+  "new_events": 0,
+  "source_implementation_commit": "e98c1600fd5a9d7763e0072b8b23423fbb988014",
+  "followup_scope": "Portable test HOME and exact PR-head CI checkout; all30 production paths unchanged from source implementation commit."
 }

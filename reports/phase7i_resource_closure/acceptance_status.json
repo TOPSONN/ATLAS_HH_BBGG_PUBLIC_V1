@@ -11,10 +11,10 @@
   "safe_legacy_tests": 81,
   "safe_legacy_failures": 0,
   "source_snapshot": "231c30aeaa4da3a53a0fe9d3ab7c2b468db0120512584ddbdd78b6a739ec0c3b",
-  "full_source_binding": "c1b38910cdf91c70d5b2e625069a3b26867482112b8f0fa0c946dc3ca82a9365",
+  "full_source_binding": "a06e5264890c7d1bfd7bb7ea66bd38b82c88bc6439648cbb2cf9eb0219e2369b",
   "historical_changed_count": 0,
-  "preflight": "PENDING_POST_COMMIT_GIT_CHECK",
-  "GITHUB_CI": "NOT_YET_DISPATCHED",
+  "preflight": "SOURCE_COMMIT_A_PASS_FINAL_HEAD_RECHECK_REQUIRED",
+  "GITHUB_CI": "PENDING_PUBLICATION_AT_REPORT_COMMIT",
   "PASS": [
     "SOURCE_REPAIRS_STATIC_REVIEW",
     "OFFLINE_METHODS",
@@ -57,5 +57,7 @@
   },
   "new_sigma_pb": null,
   "new_sigma_uncertainty_pb": null,
-  "replicas": []
+  "replicas": [],
+  "source_implementation_commit": "e98c1600fd5a9d7763e0072b8b23423fbb988014",
+  "portable_HOME_tests": 13
 }

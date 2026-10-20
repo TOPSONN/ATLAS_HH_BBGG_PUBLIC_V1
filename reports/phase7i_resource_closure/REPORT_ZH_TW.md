@@ -6,7 +6,7 @@
 
 從PR24 exact b80e16775bf141e45f4048c7197a8a99befaed51建立獨立分支codex/phase7i-resource-closure；舊PR／舊失敗收據／原安裝與物理資料保留。使用者只授權Phase7I source/tests資源修補、無害測試及stacked Draft PR。新增RAM profile依既有提案仍須先明確審核；已提出fixture512MiB/swap0及未執行正式提案2GiB/swap0，尚未收到回覆。
 
-完整source binding與30項resource snapshot見source_binding.json；精確commit由Git提交後與PR本身提供。最終exact-head Git preflight須在乾淨commit後驗證，不能把dirty-source檢查當通過。
+完整source binding與30項resource snapshot見source_binding.json；精確commit由Git提交後與PR本身提供。Source commit A e98c1600fd5a9d7763e0072b8b23423fbb988014 的完整Git preflight已通過：1415tracked／294critical、0.881s wall／0.345s CPU。後續僅測試HOME可攜性、CI checkout及報告修補；30項production bytes未變，03獨立補件確認。最終PR head仍須再做乾淨exact-head preflight，結果由PR描述與本機交付補充。
 
 ## 實作與獨立來源審查
 
@@ -24,7 +24,7 @@
 
 | 項目 | 狀態 | 證據／限制 |
 |---|---|---|
-| 新離線單元測試 | PASS | 138/138，0fail/error/skip；audit僅155次Git，0service/filter install/live probe/RAM stress/HumanReview/native |
+| 新離線單元測試 | PASS | 138/138，0fail/error/skip；audit僅155次Git，0service/filter install/live probe/RAM stress/HumanReview/native；另13/13 alternate-HOME測試 |
 | 固定安全legacy | PASS | 81/81；551次Git、5次固定Python、1次固定sleep；0forbidden imports／HumanReview；來源前後一致 |
 | 歷史保存 | PASS | 50,169筆regular-path觀測、122symlink、3,588,706,711bytes重新SHA256，0變更；非all-host保證 |
 | 獨立來源審查 | PASS（static） | independent_source_review_02.json；runtime gates仍BLOCKED |
@@ -36,7 +36,7 @@
 
 ## FAIL、BLOCKED與UNKNOWN
 
-FAIL歷史保留：最初unit harness有2個relative-import錯誤；保存harness誤判122個既有symlink。兩者修正後實際重跑通過，原紀錄留本機且harness_history.json列明。來源審查曾發現的兩個CLI缺陷已修補、加入負例，最後138與81項均在修補後重跑。
+FAIL歷史保留：最初unit harness有2個relative-import錯誤；保存harness誤判122個既有symlink。兩者修正後實際重跑通過，原紀錄留本機且harness_history.json列明。來源審查曾發現的兩個CLI缺陷已修補、加入負例，最後138與81項均在修補後重跑；再修正test-only HOME路徑後，138項及13項alternate-HOME亦實跑通過。CI checkout明確使用actual PR source head，避免把GitHub synthetic merge當來源history。
 
 BLOCKED：RAM profile明確審核、47案本機實測、filesystem allocated-overhead實證、之後另行exact BUILD_ONLY授權。新archive binary review reader與physical enclosure尚未完成遷移；physical CLI保持阻擋。
 
@@ -51,3 +51,5 @@ Corrected scientific guard仍404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7f
 CI新resource job只跑離線方法與固定81項。舊closure full job對本分支明確SKIPPED，因其中包含自動測試授權物件／native methods；不標示該job通過。歷史readiness仍驗證原固定snapshot。CI通過也不能代替本機kernel資源實測。
 
 下一關：先明確審核fixture RAM512MiB/swap0，再執行全新namespace的47案無害matrix；通過後才另提exact revision/output/完整scope的BUILD_ONLY審核。之後依序binary review、PHYSICAL_RESTART；Phase7J/K/L仍BLOCKED。
+
+本報告的CI／final-head狀態為提交當時快照。最新exact head、read-only Git preflight與CI結論另列PR描述及本機交付；來源／方法成功仍不解除RAM與47案實測BLOCKED。

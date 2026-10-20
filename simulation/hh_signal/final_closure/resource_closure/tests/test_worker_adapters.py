@@ -10,7 +10,7 @@ class WorkerAdapterTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'FULL_BUILD_RESOURCE_ENCLOSURE_REQUIRED'):
             worker.require_build_enclosure(Path('/home/btu/simulations/hh_final_closure/no_output_created'))
     def test_missing_human_review_still_first_gate(self):
-        p=Path('/home/btu/simulations/hh_final_closure/inert_negative_never_created')
+        p=Path.home()/'simulations/hh_final_closure/inert_negative_never_created'
         with self.assertRaisesRegex(ValueError,'SEPARATE_HUMAN_REVIEW_REQUIRED_NOT_EDITABLE_DATA'):
             build.prepare(p,revision='0'*40)
         self.assertFalse(p.exists())
