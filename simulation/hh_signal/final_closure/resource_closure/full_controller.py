@@ -5,17 +5,18 @@ authorization or resource stress. Production and the 47-case campaign require
 an independently verified persistent capacity sink and remain hard blocked.
 """
 from __future__ import annotations
-import argparse, base64, hashlib, json, os, resource, signal, stat, subprocess, sys, time
+import argparse, base64, functools, hashlib, json, os, re, resource, signal, stat, subprocess, sys, time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
 sys.path.insert(0, str(REPO))
-from simulation.hh_signal.final_closure.resource_closure import mount_attestation, namespace_attestation, controller_io, mount_policy, controller_guard, storage_transport
+from simulation.hh_signal.final_closure.resource_closure import mount_attestation, namespace_attestation, controller_io, mount_policy, controller_guard, storage_transport, job_envelope
 WORK = Path('/var/tmp')
-UNIT = 'atlas-hh-phase7i-autonomous-volatile-01.service'
+UNIT = 'atlas-hh-phase7i-s4-capacity-01.service'
 _CONTEXT = None
 _INHERITED_CHILD = False
+_ACTIVE_ENVELOPE = None
 PHASES = ('pre_provisioning', 'source_git_preflight', 'dependency_hashing',
           'worker_creation_monitoring', 'inert_build_preparation',
           'receipt_writing', 'postflight_validation', 'failure_cleanup')
@@ -203,8 +204,7 @@ def attestation(stage):
     facts = {row['path']: {'schema': 'PHASE7I_PRIVATE_TMPFS_FACTS_V1',
              'raw_sha256': raw_sha, 'mount_id': row['id'], 'mount_namespace': ns_identity,
              'statvfs': vfs_facts[row['path']]} for row in parsed_mounts if row['path'] in vfs_facts}
-    revision = subprocess.run(['/usr/bin/git', 'rev-parse', 'HEAD'], cwd=REPO,
-                    capture_output=True, text=True, timeout=1, check=True).stdout.strip()
+    revision = _current_revision()
     api_ids = sorted(row['id'] for row in parsed_mounts
                      if mount_policy.classify(row, str(REPO), policy) == 'kernel_api')
     transcript = {'schema': 'PHASE7I_KERNEL_API_DENIAL_TRANSCRIPT_V1',
@@ -281,6 +281,102 @@ class PhaseLog(list):
         self.last_ns = now
 
 
+def _terminate_for_envelope_fault(fault):
+    code = fault.get('exit_status') if type(fault) is dict else None
+    if type(code) is not int or code not in (124, 125, 126):
+        code = 126
+    os._exit(code)
+
+
+def _make_job_envelope(origin_ns):
+    """Future unit-only adapter; construction does not authorize execution."""
+    with Path('/proc/self/cgroup').open('rb') as stream:
+        raw = stream.read(4097)
+    require(len(raw) <= 4096, 'OWN_CGROUP_READ_BOUND')
+    uid = os.getuid()
+    relative = '/user.slice/user-%d.slice/user@%d.service/app.slice/%s' % (uid, uid, UNIT)
+    require(raw == ('0::' + relative + '\n').encode(),
+            'ENVELOPE_EXACT_MAIN_CGROUP_REQUIRED')
+    aggregate = Path('/sys/fs/cgroup' + relative)
+    info = aggregate.stat(follow_symlinks=False)
+    require(stat.S_ISDIR(info.st_mode), 'ENVELOPE_CGROUP_DIRECTORY_REQUIRED')
+    identity = {'dev': info.st_dev, 'inode': info.st_ino}
+    state = job_envelope.EnvelopeState(origin_ns, str(aggregate), os.getpid())
+    reader = job_envelope.FixedCgroupReader(UNIT, str(aggregate), identity, os.getpid())
+    # No blocking stdout/file write in the alarm handler. The fixed exit code
+    # is independently observed by the manager; raw fault remains volatile.
+    # Manager group cleanup and durable receipt storage are separate gates.
+    return job_envelope.PeriodicEnvelope(state, reader,
+        emergency_stop=_terminate_for_envelope_fault)
+
+
+def _blocked_record(action, error):
+    return {'kind': 'BLOCKED', 'action': action, 'reason': str(error)[:1024],
+            'pipe_cleanup': getattr(error, 'controller_pipe_cleanup_status', None),
+            'completed_main_phases': getattr(error, 'controller_completed_phases', None),
+            'process_cleanup': getattr(error, 'controller_process_cleanup_status', None),
+            'scratch_cleanup': getattr(error, 'controller_scratch_cleanup_status', None),
+            'job_envelope_fault': getattr(error, 'envelope_fault', None),
+            'job_envelope_cleanup': getattr(error, 'envelope_cleanup_status', None),
+            'envelope_close_pending': _ACTIVE_ENVELOPE is not None,
+            'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO}
+
+
+def monitored_workflow(function):
+    """One same-process alarm spans blocking Git/hash/worker/receipt/cleanup."""
+    @functools.wraps(function)
+    def wrapped():
+        global _ACTIVE_ENVELOPE
+        require(_ACTIVE_ENVELOPE is None, 'REENTRANT_ENVELOPE_FORBIDDEN')
+        monitor = _make_job_envelope(time.monotonic_ns())
+        _ACTIVE_ENVELOPE = monitor
+        original = None
+        try:
+            monitor.arm()
+            result = function()
+            monitor.check_latched()
+            return result
+        except BaseException as error:
+            original = error
+            # After a successful arm, failure formatting/writing remains under
+            # the same timer. Admission failures are necessarily pre-arm.
+            # Mark attempted before writing: an output failure cannot retry
+            # after the reserved terminal budget has been consumed.
+            error.controller_terminal_attempted = True
+            try:
+                emit(_blocked_record('workflow', error))
+            except BaseException as output_error:
+                error.controller_terminal_write_status = {
+                    'status': 'UNKNOWN', 'error_type': type(output_error).__name__}
+            raise
+        finally:
+            try:
+                monitor.close()
+            except BaseException as cleanup:
+                target = original if original is not None else cleanup
+                target.envelope_cleanup_status = {
+                    'status': 'UNKNOWN', 'error_type': type(cleanup).__name__}
+                # A failed restoration may leave an unknown/foreign timer.
+                # End this Main; never continue unmonitored business work.
+                _terminate_for_envelope_fault({'exit_status': 126})
+                if original is None:
+                    raise
+            finally:
+                _ACTIVE_ENVELOPE = None
+    return wrapped
+
+
+def _current_revision():
+    # Every HEAD lookup shares the active Main watchdog when present. The
+    # inert child uses the default bounded guard; both keep a one-second limit.
+    from simulation.hh_signal.final_closure.integration_runtime.git_precheck import GitGuard
+    with GitGuard(REPO, wall=1, command=1, status=1, outer_watchdog=_ACTIVE_ENVELOPE) as guard:
+        raw = guard.git('rev-parse', 'HEAD')
+    require(re.fullmatch(rb'[0-9a-f]{40}\n', raw) is not None, 'CURRENT_REVISION_ENCODING')
+    return raw[:-1].decode('ascii')
+
+
+@monitored_workflow
 def workflow():
     start = time.monotonic()
     start_ns = time.monotonic_ns()
@@ -295,9 +391,8 @@ def workflow():
         records.append({'phase': PHASES[0], 'location': str(tree), 'persistent_writes': 0})
         sys.path.insert(0, str(REPO))
         from simulation.hh_signal.final_closure.integration_runtime.contract import check_revision
-        revision = subprocess.run(['/usr/bin/git', 'rev-parse', 'HEAD'], cwd=REPO,
-                                  capture_output=True, text=True, timeout=1, check=True).stdout.strip()
-        checked = check_revision(revision, full=True)
+        revision = _current_revision()
+        checked = check_revision(revision, full=True, outer_watchdog=_ACTIVE_ENVELOPE)
         preflight = checked['git_preflight']
         records.append({'phase': PHASES[1], 'revision': revision,
                         'git_preflight': {k: preflight[k] for k in
@@ -437,7 +532,7 @@ def workflow():
         records.append({'phase': PHASES[5], 'bytes': len(data), 'sha256': sha(tree / 'receipt.json'),
                         'logical_transport': transport,
                         'storage': 'PRIVATE_SIZE_AND_INODE_CAPPED_TMPFS'})
-        after = check_revision(revision, full=True)
+        after = check_revision(revision, full=True, outer_watchdog=_ACTIVE_ENVELOPE)
         require(after['source_identity'] == checked['source_identity'], 'SOURCE_CHANGED')
         require(sha(tree / 'receipt.json') == hashlib.sha256(data).hexdigest(), 'RECEIPT_CHANGED')
         with (tree / 'receipt.transport').open('rb') as stream:
@@ -475,6 +570,7 @@ def workflow():
           'FULL_LAUNCH_ENVELOPE_VERIFIED': False,
           'persistent_output_hard_bound': 'BLOCKED',
           'io_scope': controller_io.summary(),
+          'job_envelope': _ACTIVE_ENVELOPE.summary(),
           'resource_matrix_cases_executed': 0, **ZERO})
 
 
@@ -531,6 +627,11 @@ def main(argv=None):
                   'argv': command, 'scope': 'S4_VOLATILE_ONLY_NORMAL_ONCE',
                   'guard_installs': 1, 'maximum_invalid_target_syscalls': 18,
                   'persistent_capacity': 'BLOCKED', 'controller_loss_durable_receipt': 'UNKNOWN',
+                  'cumulative_CPU_early_stop_usec': 3000000,
+                  'main_origin_wall_early_stop_ns': 10000000000,
+                  'periodic_same_process_seconds': .01,
+                  'atomic_cgroup_CPU_hard_kill_verified': False,
+                  'activation_cleanup_wall_verified': False,
                   'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
             return 0
         if args.action == 'describe-diagnostic':
@@ -562,12 +663,8 @@ def main(argv=None):
                   'service_result': os.environ.get('SERVICE_RESULT'), **ZERO})
         return 0
     except BaseException as error:
-        emit({'kind': 'BLOCKED', 'action': args.action, 'reason': str(error)[:1024],
-              'pipe_cleanup': getattr(error, 'controller_pipe_cleanup_status', None),
-              'completed_main_phases': getattr(error, 'controller_completed_phases', None),
-              'process_cleanup': getattr(error, 'controller_process_cleanup_status', None),
-              'scratch_cleanup': getattr(error, 'controller_scratch_cleanup_status', None),
-              'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
+        if not getattr(error, 'controller_terminal_attempted', False):
+            emit(_blocked_record(args.action, error))
         return 2
 
 

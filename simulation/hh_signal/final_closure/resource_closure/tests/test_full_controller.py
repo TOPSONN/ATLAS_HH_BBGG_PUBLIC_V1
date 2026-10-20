@@ -89,6 +89,7 @@ class AttestationFixture:
                 'checks':[{'case_id':n,'syscall':syscall,'target':target,'return_code':-1,'errno':1}
                           for n,syscall,target in g.CASES],
                 'host_write_or_device_access_tested':False,'FULL_LAUNCH_ENVELOPE_VERIFIED':False}))
+            stack.enter_context(mock.patch.object(c, '_current_revision', return_value='a'*40))
             stack.enter_context(mock.patch.object(c.subprocess, 'run',
                 return_value=SimpleNamespace(stdout='a'*40+'\n')))
             stack.enter_context(mock.patch.object(c, 'emit', side_effect=self.emitted.append))
@@ -489,6 +490,10 @@ class FullControllerMockWorkflow(unittest.TestCase):
                     raise OSError('INERT_CLEANUP_DENIED')
                 return original_rmdir(path, *args, **kwargs)
             stack.enter_context(mock.patch.object(c, 'WORK', work))
+            monitor = mock.Mock()
+            monitor.summary.return_value = {'scope':'INERT_MOCK_NO_KERNEL_TIMER',
+                                             'FULL_LAUNCH_ENVELOPE_VERIFIED':False}
+            stack.enter_context(mock.patch.object(c, '_make_job_envelope', return_value=monitor))
             stack.enter_context(mock.patch.object(c.os, 'getpid', return_value=222))
             stack.enter_context(mock.patch.object(c.controller_io, 'mount_capture',
                                                   return_value=b'INERT_MOUNTINFO\n'))
@@ -500,6 +505,7 @@ class FullControllerMockWorkflow(unittest.TestCase):
             stack.enter_context(mock.patch.object(c, 'sha', side_effect=sha))
             stack.enter_context(mock.patch.object(Path, 'read_text', autospec=True, side_effect=read))
             stack.enter_context(mock.patch.object(Path, 'rmdir', autospec=True, side_effect=rmdir))
+            stack.enter_context(mock.patch.object(c, '_current_revision', return_value='a'*40))
             stack.enter_context(mock.patch.object(c.subprocess, 'run',
                 return_value=SimpleNamespace(stdout='a' * 40 + '\n')))
             spawned = stack.enter_context(mock.patch.object(c.subprocess, 'Popen', return_value=proc))
