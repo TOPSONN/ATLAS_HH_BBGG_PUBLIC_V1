@@ -1,0 +1,155 @@
+{
+  "schema": "PHASE7I_STORAGE_CAPACITY_REVIEW_V1",
+  "base_revision": "cd6b43202318560492491104f994312133e8e436",
+  "verdict": "BLOCKED_NO_EXISTING_COMPLETE_PERSISTENT_CAPACITY_BACKEND",
+  "actual_findings": {
+    "native_source_filesystem": {
+      "type": "ext4",
+      "source_block_device": "/dev/sdd",
+      "major_minor": "8:48",
+      "block_device_bytes": 1099511627776,
+      "dedicated_campaign_volume": false,
+      "device_read_access": false
+    },
+    "quota_accounting": {
+      "USRQUOTA": "NO_ACTIVE_ACCOUNTING_OBSERVED",
+      "GRPQUOTA": "NO_ACTIVE_ACCOUNTING_OBSERVED",
+      "PRJQUOTA": "NO_ACTIVE_ACCOUNTING_OBSERVED"
+    },
+    "individual_project_limits": "UNKNOWN_PERMISSION",
+    "superblock_quota_and_project_features": "UNKNOWN_PERMISSION_DENIED",
+    "error_interpretation": "tune2fs/dumpe2fs permission-denied does not imply absent features or corruption.",
+    "project_ID_observed": 0,
+    "artifact_filesystem": "Shared Windows9p C: mount; no per-job allocated-block/inode hard limit established.",
+    "existing_dedicated_16MiB_or_5GiB_backend": "NONE_VERIFIED",
+    "controlplane": "Existing journal/syslog/user-manager writes remain outside any verified per-job capacity domain.",
+    "journal_usage_observation": "808.0M system-accessible /408.0M user-accessible; overlapping shared lifetime snapshots, not job deltas or additive capacity."
+  },
+  "GET_source_correction": {
+    "nonwrite_GETFMT_GETINFO": 6,
+    "potential_write_GETQUOTA": 3,
+    "GETQUOTA_successes": 0,
+    "GETQUOTA_actual_errors": [
+      "ESRCH",
+      "ESRCH",
+      "EPERM"
+    ],
+    "further_GETQUOTA_queries": 0,
+    "matching_release_source_assessment": "Observed inactive/permission error branches precede on-disk dquot allocation under the exact release-tag source semantics.",
+    "limits": "No allocated-block delta measurement or binary-to-source kernel attestation; unrelated host writes not ruled out.",
+    "corrective_audit": "quota_get_corrective_audit_01.json"
+  },
+  "selected_minimum_backend": {
+    "kind": "ADMIN_PROVISIONED_NEW_NONTHIN_FIXED_BLOCK_DEVICE",
+    "current_device_identity": "NOT_YET_SUPPLIED_NO_EXECUTION",
+    "S4": {
+      "device_bytes": 4194304,
+      "block_bytes": 1024,
+      "inode_proposal": 128,
+      "internal_journal_bytes": 1048576,
+      "tmpfs_bytes": 9437184,
+      "known_total_bytes": 13631488,
+      "aggregate_limit_bytes": 16777216,
+      "unproven_outer_controlplane_reserve_bytes": 3145728
+    },
+    "future_build_proposal": {
+      "device_bytes": 2147483648,
+      "block_bytes": 4096,
+      "inode_proposal": 32768,
+      "internal_journal_bytes": 33554432,
+      "tmpfs_bytes": 2415919104,
+      "known_total_bytes": 4563402752,
+      "aggregate_limit_bytes": 5368709120,
+      "unproven_outer_controlplane_reserve_bytes": 805306368
+    },
+    "included_if_verified": "The new fixed filesystem includes its own data, allocated inode table/bitmaps/extents/xattrs/directories, superblocks and internal journal within device geometry.",
+    "not_proven": "Outer backing storage and host/systemd/journald/rsyslog control-plane allocations; arithmetic reserve is not enforcement.",
+    "image_alternative": "Not selected. Fully allocated image payload alone does not bound outer extents/inodes/shared metadata/journal.",
+    "admin_actions": "ADMIN_ACTIONS_ZH_TW.md; proposed commands only; no root-FS quota retrofit/global log changes.",
+    "formal_build_unconditional_gate": "BLOCKED"
+  },
+  "pure_source_review": {
+    "scope": "Exact blob/source-header/kernel/dev/ID/GET matrix binding, strict failed-buffer semantics, bounded schema and logical geometry consistency.",
+    "actual_enforcement_acceptance": "Always false. Pure JSON consistency cannot authenticate kernel capture, provision storage or authorize dispatch.",
+    "source_hashes": {
+      "storage_capacity.py": "e5ec865944430ec11e7694912fd07d58ed10d5269b5713092a7e295b5c6d1484",
+      "tests/test_storage_capacity.py": "674a1df84285326f1b3bab6d8c91a941484b6148cb221822a1cd608336897c8c"
+    },
+    "test_receipt": "storage_capacity_tests_final_03.json",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "audit_forbidden_attempts": [],
+    "old_development_failure_preserved": "attempt01:1failure/1error; corrected narrow type/path handling in attempt02 and final03."
+  },
+  "raw_local_receipt_hashes": [
+    {
+      "local_name": "storage_topology_raw_01.json",
+      "bytes": 13771,
+      "sha256": "ee8627d3d6bf699b39db550fe1da0d92c3e92b01d809e5f16c838eb50528f5c6"
+    },
+    {
+      "local_name": "storage_ext4_get_prerequisites_raw_01.json",
+      "bytes": 12917,
+      "sha256": "c3effbedde2342b4b4d82d685bfee959c364bb327dce7744b04e99d740760be2"
+    },
+    {
+      "local_name": "storage_quota_get_raw_01.json",
+      "bytes": 3291,
+      "sha256": "c22bafedb60d0a0d5db2c2d87ad94953b34e93a15dc32f25c062e38f766c62de"
+    },
+    {
+      "local_name": "storage_output_controlplane_raw_01.json",
+      "bytes": 5028,
+      "sha256": "de98976349d443fac40645826577f1a060792299d6caa360ce4a6164504823ae"
+    },
+    {
+      "local_name": "storage_capacity_tests_attempt_01.json",
+      "bytes": 602,
+      "sha256": "7c54e665dec3cc468e5e3ca2040445200c40501de86f15a7c0ee73342a31bc46"
+    },
+    {
+      "local_name": "storage_capacity_tests_attempt_02.json",
+      "bytes": 670,
+      "sha256": "8e792a6c700f93bf84295d1c8b8a15f55f3d1c1a287910243b439c54fe61d9cd"
+    },
+    {
+      "local_name": "storage_capacity_tests_final_03.json",
+      "bytes": 670,
+      "sha256": "854c6a203597b013dc063df18ebfd14a909fc2f363c38933f0d5907e9b178669"
+    }
+  ],
+  "public_projection": "quota_get_public_projection_01.json",
+  "unexecuted_required_tests": [
+    "fixed normal write and readback",
+    "byte ENOSPC",
+    "inode ENOSPC",
+    "metadata/xattr/directory allocation",
+    "sparse/fallocate/hole/link/rename bypass",
+    "FD leakage",
+    "controller/child abnormal termination",
+    "pre-synced checkpoint integrity",
+    "external control-plane output allocation enforcement"
+  ],
+  "preserved_gates": {
+    "persistent_allocated_capacity_verified": false,
+    "persistent_inode_capacity_verified": false,
+    "controller_loss_receipt_retention_verified": false,
+    "formal_build_authorized": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+  },
+  "actual_new_runtime_actions": {
+    "service_launches": 0,
+    "S4_or_resource_tests": 0,
+    "mounts": 0,
+    "sudo": 0,
+    "installs": 0,
+    "quota_SET_ON_OFF_SYNC": 0,
+    "native_builds": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "next_step": "Independently review the exact source/admin proposal and provide a concrete new dedicated device plus a hard-bounded control-plane design; no live/storage execution authority is implied."
+}

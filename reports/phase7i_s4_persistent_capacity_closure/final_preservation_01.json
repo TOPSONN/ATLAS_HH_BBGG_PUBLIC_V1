@@ -1,0 +1,681 @@
+{
+  "schema": "PHASE7I_S4_FINAL_INDEPENDENT_SOURCE_PRESERVATION_V1",
+  "status": "PASS_SOURCE_MANIFESTS_TEST_IDS_AND_TRACKED_HISTORY_DIFF_ONLY",
+  "baseline_PR": 35,
+  "baseline_revision": "cd6b43202318560492491104f994312133e8e436",
+  "observed_HEAD": "cd6b43202318560492491104f994312133e8e436",
+  "review_operations": "READ_ONLY_SOURCE_HASHES_AST_AND_GIT_DIFF; NO_NEW_TEST_EXECUTION",
+  "full_suite_receipt": {
+    "file": "offline_final_04.json",
+    "sha256": "5d5532a49ab1230bcd0523dd6e2367d81d88f221f00fcff6fc201c66d02cb198",
+    "bytes": 11118
+  },
+  "full_suite_summary": {
+    "status": "PASS_SOURCE_OFFLINE_ONLY",
+    "tests_run": 542,
+    "unique_test_ids": 542,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "audit": {
+      "git_processes": 179,
+      "forbidden_attempts": [],
+      "unresolved_directory_fd_events": 737
+    },
+    "audit_scope": "REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX",
+    "audit_limitations": [
+      "stat/readlink and symlink aliases require source review",
+      "directory-FD targets are not disclosed by Python audit events"
+    ]
+  },
+  "exact_current55_source_rows": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+      "expected_sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7",
+      "current_sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "expected_sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+      "current_sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "expected_sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+      "current_sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "expected_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "current_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "expected_sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+      "current_sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/capacity_publication.py",
+      "expected_sha256": "6441c75386b2bc9e461b905cb4107c0a428eb8b7674a161c7db852a97ccdbdd4",
+      "current_sha256": "6441c75386b2bc9e461b905cb4107c0a428eb8b7674a161c7db852a97ccdbdd4",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "expected_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "current_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "expected_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "current_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "expected_sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+      "current_sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "expected_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "current_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+      "expected_sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe",
+      "current_sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "expected_sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "current_sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+      "expected_sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec",
+      "current_sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+      "expected_sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022",
+      "current_sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "expected_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "current_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+      "expected_sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236",
+      "current_sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "expected_sha256": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+      "current_sha256": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "expected_sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+      "current_sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+      "expected_sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a",
+      "current_sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "expected_sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+      "current_sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "expected_sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+      "current_sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_capacity.py",
+      "expected_sha256": "e5ec865944430ec11e7694912fd07d58ed10d5269b5713092a7e295b5c6d1484",
+      "current_sha256": "e5ec865944430ec11e7694912fd07d58ed10d5269b5713092a7e295b5c6d1484",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "expected_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "current_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "expected_sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+      "current_sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "expected_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "current_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+      "expected_sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1",
+      "current_sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+      "expected_sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3",
+      "current_sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "expected_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "current_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "expected_sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356",
+      "current_sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_capacity_publication.py",
+      "expected_sha256": "702c2b6f2aafe6123de93a695f154799c124d5ee44ac7bd9e8d46ca146b70ef0",
+      "current_sha256": "702c2b6f2aafe6123de93a695f154799c124d5ee44ac7bd9e8d46ca146b70ef0",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "expected_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "current_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "expected_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "current_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+      "expected_sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb",
+      "current_sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "expected_sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d",
+      "current_sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "expected_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "current_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+      "expected_sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3",
+      "current_sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_git_envelope.py",
+      "expected_sha256": "58793de3bb4d706c86abbe49c845a5ce233a26b6c3b6c7bdb9df0eb8e24e5f65",
+      "current_sha256": "58793de3bb4d706c86abbe49c845a5ce233a26b6c3b6c7bdb9df0eb8e24e5f65",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "expected_sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4",
+      "current_sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+      "expected_sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868",
+      "current_sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "expected_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "current_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+      "expected_sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e",
+      "current_sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "expected_sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf",
+      "current_sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+      "expected_sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9",
+      "current_sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "expected_sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+      "current_sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+      "expected_sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274",
+      "current_sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_capacity.py",
+      "expected_sha256": "674a1df84285326f1b3bab6d8c91a941484b6148cb221822a1cd608336897c8c",
+      "current_sha256": "674a1df84285326f1b3bab6d8c91a941484b6148cb221822a1cd608336897c8c",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "expected_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "current_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "expected_sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451",
+      "current_sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "expected_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "current_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "expected_sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+      "current_sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "expected_sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+      "current_sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "expected_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "current_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "expected_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "current_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "expected_sha256": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c",
+      "current_sha256": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c",
+      "same": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "expected_sha256": "ad7c26062edb857ad3e911e8920a72dcba6abebed68573fb2ccaa84781fa3e68",
+      "current_sha256": "ad7c26062edb857ad3e911e8920a72dcba6abebed68573fb2ccaa84781fa3e68",
+      "same": true
+    }
+  ],
+  "legacy_receipt": {
+    "file": "safe_legacy_final_04.json",
+    "sha256": "a39e2258757ed24bb78aea9eb2bd9c4524ab204598c954a350d49cfe996c3895",
+    "bytes": 29617
+  },
+  "legacy_summary": {
+    "status": "PASS_SELECTED_SAFE_LEGACY",
+    "tests_run": 81,
+    "scope": "Exact81 selected source/method tests. Excludes Native/Kernel/SyntheticReceipt/PTY authorization positives; no human capability constructed.",
+    "excluded_scope": "Native/Kernel/SyntheticReceipt/PTY authorization positives; no HumanReview constructor",
+    "selected_test_source_rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
+        "expected_sha256": "4aaae767a2c992a04d536c5ca9aaf1085b6493312750e213b14a363acb46a72e",
+        "current_sha256": "4aaae767a2c992a04d536c5ca9aaf1085b6493312750e213b14a363acb46a72e",
+        "same": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/test_runtime.py",
+        "expected_sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+        "current_sha256": "6eda57f8ff219d325b257a0da26e8b4c62ea0b53f8a23f42d6e4275872ab7b1c",
+        "same": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/integration_runtime/test_route_a.py",
+        "expected_sha256": "53dcf678f15d107105a435f3ad9a2fbe18ac2c1ffd82072e28b26635deccf328",
+        "current_sha256": "53dcf678f15d107105a435f3ad9a2fbe18ac2c1ffd82072e28b26635deccf328",
+        "same": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/guard_correction/test_correction.py",
+        "expected_sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d",
+        "current_sha256": "f9916415de7731d12d1d02f0227b9dba8ef77ea13dee3788f8b38857b38a884d",
+        "same": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/stop92_diagnostic/test_diagnostic.py",
+        "expected_sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926",
+        "current_sha256": "7b059e18bf4e99b4873114ad205b53e28ba1d9dc549344ef175b5079f3a29926",
+        "same": true
+      }
+    ],
+    "recomputed_implementation_snapshot_sha256": "4aed1277a3277b1ca8081f44a0f46e860220c7c9918f39c2f3f532475b9a0786",
+    "reported_implementation_snapshot_before": "4aed1277a3277b1ca8081f44a0f46e860220c7c9918f39c2f3f532475b9a0786",
+    "reported_implementation_snapshot_after": "4aed1277a3277b1ca8081f44a0f46e860220c7c9918f39c2f3f532475b9a0786",
+    "implementation_file_count": 48,
+    "snapshot_matches": true
+  },
+  "old_test_preservation": {
+    "old449_count": 449,
+    "old_unique": 449,
+    "new_count": 542,
+    "new_unique": 542,
+    "old449_missing": [],
+    "old449_all_preserved": true,
+    "old45_controller_count": 45,
+    "new_controller_count": 45,
+    "old45_missing": [],
+    "base_controller_AST_count": 45,
+    "current_controller_AST_count": 45,
+    "base_AST_missing": [],
+    "test_ID_retention_is_not_alone_semantic_equivalence": true,
+    "old_ID_receipt": {
+      "file": "offline_final_06_test_ids.json",
+      "sha256": "717516175fbf461a3283715dd990c2b13d4bbf662f65267b52ac2bcd28075742",
+      "bytes": 70449
+    },
+    "new_ID_receipt": {
+      "file": "offline_final_04_test_ids.json",
+      "sha256": "e81b7ccf08015936f365f4e1af5e838f3b7129759586f21c94de06502436d53b",
+      "bytes": 85204
+    }
+  },
+  "before_baseline_receipt": {
+    "file": "protected_source_before_01.json",
+    "sha256": "dd913594a06c0f5d22273d4b49177687b8d4bcb6d740ba327e811b553c85e8ab",
+    "bytes": 9099
+  },
+  "published21_before_identity_rows": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "before_sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+      "PR35_sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+      "before_matches_PR35": true,
+      "current_sha256": "858e6ae01e9147dc2fffb6c52b75d97a635d8af3291080b92d56d762dc1b3e9c",
+      "current_engineering_delta": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "before_sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+      "PR35_sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+      "before_matches_PR35": true,
+      "current_sha256": "3a886de3ffc8e45e25ba480944c78f12a355d383414c0a9828f5759662589008",
+      "current_engineering_delta": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "before_sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+      "PR35_sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+      "before_matches_PR35": true,
+      "current_sha256": "739dae29d49015938f1c3c6c028f822c9352c4193d2b41da7d62bf34b8a04387",
+      "current_engineering_delta": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "before_sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+      "PR35_sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+      "before_matches_PR35": true,
+      "current_sha256": "0469894011420c3b4d0cb46eec230f0c8554cb21fb0fa16657fc70454bfa0012",
+      "current_engineering_delta": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "before_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "PR35_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "before_matches_PR35": true,
+      "current_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "before_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "PR35_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "before_matches_PR35": true,
+      "current_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "before_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "PR35_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "before_matches_PR35": true,
+      "current_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "before_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "PR35_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "before_matches_PR35": true,
+      "current_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "before_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "PR35_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "before_matches_PR35": true,
+      "current_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "before_sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+      "PR35_sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+      "before_matches_PR35": true,
+      "current_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "current_engineering_delta": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "before_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "PR35_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "before_matches_PR35": true,
+      "current_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "before_sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+      "PR35_sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+      "before_matches_PR35": true,
+      "current_sha256": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+      "current_engineering_delta": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "before_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "PR35_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "before_matches_PR35": true,
+      "current_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "before_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "PR35_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "before_matches_PR35": true,
+      "current_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "before_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "PR35_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "before_matches_PR35": true,
+      "current_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "before_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "PR35_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "before_matches_PR35": true,
+      "current_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "before_sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+      "PR35_sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+      "before_matches_PR35": true,
+      "current_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "current_engineering_delta": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "before_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "PR35_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "before_matches_PR35": true,
+      "current_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "before_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "PR35_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "before_matches_PR35": true,
+      "current_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "before_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "PR35_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "before_matches_PR35": true,
+      "current_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "current_engineering_delta": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "before_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "PR35_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "before_matches_PR35": true,
+      "current_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "current_engineering_delta": false
+    }
+  ],
+  "published21_current_delta_interpretation": "Intentional source engineering in the new clone is listed explicitly; this is not a claim that all21 current files are unchanged.",
+  "scientific_guard_text_dependencies": [
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/overlay.py",
+      "PR35_sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071",
+      "before_sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071",
+      "current_sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/overlay.py",
+      "PR35_sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733",
+      "before_sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733",
+      "current_sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733",
+      "unchanged": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+      "PR35_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "before_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "current_sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "unchanged": true
+    }
+  ],
+  "scientific_guard_text_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+  "guard_identity_basis": "The previously evaluated deterministic text transform and its3 input/source dependencies remain unchanged; no new native compilation or evaluation was performed.",
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "physics_contract_unchanged": true,
+  "attachment_guard_literal": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4ba123",
+  "attachment_guard_literal_length": 63,
+  "guard_literal_handling": "63-character attachment typo preserved explicitly; actual scientific guard64-character identity not edited.",
+  "base_tracked_historical_scope": {
+    "base_tracked_files": 1501,
+    "historical_reports_data_evidence_cards_figures_paths": 921,
+    "changed_historical_paths_by_git_diff": [],
+    "unchanged_by_git_diff": true,
+    "diff_scope": "All existing base tracked reports/,metadata/,data/,samples/ paths; evidence/references/cards components; LHE/ROOT/HepMC/PDF/PNG extensions.",
+    "all_existing_base_deltas": [
+      "M\t.github/workflows/hh_signal_campaign.yml",
+      "M\t.github/workflows/hh_signal_final_closure.yml",
+      "M\t.github/workflows/hh_signal_readiness.yml",
+      "M\t.github/workflows/hh_signal_resource_closure.yml",
+      "M\tsimulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "M\tsimulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/capacity_publication.py",
+      "M\tsimulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "M\tsimulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/storage_capacity.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/tests/test_capacity_publication.py",
+      "M\tsimulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/tests/test_git_envelope.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "A\tsimulation/hh_signal/final_closure/resource_closure/tests/test_storage_capacity.py"
+    ],
+    "observation_limit": "Git diff observation only, not an atomic lock against subsequent edits."
+  },
+  "external_MC_data_scope": {
+    "scanned": false,
+    "unchanged_claim": false,
+    "status": "UNKNOWN_NOT_SCANNED; CONCURRENT_EXTERNAL_MC_NOT_ATTESTED"
+  },
+  "full_historical_3_5GB_rescan": false,
+  "new_tests_executed_by_this_review": 0,
+  "actual_timer_or_service_or_kernel_diagnostic_or_physics_runs": 0,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "wall_seconds_read_only_review": 0.5059744199999727
+}

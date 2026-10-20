@@ -1,0 +1,360 @@
+{
+  "schema": "PHASE7I_FINAL_INDEPENDENT_CONTROLLER_ENVELOPE_SOURCE_REVIEW_V2",
+  "status": "PASS_CONTROLLER_SOURCE_ONLY",
+  "source_commit_not_yet_bound": true,
+  "reviewer_edits_this_review": 0,
+  "core_source_and_tests": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "9a41dacaacfc9c65ddd2c188b4c67aa3fca641638ffd930903f6eab2bff96691"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b"
+    }
+  ],
+  "controller_integration": {
+    "exact_8_phases_retained": true,
+    "both_full_Git_checks_borrow_same_monitor": true,
+    "all_HEAD_queries_use_bounded_GitGuard": true,
+    "HEAD_shape_40_lower_hex_plus_LF": true,
+    "failure_terminal_after_successful_arm_before_close": true,
+    "failed_terminal_write_not_retried": true,
+    "close_failure_fixed_main_exit_126": true,
+    "original_exception_preservation": true,
+    "invalid_unit_rejected_before_arm": true,
+    "physical_and_live_launch_hard_blocks_preserved": true
+  },
+  "proposal_model": {
+    "scope": "PURE_AST_THREE_FUNCTIONS_WITH_MOCKED_OS_IDENTITIES_NOT_A_SERVICE_OR_CONTROLLER_RUN",
+    "os_identities": {
+      "uid": 1000,
+      "affinity": [
+        0
+      ],
+      "home": "/home/btu"
+    },
+    "argc": 104,
+    "default_action": "namespace-inspection",
+    "workflow_action_requires_separate_authorization": true,
+    "canonical_argv_sha256": "6f8a537958e1a4edc040125f491507afc745ffaf10e100f3136323b5d6456680",
+    "argv": [
+      "/usr/bin/systemd-run",
+      "--user",
+      "--quiet",
+      "--wait",
+      "--pipe",
+      "--unit",
+      "atlas-hh-phase7i-s4-capacity-01.service",
+      "--property",
+      "Type=exec",
+      "--property",
+      "RemainAfterExit=no",
+      "--property",
+      "Restart=no",
+      "--property",
+      "NotifyAccess=none",
+      "--property",
+      "RuntimeRandomizedExtraSec=0",
+      "--property",
+      "TimeoutStartFailureMode=kill",
+      "--property",
+      "TimeoutStopFailureMode=kill",
+      "--property",
+      "CPUAccounting=yes",
+      "--property",
+      "MemoryAccounting=yes",
+      "--property",
+      "TasksAccounting=yes",
+      "--property",
+      "MemoryMax=536870912",
+      "--property",
+      "MemorySwapMax=0",
+      "--property",
+      "OOMPolicy=kill",
+      "--property",
+      "CPUQuota=30%",
+      "--property",
+      "CPUQuotaPeriodSec=10000us",
+      "--property",
+      "RuntimeMaxSec=8s",
+      "--property",
+      "TimeoutStartSec=1s",
+      "--property",
+      "TimeoutStopSec=0.5s",
+      "--property",
+      "KillMode=control-group",
+      "--property",
+      "KillSignal=SIGKILL",
+      "--property",
+      "FinalKillSignal=SIGKILL",
+      "--property",
+      "SendSIGKILL=yes",
+      "--property",
+      "TasksMax=16",
+      "--property",
+      "CPUAffinity=0",
+      "--property",
+      "LimitCPU=2",
+      "--property",
+      "LimitAS=536870912",
+      "--property",
+      "LimitFSIZE=65536",
+      "--property",
+      "LimitCORE=0",
+      "--property",
+      "LimitNOFILE=128",
+      "--property",
+      "PrivateUsers=yes",
+      "--property",
+      "PrivateNetwork=yes",
+      "--property",
+      "PrivateIPC=yes",
+      "--property",
+      "ProtectSystem=strict",
+      "--property",
+      "ProtectHome=read-only",
+      "--property",
+      "ProtectControlGroups=yes",
+      "--property",
+      "NoNewPrivileges=yes",
+      "--property",
+      "RestrictNamespaces=yes",
+      "--property",
+      "CapabilityBoundingSet=",
+      "--property",
+      "ReadOnlyPaths=/dev /proc /sys",
+      "--property",
+      "InaccessiblePaths=/run/user/1000",
+      "--property",
+      "TemporaryFileSystem=/var/tmp:rw,size=8388608,nr_inodes=1024,nodev,nosuid,noexec",
+      "--property",
+      "TemporaryFileSystem=/tmp:rw,size=1048576,nr_inodes=256,nodev,nosuid,noexec",
+      "--property",
+      "WorkingDirectory=/home/btu/projects/atlas_hh_phase7i_s4_persistent_capacity_closure_v1",
+      "--property",
+      "StandardInput=null",
+      "--property",
+      "Environment=PATH=/usr/bin:/bin LANG=C.UTF-8 HOME=/home/btu PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 GIT_OPTIONAL_LOCKS=0 TMPDIR=/tmp TMP=/tmp TEMP=/tmp",
+      "--property",
+      "UnsetEnvironment=LD_PRELOAD LD_LIBRARY_PATH LD_AUDIT PYTHONPATH PYTHONHOME PYTHONSTARTUP PYTHONINSPECT GIT_CONFIG_COUNT GIT_CONFIG_PARAMETERS GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE",
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/btu/projects/atlas_hh_phase7i_s4_persistent_capacity_closure_v1/simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "namespace-inspection"
+    ],
+    "property_count": 46,
+    "properties_identical_to_PR35_except_authoring_WorkingDirectory": true,
+    "limits": {
+      "contract_CPU_seconds": 4,
+      "contract_full_wall_seconds": 13,
+      "CPU_rate_quota": "30%/10000us",
+      "per_process_CPU_seconds": 2,
+      "manager_RuntimeMaxSec": 8,
+      "manager_TimeoutStartSec": 1,
+      "manager_TimeoutStopSec": 0.5,
+      "RAM_bytes": 536870912,
+      "swap_bytes": 0,
+      "tmpfs_work_bytes": 8388608,
+      "tmpfs_tmp_bytes": 1048576,
+      "work_inodes": 1024,
+      "tmp_inodes": 256
+    },
+    "contract_caps_are_not_atomic_OS_hard_kill": true,
+    "nominal_quota_duration_arithmetic_is_not_unconditional_bound": true
+  },
+  "old_21_file_binding": {
+    "meaning": "IMMUTABLE_PR35_BASE_COMPARISON_ONLY_NOT_CURRENT_EXECUTABLE_APPROVAL",
+    "files": [
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "PR35_sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+        "current_sha256": "858e6ae01e9147dc2fffb6c52b75d97a635d8af3291080b92d56d762dc1b3e9c",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "PR35_sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+        "current_sha256": "3a886de3ffc8e45e25ba480944c78f12a355d383414c0a9828f5759662589008",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "PR35_sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+        "current_sha256": "739dae29d49015938f1c3c6c028f822c9352c4193d2b41da7d62bf34b8a04387",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": ".github/workflows/hh_signal_resource_closure.yml",
+        "PR35_sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+        "current_sha256": "0469894011420c3b4d0cb46eec230f0c8554cb21fb0fa16657fc70454bfa0012",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+        "PR35_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+        "current_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+        "PR35_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+        "current_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+        "PR35_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+        "current_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+        "PR35_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+        "current_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+        "PR35_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+        "current_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+        "PR35_sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+        "current_sha256": "9a41dacaacfc9c65ddd2c188b4c67aa3fca641638ffd930903f6eab2bff96691",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+        "PR35_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+        "current_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+        "PR35_sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+        "current_sha256": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+        "PR35_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+        "current_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+        "PR35_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+        "current_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+        "PR35_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+        "current_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+        "PR35_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+        "current_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+        "PR35_sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+        "current_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+        "unchanged_from_PR35": false
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+        "PR35_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+        "current_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+        "PR35_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+        "current_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+        "PR35_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+        "current_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+        "unchanged_from_PR35": true
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+        "PR35_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+        "current_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+        "unchanged_from_PR35": true
+      }
+    ],
+    "changed_count": 7,
+    "unchanged_count": 14,
+    "new_candidate_manifest_required": true,
+    "new_modules_and_tests_must_be_added": true,
+    "full_Git_required_enumeration_source": "integration_runtime/route_a.py full_sources recursively enumerates hh_signal reviewed code extensions and JSON; includes new resource_closure Python/tests automatically",
+    "historical_build_receipts_must_not_be_edited_or_substituted": true
+  },
+  "remaining_SOURCE_ONLY_gaps": [
+    "Factory membership/stat and synchronous initial reader precede successful timer arm; an admission-failure terminal is also pre-arm.",
+    "Main-origin measurement excludes manager activation; final return after timer restoration is unmonitored.",
+    "Python SIGALRM is deferred; kernel reads, C work, throttle, OOM or SIGKILL can prevent prompt callback. This is no atomic cumulative CPU4s hard kill or hard real-time13s claim.",
+    "Manager activation-to-cleanup wall, total CPU and controller/worker group cleanup need independently authenticated raw postmortem proof.",
+    "Deleted/missing cgroup and missing peak remain UNKNOWN; a live controller cannot certify an empty aggregate.",
+    "Shared manager/journald/rsyslog and durable output block/inode capacity remain outside verified per-job bounds; no durable receipt can be written by a dead controller.",
+    "GitGuard kill/reap patch and final whole-package commit/manifest/regression are separately pending; this receipt does not approve a stale package binding."
+  ],
+  "primary_cpu_stat_review": {
+    "tag": "linux-msft-wsl-6.6.87.2",
+    "optional_known_key": "core_sched.force_idle_usec",
+    "key_only_allowed_as_nonnegative_integer": true,
+    "unknown_keys_rejected": true,
+    "tag_config_not_running_build_identity": true,
+    "source_URLs": [
+      "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/kernel/cgroup/rstat.c",
+      "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/kernel/sched/core.c",
+      "https://raw.githubusercontent.com/microsoft/WSL2-Linux-Kernel/linux-msft-wsl-6.6.87.2/arch/x86/configs/config-wsl",
+      "https://docs.python.org/3.12/library/signal.html#execution-of-python-signal-handlers"
+    ]
+  },
+  "evidence": {
+    "job_39_tests": "job_envelope_tests_03.json",
+    "independent_original_defect_receipt": "job_envelope_independent_reproduction_01.json",
+    "independent_corrected_receipt": "job_envelope_independent_reproduction_fixed_02.json",
+    "whole_package_regression_after_latest_HEAD_helper": "PENDING_ROOT_FINAL_RUN"
+  },
+  "actual_operations_this_review": {
+    "new_kernel_resource_reads": 0,
+    "timers_armed": 0,
+    "signals_sent": 0,
+    "services": 0,
+    "namespace_ioctls": 0,
+    "stress": 0,
+    "native": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "S4_runtime_proven": false,
+  "persistent_capacity_verified": false,
+  "physical_execution_authorized": false
+}

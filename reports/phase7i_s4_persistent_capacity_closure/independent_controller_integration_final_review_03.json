@@ -1,0 +1,92 @@
+{
+  "schema": "PHASE7I_FINAL_CONTROLLER_IMPORT_REBIND_REVIEW_V3",
+  "status": "PASS_SOURCE_ONLY_IMPORT_CORRECTION",
+  "previous_review": {
+    "path": "independent_controller_integration_final_review_02.json",
+    "sha256": "f535b3722e6e3d82c4e0546460766c029c288f26df52f922d3cc965d5949dfea",
+    "preserved": true
+  },
+  "controller": {
+    "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+    "prior_sha256": "9a41dacaacfc9c65ddd2c188b4c67aa3fca641638ffd930903f6eab2bff96691",
+    "corrected_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+    "verified_only_change": "Added re to the existing import list; reversing that byte edit exactly reproduces the prior reviewed source hash."
+  },
+  "historical_attempt": {
+    "path": "offline_final_03.json",
+    "sha256": "557cad2f14ef6b6103ac066eb52239c5f1d821efe1dcc7a48f31785dd7cbf242",
+    "status": "FAIL_OFFLINE",
+    "tests_run": 542,
+    "failures": 0,
+    "errors": 6,
+    "skipped": 0,
+    "unique_test_ids": 542,
+    "source_unchanged": true,
+    "source_file_count": 55,
+    "controller_binding": "9a41dacaacfc9c65ddd2c188b4c67aa3fca641638ffd930903f6eab2bff96691",
+    "forbidden_attempts": []
+  },
+  "corrected_regression": {
+    "path": "offline_final_04.json",
+    "sha256": "5d5532a49ab1230bcd0523dd6e2367d81d88f221f00fcff6fc201c66d02cb198",
+    "status": "PASS_SOURCE_OFFLINE_ONLY",
+    "tests_run": 542,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unique_test_ids": 542,
+    "source_unchanged": true,
+    "source_file_count": 55,
+    "controller_binding": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+    "forbidden_attempts": []
+  },
+  "reviewer_limitation": "Prior source review did not catch the missing re import; actual offline regression exposed six NameError errors. Preserve that failed attempt. Import correction and the subsequent 542-test pass are source/offline evidence only.",
+  "core_source_test_current_hashes": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "prior_review_sha256": "9a41dacaacfc9c65ddd2c188b4c67aa3fca641638ffd930903f6eab2bff96691",
+      "current_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "unchanged_from_prior_review": false
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "prior_review_sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "current_sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "unchanged_from_prior_review": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "prior_review_sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4",
+      "current_sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4",
+      "unchanged_from_prior_review": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "prior_review_sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+      "current_sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+      "unchanged_from_prior_review": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "prior_review_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "current_sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b",
+      "unchanged_from_prior_review": true
+    }
+  ],
+  "all_prior_runtime_and_capacity_gaps_still_apply": true,
+  "unchanged_104_token_model_requires_fresh_exact_execution_binding": true,
+  "GitGuard_review": "Final kill/wait source is reviewed separately by its independent reviewer; this receipt makes no replacement review claim.",
+  "actual_operations_by_this_review": {
+    "kernel_resource_reads": 0,
+    "timers_armed": 0,
+    "services": 0,
+    "native": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "S4_runtime_proven": false,
+  "persistent_capacity_verified": false,
+  "execution_authorized": false
+}

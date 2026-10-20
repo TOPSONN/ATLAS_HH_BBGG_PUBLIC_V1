@@ -1,0 +1,138 @@
+{
+  "schema": "PHASE7I_S4_CAPACITY_CLOSURE_BOUNDED_EVIDENCE_V1",
+  "source_revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+  "base_PR": 35,
+  "base_head": "cd6b43202318560492491104f994312133e8e436",
+  "old_exact_tested_source": "114b5c00341be22982244d3d9548e80adf2d00e5",
+  "verdict": "SOURCE_REPAIR_VERIFIED_OS_CAPACITY_AND_S4_BLOCKED",
+  "PASS": [
+    "Exact PR35 base and old104 argv/21 identities verified",
+    "542 audited offline tests; original449 IDs and45 controller methods retained",
+    "81 safe legacy selected tests",
+    "Independent58 focused tests are a subset, not extra independent population",
+    "55 tested source identities verified and334-source/config/workflow candidate manifest",
+    "921 base tracked historical paths unchanged; scientific guard/physics unchanged",
+    "Two ordinary clean-checkout full tracked Git preflights1509/330"
+  ],
+  "FAIL": [
+    "Current active user/group/project quota unavailable (six GETFMT/GETINFO ESRCH)",
+    "No currently verified complete durable capacity/control-plane backend",
+    "Earlier local offline_final_03 had6 missing-import errors; corrected and preserved, final04 passes"
+  ],
+  "BLOCKED": [
+    "S4 execution: no new authorization and output/control-plane prerequisites unmet",
+    "Provisioning new fixed device; no actual identity/geometry/exhaustion readback",
+    "Whole aggregate CPU hard stop and activation-to-cleanup wall proof",
+    "OOM/timeout/controller-loss full-group cleanup and durable receipt survival",
+    "Formal BUILD_ONLY and all native/physics routes"
+  ],
+  "UNKNOWN": [
+    "Root ext4 superblock quota/project features: raw device denied",
+    "Running kernel binary-to-source attestation",
+    "Actual S4 CPU/wall/RAM/swap/disk/cleanup; all null",
+    "External concurrent MC data not scanned",
+    "Manager/cgroup raw capture before unit unloading",
+    "Reserve3MiB/768MiB is arithmetic, not hard bound"
+  ],
+  "actual_resource_kernel_tests": 0,
+  "actual_service_starts": 0,
+  "guard_installs": 0,
+  "stress_tests": 0,
+  "new_builds": 0,
+  "MG5_import_or_parser": 0,
+  "ME_calls": 0,
+  "integrals": 0,
+  "events": 0,
+  "new_HumanReview_objects": 0,
+  "quota_calls": {
+    "GETFMT": 3,
+    "GETINFO": 3,
+    "GETQUOTA_potential_write_class_failed": 3,
+    "SET_ON_OFF_SYNC": 0,
+    "retry_after_correction": 0
+  },
+  "quota_caveat": "GETQUOTA is write-class despite GET; source inference excludes dquot acquisition on these observed errors, but no allocated-block delta or all-host-write exclusion measured. Original raw receipt preserved.",
+  "measured_S4": {
+    "CPU_seconds": null,
+    "activation_cleanup_wall_seconds": null,
+    "memory_peak_bytes": null,
+    "swap_peak_bytes": null,
+    "allocated_blocks": null,
+    "inodes": null,
+    "empty_after_cleanup": null
+  },
+  "offline": {
+    "tests_run": 542,
+    "unique_test_ids": 542,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_seconds": 1.55362613799997,
+    "source_unchanged": true,
+    "audit": {
+      "git_processes": 179,
+      "forbidden_attempts": [],
+      "unresolved_directory_fd_events": 737
+    },
+    "audit_limitations": [
+      "stat/readlink and symlink aliases require source review",
+      "directory-FD targets are not disclosed by Python audit events"
+    ]
+  },
+  "legacy": {
+    "tests_run": 81,
+    "passes": 81,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped": 0,
+    "wall_seconds": 8.421784368999965,
+    "implementation_sources_unchanged": true,
+    "subprocess_audit": {
+      "counts": {
+        "fixed_python_fixture": 5,
+        "fixed_sleep20": 1,
+        "git": 551
+      },
+      "forbidden_imports": [],
+      "human_review_attempts": 0,
+      "python_fixture_code_sha256": [
+        "3f393e7adc82ee9cf4b9f0a056a86ae6925807e8e62d368b3aa42f6d636eddd0",
+        "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+        "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+        "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+        "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+      ],
+      "rejected": []
+    }
+  },
+  "read_only_Git_preflight": {
+    "status": "PASS_ORDINARY_READ_ONLY_FULL_GIT_PREFLIGHT_ONLY",
+    "source_revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+    "checkout": "/home/btu/projects/atlas_hh_phase7i_s4_74f8dc3d_capacity_01",
+    "normal_git_directory": true,
+    "detached": true,
+    "preflights": [
+      {
+        "tracked_files": 1509,
+        "critical_files": 330,
+        "wall_seconds": 0.6922323140000799,
+        "CPU_seconds": 0.487346631
+      },
+      {
+        "tracked_files": 1509,
+        "critical_files": 330,
+        "wall_seconds": 0.7136039609999898,
+        "CPU_seconds": 0.469009327
+      }
+    ],
+    "contained_S4_execution": false,
+    "outer_watchdog_mode_physically_tested": false,
+    "service_starts": 0
+  },
+  "candidate_manifest_sha256": "ddea666a9ebb2ac1540ad5be20e68d8af3762c5a924488402a1f97e29f52a284",
+  "S4_scope_sha256": "47893c3b4a75997d984e23d586d2603511d683e8cdc4bf73350367e4a8a7b6fc",
+  "admin_recipe_sha256": "f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

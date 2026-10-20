@@ -1,0 +1,60 @@
+{
+  "schema": "QUOTA_GET_CORRECTIVE_SOURCE_AUDIT_V1",
+  "status": "SOURCE_ERROR_PATHS_REVIEWED_NO_FURTHER_QUERIES",
+  "original_raw_receipt_sha256": "c22bafedb60d0a0d5db2c2d87ad94953b34e93a15dc32f25c062e38f766c62de",
+  "actual_calls": {
+    "GETFMT": 3,
+    "GETINFO": 3,
+    "GETQUOTA": 3,
+    "SET_ON_OFF_SYNC": 0,
+    "retry_after_source_caveat": 0
+  },
+  "finding": "GET name does not imply read-only. Generic GETQUOTA is write-class because dquot acquisition may allocate or update quota storage.",
+  "exact_release_observed": "6.6.87.2-microsoft-standard-WSL2",
+  "matching_primary_source_tag": "linux-msft-wsl-6.6.87.2",
+  "source_paths": [
+    {
+      "url": "https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/quota/quota.c",
+      "ranges": [
+        "24-47",
+        "100-135",
+        "717-747",
+        "781-800"
+      ],
+      "interpretation": "GETFMT/GETINFO are non-write-class. Project GETQUOTA without CAP_SYS_ADMIN is rejected before get_dqblk dispatch."
+    },
+    {
+      "url": "https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/ext4/super.c",
+      "ranges": [
+        "1510-1519"
+      ],
+      "interpretation": "Ext4 get_dqblk dispatches to dquot_get_dqblk."
+    },
+    {
+      "url": "https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/quota/dquot.c",
+      "ranges": [
+        "882-951",
+        "2536-2548"
+      ],
+      "interpretation": "Inactive quota ESRCH returns before acquiring the dquot/on-disk quota record; successful acquisition can allocate quota storage."
+    }
+  ],
+  "observed_GETQUOTA_results": {
+    "USRQUOTA": "ESRCH",
+    "GRPQUOTA": "ESRCH",
+    "PRJQUOTA": "EPERM"
+  },
+  "quota_dquot_allocation_assessment": "Excluded on the observed inactive/permission failure paths under matching-release source semantics; not established by interpreting failed buffers.",
+  "interpretation_qualification": "Source inference, not a measured allocated-block delta or a cryptographic running-kernel-to-source attestation. It does not rule out unrelated host logging or metadata activity.",
+  "persistent_block_delta_measured": false,
+  "all_host_persistent_writes_ruled_out": false,
+  "running_kernel_binary_to_source_attested": "UNKNOWN",
+  "returned_buffer_fields_interpreted": 0,
+  "future_query_proposal": [
+    "Q_GETFMT",
+    "Q_GETINFO"
+  ],
+  "future_GETQUOTA_proposal": "FORBIDDEN_WITHOUT_SEPARATE_NONALLOCATION_REVIEW",
+  "actual_capacity_verified": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

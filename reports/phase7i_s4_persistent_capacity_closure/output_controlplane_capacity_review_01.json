@@ -1,0 +1,391 @@
+{
+  "schema": "PHASE7I_S4_INDEPENDENT_OUTPUT_CONTROLPLANE_CAPACITY_REVIEW_V1",
+  "verdict": "BLOCKED_NO_EXISTING_AGGREGATE_DURABLE_OUTPUT_CAPACITY_PROOF",
+  "evidence_kind": "ACTUAL_READ_ONLY_INSTALLED_OS_FACTS_AND_PRIMARY_DOCS; NO_LIVE_DIAGNOSTIC",
+  "evidence": [
+    {
+      "file": "output_controlplane_readonly_facts_01.json",
+      "sha256": "3393aaf7b562a5b0ceaa1e357d74e9f4f4109eefcbec29a2036a7005f889a42e",
+      "bytes": 29496
+    },
+    {
+      "file": "output_controlplane_installed_docs_01.json",
+      "sha256": "42027c7f1b1030ecee121217adecaf287caf6a5802dfa0b79fd5ed679a56e86f",
+      "bytes": 17232
+    },
+    {
+      "file": "storage_output_controlplane_raw_01.json",
+      "sha256": "de98976349d443fac40645826577f1a060792299d6caa360ce4a6164504823ae",
+      "bytes": 5028
+    },
+    {
+      "file": "protected_source_before_01.json",
+      "sha256": "dd913594a06c0f5d22273d4b49177687b8d4bcb6d740ba327e811b553c85e8ab",
+      "bytes": 9099
+    },
+    {
+      "file": "protected_source_before_attempt_01.json",
+      "sha256": "c027f3b685139d42db28deb0a03f5440c77dcf0f6d52e9227a20eb9c045b17ef",
+      "bytes": 461
+    }
+  ],
+  "installed_systemd": "255.4-1ubuntu8.17",
+  "PASS": [
+    "Existing systemd system and user-manager read-only property interfaces responded successfully.",
+    "No journal message lines, environment variables, service activation, mount/quota mutation or stress run was read or invoked.",
+    "The21 published PR35 source files and3 scientific guard text dependencies match PR35 before any source edits.",
+    "Default and user journal usage summaries were actually queried by storage reviewer:808.0M and408.0M; these are inventories, not per-job deltas and must not be added together."
+  ],
+  "actual_property_subset": {
+    "systemd-journald.service": {
+      "RuntimeMaxUSec": "infinity",
+      "ControlGroup": "/system.slice/systemd-journald.service",
+      "CPUQuotaPerSecUSec": "infinity",
+      "MemoryMax": "infinity",
+      "MemorySwapMax": "infinity",
+      "LimitFSIZE": "infinity",
+      "StandardOutput": "null",
+      "StandardError": "inherit",
+      "LogRateLimitIntervalUSec": "0",
+      "LogRateLimitBurst": "0",
+      "LogNamespace": "",
+      "RuntimeDirectory": "systemd/journal",
+      "StateDirectory": "",
+      "LogsDirectoryMode": "0755",
+      "LogsDirectory": "",
+      "ActiveState": "active",
+      "SubState": "running",
+      "FragmentPath": "/usr/lib/systemd/system/systemd-journald.service",
+      "DropInPaths": "/usr/lib/systemd/system/systemd-journald.service.d/nice.conf"
+    },
+    "rsyslog.service": {
+      "RuntimeMaxUSec": "infinity",
+      "ControlGroup": "/system.slice/rsyslog.service",
+      "CPUQuotaPerSecUSec": "infinity",
+      "MemoryMax": "infinity",
+      "MemorySwapMax": "infinity",
+      "LimitFSIZE": "infinity",
+      "StandardOutput": "null",
+      "StandardError": "journal",
+      "LogRateLimitIntervalUSec": "0",
+      "LogRateLimitBurst": "0",
+      "LogNamespace": "",
+      "RuntimeDirectory": "",
+      "StateDirectory": "",
+      "LogsDirectoryMode": "0755",
+      "LogsDirectory": "",
+      "ActiveState": "active",
+      "SubState": "running",
+      "FragmentPath": "/usr/lib/systemd/system/rsyslog.service",
+      "DropInPaths": ""
+    },
+    "systemd-journald.socket": {
+      "ControlGroup": "/system.slice/systemd-journald.socket",
+      "CPUQuotaPerSecUSec": "infinity",
+      "MemoryMax": "infinity",
+      "MemorySwapMax": "infinity",
+      "LimitFSIZE": "infinity",
+      "StandardOutput": "journal",
+      "StandardError": "inherit",
+      "LogRateLimitIntervalUSec": "0",
+      "LogRateLimitBurst": "0",
+      "LogNamespace": "",
+      "RuntimeDirectory": "",
+      "StateDirectory": "",
+      "LogsDirectoryMode": "0755",
+      "LogsDirectory": "",
+      "ActiveState": "active",
+      "SubState": "running",
+      "FragmentPath": "/usr/lib/systemd/system/systemd-journald.socket",
+      "DropInPaths": ""
+    },
+    "user@1000.service": {
+      "RuntimeMaxUSec": "infinity",
+      "ControlGroup": "/user.slice/user-1000.slice/user@1000.service",
+      "CPUQuotaPerSecUSec": "infinity",
+      "MemoryMax": "infinity",
+      "MemorySwapMax": "infinity",
+      "LimitFSIZE": "infinity",
+      "StandardOutput": "journal",
+      "StandardError": "inherit",
+      "LogRateLimitIntervalUSec": "0",
+      "LogRateLimitBurst": "0",
+      "LogNamespace": "",
+      "RuntimeDirectory": "",
+      "StateDirectory": "",
+      "LogsDirectoryMode": "0755",
+      "LogsDirectory": "",
+      "ActiveState": "active",
+      "SubState": "running",
+      "FragmentPath": "/usr/lib/systemd/system/user@.service",
+      "DropInPaths": "/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf /usr/lib/systemd/system/user@.service.d/timeout.conf"
+    },
+    "USER_MANAGER": {
+      "Version": "255.4-1ubuntu8.17",
+      "DefaultStandardOutput": "journal",
+      "DefaultStandardError": "inherit",
+      "RuntimeWatchdogUSec": "infinity",
+      "ControlGroup": "/user.slice/user-1000.slice/user@1000.service",
+      "DefaultLimitFSIZE": "infinity"
+    },
+    "USER_DEFAULT_TARGET": {
+      "ActiveState": "active",
+      "SubState": "active",
+      "FragmentPath": "/usr/lib/systemd/user/default.target"
+    }
+  },
+  "actual_path_facts": [
+    {
+      "path": "/run/systemd/journal/stdout",
+      "exists": true,
+      "mode": "0o666",
+      "uid": 0,
+      "gid": 0,
+      "is_socket": true,
+      "is_dir": false,
+      "write_access_for_current_user": true,
+      "filesystem_capacity_bytes": 4025597952,
+      "filesystem_free_bytes": 4025065472,
+      "filesystem_total_inodes": 982812,
+      "filesystem_free_inodes": 982238,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/run/systemd/journal/socket",
+      "exists": true,
+      "mode": "0o666",
+      "uid": 0,
+      "gid": 0,
+      "is_socket": true,
+      "is_dir": false,
+      "write_access_for_current_user": true,
+      "filesystem_capacity_bytes": 4025597952,
+      "filesystem_free_bytes": 4025065472,
+      "filesystem_total_inodes": 982812,
+      "filesystem_free_inodes": 982238,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/run/systemd/journal/syslog",
+      "exists": true,
+      "mode": "0o666",
+      "uid": 0,
+      "gid": 0,
+      "is_socket": true,
+      "is_dir": false,
+      "write_access_for_current_user": true,
+      "filesystem_capacity_bytes": 4025597952,
+      "filesystem_free_bytes": 4025065472,
+      "filesystem_total_inodes": 982812,
+      "filesystem_free_inodes": 982238,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/run/user/1000/bus",
+      "exists": true,
+      "mode": "0o666",
+      "uid": 1000,
+      "gid": 1000,
+      "is_socket": true,
+      "is_dir": false,
+      "write_access_for_current_user": true,
+      "filesystem_capacity_bytes": 805117952,
+      "filesystem_free_bytes": 805097472,
+      "filesystem_total_inodes": 196562,
+      "filesystem_free_inodes": 196519,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/var/log/journal",
+      "exists": true,
+      "mode": "0o2755",
+      "uid": 0,
+      "gid": 999,
+      "is_socket": false,
+      "is_dir": true,
+      "write_access_for_current_user": false,
+      "filesystem_capacity_bytes": 1081101176832,
+      "filesystem_free_bytes": 1038334246912,
+      "filesystem_total_inodes": 67108864,
+      "filesystem_free_inodes": 66535909,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/run/log/journal",
+      "exists": true,
+      "mode": "0o2755",
+      "uid": 0,
+      "gid": 999,
+      "is_socket": false,
+      "is_dir": true,
+      "write_access_for_current_user": false,
+      "filesystem_capacity_bytes": 4025597952,
+      "filesystem_free_bytes": 4025065472,
+      "filesystem_total_inodes": 982812,
+      "filesystem_free_inodes": 982238,
+      "capacity_is_per_job_quota": false
+    },
+    {
+      "path": "/run/user/1000",
+      "exists": true,
+      "mode": "0o700",
+      "uid": 1000,
+      "gid": 1000,
+      "is_socket": false,
+      "is_dir": true,
+      "write_access_for_current_user": true,
+      "filesystem_capacity_bytes": 805117952,
+      "filesystem_free_bytes": 805097472,
+      "filesystem_total_inodes": 196562,
+      "filesystem_free_inodes": 196519,
+      "capacity_is_per_job_quota": false
+    }
+  ],
+  "active_static_logging_routes": {
+    "journald_dropin_ForwardToSyslog": "yes",
+    "journald_service": "active/running",
+    "rsyslog_service": "active/running",
+    "rsyslog_imuxsock_configured": true,
+    "rsyslog_default_direct_file_rule_count": 5,
+    "rsyslog_additional_cloudinit_direct_file_rule_count": 1,
+    "packet_delivery_tested": false,
+    "journal_private_messages_read": false,
+    "interpretation": "Active shared logging services and configured file destinations create an unbounded-by-this-job control-plane route. Actual packet flow was not generated or measured."
+  },
+  "BLOCKED": [
+    {
+      "id": "CP01",
+      "fact": "The existing durable journal resides on shared root ext4 dev8:48, not a per-job allocated-block or inode-capped volume.",
+      "effect": "No16MiB S4 aggregate allocated-capacity claim follows from its current configuration or observed808M usage."
+    },
+    {
+      "id": "CP02",
+      "fact": "ForwardToSyslog=yes is configured; active rsyslog has /var/log file routes. No per-job capacity limit covering both paths was discovered.",
+      "effect": "A new4MiB evidence device alone does not include these root-filesystem writes."
+    },
+    {
+      "id": "CP03",
+      "fact": "The user manager defaults to StandardOutput=journal and DefaultLimitFSIZE=infinity. Journald and rsyslog report LimitFSIZE=infinity and LogNamespace empty.",
+      "effect": "User-bus availability does not establish a restricted durable capture endpoint or manager lifecycle-log bound."
+    },
+    {
+      "id": "CP04",
+      "fact": "/run/user/1000 is shared volatile tmpfs of805117952 logical bytes and196562 inodes; journal runtime tmpfs is shared4025597952 bytes.",
+      "effect": "These existing runtime filesystems are neither a durable failure store nor the requested per-job16MiB physical allocation envelope."
+    },
+    {
+      "id": "CP05",
+      "fact": "btu write-access checks for /var/log/journal and /run/log/journal were false; no write or configuration-change syscall was attempted.",
+      "effect": "Direct user provisioning or permission to change the system journal was not shown. This is an access-check result, not an observed write-EPERM or sudo-policy test."
+    },
+    {
+      "id": "CP06",
+      "fact": "Existing capture code has64KiB public logical stream and128KiB private RAM limits, while S3 has a61,531-byte logical wire upper bound.",
+      "effect": "These do not bound filesystem allocated blocks, journal metadata, inodes, system-manager state, forwarded syslog or durable post-controller-loss receipt creation."
+    }
+  ],
+  "installed_documentation_interpretation": [
+    {
+      "source": "/usr/share/man/man5/journald.conf.5.gz",
+      "finding": "System*/Runtime* limits address journal files in persistent/runtime directories, not all filesystem or external control-plane allocations."
+    },
+    {
+      "source": "/usr/share/man/man5/journald.conf.5.gz",
+      "finding": "Only archived journal files are removed to satisfy size/file-count limits; active files remain, and totals can exceed configured limits after vacuum."
+    },
+    {
+      "source": "/usr/share/man/man5/journald.conf.5.gz",
+      "finding": "Default rate limits drop excess messages and depend on free-space scaling; they are not evidence-retention or per-job byte/inode quotas."
+    },
+    {
+      "source": "/usr/share/man/man5/journald.conf.5.gz",
+      "finding": "Default sync interval is5minutes except immediately synced high-priority messages; a printed message is not demonstrated durable checkpoint delivery."
+    },
+    {
+      "source": "/usr/share/man/man5/systemd.exec.5.gz",
+      "finding": "LogNamespace creates a separate journal data store for unit processes. Its description does not prove isolation of every user-manager/system-manager/kernel control-plane write; configuring it alone is insufficient."
+    },
+    {
+      "source": "/usr/share/man/man5/systemd.exec.5.gz",
+      "finding": "LogsDirectoryQuota is absent in the installed255 manual. No such feature or filesystem support was assumed."
+    }
+  ],
+  "UNKNOWN": [
+    "Per-job incremental root journal, rsyslog, manager metadata and control-plane block/inode allocation.",
+    "Actual output delivery, stream completeness and durable data after controller SIGKILL or system/power failure.",
+    "Any permission to provision a dedicated device, mount, journal namespace or quota; these operations were not attempted.",
+    "Whether an administrator can isolate every required output/control-plane write within the same declared aggregate cap without affecting historical logs.",
+    "Manager cleanup latency and cumulative CPU under the proposed3CPU-second/10wall-second early-stop margin; no service or negative runtime test was authorized."
+  ],
+  "minimal_candidate_output_route": {
+    "status": "PROPOSAL_ONLY_NOT_IMPLEMENTED_OR_VERIFIED",
+    "capacity_arithmetic_only": {
+      "private_work_tmpfs_bytes": 8388608,
+      "private_tmp_tmpfs_bytes": 1048576,
+      "candidate_dedicated_sink_device_bytes": 4194304,
+      "unresolved_controlplane_reserve_bytes": 3145728,
+      "aggregate_proposed_bytes": 16777216
+    },
+    "arithmetic_is_enforcement": false,
+    "sink_scope": "A separately administrator-provisioned fixed-capacity block device could contain its own evidence-file data, inode table, directories, allocator metadata and inner filesystem journal. Host logging outside it remains unbounded by this device.",
+    "route": "Keep service stdout/stderr null for the future isolated candidate, and explicitly route only the reviewed bounded framed evidence into fixed slots on the dedicated sink using the same controller. Source changes and exact FD/guard permissions require a separate source review.",
+    "durability": "Use explicit file+directory synchronization before acknowledging a checkpoint. A controller that has died cannot write a new terminal receipt; report only the last verified checkpoint and missing terminal state. Controller-loss durability still needs a separately authorized real test.",
+    "no_external_business_helper": "No outside collector/watcher is launched. A same-process early-stop watcher cannot certify the external manager cleanup or create evidence after it dies.",
+    "not_sufficient": "The3MiB remainder is a reservation in arithmetic only. No limit, routing or allocation proof was found for it; overallS4 and future5GiB remain BLOCKED."
+  },
+  "administrator_boundary_recipe": [
+    {
+      "step": 1,
+      "action": "Review the exact device and full write-path ledger before any mutation. Select only a new dedicated sink, with no historical data, and retain existing global journal/rsyslog settings.",
+      "readback": "Administrator records target major:minor, serial/identity, exact bytes, ownership and intended filesystem. No inferred capacity from a filename or sparse image."
+    },
+    {
+      "step": 2,
+      "action": "Provision the exact small device/filesystem using the storage reviewer recipe only after separate administrator authorization. Keep all sink metadata/journal inside that device.",
+      "readback": "Record actual block/inode counts, journal location and absence of external journal/loop-backing growth. A fallocated image on unquotaed root does not by itself close outer metadata/journal scope."
+    },
+    {
+      "step": 3,
+      "action": "Prepare a job-specific sink and fixed filenames/permissions; review preopened FD binding and exact source. Do not alter global Storage, retention, vacuum or rotation policies.",
+      "readback": "Prove source/FD/volume identity and allocation before/after. A user-manager socket or LogNamespace setting alone is not a complete write-path proof."
+    },
+    {
+      "step": 4,
+      "action": "Resolve default-journal, rsyslog and manager/kernel/control-plane write routes with an administrator-reviewed job-specific boundary; otherwise keep CP01/CP02 BLOCKED.",
+      "readback": "Provide concrete OS-enforced hard bounds covering allocated blocks and inodes for every admitted path. Do not allocate the unresolved3MiB reserve by declaration or claim all host logs are job-isolated."
+    },
+    {
+      "step": 5,
+      "action": "After exact-source review and separate live authorization, run harmless full-lifecycle positive and negative tests only within the approved caps.",
+      "readback": "Exercise full sink, inode exhaustion, truncated/partial capture, controller loss, manager cleanup and output failure while preserving all failures. CPU/wall/RAM/disk accounting includes the full approved workflow."
+    },
+    {
+      "step": 6,
+      "action": "Rollback only the new job-specific proposal after confirming no process or mount uses it; preserve bounded evidence first. Do not vacuum or delete historical logs.",
+      "readback": "Admin verifies no active process, namespace, mount or open descriptor; restore only saved job-specific configuration and release the exact new device. No rollback command is executed by this review."
+    }
+  ],
+  "permission_statement": "Read-only system and user show calls succeeded. No StartTransientUnit, journal write, sudo, mount, quota-set or administrative mutation was attempted, so no mutation permission or kernel containment is claimed.",
+  "source_preservation": {
+    "receipt": "protected_source_before_01.json",
+    "new_source_edits_by_reviewer": 0,
+    "historical_data_rescan": false,
+    "historical_data_writes": 0
+  },
+  "actual_operations": {
+    "service_starts": 0,
+    "kernel_diagnostic_attempts": 0,
+    "guard_installs": 0,
+    "mounts": 0,
+    "quota_sets": 0,
+    "stress_tests": 0,
+    "formal_builds": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "S4_FULL_LIFECYCLE_CONTROLLER_CLOSURE": "BLOCKED",
+  "FORMAL_BUILD_READINESS": "BLOCKED"
+}

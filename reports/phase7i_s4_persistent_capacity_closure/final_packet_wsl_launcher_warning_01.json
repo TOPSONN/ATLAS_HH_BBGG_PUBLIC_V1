@@ -1,0 +1,22 @@
+{
+  "schema": "READ_ONLY_PACKET_REVIEW_WSL_LAUNCHER_WARNING_V1",
+  "during": "Final frozen-candidate file hash and pure AST packet review",
+  "warning_exact": "wsl: Failed to start the systemd user session for 'btu'. See journalctl for more details.",
+  "python_review_exit_code": 0,
+  "packet_review_receipt": "final_packet_acceptance_01.json",
+  "packet_review_sha256": "f9ce767353b15daf5bfa1d2dbe1f85b1fbdf7dc1f4f0e192c88b6f15be1c98a1",
+  "source_revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+  "interpretation": "Launcher warning is separate from the successful file/source consistency checks. Current user-session health and the cause of this warning are UNKNOWN. No inference of service readiness or S4 capability follows.",
+  "actions_after_warning": {
+    "journal_read": 0,
+    "restart": 0,
+    "retry_service": 0,
+    "controller_dispatch": 0,
+    "explicit_service_start": 0,
+    "timer_arm": 0,
+    "physics": 0
+  },
+  "scope_limit": "No claim about every background Windows/WSL/systemd bootstrap action. This review issued no controller or service activation command.",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "S4_runtime_verified": false
+}

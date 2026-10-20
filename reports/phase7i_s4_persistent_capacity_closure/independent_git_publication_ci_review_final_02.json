@@ -1,0 +1,148 @@
+{
+  "schema": "INDEPENDENT_GIT_PUBLICATION_CI_FINAL_REVIEW_V2",
+  "verdict": "PASS_SOURCE_OFFLINE_ONLY",
+  "source_revision_scope": "Exact current source hashes below; no runtime or kernel acceptance",
+  "source_hashes": {
+    "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c",
+    "simulation/hh_signal/final_closure/integration_runtime/contract.py": "ad7c26062edb857ad3e911e8920a72dcba6abebed68573fb2ccaa84781fa3e68",
+    "simulation/hh_signal/final_closure/resource_closure/job_envelope.py": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+    "simulation/hh_signal/final_closure/resource_closure/full_controller.py": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+    "simulation/hh_signal/final_closure/resource_closure/capacity_publication.py": "6441c75386b2bc9e461b905cb4107c0a428eb8b7674a161c7db852a97ccdbdd4",
+    "simulation/hh_signal/final_closure/resource_closure/offline_regression.py": "adc4848909a6c2afaf8b583fff0ae83f2e1166f0f9b8ce12046b9964905ddc8d",
+    ".github/workflows/hh_signal_campaign.yml": "858e6ae01e9147dc2fffb6c52b75d97a635d8af3291080b92d56d762dc1b3e9c",
+    ".github/workflows/hh_signal_final_closure.yml": "3a886de3ffc8e45e25ba480944c78f12a355d383414c0a9828f5759662589008",
+    ".github/workflows/hh_signal_readiness.yml": "739dae29d49015938f1c3c6c028f822c9352c4193d2b41da7d62bf34b8a04387",
+    ".github/workflows/hh_signal_resource_closure.yml": "0469894011420c3b4d0cb46eec230f0c8554cb21fb0fa16657fc70454bfa0012",
+    "simulation/hh_signal/final_closure/resource_closure/tests/test_git_envelope.py": "58793de3bb4d706c86abbe49c845a5ce233a26b6c3b6c7bdb9df0eb8e24e5f65",
+    "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463",
+    "simulation/hh_signal/final_closure/resource_closure/tests/test_capacity_publication.py": "702c2b6f2aafe6123de93a695f154799c124d5ee44ac7bd9e8d46ca146b70ef0"
+  },
+  "resolved_findings": [
+    {
+      "id": "GIT_HEAD_INITIAL_CAPTURE",
+      "status": "RESOLVED",
+      "reviewed_controller_sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "correction": "All HEAD lookups, including attestation/main/child, use _current_revision via GitGuard with wall/command/status1second. Main borrows same active PeriodicEnvelope; child uses independent bounded default; strict40lowerhex+LF and no unbounded fallback.",
+      "verification": "Actual independent wiring tests exercised valid, child-default, malformed/extra and failure paths."
+    },
+    {
+      "id": "GIT_KILL_REAP_INDEPENDENCE",
+      "status": "RESOLVED",
+      "reviewed_git_sha256": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c",
+      "correction": "wait(timeout3) is independently attempted after killpg failure. Primary kill exception and any secondary wait failure remain recorded; pipe/selector close continues; UNKNOWN cleanup cannot pass.",
+      "verification": "Pure kill-only, kill+wait and pipeline-failure mocks passed; no actual signal/process resource test."
+    }
+  ],
+  "bridge_review": {
+    "status": "PASS_FINAL_BRIDGE_SOURCE_AND_MOCK_TESTS_ONLY",
+    "timer": "Only exact PeriodicEnvelope is borrowed; assert_active_timer checks owner/main-thread/handler/live periodic timer and latched faults. Borrowed __enter__/check/__exit__ never arm/pause/restart/restore SIGALRM.",
+    "limits": "child_limits min(requested,inherited finite soft,inherited finite hard), including CPU/FSIZE/CORE, never raises an inherited limit.",
+    "capture": "Borrowed path has incremental nonblocking stdout/stderr with separate1MiB bytearray caps, <=4096-byte reads, bounded <=65536 stdin, type checks and short-write handling; no regular temp output file.",
+    "CPU": "Both own+reaped-child CPU budget and active child /proc stat observations preserved; outer aggregate cgroup envelope is separate and does not become an atomic hard CPU kill.",
+    "cleanup": "Kill/reap, stdin/stdout/stderr close and selector close attempted; UNKNOWN cleanup cannot yield success and original read/wait/timeout error remains primary.",
+    "full_scope": "Exact HEAD/root/Git-layout/remote, hidden/fsmonitor flags, whole tracked index and path metadata, full critical blob bytes, two complete tracked status scans, metadata/index/HEAD/source rechecks remain; no reduced scope.",
+    "batching": "Bounded batches still request every exact critical source blob and validate blob header/SHA1/body then SHA256; source enumeration stays inside active watchdog.",
+    "contract_wiring": "Both full workflow check_revision calls pass same _ACTIVE_ENVELOPE; default callers retain the original independent GitGuard behavior.",
+    "limits_of_evidence": "Source/mock tests prove adapter behavior only; actual kernel/service containment, timer scheduling and process cleanup have not been tested here."
+  },
+  "publication_review": {
+    "status": "PASS_SOURCE_AND_SYNTHETIC_GIT_ONLY",
+    "exact_base": "cd6b43202318560492491104f994312133e8e436",
+    "allowlist": "Only fixed resource/bridge/test/workflow paths and new report prefix; historical science/configuration/old report trees excluded.",
+    "reused_checks": "Original131072-byte/blob and2MiB aggregate caps, mode100644, binary/archive/event/secret/figure exclusions, strict JSON; privacy scanner recursively covers JSON/JSONL/Markdown/serialized and escaped raw frames/child stderr.",
+    "history": "Original audit walks every outgoing intermediate commit and compares every changed index path to actual worktree bytes; a safe final HEAD cannot hide forbidden earlier payload.",
+    "actual_current_outgoing_payload_audit": "PENDING_ROOT_FINAL_INDEX_AND_COMMITS; no current source commit or push performed by reviewer."
+  },
+  "CI_review": {
+    "status": "PASS_STATIC_BRANCH_SAFETY",
+    "branch": "codex/phase7i-s4-persistent-capacity-closure",
+    "PR_push": "Audited fixed offline tests, safe legacy regression and capacity publication gate selected; all three historical job conditions false.",
+    "manual": "Historical manual workflows skip this branch; resource workflow has no workflow_dispatch trigger. Its predicates are safe hypothetically, but no runnable manual resource job is claimed.",
+    "checkout": "pull_request.head.sha || github.sha; fetch-depth0.",
+    "matrix_file": "independent_capacity_ci_condition_matrix_01.json",
+    "matrix_sha256": "68fc3bad35a287580177bd51852d8234b05890709fac4066431791ce29248b1a",
+    "actual_CI_dispatches": 0
+  },
+  "actual_independent_tests": {
+    "file": "independent_git_publication_tests_final_02.json",
+    "sha256": "a6a51e68a8fa855a82a0cc2051dd60800e810591f6d9fc4c7eb95bbd41b7e26b",
+    "modules": [
+      "test_git_envelope",
+      "test_s4_controller_wiring",
+      "test_capacity_publication",
+      "test_autonomous_publication"
+    ],
+    "tests_run": 58,
+    "unique_test_ids": 58,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "audit": {
+      "git_processes": 22,
+      "forbidden_attempts": [],
+      "unresolved_directory_fd_events": 28
+    },
+    "source_snapshot_rows": 55,
+    "interpretation": "Mocked process/timer/limits and ordinary synthetic Git repositories only."
+  },
+  "full_git_scope_comparison": {
+    "file": "independent_git_scope_comparison_01.json",
+    "sha256": "fd4a8887192dc703f4db0b1860a29b232eacecec9dd151a0841277fbe89f76ba",
+    "AST_identical_to_PR35": [
+      "verify_checkout",
+      "parse_blob_batch",
+      "regular_bytes",
+      "COMMAND_SECONDS",
+      "STATUS_SECONDS",
+      "PREFLIGHT_SECONDS",
+      "PREFLIGHT_CPU_SECONDS",
+      "OUTPUT_BYTES",
+      "EXPECTED_REMOTE"
+    ]
+  },
+  "parent_full_suite_receipt_independently_inspected": {
+    "file": "offline_final_04.json",
+    "sha256": "5d5532a49ab1230bcd0523dd6e2367d81d88f221f00fcff6fc201c66d02cb198",
+    "status": "PASS_SOURCE_OFFLINE_ONLY",
+    "tests_run": 542,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_rows_match_independent_snapshot": true
+  },
+  "preserved_history": {
+    "open_finding_review": "independent_git_publication_ci_review_01.json retained unchanged.",
+    "first_focused_run": "independent_git_publication_tests_01.json retained unchanged.",
+    "root_correction_failure": "Root reports offline_final_03 preserved6missing-re errors before the current import correction; final positive wiring calls now pass."
+  },
+  "remaining_source_findings": [],
+  "limitations": [
+    "Fixed reviewed tests are not a general sandbox; stat/readlink/symlink aliases and directory-FD targets remain a source-review boundary.",
+    "Main SIGALRM is an early-stop observation, not atomic aggregate CPU hard kill or hard real-time scheduling.",
+    "Per-command and outer budgets do not prove actual service-manager activation, group cleanup or durable controller-loss receipts.",
+    "Persistent blocks/inodes/metadata/journal/control-plane capacity remains blocked.",
+    "Resource workflow has no manual dispatch trigger; no manual resource run is claimed.",
+    "Actual final outgoing commit/index audit and hosted CI are root delivery gates, not established by synthetic fixtures."
+  ],
+  "preserved_gates": {
+    "persistent_allocated_capacity_verified": false,
+    "formal_build_authorized": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+  },
+  "actual_operations_during_this_review": {
+    "live_kernel_resource_tests": 0,
+    "services": 0,
+    "mounts": 0,
+    "quota_queries": 0,
+    "physics": 0,
+    "implementation_edits": 0,
+    "commits": 0,
+    "pushes": 0
+  },
+  "document_only_exception": {
+    "path": "reports/phase7i_s4_persistent_capacity_closure/ADMIN_ACTIONS_ZH_TW.md",
+    "sha256": "f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c",
+    "scope": "Explicit root-approved LC_ALL=C, fixed PATH and absolute readlink/Python only; previous draft/hash preserved; no proposed commands executed."
+  }
+}

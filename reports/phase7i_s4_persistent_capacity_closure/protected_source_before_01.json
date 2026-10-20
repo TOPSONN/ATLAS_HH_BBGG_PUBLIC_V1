@@ -1,0 +1,189 @@
+{
+  "schema": "PHASE7I_S4_PROTECTED_SOURCE_BEFORE_V1",
+  "status": "PASS",
+  "base_PR": 35,
+  "base_revision": "cd6b43202318560492491104f994312133e8e436",
+  "source_candidate_revision": "114b5c00341be22982244d3d9548e80adf2d00e5",
+  "protected_source_files": 21,
+  "source_rows": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "base_sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+      "before_sha256": "b2f491f933daa318924340450473db1b0ee3e696cf84b79bfe5df87e7a04acc7",
+      "bytes": 2416,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "base_sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+      "before_sha256": "baf8944cf93fc55d1f90dc4fa95676562b405729a6a6f166e4602feb363d76c3",
+      "bytes": 3099,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "base_sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+      "before_sha256": "0210939ddc4f9f55417fc28ebc9f503d7d98843feb79e02cbf8971e4a389393e",
+      "bytes": 2858,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "base_sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+      "before_sha256": "493fd1a25864809a971b4fbf87017fb9c3dbb91f064ba3f10b0bc692009d7407",
+      "bytes": 4782,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "base_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "before_sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260",
+      "bytes": 2024,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "base_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "before_sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713",
+      "bytes": 6783,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "base_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "before_sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f",
+      "bytes": 1236,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "base_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "before_sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716",
+      "bytes": 16118,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "base_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "before_sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627",
+      "bytes": 13664,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "base_sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+      "before_sha256": "b7a31faa461e086362f1b165560fb765d00337a62bb8ad5e550a16e120aea8da",
+      "bytes": 32396,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "base_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "before_sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342",
+      "bytes": 19196,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "base_sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+      "before_sha256": "b4966d5f0cc18604842c1fac41d6dcf0bf5cc3e2cff053161139d3bb874bbe7b",
+      "bytes": 5613,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "base_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "before_sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a",
+      "bytes": 11414,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "base_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "before_sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5",
+      "bytes": 8770,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "base_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "before_sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04",
+      "bytes": 17139,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "base_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "before_sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd",
+      "bytes": 25617,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "base_sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+      "before_sha256": "a3b4794c2ec4ca820f230942e1e7a832b4ec04c4780ed85df110bfdbe0de566a",
+      "bytes": 33077,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "base_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "before_sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec",
+      "bytes": 20626,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "base_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "before_sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943",
+      "bytes": 15631,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "base_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "before_sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c",
+      "bytes": 17146,
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "base_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "before_sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb",
+      "bytes": 17807,
+      "unchanged_from_PR35": true
+    }
+  ],
+  "scientific_guard_text_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+  "guard_expected_sha256": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123",
+  "guard_matches": true,
+  "guard_text_source_dependencies": [
+    {
+      "path": "simulation/hh_signal/final_closure/guard_correction/overlay.py",
+      "sha256": "de21c4d7c922ec099e198255149ecc796692b31dd6549ab3c054c55f5e2b2071",
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/stop92_diagnostic/overlay.py",
+      "sha256": "e281d48ae7f44e20955cbeead29aee032efc46580f111e62eb4783a6ddf3d733",
+      "unchanged_from_PR35": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/native_checks.f",
+      "sha256": "5cbe786a92c872cdbcd43440f8c5b8894b6d27da1ec883c66fc4ba6d402dabfb",
+      "unchanged_from_PR35": true
+    }
+  ],
+  "overlay_interpretation": "PURE_TEXT_CORRECTION_AND_REVERSAL_ONLY_NO_COMPILE_MODEL_IMPORT_OR_NATIVE_EXECUTION",
+  "physics_contract_relative_path": "simulation/hh_signal/final_closure/config/physics_contract.json",
+  "physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "physics_contract_matches": true,
+  "attachment_guard_literal": "404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4ba123",
+  "attachment_literal_length": 63,
+  "attachment_handling": "RECORDED_TYPO_NO_SOURCE_OR_AUTHORIZATION_REPAIR",
+  "prior_audit_attempt_preserved": "protected_source_before_attempt_01.json",
+  "historical_data_rescan": false,
+  "scope": "21_PUBLISHED_SOURCE_BYTES_AND_SCIENTIFIC_TEXT_IDENTITIES_ONLY",
+  "historical_data_write_planned": false,
+  "actual_kernel_service_or_physics_runs": 0
+}

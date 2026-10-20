@@ -17,6 +17,8 @@ from pathlib import Path
 import sys
 import time
 import unittest
+import signal
+from unittest.mock import patch
 
 MODULES = (
     'test_archive_io','test_backend','test_fixtures','test_worker_adapters',
@@ -24,7 +26,9 @@ MODULES = (
     'test_full_controller','test_full_publication','test_mount_attestation',
     'test_namespace_attestation','test_controller_recovery','test_recovery_publication',
     'test_controller_io','test_controller_guard','test_mount_policy','test_storage_transport',
-    'test_workflow_evidence','test_autonomous_publication')
+    'test_workflow_evidence','test_autonomous_publication',
+    'test_job_envelope','test_storage_capacity','test_capacity_publication',
+    'test_s4_controller_wiring','test_git_envelope')
 HERE = Path(__file__).resolve().parent
 COUNTS = {'git_processes':0,'forbidden_attempts':[], 'unresolved_directory_fd_events':0}
 
@@ -41,7 +45,8 @@ def audit(event,args):
             forbidden('PROCESS:'+Path(exe).name)
         COUNTS['git_processes']+=1
     elif event in ('os.fork','os.forkpty','os.posix_spawn','os.exec','os.kill','os.killpg',
-                   'fcntl.ioctl','ctypes.dlopen','os.system','os.spawn','pty.spawn'):
+                   'fcntl.ioctl','ctypes.dlopen','os.system','os.spawn','pty.spawn',
+                   'resource.setrlimit'):
         forbidden(event)
     elif event in ('open','os.listdir','os.scandir'):
         target=args[0]
@@ -69,7 +74,9 @@ def ids(suite):
 
 def snapshot():
     paths=sorted(HERE.glob('*.py'))+sorted((HERE/'tests').glob('test_*.py'))+sorted((HERE/'config').glob('*.json'))
-    return [{'path':p.relative_to(HERE).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    paths += [HERE.parent/'integration_runtime'/name for name in ('git_precheck.py','contract.py')]
+    repo=HERE.parents[3]
+    return [{'path':p.relative_to(repo).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
             for p in paths]
 
 
@@ -83,7 +90,12 @@ def run():
     if len(selected)!=len(set(selected)):
         raise RuntimeError('DUPLICATE_TEST_IDS')
     output=io.StringIO();start=time.monotonic()
-    result=unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
+    # Python emits no reliable audit event for these APIs. Force real timer,
+    # handler or process-exit calls to fail; tests must inject/mock adapters.
+    with patch.object(signal,'setitimer',side_effect=lambda *a,**k:forbidden('LIVE_TIMER')), \
+         patch.object(signal,'signal',side_effect=lambda *a,**k:forbidden('LIVE_SIGNAL_HANDLER')), \
+         patch.object(os,'_exit',side_effect=lambda *a,**k:forbidden('PROCESS_EXIT')):
+        result=unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
     after=snapshot()
     receipt={'schema':'PHASE7I_AUTONOMOUS_OFFLINE_V1',
              'status':'PASS_SOURCE_OFFLINE_ONLY' if result.wasSuccessful() and before==after and

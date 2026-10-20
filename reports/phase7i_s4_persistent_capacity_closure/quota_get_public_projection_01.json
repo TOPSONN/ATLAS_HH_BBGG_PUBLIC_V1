@@ -1,0 +1,32 @@
+{
+  "schema": "PHASE7I_QUOTA_PUBLIC_PROJECTION_V1",
+  "receipt_sha256": "c22bafedb60d0a0d5db2c2d87ad94953b34e93a15dc32f25c062e38f766c62de",
+  "filesystem_major_minor": "8:48",
+  "kernel_release": "6.6.87.2-microsoft-standard-WSL2",
+  "states": {
+    "USRQUOTA": {
+      "accounting": "NO_ACTIVE_ACCOUNTING_OBSERVED",
+      "individual_limits": "NOT_AVAILABLE_INACTIVE"
+    },
+    "GRPQUOTA": {
+      "accounting": "NO_ACTIVE_ACCOUNTING_OBSERVED",
+      "individual_limits": "NOT_AVAILABLE_INACTIVE"
+    },
+    "PRJQUOTA": {
+      "accounting": "NO_ACTIVE_ACCOUNTING_OBSERVED",
+      "individual_limits": "UNKNOWN_PERMISSION"
+    }
+  },
+  "GET_calls": 9,
+  "nonwrite_class_GETFMT_GETINFO_calls": 6,
+  "potential_write_class_GETQUOTA_calls": 3,
+  "GETQUOTA_all_failed": true,
+  "GETQUOTA_success_count": 0,
+  "quota_SET_ON_OFF_SYNC_calls": 0,
+  "GETQUOTA_caveat": "Generic GETQUOTA can allocate dquot storage; no future query is authorized by this parser.",
+  "scope": "GET_RECEIPT_CONSISTENCY_ONLY",
+  "persistent_allocated_capacity_verified": false,
+  "superblock_quota_feature": "UNKNOWN",
+  "formal_build_authorized": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

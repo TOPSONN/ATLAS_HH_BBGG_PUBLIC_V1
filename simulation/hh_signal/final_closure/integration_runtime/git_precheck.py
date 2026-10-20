@@ -3,7 +3,7 @@
 This module cannot dispatch an integrator. Keep status semantics; plumbing-only
 shortcuts are deliberately not used as a cleanliness certificate.
 """
-import hashlib, math, os, re, resource, signal, stat, subprocess, tempfile, threading, time
+import hashlib, math, os, re, resource, selectors, signal, stat, subprocess, tempfile, threading, time
 from pathlib import Path
 
 COMMAND_SECONDS = 30
@@ -31,16 +31,23 @@ class GitGuard:
     These limits do not touch the later physical integration Budget.
     """
     def __init__(self, repo, *, wall=PREFLIGHT_SECONDS, cpu=PREFLIGHT_CPU_SECONDS,
-                 command=COMMAND_SECONDS, status=STATUS_SECONDS):
+                 command=COMMAND_SECONDS, status=STATUS_SECONDS, outer_watchdog=None):
+        self.outer_watchdog=outer_watchdog;self.borrowed=False
         self.repo=Path(repo);self.wall=wall;self.cpu=cpu;self.command=command;self.status=status
         self.records=[];self.child_cpu=0.;self.active=None
     def __enter__(self):
         require(threading.current_thread() is threading.main_thread(), 'GIT_PREFLIGHT_MAIN_THREAD_REQUIRED')
-        require(signal.getitimer(signal.ITIMER_REAL)==(0.,0.), 'EXISTING_WALL_WATCHDOG')
         self.start=time.monotonic();self.own=time.process_time()
-        self.handler=signal.getsignal(signal.SIGALRM)
-        signal.signal(signal.SIGALRM,self.alarm)
-        signal.setitimer(signal.ITIMER_REAL,self.wall)
+        if self.outer_watchdog is not None:
+            from simulation.hh_signal.final_closure.resource_closure.job_envelope import PeriodicEnvelope
+            require(type(self.outer_watchdog) is PeriodicEnvelope,'UNREVIEWED_OUTER_WATCHDOG')
+            require(self.outer_watchdog.assert_active_timer() is True,'OUTER_WATCHDOG_NOT_ACTIVE')
+            self.borrowed=True
+        else:
+            require(signal.getitimer(signal.ITIMER_REAL)==(0.,0.), 'EXISTING_WALL_WATCHDOG')
+            self.handler=signal.getsignal(signal.SIGALRM)
+            signal.signal(signal.SIGALRM,self.alarm)
+            signal.setitimer(signal.ITIMER_REAL,self.wall)
         return self
     def alarm(self, *_): raise GitPrecheckError('GIT_PREFLIGHT_WALL_WATCHDOG',self.records)
     def __exit__(self, typ, exc, tb):
@@ -48,15 +55,24 @@ class GitGuard:
             if self.active is not None:self.kill(self.active)
         finally:
             if isinstance(exc,GitPrecheckError):exc.diagnostics=list(self.records)
-            signal.setitimer(signal.ITIMER_REAL,0)
-            signal.signal(signal.SIGALRM,self.handler)
+            if not self.borrowed:
+                signal.setitimer(signal.ITIMER_REAL,0)
+                signal.signal(signal.SIGALRM,self.handler)
     @staticmethod
     def kill(child):
+        primary=None
         try:os.killpg(child.pid,signal.SIGKILL)
         except ProcessLookupError:pass
-        child.wait(timeout=3)
+        except BaseException as exc:primary=exc
+        try:child.wait(timeout=3)
+        except BaseException as exc:
+            if primary is None:raise
+            primary.git_wait_error=type(exc).__name__
+        if primary is not None:raise primary
     def spent_cpu(self):return self.child_cpu+time.process_time()-self.own
     def check(self):
+        if self.outer_watchdog is not None:
+            require(self.outer_watchdog.assert_active_timer() is True,'OUTER_WATCHDOG_NOT_ACTIVE')
         require(time.monotonic()-self.start<self.wall,'GIT_PREFLIGHT_WALL_WATCHDOG')
         require(self.spent_cpu()<self.cpu,'GIT_PREFLIGHT_CPU_BUDGET')
     def git(self,*args,stdin_bytes=None):
@@ -68,9 +84,9 @@ class GitGuard:
         limit=self.status if args and args[0]=='status' else self.command
         remaining=max(1,math.ceil(self.cpu-self.spent_cpu()))
         def limits():
-            resource.setrlimit(resource.RLIMIT_CPU,(remaining,remaining))
-            resource.setrlimit(resource.RLIMIT_FSIZE,(OUTPUT_BYTES,OUTPUT_BYTES))
-            resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+            self.child_limits(remaining)
+        if self.outer_watchdog is not None:
+            return self.git_pipes(args,env,stdin_bytes,limit,limits)
         start=time.monotonic();reason=None;out=b'';err=b'';code=None;usage=None
         with tempfile.TemporaryFile() as stdout,tempfile.TemporaryFile() as stderr:
             try:
@@ -113,6 +129,118 @@ class GitGuard:
                      'stderr_excerpt':err[:512].decode('utf-8','replace'),'group_cleanup':True}
                 if stdin_bytes is not None:row.update(stdin_bytes=len(stdin_bytes),stdin_sha256=sha(stdin_bytes))
                 self.records.append(row)
+        require(code==0,'GIT_SUBPROCESS_FAILURE:'+args[0]+':'+str(code))
+        require(not err,'GIT_UNEXPECTED_DIAGNOSTIC:'+args[0])
+        require(len(out)<OUTPUT_BYTES,'GIT_OUTPUT_CAP')
+        return out
+
+    @staticmethod
+    def child_limits(remaining):
+        """Never raise an inherited finite soft or hard limit in the child."""
+        for which,requested in [(resource.RLIMIT_CPU,remaining),
+                (resource.RLIMIT_FSIZE,OUTPUT_BYTES),(resource.RLIMIT_CORE,0)]:
+            soft,hard=resource.getrlimit(which)
+            bound=min([requested]+[v for v in (soft,hard) if v!=resource.RLIM_INFINITY])
+            resource.setrlimit(which,(bound,bound))
+
+    def git_pipes(self,args,env,stdin_bytes,limit,limits):
+        """Borrowed-envelope Git streams stay in bounded incremental RAM.
+
+        This does not alter the inherited file-size limit or reduce the full
+        checkout/status/blob scope. No temporary regular output files exist.
+        """
+        start=time.monotonic();reason=None;code=None;usage=None
+        buffers={'stdout':bytearray(),'stderr':bytearray()};offset=0
+        child=None;cleanup_error=None;cleanup_reason=None;cleanup_wait_error=None;fd_errors=[];selector_error=None
+        selector=selectors.DefaultSelector()
+        try:
+            child=subprocess.Popen(['git','-C',str(self.repo),*args],env=env,
+                stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                stdin=subprocess.PIPE if stdin_bytes is not None else subprocess.DEVNULL,
+                start_new_session=True,preexec_fn=limits,bufsize=0)
+            self.active=child
+            for name in ('stdout','stderr'):
+                stream=getattr(child,name);os.set_blocking(stream.fileno(),False)
+                selector.register(stream,selectors.EVENT_READ,name)
+            if stdin_bytes is not None:
+                os.set_blocking(child.stdin.fileno(),False)
+                if stdin_bytes:selector.register(child.stdin,selectors.EVENT_WRITE,'stdin')
+                else:child.stdin.close()
+            while selector.get_map() or code is None:
+                self.check()
+                if time.monotonic()-start>=limit:raise GitPrecheckError('GIT_COMMAND_TIMEOUT:'+args[0])
+                if code is None:
+                    pid,ws,ru=os.wait4(child.pid,os.WNOHANG)
+                    if pid:
+                        code=os.waitstatus_to_exitcode(ws);usage=ru;child.returncode=code
+                        self.child_cpu+=ru.ru_utime+ru.ru_stime
+                    else:
+                        fields=Path('/proc')/str(child.pid)/'stat'
+                        try:
+                            values=fields.read_text().rsplit(')',1)[1].split()
+                            active_cpu=(int(values[11])+int(values[12]))/os.sysconf('SC_CLK_TCK')
+                            require(self.spent_cpu()+active_cpu<self.cpu,'GIT_PREFLIGHT_CPU_BUDGET')
+                        except FileNotFoundError:pass
+                for key,mask in selector.select(.02):
+                    stream=key.fileobj;name=key.data
+                    if name=='stdin':
+                        try:
+                            block=stdin_bytes[offset:offset+4096]
+                            written=os.write(stream.fileno(),block)
+                            require(type(written) is int and 0<written<=len(block),'INVALID_GIT_PIPE_WRITE')
+                            offset+=written
+                        except BrokenPipeError:raise GitPrecheckError('GIT_INPUT_CLOSED_BEFORE_COMPLETE')
+                        except BlockingIOError:continue
+                        if offset==len(stdin_bytes):selector.unregister(stream);stream.close()
+                    else:
+                        try:data=os.read(stream.fileno(),4096)
+                        except BlockingIOError:continue
+                        require(type(data) is bytes and len(data)<=4096,'INVALID_GIT_PIPE_READ')
+                        if not data:selector.unregister(stream);stream.close();continue
+                        room=OUTPUT_BYTES-len(buffers[name])
+                        buffers[name].extend(data[:room])
+                        require(len(data)<room,'GIT_OUTPUT_CAP')
+            self.check()
+        except BaseException as exc:
+            reason=str(exc)
+            raise
+        finally:
+            if child is not None:
+                try:self.kill(child)
+                except BaseException as exc:
+                    cleanup_error=type(exc).__name__;cleanup_reason=str(exc)[:256]
+                    cleanup_wait_error=getattr(exc,'git_wait_error',None)
+                if code is None:code=child.returncode
+                for name in ('stdin','stdout','stderr'):
+                    stream=getattr(child,name,None)
+                    if stream is not None and not stream.closed:
+                        try:stream.close()
+                        except BaseException as exc:fd_errors.append(type(exc).__name__)
+            self.active=None
+            try:selector.close()
+            except BaseException as exc:selector_error=type(exc).__name__
+            cleanup_complete=cleanup_error is None and not fd_errors and selector_error is None
+            out=bytes(buffers['stdout']);err=bytes(buffers['stderr'])
+            row={'argv':list(args),'exit':code,'reason':reason,
+                 'timed_out':bool(reason and ('TIMEOUT' in reason or 'WALL_WATCHDOG' in reason)),
+                 'wall_seconds':time.monotonic()-start,
+                 'CPU_seconds':None if usage is None else usage.ru_utime+usage.ru_stime,
+                 'kernel_ru_maxrss_bytes':None if usage is None else usage.ru_maxrss*1024,
+                 'stdout_bytes':len(out),'stderr_bytes':len(err),'stdout_sha256':sha(out),'stderr_sha256':sha(err),
+                 'stderr_excerpt':err[:512].decode('utf-8','replace'),'group_cleanup':cleanup_complete,
+                 'group_termination':'CONFIRMED' if cleanup_error is None else 'UNKNOWN',
+                 'fd_cleanup':'UNKNOWN' if fd_errors else 'CONFIRMED',
+                 'selector_cleanup':'UNKNOWN' if selector_error else 'CONFIRMED',
+                 'capture_mode':'BOUNDED_PIPE_RAM','child_limit_policy':'NEVER_RAISE_INHERITED_LIMITS'}
+            if cleanup_error is not None:
+                row.update(cleanup_error=cleanup_error,cleanup_reason=cleanup_reason)
+                if cleanup_wait_error is not None:row['cleanup_wait_error']=cleanup_wait_error
+            if fd_errors:row['fd_cleanup_errors']=fd_errors[:3]
+            if selector_error is not None:row['selector_cleanup_error']=selector_error
+            if stdin_bytes is not None:row.update(stdin_bytes=len(stdin_bytes),stdin_sha256=sha(stdin_bytes))
+            self.records.append(row)
+            if not cleanup_complete and reason is None:
+                raise GitPrecheckError('GIT_GROUP_CLEANUP_FAILED',self.records)
         require(code==0,'GIT_SUBPROCESS_FAILURE:'+args[0]+':'+str(code))
         require(not err,'GIT_UNEXPECTED_DIAGNOSTIC:'+args[0])
         require(len(out)<OUTPUT_BYTES,'GIT_OUTPUT_CAP')

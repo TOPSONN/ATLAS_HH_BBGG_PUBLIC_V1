@@ -59,7 +59,7 @@ def verify_source_binding(review,*,public=False,historical_audit=False):
         'new_source_binding_identity':identity({'previous_build':expected,'current_sources':current}),
         'restart_authorized':False}
 
-def check_revision(revision,*,full=False):
+def check_revision(revision,*,full=False,outer_watchdog=None):
     from .git_precheck import verify_checkout
     # Evaluate source enumeration/hashing inside the independent Git watchdog.
     def required():
@@ -67,8 +67,9 @@ def check_revision(revision,*,full=False):
             from .route_a import full_sources
             return [r['path'] for r in full_sources()]+[RECOVERY_METADATA]
         return [r['path'] for r in sources()]+[RECOVERY_METADATA]
+    options={'guard_options':{'outer_watchdog':outer_watchdog}} if outer_watchdog is not None else {}
     checked=verify_checkout(REPO,revision,required,
-        'simulation/hh_signal/final_closure/config/physics_contract.json',PHYSICS_SHA)
+        'simulation/hh_signal/final_closure/config/physics_contract.json',PHYSICS_SHA,**options)
     # This checks identity only. The human's separate approval must be checked
     # in the trusted conversation before an operator invokes execute-reviewed.
     verified=[{'path':p,'sha256':h} for p,h in sorted(checked['critical_source_sha256'].items())

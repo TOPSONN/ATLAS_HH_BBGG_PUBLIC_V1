@@ -1,0 +1,124 @@
+{
+  "schema": "PHASE7I_FINAL_CAPACITY_REPORT_ACCEPTANCE_V1",
+  "reviewer": "independent_storage_candidate_review",
+  "scope": "STATIC_ADMIN_AND_PUBLIC_REPORT_CONSISTENCY_ONLY",
+  "source_revision": "74f8dc3dd53502a430676c7327a4eb8801f7afca",
+  "verdict": "PASS_REPORT_CONSISTENCY_WITH_OS_CAPACITY_AND_S4_BLOCKED",
+  "files": [
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/ADMIN_ACTIONS_ZH_TW.md",
+      "bytes": 15651,
+      "sha256": "f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/REPORT_ZH_TW.md",
+      "bytes": 10827,
+      "sha256": "2cef29b72a71fa1cb96ad4631ccaa4fa5c9894625fb78620b06c858ab86767a4"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/evidence.json",
+      "bytes": 5322,
+      "sha256": "5ec037956285d8cf43af8bf600ecc6be26a3d2840c114fd04f4ae9bcef87151b"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/source_manifest.json",
+      "bytes": 67388,
+      "sha256": "ddea666a9ebb2ac1540ad5be20e68d8af3762c5a924488402a1f97e29f52a284"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/proposed_kernel_scope.json",
+      "bytes": 9584,
+      "sha256": "47893c3b4a75997d984e23d586d2603511d683e8cdc4bf73350367e4a8a7b6fc"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/storage_capacity_review_01.json",
+      "bytes": 6770,
+      "sha256": "6927630f316062810258c082f353ad13a56c76006b4c531cecf3bd86d5205fcc"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/quota_get_corrective_audit_01.json",
+      "bytes": 2534,
+      "sha256": "755c2db58d256eaee4d3e447fd5d109fc6faefef56cf5bf0c25cd08cdcea190c"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/quota_get_public_projection_01.json",
+      "bytes": 1170,
+      "sha256": "c079f500885cd790c652ddad80e32e2121628499fa85bf39362d1389983452b4"
+    },
+    {
+      "path": "reports/phase7i_s4_persistent_capacity_closure/output_controlplane_capacity_review_01.json",
+      "bytes": 18217,
+      "sha256": "e8b992d16ef8de987b1f033dbffa14497e0198bb1e94191cb21517d1f5156ff2"
+    }
+  ],
+  "checks": {
+    "exact_source_agreement": true,
+    "scope_reference_matches_current_bytes": true,
+    "manifest_reference_matches_current_bytes": true,
+    "admin_reference_matches_current_bytes": true,
+    "S4_not_authorized": true,
+    "S4_device_not_provisioned": true,
+    "writer_and_failure_checkpoint_not_claimed": true,
+    "limits_unchanged": true,
+    "prior21_vs_new334_wording_corrected": true,
+    "no_FULL_or_formal_authorization": true,
+    "GETQUOTA_correction_explicit": true,
+    "future_GETQUOTA_not_permitted": true
+  },
+  "capacity_arithmetic": [
+    {
+      "profile": "S4_PROPOSAL_ONLY",
+      "fixed_device_bytes": 4194304,
+      "tmpfs_bytes": 9437184,
+      "known_sum_bytes": 13631488,
+      "aggregate_ceiling_bytes": 16777216,
+      "arithmetic_reserve_bytes": 3145728,
+      "reserve_hard_enforcement": "UNPROVEN",
+      "actual_device_provisioned": false,
+      "allocated_blocks_inodes_metadata_journal_proven": false
+    },
+    {
+      "profile": "FUTURE_BUILD_ONLY_PROPOSAL_ONLY",
+      "fixed_device_bytes": 2147483648,
+      "tmpfs_bytes": 2415919104,
+      "known_sum_bytes": 4563402752,
+      "aggregate_ceiling_bytes": 5368709120,
+      "arithmetic_reserve_bytes": 805306368,
+      "reserve_hard_enforcement": "UNPROVEN",
+      "actual_device_provisioned": false,
+      "allocated_blocks_inodes_metadata_journal_proven": false
+    }
+  ],
+  "independent_semantic_review": {
+    "report_names_and_referenced_evidence": "Reviewed named public files exist; source/manifest/admin/scope hash references match exact current bytes.",
+    "capacity_boundary": "4MiB/2GiB geometry would cover only its own filesystem blocks/inodes/metadata/internal journal if provisioned and verified. Shared host journald/rsyslog/user-manager output remains outside and BLOCKED. Arithmetic reserves are not enforcement.",
+    "admin_recipe": "PROPOSAL_ONLY; no sudo/automatic apply, no existing-root formatting, no device identity supplied; pre-format blank check distinguished from post-format new UUID/geometry identity check. No administrator commands executed.",
+    "failure_capture": "Future checkpoint route not implemented or verified; controller death cannot create a later receipt, only already-synced checkpoints might survive.",
+    "quota_correction": "Six GETFMT/GETINFO classified non-write; three actual failed GETQUOTA classified potentially write-class, preserved without retry. Error-path nonallocation is matching-release source inference with kernel-binary/source binding UNKNOWN, not a block-delta measurement or proof of zero host writes.",
+    "scope_wording_correction": "Historical21 versus current334 admission wording repaired; original draft and corrective note preserved locally.",
+    "S4_and_physics": "No S4 authorization, no readiness claim, no actual full launch enforcement or formal build authorization. Next gate remains reviewed real capacity/output prerequisites and separate explicit execution authorization."
+  },
+  "open_findings": [],
+  "unchanged_blockers": [
+    "No provisioned independent fixed capacity device with verified actual geometry/inodes/metadata/journal.",
+    "No aggregate hard bound for shared control-plane/log output or verified bounded durable controller-loss capture.",
+    "No new S4 execution authorization; S4 CPU/wall/RAM/swap/disk/cleanup measurements remain UNKNOWN."
+  ],
+  "operations_during_this_acceptance": {
+    "tests": 0,
+    "OS_storage_queries": 0,
+    "quota_calls": 0,
+    "resource_or_kernel_probes": 0,
+    "service_starts": 0,
+    "mounts": 0,
+    "admin_commands_executed": 0,
+    "new_builds": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FULL_CONTROLLER_RESOURCE_ENVELOPE_VERIFIED": false,
+  "S4_EXECUTION_AUTHORIZED": false,
+  "FORMAL_BUILD_READY": false
+}
