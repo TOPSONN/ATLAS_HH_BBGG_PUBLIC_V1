@@ -14,7 +14,7 @@ PREFIX = 'simulation/hh_signal/final_closure/resource_closure/'
 RUNTIME = 'simulation/hh_signal/final_closure/integration_runtime/'
 ADAPTERS = {RUNTIME+name+'.py' for name in ('build', 'build_process', 'containment', 'route_a', 'approval', 'run')}
 WORKFLOWS = {'.github/workflows/'+name+'.yml' for name in
-             ('hh_signal_final_closure', 'hh_signal_readiness', 'hh_signal_resource_closure')}
+             ('hh_signal_final_closure', 'hh_signal_readiness', 'hh_signal_resource_closure', 'hh_signal_campaign')}
 FILE_BYTES = 131072
 AGGREGATE_BYTES = 2*1024**2
 PRIVATE_PARTS = {'.git', '.local', '__pycache__', 'private', 'private_inputs', 'private_payload',

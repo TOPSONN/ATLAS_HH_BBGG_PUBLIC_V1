@@ -3,7 +3,7 @@ import ast,copy,errno,json,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 from .. import fixtures as f
-from ..run_fixtures import assess,flattened,save_new
+from ..run_fixtures import assess,flattened,save_new,campaign_outcome
 from .. import allocation_guard as guard
 
 def record(kind,**fields):return {'kind':kind,**fields}
@@ -199,6 +199,39 @@ class FixedFixtureTests(unittest.TestCase):
   self.assertNotIn('gfortran',text);self.assertNotIn('ldd',text)
   self.assertIn('300*1024**2',text);self.assertIn('range(0,len(data),4096)',text)
   self.assertIn("os.setsid()",text);self.assertIn("os.fork()",text)
+
+class CampaignScopeTests(unittest.TestCase):
+ def successful_rows(self):
+  return [{'case':case,'status':'PASS_EXPECTED_RESULT'} for case in f.CASES]
+ def test_all47_payload_success_still_cannot_certify_full_controller(self):
+  result=campaign_outcome(list(f.CASES),self.successful_rows(),None)
+  self.assertTrue(result['PAYLOAD_BUSINESS_ENVELOPE_VERIFIED'])
+  self.assertFalse(result['FULL_LAUNCH_ENVELOPE_VERIFIED'])
+  self.assertFalse(result['FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED'])
+  self.assertFalse(result['FORMAL_BUILD_ENVELOPE_VERIFIED'])
+  for term in ('Host provisioning','observer CPU/RAM','post-unit','result writing'):
+   self.assertIn(term,result['remaining_scope_reason'])
+ def test_missing_partial_failed_or_reordered_cases_cannot_certify_payload(self):
+  complete=self.successful_rows()
+  cases=[(list(f.CASES),complete[:-1],None),
+   (list(f.CASES)[:-1],complete[:-1],None),
+   (list(f.CASES),complete,{'case':f.CASES[-1],'reason':'failure'}),
+   (list(f.CASES),list(reversed(complete)),None)]
+  changed=copy.deepcopy(complete);changed[-1]['status']='FAIL'
+  cases.append((list(f.CASES),changed,None))
+  for chosen,rows,failure in cases:
+   result=campaign_outcome(chosen,rows,failure)
+   self.assertFalse(result['PAYLOAD_BUSINESS_ENVELOPE_VERIFIED'])
+   self.assertFalse(result['FULL_LAUNCH_ENVELOPE_VERIFIED'])
+ def test_environment_or_api_cannot_override_full_controller_flags(self):
+  with patch.dict('os.environ',{'FULL_LAUNCH_ENVELOPE_VERIFIED':'true',
+                               'FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED':'true'}):
+   result=campaign_outcome(list(f.CASES),self.successful_rows(),None)
+   self.assertFalse(result['FULL_LAUNCH_ENVELOPE_VERIFIED'])
+   self.assertFalse(result['FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED'])
+  with self.assertRaises(TypeError):
+   campaign_outcome(list(f.CASES),self.successful_rows(),None,
+                    FULL_LAUNCH_ENVELOPE_VERIFIED=True)
 
 class StrictAssessorTests(unittest.TestCase):
  def test_all_47_synthetic_expected_data_shapes(self):

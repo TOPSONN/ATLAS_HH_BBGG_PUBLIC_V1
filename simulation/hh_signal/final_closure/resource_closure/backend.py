@@ -4,8 +4,8 @@ The service contains all business imports, preflight, compilation-like fixtures,
 loader, receipts, postflight and export. The host only provisions a fixed finite
 transport, observes cgroup counters, and terminates that exact unit. The systemd
 control plane and this observer are not included in payload CPU/RAM accounting.
-Future BUILD_ONLY requires a new external exact-scope decision and real manual
-TTY confirmation in the protected worker; it is not executed by this task.
+Formal BUILD_ONLY is unconditionally blocked: full host-controller resource
+containment is not implemented. Private TTY transport code is a proposal only.
 """
 from __future__ import annotations
 import fcntl, hashlib, json, os, re, stat, subprocess, time, uuid
@@ -455,8 +455,15 @@ def _current_human_tty():
 
 
 def start_build(output, revision):
-    # Future manual entry: FIRST obtain new external exact BUILD_ONLY approval.
-    # The protected worker then asks the human for manual exact-scope confirmation
+    # Full host setup/controller/postprocessing containment is not implemented.
+    # This cannot be enabled by flags, environment, receipt, or a TTY response.
+    raise ValueError('COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED')
+
+
+def _start_build_transport_proposal(output, revision):
+    # Non-executed transport design only. Never bypass the public full-controller
+    # block using this private helper. A future repaired worker would request
+    # manual exact-scope confirmation after new external BUILD_ONLY approval
     # and constructs HumanReview in that same PID. Transport grants nothing.
     # This entry performs neither binary review nor physical restart.
     require(re.fullmatch(r'[0-9a-f]{40}', revision or '') is not None, 'EXACT_REVIEWED_REVISION_REQUIRED')

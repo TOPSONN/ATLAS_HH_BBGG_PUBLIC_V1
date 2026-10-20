@@ -183,7 +183,7 @@ def main(argv=None):
     except Exception as exc:
         # Denied physical commands never modify historical workspaces.
         # A launched formal worker without complete proof has unknown counters.
-        zero=None if formal_launch_attempted else 0
+        zero=0 if str(exc)=='COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED' else (None if formal_launch_attempted else 0)
         print(json.dumps({'status':'BLOCKED_NATIVE_RUNTIME','reason':str(exc),'new_ME_calls':zero,'new_integrals':zero}));return 2
 
 if __name__=='__main__':raise SystemExit(main())

@@ -1,55 +1,56 @@
-# Phase7I 非物理資源修補驗收報告
+# Phase7I 非物理資源修補：完整驗收報告
 
-判定：**BLOCKED_PENDING_RAM_REVIEW_AND_LIVE_RESOURCE_VALIDATION**。來源修補、無害離線回歸與歷史保存已通過；完整資源服務尚未實測。沒有正式HH build、zero-ME configuration preflight、ME、integral、events、Pythia、Delphes或Phase7I物理啟動。
+**FINAL_VERDICT：SOURCE_PARTIAL_BLOCKED_FULL_CONTROLLER_AND_RAM_REVIEW。**
 
-## 範圍與來源
+本次完成一部分來源修補、驗收防誤判與離線驗證；**完整作業資源封裝尚未完成，不能報告FULL_LAUNCH_ENVELOPE_VERIFIED。** 這是目前實作缺口，沒有證據說環境本身無法提供控制。
 
-從PR24 exact b80e16775bf141e45f4048c7197a8a99befaed51建立獨立分支codex/phase7i-resource-closure；舊PR／舊失敗收據／原安裝與物理資料保留。使用者只授權Phase7I source/tests資源修補、無害測試及stacked Draft PR。新增RAM profile依既有提案仍須先明確審核；已提出fixture512MiB/swap0及未執行正式提案2GiB/swap0，尚未收到回覆。
+## 最重要的未完成項目
 
-完整source binding與30項resource snapshot見source_binding.json；精確commit由Git提交後與PR本身提供。Source commit A e98c1600fd5a9d7763e0072b8b23423fbb988014 的完整Git preflight已通過：1415tracked／294critical、0.881s wall／0.345s CPU。後續僅測試HOME可攜性、CI checkout及報告修補；30項production bytes未變，03獨立補件確認。最終PR head仍須再做乾淨exact-head preflight，結果由PR描述與本機交付補充。
+受限service包含payload的business imports、Git/source/toolchain preflight、copy、compiler、loader、receipt、postflight與archive驗證。但host啟動前profile/source binding/output provisioning，以及observer的CPU／RAM、post-unit source/hash/transport readback/result writing仍在該cgroup之外；elapsed capture也早於部分host後處理。Observer還保留poll snapshots。因此47個payload案例即使全通過，也不能證明完整supervisor/controller的CPU、RAM與total wall上限。
 
-## 實作與獨立來源審查
+本版FULL_LAUNCH_ENVELOPE_VERIFIED與FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED固定false；另有PAYLOAD_BUSINESS_ENVELOPE_VERIFIED，只能由47案真實全部成功設定。本次47案實際執行0案。Formal start_build、worker、build enclosure與CLI均在TTY/output/confirmation/native之前拒絕，reason為COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED；新授權、flags、環境或editable receipt不能解除本版封鎖。
 
-1. Compiler TMPDIR/TMP/TEMP固定到獨立有byte／inode quota的private /tmp；work亦為受限tmpfs，host保持唯讀。
-2. ldd改走bounded child runner；原本較寬的CPU／AS／FSIZE不再提高外層hard limit。
-3. Service容納business imports、Git／source／toolchain preflight、copy、compile、loader、receipt、postflight與export。單一readonly global flock保障1job；compiler流程逐一執行，一核心，native workers仍1。
-4. cgroup整組memory／swap、CPU quota、runtime、全組kill與empty/unpopulated readback；controller失去後仍需kernel runtime後援。啟動／觀測控制面及systemd manager另列，不能把payload計數說成整台主機計數。
-5. 邏輯FSIZE不能限制fallocate KEEP_SIZE實際配置。新inherited allocation filter拒絕fallocate、寫入ioctl、xattr、AIO／io_uring等繞路；actual allocated blocks與filesystem假設另核對。沒有把純BPF測試當kernel證據。
-6. 固定FD chunks/index保存strict USTAR；只驗證、不host extraction／execution。Bounded lossless checkpoint journal留在固定日誌，失敗不覆寫舊workspace；未完成的volatile scratch不宣稱完整保存。
-7. CLI成功必須有完整unit／zero-ME／cleanup證據；未證實counter維持null。被封鎖的physical CLI不寫歷史收據。
+## 授權、來源與保存
 
-獨立agent審查記錄作者分工：archive／allocation guard由該agent撰寫並自審，root-owned worker與adapters等由其獨立重新讀取。這不是外部人類binary或physics review。
+Base PR24／b80e16775bf141e45f4048c7197a8a99befaed51；新分支codex/phase7i-resource-closure，stacked Draft PR32。舊PR24保持Draft，不merge或force-push。
 
-## 實際測試證據
+使用者授權僅Phase7I source/tests資源修補、無害測試與新Draft PR。RAM須先審的要求保留；fixture512MiB/swap0、未執行正式提案2GiB/swap0尚未收到明確回覆。即使RAM批准，也不能解除完整controller實作或正式build封鎖。
 
-| 項目 | 狀態 | 證據／限制 |
-|---|---|---|
-| 新離線單元測試 | PASS | 138/138，0fail/error/skip；audit僅155次Git，0service/filter install/live probe/RAM stress/HumanReview/native；另13/13 alternate-HOME測試 |
-| 固定安全legacy | PASS | 81/81；551次Git、5次固定Python、1次固定sleep；0forbidden imports／HumanReview；來源前後一致 |
-| 歷史保存 | PASS | 50,169筆regular-path觀測、122symlink、3,588,706,711bytes重新SHA256，0變更；非all-host保證 |
-| 獨立來源審查 | PASS（static） | independent_source_review_02.json；runtime gates仍BLOCKED |
-| 真實資源matrix | BLOCKED | 47案，實際執行0案；RAM先審要求未解除 |
-| 正式HH build／zero-ME | BLOCKED／UNKNOWN | 本次未授權、未執行，不能由fixture推論成功 |
-| Genuine ME／integral／events | BLOCKED | 本次新增皆0，截面與誤差null |
+Corrected scientific guard仍404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123；physics contract仍a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb，與b80 bytes一致。四seeds、aggregateCPU/wall各14400s、1job/worker、5GiB、0retained LHE不變。RNG/integrator/grid/weights/estimator未作科學修改，原MG5/PDF/歷史資料未改裝。
 
-完整47案包含正常六階段、各階段CPU/RAM/wall/disk/異常退出、aggregate CPU、controller loss、orphan、PID、namespace／來源／cgroup寫入、stdout、tmpfs bytes／inodes、export、missing approval、archive、allocation bypass及separate-open-description job-lock反例。每案必須真實執行且證明cleanup；目前均未執行。
+Source commit A=e98c1600fd5a9d7763e0072b8b23423fbb988014；前次report/test補件head=092cd24cbd0f8b3499fc6c9571332a5b8165b12b。這些版本保留在Git。最新candidate以PR head及source_binding.json的exact hashes為準；最終乾淨head的Git preflight在提交後重驗並列於PR及本機交付。
 
-## FAIL、BLOCKED與UNKNOWN
+## 已完成的來源工作
 
-FAIL歷史保留：最初unit harness有2個relative-import錯誤；保存harness誤判122個既有symlink。兩者修正後實際重跑通過，原紀錄留本機且harness_history.json列明。來源審查曾發現的兩個CLI缺陷已修補、加入負例，最後138與81項均在修補後重跑；再修正test-only HOME路徑後，138項及13項alternate-HOME亦實跑通過。CI checkout明確使用actual PR source head，避免把GitHub synthetic merge當來源history。
+- Compiler TMPDIR/TMP/TEMP綁到有byte/inode quota的private /tmp；work亦有tmpfs上限。ldd經bounded runner，子程序不提高既有hard limit。
+- Payload cgroup整組CPU rate、memory/swap、runtime、kill/empty readback；readonly global flock提供單一job門檻；controller-loss與setsid orphan有固定反例設計。
+- 實際mount/rlimit/source/profile/FD/kernel proof嚴格readback。FSIZE不是allocated disk quota；加入inherited fallocate/ioctl/xattr/AIO/uring拒絕、st_blocks及保守量測，仍待實測。
+- 固定FD strict USTAR/hash index，不host extraction/execution；lossless bounded checkpoint journal保留partial計算簿記。未export的volatile scratch不冒稱完整archive。
+- 修正worker失敗仍可能CLI成功、denied physical command寫歷史收據、合法mode argv繞過early block、payload通過誤標FULL等缺陷；正式入口目前完全封鎖。
+- Source review由不同agent讀回root-owned controller/adapters；archive/allocation guard作者與自審範圍另列，不冒稱外部人類binary/physics review。
 
-BLOCKED：RAM profile明確審核、47案本機實測、filesystem allocated-overhead實證、之後另行exact BUILD_ONLY授權。新archive binary review reader與physical enclosure尚未完成遷移；physical CLI保持阻擋。
+## PASS／FAIL／BLOCKED／UNKNOWN
 
-UNKNOWN：本機新service／syscall filter是否實際可用、正式compiler／loader／八zero-ME／四denial的行為、genuine HH積分與收斂。沒有新cross section，沒有借用舊B/C/D或其他source的歷史數值。
+| 分類 | 實際證據與限制 |
+|---|---|
+| PASS | 最終145/145無害單元；固定81/81安全legacy；另13/13 alternate-HOME較早補件。145與81均在最後正式入口/語意修補後重跑。 |
+| PASS | Unit audit155Git；legacy551Git、5固定Python、1固定sleep；0forbidden import/HumanReview。源碼snapshot前後一致。 |
+| PASS | 50,169筆regular-path觀測、122symlink、3,588,706,711bytes重新SHA256，0變更。這是指定歷史scope，不是all-host保證。 |
+| PASS（static） | independent_source_review_05明確接受fail-closed修正，同時保留完整controller OPEN finding。 |
+| FAIL（歷史已保留） | 首輪unit harness2個relative-import錯誤；歷史保存harness誤判122個已宣告symlink；修正後重跑通過，原紀錄保留。 |
+| FAIL（前次CI） | 092head的舊campaign audit拒絕新增resource workflow；13數學測試已過，其後validators skipped。原CI run39371223382保留。 |
+| BLOCKED | 完整host controller CPU/RAM/wall實作、RAM先審、47案實際payload與新增完整controller正反測試。 |
+| BLOCKED | 正式HH build/zero-ME、archive binary review/physical enclosure遷移及後續分別授權。 |
+| UNKNOWN | 本機新kernel/service compatibility、實際allocated-overhead、完整supervisor硬限制、正式native行為、genuine HH收斂。 |
 
-## 不變科學契約與發布
+## CI與發布
 
-Corrected scientific guard仍404dfd1fb81a3fa9ad7cf18d511caf063674a325c2622785e7fca1d5f4fba123；physics contract仍a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb，bytes與b80一致。四seeds、CPU/wall各14400s、1job/worker、5GiB、retained physical LHE0保留。RNG/integrator/grid/weights/estimator沒有科學修改。
+前次092head：new resource CI138+81+strict publication SUCCESS、歷史readiness SUCCESS、closure full job明確SKIPPED、campaign舊白名單FAIL。修補僅此新分支改用現行嚴格publication audit，新增的第四份workflow為精確檔名；其他refs保留原audit。原campaign/audit_payload.py bytes不變，沒有放寬CPU/RAM/disk/figure/private限制。最新145+81及CI接線將由新head CI重驗，結果另列PR與本機交付。
 
-來源、tests與bounded文字證據可發布；PDF／PNG、native binaries、chunks/index、原安裝、events、私有完整manifest均不推送。每次push前檢查staged index與所有outgoing intermediate commits。PR保持Draft，不merge或force-push。
+Publication guard逐一檢查staged index與每個outgoing intermediate commit；固定b80 base、128KiB/blob、2MiB aggregate及禁止圖/二進位/events/private payload不變。只推source/tests/bounded文字證據；未推PDF/PNG、binaries、chunks/index、原安裝、raw events或完整private manifest。
 
-CI新resource job只跑離線方法與固定81項。舊closure full job對本分支明確SKIPPED，因其中包含自動測試授權物件／native methods；不標示該job通過。歷史readiness仍驗證原固定snapshot。CI通過也不能代替本機kernel資源實測。
+## 物理狀態與下一關
 
-下一關：先明確審核fixture RAM512MiB/swap0，再執行全新namespace的47案無害matrix；通過後才另提exact revision/output/完整scope的BUILD_ONLY審核。之後依序binary review、PHYSICAL_RESTART；Phase7J/K/L仍BLOCKED。
+REAL_NATIVE_DISPATCH=NO；本次正式HH build、native zero-ME、ME、integral、events、Pythia、Delphes及HumanReview建立/重用均0。新截面、誤差與replica結果維持null/空，不借用歷史B/C/D截面。Phase7J/K/L仍BLOCKED。
 
-本報告的CI／final-head狀態為提交當時快照。最新exact head、read-only Git preflight與CI結論另列PR描述及本機交付；來源／方法成功仍不解除RAM與47案實測BLOCKED。
+下一步：補齊host provisioning/observer/post-unit verification/receipt的完整強制資源邊界，明確審核RAM，實跑payload及完整controller正反測試。全部驗證後須審查新的exact source；本版不能提出可執行BUILD_ONLY，更不能直接進ME/integration或signal production。之後仍需各自BINARY_REVIEW及PHYSICAL_RESTART授權。

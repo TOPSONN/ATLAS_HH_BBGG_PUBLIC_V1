@@ -272,6 +272,24 @@ def loss_case(output):
          handoff['controller_pid']!=os.getpid(),'CONTROLLER_OBSERVER_NOT_SEPARATE')
  return backend.monitor_job(handoff)
 
+def campaign_outcome(chosen,results,failure):
+ # Even all actual payload fixtures cannot certify the unenclosed controller.
+ # No environment, receipt or caller-supplied flag can expand this statement.
+ requested=tuple(chosen)==CASES
+ completed=([v.get('case') for v in results]==list(CASES) and
+            all(v.get('status')=='PASS_EXPECTED_RESULT' for v in results))
+ payload=failure is None and requested and completed
+ return {'all_required_cases_executed':payload,
+  'PAYLOAD_BUSINESS_ENVELOPE_VERIFIED':payload,
+  'FULL_LAUNCH_ENVELOPE_VERIFIED':False,
+  'FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED':False,
+  'FORMAL_BUILD_ENVELOPE_VERIFIED':False,
+  'remaining_scope_reason':
+   'Host provisioning, pre-start source binding, observer CPU/RAM, post-unit '
+   'hashing, export verification and result writing are outside one complete '
+   'enforced controller envelope. Payload fixtures do not certify full-job '
+   'controller resource enforcement.'}
+
 def main(argv=None):
  parser=argparse.ArgumentParser(description=__doc__)
  parser.add_argument('--output',required=True,type=Path)
@@ -296,14 +314,11 @@ def main(argv=None):
   except BaseException as error:
    failure={'case':case,'type':type(error).__name__,'reason':str(error)[:2000]}
    print('STOP',json.dumps(failure,sort_keys=True),flush=True);break
- full=chosen==list(CASES)
  summary={'schema_version':1,'evidence_class':'SYNTHETIC_METHOD_ONLY',
   'status':'PASS_REQUESTED_HARMLESS_CASES' if failure is None else 'BLOCKED_RESOURCE_FIXTURE_FAILURE',
-  'all_required_cases_executed':full and failure is None,'required_cases':list(CASES),
-  'requested_cases':chosen,'results':results,'failure':failure,
-  'FULL_LAUNCH_ENVELOPE_VERIFIED':failure is None and full,
-  'FORMAL_BUILD_ENVELOPE_VERIFIED':False,'parser_or_physics_authorized':False,
-  'source_snapshot':backend.source_snapshot(),**ZERO}
+  'required_cases':list(CASES),'requested_cases':chosen,'results':results,'failure':failure,
+  'parser_or_physics_authorized':False,
+  'source_snapshot':backend.source_snapshot(),**campaign_outcome(chosen,results,failure),**ZERO}
  save_new(output/'suite_summary.json',summary)
  return 0 if failure is None else 2
 

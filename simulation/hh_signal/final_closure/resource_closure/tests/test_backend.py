@@ -149,15 +149,24 @@ class BackendPolicyTests(unittest.TestCase):
                 name = ast.unparse(call.func)
                 self.assertNotIn(name, ('subprocess.run', 'start_job', 'run_job', 'monitor_job'))
 
-    def test_future_build_has_no_output_without_real_tty(self):
+    def test_future_build_unconditionally_blocks_before_tty_or_output(self):
+        with mock.patch.object(b, '_current_human_tty') as tty, \
+             mock.patch.object(b.subprocess, 'run') as process, mock.patch.object(Path, 'mkdir') as mkdir:
+            for revision in ('a'*40, 'not-exact', None):
+                with self.subTest(revision=revision), self.assertRaisesRegex(
+                        ValueError, 'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED'):
+                    b.start_build('/NEVER_CREATED', revision)
+            tty.assert_not_called(); process.assert_not_called(); mkdir.assert_not_called()
+
+    def test_private_transport_proposal_negative_tty_checks_only(self):
         with mock.patch.object(b, '_current_human_tty', side_effect=OSError('NO_CONTROLLING_TTY')), \
              mock.patch.object(b.subprocess, 'run') as process, mock.patch.object(Path, 'mkdir') as mkdir:
             with self.assertRaisesRegex(OSError, 'NO_CONTROLLING_TTY'):
-                b.start_build('/NEVER_CREATED', 'a'*40)
+                b._start_build_transport_proposal('/NEVER_CREATED', 'a'*40)
             process.assert_not_called(); mkdir.assert_not_called()
         with mock.patch.object(b, '_current_human_tty') as tty:
             with self.assertRaisesRegex(ValueError, 'EXACT_REVIEWED_REVISION_REQUIRED'):
-                b.start_build('/NEVER_CREATED', 'not-exact')
+                b._start_build_transport_proposal('/NEVER_CREATED', 'not-exact')
             tty.assert_not_called()
 
     def test_fixture_cannot_receive_manual_tty_transport(self):
@@ -170,7 +179,7 @@ class BackendPolicyTests(unittest.TestCase):
     def test_manual_build_entry_order_and_no_review_creation(self):
         import ast
         tree = ast.parse((b.HERE/'backend.py').read_text())
-        start = next(x for x in tree.body if isinstance(x, ast.FunctionDef) and x.name == 'start_build')
+        start = next(x for x in tree.body if isinstance(x, ast.FunctionDef) and x.name == '_start_build_transport_proposal')
         calls = [x for x in ast.walk(start) if isinstance(x, ast.Call)]
         positions = {ast.unparse(x.func): x.lineno for x in calls}
         self.assertLess(positions['_current_human_tty'], positions['_start'])

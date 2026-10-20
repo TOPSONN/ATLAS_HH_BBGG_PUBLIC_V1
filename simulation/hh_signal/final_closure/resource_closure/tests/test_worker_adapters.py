@@ -7,7 +7,7 @@ from simulation.hh_signal.final_closure.integration_runtime import approval,buil
 
 class WorkerAdapterTests(unittest.TestCase):
     def test_unenclosed_direct_builder_rejected_before_source_work(self):
-        with self.assertRaisesRegex(ValueError,'FULL_BUILD_RESOURCE_ENCLOSURE_REQUIRED'):
+        with self.assertRaisesRegex(ValueError,'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED'):
             worker.require_build_enclosure(Path('/home/btu/simulations/hh_final_closure/no_output_created'))
     def test_missing_human_review_still_first_gate(self):
         p=Path.home()/'simulations/hh_final_closure/inert_negative_never_created'
@@ -40,6 +40,14 @@ class WorkerAdapterTests(unittest.TestCase):
                          (14400,14400,5*1024**3))
         self.assertLess(b['maximum_data_disk_bytes'],5*1024**3)
         self.assertLess(b['nominal_kernel_CPU_upper_seconds'],14400)
+    def test_all_formal_mode_spellings_rejected_before_filter_bootstrap(self):
+        for argv in (['--mode','BUILD_ONLY'],['--mode=BUILD_ONLY'],
+                     ['--mode','fixture','--mode','BUILD_ONLY'],
+                     ['--mode=BUILD_ONLY','--mode','fixture']):
+            self.assertTrue(worker._requests_build(argv))
+        for argv in ([],['--mode','fixture'],['--mode=fixture']):
+            self.assertFalse(worker._requests_build(argv))
+        self.assertIn('allow_abbrev=False',Path(worker.__file__).read_text())
     def test_worker_main_keeps_single_canonical_module(self):
         source=Path(worker.__file__).read_text()
         self.assertIn("sys.modules['simulation.hh_signal.final_closure.resource_closure.worker']=sys.modules[__name__]",source)
@@ -65,6 +73,16 @@ class WorkerAdapterTests(unittest.TestCase):
         for key,value in [('Result','exit-code'),('ExecMainStatus','2')]:
             bad=copy.deepcopy(row);bad['last_unit_properties'][key]=value
             self.assertFalse(enclosed_build_complete(bad))
+    def test_incomplete_controller_build_cli_denies_without_output_or_approval(self):
+        from simulation.hh_signal.final_closure.integration_runtime.run import main
+        import contextlib,io
+        with tempfile.TemporaryDirectory() as folder:
+            output=Path(folder)/'not_created'
+            with contextlib.redirect_stdout(io.StringIO()) as stream:
+                code=main(['prepare-review','--output',str(output),'--reviewed-revision','0'*40])
+            self.assertEqual(code,2);self.assertFalse(output.exists())
+            data=json.loads(stream.getvalue());self.assertEqual(data['new_ME_calls'],0)
+            self.assertEqual(data['reason'],'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED')
     def test_denied_physical_cli_does_not_create_history_receipts(self):
         from simulation.hh_signal.final_closure.integration_runtime.run import main
         import contextlib,io

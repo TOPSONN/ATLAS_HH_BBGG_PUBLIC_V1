@@ -1,39 +1,41 @@
 {
-  "FINAL_VERDICT": "BLOCKED_PENDING_RAM_REVIEW_AND_LIVE_RESOURCE_VALIDATION",
+  "FINAL_VERDICT": "SOURCE_PARTIAL_BLOCKED_FULL_CONTROLLER_AND_RAM_REVIEW",
   "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
   "FORMAL_BUILD_ENVELOPE_VERIFIED": false,
   "PHASE7I_PHYSICS_VALIDATED": false,
   "RAM_review": "PENDING_EXPLICIT_REPLY_TO_EXISTING_QUESTION",
   "resource_cases_planned": 47,
   "resource_cases_executed": 0,
-  "offline_tests": 138,
+  "offline_tests": 145,
   "offline_failures": 0,
   "safe_legacy_tests": 81,
   "safe_legacy_failures": 0,
-  "source_snapshot": "231c30aeaa4da3a53a0fe9d3ab7c2b468db0120512584ddbdd78b6a739ec0c3b",
-  "full_source_binding": "a06e5264890c7d1bfd7bb7ea66bd38b82c88bc6439648cbb2cf9eb0219e2369b",
+  "source_snapshot": "3a7db87f6822137dae5270c96ae69001b4fe009ebf760722a8197d2794d541e1",
+  "full_source_binding": "0c8b01ce6b0ca4af3df02f4ce9de81d28d12fb8677adf551324b67826bbcafb9",
   "historical_changed_count": 0,
   "preflight": "SOURCE_COMMIT_A_PASS_FINAL_HEAD_RECHECK_REQUIRED",
-  "GITHUB_CI": "PENDING_PUBLICATION_AT_REPORT_COMMIT",
+  "GITHUB_CI": "PREVIOUS_HEAD_RESOURCE_PASS_CAMPAIGN_WHITELIST_FAIL_FINAL_HEAD_PENDING",
   "PASS": [
-    "SOURCE_REPAIRS_STATIC_REVIEW",
-    "OFFLINE_METHODS",
-    "SAFE_LEGACY_REGRESSION",
+    "FAIL_CLOSED_SOURCE_REVIEW",
+    "145_OFFLINE_TESTS",
+    "81_SAFE_LEGACY",
     "PROTECTED_HISTORICAL_HASHES"
   ],
   "FAIL": [
-    "INITIAL_HARNESS_ERRORS_CORRECTED_AND_PRESERVED"
+    "PRESERVED_INITIAL_HARNESS_ERRORS_CORRECTED",
+    "PRESERVED_PREVIOUS_HEAD_CAMPAIGN_CI_WHITELIST_FAILURE"
   ],
   "BLOCKED": [
+    "FULL_HOST_CONTROLLER_IMPLEMENTATION",
     "EXPLICIT_RAM_PROFILE_REVIEW",
-    "47_ACTUAL_RESOURCE_CASES",
-    "ACTUAL_ALLOCATED_FILESYSTEM_OVERHEAD_PROOF",
-    "FUTURE_BUILD_ONLY_APPROVAL",
-    "FUTURE_BINARY_REVIEW_READER_AND_PHYSICAL_ENCLOSURE_MIGRATION"
+    "ACTUAL_PAYLOAD_AND_FULL_CONTROLLER_RESOURCE_TESTS",
+    "FORMAL_BUILD_ONLY",
+    "BINARY_REVIEW_AND_PHYSICAL_ENCLOSURE_MIGRATION"
   ],
   "UNKNOWN": [
-    "ACTUAL_SERVICE_KERNEL_COMPATIBILITY",
-    "FORMAL_COMPILER_LOADER_ZERO_ME_BUILD_BEHAVIOR",
+    "ACTUAL_KERNEL_RUNTIME_COMPATIBILITY",
+    "FULL_SUPERVISOR_RESOURCE_ENFORCEMENT",
+    "FORMAL_NATIVE_ZERO_ME_BUILD_BEHAVIOR",
     "GENUINE_HH_CONVERGENCE"
   ],
   "REAL_NATIVE_DISPATCH": false,
@@ -59,5 +61,10 @@
   "new_sigma_uncertainty_pb": null,
   "replicas": [],
   "source_implementation_commit": "e98c1600fd5a9d7763e0072b8b23423fbb988014",
-  "portable_HOME_tests": 13
+  "portable_HOME_tests": 13,
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "PAYLOAD_BUSINESS_ENVELOPE_VERIFIED": false,
+  "formal_BUILD_ONLY_entry": "UNCONDITIONALLY_BLOCKED_BEFORE_TTY_OUTPUT_CONFIRMATION",
+  "remaining_implementation": "Host provisioning/prestart binding/observer CPU RAM/post-unit hash/result writing are outside full controller hard envelope.",
+  "next_step": "Implement full host controller enforcement and review RAM; actual payload plus controller positive/negative tests; new exact-source review before any BUILD_ONLY."
 }

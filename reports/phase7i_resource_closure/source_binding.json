@@ -1,7 +1,7 @@
 {
   "schema": "PHASE7I_RESOURCE_CLOSURE_SOURCE_ONLY_V1",
   "base_revision": "b80e16775bf141e45f4048c7197a8a99befaed51",
-  "full_source_identity": "a06e5264890c7d1bfd7bb7ea66bd38b82c88bc6439648cbb2cf9eb0219e2369b",
+  "full_source_identity": "0c8b01ce6b0ca4af3df02f4ce9de81d28d12fb8677adf551324b67826bbcafb9",
   "full_sources": [
     {
       "path": "metadata/phase7_final_route_a_build_contract.json",
@@ -597,7 +597,7 @@
     },
     {
       "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
-      "sha256": "5eb3e5eb81f37048e939073e259b4ce397f7a117f6374499b9658717f5cf78af"
+      "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727"
     },
     {
       "path": "simulation/hh_signal/final_closure/integration_runtime/test_git_precheck.py",
@@ -629,7 +629,7 @@
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
-      "sha256": "573035874f782e431bcd23905fa6deb0d6905fdd91b9728057912f5b70cbdb2e"
+      "sha256": "a7b8f68d915947f7ac094bc4697cb230350ab0abab6abd6e78d361cd58c92c2a"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
@@ -649,11 +649,11 @@
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
-      "sha256": "3f1d7bec045e75158c4d5f1397a7fcc507eb7578fe26ba3992608bd447a497bd"
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
-      "sha256": "0801dca58ee42e624cc9e2b2cf4b52df87b4e6dd5d771363089357d7ebe74663"
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
@@ -665,23 +665,23 @@
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
-      "sha256": "9f98e7990d7c93f17897f444bfeb3b77c2d33a2bd4a45fc3c25f4138723eeb68"
+      "sha256": "6270be7209b9f8bd1795003fe96d33eada9c03425416757be9a6848ac9c0ae45"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
-      "sha256": "c88149b0b71fd962b1edd4935bb40ca6c30d47d0b09d85e7285c6096de2ad3aa"
+      "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
-      "sha256": "72e5c67fc863880b570b41ebadf19a7cb56ce021e751e3c157248771ef1b5e98"
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
-      "sha256": "04dfdf0dcb9f9769778bba25e4a14d9a42a1c396004eebc59d1affc78180fac7"
+      "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
     },
     {
       "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
-      "sha256": "a9a1978def1cfc0b56b8ae8b97a66d0643e347a045ee47ced6e6a66981c99b1d"
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
     },
     {
       "path": "simulation/hh_signal/final_closure/scripts/run_phase7_final.sh",
@@ -1177,7 +1177,7 @@
     }
   ],
   "resource_snapshot": {
-    "identity": "231c30aeaa4da3a53a0fe9d3ab7c2b468db0120512584ddbdd78b6a739ec0c3b",
+    "identity": "3a7db87f6822137dae5270c96ae69001b4fe009ebf760722a8197d2794d541e1",
     "paths": [
       {
         "path": "simulation/hh_signal/final_closure/config/physics_contract.json",
@@ -1266,8 +1266,8 @@
       },
       {
         "path": "simulation/hh_signal/final_closure/integration_runtime/run.py",
-        "sha256": "5eb3e5eb81f37048e939073e259b4ce397f7a117f6374499b9658717f5cf78af",
-        "bytes": 12959
+        "sha256": "49aa894d210b4d226d49c39912bfbd5c9f13c684dd0bc3a374e6af98c1275727",
+        "bytes": 13037
       },
       {
         "path": "simulation/hh_signal/final_closure/integration_runtime/validate.py",
@@ -1291,8 +1291,8 @@
       },
       {
         "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
-        "sha256": "573035874f782e431bcd23905fa6deb0d6905fdd91b9728057912f5b70cbdb2e",
-        "bytes": 36020
+        "sha256": "a7b8f68d915947f7ac094bc4697cb230350ab0abab6abd6e78d361cd58c92c2a",
+        "bytes": 36390
       },
       {
         "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
@@ -1316,18 +1316,18 @@
       },
       {
         "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
-        "sha256": "3f1d7bec045e75158c4d5f1397a7fcc507eb7578fe26ba3992608bd447a497bd",
-        "bytes": 9724
+        "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd",
+        "bytes": 9746
       },
       {
         "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
-        "sha256": "0801dca58ee42e624cc9e2b2cf4b52df87b4e6dd5d771363089357d7ebe74663",
-        "bytes": 18199
+        "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7",
+        "bytes": 19025
       },
       {
         "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
-        "sha256": "a9a1978def1cfc0b56b8ae8b97a66d0643e347a045ee47ced6e6a66981c99b1d",
-        "bytes": 17546
+        "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+        "bytes": 18262
       }
     ]
   },
@@ -1335,5 +1335,5 @@
   "new_integrals": 0,
   "new_events": 0,
   "source_implementation_commit": "e98c1600fd5a9d7763e0072b8b23423fbb988014",
-  "followup_scope": "Portable test HOME and exact PR-head CI checkout; all30 production paths unchanged from source implementation commit."
+  "followup_scope": "CI exact-four-workflow audit integration; permanent false-FULL semantic and formal-dispatch block. Complete host controller remains unimplemented."
 }

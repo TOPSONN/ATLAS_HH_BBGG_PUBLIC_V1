@@ -4,7 +4,7 @@
 
 ## 目前狀態
 
-實際 systemd resource matrix 尚未執行，RAM profile 的明確審核仍待回覆。不得把離線單元測試、純 BPF 解譯測試或舊 Phase13F 的成功當作本分支完整資源服務實測。`FULL_LAUNCH_ENVELOPE_VERIFIED` 目前為 false。
+實際 systemd resource matrix 尚未執行，RAM profile 的明確審核仍待回覆。不得把離線單元測試、純 BPF 解譯測試或舊 Phase13F 的成功當作本分支完整資源服務實測。Host provisioning、prestart source binding、observer CPU／RAM、post-unit hash及result receipt writing尚未納入完整controller硬限制；這是程式未完成，不是已證實環境不支援。即使47案全過，也只能設定 `PAYLOAD_BUSINESS_ENVELOPE_VERIFIED`；本版 `FULL_LAUNCH_ENVELOPE_VERIFIED` 永遠為false。
 
 固定 matrix 有47案：正常流程、六階段各五種超限／終止，以及 aggregate CPU、controller消失、setsid殘留、PID限制、唯讀來源、cgroup改寫、namespace、stdout、tmpfs容量／inode、固定exportFD、缺少人類審核、archive容量、allocation-bypass與單一工作mutex反例。任一案失敗就停止並保留新 workspace，不補做替代案。
 
@@ -50,16 +50,18 @@ python3 -B -m simulation.hh_signal.final_closure.resource_closure.run_fixtures \
 
 這個CLI只選固定無害case，沒有任意executable參數，不接受正式確認文字。壓力child入口也必須確認目前在正確限制內，才可執行固定負載。不要在shell直接呼叫壓力函式。
 
-## 未來正式BUILD_ONLY入口
+## 正式BUILD_ONLY入口目前無條件封鎖
 
-舊 `integration_runtime.run prepare-review` 已改為封裝入口。新入口必須另獲exact新revision、output、RAM與完整scope的明確授權；本次不執行。它會傳遞使用者真正foreground controlling TTY的固定descriptor，worker內由使用者親自輸入顯示的challenge。聊天文字、flag、JSON或環境變數不會建立授權。正式build仍需要四個native executable、八個zero-ME preflight、四個entry-denial與完整hash收據。
+`integration_runtime.run prepare-review`、backend與worker正式入口目前均在TTY／output／確認／編譯之前拒絕，原因是 `COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED`。目前source不能因收到新的授權或設定flag而啟動正式build。必須先補齊完整controller、驗證整體限制並審核新的exact revision；保留的TTY transport只是未啟用設計。未來新實作仍須另獲exact revision、output、RAM與完整scope授權，並由使用者親自輸入終端確認。聊天文字、flag、JSON或環境變數不會建立授權。正式build仍需要四個native executable、八個zero-ME preflight、四個entry-denial與完整hash收據。
 
 Host不解開archive。固定chunk/index FD保存bounded strict USTAR及SHA256索引，service內驗證readback；拒絕path traversal、links、special files、tamper、oversize與非有限JSON。失敗時保留固定日誌／checkpoint journal；尚未export完成的volatile compiler scratch不宣稱為完整build archive。
 
-完成build也不能執行物理積分。Archive的獨立binary reader／review與physical execution完整封裝尚未完成遷移；目前physical CLI明確阻擋。需另行來源審查及BINARY_REVIEW／PHYSICAL_RESTART授權。舊build、舊確認與舊截面不重用。
+目前不能執行正式build；即使未來完成build，也不能直接執行物理積分。Archive的獨立binary reader／review與physical execution完整封裝尚未完成遷移；目前physical CLI明確阻擋。需另行來源審查及BINARY_REVIEW／PHYSICAL_RESTART授權。舊build、舊確認與舊截面不重用。
 
 ## GitHub與CI
 
 公開內容僅source、tests、固定profile與bounded文字證據。chunks、index、native binaries、私有收據、events、原安裝與PDF／PNG留本機。Publication guard逐一檢查index與每個outgoing commit，包括中間版本。
 
 新分支的歷史closure full-test job明確SKIPPED，因其中有自動建立測試授權物件／native method案例；並非宣告它通過。新CI另跑無害單元測試與固定81項safe legacy。歷史readiness job仍驗證原本固定snapshot。CI成功只能支持離線來源／方法檢查，不能證明本機systemd資源封裝或物理成功。
+
+完整closure尚有host控制面缺口。Payload的47案無害測試與完整controller驗收是不同關卡；RAM審核解除也不會解除controller實作或正式build封鎖。

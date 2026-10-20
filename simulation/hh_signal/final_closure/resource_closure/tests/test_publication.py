@@ -20,6 +20,16 @@ class PublicationPayloadTests(unittest.TestCase):
             with self.subTest(path=name), self.assertRaisesRegex(ValueError, 'OUTSIDE_PUBLICATION'):
                 p.validate_payload(name, b'text\n')
 
+    def test_exact_campaign_ci_workflow_allowed_without_prefix_relaxation(self):
+        path = '.github/workflows/hh_signal_campaign.yml'
+        self.assertIn(path, p.WORKFLOWS)
+        self.assertEqual(len(p.WORKFLOWS), 4)
+        p.validate_payload(path, b'name: source audit fixture\non: pull_request\n')
+        for name in ('.github/workflows/unreviewed.yml', '.github/workflows/hh_signal_campaign_extra.yml',
+                     '.github/workflows/hh_signal_campaign.yaml', '.github/workflows/private.yml'):
+            with self.subTest(path=name), self.assertRaisesRegex(ValueError, 'OUTSIDE_PUBLICATION'):
+                p.validate_payload(name, b'name: forbidden workflow fixture\n')
+
     def test_binary_magic_source_extension_rejected(self):
         for raw in (b'\x7fELFbinary', b'MZbinary', b'PK\x03\x04archive', b'%PDF-1.7',
                     b'\x89PNG\r\n\x1a\n', b'valid\x00binary', b'\xff'):

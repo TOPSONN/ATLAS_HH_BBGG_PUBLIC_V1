@@ -1,7 +1,8 @@
 """Fixed service payload. Current execution scope: harmless resource fixtures.
 
-The future BUILD_ONLY branch needs a new external exact-revision decision and
-manual confirmation on the caller's pinned TTY; no test creates such approval.
+BUILD_ONLY is unconditionally blocked until the complete host controller resource
+boundary is implemented and independently reviewed. Approval alone cannot enable
+this source proposal. No test creates human approval.
 Archives are never extracted or dispatched by this module.
 """
 from __future__ import annotations
@@ -15,6 +16,15 @@ if __name__=='__main__':
     sys.modules['simulation.hh_signal.final_closure.resource_closure.worker']=sys.modules[__name__]
 from simulation.hh_signal.final_closure.resource_closure import allocation_guard
 _ALLOCATION=None
+def _requests_build(argv):
+    return any(value=='--mode=BUILD_ONLY' or
+               (value=='--mode' and argv[i+1:i+2]==['BUILD_ONLY'])
+               for i,value in enumerate(argv))
+
+if __name__=='__main__' and _requests_build(sys.argv[1:]):
+    os.write(1,(json.dumps({'kind':'FAILED','reason':'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED',
+                           'new_ME_calls':0,'new_integrals':0,'new_events':0})+'\n').encode())
+    raise SystemExit(2)
 if __name__=='__main__':
     try:_ALLOCATION=allocation_guard.install()
     except BaseException as error:
@@ -135,7 +145,8 @@ def attest(mode,source_identity):
 
 
 def require_build_enclosure(root):
-    """Live kernel checks; no environment variable or JSON confers this state."""
+    """Full controller is unimplemented; no profile/receipt/approval overrides it."""
+    require(False,'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED')
     require(_CURRENT is not None and _CURRENT['mode']=='BUILD_ONLY' and
             _CURRENT['pid']==os.getpid(),'FULL_BUILD_RESOURCE_ENCLOSURE_REQUIRED')
     require(Path(root)==_CURRENT['work']/'build','BUILD_ROOT_OUTSIDE_PRIVATE_TMPFS')
@@ -240,7 +251,8 @@ def probe_job_lock(state):
 
 
 def run_build(args,state):
-    """Future authorized path; never called by any current fixture/test."""
+    """Non-executable transport proposal pending full controller implementation."""
+    require(False,'COMPLETE_CONTROLLER_RESOURCE_ENVELOPE_NOT_IMPLEMENTED')
     from simulation.hh_signal.final_closure.integration_runtime.approval import confirm_fd,scope
     from simulation.hh_signal.final_closure.integration_runtime.route_a import full_sources
     from simulation.hh_signal.final_closure.integration_runtime.build import prepare
@@ -267,7 +279,7 @@ def run_build(args,state):
 
 def main(argv=None):
     global _CURRENT
-    p=argparse.ArgumentParser(description=__doc__)
+    p=argparse.ArgumentParser(description=__doc__,allow_abbrev=False)
     p.add_argument('--mode',required=True,choices=('fixture','BUILD_ONLY'))
     p.add_argument('--case',required=True,choices=fixtures.CASES)
     p.add_argument('--source-identity',required=True)
