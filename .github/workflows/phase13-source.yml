@@ -26,7 +26,12 @@ jobs:
           python3 -B -m unittest discover -s analysis/phase12/tests -p 'test_*.py' -v
           python3 -B -m unittest discover -s analysis/phase11/tests -p 'test_*.py' -v
       - name: Exact source, bounded evidence, index and every outgoing commit payload
-        run: python3 -B analysis/phase13/scripts/check_publication.py --repo .
+        run: |
+          if [ -f metadata/phase13f_source_manifest.json ]; then
+            python3 -B analysis/phase13f/scripts/check_publication.py --repo .
+          else
+            python3 -B analysis/phase13/scripts/check_publication.py --repo .
+          fi
       - name: Evidence scope
         run: |
           echo '### Phase13 evidence scope' >> "$GITHUB_STEP_SUMMARY"

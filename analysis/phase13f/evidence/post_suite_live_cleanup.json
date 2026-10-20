@@ -1,0 +1,193 @@
+{
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "normal",
+      "unit": "atlas-hh-phase13f-517dcabfd9794195ad6ec493c1a57d81.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "preflight_cpu",
+      "unit": "atlas-hh-phase13f-b8cf3eadd9094974b6c4c8e2b5842c4f.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "preflight_ram",
+      "unit": "atlas-hh-phase13f-ef52ef5d72514dfa84bd6471efc3c455.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "preflight_wall",
+      "unit": "atlas-hh-phase13f-d0f3669bb24d44e6bf34e229a7b8d80c.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "preflight_disk",
+      "unit": "atlas-hh-phase13f-f5b996133efe44bfb8f725215bff3ade.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "preflight_abnormal",
+      "unit": "atlas-hh-phase13f-5f8e2370e47c49e78270aa716594baef.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "child_cpu",
+      "unit": "atlas-hh-phase13f-4694a8a97f4943d49173f84bd00e4256.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "child_ram",
+      "unit": "atlas-hh-phase13f-f1563e59084e43d19a4a2d28ae02092d.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "child_wall",
+      "unit": "atlas-hh-phase13f-da8043df914c4a0da1f96572f88d8bb5.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "child_disk",
+      "unit": "atlas-hh-phase13f-75797d653fc44b98bad3d271a08b6fa7.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "child_abnormal",
+      "unit": "atlas-hh-phase13f-8a79f587c4664de1925a6edb4687a569.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "receipt_cpu",
+      "unit": "atlas-hh-phase13f-c21753588ebe4a6aa9e1bb592ad162ae.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "receipt_ram",
+      "unit": "atlas-hh-phase13f-b4be03825948456789ad824bbd2efb53.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "receipt_wall",
+      "unit": "atlas-hh-phase13f-a475f2ed850b41239cc4a8f2e702c836.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "receipt_disk",
+      "unit": "atlas-hh-phase13f-0ed39a599c8346fd89a1cefc3a525727.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "receipt_abnormal",
+      "unit": "atlas-hh-phase13f-e2ea619ce86547d8a82f6d758551d070.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "postflight_cpu",
+      "unit": "atlas-hh-phase13f-74f9673fa00d4a7686a0270c641a055d.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "postflight_ram",
+      "unit": "atlas-hh-phase13f-ddb92aa11c14401b94eda15a96251369.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "postflight_wall",
+      "unit": "atlas-hh-phase13f-b5a6da878f6e4955af93d0c3a9e35918.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "postflight_disk",
+      "unit": "atlas-hh-phase13f-2a97dee09e5544be895e47a8f106d6ae.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "postflight_abnormal",
+      "unit": "atlas-hh-phase13f-ed4938995a8e42d5a444cb78de9667cf.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "aggregate_cpu",
+      "unit": "atlas-hh-phase13f-61e46119d6fc4b95a4249ea1e3cd994e.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "orphan",
+      "unit": "atlas-hh-phase13f-9d6a952a3c2e4cd3bd956db3f4b49353.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "controller_loss",
+      "unit": "atlas-hh-phase13f-e9cfafa2328945bc929f8994a704599b.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "pids",
+      "unit": "atlas-hh-phase13f-911de81f71a9473f90732c6a1db27117.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "source_write",
+      "unit": "atlas-hh-phase13f-0a4ef2297e2b49d89e034092c79279fd.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "cgroup_write",
+      "unit": "atlas-hh-phase13f-8a412306a64640b9bd7171d13050f19f.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "namespace_escape",
+      "unit": "atlas-hh-phase13f-28543c4587ea446b8eb926057490626f.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "stdout_overflow",
+      "unit": "atlas-hh-phase13f-4c21bcf2cb1f4ad3b70f00fbd2c95c4e.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "disk_inodes",
+      "unit": "atlas-hh-phase13f-ca585ecb96944afea6877a34596b484a.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    },
+    {
+      "case": "legacy_missing_approval",
+      "unit": "atlas-hh-phase13f-b75566c0dd9741d6983e85759659755c.service",
+      "cgroup_exists": false,
+      "remaining_processes": []
+    }
+  ],
+  "units_or_cgroups_reused": false
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "FINAL_VERDICT": "FULL_LAUNCH_ENVELOPE_VERIFIED",
+  "verification_scope": "Current WSL user-systemd fixed full supervisor workflow with harmless child stand-in; not actual MG5/parser or whole-host control plane",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": true,
+  "actual_required_native_cases": 31,
+  "actual_native_expected_passes": 31,
+  "offline_regression_tests": {
+    "phase11": 172,
+    "phase12": 167,
+    "phase13": 188,
+    "phase13f": 48,
+    "total": 575
+  },
+  "independent_source_audit_checks": 736,
+  "historical_regular_path_observations": 23221,
+  "historical_symlink_records": 225,
+  "historical_within_task_changes": 0,
+  "preserved_old_flags_and_source": true,
+  "preexisting_installed_config_drift": true,
+  "preexisting_config_writer": "UNKNOWN",
+  "GATES_PASS": [
+    "ACTUAL_FULL_FOUR_PHASE_POSITIVE",
+    "FOUR_PHASE_CPU_RAM_WALL_DISK_ABNORMAL_NEGATIVES",
+    "BUSY_CONTROLLER_LOSS_SYSTEMD_ENFORCEMENT",
+    "AGGREGATE_CPU_AND_ORPHAN_CGROUP_CLEANUP",
+    "EFFECTIVE_KERNEL_LIMITS",
+    "OFFLINE_575_REGRESSIONS",
+    "INDEPENDENT_IMPLEMENTATION_736_SOURCE_BYTE_CHECKS",
+    "HISTORICAL_SHA256_WITHIN_TASK_PRESERVATION"
+  ],
+  "GATES_FAIL": [
+    "PREEXISTING_INSTALLED_CONFIG_VS_PHASE13_BASELINE_IDENTITY_COMPARISON"
+  ],
+  "GATES_BLOCKED": [
+    "NEW_EXACT_SOURCE_PARSER_ONLY_DISPATCH_REVIEW_AND_EXPLICIT_AUTHORIZATION",
+    "DRIFTED_INSTALLED_CONFIG_PROVENANCE_AND_CONFIGURATION_BINDING",
+    "LEGACY_PARSER_FULL_ENVELOPE_GATE_REMAINS_DISABLED",
+    "ALL_PHYSICAL_ME_INTEGRATION_EVENT_SHOWER_DETECTOR_EXECUTION"
+  ],
+  "GATES_UNKNOWN": [
+    "EXTERNAL_HUMAN_OR_SEPARATE_AGENT_SOURCE_REVIEW_NOT_PERFORMED",
+    "GENUINE_MG5_READONLY_CACHE_HISTORY_COMPATIBILITY_NOT_EXECUTED",
+    "OTHER_PCS_OR_GITHUB_NATIVE_BACKEND_NOT_TESTED"
+  ],
+  "PARSER_EXECUTED": false,
+  "PARSER_APPROVED": false,
+  "HUMAN_AUTHORIZATION_CREATED": false,
+  "figure_publication_authorized": false,
+  "MG5_invocations": 0,
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "GITHUB_CI": {
+    "status": "PASS_EXACT_SOURCE_EVIDENCE_COMMIT",
+    "commit": "b6c6c67c9149f78017b57d9817e2d79f67d17298",
+    "checks": [
+      {
+        "workflow": "Phase13 isolated runtime source and parser approval boundary",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580094/job/118438361511"
+      },
+      {
+        "workflow": "Phase13F full job resource source closure",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364580079/job/118438361721"
+      },
+      {
+        "workflow": "Phase13F full job resource source closure",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39364576812/job/118438349066"
+      }
+    ],
+    "scope": "Offline regressions and frozen native data only; no MG5 or physics execution"
+  },
+  "source_payload_commit": "b6c6c67c9149f78017b57d9817e2d79f67d17298",
+  "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31",
+  "executed_source_commit": "accc7cb4cb4da6f87abc204b9a986dbcc99c020a"
+}

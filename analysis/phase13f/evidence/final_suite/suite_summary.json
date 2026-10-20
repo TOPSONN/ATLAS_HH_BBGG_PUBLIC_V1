@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_REQUESTED_FIXTURE_CASES",
+  "all_required_cases_executed": true,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": true,
+  "profile": {
+    "schema_version": 1,
+    "profile_id": "PHASE13F_FULL_JOB_SYNTHETIC_V1",
+    "authorization": "SYNTHETIC_RESOURCE_FIXTURES_ONLY; NO_MG5_OR_PHYSICS",
+    "aggregate_CPU_seconds": 4,
+    "aggregate_wall_seconds": 13,
+    "unit_start_seconds": 2,
+    "unit_run_seconds": 10,
+    "unit_stop_seconds": 0.1,
+    "cpu_quota_percent": 30,
+    "cpu_quota_period_usec": 10000,
+    "CPU_watchdog_stop_usec": 2500000,
+    "aggregate_memory_bytes": 536870912,
+    "swap_bytes": 0,
+    "per_process_address_space_bytes": 536870912,
+    "per_process_CPU_seconds": 2,
+    "tmpfs_bytes": 8388608,
+    "tmpfs_inodes": 1024,
+    "per_regular_file_bytes": 65536,
+    "host_log_files": 2,
+    "host_metadata_bytes": 65536,
+    "host_metadata_files": 4,
+    "aggregate_disk_bytes": 9437184,
+    "max_tasks": 8,
+    "child_original_cpu_seconds": 2,
+    "child_original_wall_seconds": 3,
+    "child_original_AS_bytes": 536870912,
+    "poll_seconds": 0.02,
+    "full_parser_execution_authorized": false,
+    "MG5_invocations": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0
+  },
+  "source_snapshot": {
+    "paths": [
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/envelope.py",
+        "sha256": "649b2a432ee6c8e1fe6c47cee4ac97b8c77b5db41e1fd1c304e0239d63b00000",
+        "bytes": 11746
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/fixture_child.py",
+        "sha256": "244b4003fdb4983a393b1c3492aa8757259fd80e283a42d8e7c3194454be09fd",
+        "bytes": 1208
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/publication.py",
+        "sha256": "6d6ffbe1c69c4753731fb6ff3be40fcc80e8207509fa97d35dd99bb86e285581",
+        "bytes": 5954
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/workflow.py",
+        "sha256": "15fc2ecedf8f9d12e0950a5990f01223efb4cc3d69692dbc7f7c63f0d270fe51",
+        "bytes": 9068
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/check_publication.py",
+        "sha256": "23247d8e93c7edf72c72e273e6464d7998c9f0a6056f5908b43b948da4dc9721",
+        "bytes": 335
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/controller_loss_fixture.py",
+        "sha256": "f5d16235d69ed8d284505b0068994574f26e869f0df8839711f4442818d60b14",
+        "bytes": 478
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/independent_source_audit.py",
+        "sha256": "84e3e8fa88e2339daea81a24f84e7593704c20bb6dc33059efabb4ef8f489a4b",
+        "bytes": 8070
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/run_full_job_fixtures.py",
+        "sha256": "06d8c24a87529bcfc754cc3fea98513aeff1bf52e925a96b2f14137c0167eff9",
+        "bytes": 7051
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/config/full_job_profile.json",
+        "sha256": "17fb43c3602e9a64c9d9d9f1c18dca9f5d906e8fbffb46542828ffb34cd724f8",
+        "bytes": 1016
+      }
+    ],
+    "identity": "6a7ab32f5f4c261eee2e840d4d3cf567bde7b736b6129bc45e805f91510a9fd5"
+  },
+  "results": [
+    {
+      "case": "normal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1097967,
+      "wall_seconds": 3.719902452999577
+    },
+    {
+      "case": "preflight_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1536512,
+      "wall_seconds": 5.178697765999914
+    },
+    {
+      "case": "preflight_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 348871,
+      "wall_seconds": 1.2231222730001718
+    },
+    {
+      "case": "preflight_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 46751,
+      "wall_seconds": 10.137637937999898
+    },
+    {
+      "case": "preflight_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 74458,
+      "wall_seconds": 0.30825377000019216
+    },
+    {
+      "case": "preflight_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 53659,
+      "wall_seconds": 0.21607651200019973
+    },
+    {
+      "case": "child_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1490006,
+      "wall_seconds": 5.033996361999925
+    },
+    {
+      "case": "child_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1019446,
+      "wall_seconds": 3.4584885290000784
+    },
+    {
+      "case": "child_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 663466,
+      "wall_seconds": 5.138955597999939
+    },
+    {
+      "case": "child_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 845376,
+      "wall_seconds": 2.9160238920003394
+    },
+    {
+      "case": "child_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 574705,
+      "wall_seconds": 1.9644011079999473
+    },
+    {
+      "case": "receipt_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1511826,
+      "wall_seconds": 5.113300676000108
+    },
+    {
+      "case": "receipt_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 971063,
+      "wall_seconds": 3.322212075999687
+    },
+    {
+      "case": "receipt_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 654527,
+      "wall_seconds": 10.157736859999659
+    },
+    {
+      "case": "receipt_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 954306,
+      "wall_seconds": 3.277412357999765
+    },
+    {
+      "case": "receipt_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 575086,
+      "wall_seconds": 1.9888907810000092
+    },
+    {
+      "case": "postflight_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1629271,
+      "wall_seconds": 5.484316943000067
+    },
+    {
+      "case": "postflight_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1379744,
+      "wall_seconds": 4.681913795000128
+    },
+    {
+      "case": "postflight_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 561939,
+      "wall_seconds": 10.120947761000025
+    },
+    {
+      "case": "postflight_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 699124,
+      "wall_seconds": 2.3837673719999657
+    },
+    {
+      "case": "postflight_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 673449,
+      "wall_seconds": 2.3087333970001964
+    },
+    {
+      "case": "aggregate_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 2505138,
+      "wall_seconds": 8.414180004000173
+    },
+    {
+      "case": "orphan",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 617195,
+      "wall_seconds": 2.6377519050001865
+    },
+    {
+      "case": "controller_loss",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 3018297,
+      "wall_seconds": 10.123900442999911
+    },
+    {
+      "case": "pids",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 625737,
+      "wall_seconds": 2.6410663540000314
+    },
+    {
+      "case": "source_write",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 608809,
+      "wall_seconds": 2.087418321000314
+    },
+    {
+      "case": "cgroup_write",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 601804,
+      "wall_seconds": 2.0884990529998504
+    },
+    {
+      "case": "namespace_escape",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 586598,
+      "wall_seconds": 2.0051663459998963
+    },
+    {
+      "case": "stdout_overflow",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 710066,
+      "wall_seconds": 2.559221159000117
+    },
+    {
+      "case": "disk_inodes",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 635310,
+      "wall_seconds": 2.1464684200000193
+    },
+    {
+      "case": "legacy_missing_approval",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 593103,
+      "wall_seconds": 2.0346256820002964
+    }
+  ],
+  "failure": null,
+  "parser_or_physics_authorized": false,
+  "MG5_invocations": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0
+}

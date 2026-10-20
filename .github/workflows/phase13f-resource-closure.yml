@@ -1,0 +1,35 @@
+name: Phase13F full job resource source closure
+on:
+  push:
+    branches: [codex/phase13f-full-job-resource-closure]
+  pull_request:
+    paths: ['analysis/phase13f/**','metadata/phase13f*','reports/phase13f*','.github/workflows/phase13f-resource-closure.yml']
+permissions:
+  contents: read
+jobs:
+  source_regression_and_bounded_evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Phase13F policy and no false pass regressions
+        run: python3 -B -m unittest discover -s analysis/phase13f/tests -v
+      - name: Preserve Phase11, Phase12, Phase13 source method regressions
+        run: |
+          python3 -B -m unittest discover -s analysis/phase11/tests -v
+          python3 -B -m unittest discover -s analysis/phase12/tests -v
+          python3 -B -m unittest discover -s analysis/phase13/tests -v
+      - name: Independent non importing source and byte audit
+        run: python3 -B analysis/phase13f/scripts/independent_source_audit.py --repo . --evidence analysis/phase13f/evidence/final_suite --output /tmp/phase13f_source_audit.json
+      - name: Bounded evidence and all outgoing commit snapshots
+        run: python3 -B analysis/phase13f/scripts/check_publication.py --repo .
+      - name: Scope
+        run: |
+          echo 'Native local evidence is from the declared WSL/user-systemd kernel only. CI rechecks offline source methods and frozen evidence; it does not reproduce that resource backend or establish physics.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No MG5 parser/model/ME/integration/events/Pythia/Delphes/Phase7I, downloads, human authorization or figures.' >> "$GITHUB_STEP_SUMMARY"

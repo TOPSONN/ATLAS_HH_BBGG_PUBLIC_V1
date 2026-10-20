@@ -1,0 +1,44 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "machine": "x86_64",
+  "uid": 1000,
+  "systemd_run_version": "systemd 255 (255.4-1ubuntu8.17)",
+  "python_version": "3.12.3",
+  "cgroup_version": 2,
+  "user_bus_present": true,
+  "identities": [
+    {
+      "entry": "/usr/bin/python3",
+      "resolved": "/usr/bin/python3.12",
+      "bytes": 8020928,
+      "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+    },
+    {
+      "entry": "/usr/bin/systemd-run",
+      "resolved": "/usr/bin/systemd-run",
+      "bytes": 68392,
+      "sha256": "dbc8b988a849d5c9d7ef2de7068a6f107021bc6c11e0d7864c73f373eef726a7"
+    },
+    {
+      "entry": "/usr/bin/systemctl",
+      "resolved": "/usr/bin/systemctl",
+      "bytes": 1501304,
+      "sha256": "e0d3d0e9444da1b2b58c792c3f5028b69f049b77d5ca17b3ec0d09f89117225b"
+    },
+    {
+      "entry": "/usr/bin/git",
+      "resolved": "/usr/bin/git",
+      "bytes": 4066232,
+      "sha256": "2a8c18fbf43da9f692d75474c72bea9dfd796c260b0f3dfe456376abc3bbd668"
+    },
+    {
+      "entry": "/usr/bin/unshare",
+      "resolved": "/usr/bin/unshare",
+      "bytes": 43624,
+      "sha256": "a23c8863860669003dc4660039fe642f5795c8c2195898ebc5d01afa1ac3d11c"
+    }
+  ],
+  "scope": "Declared WSL local environment only; does not certify other PCs or GitHub native backend",
+  "MG5_invocations": 0
+}

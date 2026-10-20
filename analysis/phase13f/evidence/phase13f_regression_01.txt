@@ -1,0 +1,53 @@
+test_idle_or_incomplete_controller_loss_cannot_pass (test_envelope_policy.ControllerLossEvidence.test_idle_or_incomplete_controller_loss_cannot_pass) ... ok
+test_all_31_required_cases (test_envelope_policy.EnvelopePolicy.test_all_31_required_cases) ... ok
+test_arbitrary_command_or_mode_rejected_before_output (test_envelope_policy.EnvelopePolicy.test_arbitrary_command_or_mode_rejected_before_output) ... ok
+test_attestation_false_rejected (test_envelope_policy.EnvelopePolicy.test_attestation_false_rejected) ... ok
+test_bool_cannot_replace_counter (test_envelope_policy.EnvelopePolicy.test_bool_cannot_replace_counter) ... ok
+test_cleanup_never_converts_timeout_to_success (test_envelope_policy.EnvelopePolicy.test_cleanup_never_converts_timeout_to_success) ... ok
+test_cleanup_waits_for_both_processes_and_populated_flag (test_envelope_policy.EnvelopePolicy.test_cleanup_waits_for_both_processes_and_populated_flag) ... ok
+test_cpu_stop_requires_actual_aggregate_usage (test_envelope_policy.EnvelopePolicy.test_cpu_stop_requires_actual_aggregate_usage) ... ok
+test_every_profile_mutation_rejected (test_envelope_policy.EnvelopePolicy.test_every_profile_mutation_rejected) ... ok
+test_exact_profile (test_envelope_policy.EnvelopePolicy.test_exact_profile) ... ok
+test_foreign_cgroup_rejected (test_envelope_policy.EnvelopePolicy.test_foreign_cgroup_rejected) ... ok
+test_foreign_unit_rejected_before_subprocess (test_envelope_policy.EnvelopePolicy.test_foreign_unit_rejected_before_subprocess) ... ok
+test_fresh_output_constraints (test_envelope_policy.EnvelopePolicy.test_fresh_output_constraints) ... ok
+test_full_disk_diagnostics_are_preallocated_within_existing_caps (test_envelope_policy.EnvelopePolicy.test_full_disk_diagnostics_are_preallocated_within_existing_caps) ... ok
+test_kernel_predicate_independently_fails_mutated_facts (test_envelope_policy.EnvelopePolicy.test_kernel_predicate_independently_fails_mutated_facts) ... ok
+test_no_approval_or_physics (test_envelope_policy.EnvelopePolicy.test_no_approval_or_physics) ... ok
+test_no_attestation_rejected (test_envelope_policy.EnvelopePolicy.test_no_attestation_rejected) ... ok
+test_normal_rejects_each_missing_phase (test_envelope_policy.EnvelopePolicy.test_normal_rejects_each_missing_phase) ... ok
+test_normal_rejects_observer_resource_stop (test_envelope_policy.EnvelopePolicy.test_normal_rejects_observer_resource_stop) ... ok
+test_observer_completion_is_directly_reachable (test_envelope_policy.EnvelopePolicy.test_observer_completion_is_directly_reachable) ... ok
+test_original_child_limits_preserved (test_envelope_policy.EnvelopePolicy.test_original_child_limits_preserved) ... ok
+test_receipt_size_and_overwrite_rejected (test_envelope_policy.EnvelopePolicy.test_receipt_size_and_overwrite_rejected) ... ok
+test_residual_process_never_passes (test_envelope_policy.EnvelopePolicy.test_residual_process_never_passes) ... ok
+test_resource_bounds_are_conservative (test_envelope_policy.EnvelopePolicy.test_resource_bounds_are_conservative) ... ok
+test_true_normal (test_envelope_policy.EnvelopePolicy.test_true_normal) ... ok
+test_memory_fixture_faults_all_pages_below_original_per_process_limit (test_envelope_policy.ResidentMemoryFixture.test_memory_fixture_faults_all_pages_below_original_per_process_limit) ... ok
+test_aggregate_cpu_and_controller_loss_are_actual_busy_tests (test_final_native_evidence.NativeEvidence.test_aggregate_cpu_and_controller_loss_are_actual_busy_tests) ... ok
+test_all_negative_phases_stop_before_following_work (test_final_native_evidence.NativeEvidence.test_all_negative_phases_stop_before_following_work) ... ok
+test_complete_required_cases (test_final_native_evidence.NativeEvidence.test_complete_required_cases) ... ok
+test_disk_enospc_at_each_phase (test_final_native_evidence.NativeEvidence.test_disk_enospc_at_each_phase) ... ok
+test_effective_kernel_limits_all_cases (test_final_native_evidence.NativeEvidence.test_effective_kernel_limits_all_cases) ... ok
+test_exact_executed_sources_still_match (test_final_native_evidence.NativeEvidence.test_exact_executed_sources_still_match) ... ok
+test_group_oom_at_each_phase (test_final_native_evidence.NativeEvidence.test_group_oom_at_each_phase) ... ok
+test_host_export_actual_bounds (test_final_native_evidence.NativeEvidence.test_host_export_actual_bounds) ... ok
+test_measured_cpu_wall_ram_bound (test_final_native_evidence.NativeEvidence.test_measured_cpu_wall_ram_bound) ... ok
+test_no_physical_dispatch_or_approval (test_final_native_evidence.NativeEvidence.test_no_physical_dispatch_or_approval) ... ok
+test_no_residual_or_host_write (test_final_native_evidence.NativeEvidence.test_no_residual_or_host_write) ... ok
+test_orphan_and_inode_and_log_negative (test_final_native_evidence.NativeEvidence.test_orphan_and_inode_and_log_negative) ... ok
+test_real_four_phase_positive_and_original_guard (test_final_native_evidence.NativeEvidence.test_real_four_phase_positive_and_original_guard) ... ok
+test_binary_and_figure_payloads (test_publication.Publication.test_binary_and_figure_payloads) ... ok
+test_compat_workflow_arbitrary_skip_or_test_change_rejected (test_publication.Publication.test_compat_workflow_arbitrary_skip_or_test_change_rejected) ... ok
+test_event_and_raw_json_rejected (test_publication.Publication.test_event_and_raw_json_rejected) ... ok
+test_exact_compat_workflow_retains_old_tests_and_fallback (test_publication.Publication.test_exact_compat_workflow_retains_old_tests_and_fallback) ... ok
+test_foreign_old_sources_rejected (test_publication.Publication.test_foreign_old_sources_rejected) ... ok
+test_only_exact_workflow_allowed (test_publication.Publication.test_only_exact_workflow_allowed) ... ok
+test_private_config_body_rejected (test_publication.Publication.test_private_config_body_rejected) ... ok
+test_source_allowed (test_publication.Publication.test_source_allowed) ... ok
+test_unlisted_rejected (test_publication.Publication.test_unlisted_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.035s
+
+OK

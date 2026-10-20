@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "case": "controller_loss",
+  "unit": "atlas-hh-phase13f-e9cfafa2328945bc929f8994a704599b.service",
+  "controller_exit": 0,
+  "controller_PID": 32654,
+  "observer_is_separate_process": true,
+  "last_unit_properties": {
+    "RuntimeMaxUSec": "10s",
+    "MainPID": "0",
+    "Result": "timeout",
+    "ExecMainStartTimestampMonotonic": "3045620301",
+    "ExecMainExitTimestampMonotonic": "3055649338",
+    "ExecMainCode": "2",
+    "ExecMainStatus": "9",
+    "ControlGroup": "",
+    "MemoryCurrent": "[not set]",
+    "MemoryPeak": "18509824",
+    "CPUUsageNSec": "3018297000",
+    "TasksCurrent": "[not set]",
+    "CPUQuotaPerSecUSec": "300ms",
+    "CPUQuotaPeriodUSec": "10ms",
+    "MemoryMax": "536870912",
+    "MemorySwapMax": "0",
+    "TasksMax": "8",
+    "LimitCPU": "2",
+    "LimitFSIZE": "65536",
+    "LimitAS": "536870912",
+    "ProtectControlGroups": "yes",
+    "PrivateUsers": "yes",
+    "ProtectSystem": "strict",
+    "TemporaryFileSystem": "/home/btu/simulations/hh_phase13f/run_01/workflow_final_05/controller_loss/work:rw,size=8388608,nr_inodes=1024,nodev,nosuid,noexec",
+    "KillMode": "control-group",
+    "KillSignal": "9",
+    "Id": "atlas-hh-phase13f-e9cfafa2328945bc929f8994a704599b.service",
+    "LoadState": "loaded",
+    "ActiveState": "failed",
+    "SubState": "failed"
+  },
+  "stdout_records": [
+    {
+      "AS": [
+        536870912,
+        536870912
+      ],
+      "CPU": [
+        2,
+        2
+      ],
+      "FSIZE": [
+        65536,
+        65536
+      ],
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/atlas-hh-phase13f-e9cfafa2328945bc929f8994a704599b.service",
+      "cgroup_readonly": true,
+      "cpu.max": "3000 10000",
+      "cpu.max.burst": "0",
+      "kind": "ATTESTED",
+      "memory.max": "536870912",
+      "memory.oom.group": "1",
+      "memory.swap.max": "0",
+      "namespace_mount": "mnt:[4026532296]",
+      "pids.max": "8",
+      "repository_readonly": true,
+      "uid_map": "1000       1000          1",
+      "valid": true,
+      "work_capacity_bytes": 8388608
+    },
+    {
+      "kind": "ENTER",
+      "phase": "preflight"
+    }
+  ],
+  "last_observed_cgroup": {
+    "cpu.stat": "usage_usec 3015948\nuser_usec 2942400\nsystem_usec 73548\nnr_periods 1005\nnr_throttled 1004\nthrottled_usec 22727171\nnr_bursts 0\nburst_usec 0\n",
+    "memory.peak": "18509824\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "cgroup.procs": "32740\n32741\n32743\n",
+    "cgroup.events": "populated 1\nfrozen 0\n",
+    "pids.events": "max 0\n",
+    "cpu.max": "3000 10000\n",
+    "cpu.max.burst": "0\n",
+    "memory.max": "536870912\n",
+    "memory.swap.max": "0\n",
+    "pids.max": "8\n"
+  },
+  "elapsed_including_host_cleanup_seconds": 10.123900442999911,
+  "resource_stop": "SYSTEMD_RUNTIME_MAX_WITH_CONTROLLER_GONE",
+  "residual_processes_after_cleanup": [],
+  "max_observed_CPU_usec": 3018297,
+  "source_snapshot_identity": "6a7ab32f5f4c261eee2e840d4d3cf567bde7b736b6129bc45e805f91510a9fd5",
+  "canary_preserved": true,
+  "host_work_directory_empty": true,
+  "cgroup_empty_and_unpopulated_verified": true,
+  "MG5_invocations": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0
+}

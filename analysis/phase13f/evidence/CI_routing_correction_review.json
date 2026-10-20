@@ -1,0 +1,7 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "reason": "Old Phase13 publisher rejects newly stacked Phase13F files; all legacy unit tests passed. Only route publication audit to additive Phase13F guard when its manifest is present; keep original fallback, exact-base negative tests and old scientific sources unchanged.",
+  "resource_limits_changed": false,
+  "old_CI_failure_preserved": true,
+  "parser_or_physics_execution": false
+}

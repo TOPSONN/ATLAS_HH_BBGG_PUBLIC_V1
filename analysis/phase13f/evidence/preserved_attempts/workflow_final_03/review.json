@@ -1,0 +1,7 @@
+{
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "status": "EXPECTED_CLEAN_SOURCE_GUARD_REJECTION_DURING_EDIT",
+  "reason": "Post-commit source edits were tracked; real preflight correctly rejected DIRTY_TRACKED_SOURCE. Commit exact source first, then use fresh output without relaxing guard.",
+  "old_result_preserved": true,
+  "limits_or_guard_relaxed": false
+}
