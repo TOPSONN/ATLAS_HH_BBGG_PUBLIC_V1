@@ -1,0 +1,25 @@
+{
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "DIAGNOSTIC_ONLY_NO_ENVELOPE_PASS",
+  "unit": "atlas-hh-phase13f-probe-b7e258bb270f4b84ad5c204f822a2d4d",
+  "frontend_wait_timed_out_after_seconds": 10,
+  "unit_properties_before_stop": "RuntimeMaxUSec=infinity\nResult=success\nExecMainCode=0\nExecMainStatus=0\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=[not set]\nCPUQuotaPerSecUSec=infinity\nCPUQuotaPeriodUSec=infinity\nMemoryMax=infinity\nMemorySwapMax=infinity\nTasksMax=9201\nLimitCPU=infinity\nLimitFSIZE=infinity\nLimitAS=infinity\nProtectControlGroups=no\nPrivateNetwork=no\nPrivateUsers=no\nPrivateIPC=no\nProtectSystem=no\nTemporaryFileSystem=\nId=atlas-hh-phase13f-probe-b7e258bb270f4b84ad5c204f822a2d4d.service\nActiveState=inactive\nSubState=dead\n",
+  "stop_exit": 5,
+  "stdout": "{\"uid_map\": \"      1000       1000          1\\n\", \"work_capacity\": 1081101176832, \"AS\": [67108864, 67108864], \"CPU\": [1, 1], \"FSIZE\": [4096, 4096], \"memory.max\": \"67108864\\n\", \"cpu.max\": \"5000 10000\\n\", \"pids.max\": \"8\\n\", \"cgroup_fs_writable\": false}\n",
+  "stderr": "",
+  "host_work_entries": [
+    "inert.txt"
+  ],
+  "host_unshare_probe": {
+    "command": [
+      "unshare",
+      "--user",
+      "--map-root-user",
+      "--mount",
+      "true"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "MG5_invocations": 0
+}

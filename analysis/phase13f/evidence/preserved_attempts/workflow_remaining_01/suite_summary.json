@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "status": "PASS_REQUESTED_FIXTURE_CASES",
+  "all_required_cases_executed": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "profile": {
+    "schema_version": 1,
+    "profile_id": "PHASE13F_FULL_JOB_SYNTHETIC_V1",
+    "authorization": "SYNTHETIC_RESOURCE_FIXTURES_ONLY; NO_MG5_OR_PHYSICS",
+    "aggregate_CPU_seconds": 4,
+    "aggregate_wall_seconds": 13,
+    "unit_start_seconds": 2,
+    "unit_run_seconds": 10,
+    "unit_stop_seconds": 0.1,
+    "cpu_quota_percent": 30,
+    "cpu_quota_period_usec": 10000,
+    "CPU_watchdog_stop_usec": 2500000,
+    "aggregate_memory_bytes": 536870912,
+    "swap_bytes": 0,
+    "per_process_address_space_bytes": 536870912,
+    "per_process_CPU_seconds": 2,
+    "tmpfs_bytes": 8388608,
+    "tmpfs_inodes": 1024,
+    "per_regular_file_bytes": 65536,
+    "host_log_files": 2,
+    "host_metadata_bytes": 65536,
+    "host_metadata_files": 4,
+    "aggregate_disk_bytes": 9437184,
+    "max_tasks": 8,
+    "child_original_cpu_seconds": 2,
+    "child_original_wall_seconds": 3,
+    "child_original_AS_bytes": 536870912,
+    "poll_seconds": 0.02,
+    "full_parser_execution_authorized": false,
+    "MG5_invocations": 0,
+    "new_ME_calls": 0,
+    "new_integrals": 0,
+    "new_events": 0
+  },
+  "source_snapshot": {
+    "paths": [
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/envelope.py",
+        "sha256": "07890bf3218b3fe874760f578c5c2f24ab32040cf1f08f87ef6d0e8e91fff3a5",
+        "bytes": 11730
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/fixture_child.py",
+        "sha256": "244b4003fdb4983a393b1c3492aa8757259fd80e283a42d8e7c3194454be09fd",
+        "bytes": 1208
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/publication.py",
+        "sha256": "258a39f1be897a1718801e8b0d78926934941d515d59d442bf549f116753bd87",
+        "bytes": 5222
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/source/workflow.py",
+        "sha256": "f433122ad7aa5c60c8e8074f1ec50d9f05d9a7a95ed56ad5fc2c55862d7fa067",
+        "bytes": 8551
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/check_publication.py",
+        "sha256": "23247d8e93c7edf72c72e273e6464d7998c9f0a6056f5908b43b948da4dc9721",
+        "bytes": 335
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/controller_loss_fixture.py",
+        "sha256": "f5d16235d69ed8d284505b0068994574f26e869f0df8839711f4442818d60b14",
+        "bytes": 478
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/independent_source_audit.py",
+        "sha256": "688d6faa64070ba1f919e4b2c0d930ae82a5f09c160b76dc2442a3abe0982dcf",
+        "bytes": 7172
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/scripts/run_full_job_fixtures.py",
+        "sha256": "29df65e8703056289027214067283e8484d605b1b15c0453bf80a86a770f59e9",
+        "bytes": 6184
+      },
+      {
+        "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13f/config/full_job_profile.json",
+        "sha256": "17fb43c3602e9a64c9d9d9f1c18dca9f5d906e8fbffb46542828ffb34cd724f8",
+        "bytes": 1016
+      }
+    ],
+    "identity": "b020ee449f74be5d6fbeeb46b4e4645729a74c7ac55d6fe23edddd3f80f115e6"
+  },
+  "results": [
+    {
+      "case": "child_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 950667,
+      "wall_seconds": 3.2277858020001986
+    },
+    {
+      "case": "child_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 659897,
+      "wall_seconds": 2.255466264000006
+    },
+    {
+      "case": "receipt_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1710208,
+      "wall_seconds": 5.7613101800000095
+    },
+    {
+      "case": "receipt_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1296030,
+      "wall_seconds": 4.414249401999996
+    },
+    {
+      "case": "receipt_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 776425,
+      "wall_seconds": 10.109699319000129
+    },
+    {
+      "case": "receipt_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 754831,
+      "wall_seconds": 2.5474257099999704
+    },
+    {
+      "case": "receipt_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 696386,
+      "wall_seconds": 2.408670436999955
+    },
+    {
+      "case": "postflight_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1580527,
+      "wall_seconds": 5.370233961999929
+    },
+    {
+      "case": "postflight_ram",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 1370529,
+      "wall_seconds": 4.7201014059999125
+    },
+    {
+      "case": "postflight_wall",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 832441,
+      "wall_seconds": 10.100736569999981
+    },
+    {
+      "case": "postflight_disk",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 788442,
+      "wall_seconds": 2.7412580989998787
+    },
+    {
+      "case": "postflight_abnormal",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 664810,
+      "wall_seconds": 2.3139159990000735
+    },
+    {
+      "case": "aggregate_cpu",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 2509649,
+      "wall_seconds": 8.415335523000067
+    },
+    {
+      "case": "orphan",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 663389,
+      "wall_seconds": 2.7675743490001423
+    },
+    {
+      "case": "controller_loss",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 629975,
+      "wall_seconds": 10.120412032000104
+    },
+    {
+      "case": "pids",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 687587,
+      "wall_seconds": 2.8515791919999174
+    },
+    {
+      "case": "source_write",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 718225,
+      "wall_seconds": 2.454252527000108
+    },
+    {
+      "case": "cgroup_write",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 689669,
+      "wall_seconds": 2.356534539999984
+    },
+    {
+      "case": "namespace_escape",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 673684,
+      "wall_seconds": 2.318361368000069
+    },
+    {
+      "case": "stdout_overflow",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 660448,
+      "wall_seconds": 2.30110274499998
+    },
+    {
+      "case": "disk_inodes",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 702328,
+      "wall_seconds": 2.4081602369999473
+    },
+    {
+      "case": "legacy_missing_approval",
+      "status": "PASS_EXPECTED_RESULT",
+      "CPU_usec": 696727,
+      "wall_seconds": 2.3746937780001645
+    }
+  ],
+  "failure": null,
+  "parser_or_physics_authorized": false,
+  "MG5_invocations": 0,
+  "new_ME_calls": 0,
+  "new_integrals": 0,
+  "new_hard_events": 0,
+  "new_Pythia_events": 0,
+  "new_Delphes_events": 0
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "evidence_class": "PUBLIC_SOURCE_AUDIT",
+  "FINAL_VERDICT": "FULL_LAUNCH_ENVELOPE_VERIFIED",
+  "verification_scope": "Current WSL user-systemd fixed full supervisor workflow with harmless child stand-in; not actual MG5/parser or whole-host control plane",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": true,
+  "actual_required_native_cases": 31,
+  "actual_native_expected_passes": 31,
+  "offline_regression_tests": {
+    "phase11": 172,
+    "phase12": 167,
+    "phase13": 188,
+    "phase13f": 45,
+    "total": 572
+  },
+  "independent_source_audit_checks": 726,
+  "historical_regular_path_observations": 23221,
+  "historical_symlink_records": 225,
+  "historical_within_task_changes": 0,
+  "preserved_old_flags_and_source": true,
+  "preexisting_installed_config_drift": true,
+  "preexisting_config_writer": "UNKNOWN",
+  "GATES_PASS": [
+    "ACTUAL_FULL_FOUR_PHASE_POSITIVE",
+    "FOUR_PHASE_CPU_RAM_WALL_DISK_ABNORMAL_NEGATIVES",
+    "BUSY_CONTROLLER_LOSS_SYSTEMD_ENFORCEMENT",
+    "AGGREGATE_CPU_AND_ORPHAN_CGROUP_CLEANUP",
+    "EFFECTIVE_KERNEL_LIMITS",
+    "OFFLINE_572_REGRESSIONS",
+    "INDEPENDENT_IMPLEMENTATION_726_SOURCE_BYTE_CHECKS",
+    "HISTORICAL_SHA256_WITHIN_TASK_PRESERVATION"
+  ],
+  "GATES_FAIL": [
+    "PREEXISTING_INSTALLED_CONFIG_VS_PHASE13_BASELINE_IDENTITY_COMPARISON"
+  ],
+  "GATES_BLOCKED": [
+    "NEW_EXACT_SOURCE_PARSER_ONLY_DISPATCH_REVIEW_AND_EXPLICIT_AUTHORIZATION",
+    "DRIFTED_INSTALLED_CONFIG_PROVENANCE_AND_CONFIGURATION_BINDING",
+    "LEGACY_PARSER_FULL_ENVELOPE_GATE_REMAINS_DISABLED",
+    "ALL_PHYSICAL_ME_INTEGRATION_EVENT_SHOWER_DETECTOR_EXECUTION"
+  ],
+  "GATES_UNKNOWN": [
+    "EXTERNAL_HUMAN_OR_SEPARATE_AGENT_SOURCE_REVIEW_NOT_PERFORMED",
+    "GENUINE_MG5_READONLY_CACHE_HISTORY_COMPATIBILITY_NOT_EXECUTED",
+    "OTHER_PCS_OR_GITHUB_NATIVE_BACKEND_NOT_TESTED"
+  ],
+  "PARSER_EXECUTED": false,
+  "PARSER_APPROVED": false,
+  "HUMAN_AUTHORIZATION_CREATED": false,
+  "figure_publication_authorized": false,
+  "MG5_invocations": 0,
+  "NEW_ME_CALLS": 0,
+  "NEW_INTEGRALS": 0,
+  "NEW_HARD_EVENTS": 0,
+  "NEW_PYTHIA_EVENTS": 0,
+  "NEW_DELPHES_EVENTS": 0,
+  "GITHUB_CI": "PENDING_NEW_DRAFT_PR",
+  "source_payload_commit": null,
+  "PR_URL": null
+}

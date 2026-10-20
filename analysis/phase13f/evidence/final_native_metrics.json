@@ -1,0 +1,318 @@
+{
+  "evidence_class": "SYNTHETIC_METHOD_ONLY",
+  "cases": [
+    {
+      "case": "normal",
+      "CPU_seconds": 1.129086,
+      "memory_peak_bytes": 26095616,
+      "payload_wall_seconds": 3.768461,
+      "wall_including_host_cleanup_seconds": 3.8046839779999573,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": null
+    },
+    {
+      "case": "preflight_cpu",
+      "CPU_seconds": 1.537121,
+      "memory_peak_bytes": 9490432,
+      "payload_wall_seconds": 5.11978,
+      "wall_including_host_cleanup_seconds": 5.1634336619999885,
+      "Result": "signal",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "preflight_ram",
+      "CPU_seconds": 1.357756,
+      "memory_peak_bytes": 536870912,
+      "payload_wall_seconds": 4.586647,
+      "wall_including_host_cleanup_seconds": 4.684201445000326,
+      "Result": "oom-kill",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "preflight_wall",
+      "CPU_seconds": 0.052391,
+      "memory_peak_bytes": 9605120,
+      "payload_wall_seconds": 10.046385,
+      "wall_including_host_cleanup_seconds": 10.118275553999865,
+      "Result": "timeout",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "preflight_disk",
+      "CPU_seconds": 0.068587,
+      "memory_peak_bytes": 18288640,
+      "payload_wall_seconds": 0.221036,
+      "wall_including_host_cleanup_seconds": 0.26780209100024877,
+      "Result": "exit-code",
+      "ExecMainStatus": "73",
+      "resource_stop": null
+    },
+    {
+      "case": "preflight_abnormal",
+      "CPU_seconds": 0.04285,
+      "memory_peak_bytes": 9588736,
+      "payload_wall_seconds": 0.142936,
+      "wall_including_host_cleanup_seconds": 0.1802491700000246,
+      "Result": "exit-code",
+      "ExecMainStatus": "87",
+      "resource_stop": null
+    },
+    {
+      "case": "child_cpu",
+      "CPU_seconds": 1.538051,
+      "memory_peak_bytes": 25104384,
+      "payload_wall_seconds": 5.139391,
+      "wall_including_host_cleanup_seconds": 5.186304887000006,
+      "Result": "exit-code",
+      "ExecMainStatus": "78",
+      "resource_stop": null
+    },
+    {
+      "case": "child_ram",
+      "CPU_seconds": 1.064241,
+      "memory_peak_bytes": 536870912,
+      "payload_wall_seconds": 3.481552,
+      "wall_including_host_cleanup_seconds": 3.598326453000027,
+      "Result": "oom-kill",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "child_wall",
+      "CPU_seconds": 0.519883,
+      "memory_peak_bytes": 25092096,
+      "payload_wall_seconds": 4.599008,
+      "wall_including_host_cleanup_seconds": 4.662287975000254,
+      "Result": "exit-code",
+      "ExecMainStatus": "78",
+      "resource_stop": null
+    },
+    {
+      "case": "child_disk",
+      "CPU_seconds": 0.636836,
+      "memory_peak_bytes": 33570816,
+      "payload_wall_seconds": 2.134814,
+      "wall_including_host_cleanup_seconds": 2.2203829739996763,
+      "Result": "exit-code",
+      "ExecMainStatus": "78",
+      "resource_stop": null
+    },
+    {
+      "case": "child_abnormal",
+      "CPU_seconds": 0.499022,
+      "memory_peak_bytes": 15933440,
+      "payload_wall_seconds": 1.674932,
+      "wall_including_host_cleanup_seconds": 1.759312590999798,
+      "Result": "exit-code",
+      "ExecMainStatus": "87",
+      "resource_stop": null
+    },
+    {
+      "case": "receipt_cpu",
+      "CPU_seconds": 1.288388,
+      "memory_peak_bytes": 25968640,
+      "payload_wall_seconds": 4.318942,
+      "wall_including_host_cleanup_seconds": 4.385395502000392,
+      "Result": "signal",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "receipt_ram",
+      "CPU_seconds": 1.242935,
+      "memory_peak_bytes": 536870912,
+      "payload_wall_seconds": 4.135806,
+      "wall_including_host_cleanup_seconds": 4.191787039999781,
+      "Result": "oom-kill",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "receipt_wall",
+      "CPU_seconds": 0.728709,
+      "memory_peak_bytes": 26169344,
+      "payload_wall_seconds": 10.030487,
+      "wall_including_host_cleanup_seconds": 10.101439006999954,
+      "Result": "timeout",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "receipt_disk",
+      "CPU_seconds": 0.653733,
+      "memory_peak_bytes": 26116096,
+      "payload_wall_seconds": 2.192952,
+      "wall_including_host_cleanup_seconds": 2.245696668000164,
+      "Result": "exit-code",
+      "ExecMainStatus": "73",
+      "resource_stop": null
+    },
+    {
+      "case": "receipt_abnormal",
+      "CPU_seconds": 0.548957,
+      "memory_peak_bytes": 25972736,
+      "payload_wall_seconds": 1.860011,
+      "wall_including_host_cleanup_seconds": 1.9101074000000153,
+      "Result": "exit-code",
+      "ExecMainStatus": "87",
+      "resource_stop": null
+    },
+    {
+      "case": "postflight_cpu",
+      "CPU_seconds": 1.2654,
+      "memory_peak_bytes": 26177536,
+      "payload_wall_seconds": 4.240308,
+      "wall_including_host_cleanup_seconds": 4.297527337999782,
+      "Result": "signal",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "postflight_ram",
+      "CPU_seconds": 1.145576,
+      "memory_peak_bytes": 536870912,
+      "payload_wall_seconds": 3.861396,
+      "wall_including_host_cleanup_seconds": 3.9269758370001,
+      "Result": "oom-kill",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "postflight_wall",
+      "CPU_seconds": 0.551355,
+      "memory_peak_bytes": 26066944,
+      "payload_wall_seconds": 10.021643,
+      "wall_including_host_cleanup_seconds": 10.09581789699996,
+      "Result": "timeout",
+      "ExecMainStatus": "9",
+      "resource_stop": null
+    },
+    {
+      "case": "postflight_disk",
+      "CPU_seconds": 0.582893,
+      "memory_peak_bytes": 25939968,
+      "payload_wall_seconds": 1.962193,
+      "wall_including_host_cleanup_seconds": 2.0214790200002426,
+      "Result": "exit-code",
+      "ExecMainStatus": "73",
+      "resource_stop": null
+    },
+    {
+      "case": "postflight_abnormal",
+      "CPU_seconds": 0.569575,
+      "memory_peak_bytes": 26185728,
+      "payload_wall_seconds": 1.918947,
+      "wall_including_host_cleanup_seconds": 1.9895758830002706,
+      "Result": "exit-code",
+      "ExecMainStatus": "87",
+      "resource_stop": null
+    },
+    {
+      "case": "aggregate_cpu",
+      "CPU_seconds": 2.514607,
+      "memory_peak_bytes": 18460672,
+      "payload_wall_seconds": 8.344014,
+      "wall_including_host_cleanup_seconds": 8.426199573000304,
+      "Result": "signal",
+      "ExecMainStatus": "9",
+      "resource_stop": "AGGREGATE_CPU_EARLY_STOP"
+    },
+    {
+      "case": "orphan",
+      "CPU_seconds": 0.527312,
+      "memory_peak_bytes": 25968640,
+      "payload_wall_seconds": 1.761449,
+      "wall_including_host_cleanup_seconds": 2.324641487000008,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": "RESIDUAL_CGROUP_PROCESSES"
+    },
+    {
+      "case": "controller_loss",
+      "CPU_seconds": 3.011895,
+      "memory_peak_bytes": 18632704,
+      "payload_wall_seconds": 10.050224,
+      "wall_including_host_cleanup_seconds": 10.142104307000409,
+      "Result": "timeout",
+      "ExecMainStatus": "9",
+      "resource_stop": "SYSTEMD_RUNTIME_MAX_WITH_CONTROLLER_GONE"
+    },
+    {
+      "case": "pids",
+      "CPU_seconds": 0.633879,
+      "memory_peak_bytes": 28446720,
+      "payload_wall_seconds": 2.088858,
+      "wall_including_host_cleanup_seconds": 2.645530021000013,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": "RESIDUAL_CGROUP_PROCESSES"
+    },
+    {
+      "case": "source_write",
+      "CPU_seconds": 0.710381,
+      "memory_peak_bytes": 16027648,
+      "payload_wall_seconds": 2.368829,
+      "wall_including_host_cleanup_seconds": 2.4202952040000127,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": null
+    },
+    {
+      "case": "cgroup_write",
+      "CPU_seconds": 0.774658,
+      "memory_peak_bytes": 16248832,
+      "payload_wall_seconds": 2.588319,
+      "wall_including_host_cleanup_seconds": 2.6761216019999665,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": null
+    },
+    {
+      "case": "namespace_escape",
+      "CPU_seconds": 1.045912,
+      "memory_peak_bytes": 18116608,
+      "payload_wall_seconds": 3.49249,
+      "wall_including_host_cleanup_seconds": 3.5581324100003258,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": null
+    },
+    {
+      "case": "stdout_overflow",
+      "CPU_seconds": 1.210116,
+      "memory_peak_bytes": 56045568,
+      "payload_wall_seconds": 4.154582,
+      "wall_including_host_cleanup_seconds": 4.217400953999913,
+      "Result": "core-dump",
+      "ExecMainStatus": "25",
+      "resource_stop": null
+    },
+    {
+      "case": "disk_inodes",
+      "CPU_seconds": 0.74796,
+      "memory_peak_bytes": 52736000,
+      "payload_wall_seconds": 2.506076,
+      "wall_including_host_cleanup_seconds": 2.5842390980001255,
+      "Result": "exit-code",
+      "ExecMainStatus": "73",
+      "resource_stop": null
+    },
+    {
+      "case": "legacy_missing_approval",
+      "CPU_seconds": 0.551893,
+      "memory_peak_bytes": 24911872,
+      "payload_wall_seconds": 1.835233,
+      "wall_including_host_cleanup_seconds": 1.8974597989999893,
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "resource_stop": null
+    }
+  ],
+  "max_CPU_seconds": 3.011895,
+  "max_wall_including_host_cleanup_seconds": 10.142104307000409,
+  "max_memory_peak_bytes": 536870912
+}

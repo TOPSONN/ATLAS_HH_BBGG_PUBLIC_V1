@@ -1,0 +1,42 @@
+{
+  "evidence_class": "HISTORICAL_SOURCE_AUDIT",
+  "status": "PASS_STATIC_REVIEW_OLD_BLOCKERS_PRESERVED",
+  "base_revision": "aa6eb8c9abdcc4d177af2e84296180624faf835a",
+  "reviewed_files": [
+    {
+      "path": "/home/btu/simulations/hh_phase13/run_01/resource_enforcement_review.json",
+      "bytes": 4301,
+      "sha256": "ca15c4558b84185c3ccf4b713b3c1120ffb75175978f45e0480351f7b737ce5e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13/scripts/run_parser_review.py",
+      "bytes": 7496,
+      "sha256": "6aaf408b5dbd99bae43bcba0855ca90f4a9ea22ed94e609b5f0dd8c3b7c5485b"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13/scripts/parser_child.py",
+      "bytes": 2465,
+      "sha256": "d3e325673bfce5e65cf80007bfd368260ae8fc218d7a030a126980d76e9fe7c6"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13/source/native_guard.py",
+      "bytes": 12290,
+      "sha256": "ea9f3720ddef52f665acd79efebe3e720b5a1190c4eddc9b577e8607b64d3d7e"
+    },
+    {
+      "path": "/home/btu/projects/atlas_hh_phase13f_v1/analysis/phase13/source/parser_contract.py",
+      "bytes": 11370,
+      "sha256": "5549d5c496d10d9d6e1eab3f41f0af82ed4aff4fa2e24437ef5b518856b01d30"
+    }
+  ],
+  "source_review_findings": [
+    "Original native_guard covered child-only CPU/address-space/file-size/process-group limits, not cumulative supervisor workflow.",
+    "Original run_parser_review/direct child remain byte-identical and retain hard-stop approval/implementation gates.",
+    "New service starts before workflow imports/preflight and shares one cgroup/readonly mounts across supervisor/child/receipt/postflight.",
+    "Legacy 188 tests rerun offline, plus new strict profiles, mutated receipts/predicates, and 31 actual harmless backend cases."
+  ],
+  "legacy_FULL_LAUNCH_ENVELOPE_IMPLEMENTED": false,
+  "legacy_resource_receipt_rewritten": false,
+  "parser_execution_or_model_import": false,
+  "new_gate_scope": "Current native synthetic envelope only; no historical gate rewrite or approval reuse"
+}
