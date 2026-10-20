@@ -24,8 +24,8 @@
 | REAL_ME_CALLS | 0 |
 | REAL_INTEGRALS | 0 |
 | NEW_EVENTS | 0 |
-| COMMIT_HASH | executable candidate133f14e6f3f05189c706e183eb5dc86bde339376；source/evidence delivery head另見PR與本機FINAL_REPORT |
-| PULL_REQUEST_URL | publication後填入新的stacked Draft PR；base PR33保持 |
+| COMMIT_HASH | executable candidate133f14e6f3f05189c706e183eb5dc86bde339376；已核對CI的source/evidence snapshot53a3a9243fb1db175bab2cbeb3347f35572e1afc；本報告新增提交的SHA見PR head，沒有改動candidate |
+| PULL_REQUEST_URL | https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/34 — OPEN／DRAFT，stacked on PR33 |
 
 ## 來源工程
 
@@ -79,7 +79,7 @@ before/after各核對50169內容觀測、3588706711bytes、122symlink targets，
 
 ## Gates與交付
 
-**GATES_PASS**：source修補、292 offline、81 safe legacy、獨立來源及proposal審查、14檔案binding、真實完整Git核對、historical SHA256、physics bytes保存、未執行未授權kernel。
+**GATES_PASS**：source修補、292 offline、81 safe legacy、GitHub source/offline/publication CI、獨立來源及proposal審查、14檔案binding、真實完整Git核對、historical SHA256、physics bytes保存、未執行未授權kernel。
 
 **GATES_FAIL**：附件scientific guard pin為63碼；歷史Pre mount拒絕及StopPost226失敗仍原樣保留。最終offline無未修復failure；本輪沒有新kernel結果可判FAIL/PASS。
 
@@ -89,10 +89,12 @@ before/after各核對50169內容觀測、3588706711bytes、122symlink targets，
 
 FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED=false；FULL_LAUNCH_ENVELOPE_VERIFIED=false。
 
-新的stacked Draft PR僅發布source/tests/bounded evidence；raw mount／raw environment／private source receipts留本機，public只有經審查投影及SHA。未推PDF/PNG、ROOT/LHE/HepMC、native binary、cache、private config。每次push前檢查staged/index與每個outgoing intermediate commit；PR24/32/33保持原head及Draft，無merge/force-push。GitHub CI結果在publication後另補，不能作kernel證明。
+新的stacked Draft PR僅發布source/tests/bounded evidence；raw mount／raw environment／private source receipts留本機，public只有經審查投影及SHA。未推PDF/PNG、ROOT/LHE/HepMC、native binary、cache、private config。每次push前檢查staged/index與每個outgoing intermediate commit；PR24/32/33保持原head及Draft，無merge/force-push。GitHub CI在source/evidence snapshot53a3a924上，push與PR的resource job均SUCCESS：每次292 offline、81 safe legacy及publication gate PASS；三個歷史PR workflows明確SKIPPED。完整可核對run/job/steps見ci_readback.json；這不能作kernel證明。後續report-only head另在PR與本機FINAL_REPORT即時核對。
+
+原始storage獨立審查要求在任何新kernel診斷前具備可核實backend；本報告保留該要求。104-token inspection提案只界定最小功能與停止條件，尚未滿足完整persistent/control-plane容量條件，不是例外授權。
 
 ## NEXT_RECOMMENDED_STEP
 
-先確認63碼輸入差異，再另行明確授權exact source133f14e的**一次namespace/mount inspection**。argv／fresh output／固定caps／stop conditions已獨立審查，見AUTHORIZATION_REQUEST_ZH_TW.md與proposed_kernel_scope.json。第一個範圍不含child、八階段、stress或physics；任何失敗立即停止，不retry／改flags／追加預算。persistent backend及完整lifecycle必須之後另行解決。
+先由外部提供或審查可核實的hard allocated-block/inode storage backend，包含診斷control-plane輸出，再確認63碼輸入差異，才可另行授權exact source133f14e的單次namespace/mount inspection。argv／fresh output／原caps／stop conditions已獨立審查，見AUTHORIZATION_REQUEST_ZH_TW.md與proposed_kernel_scope.json；這仍是待審草案，**不是READY_FOR_EXECUTION**。本輪未解決persistent hard boundary，不能以partial diagnostic名義豁免16MiB預算。若backend需要改source或argv，必須先凍結並獨立審查新revision。範圍不含child、八階段、stress或physics；任何失敗立即停止，不retry／改flags／追加預算。完整lifecycle與正式build仍有獨立關卡。
 
 需要另行授權的依據為本次附件第5節：「本指令不授權新增 kernel attempt 或 stress run。」本報告與request均不是人類授權物件，也沒有產生或重用授權。

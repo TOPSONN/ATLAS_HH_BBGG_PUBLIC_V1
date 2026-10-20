@@ -874,5 +874,31 @@
   "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
   "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
   "verdict": "SOURCE_RECOVERY_VALIDATED_RUNTIME_AND_STORAGE_BLOCKED",
-  "GITHUB_CI": "PENDING_PUBLICATION"
+  "GITHUB_CI": {
+    "status": "PASS_HOSTED_SOURCE_OFFLINE_ONLY",
+    "verified_head": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+    "receipt": "ci_readback.json",
+    "resource_runs": [
+      39392836101,
+      39392767026
+    ],
+    "offline_per_run": 292,
+    "safe_legacy_per_run": 81,
+    "historical_workflows": "SKIPPED",
+    "kernel_acceptance": false
+  },
+  "PULL_REQUEST_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/34",
+  "storage_proposal_scope_clarification": {
+    "original_storage_review_preserved": true,
+    "minimum_missing_components_remains_applicable": "Verified persistent hard allocated-block/inode backend is required before any new kernel diagnostic.",
+    "exact_inspection_argv_status": "PROPOSAL_ONLY_NOT_READY_FOR_EXECUTION",
+    "requires_before_invocation": [
+      "independently verified storage backend including diagnostic control-plane output",
+      "re-review exact source and argv if backend affects implementation",
+      "correct scientific guard pin acknowledgement",
+      "separate explicit human authorization"
+    ],
+    "partial_diagnostic_does_not_waive_16MiB_budget": true,
+    "new_kernel_attempts_this_task": 0
+  }
 }
