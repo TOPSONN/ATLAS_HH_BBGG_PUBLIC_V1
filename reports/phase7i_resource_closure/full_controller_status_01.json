@@ -1,0 +1,79 @@
+{
+  "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
+  "TASK": "PHASE7I_FULL_CONTROLLER_AND_STORAGE_ENFORCEMENT_V1",
+  "BASE_REVISION": "66663557984fcc069de600e2af07e778a4ac30ff",
+  "NEW_SOURCE_REVISION": "3c89de1e67def831e5aa69ce56bab427bfc28cbf",
+  "CONTROLLER_IMPLEMENTATION_STATUS": "PARTIAL_IMPLEMENTED_INERT_EIGHT_PHASE_MAIN_NOT_KERNEL_COMPLETED",
+  "KERNEL_EFFECTIVE_LIMITS": "UNKNOWN_INCOMPLETE_LIVE_ATTESTATION",
+  "AGGREGATE_CPU_SECONDS": null,
+  "AGGREGATE_WALL_SECONDS": null,
+  "PEAK_RAM_BYTES": null,
+  "SWAP_BYTES": null,
+  "ALLOCATED_DISK_BOUND": "BLOCKED_PERSISTENT_ALLOCATED_BLOCK_AND_INODE_CAPACITY",
+  "RESOURCE_TESTS_EXECUTED": {
+    "single_nonstress_attempts": 1,
+    "full_47_cases": 0,
+    "stress": 0,
+    "replacements": 0
+  },
+  "OFFLINE_REGRESSION": {
+    "offline_pass": 207,
+    "safe_legacy_pass": 81,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "independent_result_checks": 92
+  },
+  "HISTORICAL_PRESERVATION": {
+    "status": "PASS",
+    "path_observations": 50169,
+    "bytes": 3588706711,
+    "symlink_targets": 122,
+    "changes": 0,
+    "errors": 0,
+    "races": 0
+  },
+  "REAL_ME_CALLS": 0,
+  "REAL_INTEGRALS": 0,
+  "NEW_EVENTS": 0,
+  "GATES_PASS": [
+    "independent_source_review",
+    "207_offline",
+    "81_safe_legacy",
+    "92_independent_failed_receipt_checks",
+    "historical_SHA256",
+    "science_contracts_unchanged",
+    "no_retry_after_failure"
+  ],
+  "GATES_FAIL": [
+    "single_positive_kernel_diagnostic",
+    "pre_unaccounted_writable_mount",
+    "stop_post_namespace_226"
+  ],
+  "GATES_BLOCKED": [
+    "persistent_capacity",
+    "full_kernel_lifecycle",
+    "47_stress_matrix",
+    "formal_BUILD_ONLY",
+    "native_zero_ME",
+    "binary_review",
+    "physical_restart"
+  ],
+  "GATES_UNKNOWN": [
+    "complete_active_kernel_readback",
+    "CPU",
+    "full_wall",
+    "memory_peak",
+    "swap",
+    "writable_mount_inventory",
+    "under_load_cleanup",
+    "STOP92_root_cause"
+  ],
+  "FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FINAL_VERDICT": "BLOCKED_FULL_CONTROLLER_KERNEL_AND_STORAGE_ENFORCEMENT",
+  "COMMIT_HASH": "Exact executable 3c89de1e67def831e5aa69ce56bab427bfc28cbf; evidence delivery head recorded in PR.",
+  "PULL_REQUEST_URL": null,
+  "GITHUB_CI": "PENDING_PUBLICATION",
+  "NEXT_RECOMMENDED_STEP": "Review preserved namespace/writable-mount failures and a real capacity backend before any newly reviewed diagnostic; formal and physical entries remain separately unauthorized."
+}

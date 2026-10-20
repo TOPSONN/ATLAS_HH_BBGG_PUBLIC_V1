@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "review": "PHASE7I_FULL_CONTROLLER_STORAGE_READ_ONLY_V1",
+  "reviewed_revision": "66663557984fcc069de600e2af07e778a4ac30ff",
+  "review_status": "PERSISTENT_ALLOCATED_STORAGE_BOUND_NOT_ESTABLISHED",
+  "execution": {
+    "read_only_WSL_inspections": 3,
+    "services_started": 0,
+    "mounts_or_unshares": 0,
+    "stress_tests": 0,
+    "seccomp_filters_installed": 0,
+    "package_installs": 0,
+    "source_repository_mutations": 0,
+    "formal_builds": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0
+  },
+  "current_environment_observations": {
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "uid": 1000,
+    "effective_capabilities": "0000000000000000",
+    "home_root_mount": "ext4 /dev/sdd rw,discard,errors=remount-ro,data=ordered",
+    "explicit_quota_mount_flags_observed": [],
+    "active_ext4_quota_state": "UNKNOWN: absence of explicit mount flags alone does not prove all on-disk quota features absent",
+    "device_readable_to_user": false,
+    "device_writable_to_user": false,
+    "filesystem_allocation_granule_bytes": 4096,
+    "filesystem_total_blocks": 263940717,
+    "user_namespace_max": 30673,
+    "dev_fuse_exists_and_readwrite": true,
+    "fusermount": "/usr/bin/fusermount",
+    "fusermount3": "/usr/bin/fusermount3",
+    "shared_libraries_present": ["libfuse3.so.3", "libext2fs.so.2"],
+    "writable_fixed_image_filesystem_programs_not_found": ["fuse2fs", "guestmount"],
+    "quota_programs_not_found": ["setquota", "repquota", "xfs_quota"],
+    "other_fuse_filesystem_binary_found": "snapfuse",
+    "unprivileged_capacity_filesystem_feasibility": "NOT_PROVEN; do not infer categorical WSL incompatibility from missing selected programs"
+  },
+  "source_hashes": {
+    "simulation/hh_signal/final_closure/resource_closure/backend.py": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91",
+    "simulation/hh_signal/final_closure/resource_closure/worker.py": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2",
+    "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb",
+    "simulation/hh_signal/final_closure/resource_closure/archive_io.py": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+  },
+  "implementable_controller_requirements": [
+    "One outer unit aggregate service cgroup contains preparation, all hashing, worker fork/exec, observer, archive/receipt finalization and cleanup. Any systemd control subgroup remains beneath that same aggregate ancestor.",
+    "Do not launch a sibling transient service from the main controller. Keep the outside host request a literal manager activation transport, not a custom hash/observer/result workflow.",
+    "Systemd v255 realizes the unit cgroup for every command spawn. Main receives EXEC_PASS_FDS; Pre and StopPost do not. StopPost uses EXEC_CONTROL_CGROUP. Test ancestry rather than assuming identical leaf membership.",
+    "Treat each command mount namespace as fresh. Private tmpfs preparation contents cannot be assumed to survive into Main or StopPost. A single Main which performs preparation itself avoids that particular handoff, while manager limits must already apply.",
+    "Use fixed fail-if-existing unit identity or another reviewed job lock which covers preparation and cleanup. A lock first acquired in Main does not protect Pre.",
+    "Enumerate start, running, stop-post and final termination timeouts. RuntimeMax alone and a rate quota alone are not complete cumulative wall/CPU limits.",
+    "Preserve finite partial evidence on controller loss; missing terminal receipt/counters remains unknown or failure, never automatic success. A process inside its own populated cgroup cannot attest that the whole cgroup is already empty."
+  ],
+  "storage_assessment": {
+    "tmpfs": "size/nr_blocks bounds allocated tmpfs data pages; nr_inodes bounds inodes and xattr consumption. Kernel metadata accounting and charged RAM are distinct and must be stated. New mounts and actual exhaustion remain untested by this review.",
+    "sealed_memfd": "A fixed number of pre-sized memfds with verified GROW and SHRINK seals can supply a kernel-backed volatile export length boundary. WRITE sealing can freeze final contents. Seals are volatile and are not a persistent ext4 quota.",
+    "shared_ext4_fixed_FDs": "Existing per-file FSIZE, default-allow allocation-bypass filter, bounded FD count and post-hoc st_blocks checks are useful defenses but do not establish a dedicated hard capacity accounting for shared filesystem metadata/journal or early inode/directory provisioning.",
+    "persistent_output_missing_gate": "Before any persistent provisioning, require a measured block/inode quota with reviewed accounting scope OR a reviewed truly fixed-capacity backing filesystem/volume whose creation and all writers are within the envelope.",
+    "no_privilege_alternative": "FUSE support is installed, but no suitable ready writable bounded-image filesystem driver was found. A custom FUSE/libext2fs design would require independent implementation, security/source review and exact bounded tests; available libraries alone are not proof.",
+    "prohibited_automatic_recovery": "No sudo, host remount, quota enablement, package install, security-flag removal or resource expansion was attempted or is recommended as an automatic next action.",
+    "full_claim": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L1484-L1508",
+      "supports": "Per-command cgroup preparation and conditional descriptor passing."
+    },
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L2174-L2178",
+      "supports": "Main EXEC_PASS_FDS."
+    },
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/src/core/service.c#L1880-L1884",
+      "supports": "StopPost has EXEC_CONTROL_CGROUP and no EXEC_PASS_FDS."
+    },
+    {
+      "url": "https://github.com/systemd/systemd/blob/v255/man/systemd.exec.xml",
+      "supports": "Per-command mount-namespace semantics."
+    },
+    {
+      "url": "https://docs.kernel.org/filesystems/tmpfs.html",
+      "supports": "Tmpfs size/block and inode limits; distinguish volatile storage from persistent capacity."
+    },
+    {
+      "url": "https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/mm/memfd.c#L151-L180",
+      "supports": "Irreversible whole-inode GROW/SHRINK/WRITE seals are supported only on special volatile files."
+    }
+  ],
+  "verdict": "Persistent hard-capacity gate remains BLOCKED. Proceed with actual controller engineering and bounded evidence only; never convert volatile diagnostic or post-hoc accounting into full storage PASS."
+}
