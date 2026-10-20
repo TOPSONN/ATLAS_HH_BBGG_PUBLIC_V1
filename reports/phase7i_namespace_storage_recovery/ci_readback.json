@@ -1,0 +1,267 @@
+{
+  "schema": "PHASE7I_RECOVERY_CI_READBACK_V1",
+  "queried_at_utc": "2026-10-20T08:27:02.145Z",
+  "verified_head": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+  "repository": "TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1",
+  "runs": [
+    {
+      "id": 39392836101,
+      "name": "Phase7I resource source and harmless offline methods",
+      "event": "pull_request",
+      "head_sha": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392836101",
+      "job": {
+        "id": 118528260373,
+        "name": "offline_source_only",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392836101/job/118528260373",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Offline inert byte and API tests; no service or approval creation",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Exact nonphysical legacy regression with forbidden dispatch audit",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Every outgoing commit payload and index; no figures or private artifacts",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 7,
+            "name": "Strict PR32 stacked delta publication gate",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 8,
+            "name": "Strict PR33 namespace recovery delta and private mount evidence gate",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      "log_readback": {
+        "characters": 99178,
+        "offline_tests": 292,
+        "offline_wall_seconds": 1.031,
+        "offline_summary": "OK",
+        "safe_legacy": {
+          "status": "PASS_SELECTED_SAFE_LEGACY",
+          "tests_run": 81,
+          "passes": 81,
+          "failure_count": 0,
+          "error_count": 0,
+          "skipped": 0,
+          "selected_test_sources_unchanged": true,
+          "wall_seconds": 8.533222904999995
+        },
+        "publication": "PASS_BOUNDED_SOURCE_ONLY_PUBLICATION"
+      }
+    },
+    {
+      "id": 39392836078,
+      "name": "HH full-loop signal readiness",
+      "event": "pull_request",
+      "head_sha": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392836078"
+    },
+    {
+      "id": 39392836050,
+      "name": "HH signal campaign source and physical evidence",
+      "event": "pull_request",
+      "head_sha": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392836050"
+    },
+    {
+      "id": 39392836060,
+      "name": "Phase7 coordinated closure and preserved science",
+      "event": "pull_request",
+      "head_sha": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392836060"
+    },
+    {
+      "id": 39392767026,
+      "name": "Phase7I resource source and harmless offline methods",
+      "event": "push",
+      "head_sha": "53a3a9243fb1db175bab2cbeb3347f35572e1afc",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392767026",
+      "job": {
+        "id": 118528031143,
+        "name": "offline_source_only",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39392767026/job/118528031143",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Offline inert byte and API tests; no service or approval creation",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Exact nonphysical legacy regression with forbidden dispatch audit",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Every outgoing commit payload and index; no figures or private artifacts",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 7,
+            "name": "Strict PR32 stacked delta publication gate",
+            "status": "completed",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 8,
+            "name": "Strict PR33 namespace recovery delta and private mount evidence gate",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      "log_readback": {
+        "characters": 99185,
+        "offline_tests": 292,
+        "offline_wall_seconds": 0.971,
+        "offline_summary": "OK",
+        "safe_legacy": {
+          "status": "PASS_SELECTED_SAFE_LEGACY",
+          "tests_run": 81,
+          "passes": 81,
+          "failure_count": 0,
+          "error_count": 0,
+          "skipped": 0,
+          "selected_test_sources_unchanged": true,
+          "wall_seconds": 7.506077480999998
+        },
+        "publication": "PASS_BOUNDED_SOURCE_ONLY_PUBLICATION"
+      }
+    }
+  ],
+  "limitations": [
+    "Hosted offline/source checks only; no local kernel enforcement acceptance.",
+    "Historical readiness/campaign/closure workflows skipped; no physical production authorized."
+  ],
+  "preserved_pr_readback": [
+    {
+      "number": 24,
+      "head": "b80e16775bf141e45f4048c7197a8a99befaed51",
+      "draft": true,
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/24"
+    },
+    {
+      "number": 32,
+      "head": "66663557984fcc069de600e2af07e778a4ac30ff",
+      "draft": true,
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/32"
+    },
+    {
+      "number": 33,
+      "head": "b8ae4cc03c0ac408577909847e56f417fc28eba8",
+      "draft": true,
+      "state": "open",
+      "merged": false,
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/33"
+    }
+  ]
+}

@@ -19,6 +19,7 @@ import unittest
 from unittest import mock
 
 from simulation.hh_signal.final_closure.resource_closure import full_controller as c
+from simulation.hh_signal.final_closure.resource_closure.tests.test_namespace_attestation import good_proof
 
 
 class AttestationFixture:
@@ -35,7 +36,7 @@ class AttestationFixture:
             'memory.swap.current': '0', 'cgroup.events': 'populated 1\nfrozen 0',
             'cgroup.procs': '222\n223\n'}.items()})
         self.lines = [
-            '1 0 0:1 / / ro,relatime - ext4 /dev/sdd ro',
+            '1 999 0:1 / / ro,relatime - ext4 /dev/sdd ro',
             '2 1 0:2 / ' + str(c.WORK) + ' rw,nosuid,nodev,noexec - tmpfs tmpfs rw',
             '3 1 0:3 / /tmp rw,nosuid,nodev,noexec - tmpfs tmpfs rw']
         self.vfs = {
@@ -47,6 +48,7 @@ class AttestationFixture:
                                     f_files=256, f_bfree=128, f_ffree=250)}
         self.rlimits = {kind: (cap, cap) for kind, cap in c.LIMITS.values()}
         self.affinity = {3}
+        self.emitted = []
 
     def read_text(self, path, *args, **kwargs):
         key = str(path)
@@ -71,6 +73,11 @@ class AttestationFixture:
                                                   return_value=self.affinity))
             stack.enter_context(mock.patch.object(c.os, 'getpid', return_value=222))
             stack.enter_context(mock.patch.object(c.os, 'getuid', return_value=1000))
+            stack.enter_context(mock.patch.object(c.mount_attestation, 'read_bounded',
+                side_effect=lambda: ('\n'.join(self.lines) + '\n').encode()))
+            stack.enter_context(mock.patch.object(c.namespace_attestation, 'collect',
+                side_effect=good_proof))
+            stack.enter_context(mock.patch.object(c, 'emit', side_effect=self.emitted.append))
             stack.enter_context(mock.patch.dict(c.os.environ, {}, clear=True))
             yield
 
@@ -290,7 +297,7 @@ class FullControllerCommandAndLifecycle(unittest.TestCase):
         self.assertEqual(command[:7], ['/usr/bin/systemd-run', '--user', '--quiet', '--wait',
                                       '--pipe', '--unit', c.UNIT])
         self.assertEqual(command[-5:], ['/usr/bin/python3', '-I', '-B',
-                                       str(c.HERE / 'full_controller.py'), 'workflow'])
+                                       str(c.HERE / 'full_controller.py'), 'namespace-inspection'])
         for forbidden in ('sudo', '--system', '--scope', '--uid', '--collect', 'OpenFile=',
                           'ReadWritePaths=', 'BindPaths=', 'RootImage=', 'StandardOutput=file:'):
             self.assertFalse(any(forbidden in item for item in command), forbidden)
@@ -305,8 +312,8 @@ class FullControllerCommandAndLifecycle(unittest.TestCase):
                     'RuntimeRandomizedExtraSec=0', 'NotifyAccess=none',
                     'TimeoutStartFailureMode=kill', 'TimeoutStopFailureMode=kill'}
         self.assertTrue(expected <= set(props))
-        self.assertEqual(sum(p.startswith('ExecStartPre=') for p in props), 1)
-        self.assertEqual(sum(p.startswith('ExecStopPost=') for p in props), 1)
+        self.assertEqual(sum(p.startswith('ExecStartPre=') for p in props), 0)
+        self.assertEqual(sum(p.startswith('ExecStopPost=') for p in props), 0)
         self.assertFalse(any(p.startswith('ExecStart=') for p in props))
 
     def test_only_finite_tmpfs_mounts_and_no_persistent_writable_allowlist(self):
@@ -322,13 +329,15 @@ class FullControllerCommandAndLifecycle(unittest.TestCase):
 
     def test_activation_performs_only_fixed_exec_without_business_work(self):
         with mock.patch.object(c, 'launch_command', return_value=['FIXED']) as command, \
-             mock.patch.object(c.os, 'execv', side_effect=RuntimeError('INERT_EXEC_REPLACEMENT')) as execute, \
+             mock.patch.object(c.os, 'execv') as execute, \
              mock.patch.object(c, 'workflow') as workflow, \
-             mock.patch.object(c, 'sha') as hashing:
-            with self.assertRaisesRegex(RuntimeError, 'INERT_EXEC_REPLACEMENT'):
-                c.main(['launch-live-diagnostic'])
-            execute.assert_called_once_with('/usr/bin/systemd-run', ['FIXED'])
-            command.assert_called_once_with()
+             mock.patch.object(c, 'sha') as hashing, \
+             mock.patch.object(c, 'emit') as emit:
+            self.assertEqual(c.main(['launch-live-diagnostic']), 2)
+            self.assertIn('NEW_KERNEL_ATTEMPT_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION',
+                          emit.call_args.args[0]['reason'])
+            execute.assert_not_called()
+            command.assert_not_called()
             workflow.assert_not_called()
             hashing.assert_not_called()
 
@@ -396,9 +405,14 @@ class FullControllerMockWorkflow(unittest.TestCase):
     @contextlib.contextmanager
     def workflow_fixture(self, *, child_changes=None, child_error=None,
                          child_returncode=0, source_changed=False, receipt_changed=False,
-                         child_stderr=b'', extra_maps='', cleanup_failure=False):
-        proof = {'aggregate_cgroup': '/INERT_CGROUP', 'mount_namespace_inode': 123}
-        body = {'kind': 'CHILD_RECEIPT', 'proof': copy.deepcopy(proof), **c.ZERO}
+                         child_stderr=b'', extra_maps='', cleanup_failure=False,
+                         child_prefix_records=(), child_terminal_kind='CHILD_RECEIPT',
+                         child_raw_override=None, child_terminal_fields=None):
+        proof = {'aggregate_cgroup': '/INERT_CGROUP', 'mount_namespace_inode': 123,
+                 'namespace': good_proof()}
+        body = {'kind': child_terminal_kind, 'proof': copy.deepcopy(proof), **c.ZERO}
+        if child_terminal_fields:
+            body.update(child_terminal_fields)
         if child_changes:
             body['proof'].update(child_changes)
         proc = mock.Mock()
@@ -408,7 +422,11 @@ class FullControllerMockWorkflow(unittest.TestCase):
         if child_error:
             proc.communicate.side_effect = child_error
         else:
-            proc.communicate.return_value = (json.dumps(body).encode(), child_stderr)
+            output = b'\n'.join(json.dumps(value).encode() for value in
+                                [*child_prefix_records, body]) + b'\n'
+            if child_raw_override is not None:
+                output = child_raw_override
+            proc.communicate.return_value = (output, child_stderr)
         checked = {'git_preflight': {
             'status': 'PASS', 'index_sha256': 'a' * 64, 'wall_seconds': .01,
             'CPU_seconds': .005, 'tracked_files': 1444,
@@ -517,9 +535,11 @@ class FullControllerMockWorkflow(unittest.TestCase):
         fixture = self.assert_blocked('INERT_CHILD_FAILED_OR_OUTPUT_BOUND',
                                      child_returncode=2, cleanup_failure=True)
         records = [call.args[0] for call in fixture.emit.call_args_list]
-        self.assertEqual(records[0]['kind'], 'CLEANUP_FAILED')
-        self.assertIn('INERT_CHILD_FAILED_OR_OUTPUT_BOUND', records[0]['original_reason'])
-        self.assertIn('INERT_CLEANUP_DENIED', records[0]['cleanup_reason'])
+        cleanups = [row for row in records if row['kind'] == 'CLEANUP_FAILED']
+        self.assertEqual(len(cleanups), 1)
+        self.assertIn('INERT_CHILD_FAILED_OR_OUTPUT_BOUND', cleanups[0]['original_reason'])
+        self.assertIn('INERT_CLEANUP_DENIED', cleanups[0]['cleanup_reason'])
+        self.assertEqual(records[-1]['kind'], 'BLOCKED')
 
 
 if __name__ == '__main__':
