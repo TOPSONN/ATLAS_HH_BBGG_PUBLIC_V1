@@ -1,17 +1,19 @@
 """Single-service inert lifecycle controller; persistent storage remains blocked.
 
-Only launch-live-diagnostic is executable. It runs no compiler, loader, MG5,
+No new kernel invocation is authorized by the recovery source. It runs no compiler, loader, MG5,
 authorization or resource stress. Production and the 47-case campaign require
 an independently verified persistent capacity sink and remain hard blocked.
 """
 from __future__ import annotations
-import argparse, hashlib, json, os, resource, signal, subprocess, sys, time
+import argparse, base64, hashlib, json, os, resource, signal, subprocess, sys, time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
+sys.path.insert(0, str(REPO))
+from simulation.hh_signal.final_closure.resource_closure import mount_attestation, namespace_attestation
 WORK = Path('/var/tmp')
-UNIT = 'atlas-hh-phase7i-full-controller-live-01.service'
+UNIT = 'atlas-hh-phase7i-namespace-recovery-01.service'
 PHASES = ('pre_provisioning', 'source_git_preflight', 'dependency_hashing',
           'worker_creation_monitoring', 'inert_build_preparation',
           'receipt_writing', 'postflight_validation', 'failure_cleanup')
@@ -36,6 +38,18 @@ def canonical(value):
     return json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()
 
 
+def diagnostic_claims_safe(value, depth=0):
+    require(depth <= 32, 'CHILD_DIAGNOSTIC_DEPTH_BOUND')
+    if type(value) is dict:
+        for key, item in value.items():
+            if key in ('FULL_LAUNCH_ENVELOPE_VERIFIED', 'FULL_CONTROLLER_RESOURCE_ENFORCEMENT_IMPLEMENTED'):
+                require(item is False, 'CHILD_DIAGNOSTIC_FULL_CLAIM_FORBIDDEN')
+            diagnostic_claims_safe(item, depth + 1)
+    elif type(value) is list:
+        for item in value:
+            diagnostic_claims_safe(item, depth + 1)
+
+
 def sha(path):
     h = hashlib.sha256()
     with Path(path).open('rb') as stream:
@@ -45,12 +59,12 @@ def sha(path):
 
 
 def lifecycle_bounds():
-    # Type=exec: one Pre start timeout + main activation timeout + runtime;
-    # StopPost and remaining group termination each receive TimeoutStopSec.
+    # Type=exec: single Main activation + runtime; no ExecStartPre/StopPost.
+    # Include stop and conservative final group termination intervals.
     # Conservative extra stop interval included. Scheduler/timer latency has
     # no hard realtime guarantee; actual elapsed readback is still mandatory.
-    stages = {'pre_start': 1, 'main_activation': 1, 'main_runtime': 8,
-              'main_stop': .5, 'stop_post': .5, 'final_group_kill': .5}
+    stages = {'pre_start': 0, 'main_activation': 1, 'main_runtime': 8,
+              'main_stop': .5, 'stop_post': 0, 'final_group_kill': .5}
     seconds = sum(stages.values())
     return {'timer_budget_seconds': seconds, 'stage_budgets_seconds': stages,
             'quota_duration_CPU_upper_seconds': .3 * seconds + .003,
@@ -59,15 +73,26 @@ def lifecycle_bounds():
 
 
 def mount_row(path, lines):
-    values = [x.split() for x in lines if len(x.split()) > 6 and x.split()[4] == str(path)]
+    try:
+        values = mount_attestation.parse_mountinfo(('\n'.join(lines) + '\n').encode())
+    except mount_attestation.MountInfoError as error:
+        raise ValueError('EXACT_MOUNT_REQUIRED:' + str(path)) from error
+    values = [r for r in values if r['path'] == str(path)]
     require(len(values) == 1, 'EXACT_MOUNT_REQUIRED:' + str(path))
     value = values[0]
-    require(value[value.index('-') + 1] == 'tmpfs', 'TMPFS_REQUIRED')
-    require({'rw', 'nosuid', 'nodev', 'noexec'} <= set(value[5].split(',')), 'TMPFS_FLAGS')
+    require(value['filesystem_type'] == 'tmpfs', 'TMPFS_REQUIRED')
+    require({'rw', 'nosuid', 'nodev', 'noexec'} <= set(value['mount_options']), 'TMPFS_FLAGS')
     return value
 
 
 def attestation(stage):
+    mount_raw = mount_attestation.read_bounded()
+    # Full local raw capture precedes parser/guard failures; never auto-publish.
+    mount_capture = mount_attestation.emit_evidence(mount_raw, stage, emit)
+    inventory = mount_attestation.inventory(mount_raw, str(REPO))
+    emit({'kind': 'MOUNT_INVENTORY_SAFE', 'stage': stage, 'inventory': inventory})
+    require(inventory['status'] == 'PASS_POLICY_PREREQUISITES_ONLY',
+            'UNACCOUNTED_WRITABLE_MOUNT_OR_INVALID_MOUNTINFO')
     rows = Path('/proc/self/cgroup').read_text().splitlines()
     require(len(rows) == 1 and rows[0].startswith('0::/'), 'CGROUP_V2_REQUIRED')
     relative = Path(rows[0][3:])
@@ -75,6 +100,7 @@ def attestation(stage):
     prefix = ('/', 'user.slice', 'user-%d.slice' % os.getuid(),
               'user@%d.service' % os.getuid(), 'app.slice')
     require(parts[:5] == prefix, 'OWN_USER_SERVICE_SLICE_REQUIRED')
+    require(len(parts) >= 6 and parts[5] == UNIT, 'OWN_SERVICE_CGROUP_REQUIRED')
     require(parts.count(UNIT) == 1 and parts[-1] in (UNIT, 'control'), 'OWN_SERVICE_CGROUP_REQUIRED')
     index = parts.index(UNIT)
     require(parts[index + 1:] in ((), ('control',)), 'UNREVIEWED_CGROUP_DESCENDANT')
@@ -89,7 +115,7 @@ def attestation(stage):
     require(len(os.sched_getaffinity(0)) == 1, 'ONE_CPU_REQUIRED')
     require(os.statvfs(REPO).f_flag & os.ST_RDONLY, 'SOURCE_READONLY_REQUIRED')
     require(os.statvfs(aggregate).f_flag & os.ST_RDONLY, 'CGROUP_READONLY_REQUIRED')
-    lines = Path('/proc/self/mountinfo').read_text().splitlines()
+    lines = mount_raw.decode('utf-8', errors='strict').splitlines()
     mounts = []
     for path, size, inodes in ((WORK, 8388608, 1024), (Path('/tmp'), 1048576, 256)):
         mount_row(path, lines)
@@ -97,7 +123,8 @@ def attestation(stage):
         require(v.f_blocks * v.f_frsize == size and v.f_files == inodes, 'TMPFS_CAP_MISMATCH')
         mounts.append({'path': str(path), 'capacity_bytes': size, 'inodes': inodes,
                        'free_bytes': v.f_bfree * v.f_frsize, 'free_inodes': v.f_ffree})
-    writable = sorted(x.split()[4] for x in lines if 'rw' in x.split()[5].split(','))
+    parsed_mounts = mount_attestation.parse_mountinfo(mount_raw)
+    writable = sorted(r['path'] for r in parsed_mounts if 'rw' in r['mount_options'])
     require(writable == sorted([str(WORK), '/tmp']), 'UNACCOUNTED_WRITABLE_MOUNT')
     raw = {}
     for key in ('cpu.stat', 'memory.current', 'memory.peak', 'memory.swap.current',
@@ -106,10 +133,15 @@ def attestation(stage):
             raw[key] = (aggregate / key).read_text().strip()
         except FileNotFoundError:
             raw[key] = None
+    namespace = namespace_attestation.collect()
+    emit({'kind': 'NAMESPACE_READBACK', 'stage': stage, 'proof': namespace})
+    namespace_attestation.validate(namespace)
     cpu = dict(x.split() for x in raw['cpu.stat'].splitlines())
     return {'stage': stage, 'pid': os.getpid(), 'membership': str(relative),
             'aggregate_cgroup': str(aggregate), 'leaf_cgroup': str(leaf),
             'mount_namespace_inode': os.stat('/proc/self/ns/mnt').st_ino,
+            'namespace': namespace, 'mount_capture': mount_capture,
+            'mount_inventory_sha256': hashlib.sha256(canonical(inventory)).hexdigest(),
             'effective': values, 'limits': limits, 'mounts': mounts,
             'writable_mounts': writable, 'raw': raw,
             'CPU_usage_usec': int(cpu['usage_usec']),
@@ -187,13 +219,32 @@ def workflow():
                                  stderr=subprocess.PIPE, start_new_session=True)
         try:
             output, errors = proc.communicate(timeout=1)
-            require(proc.returncode == 0 and not errors and len(output) <= 8192,
+            require(len(output) <= 65536 and len(errors) <= 8192,
                     'INERT_CHILD_FAILED_OR_OUTPUT_BOUND')
-            detail = json.loads(output)
+            child_records = [json.loads(line) for line in output.splitlines() if line.strip()]
+            require(child_records and len(child_records) <= 24, 'CHILD_PROTOCOL_RECORD_BOUND')
+            for child_record in child_records[:-1]:
+                require(type(child_record) is dict and child_record.get('kind') in (
+                    'PRIVATE_MOUNTINFO_RAW', 'MOUNTINFO_CAPTURE_SAFE_METADATA',
+                    'MOUNT_INVENTORY_SAFE', 'NAMESPACE_READBACK'),
+                    'UNREVIEWED_CHILD_DIAGNOSTIC_RECORD')
+                diagnostic_claims_safe(child_record)
+                emit({'kind': 'CHILD_DIAGNOSTIC_RECORD', 'record': child_record})
+            if errors:
+                emit({'kind': 'PRIVATE_CHILD_STDERR', 'base64': base64.b64encode(errors).decode(),
+                      'sha256': hashlib.sha256(errors).hexdigest()})
+            if proc.returncode != 0:
+                emit({'kind': 'CHILD_TERMINAL_REJECTED', 'exit_status': proc.returncode,
+                      'terminal_record': child_records[-1]})
+            require(proc.returncode == 0 and not errors, 'INERT_CHILD_FAILED_OR_OUTPUT_BOUND')
+            detail = child_records[-1]
+            diagnostic_claims_safe(detail)
+            require(detail.get('kind') == 'CHILD_RECEIPT', 'CHILD_TERMINAL_RECEIPT_MISSING')
             require(detail['proof']['aggregate_cgroup'] == initial['aggregate_cgroup'],
                     'SIBLING_CHILD_CGROUP_FORBIDDEN')
             require(detail['proof']['mount_namespace_inode'] == initial['mount_namespace_inode'],
                     'CHILD_MOUNT_NAMESPACE_CHANGED')
+            namespace_attestation.validate(detail['proof']['namespace'], initial['namespace'])
             records.append({'phase': PHASES[3], 'child': detail})
         finally:
             if proc.poll() is None:
@@ -236,9 +287,9 @@ def workflow():
 
 
 def properties():
-    # New protocol uses no OpenFile and no mutable host transport paths. Each
-    # Exec command gets a separate namespace; scratch is intentionally unshared.
-    executable = '/usr/bin/python3 -I -B ' + str(HERE / 'full_controller.py')
+    # Proposed architecture has one ExecStart only; internal pre/post share
+    # the same namespace. Inherited child does not re-enter manager ns caches.
+    # Keep PrivateUsers/Network/IPC and every existing security property.
     return ['Type=exec', 'RemainAfterExit=no', 'Restart=no', 'NotifyAccess=none',
             'RuntimeRandomizedExtraSec=0', 'TimeoutStartFailureMode=kill',
             'TimeoutStopFailureMode=kill', 'CPUAccounting=yes', 'MemoryAccounting=yes',
@@ -259,32 +310,42 @@ def properties():
             'Environment=PATH=/usr/bin:/bin LANG=C.UTF-8 HOME=' + str(Path.home()) +
             ' PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 GIT_OPTIONAL_LOCKS=0 TMPDIR=/tmp TMP=/tmp TEMP=/tmp',
             'UnsetEnvironment=LD_PRELOAD LD_LIBRARY_PATH LD_AUDIT PYTHONPATH PYTHONHOME PYTHONSTARTUP PYTHONINSPECT GIT_CONFIG_COUNT GIT_CONFIG_PARAMETERS GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE',
-            'ExecStartPre=' + executable + ' stage-pre',
-            'ExecStopPost=' + executable + ' stage-post']
+            ]
 
 
 def launch_command():
     return ['/usr/bin/systemd-run', '--user', '--quiet', '--wait', '--pipe', '--unit', UNIT,
             *[v for prop in properties() for v in ('--property', prop)],
-            '/usr/bin/python3', '-I', '-B', str(HERE / 'full_controller.py'), 'workflow']
+            '/usr/bin/python3', '-I', '-B', str(HERE / 'full_controller.py'), 'namespace-inspection']
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
     parser.add_argument('action', choices=('launch-live-diagnostic', 'stage-pre', 'stage-post',
-                                         'workflow', 'inert-child', 'full-campaign', 'BUILD_ONLY'))
+                                         'workflow', 'inert-child', 'full-campaign', 'BUILD_ONLY',
+                                         'namespace-inspection', 'describe-diagnostic'))
     args = parser.parse_args(argv)
-    if args.action == 'launch-live-diagnostic':
-        # Minimal fixed activation only: no source/hash/provision/result work.
-        # Fixed unit identity refuses accidental concurrent/replacement runs.
-        os.execv('/usr/bin/systemd-run', launch_command())
     try:
+        if args.action == 'describe-diagnostic':
+            emit({'kind': 'PROPOSED_ARGV_ONLY', 'execution_authorized': False,
+                  'argv': launch_command(), 'unit': UNIT, 'bounds': lifecycle_bounds(),
+                  'scope': 'One namespace/mount inspection only; no child or eight-phase workflow.',
+                  'FULL_LAUNCH_ENVELOPE_VERIFIED': False, **ZERO})
+            return 0
+        if args.action == 'launch-live-diagnostic':
+            raise ValueError('NEW_KERNEL_ATTEMPT_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION')
         if args.action == 'BUILD_ONLY':
             run_formal_build()
         elif args.action == 'full-campaign':
             run_full_campaign()
         elif args.action == 'workflow':
             workflow()
+        elif args.action == 'namespace-inspection':
+            proof = attestation('single_main_internal_pre')
+            emit({'kind': 'INSPECTION_ONLY_COMPLETE', 'proof': proof,
+                  'EIGHT_PHASE_WORKFLOW_COMPLETED': False,
+                  'FULL_LAUNCH_ENVELOPE_VERIFIED': False,
+                  'persistent_capacity': 'BLOCKED', **ZERO})
         elif args.action == 'inert-child':
             child()
         else:

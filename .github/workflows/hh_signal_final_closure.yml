@@ -11,7 +11,7 @@ jobs:
   closure_methods_and_evidence:
     # This resource-only branch must not synthesize HumanReview or run native methods.
     # Its exact safe legacy selection is exercised by the separate resource job.
-    if: github.head_ref != 'codex/phase7i-resource-closure' && github.head_ref != 'codex/phase7i-full-controller-storage' && github.ref_name != 'codex/phase7i-full-controller-storage'
+    if: github.head_ref != 'codex/phase7i-resource-closure' && github.head_ref != 'codex/phase7i-full-controller-storage' && github.ref_name != 'codex/phase7i-full-controller-storage' && github.head_ref != 'codex/phase7i-namespace-storage-recovery' && github.ref_name != 'codex/phase7i-namespace-storage-recovery'
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
