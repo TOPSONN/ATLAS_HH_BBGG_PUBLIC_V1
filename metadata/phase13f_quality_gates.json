@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "evidence_class": "PUBLIC_SOURCE_AUDIT",
-  "FINAL_VERDICT": "FULL_LAUNCH_ENVELOPE_VERIFIED",
+  "FINAL_VERDICT": "PENDING_FRESH_CLEAN_SOURCE_RECEIPTS",
   "verification_scope": "Current WSL user-systemd fixed full supervisor workflow with harmless child stand-in; not actual MG5/parser or whole-host control plane",
-  "FULL_LAUNCH_ENVELOPE_VERIFIED": true,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
   "actual_required_native_cases": 31,
   "actual_native_expected_passes": 31,
   "offline_regression_tests": {
@@ -13,7 +13,7 @@
     "phase13f": 45,
     "total": 572
   },
-  "independent_source_audit_checks": 726,
+  "independent_source_audit_checks": null,
   "historical_regular_path_observations": 23221,
   "historical_symlink_records": 225,
   "historical_within_task_changes": 0,
@@ -54,7 +54,7 @@
   "NEW_HARD_EVENTS": 0,
   "NEW_PYTHIA_EVENTS": 0,
   "NEW_DELPHES_EVENTS": 0,
-  "GITHUB_CI": "PENDING_NEW_DRAFT_PR",
+  "GITHUB_CI": "INITIAL_PHASE13F_PASS_LEGACY_PUBLICATION_ROUTING_FAIL_CORRECTED_PENDING_RETEST",
   "source_payload_commit": null,
-  "PR_URL": null
+  "PR_URL": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/31"
 }

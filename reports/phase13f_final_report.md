@@ -1,6 +1,6 @@
 # Phase13F 完整驗收報告
 
-**FINAL_VERDICT：FULL_LAUNCH_ENVELOPE_VERIFIED（限本機宣告的無害完整流程）**
+**INTERMEDIATE：CI發布路由最小修正已完成；先前完整31-case紀錄如下，修正來源待乾淨checkout重新完整驗證。不得以此intermediate版本作最終驗收。**
 
 Base：PR30，`aa6eb8c9abdcc4d177af2e84296180624faf835a`；新分支：`codex/phase13f-full-job-resource-closure`。本報告的第一個 source/evidence commit 與新 stacked Draft PR 在 delivery commit 補入；舊 PR24–30 保持 OPEN/DRAFT、head 不變。
 

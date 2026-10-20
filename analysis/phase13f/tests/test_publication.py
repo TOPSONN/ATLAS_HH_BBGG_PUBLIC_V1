@@ -21,4 +21,16 @@ class Publication(unittest.TestCase):
  def test_unlisted_rejected(self):
   with self.assertRaises(ValueError):p.payload('analysis/phase13f/source/a.py',b'A',set())
  def test_only_exact_workflow_allowed(self):
-  self.assertTrue(p.allowed('.github/workflows/phase13f-resource-closure.yml'));self.assertFalse(p.allowed('.github/workflows/other.yml'))
+  self.assertTrue(p.allowed('.github/workflows/phase13-source.yml'));self.assertTrue(p.allowed('.github/workflows/phase13f-resource-closure.yml'));self.assertFalse(p.allowed('.github/workflows/other.yml'))
+
+ def test_exact_compat_workflow_retains_old_tests_and_fallback(self):
+  import subprocess
+  frozen=subprocess.check_output(['git','-C',str(ROOT),'show',p.BASE+':'+p.COMPAT_WORKFLOW]);current=(ROOT/p.COMPAT_WORKFLOW).read_bytes()
+  self.assertTrue(p.validate_compat_workflow(current,frozen))
+  for token in (b'discover -s analysis/phase13/tests',b'discover -s analysis/phase12/tests',b'discover -s analysis/phase11/tests',b'else',b'analysis/phase13/scripts/check_publication.py'):
+   self.assertIn(token,current)
+ def test_compat_workflow_arbitrary_skip_or_test_change_rejected(self):
+  import subprocess
+  frozen=subprocess.check_output(['git','-C',str(ROOT),'show',p.BASE+':'+p.COMPAT_WORKFLOW]);current=(ROOT/p.COMPAT_WORKFLOW).read_bytes()
+  for mutant in (current+b'\n',current.replace(b'analysis/phase13/tests',b'analysis/phase13f/tests'),current.replace(b'check_publication.py --repo .',b'check_publication.py --repo . || true')):
+   with self.subTest(mutant=mutant[-60:]),self.assertRaises(ValueError):p.validate_compat_workflow(mutant,frozen)

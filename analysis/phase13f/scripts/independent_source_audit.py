@@ -44,6 +44,12 @@ def inspect(repo,evidence=None):
   frozen=subprocess.check_output(['git','-C',str(repo),'show',BASE+':'+name]);check(frozen==(repo/name).read_bytes(),'LEGACY_BYTE_IDENTITY_'+name)
  changed=subprocess.check_output(['git','-C',str(repo),'diff','--name-only',BASE,'--','analysis/phase11','analysis/phase12','analysis/phase13','simulation'],text=True)
  check(not changed.strip(),'HISTORICAL_PHASES_AND_SIMULATION_UNCHANGED')
+ frozen_ci=subprocess.check_output(['git','-C',str(repo),'show',BASE+':.github/workflows/phase13-source.yml'])
+ current_ci=(repo/'.github/workflows/phase13-source.yml').read_bytes()
+ old_ci=b'        run: python3 -B analysis/phase13/scripts/check_publication.py --repo .\n'
+ new_ci=b'        run: |\n          if [ -f metadata/phase13f_source_manifest.json ]; then\n            python3 -B analysis/phase13f/scripts/check_publication.py --repo .\n          else\n            python3 -B analysis/phase13/scripts/check_publication.py --repo .\n          fi\n'
+ check(frozen_ci.count(old_ci)==1 and current_ci==frozen_ci.replace(old_ci,new_ci),'LEGACY_CI_ONLY_EXACT_PUBLICATION_ROUTING_DIFF')
+ check(b'discover -s analysis/phase13/tests' in current_ci and b'discover -s analysis/phase12/tests' in current_ci and b'discover -s analysis/phase11/tests' in current_ci,'LEGACY_OFFLINE_TEST_STEPS_RETAINED')
  evidence_result=None
  if evidence is not None:
   data=json.loads((Path(evidence)/'suite_summary.json').read_text());check(data['failure'] is None,'ACTUAL_SUITE_NO_FAILURE');check([r['case'] for r in data['results']]==EXPECTED_CASES,'ALL_31_CASES_ACTUALLY_PRESENT');check(all(r['status']=='PASS_EXPECTED_RESULT' for r in data['results']),'ACTUAL_RESULT_CASES_PASS')
