@@ -1,0 +1,119 @@
+{
+  "schema": "PHASE7I_ADMIN_ARCHITECTURE_CLOSURE_V1",
+  "base_PR": 36,
+  "base_revision": "61b32c0aa86456cf43051aa18a6ea692f9e22c7f",
+  "exact_tested_source": "e8709b27103dd0aa1fad1c7d06192ab1cf1d8d6e",
+  "acceptance": {
+    "P1_DEVICE_GUARDS_SOURCE_VALIDATED": "PASS_SOURCE_UNATTESTED_MODEL_ONLY",
+    "ADMIN_ARCHITECTURE_READY_FOR_INDEPENDENT_REVIEW": "PASS_DESIGN_ONLY",
+    "DURABLE_EVIDENCE_DESIGN_REVIEWED": "PASS_ORDINARY_FILE_FIXTURES_ONLY",
+    "RESOURCE_BOUNDARY_GAPS_EXPLICIT": "PASS_RUNTIME_UNPROVEN"
+  },
+  "offline": {
+    "status": "PASS_SOURCE_OFFLINE_ONLY",
+    "tests_run": 612,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "wall_seconds": 1.8183037100000021,
+    "audit": {
+      "git_processes": 201,
+      "forbidden_attempts": [],
+      "unresolved_directory_fd_events": 952
+    },
+    "audit_scope": "REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX",
+    "audit_limitations": [
+      "stat/readlink and symlink aliases require source review",
+      "directory-FD targets are not disclosed by Python audit events"
+    ]
+  },
+  "legacy": {
+    "status": "PASS_SELECTED_SAFE_LEGACY",
+    "tests_run": 81,
+    "passes": 81,
+    "failure_count": 0,
+    "error_count": 0,
+    "implementation_sources_unchanged": true,
+    "wall_seconds": 8.363139329999996,
+    "subprocess_audit": {
+      "counts": {
+        "fixed_python_fixture": 5,
+        "fixed_sleep20": 1,
+        "git": 551
+      },
+      "forbidden_imports": [],
+      "human_review_attempts": 0,
+      "python_fixture_code_sha256": [
+        "763cf8f9a43a20bbb0da5a8777cc1586ae9d82fe5d858339796fb1ac46fdc422",
+        "4fbdb79368d8838543c3817902ce180c3b8ab818d7e1ec25078f30225004e91e",
+        "715566f8d314e6ba5e585cb02f80f2503709167f6c62a987c946cdf8a3edaade",
+        "6fc2f05c05732bb28ba53645813fb01f52d562bff441ddd707c717287a9572f4",
+        "46813b1854c16752f78c0cfd39d9b2ba8719e70a6a99b3526885f4bc476fcb1c"
+      ],
+      "rejected": []
+    }
+  },
+  "independent_targeted_subset": {
+    "device": 36,
+    "evidence": 19,
+    "architecture_cli_publication": 15
+  },
+  "architecture": {
+    "selected": "A_STRICT_TARGET_NOT_DEPLOYED",
+    "fallback": "B_V2_PROPOSED_NOT_ACCEPTED",
+    "B_weaker_than_original": true,
+    "B_user_accepted": false,
+    "original_limits_unchanged": true
+  },
+  "durable_evidence": {
+    "offline_logical_slots_bytes": 32768,
+    "slots": 8,
+    "slot_bytes": 4096,
+    "actual_ordinary_file_fsync_reopen": true,
+    "real_UID_isolation_verified": false,
+    "persistent_capacity_verified": false,
+    "power_loss_verified": false,
+    "faults": "OFFLINE_MODELS_OR_IO_INJECTION_NOT_LIVE_RESOURCE_FAILURES"
+  },
+  "runtime_resources": {
+    "CPU_usec": null,
+    "wall_ns": null,
+    "memory_peak_bytes": null,
+    "swap_peak_bytes": null,
+    "persistent_allocated_blocks": null,
+    "persistent_inodes": null,
+    "whole_group_cleanup": null,
+    "systemd_user_session_health": "UNKNOWN"
+  },
+  "actual_scope": {
+    "device_opens": 0,
+    "formats": 0,
+    "mounts": 0,
+    "quota_actions": 0,
+    "explicit_service_start_or_restart_commands": 0,
+    "new_kernel_resource_tests": 0,
+    "stress_tests": 0,
+    "S4_runs": 0,
+    "production_builds": 0,
+    "MG5_parser_or_model_imports": 0,
+    "ME_calls": 0,
+    "integrals": 0,
+    "events": 0,
+    "human_authorization_created_or_reused": false,
+    "ordinary_existing_WSL_python_git_used": true,
+    "incidental_WSL_bootstrap_host_writes_measured": false,
+    "legacy_fixed_child_timeout_fixtures": "EXECUTED_AS_REVIEWED_SAFE_LEGACY; NOT_RESOURCE_ENVELOPE_TEST"
+  },
+  "gates": {
+    "ADMIN_PROVISIONING_APPROVED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "S4_EXECUTED": false,
+    "BUILD_ONLY_AUTHORIZED": false,
+    "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+    "PHASE7I_PHYSICS_VALIDATED": false,
+    "TOCTOU_RUNTIME_CLOSED": false
+  },
+  "next_minimum_review": "SEPARATE_G1_BOUNDED_READ_ONLY_INVENTORY_AND_G2_ARCHITECTURE_CAPABILITY_REVIEW",
+  "publication_ci": "LOCAL_PUBLICATION_GATE_AND_STATIC_CI_REVIEW; ACTUAL_HEAD_HOSTED_CI_REPORTED_IN_PR_AND_LOCAL_DELIVERY"
+}

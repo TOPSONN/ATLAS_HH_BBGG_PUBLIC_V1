@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "simulation.hh_signal.final_closure.resource_closure.admin_review",
+    "--kind",
+    "architecture",
+    "--input",
+    "simulation/hh_signal/final_closure/resource_closure/config/admin_architecture_B.json"
+  ],
+  "exit": 0,
+  "result": {
+    "BUILD_ONLY_AUTHORIZED": false,
+    "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+    "S4_EXECUTED": false,
+    "evidence_origin": "UNATTESTED_INPUT_CONSISTENCY_ONLY",
+    "external_roles": [
+      "host_backing",
+      "launcher",
+      "manager_journal"
+    ],
+    "operation_authorized": false,
+    "original_contract_satisfied": false,
+    "provisioning_authorized": false,
+    "runtime_verified": false,
+    "snapshot_sha256": "75d79c9926cfb779449ad4a223daaf48184e52e4a681d196c3265ead51d4ddca",
+    "status": "ARCHITECTURE_SOURCE_REVIEWABLE_NOT_APPROVED"
+  }
+}
