@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, re, uuid
 from pathlib import Path
 from . import device_policy as policy, instance_binding
+from . import g1_associations
 
 MAX_BYTES=262144
 HOST_KEYS={'runtime','wsl_version','running_distros','os_memory','hypervisor','features',
@@ -10,7 +11,8 @@ HOST_KEYS={'runtime','wsl_version','running_distros','os_memory','hypervisor','f
  'storage_disks','registered_distro_backing'}
 STATES={'REPORTED_UNATTESTED','UNKNOWN'}
 ERRORS={'ACCESS_DENIED','QUERY_FAILED','OUTPUT_BOUND','QUERY_TIMEOUT','CLEANUP_UNKNOWN',
- 'NATIVE_QUERY_NONZERO','ACQUISITION_DEADLINE','STOPPED_AFTER_CLEANUP_UNKNOWN'}
+ 'NATIVE_QUERY_NONZERO','ACQUISITION_DEADLINE','STOPPED_AFTER_CLEANUP_UNKNOWN',
+ 'SERIALIZATION_WARNING','ASSOCIATION_INVALID'}
 
 def check(ok,reason):
  if not ok:raise ValueError(reason)
@@ -29,7 +31,7 @@ def load(raw):
   parse_constant=lambda _:(_ for _ in ()).throw(ValueError('NONFINITE_JSON')))
 
 def validate_host(value):
- check(type(value) is dict and value.get('schema')=='PHASE7I_G1_HOST_CAPTURE_V1','HOST_SCHEMA')
+ check(type(value) is dict and value.get('schema') in ('PHASE7I_G1_HOST_CAPTURE_V1','PHASE7I_G1_HOST_CAPTURE_V2'),'HOST_SCHEMA')
  check(len(canonical(value))<=MAX_BYTES,'CAPTURE_BYTE_BOUND')
  check(type(value.get('capture_id')) is str and str(uuid.UUID(value['capture_id']))==value['capture_id'],'CAPTURE_UUID')
  check(type(value.get('collector_sha256')) is str and re.fullmatch('[a-f0-9]{64}',value['collector_sha256']),'COLLECTOR_HASH')
@@ -54,6 +56,9 @@ def validate_host(value):
    native=row['data'][0]
    check(type(native) is dict and type(native.get('exit_code')) is int,'NATIVE_EXIT')
    check(native['exit_code']==0 or row['status']=='UNKNOWN','NONZERO_NATIVE_MUST_BE_UNKNOWN')
+ if value['schema']=='PHASE7I_G1_HOST_CAPTURE_V2':
+  check(sum(len(json.dumps(r['data'],ensure_ascii=False,separators=(',',':')).encode('utf-8')) for r in rows if 'data' in r)<=196608,'AGGREGATE_BYTE_BOUND')
+  g1_associations.validate({r['key']:r for r in rows})
  return value
 
 def public_projection(value):
@@ -74,6 +79,8 @@ def public_projection(value):
   'host_identity_confidence':'REPORTED_UNATTESTED','guest_identity_confidence':'UNKNOWN',
   'protected_storage_complete':False,'host_guest_mapping_complete':False,
   'A_verdict':'A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST','B_status':'PROPOSED_NOT_ACCEPTED',
+  'host_capture_schema':value['schema'],
+  'association_validation':'V2_COMPACT_CONTRACT' if value['schema'].endswith('_V2') else 'LEGACY_V1_NOT_COMPACT_VALIDATED',
   'execution_authorized':False,'FULL_LAUNCH_ENVELOPE_VERIFIED':False}
 
 def existing_policy_decisions(value):
@@ -101,6 +108,7 @@ def main():
   # This binds reported source bytes, never authenticates execution/origin.
   expected=hashlib.sha256(Path(__file__).with_name('g1_windows_inventory.ps1').read_bytes()).hexdigest()
   check(v['collector_sha256']==expected,'COLLECTOR_SOURCE_IDENTITY_MISMATCH')
+  check(v['schema']=='PHASE7I_G1_HOST_CAPTURE_V2','CURRENT_CAPTURE_SCHEMA_REQUIRED')
   out['reported_collector_hash_matches_reviewed_source']=True
   out['existing_policy_decisions']=existing_policy_decisions(v)
   with a.output.open('x',encoding='utf-8') as stream:json.dump(out,stream,indent=2);stream.write('\n')
