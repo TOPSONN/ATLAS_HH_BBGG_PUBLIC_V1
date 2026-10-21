@@ -1,0 +1,89 @@
+{
+  "schema": "PHASE7I_G1_G2_ACTUAL_VALIDATION_V1",
+  "source_revision": "d7baa3450d0049775d51806628674094b5dd52fa",
+  "portable_root": {
+    "status": "PASS_PORTABLE_SOURCE_ONLY",
+    "tests_run": 23,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "source_rows": [
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "sha256": "91ce6880e9c2307b2d0d7eddb6696152df305e6e90083668895559a0a165b9fd"
+      },
+      {
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "sha256": "b553c87461fa7c7a96fa70ee6a2d71fe12eae647174e98203961a867488ffe38"
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "sha256": "a297dd692be78b1781a0ba9669aa14a366a39e2545575a192829a649facad39e"
+      },
+      {
+        "path": ".github/workflows/hh_signal_resource_closure.yml",
+        "sha256": "034771714989258c74072242e0b095aae0f82fb3bbf1115b9f61af7c1111c2f5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/config/b_v2_research_execution_terms.json",
+        "sha256": "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/g1_acquisition.py",
+        "sha256": "88f6241379602c5abba37318c24d9a982dbc324d45a89529da682ea495ec9b20"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/g1_guest_inventory.py",
+        "sha256": "dc9240024052d2d1ab8fa76689e8bcce3281078026826271da7469f2fb6b881f"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/g1_publication.py",
+        "sha256": "47ad69f85d0cead2807e59988ca040e39a55fb2b537627e4d7fdf1462ac9d032"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/g1_windows_inventory.ps1",
+        "sha256": "7be2def2a3e605914826195f5f330e913ac05d641999db59d8e1893ca51d1411"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_g1_acquisition.py",
+        "sha256": "0f7275b8a9f5224e68afaff1759d8cea6457b993d0219ae50479456b67df6282"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_g1_publication.py",
+        "sha256": "2c8c6fd96bf2f15f034ab7e3d540c07606d6ef2bd22036287f625643fb86f7f4"
+      }
+    ],
+    "audit": {
+      "Git_fixture_processes": 16,
+      "forbidden": []
+    },
+    "wall_seconds": 0.7881855000014184,
+    "guest_AST_compiled_not_executed": true,
+    "host_queries": 0,
+    "WSL_launches": 0,
+    "kernel_resource_tests": 0,
+    "physics_runs": 0
+  },
+  "original_root_receipt_sha256": "ea5c40bc0ee867ab61c6e604553e6f723abb622cea6241a7ff75122f4854b30b",
+  "independent_acquisition_tests": 19,
+  "independent_publication_tests": 4,
+  "independent_counts_are_repeats_not_new_unique_tests": true,
+  "publication_privacy_cases": 6,
+  "historical_612_and_81_execution": "PENDING_GITHUB_UBUNTU_CI; NOT_EXECUTED_ON_WINDOWS",
+  "guest_inventory": "AST_AND_COMPILE_ONLY_NOT_EXECUTED",
+  "actual_host_collector_attempts": 2,
+  "actual_final_host_observation_count": 13,
+  "actual_final_reported_unattested": 2,
+  "actual_final_unknown": 11,
+  "privilege_elevation_requests": 0,
+  "WSL_guest_dispatches": 0,
+  "kernel_resource_tests": 0,
+  "S4": 0,
+  "builds": 0,
+  "ME": 0,
+  "integrals": 0,
+  "events": 0,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

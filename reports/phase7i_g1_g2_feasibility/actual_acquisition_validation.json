@@ -1,0 +1,89 @@
+{
+  "schema": "G1_INDEPENDENT_CAPTURE_INTERPRETATION_PUBLIC_V1",
+  "status": "PASS_UNATTESTED_CAPTURE_INTEGRITY_PARTIAL_ACQUISITION_WITH_EXTERNAL_BLOCKERS",
+  "original_local_receipt_sha256": "090421b085a258614b82dc5ba83b1fbb5f5d47099cd09e16859b6970dbc40fa9",
+  "source_revision_binding": "d7baa3450d0049775d51806628674094b5dd52fa",
+  "hashes": {
+    "actual_capture_raw_sha256": "a010b06c53e1efef767de8c9a93bb8fd356ebda3bedae858f2c33d249c703daa",
+    "actual_capture_canonical_sha256": "b107fffa72b05c7336577952fff77f83392baa76faf587073f22fe20fd8c7bb6",
+    "public_projection_sha256": "e138be4007a16838ef7c2cfdc7baef659b1dc6599572674cf89d36da213434af",
+    "reviewed_current_and_archived_adapter_sha256": "7be2def2a3e605914826195f5f330e913ac05d641999db59d8e1893ca51d1411",
+    "previous_actual_capture_raw_sha256": "cf19991d9a1a659c29952494bdb1633ac74ff903d3d9d7f0cccb8bfe0095ec05",
+    "previous_archived_adapter_sha256": "697188def4512f1ca99cf8c71c73b48dcad30a507abeb756c9aeb9ec55a7b478"
+  },
+  "bounds": {
+    "actual_capture_bytes": 5110,
+    "previous_capture_bytes": 3984,
+    "capture_byte_limit": 262144,
+    "reported_unattested": 2,
+    "unknown": 11,
+    "native_stdout_byte_counts": [
+      226,
+      49
+    ],
+    "native_stderr_byte_counts": [
+      0,
+      0
+    ],
+    "native_stream_retained_byte_limit": 32768,
+    "private_exception_character_counts": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "private_exception_character_limit": 2048,
+    "observation_count": 13
+  },
+  "safe_findings": {
+    "runtime": "REPORTED_UNATTESTED",
+    "installed_wsl_version": "REPORTED_UNATTESTED_EXIT_ZERO",
+    "running_distribution_query": "UNKNOWN_NONZERO_EXIT_ACCESS_DENIED",
+    "running_distribution_count": null,
+    "current_running_kernel": "UNKNOWN",
+    "native_query_argv": "BOTH_EXACT_FIXED_INVENTORY_VECTORS",
+    "native_query_cleanup": "BOTH_REPORTED_OWNED_QUERY_EXITED",
+    "CIM_queries": "NINE_UNKNOWN_CLIENT_CIM_RESOURCE_ACCESS_FAILURES",
+    "registry_backing": "UNKNOWN_ACCESS_DENIED"
+  },
+  "trust": {
+    "origin": "EXPECTED_INTERFACE_LABELS_AND_SOURCE_HASH_MATCH; EXECUTION_REPORTED_BY_PARENT; CAPTURE_CONTENT_ALONE_NOT_AUTHENTICATED_HOST_ATTESTATION",
+    "statuses_not_promoted": true,
+    "host_identity_confidence": "REPORTED_UNATTESTED",
+    "guest_identity_confidence": "UNKNOWN",
+    "host_guest_mapping_complete": false,
+    "protected_storage_complete": false,
+    "limitation": "The data does not identify whether denials originate from the tool/process security boundary, WSL broker, provider access policy or another host condition. It does not prove that administrator privileges are required."
+  },
+  "policy_decisions": [
+    {
+      "policy": "device",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "INCOMPLETE_GRAPH_OR_NAMESPACE_INVENTORY"
+    },
+    {
+      "policy": "mount",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "INCOMPLETE_MOUNT_SNAPSHOT"
+    },
+    {
+      "policy": "transaction",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "TRANSACTION_SHAPE"
+    }
+  ],
+  "limitations": [
+    "A failed running-list query does not mean no distribution is running.",
+    "Installed WSL component version is not the identity of a currently running guest kernel.",
+    "No disk/partition/backing data means no candidate or protected-storage mapping can be selected.",
+    "CIM access failure does not establish absent hardware, absent hypervisor, disabled service, broken WSL or a need for administrator elevation.",
+    "A NOT_DEMONSTRABLY_FEASIBLE verdict is lack of current proof, not proof that the platform can never support a bounded amended contract."
+  ],
+  "new_queries_by_reviewer": 0,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

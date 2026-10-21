@@ -1,0 +1,173 @@
+{
+  "schema": "INDEPENDENT_G1_PUBLICATION_TERMS_FINAL_SOURCE_REVIEW_V2",
+  "status": "PASS_SOURCE_PRIVACY_CI_AND_PROPOSED_TERMS_WITH_RUNTIME_BLOCKED",
+  "base": "80f78fafa5fb835a35d9a58537360c1726cf2eea",
+  "exact_commit_binding": "PENDING_ROOT_SOURCE_FREEZE; per-file SHA256 below binds this review",
+  "source_hashes": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/g1_publication.py",
+      "sha256": "47ad69f85d0cead2807e59988ca040e39a55fb2b537627e4d7fdf1462ac9d032",
+      "bytes": 3097
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_g1_publication.py",
+      "sha256": "2c8c6fd96bf2f15f034ab7e3d540c07606d6ef2bd22036287f625643fb86f7f4",
+      "bytes": 2793
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/b_v2_research_execution_terms.json",
+      "sha256": "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193",
+      "bytes": 3749
+    },
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "91ce6880e9c2307b2d0d7eddb6696152df305e6e90083668895559a0a165b9fd",
+      "bytes": 2802
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "a297dd692be78b1781a0ba9669aa14a366a39e2545575a192829a649facad39e",
+      "bytes": 3244
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "b553c87461fa7c7a96fa70ee6a2d71fe12eae647174e98203961a867488ffe38",
+      "bytes": 3485
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "sha256": "034771714989258c74072242e0b095aae0f82fb3bbf1115b9f61af7c1111c2f5",
+      "bytes": 9001
+    }
+  ],
+  "publication": {
+    "fixed_base_PR37": true,
+    "exact_source_scope_paths": 11,
+    "every_outgoing_intermediate_and_index_via_original_audit": true,
+    "three_original_privacy_gaps_and_standalone_string_gap_closed": true,
+    "case_insensitive_report_suffix_and_private_fields": true,
+    "bounded_JSON_JSONL_Markdown_string_decoding": true,
+    "decoded_SID_rejected": true,
+    "depth_cap": 16,
+    "frame_candidate_cap": 8192,
+    "frame_cap_reason": "Candidate kinds now include quote starts; finite fail-closed cap preserves full representative source manifests. This is an input parser count, not a resource-budget increase.",
+    "per_file_and_aggregate_payload_caps_unchanged": true,
+    "privacy_scope_limit": "Reviewed bounded known JSON/text/frame patterns; not an unrestricted detector for arbitrarily encrypted or opaque payloads."
+  },
+  "actual_independent_tests": {
+    "publication_tests": 4,
+    "all_pass": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "privacy_synthetic_cases": 6,
+    "all_private_cases_rejected": true,
+    "representative_full_manifest_positive": true,
+    "not_added_to_root_23_test_population": true
+  },
+  "CI": {
+    "receipt": "independent_g1_ci_matrix_01.json",
+    "four_current_workflow_hashes_unchanged": true,
+    "three_historical_job_conditions_false": true,
+    "new_branch_PR_push_only": [
+      "audited_old612",
+      "safe_legacy81",
+      "new_G1_modules",
+      "g1_publication"
+    ],
+    "historical_contexts_per_workflow": 30,
+    "old_job_step_condition_differences": 0,
+    "hosted_CI_executed_by_this_reviewer": false
+  },
+  "B_V2": {
+    "eight_clauses_each_NOT_ACCEPTED": true,
+    "numeric_caps_equal_PR37_ORIGINAL": true,
+    "job_roles": [
+      "worker",
+      "controller",
+      "collector"
+    ],
+    "external_roles": [
+      "manager_journal",
+      "launcher",
+      "host_backing"
+    ],
+    "explicit_CPU_wall_RAM_semantics_proposal_not_silent_relaxation": true,
+    "disk_and_protected_storage_safeguards_preserved": true,
+    "original_A_unchanged": true,
+    "user_accepted": false,
+    "execution_authorized": false,
+    "deployment_state": "NOT_DEPLOYED"
+  },
+  "protected_source": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/device_policy.py",
+      "sha256": "c3ed53841fc252778033ad83f0e6fc52ee789a16d3864a7930c83d7f6f7597f3",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/instance_binding.py",
+      "sha256": "099215e5325c02b1a246735987fc9cd57f2e7b796fb3f28dc6677558967f3083",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/evidence_slots.py",
+      "sha256": "2ec53f72c5654b657e18cd01fad5e3e349c090405b8405c5add6d542ad13edce",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "sha256": "52c658c3bcafe61f93482a1c425b1145671125cf455731dbf2bc2e9702f5d921",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+      "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f",
+      "unchanged_from_PR37": true
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1",
+      "unchanged_from_PR37": true
+    }
+  ],
+  "A_verdict": "A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST",
+  "host_confidence": "No host/guest acquisition executed by this review. Parent actual13-field capture is not upgraded from2 REPORTED_UNATTESTED and11 UNKNOWN. Access failures do not prove stopped or running.",
+  "preserved_receipts": [
+    "independent_g1_publication_and_terms_review_01.json",
+    "independent_g1_publication_privacy_reproduction_01.json",
+    "independent_g1_publication_privacy_reproduction_02.json",
+    "independent_g1_publication_privacy_reproduction_03.json",
+    "independent_g1_ci_matrix_01.json",
+    "independent_g1_publication_tests_03.json"
+  ],
+  "remaining_runtime_gates": [
+    "Existing_running_state_and_guest_identity",
+    "Trusted_device_backing_and_protected_store",
+    "Effective_controllers_and_manager_health",
+    "Protected_collector_and_pre_unload_raw_retention",
+    "Explicit_B_boundary_and_CPU_wall_RAM_clause_acceptance",
+    "Separately_authorized_normal_and_failure_kernel_tests"
+  ],
+  "actual_actions": {
+    "repo_edits": 0,
+    "host_queries": 0,
+    "guest_queries": 0,
+    "WSL_calls": 0,
+    "privilege_elevation": 0,
+    "service_or_disk_changes": 0,
+    "kernel_resource_tests": 0,
+    "S4": 0,
+    "physics": 0
+  },
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+  "ADMIN_PROVISIONING_APPROVED": false,
+  "PHASE7I_PHYSICS_VALIDATED": false
+}

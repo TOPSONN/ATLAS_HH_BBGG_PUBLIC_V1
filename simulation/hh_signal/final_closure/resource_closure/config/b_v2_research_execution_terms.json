@@ -1,0 +1,29 @@
+{
+  "schema": "B_V2_RESEARCH_EXECUTION_TERMS_PROPOSAL_V1",
+  "boundary_candidate": "BOUNDARY_AMENDMENT_CANDIDATE_V2",
+  "status": "PROPOSED_NOT_ACCEPTED",
+  "weaker_than_original": true,
+  "user_accepted": false,
+  "execution_authorized": false,
+  "original_A_unchanged": true,
+  "nominal_limits": {
+    "S4": {"CPU_seconds": 4, "wall_seconds": 13, "RAM_bytes": 536870912, "swap_bytes": 0, "disk_bytes": 16777216, "jobs": 1, "workers": 1},
+    "BUILD": {"CPU_seconds": 14400, "wall_seconds": 14400, "RAM_bytes": 2147483648, "swap_bytes": 0, "disk_bytes": 5368709120, "jobs": 1, "workers": 1}
+  },
+  "job_roles": ["worker", "controller", "collector"],
+  "external_trusted_roles": ["manager_journal", "launcher", "host_backing"],
+  "clauses": [
+    {"id":"B1_BOUNDARY", "decision":"NOT_ACCEPTED", "proposal":"Exclude only the three named shared host infrastructure roles from job accounting; report them as external nonzero costs. This does not amend protected-storage safety."},
+    {"id":"B2_CPU", "decision":"NOT_ACCEPTED", "proposal":"Kernel CPU bandwidth control plus cumulative cgroup user+system observation and early stop, not a zero-overshoot lifetime CPU hard cap. Include controller and collector through capture/cleanup. An observed final CPU over nominal budget rejects the run; missing counters are UNKNOWN. No invented finite worst-case scheduler delay."},
+    {"id":"B3_WALL", "decision":"NOT_ACCEPTED", "proposal":"Pre-armed independent manager deadline plus early controller stop, with measured activation-to-final-cleanup wall. Standard non-realtime delivery semantics; over nominal wall rejects the run, missing endpoints UNKNOWN. RuntimeMaxSec alone does not cover the whole lifecycle."},
+    {"id":"B4_RAM", "decision":"NOT_ACCEPTED", "proposal":"Linux memory.max and memory.swap.max=0 hierarchical semantics, including documented possible temporary memory.max overshoot. Retain peak/events and any OOM failure. Do not rename this a literal zero-transient-overshoot guarantee."},
+    {"id":"B5_DISK", "decision":"NOT_ACCEPTED", "proposal":"Existing P1-safe independent disposable whole-device and reviewed same-instance administrative boundary, fixed allocated blocks/inodes, metadata/journal/failure reserve. No shared-root partition, C-drive VHD, loop or logical slot substitution. All work/private/persistent job writes share the original disk ceiling."},
+    {"id":"B6_EVIDENCE", "decision":"NOT_ACCEPTED", "proposal":"Separate collector from worker/controller death domains while retaining one aggregate pool and existing 32KiB slots. Reserve before work, protected UID/FD boundary, raw cgroup capture before removal. Outer collector/host loss leaves only committed checkpoints and UNKNOWN; power-loss survival is not assumed."},
+    {"id":"B7_CLEANUP", "decision":"NOT_ACCEPTED", "proposal":"Whole-job membership and independent manager cleanup after worker/controller loss; verify empty cgroup and no surviving owned descendants before accepting completion. Do not treat disappearance of a unit as evidence of cleanup."},
+    {"id":"B8_RELEASE", "decision":"NOT_ACCEPTED", "proposal":"After separate human acceptance of every clause, concrete provisioning and independently authorized normal/failure kernel tests are still required. A source/CI PASS cannot authorize S4, BUILD_ONLY or physics and cannot set original A FULL true."}
+  ],
+  "deployment_state": "NOT_DEPLOYED",
+  "current_blockers": ["WSL_RUNNING_STATE_ACCESS", "CIM_AND_BACKING_ACCESS", "SAME_EPOCH_HOST_GUEST_MAPPING", "SAFE_FIXED_DEVICE", "COLLECTOR_UID_ISOLATION", "JOB_CONTROLLERS_AND_MANAGER_HEALTH", "INDEPENDENT_KERNEL_FAILURE_EVIDENCE", "HUMAN_CLAUSE_ACCEPTANCE"],
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}
