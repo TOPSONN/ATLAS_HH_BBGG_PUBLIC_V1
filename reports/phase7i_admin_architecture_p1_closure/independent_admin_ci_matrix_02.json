@@ -1,0 +1,164 @@
+{
+  "schema": "INDEPENDENT_ADMIN_CI_STATIC_BRANCH_MATRIX_V2",
+  "scope": "STATIC_SOURCE_BOOLEAN_MODEL_NOT_GITHUB_RUN",
+  "base": "61b32c0aa86456cf43051aa18a6ea692f9e22c7f",
+  "new_branch": "codex/phase7i-admin-architecture-p1-closure",
+  "rows": [
+    {
+      "workflow": "hh_signal_campaign.yml",
+      "event": "pull_request",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "campaign_source_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_campaign.yml",
+      "event": "push",
+      "trigger_for_reviewed_source_delta": false,
+      "job": "campaign_source_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_campaign.yml",
+      "event": "workflow_dispatch",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "campaign_source_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_readiness.yml",
+      "event": "pull_request",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_readiness.yml",
+      "event": "push",
+      "trigger_for_reviewed_source_delta": false,
+      "job": "methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_readiness.yml",
+      "event": "workflow_dispatch",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_final_closure.yml",
+      "event": "pull_request",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "closure_methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_final_closure.yml",
+      "event": "push",
+      "trigger_for_reviewed_source_delta": false,
+      "job": "closure_methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_final_closure.yml",
+      "event": "workflow_dispatch",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "closure_methods_and_evidence",
+      "job_condition": false,
+      "would_execute": false,
+      "active_named_steps": []
+    },
+    {
+      "workflow": "hh_signal_resource_closure.yml",
+      "event": "pull_request",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "offline_source_only",
+      "job_condition": true,
+      "would_execute": true,
+      "active_named_steps": [
+        "Audited autonomous pure and mock regression; forbid live dispatch",
+        "Exact nonphysical legacy regression with forbidden dispatch audit",
+        "Strict PR36 administrator architecture source and evidence gate"
+      ]
+    },
+    {
+      "workflow": "hh_signal_resource_closure.yml",
+      "event": "push",
+      "trigger_for_reviewed_source_delta": true,
+      "job": "offline_source_only",
+      "job_condition": true,
+      "would_execute": true,
+      "active_named_steps": [
+        "Audited autonomous pure and mock regression; forbid live dispatch",
+        "Exact nonphysical legacy regression with forbidden dispatch audit",
+        "Strict PR36 administrator architecture source and evidence gate"
+      ]
+    },
+    {
+      "workflow": "hh_signal_resource_closure.yml",
+      "event": "workflow_dispatch",
+      "trigger_for_reviewed_source_delta": false,
+      "job": "offline_source_only",
+      "job_condition": true,
+      "would_execute": false,
+      "active_named_steps": [
+        "Audited autonomous pure and mock regression; forbid live dispatch",
+        "Exact nonphysical legacy regression with forbidden dispatch audit",
+        "Strict PR36 administrator architecture source and evidence gate"
+      ]
+    }
+  ],
+  "historical_condition_changes": [],
+  "files": [
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "79075d47d6f2315558a997768650cdbdb0d6349c5bf2d1120caa68a0076f6a31",
+      "jobs_found": [
+        "campaign_source_and_evidence"
+      ]
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "e4f94615413af55a62405c5cce6904baced399d311a1f109af5e66040cdba0d8",
+      "jobs_found": [
+        "methods_and_evidence"
+      ]
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "fca5b5cca310a456c16484b48d5a05a274ddfd7508b72972d6c607eefe2e662a",
+      "jobs_found": [
+        "closure_methods_and_evidence"
+      ]
+    },
+    {
+      "path": ".github/workflows/hh_signal_resource_closure.yml",
+      "sha256": "9db042726a4b89a3263b8d78ce7f435b61c1cf3be7b8b125c0332ace456ed48d",
+      "jobs_found": [
+        "offline_source_only"
+      ]
+    }
+  ],
+  "correction": "Attempt01 omitted closure_methods_and_evidence due reviewer job-name allowlist; preserved, not acceptance evidence. V2 parses all jobs and requires exactly four.",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "three_historical_jobs_count": 3,
+  "all_three_historical_jobs_conditions_false_for_new_branch": true,
+  "new_resource_paths_have_audited_offline_and_admin_only_publication": true
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_TRACKED_BYTES_AND_SELECTED_TEST_IDS",
+  "base": "61b32c0aa86456cf43051aa18a6ea692f9e22c7f",
+  "base_tracked_files": 1532,
+  "unchanged_base_tracked_files": 1526,
+  "allowed_changed_paths": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    ".github/workflows/hh_signal_resource_closure.yml",
+    "reports/phase7i_s4_persistent_capacity_closure/ADMIN_ACTIONS_ZH_TW.md",
+    "simulation/hh_signal/final_closure/resource_closure/offline_regression.py"
+  ],
+  "old_manifest_files": 334,
+  "old_manifest_unchanged": 329,
+  "old_manifest_changed": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    ".github/workflows/hh_signal_resource_closure.yml",
+    "simulation/hh_signal/final_closure/resource_closure/offline_regression.py"
+  ],
+  "old_offline_ids": 542,
+  "all_old_ids_preserved": true,
+  "new_offline_ids": 612,
+  "additional_ids": 70,
+  "legacy_exact_81_ids_preserved": true,
+  "old_ADMIN_sha256": "f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c",
+  "original_physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "runtime_physics_contract_sha256": "a8a093e2ec47283dd9cb503b2c83fe95b89df4761df5fb7afc623fa291c937cb",
+  "original_build_profile_sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c",
+  "original_fixture_profile_sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98",
+  "external_historical_MC_rescan": false,
+  "scope": "TRACKED_GIT_BYTES_ONLY; EXTERNAL_MC_DATA_NOT_READ_OR_MODIFIED",
+  "history_rows_sha256": "a831413d5a85ca280ad084b7c6ca9ec28181a8c9c38657b3acc7ee58243f4351",
+  "old_manifest_rows_sha256": "d7d707c2d825e373d6d142b084e89b20f16bf8e9240cc3f1f3799cb86191a5f6",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

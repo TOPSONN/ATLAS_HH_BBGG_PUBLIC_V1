@@ -1,0 +1,298 @@
+{
+  "schema": "PHASE7I_AUTONOMOUS_OFFLINE_V1",
+  "status": "PASS_SOURCE_OFFLINE_ONLY",
+  "tests_run": 612,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "unique_test_ids": 612,
+  "source_unchanged": true,
+  "source_rows": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/__init__.py",
+      "sha256": "f466257f46b95a87f253c17c324bf2ca1cdffd8a1ee6809de1d1e5eb2e77c0b7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/admin_publication.py",
+      "sha256": "f7d7053f645a31e58188651cde9f65ea497046636297a52b4f80bd3ace0aef18"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/admin_review.py",
+      "sha256": "7f10818867b4e1e2f2f2425e17060a002b96b4e6eef8d57d3a6b4baf8a1dad76"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/allocation_guard.py",
+      "sha256": "4766634643f192cae09a23636a0533d6a62b11433beaa4cd997e7a1e8b8bf9eb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/archive_io.py",
+      "sha256": "3269ab6ec730c44f41d9a63938f6392ac5e7afe0953475b639bdd78c8b476f1e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/autonomous_publication.py",
+      "sha256": "0c61e6422f493c2c495aef4e5e02072f6bf216af37b955328b6848bb3d4e4260"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/backend.py",
+      "sha256": "5f7ca3fc3d579319c9724936375cca3a50f3b0d7cbf6a980f8b55a3b6f445c91"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/boundary_contract.py",
+      "sha256": "c84612eb644eaea3ec10af7c945022ce813841e3288f7b47a9780000462e9bd3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/capacity_publication.py",
+      "sha256": "6441c75386b2bc9e461b905cb4107c0a428eb8b7674a161c7db852a97ccdbdd4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_guard.py",
+      "sha256": "408d47b082cb5fba27b0138b9ae6a802cc57a3b7c2d0d3646ce107cdff63e716"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/controller_io.py",
+      "sha256": "957f60bb4d5e5d54f97f0c48d581d20d796fcc9114de351804d031dcdc00f627"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/device_policy.py",
+      "sha256": "c3ed53841fc252778033ad83f0e6fc52ee789a16d3864a7930c83d7f6f7597f3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/evidence_slots.py",
+      "sha256": "2ec53f72c5654b657e18cd01fad5e3e349c090405b8405c5add6d542ad13edce"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/fixtures.py",
+      "sha256": "466f9a26ae0a0058191e3d13f95595d09ec303f125104535751f33f861f0e3e7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_controller.py",
+      "sha256": "462acd9302e4075c3dcf0e0b533386549eb7b83ffb365414d126f0798836224f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/full_publication.py",
+      "sha256": "cd75ef76e102cbdd4a2928ea7ba5f1b7410f60d6b3f2b98745ddaee7d05afefe"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/instance_binding.py",
+      "sha256": "099215e5325c02b1a246735987fc9cd57f2e7b796fb3f28dc6677558967f3083"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/job_envelope.py",
+      "sha256": "1d325c3a049fd3923c2967b9f3326897d76d15d4d13cbe82aa563b1e77e9c9c1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/legacy_regression.py",
+      "sha256": "28ad1034fb49c51c4788c49d81c98d8ecc659ddced03e2df0cfbfe0ca5ebf0ec"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_attestation.py",
+      "sha256": "d973edec9e6302186bedb5522df07d3fffd74bf29ffad6491e909b022ce9a022"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/mount_policy.py",
+      "sha256": "ec268c2b415a762a836a837faf022360ef83980e4e677c69aa45ce983ad38342"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/namespace_attestation.py",
+      "sha256": "156b6c7ddf0a0402905f0fdbaa50aac12c74511ec7f3c55adbcac04841b9a236"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/offline_regression.py",
+      "sha256": "52c658c3bcafe61f93482a1c425b1145671125cf455731dbf2bc2e9702f5d921"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/publication.py",
+      "sha256": "31b6b1c181e7eecbba9f4d121a2e58c80b096e600d0f9a04b2e63bccb6f8a1cd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/recovery_publication.py",
+      "sha256": "e45cabde559cb8b030b838595014346f8dabab5c3a416adc2ce28e8712e0b97a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/run_fixtures.py",
+      "sha256": "52f85cf95258fe7ad88b1962e366f9e392157ed5eebc295adfd716c416d970f7"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/service_probe.py",
+      "sha256": "5df155f6a6a10d8686f031714618973e9133fbba486b67cc657ef7e357ab0ab0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_capacity.py",
+      "sha256": "e5ec865944430ec11e7694912fd07d58ed10d5269b5713092a7e295b5c6d1484"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/storage_transport.py",
+      "sha256": "4146df9a3bf92f14580c37154588273774ed8634e3f7a68127d3f3f8d405e82a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/worker.py",
+      "sha256": "ef710b1662c6e1e514fac02e1e3aa791991a4c6069915e00e66510796085bda2"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/workflow_evidence.py",
+      "sha256": "93a12bea7942cb2ca22286ebde90ace54d09ef834bedab3ee5b1e8432a194adb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_admin_publication.py",
+      "sha256": "816eb19de95a45199c7b59574b3b6e6fa51953e4073d3e6afebc69ebab29c746"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_admin_review_cli.py",
+      "sha256": "81c867f3c2e1665cdd95631d5911ed279a1c50a2368335ee0fc750ba1c0c2265"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_admin_security.py",
+      "sha256": "5eebf3c5c84a3b69eccc2c3aa359af3b8f8704f3d719d7b88d23c75226d87778"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_allocation_guard.py",
+      "sha256": "8a7fb0177156fb138f3fdd0e26e377d28758b8eff751a58dbb3916afadc248a1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_archive_io.py",
+      "sha256": "e953429f3502b9f9cb44142d9c761775c08310598c6eb4fb9973d5c54f7e6cb3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_autonomous_publication.py",
+      "sha256": "72fb19640162528082c5921b55acb1b0379398934740553788062b4ec6d22fa5"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_backend.py",
+      "sha256": "65bf81ffccedaa02a51fb821f3f8c93afd1de89bce6995714facd4e0acc94356"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_boundary_contract.py",
+      "sha256": "2fff3344166ceca9ad2ab75577087df9d4a346d153bccc583d6145c3439d46c1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_capacity_publication.py",
+      "sha256": "702c2b6f2aafe6123de93a695f154799c124d5ee44ac7bd9e8d46ca146b70ef0"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_guard.py",
+      "sha256": "99a24b56cdbcd5c3e45c6a4c07a1b3b2eb1caff8392776433487e0313ef6dd04"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_io.py",
+      "sha256": "d4f282be07c2c54a1e867dd2cd68f7e4a2ecb76d6c5772420b0fb459bf56acfd"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_controller_recovery.py",
+      "sha256": "88ab8d9cacfe51b6140a56184b4966a0a7125ec12d6e8faaa14aff680bb50ffb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_evidence_protocol.py",
+      "sha256": "eadbdea171cb007d08a54dbb97aec4d862371b7671838454617adb14f360fe0a"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_fixtures.py",
+      "sha256": "98cf443f4fa9cb442195106fd85ec643c993802eb05e81970555729a8d4c687d"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_controller.py",
+      "sha256": "5a4d5a7ec74fa859476b1c6fdb8c659b60dac0be8cf77bc46075073a20822e8b"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_full_publication.py",
+      "sha256": "fc4f3b6889d9f4292234761bf651a800e11f0951d2d5378f3b740b4f7fe7c8e3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_git_envelope.py",
+      "sha256": "58793de3bb4d706c86abbe49c845a5ce233a26b6c3b6c7bdb9df0eb8e24e5f65"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_job_envelope.py",
+      "sha256": "81e0d9d7c8231ee0754e5cdeab0498f161bbdadcf41b207a870368064956f4b4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_attestation.py",
+      "sha256": "05f5d3d37a9b01567cee034928ccb393ee5074a870942a101bd017c96b0bd868"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_mount_policy.py",
+      "sha256": "165f2231b05f89c988db808700c6cf12bb3d6e1dcf077f3d9a99365b43b155ec"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_namespace_attestation.py",
+      "sha256": "54becb62e039fa3275c45e33f1370ac07f49950b05ba083d747b1e3c13f2b29e"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_publication.py",
+      "sha256": "bd76fd8ec60ca7f7a067d072b6fa9cfe672c0f9a33b0edd51686ed3dc536ccaf"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_recovery_publication.py",
+      "sha256": "4de0a612de44bbeca9d2d908e6eba3a23b4f1386828f730433e7d899d680cfb9"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_s4_controller_wiring.py",
+      "sha256": "41f86763a3892f68015b4f3c20f8b221d8b072c3153d8ad8a08c9599d6b31463"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_service_probe.py",
+      "sha256": "52b5a982acf9d22b2e1b5ec2eb24f3377d4fe810f44d173c9fefd85c8440b274"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_capacity.py",
+      "sha256": "674a1df84285326f1b3bab6d8c91a941484b6148cb221822a1cd608336897c8c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_storage_transport.py",
+      "sha256": "d774e5dfa0742c724d0916cacf5f078e2a19663ff54b0d94045f56c07cb0b943"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_worker_adapters.py",
+      "sha256": "3d006da49185f7fb0e269dce095f489dee08e86e8a609a59ef928fdccb3e5451"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/tests/test_workflow_evidence.py",
+      "sha256": "9378996c50fbdc4927de6b3c69223988b7eb078d9b21503ea53db7ebc16f868c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/admin_architecture_A.json",
+      "sha256": "50de4cefbf7ba51293a0d013f50031cf851328e7418b9ce0983c06490b6fb834"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/admin_architecture_B.json",
+      "sha256": "f1bdbd7e9274c53baadb4ee0093cc46bb04a36cdd7f9c587239e1f3e15b2ffbb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/build_profile.json",
+      "sha256": "9d3b361ddc35a249f1aec1c0d542384823799dd3c47cbd194efe60593f28b60c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/fixture_profile.json",
+      "sha256": "46dc93d3faa22691fa771185aa6f8ba050b4c31e1feeb98df845bc3872474c98"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/mount_policy.json",
+      "sha256": "51760a6b9eb7857ef0aa2a96a1e4812d9edc1bd103ec37376b22df7f8ff27713"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/config/storage_contract.json",
+      "sha256": "7c1b4ab268f9b9d6c2cb7be9ae3da0c8e1c317369d62b692ebc93326a0b9ae8f"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/git_precheck.py",
+      "sha256": "2377baf6eee193abf96897f2314a7b671cf4038e8c2e6b664dcdc747b138405c"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/integration_runtime/contract.py",
+      "sha256": "ad7c26062edb857ad3e911e8920a72dcba6abebed68573fb2ccaa84781fa3e68"
+    }
+  ],
+  "wall_seconds": 1.8183037100000021,
+  "audit": {
+    "git_processes": 201,
+    "forbidden_attempts": [],
+    "unresolved_directory_fd_events": 952
+  },
+  "audit_scope": "REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX",
+  "audit_limitations": [
+    "stat/readlink and symlink aliases require source review",
+    "directory-FD targets are not disclosed by Python audit events"
+  ],
+  "kernel_services_executed": 0,
+  "actual_namespace_ioctls": 0,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false
+}

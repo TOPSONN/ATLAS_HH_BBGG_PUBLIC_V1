@@ -1,202 +1,73 @@
-# 持久容量後端：管理員操作提案
+# 管理員操作架構與 P1 安全關卡
 
-狀態：PROPOSAL_ONLY／BLOCKED。本文沒有執行格式化、掛載、quota 修改、S4、資源壓測或正式 build，也不構成人類授權。尚未取得新專用裝置的精確身分，因此下列命令包含必須另審的裝置識別值；未填入時必須中止，不能改用目前的根裝置。
+**NOT_APPROVED — 不得執行磁碟附加、provision、format、mount、quota、service修改、S4或build。**
 
-## 已確認的現況
+本版取代PR36中的可貼上操作recipe。舊文件完整保留在[61b32c0版本](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/blob/61b32c0aa86456cf43051aa18a6ea692f9e22c7f/reports/phase7i_s4_persistent_capacity_closure/ADMIN_ACTIONS_ZH_TW.md)，SHA256 f99dcf197c03b75b26f50e49fb2af8d29e2219b21a721b03367b32393683a83c。其mkfs/mount片段為歷史NOT_APPROVED資料，不應執行。本版不提供一貼上就會格式化的script，也不自動選空白磁碟。
 
-本輪 /home 的 ext4 是 /dev/sdd、8:48，虛擬 block device 為 1 TiB，與既有 source、資料及系統 journal 共用。六次 GETFMT／GETINFO 對 user、group、project 均回 ESRCH，對應目前沒有 active accounting。這項判斷依實際回傳值與匹配版本的核心來源，不依缺少 quota 工具或 mount 旗標。superblock 讀取被權限拒絕，quota／project feature 仍 UNKNOWN。
+## 先審完整架構，不先做小磁碟
 
-原九次查詢中另含三次 GETQUOTA，核心將這個名稱為 GET 的操作列為可能配置 dquot 的 write-class；本次 user／group 回 ESRCH，project 回 EPERM。原始紀錄完整保留，沒有成功 buffer 值可解讀。後續唯讀方案只允許 GETFMT／GETINFO。錯誤路徑來源核對與限制另見 quota_get_corrective_audit_01.json。
+選定A為滿足原合約的嚴格目標：專用隔離執行環境＋VM外、仍計入總額的可信collector/guardian。B為保留WSL的備選，將shared host成本列為外部信任邊界，必須另送V2修約；weaker_than_original=true、user_accepted=false，不能視為原規格PASS。
 
-控制平面的實際調查發現 journald、rsyslog、user manager 與 journal／syslog 輸出仍涉及共用根檔案系統。這裡的新 volume 只能包住自己的 blocks、inodes、metadata 與內部 journal；不能宣稱已包住那些外部寫入。不能以更改全域 journald Storage、rotation 或清除歷史 logs 處理本任務。
+完整比較與CPU/RAM/wall/disk帳本見 reports/phase7i_admin_architecture_p1_closure/ARCHITECTURE_ZH_TW.md，證據布局見同目錄EVIDENCE_PROTOCOL_ZH_TW.md。新JSON proposals可用安全CLI檢查一致性，但成功只代表source policy，不是host真實性、管理員批准或操作准入。
 
-## 選定的最小後端及總額
+## 三個P1的來源修正
 
-選定「管理員另外供應、不可成長、非 thin／sparse 的專用 block device」，不修改現有根 ext4 的 quota feature，也不在線 remount 根系統。裝置不可讓受測 worker 開啟 raw device、resize、建立新 mount 或改變 inode pool。
+P1-A：device_policy.py以完整guest graph雙向展開parent/descendants/siblings/holders/slaves，與root及所有protected historical storage的整個connected component比較；另外比對host stable identity及完整host ancestors。未知/缺graph、alias衝突、host身分不符、未證明backing、任何protected交集均拒絕。目前非單純獨立whole disk的partition/dm/loop/stack一律拒絕，不嘗試猜測安全。signature不存在不是disposable證明，還須獨立provisioning provenance。
 
-| 用途 | 專用裝置 | FS block | inode 提案上限 | 內部 journal 提案 | 保留的 tmpfs | 已知總額 | 仍未強制封閉的餘額 |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| S4 inert | 4 MiB | 1 KiB | 128 | 1 MiB，含於 4 MiB | 8＋1 MiB | 13 MiB | 3 MiB |
-| 未來 BUILD_ONLY 提案 | 2 GiB | 4 KiB | 32768 | 32 MiB，含於 2 GiB | 2 GiB＋256 MiB | 4.25 GiB | 768 MiB |
+P1-B：原始mountinfo與findmnt exact/nested/covering必須一致，目標本身及其下有mount/bind一律拒絕；bind ancestor、其他job lease、namespace/boot/collector身分不符、symlink/path traversal、path前後身分或型別改變、與covering filesystem st_dev不符、ownership/mode不符均拒絕。空目錄不是未mount證明。
 
-餘額只有算術，沒有 OS hard limit；因此兩列目前都不能通過 aggregate persistent capacity。不能把未來 persistent volume 設為 4 GiB：既有 build profile 的 tmpfs 已占 2.25 GiB，會超出 5 GiB。既有 CPU／wall／RAM／swap／job／worker 設定不變，這份幾何提案也沒有變更 profile。
+P1-C：舊路徑重開的外部mkfs/mount消費者已在新介面無條件拒絕。instance_binding.py要求acquire→before_operation→after_operation→before_release四階段持續同FD／kernel claim／host hotplug排除，綁完整reviewed device+mount policy digest、diskseq、st_rdev、size、by-id target、host instance、namespace/boot、helper start與lease identity。這是可測試交易模型，**不是已部署helper，也未證明kernel TOCTOU已關閉**。privileged_operation()始終拒絕，重比路徑或major:minor不能代替排他性。
 
-4 MiB ext4 的可用 data 空間小於 4 MiB；journal、inode table、bitmaps、superblocks、lost+found 都在其內。格式化工具的實際 readback 若不符合提案、不能配置指定 journal，立即 STOP，不能默默取消 journal、放大 volume 或改用根目錄。mke2fs 的 -N 是要求值，必須由 superblock 及 statvfs 核對實際 inode 數。上述幾何尚未建立或實跑。
+所有snapshot屬UNATTESTED_INPUT_CONSISTENCY_ONLY。完整JSON也不能自行證明它涵蓋全部namespace、protected storage或host writer。真正唯讀acquisition adapter及同FD privileged consumer均須另審；本輪不將JSON當能力。
 
-## 管理員必須先提供的證據
+## 獨立核准階段
 
-需另行核准一個全新裝置：穩定 by-id、解析後絕對路徑、major:minor、容量、底層 ancestry、非 thin／snapshot／sparse 證明、可寫入範圍及對 host 的影響。不能用本文的示例名稱代替這些證據，也不能對 /dev/sdd 或其父／子／同源裝置操作。
+| 階段 | 可審內容 | 必須先交付 | 不包含 |
+|---|---|---|---|
+| G0 source/design review | 本輪guard、協定、架構與offline證據 | exact source SHA、review／negative tests | 任何host變更 |
+| G1 read-only inventory | 管理員限定host/guest拓撲與namespace acquisition | 需讀的host命令、是否需啟動Ubuntu、raw保存位置及輸出邊界 | disk attach、service restart、quota GETQUOTA |
+| G2 architecture decision | A控制能力／實體帳本；或另審B-V2修約 | cumulative CPU及whole-wall enforcer、host backing/log/collector邊界 | 自動接受較弱合約 |
+| G3 helper/security review | 同FD consumer與host排他／hotplug邊界 | helper exact source/binary、fd/instance/namespace proof、工具不重開路徑的證明 | 實際mkfs/mount |
+| G4 provisioning | 只有明確新裝置與限定變更 | 真實host serial/WWN/backing、guest by-id/MM/diskseq、全protected graph、可拋棄性 | format、mount、S4 |
+| G5 formatting | 單一已綁定新裝置 | 新exact source+device instance freeze、G3能力已驗證、明確單次授權 | 自動mount或重試 |
+| G6 post-format review | UUID/label/geometry/journal/hash核對 | 原始raw、blocks/inodes、完整新FS身分 | 自動mount |
+| G7 mounting | exact新FS與未使用mountpoint | pinned namespace/path/parent/leaf證據、mount後FS root權限與collector writer配置 | S4、壓測或build |
+| G8 rollback | exact新job配置／mount的回復 | writers停止、失敗證據已保存、裝置仍同一instance | lazy unmount、刪歷史logs、重新格式化 |
 
-若只能提供 loop image，內層固定長度與 fallocate 成功仍不足：還要對外層檔案系統實際配置的 blocks／extents、inode、metadata、journal 及控制平面有可驗證 hard bound。truncate／sparse image、du 的單次數值、固定 FD 數量或邏輯 byte cap 都不符合這項條件。這個替代路線目前未選用，也沒有在本輪建立 image／loop。
+G4/G5/G7/G8都要各自授權，不能因guard成功就往下一步。沒有管理員提供的真實身分即BLOCKED，沒有任何推測/dev/sdX或PHYSICALDRIVE編號。後續無害kernel正反測試、單次S4、BUILD_ONLY、binary/physics另走獨立關卡。
 
-WSL 附加實體磁碟通常需要 Windows 管理員權限。實際 host device 必須另外識別及核准；本文不猜測 PHYSICALDRIVE 編號，也不將 Ubuntu 本身的 VHD 當新空白磁碟。參考：[Microsoft WSL 磁碟文件](https://learn.microsoft.com/en-us/windows/wsl/wsl2-mount-disk)。
+## G1 inventory需要的資料（不是本輪執行命令）
 
-## S4 專用新裝置的命令提案
+Windows：stable device ID／serial／WWN或等價身份、整個host backing graph、partition/sibling、實體容量、thin/sparse/snapshot/expandable狀態、與Windows root/歷史資料的關係、使用中references。若virtual disk，包含container與其外層filesystem身分、allocated blocks/metadata/journal，不接受logical size或單次du代替hard bound。
 
-以下內容只供精確審查，尚未授權執行。第一段提供兩階段的唯讀 guard：格式化前必須是空白裝置，掛載前必須符合格式化後另審的新 ext4 身分；命令中沒有 sudo、自動套用、授權字串或自動選取空白磁碟。HH_EXPECTED_MM 未由管理員實際證據填入時，程式會中止。new mountpoint 本身也會使用 host inode，必須列入 provisioning 的影響與後續 controller 邊界。
+Guest：by-id解析前後、exact MM／diskseq、whole-disk parent及所有descendants/siblings/dm/loop/holders/slaves、root與每個protected filesystem backing、所有相關mount namespace及既存mount references。mountinfo/findmnt必須綁定同一collector PID/start/boot與前後namespace readback，不能將多個無關shell的輸出拼成一份attestation。
 
-先由管理員另審並提供新裝置的 root:root／0600 raw-device 權限證據；目前尚無這個新裝置，權限狀態 UNKNOWN。不能自動 chmod 任何現有裝置。若這項前置條件未滿足，下面 guard 會中止，須另外核對特定新裝置後才可提出其 chown／chmod 操作。
+資料僅存管理員受保護的本機raw區，公開報告只保bounded投影與SHA256。真正的可丟棄性來自host provisioning紀錄，不來自wipefs結果。若本機沒有running distro，啟動Ubuntu及診斷user-session的範圍須先明定；舊warning仍UNKNOWN，不能順手restart、改linger或代換session。
 
-```bash
-set -eu
-export LC_ALL=C
-export PATH=/usr/sbin:/usr/bin:/sbin:/bin
-HH_DEVICE_LINK=/dev/disk/by-id/HH7I_S4_NEW_FIXED_DEVICE
-HH_EXPECTED_MM=REPLACE_WITH_REVIEWED_MAJOR_MINOR
-HH_EXPECTED_BYTES=4194304
-HH_MOUNT=/srv/atlas-hh/s4-capacity-v1
-HH_DEV="$(/usr/bin/readlink -e -- "$HH_DEVICE_LINK")"
-export HH_DEV HH_EXPECTED_MM HH_EXPECTED_BYTES HH_MOUNT
+## 同FD helper的必要邊界
 
-hh_readonly_guard() {
-/usr/bin/python3 -I -B - <<'PY_GUARD'
-import hashlib, json, os, re, stat, subprocess
-from pathlib import Path
-def need(ok, reason):
-    if not ok:
-        raise SystemExit('STOP: '+reason)
-dev = os.environ['HH_DEV']
-expected = os.environ['HH_EXPECTED_MM']
-stage = os.environ['HH_GUARD_STAGE']
-need(stage in ('PRE_FORMAT_BLANK','PRE_MOUNT_NEW_EXT4'), 'unreviewed guard stage')
-need(re.fullmatch(r'[0-9]+:[0-9]+', expected) is not None, 'exact reviewed identity absent')
-need(Path(dev).is_absolute() and dev.startswith('/dev/') and
-     Path(dev).resolve().as_posix() == dev, 'absolute canonical device required')
-info = os.stat(dev)
-need(stat.S_ISBLK(info.st_mode), 'not a block device')
-actual = f'{os.major(info.st_rdev)}:{os.minor(info.st_rdev)}'
-need(actual == expected, 'device changed')
-need(info.st_uid == 0 and info.st_gid == 0 and stat.S_IMODE(info.st_mode) == 0o600,
-     'raw-device root:root0600 prerequisite not established')
-root = os.stat('/').st_dev
-root_mm = f'{os.major(root)}:{os.minor(root)}'
-chain = subprocess.check_output(['/usr/bin/lsblk','-s','-r','-n','-o','MAJ:MIN',dev], text=True).splitlines()
-need(root_mm not in chain and actual != root_mm, 'root ancestry')
-state = json.loads(subprocess.check_output(
-    ['/usr/bin/lsblk','-J','-b','-o','PATH,MAJ:MIN,SIZE,TYPE,MOUNTPOINTS',dev], text=True))
-rows = state['blockdevices']
-need(len(rows) == 1 and not rows[0].get('children'), 'nested partition or holder')
-need(not any(rows[0].get('mountpoints') or []), 'already mounted')
-need(rows[0]['size'] == int(os.environ['HH_EXPECTED_BYTES']), 'size differs')
-need(subprocess.run(['/usr/bin/findmnt','-r','-n','-S',dev],
-                    stdout=subprocess.DEVNULL).returncode == 1, 'mounted or query failed')
-mount = Path(os.environ['HH_MOUNT'])
-need(mount.as_posix() == '/srv/atlas-hh/s4-capacity-v1', 'fixed absolute mountpoint')
-for ancestor in reversed((mount,*mount.parents)):
-    need(not ancestor.is_symlink(), 'symlink in mountpoint ancestry')
-    if ancestor.exists():
-        st = ancestor.stat()
-        need(ancestor.is_dir() and st.st_uid == 0 and
-             stat.S_IMODE(st.st_mode) & 0o022 == 0,
-             'ancestor must be root-owned and not group/world writable')
-if mount.exists():
-    st = mount.stat()
-    need(st.st_uid == 0 and st.st_gid == 0 and stat.S_IMODE(st.st_mode) == 0o700 and
-         not any(mount.iterdir()), 'existing leaf must be empty root:root0700')
-if stage == 'PRE_FORMAT_BLANK':
-    signatures = json.loads(subprocess.check_output(
-        ['/usr/sbin/wipefs','--no-act','--json',dev], text=True))
-    need(type(signatures) is dict and signatures.get('signatures') == [], 'existing signature')
-else:
-    uuid = os.environ['HH_EXPECTED_NEW_UUID']
-    expected_header = os.environ['HH_EXPECTED_NEW_SUPERBLOCK_SHA256']
-    need(re.fullmatch(r'[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}',uuid) is not None,
-         'reviewed post-format UUID absent')
-    need(re.fullmatch(r'[0-9a-f]{64}',expected_header) is not None,
-         'reviewed post-format header hash absent')
-    probe = subprocess.check_output(['/usr/sbin/blkid','-p','-o','export',dev],text=True)
-    fields = dict(line.split('=',1) for line in probe.splitlines() if '=' in line)
-    need(fields.get('TYPE') == 'ext4' and fields.get('LABEL') == 'HH7I_S4_V1' and
-         fields.get('UUID') == uuid, 'expected newly-created ext4 identity differs')
-    header = subprocess.check_output(['/usr/sbin/dumpe2fs','-h',dev])
-    need(len(header) <= 16384 and hashlib.sha256(header).hexdigest() == expected_header,
-         'post-format superblock readback differs')
-    text = header.decode('utf-8','strict')
-    for key,value in [('Block count',4096),('Block size',1024),('Inode count',128),('Inode size',256)]:
-        values = re.findall(r'^'+re.escape(key)+r':\s+([0-9]+)\s*$',text,re.M)
-        need(values == [str(value)], 'exact '+key+' differs')
-    need(re.search(r'^Filesystem features:.*\bhas_journal\b',text,re.M) is not None,
-         'internal journal feature absent')
-print('READ_ONLY_DEVICE_GUARD_ONLY:'+stage)
-PY_GUARD
-}
-export HH_GUARD_STAGE=PRE_FORMAT_BLANK
-hh_readonly_guard
-/usr/sbin/mke2fs -n -t ext4 -b 1024 -I 256 -N 128 -m 0 \
-  -O none,has_journal,extent,filetype,sparse_super,dir_index \
-  -J size=1 -E lazy_itable_init=0,lazy_journal_init=0,nodiscard \
-  -L HH7I_S4_V1 "$HH_DEV" 4096
-```
+持續持有經fstat/ioctl與host身分綁定的裝置FD，確切bytes與diskseq；kernel-backed claim不能只用cooperating-process flock代替。須排除所有host writers與hotplug/re-enumeration，不只guest中的其他mkfs；普通O_EXCL也不能未經分析就視為完整host排他。operation必須消費同一已開啟實例，不可回到路徑重新open。
 
-PRE_FORMAT_BLANK 必須在格式化前通過，存在任何 signature 一律中止；不得對既有 filesystem 格式化。只有管理員確認身分、空白簽章、非 thin ancestry 及 dry-run 佈局，且取得另一次明確核准後，才考慮下一行破壞性新裝置格式化。不能加 -F、-FF 或自動回答提示。
+實際operation前/後的身分、claim、namespace與source/hash均要核對；任何變化/UNKNOWN停止且保存現場，不自動close再開或重選裝置。若installed tools不能安全消費同FD，就維持BLOCKED，另審具體helper或管理員exclusive操作程序。本版沒有實作privileged consumer，沒有可用來apply的CLI。
 
-```bash
-export HH_GUARD_STAGE=PRE_FORMAT_BLANK
-hh_readonly_guard
-/usr/sbin/mke2fs -t ext4 -b 1024 -I 256 -N 128 -m 0 \
-  -O none,has_journal,extent,filetype,sparse_super,dir_index \
-  -J size=1 -E lazy_itable_init=0,lazy_journal_init=0,nodiscard \
-  -L HH7I_S4_V1 "$HH_DEV" 4096
-```
+## 容量、權限與失敗收據
 
-格式化後先停止。下面僅讀回新 UUID、label、geometry 與完整 header digest，保存有身分綁定的 post-format 收據並另外審查；本輪沒有這份新裝置收據。不能重新執行 blank guard，也不能略過所有 guard 直接 mount。
+不放寬原S4 disk16MiB、CPU4s、whole-wall13s、RAM512MiB/swap0；未來disk5GiB、CPU/wall14400s、RAM2GiB/swap0亦不變。work8＋private1＋persistent候選4MiB只占已知13MiB，3MiB仍未封閉；build2.25＋候選2GiB是4.25GiB，768MiB亦未封閉。
 
-```bash
-/usr/sbin/blkid -p -o export "$HH_DEV"
-/usr/sbin/dumpe2fs -h "$HH_DEV"
-/usr/sbin/dumpe2fs -h "$HH_DEV" | /usr/bin/sha256sum
-```
+metadata、journal、inodes與失敗reserve要實際納入固定容量；log rotation/rate-limit、S3 logical slots、tmpfs或新4MiB裝置都不能當完整persistent PASS。外部manager/journal/syslog/terminal/host成本未界定前不能run。
 
-只有審查後的新 UUID／header SHA256 已明確填入，PRE_MOUNT_NEW_EXT4 才可能通過。此階段核對同一個未掛載新裝置的身分、精確新 ext4 UUID／label／geometry／header 與所有 mountpoint ancestors；它不要求新 filesystem 為空白簽章。建立 mountpoint 後再核對其 root:root0700 與空目錄狀態，才可另授權 mount。
+掛載前leaf0700不是掛載後ext4 root權限。需獨立的collector UID、worker不見或readonly evidence mount、無worker evidence FD／unlink／truncate／punch-hole能力；不准臨時chmod放寬。8固定槽事前建立/sync/reopen只是source fixture；真正blocks/inodes/metadata與滿盤後同步、controller死亡後capture及collector自身故障仍需另審實證。
 
-```bash
-export HH_EXPECTED_NEW_UUID=REPLACE_WITH_REVIEWED_NEW_UUID
-export HH_EXPECTED_NEW_SUPERBLOCK_SHA256=REPLACE_WITH_REVIEWED_HEADER_SHA256
-export HH_GUARD_STAGE=PRE_MOUNT_NEW_EXT4
-hh_readonly_guard
-/usr/bin/install -d -m 0700 -o root -g root "$HH_MOUNT"
-hh_readonly_guard
-/usr/bin/mount -t ext4 -o nodev,nosuid,noexec,errors=remount-ro "$HH_DEV" "$HH_MOUNT"
-```
+沒有資料就UNKNOWN/FAIL；不得補0、重建native結果、由死亡worker發出新terminal。unit/cgroup不存在不是empty證明。
 
-這段沒有建立 fstab、啟動 service、修改 journald／rsyslog、調整根 quota 或啟動 fixture。noexec 是 S4 的 inert 限制；不能直接套用於需要執行編譯結果的未來 build。未來 2 GiB 路線須以另一個新裝置、另審 exact command；幾何候選為 4096-byte blocks、524288 blocks、32768 inodes、32 MiB 內部 journal，不自動產生執行命令。
+## 可實際執行的安全source review例子
 
-## 建立後的唯讀驗證與失敗證據
+只在新source checkout內使用已安裝Python；以下不讀真實裝置、不開service、不寫snapshot來源，也不能取得執行權限：
 
-另一次授權建立後，至少保留以下原始輸出與 SHA256，並與裝置 readback、source revision、完整 mount capture 綁定。以下亦未在本輪執行。
+    python3 -B -m simulation.hh_signal.final_closure.resource_closure.admin_review --kind architecture --input simulation/hh_signal/final_closure/resource_closure/config/admin_architecture_A.json
 
-```bash
-/usr/sbin/blockdev --getsize64 "$HH_DEV"
-/usr/sbin/dumpe2fs -h "$HH_DEV"
-/usr/bin/findmnt -J -T "$HH_MOUNT" -o TARGET,SOURCE,FSTYPE,OPTIONS,FSROOT,MAJ:MIN
-/usr/bin/stat -f -c 'type=%T block=%S blocks=%b free=%f inodes=%c ifree=%d' "$HH_MOUNT"
-```
+    python3 -B -m simulation.hh_signal.final_closure.resource_closure.admin_review --kind architecture --input simulation/hh_signal/final_closure/resource_closure/config/admin_architecture_B.json
 
-必須核對整個固定裝置，不能只計 data payload：superblock／group descriptor、inode table、bitmaps、extent／directory／xattr metadata、內部 journal 都須在這個裝置內，沒有外部 journal、thin growth、可用 resize API、worker raw-device FD 或其他未計寫入路徑。內部有限空間只能證明自身 volume 上限，不能證明外部 host filesystem 或日誌上限。
+device/mount/transaction模式只檢查另審acquisition提供的bounded JSON；即使回PASS_*_POLICY_ONLY，operation_authorized仍false。CLI沒有apply/format/mount模式。
 
-後續 bounded receipt 可採同 controller 的固定 slots／固定大小、先配置後開啟、明確限制 offset 的 FD；worker 不繼承 evidence writer FD，也不能 unlink、truncate、punch-hole 或改名失敗收據。需真正驗證預配置 blocks、inode、metadata／fsync 行為及 block/inode ENOSPC 後仍可更新已配置區域。現在只有 source 提案，沒有這個 durable writer 的實跑結果。controller 死亡後只能保存先前已同步的 checkpoint，不能聲稱死亡後仍生成新的成功收據。
-
-控制平面待辦：stdout／stderr=null 與 volatile pipe 的提案須另審；systemd manager、journald、rsyslog 及 kernel 記錄的外部配置仍需可靠 hard limit。3 MiB 或 768 MiB reserve 不可當成 enforcement。外部路徑未封閉前，persistent_capacity、controller-loss acceptance 與 FULL 均維持 BLOCKED。
-
-## 未來另外授權的測試與回復
-
-需分開核准並實跑正常固定輸出、block ENOSPC、inode ENOSPC、file-size overflow、metadata／directory／xattr 壓力、sparse／fallocate／punch-hole／link／rename bypass、漏繼承 FD、controller 及 child 異常退出、kill 後殘留程序與既有 checkpoint 完整性。每案有固定 CPU／wall／RAM／disk 範圍，原歷史失敗不得覆蓋；不能因失敗自動換案、放大容量或改用 root。
-
-回復只針對經核對的新 mount：先確認沒有執行中的 writer，保存失敗收據與裝置身分，核對 findmnt 指向同一個 HH_DEV，再由另行授權的管理員執行 umount。失敗時保留現場，不 lazy-unmount、不 recursive delete、不重新格式化。保留新裝置以供鑑識，不自動刪除 image、解除 host disk 或變更既有 PR／樣本。
-
-```bash
-/usr/bin/findmnt -J -T "$HH_MOUNT" -o TARGET,SOURCE,FSTYPE,MAJ:MIN
-# 確認 writer 已停止、裝置仍相同並保留收據後，才可另授權：
-/usr/bin/umount -- "$HH_MOUNT"
-```
-
-## 來源與判定限制
-
-- [Microsoft WSL 6.6.87.2 quota.c](https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/quota/quota.c)：GET 分類、權限及 inactive errno。
-- [相同版本 dquot.c](https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/quota/dquot.c) 與 [ext4/super.c](https://github.com/microsoft/WSL2-Linux-Kernel/blob/linux-msft-wsl-6.6.87.2/fs/ext4/super.c)：失敗路徑及 ext4 dispatch。
-- [Linux quota 文件](https://www.kernel.org/doc/html/latest/filesystems/quota.html)：block 與 inode quota 邊界。
-- [mke2fs](https://man7.org/linux/man-pages/man8/mke2fs.8.html)：-n、-N、block／inode size、內部 journal 與初始化選項。
-- [ext4 journal](https://www.kernel.org/doc/html/latest/filesystems/ext4/journal.html)：journal 屬於檔案系統的實體空間。
-- [quotactl](https://man7.org/linux/man-pages/man2/quotactl.2.html)：O_PATH filesystem descriptor 與 errno 的使用介面。
-
-最終判定：管理員新專用 block device 是可審查的最小方向；目前沒有已驗證的完整持久容量後端，尚不能執行 S4 或正式 build。
+最小下一授權範圍：G1限定唯讀host/guest inventory＋G2架構能力審查。先取得真正裝置與控制能力，再審helper；目前不請求provision/format/mount批准。
