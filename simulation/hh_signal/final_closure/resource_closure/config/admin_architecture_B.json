@@ -1,0 +1,120 @@
+{
+  "schema": "ADMIN_BOUNDARY_PROPOSAL_V1",
+  "architecture": "B",
+  "unchanged_original_contract": {
+    "S4": {
+      "CPU_seconds": 4,
+      "wall_seconds": 13,
+      "RAM_bytes": 536870912,
+      "swap_bytes": 0,
+      "disk_bytes": 16777216,
+      "jobs": 1,
+      "workers": 1
+    },
+    "BUILD": {
+      "CPU_seconds": 14400,
+      "wall_seconds": 14400,
+      "RAM_bytes": 2147483648,
+      "swap_bytes": 0,
+      "disk_bytes": 5368709120,
+      "jobs": 1,
+      "workers": 1
+    }
+  },
+  "status": "PROPOSED_NOT_ACCEPTED",
+  "execution_authorized": false,
+  "roles": [
+    {
+      "role": "collector",
+      "trust": "trusted",
+      "accounting_domain": "original_aggregate",
+      "writes": [
+        "protected_evidence_slots"
+      ],
+      "resource_owner": "aggregate_parent_v1",
+      "death_boundary": "survives_worker_and_controller_not_outer_budget_or_host_loss",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    },
+    {
+      "role": "controller",
+      "trust": "trusted",
+      "accounting_domain": "original_aggregate",
+      "writes": [
+        "collector_protocol_pipe",
+        "work_tmpfs"
+      ],
+      "resource_owner": "aggregate_parent_v1",
+      "death_boundary": "trusted_survival_domain",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    },
+    {
+      "role": "host_backing",
+      "trust": "trusted",
+      "accounting_domain": "external_trusted",
+      "writes": [
+        "reviewed_fixed_backing_and_metadata"
+      ],
+      "resource_owner": "trusted_host_external_unbounded_v2",
+      "death_boundary": "trusted_survival_domain",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    },
+    {
+      "role": "launcher",
+      "trust": "trusted",
+      "accounting_domain": "external_trusted",
+      "writes": [
+        "reviewed_launcher_state_and_logs"
+      ],
+      "resource_owner": "trusted_host_external_unbounded_v2",
+      "death_boundary": "trusted_survival_domain",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    },
+    {
+      "role": "manager_journal",
+      "trust": "trusted",
+      "accounting_domain": "external_trusted",
+      "writes": [
+        "reviewed_control_state_and_logs"
+      ],
+      "resource_owner": "trusted_host_external_unbounded_v2",
+      "death_boundary": "trusted_survival_domain",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    },
+    {
+      "role": "worker",
+      "trust": "untrusted",
+      "accounting_domain": "original_aggregate",
+      "writes": [
+        "private_tmpfs",
+        "work_tmpfs"
+      ],
+      "resource_owner": "aggregate_parent_v1",
+      "death_boundary": "worker_subtree",
+      "failure_behavior": "LAST_CHECKPOINT_AND_UNKNOWN_IF_CAPTURE_LOST"
+    }
+  ],
+  "amendment": {
+    "version": "BOUNDARY_AMENDMENT_CANDIDATE_V2",
+    "status": "PROPOSED_NOT_ACCEPTED",
+    "excluded_roles": [
+      "host_backing",
+      "launcher",
+      "manager_journal"
+    ],
+    "weaker_than_original": true,
+    "user_accepted": false
+  },
+  "remaining_gaps": [
+    "RAM_semantics",
+    "collector_survival",
+    "cumulative_CPU_stop",
+    "exact_device",
+    "host_allocated_blocks_and_metadata",
+    "output_routes",
+    "postmortem_retention",
+    "user_session_health",
+    "whole_lifecycle_wall"
+  ],
+  "zero_overshoot_claim": false,
+  "failure_store_preallocated": "REQUIRES_DEPLOYMENT_AND_PROOF"
+}

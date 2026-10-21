@@ -28,7 +28,9 @@ MODULES = (
     'test_controller_io','test_controller_guard','test_mount_policy','test_storage_transport',
     'test_workflow_evidence','test_autonomous_publication',
     'test_job_envelope','test_storage_capacity','test_capacity_publication',
-    'test_s4_controller_wiring','test_git_envelope')
+    'test_s4_controller_wiring','test_git_envelope',
+    'test_admin_security','test_evidence_protocol','test_boundary_contract',
+    'test_admin_review_cli','test_admin_publication')
 HERE = Path(__file__).resolve().parent
 COUNTS = {'git_processes':0,'forbidden_attempts':[], 'unresolved_directory_fd_events':0}
 
