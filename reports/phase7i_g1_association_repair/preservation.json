@@ -1,0 +1,27 @@
+{
+  "status": "PASS_SOURCE_PRESERVATION",
+  "base": "b2bd49b68c3a439eeef24b7b2e134f1746bf5fb9",
+  "baseline_files": 1621,
+  "byte_unchanged_files": 1614,
+  "reviewed_changed_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    ".github/workflows/hh_signal_resource_closure.yml",
+    "simulation/hh_signal/final_closure/master/history.py",
+    "simulation/hh_signal/final_closure/resource_closure/g1_acquisition.py",
+    "simulation/hh_signal/final_closure/resource_closure/g1_windows_inventory.ps1"
+  ],
+  "current_frozen_input_count": 1019,
+  "historical_manifest_modified": false,
+  "scientific_input_exception": "ONE_FIXED_CI_ROUTING_DELTA; OTHER_1018_INPUTS_EXACT",
+  "raw_user_capture_sha256": "5d1d5d14502d79cc1276151d64b51e8e23c40a1151b398ff4a0e3db509724b4f",
+  "raw_user_capture_unchanged": true,
+  "original_nonadmin_acl_checks_unchanged": true,
+  "native_wsl_hash_signature_arguments_cleanup_unchanged": true,
+  "private_create_new_flush_reopen_checks_unchanged": true,
+  "existing_wsl_binary_hash_matches": true,
+  "ExpectedWslExeSha256": "fcd08205b608b5c4831e0dcb1801dd274436cd2c8420815f18ae58a085891a18",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

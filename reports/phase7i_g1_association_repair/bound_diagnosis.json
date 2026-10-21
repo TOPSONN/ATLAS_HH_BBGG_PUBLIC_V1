@@ -1,0 +1,25 @@
+{
+  "status": "PER_QUERY_BYTE_BOUND_PROVEN",
+  "original_raw_sha256": "5d1d5d14502d79cc1276151d64b51e8e23c40a1151b398ff4a0e3db509724b4f",
+  "raw_bytes": 6065,
+  "reported_queries": 11,
+  "unknown_queries": 2,
+  "row_bound_triggered": false,
+  "failed_queries": [
+    "disk_partition_links",
+    "partition_volume_links"
+  ],
+  "private_controlled_reason": "QUERY_OR_AGGREGATE_BYTE_BOUND",
+  "retained_prior_payload_bytes": 2400,
+  "aggregate_remaining_before_each_failure": 194208,
+  "per_query_byte_cap": 65536,
+  "aggregate_cap": 196608,
+  "reconstructed_retained_data_with_original_depth": 8,
+  "reconstruction_warning_count": 0,
+  "rejected_edge_count": null,
+  "rejected_serialized_byte_count": null,
+  "reported_depth_warnings": 2,
+  "warning_count_basis": "USER_OBSERVATION_NOT_CAPTURED_WARNING_STREAM",
+  "inference": "NESTED_CIM_SERIALIZATION_IS_PLAUSIBLE_EXPANSION_CAUSE; REJECTED_PAYLOAD_NOT_RETAINED",
+  "new_real_capture_coverage": "PENDING_USER_SINGLE_RUN"
+}
