@@ -1,0 +1,387 @@
+{
+  "scope": "ACTUAL_SAFE_PYTHON_SUBPROCESSES_NOT_KERNEL_CONTROLLER_TEST",
+  "stages": [
+    {
+      "stage_id": "R0_IDENTITIES",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "48e66c153c5db969d6c2e43431f81b7483f30e88f4fce13ff452ea75ef70b7a6",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 326,
+          "path": "BASELINE_IDENTITY.json",
+          "sha256": "8dfb74f1cf60e40b9fa7913b6344b6548631169c6d679488452a98ebad339c11"
+        },
+        {
+          "bytes": 80,
+          "path": "safe_child_log.txt",
+          "sha256": "1ffc7fab737ca3621f4f39ab09c15cf902fd89888ee3e2f6c92934ea972a5ab8"
+        },
+        {
+          "bytes": 458,
+          "path": "stage_result.json",
+          "sha256": "e0c8e8d29cfd0a832b5bb07b234f77d8944c48c7f37329afc3143788fea0f446"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2419658,
+        "owned_child_exited": true,
+        "stdout_bytes": 80,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G1_HOST",
+      "status": "PASS_READ_ONLY_OBSERVED",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "73646b89cddf494174058f0775d6cae78ee39486a7606dc765a2288d93e69ac2",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 2100,
+          "path": "G1_HOST_ACCEPTANCE.json",
+          "sha256": "246e80cdb8311eb39d0c099793f1c85324761e424b4826e147b02be98cbb56ba"
+        },
+        {
+          "bytes": 81,
+          "path": "safe_child_log.txt",
+          "sha256": "9450e7b2b28501d9d054dde676423a3250756c61bfe95c94a287354e54de6bf1"
+        },
+        {
+          "bytes": 2239,
+          "path": "stage_result.json",
+          "sha256": "ca70f660a703468d4e4333f3702acbbab37152e7a03e93fe3de3c85d29320de4"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2663288,
+        "owned_child_exited": true,
+        "stdout_bytes": 81,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G1_GUEST",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "add41b39015c70d9274cbede62f98e702fcd9700ab28d8bbdb3f9b0adbac2137",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 239,
+          "path": "G1_BOOT_NAMESPACE_BINDING.json",
+          "sha256": "fb88fff59457c57ba318682b303c2c4bb9aa188d8eeac82b81f63bb18d70c384"
+        },
+        {
+          "bytes": 239,
+          "path": "G1_CGROUP_EFFECTIVE_STATE.json",
+          "sha256": "fb88fff59457c57ba318682b303c2c4bb9aa188d8eeac82b81f63bb18d70c384"
+        },
+        {
+          "bytes": 90,
+          "path": "G1_COMPLETE_COVERAGE.json",
+          "sha256": "e0ecce7b430b9df7bdd411b6fd2822bb02f94e6079d31eb33c4d8b7439863778"
+        },
+        {
+          "bytes": 446,
+          "path": "G1_GUEST_OBSERVATION.json",
+          "sha256": "af85775072b9e81ef5567d326acf7bb9755cec6cce9b052ea0839e5d0b92fe95"
+        },
+        {
+          "bytes": 239,
+          "path": "G1_MANAGER_LOG_STATE.json",
+          "sha256": "fb88fff59457c57ba318682b303c2c4bb9aa188d8eeac82b81f63bb18d70c384"
+        },
+        {
+          "bytes": 239,
+          "path": "G1_STORAGE_GRAPH.json",
+          "sha256": "fb88fff59457c57ba318682b303c2c4bb9aa188d8eeac82b81f63bb18d70c384"
+        },
+        {
+          "bytes": 75,
+          "path": "safe_child_log.txt",
+          "sha256": "9a19765c93c151c7c4f582c2285b8e1d7346b17808ac0d7cb47421233e123338"
+        },
+        {
+          "bytes": 578,
+          "path": "stage_result.json",
+          "sha256": "a4040b0cc589d76cda5270185afb73d56f14c91a16a6c8e3bfcf129d0c6cdd3b"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.3024208,
+        "owned_child_exited": true,
+        "stdout_bytes": 75,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G2_ARCHITECTURE",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "faf23a84d52afbff166207a46b7be273dfbb9a6a086cc8fc04358f1acacc89f8",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 1201,
+          "path": "ARCHITECTURE_A_ACTUAL_CAPABILITY_MATRIX.json",
+          "sha256": "f2b323a88b3703ac0e0c4a76192d541f31512b59e2ba984b44956e3bda58b420"
+        },
+        {
+          "bytes": 1165,
+          "path": "B_V2_CLAUSE_REVIEW.json",
+          "sha256": "89073365020a46b5c3d18553e7dc7343dfb08e753f86882e2e628c57aea088d4"
+        },
+        {
+          "bytes": 3395,
+          "path": "HOST_GUEST_RESOURCE_LEDGER.json",
+          "sha256": "745eae7da8818608b5b1ae40c2db314b3ed6f9e98002fa68f8de357c3bfbff93"
+        },
+        {
+          "bytes": 82,
+          "path": "safe_child_log.txt",
+          "sha256": "394739b866470d9b331403e1032eee932a0c00eb08ade7830f4d3441f91e0593"
+        },
+        {
+          "bytes": 246,
+          "path": "stage_result.json",
+          "sha256": "d3388193b45f639b4088f2857eb8dbcb9e7ece86d8f5c18cade247cdb4d07c7a"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2723977,
+        "owned_child_exited": true,
+        "stdout_bytes": 82,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G3_GUARDS",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "4eefe5908e43a85200eb0e061e85deb5d5a57b18c8863f4ace85dd50c1c926f6",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 354,
+          "path": "G3_COLLECTOR_SECURITY_MATRIX.json",
+          "sha256": "4c02fe63079914039834ac726009b6bb4877fe3d0911905f331bf7e786c5c0df"
+        },
+        {
+          "bytes": 472,
+          "path": "G3_DEVICE_ADAPTER_STATUS.json",
+          "sha256": "04ba362ba32d53d0ea85c22e09ddf6f997593037e65c3ab8f30c394e2419b502"
+        },
+        {
+          "bytes": 3337,
+          "path": "G3_NEGATIVE_TEST_RESULTS.json",
+          "sha256": "a3bf252bb415a6216f325204e79905cae01ff90625c249a65086b10d339192ea"
+        },
+        {
+          "bytes": 165,
+          "path": "G3_UNDEPLOYED_CAPABILITIES.json",
+          "sha256": "64fb130aa5df3edb2d8c8c94a6ac2824588e1030265a963fe89531e4eb848242"
+        },
+        {
+          "bytes": 802,
+          "path": "HELPER_SOURCE_REVIEW.json",
+          "sha256": "5e4061783f2bc7cf0beacf11f49a127b2c3c164b9468aaf6b602538e1b764915"
+        },
+        {
+          "bytes": 32,
+          "path": "inert_input.txt",
+          "sha256": "fa2f9912587c03a665390c22549b3003276a98ef9d997cba74ac642adf7173f9"
+        },
+        {
+          "bytes": 76,
+          "path": "safe_child_log.txt",
+          "sha256": "04527249095c37badd84f74b18ddf20f7a4519fd107cdf974be83e5f9c347eb2"
+        },
+        {
+          "bytes": 262,
+          "path": "stage_result.json",
+          "sha256": "7a57a5b3cd3d43edbc91267cf171d9126264ec3817ab3001e8e30285a2b741c2"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.7074176,
+        "owned_child_exited": true,
+        "stdout_bytes": 76,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G4_PROVISIONING",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "acfc9b13b1c030cac164333956f1c7950f86dd43cfa7551da42ff4c6b07348ae",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 560,
+          "path": "G4_CAPACITY_BUDGET.json",
+          "sha256": "addf11c91dcb306bc528e5a5a3bc272444fc93489821631c66f52f2c5c6b1f95"
+        },
+        {
+          "bytes": 82,
+          "path": "safe_child_log.txt",
+          "sha256": "a0b7d6927205478b9813427183b7574b2d014b0efd0241dd9a11b5cecadee45c"
+        },
+        {
+          "bytes": 422,
+          "path": "stage_result.json",
+          "sha256": "cf41688d25b6dbe522935634a4ed55976eafdd00e945c9cc1476c0c4b2c8a1c8"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2292843,
+        "owned_child_exited": true,
+        "stdout_bytes": 82,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G5_FORMAT_REVIEW",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "8949678e08e7e8dcebe3789c80aeed8be4f306c5271ec69c6dfe967944da2465",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 355,
+          "path": "G5_DEVICE_INSTANCE_CONTRACT.json",
+          "sha256": "e1d901dadf136a0f00832b0127eaeda884431d9c3727e8dc8240bc3fcd30c82e"
+        },
+        {
+          "bytes": 208,
+          "path": "G5_FORMAT_GEOMETRY_PLAN.json",
+          "sha256": "13c3bd3cbcd7f7048797d139b8958a2a2603d1b060e76bd85f88c8804ac61f00"
+        },
+        {
+          "bytes": 83,
+          "path": "safe_child_log.txt",
+          "sha256": "6c768fcb3237d05863977e752c60de90fc376fa53b9d5a876623bd8adc379d84"
+        },
+        {
+          "bytes": 318,
+          "path": "stage_result.json",
+          "sha256": "bba3f4b1c5aff5be866938a610c18fa4ddda6772bf2080e4b8244db5c5a14670"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.246614,
+        "owned_child_exited": true,
+        "stdout_bytes": 83,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G6_GEOMETRY",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "62d310f3f7bb9719365bc825004a19cd3bd81a8f32270310520bf7829b9ab631",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 194,
+          "path": "G6_READBACK_PLAN.json",
+          "sha256": "70a8117dd840018e2f5b990efd414a1629e9285491ec355213e895e6ff3817d7"
+        },
+        {
+          "bytes": 78,
+          "path": "safe_child_log.txt",
+          "sha256": "626cbba7cb52dee1a1a451c969238e80beab014473ac77062c3fde17a1d7fab8"
+        },
+        {
+          "bytes": 190,
+          "path": "stage_result.json",
+          "sha256": "3bfd0a45c6496202a89ee830f80f92d46cdaa8d461a77c3d532e268867336881"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2316431,
+        "owned_child_exited": true,
+        "stdout_bytes": 78,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    },
+    {
+      "stage_id": "G7_ENVIRONMENT",
+      "status": "PASS_SOURCE_ONLY",
+      "exact_source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+      "argv_identity": "d0ab634cd517b5c22ffd7119c3bf708b465cad42d28c3a30e27b49dec62ea3f4",
+      "real_subprocess_exit_status": 0,
+      "output_manifest": [
+        {
+          "bytes": 716,
+          "path": "G7_ENVIRONMENT_PLAN.json",
+          "sha256": "3c1d56f858e5f3966b3e4be5ef7d4900b83616111c263fdf01a2310bdb502483"
+        },
+        {
+          "bytes": 81,
+          "path": "safe_child_log.txt",
+          "sha256": "0313749b9660c26dd8c2ccd4d45691784e36c67d6c200933f5c86d109850302d"
+        },
+        {
+          "bytes": 297,
+          "path": "stage_result.json",
+          "sha256": "c325e697b682a7f2106f1caa73dc7884bb759d32af51f128bde0ea35b0206d55"
+        }
+      ],
+      "resource_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.2373142,
+        "owned_child_exited": true,
+        "stdout_bytes": 81,
+        "wall_timeout_seconds": 120
+      },
+      "authorization_reference": null
+    }
+  ],
+  "ledger_events": 18,
+  "kernel_test_dispatches": 0
+}

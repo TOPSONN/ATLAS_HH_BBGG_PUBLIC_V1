@@ -1,0 +1,103 @@
+{
+  "A_verdict": "A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST",
+  "B_status": "PROPOSED_NOT_ACCEPTED",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "actual_acceptance": "HOST_QUERY_COVERAGE_ONLY",
+  "association_validation": "V2_COMPACT_CONTRACT",
+  "blockers": [
+    "HOST_ATTESTATION_NOT_ESTABLISHED"
+  ],
+  "capture_digest_basis": "CANONICAL_CAPTURE_NOT_RAW_FILE",
+  "capture_sha256": "6612af4a74a663fee4a91ce7f96948abe1cb3315693589f4bb1c4ee492967897",
+  "collector_sha256": "fceee4386b1f90ceb72a3304ab5006e94f935c4d4fdf4ea2ad3e0a0ce36c4eee",
+  "coverage": [
+    {
+      "error_code": null,
+      "item": "disk_drives",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "disk_partition_links",
+      "row_count": 4,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "features",
+      "row_count": 3,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "hypervisor",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "logical_disks",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "os_memory",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "partition_volume_links",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "partitions",
+      "row_count": 4,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "registered_distro_backing",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "running_distros",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "runtime",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "storage_disks",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    },
+    {
+      "error_code": null,
+      "item": "wsl_version",
+      "row_count": 1,
+      "status": "REPORTED_UNATTESTED"
+    }
+  ],
+  "execution_authorized": false,
+  "guest_identity_confidence": "UNKNOWN",
+  "host_guest_mapping_complete": false,
+  "host_identity_confidence": "REPORTED_UNATTESTED",
+  "protected_storage_complete": false,
+  "raw_capture_sha256": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5",
+  "running_distro_count": 0,
+  "running_distro_state": "NONE_RUNNING_REPORTED_UNATTESTED",
+  "schema": "PHASE7I_G1_PUBLIC_PROJECTION_V1",
+  "status": "PASS_REPORTED_UNATTESTED"
+}

@@ -1,0 +1,25 @@
+{
+  "TOCTOU_RUNTIME_CLOSED": false,
+  "actual_device_open": false,
+  "evidence_slots": "EXISTING_8X4096_UNCHANGED; PRODUCTION_NOT_DEPLOYED",
+  "format_or_mount": false,
+  "host_exclusivity": "UNKNOWN",
+  "old_policy_hashes": [
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/device_policy.py",
+      "sha256": "c3ed53841fc252778033ad83f0e6fc52ee789a16d3864a7930c83d7f6f7597f3"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/instance_binding.py",
+      "sha256": "099215e5325c02b1a246735987fc9cd57f2e7b796fb3f28dc6677558967f3083"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/resource_closure/evidence_slots.py",
+      "sha256": "2ec53f72c5654b657e18cd01fad5e3e349c090405b8405c5add6d542ad13edce"
+    }
+  ],
+  "privileged_consumer_denied": true,
+  "replay_rejected": true,
+  "runtime_helper_deployed": false,
+  "same_FD_inert_reader_executed": true
+}

@@ -1,0 +1,11 @@
+本文件為待獨立審查提案，不是執行授權。Exact source `83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d`。未批准者保持BLOCKED；不得自行填假approval、降限制或改原始收據。
+
+# G1 剩餘阻擋
+
+成功的Windows13/13 raw SHA為8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5，本輪只重驗既有檔案，不重跑capture。13/13是REPORTED_UNATTESTED，非完整host attestation。4與1個association edges通過既有V2 validator。
+
+本輪只執行一次受原簽章/雜湊/argv/pipe/cleanup規則保護的running-list唯讀查詢，回傳E_ACCESSDENIED，receipt SHA為cbe9589b97aed3ea59acbb4523d4649d8c0c58e5e879ecea25980eeb3bed8247。目前guest狀態UNKNOWN；不能把舊capture的NONE_RUNNING外推成現在仍停止。也沒有附屬已開啟的Ubuntu終端。
+
+G1 guest為BLOCKED_AUTHORIZATION／CURRENT_GUEST_SESSION_UNVERIFIED，不能虛報BLOCKED_GUEST_NOT_RUNNING已被即時證明。boot、namespace、cgroup、storage、manager實測均null。讀不到guest時持續完成G2–G7工程，不嘗試UNC、wsl -d或啟動終端。
+
+V1 guest adapter原碼保留；新guest_v2修復holders/slaves切片、前後boot/cgroup/namespace綁定、bounded enumeration、固定檔案pin、output-directory FD binding。未複製進guest或執行。獨立Python reader檢查digest、ownership、counter schema、lineage、staleness與缺值；沒有same-boot現在時鐘時freshness明列UNKNOWN。僅讀journald/rsyslog設定檔，effective manager/bus仍UNKNOWN。

@@ -23,10 +23,10 @@ def check(run):
  current=source_binding(None if context['host_capture'] is None else context['host_capture']['path'])
  need(binding_identity(current)==context['scope_identity'],'RESUME_SOURCE_OR_INPUT_DRIFT')
  ledger.verify(run);return context
-def child(run,stage):
+def child(run,stage,*,bootstrap=BOOTSTRAP):
  started=time.monotonic_ns()
  out=run/'stages'/stage;out.mkdir()
- argv=[sys.executable,'-I','-B','-c',BOOTSTRAP,str(REPO),stage,str(run)]
+ argv=[sys.executable,'-I','-B','-c',bootstrap,str(REPO),stage,str(run)]
  p=subprocess.Popen(argv,cwd=REPO,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
  chunks=[];count=0;overflow=threading.Event()
  def drain():

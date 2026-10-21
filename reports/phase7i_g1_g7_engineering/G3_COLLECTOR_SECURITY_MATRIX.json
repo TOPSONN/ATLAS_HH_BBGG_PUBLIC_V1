@@ -1,0 +1,14 @@
+{
+  "collector_UID": null,
+  "controller_UID": null,
+  "death_domains": "COLLECTOR_SEPARATE_CHILD_CGROUP_WITHIN_SAME_PARENT_BUDGET",
+  "runtime_verified": false,
+  "slots": {
+    "count": 8,
+    "each_bytes": 4096,
+    "failure_slots": 2
+  },
+  "socket_authentication": "REQUIRE_SO_PEERCRED_PLUS_PID_START_BOOT_INVOCATION_BINDING; NOT_DEPLOYED",
+  "worker_UID": null,
+  "worker_evidence_FD_allowed": false
+}

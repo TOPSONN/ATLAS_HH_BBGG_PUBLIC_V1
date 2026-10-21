@@ -1,0 +1,49 @@
+{
+  "status": "PASS_INERT_ARITHMETIC_ONLY",
+  "cases": [
+    {
+      "case": "S4",
+      "actual_exit": 0,
+      "output": {
+        "known_bytes": 13631488,
+        "unclosed_bytes": 3145728,
+        "enforced": false
+      }
+    },
+    {
+      "case": "BUILD",
+      "actual_exit": 0,
+      "output": {
+        "known_bytes": 4563402752,
+        "unclosed_bytes": 805306368,
+        "enforced": false
+      }
+    },
+    {
+      "case": "overrun",
+      "actual_exit": 2,
+      "output": null
+    },
+    {
+      "case": "overflow",
+      "actual_exit": 2,
+      "output": null
+    },
+    {
+      "case": "negative",
+      "actual_exit": 2,
+      "output": null
+    },
+    {
+      "case": "nan",
+      "actual_exit": 2,
+      "output": null
+    },
+    {
+      "case": "extra",
+      "actual_exit": 2,
+      "output": null
+    }
+  ],
+  "executable_sha256": "1f58ef915b53f83ca6cb5c75d0ec88b088d82e1393bb8200441ac1a069813277"
+}
