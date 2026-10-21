@@ -1,0 +1,48 @@
+{
+  "status": "PRESERVED_NOT_OVERWRITTEN",
+  "entries": [
+    {
+      "case": "local_clone",
+      "reason": "MSYS_NTCREATE_DIRECTORY_OBJECT_ACCESS_DENIED",
+      "resolution": "Verified local object+tracked byte checkout, no elevation/network retry."
+    },
+    {
+      "case": "checkout_initialization",
+      "reason": "THREE_EXISTING_EXECUTABLE_MODES",
+      "resolution": "Preserved100755 index modes, configured filemode=false only in new Windows checkout."
+    },
+    {
+      "case": "legacy_frozen_input",
+      "reason": "ONE_KNOWN_CI_ROUTING_DELTA_BLOCKED_1019_INPUT_AUDIT",
+      "resolution": "Exact PR38 hash plus one master-branch exclusion; actual/frozen SHA and Git blob distinguished; all other drift refused."
+    },
+    {
+      "case": "focused_01",
+      "reason": "THREE_LEGACY_TEMP_FIXTURES_DENIED_OUTSIDE_WORKSPACE",
+      "resolution": "Harness temp directory moved inside new workspace; original tests and failure logs preserved, no outside cleanup retried."
+    },
+    {
+      "case": "CI_edit_helper",
+      "reason": "SHELL_QUOTING_SYNTAX_ERROR_BEFORE_MUTATION",
+      "resolution": "Used saved explicit Python helper."
+    },
+    {
+      "case": "first_actual_DAG",
+      "source": "890fcccd12e39a19e8b7f375e037f53740370130",
+      "run_id": "68065b21-6abb-44a2-b5e5-d2c55d141011",
+      "reason": "WINDOWS_RESOURCE_IMPORT_IN_HISTORICAL_PHYSICAL_REWEIGHT_MODULE",
+      "resolution": "Pure reference validators plus existing independent Decimal implementation; original physical reweight module unchanged. Failed stage not retried in old run."
+    },
+    {
+      "case": "resume_input_binding_review",
+      "source": "ca069db83bd82d8752e1da552786ef5cb6a8e5fb",
+      "run_id": "7c76f829-83d0-473c-978a-3cc44ee39c67",
+      "reason": "SOURCE_AND_HOST_BINDING_DID_NOT_COVER_ACTUAL_1019_DATA_HASHES",
+      "resolution": "Final source binds actual input digest and refuses changed frozen-data hash. New source/new run; previous outputs preserved."
+    }
+  ],
+  "old_source_resume_actual_exit": 2,
+  "current_source_run_id": "25dd3556-7889-4c45-a886-41c799ce37b7",
+  "current_source_safe_failures": [],
+  "physical_failures_this_task": null
+}

@@ -1,0 +1,46 @@
+name: HH master safe orchestration and existing-data methods
+on:
+  push:
+    branches: [codex/phase7i-master-unattended]
+  pull_request:
+    paths:
+      - 'simulation/hh_signal/final_closure/master/**'
+      - 'simulation/hh_signal/final_closure/src/contracts.py'
+      - 'reports/phase7i_master_unattended/**'
+      - '.github/workflows/hh_signal_master_unattended.yml'
+permissions:
+  contents: read
+jobs:
+  safe_source_and_existing_inputs:
+    if: github.head_ref == 'codex/phase7i-master-unattended' || github.ref_name == 'codex/phase7i-master-unattended'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserved audited612 source-only regression
+        run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.offline_regression --output "$RUNNER_TEMP/master-offline.json"
+      - name: Preserved exact81 safe legacy regression
+        run: python3 -B -m simulation.hh_signal.final_closure.resource_closure.legacy_regression --output "$RUNNER_TEMP/master-legacy.json"
+      - name: Master negative cases and affected closure methods
+        run: >-
+          python3 -B -m unittest -v
+          simulation.hh_signal.final_closure.master.test_master
+          simulation.hh_signal.final_closure.master.test_publication
+          simulation.hh_signal.final_closure.tests.test_closure
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication
+      - name: Actual safe DAG with no host or guest dispatch
+        run: |
+          python3 -B -m simulation.hh_signal.final_closure.master plan > "$RUNNER_TEMP/master-plan.json"
+          python3 -B -m simulation.hh_signal.final_closure.master run-safe > "$RUNNER_TEMP/master-run.json"
+          RUN_ID=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["run_id"])' "$RUNNER_TEMP/master-run.json")
+          python3 -B -m simulation.hh_signal.final_closure.master.ci_smoke "$RUN_ID"
+          cat "$RUNNER_TEMP/master-run.json"
+      - name: Every intermediate and changed index publication audit
+        run: python3 -B -m simulation.hh_signal.final_closure.master.publication

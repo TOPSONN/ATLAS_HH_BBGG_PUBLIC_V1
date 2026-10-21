@@ -1,0 +1,20 @@
+{
+  "schema": "B_V2_VM_COST_ASSIGNMENT_PROPOSAL_V1",
+  "boundary_candidate": "BOUNDARY_AMENDMENT_CANDIDATE_V2",
+  "prior_terms_sha256": "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193",
+  "status": "PROPOSED_NOT_ACCEPTED",
+  "weaker_than_original": true,
+  "user_accepted": false,
+  "execution_authorized": false,
+  "external_roles": ["manager_journal", "launcher", "host_backing"],
+  "assignment_proposed_for_explicit_review": {
+    "job_parent": "All scientific worker/compiler/helper, controller and protected collector descendants; guest user+system CPU, hierarchical RAM/swap, and all work/private/persistent writes remain covered.",
+    "manager_journal": "Shared host and guest manager, journal/syslog routing and their boundedness/retention risks are external nonzero infrastructure costs.",
+    "launcher": "Windows/WSL invocation and admission launcher cost is external and nonzero.",
+    "host_backing": "Propose explicitly assigning host VMM/hypervisor runtime CPU/RAM residual overhead and shared VM/backing management to this existing role. Guest job descendants and their writes are never excluded. This is a wider explicit meaning than backing metadata alone and requires new human acceptance; it is not an established deployment boundary."
+  },
+  "safety_effect": "Host VM runtime costs become external rather than jointly hard-capped under original A. Their costs may be material and remain measured/unknown separately, never declared zero. Root/history device safety is unchanged.",
+  "acceptance_requires": ["ALL_PRIOR_B1_TO_B8_CLAUSES", "THIS_EXACT_COST_ASSIGNMENT_HASH", "ACTUAL_HOST_CAPABILITY_READBACK", "SEPARATE_PROVISIONING_AND_KERNEL_AUTHORIZATION"],
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

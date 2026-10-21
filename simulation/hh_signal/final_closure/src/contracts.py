@@ -24,12 +24,19 @@ def core_evidence_identity():
 def input_identity():
     rows=read_json(HERE/'config/source_inputs.json')['files']
     require(rows and len({r['path'] for r in rows})==len(rows),'MISSING_SOURCE_IDENTITIES')
+    observed=[]
     for r in rows:
         p=Path(r['path']);require(not p.is_absolute() and '..' not in p.parts,'UNSAFE_FROZEN_INPUT_PATH')
         data=(REPO/p).read_bytes()
         if r.get('text_git_normalization'):data=data.replace(b'\r\n',b'\n')
-        require(hashlib.sha256(data).hexdigest()==r['sha256'],'FROZEN_INPUT_DRIFT:'+r['path'])
-    return rows
+        if hashlib.sha256(data).hexdigest()!=r['sha256']:
+            require(r['path']=='.github/workflows/hh_signal_campaign.yml','FROZEN_INPUT_DRIFT:'+r['path'])
+            from ..master.history import reviewed_workflow_delta
+            delta=reviewed_workflow_delta(r['path'],data,r['sha256'])
+            observed.append({**r,**delta,'frozen_git_blob':r.get('git_blob'),
+                'git_blob':hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()})
+        else:observed.append(r)
+    return observed
 
 def safe_output(value):
     p=Path(value).expanduser();allowed=Path.home()/'simulations/hh_final_closure'

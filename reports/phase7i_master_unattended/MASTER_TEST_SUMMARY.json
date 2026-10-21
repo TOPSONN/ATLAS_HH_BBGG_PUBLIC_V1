@@ -1,0 +1,135 @@
+{
+  "schema": "HH_MASTER_ACTUAL_SAFE_VALIDATION_V1",
+  "source": "1c90cb593de3fc2293e89414aeaff7cd29a7859d",
+  "local_targeted_tests": {
+    "status": "PASS_SOURCE_ONLY",
+    "tests": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "source_rows": [
+      {
+        "path": "simulation/hh_signal/final_closure/master/__init__.py",
+        "sha256": "483b12f98539fc312fdc17ef317ab04fd92477d464c2a8ed98dbde2c1881bbca"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/__main__.py",
+        "sha256": "8fda124942c1535a5de3d48057be3524a626b1f648786b7b6c0ec5fcc2aa1fec"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/ci_smoke.py",
+        "sha256": "42ca5707b06e30e29cbd0dd2e7ea675f58fd1a7fa2adc1763535cf913b92736c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/contract.py",
+        "sha256": "9221866135bc662dd7b7c6b3d3b3f5cc5724db72edab9d5278d880c19190dc2f"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/history.py",
+        "sha256": "c01152f08685c12d4664f8c3025b5bee0614e7e40c62455cb9fc2d1ed8ddb64d"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/ledger.py",
+        "sha256": "245141f96d749f2ab9ba0370f8ab4926705bf3ff66abaa60de89ae523eaba4fe"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/publication.py",
+        "sha256": "cd01f9205f4c3c85c5d98ec26852a7879bf82bac71f377871fccfd692e394108"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/runner.py",
+        "sha256": "72d9fb4af82eb21b7bca6d0f6957000a3bdfed1076d925e36d794ac117f7f599"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/same_instance.py",
+        "sha256": "17f64fa7895bbfca4e395162c6fc70b8f423a63f0c2b8102c8c00b59c4cf42f3"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tasks.py",
+        "sha256": "3c4eeb167860cbcd4d618272c9c27aed118aa40938a2bb0e4a45ed466e509b25"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/test_master.py",
+        "sha256": "c89a1750ee9b77a2d8612229a2311c55aa1313aa500bdc0f253c84cce84d38ca"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/test_publication.py",
+        "sha256": "a3f749bb5ebd8e4ae583d97071a6c54eb8872a1c1069d03ce4c972571f56e6d4"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/worker.py",
+        "sha256": "b9e9bf0724226d8d701f9710ae88bbd0c06b8a4f0df7a299afe200644abc49d8"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/src/contracts.py",
+        "sha256": "a1e5a032123aeae1349e3805fa9aa5e16afd9d7f5a2748bc7bf666c72da91fbd"
+      }
+    ],
+    "wall_seconds": 7.383849900001223,
+    "kernel_or_physics_dispatch": 0
+  },
+  "CLI": [
+    {
+      "mode": "plan",
+      "real_exit_status": 0,
+      "argv_sha256": "b49b4bb3a3a9e9225b49044fae51f2cf56f4c487a61f8438ac78f19dd9370f22",
+      "stdout_sha256": "edb310f598ad5f7a0ebe6ae133bddb20b6b5a21d0bcc33963ffec6873b757675",
+      "wall_seconds": 0.2617462,
+      "local_receipt_sha256": "2cea71d866bca714a45529da6e79acb985a504a129691c684ca2c9a6d380f1b9"
+    },
+    {
+      "mode": "run-safe",
+      "real_exit_status": 0,
+      "argv_sha256": "12373559866d0365dce65e30d476a126fd9fdd12dd9b19c2de446ecbea673b03",
+      "stdout_sha256": "30435124f6c95cbad6e09230116226bbc4f1446b5cf7ea9b8dbce5d6eb742ef7",
+      "wall_seconds": 65.0301999,
+      "local_receipt_sha256": "f1528e59932f4d6eac55298db1355c581f66fb84a5049bdb97a4b938cd2a6c1e"
+    },
+    {
+      "mode": "status",
+      "real_exit_status": 0,
+      "argv_sha256": "7a6d2ae253f53ba5c5b89b2eaeff65e4e04843a1c60d4ae64eba687aabd6e156",
+      "stdout_sha256": "75d0b0047ddceeca355658170f4946e27922100ac95fc6600f6af2a885861526",
+      "wall_seconds": 3.3893106,
+      "local_receipt_sha256": "b4cf0888e8a4a8343a4e965b9911def5075c4f677545f509793f2f7fa1db1f5f"
+    },
+    {
+      "mode": "verify",
+      "real_exit_status": 0,
+      "argv_sha256": "db45a343115c34b22f05170f115677e4c9647cd6c597cd6d39c6d719a7457b7f",
+      "stdout_sha256": "ca6b9eac2abb46d7aba55b7969ec1f92f7320a804126f573d281207c3e70394f",
+      "wall_seconds": 4.2013955,
+      "local_receipt_sha256": "0080419ea2e0e151db4147f8d9655bbe785dc8d88715edc6678beea4adcedb80"
+    },
+    {
+      "mode": "resume-safe",
+      "real_exit_status": 0,
+      "argv_sha256": "83a6b888d0b5d521f23ea8991fcc76ac2384350c7aef44e050cb9b5ab1684a21",
+      "stdout_sha256": "30435124f6c95cbad6e09230116226bbc4f1446b5cf7ea9b8dbce5d6eb742ef7",
+      "wall_seconds": 7.8569658,
+      "local_receipt_sha256": "5679f59d6a5a4e303db290792a24e0793c50c8b462857b0b31c459498dc723d2"
+    },
+    {
+      "mode": "export-review",
+      "real_exit_status": 0,
+      "argv_sha256": "6c5b9d6e1fc4474ebb268b7a87437a69d1b97b17e12f440861a8dd2372626448",
+      "stdout_sha256": "1b928dc6223557a2d1b36abc9e006a7f5d023d6565857558b133de82cd4bb9d9",
+      "wall_seconds": 2.7052065,
+      "local_receipt_sha256": "05a2143cb2bc038c0688ea7b383531fcb61ec3bb3daf532a34e5a3faff1af021"
+    }
+  ],
+  "safe_DAG_actual_subprocesses": 11,
+  "safe_SOURCE_ONLY_passes": 9,
+  "safe_external_blockers": {
+    "G1_REAL_INVENTORY": "BLOCKED_OS_CAPABILITY",
+    "G2_ARCHITECTURE_DECISION": "BLOCKED_AUTHORIZATION"
+  },
+  "safe_subprocesses_all_exit_zero": true,
+  "ledger_events": 36,
+  "resume_ledger_unchanged": true,
+  "live_dispatches": 0,
+  "kernel_resource_cases": null,
+  "new_ME_counter": null,
+  "full_612_81_and_CI": "PENDING_PUBLICATION; SOURCE_ONLY_CI_NOT_KERNEL_PROOF"
+}
