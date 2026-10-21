@@ -10,7 +10,7 @@ class Fixture(unittest.TestCase):
   self.tmp=tempfile.TemporaryDirectory(dir=root);self.root=Path(self.tmp.name)
   self.run=self.root/str(uuid.uuid4());self.run.mkdir()
   for n in ('ledger','stages','snapshots','exports'):(self.run/n).mkdir()
-  self.context={'revision':'a'*40,'source_sha256':'b'*64,'source_rows':[],
+  self.context={'revision':'a'*40,'source_sha256':'b'*64,'source_rows':[],'inputs_sha256':'c'*64,'input_count':0,'frozen_input_manifest_sha256':'d'*64,
    'host_capture':None,'scope':'SAFE_ENGINEERING_AND_READ_ONLY','run_directory':str(self.run)}
   self.context['scope_identity']=c.binding_identity(self.context);ledger.create_json(self.run/'context.json',self.context)
  def tearDown(self):self.tmp.cleanup()
@@ -71,6 +71,11 @@ class SchedulerTests(Fixture):
   changed=copy.deepcopy(self.context);changed['revision']='c'*40
   with patch.object(runner,'source_binding',return_value=changed),patch.object(runner,'child') as child:
    with self.assertRaisesRegex(ValueError,'RESUME_SOURCE'):runner.execute(self.run)
+   child.assert_not_called()
+ def test_resume_frozen_input_drift_rejected_even_with_unchanged_source(self):
+  changed=copy.deepcopy(self.context);changed['inputs_sha256']='e'*64
+  with patch.object(runner,'source_binding',return_value=changed),patch.object(runner,'child') as child:
+   with self.assertRaisesRegex(ValueError,'RESUME_SOURCE_OR_INPUT_DRIFT'):runner.execute(self.run)
    child.assert_not_called()
  def test_interrupted_stage_becomes_unknown_without_automatic_retry(self):
   self.event('RUNNING')

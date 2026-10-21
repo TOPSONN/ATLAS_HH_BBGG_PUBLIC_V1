@@ -71,6 +71,7 @@ def snapshots(run,context):
  blocked={s:c for s,c in states.items() if c.startswith('BLOCKED') or c in ('UNKNOWN','FAIL')}
  files={'MASTER_PROGRESS.json':v,'MASTER_BLOCKERS.json':{'stages':blocked,'unexecuted_measurements':None},
   'MASTER_SOURCE_MANIFEST.json':{'revision':context['revision'],'source_sha256':context['source_sha256'],'source_rows':context['source_rows'],
+   'frozen_input_count':context['input_count'],'frozen_input_rows_sha256':context['inputs_sha256'],'frozen_input_manifest_sha256':context['frozen_input_manifest_sha256'],
    'host_input_sha256':None if context['host_capture'] is None else context['host_capture']['sha256']},
   'MASTER_TEST_SUMMARY.json':{'current_safe_stage_results':states,'prior_612_81':'PRESERVED_BASELINE; FINAL_CI_REQUIRED_FOR_NEW_SOURCE','new_test_counts':None}}
  index=len(list((run/'snapshots').iterdir()))+1;need(index<=MAX_SNAPSHOTS,'SNAPSHOT_COUNT_BOUND')

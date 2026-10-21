@@ -81,7 +81,7 @@ def append(run,source,stage,status,*,start=None,command=None,exit_status=None,ou
  before='0'*64 if not rows else sha((run/'ledger'/f'{len(rows):06d}.json').read_bytes())
  now=time.monotonic_ns();v={'schema':'HH_MASTER_LEDGER_EVENT_V1','run_id':run.name,'sequence':len(rows)+1,
   'previous_sha256':before,'exact_source_revision':source['revision'],'source_sha256':source['source_sha256'],
-  'input_sha256':sha(canonical(source.get('host_capture'))),'stage_id':stage,'status':status,
+  'input_sha256':sha(canonical({'frozen_inputs_sha256':source['inputs_sha256'],'host_capture':source.get('host_capture')})),'stage_id':stage,'status':status,
   'started_monotonic_ns':start or now,'finished_monotonic_ns':None if status=='RUNNING' else now,
   'clock_domain':'MONOTONIC_PER_INVOCATION_NOT_CROSS_BOOT_DURATION','command':command,
   'argv_identity':None if command is None else sha(canonical(command)),

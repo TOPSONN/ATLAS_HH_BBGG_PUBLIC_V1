@@ -61,11 +61,16 @@ def source_binding(capture=None):
  if capture is not None:
   p=no_links(Path(capture));need(p.is_file() and p.stat().st_size<=262144,'HOST_CAPTURE_BOUND')
   host={'path':str(p),'sha256':sha(p.read_bytes())}
+ from ..src.contracts import input_identity
+ inputs=input_identity()
+ input_rows=[{'path':r['path'],'sha256':r['sha256']} for r in inputs]
  value={'revision':revision,'source_rows':rows,'source_sha256':sha(canonical(rows)),
+  'inputs_sha256':sha(canonical(input_rows)),'input_count':len(input_rows),
+  'frozen_input_manifest_sha256':sha((REPO/'simulation/hh_signal/final_closure/config/source_inputs.json').read_bytes()),
   'host_capture':host,'scope':'SAFE_ENGINEERING_AND_READ_ONLY'}
  return value
 def binding_identity(v):
- return sha(canonical({k:v[k] for k in ('revision','source_sha256','host_capture','scope')}))
+ return sha(canonical({k:v[k] for k in ('revision','source_sha256','inputs_sha256','host_capture','scope')}))
 def plan():
  return {'schema':'HH_MASTER_SAFE_PLAN_V1','scope':'SAFE_ENGINEERING_AND_READ_ONLY',
   'safe_DAG':[{'stage_id':s,'dependencies':list(d),'evidence_ceiling':'SOURCE_OR_READ_ONLY_ONLY'} for s,d in SAFE],

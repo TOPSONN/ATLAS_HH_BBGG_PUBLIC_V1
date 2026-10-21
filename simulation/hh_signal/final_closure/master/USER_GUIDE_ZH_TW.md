@@ -40,6 +40,8 @@ python3 -B -m simulation.hh_signal.final_closure.master export-review --run-id "
 - 同run的協作controller使用非阻塞OS檔案鎖；這不是對惡意同UID程序的production隔離。
 - `MASTER_PROGRESS.json`、`MASTER_STATUS_ZH_TW.md`、`MASTER_BLOCKERS.json`、`MASTER_SOURCE_MANIFEST.json`、`MASTER_TEST_SUMMARY.json`、`MASTER_NEXT_AUTHORIZATION.md`是可重建的latest views；每次舊版本保留在snapshots。
 - resume先核對exact revision、來源、input及所有已記錄output。成功、失敗或blocked的既有stage不會自動重跑。尚未開始且依賴已通過的安全stage才可執行。
+- 每次核對實際重算1019份frozen inputs的SHA，不能只核對宣告manifest或host capture。唯一已知CI路由差異以精確相容規則獨立記錄，其他資料漂移拒絕。
+- 報告commit也會改HEAD；resume必須在run所記錄的exact source revision、同一checkout路徑進行。交付流程保留該source checkout及ignored進度，另保存delivery commit；不自動重綁報告HEAD或修改舊receipt。
 - RUNNING中斷會留下UNKNOWN；前次child是否退出無法確認時，不補跑、不猜PID所有權、不接著啟動新child。
 - 不同invocation的monotonic時間不拿來計跨boot duration。未執行的kernel資源或物理測量保持null。
 
