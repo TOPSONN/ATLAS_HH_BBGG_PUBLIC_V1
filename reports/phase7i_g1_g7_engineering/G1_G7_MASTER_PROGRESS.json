@@ -1,0 +1,108 @@
+{
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "S4_EXECUTED": false,
+  "kernel_CPU": null,
+  "kernel_RAM": null,
+  "kernel_disk": null,
+  "kernel_tests_actually_executed": 0,
+  "new_ME_calls": null,
+  "new_integrals": null,
+  "next_safe_action": "REVIEW_FROZEN_PACKAGES; NEW_EVIDENCE_REQUIRES_FRESH_RUN",
+  "run_id": "bb946340-12a5-46d7-8978-11d1abf0457e",
+  "schema": "HH_G1_G7_PROGRESS_V1",
+  "source_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+  "source_sha256": "82eb85f95d8eb989673e2c27dc305c74e00a5f391ea14e6aab500213fae063a2",
+  "stages": [
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "R0_IDENTITIES"
+    },
+    {
+      "actual_OS_acceptance": "HOST_QUERY_COVERAGE_ONLY",
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "HOST_ATTESTATION_NOT_ESTABLISHED"
+      ],
+      "source_readiness": "PASS_READ_ONLY_OBSERVED",
+      "stage": "G1_HOST"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "CURRENT_GUEST_SESSION_UNVERIFIED",
+        "SEPARATE_STARTUP_OR_EXISTING_SESSION_SCOPE_REQUIRED"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G1_GUEST"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "B1_B8_AND_VM_COST_ASSIGNMENT_NOT_ACCEPTED",
+        "NO_VERIFIED_A_HARD_ENFORCER"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G2_ARCHITECTURE"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "NO_PROVEN_HOST_EXCLUSIVITY",
+        "NO_PRIVILEGED_CONSUMER_DEPLOYED"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G3_GUARDS"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "NO_REVIEWED_DISPOSABLE_DEVICE",
+        "NO_ADMIN_APPROVAL",
+        "NO_HOST_EXCLUSIVITY"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G4_PROVISIONING"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "G4_NOT_PROVISIONED",
+        "SAME_INSTANCE_CONSUMER_AND_HOST_EXCLUSIVITY_MISSING",
+        "NO_FORMAT_APPROVAL"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G5_FORMAT_REVIEW"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "G5_NOT_EXECUTED"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G6_GEOMETRY"
+    },
+    {
+      "actual_OS_acceptance": null,
+      "actual_subprocess_exit": 0,
+      "blockers": [
+        "G2_UNACCEPTED",
+        "G4_G6_NOT_DEPLOYED",
+        "NO_MOUNT_APPROVAL",
+        "COLLECTOR_UNDEPLOYED",
+        "KERNEL_NORMAL_AND_FAILURE_EVIDENCE_MISSING"
+      ],
+      "source_readiness": "PASS_SOURCE_ONLY",
+      "stage": "G7_ENVIRONMENT"
+    }
+  ]
+}

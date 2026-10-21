@@ -1,0 +1,35 @@
+{
+  "preserved_failures": [
+    {
+      "preserved_failure": "initial_readiness_tests_11_tests_1_error",
+      "controlled_reason": "WINDOWS_OS_MAKEDEV_UNAVAILABLE_IN_LEGACY_TRANSACTION_FIXTURE_SETUP",
+      "correction": "Use fixed model identities for new early FD/helper/lease rejection checks; retain unchanged full legacy positive transaction tests for real Linux CI. No OS API emulation or weakening of original device policy.",
+      "WSL_started": false,
+      "historical_tests_removed": false
+    },
+    {
+      "preserved_failure": "readiness_guest_tests_21_tests_1_error",
+      "controlled_reason": "DIRECT_READER_FIXTURE_REACHED_LINUX_O_PATH_ON_WINDOWS",
+      "correction": "Reader now explicitly rejects non-Linux use as UNKNOWN before accessing Linux-only flags. No fake O_PATH implementation or WSL execution.",
+      "following_inert_Cpp_compilation_exit": 0,
+      "combined_shell_exit_not_used_as_test_success": true
+    },
+    {
+      "preserved_failure": "affected_final_01_115_tests_1_error",
+      "controlled_reason": "POSITIVE_MOUNTINFO_FIXTURE_USED_INVALID_PARENT_ID_ZERO",
+      "correction": "Use a valid positive parent ID in the synthetic positive fixture. Historical strict mount parser is unchanged.",
+      "initial_staging_not_published": true,
+      "old_upload_source_json_and_audit_preserved": true
+    },
+    {
+      "preserved_failed_source": "21cb54b424f147b23cf10cf91fc2441dce6dd719",
+      "failure": "SOURCE_BOUND_BEFORE_RUN_CREATION",
+      "run_directories_created": 0,
+      "children_dispatched": 0,
+      "reason": "New publication blob cap was incorrectly applied to three pre-existing frozen metadata files.",
+      "correction": "Exact-name, exact-size and baseline-SHA binding for only those existing immutable files. New source/report publication stays 131072 bytes; captures and S4 nominal limits unchanged.",
+      "failed_native_or_physics_operation": false
+    }
+  ],
+  "historical_failure_receipts_deleted": false
+}

@@ -1,0 +1,51 @@
+{
+  "clauses": [
+    {
+      "clause": "B1_BOUNDARY",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B2_CPU",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B3_WALL",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B4_RAM",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B5_DISK",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B6_EVIDENCE",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B7_CLEANUP",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    },
+    {
+      "clause": "B8_RELEASE",
+      "decision": "NOT_ACCEPTED",
+      "status": "REVIEWED_PROPOSAL"
+    }
+  ],
+  "cost_assignment_raw_sha256": "eedc17a761f2aaefde628d858a70bf9d4518d271df8bedcaf54f34d96cf6237d",
+  "post_exit_observer_supplement_raw_sha256": "fcbfba8c4dececd545b4f75a852a7ec4b123d67078a038d03d85772c5076364b",
+  "recommendation": "REVIEW_B_V2_PLUS_EXACT_VM_COST_ASSIGNMENT_FIRST; NO_DEPLOYMENT_YET",
+  "status": "G2_ENGINEERING_DECISION_PACKAGE_READY",
+  "terms_raw_sha256": "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193",
+  "terms_sha256": "b0cd8618cb6242304f61b33a0d74a9902f03b71de64ea9bd520aaaa9e2440665",
+  "user_accepted": false
+}

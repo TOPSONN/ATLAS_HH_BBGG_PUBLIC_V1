@@ -1,0 +1,18 @@
+{
+  "CPU_semantics": "PARENT_CUMULATIVE_DELTA_AND_RATE; NO_ZERO_LATENCY_HARD_LIFETIME_CAP_CLAIM",
+  "OOM_boundary": "WORKER_CONTROLLER_SEPARATE_FROM_COLLECTOR; OUTER_OOM_MAY_KILL_COLLECTOR",
+  "cgroup_enforcement": null,
+  "cleanup_enforcement": null,
+  "collector_deployed": false,
+  "collector_source_protocol_reviewed": true,
+  "kernel_negative_tests": null,
+  "live_dispatcher": false,
+  "manager_logs": "SHARED_EXTERNAL_ONLY_IF_B_V2_ACCEPTED; EFFECTIVE_ROUTING_UNKNOWN",
+  "mount_authorized": false,
+  "mount_executed": false,
+  "ready_for_S4": false,
+  "resource_verifier": "readiness_validation.resource_trace",
+  "status": "G7_SOURCE_AND_DEPLOYMENT_PLAN_READY",
+  "wall_end": "COLLECTOR_FINALIZED_AFTER_DESCENDANT_CLEANUP",
+  "wall_origin": "ADMISSION_BEFORE_ACTIVATION"
+}

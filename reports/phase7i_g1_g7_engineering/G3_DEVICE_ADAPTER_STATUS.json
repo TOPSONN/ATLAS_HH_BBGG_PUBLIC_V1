@@ -1,0 +1,23 @@
+{
+  "all_mount_namespaces_complete": false,
+  "complete": false,
+  "guest_available": false,
+  "host_mapping_complete": false,
+  "host_sha256": "6612af4a74a663fee4a91ce7f96948abe1cb3315693589f4bb1c4ee492967897",
+  "nodes": [],
+  "operation_authorized": false,
+  "rejected_topologies": [
+    "part",
+    "sibling",
+    "dm",
+    "loop",
+    "thin",
+    "sparse",
+    "snapshot",
+    "growable",
+    "unknown_alias",
+    "protected_backing"
+  ],
+  "status": "REJECTED_INCOMPLETE_ACQUISITION",
+  "supported_future_candidate": "INDEPENDENT_DISPOSABLE_WHOLE_DISK_ONLY"
+}

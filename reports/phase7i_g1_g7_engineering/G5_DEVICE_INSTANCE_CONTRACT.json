@@ -1,0 +1,24 @@
+{
+  "format_ready": false,
+  "path_reopening_allowed": false,
+  "phases": [
+    "acquire",
+    "before_operation",
+    "after_operation",
+    "before_release"
+  ],
+  "privileged_consumer_deployed": false,
+  "required": [
+    "host_instance",
+    "guest_major_minor",
+    "diskseq",
+    "bytes",
+    "fd_identity",
+    "mount_namespace",
+    "boot_id",
+    "helper_identity",
+    "lease_identity",
+    "device_policy_sha256",
+    "mount_policy_sha256"
+  ]
+}

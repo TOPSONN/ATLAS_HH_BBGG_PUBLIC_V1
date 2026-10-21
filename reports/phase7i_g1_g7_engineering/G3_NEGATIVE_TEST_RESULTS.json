@@ -1,0 +1,272 @@
+{
+  "cases": [
+    {
+      "case": "normal_complete_trace",
+      "expected": "INPUT_CONSISTENCY_ONLY",
+      "passed": true
+    },
+    {
+      "case": "CPU_overrun",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "wall_overrun",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "OOM",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "timeout",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "controller_dies",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "collector_crash",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "block_ENOSPC",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_cpu_counter",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_raw_cpu_stat",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "raw_OOM",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "collector_self_post_exit_claim",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "raw_cgroup_not_empty",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "fake_cpu_stat",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_peak",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "RAM_overrun",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "swap",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "counter_reset",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "wrong_InvocationID",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "orphan",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_cleanup",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_postmortem",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "cgroup_unload",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "resurrection",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "unknown_worker",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "replay_clock",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "collector_impersonation",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_admission",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "no_final_collector",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "inode_ENOSPC",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "evidence_block_reserve",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "journal_removed",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "external_journal",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "capacity_expanded",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "wrong_inode_count",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_geometry",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "wrong_instance",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "protected_root_substitution",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "parent_graph_omission",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "alias_duplication",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "diskseq_change",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "host_backing_mismatch",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "thin",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "loop",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "already_mounted",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "symlink_traversal",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "nested_mount",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "missing_namespace",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "FD_substitution",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "helper_restart",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "lease_changed",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "path_reopening_consumer",
+      "expected": "REJECT",
+      "passed": true
+    },
+    {
+      "case": "privileged_dispatch_absent",
+      "expected": "REJECT",
+      "passed": true
+    }
+  ],
+  "failures": 0,
+  "scope": "ACTUAL_PURE_FIXTURE_CALLS_NOT_KERNEL",
+  "tests": 53
+}

@@ -1,0 +1,61 @@
+{
+  "tests": 115,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pass": true,
+  "suite_scope": "115_BEFORE_EXACT_LARGE_METADATA_BINDING_FIX; 9_SCHEDULER_TESTS_PASSED_AFTER_FIX",
+  "postfix_scheduler_tests": 9,
+  "final_Linux_CI_expected_suite_size": 116,
+  "actual_safe_DAG_children": 9,
+  "actual_DAG_child_exits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "actual_CLI_followups": [
+    {
+      "mode": "plan",
+      "exit": 0,
+      "stdout_sha256": "12a33983ac6132d13d32f5aea96b7af8ec9b3af2fbe1bba9b5fcef1b0b6a6547"
+    },
+    {
+      "mode": "resume-safe",
+      "exit": 0,
+      "stdout_sha256": "d6b14b60ee00ae2d1b6daaddf220f792e05e05df77ecee6a5d3fb84980fa4bdc"
+    },
+    {
+      "mode": "status",
+      "exit": 0,
+      "stdout_sha256": "47e0fcafb3855c566d090c5e884b41e903f8f8f6ed00cbea72f6e68f2db887d1"
+    },
+    {
+      "mode": "verify",
+      "exit": 0,
+      "stdout_sha256": "7ede48cb343f9d14f3aac4494c59dd566fb70140cd4da3b78d81120fb16da18c"
+    },
+    {
+      "mode": "export-review",
+      "exit": 0,
+      "stdout_sha256": "c82c1afc142f556a72cb9c0910e1e1d3b02c3da881696406cb4e4a83d8cfdd2d"
+    }
+  ],
+  "actual_cpp_arithmetic_cases": 7,
+  "new_pure_negative_cases": 53,
+  "counts_overlap_not_independent_sum": true,
+  "Linux_612_81": "PRESERVED_SOURCE_IDS; FINAL_CI_PENDING",
+  "kernel_tests_executed": 0,
+  "kernel_CPU": null,
+  "kernel_RAM": null,
+  "kernel_disk": null,
+  "independent_human_review": false,
+  "source_review_scope": "PRIMARY_REVIEW_PLUS_SEPARATE_AST_PROCESS_CPP_ARITHMETIC_AND_POWERSHELL_CIM_FIXTURES",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false
+}

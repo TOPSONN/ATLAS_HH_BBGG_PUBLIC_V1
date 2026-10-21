@@ -1,0 +1,22 @@
+{
+  "status": "PASS_BOUNDED_SOURCE_STATIC_REVIEW",
+  "baseline_files": 1635,
+  "unchanged_baseline_files": 1630,
+  "reviewed_changed_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py",
+    "simulation/hh_signal/final_closure/master/runner.py"
+  ],
+  "fixed_historical_core_files_preserved": 11,
+  "frozen_inputs": 1019,
+  "only_input_exception": "EXACT_FIXED_CI_BRANCH_ROUTING; OTHER_1018_EXACT",
+  "old_and_new_host_raw_preserved": true,
+  "guest_AST_no_process_network_device_ioctl_api": true,
+  "independent_human_review": false,
+  "review_method": "PRIMARY_SOURCE_REVIEW_PLUS_SEPARATE_AST_PROCESS_AND_CROSS_LANGUAGE_FIXTURES; NOT_RUNTIME_ATTESTATION",
+  "original_policies_weakened": false,
+  "kernel_dispatches": 0,
+  "resource_acceptance": false
+}

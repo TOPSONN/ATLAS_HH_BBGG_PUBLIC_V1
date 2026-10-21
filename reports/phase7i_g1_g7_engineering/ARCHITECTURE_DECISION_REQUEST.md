@@ -1,0 +1,11 @@
+本文件為待獨立審查提案，不是執行授權。Exact source `83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d`。未批准者保持BLOCKED；不得自行填假approval、降限制或改原始收據。
+
+# 架構獨立決策
+
+本文件為待獨立審查提案，不是執行授權。Exact source `83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d`。未批准者保持BLOCKED；不得自行填假approval、降限制或改原始收據。
+
+推薦審核B-V2，並逐條決定B1–B8、VM成本assignment與post-exit observer supplement。三份SHA依次為`c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193`、`eedc17a761f2aaefde628d858a70bf9d4518d271df8bedcaf54f34d96cf6237d`、`fcbfba8c4dececd545b4f75a852a7ec4b123d67078a038d03d85772c5076364b`。
+
+可選：保留A但要求外部提供缺少的共同enforcer；或接受逐條B研究語義後繼續specific-device審查；或要求修訂候選。現在所有user_accepted=false。
+
+架構決策不授權guest startup、provision、format、mount、kernel stress、S4、BUILD_ONLY或physical restart。下一步可先批准較小的guest唯讀診斷以補資料，不需先接受全部B。

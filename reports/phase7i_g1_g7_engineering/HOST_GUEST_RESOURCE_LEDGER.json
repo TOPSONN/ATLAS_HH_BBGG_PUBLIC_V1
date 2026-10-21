@@ -1,0 +1,179 @@
+{
+  "B_V2_weaker_than_original": true,
+  "VM_cost_assignment_sha256": "eedc17a761f2aaefde628d858a70bf9d4518d271df8bedcaf54f34d96cf6237d",
+  "external_roles": [
+    "manager_journal",
+    "launcher",
+    "host_backing"
+  ],
+  "nominal_limits": {
+    "BUILD": {
+      "CPU_seconds": 14400,
+      "RAM_bytes": 2147483648,
+      "disk_bytes": 5368709120,
+      "jobs": 1,
+      "swap_bytes": 0,
+      "wall_seconds": 14400,
+      "workers": 1
+    },
+    "S4": {
+      "CPU_seconds": 4,
+      "RAM_bytes": 536870912,
+      "disk_bytes": 16777216,
+      "jobs": 1,
+      "swap_bytes": 0,
+      "wall_seconds": 13,
+      "workers": 1
+    }
+  },
+  "original_A_all_roles_one_pool": true,
+  "per_role_duplicate_budget_forbidden": true,
+  "roles": [
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "worker"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "controller"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "collector"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "scientific_helpers"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "manager_journal",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "manager"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "manager_journal",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "journald"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "manager_journal",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "rsyslog"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "launcher",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "launcher"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "host_backing",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "hypervisor"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "host_backing",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "VM_runtime_residual"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "host_backing",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "host_backing"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent_fixed_device",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "filesystem_metadata"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent_fixed_device",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "journal"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent_fixed_device",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "failure_reserve"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "job_parent",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "postmortem_cleanup"
+    },
+    {
+      "A_owner": "original_shared_aggregate",
+      "B_V2_proposed_owner": "manager_journal",
+      "CPU_actual": null,
+      "RAM_actual": null,
+      "deployed": false,
+      "disk_actual": null,
+      "role": "final_after_collector_exit_observer"
+    }
+  ],
+  "status": "PROPOSED_NOT_ACCEPTED",
+  "user_accepted": false
+}

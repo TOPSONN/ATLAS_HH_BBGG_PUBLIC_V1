@@ -1,0 +1,52 @@
+{
+  "capabilities": [
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "JOINT_HOST_GUEST_CUMULATIVE_CPU"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "INDEPENDENT_ADMISSION_TO_CLEANUP_WALL"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "AGGREGATE_RAM_SWAP"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "ALL_ALLOCATED_BLOCKS_INODES_METADATA"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "FIXED_HOST_BACKING"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "BOUNDED_MANAGER_LOGS"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "COLLECTOR_DEATH_SURVIVAL"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "ORPHAN_CGROUP_CLEANUP"
+    },
+    {
+      "actual_state": "UNKNOWN_NOT_DEPLOYED",
+      "raw_kernel_evidence": null,
+      "requirement": "ZERO_TRANSIENT_OVERSHOOT"
+    }
+  ],
+  "standard_semantics_gap": "CPU_RATE_IS_NOT_LIFETIME_QUOTA; MEMORY_AND_NONREALTIME_STOP_CAN_OVERSHOOT",
+  "technical_impossibility_claimed": false,
+  "verdict": "A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST"
+}

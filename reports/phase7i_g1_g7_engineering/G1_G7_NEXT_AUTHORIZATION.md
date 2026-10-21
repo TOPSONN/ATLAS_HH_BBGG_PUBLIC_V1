@@ -1,0 +1,11 @@
+# 最小下一授權
+
+Exact source `83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d`。安全工程已完成checkpoint，沒有等待迴圈或自動live dispatcher。
+
+第一個最小外部動作：審查G1_GUEST_STARTUP_AUTHORIZATION_REQUEST，決定允許manual existing-session唯讀採集，或揭露startup限制的單次Ubuntu診斷。當前query拒絕存取，不能暗中啟動。guest V2 SHA `79e0879b214b7945137d416b9da9b9d2a38c8b13997bec0e638ef68e23e5d84a`。
+
+第二個獨立決策：B1–B8 raw terms `c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193`、VM cost `eedc17a761f2aaefde628d858a70bf9d4518d271df8bedcaf54f34d96cf6237d`、post-exit observer `fcbfba8c4dececd545b4f75a852a7ec4b123d67078a038d03d85772c5076364b`。現在三者未接受。接受也不批准provision/format/mount/kernel/S4/build。
+
+其後管理員提供exact disposable whole-device identity。沒有target/exclusivity時，G4–G7實機保持BLOCKED，不再用source工作冒充OS解除。
+
+新的source/input/guest evidence/config需要全新run；不可把本run重綁。相同83d1來源和相同inputs時才可resume-safe，會驗證並跳過既有9 children。

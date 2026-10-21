@@ -1,0 +1,22 @@
+{
+  "BUILD": {
+    "ceiling_bytes": 5368709120,
+    "fixed_device_bytes": 2147483648,
+    "private_bytes": 268435456,
+    "unclosed_remainder_bytes": 805306368,
+    "work_bytes": 2147483648
+  },
+  "BUILD_tmpfs_sum_can_be_filled_under_2GiB_RAM": false,
+  "S4": {
+    "ceiling_bytes": 16777216,
+    "fixed_device_bytes": 4194304,
+    "private_bytes": 1048576,
+    "unclosed_remainder_bytes": 3145728,
+    "work_bytes": 8388608
+  },
+  "allocated_blocks_verified": null,
+  "failure_slots_inside_fixed_device_bytes": 32768,
+  "host_control_plane_costs": "UNMEASURED_NOT_FREE",
+  "internal_journal_already_inside_device": true,
+  "remainder_hard_enforced": false
+}
