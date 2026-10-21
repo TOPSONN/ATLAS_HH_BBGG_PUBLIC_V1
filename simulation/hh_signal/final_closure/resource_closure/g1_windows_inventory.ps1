@@ -29,27 +29,122 @@ $clock=[Diagnostics.Stopwatch]::StartNew()
 $rows=[Collections.Generic.List[object]]::new()
 $script:AbortQueries=$false
 $script:RemainingPayloadBytes=196608
+function Get-G1Endpoint($Value,[string]$Class){
+    if($Value -isnot [Microsoft.Management.Infrastructure.CimInstance]){throw 'ASSOCIATION_ENDPOINT_TYPE'}
+    $sys=$Value.CimSystemProperties
+    if($sys.ClassName -ine $Class -or $sys.Namespace.Replace('\','/') -ine 'root/cimv2'){throw 'ASSOCIATION_ENDPOINT_CLASS_OR_NAMESPACE'}
+    if($sys.ServerName -and $sys.ServerName -notin @('.', 'localhost', [Environment]::MachineName)){throw 'ASSOCIATION_REMOTE_ENDPOINT'}
+    $prop=$Value.CimInstanceProperties['DeviceID']
+    if($null -eq $prop -or $prop.CimType -ne [Microsoft.Management.Infrastructure.CimType]::String -or
+       -not ($prop.Flags -band [Microsoft.Management.Infrastructure.CimFlags]::Key)){throw 'ASSOCIATION_ENDPOINT_KEY'}
+    $id=$prop.Value
+    if($id -isnot [string] -or $id.Length -eq 0 -or $id.Length -gt 1024 -or $id -cmatch '[^\x20-\x7e]'){throw 'ASSOCIATION_DEVICE_ID'}
+    return [ordered]@{class=$Class;namespace='root/cimv2';server='LOCAL_CHECKED';device_id=$id}
+}
+function Get-G1Inventory([string]$Key){
+    $match=@($rows | Where-Object {$_.key -ceq $Key})
+    if($match.Count -ne 1 -or $match[0].status -cne 'REPORTED_UNATTESTED'){throw 'ASSOCIATION_PREREQUISITE_INCOMPLETE'}
+    return ,@($match[0].data)
+}
+function Test-G1UInt32($Value){
+    return (($Value -is [uint32] -or $Value -is [int] -or $Value -is [long]) -and $Value -ge 0 -and $Value -le 4294967295)
+}
+function Get-G1IdentityMap([object[]]$Items){
+    $map=[Collections.Generic.Dictionary[string,object]]::new([StringComparer]::OrdinalIgnoreCase)
+    foreach($item in $Items){
+        $id=$item.DeviceID
+        if($id -isnot [string] -or -not $id -or $id.Length -gt 1024 -or $id -cmatch '[^\x20-\x7e]' -or $map.ContainsKey($id)){throw 'ASSOCIATION_INVENTORY_ID_MISSING_OR_DUPLICATE'}
+        $map.Add($id,$item)
+    }
+    return ,$map
+}
+function Convert-G1Associations([object[]]$Items,[string]$Key){
+    if($Items.Count -gt 128){throw 'QUERY_ROW_BOUND'}
+    $disk=$Key -ceq 'disk_partition_links'
+    if(-not $disk -and $Key -cne 'partition_volume_links'){throw 'ASSOCIATION_KEY'}
+    $class=if($disk){'Win32_DiskDriveToDiskPartition'}else{'Win32_LogicalDiskToPartition'}
+    $aClass=if($disk){'Win32_DiskDrive'}else{'Win32_DiskPartition'}
+    $bClass=if($disk){'Win32_DiskPartition'}else{'Win32_LogicalDisk'}
+    $left=Get-G1IdentityMap (Get-G1Inventory $(if($disk){'disk_drives'}else{'partitions'}))
+    $right=Get-G1IdentityMap (Get-G1Inventory $(if($disk){'partitions'}else{'logical_disks'}))
+    if(-not $disk){$null=Get-G1Inventory 'disk_partition_links'}
+    $edges=[Collections.Generic.List[object]]::new()
+    $seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    $parents=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    foreach($item in $Items){
+        if($item -isnot [Microsoft.Management.Infrastructure.CimInstance] -or $item.CimSystemProperties.ClassName -ine $class -or
+           $item.CimSystemProperties.Namespace.Replace('\','/') -ine 'root/cimv2'){throw 'ASSOCIATION_CLASS_OR_NAMESPACE'}
+        if($item.CimSystemProperties.ServerName -and $item.CimSystemProperties.ServerName -notin @('.', 'localhost', [Environment]::MachineName)){throw 'ASSOCIATION_REMOTE_ENDPOINT'}
+        foreach($name in @('Antecedent','Dependent')){
+            $p=$item.CimInstanceProperties[$name]
+            if($null -eq $p -or $p.CimType -ne [Microsoft.Management.Infrastructure.CimType]::Reference -or
+               -not ($p.Flags -band [Microsoft.Management.Infrastructure.CimFlags]::Key)){throw 'ASSOCIATION_REFERENCE_KEY'}
+        }
+        $a=Get-G1Endpoint $item.CimInstanceProperties['Antecedent'].Value $aClass
+        $b=Get-G1Endpoint $item.CimInstanceProperties['Dependent'].Value $bClass
+        if(-not $left.ContainsKey($a.device_id) -or -not $right.ContainsKey($b.device_id)){throw 'ASSOCIATION_DANGLING_ENDPOINT'}
+        $edge=[ordered]@{association_class=$class;antecedent=$a;dependent=$b}
+        if($disk){
+            $index=$left[$a.device_id].Index;$diskIndex=$right[$b.device_id].DiskIndex
+            if(-not (Test-G1UInt32 $index) -or -not (Test-G1UInt32 $diskIndex) -or $index -ne $diskIndex -or -not $parents.Add($b.device_id)){throw 'ASSOCIATION_DISK_PARENT_CONTRADICTION'}
+        }else{
+            foreach($name in @('StartingAddress','EndingAddress')){
+                $p=$item.CimInstanceProperties[$name]
+                if($null -eq $p -or $p.CimType -ne [Microsoft.Management.Infrastructure.CimType]::UInt64 -or $null -eq $p.Value){throw 'ASSOCIATION_EXTENT_REQUIRED'}
+            }
+            $start=$item.CimInstanceProperties['StartingAddress'].Value;$end=$item.CimInstanceProperties['EndingAddress'].Value
+            if($start -gt $end){throw 'ASSOCIATION_EXTENT_ORDER'}
+            $edge['starting_address']=$start.ToString([Globalization.CultureInfo]::InvariantCulture)
+            $edge['ending_address']=$end.ToString([Globalization.CultureInfo]::InvariantCulture)
+        }
+        $pair=ConvertTo-Json -InputObject @($a.device_id,$b.device_id) -Compress -WarningAction Stop
+        if(-not $seen.Add($pair)){throw 'ASSOCIATION_DUPLICATE_OR_CONFLICT'}
+        $edges.Add($edge)
+    }
+    if($disk -and $parents.Count -ne $right.Count){throw 'ASSOCIATION_PARTITION_COVERAGE_INCOMPLETE'}
+    if(-not $disk){
+        foreach($id in $right.Keys){
+            $type=$right[$id].DriveType
+            if(-not (Test-G1UInt32 $type)){throw 'ASSOCIATION_DRIVE_TYPE'}
+            if($type -eq 3 -and @($edges | Where-Object {$_.dependent.device_id -ieq $id}).Count -eq 0){throw 'ASSOCIATION_FIXED_VOLUME_COVERAGE_INCOMPLETE'}
+        }
+    }
+    return $edges.ToArray()
+}
 function Add-Observation([string]$Key,[string]$Interface,[scriptblock]$Query){
     $t=[DateTimeOffset]::UtcNow.ToString('o')
+    $data=$null;$count=$null
     if($script:AbortQueries){$rows.Add(@{key=$Key;interface=$Interface;time=$t;status='UNKNOWN';error_code='STOPPED_AFTER_CLEANUP_UNKNOWN'});return}
     if($clock.Elapsed.TotalSeconds -gt 45){$rows.Add(@{key=$Key;interface=$Interface;time=$t;status='UNKNOWN';error_code='ACQUISITION_DEADLINE'});return}
     try{
         $data=@(& $Query)
         if($data.Count -gt 128){throw 'QUERY_ROW_BOUND'}
-        $encoded=ConvertTo-Json -InputObject $data -Depth 8 -Compress
+        $encoded=ConvertTo-Json -InputObject $data -Depth 8 -Compress -WarningAction Stop
         $count=[Text.Encoding]::UTF8.GetByteCount($encoded)
-        if($count -gt 65536 -or $count -gt $script:RemainingPayloadBytes){throw 'QUERY_OR_AGGREGATE_BYTE_BOUND'}
+        if($count -gt 65536){throw 'QUERY_BYTE_BOUND'}
+        if($count -gt $script:RemainingPayloadBytes){throw 'AGGREGATE_BYTE_BOUND'}
         $script:RemainingPayloadBytes-=$count
+        if($Key -in @('disk_partition_links','partition_volume_links')){
+            $rows.Add(@{key=$Key;interface=$Interface;time=$t;status='REPORTED_UNATTESTED';data=$data;
+                association_encoding='LOCAL_CIM_COMPACT_EDGES_V1';provider_enumeration_complete=$true;enumerated_edge_count=$data.Count})
+            return
+        }
         if($Key -in @('wsl_version','running_distros') -and $data[0].exit_code -ne 0){
             $code=if(($data[0].stdout+$data[0].stderr) -match 'Wsl/E_ACCESSDENIED'){'ACCESS_DENIED'}else{'NATIVE_QUERY_NONZERO'}
             $rows.Add(@{key=$Key;interface=$Interface;time=$t;status='UNKNOWN';error_code=$code;data=$data})
         }else{$rows.Add(@{key=$Key;interface=$Interface;time=$t;status='REPORTED_UNATTESTED';data=$data})}
     }catch{
-        $reason=if($_.Exception.Message -match 'CLEANUP_UNKNOWN'){'CLEANUP_UNKNOWN'}elseif($_.Exception.Message -match 'access|denied|拒絕'){ 'ACCESS_DENIED' }elseif($_.Exception.Message -match 'BOUND'){ 'OUTPUT_BOUND' }elseif($_.Exception.Message -match 'TIMEOUT'){'QUERY_TIMEOUT'}else{'QUERY_FAILED'}
+        $reason=if($_.Exception -is [Management.Automation.ActionPreferenceStopException]){'SERIALIZATION_WARNING'}elseif($_.Exception.Message -match 'CLEANUP_UNKNOWN'){'CLEANUP_UNKNOWN'}elseif($_.Exception.Message -match '^ASSOCIATION_'){'ASSOCIATION_INVALID'}elseif($_.Exception.Message -match 'access|denied|拒絕'){ 'ACCESS_DENIED' }elseif($_.Exception.Message -match 'BOUND'){ 'OUTPUT_BOUND' }elseif($_.Exception.Message -match 'TIMEOUT'){'QUERY_TIMEOUT'}else{'QUERY_FAILED'}
         if($reason -eq 'CLEANUP_UNKNOWN'){$script:AbortQueries=$true}
         # Bounded detailed diagnostics remain ONLY in the private capture.
         $message=$_.Exception.Message
-        $rows.Add(@{key=$Key;interface=$Interface;time=$t;status='UNKNOWN';error_code=$reason;error_type=$_.Exception.GetType().FullName;hresult=$_.Exception.HResult;error_message=$message.Substring(0,[Math]::Min(2048,$message.Length))})
+        $failed=@{key=$Key;interface=$Interface;time=$t;status='UNKNOWN';error_code=$reason;error_type=$_.Exception.GetType().FullName;hresult=$_.Exception.HResult;error_message=$message.Substring(0,[Math]::Min(2048,$message.Length))}
+        if($message -cin @('QUERY_ROW_BOUND','QUERY_BYTE_BOUND','AGGREGATE_BYTE_BOUND')){
+            $failed.bound_diagnostics=@{reason=$message;query_limit_bytes=65536;aggregate_remaining_bytes=$script:RemainingPayloadBytes;
+                serialized_bytes=$count;observed_rows=$(if($null -ne $data){$data.Count}else{$null});
+                observed_row_lower_bound=$(if($message -ceq 'QUERY_ROW_BOUND'){129}else{$null});row_limit=128}
+        }
+        $rows.Add($failed)
     }
 }
 function Native-WslQuery([string[]]$Arguments){
@@ -133,7 +228,7 @@ Add-Observation 'features' 'LOCAL_CIM_ROOT_CIMV2_WIN32_OPTIONALFEATURE' {
     }
 }
 Add-Observation 'disk_drives' 'LOCAL_CIM_ROOT_CIMV2_WIN32_DISKDRIVE' {
-    Get-CimInstance -ClassName Win32_DiskDrive -Property Index,Model,SerialNumber,PNPDeviceID,Size,InterfaceType,MediaType -OperationTimeoutSec 2 | Select-Object -First 129 Index,Model,SerialNumber,PNPDeviceID,Size,InterfaceType,MediaType
+    Get-CimInstance -ClassName Win32_DiskDrive -Property DeviceID,Index,Model,SerialNumber,PNPDeviceID,Size,InterfaceType,MediaType -OperationTimeoutSec 2 | Select-Object -First 129 DeviceID,Index,Model,SerialNumber,PNPDeviceID,Size,InterfaceType,MediaType
 }
 Add-Observation 'partitions' 'LOCAL_CIM_ROOT_CIMV2_WIN32_DISKPARTITION' {
     Get-CimInstance -ClassName Win32_DiskPartition -Property DiskIndex,Index,DeviceID,Size,StartingOffset,BootPartition,PrimaryPartition,Type -OperationTimeoutSec 2 | Select-Object -First 129 DiskIndex,Index,DeviceID,Size,StartingOffset,BootPartition,PrimaryPartition,Type
@@ -142,10 +237,12 @@ Add-Observation 'logical_disks' 'LOCAL_CIM_ROOT_CIMV2_WIN32_LOGICALDISK' {
     Get-CimInstance -ClassName Win32_LogicalDisk -Property DeviceID,DriveType,FileSystem,Size,FreeSpace -OperationTimeoutSec 2 | Select-Object -First 129 DeviceID,DriveType,FileSystem,Size,FreeSpace
 }
 Add-Observation 'disk_partition_links' 'LOCAL_CIM_ROOT_CIMV2_WIN32_DISKDRIVETODISKPARTITION' {
-    Get-CimInstance -ClassName Win32_DiskDriveToDiskPartition -Property Antecedent,Dependent -OperationTimeoutSec 2 | Select-Object -First 129 Antecedent,Dependent
+    $items=@(Get-CimInstance -ClassName Win32_DiskDriveToDiskPartition -Property Antecedent,Dependent -OperationTimeoutSec 2 | Select-Object -First 129)
+    Convert-G1Associations $items 'disk_partition_links'
 }
 Add-Observation 'partition_volume_links' 'LOCAL_CIM_ROOT_CIMV2_WIN32_LOGICALDISKTOPARTITION' {
-    Get-CimInstance -ClassName Win32_LogicalDiskToPartition -Property Antecedent,Dependent -OperationTimeoutSec 2 | Select-Object -First 129 Antecedent,Dependent
+    $items=@(Get-CimInstance -ClassName Win32_LogicalDiskToPartition -Property Antecedent,Dependent,StartingAddress,EndingAddress -OperationTimeoutSec 2 | Select-Object -First 129)
+    Convert-G1Associations $items 'partition_volume_links'
 }
 Add-Observation 'storage_disks' 'LOCAL_CIM_STORAGE_MSFT_DISK' {
     Get-CimInstance -Namespace root/Microsoft/Windows/Storage -ClassName MSFT_Disk -Property Number,UniqueId,UniqueIdFormat,SerialNumber,FriendlyName,Path,Location,Size,PartitionStyle,IsBoot,IsSystem,IsOffline,IsReadOnly,BusType,LogicalSectorSize,PhysicalSectorSize -OperationTimeoutSec 2 | Select-Object -First 129 Number,UniqueId,UniqueIdFormat,SerialNumber,FriendlyName,Path,Location,Size,PartitionStyle,IsBoot,IsSystem,IsOffline,IsReadOnly,BusType,LogicalSectorSize,PhysicalSectorSize
@@ -154,8 +251,8 @@ Add-Observation 'registered_distro_backing' 'CURRENT_USER_LXSS_REGISTRY_READ_ONL
     $key='HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss'
     if(Test-Path -LiteralPath $key){Get-ChildItem -LiteralPath $key | Select-Object -First 129 | ForEach-Object {Get-ItemProperty -LiteralPath $_.PSPath -Name DistributionName,BasePath,Version | Select-Object DistributionName,BasePath,Version}}
 }
-$capture=@{schema='PHASE7I_G1_HOST_CAPTURE_V1';capture_id=[Guid]::NewGuid().ToString();started_utc=$start.ToString('o');ended_utc=[DateTimeOffset]::UtcNow.ToString('o');collector_sha256=$actual;administrator=$false;process_id=$PID;observations=$rows.ToArray();trust='REPORTED_UNATTESTED';host_guest_mapping_complete=$false;protected_storage_complete=$false;distro_launches=0;privileged_actions=0;limits='BOUNDED_RETAINED_OUTPUT_AND_ROW_ENUMERATION; PROVIDER_ALLOCATION_NOT_HARD_BOUNDED; 45S_BETWEEN_QUERY_SOFT_DEADLINE; NOT_FULL_RESOURCE_ENVELOPE'}
-$bytes=[Text.UTF8Encoding]::new($false).GetBytes((ConvertTo-Json -InputObject $capture -Depth 12 -Compress))
+$capture=@{schema='PHASE7I_G1_HOST_CAPTURE_V2';capture_id=[Guid]::NewGuid().ToString();started_utc=$start.ToString('o');ended_utc=[DateTimeOffset]::UtcNow.ToString('o');collector_sha256=$actual;administrator=$false;process_id=$PID;observations=$rows.ToArray();trust='REPORTED_UNATTESTED';host_guest_mapping_complete=$false;protected_storage_complete=$false;distro_launches=0;privileged_actions=0;limits='BOUNDED_RETAINED_OUTPUT_AND_ROW_ENUMERATION; PROVIDER_ALLOCATION_NOT_HARD_BOUNDED; 45S_BETWEEN_QUERY_SOFT_DEADLINE; NOT_FULL_RESOURCE_ENVELOPE'}
+$bytes=[Text.UTF8Encoding]::new($false).GetBytes((ConvertTo-Json -InputObject $capture -Depth 12 -Compress -WarningAction Stop))
 if($bytes.Length -gt 262144){throw 'CAPTURE_BYTE_BOUND'}
 $path=Join-Path $dir.FullName ('host_'+$capture.capture_id+'.json')
 $file=[IO.File]::Open($path,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None)

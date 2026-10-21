@@ -1,0 +1,117 @@
+{
+  "max_128_volume_encoded_bytes": 41363,
+  "new_host_queries": 0,
+  "max_128_encoded_bytes": 35987,
+  "cases": [
+    {
+      "case": "one_edge_exact",
+      "status": "PASS"
+    },
+    {
+      "case": "uint64_lossless_extents",
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "reversed_extent_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "dangling_endpoint_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong_class_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong_namespace_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_key_flag_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "string_reference_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "empty_key_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "control_key_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_partition_edge_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_fixed_volume_edge_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "disk_index_contradiction_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "128_edges_preserved_within_original_cap",
+      "status": "PASS"
+    },
+    {
+      "case": "128_volume_edges_and_all_extents_preserved",
+      "status": "PASS"
+    },
+    {
+      "case": "129_edges_reject_entire_set",
+      "status": "PASS"
+    },
+    {
+      "case": "empty_partition_inventory_zero_edges",
+      "status": "PASS"
+    },
+    {
+      "case": "row_bound_no_partial_data",
+      "status": "PASS"
+    },
+    {
+      "case": "per_query_byte_bound",
+      "status": "PASS"
+    },
+    {
+      "case": "rejected_byte_minimum_recorded",
+      "status": "PASS"
+    },
+    {
+      "case": "aggregate_byte_bound",
+      "status": "PASS"
+    },
+    {
+      "case": "depth_warning_rejected",
+      "status": "PASS"
+    },
+    {
+      "case": "provider_failure_no_partial_edges",
+      "status": "PASS"
+    },
+    {
+      "case": "success_enumeration_contract",
+      "status": "PASS"
+    },
+    {
+      "case": "complete_but_oversize_edges_rejected_without_truncation",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "wsl_launches": 0,
+  "schema": "G1_ASSOCIATION_INERT_OFFLINE_V1",
+  "inventory_top_level_executed": false,
+  "powershell_version": "7.6.5",
+  "raw_fixture_receipt_sha256": "1fa607467e7e6faca98001f9b035adacbe50648c6476017f824e384827072d7a"
+}

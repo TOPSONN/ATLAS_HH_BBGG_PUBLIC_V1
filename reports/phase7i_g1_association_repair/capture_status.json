@@ -1,0 +1,38 @@
+{
+  "status": "PASS_G1_REPORTED_QUERY_COVERAGE_13_OF_13",
+  "exact_source": "61bda291c2bc6a04607cb8ea889e520a4ceb260b",
+  "actual_acquisition": "USER_SINGLE_NONADMIN_POWERSHELL7_RUN",
+  "collector_sha256": "fceee4386b1f90ceb72a3304ab5006e94f935c4d4fdf4ea2ad3e0a0ce36c4eee",
+  "raw_capture_sha256": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5",
+  "raw_capture_bytes": 7657,
+  "raw_hash_matches_user_summary": true,
+  "projection_cli_exit": 0,
+  "independent_python_graph_validation": "PASS",
+  "reported_queries": 13,
+  "unknown_queries": 0,
+  "actual_compact_associations": [
+    {
+      "query": "disk_partition_links",
+      "edges": 4,
+      "original_setting_encoded_bytes": 1249
+    },
+    {
+      "query": "partition_volume_links",
+      "edges": 1,
+      "original_setting_encoded_bytes": 358
+    }
+  ],
+  "byte_measurement": "READ_ONLY_REENCODE_ACTUAL_CAPTURE_WITH_POWERSHELL_DEPTH8_COMPRESS_WARNING_STOP",
+  "new_projection_created": true,
+  "original_capture_immutable": true,
+  "old_master_run_rebound": false,
+  "master_rerun_required_for_standalone_projection": false,
+  "new_master_run_started": false,
+  "host_attestation": false,
+  "guest_validation": false,
+  "G2_authorized": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+  "distro_launches": 0,
+  "privileged_actions": 0
+}

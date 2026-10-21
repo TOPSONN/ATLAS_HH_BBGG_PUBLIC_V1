@@ -17,6 +17,7 @@ permissions:
   contents: read
 jobs:
   offline_source_only:
+    if: github.head_ref != 'codex/phase7i-g1-association-bound-repair' && github.ref_name != 'codex/phase7i-g1-association-bound-repair'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:

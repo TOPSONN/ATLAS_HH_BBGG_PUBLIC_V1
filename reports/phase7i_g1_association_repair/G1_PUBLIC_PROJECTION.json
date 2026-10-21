@@ -1,0 +1,121 @@
+{
+  "schema": "PHASE7I_G1_PUBLIC_PROJECTION_V1",
+  "capture_sha256": "6612af4a74a663fee4a91ce7f96948abe1cb3315693589f4bb1c4ee492967897",
+  "capture_digest_basis": "CANONICAL_CAPTURE_NOT_RAW_FILE",
+  "collector_sha256": "fceee4386b1f90ceb72a3304ab5006e94f935c4d4fdf4ea2ad3e0a0ce36c4eee",
+  "coverage": [
+    {
+      "item": "disk_drives",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "disk_partition_links",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 4,
+      "error_code": null
+    },
+    {
+      "item": "features",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 3,
+      "error_code": null
+    },
+    {
+      "item": "hypervisor",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "logical_disks",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "os_memory",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "partition_volume_links",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "partitions",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 4,
+      "error_code": null
+    },
+    {
+      "item": "registered_distro_backing",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "running_distros",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "runtime",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "storage_disks",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    },
+    {
+      "item": "wsl_version",
+      "status": "REPORTED_UNATTESTED",
+      "row_count": 1,
+      "error_code": null
+    }
+  ],
+  "running_distro_state": "NONE_RUNNING_REPORTED_UNATTESTED",
+  "running_distro_count": 0,
+  "host_identity_confidence": "REPORTED_UNATTESTED",
+  "guest_identity_confidence": "UNKNOWN",
+  "protected_storage_complete": false,
+  "host_guest_mapping_complete": false,
+  "A_verdict": "A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST",
+  "B_status": "PROPOSED_NOT_ACCEPTED",
+  "association_validation": "V2_COMPACT_CONTRACT",
+  "execution_authorized": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "raw_capture_sha256": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5",
+  "reported_collector_hash_matches_reviewed_source": true,
+  "existing_policy_decisions": [
+    {
+      "policy": "device",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "INCOMPLETE_GRAPH_OR_NAMESPACE_INVENTORY"
+    },
+    {
+      "policy": "mount",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "INCOMPLETE_MOUNT_SNAPSHOT"
+    },
+    {
+      "policy": "transaction",
+      "status": "REJECTED_INCOMPLETE_REAL_ACQUISITION",
+      "reason": "TRANSACTION_SHAPE"
+    }
+  ],
+  "projection_derivation": "ACTUAL_CLI_ALLOWLIST_PROJECTION; ONLY_RAW_CAPTURE_SCHEMA_LABEL_OMITTED_FOR_PUBLICATION_POLICY",
+  "local_cli_projection_sha256": "e4bdd8676f38cefbabfd6ef16729c130f4f1d739425d9d03a8afb076525f647e",
+  "omitted_cli_fields": [
+    "host_capture_schema"
+  ]
+}

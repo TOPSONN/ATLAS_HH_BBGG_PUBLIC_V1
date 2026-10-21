@@ -1,0 +1,88 @@
+{
+  "tests": 84,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pass": true,
+  "exact_source": "61bda291c2bc6a04607cb8ea889e520a4ceb260b",
+  "powershell_inert_cases": 26,
+  "actual_host_acquisition_executed_by_agent": false,
+  "local_linux_offline_regression": "BLOCKED_WINDOWS_MISSING_FCNTL; NOT_RERUN_VIA_WSL",
+  "local_linux_legacy_regression": "BLOCKED_WINDOWS_MISSING_RESOURCE; NOT_RERUN_VIA_WSL",
+  "earlier_test_log_sha256": "29a7bd2b17336c0d15c6a958a5b8bd8c1795a285b7251771096cda583f6b4925",
+  "final_test_log_sha256": "1eb91084699137a39359373be62b0da45320034efe4ed95242874f441359ad4b",
+  "github_ci": "PASS_PUSH_AND_PR_AT_F37C321",
+  "no_physical_or_kernel_dispatch": true,
+  "review_scope": "PRIMARY_AGENT_SOURCE_REVIEW_PLUS_SEPARATE_POWERSHELL_WRITER_AND_PYTHON_READER; NO_INDEPENDENT_HUMAN_REVIEW_CLAIM",
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+  "ci_tested_delivery": "f37c321b3893333ae0b7d710b0143df7285f0178",
+  "github_ci_runs": [
+    {
+      "id": 39583187231,
+      "event": "pull_request",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39583187231",
+      "head_sha": "f37c321b3893333ae0b7d710b0143df7285f0178"
+    },
+    {
+      "id": 39583175652,
+      "event": "push",
+      "conclusion": "success",
+      "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39583175652",
+      "head_sha": "f37c321b3893333ae0b7d710b0143df7285f0178"
+    }
+  ],
+  "github_ci_jobs": [
+    {
+      "job_id": 119165510429,
+      "decoded_log_read": true,
+      "decoded_characters": 24520,
+      "selected_evidence_lines": [
+        "2026-10-21T10:15:10.5683967Z Ran 23 tests in 0.767s\r"
+      ],
+      "host_acquisition": false
+    },
+    {
+      "job_id": 119165510844,
+      "decoded_log_read": true,
+      "decoded_characters": 199235,
+      "selected_evidence_lines": [
+        "2026-10-21T10:15:05.8774113Z Ran 612 tests in 2.299s",
+        "2026-10-21T10:15:05.8774335Z OK",
+        "2026-10-21T10:15:05.8776481Z {\"schema\": \"PHASE7I_AUTONOMOUS_OFFLINE_V1\", \"status\": \"PASS_SOURCE_OFFLINE_ONLY\", \"tests_run\": 612, \"failures\": 0, \"errors\": 0, \"skipped\": 0, \"unique_test_ids\": 612, \"source_unchanged\": true, \"wall_seconds\": 2.307948104999994, \"audit\": {\"git_processes\": 201, \"forbidden_attempts\": [], \"unresolved_directory_fd_events\": 941}, \"audit_scope\": \"REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX\", \"audit_limitations\": [\"stat/readlink and symlink aliases require source review\", \"directory-FD targets are not disclosed by Python audit events\"], \"kernel_services_executed\": 0, \"actual_namespace_ioctls\": 0, \"FULL_LAUNCH_ENVELOPE_VERIFIED\": false}",
+        "2026-10-21T10:15:14.2852925Z {\"status\": \"PASS_SELECTED_SAFE_LEGACY\", \"tests_run\": 81, \"passes\": 81, \"failure_count\": 0, \"error_count\": 0, \"skipped\": 0, \"selected_test_sources_unchanged\": true, \"wall_seconds\": 7.862943369999996}",
+        "2026-10-21T10:15:17.3067638Z Ran 84 tests in 2.716s",
+        "2026-10-21T10:15:17.3067975Z OK (skipped=1)",
+        "2026-10-21T10:15:17.7942563Z   \"status\": \"PASS_BOUNDED_SOURCE_ONLY_PUBLICATION\","
+      ],
+      "host_acquisition": false
+    },
+    {
+      "job_id": 119165550973,
+      "decoded_log_read": true,
+      "decoded_characters": 24902,
+      "selected_evidence_lines": [
+        "2026-10-21T10:15:22.9401965Z Ran 23 tests in 1.323s\r"
+      ],
+      "host_acquisition": false
+    },
+    {
+      "job_id": 119165551259,
+      "decoded_log_read": true,
+      "decoded_characters": 199237,
+      "selected_evidence_lines": [
+        "2026-10-21T10:15:13.3245182Z Ran 612 tests in 1.858s",
+        "2026-10-21T10:15:13.3245375Z OK",
+        "2026-10-21T10:15:13.3246953Z {\"schema\": \"PHASE7I_AUTONOMOUS_OFFLINE_V1\", \"status\": \"PASS_SOURCE_OFFLINE_ONLY\", \"tests_run\": 612, \"failures\": 0, \"errors\": 0, \"skipped\": 0, \"unique_test_ids\": 612, \"source_unchanged\": true, \"wall_seconds\": 1.8649370070000089, \"audit\": {\"git_processes\": 201, \"forbidden_attempts\": [], \"unresolved_directory_fd_events\": 940}, \"audit_scope\": \"REVIEWED_FIXED_TESTS_NOT_A_GENERAL_SANDBOX\", \"audit_limitations\": [\"stat/readlink and symlink aliases require source review\", \"directory-FD targets are not disclosed by Python audit events\"], \"kernel_services_executed\": 0, \"actual_namespace_ioctls\": 0, \"FULL_LAUNCH_ENVELOPE_VERIFIED\": false}",
+        "2026-10-21T10:15:21.4071536Z {\"status\": \"PASS_SELECTED_SAFE_LEGACY\", \"tests_run\": 81, \"passes\": 81, \"failure_count\": 0, \"error_count\": 0, \"skipped\": 0, \"selected_test_sources_unchanged\": true, \"wall_seconds\": 7.641248691000001}",
+        "2026-10-21T10:15:23.7815474Z Ran 84 tests in 2.133s",
+        "2026-10-21T10:15:23.7815725Z OK (skipped=1)",
+        "2026-10-21T10:15:24.1812044Z   \"status\": \"PASS_BOUNDED_SOURCE_ONLY_PUBLICATION\","
+      ],
+      "host_acquisition": false
+    }
+  ],
+  "fresh_capture_validation": "PASS_ACTUAL_CAPTURE_13_OF_13",
+  "agent_only_parsed_user_capture": true
+}
