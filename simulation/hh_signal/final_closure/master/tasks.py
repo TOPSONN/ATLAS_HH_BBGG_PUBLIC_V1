@@ -77,8 +77,24 @@ def g3(out,context):
   'host_exclusivity':'UNKNOWN','TOCTOU_RUNTIME_CLOSED':False,'evidence_slots':'EXISTING_8X4096_UNCHANGED; PRODUCTION_NOT_DEPLOYED'}
  write(out,'HELPER_SOURCE_REVIEW.json',v);return result('PASS_SOURCE_ONLY',v)
 def audit_inputs(out,context):
- from ..src.controller import audit,validate_evidence
- v={'audit':audit(),'validate':validate_evidence()}
+ # Legacy validate_all imports a physical reweight module with POSIX resource
+ # at module load. Reuse its pure per-phase validator, plus the independent
+ # Decimal/Lagrange implementation; never import that physical backend.
+ from ..src.controller import validate_evidence
+ from ..src.contracts import input_identity
+ from ...config_lock.validate import validate as f
+ from ...matched_integration.validate import validate as g
+ from ...campaign.validate_references import validate_phase
+ from ...campaign.publication import REF
+ from ...campaign.independent_regression import validate_scan
+ bindings=input_identity();scan=load(REPO/'metadata/phase7d_kappa_scan.json')
+ references={name:validate_phase(REF/name,n) for name,n in (('phase7b_100',100),('phase7c_1000',1000))}
+ d=validate_scan(REF/'phase7d_klambda/event_reweights.csv',REF/'phase7c_1000/reference_1000.lhe.gz',scan['model_BR_factor'])
+ v={'scope':'PORTABLE_PURE_REFERENCE_AND_INDEPENDENT_DECIMAL_AUDIT; NOT_LEGACY_CLI_REEXECUTION',
+  'legacy_validate_all_portability':'POSIX_RESOURCE_IMPORT_NOT_USED_OR_REPLACED',
+  'observed_input_bindings':len(bindings),'F':f(),'G':g(),'B_C_reference_bytes_counts_weights':references,
+  'D_independent_existing_data':d,'validate':validate_evidence(),
+  'external_8420_local_campaign_inventory':'NOT_RESCANNED_NO_GUEST_ACCESS; HISTORICAL_RECEIPT_REMAINS_HISTORICAL'}
  write(out,'EXISTING_INPUT_REPRODUCIBILITY.json',v);return result('PASS_SOURCE_ONLY',v)
 def numerical(out,context):
  from ..src.existing_analysis import derive

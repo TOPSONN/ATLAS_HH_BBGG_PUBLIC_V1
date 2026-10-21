@@ -1,5 +1,5 @@
 """Ordinary-file and mocked scheduler tests; no kernel/physics deployment."""
-import contextlib,copy,hashlib,io,json,os,tempfile,time,unittest,uuid
+import contextlib,copy,hashlib,io,json,os,sys,tempfile,time,unittest,uuid
 from pathlib import Path
 from unittest.mock import patch
 from . import contract as c,history,ledger,runner,same_instance,tasks
@@ -88,7 +88,7 @@ class SchedulerTests(Fixture):
  def test_failed_stage_is_not_retried_or_promoted(self):
   self.event('FAIL')
   with self.patched(),patch.object(runner,'SAFE',(('G0_SOURCE_BASELINE',()),)),patch.object(runner,'LIVE',()),patch.object(runner,'child') as child:
-   r=runner.execute(self.run);self.assertEqual(r['safe_failures'],['G0_SOURCE_BASELINE']);child.assert_not_called()
+   r=runner.execute(self.run);self.assertEqual(r['safe_failures'],['G0_SOURCE_BASELINE']);self.assertEqual(r['status'],'FAIL');child.assert_not_called()
  def test_live_chain_records_blockers_without_child_dispatch(self):
   with self.patched(),patch.object(runner,'SAFE',()),patch.object(runner,'child') as child:
    runner.execute(self.run);child.assert_not_called()
@@ -141,5 +141,14 @@ class InertHelperTests(Fixture):
    with self.assertRaises(ValueError):lease.consume()
   with self.assertRaises(PermissionError):same_instance.privileged_operation('format')
   with self.assertRaises(ValueError):same_instance.InertFDLease(p,h)
+
+class PortableReferenceAuditTests(Fixture):
+ def test_existing_reference_audit_never_imports_physical_reweight_backend(self):
+  out=self.root/'portable_audit';out.mkdir()
+  with patch.dict(sys.modules,{'simulation.hh_signal.campaign.reweight':None}):
+   v=tasks.audit_inputs(out,self.context)
+  self.assertEqual(v['status'],'PASS_SOURCE_ONLY')
+  self.assertEqual(v['evidence']['observed_input_bindings'],1019)
+  self.assertFalse(v['live_execution'])
 
 if __name__=='__main__':unittest.main()

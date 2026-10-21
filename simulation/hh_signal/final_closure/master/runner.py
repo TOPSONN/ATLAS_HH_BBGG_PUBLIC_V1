@@ -114,7 +114,7 @@ def execute(run):
    snapshots(run,context)
   for stage in LIVE:
    if stage not in ledger.latest(run):ledger.append(run,context,stage,'BLOCKED_INPUT' if stage in ('BINARY_REVIEW','PHASE7I_FOUR_REPLICAS','PHASE7K_CORRECTED_ANALYSIS','PHASE7L_FINAL_REPORT') else 'BLOCKED_AUTHORIZATION',reason='NO_LIVE_DISPATCHER; EXACT_INPUT_CAPABILITY_AND_SEPARATE_HUMAN_AUTHORIZATION_REQUIRED')
-  v=snapshots(run,context);return {'run_id':run.name,'status':'PASS_SOURCE_ONLY','safe_stages_recorded':v['safe_children_completed'],
+  v=snapshots(run,context);return {'run_id':run.name,'status':'FAIL' if any(c=='FAIL' for c in v['stages'].values()) else 'PASS_SOURCE_ONLY','safe_stages_recorded':v['safe_children_completed'],
    'safe_failures':[s for s,c in v['stages'].items() if c=='FAIL'],'live_dispatches':0,'ledger':ledger.verify(run)}
 def export(run):
  with ledger.lock(run):
