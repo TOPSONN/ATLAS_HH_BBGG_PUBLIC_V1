@@ -1,0 +1,72 @@
+{
+  "schema": "G1_G2_PRESERVED_FAILURE_HISTORY_V1",
+  "entries": [
+    {
+      "case": "actual_collector_01",
+      "status": "RETAINED_PARTIAL_UNKNOWN; DIRECTORYINFO_PROPERTY_WALKER_BUG",
+      "resolution": "Ordinary source fix; old capture remains bound to697188 collector, old projection historical only."
+    },
+    {
+      "case": "private_acl_fixture",
+      "status": "SET_ACCESS_CONTROL_DENIED_IN_SEPARATE_FIXTURE",
+      "resolution": "Actual current-user-only capture directory independently verified; no ACL weakening."
+    },
+    {
+      "case": "portable_attempt_02",
+      "status": "ONE_FAILURE_ONE_ERROR_STALE_FIXTURE_ERROR_METADATA",
+      "resolution": "Corrected fixtures; guard remained strict."
+    },
+    {
+      "case": "publication_fixture_attempt",
+      "status": "WINDOWS_TEMP_GIT_FIXTURE_DENIED",
+      "resolution": "Moved reviewed test fixtures into new workspace; no deletion outside workspace."
+    },
+    {
+      "case": "portable_final_03",
+      "status": "ONE_ERROR_HARNESS_EXECUTABLE_NONE",
+      "resolution": "Corrected local harness Windows subprocess normalization."
+    },
+    {
+      "case": "portable_final_04",
+      "status": "ONE_ERROR_HARNESS_GIT_C_ARGV",
+      "resolution": "Explicitly modeled reviewed fixture Git-C; no arbitrary subprocess allowed."
+    },
+    {
+      "case": "privacy_reproduction_01",
+      "status": "FOUR_ACCEPTED_PRIVATE_SYNTHETIC_PATTERNS",
+      "resolution": "Corrected gate, added negative regression, originals retained."
+    },
+    {
+      "case": "privacy_reproduction_02",
+      "status": "QUOTED_MARKDOWN_JSON_STRING_BYPASS",
+      "resolution": "Corrected quote frame and decoded identity handling, six independent negatives rejected."
+    },
+    {
+      "case": "tree_upload_helper_01",
+      "status": "DIRECT_VALIDATE_WITHOUT_AUDIT_ALLOWED_PATH_CONTEXT",
+      "resolution": "Corrected local upload helper context; no source policy change or upload occurred."
+    },
+    {
+      "case": "commit_import_helper_01",
+      "status": "EXACT_COMMIT_RECONSTRUCTION_FAILED",
+      "resolution": "API message omitted terminal LF; bounded reconstruction accepted only exact SHA1, no source change."
+    },
+    {
+      "case": "source_checkout_helpers",
+      "status": "LOCAL_GIT_NETWORK_AND_TEXT_DECODING_LIMITATIONS",
+      "resolution": "Approved connector plus hash-identical local objects restored exact shallow base, never elevated."
+    },
+    {
+      "case": "new_report_serialization_01",
+      "status": "PUBLICATION_REJECTED_INDEX_WORKTREE_RAW_BYTE_MISMATCH",
+      "resolution": "Windows JSON text writes used CRLF while Git attributes normalize LF. Only new unpublished report JSON bytes converted to LF before restaging; gate unchanged."
+    }
+  ],
+  "old_receipts_not_overwritten": true,
+  "historical_physical_attempts_restarted": false,
+  "new_physics_failures": 0,
+  "executed_source_01_sha256": "697188def4512f1ca99cf8c71c73b48dcad30a507abeb756c9aeb9ec55a7b478",
+  "executed_source_01_archive_method": "HASH_MATCHED_RECONSTRUCTION_REVERSING_EXACT_TWO_CORRECTIONS; NOT_PRE_EXECUTION_CAPTURE",
+  "executed_source_02_sha256": "7be2def2a3e605914826195f5f330e913ac05d641999db59d8e1893ca51d1411",
+  "current_source_not_rebound_to_previous_capture": true
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "G1_G2_INDEPENDENT_REVIEW_INDEX_V1",
+  "source_revision": "d7baa3450d0049775d51806628674094b5dd52fa",
+  "receipts": [
+    {
+      "local_receipt": "independent_g1_acquisition_review_03.json",
+      "sha256": "b107dd7a74c6115993d45d181c216d16daeb58637dd6a937417385bf795acab5",
+      "bytes": 4072,
+      "verdict": "PASS_REVIEWED_PORTABLE_SOURCE_ONLY_GUEST_STATIC",
+      "source_hash_bindings_verified": true
+    },
+    {
+      "local_receipt": "independent_g1_publication_and_terms_review_02.json",
+      "sha256": "d25fc065cdd57524b966bf640c7c31ea8e774b5d470bc52ea683909720a9450e",
+      "bytes": 7021,
+      "verdict": "PASS_SOURCE_PRIVACY_CI_AND_PROPOSED_TERMS_WITH_RUNTIME_BLOCKED",
+      "source_hash_bindings_verified": true
+    },
+    {
+      "local_receipt": "independent_g1_ci_matrix_01.json",
+      "sha256": "3a43cd384e668a7e8d7cb398b322f5fc1e9b7626b1bdd6cef8927f17db840dd0",
+      "bytes": 5652,
+      "verdict": "SEE_BOUNDED_SUMMARY",
+      "source_hash_bindings_verified": true
+    },
+    {
+      "local_receipt": "independent_windows_source_review_04.json",
+      "sha256": "a242514e04c3671b974d09ca71835d5b785fa0c0c626c0e2caf7a1152e069588",
+      "bytes": 3695,
+      "verdict": "PASS_TWO_NARROW_CORRECTIONS_FOR_EXISTING_READ_ONLY_ACQUISITION_SCOPE",
+      "source_hash_bindings_verified": true
+    },
+    {
+      "local_receipt": "independent_actual_acquisition_validation_05.json",
+      "sha256": "090421b085a258614b82dc5ba83b1fbb5f5d47099cd09e16859b6970dbc40fa9",
+      "bytes": 5725,
+      "verdict": "PASS_UNATTESTED_CAPTURE_INTEGRITY_PARTIAL_ACQUISITION_WITH_EXTERNAL_BLOCKERS",
+      "source_hash_bindings_verified": true
+    },
+    {
+      "local_receipt": "independent_report_review_01.json",
+      "sha256": "0a09fa62af10f1a8aeebd71d0ec624ae2813ea52e8f66b2957ad36b23d8f9fbc",
+      "bytes": 5635,
+      "verdict": "PASS_REPORTS_WITH_EXPLICIT_EXTERNAL_BLOCKERS"
+    }
+  ],
+  "source_review": "PASS_NO_OPEN_BLOCKING_SOURCE_FINDING",
+  "privacy_negative_cases": 6,
+  "manifest_positive_rows": 348,
+  "host_capture_review": "INTEGRITY_AND_PURE_INTERPRETATION_ONLY_NOT_ATTESTATION",
+  "B_V2": "PROPOSED_NOT_ACCEPTED; VM_HYPERVISOR_RUNTIME_ROLE_UNASSIGNED_BLOCKS_ACCEPTANCE",
+  "hosted_CI": "PENDING; STATIC_MATRIX_NOT_A_RUNTIME_RESULT",
+  "kernel_or_physics_tests_by_reviewers": 0
+}

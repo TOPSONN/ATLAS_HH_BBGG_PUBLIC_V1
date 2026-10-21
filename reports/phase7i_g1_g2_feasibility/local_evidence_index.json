@@ -1,0 +1,136 @@
+{
+  "schema": "G1_LOCAL_EVIDENCE_DIGEST_INDEX_V1",
+  "local_rows": [
+    {
+      "local_receipt": "executed_source_archive_01.json",
+      "sha256": "dc381b3d30099fed565c0f72f30ea7bfe1d2a5f4e078f03bc908dc73f6e85c54",
+      "bytes": 349
+    },
+    {
+      "local_receipt": "executed_windows_adapter_01.ps1",
+      "sha256": "697188def4512f1ca99cf8c71c73b48dcad30a507abeb756c9aeb9ec55a7b478",
+      "bytes": 13686
+    },
+    {
+      "local_receipt": "executed_windows_adapter_02.ps1",
+      "sha256": "7be2def2a3e605914826195f5f330e913ac05d641999db59d8e1893ca51d1411",
+      "bytes": 13878
+    },
+    {
+      "local_receipt": "host_projection_01.json",
+      "sha256": "01eed34bd561413b7fd240ff9aa202f42baf5423ac0283f3da11481fb2b1f09b",
+      "bytes": 3069
+    },
+    {
+      "local_receipt": "host_projection_02.json",
+      "sha256": "e138be4007a16838ef7c2cfdc7baef659b1dc6599572674cf89d36da213434af",
+      "bytes": 3132
+    },
+    {
+      "local_receipt": "independent_actual_acquisition_validation_05.json",
+      "sha256": "090421b085a258614b82dc5ba83b1fbb5f5d47099cd09e16859b6970dbc40fa9",
+      "bytes": 5725
+    },
+    {
+      "local_receipt": "independent_control_feasibility_review_01.json",
+      "sha256": "ef297414c8504f49774ed0e7640ffc34cabd6d57646aaa2776211e4e4609fb30",
+      "bytes": 20538
+    },
+    {
+      "local_receipt": "independent_g1_acquisition_review_03.json",
+      "sha256": "b107dd7a74c6115993d45d181c216d16daeb58637dd6a937417385bf795acab5",
+      "bytes": 4072
+    },
+    {
+      "local_receipt": "independent_g1_ci_matrix_01.json",
+      "sha256": "3a43cd384e668a7e8d7cb398b322f5fc1e9b7626b1bdd6cef8927f17db840dd0",
+      "bytes": 5652
+    },
+    {
+      "local_receipt": "independent_g1_publication_and_terms_review_02.json",
+      "sha256": "d25fc065cdd57524b966bf640c7c31ea8e774b5d470bc52ea683909720a9450e",
+      "bytes": 7021
+    },
+    {
+      "local_receipt": "independent_g1_publication_privacy_reproduction_01.json",
+      "sha256": "fb15e1a4b74202cd4ebfd4549e6e39acd461342e72cfa5200556c77a90c87c04",
+      "bytes": 897
+    },
+    {
+      "local_receipt": "independent_g1_publication_privacy_reproduction_02.json",
+      "sha256": "a13b41d09ee14410ffe32b10d62f71a97cc3ffedf7a0f8a892286ebe3a5d2d26",
+      "bytes": 1259
+    },
+    {
+      "local_receipt": "independent_g1_publication_privacy_reproduction_03.json",
+      "sha256": "4201fbf04c113b816fa9ad9c02d67c045ff07911c317bcd26e84f9c851bee264",
+      "bytes": 1607
+    },
+    {
+      "local_receipt": "independent_private_capture_route_03.json",
+      "sha256": "e2e4511f3c02d8c7bad5fae40dbd3dad540f72918517309e1f2a8c21324d28dc",
+      "bytes": 2769
+    },
+    {
+      "local_receipt": "independent_windows_acl_fixture_02.json",
+      "sha256": "a50ede00215f9a7540748c2d2ae376e68a1f446daa426ffc7c70110a4083c123",
+      "bytes": 1634
+    },
+    {
+      "local_receipt": "independent_windows_source_review_04.json",
+      "sha256": "a242514e04c3671b974d09ca71835d5b785fa0c0c626c0e2caf7a1152e069588",
+      "bytes": 3695
+    },
+    {
+      "local_receipt": "portable_attempt_02_failure.json",
+      "sha256": "73b0eeaf0cb74d77bb1a8b95b9c8d60bd874d7af3cf2da95f5b3a7f10f7c2da8",
+      "bytes": 249
+    },
+    {
+      "local_receipt": "portable_final_03.json",
+      "sha256": "6d491f251873a73374f4e417a9f43ac7929d322021471cc6c70a3246cc5b94ba",
+      "bytes": 2416
+    },
+    {
+      "local_receipt": "portable_final_04.json",
+      "sha256": "b473720d017d60b28d0477373277bd33281b6a332258f4f0afcd0c7f0c135750",
+      "bytes": 2445
+    },
+    {
+      "local_receipt": "portable_final_05.json",
+      "sha256": "6b6d417705afa4e77480acbe568556e42336db2e843e02e1d9d0297bd23fc6fe",
+      "bytes": 2437
+    },
+    {
+      "local_receipt": "portable_final_06.json",
+      "sha256": "ea5c40bc0ee867ab61c6e604553e6f723abb622cea6241a7ff75122f4854b30b",
+      "bytes": 2437
+    },
+    {
+      "local_receipt": "source_checkout_01.json",
+      "sha256": "aa18a623a4645ca19536a2060e6857733a138dd45d8b8eba0df9e90556edcd4c",
+      "bytes": 474
+    },
+    {
+      "local_receipt": "independent_report_review_01.json",
+      "sha256": "0a09fa62af10f1a8aeebd71d0ec624ae2813ea52e8f66b2957ad36b23d8f9fbc",
+      "bytes": 5635,
+      "verdict": "PASS_REPORTS_WITH_EXPLICIT_EXTERNAL_BLOCKERS"
+    }
+  ],
+  "private_raw_captures": [
+    {
+      "attempt": 1,
+      "bytes": 3984,
+      "sha256": "cf19991d9a1a659c29952494bdb1633ac74ff903d3d9d7f0cccb8bfe0095ec05"
+    },
+    {
+      "attempt": 2,
+      "bytes": 5110,
+      "sha256": "a010b06c53e1efef767de8c9a93bb8fd356ebda3bedae858f2c33d249c703daa"
+    }
+  ],
+  "raw_inventories_published": false,
+  "sensitive_data": "LOCAL_PROTECTED_ONLY",
+  "digest_is_not_host_attestation": true
+}
