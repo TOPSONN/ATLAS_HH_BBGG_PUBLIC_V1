@@ -1,5 +1,7 @@
 # G1 單次重新擷取操作
 
+本次已由使用者成功執行一次並完成13/13驗證。下列命令保留供exact-source審查，不需再執行；新raw與sanitized projection見capture_status及G1_PUBLIC_PROJECTION。
+
 Exact source：`61bda291c2bc6a04607cb8ea889e520a4ceb260b`。此命令只供您在原先的一般權限 PowerShell 7 執行一次。請先確認新 PR 的離線 CI 結果；不需 Administrator，也沒有正式 build 確認字串。
 
 ExpectedScriptSha256：`fceee4386b1f90ceb72a3304ab5006e94f935c4d4fdf4ea2ad3e0a0ce36c4eee`。

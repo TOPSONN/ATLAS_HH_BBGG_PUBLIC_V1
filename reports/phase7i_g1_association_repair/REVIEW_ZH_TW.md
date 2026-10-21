@@ -1,6 +1,6 @@
 # G1 association output-bound 修復審查
 
-結論：SOURCE_REPAIR_VALIDATED_FRESH_CAPTURE_PENDING。Exact source `61bda291c2bc6a04607cb8ea889e520a4ceb260b`，stacked base PR39 `b2bd49b68c3a439eeef24b7b2e134f1746bf5fb9`。原失敗收據只讀取、雜湊核對，沒有修改或公開 raw 資料。
+結論：PASS_G1_REPORTED_QUERY_COVERAGE_13_OF_13。Exact source `61bda291c2bc6a04607cb8ea889e520a4ceb260b`，stacked base PR39 `b2bd49b68c3a439eeef24b7b2e134f1746bf5fb9`。原失敗收據只讀取、雜湊核對，沒有修改或公開 raw 資料。
 
 ## 觀察與推論
 
@@ -43,3 +43,17 @@ UNKNOWN/PENDING：新真實 capture、實際 edge counts/bytes、13/13 coverage�
 `FULL_LAUNCH_ENVELOPE_VERIFIED=false`、`FORMAL_BUILD_ONLY_AUTHORIZED=false`。S4、sudo、裝置修改、WSL啟動、MG5/build/ME/integration/events 均未執行。下一步只有 USER_COMMAND_ZH_TW.md 的一般權限 PowerShell7 單次新擷取，之後驗證 SHA 並產生新的 sanitized projection。
 
 Microsoft class contracts：[DiskDriveToDiskPartition](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-diskdrivetodiskpartition)、[LogicalDiskToPartition](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-logicaldisktopartition)。前者 endpoints 為磁碟與partition，後者為partition與logicaldisk並具有extent起訖；本修復依此保留關聯。
+
+## 真實使用者新擷取與完成驗證
+
+使用者已在原一般權限 PowerShell7 單次執行 reviewed script，原始新收據 SHA256：`8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5`，實際檔案7,657 bytes。agent 只做後續唯讀核對及 Python projection CLI，exit0。13/13均為REPORTED_UNATTESTED，UNKNOWN=0；原11/13的歷史失敗收據不變。
+
+disk_partition_links 完整回報4 edges，原Depth8/Compress/WarningStop重編碼1,249 bytes；partition_volume_links 1 edge，358 bytes。新 Python validator 對這份真實 capture 的class/identity/extent/unique/coverage/parent/prerequisite檢查通過。這次兩類資料均低於原65,536-byte上限，無需新增page/capacity設計。這是實際capture的數值，不是fixture。
+
+`G1_PUBLIC_PROJECTION.json` 來自實際CLI的allowlist projection；為遵守既有禁止raw-capture schema字樣的發布規則，僅省略`host_capture_schema`標籤欄位，保留local CLI projection的SHA與omitted欄位清單。沒有改動任何raw capture或來源identity。未另建Master run，既有run沒有重綁；這個獨立projection不需要Master run。
+
+第一輪PR/push CI均實際完成，decoded logs已讀取：Linux各612/612 offline、81/81 safe legacy；84項affected中83過、1項Windows-only fixture明列skip；Windows各23/23測試，內含26個實際in-memory CIM案例。此輪commit只補使用者新擷取的sanitized evidence與報告，來源仍為61bda291；新的CI依正常PR/push觸發，以最新checks為準。
+
+最終PASS只限G1查詢覆蓋修復及內部一致性驗證。host identity仍REPORTED_UNATTESTED，guest UNKNOWN，device/mount/transaction policy繼續拒絕不完整acquisition；G2尚未批准、protected persistent storage及完整CPU/RAM/wall/cleanup仍未驗證。FULL_LAUNCH_ENVELOPE_VERIFIED與FORMAL_BUILD_ONLY_AUTHORIZED保持false。
+
+下一個動作：審查sanitized G1 projection，再決定是否明確授權相同guest的唯讀identity/cgroup/storage/logging盤點及G2架構審查；本次不包含此授權。請勿為本修復重跑已成功的host capture。

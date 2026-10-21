@@ -21,5 +21,17 @@
   "reported_depth_warnings": 2,
   "warning_count_basis": "USER_OBSERVATION_NOT_CAPTURED_WARNING_STREAM",
   "inference": "NESTED_CIM_SERIALIZATION_IS_PLAUSIBLE_EXPANSION_CAUSE; REJECTED_PAYLOAD_NOT_RETAINED",
-  "new_real_capture_coverage": "PENDING_USER_SINGLE_RUN"
+  "new_real_capture_coverage": "13_OF_13_REPORTED_UNATTESTED",
+  "actual_compact_associations": [
+    {
+      "query": "disk_partition_links",
+      "edges": 4,
+      "original_setting_encoded_bytes": 1249
+    },
+    {
+      "query": "partition_volume_links",
+      "edges": 1,
+      "original_setting_encoded_bytes": 358
+    }
+  ]
 }
