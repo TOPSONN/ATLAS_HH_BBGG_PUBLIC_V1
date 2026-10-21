@@ -12,16 +12,28 @@ BASE='8b071a4cdca472ef7c9cb78f40b894864ca30374'
 PROGRESS=REPO/'.local/readiness_progress_v1'
 STAGES=('R0_IDENTITIES','G1_HOST','G1_GUEST','G2_ARCHITECTURE','G3_GUARDS','G4_PROVISIONING','G5_FORMAT_REVIEW','G6_GEOMETRY','G7_ENVIRONMENT')
 BOOTSTRAP='import sys;sys.path.insert(0,sys.argv.pop(1));from simulation.hh_signal.final_closure.master.readiness_worker import main;raise SystemExit(main())'
+FROZEN_LARGE_SOURCE_BYTES={'metadata/phase7_final_route_a_toolchain.json':886809,
+ 'simulation/hh_signal/config_lock/configuration_lock.json':144418,
+ 'simulation/hh_signal/final_closure/config/source_inputs.json':276006}
+
+def source_row(name,baseline_hashes):
+ p=no_links(REPO/name);need(p.is_file(),'SOURCE_FILE_REQUIRED');size=p.stat().st_size
+ if size>131072:
+  need(FROZEN_LARGE_SOURCE_BYTES.get(name)==size and name in baseline_hashes,'SOURCE_BOUND')
+ raw=p.read_bytes();digest=sha(raw)
+ if size>131072:need(digest==baseline_hashes[name],'LARGE_FROZEN_SOURCE_DRIFT')
+ return {'path':name,'sha256':digest}
 
 def binding(capture,running=None,guest=None):
  need(not git('status','--porcelain','--untracked-files=no'),'TRACKED_SOURCE_DIRTY')
  old=load(REPO/'reports/phase7i_g1_association_repair/source_manifest.json')
+ baseline_hashes={r['path']:r['sha256'] for r in old['files']}
  names={r['path'] for r in old['files']}
  names|={p.relative_to(REPO).as_posix() for p in (REPO/'simulation/hh_signal/final_closure/master').glob('*') if p.suffix in ('.py','.ps1','.cpp','.json')}
  names|={'.github/workflows/hh_signal_g1_g7_engineering.yml'}
  source=[]
  for name in sorted(names):
-  p=no_links(REPO/name);need(p.is_file() and p.stat().st_size<=131072,'SOURCE_BOUND');source.append({'path':name,'sha256':sha(p.read_bytes())})
+  source.append(source_row(name,baseline_hashes))
  from ..src.contracts import input_identity
  inputs=[{'path':r['path'],'sha256':r['sha256']} for r in input_identity()]
  external={}

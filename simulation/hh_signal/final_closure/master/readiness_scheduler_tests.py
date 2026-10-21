@@ -55,5 +55,14 @@ class SchedulerTests(unittest.TestCase):
  def test_native_dispatch_cli_absent(self):
   for operation in ('start-guest','provision','format','mount','S4','approve'):
    with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):r.main([operation])
+ def test_exact_historical_large_metadata_does_not_relax_new_payload_bound(self):
+  root=Path(self.tmp.name);name='metadata/phase7_final_route_a_toolchain.json';p=root/name;p.parent.mkdir();raw=b'X'*886809;p.write_bytes(raw)
+  with patch.object(r,'REPO',root):
+   self.assertEqual(r.source_row(name,{name:sha(raw)})['sha256'],sha(raw))
+   with self.assertRaisesRegex(ValueError,'FROZEN_SOURCE_DRIFT'):r.source_row(name,{name:'0'*64})
+   p.write_bytes(raw+b'X')
+   with self.assertRaisesRegex(ValueError,'SOURCE_BOUND'):r.source_row(name,{name:sha(raw+b'X')})
+   q=root/'unreviewed.json';q.write_bytes(b'X'*131073)
+   with self.assertRaisesRegex(ValueError,'SOURCE_BOUND'):r.source_row('unreviewed.json',{'unreviewed.json':sha(q.read_bytes())})
 
 if __name__=='__main__':unittest.main()
