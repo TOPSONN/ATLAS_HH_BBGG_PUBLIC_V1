@@ -88,6 +88,12 @@ def append(run,source,stage,status,*,start=None,command=None,exit_status=None,ou
   'real_subprocess_exit_status':exit_status,'child_pid':child_pid,'output_directory':'stages/'+stage,
   'output_manifest':outputs,'test_counts':None,'resource_observations':observations,
   'failure_reason':reason,'gate_classification':status,'authorization_reference':None,'next_resumable_stage':next_stage}
+ if source.get('schema')=='HH_G2_SAFE_CONTEXT_V1':
+  # Versioned metadata only; legacy event bytes and old run bindings unchanged.
+  external=source['external']
+  need(set(external)=={'host','guest','running'} and external['running'] is None,'G2_EXACT_EXTERNAL_SET')
+  v['external_input_sha256']={n:external[n]['sha256'] for n in ('host','guest')}
+  v['scope_identity']=source['scope_identity']
  raw=canonical(v)+b'\n';need(len(raw)<=MAX_EVENT,'LEDGER_EVENT_BYTE_BOUND')
  create_json(run/'ledger'/f'{len(rows)+1:06d}.json',v);sync_dir(run/'ledger');return v
 def latest(run):
