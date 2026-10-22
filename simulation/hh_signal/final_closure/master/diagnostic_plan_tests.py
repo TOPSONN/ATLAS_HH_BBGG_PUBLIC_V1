@@ -11,7 +11,7 @@ class PreparationTests(unittest.TestCase):
   with patch.object(plan,'PRIOR_BINDING',return_value=context):c=plan.binding('unused',guest='unused')
   names={x['path'] for x in c['source_rows']};self.assertIn(pub.PREFIX+'diagnostic_capture.py',names);self.assertIn(pub.PREFIX+'diagnostic_validate.py',names);self.assertEqual(c['scope'],'G2_EFFECTIVE_DIAGNOSTIC_PREPARATION_NO_ACQUISITION')
  def test_safe_stages_have_no_acquisition_call(self):
-  tree=ast.parse((REPO/pub.PREFIX/'diagnostic_stages.py').read_text())
+  tree=ast.parse((REPO/pub.PREFIX/'diagnostic_stages.py').read_text(encoding='utf-8'))
   for node in ast.walk(tree):
    if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute):self.assertNotIn(node.func.attr,('capture','snapshot','Popen','child','socket_ready','probe'))
  def test_publication_rejects_raw_and_unapproved_artifacts(self):

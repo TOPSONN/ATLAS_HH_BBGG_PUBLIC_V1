@@ -68,7 +68,7 @@ class ReceiptTests(unittest.TestCase):
  def test_manager_does_not_prove_service_or_accounting(self):
   s,r=fixture();r['queries']=r['queries'][:2];r['failure']='PARTIAL';self.assertEqual(review(s,r)['status'],'UNKNOWN_MANAGER_STATE')
  def test_os_gap_preserves_existing_controller(self):
-  text=(Path(__file__).parent/'g2_protocol.py').read_text();self.assertNotIn('diagnostic_capture',text)
+  text=(Path(__file__).parent/'g2_protocol.py').read_text(encoding='utf-8');self.assertNotIn('diagnostic_capture',text)
  def test_systemd_finite_duration_and_boolean_limit(self):
   s,r=fixture();row=r['queries'][2];raw=base64.b64decode(row['stdout_b64']).replace(b'CPUQuotaPerSecUSec=infinity',b'CPUQuotaPerSecUSec=1s');row.update(stdout_b64=base64.b64encode(raw).decode(),stdout_bytes=len(raw));self.assertEqual(review(s,r)['status'],'UNKNOWN_DELEGATION')
   s,_=fixture();s['limits']['cleanup_seconds']=True
