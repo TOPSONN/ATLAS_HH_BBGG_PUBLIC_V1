@@ -1,0 +1,95 @@
+{
+  "FORMAL_BUILD_ONLY_AUTHORIZED": false,
+  "FULL_LAUNCH_ENVELOPE_VERIFIED": false,
+  "collector_source_sha256": "79e0879b214b7945137d416b9da9b9d2a38c8b13997bec0e638ef68e23e5d84a",
+  "historical_run_rebound": false,
+  "legacy_collector_source_sha256": "dc9240024052d2d1ab8fa76689e8bcce3281078026826271da7469f2fb6b881f",
+  "new_capture_executed": false,
+  "raw_capture_modified": false,
+  "raw_sha256": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+  "review": {
+    "boot_consistent_within_capture": true,
+    "cgroup_membership_consistent_within_capture": true,
+    "complete_attestation": false,
+    "counter_coverage": "INCOMPLETE_OBSERVED",
+    "effective_manager_state": "UNKNOWN_NOT_BUS_ATTESTED",
+    "freshness": "UNKNOWN_NO_CURRENT_SAME_BOOT_CLOCK",
+    "host_mapping_complete": false,
+    "kernel_acceptance": null,
+    "limit_observations": [
+      {
+        "limits": {
+          "cpu.max": {
+            "kind": "BANDWIDTH_ONLY_NOT_CUMULATIVE_CPU",
+            "period_usec": 100000,
+            "quota_usec": "UNLIMITED"
+          },
+          "memory.max": "UNLIMITED",
+          "memory.swap.max": "UNLIMITED",
+          "pids.max": 9201
+        },
+        "lineage_index": 0
+      },
+      {
+        "limits": {},
+        "lineage_index": 1
+      }
+    ],
+    "lineage_count": 2,
+    "missing_by_lineage": [
+      {
+        "fields": [
+          "cgroup.events",
+          "cgroup.type",
+          "cpu.max",
+          "memory.current",
+          "memory.events",
+          "memory.max",
+          "memory.peak",
+          "memory.swap.current",
+          "memory.swap.max",
+          "pids.max"
+        ],
+        "lineage_index": 1,
+        "root_cgroup": true
+      }
+    ],
+    "missing_counter_names": [
+      "cgroup.events",
+      "cgroup.type",
+      "cpu.max",
+      "memory.current",
+      "memory.events",
+      "memory.max",
+      "memory.peak",
+      "memory.swap.current",
+      "memory.swap.max",
+      "pids.max"
+    ],
+    "mount_namespace_consistent_within_capture": true,
+    "nonroot_missing_counter_names": [],
+    "runtime_enforcement": false,
+    "status": "PASS_READ_ONLY_OBSERVED",
+    "swap_disabled_verified": false,
+    "trust": "REPORTED_UNATTESTED",
+    "unlimited_limits": [
+      {
+        "field": "memory.max",
+        "lineage_index": 0,
+        "meaning": "UNLIMITED"
+      },
+      {
+        "field": "memory.swap.max",
+        "lineage_index": 0,
+        "meaning": "UNLIMITED"
+      },
+      {
+        "field": "cpu.max:quota",
+        "lineage_index": 0,
+        "meaning": "UNLIMITED"
+      }
+    ]
+  },
+  "reviewed_source_revision": "d05acf64521775f1df5fb2dcb917981f107c672c",
+  "validator_source_sha256": "2a075153f7f8a621d1ae19f1dafe73644f9fbffac44fbb94392781ad7634bf54"
+}

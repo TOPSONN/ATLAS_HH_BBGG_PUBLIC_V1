@@ -1,0 +1,28 @@
+{
+  "base_files": 1698,
+  "base_revision": "1ee91a8b4aa974a80c0b5a73c35e2c0e34204fee",
+  "byte_identical_files": 1693,
+  "collector_and_legacy_source_unchanged": true,
+  "frozen_input_count": 1019,
+  "historical_run_rebound": false,
+  "old_checkout_clean": true,
+  "old_checkpoint_aggregate_sha256": "37eab3240a1ba8551f971e56031e852bf22fd6737c5790df370aec067924d241",
+  "old_checkpoint_file_count": 84,
+  "old_executed_revision": "83d1cda235e1d5fcc23f48d6a53065f88f2d1b1d",
+  "old_prs_modified": false,
+  "one_exact_exception": "HISTORICAL_CAMPAIGN_CI_BRANCH_ROUTING_ONLY",
+  "raw_bytes_unchanged": true,
+  "raw_sha256_after": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+  "raw_sha256_before": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+  "reviewed_modified_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py",
+    "simulation/hh_signal/final_closure/master/readiness_validation.py"
+  ],
+  "root_checkout_modified": false,
+  "same_checkpoint_hash_rechecked_before_delivery": true,
+  "scientific_frozen_inputs_unchanged": 1018,
+  "status": "PASS_HISTORICAL_BYTE_PRESERVATION"
+}

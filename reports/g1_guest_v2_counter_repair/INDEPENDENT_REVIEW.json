@@ -1,0 +1,31 @@
+{
+  "boot_namespace_membership_consistent": true,
+  "limitations": [
+    "READ_ONLY_OBSERVATION_NOT_ATTESTATION",
+    "NO_CURRENT_GUEST_BOOT_OR_FRESHNESS_VERIFICATION",
+    "CROSS_FILE_COUNTERS_NOT_ATOMIC",
+    "NO_RESOURCE_ENFORCEMENT_CLAIM"
+  ],
+  "lineage_count": 2,
+  "modified_baseline_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py",
+    "simulation/hh_signal/final_closure/master/readiness_validation.py"
+  ],
+  "new_collector_execution": false,
+  "new_kernel_execution": false,
+  "no_runtime_or_physics_dispatch_api_in_reviewed_reader_AST": true,
+  "old_checkpoint_aggregate_sha256": "37eab3240a1ba8551f971e56031e852bf22fd6737c5790df370aec067924d241",
+  "old_checkpoint_file_count": 84,
+  "old_source_checkout_unchanged": true,
+  "preserved_baseline_files": 1693,
+  "raw_sha256": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+  "reviewed_source_revision": "d05acf64521775f1df5fb2dcb917981f107c672c",
+  "same_agent_independent_process": true,
+  "second_human_review": false,
+  "semantics_source": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+  "status": "PASS_INDEPENDENT_ALGORITHM_AND_AST_PROCESS",
+  "unlimited_limits_match": true
+}
