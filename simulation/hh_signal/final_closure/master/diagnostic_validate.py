@@ -54,6 +54,7 @@ def check_snapshot(v):
 
 def review(raw,expected_sha,scope_raw,expected_scope_sha,authorization_reference):
  try:
+  require(type(raw) is bytes and type(scope_raw) is bytes and len(raw)<=c.RECEIPT_CAP and len(scope_raw)<=c.RECEIPT_CAP,'INPUT_BOUND')
   require(c.sha(raw)==expected_sha and c.sha(scope_raw)==expected_scope_sha,'ORIGINAL_BYTES_MISMATCH')
   scope=c.load(scope_raw);c.checked_scope(scope)
   require(authorization_reference==scope['authorization_reference'],'AUTHORIZATION_BINDING')

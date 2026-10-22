@@ -31,6 +31,12 @@ class ReceiptTests(unittest.TestCase):
   s,r=fixture();x=review(s,r);self.assertEqual(x['observation_status'],'PASS_READ_ONLY_OBSERVED');self.assertEqual(x['status'],'UNKNOWN_DELEGATION');self.assertFalse(x['actual_job_enforcement']);self.assertEqual(x['observed_limits']['0:memory.swap.max'],'UNLIMITED')
  def test_original_bytes_and_scope_digests(self):
   s,r=fixture();raw=c.canonical(r);x=v.review(raw,'0'*64,c.canonical(s),c.sha(c.canonical(s)),s['authorization_reference']);self.assertEqual(x['status'],'FAIL_SOURCE_OR_RECEIPT_MISMATCH')
+ def test_input_bound_before_hash_or_capture(self):
+  s,r=fixture()
+  with patch.object(c,'sha',side_effect=AssertionError('HASH_BEFORE_BOUND')):self.assertEqual(v.review(b'x'*(c.RECEIPT_CAP+1),'unused',b'{}','unused','unused')['status'],'FAIL_SOURCE_OR_RECEIPT_MISMATCH')
+  with tempfile.TemporaryDirectory() as where:
+   path=Path(where)/'scope.json';path.write_bytes(b'x'*(c.RECEIPT_CAP+1))
+   with self.assertRaisesRegex(ValueError,'INPUT_BOUND'):a.bounded_bytes(path)
  def test_duplicate_and_canonical_numbers(self):
   for raw in (b'{"a":1,"a":2}',b'{"a":-0}',b'{"a":1.0}',b'{"a":-1}',b'{"a":18446744073709551616}',b'{"a":NaN}'):
    with self.subTest(raw=raw),self.assertRaises(ValueError):c.load(raw)

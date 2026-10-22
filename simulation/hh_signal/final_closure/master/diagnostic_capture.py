@@ -3,6 +3,10 @@ import base64,os,selectors,signal,stat,subprocess,sys,time
 from pathlib import Path
 from . import diagnostic_contract as c,diagnostic_tools as tools
 
+def bounded_bytes(path):
+ with Path(path).open('rb') as f:raw=f.read(c.RECEIPT_CAP+1)
+ c.need(len(raw)<=c.RECEIPT_CAP,'INPUT_BOUND');return raw
+
 def read_fixed(path,cap=c.READ_CAP,dir_fd=None):
  fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_CLOEXEC,dir_fd=dir_fd)
  try:
@@ -113,7 +117,7 @@ def write_private(folder,name,raw):
 def capture(scope):
  c.checked_scope(scope) # Unknown identity/approval stops before any live snapshot.
  c.need(sys.platform=='linux' and tuple(sys.version_info[:2])==(3,12),'REVIEWED_PYTHON312_LINUX')
- for n,digest in scope['source_sha256'].items():c.need(c.sha((Path(__file__).parent/n).read_bytes())==digest,'SOURCE_IDENTITY')
+ for n,digest in scope['source_sha256'].items():c.need(c.sha(bounded_bytes(Path(__file__).parent/n))==digest,'SOURCE_IDENTITY')
  c.need(os.getuid()==scope['uid'] and os.geteuid()==scope['uid'] and os.getgid()==scope['gid'] and os.getegid()==scope['gid'],'UID_GID_BINDING')
  observed=[tools.identity(p) for p in c.TOOLS]
  c.need(all(r['sha256']==scope['tool_sha256'][r['path']] for r in observed),'BLOCKED_TOOL_IDENTITY')
@@ -156,6 +160,6 @@ def main(argv=None):
  import argparse
  p=argparse.ArgumentParser(allow_abbrev=False);p.add_argument('--scope',required=True,type=Path);a=p.parse_args(argv)
  try:
-  raw=a.scope.read_bytes();v=capture(c.load(raw));print(c.canonical(v).decode());return 0 if v['status']=='CAPTURED_UNATTESTED_READ_ONLY' else 2
+  raw=bounded_bytes(a.scope);v=capture(c.load(raw));print(c.canonical(v).decode());return 0 if v['status']=='CAPTURED_UNATTESTED_READ_ONLY' else 2
  except (OSError,ValueError,KeyError,TypeError):print('{"status":"BLOCKED_SOURCE_TOOL_OR_AUTHORIZATION","automatic_retry":false}');return 2
 if __name__=='__main__':raise SystemExit(main())
