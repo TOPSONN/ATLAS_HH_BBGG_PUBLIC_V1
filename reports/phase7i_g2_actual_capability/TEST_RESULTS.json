@@ -1,0 +1,133 @@
+{
+  "actual_safe_cli": {
+    "ledger_events_after": 24,
+    "ledger_events_before": 24,
+    "live_dispatches": 0,
+    "results": [
+      {
+        "exit_code": 0,
+        "mode": "status",
+        "output_sha256": "740730e93179aa8ad8c813997b1543ee6d0d4a98f693575d83a93d6f6e7c8b92",
+        "status": "STATUS_SNAPSHOT"
+      },
+      {
+        "exit_code": 0,
+        "mode": "verify",
+        "output_sha256": "a86dbcb4591ce824d3851a16e521839beb30fca0f3968e1e9bba46655b439028",
+        "status": "PASS_SOURCE_ONLY"
+      },
+      {
+        "exit_code": 0,
+        "mode": "resume-safe",
+        "output_sha256": "16a5696f8922a80bedc006315d3ca07575cd9477451a27a3aaa18dee7fc88e8d",
+        "status": "PASS_SOURCE_ONLY"
+      }
+    ],
+    "resume_repeated_children": 0,
+    "run_id": "d39682c2-2f08-4ac6-a162-d8bb44d5cb65",
+    "source_revision": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+    "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
+  },
+  "counts_overlap_not_additive": true,
+  "delivery_CI": "PENDING_UNTIL_REPORT_COMMIT_EXISTS",
+  "kernel_tests_actually_executed": 0,
+  "local_final_affected": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "f20d909ae3ff5bf0bbb15ef686de6ca5621822e03dd24faf18c5b52ae1960713",
+    "modules": [
+      "simulation.hh_signal.final_closure.master.g2_protocol_tests",
+      "simulation.hh_signal.final_closure.master.g2_engine_tests",
+      "simulation.hh_signal.final_closure.master.g2_publication_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_publication_tests",
+      "simulation.hh_signal.final_closure.master.readiness_tests",
+      "simulation.hh_signal.final_closure.master.readiness_guest_tests",
+      "simulation.hh_signal.final_closure.master.readiness_scheduler_tests",
+      "simulation.hh_signal.final_closure.master.test_master",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication",
+      "simulation.hh_signal.final_closure.tests.test_closure"
+    ],
+    "scope": "SOURCE_AND_INERT_OR_SYNTHETIC_ONLY",
+    "skipped": 0,
+    "status": "PASS",
+    "tests_run": 164,
+    "wall_seconds": 52.87299350000012
+  },
+  "source_CI": {
+    "delivery_CI": "PENDING_UNTIL_DELIVERY_COMMIT",
+    "jobs": [
+      {
+        "decoded_logs_reviewed": true,
+        "event": "pull_request",
+        "evidence": {
+          "affected_subset": 103,
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 103
+        },
+        "id": 119623889002,
+        "name": "windows_inert",
+        "run": 39717767921,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "pull_request",
+        "evidence": {
+          "affected_pass": 163,
+          "affected_run": 164,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
+        },
+        "id": 119623889350,
+        "name": "linux_safe",
+        "run": 39717767921,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_pass": 163,
+          "affected_run": 164,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
+        },
+        "id": 119623711508,
+        "name": "linux_safe",
+        "run": 39717712217,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_subset": 103,
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 103
+        },
+        "id": 119623711823,
+        "name": "windows_inert",
+        "run": 39717712217,
+        "status": "SUCCESS"
+      }
+    ],
+    "scope": "SOURCE_ONLY_NOT_KERNEL_ENFORCEMENT",
+    "source": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+    "status": "SUCCESS"
+  },
+  "source_revision": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+  "synthetic_named_negatives": 45
+}

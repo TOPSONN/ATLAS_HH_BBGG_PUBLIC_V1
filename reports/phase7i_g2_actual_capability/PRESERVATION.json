@@ -1,0 +1,59 @@
+{
+  "B_proposals_sha256": [
+    "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193",
+    "eedc17a761f2aaefde628d858a70bf9d4518d271df8bedcaf54f34d96cf6237d",
+    "fcbfba8c4dececd545b4f75a852a7ec4b123d67078a038d03d85772c5076364b"
+  ],
+  "base": "6126b315834715983481802f35630742accf1d88",
+  "baseline_files": 1711,
+  "changed_existing_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py",
+    "simulation/hh_signal/final_closure/master/ledger.py"
+  ],
+  "frozen_inputs": 1019,
+  "host_guest_raw_sha256_unchanged": {
+    "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+    "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+  },
+  "ledger_legacy_projection_byte_exact": true,
+  "old_prs_modified": false,
+  "old_run_files": 84,
+  "old_run_rebound": false,
+  "old_run_sha256": "37eab3240a1ba8551f971e56031e852bf22fd6737c5790df370aec067924d241",
+  "only_frozen_delta": "FIXED_CI_ROUTING",
+  "original_installed_software_changed": false,
+  "physics_guard_and_cards_changed": false,
+  "review": {
+    "B_V2_terms_accepted": false,
+    "actual_enforcement": false,
+    "baseline_files": 1711,
+    "baseline_files_unchanged": 1706,
+    "changed_existing_files": [
+      ".github/workflows/hh_signal_campaign.yml",
+      ".github/workflows/hh_signal_final_closure.yml",
+      ".github/workflows/hh_signal_readiness.yml",
+      "simulation/hh_signal/final_closure/master/history.py",
+      "simulation/hh_signal/final_closure/master/ledger.py"
+    ],
+    "exact_base": "6126b315834715983481802f35630742accf1d88",
+    "exact_source_paths": 16,
+    "frozen_inputs": 1019,
+    "ledger_legacy_projection_byte_exact": true,
+    "named_semantic_negatives": 45,
+    "negative_scope": "SYNTHETIC_NOT_ADDITIVE_TO_UNIT_TESTS",
+    "old_live_reader_and_controller_unchanged": true,
+    "only_input_delta": "EXACT_CI_BRANCH_EXCLUSION",
+    "protocol_AST_no_OS_dispatch": true,
+    "review_method": "SAME_AGENT_PRIMARY_DIFF_REVIEW_PLUS_SEPARATE_AST_AND_SEMANTIC_PROCESS",
+    "scientific_inputs_exact": 1018,
+    "second_human_reviewer": false,
+    "status": "PASS_BOUNDED_SOURCE_REVIEW"
+  },
+  "scientific_frozen_inputs_exact": 1018,
+  "status": "PASS_BASELINE_AND_HISTORICAL_PRESERVATION",
+  "three_B_proposals_unaccepted_and_unchanged": true,
+  "unchanged_baseline_files": 1706
+}
