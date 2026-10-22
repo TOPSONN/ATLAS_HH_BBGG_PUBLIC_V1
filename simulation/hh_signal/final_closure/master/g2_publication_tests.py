@@ -16,4 +16,12 @@ class PublicationTests(unittest.TestCase):
   from .g2_catalogue import TERMS,VM,OBSERVER,clause_rows
   self.assertTrue(all(len(h)==64 for h in (TERMS,VM,OBSERVER)))
   rows=clause_rows();self.assertEqual(len(rows),8);self.assertTrue(all(r['decision']=='NOT_ACCEPTED' and not r['execution_authorized'] for r in rows))
+ def test_documented_API_or_legacy_proposal_is_not_a_G2_implementation(self):
+  from .g2_stages import cpu_rows
+  rows={r['capability']:r for r in cpu_rows({'cpu.max','cpu.stat','cgroup.procs'})}
+  for name in ('cpu.weight','CPUAccounting','CPUQuota','delegation'):
+   self.assertFalse(rows[name]['SOURCE_IMPLEMENTED']);self.assertEqual(rows[name]['SOURCE_TESTED'],'NO_G2_IMPLEMENTATION_TO_TEST')
+  self.assertEqual(rows['cgroup.controllers']['source_layer'],'EXISTING_READONLY_COLLECTOR_ONLY')
+  self.assertEqual(rows['cpu.stat']['source_layer'],'PURE_VALIDATOR')
+  self.assertTrue(all(not r['G2_CONFIGURATION_MUTATOR_IMPLEMENTED'] and not r['ACTUAL_JOB_ENFORCEMENT_VERIFIED'] for r in rows.values()))
 if __name__=='__main__':unittest.main()

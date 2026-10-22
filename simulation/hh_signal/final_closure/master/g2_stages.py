@@ -24,6 +24,19 @@ def levels(*,observed=False,implemented=True):
   'OS_CAPABILITY_SUPPORTED':'DOCUMENTED_API_IN_REPORTED_FAMILY_NOT_INSTALLED_BINARY_ATTESTATION',
   'EFFECTIVE_CONFIGURATION_VERIFIED':'UNKNOWN_FOR_NEW_JOB','ACTUAL_JOB_ENFORCEMENT_VERIFIED':False,
   'BLOCKED_AUTHORIZATION':True,'UNKNOWN':['CURRENT_MANAGER_PRIVILEGES','CURRENT_DELEGATION','CURRENT_FRESHNESS']}
+def cpu_rows(observed):
+ names=('cpu.max','cpu.stat','cpu.weight','cgroup.controllers','cgroup.subtree_control','cgroup.procs','CPUAccounting','CPUQuota','hierarchical_membership','delegation','final_cumulative_CPU')
+ pure={'cpu.max','cpu.stat','cgroup.procs','hierarchical_membership','final_cumulative_CPU'}
+ capture={'cgroup.controllers','cgroup.subtree_control'}
+ rows=[]
+ for n in names:
+  implemented=n in pure|capture
+  row=dict(capability=n,**levels(observed=n in observed,implemented=implemented),meaning='CPU_RATE_LIMIT' if n in ('cpu.max','CPUQuota') else 'RELATIVE_WEIGHT_ONLY' if n=='cpu.weight' else 'ACCOUNTING_OR_OWNERSHIP_NOT_LIFETIME_HARD_KILL')
+  row.update(SOURCE_TESTED='PURE_VALIDATOR_FIXTURES' if n in pure else 'EXISTING_GENERIC_CAPTURE_FIXTURES_ONLY' if n in capture else 'NO_G2_IMPLEMENTATION_TO_TEST',
+   source_layer='PURE_VALIDATOR' if n in pure else 'EXISTING_READONLY_COLLECTOR_ONLY' if n in capture else 'DOCUMENTED_INTERFACE_OR_LEGACY_PROPOSAL_ONLY',
+   G2_NATIVE_JOB_ACQUIRER_IMPLEMENTED=False,G2_CONFIGURATION_MUTATOR_IMPLEMENTED=False)
+  rows.append(row)
+ return rows
 def r0(out,c):
  from ..src.contracts import input_identity
  from ..guard_correction.overlay import source
@@ -62,8 +75,7 @@ def r1(out,c):
 def r2(out,c):
  guest=external(c,'guest');leaf=guest['cgroup_lineage'][0]
  observed={r['path'].rsplit('/',1)[-1] for r in guest['records'] if r['status']=='REPORTED_UNATTESTED' and r['path'].startswith(leaf+'/')}
- names=('cpu.max','cpu.stat','cpu.weight','cgroup.controllers','cgroup.subtree_control','cgroup.procs','CPUAccounting','CPUQuota','hierarchical_membership','delegation','final_cumulative_CPU')
- rows=[dict(capability=n,**levels(observed=n in observed),meaning='CPU_RATE_LIMIT' if n in ('cpu.max','CPUQuota') else 'RELATIVE_WEIGHT_ONLY' if n=='cpu.weight' else 'ACCOUNTING_OR_OWNERSHIP_NOT_LIFETIME_HARD_KILL') for n in names]
+ rows=cpu_rows(observed)
  value={'rows':rows,'nominal_CPU_usec':{'S4':4000000,'BUILD':14400000000},'shared_budget_not_per_role':True,
   'original_A_zero_overshoot_supported_by_standard_interfaces':False,'new_job_permission':'UNKNOWN_NOT_TESTED','actual_CPU_usec':None}
  emit(out,'G2_CPU_CAPABILITY_MATRIX.json',value);docs(out,'G2_CPU_ACCOUNTING_PROTOCOL.md','G2_CPU_FAILURE_MODEL.md');return done({'blockers':['EFFECTIVE_MANAGER_DELEGATION_AND_TRUSTED_CAPTURE','LIVE_CUMULATIVE_STOP_TESTS'],**levels(observed=True)})
@@ -124,7 +136,7 @@ def r6(out,c):
  text='# B1–B8 逐條決策\n\n全部NOT_ACCEPTED；本表提供可理解的選擇，沒有自動接受。\n\n'
  for row in rows:
   text+='## '+row['clause']+'\n\n'+'\n\n'.join(k+'：'+str(v) for k,v in row.items() if k not in ('clause','user_accepted','execution_authorized'))+'\n\n'
- emit(out,'G2_B1_TO_B8_DECISIONS_ZH_TW.md',text)
+ emit(out,'G2_B1_TO_B8_DECISIONS_ZH_TW.md',text.rstrip('\n')+'\n')
  docs(out,'G2_PATH_A_VS_B_COMPARISON.md','G2_RECOMMENDED_ARCHITECTURE_ZH_TW.md','G2_MINIMUM_DECISION_REQUIRED.md')
  # Non-executable proposal. Missing binary identity is explicit, not bypassed.
  emit(out,'G2_EFFECTIVE_STATE_DIAGNOSTIC_PROPOSAL.json',{'status':'REQUIRES_SEPARATE_EXACT_SCOPE_REVIEW_NOT_EXECUTION_READY',
