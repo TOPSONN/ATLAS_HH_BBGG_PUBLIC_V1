@@ -1,0 +1,133 @@
+{
+  "actual_safe_cli": {
+    "ledger_events_after": 24,
+    "ledger_events_before": 24,
+    "live_dispatches": 0,
+    "results": [
+      {
+        "exit_code": 0,
+        "mode": "status",
+        "output_sha256": "dea4d67d32609da8e91c5ad5e10089af15bf053bb515ec8b4ec8d7e72fa14f81",
+        "status": "STATUS_SNAPSHOT"
+      },
+      {
+        "exit_code": 0,
+        "mode": "verify",
+        "output_sha256": "a86dbcb4591ce824d3851a16e521839beb30fca0f3968e1e9bba46655b439028",
+        "status": "PASS_SOURCE_ONLY"
+      },
+      {
+        "exit_code": 0,
+        "mode": "resume-safe",
+        "output_sha256": "d2de9bb32c9c0fe9f908c258ca5b8d3f1a2e529b15d29805da2d81a8b4142d3a",
+        "status": "PASS_SOURCE_ONLY"
+      }
+    ],
+    "resume_repeated_children": 0,
+    "run_id": "7424d623-514b-4511-a8a8-9d9b1656787e",
+    "source_revision": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
+    "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
+  },
+  "counts_overlap_not_additive": true,
+  "delivery_CI": "PENDING_UNTIL_REPORT_COMMIT_EXISTS",
+  "kernel_tests_actually_executed": 0,
+  "local_final_affected": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "1fec6613ee6bd68e20b30edc843de401cbed9d4c70d0964b5278084ed258787d",
+    "modules": [
+      "simulation.hh_signal.final_closure.master.g2_protocol_tests",
+      "simulation.hh_signal.final_closure.master.g2_engine_tests",
+      "simulation.hh_signal.final_closure.master.g2_publication_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_publication_tests",
+      "simulation.hh_signal.final_closure.master.readiness_tests",
+      "simulation.hh_signal.final_closure.master.readiness_guest_tests",
+      "simulation.hh_signal.final_closure.master.readiness_scheduler_tests",
+      "simulation.hh_signal.final_closure.master.test_master",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication",
+      "simulation.hh_signal.final_closure.tests.test_closure"
+    ],
+    "scope": "SOURCE_AND_INERT_OR_SYNTHETIC_ONLY",
+    "skipped": 0,
+    "status": "PASS",
+    "tests_run": 165,
+    "wall_seconds": 54.052017400000295
+  },
+  "source_CI": {
+    "delivery_CI": "PENDING_UNTIL_FINAL_REPORT_COMMIT",
+    "jobs": [
+      {
+        "decoded_logs_reviewed": true,
+        "event": "pull_request",
+        "evidence": {
+          "affected_pass": 164,
+          "affected_run": 165,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
+        },
+        "id": 119629659455,
+        "name": "linux_safe",
+        "run": 39719571091,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "pull_request",
+        "evidence": {
+          "affected_subset": 104,
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 104
+        },
+        "id": 119629659615,
+        "name": "windows_inert",
+        "run": 39719571091,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_subset": 104,
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 104
+        },
+        "id": 119629641805,
+        "name": "windows_inert",
+        "run": 39719565796,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_pass": 164,
+          "affected_run": 165,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
+        },
+        "id": 119629641928,
+        "name": "linux_safe",
+        "run": 39719565796,
+        "status": "SUCCESS"
+      }
+    ],
+    "scope": "SOURCE_ONLY_NOT_KERNEL_ENFORCEMENT",
+    "source": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
+    "status": "SUCCESS"
+  },
+  "source_revision": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
+  "synthetic_named_negatives": 45
+}

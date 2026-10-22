@@ -1,0 +1,68 @@
+{
+  "MG5_or_physics_build": false,
+  "actual_resource_enforcement_measurements": null,
+  "binary_published": false,
+  "cases": [
+    {
+      "case": "S4_disk",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "BUILD_disk",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "BUILD_tmpfs_over_RAM",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "overflow",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "components_exceed_ceiling",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "negative",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "malformed",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    },
+    {
+      "case": "zero_arithmetic",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+      "status": "PASS"
+    }
+  ],
+  "compiler_sha256": "6caebf5007c405626a166bba1bf4adbd403746ff9c56d83cf33447a3d7942ec3",
+  "inert_binary_sha256": "ec6d73d43cb8d978ef9e52b3a3e2f7ede199190331388ada49d7c16f84dcaca7",
+  "kernel_tests": 0,
+  "source_sha256": "7b9dc39b8edbdb3b040baec7d3e598eb5a3f89598f9fa72fb8771c3369abaf9c",
+  "status": "PASS_CHECKED_CPP20_ARITHMETIC"
+}

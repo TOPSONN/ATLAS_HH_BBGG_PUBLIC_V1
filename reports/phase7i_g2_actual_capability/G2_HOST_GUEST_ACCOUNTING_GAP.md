@@ -1,0 +1,9 @@
+# Host/guest accounting gap
+
+原A保留所有相關host/guest成本在同一總額。Linux job parent能歸帳它的descendants；不能單靠cpu.stat/memory.max歸帳Windows launcher、shared WSL VM/VMM、system-manager及journald/rsyslog。Windows inventory 13/13只是拓樸query coverage，不是joint host+guest lifetime CPU/RAM或allocated storage enforcement。
+
+來源中已有G1-G7_RESOURCE_LEDGER，但未部署joint enforcer；本次將每個role的owner、CPU/RAM/disk歸屬、wall端點、counter、未觀察成本列入A matrix。沒有另給每個role一份4s/512MiB，不將external角色填0。固定device的metadata、inodes、internal journal和evidence reserve在同capacity內；不能重複加journal，也不能遺漏host backing metadata/control-plane寫入。
+
+A_NOT_DEMONSTRABLY_FEASIBLE_ON_CURRENT_HOST。這不是由init.scope的UNLIMITED推得，而是缺共同host/guest enforcer、零排程延遲/零瞬時超額證明、persistent allocated容量及完整post-exit證據。也不是宣稱所有受控Linux或專用平台都不可能；若保留A，須先提供滿足這些原始強保證的實際平台/形式化契約，不虛構替代機器已存在。
+
+新辨識的成本歸屬缺口：filesystem/journal的fixed-device容量不是CPU enforcer。writer程序CPU可在parent，但異步kernel writeback/journal工作是否完整歸帳尚未證明。不能偷偷將它加進三個external角色或假設是0；B條款如不足以涵蓋此語義，需另作精確邊界審查，原件不改。matrix保留WRITER_PARENT_PLUS_ASYNC_KERNEL_UNVERIFIED，不聲稱現有B已封閉全部成本。

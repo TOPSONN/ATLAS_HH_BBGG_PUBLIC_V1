@@ -1,0 +1,179 @@
+# B1–B8 逐條決策
+
+全部NOT_ACCEPTED；本表提供可理解的選擇，沒有自動接受。
+
+## B1_BOUNDARY
+
+proposed_meaning：一個job pool；只將三個具名shared角色記為external非零成本。
+
+technical_justification：可重用Linux hierarchy，不能joint量測Windows/VMM。
+
+expected_safety_impact：放寬原A成本邊界；job descendants與寫入不排除。
+
+quantitative_resource_consequence：保留S4 4s/512MiB、BUILD14400s/2GiB總量；external CPU/RAM仍null。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受manager_journal、launcher、host_backing三項外部歸屬及VM residual明列？
+
+decision：NOT_ACCEPTED
+
+## B2_CPU
+
+proposed_meaning：bandwidth＋累積parent counter＋early stop，最後超額拒絕。
+
+technical_justification：cpu.max不是lifetime總量kill；新pure protocol可檢查全parent尾量。
+
+expected_safety_impact：允許非即時停止語義，不能稱零overshoot。
+
+quantitative_resource_consequence：4,000,000／14,400,000,000µs unchanged；early tail最壞值UNKNOWN。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受observed-overrun拒絕而非原子總量零超額保證？
+
+decision：NOT_ACCEPTED
+
+## B3_WALL
+
+proposed_meaning：trusted admission到independent final readback；普通scheduler。
+
+technical_justification：active RuntimeMaxSec不含完整start/cleanup。
+
+expected_safety_impact：外部observer與receipt尾成本須明列。
+
+quantitative_resource_consequence：13／14400s unchanged；無有限排程延遲測量。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受普通scheduler及指定final-readback端點，不要求零延遲？
+
+decision：NOT_ACCEPTED
+
+## B4_RAM
+
+proposed_meaning：parent memory.max，實際swap.max=0與peak/events。
+
+technical_justification：Linux可暫態超額，tmpfs resident也歸帳。
+
+expected_safety_impact：放寬literal零transient overshoot；OOM/peak overcap拒絕。
+
+quantitative_resource_consequence：512MiB／2GiB、swap0 unchanged；BUILD tmpfs full比RAM多256MiB。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受Linux記憶體語義，並要求先補resident allocation及實測？
+
+decision：NOT_ACCEPTED
+
+## B5_DISK
+
+proposed_meaning：獨立可拋棄fixed whole device；所有job writes與evidence計帳。
+
+technical_justification：現有device/same-instance guards可重用，無合格本機candidate。
+
+expected_safety_impact：root/history保護不放寬；不能用C-drive VHD/shared-root代替。
+
+quantitative_resource_consequence：S4 fixed FS4MiB、BUILD fixed2GiB為未執行提案；metadata/journal不重複計。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：False
+
+exact_human_decision_required：是否保留此不放寬的device安全門檻，另行提供合格device？
+
+decision：NOT_ACCEPTED
+
+## B6_EVIDENCE
+
+proposed_meaning：分離collector死亡域、同parent budget、固定slots。
+
+technical_justification：pure source不是UID/FD保護或durability部署。
+
+expected_safety_impact：outer失效可留下UNKNOWN，不承諾power loss。
+
+quantitative_resource_consequence：8×4096=32768 bytes，2 failure slots，不增加disk ceiling。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受outer loss時僅保留committed checkpoints與UNKNOWN？
+
+decision：NOT_ACCEPTED
+
+## B7_CLEANUP
+
+proposed_meaning：所有owned descendants退出，collector後由外部observer讀空parent。
+
+technical_justification：新V2綁定observer PID/start/source/slot，未部署acquirer。
+
+expected_safety_impact：observer自身termination不能自證；外部非零成本需接受。
+
+quantitative_resource_consequence：collector尾CPU仍在同parent；final observer成本null而非0。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：True
+
+exact_human_decision_required：是否接受該exact post-exit observer supplement及成本歸屬？
+
+decision：NOT_ACCEPTED
+
+## B8_RELEASE
+
+proposed_meaning：接受條款不等於provision、kernel、S4、build或physics授權。
+
+technical_justification：每個live gate需要exact source/input與獨立scope。
+
+expected_safety_impact：不放寬release與歷史保護。
+
+quantitative_resource_consequence：4 fixed seeds與零retained不變；本任務新ME/integrals/events=0。
+
+current_evidence：IMMUTABLE_G1_PLUS_SOURCE_AND_SYNTHETIC_TESTS_ONLY
+
+remaining_uncertainty：EFFECTIVE_CONFIGURATION_AND_ACTUAL_JOB_ENFORCEMENT_UNVERIFIED
+
+recommendation：REVIEW_EXACT_MEANING_BEFORE_ACCEPTANCE
+
+original_A_weakened：False
+
+exact_human_decision_required：是否同意條款決策與每個後續execution approval嚴格分開？
+
+decision：NOT_ACCEPTED

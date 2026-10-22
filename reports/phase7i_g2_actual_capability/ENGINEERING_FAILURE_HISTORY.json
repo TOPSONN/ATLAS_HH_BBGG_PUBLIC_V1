@@ -1,0 +1,28 @@
+{
+  "all_historical_failures_and_receipts_preserved": true,
+  "current_unresolved_source_test_failures": 0,
+  "failed_fixture_source_sha256": "0a1df181ac89a703e1055a45b3bd4310279d9c7bb2e6026b42f002cb6e87162b",
+  "history": [
+    {
+      "cause": "NEW_MOCK_CONTEXT_OMITTED_REQUIRED_EXTERNAL_PATH",
+      "errors": 3,
+      "failed_fixture_source_preserved": true,
+      "fix": "ADD_INERT_PATH_METADATA_ONLY_NO_INPUT_READ_OR_GATE_RELAXATION",
+      "historical_run_modified": false,
+      "live_kernel_dispatches": 0,
+      "status": "PRESERVED_SOURCE_TEST_FAILURE",
+      "tests_run": 18
+    },
+    {
+      "cause": "CAPABILITY_ROWS_DEFAULTED_SOURCE_IMPLEMENTED_TRUE_FOR_DOCUMENTED_OR_LEGACY_ONLY_INTERFACES",
+      "fix": "EXPLICIT_PURE_VALIDATOR_READONLY_COLLECTOR_AND_UNIMPLEMENTED_G2_ADAPTER_LAYERS",
+      "new_physical_or_kernel_execution": false,
+      "prior_run": "d39682c2-2f08-4ac6-a162-d8bb44d5cb65",
+      "prior_run_rebound": false,
+      "prior_source": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+      "requires_fresh_exact_source_safe_run": true,
+      "status": "PRESERVED_CAPABILITY_LAYER_ANNOTATION_CORRECTION"
+    }
+  ],
+  "no_failed_real_kernel_attempt_in_this_task": true
+}

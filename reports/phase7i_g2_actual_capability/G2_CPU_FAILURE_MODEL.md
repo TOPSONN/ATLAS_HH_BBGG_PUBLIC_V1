@@ -1,0 +1,7 @@
+# CPU failure model
+
+CPU-rate與lifetime-budget分開記錄。輪詢停頓、controller死亡、collector死亡、parent替換、InvocationID重播、缺counter、u64 overflow、counter reset或角色逃逸均不能接受完成。OOM/timeout/controller loss是failure；一個仍存活的collector可保留已完成slots，但不因此將job改判成功。
+
+先要求整個worker/controller死亡域TERM，經已審grace後由獨立manager要求group KILL；collector暫留同budget parent作postmortem，再退出。最終observer在外部trusted context觀察parent populated=0、registry全部EXITED與collector PID/start綁定；完整cleanup CPU仍包含於parent final counter。外部observer CPU在B提案為manager_journal非零成本，不能用此架構聲稱原A完整成立。
+
+collector/observer失去聯繫或收尾未確認，終態UNKNOWN、保留已commit證據，不盲目重跑；overrun終態FAIL，不能換seed、延長限額或重置總budget。沒有真實native CPU測量，本次相關欄位均null。
