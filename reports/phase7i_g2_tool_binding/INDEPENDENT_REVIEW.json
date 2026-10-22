@@ -1,0 +1,74 @@
+{
+  "independent_parser_not_collector": true,
+  "independent_tool_identity_attested": false,
+  "method": "SAME_AGENT_DIFF_PLUS_SEPARATE_AST_STAGE_AND_SEMANTIC_PROCESS_NOT_SECOND_HUMAN",
+  "no_live_tool_query": true,
+  "original_three_fixed_commands_and_environment_unchanged": true,
+  "resource_enforcement_claimed": false,
+  "reviewed_original_four_hashes": {
+    "diagnostic_capture.py": "2deda99bb913e6a8ee37993778c6db4201d3ff3f1cdd048f290440e26b2f28a4",
+    "diagnostic_contract.py": "bdca317b0ef0fecc7c5b141171cd2915e2be46938402ae223fbefa1955b704b5",
+    "diagnostic_tools.py": "6ffd7db2f116fb509e44584651feb5bb4595ab33dcc3f034d89c25fe50509582",
+    "diagnostic_validate.py": "fcd9e45af9bbadcf5db53bb3f00ca68296aa2c1582c044e300f9de6c8acc8c87"
+  },
+  "source_review": {
+    "files": [
+      {
+        "path": ".github/workflows/g2_tool_binding.yml",
+        "sha256": "7379aa6ba8f40c9813cf6408a6ff7ed9df53e8bfe949e3405d12ac8e0ea7698f"
+      },
+      {
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "sha256": "fa48c94feb166c4bb46196ef527013c85ee82f38e29d04de094af75a5b6d01e9"
+      },
+      {
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "sha256": "a9dd9777e7b8cfdf3f47f530500764aad0aceedb89043243ba252e4515f6fd4c"
+      },
+      {
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "sha256": "f5ec940f5a3906addf1614852265d41b1cefbd520bc9002a81d342342b53606e"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/history.py",
+        "sha256": "79f63f35448fbdee9a2a4bbb36b1be725f799fefc14c7e42215cfd25c1de3a03"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_docs.py",
+        "sha256": "641dc0208a334f578ef81fa63646fd52ccc5a091b64fec2bca65264e5a02119c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_elf.py",
+        "sha256": "ac8ad5eaaaf701bb4dc107c3bbfb4cdd7b4eb2939a76d282a99de0f453239410"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_publication.py",
+        "sha256": "ee2c5d302984cefdb3b47cc646e91a242158d4726e7c995d403ced7b75c9eae5"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_review.py",
+        "sha256": "a1dbfb2206169bd9bb8ccde0af2f07d1a09d709ba3090429b60ef21e6dff40a2"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_runner.py",
+        "sha256": "6c516b0140ac5e6664794b5177a9ebd7f2cfad09a1dbb45937c6c5bfd3245f5c"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_tests.py",
+        "sha256": "4927dacc5fe32f0e496de57f20c5588803b8e53ff58ec4df0b28d5950b41e1f9"
+      },
+      {
+        "path": "simulation/hh_signal/final_closure/master/tool_binding_version_probe.py",
+        "sha256": "524154a6ad1fad781c0b98a55bc3eb167bcd9333d30a79ef6b8af9dbe6634c7f"
+      }
+    ],
+    "full_diagnostic_authorized": false,
+    "native_tool_reads_performed": 0,
+    "original_four_unchanged": true,
+    "source_review_method": "SAME_AGENT_SEPARATE_AST_AND_SEMANTIC_PROCESS_NOT_SECOND_HUMAN",
+    "status": "PASS_EXACT_SOURCE_AST_AND_DIFF",
+    "systemd_installed_version": null
+  },
+  "status": "PASS_SOURCE_REVIEW_WITH_EXPLICIT_RUNTIME_BLOCKERS",
+  "version_probe_separate_scope": true
+}

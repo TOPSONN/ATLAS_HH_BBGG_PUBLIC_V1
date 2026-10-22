@@ -1,0 +1,39 @@
+{
+  "PR44_checkpoint": {
+    "files": 67,
+    "sha256": "693d1e59412755417c734c6f4159435c48f3fc126bd589934287596a9279c578"
+  },
+  "baseline_byte_identical": 1796,
+  "baseline_files": 1800,
+  "changed_existing_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py"
+  ],
+  "current_checkpoint": {
+    "files": 38,
+    "sha256": "11f493ac1c6e3dbb065b5843143ea1e45a1ea55c3655557064cddac669596b6d"
+  },
+  "earlier_checkpoints": {
+    "prior_G1_G2_and_all_three_preparation_checkpoints_unchanged": true
+  },
+  "frozen_inputs": 1019,
+  "installations_changed": false,
+  "old_PRs_changed": false,
+  "old_run_rebound": false,
+  "only_frozen_exception": "EXACT_CI_ROUTING",
+  "original_controller_ledger_and_diagnostic_four_unchanged": true,
+  "original_four_source_sha256": {
+    "diagnostic_capture.py": "2deda99bb913e6a8ee37993778c6db4201d3ff3f1cdd048f290440e26b2f28a4",
+    "diagnostic_contract.py": "bdca317b0ef0fecc7c5b141171cd2915e2be46938402ae223fbefa1955b704b5",
+    "diagnostic_tools.py": "6ffd7db2f116fb509e44584651feb5bb4595ab33dcc3f034d89c25fe50509582",
+    "diagnostic_validate.py": "fcd9e45af9bbadcf5db53bb3f00ca68296aa2c1582c044e300f9de6c8acc8c87"
+  },
+  "raw_sha256_unchanged": {
+    "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+    "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+  },
+  "scientific_inputs_exact": 1018,
+  "status": "PASS_HISTORICAL_HASH_PRESERVATION"
+}

@@ -1,0 +1,293 @@
+{
+  "actual_CLI_and_resume": {
+    "ledger_events_after": 12,
+    "ledger_events_before": 12,
+    "live_dispatches": 0,
+    "results": [
+      {
+        "exit_code": 0,
+        "mode": "status",
+        "output_sha256": "a4e8dc0ea89f36b2bdc8b3663b1e900b6038b2f4852ab5d4fdc98a05da99a412",
+        "status": "STATUS_SNAPSHOT"
+      },
+      {
+        "exit_code": 0,
+        "mode": "verify",
+        "output_sha256": "e852c031e33d9bd8ba90bde2d6c5d56900656c2999514e053cfe74b17b525f94",
+        "status": "PASS_SOURCE_ONLY"
+      },
+      {
+        "exit_code": 0,
+        "mode": "resume-safe",
+        "output_sha256": "aebf070bb1328a3ddd196cb4e8329ec429867bfce22b30b5f7242635b8fc84f3",
+        "status": "PASS_SOURCE_ONLY"
+      }
+    ],
+    "resume_repeated_children": 0,
+    "run_id": "3bc2b439-3182-4bbe-a667-1f7405691028",
+    "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+    "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
+  },
+  "actual_live_dispatches": 0,
+  "composite_input_sha256": "18da964d365b033c711899d412f39c464862a504f7f3215573b9c55ba985d9fe",
+  "ledger_events": 12,
+  "new_statement_input_sha256": "6b50a8f8f70e475860c9293bfab6d2374f8a1c18101ed206a7dc24af412cd9e1",
+  "prior_run_rebound": false,
+  "run_id": "3bc2b439-3182-4bbe-a667-1f7405691028",
+  "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+  "stages": [
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "04910f0258839e53f95cdf3570bb7b3c578b9077e94ef51445590760b9582b58",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 801,
+          "path": "G2_SOURCE_AND_INPUT_BINDING.json",
+          "sha256": "618251ad4b564bd587b7fcb9b1b296c3d35ff04003807b29496d18ba5a0d9b7d"
+        },
+        {
+          "bytes": 96,
+          "path": "safe_child_log.txt",
+          "sha256": "4b9e0ec86a50a42b15e8abe9bdbbc80498752ffddf2bb497a3bbfc81459ff6c6"
+        },
+        {
+          "bytes": 272,
+          "path": "stage_result.json",
+          "sha256": "101b002203b57e9af674a969545a92ab7eda768f72e0f42df6ce27bcb89d3cad"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "PR44 source identity exact; new user statement gets a fresh input/source run",
+        "remaining_blockers": []
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T0_EXACT_SOURCE_AND_NEW_INPUT",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "a4ba542201794aea3cc3a4890c3107f45b2d3bace91e26f24e8b88b74242cc15",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1322,
+          "path": "G2_ACTUAL_TOOL_BINDING.json",
+          "sha256": "7c209f9f1d81c4e473c219d3e621f2bbe3b56ed1fac0da1c6a8a6ac469660a31"
+        },
+        {
+          "bytes": 89,
+          "path": "safe_child_log.txt",
+          "sha256": "d8644069db904799d9a6bcbc1398459f8dd2012a672534250ade17afeefcfa0f"
+        },
+        {
+          "bytes": 311,
+          "path": "stage_result.json",
+          "sha256": "f7bcaff548ca0eef9091a014dd19ecd0a31e8712aac05912adb807b1ad73d894"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Three missing expected hashes now bound to reported values, not independently read",
+        "remaining_blockers": [
+          "LIVE_TOOL_IDENTITY_NOT_ATTESTED"
+        ]
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T1_ACTUAL_TOOL_BINDING",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "1850f6f67ac4875e7d3496b99a919003f9aa54759b6d691645b310ff54e37360",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1703,
+          "path": "G2_DEPENDENCY_CLOSURE.md",
+          "sha256": "2881950f979392e326fb478afd7e3a23a8efaead2d64412f83c7a0b95778ec42"
+        },
+        {
+          "bytes": 1687,
+          "path": "G2_INSTALLED_VERSION_REVIEW.md",
+          "sha256": "edc3597d376ca7a0ffa249bd716fef63dd073815369de144868b35530ac1f89b"
+        },
+        {
+          "bytes": 1745,
+          "path": "G2_PENDING_VERSION_SCOPE_REVIEW.json",
+          "sha256": "9a1d3e10b2065f631f4c267f6df3fe4da71cae88b679ee3bff8fbf9fb695dbb8"
+        },
+        {
+          "bytes": 99,
+          "path": "safe_child_log.txt",
+          "sha256": "fbf960c8c9953fd2f40c0363a6d8f0e0abd7a5ba0367ef1580dcb0e8c34432c5"
+        },
+        {
+          "bytes": 385,
+          "path": "stage_result.json",
+          "sha256": "a494c7f639dd438aa21825d9d39f3ff35523d0f48beb48cc7926e07928c5ce1f"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Client binary version and interpreter/dynamic closure remain unknown; minimum version-only proposal prepared",
+        "remaining_blockers": [
+          "INSTALLED_VERSION_UNKNOWN",
+          "DEPENDENCY_CLOSURE_UNKNOWN",
+          "PRIVATE_PARENT_UNKNOWN"
+        ]
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T2_VERSION_AND_DEPENDENCY_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "19fd4d7c8b5af9df01b0ac013a375b180fcdb0e2d43af907b190306f46c0f6b3",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1023,
+          "path": "G2_FIXED_ARGV_ENV_COMPARISON.json",
+          "sha256": "ffb09e6192546f7f6e02cd72be53f38e9c93a30373b7f2ecab6d5b649b8f75a5"
+        },
+        {
+          "bytes": 1735,
+          "path": "G2_PREEXECUTION_STOP_RULES.md",
+          "sha256": "e53096d09ffaf7805e214d93de6aa41baff8cfd42460a3c15808ae0366399be7"
+        },
+        {
+          "bytes": 1470,
+          "path": "G2_SINGLE_USE_SCOPE_REVIEW.json",
+          "sha256": "bdebcb9c5322b9c2aa24848812000726000a24dc4fc825973e90d9f8a4e714c0"
+        },
+        {
+          "bytes": 2225,
+          "path": "G2_USER_EXECUTION_COMMAND_ZH_TW.md",
+          "sha256": "c19811d5ff480718c6f5eaa8545b2e279b76afe8504ba5b2ffe45a6a8c570cf0"
+        },
+        {
+          "bytes": 95,
+          "path": "safe_child_log.txt",
+          "sha256": "adcef2592a7fcd309078dc8f369d3959b614d194874c5d18b1dd063a845a321d"
+        },
+        {
+          "bytes": 499,
+          "path": "stage_result.json",
+          "sha256": "7b6ba49143e21add1a02835cd6e467b09fbac7f0738aeada8ea349f42ad28bec"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Pending full scope has exact observed hashes but remains blocked; no authorization manufactured",
+        "remaining_blockers": [
+          "USER_REPORTED_NOT_INDEPENDENTLY_REHASHED",
+          "INSTALLED_SYSTEMD_VERSION_UNKNOWN",
+          "DEPENDENCY_CLOSURE_UNKNOWN",
+          "EXISTING_BUS_SOCKET_CONDITIONS_UNKNOWN",
+          "PRIVATE_PARENT_UNKNOWN",
+          "SEPARATE_HUMAN_APPROVAL_REQUIRED"
+        ]
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T3_PENDING_SCOPE_AND_COMMAND",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "f59ef33055f5a856dfd17aaaf1b4638389b72e9ae68fd534dea3a8e720779514",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 531,
+          "path": "G2_INDEPENDENT_VALIDATOR_RESULTS.json",
+          "sha256": "baf5fa17f1a18edef24d6b5acef6f6fb6b1c645d5b79fefcfa3ae49f442bec5c"
+        },
+        {
+          "bytes": 91,
+          "path": "safe_child_log.txt",
+          "sha256": "df66e0a93fbe8dbddfa2a8c48f283b3197c72fc85a8fe4472a2d52c47ffcad29"
+        },
+        {
+          "bytes": 266,
+          "path": "stage_result.json",
+          "sha256": "9fa1da876cabee51d91579fcc6122e6f852cf673bcac1862cf4fdd4cb6f122b5"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Synthetic results cannot establish manager state or dependency closure",
+        "remaining_blockers": []
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T4_INDEPENDENT_VALIDATOR",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_query_executed": false,
+      "command_sha256": "aea0505f3a3781584a6f0cda71e15bb1a9d85a8edbc80f69063d77e7b8760cb2",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 652,
+          "path": "G2_BINDING_CHECKPOINT.json",
+          "sha256": "2b9338a6990aed6b32c99e149a5f9977d42966e6ec0fceb2a3e4d724b45607d5"
+        },
+        {
+          "bytes": 976,
+          "path": "G2_NEXT_ACTUAL_OS_ACTION.md",
+          "sha256": "87de7e1bb3ad2cc2cbea9b65850e89a2feacc62b3ada34ef3945d5bb83ac90e6"
+        },
+        {
+          "bytes": 98,
+          "path": "safe_child_log.txt",
+          "sha256": "6b87ad7c67b1c66eca6be66927b907475ea0b8aee5ce2a5db426a40152957147"
+        },
+        {
+          "bytes": 272,
+          "path": "stage_result.json",
+          "sha256": "12fa3d70b520dab827979c03c3099618fd7205d9b72a02592fa8e73e4be8b28c"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Safe review complete; stop at new independent version-only approval boundary",
+        "remaining_blockers": []
+      },
+      "source_revision": "55777dd8a21964dd87c7294550bd51cef73e5fa8",
+      "stage": "T5_PRESERVATION_AND_PUBLICATION",
+      "status": "PASS_SOURCE_ONLY"
+    }
+  ]
+}
