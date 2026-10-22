@@ -7,7 +7,7 @@
       {
         "exit_code": 0,
         "mode": "status",
-        "output_sha256": "740730e93179aa8ad8c813997b1543ee6d0d4a98f693575d83a93d6f6e7c8b92",
+        "output_sha256": "dea4d67d32609da8e91c5ad5e10089af15bf053bb515ec8b4ec8d7e72fa14f81",
         "status": "STATUS_SNAPSHOT"
       },
       {
@@ -19,13 +19,13 @@
       {
         "exit_code": 0,
         "mode": "resume-safe",
-        "output_sha256": "16a5696f8922a80bedc006315d3ca07575cd9477451a27a3aaa18dee7fc88e8d",
+        "output_sha256": "d2de9bb32c9c0fe9f908c258ca5b8d3f1a2e529b15d29805da2d81a8b4142d3a",
         "status": "PASS_SOURCE_ONLY"
       }
     ],
     "resume_repeated_children": 0,
-    "run_id": "d39682c2-2f08-4ac6-a162-d8bb44d5cb65",
-    "source_revision": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+    "run_id": "7424d623-514b-4511-a8a8-9d9b1656787e",
+    "source_revision": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
     "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
   },
   "counts_overlap_not_additive": true,
@@ -34,7 +34,7 @@
   "local_final_affected": {
     "errors": 0,
     "failures": 0,
-    "log_sha256": "f20d909ae3ff5bf0bbb15ef686de6ca5621822e03dd24faf18c5b52ae1960713",
+    "log_sha256": "1fec6613ee6bd68e20b30edc843de401cbed9d4c70d0964b5278084ed258787d",
     "modules": [
       "simulation.hh_signal.final_closure.master.g2_protocol_tests",
       "simulation.hh_signal.final_closure.master.g2_engine_tests",
@@ -53,81 +53,81 @@
     "scope": "SOURCE_AND_INERT_OR_SYNTHETIC_ONLY",
     "skipped": 0,
     "status": "PASS",
-    "tests_run": 164,
-    "wall_seconds": 52.87299350000012
+    "tests_run": 165,
+    "wall_seconds": 54.052017400000295
   },
   "source_CI": {
-    "delivery_CI": "PENDING_UNTIL_DELIVERY_COMMIT",
+    "delivery_CI": "PENDING_UNTIL_FINAL_REPORT_COMMIT",
     "jobs": [
       {
         "decoded_logs_reviewed": true,
         "event": "pull_request",
         "evidence": {
-          "affected_subset": 103,
-          "includes_in_memory_CIM_cases": 26,
-          "passes": 103
+          "affected_pass": 164,
+          "affected_run": 165,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
         },
-        "id": 119623889002,
-        "name": "windows_inert",
-        "run": 39717767921,
+        "id": 119629659455,
+        "name": "linux_safe",
+        "run": 39719571091,
         "status": "SUCCESS"
       },
       {
         "decoded_logs_reviewed": true,
         "event": "pull_request",
         "evidence": {
-          "affected_pass": 163,
-          "affected_run": 164,
-          "cpp_inert_arithmetic_step_success": true,
-          "forbidden_attempts": [],
-          "human_review_attempts": 0,
-          "legacy": 81,
-          "offline": 612,
-          "publication": "PASS",
-          "skipped": 1
-        },
-        "id": 119623889350,
-        "name": "linux_safe",
-        "run": 39717767921,
-        "status": "SUCCESS"
-      },
-      {
-        "decoded_logs_reviewed": true,
-        "event": "push",
-        "evidence": {
-          "affected_pass": 163,
-          "affected_run": 164,
-          "cpp_inert_arithmetic_step_success": true,
-          "forbidden_attempts": [],
-          "human_review_attempts": 0,
-          "legacy": 81,
-          "offline": 612,
-          "publication": "PASS",
-          "skipped": 1
-        },
-        "id": 119623711508,
-        "name": "linux_safe",
-        "run": 39717712217,
-        "status": "SUCCESS"
-      },
-      {
-        "decoded_logs_reviewed": true,
-        "event": "push",
-        "evidence": {
-          "affected_subset": 103,
+          "affected_subset": 104,
           "includes_in_memory_CIM_cases": 26,
-          "passes": 103
+          "passes": 104
         },
-        "id": 119623711823,
+        "id": 119629659615,
         "name": "windows_inert",
-        "run": 39717712217,
+        "run": 39719571091,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_subset": 104,
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 104
+        },
+        "id": 119629641805,
+        "name": "windows_inert",
+        "run": 39719565796,
+        "status": "SUCCESS"
+      },
+      {
+        "decoded_logs_reviewed": true,
+        "event": "push",
+        "evidence": {
+          "affected_pass": 164,
+          "affected_run": 165,
+          "cpp_inert_arithmetic_step_success": true,
+          "forbidden_attempts": [],
+          "human_review_attempts": 0,
+          "legacy": 81,
+          "offline": 612,
+          "publication": "PASS",
+          "skipped": 1
+        },
+        "id": 119629641928,
+        "name": "linux_safe",
+        "run": 39719565796,
         "status": "SUCCESS"
       }
     ],
     "scope": "SOURCE_ONLY_NOT_KERNEL_ENFORCEMENT",
-    "source": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+    "source": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
     "status": "SUCCESS"
   },
-  "source_revision": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+  "source_revision": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
   "synthetic_named_negatives": 45
 }

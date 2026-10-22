@@ -6,7 +6,7 @@
   "BASE_PR": 42,
   "BASE_REVISION": "6126b315834715983481802f35630742accf1d88",
   "DELIVERY_COMMIT": "PENDING_CONTAINING_REPORT_COMMIT_CREATION",
-  "EXECUTED_SOURCE_REVISION": "f2be12fd487c66d877e0362d6a5922cafc8ac369",
+  "EXECUTED_SOURCE_REVISION": "d1ec58c011f4f534ed04ba67de8c6ef95afa503c",
   "FINAL_VERDICT": "PASS_SAFE_G2_G3_ENGINEERING_AND_DECISION_PACKAGE; BLOCKED_ACTUAL_OS_DEPLOYMENT",
   "FORMAL_BUILD_ONLY_AUTHORIZED": false,
   "FROZEN_INPUT_SHA256_STATUS": "1019 checked; 1018 scientific/data exact, one exact CI-routing compatibility exception",
@@ -99,8 +99,8 @@
     "delivery": "PENDING_UNTIL_COMMIT_EXISTS",
     "source": "SUCCESS_DECODED_LOGS_REVIEWED",
     "source_runs": [
-      39717712217,
-      39717767921
+      39719565796,
+      39719571091
     ]
   },
   "MINIMUM_USER_DECISION": "Review exact B1-B8/VM/observer meanings and unresolved async-kernel cost; no acceptance inferred. A separately gated single-use read-only diagnostic can collect missing decision facts.",
@@ -108,8 +108,8 @@
   "NEW_INTEGRALS": 0,
   "NEW_ME_CALLS": 0,
   "NEXT_AUTHORIZED_ACTION": "Read decision package; verify existing safe checkpoint only. No new OS/device/kernel/physics action authorized.",
-  "NEXT_SAFE_RESUMABLE_ACTION": "At exact source f2be12fd487c66d877e0362d6a5922cafc8ac369, status/verify/resume-safe --run-id d39682c2-2f08-4ac6-a162-d8bb44d5cb65; new input/source requires fresh run.",
-  "OFFLINE_TEST_RESULTS": "Local affected164 PASS; Ubuntu612/612 offline,81/81 safe legacy; affected163PASS1Windows-onlySKIP",
+  "NEXT_SAFE_RESUMABLE_ACTION": "At exact source d1ec58c011f4f534ed04ba67de8c6ef95afa503c, status/verify/resume-safe --run-id 7424d623-514b-4511-a8a8-9d9b1656787e; new input/source requires fresh run.",
+  "OFFLINE_TEST_RESULTS": "Local affected165 PASS; Ubuntu612/612 offline,81/81 safe legacy; affected164PASS1Windows-onlySKIP",
   "PHYSICAL_RESTART_AUTHORIZED": false,
   "PROJECT": "ATLAS_HH_BBGG_PUBLIC_V1",
   "PUBLICATION_AUDIT": "SOURCE16_PAYLOAD_PASS; FINAL_REPORT_INDEX_AND_INTERMEDIATES_REQUIRED_BEFORE_PUSH",
@@ -117,5 +117,5 @@
   "S4_EXECUTED": false,
   "SCIENTIFIC_PREFLIGHT": "PASS_FROZEN_SOURCE_ONLY; NO_NEW_CARD_OR_GUARD_SOURCE_PROBLEM_IDENTIFIED; NATIVE_RUNTIME_UNVERIFIED",
   "TASK": "PHASE7I_G2_ACTUAL_CAPABILITY_AND_EXECUTION_ARCHITECTURE_V1",
-  "WINDOWS_TEST_RESULTS": "CI affected subset103/103 including26 in-memory CIM cases; no host recapture"
+  "WINDOWS_TEST_RESULTS": "CI affected subset104/104 including26 in-memory CIM cases; no host recapture"
 }

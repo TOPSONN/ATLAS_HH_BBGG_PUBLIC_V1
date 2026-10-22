@@ -1,6 +1,6 @@
 # G2 真實能力與執行架構工程交付
 
-完成的是有實質source修補的安全工程與決策套件；**沒有完成實機資源封裝或物理restart**。Base PR42 `6126b315834715983481802f35630742accf1d88`；exact executed source `f2be12fd487c66d877e0362d6a5922cafc8ac369`；新[Draft PR43](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/43)。Fresh safe run `d39682c2-2f08-4ac6-a162-d8bb44d5cb65`。Delivery commit尚未建立時不可能自引用其SHA，本報告保留publication前快照；完整交付SHA及最終CI由PR metadata、交付訊息與本機DELIVERY_REPORT_ZH_TW.md補上。
+完成的是有實質source修補的安全工程與決策套件；**沒有完成實機資源封裝或物理restart**。Base PR42 `6126b315834715983481802f35630742accf1d88`；exact executed source `d1ec58c011f4f534ed04ba67de8c6ef95afa503c`；新[Draft PR43](https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/43)。Fresh safe run `7424d623-514b-4511-a8a8-9d9b1656787e`。Delivery commit尚未建立時不可能自引用其SHA，本報告保留publication前快照；完整交付SHA及最終CI由PR metadata、交付訊息與本機DELIVERY_REPORT_ZH_TW.md補上。
 
 ## 實質成果
 
@@ -14,9 +14,9 @@
 
 12個安全child實際exit0，24筆append-only ledger；status/verify/resume-safe實際exit0，resume沒有重跑child。新G2 profile重用Master的lock/child/bounds；只為G2 schema增加host＋guest external hash及scope identity，legacy ledger的byte projection一致。每child仍120s soft timeout與65536-byte retained-log界線，這不是OS CPU/RAM/disk硬封裝。
 
-本機final affected164/164；新trace具名45個synthetic負例與套件重疊，不加總成獨立測試數。C++20沿用原checked arithmetic程式，8個實際正反案例，只是inert integer computation，binary留local。Source Ubuntu CI每輪612/612 offline、81/81 safe legacy、affected163通過1Windows-only skip；Windows103/103含26個in-memory CIM案例。actual decoded job logs已讀，沒有physics imports、kernel service、human approval construction。report-only delivery CI須待其commit建立後另查，不借用舊source checks。
+本機final affected165/165；新trace具名45個synthetic負例與套件重疊，不加總成獨立測試數。C++20沿用原checked arithmetic程式，8個實際正反案例，只是inert integer computation，binary留local。Source Ubuntu CI每輪612/612 offline、81/81 safe legacy、affected164通過1Windows-only skip；Windows104/104含26個in-memory CIM案例。actual decoded job logs已讀，沒有physics imports、kernel service、human approval construction。report-only delivery CI須待其commit建立後另查，不借用舊source checks。
 
-獨立驗證為同agent的另一stage process＋不同整數/observer oracle subset、AST及diff審查，沒有虛構第二位人類或完整第二kernel實作。初版mock fixture漏external path導致3個source-test errors，已補inert metadata並保留原candidate及failure history；沒有真實kernel失敗或自動重試live操作。
+獨立驗證為同agent的另一stage process＋不同整數/observer oracle subset、AST及diff審查，沒有虛構第二位人類或完整第二kernel實作。交付審核修正了首版矩陣將documented/legacy-only介面預設為SOURCE_IMPLEMENTED的標示；沒有改kernel旗標。原f2be source及d396 run保持封存，新source與新run完成全流程，沒有重綁。初版mock fixture漏external path導致3個source-test errors，已補inert metadata並保留原candidate及failure history；沒有真實kernel失敗或自動重試live操作。
 
 ## 科學與資料保存
 
@@ -38,7 +38,7 @@ source preflight沒有發現新physics-card/guard錯誤；確認目前active bui
 - **TASK**: PHASE7I_G2_ACTUAL_CAPABILITY_AND_EXECUTION_ARCHITECTURE_V1
 - **BASE_PR**: 42
 - **BASE_REVISION**: 6126b315834715983481802f35630742accf1d88
-- **EXECUTED_SOURCE_REVISION**: f2be12fd487c66d877e0362d6a5922cafc8ac369
+- **EXECUTED_SOURCE_REVISION**: d1ec58c011f4f534ed04ba67de8c6ef95afa503c
 - **DELIVERY_COMMIT**: PENDING_CONTAINING_REPORT_COMMIT_CREATION
 - **PULL_REQUEST_URL**: https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/pull/43
 - **G1_HOST_COVERAGE**: 13/13 REPORTED_UNATTESTED; 4 disk-partition, 1 partition-logical edges
@@ -72,9 +72,9 @@ source preflight沒有發現新physics-card/guard錯誤；確認目前active bui
 - **G7_READY_FOR_S4**: false
 - **SCIENTIFIC_PREFLIGHT**: PASS_FROZEN_SOURCE_ONLY; NO_NEW_CARD_OR_GUARD_SOURCE_PROBLEM_IDENTIFIED; NATIVE_RUNTIME_UNVERIFIED
 - **FROZEN_INPUT_SHA256_STATUS**: 1019 checked; 1018 scientific/data exact, one exact CI-routing compatibility exception
-- **OFFLINE_TEST_RESULTS**: Local affected164 PASS; Ubuntu612/612 offline,81/81 safe legacy; affected163PASS1Windows-onlySKIP
-- **WINDOWS_TEST_RESULTS**: CI affected subset103/103 including26 in-memory CIM cases; no host recapture
-- **GITHUB_CI**: {"source":"SUCCESS_DECODED_LOGS_REVIEWED","source_runs":[39717712217,39717767921],"delivery":"PENDING_UNTIL_COMMIT_EXISTS"}
+- **OFFLINE_TEST_RESULTS**: Local affected165 PASS; Ubuntu612/612 offline,81/81 safe legacy; affected164PASS1Windows-onlySKIP
+- **WINDOWS_TEST_RESULTS**: CI affected subset104/104 including26 in-memory CIM cases; no host recapture
+- **GITHUB_CI**: {"source":"SUCCESS_DECODED_LOGS_REVIEWED","source_runs":[39719565796,39719571091],"delivery":"PENDING_UNTIL_COMMIT_EXISTS"}
 - **PUBLICATION_AUDIT**: SOURCE16_PAYLOAD_PASS; FINAL_REPORT_INDEX_AND_INTERMEDIATES_REQUIRED_BEFORE_PUSH
 - **S4_EXECUTED**: false
 - **FULL_LAUNCH_ENVELOPE_VERIFIED**: false
@@ -93,5 +93,5 @@ source preflight沒有發現新physics-card/guard錯誤；確認目前active bui
 - **GATES_UNKNOWN**: ["CURRENT_GUEST_FRESHNESS","EFFECTIVE_MANAGER_AND_USER_SESSION_WARNING","NEW_JOB_DELEGATION","QUALIFIED_DEVICE_AND_ALL_HOST_WRITERS","INSTALLED_MKE2FS_CONFIG_FEATURES","BUILD_RUNTIME_RESIDENT_ALLOCATION","POWER_LOSS_DURABILITY","ASYNC_KERNEL_COST_CHARGING"]
 - **MINIMUM_USER_DECISION**: Review exact B1-B8/VM/observer meanings and unresolved async-kernel cost; no acceptance inferred. A separately gated single-use read-only diagnostic can collect missing decision facts.
 - **NEXT_AUTHORIZED_ACTION**: Read decision package; verify existing safe checkpoint only. No new OS/device/kernel/physics action authorized.
-- **NEXT_SAFE_RESUMABLE_ACTION**: At exact source f2be12fd487c66d877e0362d6a5922cafc8ac369, status/verify/resume-safe --run-id d39682c2-2f08-4ac6-a162-d8bb44d5cb65; new input/source requires fresh run.
+- **NEXT_SAFE_RESUMABLE_ACTION**: At exact source d1ec58c011f4f534ed04ba67de8c6ef95afa503c, status/verify/resume-safe --run-id 7424d623-514b-4511-a8a8-9d9b1656787e; new input/source requires fresh run.
 - **FINAL_VERDICT**: PASS_SAFE_G2_G3_ENGINEERING_AND_DECISION_PACKAGE; BLOCKED_ACTUAL_OS_DEPLOYMENT
