@@ -1,0 +1,57 @@
+{
+  "PR43_checkpoint": {
+    "files": 84,
+    "sha256": "f1384e3514aeb1b615f20c87f8ea2f5ec8318bdc4e058b0f1f56d591f828b92f"
+  },
+  "baseline_byte_identical": 1760,
+  "baseline_files": 1764,
+  "changed_existing_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py"
+  ],
+  "current_preparation_run": {
+    "files": 67,
+    "sha256": "693d1e59412755417c734c6f4159435c48f3fc126bd589934287596a9279c578"
+  },
+  "frozen_inputs": 1019,
+  "installations_changed": false,
+  "old_PRs_changed": false,
+  "old_run_rebound": false,
+  "only_frozen_exception": "EXACT_CI_ROUTING",
+  "original_G1_G7_checkpoint": {
+    "files": 84,
+    "sha256": "37eab3240a1ba8551f971e56031e852bf22fd6737c5790df370aec067924d241"
+  },
+  "original_controller_and_ledger_unchanged": true,
+  "prior_preparation_runs": [
+    {
+      "CI_failure": {
+        "correction": "Explicit UTF8 in the two source-only test reads; fresh source/run required",
+        "job": 119686770880,
+        "physics_or_kernel_dispatch": false,
+        "run": 39737568780,
+        "status": "FAILED_WINDOWS_DEFAULT_CP1252_READING_UTF8_TEST_SOURCE"
+      },
+      "files": 67,
+      "ledger_events": 24,
+      "run_id": "9d2f511c-22ae-4de4-b17b-f0146a137649",
+      "sha256": "af9dc8c05144b797c602e65e9f56dce226b51d598a5a3497236c3422561f17cc",
+      "source": "c1d9fc9f3c2bc9f6958dd9a647100779008ba6f5"
+    },
+    {
+      "files": 67,
+      "ledger_events": 24,
+      "run_id": "74c5568a-ae86-44ec-8260-e2553282b342",
+      "sha256": "0c2e323db91f6303c87bc8f2d5e6aa231b671f37ea659a39adf71dd409a00be5",
+      "source": "7044b32e6191308960eb1ea9e83d1753918c7137"
+    }
+  ],
+  "raw_sha256_unchanged": {
+    "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+    "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+  },
+  "scientific_inputs_exact": 1018,
+  "status": "PASS_HISTORICAL_HASH_PRESERVATION"
+}

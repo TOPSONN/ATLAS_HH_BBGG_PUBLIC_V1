@@ -1,0 +1,9 @@
+# Async kernel 成本邊界補充草案 V1（未接受）
+
+原三份B文件保持原bytes/hash。此獨立草案不是修改或接受既有條款，也沒有生效。B1現有三個external角色不能準確保證涵蓋所有guest非同步filesystem/journal/writeback CPU；不能把這些工作默默歸給manager_journal或host_backing。
+
+擬議決策：先要求逐類建立submission、實際execution、parent CPU counter及residual成本證據；不能歸帳的部分明列UNKNOWN。只有另行逐條接受新的ownership定義與誤差/尾量規則後，才可擬議放寬邊界；本草案沒有選擇任何新external排除。固定filesystem容量、journal blocks、allocated blocks與inodes只能說明disk，不證CPU charged to job。
+
+若仍要求原A所有host/guest/VMM與async成本同一累計硬上限，現平台維持A_NOT_DEMONSTRABLY_FEASIBLE。不得把B2的observed-overrun拒絕說成原子零超額停止。未來若獨立測量不足，保留BLOCKED_OS_CAPABILITY，不以source模型補洞。
+
+本草案 user_accepted=false、execution_authorized=false；不增加seeds、CPU/RAM/wall/disk，不啟動任何stress/physics。

@@ -1,0 +1,532 @@
+{
+  "actual_resume": {
+    "ledger_events_after": 24,
+    "ledger_events_before": 24,
+    "live_dispatches": 0,
+    "results": [
+      {
+        "exit_code": 0,
+        "mode": "status",
+        "output_sha256": "954727f68b16fd665210c8a2cdbcb555b88e16cf19090ad19b2bcc56c81ba8e7",
+        "status": "STATUS_SNAPSHOT"
+      },
+      {
+        "exit_code": 0,
+        "mode": "verify",
+        "output_sha256": "a86dbcb4591ce824d3851a16e521839beb30fca0f3968e1e9bba46655b439028",
+        "status": "PASS_SOURCE_ONLY"
+      },
+      {
+        "exit_code": 0,
+        "mode": "resume-safe",
+        "output_sha256": "680c77f849e4d84f33edc002a44f4c232df2d02fca97b3a555a457aaf4666d92",
+        "status": "PASS_SOURCE_ONLY"
+      }
+    ],
+    "resume_repeated_children": 0,
+    "run_id": "07c8b335-d408-414c-adb2-d5bae3cbec91",
+    "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+    "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
+  },
+  "ledger_events": 24,
+  "no_adapter_dispatch_from_safe_profile": true,
+  "run_id": "07c8b335-d408-414c-adb2-d5bae3cbec91",
+  "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+  "stages": [
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 98,
+      "command_sha256": "17aaf1e538807ff88089e775b0f43dc7db6df57318f26cf7ced4b16b66a1a08b",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 453,
+          "path": "D0_PRESERVED_EVIDENCE.json",
+          "sha256": "f5c0717a28bbfa75f7c2d1e94bdb5913cb2b1af1e954f723db1012f22087f04c"
+        },
+        {
+          "bytes": 98,
+          "path": "safe_child_log.txt",
+          "sha256": "f6e1cab6fcaa1dea532c347c51435b227fa1226a11739ffa07bfa6afa6fa2889"
+        },
+        {
+          "bytes": 326,
+          "path": "stage_result.json",
+          "sha256": "c31b07af8bc84088f2cc54f9ec2a1b801938a88fb0c37b8d834451825598e3db"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "PR43 exact evidence reused; old boot/session freshness remains unknown",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D0_SOURCE_AND_EVIDENCE_IDENTITY",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 89,
+      "command_sha256": "649f1bf705761768fb5b05ea433a5bb061876628ed92f2a4ecbb0ec102989ae2",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1392,
+          "path": "G2_DIAGNOSTIC_COMMAND_ZH_TW.md",
+          "sha256": "b73efd3bc49e70d24c80aff6f91a477515f13b8947a2ac69782a7040dd4bfbd1"
+        },
+        {
+          "bytes": 839,
+          "path": "G2_DIAGNOSTIC_TOOL_MANIFEST.json",
+          "sha256": "e4a180671542c37b241e1c102013d2cbc8914f657d7d2d8db41e5d7379d7384e"
+        },
+        {
+          "bytes": 89,
+          "path": "safe_child_log.txt",
+          "sha256": "835c68c4771c6663ea60b0ad7dd2bda63e98d14aae1b1fee1cae5112de1b8c90"
+        },
+        {
+          "bytes": 378,
+          "path": "stage_result.json",
+          "sha256": "7c4d3ec4aa27e3ec007e0dd94aee031466fb16c557117efbbc96ee1a1c392815"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "BLOCKED_TOOL_IDENTITY",
+          "BLOCKED_AUTHORIZATION"
+        ],
+        "new_technical_finding": "Exact hash-only probe available; three live binary hashes genuinely UNKNOWN",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D1_TOOL_BINARY_BINDING",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 98,
+      "command_sha256": "c61ca09ad9e64776ed6de99fbd1b9b0a70f800101f8ee4307695a2eb6edfb270",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1360,
+          "path": "G2_MANAGER_ARGV_REVIEW_ZH_TW.md",
+          "sha256": "9c75596232dc3125ef614f9b3e9d8b96f2b5fd97cf5d9b67c4b85f06ce64b5ba"
+        },
+        {
+          "bytes": 98,
+          "path": "safe_child_log.txt",
+          "sha256": "7263288fe23713df8c328c6b1b7033ebee2f8dd80afb9d60d730507d127b804b"
+        },
+        {
+          "bytes": 379,
+          "path": "stage_result.json",
+          "sha256": "be1db182b1fd10a6c2970803cd5b384160600216e0f492a36f8e6ed6ae12cb47"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "INSTALLED_VERSION_HASH_REVIEW"
+        ],
+        "new_technical_finding": "v255 user private socket has internal default-user fallback; fixed poisoned address required",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D2_SYSTEMD_MANAGER_QUERY_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 93,
+      "command_sha256": "43578453cecdc7c7d054eab0b7a258a5a9edf45a1aaa42a0331cadfe20917ec2",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1143,
+          "path": "G2_DELEGATION_OBSERVABLES_ZH_TW.md",
+          "sha256": "ae527ba67a5a73d9af7e81a74afb2339148abf08c82d8b244f2c9903ea85bba4"
+        },
+        {
+          "bytes": 93,
+          "path": "safe_child_log.txt",
+          "sha256": "5183a92612aee8dfc3b0f01086d5f3700b8a9a8ec2ca88978e775afda3882ccf"
+        },
+        {
+          "bytes": 369,
+          "path": "stage_result.json",
+          "sha256": "2e9af8e1e9c44bbb712e667a8d43a0033966675466c5d8adf6cc6bb0ce3cd455"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "UNKNOWN_EFFECTIVE_DELEGATION"
+        ],
+        "new_technical_finding": "Existing user service Delegate/accounting are distinct from future protected groups",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D3_DELEGATION_QUERY_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 103,
+      "command_sha256": "4ccec62665f967665f62135274b829125d9685aab8a146acc3f5359b1bffa331",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1742,
+          "path": "G2_DIAGNOSTIC_SCOPE.json",
+          "sha256": "a5a69f9a80d6f217c3516de2e5e1be6d20486a2ae4ce566290585dedc5875a22"
+        },
+        {
+          "bytes": 3247,
+          "path": "G2_DIAGNOSTIC_STOP_RULES.md",
+          "sha256": "0a793c04e9e7c6a290988e75aa31663554251b26ea94ed9082c321597717c13d"
+        },
+        {
+          "bytes": 103,
+          "path": "safe_child_log.txt",
+          "sha256": "2ceaae175b81e67cdba96a0d109e77f396e3784ca3548725b30c4987822b1726"
+        },
+        {
+          "bytes": 402,
+          "path": "stage_result.json",
+          "sha256": "ddb9bee2adfd343c1eeab315dac9ff4a1ddb5de50ea3c807d36298fd55752b7a"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "ACTUAL_TOOL_BINDING_AND_SINGLE_USE_SCOPE"
+        ],
+        "new_technical_finding": "Pinned ELF child, pidfd/unreaped group cleanup, bounded streams and exclusive receipt source implemented",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D4_BOUNDED_DIAGNOSTIC_IMPLEMENTATION",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 100,
+      "command_sha256": "39491b2ef83b067808b8625c7f238d4cf43b8611d4189a45b63549fb90ecdd62",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 375,
+          "path": "G2_VALIDATOR_SOURCE_REVIEW.json",
+          "sha256": "5cd4072f6ebbd981f1a6d9ce7c27663cce1b6909ca2e364a8bbf5bdbb790d781"
+        },
+        {
+          "bytes": 100,
+          "path": "safe_child_log.txt",
+          "sha256": "6e6f94f85b8c888663434ae5da6e61c2b832a8b77a1d67206753363011c7feba"
+        },
+        {
+          "bytes": 333,
+          "path": "stage_result.json",
+          "sha256": "b9602cf3a5622950b047c8826bf29efa8ae513ed7830654adc83f5f32d55e0ac"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "Independent validator preserves observed manager vs unknown future delegation",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D5_INDEPENDENT_RECEIPT_VALIDATION",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 103,
+      "command_sha256": "15f24ae7726a59a5d3e10afa0c06bd6cf0f3721990de54f57341ca1407ad5334",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 10589,
+          "path": "G2_B1_B8_DECISION_REVIEW.json",
+          "sha256": "3b743e97072cea827596fcb4e3b26aafc8d42447058bda473da6ab6bb673b07c"
+        },
+        {
+          "bytes": 7035,
+          "path": "G2_B1_B8_DECISION_REVIEW_ZH_TW.md",
+          "sha256": "4e762c1f002a9eefac46fd5855e6bf5474ac60d6055b99ae1e6044b35409cff3"
+        },
+        {
+          "bytes": 103,
+          "path": "safe_child_log.txt",
+          "sha256": "738b10891f736a7a672ee4f6c5c8d2aea3ea8d64e5029a7beb331630e914ce87"
+        },
+        {
+          "bytes": 317,
+          "path": "stage_result.json",
+          "sha256": "a760e8548265457b6b196a2b6c2778a1181c95d0382b4b13cdcc8de76e4e1e70"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "B1 needs separate async cost amendment; no implied acceptance",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D6_G2_A_B_CAPABILITY_AND_COST_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 100,
+      "command_sha256": "2c5a4940ca98195aab4992b8529e9656bc68f4c958f7829b36740ae5a898143e",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 1156,
+          "path": "G2_ASYNC_KERNEL_COST_AMENDMENT_PROPOSAL_V1.md",
+          "sha256": "90ade77b5988dca651812bcf48ef64c0887510cc1e6fc0e21481461ef10c06f0"
+        },
+        {
+          "bytes": 100,
+          "path": "safe_child_log.txt",
+          "sha256": "af68ed6cc80dc3acba69dca878bd01f38b5a2c7ed72b221928ce77bb4c88e3f1"
+        },
+        {
+          "bytes": 355,
+          "path": "stage_result.json",
+          "sha256": "9c5c994c8f859c557aafb91147a830a25385d47439bd1552470e2e518afb3753"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "BLOCKED_OS_CAPABILITY_ASYNC_COST"
+        ],
+        "new_technical_finding": "Fixed journal/disk blocks cannot prove asynchronous CPU ownership",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D7_GUEST_ASYNC_KERNEL_COST_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 94,
+      "command_sha256": "55c6af5d23591fd9234c39334488a60587b54e2b254d64ef71effb41c38c2aff",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 943,
+          "path": "G3_PROTOCOL_TO_DEPLOYMENT_GAPS.md",
+          "sha256": "15768709ce7a9e5ebfafe0f06bd9f7e385016ede341e40a51d83c6b65801321f"
+        },
+        {
+          "bytes": 434,
+          "path": "G3_SOURCE_PRESERVATION.json",
+          "sha256": "8fb83d3986cb73f6fea8428e1ec223dabe92f7d9bdd910ac8d3ca6fea1646eb9"
+        },
+        {
+          "bytes": 94,
+          "path": "safe_child_log.txt",
+          "sha256": "51d1a0fecd6797e28704d035ea05783a2a49c734c6fab1af674f96080ec640a4"
+        },
+        {
+          "bytes": 369,
+          "path": "stage_result.json",
+          "sha256": "fa7cd9edf66fb31d5676a273952a742a74d3a4b2e36c488da42c244be127ace7"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [
+          "BLOCKED_OS_CAPABILITY"
+        ],
+        "new_technical_finding": "No reproducible new defect in PR43 protocol; diagnostic is not protected native deployment",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D8_G3_DEPLOYMENT_GAP_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 99,
+      "command_sha256": "799d622b2e4d4991cb426511ba3f475ad995c931a5a5d037cf3889d14fadf7b0",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 904,
+          "path": "G4_G7_MINIMUM_CAPABILITY_PATH.json",
+          "sha256": "0c59244722276f0129af3f4ebfef17fd478823013f0bcc93630823af75109685"
+        },
+        {
+          "bytes": 99,
+          "path": "safe_child_log.txt",
+          "sha256": "9fb3936f045a7fec325aa7017f66f61308d156cabdabbd7a0b5daeac9590a2a2"
+        },
+        {
+          "bytes": 325,
+          "path": "stage_result.json",
+          "sha256": "68031227791e65f3cf368d0b136ca5e7562d8647c715b7b5527ead227a74e4cb"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "No qualified fixed device; D2 observation cannot bypass G4 through G7",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D9_G4_G7_MINIMUM_CAPABILITY_PATH",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 106,
+      "command_sha256": "30de43e254ed405b59331f37c2e18874975ed6d9a1afc238eb4b277de37ce3c4",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 364,
+          "path": "FROZEN_SCIENCE_PREFLIGHT.json",
+          "sha256": "0ed0258cef1e72a1e36979441b7ecb44031f4ae4587f15fc40efafa5b38b1ff0"
+        },
+        {
+          "bytes": 106,
+          "path": "safe_child_log.txt",
+          "sha256": "9141b48b9996c8d52538fbb3127111c60383b59600855fdc738de9c9747cd74d"
+        },
+        {
+          "bytes": 737,
+          "path": "SCIENTIFIC_CONTINUATION_FEASIBILITY_ZH_TW.md",
+          "sha256": "976df8fe9900b05eaa911f2b02f2d584e589c07c515c1682cc8fa86f69660afb"
+        },
+        {
+          "bytes": 337,
+          "path": "stage_result.json",
+          "sha256": "12e7b66d52f241fbb755ebf38fcddca32139c587de7eb3dbffeee497383e88e8"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "Physics remains frozen; exploratory sandbox would require a separate weaker scope",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D10_SCIENTIFIC_CONTINUATION_FEASIBILITY",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_command_location": "PRIVATE_APPEND_ONLY_LEDGER_FIXED_SAFE_WORKER_ARGV",
+      "actual_exit": 0,
+      "actual_kernel_resources": null,
+      "actual_user_diagnostic_executed": false,
+      "bounded_log_stdout_bytes": 97,
+      "command_sha256": "bb9c4f25c1007495369eedb92922fc960ff997b2fa603ecd7ab27b00626a3628",
+      "external_input_sha256": {
+        "guest": "c575418ca9c4a63c8ea6e53404652b4b190b03e2e5c65ada4321880c2cb87cbc",
+        "host": "8e16a1e0d90b62b63c91ca0852aff19e848752440f047246a966ad65d21c06b5"
+      },
+      "output_manifest": [
+        {
+          "bytes": 550,
+          "path": "DIAGNOSTIC_PREPARATION_CHECKPOINT.json",
+          "sha256": "6cca69fb41edf0b67385be1b773ce447806fc8326090ecaecf26d8d68380cb1c"
+        },
+        {
+          "bytes": 97,
+          "path": "safe_child_log.txt",
+          "sha256": "af274e46abee5b63d341b42fb4d4a2f40d04893047976c1db21d5da05fa67529"
+        },
+        {
+          "bytes": 330,
+          "path": "stage_result.json",
+          "sha256": "7acb7bc33fb63af29e890b1b894b9db5df94af736b5268b5b469b76e8abdd979"
+        }
+      ],
+      "source_evidence": {
+        "actual_acceptance": null,
+        "blockers": [],
+        "new_technical_finding": "All source-only stages finished; stop rather than retry blocked live tools",
+        "next_safe_action": "REVIEW_PRELIMINARY_TOOL_QUERY_ONLY"
+      },
+      "source_revision": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+      "stage": "D11_REGRESSION_AND_PUBLICATION",
+      "status": "PASS_SOURCE_ONLY"
+    }
+  ],
+  "user_diagnostic_executed": false
+}

@@ -1,0 +1,207 @@
+{
+  "actual_user_diagnostic_executed": false,
+  "affected_local": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "07e6277ee8a53c700e8e14a867cb88ebc18fe53bcbcb24b350f946b7a3af2a0c",
+    "modules": [
+      "simulation.hh_signal.final_closure.master.diagnostic_tests",
+      "simulation.hh_signal.final_closure.master.diagnostic_plan_tests",
+      "simulation.hh_signal.final_closure.master.g2_protocol_tests",
+      "simulation.hh_signal.final_closure.master.g2_engine_tests",
+      "simulation.hh_signal.final_closure.master.g2_publication_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_publication_tests",
+      "simulation.hh_signal.final_closure.master.readiness_tests",
+      "simulation.hh_signal.final_closure.master.readiness_guest_tests",
+      "simulation.hh_signal.final_closure.master.readiness_scheduler_tests",
+      "simulation.hh_signal.final_closure.master.test_master",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication",
+      "simulation.hh_signal.final_closure.tests.test_closure"
+    ],
+    "scope": "PURE_SYNTHETIC_OR_INERT_NOT_ACTUAL_UBUNTU_DIAGNOSTIC",
+    "skipped": 3,
+    "status": "PASS",
+    "tests_run": 191,
+    "wall_seconds": 55.243342000001576
+  },
+  "cpp_inert_arithmetic": {
+    "MG5_or_physics_build": false,
+    "actual_resource_enforcement_measurements": null,
+    "binary_published": false,
+    "cases": [
+      {
+        "case": "S4_disk",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "BUILD_disk",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "BUILD_tmpfs_over_RAM",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "overflow",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "components_exceed_ceiling",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "negative",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "malformed",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      },
+      {
+        "case": "zero_arithmetic",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "scope": "INERT_INTEGER_ARITHMETIC_ONLY",
+        "status": "PASS"
+      }
+    ],
+    "compiler_sha256": "6caebf5007c405626a166bba1bf4adbd403746ff9c56d83cf33447a3d7942ec3",
+    "inert_binary_sha256": "4eda90a825631eca3a1557c89fc73fe52de0861f353ac063aa32d4ca4f1675c6",
+    "kernel_tests": 0,
+    "source_sha256": "7b9dc39b8edbdb3b040baec7d3e598eb5a3f89598f9fa72fb8771c3369abaf9c",
+    "status": "PASS_CHECKED_CPP20_ARITHMETIC"
+  },
+  "delivery_CI": "PENDING_CONTAINING_COMMIT_EXISTS",
+  "failed_CI_log_retained_locally_sha256": "6bb02ac691c4a3aa2883d7891fdde420b192a2f7c207c96b684f66060a3ce28c",
+  "prior_failures": [
+    {
+      "local_clone_failed": "MSYS_NtCreateDirectoryObject_ACCESS_DENIED",
+      "old_checkout_modified": false,
+      "resolution": "INDEPENDENT_OBJECT_COPY_EXACT_BLOB_VERIFIED_NO_SHELL_OR_ESCALATION"
+    },
+    {
+      "failure": "SOURCE_FILE_REQUIRED: reviewed workflow not created yet",
+      "fix": "Created exact fixed-branch CI; no capture executed",
+      "local_helper_preparation": "First python -c quoting failed before any Python mutation; replaced with saved script",
+      "stage": "TARGETED_PRE_CI_FILE_CREATION",
+      "superseded_targeted_result": "23 run,21 PASS,2 POSIX SKIP after workflow preparation"
+    },
+    {
+      "correction": "Explicit UTF8 in the two source-only test reads; fresh source/run required",
+      "job": 119686770880,
+      "physics_or_kernel_dispatch": false,
+      "run": 39737568780,
+      "status": "FAILED_WINDOWS_DEFAULT_CP1252_READING_UTF8_TEST_SOURCE"
+    }
+  ],
+  "source": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+  "source_CI": {
+    "Ubuntu": {
+      "affected_pass": 190,
+      "affected_run": 191,
+      "cpp_inert_arithmetic": "PASS",
+      "inert_child_positive_output_overflow_timeout_group_cleanup": "PASS",
+      "legacy": 81,
+      "offline": 612,
+      "skipped": 1
+    },
+    "Windows": {
+      "affected_run": 130,
+      "in_memory_CIM_cases": 26,
+      "passes": 127,
+      "skipped": 3
+    },
+    "actual_user_diagnostic_executed": false,
+    "forbidden_attempts": [],
+    "forbidden_imports": [],
+    "human_review_attempts": 0,
+    "jobs": [
+      {
+        "counts": [
+          130
+        ],
+        "decoded_logs_reviewed": true,
+        "job": 119691334401,
+        "name": "windows_inert",
+        "run": 39738978595,
+        "scope": "SOURCE_SYNTHETIC_AND_OWNED_INERT_CHILD_ONLY_NOT_USER_UBUNTU_DIAGNOSTIC",
+        "skips": 3,
+        "status": "SUCCESS"
+      },
+      {
+        "counts": [
+          612,
+          191
+        ],
+        "decoded_logs_reviewed": true,
+        "job": 119691334564,
+        "name": "linux_safe",
+        "run": 39738978595,
+        "scope": "SOURCE_SYNTHETIC_AND_OWNED_INERT_CHILD_ONLY_NOT_USER_UBUNTU_DIAGNOSTIC",
+        "skips": 1,
+        "status": "SUCCESS"
+      },
+      {
+        "counts": [
+          612,
+          191
+        ],
+        "decoded_logs_reviewed": true,
+        "job": 119691309469,
+        "name": "linux_safe",
+        "run": 39738970442,
+        "scope": "SOURCE_SYNTHETIC_AND_OWNED_INERT_CHILD_ONLY_NOT_USER_UBUNTU_DIAGNOSTIC",
+        "skips": 1,
+        "status": "SUCCESS"
+      },
+      {
+        "counts": [
+          130
+        ],
+        "decoded_logs_reviewed": true,
+        "job": 119691309665,
+        "name": "windows_inert",
+        "run": 39738970442,
+        "scope": "SOURCE_SYNTHETIC_AND_OWNED_INERT_CHILD_ONLY_NOT_USER_UBUNTU_DIAGNOSTIC",
+        "skips": 3,
+        "status": "SUCCESS"
+      }
+    ],
+    "source": "d1a92efdace4c8e0ab480db6c5ab5dd9b7d11121",
+    "status": "SUCCESS"
+  },
+  "source_read_bound_reproduction": {
+    "actual_diagnostic_executed": false,
+    "correction": "Bounded read before hashing/parsing/dispatch; bootstrap bounded source read; negative regression",
+    "new_validator_oversize_rejected_before_hash": true,
+    "old_adapter_source_finding": "scope.read_bytes before JSON byte gate",
+    "old_source": "7044b32e6191308960eb1ea9e83d1753918c7137",
+    "old_validator_hash_before_input_bound_reproduced": true,
+    "resource_caps_increased": false
+  },
+  "suites_overlap_not_additive": true
+}

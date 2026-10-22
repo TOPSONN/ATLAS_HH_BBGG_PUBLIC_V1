@@ -1,0 +1,84 @@
+{
+  "method": "SAME_AGENT_DIFF_PLUS_SEPARATE_AST_AND_SEMANTIC_PROCESS_NOT_SECOND_HUMAN",
+  "native_runtime_review": "PENDING_ACTUAL_TOOL_IDENTITIES",
+  "previous_G3_protocol_unchanged": true,
+  "pure_validator_independent_from_collector": true,
+  "reproduced_source_read_bound": {
+    "actual_diagnostic_executed": false,
+    "correction": "Bounded read before hashing/parsing/dispatch; bootstrap bounded source read; negative regression",
+    "new_validator_oversize_rejected_before_hash": true,
+    "old_adapter_source_finding": "scope.read_bytes before JSON byte gate",
+    "old_source": "7044b32e6191308960eb1ea9e83d1753918c7137",
+    "old_validator_hash_before_input_bound_reproduced": true,
+    "resource_caps_increased": false
+  },
+  "resource_enforcement_claimed": false,
+  "source_manifest": [
+    {
+      "path": ".github/workflows/g2_effective_diagnostic.yml",
+      "sha256": "d7e9e707cf7777a3dd7ec80972b0fb1a11e546952b7ba03431837a20fed74e25"
+    },
+    {
+      "path": ".github/workflows/hh_signal_campaign.yml",
+      "sha256": "454d2aa56657202a38616c807e292341aaa068755736eab479ab3f3fda3e5000"
+    },
+    {
+      "path": ".github/workflows/hh_signal_final_closure.yml",
+      "sha256": "b60456f9394801b9606df729269562b650afb2e8a9b0e7af63e3f38dfaa07bfa"
+    },
+    {
+      "path": ".github/workflows/hh_signal_readiness.yml",
+      "sha256": "1b04f9197d8773453a1766cd0415825e2efb9615cbc2c9965e19639f295f257b"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_capture.py",
+      "sha256": "2deda99bb913e6a8ee37993778c6db4201d3ff3f1cdd048f290440e26b2f28a4"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_contract.py",
+      "sha256": "bdca317b0ef0fecc7c5b141171cd2915e2be46938402ae223fbefa1955b704b5"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_docs.py",
+      "sha256": "e5e6f90599759eafb56a197ad5fa6072e9da303a11ed9a523d8d5c4110e650ca"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_plan.py",
+      "sha256": "ae8842f9119eabd8c64969ae1f108b7ec0d940f59764245e053ac605468ac391"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_plan_tests.py",
+      "sha256": "b94d73792973732592be7054aa97288ec28108752600ce7042ed199a5533e529"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_publication.py",
+      "sha256": "e338be5c82b7d8a300ed4afd5f49de661a52cf85aff7e4fc78b766f44f1b9ac1"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_stages.py",
+      "sha256": "af0af26ad1bc9ca8c1edac9309acd345e6b15830c6306598aa9ea6e874682d64"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_tests.py",
+      "sha256": "a67c52005d59a8a5b9bd9fb8c79a48aefc5263517989be97837d49ba6cab63bb"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_tools.py",
+      "sha256": "6ffd7db2f116fb509e44584651feb5bb4595ab33dcc3f034d89c25fe50509582"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_validate.py",
+      "sha256": "fcd9e45af9bbadcf5db53bb3f00ca68296aa2c1582c044e300f9de6c8acc8c87"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/diagnostic_worker.py",
+      "sha256": "2f5cdcbfdabe2b0c85252ade4fa0454a7f01d3765a3a5f7d727a795f6f845529"
+    },
+    {
+      "path": "simulation/hh_signal/final_closure/master/history.py",
+      "sha256": "175a69ab706b1389ff573640b481e8f78018288d8905487a0fcaadc382abc53a"
+    }
+  ],
+  "status": "PASS_SOURCE_REVIEW_WITH_EXPLICIT_RUNTIME_BLOCKERS",
+  "tool_binding_proven": false
+}
