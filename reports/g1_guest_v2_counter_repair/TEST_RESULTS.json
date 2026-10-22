@@ -1,0 +1,129 @@
+{
+  "actual_cli": {
+    "negative_cases": {
+      "raw_and_existing_output_unchanged": true,
+      "results": [
+        {
+          "case": "EXISTING_OUTPUT_REJECTED",
+          "exit_code": 2,
+          "status": "PASS_NEGATIVE_REJECTED"
+        },
+        {
+          "case": "WRONG_RAW_DIGEST_REJECTED",
+          "exit_code": 2,
+          "status": "PASS_NEGATIVE_REJECTED"
+        }
+      ],
+      "reviewed_source_revision": "d05acf64521775f1df5fb2dcb917981f107c672c"
+    },
+    "positive_exit": 0,
+    "sanitized_output_sha256": "c2fcd47831c0e7d76eeba7b071abf7f35bde78678a44b60e073a0db1e8d9e557",
+    "status": "PASS_READ_ONLY_OBSERVED"
+  },
+  "ci": {
+    "delivery_commit_ci": "PENDING_UNTIL_REPORT_COMMIT_EXISTS",
+    "local_kernel_acceptance": false,
+    "runs": [
+      {
+        "decoded_job_logs_reviewed": true,
+        "event": "push",
+        "legacy": {
+          "forbidden_imports": [],
+          "human_review_attempts": 0,
+          "passes": 81,
+          "rejected": [],
+          "tests_run": 81
+        },
+        "linux_affected": {
+          "passes": 141,
+          "skip_reason": "Windows-only PowerShell CIM fixture",
+          "skipped": 1,
+          "tests_run": 142
+        },
+        "linux_job_id": 119608792752,
+        "offline": {
+          "errors": 0,
+          "failures": 0,
+          "forbidden_attempts": [],
+          "kernel_services_executed": 0,
+          "skipped": 0,
+          "tests_run": 612
+        },
+        "publication": "PASS_BOUNDED_SOURCE_ONLY_PUBLICATION",
+        "run_id": 39713098495,
+        "status": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39713098495",
+        "windows_affected_subset": {
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 81,
+          "tests_run": 81
+        },
+        "windows_job_id": 119608792997
+      },
+      {
+        "decoded_job_logs_reviewed": true,
+        "event": "pull_request",
+        "legacy": {
+          "forbidden_imports": [],
+          "human_review_attempts": 0,
+          "passes": 81,
+          "rejected": [],
+          "tests_run": 81
+        },
+        "linux_affected": {
+          "passes": 141,
+          "skip_reason": "Windows-only PowerShell CIM fixture",
+          "skipped": 1,
+          "tests_run": 142
+        },
+        "linux_job_id": 119608934119,
+        "offline": {
+          "errors": 0,
+          "failures": 0,
+          "forbidden_attempts": [],
+          "kernel_services_executed": 0,
+          "skipped": 0,
+          "tests_run": 612
+        },
+        "publication": "PASS_BOUNDED_SOURCE_ONLY_PUBLICATION",
+        "run_id": 39713143442,
+        "status": "SUCCESS",
+        "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/39713143442",
+        "windows_affected_subset": {
+          "includes_in_memory_CIM_cases": 26,
+          "passes": 81,
+          "tests_run": 81
+        },
+        "windows_job_id": 119608934375
+      }
+    ],
+    "scopes_overlap_not_additive": true,
+    "source_revision": "d05acf64521775f1df5fb2dcb917981f107c672c",
+    "status": "PASS_SOURCE_CI"
+  },
+  "counts_overlap_not_additive": true,
+  "local_affected": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "0e70fb107c922fff570a8976d0fe9e004e6f8ad4b190f506b0cda49236d83414",
+    "modules": [
+      "simulation.hh_signal.final_closure.master.guest_counter_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_publication_tests",
+      "simulation.hh_signal.final_closure.master.readiness_tests",
+      "simulation.hh_signal.final_closure.master.readiness_guest_tests",
+      "simulation.hh_signal.final_closure.master.readiness_scheduler_tests",
+      "simulation.hh_signal.final_closure.master.test_master",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication",
+      "simulation.hh_signal.final_closure.tests.test_closure"
+    ],
+    "scope": "SOURCE_AND_INERT_FIXTURES_ONLY; NO_GUEST_COLLECTION_OR_KERNEL_DISPATCH",
+    "skipped": 0,
+    "status": "PASS",
+    "tests_run": 142,
+    "wall_seconds": 36.63137779999988
+  },
+  "scope": "OFFLINE_SOURCE_AND_EXISTING_BYTES; NO_LIVE_KERNEL_OR_PHYSICS_ACCEPTANCE",
+  "source_revision": "d05acf64521775f1df5fb2dcb917981f107c672c"
+}

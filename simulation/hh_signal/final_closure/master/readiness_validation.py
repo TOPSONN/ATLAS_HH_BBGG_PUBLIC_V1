@@ -12,6 +12,24 @@ def pairs(text):
   row=line.split();need(len(row)==2 and row[0] not in result,'DUPLICATE_OR_BAD_COUNTER');result[row[0]]=decimal(row[1])
  return result
 
+# The V2 collector's exact limit fields, not a memory.* wildcard. Keep the
+# historical decimal()/pairs() readers for geometry/other consumers unchanged.
+CGROUP_MAX_FIELDS=frozenset(('memory.max','memory.swap.max','pids.max','cpu.max:quota'))
+def cgroup_number(text):
+ need(type(text) is str and re.fullmatch(r'0|[1-9][0-9]{0,19}',text) is not None,'COUNTER_SYNTAX')
+ value=int(text);need(value<=2**64-1,'COUNTER_RANGE');return value
+
+def cgroup_limit(name,text):
+ need(name in CGROUP_MAX_FIELDS,'UNREVIEWED_LIMIT_FIELD')
+ return 'UNLIMITED' if text=='max' else cgroup_number(text)
+
+def cgroup_pairs(text):
+ result={}
+ for line in text.splitlines():
+  row=line.split();need(len(row)==2 and row[0] not in result,'DUPLICATE_OR_BAD_COUNTER')
+  result[row[0]]=cgroup_number(row[1])
+ return result
+
 def guest_review(value,expected_source,expected_legacy,*,now_monotonic_ns=None):
  need(type(value) is dict and value.get('schema')=='HH_G1_GUEST_READONLY_V2','GUEST_SCHEMA')
  need(len(canonical(value))<=262144 and value.get('source_sha256')==expected_source,'GUEST_BOUND_OR_SOURCE')
@@ -27,9 +45,14 @@ def guest_review(value,expected_source,expected_legacy,*,now_monotonic_ns=None):
  need(type(before['boot_id']) is str and str(uuid.UUID(before['boot_id'].strip()))==before['boot_id'].strip(),'BOOT_ID')
  need(set(before['mount_namespace'])=={'dev','inode'} and all(uint(x) and x>0 for x in before['mount_namespace'].values()),'NAMESPACE')
  records=value['records'];need(type(records) is list and len(records)<=768,'RECORD_BOUND')
- table={};used=0
+ table={};used=0;seen={}
  for r in records:
   need(type(r) is dict and r.get('status') in ('UNKNOWN','REPORTED_UNATTESTED') and type(r.get('path')) is str,'RECORD_SCHEMA')
+  path=r['path'];seen[path]=seen.get(path,0)+1
+  if seen[path]>1:
+   # acquire() reads exactly these anchors before and after. Other repeated
+   # paths (including UNKNOWN/reported conflicts) are not merged silently.
+   need(path in ('/proc/sys/kernel/random/boot_id','/proc/self/cgroup') and seen[path]<=2,'DUPLICATE_RECORD')
   if r['status']=='UNKNOWN':continue
   need(type(r.get('text')) is str and sha(r['text'].encode())==r.get('sha256'),'READBACK_DIGEST')
   owner=before['uid'] if r['path'].startswith('/proc/self/') else 0
@@ -46,24 +69,42 @@ def guest_review(value,expected_source,expected_legacy,*,now_monotonic_ns=None):
  parts=[] if rel=='/' else rel[1:].split('/');need(len(parts)<=16,'LINEAGE_DEPTH')
  expected=['/sys/fs/cgroup'+('/'+'/'.join(parts[:n]) if n else '') for n in range(len(parts),-1,-1)]
  need(value.get('cgroup_lineage')==expected,'LINEAGE_COVERAGE')
- missing=[];counters=[]
- for path in expected:
-  item={}
+ missing=[];limits=[];unlimited=[];missing_by_level=[];nonroot_missing=[]
+ for level,path in enumerate(expected):
+  item={};missing_start=len(missing)
   for name in ('cpu.stat','cpu.max','memory.max','memory.current','memory.peak','memory.events','memory.swap.max','memory.swap.current','cgroup.events','cgroup.controllers','cgroup.subtree_control','cgroup.type','pids.max','cgroup.procs'):
    if path+'/'+name not in table:missing.append(name);continue
    text=table[path+'/'+name]['text'].strip()
    if name in ('cpu.stat','memory.events','cgroup.events'):
-    item[name]=pairs(text)
+    item[name]=cgroup_pairs(text)
     required={'cpu.stat':{'usage_usec','user_usec','system_usec'},'memory.events':{'oom','oom_kill'},'cgroup.events':{'populated','frozen'}}[name]
     missing.extend(name+':'+k for k in sorted(required-set(item[name])))
-   elif name in ('memory.max','pids.max'):item[name]=None if text=='max' else decimal(text)
-   elif name.startswith('memory.'):item[name]=decimal(text)
+    if name=='cgroup.events':need(all(item[name].get(k,0) in (0,1) for k in ('populated','frozen')),'CGROUP_EVENT_CONTRADICTION')
+   elif name in ('memory.max','memory.swap.max','pids.max'):item[name]=cgroup_limit(name,text)
+   elif name in ('memory.current','memory.peak','memory.swap.current'):item[name]=cgroup_number(text)
    elif name=='cpu.max':
-    fields=text.split();need(len(fields)==2 and (fields[0]=='max' or decimal(fields[0])>0) and decimal(fields[1])>0,'CPU_RATE');item[name]='BANDWIDTH_ONLY'
-  counters.append(item)
+    fields=text.split();need(len(fields)==2,'CPU_RATE')
+    quota=cgroup_limit('cpu.max:quota',fields[0]);period=cgroup_number(fields[1])
+    need((quota=='UNLIMITED' or quota>0) and period>0,'CPU_RATE')
+    item[name]={'quota_usec':quota,'period_usec':period,'kind':'BANDWIDTH_ONLY_NOT_CUMULATIVE_CPU'}
+  selected={k:item[k] for k in ('memory.max','memory.swap.max','pids.max','cpu.max') if k in item}
+  limits.append({'lineage_index':level,'limits':selected})
+  unlimited.extend({'lineage_index':level,'field':k,'meaning':'UNLIMITED'} for k,v in selected.items() if v=='UNLIMITED')
+  if item.get('cpu.max',{}).get('quota_usec')=='UNLIMITED':unlimited.append({'lineage_index':level,'field':'cpu.max:quota','meaning':'UNLIMITED'})
+  absent=missing[missing_start:]
+  if absent:missing_by_level.append({'lineage_index':level,'root_cgroup':path=='/sys/fs/cgroup','fields':sorted(set(absent))})
+  if path!='/sys/fs/cgroup':nonroot_missing.extend(absent)
+ # Separate file reads are not an atomic snapshot: current may exceed a newly
+ # reduced max; a later current can exceed an earlier peak. Do not invent
+ # cross-file conservation or derive swap-disabled/enforcement from usage=0.
  need(all(type(x) is dict and x.get('relation_complete') is True for x in value['block_graph']),'INCOMPLETE_BLOCK_RELATIONS')
  return {'status':'PASS_READ_ONLY_OBSERVED','trust':'REPORTED_UNATTESTED','lineage_count':len(expected),
   'missing_counter_names':sorted(set(missing)),'effective_manager_state':'UNKNOWN_NOT_BUS_ATTESTED',
+  'missing_by_lineage':missing_by_level,'nonroot_missing_counter_names':sorted(set(nonroot_missing)),
+  'counter_coverage':'INCOMPLETE_OBSERVED' if missing else 'COMPLETE_FOR_COLLECTED_FIELDS',
+  'limit_observations':limits,'unlimited_limits':unlimited,
+  'boot_consistent_within_capture':True,'mount_namespace_consistent_within_capture':True,
+  'cgroup_membership_consistent_within_capture':True,'swap_disabled_verified':False,
   'freshness':'CHECKED_SAME_BOOT_CLOCK' if now_monotonic_ns is not None else 'UNKNOWN_NO_CURRENT_SAME_BOOT_CLOCK',
   'host_mapping_complete':False,'complete_attestation':False,'runtime_enforcement':False,'kernel_acceptance':None}
 

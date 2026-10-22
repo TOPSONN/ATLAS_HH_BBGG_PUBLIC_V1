@@ -1,0 +1,65 @@
+name: Guest V2 counter parser offline repair
+on:
+  push:
+    branches: [codex/g1-guest-v2-counter-parser-repair]
+  pull_request:
+    paths:
+      - 'simulation/hh_signal/final_closure/master/**'
+      - 'reports/g1_guest_v2_counter_repair/**'
+      - '.github/workflows/g1_guest_v2_counter_repair.yml'
+permissions:
+  contents: read
+jobs:
+  linux_safe:
+    if: github.head_ref == 'codex/g1-guest-v2-counter-parser-repair' || github.ref_name == 'codex/g1-guest-v2-counter-parser-repair'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserved612 and exact81, with actual forbidden dispatch audit
+        run: |
+          python3 -B -m simulation.hh_signal.final_closure.resource_closure.offline_regression --output "$RUNNER_TEMP/offline.json"
+          python3 -B -m simulation.hh_signal.final_closure.resource_closure.legacy_regression --output "$RUNNER_TEMP/legacy.json"
+      - name: Affected methods and independent pure negative fixtures
+        run: >-
+          python3 -B -m unittest -v
+          simulation.hh_signal.final_closure.master.readiness_tests
+          simulation.hh_signal.final_closure.master.readiness_guest_tests
+          simulation.hh_signal.final_closure.master.guest_counter_tests
+          simulation.hh_signal.final_closure.master.guest_counter_publication_tests
+          simulation.hh_signal.final_closure.master.readiness_scheduler_tests
+          simulation.hh_signal.final_closure.master.test_master
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication
+          simulation.hh_signal.final_closure.tests.test_closure
+      - name: Every intermediate payload and full changed index
+        run: python3 -B -m simulation.hh_signal.final_closure.master.guest_counter_publication
+  windows_inert:
+    if: github.head_ref == 'codex/g1-guest-v2-counter-parser-repair' || github.ref_name == 'codex/g1-guest-v2-counter-parser-repair'
+    runs-on: windows-2025
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pure methods and PowerShell in-memory CIM; no host acquisition
+        shell: pwsh
+        run: >-
+          python -B -m unittest -v
+          simulation.hh_signal.final_closure.master.readiness_tests
+          simulation.hh_signal.final_closure.master.readiness_guest_tests
+          simulation.hh_signal.final_closure.master.guest_counter_tests
+          simulation.hh_signal.final_closure.master.guest_counter_publication_tests
+          simulation.hh_signal.final_closure.master.readiness_scheduler_tests
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations
