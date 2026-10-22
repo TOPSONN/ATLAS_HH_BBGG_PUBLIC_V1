@@ -11,9 +11,14 @@ COUNTER_SUFFIX=" && github.head_ref != 'codex/g1-guest-v2-counter-parser-repair'
 
 G2_SUFFIX=" && github.head_ref != 'codex/phase7i-g2-actual-capability' && github.ref_name != 'codex/phase7i-g2-actual-capability'"
 
+DIAGNOSTIC_SUFFIX=" && github.head_ref != 'codex/phase7i-g2-effective-diagnostic' && github.ref_name != 'codex/phase7i-g2-effective-diagnostic'"
+
 def reviewed_workflow_delta(path,raw,expected):
  need(path==CAMPAIGN and expected==FROZEN,'FROZEN_INPUT_DRIFT_NOT_WORKFLOW_EXCEPTION')
  text=raw.decode('utf-8')
+ if DIAGNOSTIC_SUFFIX in text:
+  need(text.count(DIAGNOSTIC_SUFFIX)==1 and text.count(G2_SUFFIX)==1,'WORKFLOW_ROUTING_AMBIGUITY')
+  text=text.replace(DIAGNOSTIC_SUFFIX,'')
  if G2_SUFFIX in text:
   need(text.count(G2_SUFFIX)==1 and text.count(COUNTER_SUFFIX)==1 and text.count(ENGINEERING_SUFFIX)==1 and text.count(REPAIR_SUFFIX)==1 and text.count(SUFFIX)==1,'WORKFLOW_ROUTING_AMBIGUITY')
   text=text.replace(G2_SUFFIX,'')

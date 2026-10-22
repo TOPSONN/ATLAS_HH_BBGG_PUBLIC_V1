@@ -1,0 +1,83 @@
+name: G2 effective diagnostic source and bounded inert checks
+on:
+  push:
+    branches: [codex/phase7i-g2-effective-diagnostic]
+  pull_request:
+    paths:
+      - 'simulation/hh_signal/final_closure/master/**'
+      - 'reports/phase7i_g2_effective_diagnostic/**'
+      - '.github/workflows/g2_effective_diagnostic.yml'
+permissions:
+  contents: read
+jobs:
+  linux_safe:
+    if: github.head_ref == 'codex/phase7i-g2-effective-diagnostic' || github.ref_name == 'codex/phase7i-g2-effective-diagnostic'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserved612 and exact81, with actual forbidden dispatch audit
+        run: |
+          python3 -B -m simulation.hh_signal.final_closure.resource_closure.offline_regression --output "$RUNNER_TEMP/offline.json"
+          python3 -B -m simulation.hh_signal.final_closure.resource_closure.legacy_regression --output "$RUNNER_TEMP/legacy.json"
+      - name: Affected methods and independent pure negative fixtures
+        run: >-
+          python3 -B -m unittest -v
+          simulation.hh_signal.final_closure.master.readiness_tests
+          simulation.hh_signal.final_closure.master.readiness_guest_tests
+          simulation.hh_signal.final_closure.master.diagnostic_tests
+          simulation.hh_signal.final_closure.master.diagnostic_plan_tests
+          simulation.hh_signal.final_closure.master.g2_protocol_tests
+          simulation.hh_signal.final_closure.master.g2_engine_tests
+          simulation.hh_signal.final_closure.master.g2_publication_tests
+          simulation.hh_signal.final_closure.master.guest_counter_tests
+          simulation.hh_signal.final_closure.master.guest_counter_publication_tests
+          simulation.hh_signal.final_closure.master.readiness_scheduler_tests
+          simulation.hh_signal.final_closure.master.test_master
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication
+          simulation.hh_signal.final_closure.tests.test_closure
+      - name: Preserved C++20 inert checked arithmetic, no kernel or physics build
+        run: |
+          g++ -std=c++20 -O2 -Wall -Wextra simulation/hh_signal/final_closure/master/capacity_crosscheck.cpp -o "$RUNNER_TEMP/capacity"
+          "$RUNNER_TEMP/capacity" 16777216 8388608 1048576 4194304
+          "$RUNNER_TEMP/capacity" 5368709120 2147483648 268435456 2147483648
+          if "$RUNNER_TEMP/capacity" 2147483648 2147483648 268435456 1; then exit 1; fi
+          if "$RUNNER_TEMP/capacity" 1 1 1 0; then exit 1; fi
+          if "$RUNNER_TEMP/capacity" 18446744073709551615 18446744073709551615 1 0; then exit 1; fi
+      - name: Every intermediate payload and full changed index
+        run: python3 -B -m simulation.hh_signal.final_closure.master.diagnostic_publication
+  windows_inert:
+    if: github.head_ref == 'codex/phase7i-g2-effective-diagnostic' || github.ref_name == 'codex/phase7i-g2-effective-diagnostic'
+    runs-on: windows-2025
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pure methods and PowerShell in-memory CIM; no host acquisition
+        shell: pwsh
+        run: >-
+          python -B -m unittest -v
+          simulation.hh_signal.final_closure.master.readiness_tests
+          simulation.hh_signal.final_closure.master.readiness_guest_tests
+          simulation.hh_signal.final_closure.master.diagnostic_tests
+          simulation.hh_signal.final_closure.master.diagnostic_plan_tests
+          simulation.hh_signal.final_closure.master.g2_protocol_tests
+          simulation.hh_signal.final_closure.master.g2_engine_tests
+          simulation.hh_signal.final_closure.master.g2_publication_tests
+          simulation.hh_signal.final_closure.master.guest_counter_tests
+          simulation.hh_signal.final_closure.master.guest_counter_publication_tests
+          simulation.hh_signal.final_closure.master.readiness_scheduler_tests
+          simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations
