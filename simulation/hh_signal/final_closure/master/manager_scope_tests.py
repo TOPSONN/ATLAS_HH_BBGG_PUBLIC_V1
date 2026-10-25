@@ -126,6 +126,31 @@ class SecurityPolicyTests(unittest.TestCase):
   self.assertIn("dependencies['transitive_mapping_attested'] is True",code)
   self.assertIn('BLOCKED_DEPENDENCY_CLOSURE_DYNAMIC_RESOLUTION_NOT_VERIFIED',code)
 @unittest.skipUnless(sys.platform=='linux','POSIX_FD_FIXTURE_ONLY_NOT_USER_WSL_EVIDENCE')
+class NativeEnvironmentFixture(unittest.TestCase):
+ def test_actual_ancestor_acl_policy_remains_fail_closed(self):
+  with tempfile.TemporaryDirectory(dir=Path.home()) as directory:
+   fd=os.open(directory,os.O_RDONLY|os.O_DIRECTORY)
+   try:proof=fs.fs_identity(fd);s=os.fstat(fd)
+   finally:os.close(fd)
+   if proof['classification']!='LINUX_NATIVE_FILESYSTEM_CONFIRMED':self.skipTest('CI_FS_NOT_EXT4_NO_NATIVE_STORAGE_PASS')
+   policy={'uid':os.getuid(),'filesystem':proof,'directory_identity':{k:getattr(s,k) for k in ('st_dev','st_ino','st_uid')}}
+   # Read only the fixed ancestor chain of this owned fixture. Never alter ACLs.
+   acl_present=False
+   for ancestor in reversed((Path(directory),*Path(directory).parents)):
+    fd=os.open(ancestor,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)
+    try:
+     try:fs.no_acl(fd,True)
+     except ValueError as exc:
+      if str(exc)!='EXTENDED_OR_INHERITED_ACL_REJECTED':raise
+      acl_present=True
+    finally:os.close(fd)
+   if acl_present:
+    with self.assertRaisesRegex(ValueError,'^EXTENDED_OR_INHERITED_ACL_REJECTED$'):fs.Store(directory,policy)
+   else:
+    store=fs.Store(directory,policy)
+    try:self.assertTrue(store.verify())
+    finally:store.close()
+@unittest.skipUnless(sys.platform=='linux','POSIX_FD_FIXTURE_ONLY_NOT_USER_WSL_EVIDENCE')
 class NativeFileFixtures(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory(dir=Path.home());self.root=Path(self.tmp.name);self.store=None;fd=os.open(self.root,os.O_RDONLY|os.O_DIRECTORY)
@@ -134,6 +159,10 @@ class NativeFileFixtures(unittest.TestCase):
   if proof['classification']!='LINUX_NATIVE_FILESYSTEM_CONFIRMED':self.tmp.cleanup();self.skipTest('CI_FS_NOT_EXT4_NO_NATIVE_STORAGE_PASS')
   policy={'uid':os.getuid(),'filesystem':proof,'directory_identity':{k:getattr(s,k) for k in ('st_dev','st_ino','st_uid')}}
   try:self.store=fs.Store(str(self.root),policy)
+  except ValueError as exc:
+   self.tmp.cleanup()
+   if str(exc)=='EXTENDED_OR_INHERITED_ACL_REJECTED':self.skipTest('BLOCKED_CI_ANCESTOR_ACL_NO_NATIVE_POSITIVE_EVIDENCE')
+   raise
   except BaseException:self.tmp.cleanup();raise
  def tearDown(self):
   if self.store:self.store.close()
