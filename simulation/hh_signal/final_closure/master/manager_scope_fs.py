@@ -36,8 +36,10 @@ def classify(magic,name):
  return 'UNKNOWN_FILESYSTEM'
 def fs_identity(fd):
  need(sys.platform=='linux' and ctypes.sizeof(ctypes.c_long)==8,'UNKNOWN_NATIVE_STATFS_ABI')
+ need(os.uname().machine=='x86_64','UNKNOWN_NATIVE_STATFS_MACHINE')
  class StatFS(ctypes.Structure):
   _fields_=[('kind',ctypes.c_long),('block_size',ctypes.c_long),('blocks',ctypes.c_ulong*5),('fsid',ctypes.c_int*2),('name_length',ctypes.c_long),('fragment_size',ctypes.c_long),('flags',ctypes.c_long),('spare',ctypes.c_long*4)]
+ need(ctypes.sizeof(StatFS)==120,'UNKNOWN_NATIVE_STATFS_LAYOUT')
  libc=ctypes.CDLL(None,use_errno=True);value=StatFS();call=libc.fstatfs;call.argtypes=[ctypes.c_int,ctypes.POINTER(StatFS)];call.restype=ctypes.c_int
  need(call(fd,ctypes.byref(value))==0,'UNKNOWN_FSTATFS')
  info=read_proc('/proc/self/fdinfo/'+str(fd),8192).decode('ascii');matches=re.findall(r'^mnt_id:\s*([0-9]+)$',info,re.M);need(len(matches)==1,'FD_MOUNT_ID')
@@ -59,6 +61,9 @@ class Pinned:
  def verify(self):
   self.store.verify();current=os.fstat(self.fd);look=os.stat(self.name,dir_fd=self.store.fd,follow_symlinks=False)
   need(same(self.started,current) and same(current,look),'FILE_REPLACEMENT_OR_MUTATION')
+  lookup_fd=os.open(self.name,os.O_RDONLY|os.O_NONBLOCK|os.O_NOFOLLOW|os.O_CLOEXEC,dir_fd=self.store.fd)
+  try:need(fs_identity(lookup_fd)==fs_identity(self.fd),'FILE_MOUNT_SUBSTITUTION')
+  finally:os.close(lookup_fd)
   no_acl(self.fd,False)
   os.lseek(self.fd,0,os.SEEK_SET);need(bounded_fd(self.fd)==self.raw,'SAME_FD_CONTENT_DRIFT')
   need(same(current,os.fstat(self.fd)),'POST_READ_IDENTITY_CHANGE');return True
@@ -88,6 +93,9 @@ class Store:
    checked_stat(now,self.policy['uid'],True,False);no_acl(fd,True)
    if parent is not None:
     look=os.stat(name,dir_fd=parent,follow_symlinks=False);need((look.st_dev,look.st_ino)==(now.st_dev,now.st_ino) and stat.S_ISDIR(look.st_mode),'ANCESTOR_PATH_SUBSTITUTION')
+    lookup_fd=os.open(name,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW|os.O_CLOEXEC,dir_fd=parent)
+    try:need(fs_identity(lookup_fd)==fs_identity(fd),'ANCESTOR_MOUNT_SUBSTITUTION')
+    finally:os.close(lookup_fd)
   checked_stat(os.fstat(self.fd),self.policy['uid'],True,self.private,0o700 if self.private else None)
   check_fs(fs_identity(self.fd),self.policy['filesystem']);return True
  def pin(self,name,digest,mode=0o600):
@@ -104,7 +112,8 @@ class Store:
   fd=os.open(name,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW|os.O_CLOEXEC,mode,dir_fd=self.fd)
   try:
    checked_stat(os.fstat(fd),self.policy['uid'],mode=mode,allow_empty=True);no_acl(fd,False);view=memoryview(raw)
-   while view:view=view[os.write(fd,view):]
+   while view:
+    written=os.write(fd,view);need(type(written) is int and 0<written<=len(view),'WRITE_NO_PROGRESS_OR_INVALID_COUNT');view=view[written:]
    os.fsync(fd)
   finally:os.close(fd)
   os.fsync(self.fd);return self.pin(name,sha(raw),mode)
