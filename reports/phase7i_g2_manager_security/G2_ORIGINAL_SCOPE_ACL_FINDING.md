@@ -1,0 +1,7 @@
+# 原Scope與Source ACL根因
+
+CURRENT_WINDOWS_SCOPE_ACL=FAIL；HISTORICAL_SCOPE_ACL_AT_EXECUTION_TIME=UNKNOWN。原SHA仍與正式wrapper receipt相符，VERSION_ONLY_RECEIPT_INTEGRITY_REVIEW=PASS_WITH_PROVENANCE_LIMITS。原source同樣要以本輪唯讀DACL觀測分類，不能從Git clean推為他人不可寫。
+
+原因是原Windows資料目錄繼承廣泛DACL，Users可讀、Authenticated Users可Modify；名為private的資料夾、SHA正確及/mnt/c路徑不會自動建立0700/0600 Linux權限。先hash再讓普通Python loader按路徑重讀，仍可能讀到不同bytes。原history只記錄writer檢查及hash，不補造執行前ACL證據。
+
+本修訂保留原scope、receipt、authorization、checkpoint與PR45不變。新Windows工程輸出目錄只保護自己的DACL，不更改舊目錄；這仍不是Linux-native staging驗收。未來scope/source採獨立原生儲存、原始檔FD與記憶體code binding，不把Windows工程checkout直接當正式import根。
