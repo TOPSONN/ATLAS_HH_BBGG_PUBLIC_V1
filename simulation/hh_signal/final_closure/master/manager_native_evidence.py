@@ -2,11 +2,16 @@
 import base64,os,signal,stat,sys,time
 from . import manager_dependency_contract as c,manager_native_contract as nc,manager_scope_fs as fs,manager_dependency_io as dio,manager_elf as elf,manager_dependency_provider as provider
 def observed_store(path,private):
- c.path(path);fd=os.open(path,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW|os.O_CLOEXEC)
- try:s=os.fstat(fd);identity=fs.fs_identity(fd)
- finally:os.close(fd)
- policy={'uid':1000,'filesystem':identity,'directory_identity':{k:getattr(s,k) for k in ('st_dev','st_ino','st_uid')}}
- return fs.Store(path,policy,private=private)
+ c.path(path);held=[]
+ try:
+  fd=os.open('/',os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW|os.O_CLOEXEC);held.append(fd)
+  fs.checked_stat(os.fstat(fd),1000,True,False);fs.no_acl(fd,True)
+  for name in path.split('/')[1:]:
+   fd=os.open(name,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW|os.O_CLOEXEC,dir_fd=fd);held.append(fd);fs.checked_stat(os.fstat(fd),1000,True,False);fs.no_acl(fd,True)
+  s=os.fstat(fd);identity=fs.fs_identity(fd);policy={'uid':1000,'filesystem':identity,'directory_identity':{k:getattr(s,k) for k in ('st_dev','st_ino','st_uid')}}
+  return fs.Store(path,policy,private=private)
+ finally:
+  for fd in reversed(held):os.close(fd)
 def interpreter():
  c.need(sys.platform=='linux' and os.getuid()==os.geteuid()==os.getgid()==os.getegid()==1000,'REQUIRED_EXISTING_NONROOT_UBUNTU_SESSION');c.need(tuple(sys.version_info[:3])==(3,12,3) and sys.flags.isolated and sys.flags.no_site and sys.dont_write_bytecode,'REVIEWED_PYTHON3123_ISOLATED')
  with_file=dio.AliasPin('/usr/bin/python3.12',{},nc.PYTHON)

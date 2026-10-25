@@ -112,6 +112,10 @@ class CapsuleAndSafetyTests(unittest.TestCase):
   a=types.SimpleNamespace(st_mode=stat.S_IFREG|0o400,st_nlink=1,st_size=8,st_dev=1,st_ino=1,st_mtime_ns=1,st_ctime_ns=1);b=copy.copy(a);b.st_ino=2
   with posix_flags(),patch.object(os,'open',return_value=9),patch.object(os,'fstat',side_effect=[a,b]),patch.object(os,'read',side_effect=[b'VALUE=1\n',b'']),self.assertRaises(ValueError):capsule.read_source('/inert',c.sha(b'VALUE=1\n'),[])
 class StoreEdgeTests(unittest.TestCase):
+ def test_initial_parent_observation_never_follows_symlink_ancestor(self):
+  directory=types.SimpleNamespace(st_mode=stat.S_IFDIR|0o755,st_uid=0)
+  with posix_flags(),patch.object(os,'O_DIRECTORY',0x10000,create=True),patch.object(os,'open',side_effect=[1,2,OSError(errno.ELOOP,'inert symlink')]) as opened,patch.object(os,'fstat',return_value=directory),patch.object(os,'close') as closed,patch.object(fs,'no_acl'),patch.object(fs,'fs_identity',side_effect=AssertionError('MUST NOT OBSERVE TARGET')),self.assertRaises(OSError):capture.observed_store('/home/btu/private',True)
+  self.assertEqual([call.args[0] for call in opened.call_args_list],['/','home','btu']);self.assertEqual(opened.call_args_list[1].kwargs['dir_fd'],1);self.assertEqual(opened.call_args_list[2].kwargs['dir_fd'],2);self.assertEqual(closed.call_count,2)
  def test_acl_absent_empty_unsupported_default_and_permission(self):
   with patch.object(os,'getxattr',create=True,side_effect=OSError(errno.ENODATA,'absent')):fs.no_acl(1,True)
   with patch.object(os,'getxattr',create=True,return_value=b''):fs.no_acl(1,True)
