@@ -1,0 +1,119 @@
+{
+  "actual_manager_data": null,
+  "changed_final_test_file_review": "EXACT_ACL_FAILURE_CLASSIFICATION_ONLY; NEW_REAL_ANCESTOR_REJECTION_TEST; NO_RUNTIME_POLICY_CHANGE",
+  "dynamic_resolution_provider": "NOT_IMPLEMENTED; CAPTURE_DISPATCH_FAIL_CLOSED",
+  "fixed_argv_env_exact": true,
+  "host_attestation": false,
+  "method": "SAME_AGENT_SEPARATE_AST_AND_SEMANTIC_PROCESS_PLUS_INDEPENDENT_RECEIPT_PARSER; NOT_SECOND_HUMAN",
+  "native_positive_tests": "BLOCKED_CI_ANCESTOR_ACL",
+  "original_four_unchanged": true,
+  "source_review": {
+    "baseline_byte_identical": 1823,
+    "baseline_files": 1827,
+    "changed_existing_files": [
+      ".github/workflows/hh_signal_campaign.yml",
+      ".github/workflows/hh_signal_final_closure.yml",
+      ".github/workflows/hh_signal_readiness.yml",
+      "simulation/hh_signal/final_closure/master/history.py"
+    ],
+    "dependency_resolution_provider": "NOT_IMPLEMENTED_DISPATCH_FAIL_CLOSED",
+    "files": [
+      {
+        "bytes": 4863,
+        "path": ".github/workflows/g2_manager_security.yml",
+        "sha256": "096728df0e7434df85cf7dc91a46ce01824810247c8058e60aeeb5d90dc0417e"
+      },
+      {
+        "bytes": 3782,
+        "path": ".github/workflows/hh_signal_campaign.yml",
+        "sha256": "48383dccdf28f23e5e2bed855c6622992a0da953aef0a4dc7fb20188373807ed"
+      },
+      {
+        "bytes": 4465,
+        "path": ".github/workflows/hh_signal_final_closure.yml",
+        "sha256": "4bb237cda367b587f1ff8e7694b0c88d48189020474219c55d5d5a2a5a4f258d"
+      },
+      {
+        "bytes": 4224,
+        "path": ".github/workflows/hh_signal_readiness.yml",
+        "sha256": "79f594f1634a2ee3759814543298a944be57694f2d7525d662892161eee40fda"
+      },
+      {
+        "bytes": 3447,
+        "path": "simulation/hh_signal/final_closure/master/history.py",
+        "sha256": "45389b8198e19aa2368833601c856fda3e4dcbeb31aeef07a4152f185c8fdcdb"
+      },
+      {
+        "bytes": 5360,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_bootstrap.py",
+        "sha256": "1e7e52cea1aa2096fb9ffb0dd98086032b703d07cecf0fa88f77bd2e4901a57e"
+      },
+      {
+        "bytes": 4237,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_capture.py",
+        "sha256": "d40335841ad3cc0927fa8d966c38cfb4290e3e894a28a83038e74741b3bfc701"
+      },
+      {
+        "bytes": 8271,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_contract.py",
+        "sha256": "45516ba2699779b30de3edb2e1418dc915a2e0be9e62d006a62de20068e9acc6"
+      },
+      {
+        "bytes": 12475,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_docs.py",
+        "sha256": "8d724b824607e6f0180a7ca5a621f25fbedb9b3ddb8c1e2d0059c8051b663813"
+      },
+      {
+        "bytes": 9243,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_fs.py",
+        "sha256": "551721294158f9229d4008c3af010e66f6bf072797fef3ad442b8d26c3d5d511"
+      },
+      {
+        "bytes": 3543,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_loader.py",
+        "sha256": "e0b15546863cc3807339d0a37d2c0247d340e57caecaca62c374272883fd497b"
+      },
+      {
+        "bytes": 2541,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_publication.py",
+        "sha256": "a515e612057ea05ebc9abefcc7012b6990b0e1f088d8bc227f29e90e3c727934"
+      },
+      {
+        "bytes": 12894,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_runner.py",
+        "sha256": "76942ee285a85eaf664bdd2fa21b3d6765e58c6beec65d965f852e32cc9deae3"
+      },
+      {
+        "bytes": 17730,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_tests.py",
+        "sha256": "e365ed755d46344167ae3cf2c7fbe92ab0332b528a07686826a4546189ec0bb5"
+      },
+      {
+        "bytes": 5858,
+        "path": "simulation/hh_signal/final_closure/master/manager_scope_validate.py",
+        "sha256": "4ff111d340ba04d4c4732b9fc811e15c59567ca841b3bdc29c7fb612f59445ae"
+      }
+    ],
+    "frozen_inputs": 1019,
+    "method": "SAME_AGENT_SEPARATE_AST_AND_SEMANTIC_PROCESS_NOT_SECOND_HUMAN",
+    "native_guest_access": false,
+    "new_manager_authorization": false,
+    "original_four_unchanged": true,
+    "scientific_frozen_bytes_unchanged": 1018,
+    "status": "PASS_SOURCE_REVIEW_WITH_EXPLICIT_DYNAMIC_CLOSURE_BLOCKER",
+    "version_receipt": {
+      "G2_CGROUP_DELEGATION_VERIFIED": false,
+      "G2_MANAGER_STATE_VERIFIED": false,
+      "TOOL_IDENTITY_VERIFIED": false,
+      "dependency_closure_verified": false,
+      "family": 255,
+      "host_attestation": false,
+      "manager_version_verified": false,
+      "original_bytes_bound": true,
+      "status": "OBSERVED_CLIENT_V255_NOT_MANAGER_ATTESTATION",
+      "verified": true
+    }
+  },
+  "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+  "status": "PASS_SOURCE_REVIEW_WITH_NATIVE_AND_DEPENDENCY_BLOCKERS"
+}

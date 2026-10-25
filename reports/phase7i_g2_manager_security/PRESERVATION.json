@@ -1,0 +1,55 @@
+{
+  "B1_task_text_digest": "INVALID_57_HEX_CHARACTERS_PRESERVED_AS_TASK_TYPO_NOT_FILE_IDENTITY",
+  "B1_terms_actual_SHA256": "c01968bda61e705c25cca774372572ad8b5efb221451db21ba33c21b77682193",
+  "B_V2_terms_accepted": false,
+  "baseline_byte_identical": 1823,
+  "baseline_files": 1827,
+  "changed_existing_files": [
+    ".github/workflows/hh_signal_campaign.yml",
+    ".github/workflows/hh_signal_final_closure.yml",
+    ".github/workflows/hh_signal_readiness.yml",
+    "simulation/hh_signal/final_closure/master/history.py"
+  ],
+  "earlier_PRs_and_runs_rebound": false,
+  "frozen_inputs": 1019,
+  "installations_modified": false,
+  "only_frozen_exception": "EXACT_CI_ROUTING",
+  "original_four_source_sha256": {
+    "diagnostic_capture.py": "2deda99bb913e6a8ee37993778c6db4201d3ff3f1cdd048f290440e26b2f28a4",
+    "diagnostic_contract.py": "bdca317b0ef0fecc7c5b141171cd2915e2be46938402ae223fbefa1955b704b5",
+    "diagnostic_tools.py": "6ffd7db2f116fb509e44584651feb5bb4595ab33dcc3f034d89c25fe50509582",
+    "diagnostic_validate.py": "fcd9e45af9bbadcf5db53bb3f00ca68296aa2c1582c044e300f9de6c8acc8c87"
+  },
+  "original_scope_current_ACL": "FAIL",
+  "original_scope_execution_time_ACL": "UNKNOWN",
+  "original_snapshot_hashes": {
+    "PR45_safe_checkpoint": {
+      "files": 38,
+      "sha256": "11f493ac1c6e3dbb065b5843143ea1e45a1ea55c3655557064cddac669596b6d"
+    },
+    "runtime_review": {
+      "files": 23,
+      "sha256": "dd59c16f0a36eb3c75656f9af5f5eb6cdce329044559d5d8f5a8776ca3e938c6"
+    },
+    "version_execution": {
+      "files": 17,
+      "sha256": "4891ac07735583c592b08c57990589a6d17d3e8760bdf3802e5ec8d1556c5d10"
+    }
+  },
+  "scientific_inputs_byte_identical": 1018,
+  "status": "PASS_HISTORICAL_HASH_PRESERVATION",
+  "verified_snapshot_hashes": {
+    "PR45_safe_checkpoint": {
+      "files": 38,
+      "sha256": "11f493ac1c6e3dbb065b5843143ea1e45a1ea55c3655557064cddac669596b6d"
+    },
+    "runtime_review": {
+      "files": 23,
+      "sha256": "dd59c16f0a36eb3c75656f9af5f5eb6cdce329044559d5d8f5a8776ca3e938c6"
+    },
+    "version_execution": {
+      "files": 17,
+      "sha256": "4891ac07735583c592b08c57990589a6d17d3e8760bdf3802e5ec8d1556c5d10"
+    }
+  }
+}

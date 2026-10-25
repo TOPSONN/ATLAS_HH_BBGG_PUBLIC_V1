@@ -1,0 +1,638 @@
+{
+  "actual_CLI_and_resume": {
+    "ledger_events_after": 26,
+    "ledger_events_before": 26,
+    "live_dispatches": 0,
+    "results": [
+      {
+        "exit_code": 0,
+        "mode": "status",
+        "output_sha256": "bfdfa5ee9b8da66396d6fa54391d0b3cf49c5d4c9815572037d0c2b7fb9d1e10",
+        "status": "STATUS_SNAPSHOT"
+      },
+      {
+        "exit_code": 0,
+        "mode": "verify",
+        "output_sha256": "28755f665d708711925a35ef200cde39b20207419972ff7c4316d04459c8ac7a",
+        "status": "PASS_SOURCE_ONLY"
+      },
+      {
+        "exit_code": 0,
+        "mode": "resume-safe",
+        "output_sha256": "58542de7b3e783fcde064ffa7a178d9db98543b790b49639d5f33d624f86d14d",
+        "status": "PASS_SOURCE_ONLY"
+      }
+    ],
+    "resume_repeated_children": 0,
+    "run_id": "a56d570b-f323-408e-98f3-c1c28b535433",
+    "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+    "status": "PASS_ACTUAL_SAFE_CLI_AND_RESUME"
+  },
+  "current_checkpoint": {
+    "files": 70,
+    "sha256": "70c606c9637dffd936b912c1941ccf975e217bb09b255cb1f9c64d2678c1bcce"
+  },
+  "initial_preparation_failure": {
+    "cause_review": "PREPARED_PRIVATE_PROGRESS_REQUIRED: no progress directory existed; binding separately passed 436 source files",
+    "exit_status": 1,
+    "live_dispatches": 0,
+    "preserved": true,
+    "run_created": false,
+    "safe_children_started": 0,
+    "source": "dac78384fa09ea294ec526e7193224ba9bb60929"
+  },
+  "ledger_events": 26,
+  "live_dispatches": 0,
+  "ordinary_file_ledger_not_WORM": true,
+  "prior_run_rebound": false,
+  "run_id": "a56d570b-f323-408e-98f3-c1c28b535433",
+  "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+  "stages": [
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "95e7eddc360d78dff571928864babe584454864867df5a47753ea5dab6d46da6",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 714,
+          "path": "G2_EXACT_SOURCE_REVIEW.json",
+          "sha256": "a383cede544c0aad23482449e832de9a20ade4d28c4712d38b6e6585c864cbb7"
+        },
+        {
+          "bytes": 94,
+          "path": "safe_child_log.txt",
+          "sha256": "f7881761847b941e50a358dd252387820b92ba74f78ee40cff26e0f3bdb4eff6"
+        },
+        {
+          "bytes": 244,
+          "path": "stage_result.json",
+          "sha256": "887010944c38caac5d133560025726fc27c64b28f4c9b6ef61912e98566b243a"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 7.4849502,
+        "owned_child_exited": true,
+        "stdout_bytes": 94,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "PR45 ancestry and exact protected input identity",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S0_EXACT_SOURCE_AND_HISTORY",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "6d7ec5f97cfe6b6e6c460938f942f7a47d7d1a54333afbbab229ebb729e9c40b",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 815,
+          "path": "G2_VERSION_RECEIPT_PRESERVATION.json",
+          "sha256": "e96f345215f4b9e55e36aaebc155451e59d9922a0b1f8973ac328462bb386492"
+        },
+        {
+          "bytes": 102,
+          "path": "safe_child_log.txt",
+          "sha256": "d1b21a35618b185d3aba13a5bf923fc1f3709c5eaf0632f82bcec374caf4c4d7"
+        },
+        {
+          "bytes": 258,
+          "path": "stage_result.json",
+          "sha256": "882e9f23776d17f13a3325128f104775885d5f44277e622d2e5afd7e099f8100"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.9287472,
+        "owned_child_exited": true,
+        "stdout_bytes": 102,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Genuine consumed version receipt revalidated without execution",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S1_PRESERVED_VERSION_RECEIPT_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "77c99852d3c5ee918a5098618f9e3b5f3cfd82313b8d91fcc97ebf4a92a58b77",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 988,
+          "path": "G2_ORIGINAL_SCOPE_ACL_FINDING.md",
+          "sha256": "9a0c433ea4f5a338d97b0be5300244148f4e360f45f3a9432e49f78aab18d04b"
+        },
+        {
+          "bytes": 90,
+          "path": "safe_child_log.txt",
+          "sha256": "58a6d4fb8013b1a3b6351fbc0f6cc0e9458b494551473c4c6d94f347a7a13346"
+        },
+        {
+          "bytes": 309,
+          "path": "stage_result.json",
+          "sha256": "3f532d7ca9793cbeca70f23eb1c254578c0a8ceda9b113025f1827dbaa519475"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.1664173,
+        "owned_child_exited": true,
+        "stdout_bytes": 90,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Current source/scope inherited DACL unsafe; old execution-time ACL remains unknown",
+        "remaining_blockers": [
+          "HISTORICAL_ACL_FAIL_PRESERVED"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S2_SCOPE_ACL_ROOT_CAUSE",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "332c7a4ba4f6f42f1885bd6f5519e3f35f8452783f2d9d16ea2cc3ad4ef1cad1",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 1406,
+          "path": "G2_NATIVE_PRIVATE_SCOPE_IMPLEMENTATION.md",
+          "sha256": "1759def9ac95fbc13fc4eb85796757347c20bbed44fa54e0c56be9a630882977"
+        },
+        {
+          "bytes": 824,
+          "path": "G2_SCOPE_STORAGE_SECURITY_CONTRACT.json",
+          "sha256": "92db76febdef9e65fda6cd0f4d820ce27d29b121e0dd44398d4330259ee3401b"
+        },
+        {
+          "bytes": 99,
+          "path": "safe_child_log.txt",
+          "sha256": "8d97718eaa015e5efb4c5c2cd77776cb3290fe4d7509534eea660c9656bad0ba"
+        },
+        {
+          "bytes": 291,
+          "path": "stage_result.json",
+          "sha256": "d5ed71c8a4cd4e20b8a40473521ed282ce4ab4dc105efa1ba469728800ab39e6"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.824422,
+        "owned_child_exited": true,
+        "stdout_bytes": 99,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Native FS, mount, ACL and FD policy implemented; not deployed",
+        "remaining_blockers": [
+          "ACTUAL_NATIVE_IDENTITIES_UNKNOWN"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S3_NATIVE_PRIVATE_STORAGE_DESIGN",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "a94e4db646d2457d121b9d296f61e27b943f200e3b81402789fced7f82ae58b6",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 397,
+          "path": "G2_SCOPE_FD_REVIEW.json",
+          "sha256": "4e3e189efb5ddb2f05021ba43e619b0f0d2755ddefc12382c0a42b155a04e4d5"
+        },
+        {
+          "bytes": 92,
+          "path": "safe_child_log.txt",
+          "sha256": "8a229b8cc5e0bba0a3fc145f1e9547b5a5eee3e7c0de52798721775d053c792f"
+        },
+        {
+          "bytes": 277,
+          "path": "stage_result.json",
+          "sha256": "415c6f0f796826c241090182df17cfa78856ffe1beba45aaebe218b54b5216fb"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.2616407,
+        "owned_child_exited": true,
+        "stdout_bytes": 92,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Pinned original scope bytes, pre/post instance checks and exclusive create source",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S4_SCOPE_INPUT_FD_PINNING",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "76e5af9a861de8e6ecb07a94797fdf1207292acf6ffb603065a17194830afb22",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 1564,
+          "path": "G2_SOURCE_IMPORT_TRUST_REVIEW.md",
+          "sha256": "f5bc122bcaa42ede594645c738962ba6c70004133d0c0e36d5a1b639f91dcc64"
+        },
+        {
+          "bytes": 93,
+          "path": "safe_child_log.txt",
+          "sha256": "2f6d0c17338245d1c9c82af29458edf97493b2dd55bbf3256a739e92eed893ce"
+        },
+        {
+          "bytes": 324,
+          "path": "stage_result.json",
+          "sha256": "6300f2a5da01dec85c06e6b1ba3d2bb1813edb7c1f9662b508d549439a9a972b"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.2325011,
+        "owned_child_exited": true,
+        "stdout_bytes": 93,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Hash-to-import gap replaced by one memory capsule; native source staging not created",
+        "remaining_blockers": [
+          "RUNTIME_STDLIB_AND_EXTENSION_TRUST_UNKNOWN"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S5_REVIEWED_SOURCE_STAGING",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "c746e199e4187b6c5c47b3dc309a1b67309415c14ee04710d943de4f7e5c7055",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 1250,
+          "path": "G2_DEPENDENCY_CLOSURE_REVIEW.json",
+          "sha256": "559918d0f5a1b63e822c8fbba884fea4f5d968adb4c1fec7ff99d8f984374e40"
+        },
+        {
+          "bytes": 96,
+          "path": "safe_child_log.txt",
+          "sha256": "841d05971499980cd9249897b318fdb7454b079355ae8f66ff156280b5c5218e"
+        },
+        {
+          "bytes": 304,
+          "path": "stage_result.json",
+          "sha256": "f52fe0af6a233c3eff4cdbe9915b1d3d133ec4ca95470c8b59fff505a644ffbd"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 0.7580093,
+        "owned_child_exited": true,
+        "stdout_bytes": 96,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Fixed allowlist verification is not transitive closure; dispatch remains blocked",
+        "remaining_blockers": [
+          "BLOCKED_DEPENDENCY_CLOSURE"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S6_MINIMUM_DEPENDENCY_CLOSURE",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "82dbd132b8056bd7d79d1bee6475ce1088bf132abc8f5369be2620dd0a744fc6",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 1251,
+          "path": "G2_MANAGER_FIXED_QUERY_REVIEW.md",
+          "sha256": "217cdee860479c8f790d913fd23ee854012081bcccd093e718d59dca911317fd"
+        },
+        {
+          "bytes": 95,
+          "path": "safe_child_log.txt",
+          "sha256": "802b670e29fc56631e2d4d67b915c3655eb42bf8c309e4803a06843793406d46"
+        },
+        {
+          "bytes": 261,
+          "path": "stage_result.json",
+          "sha256": "aa6fb76814ed7c8b3fad50b80366b7d6f3a2bd198fab9cde9d773a7867808627"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.2298854,
+        "owned_child_exited": true,
+        "stdout_bytes": 95,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Original three argv, environment, properties and limits unchanged",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S7_MANAGER_FIXED_ARGV_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "e55c508a2cb95ee5580f25e0776259ff5a3230588795eefe4784994971bce33c",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 937,
+          "path": "G2_BUS_AND_SESSION_REQUIREMENTS.md",
+          "sha256": "b1aeaf4b3a52ca62d306af00b3c15a599ab0ee4aa8f211d166864423805a01fe"
+        },
+        {
+          "bytes": 101,
+          "path": "safe_child_log.txt",
+          "sha256": "2e8d023227e69c38ba623993828ff71174d3ff65769e7e0bcd4bc554b7e4399b"
+        },
+        {
+          "bytes": 301,
+          "path": "stage_result.json",
+          "sha256": "a44d352f23b647434dfb8e8bd9f445e55a9af48ca97087124e72707b6f65e4e6"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.3324245,
+        "owned_child_exited": true,
+        "stdout_bytes": 101,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "No-autostart source semantics reviewed; current bus/session not acquired",
+        "remaining_blockers": [
+          "CURRENT_BUS_AND_SESSION_UNKNOWN"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S8_BUS_FALLBACK_AND_SESSION_REVIEW",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "264a0a2bc580840c7f40043e9581de27e4fb7158d4c084c2884f4a12bd5d3def",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 457,
+          "path": "G2_INDEPENDENT_RECEIPT_VALIDATOR_RESULTS.json",
+          "sha256": "2e374ed0ac73b79d8d34d384d6804827d3a3b739051621c168bd61dcc10d6dc1"
+        },
+        {
+          "bytes": 99,
+          "path": "safe_child_log.txt",
+          "sha256": "99ddcd92c1dc30898c1015b068d2d09653893e64f60ea33663f9ff9b6b98e52b"
+        },
+        {
+          "bytes": 288,
+          "path": "stage_result.json",
+          "sha256": "5fe69f29ca3312605df387d45def97f09dc8bfacf5ec494dee55d690e0e7bd57"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.3625093,
+        "owned_child_exited": true,
+        "stdout_bytes": 99,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Independent source/storage/approval/replay/property validator fixtures; no live manager data",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S9_INDEPENDENT_RECEIPT_VALIDATOR",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "d29be960e202222e287ebe12bc94506a3f1e1e5abd2286285949c7f1fae43987",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 149,
+          "path": "G2_FOCUSED_TESTS.json",
+          "sha256": "efaf06603f92f900a9e0ce9cfef5e30f907ab430e0531582f5d4e0e14ac009a2"
+        },
+        {
+          "bytes": 229,
+          "path": "safe_child_log.txt",
+          "sha256": "994c1979e63cf192ab8ed53ca700db46f991f495682fc62ffd80dbbe64419dff"
+        },
+        {
+          "bytes": 260,
+          "path": "stage_result.json",
+          "sha256": "64dbc53e8c309e11c76a4dbf7f3832b569f1324c1acd6e5884c677b9ab95b7f8"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.4952611,
+        "owned_child_exited": true,
+        "stdout_bytes": 229,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Focused source/negative tests physically executed in safe worker",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S10_NEGATIVE_TESTS",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "567b7a4e3acdff9041f99fda11b87e32e8d8269ede4bc52ce26cdc0759ff60d7",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 1143,
+          "path": "G2_MANAGER_AUTHORIZATION_REQUEST_ZH_TW.md",
+          "sha256": "18ff179397eaad58a46f37eeed284d2a6118969bf1d9f00af3ae222d67605fcb"
+        },
+        {
+          "bytes": 3477,
+          "path": "G2_MANAGER_SCOPE_CANDIDATE.json",
+          "sha256": "766d6e00181583b90681edf23b40da89854e23b426329b0a0fe3d7027bf2bb83"
+        },
+        {
+          "bytes": 2979,
+          "path": "G2_MANAGER_SINGLE_USE_COMMAND_ZH_TW.md",
+          "sha256": "73e305fa3ee1b56c337579df0cc97fe847b9db4ed5b3c3bad45a61b45051a13f"
+        },
+        {
+          "bytes": 94,
+          "path": "safe_child_log.txt",
+          "sha256": "4c21ce6c0edad264f2ee7b228233529595a9bee8e35c1fbb1c333adf8f991460"
+        },
+        {
+          "bytes": 311,
+          "path": "stage_result.json",
+          "sha256": "e3f2fd20b6bb3dce5ca4fe86694850fa2b495f72e2fcecb0756d13ca1164ff17"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.4892805,
+        "owned_child_exited": true,
+        "stdout_bytes": 94,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Exact candidate source closure bound; missing runtime facts are null, no approval manufactured",
+        "remaining_blockers": [
+          "NOT_EXECUTION_READY"
+        ]
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S11_MANAGER_APPROVAL_PACKET",
+      "status": "PASS_SOURCE_ONLY"
+    },
+    {
+      "actual_exit": 0,
+      "actual_kernel_limits": null,
+      "actual_manager_query": null,
+      "command_sha256": "90ea729d98d81a615896bb3cd28976e38e12fc43eba8733340477153de780e93",
+      "input_sha256": "478ba9e530da8ecf43aced9104d84eef2d691fe72703bb06de10cd36dfbe0fca",
+      "output_manifest": [
+        {
+          "bytes": 518,
+          "path": "G2_SAFE_ENGINEERING_CHECKPOINT.json",
+          "sha256": "2bae73087574aee62217f0bee5bcee3f2d50c0e1f04b4a2a16a1db118c60404b"
+        },
+        {
+          "bytes": 99,
+          "path": "safe_child_log.txt",
+          "sha256": "8ed65adddb90cc2b34b2c5f5103a43678dfa3de3155666658831e87d421a618c"
+        },
+        {
+          "bytes": 257,
+          "path": "stage_result.json",
+          "sha256": "5b4bc35ec3b1dd0450b4ec5a3144df346afdb0e5b847a0f641c5d0af5d41acab"
+        }
+      ],
+      "soft_child_observations": {
+        "CPU_seconds": null,
+        "RAM_peak_bytes": null,
+        "kernel_disk_bytes": null,
+        "limits_kind": "SOFT_SAFE_ENGINEERING_TIMEOUT_AND_RETAINED_LOG_LIMIT_NOT_OS_ENVELOPE",
+        "observed_safe_child_wall_seconds": 1.2325335,
+        "owned_child_exited": true,
+        "stdout_bytes": 99,
+        "wall_timeout_seconds": 120
+      },
+      "source_evidence": {
+        "actual_acceptance": null,
+        "finding": "Checkpoint source/inputs bound, stop before any new live gate",
+        "remaining_blockers": []
+      },
+      "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+      "source_sha256": "7dffc5877d7099ec08dc3b647e2a699d11af99b5ce3a23bd455e55c103092a9c",
+      "stage": "S12_PUBLICATION_AND_PRESERVATION",
+      "status": "PASS_SOURCE_ONLY"
+    }
+  ]
+}

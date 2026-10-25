@@ -1,0 +1,106 @@
+{
+  "actual_user_WSL_manager_test": null,
+  "affected_local_previous_candidate": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "b11cd0f1924626650a8bc9417ec7c6d0337f4f797f83744bef5740db3df8df6c",
+    "modules": [
+      "simulation.hh_signal.final_closure.master.manager_scope_tests",
+      "simulation.hh_signal.final_closure.master.tool_binding_tests",
+      "simulation.hh_signal.final_closure.master.diagnostic_tests",
+      "simulation.hh_signal.final_closure.master.diagnostic_plan_tests",
+      "simulation.hh_signal.final_closure.master.g2_protocol_tests",
+      "simulation.hh_signal.final_closure.master.g2_engine_tests",
+      "simulation.hh_signal.final_closure.master.g2_publication_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_tests",
+      "simulation.hh_signal.final_closure.master.guest_counter_publication_tests",
+      "simulation.hh_signal.final_closure.master.readiness_tests",
+      "simulation.hh_signal.final_closure.master.readiness_guest_tests",
+      "simulation.hh_signal.final_closure.master.readiness_scheduler_tests",
+      "simulation.hh_signal.final_closure.master.test_master",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_associations",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_acquisition",
+      "simulation.hh_signal.final_closure.resource_closure.tests.test_g1_publication",
+      "simulation.hh_signal.final_closure.tests.test_closure"
+    ],
+    "scope": "SOURCE_OR_OWNED_INERT_FIXTURE_NOT_USER_WSL_OS_ACCEPTANCE",
+    "skipped": 7,
+    "status": "PASS",
+    "tests_run": 239,
+    "wall_seconds": 125.86174649999975
+  },
+  "delivery_CI": "EXTERNAL_CHECK_AFTER_CONTAINING_COMMIT",
+  "final_source_focused": {
+    "actual_WSL_or_manager_test": false,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 5,
+    "source_revision": "c80244e69b840eb3984ba9bda1b2f64546556124",
+    "tests_run": 28
+  },
+  "initial_CI_failure": {
+    "errors": 4,
+    "interpretation": "ACTUAL_CI_ANCESTOR_ACL_REJECTED; NO_POLICY_WEAKENING; FOUR_NATIVE_POSITIVE_TESTS_NOT_EXECUTED",
+    "job": 121121565936,
+    "physical_dispatches": 0,
+    "preserved_decoded_log_sha256": "1c11a9b430d50ef2544f84d8488fe84ada9349a1830d21ca7251514cdfb589e8",
+    "reason": "EXTENDED_OR_INHERITED_ACL_REJECTED",
+    "run": 40177600277,
+    "skipped": 1,
+    "source": "dac78384fa09ea294ec526e7193224ba9bb60929",
+    "tests_run": 239
+  },
+  "initial_safe_preparation_failure": {
+    "cause_review": "PREPARED_PRIVATE_PROGRESS_REQUIRED: no progress directory existed; binding separately passed 436 source files",
+    "exit_status": 1,
+    "live_dispatches": 0,
+    "preserved": true,
+    "run_created": false,
+    "safe_children_started": 0,
+    "source": "dac78384fa09ea294ec526e7193224ba9bb60929"
+  },
+  "native_positive_CI_blocker": "FOUR_CASES_SKIPPED_DUE_REAL_ANCESTOR_ACL; NO_ACL_CHANGED_OR_POLICY_RELAXED",
+  "native_positive_CI_evidence": null,
+  "source": "c80244e69b840eb3984ba9bda1b2f64546556124",
+  "source_CI": {
+    "decoded_log_sha256": {
+      "121122664892": "2481a9db5737566da78976368b8396cc6966a54f7a3e136de367ba729c29ff75",
+      "121122665105": "7ab2461b48fad1cf59aece10b6dbe6528c3eeba43193574ddeed1fc1080e88b7"
+    },
+    "independent_user_WSL_OS_acceptance": null,
+    "jobs": [
+      {
+        "actual_ancestor_acl_rejection": "PASS_NEGATIVE_ONLY",
+        "affected": 240,
+        "affected_pass": 235,
+        "affected_skipped": 5,
+        "cpp_inert_arithmetic_cases": 5,
+        "job": 121122664892,
+        "legacy_skipped": 0,
+        "native_positive_fixture": "BLOCKED_CI_ANCESTOR_ACL; FOUR_SKIPS",
+        "offline": 612,
+        "offline_skipped": 0,
+        "platform": "ubuntu-24.04",
+        "safe_legacy": 81,
+        "status": "success"
+      },
+      {
+        "affected": 179,
+        "affected_pass": 171,
+        "affected_skipped": 8,
+        "job": 121122665105,
+        "platform": "windows-2025",
+        "status": "success"
+      }
+    ],
+    "original_failed_run": 40177600277,
+    "original_failed_source": "dac78384fa09ea294ec526e7193224ba9bb60929",
+    "original_failure_preserved": true,
+    "run": 40177965897,
+    "source": "c80244e69b840eb3984ba9bda1b2f64546556124",
+    "status": "SUCCESS_WITH_NATIVE_POSITIVE_FIXTURE_LIMITS",
+    "suites_overlap_not_additive": true,
+    "url": "https://github.com/TOPSONN/ATLAS_HH_BBGG_PUBLIC_V1/actions/runs/40177965897"
+  },
+  "suites_overlap_not_additive": true
+}

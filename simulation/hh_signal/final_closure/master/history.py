@@ -15,9 +15,14 @@ DIAGNOSTIC_SUFFIX=" && github.head_ref != 'codex/phase7i-g2-effective-diagnostic
 
 TOOL_BINDING_SUFFIX=" && github.head_ref != 'codex/phase7i-g2-tool-identity-binding' && github.ref_name != 'codex/phase7i-g2-tool-identity-binding'"
 
+MANAGER_SECURITY_SUFFIX=" && github.head_ref != 'codex/phase7i-g2-manager-scope-security' && github.ref_name != 'codex/phase7i-g2-manager-scope-security'"
+
 def reviewed_workflow_delta(path,raw,expected):
  need(path==CAMPAIGN and expected==FROZEN,'FROZEN_INPUT_DRIFT_NOT_WORKFLOW_EXCEPTION')
  text=raw.decode('utf-8')
+ if MANAGER_SECURITY_SUFFIX in text:
+  need(text.count(MANAGER_SECURITY_SUFFIX)==1 and text.count(TOOL_BINDING_SUFFIX)==1,'WORKFLOW_ROUTING_AMBIGUITY')
+  text=text.replace(MANAGER_SECURITY_SUFFIX,'')
  if TOOL_BINDING_SUFFIX in text:
   need(text.count(TOOL_BINDING_SUFFIX)==1 and text.count(DIAGNOSTIC_SUFFIX)==1,'WORKFLOW_ROUTING_AMBIGUITY')
   text=text.replace(TOOL_BINDING_SUFFIX,'')
